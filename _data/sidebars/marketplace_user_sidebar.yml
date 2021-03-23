@@ -1,0 +1,38 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+  - title: Marketplace user guides
+    product: Marketplace
+    version: 202009.0
+    folders:
+
+      - title: Section 1
+        output: web
+        folderitems:
+          - title: Item 1
+            url: "/marketplace/user/item-1"
+            output: web
+
+          - title: Item 2
+            url: "#"
+            output: web
+
+          - title: Item 3
+            url: "#"
+            output: web
+
+      - title: Section 2
+        output: web
+
+        folderitems:
+          - title: Item 4
+            url: "#"
+            output: web
+
+      - title: Section 3
+        output: web
+
+        folderitems:
+          - title: Item 5
+            url: "#"
+            output: web

@@ -4,17 +4,21 @@ topnav:
 - title: Topnav
   items:
     - title: GitHub
-      external_url: https://github.com/tomjoht/documentation-theme-jekyll
+      external_url: https://github.com/spryker/docs
 
 #Topnav dropdowns
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
+    - title: Help
+      folderitems:
+        - title: Jekyll documentation
+          external_url: http://jekyllrb.com/docs/home/
+        - title: Theme manual
+          url: /mydoc_introduction.html
     - title: Products
       folderitems:
-        - title: Jekyll Documentation Theme
-          url: /mydoc_introduction.html
         - title: Developer Documentation
-          url: /marketplace/dev/system-requirements.html
+          url: /docs/marketplace/dev/setup/system-requirements.html
         - title: User Documentation
-          url: /marketplace/user/item-1
+          url: /docs/marketplace/user/section-1/item-1

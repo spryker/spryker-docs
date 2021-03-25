@@ -10,7 +10,7 @@ entries:
         output: web
         folderitems:
           - title: Item 1
-            url: "/marketplace/user/item-1"
+            url: /docs/marketplace/user/section-1/item-1.html
             output: web
 
           - title: Item 2

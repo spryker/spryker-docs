@@ -1,4 +1,4 @@
-repository: spryker/docs
+repository: spryker/spryker.github.io
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
@@ -12,7 +12,7 @@ site_title: Spryker Documentation
 company_name: Spryker
 # this appears in the footer
 
-github_editme_path: spryker/docs/blob/master/
+github_editme_path: spryker/spryker.github.io/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 google_analytics: ""
@@ -60,21 +60,18 @@ defaults:
       type: "pages"
     values:
       sidebar: marketplace_developer_sidebar
-      permalink: "/marketplace/dev/:basename"
   -
     scope:
       path: "docs/marketplace/user"
       type: "pages"
     values:
       sidebar: marketplace_user_sidebar
-      permalink: "/marketplace/user/:basename"
   -
     scope:
       path: "theme_manual"
       type: "pages"
     values:
       sidebar: mydoc_sidebar
-      permalink: ":basename:output_ext"
 
 # these are defaults used for the frontmatter for these file types
 
@@ -83,7 +80,7 @@ sidebars:
 - marketplace_user_sidebar
 - mydoc_sidebar
 
-description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
+description: "Spryker documentation center."
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only

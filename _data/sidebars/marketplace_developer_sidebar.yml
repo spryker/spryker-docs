@@ -1,0 +1,46 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+  - title: Marketplace developer guides
+    product: Marketplace
+    version: 202009.0
+    folders:
+
+      - title: Setup
+        output: web
+        folderitems:
+          - title: System requirements
+            url: /docs/marketplace/dev/setup/system-requirements.html
+            output: web
+
+          - title: Installation
+            url: /docs/marketplace/dev/setup/installation.html
+            output: web
+
+          - title: Post-installation steps
+            url: /docs/marketplace/dev/setup/post-installation-steps.html
+            output: web
+
+      - title: Feature integration guides
+        output: web
+
+        folderitems:
+          - title: Feature integration guides sample page
+            url: /docs/marketplace/dev/feature-integration-guides/fig-sample-page.html
+            output: web
+
+      - title: Glue API guides
+        output: web
+
+        folderitems:
+          - title: Glue API guides sample page
+            url: /docs/marketplace/dev/glue-api-guides/glue-api-sample-page.html
+            output: web
+
+      - title: HowTos
+        output: web
+
+        folderitems:
+          - title: HowTos sample page
+            url: /docs/marketplace/dev/howtos/howtos-sample-page.html
+            output: web

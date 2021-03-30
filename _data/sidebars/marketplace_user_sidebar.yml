@@ -10,19 +10,26 @@ entries:
         output: web
         folderitems:
           - title: Marketplace concept
-            url: "/docs/marketplace/user/intro-to-spryker/marketplace-concept"
+            url: "/docs/marketplace/user/intro-to-spryker/marketplace-concept.html"
             output: web
 
           - title: Item 3
             url: "#"
             output: web
 
-      - title: Section 2
+      - title: Features
         output: web
-
         folderitems:
-          - title: Item 4
-            url: "#"
+          - title: Merchants feature overview
+            url: "/docs/marketplace/user/features/merchants-feature-overview.html"
+            output: web
+
+          - title: Merchant users feature overview
+            url: "/docs/marketplace/user/features/merchant-users-feature-overview.html"
+            output: web
+
+          - title: Product offer feature overview
+            url: "/docs/marketplace/user/features/product-offer-feature-overview.html"
             output: web
 
       - title: Section 3

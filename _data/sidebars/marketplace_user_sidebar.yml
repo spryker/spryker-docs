@@ -6,15 +6,11 @@ entries:
     version: 202009.0
     folders:
 
-      - title: Section 1
+      - title: Intro to Spryker
         output: web
         folderitems:
-          - title: Item 1
-            url: /docs/marketplace/user/section-1/item-1.html
-            output: web
-
-          - title: Item 2
-            url: "#"
+          - title: Marketplace concept
+            url: "/docs/marketplace/user/intro-to-spryker/marketplace-concept"
             output: web
 
           - title: Item 3

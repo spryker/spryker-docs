@@ -33,8 +33,12 @@ entries:
         output: web
 
         folderitems:
-          - title: Glue API guides sample page
-            url: /docs/marketplace/dev/glue-api-guides/glue-api-sample-page.html
+          - title: Retrieving merchant information 
+            url: /docs/marketplace/dev/glue-api-guides/retrieving-merchant-information.html
+            output: web
+
+          - title: Retrieving product offers 
+            url: /docs/marketplace/dev/glue-api-guides/retrieving-product-offers.html
             output: web
 
       - title: HowTos

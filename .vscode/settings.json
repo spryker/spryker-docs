@@ -2,5 +2,13 @@
 {
   "files.associations": {
     "*.html": "liquid"
-  }
+  },
+  "spellright.language": [
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ]
 }

@@ -1,3 +1,8 @@
+---
+title: Merchants feature overview 
+summary: "Learn the concept of merchants in the Spryker Marketplace."
+---
+
 *Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](https://documentation.spryker.com/marketplace/docs/product-offer-feature-overview), define prices and stock, fulfill orders, and edit merchant profile information.
 
 Merchant is the core entity of the Spryker Marketplace, and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.

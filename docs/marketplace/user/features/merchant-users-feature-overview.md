@@ -1,4 +1,8 @@
-## Merchant Users concept
+---
+title: Merchant users feature overview 
+summary: "Learn the concept of merchant users in the Spryker Marketplace."
+---
+
 The merchant concept presupposes having employees with access to the Merchant Portal that will perform various actions on behalf of the merchants. To allow that, the *merchant user* entity is introduced.
 From the technical point of view, Merchant Portal is a subset of modules in Zed functioning separately from the Back Office application. As in the Back Office, there are users performing different types of actions (we will further on name them *Back Office users*), Merchant Portal has *merchant users* that function similarly within the Merchant account. 
 

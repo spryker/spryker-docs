@@ -1,3 +1,8 @@
+---
+title: Product offers feature overview 
+summary: "Learn the concept of merproduct offers in the Spryker Marketplace."
+---
+
 The *product offer* entity is created when multiple merchants need to sell the same product on the Marketplace. 
 
 Product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference mandatory and can only be defined once.

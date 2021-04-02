@@ -29,11 +29,14 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/fig-sample-page.html
             output: web
 
+          - title: Marketplace Merchant feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html
+            output: web
+
       - title: Glue API guides
         output: web
 
         folderitems:
-
           - title: Retrieving merchant information 
             url: /docs/marketplace/dev/glue-api-guides/retrieving-merchant-information.html
             output: web
@@ -43,6 +46,7 @@ entries:
             output: web
 
           - title: Retrieving product offers 
+
             url: /docs/marketplace/dev/glue-api-guides/retrieving-product-offers.html
             output: web
 

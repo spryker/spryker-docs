@@ -1,6 +1,6 @@
 ---
-title: Marketplace Merchant feature integration guide
-summary: "This integration guide provides steps on now to integrate Marketplace Merchant feature"
+title: Marketplace Merchant feature integration
+summary: "This integration guide provides steps on how to integrate the Marketplace Merchant feature"
 ---
 
 ## Install feature core
@@ -40,7 +40,8 @@ Set up database schema:
 1. Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/MerchantSearch/Persistence/Propel/Schema/spy_merchant_search.schema.xml**
-  ```xml
+
+```xml
   <?xml version="1.0"?>
   <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" name="zed"
@@ -55,7 +56,7 @@ Set up database schema:
 
   </database>
 
-  ```
+```
 
 2. Run the following commands to apply database changes and to generate entity and transfer changes:
 
@@ -553,6 +554,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 | MerchantSynchronizationDataBulkRepositoryPlugin | Synchronizes the entire search table content into Search. | None | Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -576,7 +578,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 ```
 
 5. Configure a synchronization pool name:
+
 **src/Pyz/Zed/MerchantSearch/MerchantSearchConfig.php**
+
 ```php
 <?php
 
@@ -599,9 +603,197 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
 
 Make sure that, when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
 
-| arget entity | Example of expected data identifier | Example of expected data fragment|
+
+| Target entity | Example of expected data identifier |Example of expected data identifier |
 |---|---|---|
-| Merchant | merchant:1 | ```php {"idMerchant":1,"name":"Sony Experts","registrationNumber":"HYY 134306","email":"michele@sony-experts.com","status":"approved","isActive":true,"merchantReference":"MER000006","fkStateMachineProcess":1,"storeRelation":{"idEntity":1,"idStores":[1],"stores":[{"availableLocaleIsoCodes":[],"queuePools":[],"storesWithSharedPersistence":[],"idStore":1,"name":"DE","defaultCurrencyIsoCode":null,"availableCurrencyIsoCodes":[],"selectedCurrencyIsoCode":null,"timezone":null,"countries":[]}]},"addressCollection":null,"merchantProfile":{"idMerchantProfile":3,"contactPersonRole":"Brand Manager","contactPersonTitle":"Ms","contactPersonFirstName":"Michele","contactPersonLastName":"Nemeth","contactPersonPhone":"030\/123456789","logoUrl":"https:\/\/d2s0ynfc62ej12.cloudfront.net\/merchant\/sonyexperts-logo.png","publicEmail":"support@sony-experts.com","publicPhone":"+49 30 234567691","descriptionGlossaryKey":"merchant.description_glossary_key.1","bannerUrlGlossaryKey":"merchant.banner_url_glossary_key.1","deliveryTimeGlossaryKey":"merchant.delivery_time_glossary_key.1","termsConditionsGlossaryKey":"merchant.terms_conditions_glossary_key.1","cancellationPolicyGlossaryKey":"merchant.cancellation_policy_glossary_key.1","imprintGlossaryKey":"merchant.imprint_glossary_key.1","dataPrivacyGlossaryKey":"merchant.data_privacy_glossary_key.1","fkMerchant":1,"merchantName":"Sony Experts","latitude":"11.547788","longitude":"48.131058","faxNumber":"+49 30 234567600","merchantReference":"MER000006","bannerUrl":null,"addressCollection":{"addresses":[{"idMerchantProfileAddress":3,"fkCountry":60,"countryName":"Germany","address1":"Matthias-Pschorr-Stra\u00dfe","address2":"1","address3":"","city":"M\u00fcnchen","zipCode":"80336","email":null,"fkMerchantProfile":3}]},"merchantProfileLocalizedGlossaryAttributes":[]},"urlCollection":[{"url":"\/de\/merchant\/sony-experts","resourceType":null,"resourceId":null,"fkLocale":46,"idUrl":505,"fkResourceCategorynode":null,"fkRedirect":null,"fkResourcePage":null,"fkResourceRedirect":null,"fkResourceMerchant":1,"urlPrefix":null,"localeName":"de_DE","fkResourceProductAbstract":null,"fkResourceProductSet":null,"itemType":null,"itemId":null,"fkProductAbstract":null,"fkCategorynode":null,"fkPage":null},{"url":"\/en\/merchant\/sony-experts","resourceType":null,"resourceId":null,"fkLocale":66,"idUrl":506,"fkResourceCategorynode":null,"fkRedirect":null,"fkResourcePage":null,"fkResourceRedirect":null,"fkResourceMerchant":1,"urlPrefix":null,"localeName":"en_US","fkResourceProductAbstract":null,"fkResourceProductSet":null,"itemType":null,"itemId":null,"fkProductAbstract":null,"fkCategorynode":null,"fkPage":null}],"categories":[{"idCategory":2,"categoryKey":"cameras-and-camcorder","isActive":true,"isInMenu":true,"isClickable":true,"isSearchable":true,"name":null,"url":null,"imageName":null,"categoryImageName":null,"metaTitle":null,"metaDescription":null,"metaKeywords":null,"fkCategoryTemplate":1,"idCmsBlocks":[],"categoryNode":null,"nodeCollection":null,"parentCategoryNode":null,"localizedAttributes":[{"name":"Kameras \u0026 Camcorders","url":null,"metaTitle":"Kameras \u0026 Camcorders","metaDescription":"Kameras \u0026 Camcorders","metaKeywords":"Kameras \u0026 Camcorders","locale":{"idLocale":46,"localeName":"de_DE","name":null,"isActive":true},"image":null},{"name":"Cameras \u0026 Camcordersshhhhjjj","url":null,"metaTitle":"Cameras \u0026 Camcorders","metaDescription":"Cameras \u0026 Camcorders","metaKeywords":"Cameras \u0026 Camcorders","locale":{"idLocale":66,"localeName":"en_US","name":null,"isActive":true},"image":null}],"extraParents":[],"imageSets":[]}],"stocks":[{"idStock":7,"name":"Sony Experts MER000006 Warehouse 1","isActive":true,"storeRelation":null}]}``` |
+| Merchant | merchant:1 |Example of expected data identifier is provided below |
+
+<details><summary>Click to view an example of expected data fragment</summary>
+
+ ```json
+
+ {
+  "idMerchant": 1,
+  "name": "Sony Experts",
+  "registrationNumber": "HYY 134306",
+  "email": "michele@sony-experts.com",
+  "status": "approved",
+  "isActive": true,
+  "merchantReference": "MER000006",
+  "fkStateMachineProcess": 1,
+  "storeRelation": {
+    "idEntity": 1,
+    "idStores": [
+      1
+    ],
+    "stores": [
+      {
+        "availableLocaleIsoCodes": [],
+        "queuePools": [],
+        "storesWithSharedPersistence": [],
+        "idStore": 1,
+        "name": "DE",
+        "defaultCurrencyIsoCode": null,
+        "availableCurrencyIsoCodes": [],
+        "selectedCurrencyIsoCode": null,
+        "timezone": null,
+        "countries": []
+      }
+    ]
+  },
+  "addressCollection": null,
+  "merchantProfile": {
+    "idMerchantProfile": 3,
+    "contactPersonRole": "Brand Manager",
+    "contactPersonTitle": "Ms",
+    "contactPersonFirstName": "Michele",
+    "contactPersonLastName": "Nemeth",
+    "contactPersonPhone": "030/123456789",
+    "logoUrl": "https://d2s0ynfc62ej12.cloudfront.net/merchant/sonyexperts-logo.png",
+    "publicEmail": "support@sony-experts.com",
+    "publicPhone": "+49 30 234567691",
+    "descriptionGlossaryKey": "merchant.description_glossary_key.1",
+    "bannerUrlGlossaryKey": "merchant.banner_url_glossary_key.1",
+    "deliveryTimeGlossaryKey": "merchant.delivery_time_glossary_key.1",
+    "termsConditionsGlossaryKey": "merchant.terms_conditions_glossary_key.1",
+    "cancellationPolicyGlossaryKey": "merchant.cancellation_policy_glossary_key.1",
+    "imprintGlossaryKey": "merchant.imprint_glossary_key.1",
+    "dataPrivacyGlossaryKey": "merchant.data_privacy_glossary_key.1",
+    "fkMerchant": 1,
+    "merchantName": "Sony Experts",
+    "latitude": "11.547788",
+    "longitude": "48.131058",
+    "faxNumber": "+49 30 234567600",
+    "merchantReference": "MER000006",
+    "bannerUrl": null,
+    "addressCollection": {
+      "addresses": [
+        {
+          "idMerchantProfileAddress": 3,
+          "fkCountry": 60,
+          "countryName": "Germany",
+          "address1": "Matthias-Pschorr-Straße",
+          "address2": "1",
+          "address3": "",
+          "city": "München",
+          "zipCode": "80336",
+          "email": null,
+          "fkMerchantProfile": 3
+        }
+      ]
+    },
+    "merchantProfileLocalizedGlossaryAttributes": []
+  },
+  "urlCollection": [
+    {
+      "url": "/de/merchant/sony-experts",
+      "resourceType": null,
+      "resourceId": null,
+      "fkLocale": 46,
+      "idUrl": 505,
+      "fkResourceCategorynode": null,
+      "fkRedirect": null,
+      "fkResourcePage": null,
+      "fkResourceRedirect": null,
+      "fkResourceMerchant": 1,
+      "urlPrefix": null,
+      "localeName": "de_DE",
+      "fkResourceProductAbstract": null,
+      "fkResourceProductSet": null,
+      "itemType": null,
+      "itemId": null,
+      "fkProductAbstract": null,
+      "fkCategorynode": null,
+      "fkPage": null
+    },
+    {
+      "url": "/en/merchant/sony-experts",
+      "resourceType": null,
+      "resourceId": null,
+      "fkLocale": 66,
+      "idUrl": 506,
+      "fkResourceCategorynode": null,
+      "fkRedirect": null,
+      "fkResourcePage": null,
+      "fkResourceRedirect": null,
+      "fkResourceMerchant": 1,
+      "urlPrefix": null,
+      "localeName": "en_US",
+      "fkResourceProductAbstract": null,
+      "fkResourceProductSet": null,
+      "itemType": null,
+      "itemId": null,
+      "fkProductAbstract": null,
+      "fkCategorynode": null,
+      "fkPage": null
+    }
+  ],
+  "categories": [
+    {
+      "idCategory": 2,
+      "categoryKey": "cameras-and-camcorder",
+      "isActive": true,
+      "isInMenu": true,
+      "isClickable": true,
+      "isSearchable": true,
+      "name": null,
+      "url": null,
+      "imageName": null,
+      "categoryImageName": null,
+      "metaTitle": null,
+      "metaDescription": null,
+      "metaKeywords": null,
+      "fkCategoryTemplate": 1,
+      "idCmsBlocks": [],
+      "categoryNode": null,
+      "nodeCollection": null,
+      "parentCategoryNode": null,
+      "localizedAttributes": [
+        {
+          "name": "Kameras & Camcorders",
+          "url": null,
+          "metaTitle": "Kameras & Camcorders",
+          "metaDescription": "Kameras & Camcorders",
+          "metaKeywords": "Kameras & Camcorders",
+          "locale": {
+            "idLocale": 46,
+            "localeName": "de_DE",
+            "name": null,
+            "isActive": true
+          },
+          "image": null
+        },
+        {
+          "name": "Cameras & Camcordersshhhhjjj",
+          "url": null,
+          "metaTitle": "Cameras & Camcorders",
+          "metaDescription": "Cameras & Camcorders",
+          "metaKeywords": "Cameras & Camcorders",
+          "locale": {
+            "idLocale": 66,
+            "localeName": "en_US",
+            "name": null,
+            "isActive": true
+          },
+          "image": null
+        }
+      ],
+      "extraParents": [],
+      "imageSets": []
+    }
+  ],
+  "stocks": [
+    {
+      "idStock": 7,
+      "name": "Sony Experts MER000006 Warehouse 1",
+      "isActive": true,
+      "storeRelation": null
+    }
+  ]
+}
+
+ ```
+ </details>
 
 6. Set up result formatters:
 
@@ -682,7 +874,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 To import data:
 1. Prepare merchant profile data according to your requirements using our demo data:
 
-```
+```html
 merchant_reference,contact_person_role,contact_person_title,contact_person_first_name,contact_person_last_name,contact_person_phone,banner_url,logo_url,public_email,public_phone,description_glossary_key.en_US,description_glossary_key.de_DE,banner_url_glossary_key.en_US,banner_url_glossary_key.de_DE,delivery_time_glossary_key.en_US,delivery_time_glossary_key.de_DE,terms_conditions_glossary_key.en_US,terms_conditions_glossary_key.de_DE,cancellation_policy_glossary_key.en_US,cancellation_policy_glossary_key.de_DE,imprint_glossary_key.en_US,imprint_glossary_key.de_DE,data_privacy_glossary_key.en_US,data_privacy_glossary_key.de_DE,is_active,fax_number,longitude,latitude
 MER000001,E-Commerce Manager,Mr,Harald,Schmidt,+49 30 208498350,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-logo.png,info@spryker.com,+49 30 234567891,Spryker is the main merchant at the Demo Marketplace.,Spryker ist der Haupthändler auf dem Demo-Marktplatz.,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,1-3 days,1-3 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-E-Mail. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.","<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>","<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Vertreten durch<br>Geschäftsführer: Alexander Graf, Boris Lokschin<br>Registergericht: Hamburg<br>Registernummer: HRB 134310<br></p>",Spryker Systems GmbH values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Spryker Systems GmbH.,1,+49 30 234567800,52.534105,13.384458
 MER000002,Country Manager DE,Ms,Martha,Farmer,+31 123 345 678,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-logo.png,hi@video-king.nl,+31 123 345 777,"Video King is a premium provider of video equipment. In business since 2010, we understand the needs of video professionals and enthusiasts and offer a wide variety of products with competitive prices. ","Video King ist ein Premium-Anbieter von Videogeräten. Wir sind seit 2010 im Geschäft, verstehen die Bedürfnisse von Videoprofis und -enthusiasten und bieten eine große Auswahl an Produkten zu wettbewerbsfähigen Preisen an. ",https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,2-4 days,2-4 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-E-Mail. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",<p>Video King<br><br>Gilzeweg 24<br>4854SG Bavel<br>NL <br><br>Phone: +31 123 45 6789<br>Email: hi@video-king.nl<br><br>Represented by<br>Managing Director: Max Mustermann<br>Register Court: Amsterdam<br>Register Number: 1234.4567<br></p>,<p>Video King<br><br>Gilzeweg 24<br>4854SG Bavel<br>NL<br><br>Telefon: +31 123 45 6789<br>Email: hi@video-king.nl<br><br>Vertreten durch<br>Geschäftsführer: Max Mustermann<br>Registergericht: Amsterdam<br>Registernummer: 1234.4567<br></p>,Video King values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Video King.,1,+31 123 345 733,51.558107,4.838470

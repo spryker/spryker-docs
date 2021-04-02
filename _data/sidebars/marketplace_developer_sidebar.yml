@@ -29,8 +29,8 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/fig-sample-page.html
             output: web
 
-          - title: Marketplace Merchant feature integration guide
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration-guide.html
+          - title: Marketplace Merchant feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html
             output: web
 
       - title: Glue API guides

@@ -23,11 +23,37 @@ entries:
 
       - title: Feature integration guides
         output: web
-
         folderitems:
-          - title: Feature integration guides sample page
-            url: /docs/marketplace/dev/feature-integration-guides/fig-sample-page.html
+          - title: Merchant Portal Core feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
             output: web
+
+          - title: Merchant Opening Hours feature integration 
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
+            output: web
+
+          - title: Merchant Category feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
+            output: web
+
+          - title: Product Offer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
+            output: web
+            
+        subfolders:
+
+          - title: Glue API
+            output: web
+            subfolderitems:
+      
+            - title: Glue API\:\ Merchant Opening Hours feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/glue/glue-merchant-opening-hours-feature-integration.html
+            output: web
+          
+            - title: Glue API\:\ Marketplace Merchant Category Feature Integration
+            url: /docs/marketplace/dev/feature-integration-guides/glue/glue-marketplace-merchant-category-feature-integration.html
+            output: web
+
 
       - title: Glue API guides
         output: web

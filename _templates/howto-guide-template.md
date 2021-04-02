@@ -1,5 +1,6 @@
 ---
-title: 
+title: {Meta name}
+description: {Meta description}
 tags: [, ]
 ---
 

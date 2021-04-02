@@ -854,7 +854,6 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 ```
 8. Add the `merchant` resource to supported search sources:
 
-
 ```php
 <?php
 

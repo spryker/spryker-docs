@@ -1,6 +1,6 @@
 ---
-title: Retrieving merchant information 
-summary: "Learn how to manage merchant information via the Spryker Glue API."
+title: Retrieving merchant information
+description: Retrieve the Marketplace merchant information via API
 ---
 
 Merchant is the individual or an organization selling products on the Marketplace. Every Merchant has a profile page where the customer can check contact information, opening hours, legal details, etc.

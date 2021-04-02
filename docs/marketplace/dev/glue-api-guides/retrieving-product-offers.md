@@ -1,6 +1,6 @@
 ---
 title: Retrieving product offers 
-summary: "Learn how to retrieve product offers via the Spryker Glue API."
+description: Retrieve Marketplace product offers via API
 ---
 
 Product offers allow different merchants to sell the same product on the Marketplace. Product offers are created per concrete products, and you can get the offer information via retrieving the product information.

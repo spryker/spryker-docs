@@ -609,7 +609,7 @@ Make sure that, when merchant entities are created or updated through ORM, they 
 |---|---|---|
 | Merchant | merchant:1 |Example of expected data identifier is provided below |
 
-<details><summary>Click to view example of the expected data fragment</summary>
+<details><summary>Click to view an example of the expected data fragment</summary>
 
  ```json
 

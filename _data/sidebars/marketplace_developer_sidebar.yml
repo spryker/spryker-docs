@@ -53,6 +53,10 @@ entries:
 
           - title: Merchant Portal - Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-product-offer-feature-integration.html
+            output: web 
+
+          - title: Marketplace Product feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html
             output: web  
             
             subfolders:

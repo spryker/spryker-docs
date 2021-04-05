@@ -1,10 +1,11 @@
 ---
 title: Glue - Marketplace Product Offer + Cart feature integration
 last_updated: Dec 17, 2020
-summary: This integration guide provides steps on how to integrate the Product Offer + Cart feature into a Spryker project.
+summary: This integration guide provides steps on how to integrate the Glue Product Offer + Cart feature into a Spryker project.
 ---
 
 ## Install feature core
+Follow the steps below to install the Merchant Portal - Product Offer feature core.
 
 ### Prerequisites
 

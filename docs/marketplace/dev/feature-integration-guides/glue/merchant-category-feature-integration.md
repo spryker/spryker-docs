@@ -1,8 +1,7 @@
 ---
-title: Glue API\:\ Marketplace Merchant Category Feature Integration
+title: Merchant Category feature integration
 last_updated: Nov 10, 2020
 summary: This document describes the process how to integrate the Merchant Category Glue API feature into a Spryker project.
-sidebar: marketplace_developer_sidebar.yml
 ---
 
 ## Install feature core

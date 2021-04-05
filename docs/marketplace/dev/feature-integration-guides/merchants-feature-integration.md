@@ -1,6 +1,7 @@
 ---
-title: Marketplace Merchant feature integration
-summary: "This integration guide provides steps on how to integrate the Marketplace Merchant feature"
+title: Merchants feature integration
+last_updated: Mar 23, 2021
+summary: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
 ---
 
 ## Install feature core

@@ -1,5 +1,5 @@
 ---
-title: Marketplace Merchant Category feature integration
+title: Merchant Category feature integration
 last_updated: Mar 04, 2021
 summary: This document describes the process how to integrate the Merchant Category feature into a Spryker project.
 ---

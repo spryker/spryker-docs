@@ -74,6 +74,10 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
                 output: web
 
+              - title: Glue API - Product Offer feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-feature-integration.html
+                output: web
+
               - title: Glue API - Product Offer + Cart feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html
                 output: web  

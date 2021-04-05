@@ -1,66 +1,77 @@
-# {title} ({Feature Name feature integration})
+<!-- This document is an integration guide template.
+All the described steps are optional. If you want to add a step that's not described in the template, contact Karoly Gerner. -->
 
-This document describes how to integrate the [Feature Name](link to a respective feature overview page) feature into a Spryker project.
+
+
+
+
+# {Feature Name} feature integration
+
+This document describes how to integrate the [Feature Name]({link to a respective feature overview}) feature into a Spryker project.
 
 ## Install feature core
 
 Follow the steps below to install the {Feature Name} feature core.
 
 ### Prerequisites
-[comment]: <> "Describe the required other features \(if any\) with a version that should be in place before the current feature can be installed."
+<!-- Describe the features a project must have before they can integrate the current feature. -->
 
-To start feature integration, overview, and install the necessary features:
-[comment]: <> "Refer to feature mapping: https://release.spryker.com/features."
+To start feature integration, integrate the required features:
+<!--See feature mapping at [Features](https://release.spryker.com/features). -->
 
 | NAME | VERSION |
 | --------- | ------ |
-| {Feature Name} | feature version |
+| {Feature Name} | {feature version} |
 
 ### 1) Install required modules using Сomposer
-[comment]: <> "Provide the console command\(s\) with the exact latest version numbers of all required modules. If you have other modules except for the feature modules in the composer command, you need to move them to the prerequisites."
+<!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
-```
-command to install the required modules
+```bash
+{commands to install the required modules}
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
+
 Make sure that the following modules have been installed:
 
 | MODULE  | EXPECTED DIRECTORY |
 | -------- | ------------------- |
-| {ModuleName} | path for a directory (example: vendor/spryker/product-configuration) |
+| {ModuleName} | {expected directory} |
 
-### 2) Set up the configuration
-[comment]: <> "Provide config change list for altering config \(both system config or module config\). This is only necessary if it is mandatory to change the configuration. When the default configuration is enough for primary behavior, this step can be skipped."
+### Set up the configuration
+<!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | ------------- | ------------ | ------------ |
-|example configuration | example specification|example namespace |
+| {configuration} | {specification} | {namespace} |
 
-```
-code sample with the updated configuration
+```php
+{code sample with the updated configuration}
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
 
 
 
 
-### 3) Set up database schema and transfer objects
-[comment]: <> "\(Optional\) Provide "code snippet\(s\)" with DB schema modifications that customers need to add to project code. \(Optional\) Provide code snippet\(s\) with transfer schema modifications that customers need to add to project code.\(Optional\) Provide "info" prior to each code snippet\(s\) explaining the purpose of these changes. Provide the console command\(s\) customers need to run to apply the changes \(in project + core\). "
+### Set up database schema and transfer objects
+<!--Provide the following with a description before each item:
+* Code snippets with DB schema changes.
+* Code snippets with transfer schema changes.
+* The console command to apply the changes in project and core. -->
 
 Set up database schema and transfer objects as follows:
-1.
-2.
-
-Apply database changes and generate entity and transfer changes:
+1. ...
+2. ...
+...
+5. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -69,236 +80,279 @@ console transfer:generate
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following changes have been applied by checking your database:
 
-| Database Entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --------------- | ---- | ------ |
-| sample entity | table | sample event |
+| {entity} | {entity type} | {event} |
 
 Make sure that the following changes have been triggered in transfer objects:
 
-| Transfer  | Type  | Event   | Path   |
-| ---------- | ---- | ------ | -------------- |
-| example transer | class | example event | example path   |
+| TRANSFER | TYPE | EVENT  | PATH  |
+| --------- | ------- | ----- | ------------- |
+| {transfer} | {type} | {event} | {path} |
 
 
 
-### 4) Set up database schema
-[comment]: <> "This step is only possible if your feature has no transfer object definition changes. \(Optional\) Provide code snippet\(s\) with DB schema modifications that customers need to add to project code. \(Optional\) Provide "info" prior to each code snippet\(s\)  explaining the purpose of these changes. Provide the console command\(s\) customers need to run to apply the changes \(in project + core\). "
+### Set up database schema
+<!--If the feature has transfer object definition changes, merge the steps as described in [Set up database schema and transfer objects](set-up-database-schema-and-transfer-objects). Provide code snippets with DB schema changes, describing the changes before each code snippet. Provide the console commands to apply the changes in project and core. -->
 
-Adjust the schema definition so entity changes will trigger events.
+Set up database schema as follows:
 
-| Affected Entity | Triggered Events  |
+1. Adjust the schema definition so entity changes trigger events:
+
+| AFFECTED ENTITY | TRIGGERED EVENTS  |
 | ------------- | ----------- |
-| example entity | example event |
+| {affected entity} |  {triggered event} |
 
-```
-example code of the database schema
+```xml
+{database schema code}
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
-```
+```bash
 console transfer:generate
 console propel:install
 console transfer:generate
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following changes have been applied by checking your database:
 
-| Database Entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --------------- | ---- | ----- |
-| example entity   | table | example event |
+| {entity}   | {type} | {event} |
 
 
-### 5) Set up transfer objects
-[comment]: <> "This step is only possible if your feature has no database definition changes. \(Optional\) Provide code snippet\(s\) with transfer schema modifications that customers need to add to project code. \(Optional\) Provide "info" prior to each code snippet\(s\) explaining the purpose of these changes. Provide the console command\(s\) customers need to run to apply the changes \(in project + core\)."
+### Set up transfer objects
+<!--If the feature has database definition changes, merge the steps as described in [Set up database schema and transfer objects](#set-up-database-schema-and-transfer-objects). Provide code snippet with transfer schema changes, describing the changes before each code snippet. Provide the console commands to apply the changes in project and core.-->
 
-Run the following commands to generate transfers:
 
-```
+
+Generate transfers:
+
+```bash
 console transfer:generate
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
 Ensure the following transfers have been created:
 
-| Transfer | Type | Event  | Path  |
+| TRANSFER | TYPE | EVENT  | PATH  |
 | --------- | ------- | ----- | ------------- |
-| example traansfer | example type | example event | example path |
+| {transfer} | {type} | {event} | {path} |
 
 
 
-### 6) Add translations
-[comment]: <> "Provide the list of glossary keys for DE and EN for your feature in the code snippet. When the glossary key is dynamically generated, provide the additional description of how to construct these glossary keys."
+### Add translations
+<!--Provide glossary keys for `DE` and `EN` of your feature as a code snippet. When a glossary key is dynamically generated, describe how to construct the key.-->
 
-Append glossary for the feature:
+Add translations as follows:
 
-```
-code snippet
-```
-
-Run the following console command to import data:
+1. Append glossary for the feature:
 
 ```
+{glossary code snippet}
+```
+
+2. Import data:
+
+```bash
 console data:import glossary
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the configured data is added to the `spy_glossary` table in the database.
+Make sure that the configured data has been added to the `spy_glossary` table.
 
 
 
-### 7) Configure export to Redis and Elasticsearch
-[comment]: <> "Provide a plugin list for wiring Pub & Sync up. Provide a plugin list" for enabling Re-generate and Re-sync features of Pub & Sync."
+### Configure export to Redis and Elasticsearch
+<!--Provide the plugins for wiring P&S up. Provide the plugins for enabling re-generate and re-sync features of P&S.-->
 
-This step will publish tables on change (create, edit) to the \<table_name\> and synchronize the data to Storage.
 
-| Plugin | Specification | Prerequisites | Namespace   |
+Configure tables to be published and synchronized to the Storage on create, edit, and delete changes.
+
+| PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |
 | --------------- | -------------- | ------ | -------------- |
-| example plugin | Description | None  | example namespace |
+| {plugin} | {description} | {{prerequisite}   |         }  |   {namespace} |
+
+```php
+{code snippet with plugin setup}
+```
+
+#### Verification
+<!--Describe how a developer can check they have completed the step correctly.-->
+
+Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
+
+STORAGE TYPE | TARGET ENTITY | EXPECTED DATA IDENTIFIER EXAMPLE | EXPECTED DATA FRAGMENT EXAMPLE |
+| ------------------ |------------------- | ------------------- |------------------- |
+| {Redis | Elastisearch} |  {entity} | {expected data identifier example} | See below the table. |
+
+Expected data fragment example:
 
 ```
-code snippet
+{expected data fragment example}
 ```
 
 
-### 8) Configure export to Redis
-[comment]: <> "This step is only possible if your feature has no elasitcsearch configuration changes. Provide a plugin list for wiring Pub & Sync up. Provide a plugin list for enabling Re-generate and Re-sync features of Pub & Sync."
-
-This step will publish tables on change (create, edit, delete) to the \<table_name\> and synchronize the data to Storage.
 
 
-| Plugin | Specification | Prerequisites | Namespace   |
+### Configure export to Redis
+<!--If the feature has Elasticsearch configuration changes, merge the steps as described in [Configure export to Redeis and Elasticsearch](#configure-export-to-redis-and-elasticsearch). Provide the plugins for wiring P&S up. Provide the plugins for enabling re-generate and re-sync features of P&S.-->
+
+Configure tables to be published to the {table name} table and synchronized to the Storage on create, edit, and delete changes.
+
+
+| PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |
 | --------------- | -------------- | ------ | -------------- |
-| example plugin | Description | None  | example namespace |
+| {plugin} | {description} | { {prerequisite} |      }  | {namespace} |
+
+```php
+{code snippet with plugin setup}
+```
+
+#### Verification
+<!--Describe how a developer can check they have completed the step correctly.-->
+
+Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
+
+STORAGE TYPE | TARGET ENTITY | EXPECTED DATA IDENTIFIER EXAMPLE | EXPECTED DATA FRAGMENT EXAMPLE |
+| ------------------ |------------------- | ------------------- |------------------- |
+| {Redis | Elastisearch} |  {target entity} | {expected data identifier example} | See below the table. |
+
+Expected data fragment example: {target entity}
 
 ```
-code snippet
+{expected data fragment example}
 ```
 
-##### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
-
-Make sure that when \<action\> is created, updated or deleted, they are exported (or removed) to Redis and Elasticsearch accordingly.
-
-| Target entity | Example expected data identifier |
-| ------------------ |------------------- |
-| example entity | example data identifier |
-
-Example expected fragment:
-
-```
-code snippet
-```
 
 
 #### Configure export to Elasticsearch
-[comment]: <> "This step is only possible if your feature has no redis configuration changes. Provide a plugin list for wiring Pub & Sync up. Provide a plugin list for enabling Re-generate and Re-sync features of Pub & Sync."
+<!--If the feature has Redis configuration changes, merge the steps as described in [Configure export to Redeis and Elasticsearch](#configure-export-to-redis-and-elasticsearch). Provide a plugin list for wiring P&S up. Provide a plugin list for enabling Re-generate and Re-sync features of P&S.-->
 
 Install the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace   |
+| PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |
 | --------------- | -------------- | ------ | -------------- |
-| example plugin | Description | None  | example namespace |
+| {plugin} | {Description} | {{prerequisite} |  }  |{namespace} |
 
-```
-code snippet
+```php
+{code snippet with plugin setup}
 ```
 
 ##### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
+
+Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
+
+STORAGE TYPE | TARGET ENTITY | EXPECTED DATA IDENTIFIER EXAMPLE | EXPECTED DATA FRAGMENT EXAMPLE |
+| ------------------ |------------------- | ------------------- |------------------- |
+| {Redis | Elastisearch} |  {entity} | {expected data identifier example} | See below the table. |
+
+Expected data fragment example:
+
+```
+{expected data fragment example}
+```
 
 
 
 
 ### Import data
-[comment]: <> "This section contains as many sub-steps as many data importers the feature has; additionally, infrastructural importers appear here."
+<!--This section contains as many sub-sections as many data importers the feature has; additionally, infrastructural importers appear here.-->
 
-Prepare your data according to your requirements using our demo data:
+Import data as follows:
 
+1. Prepare your data according to your requirements using our demo data:
+
+```csv
+{demo data}
 ```
-code snippet
-```
 
-Run the following console command to import data:
+2. Import data:
 
-```
-command sample
+```bash
+{command to import data}
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the configured data is added to the \<table_name\> table in the database.
+Make sure that the configured data has been added to the `{table_name}` table.
 
 
 
-#### Add infrastructural data
-[comment]: <> "Define the plugin list that is necessary for wiring up infrastructural data installation. Define the console command that is necessary for running the infrastructural data installation."
+#### Import infrastructural data
+<!--Provide the plugin list for wiring up the installation of infrastructural data. Provide the console command to run the installation of the infrastructural data.-->
 
 Import infrastructural data as follows:
 
-1. Install the plugin(s):
+1. Install the plugins:
 
-   | Plugin  | Specification | Prerequisites | Namespace |
-   | ------------ | ----------- | ----- | ------------ |
-   | example plugin | description | None  | example namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |
+| --------------- | -------------- | ------ | -------------- |
+| {plugin} | {Description} | {{prerequisite} |  }  |{namespace} |
 
-   ```
-   code snippet
-   ```
+```php
+{code snippet with plugin setup}
+```
 
-2. Execute the registered installer plugins and install the infrastructural data:
+2. To install the infrastructural data, execute the installer plugins you've registered:
 
-   ```
-   console setup:init-db
-   ```
+```bash
+console setup:init-db
+```
 
 ##### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly. Provide verification for "Configure Export to Redis and Elastisearch"."
+<!--Describe how a developer can check they have completed the step correctly. Provide verification for "Configure Export to Redis and Elastisearch".-->
 
-Ensure that, in the database, the \<entities\> have been added to the \<table_name\> table.
+Ensure that the {entities} have been added to the `{table_name}` table.
 
 
 #### Import {DataImporterName}
-[comment]: <> "Provide demo data for the current data importer in the code snippet. Provide additional "info" for glossary key generation if it depends on data import. Provide data import column definition table. Provide plugin list describing how to wire up data importer. Provide a code snippet showing how to attach the data import to a console command. Provide a console command demonstrating how to import data."
+<!--Provide demo data for the current data importer as a code snippet. Provide additional information about glossary key generation if it depends on data import. Provide a table with data import column definitions. Provide the plugin list to wire up the data importer. Provide a code snippet showing how to attach the data import to a console command. Provide the console command to import data.-->
 
-| Plugin  | Specification | Prerequisites | Namespace |
-| ------------ | ----------- | ----- | ------------ |
-| example plugin | description | None  | example namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |
+| --------------- | -------------- | ------ | -------------- |
+| {plugin} | {Description} | {{prerequisite} |  }  |{namespace} |
 
-```
-code snippet
+```php
+{code snippet with plugin setup}
 ```
 
 ##### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly. Provide verification for "Configure Export to Redis and Elastisearch"."
+<!--Describe how a developer can check that they have completed the following steps correctly:
+* Current step
+* [Configure Export to Redis and Elastisearch](#configure-export-to-redis-and-elasticsearch)
+* [Configure Export to Elastisearch](#configure-export-to-elasticsearch)
+* [Configure Export to Redis](#configure-export-to-redis)  -->
 
 
 ### Set up behavior
-[comment]: <> "This is a comment, it will not be included"
+<!--This is a comment, it will not be included -->
 Enable the following behaviors by registering the plugins:
 
 | Plugin  | Specification | Prerequisites | Namespace |
 | ------------ | ----------- | ----- | ------------ |
-| example plugin | description | None  | example namespace |
+| {plugin} | {description} | {{prerequisite} |        }  | example namespace |
 
-```
-code snippet
+```php
+{code snippet with plugin setup}
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
 
 ## Install feature front end
@@ -306,102 +360,111 @@ code snippet
 Follow the steps below to install the {Feature Name} feature front end.
 
 ### Prerequisites
-[comment]: <> "Describe the required other features \(if any\) with a version that should be in place before the current feature can be installed."
+<!--Describe the features the project must have before the current feature can be integrated.-->
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features:
+<!--See feature mapping at [Features](https://release.spryker.com/features).-->
 
-| NAME  | VERSION    |
-| ---------------- | ------------- |
-| Feature name (is taken from https://release.spryker.com/features) | feature version |
+| NAME | VERSION |
+| --------- | ------ |
+| {Feature Name} | {feature version} |
 
 ### 1) Install required modules using Сomposer
-[comment]: <> "Provide the console command\(s\) with the exact latest version numbers of all required modules. If you have other modules except for the feature modules in the composer command, you need to move them to the prerequisites."
+<!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
-```
-command to install the required modules
+```bash
+{command to install the required modules}
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following modules have been installed:
 
 | MODULE  | EXPECTED DIRECTORY |
 | -------- | ------------------- |
-| {ModuleName} | path for a directory (example: vendor/spryker/product-configuration) |
+| {ModuleName} | {expected directory} |
 
 
-### 2) Add translations
+### Add translations
 
 Add translations as follows:
 
-1. Append glossary according to your configuration:
+1. Append glossary for the feature:
 
-   ```
-   code snippet
-   ```
+```
+{glossary code snippet}
+```
 
-2.  Import data:
+2. Import data:
 
-   ```
-   code snippet
-   ```
+```bash
+console data:import glossary
+```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
+
+Make sure that the configured data has been added to the `spy_glossary` table.
 
 
-### 3) Enable controllers
-[comment]: <> "Provide controller provider list \/\ route provider list which should be enabled"
-Register the following route provider(s) on the Storefront:
 
-| Provider| Namespace  |
+### Enable controllers
+<!--Provide a list of controller providers and route providers to enable -->
+
+Register the following route providers on the Storefront:
+
+| PROVIDER| NAMESPACE  |
 | --------------- | --------------------- |
-| provider sample | namespace sample |
+| {provider} | {namespace} |
 
-```
-code sample
+```php
+{code snippet with provider setup}
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
 
-### 4) Set up widgets
+### Set up widgets
+<!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->
 
 Set up widgets as follows:
-[comment]: <> "Provide plugin list \/\ global widget list for enabling widgets. Provide complex javascript clarification when necessary. Provide console command for generating frontend code, if necessary."
 
 1. Register the following plugins to enable widgets:
 
-| Plugin | Specification | Prerequisites | Namespace   |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE   |
 | --------------- | -------------- | ------ | -------------- |
-| example plugin | Description | None  | example namespace |
+| {plugin} | {description} | {{prerequisite} |    } |  {namespace} |
 
-```
-code sample
+```php
+{code snippet with provider setup}
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
-| Widget | Verification |
+| WIDGET | VERIFICATION |
 | ---------------- | ----------------- |
-|widget sample | verification description |
+| {widget} | {steps to verify the changes} |
 
 2. Enable Javascript and CSS changes:
 
-```
+```bash
 console frontend:yves:build
 ```
 
 #### Verification
-[comment]: <> "Provide the verification steps how to confirm that the step was performed correctly."
+<!--Describe how a developer can check they have completed the step correctly.-->
 
-## Related Features
 
-Here you can find a list of related feature integration guides:
+## Related features
+Integrate the following related features:
+
+| Feature | Required for the current feature | Integration guide |
+| --- | --- | --- |
+  | {Feature Name} | {✓  |    } | [{Integration guide name}](link to the integration guide) |

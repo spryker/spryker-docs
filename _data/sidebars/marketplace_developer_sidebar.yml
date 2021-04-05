@@ -47,28 +47,40 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
             output: web
 
+          - title: Product Offer + Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/product-offer-cart-feature-integration.html
+            output: web
+
+          - title: Merchant Portal - Product Offer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-product-offer-feature-integration.html
+            output: web 
+
+          - title: Marketplace Product feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html
+            output: web  
+            
             subfolders:
 
             - title: Glue API
               output: web
 
               subfolderitems:
-
-              - title: Marketplace Merchant feature integration
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html
-                output: web
-
-              - title: Merchant Opening Hours feature integration
+      
+              - title: Glue API - Merchant Opening Hours feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
                 output: web
-
-              - title: Merchant Category Feature Integration
+          
+              - title: Glue API - Merchant Category feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
                 output: web
 
-              - title: Marketplace Product Offer feature integration
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
+              - title: Glue API - Product Offer feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-feature-integration.html
                 output: web
+
+              - title: Glue API - Product Offer + Cart feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html
+                output: web  
 
       - title: Glue API guides
         output: web

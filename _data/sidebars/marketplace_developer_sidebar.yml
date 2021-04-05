@@ -35,7 +35,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html
             output: web
 
-          - title: Merchant Opening Hours feature integration 
+          - title: Merchant Opening Hours feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
             output: web
 
@@ -82,27 +82,27 @@ entries:
         output: web
 
         folderitems:
-          - title: Retrieving merchant information 
+          - title: Retrieving merchant information
             url: /docs/marketplace/dev/glue-api-guides/retrieving-merchant-information.html
             output: web
 
-          - title: Retrieving Marketplace orders 
+          - title: Retrieving Marketplace orders
             url: /docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html
             output: web
 
-          - title: Retrieving product offers 
+          - title: Retrieving product offers
             url: /docs/marketplace/dev/glue-api-guides/retrieving-product-offers.html
             output: web
 
-          - title: Catalog search 
+          - title: Catalog search
             url: /docs/marketplace/dev/glue-api-guides/catalog-search.html
             output: web
 
-          - title: Retrieving suggestions for auto-completion and search 
+          - title: Retrieving suggestions for auto-completion and search
             url: /docs/marketplace/dev/glue-api-guides/retrieving-suggestions-for-auto-completion-and-search.html
             output: web
 
-          - title: Resolving search engine friendly URLs 
+          - title: Resolving search engine friendly URLs
             url: /docs/marketplace/dev/glue-api-guides/resolving-search-engine-friendly-urls.html
             output: web
 
@@ -138,7 +138,7 @@ entries:
               - title:  Managing carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html
                 output: web
-                
+
               - title:  Managing items in carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
                 output: web
@@ -151,7 +151,7 @@ entries:
               - title:  Managing guest carts
                 url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-carts.html
                 output: web
-                
+
               - title:  Managing items in carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
                 output: web

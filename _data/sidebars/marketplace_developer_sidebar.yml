@@ -46,6 +46,14 @@ entries:
           - title: Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
             output: web
+
+          - title: Product Offer + Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/product-offer-cart-feature-integration.html
+            output: web
+
+          - title: Merchant Portal - Product Offer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-product-offer-feature-integration.html
+            output: web  
             
             subfolders:
 
@@ -54,13 +62,17 @@ entries:
 
               subfolderitems:
       
-              - title: Merchant Opening Hours feature integration
+              - title: Glue API - Merchant Opening Hours feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
                 output: web
           
-              - title: Merchant Category Feature Integration
+              - title: Glue API - Merchant Category feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
-                output: web    
+                output: web
+
+              - title: Glue API - Product Offer + Cart feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html
+                output: web  
 
       - title: Glue API guides
         output: web

@@ -10,7 +10,7 @@ Follow the steps below to install the Merchant Category feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, overview, and install the necessary features:
 
 | Name | Version | Link |
 | --------- | ----- | ---------- |
@@ -253,6 +253,7 @@ Make sure that imported data is added to the spy_merchant_category table.
 
 
 ## Install feature front end
+Follow the steps below to install the Merchant Category feature front end.
 
 ### Prerequisites
 

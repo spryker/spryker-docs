@@ -8,6 +8,7 @@ entries:
 
       - title: Setup
         output: web
+
         folderitems:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
@@ -25,13 +26,41 @@ entries:
         output: web
 
         folderitems:
-          - title: Feature integration guides sample page
-            url: /docs/marketplace/dev/feature-integration-guides/fig-sample-page.html
+
+          - title: Merchant Portal Core feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
             output: web
 
-          - title: Marketplace Merchant feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html
+          - title: Merchants feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html
             output: web
+
+          - title: Merchant Opening Hours feature integration 
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
+            output: web
+
+          - title: Merchant Category feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
+            output: web
+
+          - title: Product Offer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
+            output: web
+            
+            subfolders:
+
+            - title: Glue API
+              output: web
+
+              subfolderitems:
+      
+              - title: Merchant Opening Hours feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
+                output: web
+          
+              - title: Merchant Category Feature Integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
+                output: web    
 
       - title: Glue API guides
         output: web
@@ -46,7 +75,6 @@ entries:
             output: web
 
           - title: Retrieving product offers 
-
             url: /docs/marketplace/dev/glue-api-guides/retrieving-product-offers.html
             output: web
 

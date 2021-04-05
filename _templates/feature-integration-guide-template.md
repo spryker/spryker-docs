@@ -97,7 +97,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 
 ### Set up database schema
-<!--If the feature has transfer object definition changes, merge the steps as described in [Set up database schema and transfer objects](set-up-database-schema-and-transfer-objects). Provide code snippets with DB schema changes, describing the changes before each code snippet. Provide the console commands to apply the changes in project and core. -->
+<!--If the feature has transfer object definition changes, merge the steps as described in [Set up database schema and transfer objects](#set-up-database-schema-and-transfer-objects). Provide code snippets with DB schema changes, describing the changes before each code snippet. Provide the console commands to apply the changes in project and core. -->
 
 Set up database schema as follows:
 

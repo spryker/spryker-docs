@@ -62,9 +62,9 @@ entries:
           - title: Marketplace Product + Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html
             output: web
-            
+
           - title: Marketplace Product + Marketplace Product Offer feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
+            url: docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
             output: web
 
             subfolders:

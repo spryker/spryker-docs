@@ -37,7 +37,7 @@ Install the required modules:
 
 Make sure that the following modules have been installed:
 
-| MODULE  | EXPECTED DIRECTORY |
+| MODULE  | EXPECTED DIRECTORY <!--for public Demo Shops--> |
 | -------- | ------------------- |
 | {ModuleName} | {expected directory} |
 
@@ -383,7 +383,7 @@ Install the required modules:
 
 Make sure that the following modules have been installed:
 
-| MODULE  | EXPECTED DIRECTORY |
+| MODULE  | EXPECTED DIRECTORY <!--for public Demo Shops--> |
 | -------- | ------------------- |
 | {ModuleName} | {expected directory} |
 

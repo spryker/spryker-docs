@@ -14,7 +14,7 @@ This document describes how to integrate the [Feature Name]({link to a respectiv
 Follow the steps below to install the {Feature Name} feature core.
 
 ### Prerequisites
-<!-- Describe the features a project must have before they can integrate the current feature. -->
+<!-- List the features a project must have before they can integrate the current feature. -->
 
 To start feature integration, integrate the required features:
 <!--See feature mapping at [Features](https://release.spryker.com/features). -->

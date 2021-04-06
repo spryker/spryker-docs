@@ -27,7 +27,7 @@ entries:
 
         folderitems:
           - title: Merchant Portal Core feature integration
-            url: docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
             output: web
 
           - title: Merchants feature integration

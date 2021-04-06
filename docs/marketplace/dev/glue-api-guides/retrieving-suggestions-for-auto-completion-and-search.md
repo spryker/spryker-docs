@@ -47,8 +47,8 @@ To retrieve a search suggestion, send the request:
 
 ### Response
 
-<details open>
-<summary>Response sample - no results</summary>
+<details>
+<summary markdown='span'>Response sample - no results</summary>
 
 ```json
 {
@@ -77,8 +77,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - retrieve suggestions for an abstract product</summary>
+<details>
+<summary markdown='span'>Response sample - retrieve suggestions for an abstract product</summary>
 
 ```json
 {
@@ -123,8 +123,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - retrieve suggestions for an abstract product with the included abstract product details</summary>
+<details>
+<summary markdown='span'>Response sample - retrieve suggestions for an abstract product with the included abstract product details</summary>
 
 ```json
 {
@@ -246,8 +246,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - retrieve search suggestions for an abstract product by name</summary>
+<details>
+<summary markdown='span'>Response sample - retrieve search suggestions for an abstract product by name</summary>
 
 ```json
 {
@@ -399,8 +399,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - retrieve search suggestions for an abstract product by 2 letters</summary>
+<details>
+<summary markdown='span'>Response sample - retrieve search suggestions for an abstract product by 2 letters</summary>
 
 ```json
 {
@@ -603,8 +603,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - retrieve search suggestions for for a product by enetring 11 symbols</summary>
+<details>
+<summary markdown='span'>Response sample - retrieve search suggestions for for a product by enetring 11 symbols</summary>
 
 ```json
 {
@@ -756,8 +756,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - retrieve search suggestions for a concrete product by SKU</summary>
+<details>
+<summary markdown='span'>Response sample - retrieve search suggestions for a concrete product by SKU</summary>
 
 ```json
 {
@@ -801,8 +801,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - retrieve suggestions for a product in search by multiple attributes</summary>
+<details>
+<summary markdown='span'>Response sample - retrieve suggestions for a product in search by multiple attributes</summary>
 
 ```json
 {
@@ -952,8 +952,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - set currency in search suggestions</summary>
+<details>
+<summary markdown='span'>Response sample - set currency in search suggestions</summary>
 
 ```json
 {
@@ -1114,8 +1114,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - set currency and price mode in search suggestions</summary>
+<details>
+<summary markdown='span'>Response sample - set currency and price mode in search suggestions</summary>
 
 ```json
 {
@@ -1276,8 +1276,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - retrieve search suggestions by category</summary>
+<details>
+<summary markdown='span'>Response sample - retrieve search suggestions by category</summary>
 
 ```json
 {
@@ -1437,8 +1437,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - retrieve search suggestions by part of a category name</summary>
+<details>
+<summary markdown='span'>Response sample - retrieve search suggestions by part of a category name</summary>
 
 ```json
 {
@@ -1621,8 +1621,8 @@ To retrieve a search suggestion, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample - retrieve search suggestions by Merchant name - Marketplace ony</summary>
+<details>
+<summary markdown='span'>Response sample - retrieve search suggestions by Merchant name - Marketplace ony</summary>
 
 </b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>
 

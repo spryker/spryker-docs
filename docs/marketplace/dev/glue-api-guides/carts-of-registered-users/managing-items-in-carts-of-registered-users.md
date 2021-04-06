@@ -39,8 +39,8 @@ To add items to a cart, send the request:
 To retrieve all the product options of the item in a cart, include `concrete-products` and `product-options`.
 :::
 
-<details open>
-<summary>Request sample</summary>
+<details>
+<summary markdown='span'>Request sample</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 
@@ -58,8 +58,8 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 </details>
 
 
-<details open>
-<summary>Request sample with product measurement units and sales units</summary>
+<details>
+<summary markdown='span'>Request sample with product measurement units and sales units</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
     
@@ -80,8 +80,8 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 ```
 </details>
 
-<details open>
-<summary>Request sample with cart rules</summary>
+<details>
+<summary markdown='span'>Request sample with cart rules</summary>
 
 `POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
 
@@ -99,8 +99,8 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 
 </details> 
 
-<details open>
-<summary>Request sample with vouchers</summary>
+<details>
+<summary markdown='span'>Request sample with vouchers</summary>
 
 `POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
 
@@ -118,8 +118,8 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 
 </details> 
 
-<details open>
-<summary>Request sample with a promotional item and cart rules</summary>
+<details>
+<summary markdown='span'>Request sample with a promotional item and cart rules</summary>
     
 :::(Info) (Cart rules)
 
@@ -142,8 +142,8 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 ```
 </details>
 
-<details open>
-<summary>Request sample with concrete products and product options</summary>
+<details>
+<summary markdown='span'>Request sample with concrete products and product options</summary>
 
 `POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
     
@@ -168,8 +168,8 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 ```
 </details>
 
-<details open>
-<summary>Request sample with product offers (Marketplace only)</summary>
+<details>
+<summary markdown='span'>Request sample with product offers (Marketplace only)</summary>
 
 This option is available only in case you have upgraded your shop to Marketplace provided by Spryker. 
 
@@ -214,8 +214,8 @@ It is the responsibility of the API Client to track whether the selected items a
 
 ### Response
 
-<details open>
-<summary>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -247,8 +247,8 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 
-<details open>
-<summary>Response sample with items, product measurement units, and sales units</summary>
+<details>
+<summary markdown='span'>Response sample with items, product measurement units, and sales units</summary>
 
 ```json
 {
@@ -388,8 +388,8 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 
-<details open>
-<summary>Response sample with cart rules</summary>
+<details>
+<summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
 {
@@ -491,8 +491,8 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 
-<details open>
-<summary>Response sample with vouchers</summary>
+<details>
+<summary markdown='span'>Response sample with vouchers</summary>
 
 ```json
 {
@@ -634,8 +634,8 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-<details open>
-<summary>Response sample: adding a promotional item without cart-rules relationship</summary>
+<details>
+<summary markdown='span'>Response sample: adding a promotional item without cart-rules relationship</summary>
 
 ```json
 {
@@ -677,8 +677,8 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 
-<details open>
-<summary>Response sample: adding a promotional item with cart-rules relationship</summary>
+<details>
+<summary markdown='span'>Response sample: adding a promotional item with cart-rules relationship</summary>
 
 ```json
 {
@@ -955,7 +955,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-    <summary>Response sample with concrete products and product options</summary>
+<summary markdown='span'>Response sample with concrete products and product options</summary>
 
 ```json
     {
@@ -1193,8 +1193,8 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-<details open>
-<summary>Response sample with product offers (Marketplace only)</summary>
+<details>
+<summary markdown='span'>Response sample with product offers (Marketplace only)</summary>
 
 This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
 
@@ -1443,8 +1443,8 @@ Request sample:
 
 ### Response
 
-<details open>
-<summary>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {

@@ -105,6 +105,3 @@ Make sure that the `MerchantProductOfferCartItemExpanderPlugin` and `MerchantPro
 ```
 
 Make sure that the `MerchantProductOfferRestCartItemsAttributesMapperPlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/carts/{{cartUuid}}?include=items` to the cart that has an item with product offer. You should be able to see attributes productOfferReference and merchantReference among the attributes of the items resource.
-
- 
-

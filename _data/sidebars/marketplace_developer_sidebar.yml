@@ -63,7 +63,7 @@ entries:
             output: web
 
           - title: Marketplace Product + Marketplace Product Offer feature integration
-            url: docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
             output: web
 
             subfolders:
@@ -89,8 +89,8 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
                 output: web
 
-              - title: Glue API - Product Offer feature integration
-                url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-feature-integration.html
+              - title: Glue API - Markteplace Product Offer feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
                 output: web
 
               - title: Glue API - Product Offer + Cart feature integration

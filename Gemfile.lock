@@ -256,7 +256,6 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
-    unf_ext (0.0.7.7-x64-mingw32)
     unicode-display_width (1.7.0)
     webrick (1.7.0)
     zeitwerk (2.4.2)

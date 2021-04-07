@@ -75,8 +75,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 ### Response
 
-<details open>
-<summary>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -119,8 +119,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 
-<details open>
-<summary>Response sample with guest cart items</summary>
+<details>
+<summary markdown='span'>Response sample with guest cart items</summary>
 
 ```json
 {
@@ -214,8 +214,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
    
     
-<details open>
-<summary>Response sample with cart rules</summary>
+<details>
+<summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
 {
@@ -288,8 +288,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 
-<details open>
-<summary>Response sample with gift cards</summary>
+<details>
+<summary markdown='span'>Response sample with gift cards</summary>
 
 ```json
 {
@@ -358,8 +358,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 ```
 </details>
 
-<details open>
-    <summary>Sample response with guest cart items, concrete products, and product options</summary>
+<details>
+<summary markdown='span'>Sample response with guest cart items, concrete products, and product options</summary>
 
 ```json
 {
@@ -615,8 +615,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     
 </details>
 
-<details open>
-<summary>Response sample with guest cart items, sales units, and product measurement units</summary>
+<details>
+<summary markdown='span'>Response sample with guest cart items, sales units, and product measurement units</summary>
 
 ```json
 {
@@ -744,8 +744,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 
-<details open>
-<summary>Response sample with a cart rule and a discount voucher</summary>
+<details>
+<summary markdown='span'>Response sample with a cart rule and a discount voucher</summary>
     
 ```json
 {
@@ -814,8 +814,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 </details>
 
-<details open>
-<summary>Response sample with product labels</summary>
+<details>
+<summary markdown='span'>Response sample with product labels</summary>
     
 ```json
 {
@@ -962,8 +962,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 
-<details open>
-<summary>Response sample with promotional items</summary>
+<details>
+<summary markdown='span'>Response sample with promotional items</summary>
     
 ```json
 {
@@ -1106,8 +1106,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 </details>
 
-<details open>
-<summary>Response sample with product offers (Marketplace only)</summary>
+<details>
+<summary markdown='span'>Response sample with product offers (Marketplace only)</summary>
 
 </b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>
 

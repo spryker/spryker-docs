@@ -39,8 +39,8 @@ GET **/product-offers/*{{offerId}}***
 
 ### Response
 
-<details open>
-<summary>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -60,8 +60,8 @@ GET **/product-offers/*{{offerId}}***
 ```
 </details>
 
-<details open>
-<summary>Response sample with product offer prices, product offer availabilities and merchant information</summary>
+<details>
+<summary markdown='span'>Response sample with product offer prices, product offer availabilities and merchant information</summary>
 
 ```json
 {

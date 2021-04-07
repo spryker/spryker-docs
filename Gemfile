@@ -9,5 +9,6 @@ gem 'github-pages', group: :jekyll_plugins
 gem "webrick", "~> 1.7"
 
 group :jekyll_plugins do
+  gem 'jekyll-commonmark-ghpages'
   gem 'jekyll-algolia', '~> 1.0'
 end

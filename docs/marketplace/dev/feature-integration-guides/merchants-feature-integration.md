@@ -1,6 +1,7 @@
 ---
-title: Marketplace Merchant feature integration
-summary: "This integration guide provides steps on how to integrate the Marketplace Merchant feature"
+title: Merchants feature integration
+last_updated: Mar 23, 2021
+summary: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
 ---
 
 ## Install feature core
@@ -608,7 +609,8 @@ Make sure that, when merchant entities are created or updated through ORM, they 
 |---|---|---|
 | Merchant | merchant:1 |Example of expected data identifier is provided below |
 
-<details><summary>Click to view an example of expected data fragment</summary>
+<details>
+<summary markdown='span'>Click to view an example of the expected data fragment</summary>
 
  ```json
 

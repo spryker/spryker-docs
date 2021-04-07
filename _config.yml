@@ -103,6 +103,3 @@ algolia:
   application_id: 'AO9LOQG3IM'
   index_name: 'docs'
   search_only_api_key: '9ddeee0217d836870fa4b721256e508a'
-  files_to_exclude:
-    - docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.md
-    - docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.md

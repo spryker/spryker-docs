@@ -1,0 +1,16 @@
+<script>
+    const searchClient = algoliasearch(
+        '{{ site.algolia.application_id }}',
+        '{{ site.algolia.search_only_api_key }}'
+    );
+    const indices = [
+        {
+            name: 'user',
+            title: 'Marketplace User'
+        },
+        {
+            name: 'dev',
+            title: 'Marketplace Developer'
+        },
+    ];
+</script>

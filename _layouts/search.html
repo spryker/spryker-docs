@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css"/>
+    </head>
+    <body>
+        {% include topnav.html %}
+        <!-- Page Content -->
+        <div class="container">
+            <div id="main">
+                <!-- Content Row -->
+                <div class="row">
+                    {% assign content_col_size = "col-md-12" %}
+                    <!-- Content Column -->
+                    <div class="{{content_col_size}}" id="tg-sb-content">
+                        <div id="searchbox" class="ais-SearchBox"></div>
+                        <div id="tabs"></div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /#main -->
+        </div>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3"></script>
+        <script src="/js/algolia-search.js"></script>
+        <script type="module">
+            AlgoliaSearch.init(searchClient, indices).render();
+        </script>
+    </body>
+</html>

@@ -4,38 +4,28 @@ entries:
   - title: Marketplace user guides
     product: Marketplace
     version: 202009.0
-    folders:
+    nested:
 
       - title: Intro to Spryker
-        output: web
-        folderitems:
+        nested:
           - title: Marketplace concept
             url: "/docs/marketplace/user/intro-to-spryker/marketplace-concept.html"
-            output: web
 
           - title: Item 3
             url: "#"
-            output: web
 
       - title: Features
-        output: web
-        folderitems:
+        nested:
           - title: Merchants feature overview
             url: "/docs/marketplace/user/features/merchants-feature-overview.html"
-            output: web
 
           - title: Merchant users feature overview
             url: "/docs/marketplace/user/features/merchant-users-feature-overview.html"
-            output: web
 
           - title: Product offer feature overview
             url: "/docs/marketplace/user/features/product-offer-feature-overview.html"
-            output: web
 
       - title: Section 3
-        output: web
-
-        folderitems:
+        nested:
           - title: Item 5
             url: "#"
-            output: web

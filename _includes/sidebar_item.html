@@ -1,0 +1,18 @@
+{% if include.item.external_url %}
+<li>
+    <a title="{{include.item.title}}" href="{{include.item.external_url}}" target="_blank" rel="noopener">{{include.item.title}}</a>
+{% elsif page.url == include.item.url %}
+<li class="active">
+    <a title="{{include.item.title}}" href="{{include.item.url}}">{{include.item.title}}</a>
+{% else %}
+<li>
+    <a title="{{include.item.title}}" href="{{include.item.url}}">{{include.item.title}}</a>
+{% endif %}
+{% if include.item.nested %}
+    <ul>
+    {% for nested_item in include.item.nested %}
+        {% include sidebar_item.html item=nested_item %}
+    {% endfor %}
+    </ul>
+{% endif %}
+</li>

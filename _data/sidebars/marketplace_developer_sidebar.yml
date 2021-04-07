@@ -66,6 +66,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
             output: web
 
+          - title: Marketplace return management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
+            output: web
+
             subfolders:
 
             - title: Glue API

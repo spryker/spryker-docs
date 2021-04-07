@@ -1,28 +1,14 @@
-<!-- This document is an integration guide template.
-All the described steps are optional. If you want to add a step that's not described in the template, contact Karoly Gerner. -->
-
-
-
-
-
-# Marketplace return management feature integration
+---
+title: Marketplace return management feature integration
+last_updated: Apr 7, 2021
+summary: This document describes the process how to integrate the Marketplace return management feature into a Spryker project.
+---
 
 This document describes how to integrate the [Marketplace return management]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
 
 ## Install feature core
 
 Follow the steps below to install the Marketplace return management feature core.
-
-### Prerequisites
-<!-- List the features a project must have before they can integrate the current feature. -->
-
-To start feature integration, integrate the required features:
-<!--See feature mapping at [Features](https://release.spryker.com/features). -->
-
-| NAME | VERSION |
-| --------- | ------ |
-| Return Management | 202009.0 | 
-| Marketplace Order Management	| dev-master |
 
 ### 1) Install required modules using Сomposer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
@@ -31,10 +17,12 @@ Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-return-management --update-with-dependencies
-composer require spryker/sales-return ^1.1.0 --update-with-dependencies ##<!-- Have to be deleted after Return Management feature will be released with a new version-->
+composer require spryker/sales-return ^1.1.0 --update-with-dependencies 
 ```
+<!-- Have to be deleted after Return Management feature will be released with a new version-->
+---
 
-#### Verification
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following modules have been installed:
@@ -43,6 +31,9 @@ Make sure that the following modules have been installed:
 | -------- | ------------------- |
 | MerchantSalesReturn | spryker/merchant-sales-return |
 
+---
+
+
 ### Set up the configuration
 <!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
 
@@ -50,15 +41,17 @@ Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | ------------- | ------------ | ------------ |
-| MainMerchantStateMachine | Adjust MainMerchantStateMachine to have the MarketplaceReturn and MarketplaceRefund subprocesses. | config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml |
-| MerchantDefaultStateMachine | Adjust MerchantDefaultStateMachine to have the MarketplaceReturn and MarketplaceRefund subprocesses. | config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml |
-| MarketplaceRefund  | Add configuration for MarketplaceRefund subproces in the MarketplaceSubproces for the Merchant StateMachine configuration. | config/Zed/StateMachine/Merchant/MarketplaceSubprocess/MarketplaceRefund01.xml |
-| MarketplaceReturn  | Add configuration for MarketplaceReturn subproces in the MarketplaceSubproces for the Merchant StateMachineconfiguration. | config/Zed/StateMachine/Merchant/MarketplaceSubprocess/MarketplaceReturn01.xml |
-| Oms  | Adjust oms configuration for MarketplacePayment to have the MarketplaceReturn and MarketplaceRefund subprocesses. | config/Zed/oms/MarketplacePayment01.xml |
-| Oms  | Add configuration for MarketplaceRefund subproces in the MarketplaceSubproces for the oms configuration. | config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml |
-| Oms  | Add configuration for MarketplaceReturn subproces in the MarketplaceSubproces for the oms configuration. | config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml |
+| MainMerchantStateMachine | Adjust `MainMerchantStateMachine` to have the `MarketplaceReturn` and `MarketplaceRefund` subprocesses. | config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml |
+| MerchantDefaultStateMachine | Adjust `MerchantDefaultStateMachine` to have the `MarketplaceReturn` and `MarketplaceRefund` subprocesses. | config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml |
+| MarketplaceRefund  | Add configuration for `MarketplaceRefund` subprocess in the `MarketplaceSubprocess` for the Merchant StateMachine configuration. | config/Zed/StateMachine/Merchant/MarketplaceSubprocess/MarketplaceRefund01.xml |
+| MarketplaceReturn  | Add configuration for the `MarketplaceReturn` subprocess in the `MarketplaceSubprocess` for the Merchant StateMachine configuration. | config/Zed/StateMachine/Merchant/MarketplaceSubprocess/MarketplaceReturn01.xml |
+| Oms  | Adjust OMS configuration for the `MarketplacePayment` to have the `MarketplaceReturn` and `MarketplaceRefund` subprocesses. | config/Zed/oms/MarketplacePayment01.xml |
+| Oms  | Add configuration for the `MarketplaceRefund` subprocess in the `MarketplaceSubprocess` for the OMS configuration. | config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml |
+| Oms  | Add configuration for `MarketplaceReturn` subprocess in the `MarketplaceSubprocess` for the OMS configuration. | config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml |
 
-###### config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml
+<details>
+<summary markdown='span'>config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml</summary>
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -79,7 +72,11 @@ Add the following configuration:
 </statemachine>
 ```
 
-###### config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml
+</details> 
+
+<details>
+<summary markdown='span'>config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml</summary>
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -99,7 +96,12 @@ Add the following configuration:
 
 </statemachine>
 ```
-###### config/Zed/StateMachine/Merchant/MarketplaceSubprocess/MarketplaceRefund01.xml
+
+</details>
+
+<details>
+<summary markdown='span'>config/Zed/StateMachine/Merchant/MarketplaceSubprocess/MarketplaceRefund01.xml</summary>
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -133,7 +135,12 @@ Add the following configuration:
 
 </statemachine>
 ```
-###### config/Zed/StateMachine/Merchant/MarketplaceSubprocess/MarketplaceReturn01.xm
+
+</details> 
+
+<details>
+<summary markdown='span'>config/Zed/StateMachine/Merchant/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -198,7 +205,12 @@ Add the following configuration:
 
 </statemachine>
 ```
-###### config/Zed/oms/MarketplacePayment01.xml
+
+</details> 
+
+<details>
+<summary markdown='span'>config/Zed/oms/MarketplacePayment01.xml</summary>
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -218,7 +230,12 @@ Add the following configuration:
 
 </statemachine>
 ```
-###### config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml
+
+</details> 
+
+<details>
+<summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml</summary>
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -252,7 +269,12 @@ Add the following configuration:
 
 </statemachine>
 ```
-###### config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml
+
+</details> 
+
+<details>
+<summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -318,6 +340,8 @@ Add the following configuration:
 </statemachine>
 ```
 
+</details> 
+
 ### Set up database schema and transfer objects
 <!--Provide the following with a description before each item:
 * Code snippets with DB schema changes.
@@ -332,7 +356,9 @@ console propel:install
 console transfer:generate
 ```
 
-#### Verification
+---
+
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following changes have been applied by checking your database:
@@ -356,6 +382,7 @@ Make sure that the following changes have been triggered in transfer objects:
 | MerchantOrderCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderCriteria |
 | ReturnCreateRequest | class | created | src/Generated/Shared/Transfer/ReturnCreateRequest |
 
+---
 
 ### Add translations
 <!--Provide glossary keys for `DE` and `EN` of your feature as a code snippet. When a glossary key is dynamically generated, describe how to construct the key.-->
@@ -363,8 +390,10 @@ Make sure that the following changes have been triggered in transfer objects:
 Add translations as follows:
 
 1. Append glossary for the feature:
-   
-###### data/import/common/common/glossary.csv
+
+<details>
+<summary markdown='span'>data/import/common/common/glossary.csv</summary>
+
 ``` 
 merchant_sales_return.message.items_from_different_merchant_detected,"There are products from different merchants in your order. You can only return products from one merchant at a time.",en_US
 merchant_sales_return.message.items_from_different_merchant_detected,"Diese Bestellung enthält Artikel von verschiedenen Händlern. Sie können nur Artikel von einem Händler zur selben Zeit zurückschicken.",de_DE
@@ -372,17 +401,23 @@ merchant_sales_return_widget.create_form.different_merchants_info,There are prod
 merchant_sales_return_widget.create_form.different_merchants_info,Diese Bestellung enthält Artikel von verschiedenen Händlern. Sie können nur Artikel von einem Händler zur selben Zeit zurückschicken.,de_DE
 ```
 
-2. Import data:
+</details>
+
+
+1. Import data:
 
 ```bash
 console data:import glossary
 ```
 
-#### Verification
+---
+
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the configured data has been added to the `spy_glossary` table.
 
+---
 
 ### Set up behavior
 <!--This is a comment, it will not be included -->
@@ -390,12 +425,14 @@ Enable the following behaviors by adding and registering the plugins:
 
 | Plugin  | Specification | Prerequisites | Namespace |
 | ------------ | ----------- | ----- | ------------ |
-| MerchantReturnPreCreatePlugin | Provides merchant order reference for return transfer | none |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| MerchantReturnCreateRequestValidatorPlugin | Checks if each item in the itemTransfers has the same merchant reference. | none |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| MerchantReturnPreCreatePlugin | Provides merchant order reference for the return transfer. | none |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| MerchantReturnCreateRequestValidatorPlugin | Checks if each item in the `itemTransfers` has the same merchant reference. | none |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | MarketplaceRefundCommandPlugin | Triggers 'refund' event on a marketplace order item. | none |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | MarketplaceStartReturnCommandPlugin | Triggers 'return' event on a marketplace order item. | none |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 
-##### src/Pyz/Zed/SalesReturn/SalesReturnDependencyProvider.php
+<details>
+<summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -423,7 +460,11 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 }
 ```
 
-##### src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/MarketplaceStartRefundCommandPlugin.php
+</details> 
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/MarketplaceStartRefundCommandPlugin.php</summary>
+
 ```php
 <?php
 
@@ -476,7 +517,12 @@ class MarketplaceRefundCommandPlugin extends AbstractPlugin implements CommandPl
     }
 }
 ```
-###### src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/MarketplaceStartReturnCommandPlugin.php
+
+</details> 
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/MarketplaceStartReturnCommandPlugin.php</summary>
+
 ```php
 <?php
 
@@ -529,7 +575,12 @@ class MarketplaceStartReturnCommandPlugin extends AbstractPlugin implements Comm
     }
 }
 ```
-###### src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php
+
+</details> 
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -550,9 +601,14 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
 }
 ```
 
-Add config for the SalesReturn:
+</details> 
 
-###### src/Pyz/Zed/SalesReturn/SalesReturnConfig.php
+
+Add config for the `SalesReturn`:
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnConfig.php</summary>
+
 ```php
 <?php
 
@@ -570,9 +626,12 @@ class SalesReturnConfig extends SprykerSalesReturnConfig
 }
 ```
 
+</details> 
+
+
 ## Install feature front end
 
-Follow the steps below to install the {Feature Name} feature front end.
+Follow the steps below to install the Marketplace return management feature front end.
 
 ### Prerequisites
 <!--Describe the features the project must have before the current feature can be integrated.-->
@@ -593,7 +652,9 @@ Install the required modules:
 composer require spryker-shop/merchant-sales-return-widget ^0.1.0 --update-with-dependencies
 ```
 
-#### Verification
+---
+
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following modules have been installed:
@@ -601,6 +662,8 @@ Make sure that the following modules have been installed:
 | MODULE  | EXPECTED DIRECTORY <!--for public Demo Shops--> |
 | -------- | ------------------- |
 | MerchantSalesReturnWidget | spryker-shop/merchant-sales-return-widget |
+
+---
 
 ### Set up widgets
 <!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->
@@ -611,8 +674,8 @@ Set up widgets as follows:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE   |
 | --------------- | -------------- | ------ | -------------- |
-| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the MerchantSalesReturnCreateFormWidget | none |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
-| MerchantSalesReturnCreateFormWidget |  Provides "Create Return" only with the items of one merchant order at a time and only for returnable items. | none |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
+| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget` | none |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
+| MerchantSalesReturnCreateFormWidget |  Provides "Create Return" only with the items of one merchant order at a time and only for the returnable items. | none |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
 
 
 ```php
@@ -647,7 +710,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-#### Verification
+---
+
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
@@ -656,19 +721,10 @@ Make sure that the following widgets have been registered by adding the respecti
 | ---------------- | ----------------- |
 | MerchantSalesReturnCreateFormWidget | Go through the  Return flow in the same way as now by clicking the "Create Return" button on the top of the Order Details page. Go on the "Create Return Page", and create a return only with the items of one merchant order at a time and only for returnable items.  |
 
-2. Enable Javascript and CSS changes:
+---
+
+1. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
 ```
-
-#### Verification
-<!--Describe how a developer can check they have completed the step correctly.-->
-
-
-## Related features
-Integrate the following related features:
-
-| Feature | Required for the current feature | Integration guide |
-| --- | --- | --- |
-  | {Feature Name} | {✓  |    } | [{Integration guide name}](link to the integration guide) |

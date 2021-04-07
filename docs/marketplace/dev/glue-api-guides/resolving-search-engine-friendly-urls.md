@@ -49,8 +49,8 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 ### Response
 
-<details open>
-<summary>Response sample of a product URL</summary>
+<details>
+<summary markdown='span'>Response sample of a product URL</summary>
     
 ```json
 {
@@ -74,8 +74,8 @@ To resolve a SEF URL into a Glue API URL, send the request:
 ```    
 </details>
 
-<details open>
-<summary>Response sample of a category node URL</summary>
+<details>
+<summary markdown='span'>Response sample of a category node URL</summary>
     
 ```json
 {
@@ -99,8 +99,8 @@ To resolve a SEF URL into a Glue API URL, send the request:
 ```
 </details>
 
-<details open>
-<summary>Response sample of a CMS page URL</summary>
+<details>
+<summary markdown='span'>Response sample of a CMS page URL</summary>
 
 ```json
 {
@@ -124,8 +124,8 @@ To resolve a SEF URL into a Glue API URL, send the request:
 ```
 </details>
 
-<details open>
-<summary>Response sample of a merchant page URL (Marketplace only)</summary>
+<details>
+<summary markdown='span'>Response sample of a merchant page URL (Marketplace only)</summary>
 
 This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.
 

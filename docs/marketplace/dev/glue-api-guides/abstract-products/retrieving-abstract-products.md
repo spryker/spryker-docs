@@ -25,7 +25,7 @@ To retrieve general information about an abstract product, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{{abstract_product_sku}}*** | SKU of an abstract product to get information for. |
+| ***{% raw %}{{abstract_product_sku}}{% endraw %}*** | SKU of an abstract product to get information for. |
 
 ### Request
 
@@ -57,7 +57,7 @@ To retrieve general information about an abstract product, send the request:
 
 ### Response
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
     
 ```json
@@ -120,7 +120,7 @@ To retrieve general information about an abstract product, send the request:
 
  </details>
  
-<details open>
+<details>
 <summary markdown='span'>Response sample with image sets</summary>
     
 ```json
@@ -216,7 +216,7 @@ To retrieve general information about an abstract product, send the request:
  </details>
  
  
-<details open>
+<details>
 <summary markdown='span'>Response sample with product availability</summary>
     
 ```json
@@ -302,7 +302,7 @@ To retrieve general information about an abstract product, send the request:
 
  </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with product prices</summary>
     
 ```json
@@ -409,7 +409,7 @@ To retrieve general information about an abstract product, send the request:
 
  </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with category nodes</summary>
     
 ```json
@@ -591,7 +591,7 @@ To retrieve general information about an abstract product, send the request:
  </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with tax rates</summary>
     
 ```json
@@ -754,7 +754,7 @@ To retrieve general information about an abstract product, send the request:
  </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with product labels</summary>
     
 ```json
@@ -813,7 +813,7 @@ To retrieve general information about an abstract product, send the request:
  </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with concrete products</summary>
     
 ```json
@@ -927,7 +927,7 @@ To retrieve general information about an abstract product, send the request:
  </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with product options</summary>
     
 ```json
@@ -1036,7 +1036,7 @@ To retrieve general information about an abstract product, send the request:
 
  
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with product reviews</summary>
     
 ```json
@@ -1157,7 +1157,7 @@ To retrieve general information about an abstract product, send the request:
 ```
  </details>
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with merchant product</summary>
 
 ```json
@@ -1221,7 +1221,7 @@ To retrieve general information about an abstract product, send the request:
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>Response sample with merchant product including the information about the merchant</summary>
 
 ```json

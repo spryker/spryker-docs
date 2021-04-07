@@ -56,8 +56,8 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 The endpoint responds with an array of orders placed by the authenticated customer. In response, each order will have a unique identifier. It is specified in the *id* attribute. You can use the ID to retrieve detailed order information. Also, *self* links will be provided to access the order individually using the REST API.
 
-<details open>
-<summary>Response sample - all orders</summary>
+<details>
+<summary markdown='span'>Response sample - all orders</summary>
 
 ```json
 {
@@ -203,8 +203,8 @@ The endpoint responds with an array of orders placed by the authenticated custom
 ```
 </details>
 
-<details open>
-<summary>Response sample with information on merchants</summary>
+<details>
+<summary markdown='span'>Response sample with information on merchants</summary>
 
 This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.
 
@@ -565,8 +565,8 @@ GET **/orders/*****{{order_id}}***
 
 ### Response
 
-<details open>
-<summary>Response sample - a specific order</summary>
+<details>
+<summary markdown='span'>Response sample - a specific order</summary>
 
 ```json
 {
@@ -817,8 +817,8 @@ GET **/orders/*****{{order_id}}***
 ```
 </details>
 
-<details open>
-<summary>Response sample with information on merchants</summary>
+<details>
+<summary markdown='span'>Response sample with information on merchants</summary>
 
 ```json
 {

@@ -58,7 +58,7 @@ To retrieve general information about a concrete product, send the request:
 ### Response
 
 <details>
-    <summary>Response sample</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -106,7 +106,7 @@ To retrieve general information about a concrete product, send the request:
  </details>
 
 <details>
-    <summary>Response sample with sales units and product measurement units</summary>
+<summary markdown='span'>Response sample with sales units and product measurement units</summary>
 
 ```json
 {
@@ -199,7 +199,7 @@ To retrieve general information about a concrete product, send the request:
  </details>
  
  <details>
-    <summary>Response sample with product labels</summary>
+<summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {
@@ -246,8 +246,8 @@ To retrieve general information about a concrete product, send the request:
 
  </details>
  
- <details open>
-    <summary>Response sample with product image sets</summary>
+ <details>
+<summary markdown='span'>Response sample with product image sets</summary>
     
 ```json
 {
@@ -326,8 +326,8 @@ To retrieve general information about a concrete product, send the request:
     
 </details>
 
- <details open>
-    <summary>Response sample with product availability</summary>
+ <details>
+<summary markdown='span'>Response sample with product availability</summary>
     
 ```json
 {
@@ -398,8 +398,8 @@ To retrieve general information about a concrete product, send the request:
     
 </details>
 
- <details open>
-    <summary>Response sample with concrete product prices</summary>
+ <details>
+<summary markdown='span'>Response sample with concrete product prices</summary>
     
 ```json
 {
@@ -490,8 +490,8 @@ To retrieve general information about a concrete product, send the request:
     
 </details>
 
- <details open>
-    <summary>Response sample with product options</summary>
+ <details>
+<summary markdown='span'>Response sample with product options</summary>
     
 ```json
 {
@@ -582,8 +582,8 @@ To retrieve general information about a concrete product, send the request:
     
 </details>
 
- <details open>
-    <summary>Response sample with reviews</summary>
+ <details>
+<summary markdown='span'>Response sample with reviews</summary>
     
 ```json
 {
@@ -688,8 +688,8 @@ To retrieve general information about a concrete product, send the request:
 ```    
 </details>
 
-<details open>
-<summary>Response sample with product offers</summary>
+<details>
+<summary markdown='span'>Response sample with product offers</summary>
 
 ```json
 {
@@ -759,8 +759,8 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details open>
-<summary>Response sample with details on abstract product and the merchant who sells the concrete produuct</summary>
+<details>
+<summary markdown='span'>Response sample with details on abstract product and the merchant who sells the concrete produuct</summary>
 
 ```json
 {
@@ -899,16 +899,16 @@ To retrieve general information about a concrete product, send the request:
 
 For other attributes of the included resources, see:
 
-*     [Retrieve sales units of a concrete product](https://documentation.spryker.com/docs/retrieving-sales-units#sales-units-response-attributes)
-*     [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units#measurement-units-response-attributes)
-*     [Retrieve image sets of a concrete product](https://documentation.spryker.com/docs/retrieving-image-sets-of-concrete-products#concrete-image-sets-response-attributes)
-*     [Retrieve availability of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-availability#concrete-product-availability-response-attributes)
-*     [Retrieve prices of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-prices#concrete-product-prices-response-attributes)
-*     [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
-*     [Retrieve product ratings and reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
-*     [Retrieve product offers](https://documentation.spryker.com/marketplace/docs/retrieving-product-offers#product-offers-response-attributes)
-*     [Retrieve abstract products](https://documentation.spryker.com/marketplace/docs/retrieving-abstract-products)
-*     [Retrieve merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)
+* [Retrieve sales units of a concrete product](https://documentation.spryker.com/docs/retrieving-sales-units#sales-units-response-attributes)
+* [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units#measurement-units-response-attributes)
+* [Retrieve image sets of a concrete product](https://documentation.spryker.com/docs/retrieving-image-sets-of-concrete-products#concrete-image-sets-response-attributes)
+* [Retrieve availability of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-availability#concrete-product-availability-response-attributes)
+* [Retrieve prices of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-prices#concrete-product-prices-response-attributes)
+* [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
+* [Retrieve product ratings and reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
+* [Retrieve product offers](https://documentation.spryker.com/marketplace/docs/retrieving-product-offers#product-offers-response-attributes)
+* [Retrieve abstract products](https://documentation.spryker.com/marketplace/docs/retrieving-abstract-products)
+* [Retrieve merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)
 
 
 ## Possible errors

@@ -62,8 +62,8 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 ### Response
 
 
-<details open>
-    <summary>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
     
 ```json
 "data": 
@@ -165,8 +165,8 @@ To retrieve all carts, send the request:
 
 ### Response 
 
-<details open>
-<summary>Response sample - no carts</summary>
+<details>
+<summary markdown='span'>Response sample - no carts</summary>
 
 ```json
 {
@@ -178,8 +178,8 @@ To retrieve all carts, send the request:
 ```    
 </details>
 
-<details open>
-<summary>Response sample: multiple carts</summary>
+<details>
+<summary markdown='span'>Response sample: multiple carts</summary>
  
 ```json
 {
@@ -245,8 +245,8 @@ To retrieve all carts, send the request:
 
 
 
-<details open>
-<summary>Response sample with items</summary>
+<details>
+<summary markdown='span'>Response sample with items</summary>
 
 ```json
 {
@@ -539,8 +539,8 @@ To retrieve all carts, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample with cart permission groups</summary>
+<details>
+<summary markdown='span'>Response sample with cart permission groups</summary>
 
 ```json
 {
@@ -676,8 +676,8 @@ To retrieve all carts, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample with shared carts</summary>
+<details>
+<summary markdown='span'>Response sample with shared carts</summary>
 
 ```json
 {
@@ -812,8 +812,8 @@ To retrieve all carts, send the request:
 ```    
 </details>
 
-<details open>
-<summary>Response sample with shared carts and company users they are shared with</summary>
+<details>
+<summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
 
 ```json
 {
@@ -917,8 +917,8 @@ To retrieve all carts, send the request:
 
 </details>
 
-<details open>
-<summary>Response sample with cart rules</summary>
+<details>
+<summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
 {
@@ -1048,8 +1048,8 @@ To retrieve all carts, send the request:
 ```    
 </details>
 
-<details open>
-<summary>Response sample with vouchers</summary>
+<details>
+<summary markdown='span'>Response sample with vouchers</summary>
 
 ```json
 {
@@ -1119,8 +1119,8 @@ To retrieve all carts, send the request:
 
 </details>
 
-<details open>
-<summary>Response sample with a promotional item</summary>
+<details>
+<summary markdown='span'>Response sample with a promotional item</summary>
 
 ```json
 {
@@ -1185,8 +1185,8 @@ To retrieve all carts, send the request:
 ```    
 </details>
 
-<details open>
-<summary>Response sample with gift cards applied</summary>
+<details>
+<summary markdown='span'>Response sample with gift cards applied</summary>
 
 ```json
 {
@@ -1255,8 +1255,8 @@ To retrieve all carts, send the request:
 ```    
 </details>
 
-<details open>
-<summary>Response sample with items, concrete products, and product options</summary>
+<details>
+<summary markdown='span'>Response sample with items, concrete products, and product options</summary>
 
 ```json
 {
@@ -1508,8 +1508,8 @@ To retrieve all carts, send the request:
 ```    
 </details>
 
-<details open>
-<summary>Response sample with product labels</summary>
+<details>
+<summary markdown='span'>Response sample with product labels</summary>
 
 ```json
 {
@@ -1668,8 +1668,8 @@ To retrieve all carts, send the request:
 
 </details>
 
-<details open>
-<summary>Response sample with product offers (Marketplace only)</summary>
+<details>
+<summary markdown='span'>Response sample with product offers (Marketplace only)</summary>
 
 This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
 
@@ -2030,8 +2030,8 @@ To retrieve a particular cart, send the request:
 
 ### Response
 
-<details open>
-<summary>Response sample</summary>
+<details>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -2067,8 +2067,8 @@ To retrieve a particular cart, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample with items</summary>
+<details>
+<summary markdown='span'>Response sample with items</summary>
 
 ```json
 {
@@ -2195,8 +2195,8 @@ To retrieve a particular cart, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample with cart permission groups</summary>
+<details>
+<summary markdown='span'>Response sample with cart permission groups</summary>
 
 ```json
 {
@@ -2257,8 +2257,8 @@ To retrieve a particular cart, send the request:
 
 
 
-<details open>
-<summary>Sample response with details on shared carts</summary>
+<details>
+<summary markdown='span'>Sample response with details on shared carts</summary>
 
 ```json
 {
@@ -2317,8 +2317,8 @@ To retrieve a particular cart, send the request:
 ```    
 </details>
 
-<details open>
-<summary>Response sample with shared carts and company users they are shared with</summary>
+<details>
+<summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
 
 ```json
 {
@@ -2395,8 +2395,8 @@ To retrieve a particular cart, send the request:
 </summary>
 </details>
 
-<details open>
-<summary>Response sample with cart rules</summary>
+<details>
+<summary markdown='span'>Response sample with cart rules</summary>
 
 ```json
 {
@@ -2463,8 +2463,8 @@ To retrieve a particular cart, send the request:
 
 
 
-<details open>
-<summary>Response sample with a promotional item</summary>
+<details>
+<summary markdown='span'>Response sample with a promotional item</summary>
 
 ```json
 {
@@ -2524,8 +2524,8 @@ To retrieve a particular cart, send the request:
 </details>
 
 
-<details open>
-<summary>Response sample with with details on gift cards</summary>
+<details>
+<summary markdown='span'>Response sample with with details on gift cards</summary>
 
 ```json
 {
@@ -2589,8 +2589,8 @@ To retrieve a particular cart, send the request:
 ```    
 </details>
 
-<details open>
-<summary>Response sample with items, respective concrete products, and their product options</summary>
+<details>
+<summary markdown='span'>Response sample with items, respective concrete products, and their product options</summary>
 
 ```json
 {
@@ -2837,8 +2837,8 @@ To retrieve a particular cart, send the request:
 ```    
 </details>
 
-<details open>
-    <summary>Response sample with vouchers</summary>
+<details>
+<summary markdown='span'>Response sample with vouchers</summary>
     
 ```json
 {
@@ -2908,8 +2908,8 @@ To retrieve a particular cart, send the request:
 
 </details>
 
-<details open>
-    <summary>Response sample with product labels</summary>
+<details>
+<summary markdown='span'>Response sample with product labels</summary>
     
 ```json
 {
@@ -3063,8 +3063,8 @@ To retrieve a particular cart, send the request:
 
 </details>
 
-<details open>
-<summary>Response sample with details on product offers and their prices and availability (Marketplace only)</summary>
+<details>
+<summary markdown='span'>Response sample with details on product offers and their prices and availability (Marketplace only)</summary>
 
 This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
 
@@ -3286,8 +3286,8 @@ This option is available only in case you have upgraded your shop to Marketplace
 ```    
 </details>
 
-<details open>
-<summary>Response sample with merchant products (Marketplace only)</summary>
+<details>
+<summary markdown='span'>Response sample with merchant products (Marketplace only)</summary>
 
 This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
 

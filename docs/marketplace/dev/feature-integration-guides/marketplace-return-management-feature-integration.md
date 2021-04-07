@@ -30,7 +30,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-product-offer --update-with-dependencies 
+composer require spryker-feature/marketplace-return-management --update-with-dependencies
 composer require spryker/sales-return ^1.1.0 --update-with-dependencies ##<!-- Have to be deleted after Return Management feature will be released with a new version-->
 ```
 

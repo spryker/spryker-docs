@@ -33,11 +33,10 @@ To retrieve general information about an abstract product, send the request:
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | abstract-product-prices, concrete-products, product-labels, abstract-product-image-sets, abstract-product-availabilities, category-nodes, product-tax-sets, product-options, product-reviews, merchants |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
-:::(Warning) (Performance)
+
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
 * If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
-:::
 
 
 | Request | Usage |

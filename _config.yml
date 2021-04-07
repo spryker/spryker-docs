@@ -35,15 +35,19 @@ exclude:
 highlighter: rouge
 # library used for syntax highlighting
 
-markdown: kramdown
-kramdown:
-  input: GFM
-  auto_ids: true
-  hard_wrap: false
-  syntax_highlighter: rouge
-  parse_block_html: true
-  parse_span_html: true
+#markdown: kramdown
+#kramdown:
+#  input: GFM
+#  auto_ids: true
+#  hard_wrap: false
+#  syntax_highlighter: rouge
+#  parse_block_html: true
+#  parse_span_html: true
 
+markdown: CommonMarkGhPages
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 

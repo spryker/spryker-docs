@@ -133,7 +133,7 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
                 output: web
 
-              - title: Marketplace return management feature integration
+              - title: Glue API - Marketplace return management feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
                 output: web
 

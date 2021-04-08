@@ -1,14 +1,14 @@
 ---
-title: Marketplace return management feature integration
+title: Glue API - Marketplace return management feature integration
 last_updated: Apr 8, 2021
-summary: This document describes the process how to integrate the Marketplace return management feature into a Spryker project.
+summary: This document describes the process how to integrate the Marketplace return management API feature into a Spryker project.
 ---
 
-This document describes how to integrate the [Marketplace return management]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
+This document describes how to integrate the [Marketplace return management API]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Return Management feature core.
+Follow the steps below to install the Marketplace Return Management API feature core.
 
 ### Prerequisites
 <!-- List the features a project must have before they can integrate the current feature. -->
@@ -18,10 +18,10 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION |
 | --------- | ------ |
-| Merchant | 202009.0  | 
+| Merchant | 202009.0  |
 | Marketplace Return Management | dev-master |
 
-### 1) Install required modules using Сomposer
+### 1) Install the required modules using Сomposer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
@@ -45,7 +45,7 @@ Make sure that the following modules have been installed:
 ---
 
 
-### Set up transfer objects
+### 2) Set up transfer objects
 <!--If the feature has database definition changes, merge the steps as described in [Set up database schema and transfer objects](#set-up-database-schema-and-transfer-objects). Provide code snippet with transfer schema changes, describing the changes before each code snippet. Provide the console commands to apply the changes in project and core.-->
 
 
@@ -71,7 +71,7 @@ Ensure the following transfers have been created:
 | ReturnResponse.messages | attribute | created | src/Generated/Shared/Transfer/ReturnResponseTransfer |
 ---
 
-### Set up behavior
+### 3) Set up behavior
 <!--This is a comment, it will not be included -->
 Enable the following behaviors by registering the plugins:
 
@@ -139,11 +139,11 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 
 Make sure that the `MerchantReturnCollectionExpanderPlugin` and `MerchantByMerchantReferenceResourceRelationshipPlugin` 
 plugins are set up by :
-1. sending the request GET `http://glue.mysprykershop.com/returns/{returnId}include=merchants`
+1. sending the request `GET http://glue.mysprykershop.com/returns/{returnId}include=merchants`
 
 Verify that return data include `merchantReferance` with the attributes Merchant Name and Mercahnt URL and `merchantReferance` resource is available and includes these attributes.
 
-2. sending the request GET `http://glue.mysprykershop.com/returns`
+2. sending the request `GET http://glue.mysprykershop.com/returns`
 
 Verify that returns data includes the `mercahntReference` and `productOfferReferance`.
 

@@ -10,7 +10,7 @@ This document describes how to integrate the [Marketplace return management]({ht
 
 Follow the steps below to install the Marketplace return management feature core.
 
-### 1) Install required modules using Сomposer
+### 1) Install required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
@@ -34,7 +34,7 @@ Make sure that the following modules have been installed:
 ---
 
 
-### Set up the configuration
+### 2) Set up the configuration
 <!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
 
 Add the following configuration:
@@ -342,7 +342,7 @@ Add the following configuration:
 
 </details> 
 
-### Set up database schema and transfer objects
+### 3) Set up database schema and transfer objects
 <!--Provide the following with a description before each item:
 * Code snippets with DB schema changes.
 * Code snippets with transfer schema changes.
@@ -384,7 +384,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ---
 
-### Add translations
+### 4) Add translations
 <!--Provide glossary keys for `DE` and `EN` of your feature as a code snippet. When a glossary key is dynamically generated, describe how to construct the key.-->
 
 Add translations as follows:
@@ -404,7 +404,7 @@ merchant_sales_return_widget.create_form.different_merchants_info,Diese Bestellu
 </details>
 
 
-1. Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -419,7 +419,7 @@ Make sure that the configured data has been added to the `spy_glossary` table.
 
 ---
 
-### Set up behavior
+### 5) Set up behavior
 <!--This is a comment, it will not be included -->
 Enable the following behaviors by adding and registering the plugins:
 
@@ -633,16 +633,6 @@ class SalesReturnConfig extends SprykerSalesReturnConfig
 
 Follow the steps below to install the Marketplace return management feature front end.
 
-### Prerequisites
-<!--Describe the features the project must have before the current feature can be integrated.-->
-
-To start feature integration, integrate the required features:
-<!--See feature mapping at [Features](https://release.spryker.com/features).-->
-
-| NAME | VERSION |
-| --------- | ------ |
-| {Feature Name} | {feature version} |
-
 ### 1) Install required modules using Сomposer
 <!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
@@ -665,7 +655,7 @@ Make sure that the following modules have been installed:
 
 ---
 
-### Set up widgets
+### 2) Set up widgets
 <!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->
 
 Set up widgets as follows:
@@ -719,7 +709,7 @@ Make sure that the following widgets have been registered by adding the respecti
 
 | WIDGET | VERIFICATION |
 | ---------------- | ----------------- |
-| MerchantSalesReturnCreateFormWidget | Go through the  Return flow in the same way as now by clicking the "Create Return" button on the top of the Order Details page. Go on the "Create Return Page", and create a return only with the items of one merchant order at a time and only for returnable items.  |
+| MerchantSalesReturnCreateFormWidget | Go through the  Return flow in the same way as now by clicking the **Create Return** button on the top of the *Order Details* page. Go on the *Create Return* page, and create a return only with the items of one merchant order at a time and only for returnable items. |
 
 ---
 

@@ -74,11 +74,15 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
             output: web
 
+          - title: Merchant Portal feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-integration-guide.html
+            output: web
+
           - title: Merchant Portal - Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
             output: web
 
-          - title: Merchant Portal - Markteplace Product feature integration
+          - title: Merchant Portal - Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
             output: web
 
@@ -133,7 +137,7 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
                 output: web
 
-              - title: Glue API - Marketplace Product Offer + Cart feature integrationn
+              - title: Glue API - Marketplace Product Offer + Cart feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
                 output: web
 

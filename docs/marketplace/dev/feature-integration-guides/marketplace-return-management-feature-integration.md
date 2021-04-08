@@ -1,7 +1,7 @@
 ---
-title: Marketplace return management feature integration
+title: Marketplace Return Management feature integration
 last_updated: Apr 7, 2021
-summary: This document describes the process how to integrate the Marketplace return management feature into a Spryker project.
+summary: This document describes the process how to integrate the Marketplace Return Management feature into a Spryker project.
 ---
 
 This document describes how to integrate the [Marketplace return management]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
@@ -17,7 +17,7 @@ Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-return-management --update-with-dependencies
-composer require spryker/sales-return ^1.1.0 --update-with-dependencies 
+composer require spryker/sales-return ^1.1.0 --update-with-dependencies
 ```
 <!-- Have to be deleted after Return Management feature will be released with a new version-->
 ---
@@ -72,7 +72,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml</summary>
@@ -136,7 +136,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
@@ -206,7 +206,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/oms/MarketplacePayment01.xml</summary>
@@ -231,7 +231,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml</summary>
@@ -270,7 +270,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
@@ -340,7 +340,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 ### 3) Set up database schema and transfer objects
 <!--Provide the following with a description before each item:
@@ -394,7 +394,7 @@ Add translations as follows:
 <details>
 <summary markdown='span'>data/import/common/common/glossary.csv</summary>
 
-``` 
+```
 merchant_sales_return.message.items_from_different_merchant_detected,"There are products from different merchants in your order. You can only return products from one merchant at a time.",en_US
 merchant_sales_return.message.items_from_different_merchant_detected,"Diese Bestellung enthält Artikel von verschiedenen Händlern. Sie können nur Artikel von einem Händler zur selben Zeit zurückschicken.",de_DE
 merchant_sales_return_widget.create_form.different_merchants_info,There are products from different merchants in your order. You can only return products from one merchant at a time.,en_US
@@ -460,7 +460,7 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 }
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/MarketplaceStartRefundCommandPlugin.php</summary>
@@ -518,7 +518,7 @@ class MarketplaceRefundCommandPlugin extends AbstractPlugin implements CommandPl
 }
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/MarketplaceStartReturnCommandPlugin.php</summary>
@@ -576,7 +576,7 @@ class MarketplaceStartReturnCommandPlugin extends AbstractPlugin implements Comm
 }
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
@@ -601,7 +601,7 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
 }
 ```
 
-</details> 
+</details>
 
 
 Add config for the `SalesReturn`:
@@ -626,7 +626,7 @@ class SalesReturnConfig extends SprykerSalesReturnConfig
 }
 ```
 
-</details> 
+</details>
 
 
 ## Install feature front end
@@ -687,7 +687,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
               MerchantSalesReturnCreateFormWidget::class,
         ];
     }
-    
+
     /**
      * @return \SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface[]
      */

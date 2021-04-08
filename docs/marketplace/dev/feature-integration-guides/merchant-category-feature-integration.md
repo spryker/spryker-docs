@@ -37,7 +37,7 @@ Make sure that the following modules have been installed:
 
 Adjust the schema definition so that entity changes trigger the events:
 
-src/Pyz/Zed/MerchantCategory/Persistence/Propel/Schema/spy_merchant_category.schema.xml
+**src/Pyz/Zed/MerchantCategory/Persistence/Propel/Schema/spy_merchant_category.schema.xml**
 
 ```xml
 <?xml version="1.0"?><database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"          namespace="Orm\Zed\MerchantCategory\Persistence"          package="src.Orm.Zed.MerchantCategory.Persistence">
@@ -57,7 +57,12 @@ console propel:install
 console transfer:generate
 ```
 
+---
+**Verification**
+
 Verify the following changes by checking your database
+
+---
 
 | Database entity       | Type  | Event   |
 | --------------------- | ----- | ------- |
@@ -71,6 +76,9 @@ Run the following command to generate transfer changes:
 console transfer:generate
 ```
 
+---
+**Verification**
+
 Make sure that the following changes have been applied in transfer objects:
 
 | Transfer | Type   | Event   | Path  |
@@ -81,6 +89,7 @@ Make sure that the following changes have been applied in transfer objects:
 | MerchantSearch            | object | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
 | DataImporterConfiguration | object | Created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer |
 
+---
 ### 4) Set up behavior
 
 Activate the following plugins:
@@ -92,7 +101,7 @@ Activate the following plugins:
 | MerchantCategoryWritePublisherPlugin | Updates merchant categories in search based on category events. | None | Spryker\Zed\MerchantSearch\Communication\Plugin\Publisher\MerchantCategory |
 | RemoveMerchantCategoryRelationPlugin | Removes merchant categories on category delete. | None | Spryker\Zed\MerchantCategory\Communication\Plugin |
 
- src/Pyz/Zed/Category/CategoryDependencyProvider.php
+ **src/Pyz/Zed/Category/CategoryDependencyProvider.php**
 
 ```php
 <?php
@@ -120,9 +129,14 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
+---
+**Verification**
+
 Make sure when you delete category, that has a relation to merchant, in Zed UI there is no exception and merchant category removed as well.
 
-src/Pyz/Zed/Merchant/MerchantDependencyProvider.php
+---
+
+**src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
 
 ```
 namespace Pyz\Zed\Merchant;
@@ -143,9 +157,14 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
     }
 ```
 
+---
+**Verification**
+
 Make sure that `MerchantFacade::get()` response contains merchant categories.
 
-src/Pyz/Zed/MerchantSearch/MerchantSearchDependencyProvider.php
+---
+
+**src/Pyz/Zed/MerchantSearch/MerchantSearchDependencyProvider.php**
 
 ```
 <?php
@@ -168,9 +187,14 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
     }
 ```
 
+---
+**Verification**
+
 Make sure that index data http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes contains merchant category keys for the merchants that assigned to categories.
 
-src/Pyz/Zed/Publisher/PublisherDependencyProvider.php
+---
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
 <?php
@@ -196,15 +220,18 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-Make sure that changing of category keys triggers those changes http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes .
+---
+**Verification**
 
-### 5) Import data
+Make sure that changing of category keys triggers those changes http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes.
 
-#### Import merchant categories data
+---
+
+### 5) Import merchant categories data
 
 Prepare your data according to your requirements using the following format:
 
-data/import/common/common/marketplace/merchant_category.csv
+**data/import/common/common/marketplace/merchant_category.csv**
 
 ```yaml
 category_key,merchant_reference 2
@@ -221,7 +248,7 @@ Register the following plugins to enable data import:
 | ------------- | ------------------- | ----- | ------------ |
 | MerchantCategoryDataImportPlugin | Imports merchant category data into the database. | None | Spryker\Zed\MerchantCategoryDataImport\Communication\Plugin\DataImport |
 
- src/Pyz/Zed/DataImport/DataImportDependencyProvider.php
+ **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
@@ -248,9 +275,12 @@ Run the following console command to import data:
 console data:import merchant-category
 ```
 
+---
+**Verification**
+
 Make sure that imported data is added to the spy_merchant_category table.
 
-
+---
 
 ## Install feature front end
 Follow the steps below to install the Merchant Category feature front end.
@@ -272,7 +302,7 @@ Activate the following plugins:
 | ---------------- | -------------- | ----------- | ---------------------- |
 | MerchantCategoryMerchantSearchQueryExpanderPlugin | Adds filter by category keys to elasticsearch query. | None  | Spryker\Client\MerchantCategorySearch\Plugin\Elasticsearch\Query |
 
- src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php
+**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
 
 ```php
 <?php
@@ -296,4 +326,9 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 }
 ```
 
+---
+**Verification**
+
 Make sure that `MerchantSearchClient::search()` allows filtering merchants by category keys, if an array of categoryKeys is provided as the request parameter.
+
+---

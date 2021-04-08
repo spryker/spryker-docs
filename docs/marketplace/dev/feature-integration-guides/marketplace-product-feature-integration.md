@@ -10,7 +10,7 @@ summary: This document describes the process how to integrate the Marketplace Pr
 
 To start feature integration, overview and install the necessary features:
 
-| Name            | Version | Link        |
+| Name            | Version | Integration Guide        |
 | --------------- | -------- | ------------------ |
 | Spryker Core         | master      | [Spryker Core Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
 | Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1876853120) |
@@ -38,7 +38,7 @@ Make sure that the following modules have been installed:
 
 Adjust the schema definition so entity changes will trigger events:
 
-src/Pyz/Zed/MerchantProduct/Persistence/Propel/Schema/spy_merchant_product_abstract.schema.xml
+**src/Pyz/Zed/MerchantProduct/Persistence/Propel/Schema/spy_merchant_product_abstract.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -65,11 +65,16 @@ Run the following commands to apply database changes and to generate entity and 
 console transfer:generate 2console propel:install 3console transfer:generate
 ```
 
+---
+**Verification**
+
 Verify the following changes by checking your database
 
 | Database entity               | Type  | Event   |
 | ----------------------------- | ----- | ------- |
 | spy_merchant_product_abstract | table | created |
+
+---
 
 ## 3) Set up transfer objects
 
@@ -78,6 +83,9 @@ Run the following command to generate transfer changes:
 ```bash
 console transfer:generate
 ```
+
+---
+**Verification**
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -90,9 +98,8 @@ Make sure that the following changes have been applied in transfer objects:
 | MerchantSearchCollection  | object | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
 | MerchantProductStorage    | object | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
 
-### 3) Add translations
-
-#### Zed translations
+---
+### 3) Add Zed translations
 
 Run the following command to generate a new translation cache for Zed:
 
@@ -113,7 +120,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   | None          | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. | None          | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
 
-src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php
+**src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
 ```php
 <?php
@@ -147,9 +154,14 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
+---
+**Verification**
+
 Make sure that when you can filter products by merchant at http://zed.de.demo-spryker.com/availability-gui.
 
-src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php
+---
+
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
 ```php
 <?php
@@ -173,7 +185,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 }
 ```
 
-src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
 ```php
 <?php
@@ -200,9 +212,14 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 }
 ```
 
-Make sure de_page Easticsearch index for any product that belongs (see spy_merchant_product_abstract) to active and approved merchant, contains merchant names. (indexes can be accessed by any  Elasticsearch client, e.g. Kibana - see for docker https://documentation.spryker.com/docs/services configuration details.)
+---
+**Verification**
 
-src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php
+Make sure the `de_page` Easticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana—see for docker https://documentation.spryker.com/docs/services configuration details.)
+
+---
+
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
 ```php
 <?php
@@ -226,15 +243,20 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-Make sure that data in  spy_product_abstract_storage contains merchant_references's for merchant products.
+---
 
-### 5) Import data
+**Verification**
 
-#### Import Merchant Product data
+Make sure that data in  `spy_product_abstract_storage` contains `merchant_references`'s for merchant products.
+
+---
+
+
+### 5) Import Merchant Product data
 
 Prepare your data according to your requirements using our demo data:
 
-data/import/common/common/marketplace/merchant_product.csv
+<details><summary markdown='span'>data/import/common/common/marketplace/merchant_product.csv</summary>
 
 ```yaml
 sku,merchant_reference,is_shared
@@ -375,7 +397,7 @@ sku,merchant_reference,is_shared
 208,MER000002,1
 209,MER000002,1
 ```
-
+</details>
 
 
 | Column  | Is Obligatory? | Data Type | Data Example | Data Explanation  |
@@ -390,7 +412,7 @@ Register the following plugins to enable data import:
 | ------------------ | ----------------- | --------- | -------------------------- |
 | MerchantProductDataImportPlugin | Imports merchant product data into the database. | None          | Spryker\Zed\MerchantProductDataImport\Communication\Plugin |
 
- src/Pyz/Zed/DataImport/DataImportDependencyProvider.php
+ **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
@@ -463,9 +485,14 @@ Run the following command to enable Javascript and CSS changes:
 console frontend:yves:build
 ```
 
+---
+**Verification**
+
 Make sure that on the product detail page for merchant products you can see the seller name.
 
 Make sure that when you add merchant product to cart, on a cart page is has Sold By: widget shown.
+
+---
 
 ### 2) Set up behavior
 
@@ -477,7 +504,7 @@ Enable the following behaviors by registering the plugins:
 | ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. | None          | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
 | MerchantProductPreAddToCartPlugin                     | Sets merchant reference to item transfer on add to cart.     | None          | SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage      |
 
-src/Pyz/Client/SearchElasticsearch/SearchElasticsearchDependencyProvider.php
+**src/Pyz/Client/SearchElasticsearch/SearchElasticsearchDependencyProvider.php**
 
 ```php
 <?php
@@ -504,9 +531,14 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 }
 ```
 
+---
+**Verification**
+
 Make sure that when you enter the merchant name in the search field, the return list contains merchant products.
 
-src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php
+---
+
+**src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
 <?php
@@ -531,9 +563,14 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
+---
+**Verification**
+
 Make sure that merchant product is selected on pdp by default.
 
-src/Pyz/Yves/CartPage/CartPageDependencyProvider.php
+---
+
+**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 
 ```php
 <?php
@@ -557,7 +594,12 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 }
 ```
 
-Make sure when you add to cart merchant product, it have merchantReference set. (Can be checked in spy_quote table)
+---
+**Verification**
+
+Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table)
+
+---
 
 ## Related features
 

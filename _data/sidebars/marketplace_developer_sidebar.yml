@@ -46,6 +46,18 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
             output: web
 
+          - title: Marketplace Return Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
+            output: web
+
+          - title: Marketplace Shipment + Checkout feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature integration.html
+            output: web
+
+          - title: Marketplace Shipment + Customer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-customer-feature-integration.html
+            output: web
+
           - title: Merchant Category feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
             output: web

@@ -10,8 +10,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Link |
 |-|-|-|
-| Spryker Core | master | [GLUE: Spryker Core Feature Integration - ongoing]()  |
-| Marketplace Inventory Management | master | [[WIP] Marketplace Inventory Management Feature Integration - ]()  |
+| Spryker Core | master | [GLUE: Spryker Core Feature Integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+| Marketplace Inventory Management | master | [Marketplace Inventory Management Feature Integration](/docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html)  |
 
 ### 1) Install the required modules using composer
 Run the following commands to install the required modules:

@@ -10,9 +10,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Link |
 |-|-|-|
-| Spryker Core | master | [[PUBLISHED] Glue API: Spryker Core feature integration - ongoing](https://spryker.atlassian.net/l/c/KXkyvNgf)  |
-| Marketplace Merchant | master | [[WIP] Marketplace Merchant Feature Integration - ongoing](https://spryker.atlassian.net/l/c/nLJp1kNH)   |
-| Product Management | master | [Inventory Management Feature Integration - ongoing](https://spryker.atlassian.net/l/c/xvoax8TT)  |
+| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+| Marketplace Merchant | master | [Marketplace Merchant feature integration](https://spryker.atlassian.net/l/c/nLJp1kNH)   |
+| Product Management | master | [Inventory Management feature integration](https://spryker.atlassian.net/l/c/xvoax8TT)  |
 
 ### 1) Setup Behavior
 Enable the following behaviors by registering the plugins:

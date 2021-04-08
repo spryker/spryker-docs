@@ -10,8 +10,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Link |
 |-|-|-|
-| Spryker Core | master | [[PUBLISHED] Glue API: Spryker Core feature integration - ongoing](https://spryker.atlassian.net/l/c/AmM71nqp)  |
-| Marketplace Product | master | [[WIP] Marketplace Product Feature Integration - ongoing](https://spryker.atlassian.net/l/c/DxPfRrs0)|
+| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+| Marketplace Product | master | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 Run the following commands to install the required modules:

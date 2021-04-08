@@ -66,8 +66,16 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
             output: web
 
-          - title: Marketplace return management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
+          - title: Marketplace Inventory Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
+            output: web
+
+          - title: Marketplace Inventory Management + Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-order-management-feature-integration.html
+            output: web
+
+          - title: Marketplace Inventory Management + Packaging Units feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-packaging-units-feature-integration.html
             output: web
 
             subfolders:
@@ -99,6 +107,10 @@ entries:
 
               - title: Glue API - Product Offer + Cart feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html
+                output: web
+
+              - title: Glue API - Marketplace Inventory Management feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-feature-integration.html
                 output: web
 
       - title: Glue API guides

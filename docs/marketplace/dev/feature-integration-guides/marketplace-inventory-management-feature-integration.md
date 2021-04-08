@@ -589,7 +589,6 @@ offer358,Sony Experts MER000006 Warehouse 1,0,1
 offer359,Sony Experts MER000006 Warehouse 1,0,1
 offer360,Sony Experts MER000006 Warehouse 1,0,1
 ```
-
 </details>
 
 | Column | Is Obligatory? | Data Type | Data Example | Data explanation |

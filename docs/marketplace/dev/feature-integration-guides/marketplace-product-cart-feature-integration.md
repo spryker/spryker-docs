@@ -7,8 +7,10 @@ summary: This document describes the process how to integrate the Marketplace Pr
 ## Install feature core
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
-| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+
+| Name | Version | Integration Guide  |
 |-|-|-|
+| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
 | Marketplace Product | master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html)|
 | Cart | master | [Cart Feature Integration](https://documentation.spryker.com/docs/cart-feature-integration) |
 
@@ -27,7 +29,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ***
 
-###2) Set up behavior
+### 2) Set up behavior
 Enable the following behaviors by registering the plugins:
 
 | Plugin | Description | Prerequisites | Namespace |
@@ -61,7 +63,9 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
-***
+---
 **Verification**
+
 Make sure that you can’t add an item with `merchantReference` and `sku` that do not belong to the same `MerchantProduct`(see `spy_merchant_product_abstract`).
-***
+
+---

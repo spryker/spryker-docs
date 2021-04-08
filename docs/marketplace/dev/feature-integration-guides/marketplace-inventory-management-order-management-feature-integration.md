@@ -65,6 +65,7 @@ Verify the following changes by checking your database
 |-|-|-|
 | spy_oms_product_offer_reservation | table | created |
 
+***
 
 ### 3) Set up transfer objects
 Run the following command to generate transfer changes:

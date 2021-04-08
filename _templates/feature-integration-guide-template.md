@@ -1,7 +1,11 @@
 <!-- This document is an integration guide template.
 All the described steps are optional. If you want to add a step that's not described in the template, contact Karoly Gerner. -->
 
-
+---
+title: {Meta name}
+description: {Meta description}
+tags: [, ]
+---
 
 
 
@@ -32,7 +36,8 @@ Install the required modules:
 {commands to install the required modules}
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following modules have been installed:
@@ -40,6 +45,8 @@ Make sure that the following modules have been installed:
 | MODULE  | EXPECTED DIRECTORY <!--for public Demo Shops--> |
 | -------- | ------------------- |
 | {ModuleName} | {expected directory} |
+
+---
 
 ### Set up the configuration
 <!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
@@ -54,11 +61,11 @@ Add the following configuration:
 {code sample with the updated configuration}
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-
-
+---
 
 
 ### Set up database schema and transfer objects
@@ -79,7 +86,8 @@ console propel:install
 console transfer:generate
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following changes have been applied by checking your database:
@@ -94,7 +102,7 @@ Make sure that the following changes have been triggered in transfer objects:
 | --------- | ------- | ----- | ------------- |
 | {transfer} | {type} | {event} | {path} |
 
-
+---
 
 ### Set up database schema
 <!--If the feature has transfer object definition changes, merge the steps as described in [Set up database schema and transfer objects](#set-up-database-schema-and-transfer-objects). Provide code snippets with DB schema changes, describing the changes before each code snippet. Provide the console commands to apply the changes in project and core. -->
@@ -119,7 +127,8 @@ console propel:install
 console transfer:generate
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following changes have been applied by checking your database:
@@ -128,6 +137,7 @@ Make sure that the following changes have been applied by checking your database
 | --------------- | ---- | ----- |
 | {entity}   | {type} | {event} |
 
+---
 
 ### Set up transfer objects
 <!--If the feature has database definition changes, merge the steps as described in [Set up database schema and transfer objects](#set-up-database-schema-and-transfer-objects). Provide code snippet with transfer schema changes, describing the changes before each code snippet. Provide the console commands to apply the changes in project and core.-->
@@ -140,7 +150,8 @@ Generate transfers:
 console transfer:generate
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Ensure the following transfers have been created:
@@ -149,7 +160,7 @@ Ensure the following transfers have been created:
 | --------- | ------- | ----- | ------------- |
 | {transfer} | {type} | {event} | {path} |
 
-
+---
 
 ### Add translations
 <!--Provide glossary keys for `DE` and `EN` of your feature as a code snippet. When a glossary key is dynamically generated, describe how to construct the key.-->
@@ -168,12 +179,13 @@ Add translations as follows:
 console data:import glossary
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the configured data has been added to the `spy_glossary` table.
 
-
+---
 
 ### Configure export to Redis and Elasticsearch
 <!--Provide the plugins for wiring P&S up. Provide the plugins for enabling re-generate and re-sync features of P&S.-->
@@ -189,7 +201,8 @@ Configure tables to be published and synchronized to the Storage on create, edit
 {code snippet with plugin setup}
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
@@ -204,7 +217,7 @@ Expected data fragment example:
 {expected data fragment example}
 ```
 
-
+---
 
 
 ### Configure export to Redis
@@ -221,7 +234,8 @@ Configure tables to be published to the {table name} table and synchronized to t
 {code snippet with plugin setup}
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
@@ -236,7 +250,7 @@ Expected data fragment example: {target entity}
 {expected data fragment example}
 ```
 
-
+---
 
 #### Configure export to Elasticsearch
 <!--If the feature has Redis configuration changes, merge the steps as described in [Configure export to Redeis and Elasticsearch](#configure-export-to-redis-and-elasticsearch). Provide a plugin list for wiring P&S up. Provide a plugin list for enabling Re-generate and Re-sync features of P&S.-->
@@ -251,7 +265,8 @@ Install the following plugins:
 {code snippet with plugin setup}
 ```
 
-##### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
@@ -266,7 +281,7 @@ Expected data fragment example:
 {expected data fragment example}
 ```
 
-
+---
 
 
 ### Import data
@@ -286,12 +301,13 @@ Import data as follows:
 {command to import data}
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the configured data has been added to the `{table_name}` table.
 
-
+---
 
 #### Import infrastructural data
 <!--Provide the plugin list for wiring up the installation of infrastructural data. Provide the console command to run the installation of the infrastructural data.-->
@@ -314,11 +330,13 @@ Import infrastructural data as follows:
 console setup:init-db
 ```
 
-##### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly. Provide verification for "Configure Export to Redis and Elastisearch".-->
 
 Ensure that the {entities} have been added to the `{table_name}` table.
 
+---
 
 #### Import {DataImporterName}
 <!--Provide demo data for the current data importer as a code snippet. Provide additional information about glossary key generation if it depends on data import. Provide a table with data import column definitions. Provide the plugin list to wire up the data importer. Provide a code snippet showing how to attach the data import to a console command. Provide the console command to import data.-->
@@ -331,13 +349,15 @@ Ensure that the {entities} have been added to the `{table_name}` table.
 {code snippet with plugin setup}
 ```
 
-##### Verification
+---
+**Verification**
 <!--Describe how a developer can check that they have completed the following steps correctly:
 * Current step
 * [Configure Export to Redis and Elastisearch](#configure-export-to-redis-and-elasticsearch)
 * [Configure Export to Elastisearch](#configure-export-to-elasticsearch)
 * [Configure Export to Redis](#configure-export-to-redis)  -->
 
+---
 
 ### Set up behavior
 <!--This is a comment, it will not be included -->
@@ -351,9 +371,11 @@ Enable the following behaviors by registering the plugins:
 {code snippet with plugin setup}
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
+---
 
 ## Install feature front end
 
@@ -378,7 +400,8 @@ Install the required modules:
 {command to install the required modules}
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following modules have been installed:
@@ -387,6 +410,7 @@ Make sure that the following modules have been installed:
 | -------- | ------------------- |
 | {ModuleName} | {expected directory} |
 
+---
 
 ### Add translations
 
@@ -404,12 +428,13 @@ Add translations as follows:
 console data:import glossary
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the configured data has been added to the `spy_glossary` table.
 
-
+---
 
 ### Enable controllers
 <!--Provide a list of controller providers and route providers to enable -->
@@ -424,9 +449,11 @@ Register the following route providers on the Storefront:
 {code snippet with provider setup}
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
+---
 
 ### Set up widgets
 <!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->
@@ -443,7 +470,8 @@ Set up widgets as follows:
 {code snippet with provider setup}
 ```
 
-#### Verification
+---
+**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
@@ -458,8 +486,8 @@ Make sure that the following widgets have been registered by adding the respecti
 console frontend:yves:build
 ```
 
-#### Verification
-<!--Describe how a developer can check they have completed the step correctly.-->
+---
+
 
 
 ## Related features

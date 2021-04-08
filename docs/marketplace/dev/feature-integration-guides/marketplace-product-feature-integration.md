@@ -12,9 +12,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name            | Version | Link        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | master      | [[PUBLISHED\] Spryker Core Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
-| Marketplace Merchant | master      | [[WIP\] Marketplace Merchant Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1876853120) |
-| Product Management   | master      | [[APPROVED\] Product Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/895912554) |
+| Spryker Core         | master      | [Spryker Core Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
+| Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1876853120) |
+| Product Management   | master      | [Product Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/895912554) |
 
 ### 1) Install the required modules using composer
 
@@ -62,7 +62,7 @@ src/Pyz/Zed/MerchantProduct/Persistence/Propel/Schema/spy_merchant_product_abstr
 Run the following commands to apply database changes and to generate entity and transfer changes.
 
 ```bash
-console transfer:generate 2console propel:install 3console transfer:generate 
+console transfer:generate 2console propel:install 3console transfer:generate
 ```
 
 Verify the following changes by checking your database
@@ -394,9 +394,9 @@ Register the following plugins to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\MerchantProductDataImport\Communication\Plugin\MerchantProductDataImportPlugin;
 
@@ -420,7 +420,7 @@ console data:import merchant-product
 
 Make sure that imported data is added to the spy_merchant_product.
 
- 
+
 
 ## Install feature front end
 

@@ -1,7 +1,7 @@
 ---
 title: Merchant Opening Hours feature integration
 last_updated: Dec 04, 2020
-summary: This document describes how to integrate the Merchant Opening Hours feature into a Spryker project.
+summary: This document describes how to integrate the Merchant Opening Hours Glue API feature into a Spryker project.
 ---
 
 ## Install Feature Core

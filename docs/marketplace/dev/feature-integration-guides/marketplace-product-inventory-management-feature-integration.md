@@ -8,7 +8,7 @@ summary: This document describes the process how to integrate the Marketplace Pr
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Link |
+| Name | Version | Integration Guide |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
 | Marketplace Merchant | master | [Marketplace Merchant feature integration](https://spryker.atlassian.net/l/c/nLJp1kNH)   |
@@ -56,5 +56,9 @@ class AvailabilityGuiDependencyProvider extends SprykerAvailabilityGuiDependency
     }
 }
 ```
+---
+**Verification**
 
 Make sure that you can filter product availabilities by merchant at http://zed.de.demo-spryker.com/product-management.
+
+---

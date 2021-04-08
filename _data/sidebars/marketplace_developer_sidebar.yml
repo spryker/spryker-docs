@@ -34,6 +34,14 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-order-management-feature-integration.html
             output: web
 
+          - title: Marketplace Inventory Management + Packaging Units feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-packaging-units-feature-integration.html
+            output: web
+
+          - title: Marketplace Product + Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-cart-feature-integration.html
+            output: web
+
           - title: Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html
             output: web
@@ -46,6 +54,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
             output: web
 
+          - title: Marketplace Return Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
+            output: web
+
           - title: Merchant Category feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
             output: web
@@ -54,8 +66,16 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
             output: web
 
-          - title: Merchant Portal Core feature integration
+          - title: Merchant Portal - Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
+            output: web
+
+          - title: Merchant Portal - Markteplace Product feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
+            output: web
+
+          - title: Merchant Portal - Marketplace Product + Tax feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html
             output: web
 
           - title: Merchant Portal - Product Offer feature integration
@@ -72,18 +92,6 @@ entries:
 
           - title: Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
-            output: web
-
-          - title: Marketplace Inventory Management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
-            output: web
-
-          - title: Marketplace Inventory Management + Order Management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-order-management-feature-integration.html
-            output: web
-
-          - title: Marketplace Inventory Management + Packaging Units feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-packaging-units-feature-integration.html
             output: web
 
             subfolders:
@@ -121,13 +129,6 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
                 output: web
 
-              - title: Glue API - Product Offer + Cart feature integration
-                url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html
-                output: web
-
-              - title: Glue API - Marketplace Inventory Management feature integration
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-feature-integration.html
-                output: web
 
       - title: Glue API guides
         output: web

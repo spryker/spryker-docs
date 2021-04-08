@@ -8,11 +8,11 @@ summary: This document describes the process how to integrate the Marketplace In
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Link |
+| Name | Version | Integration guide |
 |-|-|-|
-| Spryker Core | master | [[PUBLISHED] Glue API: Spryker Core feature integration - ongoing]()  |
-| Marketplace Product Offer | master |   [[WIP] Marketplace Product Offer Feature Integration - ongoing]()  |
-| Inventory Management | master |  [Inventory Management Feature Integration - ongoing]()  |
+| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+| Marketplace Product Offer | master | [Marketplace Product Offer Feature Integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.md)  |
+| Inventory Management | master | [Inventory Management Feature Integration]()  |
 
 ### 1) Install the required modules using composer
 Run the following commands to install the required modules:

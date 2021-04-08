@@ -27,7 +27,7 @@ To start feature integration, integrate the required features:
 | -------------- | ----------------- |
 | {Feature Name} | {feature version} |
 
-### 1) Install required modules using Composer
+### 1) Install the required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
@@ -391,7 +391,7 @@ To start feature integration, integrate the required features:
 | -------------- | ----------------- |
 | {Feature Name} | {feature version} |
 
-### 1) Install required modules using Composer
+### 1) Install the required modules using Composer
 <!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:

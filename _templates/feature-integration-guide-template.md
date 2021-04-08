@@ -363,7 +363,7 @@ Ensure that the {entities} have been added to the `{table_name}` table.
 <!--This is a comment, it will not be included -->
 Enable the following behaviors by registering the plugins:
 
-| Plugin  | Specification | Prerequisites | Namespace |
+| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
 | {plugin} | {description} | {{prerequisite} |        }  | example namespace |
 

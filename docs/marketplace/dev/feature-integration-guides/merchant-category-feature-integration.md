@@ -6,7 +6,7 @@ summary: This document describes the process how to integrate the Merchant Categ
 
 ## Install feature core
 Follow the steps below to install the Merchant Category feature core.
- 
+
 
 ### Prerequisites
 
@@ -14,7 +14,7 @@ To start feature integration, overview, and install the necessary features:
 
 | Name | Version | Link |
 | --------- | ----- | ---------- |
-| Spryker Core         | master      | [[PUBLISHED\] Spryker Core Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
+| Spryker Core         | master      | [[PUBLISHED] Spryker Core Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
 | Marketplace Merchant | master      | [[WIP\] Marketplace Merchant Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1876853120) |
 
 ### 1) Install the required modules using composer
@@ -207,7 +207,7 @@ Prepare your data according to your requirements using the following format:
 data/import/common/common/marketplace/merchant_category.csv
 
 ```yaml
-category_key,merchant_reference 2 
+category_key,merchant_reference 2
 ```
 
 | Column             | Is Obligatory? | Data Type | Data Example | Data Explanation  |
@@ -225,9 +225,9 @@ Register the following plugins to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\MerchantCategoryDataImport\Communication\Plugin\DataImport;
 

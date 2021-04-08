@@ -14,8 +14,8 @@ To start feature integration, overview, and install the necessary features:
 
 | Name   | Version | Link   |
 | ---------------- | ------ | ------------------ |
-| Spryker Core   | master   | [[PUBLISHED\] Glue API: Spryker Core feature integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/639173086) |
-| Marketplace Merchant Category | master  | [[WIP\]  Marketplace Merchant Category Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1874690281) |
+| Spryker Core   | master   | [Glue API: Spryker Core feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/639173086) |
+| Marketplace Merchant Category | master  | [Marketplace Merchant Category Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1874690281) |
 
 ### 1) Install the required modules using composer
 
@@ -82,5 +82,3 @@ class MerchantsRestApiDependencyProvider extends SprykerMerchantsRestApiDependen
 Make sure that when you sending the request GET http://glue.mysprykershop.com/merchants, you can see the category keys and names for merchants that assigned to categories.
 
 Make sure that when you sending the request GET http://glue.mysprykershop.com/merchants?categoryKeys[]={some-category-key}, you can see only merchants that belongs to the particular category in the response.
-
- 

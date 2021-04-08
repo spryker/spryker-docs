@@ -21,7 +21,7 @@ To start feature integration, overview, and install the necessary features:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature``/marketplace-product-offer` `--update-with-dependencies
+composer require spryker-feature/marketplace-product-offer --update-with-dependencies
 ```
 
 
@@ -56,7 +56,7 @@ src/Pyz/Zed/ProductOffer/Persistence/Propel/Schema/spy_product_offer.schema.xml
           xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ProductOffer\Persistence"
           package="src.Orm.Zed.ProductOffer.Persistence">
- 
+
     <table name="spy_product_offer" phpName="SpyProductOffer">
         <behavior name="event">
             <parameter name="spy_product_offer_all" column="*"/>
@@ -64,7 +64,7 @@ src/Pyz/Zed/ProductOffer/Persistence/Propel/Schema/spy_product_offer.schema.xml
             <parameter name="spy_product_offer_concrete_sku" column="concrete_sku" keep-additional="true"/>
         </behavior>
     </table>
- 
+
     <table name="spy_product_offer_store" phpName="SpyProductOfferStore">
         <behavior name="event">
             <parameter name="spy_product_offer_store_all" column="*"/>
@@ -133,14 +133,14 @@ src/Pyz/Zed/Event/EventDependencyProvider.php
 
 ```
 <?php
- 
+
 namespace Pyz\Zed\Event;
- 
+
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber\MerchantProductOfferSearchEventSubscriber;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber\MerchantSearchEventSubscriber;
 use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Event\Subscriber\MerchantProductOfferStorageEventSubscriber;
- 
+
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
     public function getEventSubscriberCollection()
@@ -149,7 +149,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
         $eventSubscriberCollection->add(new MerchantSearchEventSubscriber());
         $eventSubscriberCollection->add(new MerchantProductOfferSearchEventSubscriber());
         $eventSubscriberCollection->add(new MerchantProductOfferStorageEventSubscriber());
- 
+
         return $eventSubscriberCollection;
     }
 }
@@ -161,12 +161,12 @@ src/Pyz/Client/RabbitMq/RabbitMqConfig.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\RabbitMq;
- 
+
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\MerchantProductOfferStorage\MerchantProductOfferStorageConfig;
- 
+
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
     /**
@@ -178,7 +178,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
             MerchantProductOfferStorageConfig::MERCHANT_PRODUCT_OFFER_SYNC_STORAGE_QUEUE,
         ];
     }
- 
+
 }
 ```
 
@@ -192,14 +192,14 @@ src/Pyz/Zed/Queue/QueueDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Queue;
- 
+
 use Spryker\Shared\MerchantProductOfferStorage\MerchantProductOfferStorageConfig;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
 use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationStorageQueueMessageProcessorPlugin;
- 
+
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
     /**
@@ -227,13 +227,13 @@ src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Synchronization;
- 
+
 use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Synchronization\ProductConcreteProductOffersSynchronizationDataPlugin;
 use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Synchronization\ProductOfferSynchronizationDataPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
- 
+
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
@@ -255,13 +255,13 @@ src/Pyz/Zed/MerchantProductOfferStorage/MerchantProductOfferStorageConfig.php
 
 ```
 <?php
- 
+
 namespace Pyz\Zed\MerchantProductOfferStorage;
- 
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Shared\Publisher\PublisherConfig;
 use Spryker\Zed\MerchantProductOfferStorage\MerchantProductOfferStorageConfig as SprykerMerchantProductOfferStorageConfig;
- 
+
 class MerchantProductOfferStorageConfig extends SprykerMerchantProductOfferStorageConfig
 {
     /**
@@ -344,14 +344,14 @@ src/Pyz/Zed/DataImport/DataImportDependencyProvider.php
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\DataImport;
-  
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\MerchantProductOfferDataImport\Communication\Plugin\MerchantProductOfferDataImportPlugin;
 use Spryker\Zed\MerchantProductOfferDataImport\Communication\Plugin\MerchantProductOfferStoreDataImportPlugin;
 use Spryker\Zed\ProductOfferValidityDataImport\Communication\ProductOfferValidityDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -405,12 +405,12 @@ src/Pyz/Client/Catalog/CatalogDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\Catalog;
- 
+
 use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
 use Spryker\Client\MerchantProductOfferSearch\Plugin\MerchantReferenceQueryExpanderPlugin;
- 
+
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
     /**
@@ -422,7 +422,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new MerchantReferenceQueryExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface[]|\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
      */
@@ -439,13 +439,13 @@ src/Pyz/Client/Search/SearchDependencyProvider.php
 
 ```
 <?php
- 
+
 namespace Pyz\Client\Search;
- 
+
 use Spryker\Client\Kernel\Container;
 use Spryker\Client\MerchantProductOfferSearch\Plugin\MerchantNameSearchConfigExpanderPlugin;
 use Spryker\Client\Search\SearchDependencyProvider as SprykerSearchDependencyProvider;
- 
+
 class SearchDependencyProvider extends SprykerSearchDependencyProvider
 {
     /**
@@ -456,9 +456,9 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
     protected function createSearchConfigExpanderPlugins(Container $container)
     {
         $searchConfigExpanderPlugins = parent::createSearchConfigExpanderPlugins($container);
- 
+
         $searchConfigExpanderPlugins[] = new MerchantNameSearchConfigExpanderPlugin();
- 
+
         return $searchConfigExpanderPlugins;
     }
 }
@@ -468,13 +468,13 @@ src/Pyz/Client/SearchElasticsearch/SearchElasticsearchDependencyProvider.php
 
 ```
 <?php
- 
+
 namespace Pyz\Client\SearchElasticsearch;
- 
+
 use Spryker\Client\Kernel\Container;
 use Spryker\Client\MerchantProductOfferSearch\Plugin\MerchantNameSearchConfigExpanderPlugin;
 use Spryker\Client\SearchElasticsearch\SearchElasticsearchDependencyProvider as SprykerSearchElasticsearchDependencyProvider;
- 
+
 class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDependencyProvider
 {
     /**
@@ -495,15 +495,15 @@ src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductOfferGui;
- 
+
 use Spryker\Zed\MerchantGui\Communication\Plugin\ProductOffer\MerchantProductOfferListActionViewDataExpanderPlugin;
 use Spryker\Zed\MerchantProductOfferGui\Communication\Plugin\MerchantProductOfferTableExpanderPlugin;
 use Spryker\Zed\MerchantProductOfferGui\Communication\Plugin\ProductOfferGui\MerchantProductOfferViewSectionPlugin;
 use Spryker\Zed\ProductOfferGui\ProductOfferGuiDependencyProvider as SprykerProductOfferGuiDependencyProvider;
 use Spryker\Zed\ProductOfferValidityGui\Communication\Plugin\ProductOfferGui\ProductOfferValidityProductOfferViewSectionPlugin;
- 
+
 class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependencyProvider
 {
     /**
@@ -515,7 +515,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
             new MerchantProductOfferListActionViewDataExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferTableExpanderPluginInterface[]
      */
@@ -525,7 +525,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
             new MerchantProductOfferTableExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface[]
      */
@@ -543,16 +543,16 @@ src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php
 
 ```
 <?php
- 
+
 namespace Pyz\Zed\ProductPageSearch;
- 
+
 use Spryker\Shared\MerchantProductOfferSearch\MerchantProductOfferSearchConfig;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageDataExpander\MerchantProductPageDataExpanderPlugin;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageDataLoader\MerchantProductPageDataLoaderPlugin;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageMapExpander\MerchantNamesProductAbstractMapExpanderPlugin;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageMapExpander\MerchantReferencesProductAbstractsMapExpanderPlugin;
 use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
- 
+
 class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
 {
     /**
@@ -561,12 +561,12 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     protected function getDataExpanderPlugins()
     {
         $dataExpanderPlugins = [];
- 
+
         $dataExpanderPlugins[MerchantProductOfferSearchConfig::PLUGIN_PRODUCT_MERCHANT_DATA] = new MerchantProductPageDataExpanderPlugin();
- 
+
         return $dataExpanderPlugins;
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface[]
      */
@@ -576,7 +576,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
             new MerchantProductPageDataLoaderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface[]
      */
@@ -594,13 +594,13 @@ src/Pyz/Client/MerchantProductOfferStorage/MerchantProductOfferStorageDependency
 
 ```
 <?php
- 
+
 namespace Pyz\Client\MerchantProductOfferStorage;
- 
+
 use Spryker\Client\MerchantProductOfferStorage\MerchantProductOfferStorageDependencyProvider as SprykerMerchantProductOfferStorageDependencyProvider;
 use Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage\DefaultProductOfferReferenceStrategyPlugin;
 use Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage\ProductOfferReferenceStrategyPlugin;
- 
+
 class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProductOfferStorageDependencyProvider
 {
     /**
@@ -620,12 +620,12 @@ src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\ProductStorage;
- 
+
 use Spryker\Client\MerchantProductOfferStorage\Plugin\ProductStorage\ProductViewOfferExpanderPlugin;
 use Spryker\Client\ProductStorage\ProductStorageDependencyProvider as SprykerProductStorageDependencyProvider;
- 
+
 class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
     /**
@@ -644,14 +644,14 @@ src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductOffer;
- 
+
 use Spryker\Zed\ProductOffer\ProductOfferDependencyProvider as SprykerProductOfferDependencyProvider;
 use Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer\ProductOfferValidityProductOfferExpanderPlugin;
 use Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer\ProductOfferValidityProductOfferPostCreatePlugin;
 use Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer\ProductOfferValidityProductOfferPostUpdatePlugin;
- 
+
 class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvider
 {
     /**
@@ -663,7 +663,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
             new ProductOfferValidityProductOfferPostCreatePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostUpdatePluginInterface[]
      */
@@ -673,7 +673,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
             new ProductOfferValidityProductOfferPostUpdatePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferExpanderPluginInterface[]
      */
@@ -690,12 +690,12 @@ src/Pyz/Zed/Console/ConsoleDependencyProvider.php
 
 ```
 <?php
- 
+
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\ProductOfferValidity\Communication\Console\ProductOfferValidityConsole;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -708,7 +708,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         $commands = [
             new ProductOfferValidityConsole(),
         ];
- 
+
         return $commands;
     }
 }
@@ -779,13 +779,13 @@ src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
 
 ```
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\MerchantProductOfferWidget\Widget\MerchantProductOfferWidget;
 use SprykerShop\Yves\MerchantProductOfferWidget\Widget\ProductOfferSoldByMerchantWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -822,4 +822,3 @@ Make sure that the following widgets were registered:
 | ---------------------- | ---------------------- |
 | Marketplace Product Offer API    | [[WIP\] GLUE: Marketplace Product Offer Feature integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1473445966) |
 | Marketplace Product Offer + Cart | [[WIP\] Marketplace Product Offer + Cart Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1950973965) |
-

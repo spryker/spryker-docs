@@ -26,32 +26,12 @@ entries:
         output: web
 
         folderitems:
-          - title: Merchant Portal Core feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
+          - title: Marketplace Inventory Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
             output: web
 
-          - title: Merchants feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html
-            output: web
-
-          - title: Merchant Opening Hours feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
-            output: web
-
-          - title: Merchant Category feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
-            output: web
-
-          - title: Product Offer feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
-            output: web
-
-          - title: Product Offer + Cart feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/product-offer-cart-feature-integration.html
-            output: web
-
-          - title: Merchant Portal - Product Offer feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-product-offer-feature-integration.html
+          - title: Marketplace Inventory Management + Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-order-management-feature-integration.html
             output: web
 
           - title: Marketplace Product feature integration
@@ -66,8 +46,56 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
             output: web
 
-          - title: Marketplace return management feature integration
+          - title: Marketplace Return Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
+            output: web
+
+          - title: Marketplace Shipment + Checkout feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature integration.html
+            output: web
+
+          - title: Marketplace Shipment + Customer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-customer-feature-integration.html
+            output: web
+
+          - title: Merchant Category feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
+            output: web
+
+          - title: Merchant Opening Hours feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
+            output: web
+
+          - title: Merchant Portal Core feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
+            output: web
+
+          - title: Merchant Portal - Product Offer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-product-offer-feature-integration.html
+            output: web
+
+          - title: Merchants feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html
+            output: web
+
+          - title: Product Offer + Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/product-offer-cart-feature-integration.html
+            output: web
+
+          - title: Product Offer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
+            output: web
+
+          - title: Marketplace Inventory Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
+            output: web
+
+          - title: Marketplace Inventory Management + Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-order-management-feature-integration.html
+            output: web
+
+          - title: Marketplace Inventory Management + Packaging Units feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-packaging-units-feature-integration.html
             output: web
 
             subfolders:
@@ -77,15 +105,19 @@ entries:
 
               subfolderitems:
 
-              - title: Glue API - Merchant Opening Hours feature integration
-                url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
+              - title: Glue API - Marketplace Inventory Management feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-feature-integration.html
+                output: web
+
+              - title: Glue API - Marketplace Merchant feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html
                 output: web
 
               - title: Glue API - Marketplace Product feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html
                 output: web
 
-              - title: Glue API - Marketplace Product Offer feature integration
+              - title: Glue API - Markteplace Product Offer feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
                 output: web
 
@@ -93,8 +125,12 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
                 output: web
 
-              - title: Glue API - Markteplace Product Offer feature integration
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
+              - title: Glue API - Merchant Opening Hours feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
+                output: web
+
+              - title: Glue API - Marketplace Product Offer + Cart feature integrationn
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
                 output: web
 
               - title: Marketplace return management feature integration
@@ -103,6 +139,10 @@ entries:
 
               - title: Glue API - Product Offer + Cart feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html
+                output: web
+
+              - title: Glue API - Marketplace Inventory Management feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-feature-integration.html
                 output: web
 
       - title: Glue API guides

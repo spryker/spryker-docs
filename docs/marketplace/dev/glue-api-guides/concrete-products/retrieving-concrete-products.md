@@ -45,7 +45,8 @@ To retrieve general information about a concrete product, send the request:
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Get information about the `001_25904006` product with its image sets.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Get information about the `001_25904006` product with its availability.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its prices.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its [default prices](https://documentation.spryker.com/v4/docs/products-reference-information#default-and-original-prices). |
+| `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices (default and [volume prices](https://documentation.spryker.com/docs/volume-prices)) |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Get information about the `001_25904006` product with its product options.  |
 | `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Get information about the `001_25904006` product with its product reviews.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Get information about the `001_25904006` product with its product offers.  |
@@ -398,96 +399,195 @@ To retrieve general information about a concrete product, send the request:
     
 </details>
 
- <details>
-<summary markdown='span'>Response sample with concrete product prices</summary>
-    
-```json
+ <details><summary markdown='span'>Response sample with default product prices</summary>
+
+```php
 {
-    "data": {
-        "type": "concrete-products",
-        "id": "001_25904006",
-        "attributes": {
-            "sku": "001_25904006",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
-            "averageRating": null,
-            "reviewCount": 0,
-            "name": "Canon IXUS 160",
-            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
-            "attributes": {
-                "megapixel": "20 MP",
-                "flash_range_tele": "4.2-4.9 ft",
-                "memory_slots": "1",
-                "usb_version": "2",
-                "brand": "Canon",
-                "color": "Red"
-            },
-            "superAttributesDefinition": [
-                "color"
-            ],
-            "metaTitle": "Canon IXUS 160",
-            "metaKeywords": "Canon,Entertainment Electronics",
-            "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
-            "attributeNames": {
-                "megapixel": "Megapixel",
-                "flash_range_tele": "Flash range (tele)",
-                "memory_slots": "Memory slots",
-                "usb_version": "USB version",
-                "brand": "Brand",
-                "color": "Color"
-            }
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices"
-        },
-        "relationships": {
-            "concrete-product-prices": {
-                "data": [
-                    {
-                        "type": "concrete-product-prices",
-                        "id": "001_25904006"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "type": "concrete-product-prices",
-            "id": "001_25904006",
-            "attributes": {
-                "price": 9999,
-                "prices": [
-                    {
-                        "priceTypeName": "DEFAULT",
-                        "netAmount": null,
-                        "grossAmount": 9999,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        }
-                    },
-                    {
-                        "priceTypeName": "ORIGINAL",
-                        "netAmount": null,
-                        "grossAmount": 12564,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        }
-                    }
-                ]
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
-            }
-        }
-    ]
+    "data": {
+        "type": "concrete-products",
+        "id": "001_25904006",
+        "attributes": {
+            "sku": "001_25904006",
+            "isDiscontinued": false,
+            "discontinuedNote": null,
+            "averageRating": null,
+            "reviewCount": 0,
+            "name": "Canon IXUS 160",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "attributes": {
+                "megapixel": "20 MP",
+                "flash_range_tele": "4.2-4.9 ft",
+                "memory_slots": "1",
+                "usb_version": "2",
+                "brand": "Canon",
+                "color": "Red"
+            },
+            "superAttributesDefinition": [
+                "color"
+            ],
+            "metaTitle": "Canon IXUS 160",
+            "metaKeywords": "Canon,Entertainment Electronics",
+            "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
+            "attributeNames": {
+                "megapixel": "Megapixel",
+                "flash_range_tele": "Flash range (tele)",
+                "memory_slots": "Memory slots",
+                "usb_version": "USB version",
+                "brand": "Brand",
+                "color": "Color"
+            }
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices"
+        },
+        "relationships": {
+            "concrete-product-prices": {
+                "data": [
+                    {
+                        "type": "concrete-product-prices",
+                        "id": "001_25904006"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "concrete-product-prices",
+            "id": "001_25904006",
+            "attributes": {
+                "price": 9999,
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": null,
+                        "grossAmount": 9999,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    },
+                    {
+                        "priceTypeName": "ORIGINAL",
+                        "netAmount": null,
+                        "grossAmount": 12564,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+            }
+        }
+    ]
 }
 ```
-    
+
+</details>
+
+<details><summary markdown='span'>Response sample with volume prices</summary>
+
+```php
+{
+    "data": {
+        "type": "concrete-products",
+        "id": "093_24495843",
+        "attributes": {
+            "sku": "093_24495843",
+            "isDiscontinued": false,
+            "discontinuedNote": null,
+            "averageRating": 4.3,
+            "reviewCount": 4,
+            "productAbstractSku": "093",
+            "name": "Sony SmartWatch 3",
+            "description": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated, casual, vibrant colours and fitness style, all made from the finest materials. Designed to perform and impress, this smartphone watch delivers a groundbreaking combination of technology and style. Downloadable apps let you customise your SmartWatch 3 SWR50 and how you use it.         Tell SmartWatch 3 SWR50 smartphone watch what you want and it will do it. Search. Command. Find.",
+            "attributes": {
+                "internal_ram": "512 MB",
+                "flash_memory": "4 GB",
+                "weight": "45 g",
+                "protection_feature": "Water resistent",
+                "brand": "Sony",
+                "color": "Silver"
+            },
+            "superAttributesDefinition": [
+                "flash_memory",
+                "color"
+            ],
+            "metaTitle": "Sony SmartWatch 3",
+            "metaKeywords": "Sony,Smart Electronics",
+            "metaDescription": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated,",
+            "attributeNames": {
+                "internal_ram": "Internal RAM",
+                "flash_memory": "Flash memory",
+                "weight": "Weight",
+                "protection_feature": "Protection feature",
+                "brand": "Brand",
+                "color": "Color"
+            }
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/concrete-products/093_24495843?include=concrete-product-prices"
+        },
+        "relationships": {
+            "concrete-product-prices": {
+                "data": [
+                    {
+                        "type": "concrete-product-prices",
+                        "id": "093_24495843"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "concrete-product-prices",
+            "id": "093_24495843",
+            "attributes": {
+                "price": 24899,
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": null,
+                        "grossAmount": 24899,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": [
+                            {
+                                "netAmount": 150,
+                                "grossAmount": 165,
+                                "quantity": 5
+                            },
+                            {
+                                "netAmount": 145,
+                                "grossAmount": 158,
+                                "quantity": 10
+                            },
+                            {
+                                "netAmount": 140,
+                                "grossAmount": 152,
+                                "quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/093_24495843/concrete-product-prices"
+            }
+        }
+    ]
+}
+```
+
 </details>
 
  <details>

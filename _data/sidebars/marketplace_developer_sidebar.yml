@@ -70,6 +70,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html
             output: web
 
+          - title: Marketplace Promotions & Discounts feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-promotions-discounts-feature-integration.html
+            output: web
+
           - title: Marketplace Return Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
             output: web

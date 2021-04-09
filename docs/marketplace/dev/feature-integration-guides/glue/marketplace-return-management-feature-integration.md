@@ -73,7 +73,7 @@ Ensure the following transfers have been created:
 <!--This is a comment, it will not be included -->
 Enable the following behaviors by registering the plugins:
 
-| Plugin  | Specification | Prerequisites | Namespace |
+| PLUGIN  | SPECIFICATION | PREREQUISITES | NaNAMESPACEmespace |
 | ------------ | ----------- | ----- | ------------ |
 | MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resources as relationship by merchant references in the attributes | none |  Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication     |
 | MerchantReturnCollectionExpanderPlugin | Expands return collection with merchant data | none | Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |

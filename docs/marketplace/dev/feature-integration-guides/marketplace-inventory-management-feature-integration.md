@@ -92,8 +92,9 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| MerchantStock | object | Created | src/Generated/Shared/Transfer/MerchantStockTransfer |
+| Transfer | Type | Event | Path |
 |-|-|-|-|
+| MerchantStock | object | Created | src/Generated/Shared/Transfer/MerchantStockTransfer |
 | MerchantStockCriteria | object | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
 | ProductAvailabilityCriteria | object | Created | src/Generated/Shared/Transfer/ProductAvailabilityCriteriaTransfer |
 | ProductConcreteAvailability | object | Created | src/Generated/Shared/Transfer/ProductConcreteAvailabilityTransfer |
@@ -121,7 +122,7 @@ console translator:generate-cache
 ### 5) Setup behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantStockMerchantExpanderPlugin | Expands MerchantTransfer with related stocks. | None | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
 | MerchantStockMerchantPostCreatePlugin | Creates default stock for the merchant. | None | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
@@ -296,7 +297,7 @@ This step will publish tables on change (create, edit) to the `spy_product_offer
 
 #### Setup event, listeners, and publishers
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferAvailabilityStorageEventSubscriber | Registers listeners that are responsible for publishing product offer availability related changes to storage. | None | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Event\Subscriber |
 
@@ -360,7 +361,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 #### Configure message processors
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with Redis storage, and marks messages as failed in case of error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
@@ -413,7 +414,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 #### Set up re-generate and re-sync features
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferAvailabilitySynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. | None | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Synchronization |
 
@@ -460,7 +461,7 @@ MER000005,Budget Cameras MER000005 Warehouse 1
 MER000006,Sony Experts MER000006 Warehouse 1
 ```
 
-| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIREDy? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | mandatory | string | MER000001 | Merchant identifier. |
 | stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
@@ -593,7 +594,7 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 ```
 </details>
 
-| Column | Is Obligatory? | Data Type | Data Example | Data explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | product_offer_reference | mandatory | string | offer350 | Product offer identifier. |
 | stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
@@ -602,7 +603,7 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 
 Register the following plugins to enable data import:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantStockDataImportPlugin | Imports merchant stock data into the database. | None | Spryker\Zed\MerchantStockDataImport\Communication\Plugin |
 | ProductOfferStockDataImportPlugin | Imports product offer stock data into the database. | None | Spryker\Zed\ProductOfferStockDataImport\Communication\Plugin |

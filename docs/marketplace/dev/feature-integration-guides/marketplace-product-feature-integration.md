@@ -11,7 +11,7 @@ Follow the steps below to install the Marketplace Product feature core.
 
 To start feature integration, overview and install the necessary features:
 
-| Name            | Version | Integration Guide        |
+| NAME            | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
 | Spryker Core         | master      | [Spryker Core Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
 | Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1876853120) |
@@ -27,8 +27,8 @@ composer require spryker-feature/marketplace-product: "dev-master" --update-with
 
 Make sure that the following modules have been installed:
 
-| Module              | Expected Directory                   |
-| :------------------------ | :------------------------------------------ |
+| MODULE              | EXPECTED DIRECTORY                   |
+| ------------------- | ------------------------------------ |
 | MerchantProduct           | vendor/spryker/merchant-product             |
 | MerchantProductDataImport | vendor/spryker/merchant-product-data-import |
 | MerchantProductGui        | vendor/spryker/merchant-product-gui         |
@@ -71,7 +71,7 @@ console transfer:generate 2console propel:install 3console transfer:generate
 
 Verify the following changes by checking your database
 
-| Database entity               | Type  | Event   |
+| DATABASE ENTITY               | TYPE  | EVENT   |
 | ----------------------------- | ----- | ------- |
 | spy_merchant_product_abstract | table | created |
 
@@ -90,7 +90,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer  | Type | Event | Path  |
+| TRANSFER  | TYPE | EVENT | PATH  |
 | ----------------- | ----- | ------ | -------------------------- |
 | MerchantProductCriteria   | object | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
 | MerchantProduct           | object | Created | src/Generated/Shared/Transfer/MerchantProductTransfer        |
@@ -112,7 +112,7 @@ console translator:generate-cache
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description  | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
 | --------------------- | ------------------- | --------- | -------------------- |
 | MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.   | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
 | MerchantProductProductTableQueryCriteriaExpanderPlugin       | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
@@ -401,7 +401,7 @@ sku,merchant_reference,is_shared
 </details>
 
 
-| Column  | Is Obligatory? | Data Type | Data Example | Data Explanation  |
+| COLUMN  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION  |
 | ------------ | ------------ | -------- | --------------- | ------------------------ |
 | sku                | mandatory      | string    | 091                  | Product identifier.                                          |
 | merchant_reference | mandatory      | string    | roan-gmbh-und-co-k-g | Merchant identifier.                                         |
@@ -409,7 +409,7 @@ sku,merchant_reference,is_shared
 
 Register the following plugins to enable data import:
 
-| Plugin  | Specification  | Prerequisites | Namespace  |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
 | ------------------ | ----------------- | --------- | -------------------------- |
 | MerchantProductDataImportPlugin | Imports merchant product data into the database. | None          | Spryker\Zed\MerchantProductDataImport\Communication\Plugin |
 
@@ -451,8 +451,8 @@ Make sure that imported data is added to the spy_merchant_product.
 
 Register the following plugins to enable widgets:
 
-| Plugin                      | Description                                | Prerequisites | Namespace                                     |
-| -------------------------- | ----------------------------------------- | ------------ | -------------------------------------------- |
+| PLUGIN  | DESCRIPTION | Prerequisites | NAMESPACE |
+| ------------------ | ----------------- | ------------ | -------------------- |
 | MerchantProductWidget       | Displays alternative product.              | None          | SprykerShop\Yves\MerchantProductWidget\Widget |
 | ProductSoldByMerchantWidget | Displays list of products for replacement. | None          | SprykerShop\Yves\MerchantProductWidget\Widget |
 
@@ -499,7 +499,7 @@ Make sure that when you add merchant product to cart, on a cart page is has Sold
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin  | Description    | Prerequisites | Namespace  |
+| PLUGIN  | DESCRIPTION    | PREREQUISITES | NAMESPACE  |
 | ----------------- | ---------------------- | ------------ | -------------------- |
 | MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       | None          | Spryker\Client\MerchantProductSearch\Plugin\Search          |
 | ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. | None          | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |

@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Product Offer Glue API feature
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 |-|-|
 | Marketplace Product Offer | dev-master |
 
@@ -25,7 +25,7 @@ composer require spryker/merchant-product-offers-rest-api:"^0.4.0" --update-with
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantProductOffersRestApi | spryker/merchant-product-offers-rest-api |
 
@@ -42,7 +42,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | RestProductOffersAttributes | class | Created | src/Generated/Shared/Transfer/RestProductOffersAttributesTransfer |
 
@@ -52,7 +52,7 @@ Make sure that the following changes have been applied in transfer objects:
 #### Enable resources and relationships
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOffersResourceRoutePlugin | Registers the `product-offers` resource. | None | Spryker\Glue\MerchantProductOffersRestApi\Plugin\GlueApplication |
 | ConcreteProductsProductOffersResourceRoutePlugin | Registers the `product-offers` resource with `concrete-products`. | None | Spryker\Glue\MerchantProductOffersRestApi\Plugin\GlueApplication |

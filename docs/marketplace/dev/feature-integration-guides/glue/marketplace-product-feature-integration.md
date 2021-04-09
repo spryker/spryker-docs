@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Product Glue API feature core.
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Link |
+| NAME | VERSION | LINK |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
 | Marketplace Product | master | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html)|
@@ -29,7 +29,7 @@ composer require spryker/merchant-products-rest-api: "dev-master" --update-with-
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantProductsRestApi | vendor/spryker/merchant-products-rest-api |
 
@@ -47,7 +47,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT| PATH |
 |-|-|-|-|
 | AbstractProductsRestAttributes.merchantReference | property | Created | src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer |
 | RestCartItemsAttributes.merchantReference | property | Created | src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer |
@@ -58,7 +58,7 @@ Make sure that the following changes have been applied in transfer objects:
 3) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantProductCartItemExpanderPlugin | Expands view data for abstract product with merchant data. | None | Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi |
 | MerchantByMerchantReferenceResourceRelationshipPlugin |  Adds merchants resources as relationship by merchant references in the attributes. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |

@@ -5,6 +5,8 @@ summary: This document describes the process how to integrate the Marketplace In
 ---
 
 ## Install feature Core
+Follow the steps below to install the Marketplace Inventory Management Glue API feature core.
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

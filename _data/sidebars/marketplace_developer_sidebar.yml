@@ -54,6 +54,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
             output: web
 
+          - title: Marketplace Product Offer Prices feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html
+            output: web
+
           - title: Marketplace Return Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
             output: web

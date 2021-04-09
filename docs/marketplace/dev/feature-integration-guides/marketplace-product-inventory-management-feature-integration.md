@@ -5,6 +5,8 @@ summary: This document describes the process how to integrate the Marketplace Pr
 ---
 
 ## Install Feature Core
+Follow the steps below to install the Marketplace Product + Inventory Management feature core.
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

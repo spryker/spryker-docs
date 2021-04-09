@@ -4,11 +4,11 @@ last_updated: Apr 7, 2021
 summary: This document describes the process how to integrate the Marketplace Return Management feature into a Spryker project.
 ---
 
-This document describes how to integrate the [Marketplace return management]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
+This document describes how to integrate the [Marketplace Return Management]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace return management feature core.
+Follow the steps below to install the Marketplace Return Management feature core.
 
 ### 1) Install required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->

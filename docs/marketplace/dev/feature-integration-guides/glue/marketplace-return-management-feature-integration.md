@@ -133,6 +133,7 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 
 ---
 **Verification**
+
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the `MerchantReturnCollectionExpanderPlugin` and `MerchantByMerchantReferenceResourceRelationshipPlugin`

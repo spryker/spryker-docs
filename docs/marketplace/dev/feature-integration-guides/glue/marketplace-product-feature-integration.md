@@ -5,6 +5,8 @@ summary: This document describes how to integrate the Marketplace Product Glue A
 ---
 
 ## Install feature core
+Follow the steps below to install the Marketplace Product Glue API feature core.
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

@@ -5,24 +5,34 @@ summary: This document describes the process how to integrate the Marketplace Me
 ---
 
 ## Install feature core
+Follow the steps below to install the Marketplace Merchant Glue API feature core.
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
 | Name | Version | Link |
 |-|-|-|
-| Spryker Core | master | [[PUBLISHED] Glue API: Spryker Core feature integration - ongoing](https://spryker.atlassian.net/l/c/6k015Xc9) |
-| Marketplace Merchant | master | [[WIP] Marketplace Merchant Feature Integration - ongoing](https://spryker.atlassian.net/l/c/CndMqdDE) |
+| Spryker Core | master | [Glue API: Spryker Core Feature Integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
+| Marketplace Merchant | master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 Run the following commands to install the required modules:
 ```bash
 composer require spryker/merchants-rest-api:"^0.2.0" --update-with-dependencies
 ```
+
+---
+**Verification**
+
+Make sure that the following changes have been applied in transfer objects:
+
 Make sure that the following modules have been installed:
 
 | Module | Expected Directory |
 |-|-|
 | MerchantsRestApi | vendor/spryker/merchants-rest-api |
+
+---
 
 ### 2) Set up transfer objects
 Run the following command to generate transfer changes:
@@ -30,6 +40,9 @@ Run the following command to generate transfer changes:
 ```bash
 console transfer:generate
 ```
+
+---
+**Verification**
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -43,6 +56,8 @@ Make sure that the following changes have been applied in transfer objects:
 | RestOrderDetailsAttributesTransfer.merchantReferences | property | Created | src/Generated/Shared/Transfer/RestOrderDetailsAttributesTransfer |
 | RestOrderItemsAttributesTransfer.merchantReference | property | Created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
 | RestErrorMessageTransfer | object | Created | src/Generated/Shared/Transfer/RestErrorMessageTransfer |
+
+---
 
 ### 3) Set up behavior
 #### Enable resources and relationships
@@ -125,6 +140,9 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 }
 ```
 
+---
+**Verification**
+
 Make sure that the `MerchantsResourceRoutePlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/merchants/{{merchantReference}}`, `http://glue.mysprykershop.com/merchants`.
 
 Make sure that the pagination is working by sending the request GET `http://glue.mysprykershop.com/merchants?offset=1&limit=1`.
@@ -136,3 +154,5 @@ Make sure that the `MerchantAddressByMerchantReferenceResourceRelationshipPlugin
 Make sure that by sending the request GET `http://glue.mysprykershop.com/url-resolver?url={merchantUrl}`, you can see the merchant entity type and ID in the response.
 
 Make sure that by sending the request GET `http://glue.mysprykershop.com/orders?include=merchant`, you can see merchant attributes in the response.
+
+---

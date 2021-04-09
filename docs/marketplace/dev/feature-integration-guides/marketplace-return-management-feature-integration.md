@@ -1,23 +1,23 @@
 ---
-title: Marketplace return management feature integration
+title: Marketplace Return Management feature integration
 last_updated: Apr 7, 2021
-summary: This document describes the process how to integrate the Marketplace return management feature into a Spryker project.
+summary: This document describes the process how to integrate the Marketplace Return Management feature into a Spryker project.
 ---
 
-This document describes how to integrate the [Marketplace return management]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
+This document describes how to integrate the [Marketplace Return Management]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace return management feature core.
+Follow the steps below to install the Marketplace Return Management feature core.
 
-### 1) Install required modules using Сomposer
+### 1) Install required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-return-management --update-with-dependencies
-composer require spryker/sales-return ^1.1.0 --update-with-dependencies 
+composer require spryker/sales-return ^1.1.0 --update-with-dependencies
 ```
 <!-- Have to be deleted after Return Management feature will be released with a new version-->
 ---
@@ -34,7 +34,7 @@ Make sure that the following modules have been installed:
 ---
 
 
-### Set up the configuration
+### 2) Set up the configuration
 <!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
 
 Add the following configuration:
@@ -72,7 +72,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml</summary>
@@ -136,7 +136,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
@@ -206,7 +206,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/oms/MarketplacePayment01.xml</summary>
@@ -231,7 +231,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml</summary>
@@ -270,7 +270,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
@@ -340,9 +340,9 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details> 
+</details>
 
-### Set up database schema and transfer objects
+### 3) Set up database schema and transfer objects
 <!--Provide the following with a description before each item:
 * Code snippets with DB schema changes.
 * Code snippets with transfer schema changes.
@@ -384,7 +384,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ---
 
-### Add translations
+### 4) Add translations
 <!--Provide glossary keys for `DE` and `EN` of your feature as a code snippet. When a glossary key is dynamically generated, describe how to construct the key.-->
 
 Add translations as follows:
@@ -394,7 +394,7 @@ Add translations as follows:
 <details>
 <summary markdown='span'>data/import/common/common/glossary.csv</summary>
 
-``` 
+```
 merchant_sales_return.message.items_from_different_merchant_detected,"There are products from different merchants in your order. You can only return products from one merchant at a time.",en_US
 merchant_sales_return.message.items_from_different_merchant_detected,"Diese Bestellung enthält Artikel von verschiedenen Händlern. Sie können nur Artikel von einem Händler zur selben Zeit zurückschicken.",de_DE
 merchant_sales_return_widget.create_form.different_merchants_info,There are products from different merchants in your order. You can only return products from one merchant at a time.,en_US
@@ -404,7 +404,7 @@ merchant_sales_return_widget.create_form.different_merchants_info,Diese Bestellu
 </details>
 
 
-1. Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -419,7 +419,7 @@ Make sure that the configured data has been added to the `spy_glossary` table.
 
 ---
 
-### Set up behavior
+### 5) Set up behavior
 <!--This is a comment, it will not be included -->
 Enable the following behaviors by adding and registering the plugins:
 
@@ -460,7 +460,7 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 }
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/MarketplaceStartRefundCommandPlugin.php</summary>
@@ -518,7 +518,7 @@ class MarketplaceRefundCommandPlugin extends AbstractPlugin implements CommandPl
 }
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/MarketplaceStartReturnCommandPlugin.php</summary>
@@ -576,7 +576,7 @@ class MarketplaceStartReturnCommandPlugin extends AbstractPlugin implements Comm
 }
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
@@ -601,7 +601,7 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
 }
 ```
 
-</details> 
+</details>
 
 
 Add config for the `SalesReturn`:
@@ -626,22 +626,12 @@ class SalesReturnConfig extends SprykerSalesReturnConfig
 }
 ```
 
-</details> 
+</details>
 
 
 ## Install feature front end
 
 Follow the steps below to install the Marketplace return management feature front end.
-
-### Prerequisites
-<!--Describe the features the project must have before the current feature can be integrated.-->
-
-To start feature integration, integrate the required features:
-<!--See feature mapping at [Features](https://release.spryker.com/features).-->
-
-| NAME | VERSION |
-| --------- | ------ |
-| {Feature Name} | {feature version} |
 
 ### 1) Install required modules using Сomposer
 <!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
@@ -665,7 +655,7 @@ Make sure that the following modules have been installed:
 
 ---
 
-### Set up widgets
+### 2) Set up widgets
 <!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->
 
 Set up widgets as follows:
@@ -697,7 +687,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
               MerchantSalesReturnCreateFormWidget::class,
         ];
     }
-    
+
     /**
      * @return \SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface[]
      */
@@ -719,7 +709,7 @@ Make sure that the following widgets have been registered by adding the respecti
 
 | WIDGET | VERIFICATION |
 | ---------------- | ----------------- |
-| MerchantSalesReturnCreateFormWidget | Go through the  Return flow in the same way as now by clicking the "Create Return" button on the top of the Order Details page. Go on the "Create Return Page", and create a return only with the items of one merchant order at a time and only for returnable items.  |
+| MerchantSalesReturnCreateFormWidget | Go through the  Return flow in the same way as now by clicking the **Create Return** button on the top of the *Order Details* page. Go on the *Create Return* page, and create a return only with the items of one merchant order at a time and only for returnable items. |
 
 ---
 

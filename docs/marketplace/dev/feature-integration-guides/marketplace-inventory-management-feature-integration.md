@@ -5,6 +5,8 @@ summary: This document describes the process how to integrate the Marketplace In
 ---
 
 ## Install feature core
+Follow the steps below to install the Marketplace Inventory Management feature core.
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -64,7 +66,8 @@ console transfer:generate
 console propel:install
 console transfer:generate
 ```
-***
+
+---
 **Verification**
 
 Verify the following changes by checking your database
@@ -75,7 +78,7 @@ Verify the following changes by checking your database
 | spy_product_offer_stock | table | created |
 | spy_product_offer_availability_storage | table | created |
 
-***
+---
 
 ### 3) Set up transfer objects
 Run the following command to generate transfer changes:
@@ -83,6 +86,9 @@ Run the following command to generate transfer changes:
 ```bash
 console transfer:generate
 ```
+
+---
+**Verification**
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -100,6 +106,8 @@ Make sure that the following changes have been applied in transfer objects:
 | SpyMerchantUserEntity | object | Created | src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
 | SpyProductOfferAvailabilityStorageEntity | object | Created | src/Generated/Shared/Transfer/SpyProductOfferAvailabilityStorageEntityTransfer |
 | SpyProductOfferStockEntity | object | Created | src/Generated/Shared/Transfer/SpyProductOfferStockEntityTransfer |
+
+---
 
 ### 4) Add translations
 #### Zed translations
@@ -156,10 +164,14 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
     }
 }
 ```
+---
+**Verification**
 
 Make sure that when you retrieve merchant using `MerchantFacade::get()` the response transfer contains merchant stocks.
 
 Make sure that when you create a merchant in Zed UI, its stock also gets created in `spy_merchant_stock` table.
+
+---
 
 **src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php**
 
@@ -184,8 +196,12 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
     }
 }
 ```
+---
+**Verification**
 
 Make sure that when you edit some merchant on `http://zed.de.demo-spryker.com/merchant-gui/list-merchant`, you can see the `Wherehouses` field.
+
+---
 
 **src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
 
@@ -232,12 +248,16 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
+---
+**Verification**
 
 Make sure that when you create a product offer using `ProductOfferFacade::create()` with provided stock data, it persists to `spy_product_offer_stock`.
 
 Make sure that when you update a product offer using `ProductOfferFacade::create()` with provided stock data, it updates stock data in `spy_product_offer_stock`.
 
 Make sure that when you retrieve a product offer using `ProductOfferFacade::findOne()` the response data contains info about product offer stocks.
+
+---
 
 **src/Pyz/Zed/Availability/AvailabilityDependencyProvider.php**
 
@@ -263,7 +283,12 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 }
 ```
 
+---
+**Verification**
+
 Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySkuForStore()` returns not a product, but a product offer availability if the product offer reference passed in the request.
+
+---
 
 ### 6) Configure export to Redis
 
@@ -412,11 +437,18 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     }
 }
 
+---
+**Verification**
+
 Make sure that the command `console sync:data merchant_profile` exports data from `spy_product_offer_availability_storage` table to Redis.
 
 Make sure that when a product offer availability entities get created or updated through ORM, it is exported to Redis accordingly.
 
+---
+
 ### 8) Import data
+Import the following data.
+
 #### Import Merchant Stock data
 Prepare your data according to your requirements using our demo data:
 
@@ -559,7 +591,6 @@ offer358,Sony Experts MER000006 Warehouse 1,0,1
 offer359,Sony Experts MER000006 Warehouse 1,0,1
 offer360,Sony Experts MER000006 Warehouse 1,0,1
 ```
-
 </details>
 
 | Column | Is Obligatory? | Data Type | Data Example | Data explanation |
@@ -605,5 +636,9 @@ Run the following console command to import data:
 console data:import merchant-stock
 console data:import product-offer-stock
 ```
+---
+**Verification**
 
 Make sure that imported data is added to the `spy_merchant_stock` and `spy_product_offer_stock` tables.
+
+---

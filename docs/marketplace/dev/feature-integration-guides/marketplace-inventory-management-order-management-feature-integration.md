@@ -5,6 +5,8 @@ summary: This document describes the process how to integrate the Marketplace In
 ---
 
 ## Install feature core
+Follow the steps below to install the Marketplace Inventory Management + Order Management feature core.
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -20,12 +22,17 @@ Run the following commands to install the required modules:
 composer require spryker/oms-product-offer-reservation: "^0.1.0" --update-with-dependencies
 ```
 
+---
+**Verification**
+
 Make sure that the following modules have been installed:
 
 | Module | Expected Directory |
 |-|-|
 | OmsProductOfferReservation | vendor/spryker/oms-product-offer-reservation |
 | OmsProductOfferReservationGui | vendor/spryker/product-offer-reservation-gui |
+
+---
 
 ### 2) Set up the database schema
 Adjust the schema definition so entity changes will trigger events:
@@ -73,6 +80,8 @@ Run the following command to generate transfer changes:
 ```bash
 console transfer:generate
 ```
+---
+**Verification**
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -81,6 +90,8 @@ Make sure that the following changes have been applied in transfer objects:
 | SpyOmsProductOfferReservationEntity | object | Created | src/Generated/Shared/Transfer/SpyOmsProductOfferReservationEntityTransfer |
 | OmsProductOfferReservationCriteria | object | Created | src/Generated/Shared/Transfer/OmsProductOfferReservationCriteriaTransfer |
 | OmsProductOfferReservation | object | Created | src/Generated/Shared/Transfer/OmsProductOfferReservationTransfer |
+
+---
 
 ### 5) Set up behavior
 Enable the following behaviors by registering the plugins:
@@ -149,12 +160,16 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+---
+**Verification**
 
 Make sure if you add a product offer to the cart, place the order, reserved product offers count changes in the `spy_oms_product_offer_reservation` table.
 
 Make sure that a product offer available at PDP if it’s stock > 0 in the `spy_product_offer_stock` table.
 
 Make sure that the concrete product availability (in the `spy_availability` table) not affected when you place an order with a product offer.
+
+---
 
 **src/Pyz/Zed/ProductOfferStockGui/ProductOfferStockGuiDependencyProvider.php**
 
@@ -180,5 +195,9 @@ class ProductOfferStockGuiDependencyProvider extends SprykerProductOfferStockGui
 }
 ```
 
+---
+**Verification**
 
 Make sure that at if you open some product offer in view mode at `http://glue.mysprykershop.com/product-offer-gui/view?id-product-offer={idProductOffer}`, stock table contains the `Reservations` column.
+
+  ---

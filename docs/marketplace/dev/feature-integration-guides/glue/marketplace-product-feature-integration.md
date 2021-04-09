@@ -5,6 +5,8 @@ summary: This document describes how to integrate the Marketplace Product Glue A
 ---
 
 ## Install feature core
+Follow the steps below to install the Marketplace Product Glue API feature core.
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -20,11 +22,18 @@ Run the following commands to install the required modules:
 ```bash
 composer require spryker/merchant-products-rest-api: "dev-master" --update-with-dependencies
 ```
+
+
+---
+**Verification**
+
 Make sure that the following modules have been installed:
 
 | Module | Expected Directory |
 |-|-|
 | MerchantProductsRestApi | vendor/spryker/merchant-products-rest-api |
+
+---
 
 ### 2) Set up transfer objects
 Run the following command to generate transfer changes:
@@ -32,6 +41,10 @@ Run the following command to generate transfer changes:
 ```bash
 console transfer:generate
 ```
+
+---
+**Verification**
+
 Make sure that the following changes have been applied in transfer objects:
 
 | Transfer | Type | Event | Path |
@@ -39,6 +52,8 @@ Make sure that the following changes have been applied in transfer objects:
 | AbstractProductsRestAttributes.merchantReference | property | Created | src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer |
 | RestCartItemsAttributes.merchantReference | property | Created | src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer |
 | CartItemRequest.merchantReference | property | Created | src/Generated/Shared/Transfer/CartItemRequestTransfer |
+
+---
 
 3) Set up behavior
 Enable the following behaviors by registering the plugins:
@@ -115,8 +130,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-Make sure that you can add a merchant product to the cart using a POST request to `http://zed.de.demo-spryker.com/guest-cart-items or http://zed.de.demo-spryker.com/carts/{idCart}/items`.
+---
+**Verification**
 
-Make sure that when you do a GET request for the carts with merchant products, their merchants returned as well. `http://zed.de.demo-spryker.com/guest-carts/{idCart}?include=guest-cart-items,merchants` or `http://zed.de.demo-spryker.com/carts/{idCart}?include=items,merchants`.
+Make sure that you can add a merchant product to the cart using a `POST` request to `http://zed.de.demo-spryker.com/guest-cart-items or http://zed.de.demo-spryker.com/carts/{idCart}/items`.
 
-Make sure that when you do a GET request to retrieve abstract products that belong to a specific merchant, it returns product data together with their merchants `http://zed.de.demo-spryker.com/abstract-products/{abstractProductSku}?include=merchants`.
+Make sure that when you do a `GET` request for the carts with merchant products, their merchants returned as well. `http://zed.de.demo-spryker.com/guest-carts/{idCart}?include=guest-cart-items,merchants` or `http://zed.de.demo-spryker.com/carts/{idCart}?include=items,merchants`.
+
+Make sure that when you do a `GET` request to retrieve abstract products that belong to a specific merchant, it returns product data together with their merchants `http://zed.de.demo-spryker.com/abstract-products/{abstractProductSku}?include=merchants`.
+
+  ---

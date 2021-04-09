@@ -10,13 +10,13 @@ Follow the steps below to install the Marketplace Inventory Management feature c
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
 | Marketplace Product Offer | master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html)  |
 | Inventory Management | master | [Inventory Management feature integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 Run the following commands to install the required modules:
 
 ```bash
@@ -25,7 +25,7 @@ composer require spryker-feature/marketplace-inventory-management: "dev-master" 
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantStock | vendor/spryker/merchant-stock |
 | MerchantStockDataImport | vendor/spryker/merchant-stock-data-import |
@@ -72,7 +72,7 @@ console transfer:generate
 
 Verify the following changes by checking your database
 
-| Database entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 |-|-|-|
 | spy_merchant_stock | table | created |
 | spy_product_offer_stock | table | created |
@@ -92,9 +92,8 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
-|-|-|-|-|
 | MerchantStock | object | Created | src/Generated/Shared/Transfer/MerchantStockTransfer |
+|-|-|-|-|
 | MerchantStockCriteria | object | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
 | ProductAvailabilityCriteria | object | Created | src/Generated/Shared/Transfer/ProductAvailabilityCriteriaTransfer |
 | ProductConcreteAvailability | object | Created | src/Generated/Shared/Transfer/ProductConcreteAvailabilityTransfer |
@@ -122,7 +121,7 @@ console translator:generate-cache
 ### 5) Setup behavior
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| Plugin | Description | Prerequisites | Namespace |
 |-|-|-|-|
 | MerchantStockMerchantExpanderPlugin | Expands MerchantTransfer with related stocks. | None | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
 | MerchantStockMerchantPostCreatePlugin | Creates default stock for the merchant. | None | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
@@ -297,7 +296,7 @@ This step will publish tables on change (create, edit) to the `spy_product_offer
 
 #### Setup event, listeners, and publishers
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| Plugin | Specification | Prerequisites | Namespace |
 |-|-|-|-|
 | ProductOfferAvailabilityStorageEventSubscriber | Registers listeners that are responsible for publishing product offer availability related changes to storage. | None | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Event\Subscriber |
 
@@ -361,7 +360,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 #### Configure message processors
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| Plugin | Specification | Prerequisites | Namespace |
 |-|-|-|-|
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with Redis storage, and marks messages as failed in case of error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
@@ -414,7 +413,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 #### Set up re-generate and re-sync features
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| Plugin | Specification | Prerequisites | Namespace |
 |-|-|-|-|
 | ProductOfferAvailabilitySynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. | None | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Synchronization |
 
@@ -461,7 +460,7 @@ MER000005,Budget Cameras MER000005 Warehouse 1
 MER000006,Sony Experts MER000006 Warehouse 1
 ```
 
-| COLUMN | REQUIREDy? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
 |-|-|-|-|-|
 | merchant_reference | mandatory | string | MER000001 | Merchant identifier. |
 | stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
@@ -594,7 +593,7 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| Column | Is Obligatory? | Data Type | Data Example | Data explanation |
 |-|-|-|-|-|
 | product_offer_reference | mandatory | string | offer350 | Product offer identifier. |
 | stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
@@ -603,7 +602,7 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 
 Register the following plugins to enable data import:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| Plugin | Specification | Prerequisites | Namespace |
 |-|-|-|-|
 | MerchantStockDataImportPlugin | Imports merchant stock data into the database. | None | Spryker\Zed\MerchantStockDataImport\Communication\Plugin |
 | ProductOfferStockDataImportPlugin | Imports product offer stock data into the database. | None | Spryker\Zed\ProductOfferStockDataImport\Communication\Plugin |

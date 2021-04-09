@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Inventory Management + Packagi
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Link |
+| NAME | VERSION | LINK |
 |-|-|-|
 | Spryker Core | master | [[PUBLISHED] Glue API: Spryker Core feature integration - ongoing]()  |
 | Marketplace Inventory Management | master | [[WIP] Marketplace Inventory Management Feature Integration - ongoing]()  |
@@ -25,7 +25,7 @@ composer require spryker/product-offer-packaging-unit:"^0.1.0" --update-with-dep
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | ProductOfferPackagingUnit | vendor/spryker/product-offer-packaging-unit |
 
@@ -33,7 +33,7 @@ Make sure that the following modules have been installed:
 #### Enable resources and relationships
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferPackagingUnitOmsReservationAggregationPlugin | Aggregates reservations for product offers packaging unit. | None | Spryker\Zed\ProductOfferPackagingUnit\Communication\Plugin\Oms |
 

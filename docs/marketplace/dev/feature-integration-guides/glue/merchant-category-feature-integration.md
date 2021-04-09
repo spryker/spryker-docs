@@ -17,7 +17,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core   | master   | [Glue API: Spryker Core feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/639173086) |
 | Marketplace Merchant Category | master  | [Marketplace Merchant Category Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1874690281) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 Run the following commands to install the required modules:
 

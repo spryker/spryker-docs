@@ -12,7 +12,7 @@ Follow the steps below to install the Marketplace Product Offer Prices Glue API 
 
 To start feature integration, overview, and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 |-|-|
 | Marketplace Product Offer Prices | dev-master |
 
@@ -28,7 +28,7 @@ composer require spryker/spryker/product-offer-prices-rest-api:"^0.3.0" --update
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | ProductOfferPricesRestApi | spryker/product-offer-prices-rest-api |
 
@@ -51,7 +51,7 @@ Make sure that the  `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcr
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | RestProductOfferPriceAttributes | class | Created | src/Generated/Shared/Transfer/RestProductOffersAttributesTransfer |
 
@@ -63,7 +63,7 @@ To set up behavior, take the following steps:
 #### Enable Product Offer Prices resources and relationships
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferPricesResourceRoutePlugin | Registers the `product-offer-prices` resource. | None | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
 | ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Registers the `product-offer-prices` resource as a relationship to `product-offers`. | None | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |

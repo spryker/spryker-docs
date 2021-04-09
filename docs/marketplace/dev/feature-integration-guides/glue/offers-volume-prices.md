@@ -11,7 +11,7 @@ Follow the steps below to install the Offers Volume Prices Glue API feature core
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 |-|-|
 | Marketplace Product Offer Prices | dev-master |
 | Marketplace Product Offer Volume Prices | dev-master |
@@ -27,7 +27,7 @@ composer require spryker/spryker/price-product-offer-volumes-rest-api:"^0.1.0" -
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | PriceProductOfferVolumesRestApi | spryker/price-product-offer-volumes-rest-api |
 
@@ -46,7 +46,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | RestProductOfferPriceAttributes.volumePrices | property | Created | src/Generated/Shared/Transfer/RestProductOffersAttributesTransfer |
 
@@ -56,7 +56,7 @@ Make sure that the following changes have been applied in transfer objects:
 Enable Product Offer Prices resources and relationships
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | RestProductOfferPricesAttributesMapperPlugin | Extends RestProductOfferPricesAttributesTransfer with volume price data | None | Spryker\Glue\PriceProductOfferVolumesRestApi\Plugin |
 

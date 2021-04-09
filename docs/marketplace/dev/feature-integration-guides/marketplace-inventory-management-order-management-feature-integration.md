@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Inventory Management + Order M
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Link |
+| NAME | VERSION | LINK |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
 | Inventory Management | master |  [Inventory Management Feature Integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
@@ -27,7 +27,7 @@ composer require spryker/oms-product-offer-reservation: "^0.1.0" --update-with-d
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | OmsProductOfferReservation | vendor/spryker/oms-product-offer-reservation |
 | OmsProductOfferReservationGui | vendor/spryker/product-offer-reservation-gui |

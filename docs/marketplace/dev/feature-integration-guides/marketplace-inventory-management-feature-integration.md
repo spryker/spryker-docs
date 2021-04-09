@@ -10,13 +10,13 @@ Follow the steps below to install the Marketplace Inventory Management feature c
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
 | Marketplace Product Offer | master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html)  |
 | Inventory Management | master | [Inventory Management feature integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 Run the following commands to install the required modules:
 
 ```bash
@@ -25,7 +25,7 @@ composer require spryker-feature/marketplace-inventory-management: "dev-master" 
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantStock | vendor/spryker/merchant-stock |
 | MerchantStockDataImport | vendor/spryker/merchant-stock-data-import |
@@ -72,7 +72,7 @@ console transfer:generate
 
 Verify the following changes by checking your database
 
-| Database entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 |-|-|-|
 | spy_merchant_stock | table | created |
 | spy_product_offer_stock | table | created |

@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Merchant Glue API feature core
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Link |
+| NAME | VERSION | LINK |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core Feature Integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
 | Marketplace Merchant | master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html) |
@@ -28,7 +28,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantsRestApi | vendor/spryker/merchants-rest-api |
 
@@ -46,7 +46,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | RestMerchantsAttributesTransfer | object | Created | src/Generated/Shared/Transfer/RestMerchantsAttributesTransfer |
 | RestMerchantAddressesAttributesTransfer | object | Created | src/Generated/Shared/Transfer/RestMerchantAddressesAttributesTransfer |
@@ -63,7 +63,7 @@ Make sure that the following changes have been applied in transfer objects:
 #### Enable resources and relationships
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantsResourceRoutePlugin | Registers the `merchants` resource. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
 | MerchantAddressesResourceRoutePlugin | Registers the `merchant-addresses` resource. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |

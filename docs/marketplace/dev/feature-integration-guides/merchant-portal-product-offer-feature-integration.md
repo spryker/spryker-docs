@@ -24,11 +24,16 @@ Run the following command(s) to install the required modules:
 composer require spryker/product-offer-merchant-portal-gui:"dev-master" --update-with-dependencies
 ```
 
+---
+**Verification**
+
 Make sure that the following modules have been installed:
 
 | Module                    | Expected Directory                  |
 | ----------------------- | ----------------------------------- |
 | ProductOfferMerchantPortalGui | spryker/product-offer-merchant-portal-gui |
+
+---
 
 ### 2) Set up transfer objects
 
@@ -48,7 +53,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Set up behavior
 
-### Extend OrderItemsTable in SalesMerchantPortalGui 
+### Extend OrderItemsTable in SalesMerchantPortalGui
 
 Activate the following plugins:
 
@@ -56,7 +61,7 @@ Activate the following plugins:
 | ----------------------- | -------------- | -------------- | ----------------------- |
 | ProductOfferMerchantOrderItemTableExpanderPlugin | Adds merchantReference and ProductOfferSku to Sales tables in MerchantPortal | Marketplace Sales Merchant Portal integrated | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
 
-src/Pyz/Zed/SalesMerchantPortalGui/SalesMerchantPortalGuiDependencyProvider.php
+**src/Pyz/Zed/SalesMerchantPortalGui/SalesMerchantPortalGuiDependencyProvider.php**
 
 ```php
 <?php
@@ -80,9 +85,14 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 }
 ```
 
-Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening ` http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that columns “Merchant Reference” and “Product Offer SKU” are present. 
+---
+**Verification**
 
-### Add Offer widget to MerchantDashobard
+Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening ` http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that columns “Merchant Reference” and “Product Offer SKU” are present.
+
+---
+
+### Add the Offer widget to MerchantDashobard
 
 Activate the following plugins:
 
@@ -90,7 +100,7 @@ Activate the following plugins:
 | ---------------- | --------------- | ------------- | ----------------- |
 | OffersMerchantDashboardCardPlugin | Adds Offers widget on MerchantDashobard | None              | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
 
-src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php
+**src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
 
 ```php
 <?php
@@ -113,4 +123,9 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 }
 ```
 
-Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up at the page. 
+---
+**Verification**
+
+Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up at the page.
+
+---

@@ -29,7 +29,7 @@ Activate the following plugins:
 | MerchantProductOfferCartItemExpanderPlugin              | Expands the merchant product offer information with a merchant reference. | None              | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
 | MerchantProductOfferRestCartItemsAttributesMapperPlugin | Maps merchant product offer reference and merchant reference to items attributes. | None              | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
 
-src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php
+**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -64,7 +64,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php
+**src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -88,6 +88,8 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
+---
+**Verification**
 
 Make sure that the `MerchantProductOfferCartItemExpanderPlugin` and `MerchantProductOfferCartItemMapperPlugin` plugins are set up by sending the request `POST https://glue.mysprykershop.com/carts/{{cartUuid}}/items` with the following body and make sure the product has been added to the cart with the offer.
 
@@ -104,4 +106,6 @@ Make sure that the `MerchantProductOfferCartItemExpanderPlugin` and `MerchantPro
 }
 ```
 
-Make sure that the `MerchantProductOfferRestCartItemsAttributesMapperPlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/carts/{{cartUuid}}?include=items` to the cart that has an item with product offer. You should be able to see attributes productOfferReference and merchantReference among the attributes of the items resource.
+Make sure that the `MerchantProductOfferRestCartItemsAttributesMapperPlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/carts/{{cartUuid}}?include=items` to the cart that has an item with product offer. You should be able to see attributes `productOfferReference` and `merchantReference` among the attributes of the items resource.
+
+---

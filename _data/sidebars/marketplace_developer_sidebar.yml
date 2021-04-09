@@ -125,6 +125,10 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
                 output: web
 
+              - title: Glue API - Marketplace Return Management feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
+                output: web
+
               - title: Glue API - Merchant Category feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
                 output: web
@@ -134,11 +138,7 @@ entries:
                 output: web
 
               - title: Glue API - Marketplace Product Offer + Cart feature integrationn
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
-                output: web
-
-              - title: Glue API - Marketplace return management feature integration
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
+                url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html
                 output: web
 
       - title: Glue API guides

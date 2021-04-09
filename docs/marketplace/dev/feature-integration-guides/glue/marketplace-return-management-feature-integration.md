@@ -48,8 +48,6 @@ Make sure that the following modules have been installed:
 ### 2) Set up transfer objects
 <!--If the feature has database definition changes, merge the steps as described in [Set up database schema and transfer objects](#set-up-database-schema-and-transfer-objects). Provide code snippet with transfer schema changes, describing the changes before each code snippet. Provide the console commands to apply the changes in project and core.-->
 
-
-
 Generate transfers:
 
 ```bash
@@ -100,7 +98,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
                 SalesReturnsRestApiConfig::RESOURCE_RETURNS,
                 new MerchantByMerchantReferenceResourceRelationshipPlugin()
             );
-    
+
             return $resourceRelationshipCollection;
       }
 
@@ -121,7 +119,7 @@ use Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn\MerchantRet
 
 class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 {
- 
+
     protected function getReturnCollectionExpanderPlugins(): array
     {
         return [
@@ -137,7 +135,7 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the `MerchantReturnCollectionExpanderPlugin` and `MerchantByMerchantReferenceResourceRelationshipPlugin` 
+Make sure that the `MerchantReturnCollectionExpanderPlugin` and `MerchantByMerchantReferenceResourceRelationshipPlugin`
 plugins are set up by :
 1. sending the request `GET http://glue.mysprykershop.com/returns/{returnId}include=merchants`
 

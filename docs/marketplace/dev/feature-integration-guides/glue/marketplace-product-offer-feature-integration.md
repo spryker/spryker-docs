@@ -17,22 +17,34 @@ Run the following commands to install the required modules:
 ```bash
 composer require spryker/merchant-product-offers-rest-api:"^0.4.0" --update-with-dependencies
 ```
+
+---
+**Verification**
+
 Make sure that the following modules have been installed:
 
 | Module | Expected Directory |
 |-|-|
 | MerchantProductOffersRestApi | spryker/merchant-product-offers-rest-api |
 
+---
+
 ### 2) Set up transfer objects
 Run the following command to generate transfer changes:
 ```bash
 console transfer:generate
 ```
+
+---
+**Verification**
+
 Make sure that the following changes have been applied in transfer objects:
 
 | Transfer | Type | Event | Path |
 |-|-|-|-|
 | RestProductOffersAttributes | class | Created | src/Generated/Shared/Transfer/RestProductOffersAttributesTransfer |
+
+---
 
 ### 3) Set up behavior
 #### Enable resources and relationships
@@ -95,6 +107,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
+---
+**Verification**
+
 Make sure that the `ProductOffersResourceRoutePlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/product-offers/{{offerReference}}`.
 
 Make sure that the `ConcreteProductsProductOffersResourceRoutePlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/concrete-products/{{sku}}/product-offers`.
@@ -102,3 +117,5 @@ Make sure that the `ConcreteProductsProductOffersResourceRoutePlugin` plugin is 
 Make sure that the `ProductOffersByProductConcreteSkuResourceRelationshipPlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/concrete-products/{{sku}}?include=product-offers`. You should get `concrete-products` with all product’s `product-offers` as relationships.
 
 Make sure that the `MerchantByMerchantReferenceResourceRelationshipPlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/product-offers/{{productOfferReference}}?include=merchants`. The response should include the `merchants` resource along with the `product-offers`.
+
+---

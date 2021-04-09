@@ -17,7 +17,7 @@ To start feature integration, overview and install the necessary features:
 | Order Threshold | dev-master  |
 | Cart            | 202001.0    |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 Run the following commands to install the required modules:
 

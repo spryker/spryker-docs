@@ -195,7 +195,7 @@ Configure tables to be published and synchronized to the Storage on create, edit
 
 | PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |
 | --------------- | -------------- | ------ | -------------- |
-| {plugin} | {description} | {{prerequisite}   |         }  |   {namespace} |
+| {plugin} | {description} | {prerequisite}  <!--leave blank if "None"--> |   {namespace} |
 
 ```php
 {code snippet with plugin setup}

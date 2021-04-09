@@ -34,6 +34,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-order-management-feature-integration.html
             output: web
 
+          - title: Marketplace Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
+            output: web
+
           - title: Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html
             output: web
@@ -51,7 +55,7 @@ entries:
             output: web
 
           - title: Marketplace Shipment + Checkout feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature integration.html
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature-integration.html
             output: web
 
           - title: Marketplace Shipment + Customer feature integration

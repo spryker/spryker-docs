@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Product + Cart feature core.
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration Guide  |
+| NAME | VERSION | INTEGRATION GUIDE  |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
 | Marketplace Product | master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html)|
@@ -25,7 +25,7 @@ console transfer:generate
 **Verification**
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | Item.merchantReference | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
 
@@ -34,7 +34,7 @@ Make sure that the following changes have been applied in transfer objects:
 ### 2) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantProductCartPreCheckPlugin | Validates that merchant references in the cart items match existing merchant products. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Cart |
 

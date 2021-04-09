@@ -42,6 +42,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html
             output: web
 
+          - title: Marketplace Order Management + Customer Account Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
+            output: web
+
           - title: Marketplace Order Management + Order Threshold feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html
             output: web

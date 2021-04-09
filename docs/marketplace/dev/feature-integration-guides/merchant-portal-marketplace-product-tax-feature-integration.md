@@ -6,6 +6,7 @@ summary: This integration guide provides steps on how to integrate the Merchant 
 
 ## Install feature core
 Follow the steps below to install the Merchant Portal - Marketplace Product + Tax feature core.
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

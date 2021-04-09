@@ -10,7 +10,7 @@ Follow the steps below to install the Merchant Category Glue API feature core.
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, overview and install the necessary features:
 
 | Name   | Version | Link   |
 | ---------------- | ------ | ------------------ |

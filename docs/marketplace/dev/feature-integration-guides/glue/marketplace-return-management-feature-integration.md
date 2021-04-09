@@ -8,7 +8,7 @@ This document describes how to integrate the [Marketplace return management API]
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Return Management API feature core.
+Follow the steps below to install the Marketplace Return Management Glue API feature core.
 
 ### Prerequisites
 <!-- List the features a project must have before they can integrate the current feature. -->

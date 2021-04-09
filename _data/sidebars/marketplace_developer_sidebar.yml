@@ -129,6 +129,10 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
                 output: web
 
+              - title: Glue API - Marketplace Product Offer Prices feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html
+                output: web
+
               - title: Glue API - Marketplace Return Management feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
                 output: web
@@ -139,6 +143,10 @@ entries:
 
               - title: Glue API - Merchant Opening Hours feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
+                output: web
+
+              - title: Glue API - Offers Volume Prices feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/offers-volume-prices.html
                 output: web
 
               - title: Glue API - Marketplace Product Offer + Cart feature integrationn

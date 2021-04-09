@@ -6,8 +6,10 @@ For code samples with more than 38 lines, use dropdowns with this syntax:
 <details>
 <summary markdown='span'>{namespace}</summary>
 
-{text}
+```php
+{code}
 
+```
 </details>
 
 ## Escaping Liquid template tags

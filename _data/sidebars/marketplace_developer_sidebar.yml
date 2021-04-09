@@ -79,7 +79,7 @@ entries:
             output: web
 
           - title: Marketplace Shipment + Checkout feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature integration.html
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature-integration.html
             output: web
 
           - title: Marketplace Shipment + Customer feature integration

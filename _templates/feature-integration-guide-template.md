@@ -228,7 +228,7 @@ Configure tables to be published to the {table name} table and synchronized to t
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES    | NAMESPACE |
 | -------- | ------------- | ---------------- | --------- |
-| {plugin} | {description} | { {prerequisite} | }         | {namespace} |
+| {plugin} | {description} | {prerequisite} <!--leave blank if "None"--> | {namespace} |
 
 ```php
 {code snippet with plugin setup}
@@ -259,7 +259,7 @@ Install the following plugins:
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
-| {plugin} | {Description} | {{prerequisite} | }         | {namespace} |
+| {plugin} | {Description} | {prerequisite}<!--leave blank if "None"-->| {namespace} |
 
 ```php
 {code snippet with plugin setup}
@@ -318,7 +318,7 @@ Import infrastructural data as follows:
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
-| {plugin} | {Description} | {{prerequisite} | }         | {namespace} |
+| {plugin} | {Description} | {prerequisite} <!--leave blank if "None"-->| {namespace} |
 
 ```php
 {code snippet with plugin setup}
@@ -343,7 +343,7 @@ Ensure that the {entities} have been added to the `{table_name}` table.
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
-| {plugin} | {Description} | {{prerequisite} | }         | {namespace} |
+| {plugin} | {Description} | {prerequisite} <!--leave blank if "None"-->| {namespace} |
 
 ```php
 {code snippet with plugin setup}
@@ -365,7 +365,7 @@ Enable the following behaviors by registering the plugins:
 
 | Plugin   | Specification | Prerequisites   | Namespace |
 | -------- | ------------- | --------------- | --------- |
-| {plugin} | {description} | {{prerequisite} | }         | example namespace |
+| {plugin} | {description} | {prerequisite}<!--leave blank if "None"-->| example namespace |
 
 ```php
 {code snippet with plugin setup}
@@ -464,7 +464,7 @@ Set up widgets as follows:
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
-| {plugin} | {description} | {{prerequisite} | }         | {namespace} |
+| {plugin} | {description} | {prerequisite}<!--leave blank if "None"-->| {namespace} |
 
 ```php
 {code snippet with provider setup}

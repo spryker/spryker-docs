@@ -38,6 +38,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-packaging-units-feature-integration.html
             output: web
 
+          - title: Marketplace Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
+            output: web
+
           - title: Marketplace Product + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-cart-feature-integration.html
             output: web

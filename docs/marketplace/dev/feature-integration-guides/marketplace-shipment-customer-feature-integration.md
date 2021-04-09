@@ -16,7 +16,7 @@ Follow the steps below to install the Marketplace Shipment + Customer feature co
 | Marketplace Shipment | dev-master | 
 | Customer | 202001.0 | 
 
-### Set up behavior
+### 1) Set up behavior
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |

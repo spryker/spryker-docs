@@ -1,5 +1,8 @@
 <!-- This document is an integration guide template.
-All the described steps are optional. If you want to add a step that's not described in the template, contact Karoly Gerner. -->
+All the described steps are optional. If you want to add a step that's not described in the template, contact Karoly Gerner.
+
+
+Before you start, check out the formatting templates in [Formatting templates for feature integration guides](formatting-templates-for-feature-integration-guides.md).-->
 
 ---
 title: {Meta name}
@@ -203,7 +206,9 @@ Configure tables to be published and synchronized to the Storage on create, edit
 
 ---
 **Verification**
-<!--Describe how a developer can check they have completed the step correctly.-->
+<!--Describe how a developer can check they have completed the step correctly.
+
+Usually, it is technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
 
 Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
 
@@ -236,7 +241,9 @@ Configure tables to be published to the {table name} table and synchronized to t
 
 ---
 **Verification**
-<!--Describe how a developer can check they have completed the step correctly.-->
+<!--Describe how a developer can check they have completed the step correctly.
+
+Usually, it is technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
 
 Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
 
@@ -267,7 +274,9 @@ Install the following plugins:
 
 ---
 **Verification**
-<!--Describe how a developer can check they have completed the step correctly.-->
+<!--Describe how a developer can check they have completed the step correctly.
+
+Usually, it is technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
 
 Make sure that, when an {entity} is created, updated or deleted, it is exported to or removed from Redis and Elasticsearch.
 

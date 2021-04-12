@@ -1,5 +1,5 @@
 ---
-title: Merchants feature integration
+title: Marketplace Merchants feature integration
 last_updated: Mar 23, 2021
 summary: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
 ---
@@ -10,12 +10,12 @@ Follow the steps below to install the Marketplace Merchant feature core.
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |Integration guide |
+| NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | master |
 | Merchant | master |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 Install the required modules:
 
 ```bash
@@ -25,7 +25,7 @@ Make sure that the following modules have been installed:
 
 
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | MerchantProfile | vendor/spryker/merchant-profile |
 | MerchantProfileDataImport | vendor/spryker/merchant-profile-data-import |
@@ -73,7 +73,7 @@ console transfer:generate
 
 Make sure that the following changes have occurred in the database:
 
-| Database entity | Type | Event |
+| DATBASE ENTITY | TYPE | EVENT |
 |---|---|---|
 | spy_merchant_storage | table | created |
 | spy_merchant_search | table | created |
@@ -322,7 +322,7 @@ Configure export to Redis:
 
 1. Set up event listeners and publishers:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | MerchantPublisherTriggerPlugin | Registers the publishers that publish merchant entity changes to storage. | None | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin |
 | MerchantStoragePublisherPlugin | Publishes merchant data to the `spy_merchant_storage` table. | None | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
@@ -398,7 +398,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 3. Configure message processors:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with Redis and marks messages as failed in case of an error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
@@ -450,7 +450,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 4. Set up re-generate and re-sync features:
 
-| Plugin| Specification| Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. | None | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
 
@@ -543,7 +543,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 3. Configure message processors:
 
-| Plugin  | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | SynchronizationSearchQueueMessageProcessorPlugin | Configures merchant messages to sync with Elastica search and marks messages as failed in case of an error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
@@ -576,7 +576,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 4. Setup re-generate and re-sync features:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | MerchantSynchronizationDataBulkRepositoryPlugin | Synchronizes the entire search table content into Search. | None | Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization |
 
@@ -635,11 +635,11 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
 Make sure that, when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
 
 
-| Target entity | Example of expected data identifier |Example of expected data identifier |
-|---|---|---|
-| Merchant | merchant:1 |Example of expected data identifier is provided below |
+| TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
+|---|---|
+| Merchant | merchant:1 |
 
-<details><summary markdown='span'>Click to view an example of the expected data fragment</summary>
+<details><summary markdown='span'>Example of the expected data fragment</summary>
 
  ```json
 
@@ -829,9 +829,9 @@ Make sure that, when merchant entities are created or updated through ORM, they 
 
  ---
 
-6. Set up result formatters:
+1. Set up result formatters:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer.  None | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
 
@@ -858,7 +858,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 ```
 7. Set up query expanders:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |----|----|----|----|
 | PaginatedMerchantSearchQueryExpanderPlugin | Allows to use pagination for merchant search. | None | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
 | StoreQueryExpanderPlugin | Allows search to filter out merchants that do not belong to the current store. | None | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
@@ -928,7 +928,7 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 </details>
 
 
-| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000007 | Merchant identifier. |
 | contact_person_role |   | String | E-Commerce Manager | Role of the contact person of a merchant. |
@@ -971,7 +971,7 @@ MER000003,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115
 MER000007 ,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115
 ```
 
-| Column | Is Obligatory? | Data Type | Data Example | Data explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000006 | Merchant identifier. |
 | country_iso2_code |   | String | DE | Country ISO-2 code the address exists in. |
@@ -984,7 +984,7 @@ MER000007 ,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115
 
 3. Register the following plugins to enable data import:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantProfileDataImportPlugin | Imports merchant profile data into the database. | None | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
 | MerchantProfileAddressDataImportPlugin | Imports merchant profile address data into the database. | None | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
@@ -1015,7 +1015,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 
 ```bash
 console data:import merchant-profile
-console data:import merchant-profile-address```
+console data:import merchant-profile-address
+```
 
 ---
 **Verification**
@@ -1029,17 +1030,17 @@ Follow the steps below to install the feature front end.
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
-| Name | Version |
+| NAME | VERSION |
 |-|-|
 | Spryker Core | master |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 Run the following commands to install the required modules:
 ```bash
 composer require spryker-feature/marketplace-merchant: "dev-master" --update-with-dependencies
 ```
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantProfileWidget | vendor/spryker-shop/merchant-profile-widget |
 | MerchantPage | vendor/spryker-shop/merchant-page |
@@ -1083,11 +1084,11 @@ Make sure that, in the database, the configured data has been added to the `spy_
 ---
 
 ### 3) Set up behavior
-Set up behavior:
+To set up behavior:
 
 1. Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantPageResourceCreatorPlugin | Allows to access a merchant page at `https://yves.mysprykershop.com/merchant/{merchantReference}`. | None | SprykerShop\Yves\MerchantPage\Plugin |
 | UrlStorageMerchantMapperPlugin | Provides access to merchant storage data in the controller related to the `https://yves.mysprykershop.com/merchant/{merchantReference}` URL.  | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin |
@@ -1162,7 +1163,7 @@ Make sure that you can view merchant profile data at http://yves.de.demo-spryker
 ## Related features
 Integrate the following related features:
 
-| Feature        | Required for the current feature | Integration guide |
+| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
 | Marketplace Merchant  API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html) |
 |   |   |   |   |

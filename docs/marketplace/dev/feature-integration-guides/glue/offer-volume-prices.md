@@ -1,11 +1,11 @@
 ---
-title: Offers Volume Prices feature integration
+title: Glue API - Offer Volume Prices feature integration
 last_updated: Dec 04, 2020
 summary: This document describes how to integrate the Offers Volume Prices Glue API feature into a Spryker project.
 ---
 
 ## Install feature core
-Follow the steps below to install the Offers Volume Prices Glue API feature core.
+Follow the steps below to install the Offer Volume Prices Glue API feature core.
 
 ### Prerequisites
 

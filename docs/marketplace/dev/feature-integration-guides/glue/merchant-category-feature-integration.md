@@ -1,6 +1,6 @@
 ---
-title: Merchant Category feature integration
-last_updated: Nov 10, 2020
+title: Glue API - Merchant Category feature integration
+last_updated: Mar 04, 2021
 summary: This document describes the process how to integrate the Merchant Category Glue API feature into a Spryker project.
 ---
 
@@ -12,10 +12,10 @@ Follow the steps below to install the Merchant Category Glue API feature core.
 
 To start feature integration, overview and install the necessary features:
 
-| Name   | Version | Link   |
+| NAME   | VERSION | INTEGRATION GUIDE   |
 | ---------------- | ------ | ------------------ |
-| Spryker Core   | master   | [Glue API: Spryker Core feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/639173086) |
-| Marketplace Merchant Category | master  | [Marketplace Merchant Category Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1874690281) |
+| Spryker Core   | master   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant Category | master  | [Marketplace Merchant Category feature integration](docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -30,7 +30,7 @@ composer require spryker/merchant-categories-rest-api:"^0.1.0" --update-with-dep
 
 Make sure that the following modules have been installed:
 
-| Module  | Expected Directory   |
+| MODULE  | EXPECTED DIRECTORY   |
 | -------------- | ----------------- |
 | MerchantCategoriesRestApi | vendor/spryker/merchant-categories-rest-api |
 
@@ -49,7 +49,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer  | Type   | Event   | Path   |
+| TRANSFER  | TYPE   | EVENT   | PATH   |
 | -------------- | ---- | ----- | ------------------ |
 | RestMerchantsAttributes | object | Created | src/Generated/Shared/Transfer/RestMerchantsAttributes |
 
@@ -61,7 +61,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- | -------------- | ------------- | ----------------- |
 | MerchantCategoryMerchantRestAttributesMapperPlugin | Maps active categories from MerchantStorageTransfer to RestMerchantsAttributesTransfer. | None | Spryker\Glue\MerchantCategoriesRestApi\Plugin\MerchantsRestApi |
 

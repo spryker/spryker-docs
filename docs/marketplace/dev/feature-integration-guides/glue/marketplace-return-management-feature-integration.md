@@ -16,10 +16,10 @@ Follow the steps below to install the Marketplace Return Management Glue API fea
 To start feature integration, integrate the required features:
 <!--See feature mapping at [Features](https://release.spryker.com/features). -->
 
-| NAME | VERSION |
-| --------- | ------ |
-| Merchant | 202009.0  |
-| Marketplace Return Management | dev-master |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --------- | ------ | --------|
+| Merchant | 202009.0  | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html)
+| Marketplace Return Management | dev-master | [Marketplace Return Management feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html)
 
 ### 1) Install the required modules using Сomposer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
@@ -73,7 +73,7 @@ Ensure the following transfers have been created:
 <!--This is a comment, it will not be included -->
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN  | SPECIFICATION | PREREQUISITES | NaNAMESPACEmespace |
+| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
 | MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resources as relationship by merchant references in the attributes | none |  Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication     |
 | MerchantReturnCollectionExpanderPlugin | Expands return collection with merchant data | none | Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |

@@ -92,8 +92,9 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| MerchantStock | object | Created | src/Generated/Shared/Transfer/MerchantStockTransfer |
+| TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
+| MerchantStock | object | Created | src/Generated/Shared/Transfer/MerchantStockTransfer |
 | MerchantStockCriteria | object | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
 | ProductAvailabilityCriteria | object | Created | src/Generated/Shared/Transfer/ProductAvailabilityCriteriaTransfer |
 | ProductConcreteAvailability | object | Created | src/Generated/Shared/Transfer/ProductConcreteAvailabilityTransfer |
@@ -118,10 +119,10 @@ Run the following command to generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 5) Setup behavior
+### 5) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantStockMerchantExpanderPlugin | Expands MerchantTransfer with related stocks. | None | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
 | MerchantStockMerchantPostCreatePlugin | Creates default stock for the merchant. | None | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |

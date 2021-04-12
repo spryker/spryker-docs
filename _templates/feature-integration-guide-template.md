@@ -214,7 +214,7 @@ Make sure that, when an {entity} is created, updated or deleted, it is exported 
 
 | STORAGE TYPE | TARGET ENTITY | EXPECTED DATA IDENTIFIER EXAMPLE | EXPECTED DATA FRAGMENT EXAMPLE     |
 | ------------ | ------------- | -------------------------------- | ---------------------------------- |
-| {Redis       | Elasticsearch} | {entity}                         | {expected data identifier example} | See below the table. |
+| {Redis / Elasticsearch} | {entity}                         | {expected data identifier example} | See below the table. |
 
 Expected data fragment example:
 
@@ -233,7 +233,7 @@ Configure tables to be published to the {table name} table and synchronized to t
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES    | NAMESPACE |
 | -------- | ------------- | ---------------- | --------- |
-| {plugin} | {description} | {prerequisite} <!--leave blank if "None"--> | {namespace} |
+| {plugin} | {description} | {{prerequisite} /      } <!-- if none, leave blank --> | {namespace} |
 
 ```php
 {code snippet with plugin setup}
@@ -249,7 +249,7 @@ Make sure that, when an {entity} is created, updated or deleted, it is exported 
 
 | STORAGE TYPE | TARGET ENTITY | EXPECTED DATA IDENTIFIER EXAMPLE | EXPECTED DATA FRAGMENT EXAMPLE     |
 | ------------ | ------------- | -------------------------------- | ---------------------------------- |
-| {Redis       | Elasticsearch} | {target entity}                  | {expected data identifier example} | See below the table. |
+| {Redis / Elasticsearch} | {target entity}                  | {expected data identifier example} | See below the table. |
 
 Expected data fragment example: {target entity}
 
@@ -282,7 +282,7 @@ Make sure that, when an {entity} is created, updated or deleted, it is exported 
 
 | STORAGE TYPE | TARGET ENTITY | EXPECTED DATA IDENTIFIER EXAMPLE | EXPECTED DATA FRAGMENT EXAMPLE     |
 | ------------ | ------------- | -------------------------------- | ---------------------------------- |
-| {Redis       | Elasticsearch} | {entity}                         | {expected data identifier example} | See below the table. |
+| {Redis / Elasticsearch} | {entity}                         | {expected data identifier example} | See below the table. |
 
 Expected data fragment example:
 
@@ -327,7 +327,7 @@ Import infrastructural data as follows:
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
-| {plugin} | {Description} | {prerequisite} <!--leave blank if "None"-->| {namespace} |
+| {plugin} | {Description} | {{prerequisite} /      } <!-- if none, leave blank -->| {namespace} |
 
 ```php
 {code snippet with plugin setup}
@@ -352,7 +352,7 @@ Ensure that the {entities} have been added to the `{table_name}` table.
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
-| {plugin} | {Description} | {prerequisite} <!--leave blank if "None"-->| {namespace} |
+| {plugin} | {Description} | {{prerequisite} /      } <!-- if none, leave blank -->| {namespace} |
 
 ```php
 {code snippet with plugin setup}
@@ -374,7 +374,7 @@ Enable the following behaviors by registering the plugins:
 
 | Plugin   | Specification | Prerequisites   | Namespace |
 | -------- | ------------- | --------------- | --------- |
-| {plugin} | {description} | {prerequisite}<!--leave blank if "None"-->| example namespace |
+| {plugin} | {description} | {{prerequisite} /      } <!-- if none, leave blank -->| {namespace} |
 
 ```php
 {code snippet with plugin setup}
@@ -473,7 +473,7 @@ Set up widgets as follows:
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
-| {plugin} | {description} | {prerequisite}<!--leave blank if "None"-->| {namespace} |
+| {plugin} | {description} | {{prerequisite} /      } <!-- if none, leave blank -->| {namespace} |
 
 ```php
 {code snippet with provider setup}
@@ -504,4 +504,4 @@ Integrate the following related features:
 
 | Feature        | Required for the current feature | Integration guide |
 | -------------- | -------------------------------- | ----------------- |
-| {Feature Name} | {✓                               | }                 | [{Integration guide name}](link to the integration guide) |
+| {Feature Name} | {✓ /  }    | [{Integration guide name}](link to the integration guide) |

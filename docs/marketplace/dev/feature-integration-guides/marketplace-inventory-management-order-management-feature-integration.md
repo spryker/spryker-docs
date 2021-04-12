@@ -10,9 +10,9 @@ Follow the steps below to install the Marketplace Inventory Management + Order M
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+| Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
 | Inventory Management | master |  [Inventory Management Feature Integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
 
 ### 1) Install the required modules using Composer
@@ -64,11 +64,12 @@ console transfer:generate
 console propel:install
 console transfer:generate
 ```
-***
-**Verification**
-Verify the following changes by checking your database
 
-| Database entity | Type | Event |
+---
+**Verification**
+Verify the following changes by checking your database:
+
+| DATABASE ENTITY | TYPE | EVENT |
 |-|-|-|
 | spy_oms_product_offer_reservation | table | created |
 
@@ -85,7 +86,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | SpyOmsProductOfferReservationEntity | object | Created | src/Generated/Shared/Transfer/SpyOmsProductOfferReservationEntityTransfer |
 | OmsProductOfferReservationCriteria | object | Created | src/Generated/Shared/Transfer/OmsProductOfferReservationCriteriaTransfer |
@@ -96,7 +97,7 @@ Make sure that the following changes have been applied in transfer objects:
 ### 5) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferOmsReservationAggregationPlugin | Aggregates reservations for product offers. | None | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
 | ProductOfferOmsReservationReaderStrategyPlugin | Provides the ability to read product offer reservation data from alternative table. | None | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |

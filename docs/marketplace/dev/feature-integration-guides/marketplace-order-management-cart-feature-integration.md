@@ -4,7 +4,7 @@ last_updated:  Jan 05, 2021
 summary: This document describes the process how to integrate the Marketplace Order Management Feature + Cart integration feature into a Spryker project.
 ---
 
-## Install Feature Core
+## Install feature core
 Follow the steps below to install the Marketplace Order Management Feature + Cart feature core.
 
 

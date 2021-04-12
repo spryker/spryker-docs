@@ -10,7 +10,7 @@ Follow the steps below to install the Merchant Portal - Marketplace Product + Ta
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 |-|-|
 | Marketplace Product | dev-master |
 | Tax | dev-master |
@@ -27,7 +27,7 @@ composer require spryker/tax-merchant-portal-gui:"dev-master" --update-with-depe
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | TaxMerchantPortalGui | spryker/tax-merchant-portal-gui |
 
@@ -45,7 +45,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER  | TYPE  | EVENT | PATH  |
 |-|-|-|-|
 | TaxSetCollection | class | Created | src/Generated/Shared/Transfer/TaxSetCollectionTransfer |
 | TaxSet | class | Created | src/Generated/Shared/Transfer/TaxSetTransfer |
@@ -55,7 +55,7 @@ Make sure that the following changes have been applied in transfer objects:
 ### 3) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | TaxProductAbstractFormExpanderPlugin | Expands ProductAbstractForm with Tax Set field. | None | Spryker\Zed\TaxMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
 

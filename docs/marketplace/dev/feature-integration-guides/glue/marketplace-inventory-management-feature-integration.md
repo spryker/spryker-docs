@@ -108,8 +108,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ---
 **Verification**
 
-Make sure that the `ProductOfferAvailabilitiesResourceRoutePlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/product-offers/{{productOfferReference}}/product-offer-availabilities`.
+Make sure that the `ProductOfferAvailabilitiesResourceRoutePlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/product-offers/{% raw %}{{productOfferReference}}{% endraw %}/product-offer-availabilities`.
 
-Make sure that the `ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com{{url}}/product-offers/{{productOfferReference}}?include=product-offer-availabilities`. The response should include the `product-offer-availabilities` resource along with the `product-offers`.
+Make sure that the `ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com{% raw %}{{url}}{% endraw %}/product-offers/{% raw %}{{productOfferReference}}{% endraw %}?include=product-offer-availabilities`. The response should include the `product-offer-availabilities` resource along with the `product-offers`.
 
 ---

@@ -12,7 +12,7 @@ Follow the steps below to install the Merchant Portal Core feature core.
 
 To start feature integration, overview, and install the necessary features:
 
-| Name                 | Version    |
+| NAME | VERSION |
 | -------------------- | ---------- |
 | Spryker Core         | dev-master |
 | Spryker Core BO      | dev-master |
@@ -28,7 +28,7 @@ composer require spryker-feature/marketplace-merchantportal-core:"dev-master" --
 
 Make sure that the following modules have been installed:
 
-| Module  | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | ----------------------- | ----------------------------- |
 | DashboardMerchantPortalGui   | vendor/spryker/dashboard-merchant-portal-gui  |
 | DashboardMerchantPortalGuiExtension | vendor/spryker/dashboard-merchant-portal-gui-extension |
@@ -42,7 +42,7 @@ Set up behavior as follows:
 
 1. Install the following plugins with modules:
 
-| Plugin  | Specification| Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | ------------ | ------------- | --------- |
 | MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. | None | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security |
 | BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String | None | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
@@ -160,7 +160,7 @@ console navigation:build-cache
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer  | Type  | Event   | Path   |
+| TRANSFER  | TYPE  | EVENT | PATH  |
 | ----------- | ----- | ------- | ---------------------------- |
 | MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCard  |
 | MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButton |
@@ -182,7 +182,7 @@ Follow the steps below to install the Merchant Portal Core feature front end.
 
 To start builder integration, check spryker packages versions:
 
-| Name                        | Version   |
+| NAME | VERSION |
 | --------------------------- | --------- |
 | Discount (optional)         | >= 9.7.4  |
 | Gui (optional)              | >= 3.30.2 |

@@ -87,6 +87,6 @@ class ProductOfferPricesRestApiDependencyProvider extends SprykerProductPricesRe
 ---
 **Verification**
 
-Make sure that the `ProductOfferPricesRestApiDependencyProvider` plugin is set up by having product offer volumes over sending the request `GET http://glue.mysprykershop.com//concrete-products/{concreteProductId}?include=product-offers,product-offer-prices`.
+Make sure that the `ProductOfferPricesRestApiDependencyProvider` plugin is set up by having product offer volumes over sending the request `GET http://glue.mysprykershop.com//concrete-products/{% raw %}{{concreteProductId}}{% endraw %}?include=product-offers,product-offer-prices`.
 
 ---

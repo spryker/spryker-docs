@@ -11,7 +11,7 @@ Follow the steps below to install the Merchant Opening Hours Glue API feature co
 
 To start feature integration, overview and install the necessary features:
 
-| Name  | Version | INTEGRATION GUIDE |
+| NAME  | VERSION | INTEGRATION GUIDE |
 | ----------- | ------ | --------------|
 | Merchant Opening Hours | dev-master  | [Merchant Opening Hours feature integration](docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html)
 
@@ -110,6 +110,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ---
 **Verification**
 
-Make sure that the `MerchantOpeningHoursResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/merchant-opening-hours/{{merchant-reference}}`
+Make sure that the `MerchantOpeningHoursResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/merchant-opening-hours/{% raw %}{{merchant-reference}}{% endraw %}`
 
-Make sure that the `MerchantOpeningHoursByMerchantReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/merchants/{{merchant-reference}}?include=merchant-opening-hours`. You should get merchants with all merchant opening hours as relationships.
+Make sure that the `MerchantOpeningHoursByMerchantReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/merchants/{% raw %}{{merchant-reference}}{% endraw %}?include=merchant-opening-hours`. You should get merchants with all merchant opening hours as relationships.

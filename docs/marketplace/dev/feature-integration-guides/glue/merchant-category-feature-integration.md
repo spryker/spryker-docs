@@ -30,7 +30,7 @@ composer require spryker/merchant-categories-rest-api:"^0.1.0" --update-with-dep
 
 Make sure that the following modules have been installed:
 
-| MODULE  | EXPECTED DIRECTORY   |
+| MODULE | EXPECTED DIRECTORY |
 | -------------- | ----------------- |
 | MerchantCategoriesRestApi | vendor/spryker/merchant-categories-rest-api |
 
@@ -49,7 +49,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER  | TYPE   | EVENT   | PATH   |
+| TRANSFER  | TYPE  | EVENT | PATH  |
 | -------------- | ---- | ----- | ------------------ |
 | RestMerchantsAttributes | object | Created | src/Generated/Shared/Transfer/RestMerchantsAttributes |
 
@@ -94,6 +94,6 @@ class MerchantsRestApiDependencyProvider extends SprykerMerchantsRestApiDependen
 
 Make sure that when you sending the request `GET http://glue.mysprykershop.com/merchants`, you can see the category keys and names for merchants that assigned to categories.
 
-Make sure that when you sending the request `GET http://glue.mysprykershop.com/merchants?categoryKeys[]={some-category-key}`, you can see only merchants that belongs to the particular category in the response.
+Make sure that when you sending the request `GET http://glue.mysprykershop.com/merchants?categoryKeys[]={% raw %}{{some-category-key}}{% endraw %}`, you can see only merchants that belongs to the particular category in the response.
 
 ---

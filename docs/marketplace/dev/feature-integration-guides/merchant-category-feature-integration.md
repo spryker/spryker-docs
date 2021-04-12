@@ -12,10 +12,10 @@ Follow the steps below to install the Merchant Category feature core.
 
 To start feature integration, overview, and install the necessary features:
 
-| Name | Version | Link |
+| NAME | VERSION | LINK |
 | --------- | ----- | ---------- |
-| Spryker Core         | master      | [[PUBLISHED] Spryker Core Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
-| Marketplace Merchant | master      | [[WIP\] Marketplace Merchant Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1876853120) |
+| Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | master      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html) |
 
 ### 1) Install the required modules using composer
 
@@ -28,7 +28,7 @@ composer require spryker/merchant-category:"^0.2.0" spryker/merchant-category-da
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | ----------- | ------------ |
 | MerchantCategory | vendor/spryker/merchant-category  |
 | MerchantCategoryDataImport | vendor/spryker/merchant-category-data-import |
@@ -64,7 +64,7 @@ Verify the following changes by checking your database
 
 ---
 
-| Database entity       | Type  | Event   |
+| DATABASE ENTITY | TYPE | EVENT |
 | --------------------- | ----- | ------- |
 | spy_merchant_category | table | created |
 
@@ -81,7 +81,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type   | Event   | Path  |
+| TRANSFER  | TYPE  | EVENT | PATH  |
 | ------------- | --- | ---- | ---------------- |
 | MerchantCategoryCriteria  | object | Created | src/Generated/Shared/Transfer/MerchantCategoryCriteriaTransfer |
 | MerchantCategory          | object | Created | src/Generated/Shared/Transfer/MerchantCategoryTransfer  |
@@ -94,7 +94,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 Activate the following plugins:
 
-| Plugin  | Specification  | Prerequisites | Namespace  |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | -------------- | ----------- | ------ | ------------- |
 | MerchantCategoryMerchantExpanderPlugin | Expands MerchantTransfer with categories.  | None  | Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant |
 | MerchantCategoryMerchantSearchDataExpanderPlugin | Expands merchant search data with merchant category keys. | None | Spryker\Zed\MerchantCategorySearch\Communication\Plugin\MerchantSearch |
@@ -237,14 +237,14 @@ Prepare your data according to your requirements using the following format:
 category_key,merchant_reference 2
 ```
 
-| Column             | Is Obligatory? | Data Type | Data Example | Data Explanation  |
+| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------- | ------- | ----- | -------- | -------------- |
 | category_key  | mandatory | string  | food  | Internal data import identifier for a merchant. |
 | merchant_reference | mandatory | string    | roan  | Merchant identifier.  |
 
 Register the following plugins to enable data import:
 
-| Plugin | Specification  | Prerequisites | Namespace  |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------- | ------------------- | ----- | ------------ |
 | MerchantCategoryDataImportPlugin | Imports merchant category data into the database. | None | Spryker\Zed\MerchantCategoryDataImport\Communication\Plugin\DataImport |
 
@@ -289,7 +289,7 @@ Follow the steps below to install the Merchant Category feature front end.
 
 Please overview and install the necessary features before beginning the integration step.
 
-| Name  | Version | Link |
+| NAME | VERSION | LINK |
 | -------- | ------ | -------------- |
 | Spryker Core | master  | [[PUBLISHED\] Glue API: Spryker Core feature integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/639173086) |
 | Merchant     | master | [[DEPRECATED\] Merchant Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1025277972) |
@@ -298,7 +298,7 @@ Please overview and install the necessary features before beginning the integrat
 
 Activate the following plugins:
 
-| Plugin  | Specification | Prerequisites | Namespace  |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ---------------- | -------------- | ----------- | ---------------------- |
 | MerchantCategoryMerchantSearchQueryExpanderPlugin | Adds filter by category keys to elasticsearch query. | None  | Spryker\Client\MerchantCategorySearch\Plugin\Elasticsearch\Query |
 

@@ -91,7 +91,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 ---
 **Verification**
 
-Make sure that the `MerchantProductOfferCartItemExpanderPlugin` and `MerchantProductOfferCartItemMapperPlugin` plugins are set up by sending the request `POST https://glue.mysprykershop.com/carts/{{cartUuid}}/items` with the following body and make sure the product has been added to the cart with the offer.
+Make sure that the `MerchantProductOfferCartItemExpanderPlugin` and `MerchantProductOfferCartItemMapperPlugin` plugins are set up by sending the request `POST https://glue.mysprykershop.com/carts/{% raw %}{{cartUuid}}{% endraw %}/items` with the following body and make sure the product has been added to the cart with the offer.
 
 ```json
 {
@@ -106,6 +106,6 @@ Make sure that the `MerchantProductOfferCartItemExpanderPlugin` and `MerchantPro
 }
 ```
 
-Make sure that the `MerchantProductOfferRestCartItemsAttributesMapperPlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/carts/{{cartUuid}}?include=items` to the cart that has an item with product offer. You should be able to see attributes `productOfferReference` and `merchantReference` among the attributes of the items resource.
+Make sure that the `MerchantProductOfferRestCartItemsAttributesMapperPlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/carts/{% raw %}{{cartUuid}}{% endraw %}?include=items` to the cart that has an item with product offer. You should be able to see attributes `productOfferReference` and `merchantReference` among the attributes of the items resource.
 
 ---

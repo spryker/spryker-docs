@@ -133,6 +133,7 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. | None | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
 
 **src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
+
 ```php
 <?php
 
@@ -165,6 +166,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
     }
 }
 ```
+
 ---
 **Verification**
 
@@ -197,6 +199,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
     }
 }
 ```
+
 ---
 **Verification**
 
@@ -249,6 +252,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
+
 ---
 **Verification**
 
@@ -326,7 +330,9 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
     }
 }
 ```
+
 #### Register the synchronization queue and synchronization error queue
+
 ```php
 <?php
 

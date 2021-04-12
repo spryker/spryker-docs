@@ -59,7 +59,8 @@ Activate the following plugins:
 | ProductOffersByProductConcreteSkuResourceRelationshipPlugin | Registers the `product-offers` resource as a relationship to `concrete-products`. | None | Spryker\Glue\MerchantProductOffersRestApi\Plugin\GlueApplication |
 
 
-**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -109,15 +110,17 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
+</details>
+
 ---
 **Verification**
 
-Make sure that the `ProductOffersResourceRoutePlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/product-offers/{{offerReference}}`.
+Make sure that the `ProductOffersResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}`.
 
-Make sure that the `ConcreteProductsProductOffersResourceRoutePlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/concrete-products/{{sku}}/product-offers`.
+Make sure that the `ConcreteProductsProductOffersResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/concrete-products/{% raw %}{{sku}}{% endraw %}/product-offers`.
 
-Make sure that the `ProductOffersByProductConcreteSkuResourceRelationshipPlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/concrete-products/{{sku}}?include=product-offers`. You should get `concrete-products` with all product’s `product-offers` as relationships.
+Make sure that the `ProductOffersByProductConcreteSkuResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/concrete-products/{% raw %}{{sku}}{% endraw %}?include=product-offers`. You should get `concrete-products` with all product’s `product-offers` as relationships.
 
-Make sure that the `MerchantByMerchantReferenceResourceRelationshipPlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/product-offers/{{productOfferReference}}?include=merchants`. The response should include the `merchants` resource along with the `product-offers`.
+Make sure that the `MerchantByMerchantReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{sku}}{% endraw %}?include=merchants`. The response should include the `merchants` resource along with the `product-offers`.
 
 ---

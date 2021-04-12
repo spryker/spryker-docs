@@ -13,9 +13,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME            | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | master      | [Spryker Core Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
-| Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1876853120) |
-| Product Management   | master      | [Product Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/895912554) |
+| Spryker Core         | master      | [Spryker Core feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
+| Marketplace Merchant | master      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html) |
+| Product Management   | master      | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
 
 ### 1) Install the required modules using composer
 
@@ -398,8 +398,8 @@ sku,merchant_reference,is_shared
 208,MER000002,1
 209,MER000002,1
 ```
-</details>
 
+</details>
 
 | COLUMN  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION  |
 | ------------ | ------------ | -------- | --------------- | ------------------------ |
@@ -434,7 +434,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-
 Run the following console command to import data:
 
 ```
@@ -442,8 +441,6 @@ console data:import merchant-product
 ```
 
 Make sure that imported data is added to the spy_merchant_product.
-
-
 
 ## Install feature front end
 
@@ -598,14 +595,14 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 ---
 **Verification**
 
-Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table)
+Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
 
 ---
 
 ## Related features
 
-| Feature   | Link    |
+| FEATURE   | INTEGRATION GUIDE    |
 |-------------------- | --------- |
-| Marketplace Product API                          | [[WIP\] GLUE: Marketplace Product Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1950483252/WIP+GLUE+Marketplace+Merchant+Product+Feature+Integration+-+ongoing) |
-| Marketplace Product + Inventory Management       | [[WIP\] Marketplace Product + Inventory Management Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1951793295) |
-| Marketplace Product  + Marketplace Product Offer | [[WIP\] Marketplace Product +  Marketplace Product Offer Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1951858888) |
+| Marketplace Product API                          | [Glue API - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html) |
+| Marketplace Product + Inventory Management | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html) |
+| Marketplace Product + Marketplace Product Offer | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html) |

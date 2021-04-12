@@ -137,12 +137,12 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the `MerchantReturnCollectionExpanderPlugin` and `MerchantByMerchantReferenceResourceRelationshipPlugin`
-plugins are set up by :
-1. sending the request `GET http://glue.mysprykershop.com/returns/{returnId}include=merchants`
+plugins are set up by:
+1. sending the request `GET http://glue.mysprykershop.com/returns/{% raw %}{{returnId}}{% endraw %}include=merchants`.
 
 Verify that return data include `merchantReferance` with the attributes Merchant Name and Mercahnt URL and `merchantReferance` resource is available and includes these attributes.
 
-2. sending the request `GET http://glue.mysprykershop.com/returns`
+2. Sending the request `GET http://glue.mysprykershop.com/returns`.
 
 Verify that returns data includes the `mercahntReference` and `productOfferReferance`.
 

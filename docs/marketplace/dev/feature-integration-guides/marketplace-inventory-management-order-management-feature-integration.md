@@ -73,7 +73,7 @@ Verify the following changes by checking your database:
 |-|-|-|
 | spy_oms_product_offer_reservation | table | created |
 
-***
+---
 
 ### 3) Set up transfer objects
 Run the following command to generate transfer changes:
@@ -81,6 +81,7 @@ Run the following command to generate transfer changes:
 ```bash
 console transfer:generate
 ```
+
 ---
 **Verification**
 
@@ -105,7 +106,7 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferReservationPostSaveTerminationAwareStrategyPlugin | Prevents generic product availability update for product offers. | None | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
 | ProductOfferReservationProductOfferStockTableExpanderPlugin | Expands product offer stock table with reservations column. | None | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
 
-**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 namespace Pyz\Zed\Oms;
@@ -161,6 +162,9 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
+</details>
+
 ---
 **Verification**
 
@@ -199,6 +203,6 @@ class ProductOfferStockGuiDependencyProvider extends SprykerProductOfferStockGui
 ---
 **Verification**
 
-Make sure that at if you open some product offer in view mode at `http://glue.mysprykershop.com/product-offer-gui/view?id-product-offer={idProductOffer}`, stock table contains the `Reservations` column.
+Make sure that at if you open some product offer in view mode at `http://glue.mysprykershop.com/product-offer-gui/view?id-product-offer={% raw %}{{idProductOffer}}{% endraw %}`, stock table contains the `Reservations` column.
 
-  ---
+---

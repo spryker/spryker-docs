@@ -11,7 +11,7 @@ Follow the steps below to install the Merchant Portal - Product Offer feature co
 
 To start feature integration, overview, and install the necessary features:
 
-| Name                         | Version |
+| NAME | VERSION |
 | --------------------------- | ---------- |
 | Marketplace Product Offer        | dev-master  |
 | Marketplace Merchant Portal Core | dev-master  |
@@ -29,7 +29,7 @@ composer require spryker/product-offer-merchant-portal-gui:"dev-master" --update
 
 Make sure that the following modules have been installed:
 
-| Module                    | Expected Directory                  |
+| MODULE | EXPECTED DIRECTORY|
 | ----------------------- | ----------------------------------- |
 | ProductOfferMerchantPortalGui | spryker/product-offer-merchant-portal-gui |
 
@@ -46,7 +46,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer  | Type  | Event   | Path    |
+| TRANSFER  | TYPE  | EVENT | PATH  |
 | ----------------- | ---- | ------ | ----------------------- |
 | MerchantDashboardCard      | class | Created | src/Generated/Shared/Transfer/MerchantDashboardCard      |
 | MerchantProductOfferCounts | class | Created | src/Generated/Shared/Transfer/MerchantProductOfferCounts |
@@ -57,7 +57,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------------------- | -------------- | -------------- | ----------------------- |
 | ProductOfferMerchantOrderItemTableExpanderPlugin | Adds merchantReference and ProductOfferSku to Sales tables in MerchantPortal | Marketplace Sales Merchant Portal integrated | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
 
@@ -96,7 +96,7 @@ Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is 
 
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace  |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ---------------- | --------------- | ------------- | ----------------- |
 | OffersMerchantDashboardCardPlugin | Adds Offers widget on MerchantDashobard | None              | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
 

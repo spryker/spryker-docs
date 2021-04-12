@@ -132,6 +132,7 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. | None | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
 
 **src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
+
 ```php
 <?php
 
@@ -164,6 +165,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
     }
 }
 ```
+
 ---
 **Verification**
 
@@ -196,6 +198,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
     }
 }
 ```
+
 ---
 **Verification**
 
@@ -248,6 +251,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
+
 ---
 **Verification**
 
@@ -325,7 +329,9 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
     }
 }
 ```
+
 #### Register the synchronization queue and synchronization error queue
+
 ```php
 <?php
 
@@ -360,7 +366,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 #### Configure message processors
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with Redis storage, and marks messages as failed in case of error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
@@ -413,10 +419,11 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 #### Set up re-generate and re-sync features
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferAvailabilitySynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. | None | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Synchronization |
 
+```php
 <?php
 
 namespace Pyz\Zed\Synchronization;
@@ -436,6 +443,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
         ];
     }
 }
+```
 
 ---
 **Verification**
@@ -460,7 +468,7 @@ MER000005,Budget Cameras MER000005 Warehouse 1
 MER000006,Sony Experts MER000006 Warehouse 1
 ```
 
-| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
+| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | mandatory | string | MER000001 | Merchant identifier. |
 | stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
@@ -591,9 +599,11 @@ offer358,Sony Experts MER000006 Warehouse 1,0,1
 offer359,Sony Experts MER000006 Warehouse 1,0,1
 offer360,Sony Experts MER000006 Warehouse 1,0,1
 ```
+
 </details>
 
-| Column | Is Obligatory? | Data Type | Data Example | Data explanation |
+
+| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | product_offer_reference | mandatory | string | offer350 | Product offer identifier. |
 | stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
@@ -602,7 +612,7 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 
 Register the following plugins to enable data import:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantStockDataImportPlugin | Imports merchant stock data into the database. | None | Spryker\Zed\MerchantStockDataImport\Communication\Plugin |
 | ProductOfferStockDataImportPlugin | Imports product offer stock data into the database. | None | Spryker\Zed\ProductOfferStockDataImport\Communication\Plugin |
@@ -636,6 +646,7 @@ Run the following console command to import data:
 console data:import merchant-stock
 console data:import product-offer-stock
 ```
+
 ---
 **Verification**
 

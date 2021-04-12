@@ -13,8 +13,8 @@ Follow the steps below to install the Marketplace Promotions & Discounts feature
 
 To start feature integration, overview, and install the necessary features:
 
-| Name                         | Version    |
-| ---------------------------- | ---------- |
+| NAME | VERSION |
+| - | - |
 | Spryker Core                 | 202001.0   |
 | Marketplace Order Management | dev-master |
 | Promotions & Discounts       | 202001.0   |
@@ -24,7 +24,7 @@ To start feature integration, overview, and install the necessary features:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-promotions-discounts --update-with-dependencies 
+composer require spryker-feature/marketplace-promotions-discounts --update-with-dependencies
 ```
 
 ---
@@ -33,8 +33,9 @@ composer require spryker-feature/marketplace-promotions-discounts --update-with-
 
 Make sure that the following modules were installed:
 
-| Module                        | Expected Directory                        |
-| :---------------------------- | :---------------------------------------- |
+| MODULE | EXPECTED DIRECTORY |
+ |
+| - | - |
 | DiscountMerchantSalesOrder    | spryker/discount-merchant-sales-order     |
 | DiscountMerchantSalesOrderGui | spryker/discount-merchant-sales-order-gui |
 
@@ -45,7 +46,7 @@ Make sure that the following modules were installed:
 Run the following commands to generate transfer changes.
 
 ```bash
-console transfer:generate 
+console transfer:generate
 ```
 
 ---
@@ -54,8 +55,8 @@ console transfer:generate
 
 Make sure that the following changes were applied in transfer objects:
 
-| Transfer                         | Type      | Event   | Path                                                |
-| :------------------------------- | :-------- | :------ | :-------------------------------------------------- |
+| TRANSFER  | TYPE  | EVENT | PATH |
+| - | - | - | - |
 | MerchantOrder.merchantOrderItems | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
 
 ---
@@ -74,8 +75,9 @@ console translator:generate-cache
 
 Change the following the configuration to enable the feature:
 
-| Configuration                                                | Specification                                                | Namespace                                                    |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CONFIGURATION | SPECIFICATION | NAMESPACE |
+ |
+| - | - | - |
 | MerchantSalesOrderMerchantUserGuiConfig   ::getMerchantSalesOrderDetailExternalBlocksUrls | Adds Merchant discount separation while viewing Merchant Order | \Pyz\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUserGuiConfig |
 
 **src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiConfig.php**
@@ -105,8 +107,9 @@ class MerchantSalesOrderMerchantUserGuiConfig extends SprykerMerchantSalesOrderM
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin                            | Description                                                  | Prerequisites | Namespace                                                   |
-| --------------------------------- | ------------------------------------------------------------ | ------------- | ----------------------------------------------------------- |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+
+| - | - | - | - |
 | DiscountMerchantOrderFilterPlugin | Removes none Merchant related discounts from Merchant Orders | None          | Spryker\Zed\DiscountMerchantSalesOrder\Communication\Plugin |
 
 **src/Pyz/Zed/MerchantSalesOrder/MerchantSalesOrderDependencyProvider.php**

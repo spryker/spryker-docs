@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Product + Inventory Management
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration Guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
 | Marketplace Merchant | master | [Marketplace Merchant feature integration](https://spryker.atlassian.net/l/c/nLJp1kNH)   |
@@ -19,7 +19,8 @@ To start feature integration, overview and install the necessary features:
 ### 1) Setup Behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+|
 |-|-|-|-|
 | MerchantProductAvailabilityAbstractTableQueryCriteriaExpanderPlugin |  Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. | None | Spryker\Zed\MerchantProductGui\Communication\Plugin\AvailabilityGui |
 | MerchantProductAvailabilityViewActionViewDataExpanderPlugin | Expands view data for product availability with merchant data. | None | Spryker\Zed\MerchantProductGui\Communication\Plugin\AvailabilityGui |

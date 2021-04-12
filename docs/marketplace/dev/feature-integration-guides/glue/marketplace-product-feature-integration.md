@@ -133,10 +133,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ---
 **Verification**
 
-Make sure that you can add a merchant product to the cart using a `POST` request to `http://zed.de.demo-spryker.com/guest-cart-items or http://zed.de.demo-spryker.com/carts/{idCart}/items`.
+Make sure that you can add a merchant product to the cart using a `POST` request to `http://zed.de.demo-spryker.com/guest-cart-items or http://zed.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}/items`.
 
-Make sure that when you do a `GET` request for the carts with merchant products, their merchants returned as well. `http://zed.de.demo-spryker.com/guest-carts/{idCart}?include=guest-cart-items,merchants` or `http://zed.de.demo-spryker.com/carts/{idCart}?include=items,merchants`.
+Make sure that when you do a `GET` request for the carts with merchant products, their merchants returned as well. `http://zed.de.demo-spryker.com/guest-carts/{idCart}?include=guest-cart-items,merchants` or `http://zed.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}?include=items,merchants`.
 
-Make sure that when you do a `GET` request to retrieve abstract products that belong to a specific merchant, it returns product data together with their merchants `http://zed.de.demo-spryker.com/abstract-products/{abstractProductSku}?include=merchants`.
+Make sure that when you do a `GET` request to retrieve abstract products that belong to a specific merchant, it returns product data together with their merchants `http://zed.de.demo-spryker.com/abstract-products/{% raw %}{{abstractProductSku}}{% endraw %}?include=merchants`.
 
   ---

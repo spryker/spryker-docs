@@ -1,5 +1,5 @@
 ---
-title: Merchant Opening Hours feature integration
+title: Glue API - Merchant Opening Hours feature integration
 last_updated: Dec 04, 2020
 summary: This document describes how to integrate the Merchant Opening Hours Glue API feature into a Spryker project.
 ---
@@ -11,9 +11,9 @@ Follow the steps below to install the Merchant Opening Hours Glue API feature co
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| ----------- | ------ |
-| Merchant Opening Hours | dev-master  |
+| NAME  | VERSION | INTEGRATION GUIDE |
+| ----------- | ------ | --------------|
+| Merchant Opening Hours | dev-master  | [Merchant Opening Hours feature integration](docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -28,7 +28,7 @@ composer require spryker/merchant-opening-hours-rest-api:"^0.1.0"
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
+| MODULE   | EXPECTED DIRECTORY   |
 | ------------------ | ----------------- |
 | MerchantOpeningHoursRestApi | spryker/merchant-opening-hours-rest-api |
 
@@ -47,8 +47,8 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER  | TYPE  | EVENT | PATH  |
-| :--------------------------------- | :---- | :------ | :----------------------------------------------------------- |
+| TRANSFER  | TYPE  | EVENT   | PATH |
+| -------------- | ---- | ------ | ------------------ |
 | RestMerchantOpeningHoursAttributes | class | Created | src/Generated/Shared/Transfer/RestMerchantOpeningHoursAttributesTransfer |
 
 ```
@@ -59,8 +59,8 @@ Make sure that the following changes have been applied in transfer objects:
 
 Activate the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| ----------------- | -------------- | --------------- | ---------------------- |
+| PLUGIN  | SPECIFICATION   | PREREQUISITES | NAMESPACE   |
+| ----------------- | -------------- | --------------- | ---------------- |
 | MerchantOpeningHoursResourceRoutePlugin | Registers the merchant-opening-hours resource.  | None  | Spryker\Glue\MerchantOpeningHoursRestApi\Plugin\GlueApplication |
 | MerchantOpeningHoursByMerchantReferenceResourceRelationshipPlugin | Registers the merchant-opening-hours resource as a relationship to the merchants resource. | None  | Spryker\Glue\MerchantOpeningHoursRestApi\Plugin\GlueApplication |
 

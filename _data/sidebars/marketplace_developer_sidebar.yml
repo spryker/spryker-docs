@@ -38,6 +38,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-packaging-units-feature-integration.html
             output: web
 
+          - title: Marketplace Merchants feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html
+            output: web
+
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
             output: web
@@ -126,10 +130,6 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-product-offer-feature-integration.html
             output: web
 
-          - title: Merchants feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html
-            output: web
-
           - title: Product Offer + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/product-offer-cart-feature-integration.html
             output: web
@@ -177,8 +177,8 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
                 output: web
 
-              - title: Glue API - Offers Volume Prices feature integration
-                url: /docs/marketplace/dev/feature-integration-guides/glue/offers-volume-prices.html
+              - title: Glue API - Offer Volume Prices feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/offer-volume-prices.html
                 output: web
 
               - title: Glue API - Marketplace Product Offer + Cart feature integration

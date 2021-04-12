@@ -1,6 +1,6 @@
 ---
-title: Merchant Category feature integration
-last_updated: Nov 10, 2020
+title: Glue API - Merchant Category feature integration
+last_updated: Mar 04, 2021
 summary: This document describes the process how to integrate the Merchant Category Glue API feature into a Spryker project.
 ---
 
@@ -12,10 +12,10 @@ Follow the steps below to install the Merchant Category Glue API feature core.
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME   | VERSION | INTEGRATION GUIDE   |
 | ---------------- | ------ | ------------------ |
-| Spryker Core   | master   | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
-| Marketplace Merchant Category | master  | [Marketplace Merchant Category Feature Integration](/docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html) |
+| Spryker Core   | master   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant Category | master  | [Marketplace Merchant Category feature integration](docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -61,8 +61,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 Activate the following plugins:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- | -------------- | ------------- | ----------------- |
 | MerchantCategoryMerchantRestAttributesMapperPlugin | Maps active categories from MerchantStorageTransfer to RestMerchantsAttributesTransfer. | None | Spryker\Glue\MerchantCategoriesRestApi\Plugin\MerchantsRestApi |
 

@@ -13,10 +13,10 @@ Follow the steps below to install the Marketplace Order Management Feature + Ord
 
 To start feature integration, overview and install the necessary features:
 
-| NAME                    | VERSION |
-| ---------------------------- | ----------- |
-| Marketplace Order Management | dev-master  |
-| Customer Account Management  | 202001.0    |
+| NAME  | VERSION | INTEGRATION GUIDE |
+| ------------------ | ----------- | ----------|
+| Marketplace Order Management | dev-master  | [Marketplace Order Management feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html) |
+| Customer Account Management  | 202001.0    | [Customer Account Management feature integration](https://documentation.spryker.com/docs/customer-account-management-feature-integration)
 
 ## 1) Set up the transfer objects
 
@@ -42,9 +42,9 @@ Make sure that the following changes were applied in transfer objects.
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | DESCRIPTION | NAMESPACE|
+| PLUGIN | SPECIFICATION | PTEREQUISITES | NAMESPACE|
 | ------------------- | ------------------ | ------------------- |
-| MerchantSwitchCartAfterCustomerAuthenticationSuccessPlugin | Sets merchant reference value to cookies if a customer's quote contains it, and the quote is not empty. | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\CustomerPage |
+| MerchantSwitchCartAfterCustomerAuthenticationSuccessPlugin | Sets merchant reference value to cookies if a customer's quote contains it, and the quote is not empty. | None | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\CustomerPage |
 
 
 

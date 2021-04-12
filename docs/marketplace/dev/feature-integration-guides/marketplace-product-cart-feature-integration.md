@@ -12,9 +12,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE  |
 |-|-|-|
-| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+| Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
 | Marketplace Product | master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html)|
-| Cart | master | [Cart Feature Integration](https://documentation.spryker.com/docs/cart-feature-integration) |
+| Cart | master | [Cart Feature Integration](https://github.com/spryker-feature/cart) |
 
 ### 1) Set up transfer objects
 Run the following command to generate transfer changes:

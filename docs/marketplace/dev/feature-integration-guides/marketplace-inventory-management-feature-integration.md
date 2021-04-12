@@ -92,8 +92,9 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| MerchantStock | object | Created | src/Generated/Shared/Transfer/MerchantStockTransfer |
+| TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
+| MerchantStock | object | Created | src/Generated/Shared/Transfer/MerchantStockTransfer |
 | MerchantStockCriteria | object | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
 | ProductAvailabilityCriteria | object | Created | src/Generated/Shared/Transfer/ProductAvailabilityCriteriaTransfer |
 | ProductConcreteAvailability | object | Created | src/Generated/Shared/Transfer/ProductConcreteAvailabilityTransfer |
@@ -118,10 +119,10 @@ Run the following command to generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 5) Setup behavior
+### 5) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantStockMerchantExpanderPlugin | Expands MerchantTransfer with related stocks. | None | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
 | MerchantStockMerchantPostCreatePlugin | Creates default stock for the merchant. | None | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
@@ -298,7 +299,7 @@ Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySku
 
 This step will publish tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronize the data to Storage.
 
-#### Setup event, listeners, and publishers
+#### Set up event, listeners, and publishers
 
 | Plugin | Specification | Prerequisites | Namespace |
 |-|-|-|-|
@@ -468,7 +469,7 @@ MER000005,Budget Cameras MER000005 Warehouse 1
 MER000006,Sony Experts MER000006 Warehouse 1
 ```
 
-| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | mandatory | string | MER000001 | Merchant identifier. |
 | stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
@@ -604,8 +605,7 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 
 </details>
 
-
-| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | product_offer_reference | mandatory | string | offer350 | Product offer identifier. |
 | stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |

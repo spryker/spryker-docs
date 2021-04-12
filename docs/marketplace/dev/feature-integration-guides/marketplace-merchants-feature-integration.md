@@ -1,5 +1,5 @@
 ---
-title: Merchants feature integration
+title: Marketplace Merchants feature integration
 last_updated: Mar 23, 2021
 summary: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
 ---
@@ -10,12 +10,12 @@ Follow the steps below to install the Marketplace Merchant feature core.
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |Integration guide |
+| NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master |
-| Merchant | master |
+| Spryker Core | master | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Merchant | master | [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 Install the required modules:
 
 ```bash
@@ -25,7 +25,7 @@ Make sure that the following modules have been installed:
 
 
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | MerchantProfile | vendor/spryker/merchant-profile |
 | MerchantProfileDataImport | vendor/spryker/merchant-profile-data-import |
@@ -73,7 +73,7 @@ console transfer:generate
 
 Make sure that the following changes have occurred in the database:
 
-| Database entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 |---|---|---|
 | spy_merchant_storage | table | created |
 | spy_merchant_search | table | created |
@@ -94,7 +94,7 @@ console transfer:generate
 
 Make sure that the following changes have occurred in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 |---|---|---|---|
 | MerchantProfileAddress | object | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
 | MerchantProfileCollection | object | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer|
@@ -123,7 +123,7 @@ console translator:generate-cache
 ### 5) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description  | Prerequisites | Namespace|
+| PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | MerchantProfileExpanderPlugin | Expands merchant with profile data.| None          | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant |
 | MerchantProfileMerchantPostCreatePlugin | Creates merchant profile on merchant create action. | None | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant|
@@ -285,7 +285,8 @@ Make sure that, after executing `console setup:init-db`, the Merchant Admin role
 Make sure that the `console sync:data url` command exports the merchant URL data from `spy_url`  to Redis.
 
 ### 6) Configure navigation
-Add marketplace section to `navigation.xml:`
+Add marketplace section to `navigation.xml`:
+
 **config/Zed/navigation.xml**
 
 ```xml
@@ -311,7 +312,7 @@ Add marketplace section to `navigation.xml:`
 ---
 **Verification**
 
-Make sure that, in the navigation menu of the Back Office,  you can see the **Marketplace** button.
+Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace** button.
 
 ---
 
@@ -322,7 +323,7 @@ Configure export to Redis:
 
 1. Set up event listeners and publishers:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | MerchantPublisherTriggerPlugin | Registers the publishers that publish merchant entity changes to storage. | None | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin |
 | MerchantStoragePublisherPlugin | Publishes merchant data to the `spy_merchant_storage` table. | None | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
@@ -398,7 +399,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 3. Configure message processors:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with Redis and marks messages as failed in case of an error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
@@ -450,7 +451,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 4. Set up re-generate and re-sync features:
 
-| Plugin| Specification| Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. | None | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
 
@@ -543,7 +544,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 3. Configure message processors:
 
-| Plugin  | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | SynchronizationSearchQueueMessageProcessorPlugin | Configures merchant messages to sync with Elastica search and marks messages as failed in case of an error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
@@ -576,7 +577,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 4. Setup re-generate and re-sync features:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | MerchantSynchronizationDataBulkRepositoryPlugin | Synchronizes the entire search table content into Search. | None | Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization |
 
@@ -635,11 +636,12 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
 Make sure that, when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
 
 
-| Target entity | Example of expected data identifier |Example of expected data identifier |
-|---|---|---|
-| Merchant | merchant:1 |Example of expected data identifier is provided below |
+| TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
+|---|---|
+| Merchant | merchant:1 |
 
-<details><summary markdown='span'>Click to view an example of the expected data fragment</summary>
+<details>
+<summary markdown='span'>Example of the expected data fragment</summary>
 
  ```json
 
@@ -824,14 +826,13 @@ Make sure that, when merchant entities are created or updated through ORM, they 
 }
 
  ```
-
  </details>
 
  ---
 
-6. Set up result formatters:
+1. Set up result formatters:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer.  None | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
 
@@ -858,7 +859,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 ```
 7. Set up query expanders:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |----|----|----|----|
 | PaginatedMerchantSearchQueryExpanderPlugin | Allows to use pagination for merchant search. | None | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
 | StoreQueryExpanderPlugin | Allows search to filter out merchants that do not belong to the current store. | None | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
@@ -907,7 +908,8 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 To import data:
 1. Prepare merchant profile data according to your requirements using our demo data:
 
-<details><summary merchant='span'>click to view the demo data</summary>
+<details>
+<summary merchant='span'>click to view the demo data</summary>
 
 ```html
 merchant_reference,contact_person_role,contact_person_title,contact_person_first_name,contact_person_last_name,contact_person_phone,banner_url,logo_url,public_email,public_phone,description_glossary_key.en_US,description_glossary_key.de_DE,banner_url_glossary_key.en_US,banner_url_glossary_key.de_DE,delivery_time_glossary_key.en_US,delivery_time_glossary_key.de_DE,terms_conditions_glossary_key.en_US,terms_conditions_glossary_key.de_DE,cancellation_policy_glossary_key.en_US,cancellation_policy_glossary_key.de_DE,imprint_glossary_key.en_US,imprint_glossary_key.de_DE,data_privacy_glossary_key.en_US,data_privacy_glossary_key.de_DE,is_active,fax_number,longitude,latitude
@@ -924,11 +926,10 @@ Budget Cameras is offering a great selection of digital cameras with the lowest 
 Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten Preisen.",https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,2-4 days,2-4 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-E-Mail. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",<p>Budget Cameras<br><br>Spitalerstraße 3<br>20095 Hamburg<br>DE<br><br>Phone: 030 1234567<br>Email: support@budgetcamerasonline.com<br><br>Represented by<br>Managing Director: Max Mustermann<br>Register Court: Hamburg<br>Register Number: HXX 134305<br></p>,<p>Budget Cameras<br><br>Spitalerstraße 3<br>20095 Hamburg<br>DE<br><br>Phone: 030 1234567<br>Email: support@budgetcamerasonline.com<br><br>Vertreten durch<br>Geschäftsführer: Max Mustermann<br>Registergericht: Hamburg<br>Registernummer: HXX 134305<br></p>,Budget Cameras values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Budget Cameras.,1,+49 30 234567500,53.552463,10.004663
 
 ```
-
 </details>
 
 
-| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000007 | Merchant identifier. |
 | contact_person_role |   | String | E-Commerce Manager | Role of the contact person of a merchant. |
@@ -971,7 +972,7 @@ MER000003,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115
 MER000007 ,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115
 ```
 
-| Column | Is Obligatory? | Data Type | Data Example | Data explanation |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000006 | Merchant identifier. |
 | country_iso2_code |   | String | DE | Country ISO-2 code the address exists in. |
@@ -984,7 +985,7 @@ MER000007 ,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115
 
 3. Register the following plugins to enable data import:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantProfileDataImportPlugin | Imports merchant profile data into the database. | None | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
 | MerchantProfileAddressDataImportPlugin | Imports merchant profile address data into the database. | None | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
@@ -1015,7 +1016,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 
 ```bash
 console data:import merchant-profile
-console data:import merchant-profile-address```
+console data:import merchant-profile-address
+```
 
 ---
 **Verification**
@@ -1025,21 +1027,21 @@ Make sure that imported data has been added to the `spy_merchant_profile` and `s
 ---
 
 ## Install feature front end
-Follow the steps below to install the feature front end.
+Follow the steps below to install the Marketplace Merchants feature front end.
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
-| Name | Version |
+| NAME | VERSION | INTEGRATION GUIDE |
 |-|-|
-| Spryker Core | master |
+| Spryker Core | master | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 Run the following commands to install the required modules:
 ```bash
 composer require spryker-feature/marketplace-merchant: "dev-master" --update-with-dependencies
 ```
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantProfileWidget | vendor/spryker-shop/merchant-profile-widget |
 | MerchantPage | vendor/spryker-shop/merchant-page |
@@ -1083,11 +1085,11 @@ Make sure that, in the database, the configured data has been added to the `spy_
 ---
 
 ### 3) Set up behavior
-Set up behavior:
+To set up behavior:
 
 1. Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantPageResourceCreatorPlugin | Allows to access a merchant page at `https://yves.mysprykershop.com/merchant/{merchantReference}`. | None | SprykerShop\Yves\MerchantPage\Plugin |
 | UrlStorageMerchantMapperPlugin | Provides access to merchant storage data in the controller related to the `https://yves.mysprykershop.com/merchant/{merchantReference}` URL.  | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin |
@@ -1117,6 +1119,7 @@ class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependency
 ```
 
 **src/Pyz/Client/UrlStorage/UrlStorageDependencyProvider.php**
+
 ```php
 <?php
 
@@ -1142,7 +1145,7 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 ---
 **Verification**
 
-Make sure that you can open the merchant page at link http://yves.de.demo-spryker.com/de/merchant/roan.
+Make sure that you can open the merchant page at link `http://yves.de.demo-spryker.com/de/merchant/roan`.
 
 ---
 
@@ -1162,7 +1165,7 @@ Make sure that you can view merchant profile data at http://yves.de.demo-spryker
 ## Related features
 Integrate the following related features:
 
-| Feature        | Required for the current feature | Integration guide |
+| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
 | Marketplace Merchant  API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html) |
 |   |   |   |   |

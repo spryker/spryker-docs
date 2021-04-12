@@ -1,5 +1,5 @@
 ---
-title: Marketplace Product Offer Prices feature integration
+title: Glue API - Marketplace Product Offer Prices feature integration
 last_updated: Nov 10, 2020
 summary: This document describes the process how to integrate the Marketplace Product Offer Prices Glue API feature into a Spryker project.
 ---
@@ -12,9 +12,9 @@ Follow the steps below to install the Marketplace Product Offer Prices Glue API 
 
 To start feature integration, overview, and install the necessary features:
 
-| NAME | VERSION |
-|-|-|
-| Marketplace Product Offer Prices | dev-master |
+| NAME | VERSION | INTEGRATION GUIDE |
+|-|-|-|
+| Marketplace Product Offer Prices | dev-master | [Marketplace Product Offer Prices feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 Run the following commands to install the required modules:

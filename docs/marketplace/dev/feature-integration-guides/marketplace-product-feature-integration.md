@@ -13,11 +13,11 @@ To start feature integration, overview and install the necessary features:
 
 | NAME            | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | master      | [Spryker Core feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
-| Marketplace Merchant | master      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html) |
-| Product Management   | master      | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
+| Spryker Core         | master      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | master      | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
+| Product   | master      | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 Run the following commands to install the required modules:
 
@@ -257,7 +257,8 @@ Make sure that data in  `spy_product_abstract_storage` contains `merchant_refere
 
 Prepare your data according to your requirements using our demo data:
 
-<details><summary markdown='span'>data/import/common/common/marketplace/merchant_product.csv</summary>
+<details>
+<summary markdown='span'>data/import/common/common/marketplace/merchant_product.csv</summary>
 
 ```yaml
 sku,merchant_reference,is_shared
@@ -440,7 +441,12 @@ Run the following console command to import data:
 console data:import merchant-product
 ```
 
-Make sure that imported data is added to the spy_merchant_product.
+---
+
+**Verification**
+
+Make sure that imported data is added to the `spy_merchant_product` table.
+---
 
 ## Install feature front end
 
@@ -449,9 +455,9 @@ Make sure that imported data is added to the spy_merchant_product.
 Register the following plugins to enable widgets:
 
 | PLUGIN  | DESCRIPTION | Prerequisites | NAMESPACE |
-| ------------------ | ----------------- | ------------ | -------------------- |
-| MerchantProductWidget       | Displays alternative product.              | None          | SprykerShop\Yves\MerchantProductWidget\Widget |
-| ProductSoldByMerchantWidget | Displays list of products for replacement. | None          | SprykerShop\Yves\MerchantProductWidget\Widget |
+| ----------- | ----------- | ---------- | --------- |
+| MerchantProductWidget | Displays alternative product. | None | SprykerShop\Yves\MerchantProductWidget\Widget |
+| ProductSoldByMerchantWidget | Displays list of products for replacement. | None | SprykerShop\Yves\MerchantProductWidget\Widget |
 
 ```php
 <?php
@@ -564,7 +570,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 ---
 **Verification**
 
-Make sure that merchant product is selected on pdp by default.
+Make sure that merchant product is selected on the Product Details Page by default.
 
 ---
 
@@ -603,6 +609,6 @@ Make sure when you add to cart merchant product, it has `merchantReference` set.
 
 | FEATURE   | INTEGRATION GUIDE    |
 |-------------------- | --------- |
-| Marketplace Product API                          | [Glue API - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html) |
+| Marketplace Product API | [Glue API - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html) |
 | Marketplace Product + Inventory Management | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html) |
 | Marketplace Product + Marketplace Product Offer | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html) |

@@ -469,7 +469,9 @@ MER000006,Sony Experts MER000006 Warehouse 1
 | stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
 
 #### Import Product Offer Stock data
-<details><summary markdown='span'>Prepare your data according to your requirements using our demo data:</summary>
+
+<details>
+<summary markdown='span'>Prepare your data according to your requirements using our demo data:</summary>
 
 ```
 product_offer_reference,stock_name,quantity,is_never_out_of_stock
@@ -594,6 +596,7 @@ offer358,Sony Experts MER000006 Warehouse 1,0,1
 offer359,Sony Experts MER000006 Warehouse 1,0,1
 offer360,Sony Experts MER000006 Warehouse 1,0,1
 ```
+
 </details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -639,6 +642,7 @@ Run the following console command to import data:
 console data:import merchant-stock
 console data:import product-offer-stock
 ```
+
 ---
 **Verification**
 

@@ -11,10 +11,10 @@ Follow the steps below to install the Offer Volume Prices Glue API feature core.
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-|-|-|
-| Marketplace Product Offer Prices | dev-master |
-| Marketplace Product Offer Volume Prices | dev-master |
+| NAME | VERSION | INTEGRATION GUIDE |
+|-|-| - |
+| Marketplace Product Offer Prices | dev-master | [Marketplace Product Offer Prices feature integration] |
+| Marketplace Product Offer Volume Prices | dev-master | [Marketplace Product Offer Volume Prices feature integration]() |
 
 ### 1) Install the required modules using Composer
 Run the following commands to install the required modules:

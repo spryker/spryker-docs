@@ -10,11 +10,11 @@ Follow the steps below to install the Marketplace Product Offer Prices feature c
 ### Prerequisites
 To start feature integration, overview, and install the necessary features:
 
-| NAME | VERSION |
-|-|-|
-| Marketplace Product Offer | dev-master |
-| Prices | 202001.0 |
-| Spryker Core | 202001.0 |
+| NAME | VERSION | INTEGRATION GUIDE |
+|-|-|-|
+| Marketplace Product Offer | dev-master | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.md) |
+| Prices | 202001.0 |[Prices feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.md) |
+| Spryker Core | 202001.0 | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 
 ### 1) Install the required modules using Composer
@@ -82,7 +82,7 @@ Verify that the following changes have been implemented by checking your databas
 
 Make sure that the following changes were applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
 | DataImporterReaderConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
@@ -160,7 +160,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 #### Configure message processors
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all Merchant Product Offers to sync with Redis storage, and marks messages as failed in case of error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
@@ -194,7 +194,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 #### Set up re-generate and re-sync features
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | PriceProductOfferSynchronizationDataPlugin | Allows synchronizing the entire storage table content into Storage. | None | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Synchronizatio |
 
@@ -254,11 +254,12 @@ Make sure that after setting up the event listeners, `console sync:data product_
 
 Make sure that when the following entities get updated via the ORM, the corresponding Redis keys have the correct values.
 
-| TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER | EXAMPLE EXPECTED DATA FRAGMENT |
-|-|-|-|
-| PriceProductOffer | `kv:product_concrete_product_offer_price:de:6` | Example expected data fragment is provided below |
+| TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
+|-|-|
+| PriceProductOffer | `kv:product_concrete_product_offer_price:de:6` | 
 
-<details><summary MARKDOWN='span'>Click to view an example of expected data fragment</summary>
+<details>
+<summary markdown='span'>Example of expected data fragment</summary>
 
 ```json
 [
@@ -336,7 +337,6 @@ Make sure that when the following entities get updated via the ORM, the correspo
   }
 ]
 ```
-
 </details>
 ---
 
@@ -356,7 +356,7 @@ offer3,DEFAULT,DE,CHF,10402,12669,
 offer4,DEFAULT,DE,EUR,27741,29712,"[{""quantity"":5,""net_price"":6050,""gross_price"":7065}, {""quantity"":10,""net_price"":5045,""gross_price"":6058}, {""quantity"":20,""net_price"":4040,""gross_price"":5052}]"
 ```
 
-| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | product_offer_reference | mandatory | string | offer1 | Product Offer reference that will have these prices |
 | price_type | mandatory | string | DEFAULT | Sets price type to product offer price |
@@ -406,11 +406,10 @@ Make sure that the Product Offer prices data is in the `spy_price_product_offer`
 
 ---
 
-6) Set up behavior
+### 6) Set up behavior
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-
 |-|-|-|-|
 | PriceProductOfferProductOfferExpanderPlugin | Expands Product Offer entity with prices | None | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
 | PriceProductOfferProductOfferPostCreatePlugin | Saves Product Offer price data after Product Offer creation | None | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
@@ -426,7 +425,8 @@ Enable the following behaviors by registering the plugins:
 | PriceProductOfferVolumeExtractorPlugin | Maps out JSON entries from price_data of PriceProductTransfer to new PriceProductTransfers with volume prices | None | Spryker\Client\PriceProductOfferVolume\Plugin\PriceProductOfferStorage |
 | PriceProductOfferVolumeFilterPlugin | Applies correct volume pricing when applicable and quantity is selected | None | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer |
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -473,11 +473,11 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
 ```
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
+<details>
+<summary markdown='span'>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
-
 
 namespace Pyz\Zed\PriceProduct;
 
@@ -521,7 +521,6 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }
 }
 ```
-
 </details>
 
 **src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php**

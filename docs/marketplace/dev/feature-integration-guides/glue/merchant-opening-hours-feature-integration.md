@@ -13,7 +13,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | ----------- | ------ | --------------|
-| Merchant Opening Hours | dev-master  | [Merchant Opening Hours feature integration](docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html)
+| Merchant Opening Hours | dev-master  | [Merchant Opening Hours feature integration](docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

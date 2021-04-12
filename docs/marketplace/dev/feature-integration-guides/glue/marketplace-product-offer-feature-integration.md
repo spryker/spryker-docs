@@ -12,7 +12,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|
-| Marketplace Product Offer | dev-master |[Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html)
+| Marketplace Product Offer | dev-master |[Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
 
 ### 1) Install the required modules using composer
 Run the following commands to install the required modules:

@@ -4,7 +4,7 @@ last_updated: Dec 07, 2020
 summary: This document describes the process how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
 ---
 
-## Install Feature Core
+## Install feature core
 Follow the steps below to install the Marketplace Product + Inventory Management feature core.
 
 ### Prerequisites
@@ -16,7 +16,7 @@ To start feature integration, overview and install the necessary features:
 | Marketplace Merchant | master | [Marketplace Merchant feature integration](https://spryker.atlassian.net/l/c/nLJp1kNH)   |
 | Product Management | master | [Inventory Management feature integration](https://spryker.atlassian.net/l/c/xvoax8TT)  |
 
-### 1) Setup Behavior
+### 1) Set up behavior
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
@@ -62,6 +62,6 @@ class AvailabilityGuiDependencyProvider extends SprykerAvailabilityGuiDependency
 ---
 **Verification**
 
-Make sure that you can filter product availabilities by merchant at http://zed.de.demo-spryker.com/product-management.
+Make sure that you can filter product availabilities by merchant at `http://zed.de.demo-spryker.com/product-management`.
 
 ---

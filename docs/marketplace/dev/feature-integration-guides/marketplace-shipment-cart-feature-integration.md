@@ -10,15 +10,15 @@ Follow the steps below to install the Marketplace Shipment + Cart feature core.
 ### Prerequisites
 To start feature integration, overview, and install the necessary features:
 
-| Name | Version |
-|-|-|
-| Marketplace Shipment | dev-master |
-| Cart | 202001.0 |
+| NAME | VERSION | INTEGRATION GUIDE |
+|-|-|-|
+| Marketplace Shipment | dev-master | [Marketplace Shipment feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html) |
+| Cart | 202001.0 | [Cart feature integration](https://github.com/spryker-feature/cart) |
 
 ## 1) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantShipmentItemExpanderPlugin | Expands Cart items with merchant shipment | None | Spryker\Zed\MerchantShipment\Communication\Plugin\Cart |
 | MerchantShipmentQuoteExpanderPlugin | Expands Quote items with merchant shipment | None | Spryker\Zed\MerchantShipment\Communication\Plugin\Quote |

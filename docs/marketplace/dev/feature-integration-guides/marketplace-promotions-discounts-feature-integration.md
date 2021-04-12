@@ -13,11 +13,11 @@ Follow the steps below to install the Marketplace Promotions & Discounts feature
 
 To start feature integration, overview, and install the necessary features:
 
-| NAME | VERSION |
-| - | - |
-| Spryker Core                 | 202001.0   |
-| Marketplace Order Management | dev-master |
-| Promotions & Discounts       | 202001.0   |
+| NAME | VERSION | INTEGRATION GUIDE |
+| - | - | - |
+| Spryker Core                 | 202001.0   | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Order Management | dev-master | [Marketplace Order Management feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html) |
+| Promotions & Discounts       | 202001.0   | [Promotions & Discounts feature integration](https://github.com/spryker-feature/promotions-discounts) |
 
 ###  1) Install the required modules using Composer
 
@@ -34,7 +34,6 @@ composer require spryker-feature/marketplace-promotions-discounts --update-with-
 Make sure that the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
- |
 | - | - |
 | DiscountMerchantSalesOrder    | spryker/discount-merchant-sales-order     |
 | DiscountMerchantSalesOrderGui | spryker/discount-merchant-sales-order-gui |
@@ -76,7 +75,6 @@ console translator:generate-cache
 Change the following the configuration to enable the feature:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
- |
 | - | - | - |
 | MerchantSalesOrderMerchantUserGuiConfig   ::getMerchantSalesOrderDetailExternalBlocksUrls | Adds Merchant discount separation while viewing Merchant Order | \Pyz\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUserGuiConfig |
 
@@ -108,13 +106,12 @@ class MerchantSalesOrderMerchantUserGuiConfig extends SprykerMerchantSalesOrderM
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-
 | - | - | - | - |
 | DiscountMerchantOrderFilterPlugin | Removes none Merchant related discounts from Merchant Orders | None          | Spryker\Zed\DiscountMerchantSalesOrder\Communication\Plugin |
 
 **src/Pyz/Zed/MerchantSalesOrder/MerchantSalesOrderDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\MerchantSalesOrder;

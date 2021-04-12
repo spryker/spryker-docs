@@ -11,10 +11,10 @@ This document describes how to integrate the Marketplace Shipment + Customer fea
 Follow the steps below to install the Marketplace Shipment + Customer feature core.
 
 ### Prerequisites
-| NAME | VERSION |
-| --------- | ------ |
-| Marketplace Shipment | dev-master | 
-| Customer | 202001.0 | 
+| NAME | VERSION | INTEGRATION GUIDE |
+| --------- | ------ | -----------|
+| Marketplace Shipment | dev-master | [Marketplace Shipment feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html) |
+| Customer | 202001.0 |  |
 
 ### 1) Set up behavior
 Enable the following behaviors by registering the plugins:

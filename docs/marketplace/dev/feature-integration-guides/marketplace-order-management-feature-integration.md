@@ -12,13 +12,13 @@ Follow the steps below to install the Marketplace Order Management feature core.
 
 ### Prerequisites
 
-| NAME | VERSION |
-| --------- | ------ |
-| Spryker Core | 202001.0 |
-| Order Management | 202001.0 |
-| Shipment | 202001.0 |
-| State Machine | 202001.0 |
-| Marketplace Merchant | dev-master |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --------- | ------ | ---------------|
+| Spryker Core | 202001.0 | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Order Management | 202001.0 | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
+| Shipment | 202001.0 | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
+| State Machine | 202001.0 | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
+| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
 
 ### 1) Install required modules using Сomposer
 
@@ -106,7 +106,7 @@ MER000005,MerchantDefaultStateMachine
 ```
 
 
-|PAREMETER |REQUIRED  |TYPE  |DATA EXAMPLE | DESCRIPTION |
+|PAREMETER |REQUIRED?  |TYPE  |DATA EXAMPLE | DESCRIPTION |
 |---------|---------|---------|---------| ---------|
 |merchant_reference     |  ✓       |  string       | spryker        |String identifier for merchant in the Spryker system. |
 |merchant_oms_process_name     |    ✓     |     string   |  MainMerchantStateMachine       | String identifier for the State Machine processes.|
@@ -116,7 +116,7 @@ MER000005,MerchantDefaultStateMachine
 
 |PLUGIN  |SPECIFICATION  |PREREQUISITES  |NAMESPACE  |
 |---------|---------|---------|---------|
-|MerchantOmsProcessDataImportPlugin     |  Imports Merchant State Machine data       |    None     |   Spryker\Zed\MerchantOmsDataImport\Communication\Plugin\DataImport      |
+|MerchantOmsProcessDataImportPlugin |  Imports Merchant State Machine data  |    None     |   Spryker\Zed\MerchantOmsDataImport\Communication\Plugin\DataImport  |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
@@ -142,7 +142,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 ```
 </details>
 
-3. Import data:
+1. Import data:
 
 ```bash
 console data:import merchant-oms-process
@@ -315,6 +315,7 @@ class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
 ```bash
 console data:export --config=merchant_order_export_config.yml
 ```
+
 ### 6) Set up behavior
 Enable the following behaviors by registering the plugins:
 
@@ -516,17 +517,17 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 ## Install feature front end
 
-Follow the steps below to install the Order Management feature front end.
+Follow the steps below to install the Marketplace Order Management feature front end.
 
 ### Prerequisites
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --------- | ------ |
-| Spryker Core | 202001.0 |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --------- | ------ | --------------|
+| Spryker Core | 202001.0 | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
-### 1) Install required modules using Сomposer
+### 1) Install the required modules using Сomposer
 
 If installed before, not needed.
 
@@ -594,8 +595,8 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET | VERIFICATION |
-| ---------------- | ----------------- |
-| SalesMerchantPortalGui| Open MerchantDashboard at `HTTP://{yourmerchantportaldomain}/dashboard-merchant-portal-gui` and check that Sales widget is available. |
+| ----------- | ---------- |
+| SalesMerchantPortalGui| Open MerchantDashboard at `http://mysprykershop.com/dashboard-merchant-portal-gui` and check that Sales widget is available. |
 
 ---
 

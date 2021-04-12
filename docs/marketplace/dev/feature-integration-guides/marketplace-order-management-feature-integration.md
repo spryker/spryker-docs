@@ -1,5 +1,5 @@
 ---
-title: Marketplace Order Management feature integration 
+title: Marketplace Order Management feature integration
 description: {Meta description}
 tags: [, ]
 ---
@@ -92,7 +92,7 @@ console translator:generate-cache
 Import data as follows:
 
 1. Prepare your data according to your requirements using our demo data:
-   
+
 **data/import/common/common/marketplace/merchant_product_offer.csv**
 ```csv
 merchant_reference,merchant_oms_process_name
@@ -123,12 +123,12 @@ MER000005,MerchantDefaultStateMachine
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\DataImport;
-  
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\MerchantOmsDataImport\Communication\Plugin\DataImport;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -166,7 +166,7 @@ Export data as follows:
 
 ```xml
 version: 1
- 
+
 defaults:
     filter_criteria: &default_filter_criteria
         merchant_order_created_at:
@@ -177,7 +177,7 @@ defaults:
             type: between
             from: '2021-01-08 09:00:12+12:00'
             to: '2021-12-31 23:59:59+09:00'
- 
+
 actions:
 #Merchant orders data export
     - data_entity: merchant-order-expense
@@ -185,31 +185,31 @@ actions:
       filter_criteria:
           <<: *default_filter_criteria
           store_name: [DE]
- 
+
     - data_entity: merchant-order-expense
       destination: 'merchants/{merchant_name}/merchant-orders/{data_entity}s_{store_name}_{timestamp}.csv'
       filter_criteria:
           <<: *default_filter_criteria
           store_name: [US]
- 
+
     - data_entity: merchant-order-item
       destination: 'merchants/{merchant_name}/merchant-orders/{data_entity}s_{store_name}_{timestamp}.csv'
       filter_criteria:
           <<: *default_filter_criteria
           store_name: [DE]
- 
+
     - data_entity: merchant-order-item
       destination: 'merchants/{merchant_name}/merchant-orders/{data_entity}s_{store_name}_{timestamp}.csv'
       filter_criteria:
           <<: *default_filter_criteria
           store_name: [US]
- 
+
     - data_entity: merchant-order
       destination: 'merchants/{merchant_name}/merchant-orders/{data_entity}s_{store_name}_{timestamp}.csv'
       filter_criteria:
           <<: *default_filter_criteria
           store_name: [DE]
- 
+
     - data_entity: merchant-order
       destination: 'merchants/{merchant_name}/merchant-orders/{data_entity}s_{store_name}_{timestamp}.csv'
       filter_criteria:
@@ -275,23 +275,23 @@ actions:
 
  PLUGIN | SPECIFICATION | PREREQUISITES| NAMESPACE|
 | --------------- | -------------- | ------ | -------------- |
-| MerchantOrderDataEntityExporterPlugin | Exports Merchant Order data | None | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport| 
+| MerchantOrderDataEntityExporterPlugin | Exports Merchant Order data | None | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport|
 | MerchantOrderItemDataEntityExporterPlugin | Exports Merchant Order Items data | None   | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
-|MerchantOrderExpenseDataEntityExporterPlugin  | Exports Merchant Order Expense data | None   |Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport | 
+|MerchantOrderExpenseDataEntityExporterPlugin  | Exports Merchant Order Expense data | None   |Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/DataExport/DataExportDependencyProvider.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataExport;
- 
+
 use Spryker\Zed\DataExport\DataExportDependencyProvider as SprykerDataExportDependencyProvider;
 use Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport\MerchantOrderDataEntityExporterPlugin;
 use Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport\MerchantOrderExpenseDataEntityExporterPlugin;
 use Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport\MerchantOrderItemDataEntityExporterPlugin;
- 
+
 class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
 {
     /**
@@ -336,16 +336,16 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\MerchantOmsGui\Communication\Plugin\Sales\MerchantOmsStateOrderItemsTableExpanderPlugin;
 use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales\MerchantOrderDataOrderExpanderPlugin;
 use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales\MerchantReferenceOrderItemExpanderPreSavePlugin;
 use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales\MerchantReferencesOrderExpanderPlugin;
 use Spryker\Zed\ProductOfferSales\Communication\Plugin\Sales\ProductOfferReferenceOrderItemExpanderPreSavePlugin;
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
- 
+
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
@@ -358,7 +358,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new MerchantReferencesOrderExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPreSavePluginInterface[]
      */
@@ -369,7 +369,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new ProductOfferReferenceOrderItemExpanderPreSavePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsTableExpanderPluginInterface[]
      */
@@ -388,13 +388,13 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\MerchantOms\Communication\Console\TriggerEventFromCsvFileConsole;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -417,14 +417,14 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\MerchantSalesOrder;
- 
+
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder\EventTriggerMerchantOrderPostCreatePlugin;
 use Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder\MerchantOmsMerchantOrderExpanderPlugin;
 use Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderDependencyProvider as SprykerMerchantSalesOrderDependencyProvider;
- 
+
 class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDependencyProvider
 {
     /**
@@ -436,7 +436,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
             new EventTriggerMerchantOrderPostCreatePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderExpanderPluginInterface[]
      */
@@ -455,17 +455,17 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Zed\StateMachine;
- 
+
 use Spryker\Zed\MerchantOms\Communication\Plugin\StateMachine\MerchantStateMachineHandlerPlugin;
 use Spryker\Zed\StateMachine\StateMachineDependencyProvider as SprykerStateMachineDependencyProvider;
- 
+
 class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvider
 {
     /**
@@ -485,12 +485,12 @@ class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvid
 
 ```php
 ?php
- 
+
 namespace Pyz\Zed\Shipment;
- 
+
 use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment\MerchantReferenceShipmentExpenseExpanderPlugin;
 use Spryker\Zed\Shipment\ShipmentDependencyProvider as SprykerShipmentDependencyProvider;
- 
+
 class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 {
     /**
@@ -509,8 +509,8 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 ---
 **Verification**
-1. Make sure that the Merchant State Machine is executed on Merchant Orders after the order has been split
-2. Make sure that when retrieving an order in the Sales module, it is split by the Merchant Order and that the Order state is derived from the Merchant State Machine
+1. Make sure that the Merchant State Machine is executed on Merchant Orders after the order has been split.
+2. Make sure that when retrieving an order in the Sales module, it is split by the Merchant Order and that the Order state is derived from the Merchant State Machine.
 
 ---
 
@@ -543,6 +543,7 @@ Apply database changes and to generate entity and transfer changes:
 ```bash
 console transfer:generate
 ```
+
 ---
 **Verification**
 
@@ -567,12 +568,12 @@ Register the following plugins to enable widgets:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DashboardMerchantPortalGui;
- 
+
 use Spryker\Zed\DashboardMerchantPortalGui\DashboardMerchantPortalGuiDependencyProvider as SprykerDashboardMerchantPortalGuiDependencyProvider;
 use Spryker\Zed\SalesMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui\OrdersMerchantDashboardCardPlugin;
- 
+
 class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerchantPortalGuiDependencyProvider
 {
     protected function getDashboardCardPlugins(): array
@@ -584,7 +585,11 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 }
 
 ```
+
 </details>
+
+---
+**Verification**
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
@@ -592,10 +597,12 @@ Make sure that the following widgets have been registered by adding the respecti
 | ---------------- | ----------------- |
 | SalesMerchantPortalGui| Open MerchantDashboard at `HTTP://{yourmerchantportaldomain}/dashboard-merchant-portal-gui` and check that Sales widget is available. |
 
+---
+
 ## Related features
 Integrate the following related features:
 
-| Feature | Integration guide |
-| --- | --- | 
-  | Marketplace Order Management + Order Threshold |https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2021130304 |
-  | Marketplace Order Management + Cart | https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2021163080)|
+| FEATURE | INTEGRATION GUIDE |
+| --- | --- |
+  | Marketplace Order Management + Order Threshold |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html) |
+  | Marketplace Order Management + Cart | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html)|

@@ -39,6 +39,6 @@ Make sure that the following modules have been installed:
 
 **Verification**
 
-Make sure that Merchant Orders have correct threshold expenses shown in order-overview page in `http://zed.mysprykershop.com/merchant-sales-order-merchant-user-gui/detail?id-merchant-sales-order={{idMerchantSalesOrder}}`
+Make sure that Merchant Orders have correct threshold expenses shown in order-overview page in `http://zed.mysprykershop.com/merchant-sales-order-merchant-user-gui/detail?id-merchant-sales-order={% raw %}{{idMerchantSalesOrder}}{% endraw %}`
 
 ---

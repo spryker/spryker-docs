@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Product Offer Prices feature c
 ### Prerequisites
 To start feature integration, overview, and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 |-|-|
 | Marketplace Product Offer | dev-master |
 | Prices | 202001.0 |
@@ -28,7 +28,7 @@ composer require spryker-feature/marketplace-product-offer-prices --update-with-
 
 Make sure that the following modules were installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | PriceProductOffer | spryker/price-product-offer |
 | PriceProductOfferDataImport | spryker/price-product-offer-data-import |
@@ -75,11 +75,10 @@ console transfer:generate
 
 Verify that the following changes have been implemented by checking your database:
 
-| Database entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 |-|-|-|
 | spy_price_product_offer | table | created |
 | spy_product_concrete_product_offer_price_storage | table | created |
-
 
 Make sure that the following changes were applied in transfer objects:
 
@@ -102,7 +101,7 @@ console translator:generate-cache
 ### 4) Configure export to Redis and ElasticSearch
 #### Set up event listeners
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | PriceProductOfferStorageEventSubscriber | Registers listeners that are responsible for publishing Product Offer Prices to storage. | None | Spryker\Zed\PriceProduc |
 
@@ -255,11 +254,11 @@ Make sure that after setting up the event listeners, `console sync:data product_
 
 Make sure that when the following entities get updated via the ORM, the corresponding Redis keys have the correct values.
 
-| Target Entity | Example expected data identifier | Example expected data fragment |
+| TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER | EXAMPLE EXPECTED DATA FRAGMENT |
 |-|-|-|
 | PriceProductOffer | `kv:product_concrete_product_offer_price:de:6` | Example expected data fragment is provided below |
 
-<details><summary merchant='span'>Click to view an example of expected data fragment</summary>
+<details><summary MARKDOWN='span'>Click to view an example of expected data fragment</summary>
 
 ```json
 [
@@ -357,7 +356,7 @@ offer3,DEFAULT,DE,CHF,10402,12669,
 offer4,DEFAULT,DE,EUR,27741,29712,"[{""quantity"":5,""net_price"":6050,""gross_price"":7065}, {""quantity"":10,""net_price"":5045,""gross_price"":6058}, {""quantity"":20,""net_price"":4040,""gross_price"":5052}]"
 ```
 
-| Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
+| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | product_offer_reference | mandatory | string | offer1 | Product Offer reference that will have these prices |
 | price_type | mandatory | string | DEFAULT | Sets price type to product offer price |
@@ -369,7 +368,7 @@ offer4,DEFAULT,DE,EUR,27741,29712,"[{""quantity"":5,""net_price"":6050,""gross_p
 
 Register the following plugins to enable data import:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | PriceProductOfferDataImportPlugin | Imports Price Product Offer data | None | Spryker\ |
 
@@ -410,7 +409,8 @@ Make sure that the Product Offer prices data is in the `spy_price_product_offer`
 6) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+
 |-|-|-|-|
 | PriceProductOfferProductOfferExpanderPlugin | Expands Product Offer entity with prices | None | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
 | PriceProductOfferProductOfferPostCreatePlugin | Saves Product Offer price data after Product Offer creation | None | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |

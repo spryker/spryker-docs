@@ -10,7 +10,7 @@ Follow the steps below to install the Merchant Portal - Marketplace Product feat
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 |-|-|
 | Marketplace Product | dev-master |
 | Marketplace Merchant Portal Core | dev-master |
@@ -27,7 +27,7 @@ composer require spryker/product-merchant-portal-gui:"dev-master" --update-with-
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | ProductMerchantPortalGui | spryker/product-merchant-portal-gui |
 | ProductMerchantPortalGuiExtension | spryker/product-merchant-portal-gui-extension |
@@ -46,7 +46,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER  | TYPE  | EVENT | PATH  |
 |-|-|-|-|
 | MerchantProductTableCriteria | class | Created | src/Generated/Shared/Transfer/MerchantProductTableCriteriaTransfer |
 | ProductAbstractCollection | class | Created | src/Generated/Shared/Transfer/ProductAbstractCollectionTransfer |

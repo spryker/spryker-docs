@@ -12,7 +12,7 @@ Follow the steps below to install the Merchant Switcher feature core.
 
 To start feature integration, overview, and install the necessary features:
 
-| Name                      | Version    |
+| NAME | VERSION |
 | ------------------------- | ---------- |
 | Spryker Core              | 202001.0   |
 | Marketplace Product Offer | dev-master |
@@ -22,7 +22,7 @@ To start feature integration, overview, and install the necessary features:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-switcher --update-with-dependencies 
+composer require spryker-feature/merchant-switcher --update-with-dependencies
 ```
 
 ---
@@ -42,7 +42,7 @@ Make sure that the following modules were installed:
 Run the following commands to generate transfer changes.
 
 ```bash
-console transfer:generate 
+console transfer:generate
 ```
 
 ---
@@ -65,7 +65,7 @@ Follow the steps below to install the Merchant Switcher feature FRONT END.
 
 To start feature integration, overview, and install the necessary features:
 
-| Name         | Version  |
+| NAME | VERSION |
 | ------------ | -------- |
 | Spryker Core | 202001.0 |
 
@@ -74,7 +74,7 @@ To start feature integration, overview, and install the necessary features:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-shop/merchant-switcher-widget --update-with-dependencies 
+composer require spryker-shop/merchant-switcher-widget --update-with-dependencies
 ```
 
 ---
@@ -83,7 +83,7 @@ composer require spryker-shop/merchant-switcher-widget --update-with-dependencie
 
 Make sure that the following modules were installed:
 
-| Module           | Expected Directory        |
+| MODULE | EXPECTED DIRECTORY |
 | :--------------- | :------------------------ |
 | MerchantSwitcher | spryker/merchant-switcher |
 
@@ -94,7 +94,7 @@ Make sure that the following modules were installed:
 Run the following commands to generate transfer changes.
 
 ```bash
-console transfer:generate 
+console transfer:generate
 ```
 
 ---
@@ -142,7 +142,8 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin                                    | Description                                        | Prerequisites | Namespace                                                    |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+
 | ----------------------------------------- | -------------------------------------------------- | ------------- | ------------------------------------------------------------ |
 | MerchantSwitcherWidgetRouteProviderPlugin | Wires Merchant switch request route to shop Router | None          | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\Router        |
 | MerchantShopContextExpanderPlugin         | Adds Merchant reference from cookie to ShopContext | None          | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication |
@@ -151,12 +152,12 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\Router;
- 
+
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
 use SprykerShop\Yves\MerchantSwitcherWidget\Plugin\Router\MerchantSwitcherWidgetRouteProviderPlugin;
- 
+
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
@@ -175,17 +176,17 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 ```
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\ShopContext;
- 
+
 use Spryker\Yves\ShopContext\ShopContextDependencyProvider as SprykerShopContextDependencyProvider;
 use SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication\MerchantShopContextExpanderPlugin;
- 
+
 class ShopContextDependencyProvider extends SprykerShopContextDependencyProvider
 {
     /**
@@ -204,13 +205,13 @@ class ShopContextDependencyProvider extends SprykerShopContextDependencyProvider
 
 ```
 <?php
- 
+
 namespace Pyz\Client\SearchElasticsearch;
- 
+
 use Spryker\Client\Kernel\Container;
 use Spryker\Client\MerchantProductOfferSearch\Plugin\MerchantNameSearchConfigExpanderPlugin;
 use Spryker\Client\SearchElasticsearch\SearchElasticsearchDependencyProvider as SprykerSearchElasticsearchDependencyProvider;
- 
+
 class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDependencyProvider
 {
     /**
@@ -231,17 +232,17 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 
 ```
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\ShopContext;
- 
+
 use Spryker\Yves\ShopContext\ShopContextDependencyProvider as SprykerShopContextDependencyProvider;
 use SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication\MerchantShopContextExpanderPlugin;
- 
+
 class ShopContextDependencyProvider extends SprykerShopContextDependencyProvider
 {
     /**
@@ -260,7 +261,8 @@ class ShopContextDependencyProvider extends SprykerShopContextDependencyProvider
 
 Register the following plugins to enable widgets:
 
-| Plugin                             | Description                                                  | Prerequisites | Namespace                                      |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+
 | ---------------------------------- | ------------------------------------------------------------ | ------------- | ---------------------------------------------- |
 | MerchantSwitcherSelectorFormWidget | Shows a list of Merchants that you can switch the shop context in between | None          | SprykerShop\Yves\MerchantSwitcherWidget\Widget |
 
@@ -268,12 +270,12 @@ Register the following plugins to enable widgets:
 
 ```
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\MerchantSwitcherWidget\Widget\MerchantSwitcherSelectorFormWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -300,14 +302,16 @@ console frontend:yves:build
 
 Make sure that the following widgets were registered:
 
-| Module                             | Test                                                         |
+| MODULE | TEST |
+
 | :--------------------------------- | :----------------------------------------------------------- |
 | MerchantSwitcherSelectorFormWidget | Check the top navigation and change the merchant, wait for page reload and the shop context to be changed (default selected product offers) |
 
 ---
 
-# Related Features
+# Related features
 
-| Feature                                                 | Link                                                         |
-| ------------------------------------------------------- | ------------------------------------------------------------ |
-| Merchant Switcher Feature + Customer Account Management | [[WIP\] Marketplace Order Management Feature + Customer Account Management integration - ongoing](http://spryker.atlassian.net/wiki/spaces/DOCS/pages/2051145733) |
+| FEATURE | INTEGRATION GUIDE |
+
+| - | - |
+| Merchant Switcher Feature + Customer Account Management | [Marketplace Order Management Feature + Customer Account Management integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html) |

@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Product + Marketplace Product 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Link |
+| NAME | VERSION | LINK |
 |-|-|-|
 | Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
 | Marketplace Product | master | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html)  |
@@ -19,7 +19,8 @@ To start feature integration, overview and install the necessary features:
 ### 1) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+
 |-|-|-|-|
 | MerchantProductProductOfferReferenceStrategyPlugin | Allows to select merchant product by default on PDP. | None | Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin |
 

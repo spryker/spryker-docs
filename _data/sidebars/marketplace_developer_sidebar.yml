@@ -126,6 +126,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
             output: web
 
+          - title: Merchant Portal - Marketplace Product Offer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-offer-feature-integration.html
+            output: web
+
           - title: Merchant Portal - Marketplace Product + Tax feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html
             output: web

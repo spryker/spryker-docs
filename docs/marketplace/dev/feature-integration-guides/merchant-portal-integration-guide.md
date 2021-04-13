@@ -1,5 +1,5 @@
 ---
-title: Marketplace Return Management feature integration
+title: Merchant Portal feature integration
 last_updated: Dec 11, 2020 
 summary: This document describes the process how to integrate the Merchant Portal feature into a Spryker project.
 draft: true

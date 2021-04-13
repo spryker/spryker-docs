@@ -22,7 +22,7 @@ To start feature integration, integrate the required features:
 | Marketplace Return Management | dev-master | [Marketplace Return Management feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html) |
 
 ### 1) Install the required modules using Сomposer
-<!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
+<!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
 

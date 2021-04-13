@@ -11,7 +11,7 @@ This document describes how to integrate the [Marketplace Return Management]({ht
 Follow the steps below to install the Marketplace Return Management feature core.
 
 ### 1) Install required modules using Composer
-<!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
+<!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
 

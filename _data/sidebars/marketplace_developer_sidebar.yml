@@ -42,16 +42,16 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html
             output: web
 
-          - title: Marketplace Order Management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
-            output: web
-
           - title: Marketplace Order Management + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html
             output: web
 
           - title: Marketplace Order Management + Customer Account Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
+            output: web
+
+          - title: Marketplace Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
             output: web
 
           - title: Marketplace Order Management + Order Threshold feature integration
@@ -86,6 +86,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
             output: web
 
+          - title: Marketplace Shipment Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-cart-feature-integration.html
+            output: web
+
           - title: Marketplace Shipment + Checkout feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature-integration.html
             output: web
@@ -94,16 +98,16 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-customer-feature-integration.html
             output: web
 
+          - title: Marketplace Shipment feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html
+            output: web
+
           - title: Merchant Category feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
             output: web
 
           - title: Merchant Opening Hours feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
-            output: web
-
-          - title: Merchant Switcher feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
             output: web
 
           - title: Merchant Portal feature integration
@@ -128,6 +132,10 @@ entries:
 
           - title: Merchant Portal - Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-product-offer-feature-integration.html
+            output: web
+
+          - title: Merchant Switcher feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
             output: web
 
           - title: Product Offer + Cart feature integration

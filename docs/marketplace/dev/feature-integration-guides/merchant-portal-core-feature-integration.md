@@ -13,7 +13,7 @@ Follow the steps below to install the Merchant Portal Core feature core.
 To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
-| -------------------- | ---------- |
+| -------------------- | ---------- | ---------|
 | Spryker Core         | dev-master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Spryker Core BO      | dev-master | [Spryker Core Back Office feature integration](https://github.com/spryker-feature/spryker-core-back-office)
 | Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html)

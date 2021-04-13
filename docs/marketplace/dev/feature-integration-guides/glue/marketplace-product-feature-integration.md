@@ -86,7 +86,8 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 }
 ```
-**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
+
+<details><summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -129,6 +130,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
+</details>
 
 ---
 **Verification**

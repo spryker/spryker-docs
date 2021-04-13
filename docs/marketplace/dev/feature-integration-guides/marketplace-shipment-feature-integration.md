@@ -28,10 +28,10 @@ composer require spryker-feature/marketplace-shipment --update-with-dependencies
 
 Make sure that the following modules were installed:
 
-| NAME | VERSION |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
-| Spryker Core | 202001.0 |
-
+| MerchantShipment | spryker/merchant-shipment |
+| MerchantShipmentGui | spryker/merchant-shipment-gui |
 ---
 
 ### 2) Set up configuration

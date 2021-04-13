@@ -77,7 +77,7 @@ Verify the following changes by checking your database
 
 ---
 
-## 3) Set up transfer objects
+### 3) Set up transfer objects
 
 Run the following command to generate transfer changes:
 
@@ -437,15 +437,15 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 
 Run the following console command to import data:
 
-```
+```bash
 console data:import merchant-product
 ```
 
 ---
-
 **Verification**
 
 Make sure that imported data is added to the `spy_merchant_product` table.
+
 ---
 
 ## Install feature front end
@@ -494,7 +494,7 @@ console frontend:yves:build
 
 Make sure that on the product detail page for merchant products you can see the seller name.
 
-Make sure that when you add merchant product to cart, on a cart page is has Sold By: widget shown.
+Make sure that when you add merchant product to cart, on a cart page is has the Sold By: widget shown.
 
 ---
 

@@ -83,6 +83,7 @@ When the offer is out of stock, it is displayed as an out-of-stock product.
 
 ### Product offer availability
 Product offer availability calculation differs from the calculation of concrete products availability:
+
 | Concrete product availability   | Product offer availability   |
 | --------------------- | ------------------------ |
 | Formula: Concrete product availability = Concrete product quantity – Concrete product reservations | Formula: Offer availability = Offer quantity – Offer reservations |

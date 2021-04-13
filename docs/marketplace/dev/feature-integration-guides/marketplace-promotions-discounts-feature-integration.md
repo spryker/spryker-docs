@@ -15,7 +15,7 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
-| Spryker Core                 | 202001.0   | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core                 | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Marketplace Order Management | dev-master | [Marketplace Order Management feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html) |
 | Promotions & Discounts       | 202001.0   | [Promotions & Discounts feature integration](https://github.com/spryker-feature/promotions-discounts) |
 

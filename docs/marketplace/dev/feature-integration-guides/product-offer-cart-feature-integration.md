@@ -11,24 +11,24 @@ Follow the steps below to install the Product Offer + Cart feature core.
 
 To start feature integration, overview, and install the necessary features:
 
-| Name                      | Version    |
-| ----------------------- | -------- |
-| Marketplace Product Offer | dev-master |
-| Cart                      | 202001.0   |
+| NAME      | VERSION  | INTEGRATION GUIDE |
+| --------- | -------- | ------------------|
+| Marketplace Product Offer | dev-master | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html)
+| Cart                      | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart)
 
 ##  1) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
 | Plugin    | Description    | Prerequisites | Namespace  |
-| ----------------------- | ----------------- | ----------- | ------------------- |
+| ------------- | ------------- | ----------- | ------------ |
 | ProductOfferGroupKeyItemExpanderPlugin         | Adds Product Offer reference to group key that separates items in the cart. | None          | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
 | ProductOfferCartPreCheckPlugin                 | Checks if the Product Offer belongs to the product concrete before adding an item to cart. | None          | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
 | FilterInactiveProductOfferPreReloadItemsPlugin | Removes inactive Product Offer from cart when reloading it   | None          | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
 
+<details>
+<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
-
-<details><summary merchant='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 ```php
 <?php
 
@@ -97,10 +97,10 @@ Follow the steps below to install the Product Offer + Cart feature front end.
 
 To start feature integration, overview, and install the necessary features:
 
-| Name                      | Version    |
-| ------------------------ | --------- |
-| Marketplace Product Offer | dev-master |
-| Cart                      | 202001.0   |
+| NAME        | VERSION    | INTEGRATION GUIDE |
+| ----------- | ---------- | ------------------|
+| Marketplace Product Offer | dev-master | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
+| Cart                      | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart) |
 
 ## 1) Set up behavior
 

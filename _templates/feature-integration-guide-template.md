@@ -31,7 +31,7 @@ To start feature integration, integrate the required features:
 | {Feature Name} | {feature version} |
 
 ### 1) Install the required modules using Composer
-<!--Provide one or more console commands with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
+<!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
 
@@ -372,7 +372,7 @@ Ensure that the {entities} have been added to the `{table_name}` table.
 <!--This is a comment, it will not be included -->
 Enable the following behaviors by registering the plugins:
 
-| Plugin   | Specification | Prerequisites   | Namespace |
+| PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
 | {plugin} | {description} | {{prerequisite} /      } <!-- if none, leave blank -->| {namespace} |
 
@@ -401,7 +401,7 @@ To start feature integration, integrate the required features:
 | {Feature Name} | {feature version} |
 
 ### 1) Install the required modules using Composer
-<!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
+<!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
 
@@ -502,6 +502,6 @@ console frontend:yves:build
 ## Related features
 Integrate the following related features:
 
-| Feature        | Required for the current feature | Integration guide |
+| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
 | {Feature Name} | {✓ /  }    | [{Integration guide name}](link to the integration guide) |

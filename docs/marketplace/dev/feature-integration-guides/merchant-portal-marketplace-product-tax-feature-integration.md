@@ -10,10 +10,10 @@ Follow the steps below to install the Merchant Portal - Marketplace Product + Ta
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-|-|-|
-| Marketplace Product | dev-master |
-| Tax | dev-master |
+| NAME | VERSION | integration guide |
+|-|-|-|
+| Marketplace Product | dev-master | [Marketplace Product feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html) |
+| Tax | dev-master | [Tax feature integration](https://github.com/spryker-feature/tax)
 
 ### 1) Install the required modules using Composer
 Run the following commands to install the required modules:

@@ -12,13 +12,13 @@ Follow the steps below to install the Merchant Portal Core feature core.
 
 To start feature integration, overview, and install the necessary features:
 
-| NAME | VERSION |
+| NAME | VERSION | INTEGRATION GUIDE |
 | -------------------- | ---------- |
-| Spryker Core         | dev-master |
-| Spryker Core BO      | dev-master |
-| Marketplace Merchant | dev-master |
+| Spryker Core         | dev-master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core BO      | dev-master | [Spryker Core Back Office feature integration](https://github.com/spryker-feature/spryker-core-back-office)
+| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html)
 
-###  1) Install the required modules using composer
+###  1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
@@ -29,7 +29,7 @@ composer require spryker-feature/marketplace-merchantportal-core:"dev-master" --
 Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
-| ----------------------- | ----------------------------- |
+| ------------- | --------------- |
 | DashboardMerchantPortalGui   | vendor/spryker/dashboard-merchant-portal-gui  |
 | DashboardMerchantPortalGuiExtension | vendor/spryker/dashboard-merchant-portal-gui-extension |
 | SecurityMerchantPortalGui  | vendor/spryker/security-merchant-portal-gui |
@@ -52,7 +52,7 @@ Set up behavior as follows:
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\Twig;
@@ -80,7 +80,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\Application;
@@ -105,7 +105,9 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 
 **src/Pyz/Zed/Security/SecurityDependencyProvider.php**
 
-```
+```php
+<?php
+
 namespace Pyz\Zed\Security;
 
 use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
@@ -161,7 +163,7 @@ console navigation:build-cache
 Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
-| ----------- | ----- | ------- | ---------------------------- |
+| ----------- | ----- | ------- | -------------------- |
 | MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCard  |
 | MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButton |
 
@@ -180,7 +182,7 @@ Follow the steps below to install the Merchant Portal Core feature front end.
 
 **Spryker requirements:**
 
-To start builder integration, check spryker packages versions:
+To start builder integration, check the Spryker packages versions:
 
 | NAME | VERSION |
 | --------------------------- | --------- |
@@ -190,7 +192,7 @@ To start builder integration, check spryker packages versions:
 
 ### 1) Set up Marketplace builder configs
 
-Add angular.json file.
+Add `angular.json` file.
 
 ```bash
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/master/angular.json
@@ -226,7 +228,7 @@ npm i -D @angular-builders/custom-webpack@~9.1.0 @angular-devkit/build-angular@~
 
 Update package.json with the following fields:
 
-package.json
+**package.json**
 
 ```json
 {
@@ -256,7 +258,7 @@ package.json
 
 Update frontend/settings.js to point to an updated `tsconfig` for Yves in the `globalSettings.paths` object:
 
-frontend/settings.js
+**frontend/settings.js**
 
 ```js
 const globalSettings = {
@@ -270,7 +272,7 @@ const globalSettings = {
 
 Add .yarnrc.yml file.
 
-.yarnrc.yml
+**.yarnrc.yml**
 
 ```yaml
 nodeLinker: node-modules
@@ -292,7 +294,7 @@ wget -O .yarn/releases/yarn-2.0.0-rc.32.js https://raw.githubusercontent.com/spr
 
 Run commands from the root of the project:
 
-```
+```bash
 npm i -g yarn @angular/cli@9.1.11
 ```
 
@@ -306,7 +308,7 @@ Now it is time to install project dependencies:
 yarn install
 ```
 
-Check if MarketPlace packages are located in the node_modules/@spryker folder (e.g., utils).
+Check if the MarketPlace packages are located in the `node_modules/@spryker` folder (e.g., utils).
 
 ## 2) Install Marketplace builder
 

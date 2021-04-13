@@ -40,7 +40,7 @@ Install needed packages for Merchant Portal with dependencies, see the available
 
 1. Create users for merchant portal using Zed UI (Backoffice), or if you need them out of the box, add them into `\Pyz\Zed\User\UserConfig::getInstallerUsers()`, for example:
 
-   ```
+   ```json
    [
        'firstName' => 'Michele',
        'lastName' => 'Nemeth',
@@ -55,7 +55,7 @@ Install needed packages for Merchant Portal with dependencies, see the available
 
       1. merchant.csv 
 
-         ```
+         ```yaml
          merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
          sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
          ```
@@ -64,7 +64,7 @@ Install needed packages for Merchant Portal with dependencies, see the available
 
       2. merchant_user.csv 
 
-         ```
+         ```yaml
          merchant_key,username
          sony-experts,michele@sony-experts.com
          ```
@@ -77,7 +77,7 @@ Install needed packages for Merchant Portal with dependencies, see the available
 
          2. Enable merchant user Pyz level data import command:
 
-            ```
+            ```php
             \Pyz\Zed\DataImport\Business\DataImportBusinessFactory::getDataImporterByType()
             
             ...
@@ -96,7 +96,7 @@ Install needed packages for Merchant Portal with dependencies, see the available
 
    1. Use `\Spryker\Zed\MerchantUser\Communication\Plugin\Acl\MerchantUserAclInstallerPlugin` to install additional roles for ACL during install command. 
 
-      ```
+      ```php
       <?php
       namespace Pyz\Zed\Acl;
       
@@ -121,7 +121,7 @@ By default, it will install the “Merchant Admin” group and “Merchant Admin
 
 For default users (defined in UserConfig) you can add default group in `\Pyz\Zed\Acl\AclConfig::getInstallerUsers()`
 
-```
+```php
     /**
      * @return array
      */
@@ -154,7 +154,7 @@ Run `console data:import:merchant-user`
 
 Add installed MP modules into `config/Zed/navigation.xml` at the end of the file. 
 
-```
+```xml
 <merchant-portal-dashboard>
         <label>Dashboard</label>
         <title>Merchant Dashboard</title>
@@ -219,7 +219,7 @@ Run `console navigation:build-cache`.
 
 Make sure that you have enabled `\Spryker\Zed\Acl\Communication\Plugin\Navigation\AclNavigationItemCollectionFilterPlugin` in `\Pyz\Zed\ZedNavigation\ZedNavigationDependencyProvider`.
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\ZedNavigation;

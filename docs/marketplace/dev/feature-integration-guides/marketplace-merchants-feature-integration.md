@@ -12,7 +12,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Merchant | master | [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing) |
 
 ### 1) Install the required modules using Composer
@@ -909,7 +909,7 @@ To import data:
 1. Prepare merchant profile data according to your requirements using our demo data:
 
 <details>
-<summary merchant='span'>click to view the demo data</summary>
+<summary markdown='span'>click to view the demo data</summary>
 
 ```html
 merchant_reference,contact_person_role,contact_person_title,contact_person_first_name,contact_person_last_name,contact_person_phone,banner_url,logo_url,public_email,public_phone,description_glossary_key.en_US,description_glossary_key.de_DE,banner_url_glossary_key.en_US,banner_url_glossary_key.de_DE,delivery_time_glossary_key.en_US,delivery_time_glossary_key.de_DE,terms_conditions_glossary_key.en_US,terms_conditions_glossary_key.de_DE,cancellation_policy_glossary_key.en_US,cancellation_policy_glossary_key.de_DE,imprint_glossary_key.en_US,imprint_glossary_key.de_DE,data_privacy_glossary_key.en_US,data_privacy_glossary_key.de_DE,is_active,fax_number,longitude,latitude
@@ -959,7 +959,7 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 | longitude |   | String | 52.534105 | Longitude value of a merchant. |
 | latitude |   | String | 13.384458 | Latitude value of a merchant. |
 
-2. Prepare merchant profile address data according to your requirements using our demo data:
+1. Prepare merchant profile address data according to your requirements using our demo data:
 
 ```
 merchant_reference,country_iso2_code,country_iso3_code,address1,address2,address3,city,zip_code
@@ -1032,8 +1032,8 @@ Follow the steps below to install the Marketplace Merchants feature front end.
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
-|-|-|
-| Spryker Core | master | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+|-|-|-|
+| Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 ### 1) Install the required modules using Composer
 Run the following commands to install the required modules:
@@ -1168,4 +1168,3 @@ Integrate the following related features:
 | FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
 | Marketplace Merchant  API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html) |
-|   |   |   |   |

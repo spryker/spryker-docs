@@ -11,6 +11,7 @@ This document describes how to integrate the Marketplace Shipment + Checkout fea
 Follow the steps below to install the Marketplace Shipment + Checkout feature core.
 
 ### Prerequisites
+
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | -----------|
 | Marketplace Shipment | dev-master | [Marketplace Shipment feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html) |

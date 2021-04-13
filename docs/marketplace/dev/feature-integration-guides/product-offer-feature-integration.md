@@ -11,13 +11,13 @@ Follow the steps below to install the Marketplace Product Offer feature core.
 
 To start feature integration, overview, and install the necessary features:
 
-| NAME | VERSION |
-| --------------- | ------- |
-| Spryker Core         | 202001.0   |
-| Marketplace Merchant | dev-master |
-| Product              | 202001.0   |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --------------- | ------- | -------|
+| Spryker Core         | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
+| Product              | 202001.0   | [Product feature integration](https://github.com/spryker-feature/product) |
 
-###  1) Install the required modules using composer
+###  1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
@@ -31,7 +31,7 @@ composer require spryker-feature/marketplace-product-offer --update-with-depende
 Make sure that the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
-| ---------------------------- | ------------------------------------- |
+| ------------------ | ---------------------- |
 | MerchantProductOffer           | spryker/merchant-product-offer             |
 | MerchantProductOfferDataImport | spryker/merchant-product-offer-data-import |
 | MerchantProductOfferGui        | spryker/merchant-product-offer-gui         |
@@ -89,7 +89,7 @@ console transfer:generate``console propel:``install``console transfer:generate
 Verify that the following changes have been implemented by checking your database:
 
 | DATABASE ENTITY | TYPE | EVENT |
-| ------------------------------------------- | ----- | ------ |
+| -------------------------- | ----- | ------ |
 | spy_product_offer                            | table  | created |
 | spy_product_offer_store                      | table  | created |
 | spy_product_concrete_product_offers_storage  | table  | created |
@@ -101,7 +101,7 @@ Verify that the following changes have been implemented by checking your databas
 Make sure that the following changes were applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
-| --------------------------------- | -------- | ------ | ----------------------------------------------------------- |
+| --------------- | -------- | ------ | ---------------- |
 | MerchantProductOfferCriteriaFilter | class     | created | src/Generated/Shared/Transfer/MerchantProductOfferCriteriaFilterTransfer |
 | DataImporterConfiguration          | class     | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer |
 | ProductOffer                       | class     | created | src/Generated/Shared/Transfer/ProductOfferTransfer           |
@@ -130,7 +130,7 @@ console translator:generate-cache
 #### Set up event listeners
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| ------------------- | --------------- | ----------- | :---------------------- |
+| --------------- | ------------- | ----------- | ---------------- |
 | MerchantProductOfferStorageEventSubscriber | Registers listeners that are responsible for publishing Merchant Product Offers to storage. | None          | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Event\Subscriber |
 | MerchantProductOfferSearchEventSubscriber  | Registers listeners that are responsible for publishing Merchant Product Offer search to storage. | None          | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
 | MerchantSearchEventSubscriber              | Registers listeners that are responsible for publishing Merchant search to storage. | None          | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
@@ -293,9 +293,9 @@ class MerchantProductOfferStorageConfig extends SprykerMerchantProductOfferStora
 Make sure that when the following entities get updated via the ORM, the corresponding Redis keys have the correct values.
 
 | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER | EXAMPLE EXPECTED DATA FRAGMENT |
-| ---------- | --------------------------- | ------------------ |
-| ProductOffer  | kv:product_offer:offer2                         | {“id_product_offer”:1,“id_merchant”:6,“product_offer_reference”:“offer1",“merchant_sku”:“GS952M00H-Q11"} |
-| ProductOffer  | kv:product_concrete_product_offers:093_24495843 | [“offer3”,“offer4"]                                          |
+| ---------- | ------------------------- | ------------------ |
+| ProductOffer  | kv:product_offer:offer2     | {“id_product_offer”:1,“id_merchant”:6,“product_offer_reference”:“offer1",“merchant_sku”:“GS952M00H-Q11"} |
+| ProductOffer  | kv:product_concrete_product_offers:093_24495843 | [“offer3”,“offer4"]   |
 
 ---
 
@@ -309,7 +309,7 @@ Prepare your data according to your requirements using our demo data:
 product_offer_reference,concrete_sku,merchant_reference,merchant_sku,is_active,approval_status``offer1,093_24495843,MER000001,GS952M00H-Q11,1,approved``offer2,090_24495844,MER000002,,1,approved``offer3,091_25873091,MER000001,M9122A0AQ-C11,1,approved``offer4,091_25873091,MER000002,M9122A0AQ-C11,1,approved``offer5,092_24495842,MER000001,TH344E01G-Q11,0,approved``offer6,092_24495842,MER000002,OB054P005-Q11,1,approved``offer7,193_32124735,MER000001,,1,approved``offer8,001_25904006,MER000002,,1,approved``offer9,002_25904004,MER000002,,0,approved``offer10,003_26138343,MER000002,,0,waiting_for_approval``offer11,004_30663302,MER000002,,1,waiting_for_approval
 ```
 
-| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------------- | ----------- | -------- | --------- | ------------------ |
 | product_offer_reference | mandatory      | string    | offer1        | Product Offer reference that will be referenced to this Merchant. |
 | concrete_sku            | mandatory      | string    | 093_24495843  | Concrete product SKU this Product Offer is attached to.      |
@@ -324,8 +324,8 @@ product_offer_reference,concrete_sku,merchant_reference,merchant_sku,is_active,a
 product_offer_reference,store_name``offer1,DE``offer1,AT``offer2,DE``offer2,AT``offer2,US
 ```
 
-| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
-| --------------------- | ------------ | ------- | ----------------- | :---------------------------------------------------- |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| ---------------- | ------------ | ------- | ------------- | ------- |
 | product_offer_reference | mandatory      | string    | roan-gmbh-und-co-k-g | Product Offer reference, unique identifier per Offer. |
 | store_name              | mandatory      | string    | DE                   | The name of the store.                                |
 
@@ -335,8 +335,8 @@ product_offer_reference,store_name``offer1,DE``offer1,AT``offer2,DE``offer2,AT``
 product_offer_reference,valid_from,valid_to``offer1,,``offer2,2020-05-05,2020-12-31
 ```
 
-| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
-| -------------------- | ----------- | ------ | ----------- | ------------------------------- |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| ------------ | ----------- | ------ | ----------- | ---------------- |
 | product_offer_reference | mandatory      | string    | offer1       | Unique Product Offer identifier.             |
 | valid_from              | optional       | `string`  | 2020-01-01   | Date since which the Product Offer is valid. |
 | valid_to                | optional       | `string`  | 2020-01-01   | Date till which the Product Offer is valid.  |
@@ -396,8 +396,7 @@ Make sure that the Product Offer validity data is correctly imported in `spy_pro
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-
-| -------------------------- | ------------------------ | ------------------------- | ----------------------------- |
+| ---------------- | --------------- | -------------- | ---------------- |
 | MerchantProductOfferTableExpanderPlugin              | Expands ProductOfferGui product table with Merchant data     | None                           | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin\ProductOfferGui |
 | MerchantProductOfferViewSectionPlugin                | Adds a new Merchant section to the ProductOfferGui view      | None                           | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin     |
 | ProductOfferValidityProductOfferViewSectionPlugin    | Adds a new validity section to the ProductOfferGui view      | None                           | Spryker\Zed\ProductOfferValidityGui\Communication\Plugin\ProductOfferGui |
@@ -450,7 +449,8 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Client/Search/SearchDependencyProvider.php</summary>
+<details>
+<summary markdown='span'>src/Pyz/Client/Search/SearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -508,7 +508,8 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -557,7 +558,8 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 ```
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -660,7 +662,8 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -754,17 +757,17 @@ Make sure console command invalidates expired Product Offers are reactivates Pro
 ---
 
 ## Install feature front end
+Follow the steps below to install the Marketplace Product Offer feature front end.
 
 ### Prerequisites
 
 To start feature integration, overview, and install the necessary features:
 
-| NAME | VERSION |
+| NAME | VERSION | INTEGRATION GUIDE |
+| ---------- | ----- | --------------|
+| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
 
-| ---------- | ----- |
-| Spryker Core | 202001.0 |
-
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 If installed before, not needed.
 
@@ -774,7 +777,7 @@ If installed before, not needed.
 Verify that the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
-| ---------------------- | ------------------------------------- |
+| ---------- | -------------- |
 | MerchantProductOfferWidget | spryker-shop/merchant-product-offer-widget |
 
 ---
@@ -807,7 +810,7 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 Register the following plugins to enable widgets:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-| ------------------ | ------------------- | ------ | ------------------------------- |
+| -------------- | --------------- | ------ | ---------------- |
 | MerchantProductOfferWidget       | Shows the list of the Offers with their prices for a product concrete. | None          | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
 | ProductOfferSoldByMerchantWidget | Shows Merchant data for an Offer given a cart item.          | None          | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
 
@@ -849,7 +852,7 @@ console frontend:yves:build
 Make sure that the following widgets were registered:
 
 | MODULE | TEST |
-| ------------------------------ | --------------------------- |
+| ----------------- | ----------------- |
 | MerchantProductOfferWidget       | Go to a product concrete detail page that has Offers, and you will see the default Offer selected and the widget displayed. |
 | ProductOfferSoldByMerchantWidget | Go through the checkout process with an Offer, and you will see the sold by text and Merchant data throughout the checkout process. |
 

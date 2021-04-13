@@ -14,7 +14,7 @@ Follow the steps below to install the Marketplace Order Management feature core.
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|
-| Spryker Core | 202001.0 | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Order Management | 202001.0 | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
 | Shipment | 202001.0 | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
 | State Machine | 202001.0 | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
@@ -525,7 +525,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | --------------|
-| Spryker Core | 202001.0 | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 ### 1) Install the required modules using Сomposer
 
@@ -604,6 +604,6 @@ Make sure that the following widgets have been registered by adding the respecti
 Integrate the following related features:
 
 | FEATURE | INTEGRATION GUIDE |
-| --- | --- |
+| --- | --- | -------|
   | Marketplace Order Management + Order Threshold |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html) |
   | Marketplace Order Management + Cart | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html)|

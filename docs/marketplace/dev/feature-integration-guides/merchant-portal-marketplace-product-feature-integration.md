@@ -10,10 +10,10 @@ Follow the steps below to install the Merchant Portal - Marketplace Product feat
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-|-|-|
-| Marketplace Product | dev-master |
-| Marketplace Merchant Portal Core | dev-master |
+| NAME | VERSION | INTEGRATION GUIDE |
+|-|-|-|
+| Marketplace Product | dev-master | [Marketplace Product feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html) |
+| Marketplace Merchant Portal Core | dev-master | [Merchant Portal Core feature integration](docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 Run the following commands to install the required modules:

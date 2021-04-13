@@ -17,7 +17,7 @@ To start feature integration, overview, and install the necessary features:
 | Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Marketplace Merchant | master      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 Run the following commands to install the required modules:
 
@@ -291,8 +291,8 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION | LINK |
 | -------- | ------ | -------------- |
-| Spryker Core | master  | [[PUBLISHED\] Glue API: Spryker Core feature integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/639173086) |
-| Merchant     | master | [[DEPRECATED\] Merchant Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1025277972) |
+| Spryker Core | master  | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Merchant     | master | [[DEPRECATED\] Merchant Feature Integration](https://github.com/spryker-feature/merchant) |
 
 ### 1) Set up behavior
 

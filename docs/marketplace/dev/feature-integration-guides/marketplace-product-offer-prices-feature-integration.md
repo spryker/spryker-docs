@@ -12,9 +12,9 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product Offer | dev-master | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.md) |
-| Prices | 202001.0 |[Prices feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.md) |
-| Spryker Core | 202001.0 | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Product Offer | dev-master | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
+| Prices | 202001.0 |[Prices feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
+| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 
 ### 1) Install the required modules using Composer

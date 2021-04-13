@@ -11,10 +11,10 @@ Follow the steps below to install the Merchant Opening Hours feature core.
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| - | - |
-| Spryker Core         | 202001.0   |
-| Marketplace Merchant | dev-master |
+| NAME | VERSION | INTEGRATION GUIDE |
+| - | - | - |
+| Spryker Core         | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html)
 
 ###  1) Install the required modules using Composer
 
@@ -25,6 +25,7 @@ composer require spryker-feature/merchant-opening-hours
 ```
 
 ---
+
 **Verification**
 
 Make sure that the following modules were installed: `ModuleExpected DirectoryMerchantOpeningHoursspryker/merchant-opening-hoursMerchantOpeningHoursDataImportspryker/merchant-opening-hours-data-importMerchantOpeningHoursStoragespryker/merchant-opening-hours-storageWeekdaySchedulespryker/weekday-schedule`
@@ -78,7 +79,6 @@ Adjust the schema definition so entity changes will trigger events:
 </database>
 ```
 
-
 Run the following commands to apply database changes and to generate entity and transfer changes.
 
 ```bash
@@ -86,6 +86,7 @@ console transfer:generate console propel:install console transfer:generate
 ```
 
 ---
+
 **Verification**
 
 Verify the following changes have been applied by checking your database:
@@ -101,8 +102,7 @@ Verify the following changes have been applied by checking your database:
 Make sure that the following changes in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
-
-| ------------------------------ | ---- | ------ | ---------------------------------------------------------- |
+| ------------------- | ---- | ------ | ---------------------- |
 | WeekdaySchedule                 | class | created | src/Generated/Shared/Transfer/WeekdayScheduleTransfer        |
 | DataImporterReaderConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
 | MerchantCriteria                | class | created | src/Generated/Shared/Transfer/MerchantCriteriaTransfer       |
@@ -152,8 +152,8 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 #### Configure message processors
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| ------------------------------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------- |
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile and merchant opening hours messages to sync with Redis storage, and marks messages as failed in case of error. | None          | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| --------------- | --------------- | ------------ | ----------------- |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile and merchant opening hours messages to sync with Redis storage, and marks messages as failed in case of error. | None  | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -244,11 +244,12 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
 
 2. Make sure that when merchant opening hours entities get created or updated through ORM, it is exported to Redis accordingly.
 
-| Target entity | Example expected data identifier |
+| TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | ---------------- | ----------------- |
 | MerchantOpeningHours | kv:merchant_opening_hours:1 |
 
-<details><summary merchant='span'>Example expected data fragment</summary>
+<details>
+<summary markdown='span'>Example expected data fragment</summary>
 
 ```json
 {
@@ -310,7 +311,6 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
    ]
 }
 ```
-
 </details>
 
 ---
@@ -321,14 +321,15 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
 
 Prepare your data according to your requirements using our demo data:
 
-<details><summary markdown='span'>vendor/spryker/spryker/Bundles/MerchantOpeningHoursDataImport/data/import/merchant_open_hours_date_schedule.csv</summary>
+<details>
+<summary markdown='span'>vendor/spryker/spryker/Bundles/MerchantOpeningHoursDataImport/data/import/merchant_open_hours_date_schedule.csv</summary>
 
-```
+```yaml
 merchant_reference,date,time_from,time_to,note MER000001,2020-01-01,,,merchant_weekday_schedule.new_year MER000001,2020-04-10,,,merchant_weekday_schedule.good_friday MER000001,2020-04-12,,,merchant_weekday_schedule.easter_sunday MER000001,2020-04-13,,,merchant_weekday_schedule.easter_monday MER000001,2020-05-01,,,merchant_weekday_schedule.may_day MER000001,2020-05-21,,,merchant_weekday_schedule.ascension_of_christ MER000001,2020-05-31,,,merchant_weekday_schedule.whit_sunday MER000001,2020-06-01,,,merchant_weekday_schedule.whit_monday MER000001,2020-06-11,,,merchant_weekday_schedule.corpus_christi MER000001,2020-10-03,,,merchant_weekday_schedule.day_of_german_unity MER000001,2020-11-01,,,merchant_weekday_schedule.all_saints_day MER000001,2020-12-25,,,merchant_weekday_schedule.1st_christmas_day MER000001,2020-12-26,,,merchant_weekday_schedule.2nd_christmas_day MER000001,2021-11-28,13:00:00,18:00:00,merchant_weekday_schedule.sunday_opening MER000001,2021-12-31,10:00:00,17:00:00, MER000002,2020-01-01,,,merchant_weekday_schedule.new_year MER000002,2020-04-10,,,merchant_weekday_schedule.good_friday MER000002,2020-04-12,,,merchant_weekday_schedule.easter_sunday MER000002,2020-04-13,,,merchant_weekday_schedule.easter_monday MER000002,2020-05-01,,,merchant_weekday_schedule.may_day MER000002,2020-05-21,,,merchant_weekday_schedule.ascension_of_christ MER000002,2020-05-31,,,merchant_weekday_schedule.whit_sunday MER000002,2020-06-01,,,merchant_weekday_schedule.whit_monday MER000002,2020-06-11,,,merchant_weekday_schedule.corpus_christi MER000002,2020-10-03,,,merchant_weekday_schedule.day_of_german_unity MER000002,2020-11-01,,,merchant_weekday_schedule.all_saints_day MER000002,2020-12-25,,,merchant_weekday_schedule.1st_christmas_day MER000002,2020-12-26,,,merchant_weekday_schedule.2nd_christmas_day MER000006,2020-01-01,,,merchant_weekday_schedule.new_year MER000006,2020-04-10,,,merchant_weekday_schedule.good_friday MER000006,2020-04-12,,,merchant_weekday_schedule.easter_sunday MER000006,2020-04-13,,,merchant_weekday_schedule.easter_monday MER000006,2020-05-01,,,merchant_weekday_schedule.may_day MER000006,2020-05-21,,,merchant_weekday_schedule.ascension_of_christ MER000006,2020-05-31,,,merchant_weekday_schedule.whit_sunday MER000006,2020-06-01,,,merchant_weekday_schedule.whit_monday MER000006,2020-06-11,,,merchant_weekday_schedule.corpus_christi MER000006,2020-10-03,,,merchant_weekday_schedule.day_of_german_unity MER000006,2020-11-01,,,merchant_weekday_schedule.all_saints_day MER000006,2020-12-25,,,merchant_weekday_schedule.1st_christmas_day MER000006,2020-12-26,,,merchant_weekday_schedule.2nd_christmas_day MER000006,2021-11-28,13:00:00,18:00:00,merchant_weekday_schedule.sunday_opening MER000006,2021-12-31,10:00:00,17:00:00, MER000005,2020-01-01,,,merchant_weekday_schedule.new_year MER000005,2020-04-10,,,merchant_weekday_schedule.good_friday MER000005,2020-04-12,,,merchant_weekday_schedule.easter_sunday MER000005,2020-04-13,,,merchant_weekday_schedule.easter_monday MER000005,2020-05-01,,,merchant_weekday_schedule.may_day MER000005,2020-05-21,,,merchant_weekday_schedule.ascension_of_christ MER000005,2020-05-31,,,merchant_weekday_schedule.whit_sunday MER000005,2020-06-01,,,merchant_weekday_schedule.whit_monday MER000005,2020-06-11,,,merchant_weekday_schedule.corpus_christi MER000005,2020-10-03,,,merchant_weekday_schedule.day_of_german_unity MER000005,2020-11-01,,,merchant_weekday_schedule.all_saints_day MER000005,2020-12-25,,,merchant_weekday_schedule.1st_christmas_day MER000005,2020-12-26,,,merchant_weekday_schedule.2nd_christmas_day MER000005,2021-11-28,13:00:00,18:00:00,merchant_weekday_schedule.sunday_opening MER000005,2021-12-31,10:00:00,13:00:00, MER000005,2021-12-31,14:00:00,17:00:00,
 ```
 </details>
 
-| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------- | -------------- | --------- | ------------ | ---------------------- |
 | merchant_reference | mandatory  | string | MER000005  | Merchant identifier.  |
 | date | mandatory | string    | 2020-01-01  | Date with special opening hours  |
@@ -338,13 +339,11 @@ merchant_reference,date,time_from,time_to,note MER000001,2020-01-01,,,merchant_w
 
 **vendor/spryker/spryker/Bundles/MerchantOpeningHoursDataImport/data/import/merchant_open_hours_week_day_schedule.csv**
 
-```
+```yaml
 merchant_reference,week_day_key,time_from,time_to MER000001,MONDAY,7:00:00,13:00:00 MER000001,MONDAY,14:00:00,20:00:00 MER000001,TUESDAY,7:00:00,20:00:00 MER000001,WEDNESDAY,7:00:00,20:00:00 MER000001,THURSDAY,7:00:00,20:00:00 MER000001,FRIDAY,7:00:00,20:00:00 MER000001,SATURDAY,7:00:00,20:00:00 MER000001,SUNDAY,, MER000002,MONDAY,8:00:00,13:00:00 MER000002,MONDAY,14:00:00,19:00:00 MER000002,TUESDAY,8:00:00,19:00:00 MER000002,WEDNESDAY,8:00:00,19:00:00 MER000002,THURSDAY,8:00:00,19:00:00 MER000002,FRIDAY,8:00:00,19:00:00 MER000002,SATURDAY,8:00:00,19:00:00 MER000002,SUNDAY,, MER000006,MONDAY,7:00:00,13:00:00 MER000006,MONDAY,14:00:00,20:00:00 MER000006,TUESDAY,7:00:00,20:00:00 MER000006,WEDNESDAY,7:00:00,20:00:00 MER000006,THURSDAY,7:00:00,20:00:00 MER000006,FRIDAY,7:00:00,20:00:00 MER000006,SATURDAY,7:00:00,20:00:00 MER000006,SUNDAY,, MER000005,MONDAY,8:00:00,13:00:00 MER000005,MONDAY,14:00:00,19:00:00 MER000005,TUESDAY,8:00:00,19:00:00 MER000005,WEDNESDAY,8:00:00,19:00:00 MER000005,THURSDAY,8:00:00,19:00:00 MER000005,FRIDAY,8:00:00,19:00:00 MER000005,SATURDAY,8:00:00,19:00:00 MER000005,SUNDAY,,
 ```
 
-
-
-| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ----------- | ---------- | --------- | ------------ | ---------------- |
 | `merchant_reference` | mandatory | string | MER000005 | Merchant identifier.  |
 | week_day_key | mandatory | `string`  | MONDAY | Day of the week to assign opening hours to a merchant.It is an enum in database with the following values:MONDAYTUESDAYWEDNESDAYTHURSDAYFRIDAYSATURDAYSUNDAY |
@@ -395,13 +394,13 @@ Make sure that the opening hours data is added to the `spy_merchant_opening_hour
 
 To start feature integration, overview, and install the necessary features:
 
-| NAME | VERSION |
+| NAME | VERSION | INTEGRATION GUIDE |
 | ------------ | -------- |
-| Spryker Core | 202001.0 |
+| Spryker Core | 202001.0 | [Spryker Core](https://documentation.spryker.com/docs/spryker-core-feature-integration)
 
 
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 If installed before, not needed.
 
@@ -411,7 +410,7 @@ If installed before, not needed.
 Verify if the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
-| :------------------------- | :----------------------------------------- |
+| ------------------- | ------------------- |
 | MerchantOpeningHoursWidget | spryker-shop/merchant-opening-hours-widget |
 
 ---
@@ -422,13 +421,13 @@ Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
-```
+```yaml
 merchant_opening_hours.opening_hours_title,Opening Hours,en_US merchant_opening_hours.opening_hours_title,Öffnungszeiten,de_DE merchant_opening_hours.special_opening_hours_title,Special Opening Hours,en_US merchant_opening_hours.special_opening_hours_title,Besondere Öffnungszeiten,de_DE merchant_opening_hours.public_holidays_title,Public Holidays,en_US merchant_opening_hours.public_holidays_title,Feiertage,de_DE merchant_opening_hours.opening_hours_closed,Closed,en_US merchant_opening_hours.opening_hours_closed,Geschlossen,de_DE merchant_opening_hours.day.title.monday,Monday,en_US merchant_opening_hours.day.title.monday,Montag,de_DE merchant_opening_hours.day.title.tuesday,Tuesday,en_US merchant_opening_hours.day.title.tuesday,Dienstag,de_DE merchant_opening_hours.day.title.wednesday,Wednesday,en_US merchant_opening_hours.day.title.wednesday,Mittwoch,de_DE merchant_opening_hours.day.title.thursday,Thursday,en_US merchant_opening_hours.day.title.thursday,Donnerstag,de_DE merchant_opening_hours.day.title.friday,Friday,en_US merchant_opening_hours.day.title.friday,Freitag,de_DE merchant_opening_hours.day.title.saturday,Saturday,en_US merchant_opening_hours.day.title.saturday,Samstag,de_DE merchant_opening_hours.day.title.sunday,Sunday,en_US merchant_opening_hours.day.title.sunday,Sonntag,de_DE
 ```
 
 Run the following console command to import data:
 
-```
+```bash
 console data:import glossary
 ```
 
@@ -444,7 +443,6 @@ Make sure that in the database, the configured data is added to the spy_glossary
 Register the following plugins to enable widgets:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-
 | --------------- | ------------------ | ------------- | --------------- |
 | MerchantOpeningHoursWidget | Displays merchant working hours. | None  | SprykerShop\Yves\MerchantOpeningHoursWidget\Widget |
 
@@ -484,8 +482,7 @@ console frontend:yves:build
 Make sure that the following widget was registered:
 
 | MODULE | TEST |
-
-| ------------------ | -------------------- |
+| ------------- | ------------- |
 | MerchantOpeningHoursWidget | Go to a MerchantPage on the storefront and ensure that merchant working hours are displayed on the page. |
 
 ---
@@ -493,6 +490,5 @@ Make sure that the following widget was registered:
 ## Related features
 
 | FEATURE | INTEGRATION GUIDE |
-
 | ------------------ | -------------- |
 | Merchant Opening Hours API | [Glue API - Merchant Opening Hours integration](/docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html) |

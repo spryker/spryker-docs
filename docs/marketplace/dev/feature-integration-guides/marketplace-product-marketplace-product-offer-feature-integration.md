@@ -5,21 +5,23 @@ summary: This document describes the process how to integrate the Marketplace Pr
 ---
 
 ## Install feature core
+Follow the steps below to install the Marketplace Product + Marketplace Product Offer feature core.
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Link |
+| NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | master | [[PUBLISHED] Glue API: Spryker Core feature integration - ongoing](https://spryker.atlassian.net/l/c/91U2u3Mk)  |
-| Marketplace Product | master | [[WIP] Marketplace Product Feature Integration - ongoing](https://spryker.atlassian.net/l/c/4iTsw5Ei)  |
-| Product Offer | master | [[WIP] Marketplace Product Offer Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1057325063?atlOrigin=eyJpIjoiYjVlMDFlOTg0N2RiNDY5MWI5NmIzODgzMDdjOGFlMjYiLCJwIjoiYyJ9)   |
+| Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
+| Marketplace Product | master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html)  |
+| Product Offer | master | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html)   |
 
-### 1) Setup behavior
+### 1) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProductProductOfferReferenceStrategyPlugin | Allows to select merchant product by default on PDP. | None | Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin |
+| MerchantProductProductOfferReferenceStrategyPlugin | Allows selecting merchant product by default on PDP. | None | Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin |
 
 **src/Pyz/Client/MerchantProductOfferStorage/MerchantProductOfferStorageDependencyProvider.php**
 
@@ -46,6 +48,11 @@ class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProdu
 }
 ```
 
-Make sure you can switch between merchant products and product offers on the product detail page.
+---
+**Verification**
 
-Make sure that merchant products selected on the product detail page by default.
+Make sure you can switch between merchant products and product offers on the Product Details page.
+
+Make sure that merchant products selected on the Product Details page by default.
+
+---

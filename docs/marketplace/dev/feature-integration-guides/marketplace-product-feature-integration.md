@@ -5,18 +5,19 @@ summary: This document describes the process how to integrate the Marketplace Pr
 ---
 
 ## Install feature core
+Follow the steps below to install the Marketplace Product feature core.
 
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| Name            | Version | Link        |
+| NAME            | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | master      | [[PUBLISHED\] Spryker Core Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
-| Marketplace Merchant | master      | [[WIP\] Marketplace Merchant Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1876853120) |
-| Product Management   | master      | [[APPROVED\] Product Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/895912554) |
+| Spryker Core         | master      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | master      | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
+| Product   | master      | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 Run the following commands to install the required modules:
 
@@ -26,8 +27,8 @@ composer require spryker-feature/marketplace-product: "dev-master" --update-with
 
 Make sure that the following modules have been installed:
 
-| Module              | Expected Directory                   |
-| :------------------------ | :------------------------------------------ |
+| MODULE              | EXPECTED DIRECTORY                   |
+| ------------------- | ------------------------------------ |
 | MerchantProduct           | vendor/spryker/merchant-product             |
 | MerchantProductDataImport | vendor/spryker/merchant-product-data-import |
 | MerchantProductGui        | vendor/spryker/merchant-product-gui         |
@@ -38,7 +39,7 @@ Make sure that the following modules have been installed:
 
 Adjust the schema definition so entity changes will trigger events:
 
-src/Pyz/Zed/MerchantProduct/Persistence/Propel/Schema/spy_merchant_product_abstract.schema.xml
+**src/Pyz/Zed/MerchantProduct/Persistence/Propel/Schema/spy_merchant_product_abstract.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -62,16 +63,21 @@ src/Pyz/Zed/MerchantProduct/Persistence/Propel/Schema/spy_merchant_product_abstr
 Run the following commands to apply database changes and to generate entity and transfer changes.
 
 ```bash
-console transfer:generate 2console propel:install 3console transfer:generate 
+console transfer:generate 2console propel:install 3console transfer:generate
 ```
+
+---
+**Verification**
 
 Verify the following changes by checking your database
 
-| Database entity               | Type  | Event   |
+| DATABASE ENTITY               | TYPE  | EVENT   |
 | ----------------------------- | ----- | ------- |
 | spy_merchant_product_abstract | table | created |
 
-## 3) Set up transfer objects
+---
+
+### 3) Set up transfer objects
 
 Run the following command to generate transfer changes:
 
@@ -79,9 +85,12 @@ Run the following command to generate transfer changes:
 console transfer:generate
 ```
 
+---
+**Verification**
+
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer  | Type | Event | Path  |
+| TRANSFER  | TYPE | EVENT | PATH  |
 | ----------------- | ----- | ------ | -------------------------- |
 | MerchantProductCriteria   | object | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
 | MerchantProduct           | object | Created | src/Generated/Shared/Transfer/MerchantProductTransfer        |
@@ -90,9 +99,8 @@ Make sure that the following changes have been applied in transfer objects:
 | MerchantSearchCollection  | object | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
 | MerchantProductStorage    | object | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
 
-### 3) Add translations
-
-#### Zed translations
+---
+### 3) Add Zed translations
 
 Run the following command to generate a new translation cache for Zed:
 
@@ -104,7 +112,7 @@ console translator:generate-cache
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description  | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
 | --------------------- | ------------------- | --------- | -------------------- |
 | MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.   | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
 | MerchantProductProductTableQueryCriteriaExpanderPlugin       | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
@@ -113,7 +121,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   | None          | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. | None          | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
 
-src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php
+**src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
 ```php
 <?php
@@ -147,9 +155,14 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
+---
+**Verification**
+
 Make sure that when you can filter products by merchant at http://zed.de.demo-spryker.com/availability-gui.
 
-src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php
+---
+
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
 ```php
 <?php
@@ -173,7 +186,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 }
 ```
 
-src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
 ```php
 <?php
@@ -200,9 +213,14 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 }
 ```
 
-Make sure de_page Easticsearch index for any product that belongs (see spy_merchant_product_abstract) to active and approved merchant, contains merchant names. (indexes can be accessed by any  Elasticsearch client, e.g. Kibana - see for docker https://documentation.spryker.com/docs/services configuration details.)
+---
+**Verification**
 
-src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php
+Make sure the `de_page` Easticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana—see for docker https://documentation.spryker.com/docs/services configuration details.)
+
+---
+
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
 ```php
 <?php
@@ -226,15 +244,21 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-Make sure that data in  spy_product_abstract_storage contains merchant_references's for merchant products.
+---
 
-### 5) Import data
+**Verification**
 
-#### Import Merchant Product data
+Make sure that data in  `spy_product_abstract_storage` contains `merchant_references`'s for merchant products.
+
+---
+
+
+### 5) Import Merchant Product data
 
 Prepare your data according to your requirements using our demo data:
 
-data/import/common/common/marketplace/merchant_product.csv
+<details>
+<summary markdown='span'>data/import/common/common/marketplace/merchant_product.csv</summary>
 
 ```yaml
 sku,merchant_reference,is_shared
@@ -376,9 +400,9 @@ sku,merchant_reference,is_shared
 209,MER000002,1
 ```
 
+</details>
 
-
-| Column  | Is Obligatory? | Data Type | Data Example | Data Explanation  |
+| COLUMN  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION  |
 | ------------ | ------------ | -------- | --------------- | ------------------------ |
 | sku                | mandatory      | string    | 091                  | Product identifier.                                          |
 | merchant_reference | mandatory      | string    | roan-gmbh-und-co-k-g | Merchant identifier.                                         |
@@ -386,17 +410,17 @@ sku,merchant_reference,is_shared
 
 Register the following plugins to enable data import:
 
-| Plugin  | Specification  | Prerequisites | Namespace  |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
 | ------------------ | ----------------- | --------- | -------------------------- |
 | MerchantProductDataImportPlugin | Imports merchant product data into the database. | None          | Spryker\Zed\MerchantProductDataImport\Communication\Plugin |
 
- src/Pyz/Zed/DataImport/DataImportDependencyProvider.php
+ **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\MerchantProductDataImport\Communication\Plugin\MerchantProductDataImportPlugin;
 
@@ -411,16 +435,18 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-
 Run the following console command to import data:
 
-```
+```bash
 console data:import merchant-product
 ```
 
-Make sure that imported data is added to the spy_merchant_product.
+---
+**Verification**
 
- 
+Make sure that imported data is added to the `spy_merchant_product` table.
+
+---
 
 ## Install feature front end
 
@@ -428,10 +454,10 @@ Make sure that imported data is added to the spy_merchant_product.
 
 Register the following plugins to enable widgets:
 
-| Plugin                      | Description                                | Prerequisites | Namespace                                     |
-| -------------------------- | ----------------------------------------- | ------------ | -------------------------------------------- |
-| MerchantProductWidget       | Displays alternative product.              | None          | SprykerShop\Yves\MerchantProductWidget\Widget |
-| ProductSoldByMerchantWidget | Displays list of products for replacement. | None          | SprykerShop\Yves\MerchantProductWidget\Widget |
+| PLUGIN  | DESCRIPTION | Prerequisites | NAMESPACE |
+| ----------- | ----------- | ---------- | --------- |
+| MerchantProductWidget | Displays alternative product. | None | SprykerShop\Yves\MerchantProductWidget\Widget |
+| ProductSoldByMerchantWidget | Displays list of products for replacement. | None | SprykerShop\Yves\MerchantProductWidget\Widget |
 
 ```php
 <?php
@@ -463,21 +489,26 @@ Run the following command to enable Javascript and CSS changes:
 console frontend:yves:build
 ```
 
+---
+**Verification**
+
 Make sure that on the product detail page for merchant products you can see the seller name.
 
-Make sure that when you add merchant product to cart, on a cart page is has Sold By: widget shown.
+Make sure that when you add merchant product to cart, on a cart page is has the Sold By: widget shown.
+
+---
 
 ### 2) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin  | Description    | Prerequisites | Namespace  |
+| PLUGIN  | DESCRIPTION    | PREREQUISITES | NAMESPACE  |
 | ----------------- | ---------------------- | ------------ | -------------------- |
 | MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       | None          | Spryker\Client\MerchantProductSearch\Plugin\Search          |
 | ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. | None          | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
 | MerchantProductPreAddToCartPlugin                     | Sets merchant reference to item transfer on add to cart.     | None          | SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage      |
 
-src/Pyz/Client/SearchElasticsearch/SearchElasticsearchDependencyProvider.php
+**src/Pyz/Client/SearchElasticsearch/SearchElasticsearchDependencyProvider.php**
 
 ```php
 <?php
@@ -504,9 +535,14 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 }
 ```
 
+---
+**Verification**
+
 Make sure that when you enter the merchant name in the search field, the return list contains merchant products.
 
-src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php
+---
+
+**src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
 <?php
@@ -531,9 +567,14 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-Make sure that merchant product is selected on pdp by default.
+---
+**Verification**
 
-src/Pyz/Yves/CartPage/CartPageDependencyProvider.php
+Make sure that merchant product is selected on the Product Details Page by default.
+
+---
+
+**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 
 ```php
 <?php
@@ -557,12 +598,17 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 }
 ```
 
-Make sure when you add to cart merchant product, it have merchantReference set. (Can be checked in spy_quote table)
+---
+**Verification**
+
+Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
+
+---
 
 ## Related features
 
-| Feature   | Link    |
+| FEATURE   | INTEGRATION GUIDE    |
 |-------------------- | --------- |
-| Marketplace Product API                          | [[WIP\] GLUE: Marketplace Product Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1950483252/WIP+GLUE+Marketplace+Merchant+Product+Feature+Integration+-+ongoing) |
-| Marketplace Product + Inventory Management       | [[WIP\] Marketplace Product + Inventory Management Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1951793295) |
-| Marketplace Product  + Marketplace Product Offer | [[WIP\] Marketplace Product +  Marketplace Product Offer Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1951858888) |
+| Marketplace Product API | [Glue API - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html) |
+| Marketplace Product + Inventory Management | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html) |
+| Marketplace Product + Marketplace Product Offer | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html) |

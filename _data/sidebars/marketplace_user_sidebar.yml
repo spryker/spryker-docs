@@ -19,23 +19,73 @@ entries:
 
       - title: Features
         output: web
-        folderitems:
-          - title: Merchants feature overview
-            url: "/docs/marketplace/user/features/merchants-feature-overview.html"
-            output: web
-
-          - title: Merchant users feature overview
-            url: "/docs/marketplace/user/features/merchant-users-feature-overview.html"
-            output: web
-
-          - title: Product offer feature overview
-            url: "/docs/marketplace/user/features/product-offer-feature-overview.html"
-            output: web
-
-      - title: Section 3
-        output: web
 
         folderitems:
-          - title: Item 5
-            url: "#"
+        - output: web
+
+          subfolders:
+
+          - title: Merchants
             output: web
+
+            subfolderitems:
+
+            - title: Merchants feature overview
+              url: /docs/marketplace/user/features/merchants/merchants-feature-overview.html
+              output: web
+
+            - title: Merchant users feature overview
+              url: /docs/marketplace/user/features/merchants/merchant-users-feature-overview.html
+              output: web
+
+          - title: Products and offers
+            output: web
+
+            subfolderitems:
+            
+            - title: Product Offer feature overview
+              url: /docs/marketplace/user/features/products-and-offers/product-offer-feature-overview.html
+              output: web
+
+          - title: Marketplace order
+            output: web
+
+            subfolderitems:
+            
+            - title: Marketplace Order feature overview
+              url: /docs/marketplace/user/features/marketplace-order/marketplace-order-feature-overview.html
+              output: web
+            
+            - title: Marketplace Order module relations
+              url: /docs/marketplace/user/features/marketplace-order/marketplace-order-module-relations.html
+              output: web
+
+          - title: Merchant order
+            output: web
+
+            subfolderitems:
+            
+            - title: Merchant Order feature overview
+              url: /docs/marketplace/user/features/merchant-order/merchant-order-feature-overview.html
+              output: web
+            
+            - title: Marketplace Order module relations
+              url: /docs/marketplace/user/features/merchant-order/merchant-order-module-relations.html
+              output: web
+
+          - title: Marketplace and merchant state machines
+            output: web
+
+            subfolderitems:
+            
+            - title: Marketplace and Merchant State Machines feature overview
+              url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html
+              output: web
+            
+            - title: Marketplace and merchant state machines interaction
+              url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-interaction.html
+              output: web
+            
+            - title: Marketplace and merchant state machine module schema
+              url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machine-module-schema.html
+              output: web

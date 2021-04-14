@@ -1,6 +1,6 @@
 ---
-title: Merchant Category feature integration
-last_updated: Nov 10, 2020
+title: Glue API - Merchant Category feature integration
+last_updated: Mar 04, 2021
 summary: This document describes the process how to integrate the Merchant Category Glue API feature into a Spryker project.
 ---
 
@@ -10,14 +10,14 @@ Follow the steps below to install the Merchant Category Glue API feature core.
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, overview and install the necessary features:
 
-| Name   | Version | Link   |
+| NAME   | VERSION | INTEGRATION GUIDE   |
 | ---------------- | ------ | ------------------ |
-| Spryker Core   | master   | [[PUBLISHED\] Glue API: Spryker Core feature integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/639173086) |
-| Marketplace Merchant Category | master  | [[WIP\]  Marketplace Merchant Category Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1874690281) |
+| Spryker Core   | master   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant Category | master  | [Marketplace Merchant Category feature integration](docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 Run the following commands to install the required modules:
 
@@ -25,11 +25,16 @@ Run the following commands to install the required modules:
 composer require spryker/merchant-categories-rest-api:"^0.1.0" --update-with-dependencies
 ```
 
+---
+**Verification**
+
 Make sure that the following modules have been installed:
 
-| Module  | Expected Directory   |
+| MODULE | EXPECTED DIRECTORY |
 | -------------- | ----------------- |
 | MerchantCategoriesRestApi | vendor/spryker/merchant-categories-rest-api |
+
+---
 
 ### 2) Set up transfer objects
 
@@ -39,11 +44,16 @@ Run the following command to generate transfer changes:
 console transfer:generate
 ```
 
+---
+**Verification**
+
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer  | Type   | Event   | Path   |
+| TRANSFER  | TYPE  | EVENT | PATH  |
 | -------------- | ---- | ----- | ------------------ |
 | RestMerchantsAttributes | object | Created | src/Generated/Shared/Transfer/RestMerchantsAttributes |
+
+---
 
 ### 3) Set up behavior
 
@@ -51,11 +61,11 @@ Make sure that the following changes have been applied in transfer objects:
 
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- | -------------- | ------------- | ----------------- |
 | MerchantCategoryMerchantRestAttributesMapperPlugin | Maps active categories from MerchantStorageTransfer to RestMerchantsAttributesTransfer. | None | Spryker\Glue\MerchantCategoriesRestApi\Plugin\MerchantsRestApi |
 
-src/Pyz/Glue/MerchantsRestApi/MerchantsRestApiDependencyProvider.php
+**src/Pyz/Glue/MerchantsRestApi/MerchantsRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -79,8 +89,11 @@ class MerchantsRestApiDependencyProvider extends SprykerMerchantsRestApiDependen
 }
 ```
 
-Make sure that when you sending the request GET http://glue.mysprykershop.com/merchants, you can see the category keys and names for merchants that assigned to categories.
+---
+**Verification**
 
-Make sure that when you sending the request GET http://glue.mysprykershop.com/merchants?categoryKeys[]={some-category-key}, you can see only merchants that belongs to the particular category in the response.
+Make sure that when you sending the request `GET http://glue.mysprykershop.com/merchants`, you can see the category keys and names for merchants that assigned to categories.
 
- 
+Make sure that when you sending the request `GET http://glue.mysprykershop.com/merchants?categoryKeys[]={% raw %}{{some-category-key}}{% endraw %}`, you can see only merchants that belongs to the particular category in the response.
+
+---

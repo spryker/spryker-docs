@@ -4,20 +4,22 @@ last_updated: Dec 07, 2020
 summary: This document describes the process how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
 ---
 
-## Install Feature Core
+## Install feature core
+Follow the steps below to install the Marketplace Product + Inventory Management feature core.
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Link |
+| NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | master | [[PUBLISHED] Glue API: Spryker Core feature integration - ongoing](https://spryker.atlassian.net/l/c/KXkyvNgf)  |
-| Marketplace Merchant | master | [[WIP] Marketplace Merchant Feature Integration - ongoing](https://spryker.atlassian.net/l/c/nLJp1kNH)   |
-| Product Management | master | [Inventory Management Feature Integration - ongoing](https://spryker.atlassian.net/l/c/xvoax8TT)  |
+| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
+| Marketplace Merchant | master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html)   |
+| Product Management | master | [Inventory Management feature integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
 
-### 1) Setup Behavior
+### 1) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantProductAvailabilityAbstractTableQueryCriteriaExpanderPlugin |  Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. | None | Spryker\Zed\MerchantProductGui\Communication\Plugin\AvailabilityGui |
 | MerchantProductAvailabilityViewActionViewDataExpanderPlugin | Expands view data for product availability with merchant data. | None | Spryker\Zed\MerchantProductGui\Communication\Plugin\AvailabilityGui |
@@ -56,5 +58,9 @@ class AvailabilityGuiDependencyProvider extends SprykerAvailabilityGuiDependency
     }
 }
 ```
+---
+**Verification**
 
-Make sure that you can filter product availabilities by merchant at http://zed.de.demo-spryker.com/product-management.
+Make sure that you can filter product availabilities by merchant at `http://zed.de.demo-spryker.com/product-management`.
+
+---

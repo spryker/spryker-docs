@@ -1,24 +1,23 @@
 ---
-title: Merchant Portal - Product Offer feature integration
+title: Merchant Portal - Marketplace Product Offer feature integration 
 last_updated: Jan 05, 2021
-summary: This integration guide provides steps on how to integrate the Merchant Portal - Product Offer feature into a Spryker project.
+summary: This integration guide provides steps on how to integrate the Merchant Portal - Marketplace Product Offer feature into a Spryker project.
 ---
+## Install Feature Core
+Follow the steps below to install the Merchant Portal - Marketplace Product Offer feature core.
 
-## Install feature core
-Follow the steps below to install the Merchant Portal - Product Offer feature core.
+### Prerequisites
 
-## Prerequisites
+To start feature integration, overview and install the necessary features:
 
-To start feature integration, overview, and install the necessary features:
-
-| NAME | VERSION | INTEGRATION GUIDE |
-| ---------------- | ---------- | -----------|
-| Marketplace Product Offer        | dev-master  | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
-| Marketplace Merchant Portal Core | dev-master  | [Merchant Portal Core feature integration](docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html) |
+| NAME  | VERSION | INTEGRATION GUIDE |
+| --------------- | --------- | ------------|
+| Marketplace Product Offer        | dev-master  | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html)
+| Marketplace Merchant Portal Core | dev-master  | [Merchant Portal Core feature integration](docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html)
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Run the following commands to install the required modules:
 
 ```bash
 composer require spryker/product-offer-merchant-portal-gui:"dev-master" --update-with-dependencies
@@ -29,8 +28,8 @@ composer require spryker/product-offer-merchant-portal-gui:"dev-master" --update
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY|
-| ----------- | --------------- |
+| MODULE  | EXPECTED DIRECTORY  |
+| ---------------------- | ----------------- |
 | ProductOfferMerchantPortalGui | spryker/product-offer-merchant-portal-gui |
 
 ---
@@ -43,25 +42,29 @@ Run the following command to generate transfer changes:
 console transfer:generate
 ```
 
+---
+**Verification**
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER  | TYPE  | EVENT | PATH  |
-| ----------------- | ---- | ------ | ----------------------- |
+| TRANSFER | TYPE  | EVENT   | PATH |
+| ------------- | ---- | ------ |---------------- |
 | MerchantDashboardCard      | class | Created | src/Generated/Shared/Transfer/MerchantDashboardCard      |
 | MerchantProductOfferCounts | class | Created | src/Generated/Shared/Transfer/MerchantProductOfferCounts |
 
+---
+
 ### 3) Set up behavior
 
-### Extend OrderItemsTable in SalesMerchantPortalGui
+#### Extend OrderItemsTable in SalesMerchantPortalGui 
 
 Activate the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| ----------------------- | -------------- | -------------- | ----------------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
+| --------------- | ------------ | ----------- | ------------ |
 | ProductOfferMerchantOrderItemTableExpanderPlugin | Adds merchantReference and ProductOfferSku to Sales tables in MerchantPortal | Marketplace Sales Merchant Portal integrated | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
 
-**src/Pyz/Zed/SalesMerchantPortalGui/SalesMerchantPortalGuiDependencyProvider.php**
+**src/Pyz/Zed/SalesMerchantPortalGui/SalesMerchantPortalGuiDependencyProvider.php** 
 
 ```php
 <?php
@@ -85,19 +88,21 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 }
 ```
 
+
 ---
+
 **Verification**
 
-Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening ` http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that columns “Merchant Reference” and “Product Offer SKU” are present.
+Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening  `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that columns “Merchant Reference” and “Product Offer SKU” are present. 
 
 ---
 
-### Add the Offer widget to MerchantDashobard
+### Add Offer widget to MerchantDashobard
 
 Activate the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| ---------------- | --------------- | ------------- | ----------------- |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE  |
+| ---------------- | ------------- | --------- | ---------------- |
 | OffersMerchantDashboardCardPlugin | Adds Offers widget on MerchantDashobard | None              | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
 
 **src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
@@ -126,6 +131,6 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 ---
 **Verification**
 
-Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up at the page.
+Make sure that the OffersMerchantDashboardCardPlugin plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up at the page. 
 
 ---

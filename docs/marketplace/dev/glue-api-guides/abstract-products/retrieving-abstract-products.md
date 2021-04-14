@@ -44,7 +44,8 @@ To retrieve general information about an abstract product, send the request:
 | `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its prices. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its [default prices](https://documentation.spryker.com/v4/docs/products-reference-information#default-and-original-prices). |
+| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](https://documentation.spryker.com/docs/volume-prices)). |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
 | `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product lables. |
@@ -302,10 +303,11 @@ To retrieve general information about an abstract product, send the request:
 
  </details>
 
-<details>
-<summary markdown='span'>Response sample with product prices</summary>
-    
-```json
+
+
+<details> <summary markdown='span'>Response sample with default product prices</summary>
+
+```php
 {
     "data": {
         "type": "abstract-products",
@@ -407,7 +409,122 @@ To retrieve general information about an abstract product, send the request:
 }
 ```
 
- </details>
+</details>
+
+<details> <summary markdown='span'>Response sample with volume prices</summary>
+
+```json
+{
+    "data": {
+        "type": "abstract-products",
+        "id": "093",
+        "attributes": {
+            "sku": "093",
+            "merchantReference": "MER000001",
+            "averageRating": 4.3,
+            "reviewCount": 4,
+            "name": "Sony SmartWatch 3",
+            "description": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated, casual, vibrant colours and fitness style, all made from the finest materials. Designed to perform and impress, this smartphone watch delivers a groundbreaking combination of technology and style. Downloadable apps let you customise your SmartWatch 3 SWR50 and how you use it.  Tell SmartWatch 3 SWR50 smartphone watch what you want and it will do it. Search. Command. Find.",
+            "attributes": {
+                "internal_ram": "512 MB",
+                "flash_memory": "4 GB",
+                "weight": "45 g",
+                "protection_feature": "Water resistent",
+                "brand": "Sony",
+                "color": "Yellow"
+            },
+            "superAttributesDefinition": [
+                "flash_memory",
+                "color"
+            ],
+            "superAttributes": {
+                "color": [
+                    "Silver"
+                ]
+            },
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "093_24495843"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Silver"
+                    ]
+                },
+                "attribute_variants": []
+            },
+            "metaTitle": "Sony SmartWatch 3",
+            "metaKeywords": "Sony,Smart Electronics",
+            "metaDescription": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated,",
+            "attributeNames": {
+                "internal_ram": "Internal RAM",
+                "flash_memory": "Flash memory",
+                "weight": "Weight",
+                "protection_feature": "Protection feature",
+                "brand": "Brand",
+                "color": "Color"
+            },
+            "url": "/en/sony-smartwatch-3-93"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices"
+        },
+        "relationships": {
+            "abstract-product-prices": {
+                "data": [
+                    {
+                        "type": "abstract-product-prices",
+                        "id": "093"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "abstract-product-prices",
+            "id": "093",
+            "attributes": {
+                "price": 24899,
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": null,
+                        "grossAmount": 24899,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": [
+                            {
+                                "netAmount": 150,
+                                "grossAmount": 165,
+                                "quantity": 5
+                            },
+                            {
+                                "netAmount": 145,
+                                "grossAmount": 158,
+                                "quantity": 10
+                            },
+                            {
+                                "netAmount": 140,
+                                "grossAmount": 152,
+                                "quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/abstract-products/093/abstract-product-prices"
+            }
+        }
+    ]
+}
+```
+
+</details>
 
 <details>
 <summary markdown='span'>Response sample with category nodes</summary>
@@ -1334,7 +1451,7 @@ To retrieve general information about an abstract product, send the request:
 | Attribute | Type | Description |
 | --- | --- | --- |
 | sku | String | SKU of the abstract product |
-| merchantReference | String | Unique identifier of the merchant in the system.<br>**This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.**|
+| merchantReference | String | Unique identifier of the merchant in the system.<br>**This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.**|
 | averageRating | String | Average rating of the product based on customer rating. |
 | reviewCount | String | Number of reviews left by customer for this abstract product. |
 | name | String | Name of the abstract product |

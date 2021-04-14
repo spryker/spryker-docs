@@ -12,13 +12,13 @@ Follow the steps below to install the Merchant Portal Core feature core.
 
 To start feature integration, overview, and install the necessary features:
 
-| Name                 | Version    |
-| -------------------- | ---------- |
-| Spryker Core         | dev-master |
-| Spryker Core BO      | dev-master |
-| Marketplace Merchant | dev-master |
+| NAME | VERSION | INTEGRATION GUIDE |
+| -------------------- | ---------- | ---------|
+| Spryker Core         | dev-master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core BO      | dev-master | [Spryker Core Back Office feature integration](https://github.com/spryker-feature/spryker-core-back-office)
+| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html)
 
-###  1) Install the required modules using composer
+###  1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
@@ -28,8 +28,8 @@ composer require spryker-feature/marketplace-merchantportal-core:"dev-master" --
 
 Make sure that the following modules have been installed:
 
-| Module  | Expected Directory |
-| ----------------------- | ----------------------------- |
+| MODULE | EXPECTED DIRECTORY |
+| ------------- | --------------- |
 | DashboardMerchantPortalGui   | vendor/spryker/dashboard-merchant-portal-gui  |
 | DashboardMerchantPortalGuiExtension | vendor/spryker/dashboard-merchant-portal-gui-extension |
 | SecurityMerchantPortalGui  | vendor/spryker/security-merchant-portal-gui |
@@ -42,7 +42,7 @@ Set up behavior as follows:
 
 1. Install the following plugins with modules:
 
-| Plugin  | Specification| Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | ------------ | ------------- | --------- |
 | MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. | None | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security |
 | BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String | None | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
@@ -50,9 +50,9 @@ Set up behavior as follows:
 | GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed | None | Spryker\Zed\GuiTable\Communication\Plugin\Application |
 | GuiTableConfigurationTwigPlugin | Add a new Twig function for rendering GuiTableConfiguration for the GuiTable web component | None | Spryker\Zed\GuiTable\Communication\Plugin\Twig<?php  |
 
-src/Pyz/Zed/Twig/TwigDependencyProvider.php
+**src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\Twig;
@@ -78,10 +78,9 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
+**src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 
-src/Pyz/Zed/Application/ApplicationDependencyProvider.php
-
-```
+```php
 <?php
 
 namespace Pyz\Zed\Application;
@@ -104,9 +103,11 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-src/Pyz/Zed/Security/SecurityDependencyProvider.php
+**src/Pyz/Zed/Security/SecurityDependencyProvider.php**
 
-```
+```php
+<?php
+
 namespace Pyz\Zed\Security;
 
 use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
@@ -128,11 +129,9 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 }
 ```
 
-
-
 Open access to the Merchant Portal login page by default:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -158,12 +157,17 @@ console navigation:build-cache
 console navigation:build-cache
 ```
 
+---
+**Verification**
+
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer  | Type  | Event   | Path   |
-| ----------- | ----- | ------- | ---------------------------- |
+| TRANSFER  | TYPE  | EVENT | PATH  |
+| ----------- | ----- | ------- | -------------------- |
 | MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCard  |
 | MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButton |
+
+---
 
 ## Install feature front end
 
@@ -178,9 +182,9 @@ Follow the steps below to install the Merchant Portal Core feature front end.
 
 **Spryker requirements:**
 
-To start builder integration, check spryker packages versions:
+To start builder integration, check the Spryker packages versions:
 
-| Name                        | Version   |
+| NAME | VERSION |
 | --------------------------- | --------- |
 | Discount (optional)         | >= 9.7.4  |
 | Gui (optional)              | >= 3.30.2 |
@@ -188,7 +192,7 @@ To start builder integration, check spryker packages versions:
 
 ### 1) Set up Marketplace builder configs
 
-Add angular.json file.
+Add `angular.json` file.
 
 ```bash
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/master/angular.json
@@ -202,9 +206,9 @@ wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/maste
 wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/master/tsconfig.mp.json
 ```
 
-Add vendor/spryker/*/src/Spryker/Zed/*/Presentation/Components/** and **/node_modules/** to exclude option in the tslint.json.
+Add `vendor/spryker/*/src/Spryker/Zed/*/Presentation/Components/**` and `**/node_modules/**` to exclude option in tslint.json.
 
-Add tslint.mp.json file.
+Add the tslint.mp.json file.
 
 ```bash
 wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/master/tslint.mp.json
@@ -224,7 +228,7 @@ npm i -D @angular-builders/custom-webpack@~9.1.0 @angular-devkit/build-angular@~
 
 Update package.json with the following fields:
 
-package.json
+**package.json**
 
 ```json
 {
@@ -252,9 +256,9 @@ package.json
 }
 ```
 
-Update frontend/settings.js to point to an updated tsconfig for Yves in globalSettings.paths object:
+Update frontend/settings.js to point to an updated `tsconfig` for Yves in the `globalSettings.paths` object:
 
-frontend/settings.js
+**frontend/settings.js**
 
 ```js
 const globalSettings = {
@@ -268,7 +272,7 @@ const globalSettings = {
 
 Add .yarnrc.yml file.
 
-.yarnrc.yml
+**.yarnrc.yml**
 
 ```yaml
 nodeLinker: node-modules
@@ -280,7 +284,7 @@ plugins:
 yarnPath: .yarn/releases/yarn-2.0.0-rc.32.js
 ```
 
-Add .yarn folder and download plugin-workspace-tools.js and yarn-2.0.0-rc.32.js.
+Add the .yarn folder and download plugin-workspace-tools.js and yarn-2.0.0-rc.32.js.
 
 ```bash
 mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
@@ -290,13 +294,13 @@ wget -O .yarn/releases/yarn-2.0.0-rc.32.js https://raw.githubusercontent.com/spr
 
 Run commands from the root of the project:
 
-```
+```bash
 npm i -g yarn @angular/cli@9.1.11
 ```
 
-Run yarn -v to check if the yarn was installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
+Run yarn `-v` to check if the yarn was installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
 
-ng --version should show Angular CLI: 9.1.11 version.
+`ng --version` should show Angular CLI: 9.1.11 version.
 
 Now it is time to install project dependencies:
 
@@ -304,13 +308,13 @@ Now it is time to install project dependencies:
 yarn install
 ```
 
-Check if MarketPlace packages are located in the node_modules/@spryker folder (e.g. utils).
+Check if the MarketPlace packages are located in the `node_modules/@spryker` folder (e.g., utils).
 
 ## 2) Install Marketplace builder
 
 Add the frontend/merchant-portal folder with the next files:
 
-frontend/merchant-portal/entry-points.js
+**frontend/merchant-portal/entry-points.js**
 
 ```js
 const { strings } = require("@angular-devkit/core");
@@ -355,7 +359,7 @@ module.exports = {
 };
 ```
 
-frontend/merchant-portal/html-transform.js
+**frontend/merchant-portal/html-transform.js**
 
 ```js
 const { getMPEntryPointsMap } = require("./entry-points");
@@ -379,7 +383,7 @@ function insertTextAt(text, idx, fullText) {
 }
 ```
 
-frontend/merchant-portal/jest.config.js
+**frontend/merchant-portal/jest.config.js**
 
 ```js
 module.exports = {
@@ -403,14 +407,14 @@ module.exports = {
 };
 ```
 
-frontend/merchant-portal/test-setup.ts
+**frontend/merchant-portal/test-setup.ts**
 
 ```ts
 import 'core-js/features/reflect';
 import 'jest-preset-angular';
 ```
 
-frontend/merchant-portal/tsconfig.spec.json
+**frontend/merchant-portal/tsconfig.spec.json**
 
 ```json
 {
@@ -430,7 +434,7 @@ frontend/merchant-portal/tsconfig.spec.json
 }
 ```
 
-frontend/merchant-portal/webpack.config.ts
+**frontend/merchant-portal/webpack.config.ts**
 
 ```ts
 import {
@@ -460,10 +464,12 @@ export default async (
     return config;
 };
 ```
+---
+**Verification**
 
-Verification
+`npm run mp:build` should pass successfully.
 
-npm run mp:build should pass successfully.
+---
 
 ## 3. Adjust deployment configs
 
@@ -484,11 +490,11 @@ If you want to configure deployment configuration to automatically install and b
 
 ## Adjust environment infrastructure
 
-It is not safe to expose MerchantPortal next to the Back Office - MerchantPortal **MUST NOT** have OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed. 
+It is not safe to expose MerchantPortal next to the Back Office - MerchantPortal **MUST NOT** have OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
 
 ### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
 
-MerchantPortal MUST be placed into its own private subnet. 
+MerchantPortal MUST be placed into its own private subnet.
 
 MerchantPortal **MUST** have access to:
 
@@ -501,7 +507,7 @@ MerchantPortal **MUST NOT** have access to:
 - Gateway
 - Scheduler
 
-### 2) Create a dedicated database user 
+### 2) Create a dedicated database user
 
 Grant only default CRUD (INSERT, DELETE, UPDATE, SELECT) operations. DO NOT grant ALL PRIVILEGES, GRANT OPTION, DROP, CREATE, and other admin related grants.
 
@@ -513,16 +519,16 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON your_app_schema.* TO 'merchnatportal'@'l
 FLUSH PRIVILEGES;
 ```
 
-### 3) Create a new Nginx web server configuration 
+### 3) Create a new Nginx web server configuration
 
-Example of an Nginx configuration: 
+Example of an Nginx configuration:
 
-/etc/nginx/merchnat-portal.conf
+**/etc/nginx/merchnat-portal.conf**
 
 ```nginx
 server {
     # { Your virtual host settings }
-    
+
     # Allow /assets/js/mp assets to be served only
     location ~ (/assets/js/mp|/favicon.ico|/robots.txt) {
         access_log        off;
@@ -542,35 +548,39 @@ server {
         fastcgi_param APPLICATION_ENV $application_env;
         fastcgi_param APPLICATION_STORE $application_store;
         fastcgi_param SCRIPT_FILENAME  $document_root/index.php;
-        
+
         # Credentials of the newly created DB user.
         fastcgi_param SPRYKER_DB_USERNAME merchnatportal;
         fastcgi_param SPRYKER_DB_PASSWORD '{your_merchnatportal_password}';
-        
-        
+
+
         more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
     }
 }
 ```
 
-After the Nginx config was modified, run the following command to apply the new config:f 
+After the Nginx config was modified, run the following command to apply the new config:f
 
 ```bash
 sudo service nginx reload
 ```
 
+---
+**Verification**
 Make sure to use environment variables in config-default.php:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
-<?php 
+<?php
 
 // other code
 
 $config[PropelConstants::ZED_DB_USERNAME] = getenv('SPRYKER_DB_USERNAME');
 $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
 ```
+
+---
 
 The following page should now show the login page for MerchantPortal: https://you-merchant-portal.domain/security-merchant-portal-gui/login
 

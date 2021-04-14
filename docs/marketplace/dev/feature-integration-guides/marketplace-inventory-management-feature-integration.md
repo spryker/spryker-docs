@@ -8,7 +8,7 @@ summary: This document describes the process how to integrate the Marketplace In
 Follow the steps below to install the Marketplace Inventory Management feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -38,7 +38,7 @@ Make sure that the following modules have been installed:
 | ProductOfferAvailabilityStorage | vendor/spryker/product-offer-availability-storage |
 
 ### 2) Set up the database schema
-Adjust the schema definition so entity changes will trigger events:
+Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/ProductOfferStock/Persistence/Propel/Schema/spy_product_offer_stock.schema.xml**
 
@@ -59,7 +59,7 @@ Adjust the schema definition so entity changes will trigger events:
 </database>
 ```
 
-Run the following commands to apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes.
 
 ```bash
 console transfer:generate
@@ -70,7 +70,7 @@ console transfer:generate
 ---
 **Verification**
 
-Verify the following changes by checking your database
+Make sure that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 |-|-|-|
@@ -110,8 +110,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ---
 
-### 4) Add translations
-#### Zed translations
+### 4) Add Zed translations
 
 Run the following command to generate a new translation cache for Zed:
 
@@ -124,13 +123,13 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantStockMerchantExpanderPlugin | Expands MerchantTransfer with related stocks. | None | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
-| MerchantStockMerchantPostCreatePlugin | Creates default stock for the merchant. | None | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
-| MerchantStockMerchantFormExpanderPlugin | Expands MerchantForm with form field for merchant warehouses. | None | Spryker\Zed\MerchantStockGui\Communication\Plugin\MerchantGui |
-| ProductOfferStockProductOfferExpanderPlugin | Expands ProductOfferTransfer with Product Offer Stock. | None | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
-| ProductOfferStockProductOfferPostCreatePlugin | Persists product offer stock on product offer create. | None | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
-| ProductOfferStockProductOfferPostUpdatePlugin | Persists product offer stock on product offer updated. | None | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
-| ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. | None | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
+| MerchantStockMerchantExpanderPlugin | Expands MerchantTransfer with related stocks. |  | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
+| MerchantStockMerchantPostCreatePlugin | Creates default stock for the merchant. |  | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
+| MerchantStockMerchantFormExpanderPlugin | Expands MerchantForm with form field for merchant warehouses. |  | Spryker\Zed\MerchantStockGui\Communication\Plugin\MerchantGui |
+| ProductOfferStockProductOfferExpanderPlugin | Expands ProductOfferTransfer with Product Offer Stock. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
+| ProductOfferStockProductOfferPostCreatePlugin | Persists product offer stock on product offer create. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
+| ProductOfferStockProductOfferPostUpdatePlugin | Persists product offer stock on product offer updated. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
+| ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. |  | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
 
 **src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
 
@@ -203,11 +202,11 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 ---
 **Verification**
 
-Make sure that when you edit some merchant on `http://zed.de.demo-spryker.com/merchant-gui/list-merchant`, you can see the `Wherehouses` field.
+Make sure that when you edit some merchant on http://zed.de.demo-spryker.com/merchant-gui/list-merchant, you can see the `Wherehouses` field.
 
 ---
 
-**src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -253,6 +252,8 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
 }
 ```
 
+</details>
+
 ---
 **Verification**
 
@@ -291,7 +292,7 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 ---
 **Verification**
 
-Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySkuForStore()` returns not a product, but a product offer availability if the product offer reference passed in the request.
+Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySkuForStore()` returns not a product but a product offer availability if the product offer reference passed in the request.
 
 ---
 
@@ -301,9 +302,9 @@ This step will publish tables on change (create, edit) to the `spy_product_offer
 
 #### Set up event, listeners, and publishers
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferAvailabilityStorageEventSubscriber | Registers listeners that are responsible for publishing product offer availability related changes to storage. | None | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Event\Subscriber |
+| ProductOfferAvailabilityStorageEventSubscriber | Registers listeners that are responsible for publishing product offer availability related changes to storage. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -369,7 +370,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with Redis storage, and marks messages as failed in case of error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with Redis storage, and marks messages as failed in case of error. |  | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 ```php
 <?php
@@ -422,7 +423,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferAvailabilitySynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. | None | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Synchronization |
+| ProductOfferAvailabilitySynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Synchronization |
 
 ```php
 <?php
@@ -471,8 +472,8 @@ MER000006,Sony Experts MER000006 Warehouse 1
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
-| merchant_reference | mandatory | string | MER000001 | Merchant identifier. |
-| stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
+| merchant_reference | &check; | string | MER000001 | Merchant identifier. |
+| stock_name | &check; | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
 
 #### Import Product Offer Stock data
 
@@ -607,17 +608,17 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
-| product_offer_reference | mandatory | string | offer350 | Product offer identifier. |
-| stock_name | mandatory | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
-| quantity | mandatory | int | 21 | The amount of available product offers. |
-| is_never_out_of_stock | mandatory | int | 1 | Flag, the allows to make product offer always available, ignoring stock quantity. |
+| product_offer_reference | &check; | string | offer350 | Product offer identifier. |
+| stock_name | &check; | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
+| quantity | &check; | int | 21 | The amount of available product offers. |
+| is_never_out_of_stock | &check; | int | 1 | Flag, the allows to make product offer always available, ignoring stock quantity. |
 
 Register the following plugins to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantStockDataImportPlugin | Imports merchant stock data into the database. | None | Spryker\Zed\MerchantStockDataImport\Communication\Plugin |
-| ProductOfferStockDataImportPlugin | Imports product offer stock data into the database. | None | Spryker\Zed\ProductOfferStockDataImport\Communication\Plugin |
+| MerchantStockDataImportPlugin | Imports merchant stock data into the database. |  | Spryker\Zed\MerchantStockDataImport\Communication\Plugin |
+| ProductOfferStockDataImportPlugin | Imports product offer stock data into the database. |  | Spryker\Zed\ProductOfferStockDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 

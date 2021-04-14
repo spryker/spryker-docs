@@ -57,7 +57,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| TaxProductAbstractFormExpanderPlugin | Expands ProductAbstractForm with Tax Set field. | None | Spryker\Zed\TaxMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
+| TaxProductAbstractFormExpanderPlugin | Expands ProductAbstractForm with Tax Set field. |  | Spryker\Zed\TaxMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
 
 **src\Pyz\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvider.php**
 

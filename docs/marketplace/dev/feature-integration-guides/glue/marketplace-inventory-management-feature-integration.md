@@ -58,8 +58,8 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferAvailabilitiesResourceRoutePlugin | Registers the product-offer-availabilities resource. | None | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
-| ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin | Adds the product-offer-availabilities resource as a relationship of the product-offers resource. | None | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
+| ProductOfferAvailabilitiesResourceRoutePlugin | Registers the product-offer-availabilities resource. |  | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
+| ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin | Adds the product-offer-availabilities resource as a relationship of the product-offers resource. |  | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 

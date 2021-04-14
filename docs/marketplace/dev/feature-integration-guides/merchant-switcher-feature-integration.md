@@ -14,7 +14,7 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ---------- | --------|
-| Spryker Core              | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Marketplace Product Offer | dev-master | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
 
 ###  1) Install the required modules using Composer
@@ -37,7 +37,7 @@ Make sure that the following modules were installed:
 
 ---
 
-## 2) Set up the transfer objects
+### 2) Set up the transfer objects
 
 Run the following commands to generate transfer changes.
 
@@ -103,7 +103,7 @@ console transfer:generate
 
 Make sure that the following changes were applied in transfer objects:
 
-| Transfer | Type | Event | Path  |
+| TRANSFER  | TYPE  | EVENT | PATH  |
 | ----------- | ---- | ------ | ----------------------- |
 | MerchantSwitchRequest | class | created | src/Generated/Shared/Transfer/MerchantSwitchRequestTransfer |
 
@@ -144,8 +144,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | --------------- | --------------- | ------------- | ------------ |
-| MerchantSwitcherWidgetRouteProviderPlugin | Wires Merchant switch request route to shop Router | None          | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\Router        |
-| MerchantShopContextExpanderPlugin         | Adds Merchant reference from cookie to ShopContext | None          | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication |
+| MerchantSwitcherWidgetRouteProviderPlugin | Wires Merchant switch request route to shop Router |  | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\Router        |
+| MerchantShopContextExpanderPlugin         | Adds Merchant reference from cookie to ShopContext |  | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -262,7 +262,7 @@ Register the following plugins to enable widgets:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | -------------------- | -------------- | ------------- | --------------------- |
-| MerchantSwitcherSelectorFormWidget | Shows a list of Merchants that you can switch the shop context in between | None          | SprykerShop\Yves\MerchantSwitcherWidget\Widget |
+| MerchantSwitcherSelectorFormWidget | Shows a list of Merchants that you can switch the shop context in between |  | SprykerShop\Yves\MerchantSwitcherWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

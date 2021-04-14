@@ -61,8 +61,8 @@ Activate the following plugins:
 
 | PLUGIN  | SPECIFICATION   | PREREQUISITES | NAMESPACE   |
 | ----------------- | -------------- | --------------- | ---------------- |
-| MerchantOpeningHoursResourceRoutePlugin | Registers the merchant-opening-hours resource.  | None  | Spryker\Glue\MerchantOpeningHoursRestApi\Plugin\GlueApplication |
-| MerchantOpeningHoursByMerchantReferenceResourceRelationshipPlugin | Registers the merchant-opening-hours resource as a relationship to the merchants resource. | None  | Spryker\Glue\MerchantOpeningHoursRestApi\Plugin\GlueApplication |
+| MerchantOpeningHoursResourceRoutePlugin | Registers the merchant-opening-hours resource.  |   | Spryker\Glue\MerchantOpeningHoursRestApi\Plugin\GlueApplication |
+| MerchantOpeningHoursByMerchantReferenceResourceRelationshipPlugin | Registers the merchant-opening-hours resource as a relationship to the merchants resource. |   | Spryker\Glue\MerchantOpeningHoursRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 

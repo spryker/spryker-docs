@@ -60,8 +60,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProductCartItemExpanderPlugin | Expands view data for abstract product with merchant data. | None | Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi |
-| MerchantByMerchantReferenceResourceRelationshipPlugin |  Adds merchants resources as relationship by merchant references in the attributes. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantProductCartItemExpanderPlugin | Expands view data for abstract product with merchant data. |  | Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi |
+| MerchantByMerchantReferenceResourceRelationshipPlugin |  Adds merchants resources as relationship by merchant references in the attributes. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 

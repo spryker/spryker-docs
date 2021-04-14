@@ -107,7 +107,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | - | - | - | - |
-| DiscountMerchantOrderFilterPlugin | Removes none Merchant related discounts from Merchant Orders | None          | Spryker\Zed\DiscountMerchantSalesOrder\Communication\Plugin |
+| DiscountMerchantOrderFilterPlugin | Removes none Merchant related discounts from Merchant Orders |           | Spryker\Zed\DiscountMerchantSalesOrder\Communication\Plugin |
 
 **src/Pyz/Zed/MerchantSalesOrder/MerchantSalesOrderDependencyProvider.php**
 

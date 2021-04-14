@@ -18,7 +18,7 @@ To start feature integration, overview and install the necessary features:
 | Marketplace Order Management | dev-master  | [Marketplace Order Management feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html) |
 | Customer Account Management  | 202001.0    | [Customer Account Management feature integration](https://documentation.spryker.com/docs/customer-account-management-feature-integration)
 
-## 1) Set up the transfer objects
+### 1) Set up the transfer objects
 
 Run the following commands to generate transfer changes.
 
@@ -42,9 +42,9 @@ Make sure that the following changes were applied in transfer objects.
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | SPECIFICATION | PTEREQUISITES | NAMESPACE|
-| ------------------- | ------------------ | ------------------- |
-| MerchantSwitchCartAfterCustomerAuthenticationSuccessPlugin | Sets merchant reference value to cookies if a customer's quote contains it, and the quote is not empty. | None | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\CustomerPage |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE|
+| ------------------- | ------------------ | ------------------- |------------------- |
+| MerchantSwitchCartAfterCustomerAuthenticationSuccessPlugin | Sets merchant reference value to cookies if a customer's quote contains it, and the quote is not empty. |  | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\CustomerPage |
 
 
 
@@ -71,7 +71,6 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 ```
 
 ---
-
 **Verification**
 
 Make sure that after customers log in, their selected merchant is not changed and set correctly.

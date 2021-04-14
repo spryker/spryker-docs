@@ -65,8 +65,8 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferPricesResourceRoutePlugin | Registers the `product-offer-prices` resource. | None | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
-| ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Registers the `product-offer-prices` resource as a relationship to `product-offers`. | None | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
+| ProductOfferPricesResourceRoutePlugin | Registers the `product-offer-prices` resource. |  | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
+| ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Registers the `product-offer-prices` resource as a relationship to `product-offers`. |  | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
 
 
 <details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>

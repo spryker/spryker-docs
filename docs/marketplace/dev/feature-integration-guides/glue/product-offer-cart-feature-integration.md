@@ -25,9 +25,9 @@ Activate the following plugins:
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES | NAMESPACE   |
 | -------------------- | ------------------- | --------------- | ------------------ |
-| MerchantProductOfferCartItemMapperPlugin                | Maps merchant product offer reference and merchant reference, coming from Glue add to cart request, to persistent cart-specific transfer. | None              | Spryker\Zed\MerchantProductOffersRestApi\Communication\Plugin\CartsRestApi |
-| MerchantProductOfferCartItemExpanderPlugin              | Expands the merchant product offer information with a merchant reference. | None              | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
-| MerchantProductOfferRestCartItemsAttributesMapperPlugin | Maps merchant product offer reference and merchant reference to items attributes. | None              | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
+| MerchantProductOfferCartItemMapperPlugin                | Maps merchant product offer reference and merchant reference, coming from Glue add to cart request, to persistent cart-specific transfer. |               | Spryker\Zed\MerchantProductOffersRestApi\Communication\Plugin\CartsRestApi |
+| MerchantProductOfferCartItemExpanderPlugin              | Expands the merchant product offer information with a merchant reference. |               | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
+| MerchantProductOfferRestCartItemsAttributesMapperPlugin | Maps merchant product offer reference and merchant reference to items attributes. |               | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 

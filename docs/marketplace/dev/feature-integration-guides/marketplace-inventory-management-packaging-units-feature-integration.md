@@ -35,7 +35,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferPackagingUnitOmsReservationAggregationPlugin | Aggregates reservations for product offers packaging unit. | None | Spryker\Zed\ProductOfferPackagingUnit\Communication\Plugin\Oms |
+| ProductOfferPackagingUnitOmsReservationAggregationPlugin | Aggregates reservations for product offers packaging unit. |  | Spryker\Zed\ProductOfferPackagingUnit\Communication\Plugin\Oms |
 
 **src/Pyz/Zed/Oms/OmsDependencyProvider.php**
 

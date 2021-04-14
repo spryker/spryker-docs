@@ -425,10 +425,10 @@ Enable the following behaviors by adding and registering the plugins:
 
 | Plugin  | Specification | Prerequisites | Namespace |
 | ------------ | ----------- | ----- | ------------ |
-| MerchantReturnPreCreatePlugin | Provides merchant order reference for the return transfer. | none |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| MerchantReturnCreateRequestValidatorPlugin | Checks if each item in the `itemTransfers` has the same merchant reference. | none |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| MarketplaceRefundCommandPlugin | Triggers 'refund' event on a marketplace order item. | none |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| MarketplaceStartReturnCommandPlugin | Triggers 'return' event on a marketplace order item. | none |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| MerchantReturnPreCreatePlugin | Provides merchant order reference for the return transfer. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| MerchantReturnCreateRequestValidatorPlugin | Checks if each item in the `itemTransfers` has the same merchant reference. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| MarketplaceRefundCommandPlugin | Triggers 'refund' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| MarketplaceStartReturnCommandPlugin | Triggers 'return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnDependencyProvider.php</summary>
@@ -664,8 +664,8 @@ Set up widgets as follows:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE   |
 | --------------- | -------------- | ------ | -------------- |
-| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget` | none |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
-| MerchantSalesReturnCreateFormWidget |  Provides "Create Return" only with the items of one merchant order at a time and only for the returnable items. | none |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
+| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget` |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
+| MerchantSalesReturnCreateFormWidget |  Provides "Create Return" only with the items of one merchant order at a time and only for the returnable items. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
 
 
 ```php

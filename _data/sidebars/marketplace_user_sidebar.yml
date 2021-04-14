@@ -12,7 +12,6 @@ entries:
             url: "/docs/marketplace/user/intro-to-spryker/marketplace-concept.html"
 
           - title: Item 3
-            url: "#"
 
       - title: Features
         nested:

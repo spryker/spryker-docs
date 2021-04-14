@@ -82,7 +82,7 @@ console transfer:generate
 Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
-| ------------- | --- | ---- | ---------------- |
+| - | - | - | - |
 | MerchantCategoryCriteria  | object | Created | src/Generated/Shared/Transfer/MerchantCategoryCriteriaTransfer |
 | MerchantCategory          | object | Created | src/Generated/Shared/Transfer/MerchantCategoryTransfer  |
 | MerchantSearchCollection  | object | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
@@ -96,10 +96,10 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | -------------- | ----------- | ------ | ------------- |
-| MerchantCategoryMerchantExpanderPlugin | Expands MerchantTransfer with categories.  | None  | Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant |
-| MerchantCategoryMerchantSearchDataExpanderPlugin | Expands merchant search data with merchant category keys. | None | Spryker\Zed\MerchantCategorySearch\Communication\Plugin\MerchantSearch |
-| MerchantCategoryWritePublisherPlugin | Updates merchant categories in search based on category events. | None | Spryker\Zed\MerchantSearch\Communication\Plugin\Publisher\MerchantCategory |
-| RemoveMerchantCategoryRelationPlugin | Removes merchant categories on category delete. | None | Spryker\Zed\MerchantCategory\Communication\Plugin |
+| MerchantCategoryMerchantExpanderPlugin | Expands MerchantTransfer with categories.  |   | Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant |
+| MerchantCategoryMerchantSearchDataExpanderPlugin | Expands merchant search data with merchant category keys. |  | Spryker\Zed\MerchantCategorySearch\Communication\Plugin\MerchantSearch |
+| MerchantCategoryWritePublisherPlugin | Updates merchant categories in search based on category events. |  | Spryker\Zed\MerchantSearch\Communication\Plugin\Publisher\MerchantCategory |
+| RemoveMerchantCategoryRelationPlugin | Removes merchant categories on category delete. |  | Spryker\Zed\MerchantCategory\Communication\Plugin |
 
  **src/Pyz/Zed/Category/CategoryDependencyProvider.php**
 
@@ -160,7 +160,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 ---
 **Verification**
 
-Make sure that `MerchantFacade::get()` response contains merchant categories.
+Make sure that the `MerchantFacade::get()` response contains merchant categories.
 
 ---
 
@@ -237,16 +237,16 @@ Prepare your data according to your requirements using the following format:
 category_key,merchant_reference 2
 ```
 
-| COLUMN | IS OBLIGATORY? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------- | ------- | ----- | -------- | -------------- |
-| category_key  | mandatory | string  | food  | Internal data import identifier for a merchant. |
-| merchant_reference | mandatory | string    | roan  | Merchant identifier.  |
+| category_key  | &check; | string  | food  | Internal data import identifier for a merchant. |
+| merchant_reference | &check; | string    | roan  | Merchant identifier.  |
 
 Register the following plugins to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------- | ------------------- | ----- | ------------ |
-| MerchantCategoryDataImportPlugin | Imports merchant category data into the database. | None | Spryker\Zed\MerchantCategoryDataImport\Communication\Plugin\DataImport |
+| MerchantCategoryDataImportPlugin | Imports merchant category data into the database. |  | Spryker\Zed\MerchantCategoryDataImport\Communication\Plugin\DataImport |
 
  **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -300,7 +300,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ---------------- | -------------- | ----------- | ---------------------- |
-| MerchantCategoryMerchantSearchQueryExpanderPlugin | Adds filter by category keys to elasticsearch query. | None  | Spryker\Client\MerchantCategorySearch\Plugin\Elasticsearch\Query |
+| MerchantCategoryMerchantSearchQueryExpanderPlugin | Adds filter by category keys to elasticsearch query. |   | Spryker\Client\MerchantCategorySearch\Plugin\Elasticsearch\Query |
 
 **src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
 

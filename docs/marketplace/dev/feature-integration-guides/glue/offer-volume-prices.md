@@ -58,7 +58,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| RestProductOfferPricesAttributesMapperPlugin | Extends RestProductOfferPricesAttributesTransfer with volume price data | None | Spryker\Glue\PriceProductOfferVolumesRestApi\Plugin |
+| RestProductOfferPricesAttributesMapperPlugin | Extends RestProductOfferPricesAttributesTransfer with volume price data |  | Spryker\Glue\PriceProductOfferVolumesRestApi\Plugin |
 
 **src/Pyz/Glue/ProductOfferPricesRestApi/ProductOfferPricesRestApiDependencyProvider.php**
 

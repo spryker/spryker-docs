@@ -65,12 +65,12 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantsResourceRoutePlugin | Registers the `merchants` resource. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| MerchantAddressesResourceRoutePlugin | Registers the `merchant-addresses` resource. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| MerchantAddressByMerchantReferenceResourceRelationshipPlugin | Adds the `merchant-addresses` resource as a relationship of the `merchants` resource. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resource as a relationship by merchant reference provided in the attributes. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| MerchantRestUrlResolverAttributesTransferProviderPlugin | Adds functionality for merchant url resolving to UrlRestApi. | None | Spryker\Glue\MerchantsRestApi\Plugin\UrlsRestApi |
-| MerchantsByOrderResourceRelationshipPlugin | Adds `merchants` resources as relationship by order merchant references. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantsResourceRoutePlugin | Registers the `merchants` resource. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantAddressesResourceRoutePlugin | Registers the `merchant-addresses` resource. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantAddressByMerchantReferenceResourceRelationshipPlugin | Adds the `merchant-addresses` resource as a relationship of the `merchants` resource. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resource as a relationship by merchant reference provided in the attributes. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantRestUrlResolverAttributesTransferProviderPlugin | Adds functionality for merchant url resolving to UrlRestApi. |  | Spryker\Glue\MerchantsRestApi\Plugin\UrlsRestApi |
+| MerchantsByOrderResourceRelationshipPlugin | Adds `merchants` resources as relationship by order merchant references. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 

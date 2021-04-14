@@ -13,7 +13,7 @@ Follow the steps below to install the Marketplace Shipment feature core.
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
-|-|-|
+|-|-|-|
 | Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 
@@ -101,7 +101,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantShipmentOrderItemTemplatePlugin | Shows merchant shipment in shipment section of the ShipmentGui::SallesController | None | Spryker\Zed\MerchantShipmentGui\Communication\ShipmentGui |
+| MerchantShipmentOrderItemTemplatePlugin | Shows merchant shipment in shipment section of the ShipmentGui::SallesController |  | Spryker\Zed\MerchantShipmentGui\Communication\ShipmentGui |
 
 **src/Pyz/Zed/ShipmentGui/ShipmentGuiDependencyProvider.php**
 
@@ -134,7 +134,7 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 
 ## Related features
 
-| FEATURE |REQUIRED| INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE| INTEGRATION GUIDE |
 |-|-|-|
 | Marketplace Shipment + Cart | | [Marketplace Shipment + Cart feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-shipment-cart-feature-integration.html) |
 | Marketplace Shipment + Checkout | | [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature-integration.html) |

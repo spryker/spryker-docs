@@ -4,7 +4,7 @@ last_updated: Jan 05, 2021
 summary: This integration guide provides steps on how to integrate the Merchant Portal - Marketplace Product feature into a Spryker project.
 ---
 
-## Install feature Core
+## Install feature core
 Follow the steps below to install the Merchant Portal - Marketplace Product feature core.
 
 ### Prerequisites

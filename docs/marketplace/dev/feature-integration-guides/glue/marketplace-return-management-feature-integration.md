@@ -75,8 +75,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
-| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resources as relationship by merchant references in the attributes | none |  Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication     |
-| MerchantReturnCollectionExpanderPlugin | Expands return collection with merchant data | none | Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |
+| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resources as relationship by merchant references in the attributes |  |  Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication     |
+| MerchantReturnCollectionExpanderPlugin | Expands return collection with merchant data |  | Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |
 
 <details>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>

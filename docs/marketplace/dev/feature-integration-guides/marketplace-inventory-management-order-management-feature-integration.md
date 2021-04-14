@@ -8,7 +8,7 @@ summary: This document describes the process how to integrate the Marketplace In
 Follow the steps below to install the Marketplace Inventory Management + Order Management feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+To start feature integration, integra the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -16,7 +16,7 @@ To start feature integration, overview and install the necessary features:
 | Inventory Management | master |  [Inventory Management Feature Integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
 
 ### 1) Install the required modules using Composer
-Run the following commands to install the required modules:
+Run the following command to install the required modules:
 
 ```bash
 composer require spryker/oms-product-offer-reservation: "^0.1.0" --update-with-dependencies
@@ -35,7 +35,7 @@ Make sure that the following modules have been installed:
 ---
 
 ### 2) Set up the database schema
-Adjust the schema definition so entity changes will trigger events:
+Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/OmsProductOfferReservation/Persistence/Propel/Schema/spy_oms_product_offer_reservation.schema.xml**
 
@@ -57,7 +57,7 @@ Adjust the schema definition so entity changes will trigger events:
 </database>
 ```
 
-Run the following commands to apply database changes and to generate entity and transfer changes.
+Run the following commands to apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -67,7 +67,8 @@ console transfer:generate
 
 ---
 **Verification**
-Verify the following changes by checking your database:
+
+Make sure that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 |-|-|-|
@@ -100,11 +101,11 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferOmsReservationAggregationPlugin | Aggregates reservations for product offers. | None | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
-| ProductOfferOmsReservationReaderStrategyPlugin | Provides the ability to read product offer reservation data from alternative table. | None | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
-| ProductOfferOmsReservationWriterStrategyPlugin | Provides the ability to write product offer reservation to alternative table. | None | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
-| ProductOfferReservationPostSaveTerminationAwareStrategyPlugin | Prevents generic product availability update for product offers. | None | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
-| ProductOfferReservationProductOfferStockTableExpanderPlugin | Expands product offer stock table with reservations column. | None | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
+| ProductOfferOmsReservationAggregationPlugin | Aggregates reservations for product offers. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
+| ProductOfferOmsReservationReaderStrategyPlugin | Provides the ability to read product offer reservation data from alternative table. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
+| ProductOfferOmsReservationWriterStrategyPlugin | Provides the ability to write product offer reservation to alternative table. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
+| ProductOfferReservationPostSaveTerminationAwareStrategyPlugin | Prevents generic product availability update for product offers. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
+| ProductOfferReservationProductOfferStockTableExpanderPlugin | Expands product offer stock table with reservations column. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
 
 <details><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 

@@ -116,10 +116,9 @@ MER000005,MerchantDefaultStateMachine
 
 |PLUGIN  |SPECIFICATION  |PREREQUISITES  |NAMESPACE  |
 |---------|---------|---------|---------|
-|MerchantOmsProcessDataImportPlugin |  Imports Merchant State Machine data  |    None     |   Spryker\Zed\MerchantOmsDataImport\Communication\Plugin\DataImport  |
+|MerchantOmsProcessDataImportPlugin |  Imports Merchant State Machine data  |  |   Spryker\Zed\MerchantOmsDataImport\Communication\Plugin\DataImport  |
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
@@ -140,9 +139,9 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 
 ```
-</details>
 
-1. Import data:
+
+3. Import data:
 
 ```bash
 console data:import merchant-oms-process
@@ -219,68 +218,25 @@ actions:
 ```
 </details>
 
-<table>
-<thead>
-  <tr>
-    <th colspan="3">PARAMETER</th>
-    <th>REQUIRED</th>
-    <th>POSSIBLE VALUES</th>
-    <th>DESCRIPTION</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td colspan="3">data_entity</td>
-    <td>✓</td>
-    <td>merchant-order<br>merchant-order-item<br>merchant-order-expense</td>
-    <td>String identifier for data entity that is expected to be  exported.</td>
-  </tr>
-  <tr>
-    <td rowspan="5">filter_criteria</td>
-    <td colspan="2">store_name</td>
-    <td>✓</td>
-    <td>All existing store names.</td>
-    <td>An existing store name for the data to filter on.</td>
-  </tr>
-  <tr>
-    <td rowspan="2">merchant_order_created_at</td>
-    <td>from</td>
-    <td></td>
-    <td>Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI'</td>
-    <td>Date of merchant order creation from which the data needs to be filtered.</td>
-  </tr>
-  <tr>
-    <td>to</td>
-    <td></td>
-    <td>Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI'</td>
-    <td>Date of merchant order creation up to  which the data needs to be filtered.</td>
-  </tr>
-  <tr>
-    <td rowspan="2">merchant_order_updated_at</td>
-    <td>from</td>
-    <td></td>
-    <td>Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI'</td>
-    <td>Date of merchant order update from which the data needs to be filtered.</td>
-  </tr>
-  <tr>
-    <td>to</td>
-    <td></td>
-    <td>Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI'</td>
-    <td>Date of merchant order update up to  which the data needs to be filtered.</td>
-  </tr>
-</tbody>
-</table>
+
+| PARAMETER |  |  | REQUIRED | POSSIBLE VALUES | DESCRIPTION |
+|-|-|-|-|-|-|
+| data_entity |  |  | ✓ | merchant-order merchant-order-item merchant-order-expense | String identifier for data entity that is expected to be  exported. |
+| filter_criteria | store_name |  | ✓ | All existing store names. | An existing store name for the data to filter on. |
+|  | merchant_order_created_at | from |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order creation from which the data needs to be filtered. |
+|  |  | to |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order creation up to  which the data needs to be filtered. |
+|  | merchant_order_updated_at | from |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order update from which the data needs to be filtered. |
+|  |  | to |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order update up to  which the data needs to be filtered. |
 
 2. Register the following plugins to enable data export:
 
  PLUGIN | SPECIFICATION | PREREQUISITES| NAMESPACE|
 | --------------- | -------------- | ------ | -------------- |
-| MerchantOrderDataEntityExporterPlugin | Exports Merchant Order data | None | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport|
-| MerchantOrderItemDataEntityExporterPlugin | Exports Merchant Order Items data | None   | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
-|MerchantOrderExpenseDataEntityExporterPlugin  | Exports Merchant Order Expense data | None   |Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
+| MerchantOrderDataEntityExporterPlugin | Exports Merchant Order data |   | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport|
+| MerchantOrderItemDataEntityExporterPlugin | Exports Merchant Order Items data |     | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
+|MerchantOrderExpenseDataEntityExporterPlugin  | Exports Merchant Order Expense data |     |Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/DataExport/DataExportDependencyProvider.php</summary>
+**src/Pyz/Zed/DataExport/DataExportDependencyProvider.php**
 
 ```php
 <?php
@@ -306,9 +262,8 @@ class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
         ];
     }
 }
-
 ```
-</details>
+
 
 3. Export data:
 
@@ -603,7 +558,7 @@ Make sure that the following widgets have been registered by adding the respecti
 ## Related features
 Integrate the following related features:
 
-| FEATURE | INTEGRATION GUIDE |
-| --- | --- | -------|
-  | Marketplace Order Management + Order Threshold |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html) |
-  | Marketplace Order Management + Cart | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html)|
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
+| --- | --- | --- |
+| Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html) |
+| Marketplace Order Management + Cart |  | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html)|

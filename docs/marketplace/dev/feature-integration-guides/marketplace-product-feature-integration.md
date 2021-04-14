@@ -9,7 +9,7 @@ Follow the steps below to install the Marketplace Product feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME            | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
@@ -37,7 +37,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up the database schema
 
-Adjust the schema definition so entity changes will trigger events:
+Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/MerchantProduct/Persistence/Propel/Schema/spy_merchant_product_abstract.schema.xml**
 
@@ -57,8 +57,6 @@ Adjust the schema definition so entity changes will trigger events:
     </table>
 </database>
 ```
-
-
 
 Run the following commands to apply database changes and to generate entity and transfer changes.
 
@@ -404,9 +402,9 @@ sku,merchant_reference,is_shared
 
 | COLUMN  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION  |
 | ------------ | ------------ | -------- | --------------- | ------------------------ |
-| sku                | mandatory      | string    | 091                  | Product identifier.                                          |
-| merchant_reference | mandatory      | string    | roan-gmbh-und-co-k-g | Merchant identifier.                                         |
-| is_shared          | mandatory      | string    | 1                    | Defines if other merchant can create product offers for this merchant product. |
+| sku                | &check;      | string    | 091                  | Product identifier.                                          |
+| merchant_reference | &check;      | string    | roan-gmbh-und-co-k-g | Merchant identifier.                                         |
+| is_shared          | &check;      | string    | 1                    | Defines if other merchant can create product offers for this merchant product. |
 
 Register the following plugins to enable data import:
 
@@ -607,8 +605,8 @@ Make sure when you add to cart merchant product, it has `merchantReference` set.
 
 ## Related features
 
-| FEATURE   | INTEGRATION GUIDE    |
-|-------------------- | --------- |
-| Marketplace Product API | [Glue API - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html) |
-| Marketplace Product + Inventory Management | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html) |
-| Marketplace Product + Marketplace Product Offer | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html) |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| - | - | - |
+| Marketplace Product API | | [Glue API - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html) |
+| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html) |
+| Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html) |

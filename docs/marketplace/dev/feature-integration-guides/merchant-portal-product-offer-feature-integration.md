@@ -52,8 +52,9 @@ Make sure that the following changes have been applied in transfer objects:
 | MerchantProductOfferCounts | class | Created | src/Generated/Shared/Transfer/MerchantProductOfferCounts |
 
 ### 3) Set up behavior
+To set up behavior, take the following steps
 
-### Extend OrderItemsTable in SalesMerchantPortalGui
+#### Extend OrderItemsTable in SalesMerchantPortalGui
 
 Activate the following plugins:
 
@@ -88,17 +89,17 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 ---
 **Verification**
 
-Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening ` http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that columns “Merchant Reference” and “Product Offer SKU” are present.
+Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening http://zed.mysprykershop.com/sales-merchant-portal-gui/orders. Click on any of the orders and check that columns “Merchant Reference” and “Product Offer SKU” are present.
 
 ---
 
-### Add the Offer widget to MerchantDashobard
+#### Add the Offer widget to MerchantDashobard
 
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ---------------- | --------------- | ------------- | ----------------- |
-| OffersMerchantDashboardCardPlugin | Adds Offers widget on MerchantDashobard | None              | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
+| OffersMerchantDashboardCardPlugin | Adds Offers widget on MerchantDashobard |               | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
 
 **src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
 
@@ -126,6 +127,6 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 ---
 **Verification**
 
-Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up at the page.
+Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening http://zed.mysprykershop.com/dashboard-portal-gui. The Offers widget should show up at the page.
 
 ---

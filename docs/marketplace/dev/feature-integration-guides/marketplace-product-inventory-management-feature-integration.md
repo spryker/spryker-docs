@@ -1,7 +1,7 @@
 ---
 title: Marketplace Product + Inventory Management feature integration
 last_updated: Dec 07, 2020
-summary: This document describes the process how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
 ---
 
 ## Install feature core

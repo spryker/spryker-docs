@@ -1,7 +1,7 @@
 ---
 title: Marketplace Order Management + Customer Account Management feature integration
 last_updated: Jan 06, 2021
-summary: This document describes the process how to integrate the Marketplace Order Management Feature + Order Threshold feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Order Management Feature + Order Threshold feature into a Spryker project.
 ---
 
 

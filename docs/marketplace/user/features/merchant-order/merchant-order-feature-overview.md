@@ -1,6 +1,6 @@
 In the marketplace, when a buyer goes through checkout, the [Marketplace order](https://documentation.spryker.com/marketplace/docs/marketplace-order-feature-overview) is created. Such an order can contain offers and products from different merchants. The part of the order that belongs to a certain merchant is called *merchant order*, and it’s created in the system after the Marketplace order is has been placed. Thus, each merchant order contains at least one item from the Marketplace order.
 
-![Merchant order](https://confluence-connect.gliffy.net/embed/image/1c2da1e6-9e30-4413-a799-bcf18d401167.png?utm_medium=live&utm_source=custom){height="" width=""}
+![Merchant order](https://confluence-connect.gliffy.net/embed/image/1c2da1e6-9e30-4413-a799-bcf18d401167.png?utm_medium=live&utm_source=custom)
 
 Every merchant order has its own shipment and delivery method based on the merchant’s setup. However, a customer can customize the delivery settings at the *Address* step of the checkout and, for example, split one merchant order into several shipments if needed. See [Split Delivery feature overview](https://documentation.spryker.com/docs/split-delivery-overview){target="_blank"} for details.
 
@@ -26,8 +26,8 @@ Discount totals calculations for merchant orders follow these rules:
 
 * If the discount applies to the whole Marketplace order, the discount is distributed among all the merchant orders and calculated according to the total volume of each of the items.
 
-![Merchant discount 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/mp-discount.png){height="" width=""}
+![Merchant discount 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/mp-discount.png)
 
 * If the discount is related to a single product item, then the whole discount is assigned only to the merchant order that contains the discounted item.
 
-![Merchant discount 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/mp-discount-2.png){height="" width=""}
+![Merchant discount 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/mp-discount-2.png)

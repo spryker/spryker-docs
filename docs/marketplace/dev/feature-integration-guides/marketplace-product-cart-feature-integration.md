@@ -1,7 +1,7 @@
 ---
 title: Marketplace Product + Cart feature integration
 last_updated: Dec 16, 2020
-summary: This document describes the process how to integrate the Marketplace Product + Cart feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Product + Cart feature into a Spryker project.
 ---
 
 ## Install feature core

@@ -1,7 +1,7 @@
 ---
 title: Merchant Portal - Marketplace Product Offer feature integration 
 last_updated: Jan 05, 2021
-summary: This integration guide provides steps on how to integrate the Merchant Portal - Marketplace Product Offer feature into a Spryker project.
+description: This integration guide provides steps on how to integrate the Merchant Portal - Marketplace Product Offer feature into a Spryker project.
 ---
 ## Install Feature Core
 Follow the steps below to install the Merchant Portal - Marketplace Product Offer feature core.

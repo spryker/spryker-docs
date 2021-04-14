@@ -14,7 +14,7 @@ tags: [, ]
 
 # {Feature Name} feature integration
 
-This document describes how to integrate the [Feature Name]({link to a respective feature overview}) feature into a Spryker project.
+This document describes how to integrate the [Feature Name feature]({link to a respective feature overview}) into a Spryker project.
 
 ## Install feature core
 

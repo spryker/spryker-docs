@@ -4,13 +4,11 @@
         '{{ site.algolia.search_only_api_key }}'
     );
     const indices = [
+    {% for index in site.algolia.indices %}
         {
-            name: 'user',
-            title: 'Marketplace User'
+            name: '{{ index.name }}',
+            title: '{{ index.title }}'
         },
-        {
-            name: 'dev',
-            title: 'Marketplace Developer'
-        },
+    {% endfor %}
     ];
 </script>

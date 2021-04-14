@@ -1,0 +1,7 @@
+algolia:
+  index_name: 'user'
+  files_to_exclude:
+    - theme_manual/*
+    - index.md
+    - 404.md
+    - docs/marketplace/dev/**/*.md

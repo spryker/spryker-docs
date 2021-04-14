@@ -101,5 +101,9 @@ search: algolia
 
 algolia:
   application_id: 'AO9LOQG3IM'
-  index_name: 'docs'
   search_only_api_key: '9ddeee0217d836870fa4b721256e508a'
+  indices:
+    - name: 'user'
+      title: 'Marketplace User'
+    - name: 'dev'
+      title: 'Marketplace Developer'

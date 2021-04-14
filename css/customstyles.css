@@ -221,7 +221,7 @@ ul#results-container a:hover {
 #search-demo-container a:hover {
     color: black;
 }
-#search-input {
+#search-input, .search-input {
     padding: .5em;
     margin-left:20px;
     width:20em;

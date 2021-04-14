@@ -44,7 +44,7 @@ const AlgoliaSearch = {
     },
     addSearchWidgets() {
         this.searchIndices.forEach((searchIndex, index) => {
-            // add search box only for the main index
+            // add searchbox widget only to the main index
             if (index === 0) {
                 searchIndex.addWidget(
                     instantsearch.widgets.searchBox({
@@ -57,7 +57,17 @@ const AlgoliaSearch = {
                 );
             }
 
-            // hits widget
+            // stats
+            searchIndex.addWidget(
+                instantsearch.widgets.stats({
+                    container: $(`#tabs-${searchIndex.indexName} .${this.pageConfig.statsClassName}`).get(0),
+                    templates: {
+                        text: '{{#hasNoResults}}0 results{{/hasNoResults}}{{#hasOneResult}}1 result{{/hasOneResult}}{{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} results{{/hasManyResults}} found',
+                    },
+                })
+            );
+
+            // hits
             searchIndex.addWidget(
                 instantsearch.widgets.hits({
                     container: $(`#tabs-${searchIndex.indexName} .${this.pageConfig.hitsClassName}`).get(0),
@@ -85,17 +95,7 @@ const AlgoliaSearch = {
                 })
             );
 
-            // stats widget
-            searchIndex.addWidget(
-                instantsearch.widgets.stats({
-                    container: $(`#tabs-${searchIndex.indexName} .${this.pageConfig.statsClassName}`).get(0),
-                    templates: {
-                        text: '{{#hasNoResults}}0 results{{/hasNoResults}}{{#hasOneResult}}1 result{{/hasOneResult}}{{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} results{{/hasManyResults}} found',
-                    },
-                })
-            );
-
-            // pagination widget
+            // pagination
             searchIndex.addWidget(
                 instantsearch.widgets.pagination({
                     container: $(`#tabs-${searchIndex.indexName} .${this.pageConfig.paginationClassName}`).get(0),

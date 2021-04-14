@@ -4,24 +4,11 @@ entries:
 - title: sidebar
   product: Theme Manual
   version: 6.0
-  folders:
-
-  - title:
-    output: pdf
-    type: frontmatter
-    folderitems:
-    - title:
-      url: /titlepage.html
-      output: pdf
-      type: frontmatter
-    - title:
-      url: /tocpage.html
-      output: pdf
-      type: frontmatter
+  nested:
 
   - title: Overview
     output: web, pdf
-    folderitems:
+    nested:
 
     - title: Get started
       url: /get_started.html
@@ -46,7 +33,7 @@ entries:
 
   - title: Release Notes
     output: web, pdf
-    folderitems:
+    nested:
 
     - title: 6.0 Release notes
       url: /mydoc_release_notes_60.html
@@ -58,7 +45,7 @@ entries:
 
   - title: Installation
     output: web, pdf
-    folderitems:
+    nested:
 
     - title: About Ruby, Gems, Bundler, etc.
       url: /mydoc_about_ruby_gems_etc.html
@@ -75,7 +62,7 @@ entries:
   - title: Authoring
     output: web, pdf
 
-    folderitems:
+    nested:
     - title: Pages
       url: /mydoc_pages.html
       output: web, pdf
@@ -111,7 +98,7 @@ entries:
   - title: Navigation
     output: web, pdf
 
-    folderitems:
+    nested:
     - title: Sidebar navigation
       url: /mydoc_sidebar_navigation.html
       output: web, pdf
@@ -131,7 +118,7 @@ entries:
   - title: Formatting
     output: web, pdf
 
-    folderitems:
+    nested:
     - title: Tooltips
       url: /mydoc_adding_tooltips.html
       output: web, pdf
@@ -179,7 +166,7 @@ entries:
   - title: Handling reviews
     output: web, pdf
 
-    folderitems:
+    nested:
     - title: Commenting on files
       url: /mydoc_commenting_on_files.html
       output: web, pdf
@@ -191,7 +178,7 @@ entries:
   - title: Publishing
     output: web, pdf
 
-    folderitems:
+    nested:
     - title: Build arguments
       url: /mydoc_build_arguments.html
       output: web, pdf
@@ -227,7 +214,7 @@ entries:
   - title: Special layouts
     output: web, pdf
 
-    folderitems:
+    nested:
     - title: Knowledge-base layout
       url: /mydoc_kb_layout.html
       output: web, pdf
@@ -247,7 +234,7 @@ entries:
   - title: Troubleshooting
     output: web, pdf
 
-    folderitems:
+    nested:
 
     - title: Troubleshooting
       url: /mydoc_troubleshooting.html
@@ -255,16 +242,16 @@ entries:
 
   - title: Tag archives
     output: web
-    folderitems:
+    nested:
 
     - title: Tag archives overview
       url: /mydoc_tag_archives_overview.html
       output: web
 
-      subfolders:
+      nested:
       - title: Tag archive pages
         output: web
-        subfolderitems:
+        nested:
 
         - title: Formatting pages
           url: /tag_formatting.html

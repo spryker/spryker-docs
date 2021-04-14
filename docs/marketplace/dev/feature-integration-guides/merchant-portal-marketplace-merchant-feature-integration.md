@@ -1,6 +1,6 @@
 ---
 title: Merchant Portal - Marketplace Merchant feature integration
-summary: This document describes the process how to integrate the Marketplace Merchant into the Spryker  Merchant Portal.
+description: This document describes the process how to integrate the Marketplace Merchant into the Spryker  Merchant Portal.
 published: false
 ---
 

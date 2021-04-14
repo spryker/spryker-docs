@@ -1,7 +1,7 @@
 ---
 title: Merchant Switcher feature integration
 last_updated: Jan 06, 2021
-summary: This integration guide provides steps on how to integrate the Merchant Switcher feature into a Spryker project.
+description: This integration guide provides steps on how to integrate the Merchant Switcher feature into a Spryker project.
 ---
 
 ## Install Feature Core

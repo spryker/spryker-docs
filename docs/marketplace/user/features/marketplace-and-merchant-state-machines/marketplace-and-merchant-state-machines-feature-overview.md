@@ -7,7 +7,7 @@ To provide the algorithm of dealing with orders for Marketplace administrators a
 You can set up as many state machines as you need and allow your Marketplace administrator to decide which state machine to use for specific payment methods or countries and stores with different processes. You can also set up different merchant state machines to apply to different merchants according to their processes.
 :::
 
-![Marketplace and merchant state machines](https://confluence-connect.gliffy.net/embed/image/01b89c1e-03f6-448a-90f4-982630e5f96a.png?utm_medium=live&utm_source=custom){height="" width=""}
+![Marketplace and merchant state machines](https://confluence-connect.gliffy.net/embed/image/01b89c1e-03f6-448a-90f4-982630e5f96a.png?utm_medium=live&utm_source=custom)
 
 ## Marketplace state machine
 The Marketplace can have one or several state machines assigned to the marketplace orders. Marketplace State Machine processes marketplace order items. 
@@ -32,8 +32,7 @@ The status of the Marketplace order is an aggregated state of the Marketplace or
 <details open>
 <summary>Merchant state machine flow</summary>
 
-![Merchant state machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+and+Merchant+State+Machines+feature+overview/marketplace-state-machine.png){height="" width=""}
-
+![Merchant state machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+and+Merchant+State+Machines+feature+overview/marketplace-state-machine.png)
 </details>
 
 ## Merchant state machine
@@ -55,7 +54,7 @@ Our exemplary merchant state machine provides the following states:
 <details open>
 <summary>Merchant State Machine flow</summary>
 
-![Merchant state machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+and+Merchant+State+Machines+feature+overview/merchant-state-machine.png){height="" width=""}
+![Merchant state machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+and+Merchant+State+Machines+feature+overview/merchant-state-machine.png)
 
 </details>
 

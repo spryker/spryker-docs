@@ -25,6 +25,7 @@ To start feature integration, integrate the required features:
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
+
 ```bash
 composer require spryker/merchant-sales-returns-rest-api:"^0.1.0" spryker/product-offer-sales-rest-api:"^0.1.0"  spryker/merchants-rest-api:"^0.1.2" --update-with-dependencies
 ```

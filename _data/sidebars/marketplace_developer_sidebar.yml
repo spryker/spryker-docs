@@ -112,12 +112,9 @@ entries:
           - title: Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
 
-            subfolders:
-
+            nested:
             - title: Glue API
-
-              subfolderitems:
-
+              nested:
               - title: Glue API - Marketplace Inventory Management feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-feature-integration.html
 
@@ -150,6 +147,7 @@ entries:
 
       - title: Glue API guides
         nested:
+        
           - title: Retrieving merchant information
             url: /docs/marketplace/dev/glue-api-guides/retrieving-merchant-information.html
 

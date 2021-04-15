@@ -4,12 +4,14 @@ last_updated: Dec 04, 2020
 description: This document describes how to integrate the Offers Volume Prices Glue API feature into a Spryker project.
 ---
 
+This document describes how to integrate the Offers Volume Prices Glue API feature into a Spryker project.
+
 ## Install feature core
 Follow the steps below to install the Offer Volume Prices Glue API feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-| - |
@@ -17,7 +19,9 @@ To start feature integration, overview and install the necessary features:
 | Marketplace Product Offer Volume Prices | dev-master | [Marketplace Product Offer Volume Prices feature integration]() |
 
 ### 1) Install the required modules using Composer
+
 Run the following commands to install the required modules:
+
 ```bash
 composer require spryker/spryker/price-product-offer-volumes-rest-api:"^0.1.0" --update-with-dependencies
 ```
@@ -34,7 +38,9 @@ Make sure that the following modules have been installed:
 ---
 
 ### 2) Set up database and transfer objects
-Run the following command to update the database and generate transfer changes:
+
+Update the database and generate transfer changes:
+
 ```bash
 console transfer:generate
 console propel:install
@@ -52,8 +58,8 @@ Make sure that the following changes have been applied in transfer objects:
 
 ---
 
-### 3) Set up behavior
-Enable Product Offer Prices resources and relationships
+### 3) Enable Product Offer Prices resources and relationships
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |

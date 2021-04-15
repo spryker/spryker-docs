@@ -1,10 +1,10 @@
 ---
 title: Glue API - Marketplace return management feature integration
 last_updated: Apr 8, 2021
-description: This document describes the process how to integrate the Marketplace return management API feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Return Management API feature into a Spryker project.
 ---
 
-This document describes how to integrate the [Marketplace return management API]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
+This document describes how to integrate the [Marketplace Return Management API](https://github.com/spryker-feature/marketplace-return-management) feature into a Spryker project.
 
 ## Install feature core
 
@@ -25,7 +25,6 @@ To start feature integration, integrate the required features:
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
-
 ```bash
 composer require spryker/merchant-sales-returns-rest-api:"^0.1.0" spryker/product-offer-sales-rest-api:"^0.1.0"  spryker/merchants-rest-api:"^0.1.2" --update-with-dependencies
 ```

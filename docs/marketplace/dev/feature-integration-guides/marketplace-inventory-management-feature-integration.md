@@ -4,6 +4,8 @@ last_updated: Dec 16, 2020
 description: This document describes the process how to integrate the Marketplace Inventory Management feature into a Spryker project.
 ---
 
+This document describes how to integrate the [Marketplace Inventory Management](https://github.com/spryker-feature/marketplace-inventory-management) feature into a Spryker project.
+
 ## Install feature core
 Follow the steps below to install the Marketplace Inventory Management feature core.
 
@@ -17,7 +19,8 @@ To start feature integration, integrate the required features:
 | Inventory Management | master | [Inventory Management feature integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
 
 ### 1) Install the required modules using Composer
-Run the following commands to install the required modules:
+
+Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-inventory-management: "dev-master" --update-with-dependencies
@@ -38,6 +41,7 @@ Make sure that the following modules have been installed:
 | ProductOfferAvailabilityStorage | vendor/spryker/product-offer-availability-storage |
 
 ### 2) Set up the database schema
+
 Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/ProductOfferStock/Persistence/Propel/Schema/spy_product_offer_stock.schema.xml**
@@ -81,7 +85,7 @@ Make sure that the following changes have been applied by checking your database
 ---
 
 ### 3) Set up transfer objects
-Run the following command to generate transfer changes:
+Generate transfers:
 
 ```bash
 console transfer:generate
@@ -112,7 +116,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 4) Add Zed translations
 
-Run the following command to generate a new translation cache for Zed:
+Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache

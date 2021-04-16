@@ -150,6 +150,10 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
             output: web
 
+          - title: Marketplace wishlist feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist.html
+            output: web
+
             subfolders:
 
             - title: Glue API

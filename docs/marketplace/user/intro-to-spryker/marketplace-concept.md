@@ -13,7 +13,7 @@ The Spryker Marketplace solution supports two major types of marketplace models:
 
 The Spryker Marketplace solution supports both B2C and B2B marketplaces. Besides, Spryker Marketplace is not a separate system. Instead, it is built as a set of extensions on top of Spryker Commerce OS, which makes upgrading to Marketplace straight-forward and easy. 
 
-![Marketplace concept](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Marketplace/Marketplace+Concept/marketplace-concept.png){height="" width=""}
+![Marketplace concept](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Marketplace/Marketplace+Concept/marketplace-concept.png)
 
 Spryker Marketplace includes the following functionalities:
 

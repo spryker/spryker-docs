@@ -1,10 +1,10 @@
 ---
-title: Glue API - Marketplace return management feature integration
+title: Glue API - Marketplace Return Management feature integration
 last_updated: Apr 8, 2021
-summary: This document describes the process how to integrate the Marketplace return management API feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Return Management API feature into a Spryker project.
 ---
 
-This document describes how to integrate the [Marketplace return management API]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
+This document describes how to integrate the [Marketplace Return Management API](https://github.com/spryker-feature/marketplace-return-management) feature into a Spryker project.
 
 ## Install feature core
 
@@ -75,8 +75,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
-| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resources as relationship by merchant references in the attributes | none |  Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication     |
-| MerchantReturnCollectionExpanderPlugin | Expands return collection with merchant data | none | Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |
+| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resources as relationship by merchant references in the attributes |  |  Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication     |
+| MerchantReturnCollectionExpanderPlugin | Expands return collection with merchant data |  | Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |
 
 <details>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>

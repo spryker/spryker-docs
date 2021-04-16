@@ -1,8 +1,10 @@
 ---
 title: Glue API - Marketplace Product Offer Prices feature integration
 last_updated: Nov 10, 2020
-summary: This document describes the process how to integrate the Marketplace Product Offer Prices Glue API feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Product Offer Prices Glue API feature into a Spryker project.
 ---
+
+This document describes how to integrate the [Marketplace Product Offer Prices Glue API](https://github.com/spryker-feature/marketplace-product-offer-prices) feature into a Spryker project.
 
 ## Install feature core
 
@@ -10,14 +12,14 @@ Follow the steps below to install the Marketplace Product Offer Prices Glue API 
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Marketplace Product Offer Prices | dev-master | [Marketplace Product Offer Prices feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-Run the following commands to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/spryker/product-offer-prices-rest-api:"^0.3.0" --update-with-dependencies
@@ -34,8 +36,10 @@ Make sure that the following modules have been installed:
 
 ---
 
-### 2) Set up database and transfer objects
-Run the following command to update the database and generate transfer changes:
+### 2) Set up database schema and transfer objects
+
+Update the database and generate transfer changes:
+
 ```bash
 console transfer:generate
 console propel:install
@@ -57,16 +61,13 @@ Make sure that the following changes have been applied in transfer objects:
 
 ---
 
-### 3) Set up behavior
-To set up behavior, take the following steps:
-
-#### Enable Product Offer Prices resources and relationships
+### 3) Enable Product Offer Prices resources and relationships
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferPricesResourceRoutePlugin | Registers the `product-offer-prices` resource. | None | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
-| ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Registers the `product-offer-prices` resource as a relationship to `product-offers`. | None | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
+| ProductOfferPricesResourceRoutePlugin | Registers the `product-offer-prices` resource. |  | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
+| ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Registers the `product-offer-prices` resource as a relationship to `product-offers`. |  | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
 
 
 <details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>

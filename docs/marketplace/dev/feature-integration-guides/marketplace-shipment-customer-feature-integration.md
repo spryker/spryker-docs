@@ -21,19 +21,19 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
-| MerchantShipmentCheckoutAddressStepPreGroupItemsByShipmentPlugin | Sets shipment merchant reference in the initial checkout step to avoid wrong grouping by merchant reference. | None | Spryker\Yves\MerchantShipment\Plugin\CustomerPage|
+| MerchantShipmentCheckoutAddressStepPreGroupItemsByShipmentPlugin | Sets shipment merchant reference in the initial checkout step to avoid wrong grouping by merchant reference. |  | Spryker\Yves\MerchantShipment\Plugin\CustomerPage|
 
 <details>
 <summary markdown='span'>ssrc/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CustomerPage;
- 
+
 use SprykerShop\Yves\CustomerPage\CustomerPageDependencyProvider as SprykerShopCustomerPageDependencyProvider;
 use Spryker\Yves\MerchantShipment\Plugin\CustomerPage\MerchantShipmentCheckoutAddressStepPreGroupItemsByShipmentPlugin;
- 
+
 class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
     /**

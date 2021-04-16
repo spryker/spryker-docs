@@ -1,7 +1,7 @@
 ---
 title: Product Offer + Cart feature integration
 last_updated: Dec 17, 2020
-summary: This integration guide provides steps on how to integrate the Product Offer + Cart feature into a Spryker project.
+description: This integration guide provides steps on how to integrate the Product Offer + Cart feature into a Spryker project.
 ---
 
 ## Install feature core
@@ -20,11 +20,11 @@ To start feature integration, overview, and install the necessary features:
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin    | Description    | Prerequisites | Namespace  |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------- | ------------- | ----------- | ------------ |
-| ProductOfferGroupKeyItemExpanderPlugin         | Adds Product Offer reference to group key that separates items in the cart. | None          | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
-| ProductOfferCartPreCheckPlugin                 | Checks if the Product Offer belongs to the product concrete before adding an item to cart. | None          | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
-| FilterInactiveProductOfferPreReloadItemsPlugin | Removes inactive Product Offer from cart when reloading it   | None          | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
+| ProductOfferGroupKeyItemExpanderPlugin         | Adds Product Offer reference to group key that separates items in the cart. |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
+| ProductOfferCartPreCheckPlugin                 | Checks if the Product Offer belongs to the product concrete before adding an item to cart. |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
+| FilterInactiveProductOfferPreReloadItemsPlugin | Removes inactive Product Offer from cart when reloading it   |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
@@ -86,7 +86,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 Make sure that inactive Product Offers get removed from cart on reload.
 
-Make sure that it is only possible to have items in cart where the Product Offer reference belongs to the correct Product Concrete.
+Make sure that it is only possible to have items in cart where the Product Offer reference belongs to the correct Product sConcrete.
 
 ---
 
@@ -106,9 +106,9 @@ To start feature integration, overview, and install the necessary features:
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin    | Description   | Prerequisites | Namespace  |
-| -------------------- | ------------------ | ----------- | ---------------------- |
-| MerchantProductOfferPreAddToCartPlugin | Sets Product Offer reference to item transfer | None          | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\CartPage |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| - | - | - | - |
+| MerchantProductOfferPreAddToCartPlugin | Sets Product Offer reference to item transfer |  | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\CartPage |
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
@@ -143,6 +143,6 @@ Make sure that the Product Offer reference (and sold by merchant) is added to Ca
 
 ## Related features
 
-| Feature | Link |
-| - | - |
-| Marketplace Product Offer API + Cart API | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html) |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| - | - | - |
+| Marketplace Product Offer API + Cart API | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html) |

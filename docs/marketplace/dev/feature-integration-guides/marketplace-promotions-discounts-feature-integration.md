@@ -1,7 +1,7 @@
 ---
 title: Marketplace Promotions & Discounts feature integration
 last_updated: Jan 04, 2021
-summary: This document describes the process how to integrate the Marketplace Promotions & Discounts feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Promotions & Discounts feature into a Spryker project.
 ---
 
 ## Install feature core
@@ -107,7 +107,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | - | - | - | - |
-| DiscountMerchantOrderFilterPlugin | Removes none Merchant related discounts from Merchant Orders | None          | Spryker\Zed\DiscountMerchantSalesOrder\Communication\Plugin |
+| DiscountMerchantOrderFilterPlugin | Removes none Merchant related discounts from Merchant Orders |           | Spryker\Zed\DiscountMerchantSalesOrder\Communication\Plugin |
 
 **src/Pyz/Zed/MerchantSalesOrder/MerchantSalesOrderDependencyProvider.php**
 

@@ -1,14 +1,16 @@
 ---
 title: Glue API - Marketplace Product feature integration
 last_updated: Dec 07, 2020
-summary: This document describes how to integrate the Marketplace Product Glue API feature into a Spryker project.
+description: This document describes how to integrate the Marketplace Product Glue API feature into a Spryker project.
 ---
+
+This document describes how to integrate the [Marketplace Product Glue API](https://github.com/spryker-feature/marketplace-product) feature into a Spryker project.
 
 ## Install feature core
 Follow the steps below to install the Marketplace Product Glue API feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the following features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -16,7 +18,8 @@ To start feature integration, overview and install the necessary features:
 | Marketplace Product | master | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
-Run the following commands to install the required modules:
+
+Install the required modules:
 
 
 ```bash
@@ -36,7 +39,8 @@ Make sure that the following modules have been installed:
 ---
 
 ### 2) Set up transfer objects
-Run the following command to generate transfer changes:
+
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -55,13 +59,14 @@ Make sure that the following changes have been applied in transfer objects:
 
 ---
 
-3) Set up behavior
+### 3) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProductCartItemExpanderPlugin | Expands view data for abstract product with merchant data. | None | Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi |
-| MerchantByMerchantReferenceResourceRelationshipPlugin |  Adds merchants resources as relationship by merchant references in the attributes. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantProductCartItemExpanderPlugin | Expands view data for abstract product with merchant data. |  | Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi |
+| MerchantByMerchantReferenceResourceRelationshipPlugin |  Adds merchants resources as relationship by merchant references in the attributes. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 

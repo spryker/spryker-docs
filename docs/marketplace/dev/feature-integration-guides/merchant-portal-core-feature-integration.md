@@ -1,7 +1,7 @@
 ---
 title: Marketplace Merchant Portal Core feature integration
 last_updated: Mar 31, 2021
-summary: This document describes how to integrate the Merchant Portal Core feature into a Spryker project.
+description: This document describes how to integrate the Merchant Portal Core feature into a Spryker project.
 ---
 
 ## Install feature core
@@ -10,7 +10,7 @@ Follow the steps below to install the Merchant Portal Core feature core.
 
 ## Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | -------------------- | ---------- | ---------|
@@ -44,11 +44,11 @@ Set up behavior as follows:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | ------------ | ------------- | --------- |
-| MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. | None | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security |
-| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String | None | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
-| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components | None | Spryker\Zed\ZedUi\Communication\Plugin |
-| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed | None | Spryker\Zed\GuiTable\Communication\Plugin\Application |
-| GuiTableConfigurationTwigPlugin | Add a new Twig function for rendering GuiTableConfiguration for the GuiTable web component | None | Spryker\Zed\GuiTable\Communication\Plugin\Twig<?php  |
+| MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security |
+| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
+| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components |  | Spryker\Zed\ZedUi\Communication\Plugin |
+| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
+| GuiTableConfigurationTwigPlugin | Add a new Twig function for rendering GuiTableConfiguration for the GuiTable web component |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig<?php  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -310,7 +310,7 @@ yarn install
 
 Check if the MarketPlace packages are located in the `node_modules/@spryker` folder (e.g., utils).
 
-## 2) Install Marketplace builder
+### 2) Install Marketplace builder
 
 Add the frontend/merchant-portal folder with the next files:
 
@@ -471,9 +471,9 @@ export default async (
 
 ---
 
-## 3. Adjust deployment configs
+### 3) Adjust deployment configs
 
-If you want to configure deployment configuration to automatically install and build Merchant Portal, you need to change frontend dependencies install commands in the deployment Yaml:
+If you want to configure deployment configuration to automatically install and build Merchant Portal, you need to change frontend dependencies and install commands in the deployment Yaml:
 
 - Remove existing Yves and Zed dependencies install commands from deployment Yaml: yves-isntall-dependenciesand yves-isntall-dependencies
 

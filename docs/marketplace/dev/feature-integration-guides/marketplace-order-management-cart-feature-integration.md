@@ -4,6 +4,8 @@ last_updated:  Jan 05, 2021
 description: This document describes the process how to integrate the Marketplace Order Management Feature + Cart integration feature into a Spryker project.
 ---
 
+This document describes how to integrate the [Marketplace Order Management + Cart](https://github.com/spryker-feature/marketplace-merchant) feature into a Spryker project.
+
 ## Install feature core
 Follow the steps below to install the Marketplace Order Management Feature + Cart feature core.
 
@@ -106,7 +108,7 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Run the following commands to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/cart-note-merchant-portal-gui:"^0.1.2" --update-with-dependencies

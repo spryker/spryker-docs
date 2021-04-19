@@ -4,12 +4,15 @@ last_updated: Dec 17, 2020
 description: This integration guide provides steps on how to integrate the Marketplace Product Offer + Cart Glue API feature into a Spryker project.
 ---
 
+This document describes how to integrate the Marketplace Product Offer + Cart Glue API feature into a Spryker project.
+
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product Offer + Cart Glue API feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME                  | VERSION | INTEGRATION GUIDE |
 | --------------------- | ------- | ------------------|
@@ -17,17 +20,15 @@ To start feature integration, overview and install the necessary features:
 | Marketplace Product Offer API    | dev-master  | [Glue API - Marketplace Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html) |
 | Marketplace Inventory Management | dev-master  | [Marketplace Inventory Management feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html) |
 
-## 1) Set up behavior
-
-### Enable adding Merchant Product Offer to cart
+### 1) Enable adding Merchant Product Offer to cart
 
 Activate the following plugins:
 
-| PLUGIN   | SPECIFICATION | PREREQUISITES | NAMESPACE   |
-| -------------------- | ------------------- | --------------- | ------------------ |
-| MerchantProductOfferCartItemMapperPlugin                | Maps merchant product offer reference and merchant reference, coming from Glue add to cart request, to persistent cart-specific transfer. |               | Spryker\Zed\MerchantProductOffersRestApi\Communication\Plugin\CartsRestApi |
-| MerchantProductOfferCartItemExpanderPlugin              | Expands the merchant product offer information with a merchant reference. |               | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
-| MerchantProductOfferRestCartItemsAttributesMapperPlugin | Maps merchant product offer reference and merchant reference to items attributes. |               | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
+| PLUGIN   | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| - | - | - | - |
+| MerchantProductOfferCartItemMapperPlugin | Maps merchant product offer reference and merchant reference, coming from Glue add to cart request, to persistent cart-specific transfer. |  Spryker\Zed\MerchantProductOffersRestApi\Communication\Plugin\CartsRestApi |
+| MerchantProductOfferCartItemExpanderPlugin | Expands the merchant product offer information with a merchant reference. | | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
+| MerchantProductOfferRestCartItemsAttributesMapperPlugin | Maps merchant product offer reference and merchant reference to items attributes. | | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 

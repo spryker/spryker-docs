@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | --------|
-| Merchant | 202009.0  | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
+| Marketplace Merchant | dev-master  | [Marketplace Merchant feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
 | Marketplace Return Management | dev-master | [Marketplace Return Management feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html) |
 
 ### 1) Install the required modules using Сomposer
@@ -27,7 +27,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-sales-returns-rest-api:"^0.1.0" spryker/product-offer-sales-rest-api:"^0.1.0"  spryker/merchants-rest-api:"^0.1.2" --update-with-dependencies
+composer require spryker/merchant-sales-returns-rest-api:"^0.2.0" --update-with-dependencies
 ```
 
 ---
@@ -39,8 +39,6 @@ Make sure that the following modules have been installed:
 | MODULE  | EXPECTED DIRECTORY <!--for public Demo Shops--> |
 | -------- | ------------------- |
 |MerchantSalesReturnsRestApi | spryker/merchant-sales-returns-rest-api |
-|ProductOfferSalesRestApi | spryker/product-offer-sales-rest-api |
-|MerchantsRestApi |spryker/merchants-rest-api |
 
 ---
 
@@ -76,7 +74,6 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
 | MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resources as relationship by merchant references in the attributes |  |  Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication     |
-| MerchantReturnCollectionExpanderPlugin | Expands return collection with merchant data |  | Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |
 
 <details>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
@@ -107,43 +104,19 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnDependencyProvider.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Zed\SalesReturn;
-
-use Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn\MerchantReturnCollectionExpanderPlugin;
-
-class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
-{
-
-    protected function getReturnCollectionExpanderPlugins(): array
-    {
-        return [
-            new MerchantReturnCollectionExpanderPlugin(),
-        ];
-    }
-}
-```
-
-</details>
-
 ---
 **Verification**
 
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the `MerchantReturnCollectionExpanderPlugin` and `MerchantByMerchantReferenceResourceRelationshipPlugin`
-plugins are set up by:
+Make sure that the `MerchantByMerchantReferenceResourceRelationshipPlugin`
+plugin is set up by:
 1. sending the request `GET http://glue.mysprykershop.com/returns/{% raw %}{{returnId}}{% endraw %}include=merchants`.
 
-Verify that return data include `merchantReferance` with the attributes Merchant Name and Mercahnt URL and `merchantReferance` resource is available and includes these attributes.
+Verify that the return data includes `merchant` resource attributes.
 
 2. Sending the request `GET http://glue.mysprykershop.com/returns`.
 
-Verify that returns data includes the `mercahntReference` and `productOfferReferance`.
+Verify that the return data includes the `merchantReference`.
 
 ---

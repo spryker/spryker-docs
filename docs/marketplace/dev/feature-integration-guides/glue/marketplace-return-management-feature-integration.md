@@ -110,13 +110,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the `MerchantByMerchantReferenceResourceRelationshipPlugin`
-plugins are set up by:
+plugin is set up by:
 1. sending the request `GET http://glue.mysprykershop.com/returns/{% raw %}{{returnId}}{% endraw %}include=merchants`.
 
-Verify that return data includes `merchant` resource attributes.
+Verify that the return data includes `merchant` resource attributes.
 
 2. Sending the request `GET http://glue.mysprykershop.com/returns`.
 
-Verify that returns data includes the `merchantReference`.
+Verify that the return data includes the `merchantReference`.
 
 ---

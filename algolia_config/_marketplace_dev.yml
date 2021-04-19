@@ -5,5 +5,3 @@ algolia:
     - index.md
     - 404.md
     - docs/marketplace/user/**/*.md
-    - docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.md
-    - docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.md

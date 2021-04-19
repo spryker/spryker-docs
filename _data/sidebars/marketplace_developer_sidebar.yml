@@ -76,6 +76,9 @@ entries:
           - title: Marketplace Shipment feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html
 
+          - title: Marketplace Wishlist feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html  
+
           - title: Merchant Category feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
 
@@ -111,9 +114,6 @@ entries:
 
           - title: Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
-
-          - title: Marketplace wishlist feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist.html
 
             nested:
             - title: Glue API

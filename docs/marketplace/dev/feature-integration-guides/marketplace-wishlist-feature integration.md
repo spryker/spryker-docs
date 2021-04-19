@@ -1,11 +1,11 @@
 ---
-title: Marketplace wishlist feature integration
+title: Marketplace Wishlist feature integration
 last_updated:
 summary: This document describes the process how to integrate the Marketplace wishlist feature into a Spryker project.
 ---
 
-## Install Feature Core
-Follow the steps below to install the Marketplace wishlist feature core.
+## Install feature core
+Follow the steps below to install the Marketplace Wishlist feature core.
 
 ### Prerequisites
 
@@ -13,8 +13,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name            | Version | Link        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | master      | [Spryker Core Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
-| Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1876853120) |
+| Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -36,21 +36,16 @@ Enable the following behaviors by registering the plugins:
 
 | Plugin | Description | Prerequisites | Namespace |
 |-|-|-|-|
-| WishlistProductOfferPostMoveToCartCollectionExpanderPlugin | Expands WishlistMoveToCartRequestCollection transfer object with not valid product offers as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
-| WishlistMerchantProductPostMoveToCartCollectionExpanderPlugin | Expands WishlistMoveToCartRequestCollection transfer object with not valid merchant products as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
-| WishlistProductOfferCollectionToRemoveExpanderPlugin | Expands WishlistItemCollectionTransfer transfer object with product offer reference. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
-| WishlistMerchantProductCollectionToRemoveExpanderPlugin | Expands WishlistItemCollection transfer object with merchant product wishlist items from WishlistMoveToCartRequestCollection transfer object. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
+| WishlistProductOfferPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollection` transfer object with not valid product offers as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
+| WishlistMerchantProductPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollection` transfer object with not valid merchant products as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
+| WishlistProductOfferCollectionToRemoveExpanderPlugin | Expands `WishlistItemCollectionTransfer` transfer object with product offer reference. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
+| WishlistMerchantProductCollectionToRemoveExpanderPlugin | Expands `WishlistItemCollection` transfer object with merchant product wishlist items from the `WishlistMoveToCartRequestCollection` transfer object. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
 
 
 **src/Pyz/Client/Wishlist/WishlistDependencyProvider.php**
 
 ```php
 <?php
-
-/**
- * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
- */
 
 namespace Pyz\Client\Wishlist;
 
@@ -85,21 +80,28 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
     }
 }
 ```
+---
 
-Make sure you can add product offer to wishlist and see product offer data in there.
-Make sure you can see merchant information in case of merchant product is added.
-Make sure you can move wishlist with product offers to card and vise versa.
+**Verification**
 
+
+Make sure that you can add a product offer to a wishlist and see the product offer data in there.
+Make sure that you can see the merchant information when the merchant product is added to a wishlist.
+Make sure that you can move the wishlist with the product offers to a shopping cart and vise versa.
+
+---
 
 ### 3) Set up database schema and transfer objects
 
 Run the following command to generate transfer changes:
 
-```
+```bash
 console transfer:generate
 console propel:install
 console transfer:generate
 ```
+
+---
 **Verification**
 
 Make sure that the following changes have been applied by checking your database:
@@ -128,20 +130,27 @@ Make sure  the following changes have been applied in transfer objects:
 | MerchantProductCriteria | object | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
 | Merchant | object | Created | src/Generated/Shared/Transfer/MerchantTransfer |
 
-## Install Feature Frontend
+---
+
+## Install feature frontend
 ### Prerequisites
 
 | Name            | Version | Link        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | master      | [Spryker Core Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/900924310) |
+| Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Merchant | master      | [Merchant Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1025277972) |
 
 ### 1) Install the required modules using Сomposer 
 
 If installed before, not needed.
 
+---
+**Verification**
+
 Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantWidget | spryker-shop/merchant-widget |
+
+---

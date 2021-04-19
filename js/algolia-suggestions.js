@@ -20,9 +20,14 @@ const Suggestions = {
             templates: {
                 header: `<div>${indexConfig.title}</div>`,
                 suggestion(suggestion) {
-                    const title = suggestion._highlightResult.title
+                    let title = suggestion._highlightResult.title
                         ? suggestion._highlightResult.title.value
                         : suggestion.title;
+
+                    if (typeof title === 'undefined') {
+                        title = suggestion.slug;
+                    }
+
                     return `<a href="${suggestion.url}">${title}</a>`;
                 },
                 empty: '<p>No matching results</p>',

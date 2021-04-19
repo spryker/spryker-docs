@@ -78,6 +78,11 @@ const AlgoliaSearch = {
                             let title = typeof item._highlightResult.title !== 'undefined'
                                 ? item._highlightResult.title.value
                                 : item.title;
+
+                            if (typeof title === 'undefined') {
+                                title = item.slug;
+                            }
+
                             let content = typeof item._highlightResult.content !== 'undefined'
                                 ? item._highlightResult.content.value
                                 : '';

@@ -12,10 +12,10 @@ Follow the steps below to install the Marketplace Wishlist feature core.
 To start feature integration, overview and install the necessary features:
 
 | Name            | Version | Link        |
-| --------------- | -------- | ------------------ |
+| --------------- | ------- | ---------- |
 | Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
-| Marketplace Product + Marketplace Product Offer feature integration | master      | [Marketplace Merchant Feature Integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
+| Marketplace Product + Marketplace Product Offer | master | [Marketplace Product + Marketplace Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -25,12 +25,18 @@ To start feature integration, overview and install the necessary features:
 ```bash
 composer require spryker-feature/marketplace-wishlist:"dev-master" --update-with-dependencies
 ```
+---
+
+**Verification**
+
 Make sure the following modules have been installed:
 
 | Module | Expected Directory |
 |-|-|
 | MerchantProductOfferWishlist | vendor/spryker/merchant-product-offer-wishlist |
 | MerchantProductWishlist | vendor/spryker/merchant-product-offer-wishlist |
+
+---
 
 ### 2) Set up behavior
 Enable the following behaviors by registering the plugins:
@@ -131,3 +137,4 @@ Make sure  the following changes have been applied in transfer objects:
 | MerchantProductCriteria | object | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
 | Merchant | object | Created | src/Generated/Shared/Transfer/MerchantTransfer |
 
+---

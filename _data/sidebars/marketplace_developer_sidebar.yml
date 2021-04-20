@@ -77,7 +77,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html
 
           - title: Marketplace Wishlist feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html  
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html  
 
           - title: Merchant Category feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html

@@ -15,6 +15,7 @@ To start feature integration, overview and install the necessary features:
 | --------------- | -------- | ------------------ |
 | Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
+| Marketplace Product + Marketplace Product Offer feature integration | master      | [Marketplace Merchant Feature Integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -130,27 +131,3 @@ Make sure  the following changes have been applied in transfer objects:
 | MerchantProductCriteria | object | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
 | Merchant | object | Created | src/Generated/Shared/Transfer/MerchantTransfer |
 
----
-
-## Install feature frontend
-### Prerequisites
-
-| Name            | Version | Link        |
-| --------------- | -------- | ------------------ |
-| Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Merchant | master      | [Merchant Feature Integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1025277972) |
-
-### 1) Install the required modules using Сomposer 
-
-If installed before, not needed.
-
----
-**Verification**
-
-Make sure that the following modules have been installed:
-
-| MODULE | EXPECTED DIRECTORY |
-|-|-|
-| MerchantWidget | spryker-shop/merchant-widget |
-
----

@@ -100,10 +100,10 @@ github: [metadata]
 search: algolia
 
 algolia:
-  application_id: 'AO9LOQG3IM'
-  search_only_api_key: '9ddeee0217d836870fa4b721256e508a'
+  application_id: 'IBBSSFT6M1'
+  search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
   indices:
-    - name: 'user'
+    - name: 'marketplace_user'
       title: 'Marketplace User'
-    - name: 'dev'
+    - name: 'marketplace_dev'
       title: 'Marketplace Developer'

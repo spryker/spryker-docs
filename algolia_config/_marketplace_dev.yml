@@ -1,7 +1,8 @@
 algolia:
-  index_name: 'dev'
+  index_name: 'marketplace_dev'
   files_to_exclude:
     - theme_manual/*
     - index.md
     - 404.md
+    - search.md
     - docs/marketplace/user/**/*.md

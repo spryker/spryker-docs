@@ -1,7 +1,7 @@
 ---
 title: Merchant Portal - Marketplace Product + Tax feature integration
 last_updated: Jan 05, 2021
-summary: This integration guide provides steps on how to integrate the Merchant Portal - Marketplace Product + Tax feature into a Spryker project.
+description: This integration guide provides steps on how to integrate the Merchant Portal - Marketplace Product + Tax feature into a Spryker project.
 ---
 
 ## Install feature core
@@ -57,7 +57,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| TaxProductAbstractFormExpanderPlugin | Expands ProductAbstractForm with Tax Set field. | None | Spryker\Zed\TaxMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
+| TaxProductAbstractFormExpanderPlugin | Expands ProductAbstractForm with Tax Set field. |  | Spryker\Zed\TaxMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
 
 **src\Pyz\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvider.php**
 

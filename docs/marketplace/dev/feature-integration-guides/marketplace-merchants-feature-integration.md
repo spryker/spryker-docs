@@ -1,8 +1,11 @@
 ---
 title: Marketplace Merchants feature integration
 last_updated: Mar 23, 2021
-summary: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
+description: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
 ---
+
+This document describes how to integrate the [Marketplace Merchants](https://github.com/spryker-feature/marketplace-merchant) feature into a Spryker project.
+
 
 ## Install feature core
 Follow the steps below to install the Marketplace Merchant feature core.
@@ -125,19 +128,19 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| MerchantProfileExpanderPlugin | Expands merchant with profile data.| None          | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant |
-| MerchantProfileMerchantPostCreatePlugin | Creates merchant profile on merchant create action. | None | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant|
-| MerchantProfileMerchantPostUpdatePlugin| Updates merchant profile on merchant update action.m| None | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant |
-| MerchantProfileContactPersonFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating contact person data. | None | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
-| MerchantProfileFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant profile data. | None | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
-| MerchantProfileLegalInformationFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant legal information. | None | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
-| MerchantProfileFormExpanderPlugin | Expands MerchantForm with merchant profile fields. | None | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui |
-| MerchantUserAclInstallerPlugin | Provides merchant user roles to ACL. | None  | Spryker\Zed\MerchantUser\Communication\Plugin\Acl |
-| SyncMerchantUsersStatusMerchantPostUpdatePlugin | Updates merchant users status by merchant status on merchant update. | None | Spryker\Zed\MerchantUser\Communication\Plugin\Merchant |
-| MerchantUserTabMerchantFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information. | None | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
-| MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab. | None | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
+| MerchantProfileExpanderPlugin | Expands merchant with profile data.|            | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant |
+| MerchantProfileMerchantPostCreatePlugin | Creates merchant profile on merchant create action. |   | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant|
+| MerchantProfileMerchantPostUpdatePlugin| Updates merchant profile on merchant update action.m|   | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant |
+| MerchantProfileContactPersonFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating contact person data. |   | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
+| MerchantProfileFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant profile data. |   | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
+| MerchantProfileLegalInformationFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant legal information. |   | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
+| MerchantProfileFormExpanderPlugin | Expands MerchantForm with merchant profile fields. |   | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui |
+| MerchantUserAclInstallerPlugin | Provides merchant user roles to ACL. |    | Spryker\Zed\MerchantUser\Communication\Plugin\Acl |
+| SyncMerchantUsersStatusMerchantPostUpdatePlugin | Updates merchant users status by merchant status on merchant update. |   | Spryker\Zed\MerchantUser\Communication\Plugin\Merchant |
+| MerchantUserTabMerchantFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
+| MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 
-**src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -185,6 +188,8 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 }
 ```
 
+</details>
+
 ---
 **Verification**
 
@@ -198,8 +203,7 @@ Make sure that, when you deactivate a merchant in the *Merchants* section of the
 
 ---
 
-**src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php**
-
+<details><summary markdown='span'>src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php</summary>
 ```php
 
 <?php
@@ -252,6 +256,8 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 }
 
 ```
+</details>
+
 
 Make sure that when you edit a merchant in the Merchants section of the Back Office, you can see merchant profile related tabs: Contact Person, Merchant Profile, Legal Information, Merchant User.
 
@@ -325,8 +331,8 @@ Configure export to Redis:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| MerchantPublisherTriggerPlugin | Registers the publishers that publish merchant entity changes to storage. | None | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin |
-| MerchantStoragePublisherPlugin | Publishes merchant data to the `spy_merchant_storage` table. | None | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
+| MerchantPublisherTriggerPlugin | Registers the publishers that publish merchant entity changes to storage. |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin |
+| MerchantStoragePublisherPlugin | Publishes merchant data to the `spy_merchant_storage` table. |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -401,7 +407,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with Redis and marks messages as failed in case of an error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with Redis and marks messages as failed in case of an error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 ```php
 <?php
@@ -453,7 +459,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. | None | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
+| MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
 
 ```php
 <?php
@@ -546,7 +552,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| SynchronizationSearchQueueMessageProcessorPlugin | Configures merchant messages to sync with Elastica search and marks messages as failed in case of an error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationSearchQueueMessageProcessorPlugin | Configures merchant messages to sync with Elastica search and marks messages as failed in case of an error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 ```php
@@ -579,7 +585,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| MerchantSynchronizationDataBulkRepositoryPlugin | Synchronizes the entire search table content into Search. | None | Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization |
+| MerchantSynchronizationDataBulkRepositoryPlugin | Synchronizes the entire search table content into Search. |   | Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -834,7 +840,7 @@ Make sure that, when merchant entities are created or updated through ORM, they 
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer.  None | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
+| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer.    | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
 
 ```php
 <?php
@@ -861,8 +867,8 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |----|----|----|----|
-| PaginatedMerchantSearchQueryExpanderPlugin | Allows to use pagination for merchant search. | None | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
-| StoreQueryExpanderPlugin | Allows search to filter out merchants that do not belong to the current store. | None | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
+| PaginatedMerchantSearchQueryExpanderPlugin | Allows to use pagination for merchant search. |   | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
+| StoreQueryExpanderPlugin | Allows search to filter out merchants that do not belong to the current store. |   | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
 
 ```php
 <?php
@@ -987,8 +993,8 @@ MER000007 ,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProfileDataImportPlugin | Imports merchant profile data into the database. | None | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
-| MerchantProfileAddressDataImportPlugin | Imports merchant profile address data into the database. | None | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
+| MerchantProfileDataImportPlugin | Imports merchant profile data into the database. |   | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
+| MerchantProfileAddressDataImportPlugin | Imports merchant profile address data into the database. |   | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 ```php
@@ -1091,7 +1097,7 @@ To set up behavior:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantPageResourceCreatorPlugin | Allows to access a merchant page at `https://yves.mysprykershop.com/merchant/{merchantReference}`. | None | SprykerShop\Yves\MerchantPage\Plugin |
+| MerchantPageResourceCreatorPlugin | Allows to access a merchant page at `https://yves.mysprykershop.com/merchant/{merchantReference}`. |   | SprykerShop\Yves\MerchantPage\Plugin |
 | UrlStorageMerchantMapperPlugin | Provides access to merchant storage data in the controller related to the `https://yves.mysprykershop.com/merchant/{merchantReference}` URL.  | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin |
 
 **src/Pyz/Yves/StorageRouter/StorageRouterDependencyProvider.php**

@@ -4,88 +4,62 @@ entries:
   - title: Marketplace user guides
     product: Marketplace
     version: 202009.0
-    folders:
+    nested:
 
       - title: Intro to Spryker
-        output: web
-        folderitems:
+        nested:
           - title: Marketplace concept
             url: "/docs/marketplace/user/intro-to-spryker/marketplace-concept.html"
-            output: web
 
           - title: Item 3
-            url: "#"
-            output: web
 
       - title: Features
-        output: web
+        nested:
+        - title: Merchants
+          nested:
 
-        folderitems:
-        - output: web
+          - title: Merchants feature overview
+            url: /docs/marketplace/user/features/merchants/merchants-feature-overview.html
 
-          subfolders:
+          - title: Merchant users feature overview
+            url: /docs/marketplace/user/features/merchants/merchant-users-feature-overview.html
 
-          - title: Merchants
-            output: web
+        - title: Products and offers
 
-            subfolderitems:
+          nested:
 
-            - title: Merchants feature overview
-              url: /docs/marketplace/user/features/merchants/merchants-feature-overview.html
-              output: web
+          - title: Product Offer feature overview
+            url: /docs/marketplace/user/features/products-and-offers/product-offer-feature-overview.html
 
-            - title: Merchant users feature overview
-              url: /docs/marketplace/user/features/merchants/merchant-users-feature-overview.html
-              output: web
+        - title: Marketplace order
 
-          - title: Products and offers
-            output: web
+          nested:
 
-            subfolderitems:
-            
-            - title: Product Offer feature overview
-              url: /docs/marketplace/user/features/products-and-offers/product-offer-feature-overview.html
-              output: web
+          - title: Marketplace Order feature overview
+            url: /docs/marketplace/user/features/marketplace-order/marketplace-order-feature-overview.html
 
-          - title: Marketplace order
-            output: web
+          - title: Marketplace Order module relations
+            url: /docs/marketplace/user/features/marketplace-order/marketplace-order-module-relations.html
 
-            subfolderitems:
-            
-            - title: Marketplace Order feature overview
-              url: /docs/marketplace/user/features/marketplace-order/marketplace-order-feature-overview.html
-              output: web
-            
-            - title: Marketplace Order module relations
-              url: /docs/marketplace/user/features/marketplace-order/marketplace-order-module-relations.html
-              output: web
+        - title: Merchant order
 
-          - title: Merchant order
-            output: web
+          nested:
 
-            subfolderitems:
-            
-            - title: Merchant Order feature overview
-              url: /docs/marketplace/user/features/merchant-order/merchant-order-feature-overview.html
-              output: web
-            
-            - title: Marketplace Order module relations
-              url: /docs/marketplace/user/features/merchant-order/merchant-order-module-relations.html
-              output: web
+          - title: Merchant Order feature overview
+            url: /docs/marketplace/user/features/merchant-order/merchant-order-feature-overview.html
 
-          - title: Marketplace and merchant state machines
-            output: web
+          - title: Marketplace Order module relations
+            url: /docs/marketplace/user/features/merchant-order/merchant-order-module-relations.html
 
-            subfolderitems:
-            
-            - title: Marketplace and Merchant State Machines feature overview
-              url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html
-              output: web
-            
-            - title: Marketplace and merchant state machines interaction
-              url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-interaction.html
-              output: web
-            
-            - title: Marketplace and merchant state machine module schema
-              url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machine-module-schema.html
-              output: web
+        - title: Marketplace and merchant state machines
+
+          nested:
+
+          - title: Marketplace and Merchant State Machines feature overview
+            url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html
+
+          - title: Marketplace and merchant state machines interaction
+            url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-interaction.html
+
+          - title: Marketplace and merchant state machine module schema
+            url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machine-module-schema.html

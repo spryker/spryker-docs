@@ -1,7 +1,7 @@
 ---
 title: "Spryker Marketplace Documentation"
 permalink: index.html
-summary: This is a draft version of the Spryker Marketplace documentation.
+description: This is a draft version of the Spryker Marketplace documentation.
 ---
 
 * [Marketplace developer guides](/docs/marketplace/dev/setup/system-requirements)

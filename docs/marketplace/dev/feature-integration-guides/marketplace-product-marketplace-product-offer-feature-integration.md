@@ -1,7 +1,7 @@
 ---
 title: Marketplace Product + Marketplace Product Offer feature integration
 last_updated: Dec 07, 2020
-summary: This document describes the process how to integrate the Marketplace Product + Marketplace Product Offer feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Product + Marketplace Product Offer feature into a Spryker project.
 ---
 
 ## Install feature core
@@ -21,7 +21,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProductProductOfferReferenceStrategyPlugin | Allows selecting merchant product by default on PDP. | None | Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin |
+| MerchantProductProductOfferReferenceStrategyPlugin | Allows selecting merchant product by default on PDP. |  | Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin |
 
 **src/Pyz/Client/MerchantProductOfferStorage/MerchantProductOfferStorageDependencyProvider.php**
 

@@ -1,7 +1,7 @@
 ---
 title: Marketplace Product + Inventory Management feature integration
 last_updated: Dec 07, 2020
-summary: This document describes the process how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
 ---
 
 ## Install feature core
@@ -21,8 +21,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProductAvailabilityAbstractTableQueryCriteriaExpanderPlugin |  Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. | None | Spryker\Zed\MerchantProductGui\Communication\Plugin\AvailabilityGui |
-| MerchantProductAvailabilityViewActionViewDataExpanderPlugin | Expands view data for product availability with merchant data. | None | Spryker\Zed\MerchantProductGui\Communication\Plugin\AvailabilityGui |
+| MerchantProductAvailabilityAbstractTableQueryCriteriaExpanderPlugin |  Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. |  | Spryker\Zed\MerchantProductGui\Communication\Plugin\AvailabilityGui |
+| MerchantProductAvailabilityViewActionViewDataExpanderPlugin | Expands view data for product availability with merchant data. |  | Spryker\Zed\MerchantProductGui\Communication\Plugin\AvailabilityGui |
 
 **src/Pyz/Zed/AvailabilityGui/AvailabilityGuiDependencyProvider.php**
 

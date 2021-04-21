@@ -1,14 +1,17 @@
 ---
 title: Glue API - Marketplace Merchant feature integration
 last_updated: Dec 03, 2020
-summary: This document describes the process how to integrate the Marketplace Merchant Glue API feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Merchant Glue API feature into a Spryker project.
 ---
+
+This document describes how to integrate the [Marketplace Merchant Glue API](https://github.com/spryker-feature/marketplace-merchant) feature into a Spryker project.
+
 
 ## Install feature core
 Follow the steps below to install the Marketplace Merchant Glue API feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -16,7 +19,8 @@ To start feature integration, overview and install the necessary features:
 | Marketplace Merchant | master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-Run the following commands to install the required modules:
+
+Install the required modules:
 ```bash
 composer require spryker/merchants-rest-api:"^0.2.0" --update-with-dependencies
 ```
@@ -35,8 +39,8 @@ Make sure that the following modules have been installed:
 ---
 
 ### 2) Set up transfer objects
-Run the following command to generate transfer changes:
 
+Generate transfer changes:
 ```bash
 console transfer:generate
 ```
@@ -59,18 +63,17 @@ Make sure that the following changes have been applied in transfer objects:
 
 ---
 
-### 3) Set up behavior
-#### Enable resources and relationships
+### 3) Enable resources and relationships
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantsResourceRoutePlugin | Registers the `merchants` resource. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| MerchantAddressesResourceRoutePlugin | Registers the `merchant-addresses` resource. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| MerchantAddressByMerchantReferenceResourceRelationshipPlugin | Adds the `merchant-addresses` resource as a relationship of the `merchants` resource. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resource as a relationship by merchant reference provided in the attributes. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| MerchantRestUrlResolverAttributesTransferProviderPlugin | Adds functionality for merchant url resolving to UrlRestApi. | None | Spryker\Glue\MerchantsRestApi\Plugin\UrlsRestApi |
-| MerchantsByOrderResourceRelationshipPlugin | Adds `merchants` resources as relationship by order merchant references. | None | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantsResourceRoutePlugin | Registers the `merchants` resource. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantAddressesResourceRoutePlugin | Registers the `merchant-addresses` resource. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantAddressByMerchantReferenceResourceRelationshipPlugin | Adds the `merchant-addresses` resource as a relationship of the `merchants` resource. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resource as a relationship by merchant reference provided in the attributes. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| MerchantRestUrlResolverAttributesTransferProviderPlugin | Adds functionality for merchant url resolving to UrlRestApi. |  | Spryker\Glue\MerchantsRestApi\Plugin\UrlsRestApi |
+| MerchantsByOrderResourceRelationshipPlugin | Adds `merchants` resources as relationship by order merchant references. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 

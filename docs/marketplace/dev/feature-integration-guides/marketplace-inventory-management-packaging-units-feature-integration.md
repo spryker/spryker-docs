@@ -1,8 +1,10 @@
 ---
 title: Marketplace Inventory Management + Packaging Units feature integration
 last_updated: Dec 16, 2020
-summary: This document describes the process how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
 ---
+
+This document describes how to integrate the [Marketplace Inventory Management + Packaging Units]() feature into a Spryker project.
 
 ## Install feature core
 Follow the steps below to install the Marketplace Inventory Management + Packaging Units feature core.
@@ -35,7 +37,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferPackagingUnitOmsReservationAggregationPlugin | Aggregates reservations for product offers packaging unit. | None | Spryker\Zed\ProductOfferPackagingUnit\Communication\Plugin\Oms |
+| ProductOfferPackagingUnitOmsReservationAggregationPlugin | Aggregates reservations for product offers packaging unit. |  | Spryker\Zed\ProductOfferPackagingUnit\Communication\Plugin\Oms |
 
 **src/Pyz/Zed/Oms/OmsDependencyProvider.php**
 

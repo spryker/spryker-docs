@@ -1,0 +1,12 @@
+language: ruby
+cache: bundler
+before_install:
+  - gem install bundler
+script:
+  - bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
+  - bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_user.yml
+branches:
+  only:
+    - master
+rvm:
+  - 2.5

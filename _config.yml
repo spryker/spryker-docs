@@ -96,3 +96,14 @@ description: "Spryker documentation center."
 
 
 github: [metadata]
+
+search: algolia
+
+algolia:
+  application_id: 'IBBSSFT6M1'
+  search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
+  indices:
+    - name: 'marketplace_user'
+      title: 'Marketplace User'
+    - name: 'marketplace_dev'
+      title: 'Marketplace Developer'

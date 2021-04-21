@@ -1,0 +1,14 @@
+<script>
+    const searchClient = algoliasearch(
+        '{{ site.algolia.application_id }}',
+        '{{ site.algolia.search_only_api_key }}'
+    );
+    const indices = [
+    {% for index in site.algolia.indices %}
+        {
+            name: '{{ index.name }}',
+            title: '{{ index.title }}'
+        },
+    {% endfor %}
+    ];
+</script>

@@ -24,7 +24,7 @@ To retrieve information about all the active merchants, send the request:
 
 | Query prameter | Description | Examlary values |
 | --- | --- | --- |
-| category-keys[] | Category key that is assigned to a merchant. | {{category key}} |
+| category-keys[] | Category key that is assigned to a merchant. | {% raw %}{{category key}}{% endraw %} |
 
 | Request | Usage |
 | --- | --- |
@@ -33,7 +33,7 @@ To retrieve information about all the active merchants, send the request:
 
 ### Response
 
-Response sample - retrieve all active merchants
+<details><summary markdown='span'>Response sample: retrieve all active merchants</summary>
 
 ```json
 {
@@ -187,9 +187,11 @@ Response sample - retrieve all active merchants
 }
 ```
 
+</details>
 
 
-Response sample - retrieve merchants with multiple category keys
+
+<details><summary markdown='span'>Response sample: retrieve merchants with multiple category keys</summary>
 
 ```json
 {
@@ -279,24 +281,25 @@ Response sample - retrieve merchants with multiple category keys
 }
 ```
 
+</details>
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| merchantName           | String   | The name of the Merchant.                             |
-| merchantUrl            | String   | The Merchant’s profile URL.                           |
-| contactPersonRole      | String   | The role of the contact person.                       |
+| merchantName           | String   | Name of the Merchant.                             |
+| merchantUrl            | String   | Merchant’s profile URL.                           |
+| contactPersonRole      | String   | Role of the contact person.                       |
 | contactPersonTitle     | String   | Salutation to use when addressing the contact person. |
 | contactPersonFirstName | String   | Contact person’s first name.                          |
 | contactPersonLastName  | String   | Contact person’s last name.                           |
 | contactPersonPhone     | String   | Contact person’s phone number.                        |
-| logoUrl                | String   | The Merchant’s logo URL.                              |
+| logoUrl                | String   | Merchant’s logo URL.                              |
 | publicEmail            | String   | Merchant’s public email address.                      |
 | publicPhone            | String   | Merchant’s public phone number.                       |
-| description            | String   | The Merchant’s description.                           |
-| bannerUrl              | String   | The Merchant’s banner URL.                            |
-| deliveryTime           | String   | The average delivery time.                            |
-| latitude               | String   | The Merchant’s latitude.                              |
-| longitude              | String   | The Merchant’s longitude.                             |
+| description            | String   | Merchant’s description.                           |
+| bannerUrl              | String   | Merchant’s banner URL.                            |
+| deliveryTime           | String   | Average delivery time.                            |
+| latitude               | String   | Merchant’s latitude.                              |
+| longitude              | String   | Merchant’s longitude.                             |
 | faxNumber              | String   | Merchant’s fax number.                                |
 | legalInformation       | Object   | List of legal information.                            |
 | terms                  | String   | Merchant’s terms and conditions.                      |
@@ -305,33 +308,33 @@ Response sample - retrieve merchants with multiple category keys
 | dataPrivacy            | String   | Merchant’s data privacy conditions.                   |
 | categories             | Array    | List of categories where the merchant belongs.        |
 | categoryKey            | String   | Category key used for Merchant.                       |
-| name                   | String   | Name of the merchant category. 
+| name                   | String   | Name of the merchant category.
 
 ## Retrieve profile information for the specific merchant
 
 To get the details of a specific merchant, send the request:
 ***
-`GET` **/merchants/*{{merchantId}}***
+`GET` **/merchants/*{% raw %}{{merchantId}}{% endraw %}***
 ***
 
 | Path prameter | Description |
 | --- | --- |
-| *{{merchantId}}* | Merchant Reference assigned to every Merchant. |
+| ***{% raw %}{{merchantId}}{% endraw %}*** | Merchant reference assigned to every merchant. |
 
 ### Request
 
 | Query prameter | Description | Examlary values |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | merchant-addresses, merchant-opening-hours |
+| include | Adds resource relationships to the request. | `merchant-addresses`, `merchant-opening-hours` |
 
 | Usage     | Description   |
 | -------------------- | ---------------------- |
-| `GET http://glue.mysprykershop.com/merchants/MER000006`        | Retrieve information about merchant MER000006                |
+| `GET http://glue.mysprykershop.com/merchants/MER000006`        | Retrieve information about merchant MER000006. |
 | `GET http://glue.mysprykershop.com/merchants/MER000006?include=merchant-addresses,merchant-opening-hours` | Retrieve information about merchant MER000006 with the merchant addresses and opening hours included. |
 
 ### Response
 
-Response sample with specific merchant information
+<details><summary markdown='span'>Response sample with specific merchant information</summary>
 
 ```json
 {
@@ -375,8 +378,10 @@ Response sample with specific merchant information
 }
 ```
 
+</details>
 
-Response sample with merchant addresses and opening hours</summary>
+
+<details><summary markdown='span'>Response sample with merchant addresses and opening hours</summary>
 
 ```json
 {
@@ -602,25 +607,26 @@ Response sample with merchant addresses and opening hours</summary>
 }
 ```
 
+</details>
 
 For the merchant attributes, see Retrieving all merchants.
 
-For details on the attributes of the included resources `merchant-addresses` and `merchant-opening-hours`, see:
+For details about the attributes of the included resources `merchant-addresses` and `merchant-opening-hours`, see:
 
-* Retrieving merchant addresses
-* Retrieving merchant opening hours
+* Retrieving merchant addresses.
+* Retrieving merchant opening hours.
 
 ## Retrieve merchant addresses
 
 To retrieve merchant addresses, send the request:
 
 ***
-`GET` **/merchants/*{{merchantId}}*/merchant-addresses**
+`GET` **/merchants/*{% raw %}{{merchantId}}{% endraw %}*/merchant-addresses**
 ***
 
 | Path Parameter| Description  |
 | ---------------- | ----------------------- |
-| *{{merchantId}}*     | Merchant Reference assigned to every Merchant. |
+| ***{% raw %}{{merchantId}}{% endraw %}***    | Merchant reference assigned to every merchant. |
 
 ### Request
 
@@ -628,8 +634,7 @@ Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchant-
 
 ### Response
 
-
-Response sample - retrieve merchant addresses
+<details><summary markdown='span'>Response sample: retrieve merchant addresses</summary>
 
 ```json
 {
@@ -679,28 +684,30 @@ Response sample - retrieve merchant addresses
 }
 ```
 
+</details>
+
 
 | Attribute | Type | Description  |
 | ------------- | -------- | --------------- |
-| addresses       | Array    | List of Merchant Addresses information. |
-| countryName     | String   | The name of the country.                |
-| address1        | String   | The 1st line of the Merchant Address.   |
-| address2        | String   | The 2nd line of the Merchant Address.   |
-| address3        | String   | The 3rd line of the Merchant Address.   |
-| city            | String   | The name of the city.                   |
-| zipCode         | String   | The ZIP code.                           |
-| email           | String   | The email address.                      |
+| addresses       | Array    | List of merchant addresses information. |
+| countryName     | String   | Name of the country.                |
+| address1        | String   | 1st line of the merchant address.   |
+| address2        | String   | 2nd line of the merchant address.   |
+| address3        | String   | 3rd line of the merchant address.   |
+| city            | String   | Name of the city.                   |
+| zipCode         | String   | ZIP code.                           |
+| email           | String   | Email address.                      |
 
 ## Retrieve merchant opening hours
 
 To retrieve a merchant opening hours, send the request:
 ***
-`GET` **/merchants/*{{merchantId}}*/merchant-opening-hours**
+`GET` **/merchants/*{% raw %}{{merchantId}}{% endraw %}*/merchant-opening-hours**
 ***
 
 | Path Parameter | Description    |
 | ------------ | ----------- |
-| *{{merchantId}}*  | Merchant Reference assigned to every Merchant. |
+| ***{% raw %}{{merchantId}}{% endraw %}*** | Merchant reference assigned to every merchant. |
 
 ### Request
 
@@ -708,7 +715,7 @@ Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchan
 
 ### Response
 
-Response sample - retrieve merchant opening hours
+<details><summary markdown='span'>Response sample: retrieve merchant opening hours</summary>
 
 ```json
 {
@@ -857,12 +864,13 @@ Response sample - retrieve merchant opening hours
 }
 ```
 
+</details>
 
 | Attribute| Description |
 | --------------- | --------------------- |
-| weekdaySchedule | An array of the schedule for weekdays. The following information is available for each weekday:<ul><li>`day`- the name of the day.</li><li>`timeFrom` - the time when the Merchant starts working on a usual day.</li><li>`timeTo` - the time when the Merchant stops working on a usual day.</li></ul> |
-| dateSchedule    | An array of the schedule for special working days, e.g. holidays. Each day exposes the following information:<ul><li>`date` - specifies the date.</li><li>`timeFrom` - the time when the Merchant starts working on holiday.</li><li>`timeTo` - the time when the Merchant stops working on holiday.</li><li>`note` - the name of the holiday or special note.</li>|
+| weekdaySchedule | An array of the schedule for weekdays. The following information is available for each weekday:<ul><li>`day`—name of the day.</li><li>`timeFrom`—time when the Merchant starts working on a usual day.</li><li>`timeTo`—time when the Merchant stops working on a usual day.</li></ul> |
+| dateSchedule    | An array of the schedule for special working days, e.g. holidays. Each day exposes the following information:<ul><li>`date`—specifies the date.</li><li>`timeFrom`—time when the Merchant starts working on holiday.</li><li>`timeTo`—time when the Merchant stops working on holiday.</li><li>`note`—name of the holiday or special note.</li>|
 
-## Possible Errors
+## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors){target="_blank"}.
+For statuses, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).

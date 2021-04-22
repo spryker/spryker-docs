@@ -3,7 +3,7 @@ title: Retrieving concrete products
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource in the Spryker Marketplace
 ---
 
-This endpoint allows to retrieve general information about concrete products.
+This endpoint allows retrieving general information about concrete products.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
@@ -13,7 +13,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
 
 
-## Retrieve a concrete product 
+## Retrieve a concrete product
 To retrieve general information about a concrete product, send the request:
 
 ---
@@ -25,11 +25,11 @@ To retrieve general information about a concrete product, send the request:
 | --- | --- |
 | ***{{concrete_product_sku}}*** | SKU of a concrete product to get information for. |
 
-### Request 
+### Request
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | concrete-product-image-sets, concrete-product-availabilities, product-options, product-reviews, product-offers, concrete-product-prices, product-measurement-units, sales-units, product-labels, product-offers, merchants | 
+| include | Adds resource relationships to the request. | concrete-product-image-sets, concrete-product-availabilities, product-options, product-reviews, product-offers, concrete-product-prices, product-measurement-units, sales-units, product-labels, product-offers, merchants |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
 
 :::(Warning) (Performance)
@@ -198,7 +198,7 @@ To retrieve general information about a concrete product, send the request:
 ```
 
  </details>
- 
+
  <details>
 <summary markdown='span'>Response sample with product labels</summary>
 
@@ -246,10 +246,10 @@ To retrieve general information about a concrete product, send the request:
 ```
 
  </details>
- 
+
  <details>
 <summary markdown='span'>Response sample with product image sets</summary>
-    
+
 ```json
 {
     "data": {
@@ -324,12 +324,12 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
-    
+
 </details>
 
  <details>
 <summary markdown='span'>Response sample with product availability</summary>
-    
+
 ```json
 {
     "data": {
@@ -396,7 +396,7 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
-    
+
 </details>
 
  <details><summary markdown='span'>Response sample with default product prices</summary>
@@ -592,7 +592,7 @@ To retrieve general information about a concrete product, send the request:
 
  <details>
 <summary markdown='span'>Response sample with product options</summary>
-    
+
 ```json
 {
     "data": {
@@ -679,12 +679,12 @@ To retrieve general information about a concrete product, send the request:
     ]
 }
 ```
-    
+
 </details>
 
  <details>
 <summary markdown='span'>Response sample with reviews</summary>
-    
+
 ```json
 {
     "data": {

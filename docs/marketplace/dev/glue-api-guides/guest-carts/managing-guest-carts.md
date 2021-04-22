@@ -3,7 +3,7 @@ title: Managing guest carts
 description: Retrieve details about guest carts and learn what else you can do with the resource in the Spryker Marketplace
 ---
 
-This endpoint allows to manage guest carts.
+This endpoint allows managing guest carts.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
@@ -70,7 +70,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | `GET https://glue.mysprykershop.com/guest-carts?include=vouchers` | Retrieve a guest cart with information about vouchers. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=concrete-products,product-labels` | Retrieve a guest cart with information about concrete products and the product labels assigned to the products in it. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=promotional-items,abstract-products,concrete-product`| Retrieve detailed information on the promotional items for the guest cart. |
-| `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items,concrete-products,product-offers,product-offer-availabilities,product-offer-prices` | Retrieve detailed information on the product offers for the guest cart.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>| 
+| `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items,concrete-products,product-offers,product-offer-availabilities,product-offer-prices` | Retrieve detailed information on the product offers for the guest cart.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>|
 
 
 ### Response
@@ -212,8 +212,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 }
 ```
 </details>
-   
-    
+
+
 <details>
 <summary markdown='span'>Response sample with cart rules</summary>
 
@@ -612,7 +612,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
-    
+
 </details>
 
 <details>
@@ -746,7 +746,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <details>
 <summary markdown='span'>Response sample with a cart rule and a discount voucher</summary>
-    
+
 ```json
 {
     "data": {
@@ -816,7 +816,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <details>
 <summary markdown='span'>Response sample with product labels</summary>
-    
+
 ```json
 {
     "data": [
@@ -964,7 +964,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <details>
 <summary markdown='span'>Response sample with promotional items</summary>
-    
+
 ```json
 {
     "data": [

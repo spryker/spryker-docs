@@ -3,7 +3,7 @@ title: Retrieving abstract products
 description: Retrieve general information about abstract products and related resources in the Spryker Marketplace
 ---
 
-This endpoint allows to retrieve general information about abstract products.
+This endpoint allows retrieving general information about abstract products.
 
 ## Installation
 
@@ -60,7 +60,7 @@ To retrieve general information about an abstract product, send the request:
 
 <details>
 <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -120,10 +120,10 @@ To retrieve general information about an abstract product, send the request:
 ```
 
  </details>
- 
+
 <details>
 <summary markdown='span'>Response sample with image sets</summary>
-    
+
 ```json
 {
     "data": {
@@ -215,11 +215,11 @@ To retrieve general information about an abstract product, send the request:
 ```
 
  </details>
- 
- 
+
+
 <details>
 <summary markdown='span'>Response sample with product availability</summary>
-    
+
 ```json
 {
     "data": {
@@ -528,7 +528,7 @@ To retrieve general information about an abstract product, send the request:
 
 <details>
 <summary markdown='span'>Response sample with category nodes</summary>
-    
+
 ```json
 {
     "data": {
@@ -710,7 +710,7 @@ To retrieve general information about an abstract product, send the request:
 
 <details>
 <summary markdown='span'>Response sample with tax rates</summary>
-    
+
 ```json
 {
     "data": {
@@ -873,7 +873,7 @@ To retrieve general information about an abstract product, send the request:
 
 <details>
 <summary markdown='span'>Response sample with product labels</summary>
-    
+
 ```json
 {
     "data": {
@@ -932,7 +932,7 @@ To retrieve general information about an abstract product, send the request:
 
 <details>
 <summary markdown='span'>Response sample with concrete products</summary>
-    
+
 ```json
 {
     "data": {
@@ -1046,7 +1046,7 @@ To retrieve general information about an abstract product, send the request:
 
 <details>
 <summary markdown='span'>Response sample with product options</summary>
-    
+
 ```json
 {
     "data": {
@@ -1151,11 +1151,11 @@ To retrieve general information about an abstract product, send the request:
 
  </details>
 
- 
+
 
 <details>
 <summary markdown='span'>Response sample with product reviews</summary>
-    
+
 ```json
 {
     "data": {

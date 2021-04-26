@@ -1,10 +1,10 @@
 ---
-title: File details: merchant.csv
+title: File details - merchant.csv
 last_updated: Feb 26, 2021
 description: This document describes the merchant.csv file to configure merchant information in your Spryker shop.
 ---
 
-This document describes the `merchant.csv` file to configure [merchant](/docs/marketplace/user/features/merchants/merchants-feature-overview.md) information in your Spryker shop.
+This document describes the `merchant.csv` file to configure [merchant](/docs/marketplace/user/features/merchants/merchants-feature-overview.html) information in your Spryker shop.
 
 ## Import file parameters
 
@@ -21,9 +21,9 @@ The file should have the following parameters:
 | url.de_DE | &check; | String |   | Defined per locale. | Merchant page URL in the storefront for DE store. |
 
 ## Import file dependencies
-The file has the following dependencies: [File details: merchant_profile.csv](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2231730522/File+details+merchant+profile.csv).
+The file has the following dependencies: [File details - merchant_profile.csv](/docs/marketplace/dev/data-import/file-details-merchant-profilecsv.html).
 
-##Import template file and content example
+## Import template file and content example
 
 Find the template and an example of the file below:
 

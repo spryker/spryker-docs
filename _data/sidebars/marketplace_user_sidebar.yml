@@ -13,6 +13,20 @@ entries:
 
           - title: Item 3
 
+      - title: Back Office user guides
+        nested:
+        - title: Merchants
+          nested:
+
+          - title: Managing merchant users
+            url: /docs/marketplace/user/back-office-user-guides/merchants/managing-merchant-users.html
+
+          - title: Managing merchants
+            url: /docs/marketplace/user/back-office-user-guides/merchants/managing-merchants.html
+
+          - title: Merchants - reference information
+            url: /docs/marketplace/user/back-office-user-guides/merchants/merchants-reference-information.html
+
       - title: Features
         nested:
         - title: Merchants

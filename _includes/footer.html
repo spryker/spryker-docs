@@ -1,9 +1,44 @@
-<footer>
+<!-- <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}. All rights reserved. <br />
 {% if page.last_updated %}<span>Page last updated:</span> {{page.last_updated}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y"  }} <br />
-<p><img src="{{ "/images/company_logo.png" }}" alt="Company logo"/></p>
+<p><img src="{{ "/images/logo-footer.svg" }}" alt="Company logo"/></p>
                 </div>
             </div>
+</footer>
+ -->
+
+<footer class="main-footer">
+	<div class="main-footer-top">
+		<div class="main-footer-block">
+			<div class="main-footer-column-1">
+				<img src="{{ "/images/logo-footer.svg" }}" alt="Company logo" class="main-footer-logo" />
+			</div>
+			<div class="main-footer-column-2">
+				<nav class="main-footer-nav">
+					<ul>
+						<li><a href="#">Release Notes</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Bootcamp Training</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="main-footer-column-3">
+				<ul class="main-footer-socials">
+					<li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-footer-bottom">
+		<div class="container">
+			<p>&copy;{{ site.time | date: "%Y"  }} {{site.company_name}} Systems GmbH</p>
+		</div>
+	</div>
 </footer>

@@ -30,6 +30,10 @@ exclude:
   - .idea/
   - .gitignore
   - vendor
+  - node_modules
+  - package.json
+  - package-lock.json
+  - gulpfile.js
 # these are the files and directories that jekyll will exclude from the build
 
 highlighter: rouge

@@ -1,1 +1,30 @@
 @import 'variables';
+@import 'components/header';
+@import 'components/footer';
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: $grey-lightest;
+	display: flex;
+	flex-direction: column;
+}
+
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+}
+
+.page-content {
+	flex: 1 1 auto;
+}
+
+.container {
+	max-width: 1440px;
+	width: 100%;
+	padding: 0 24px;
+	margin: 0 auto;
+}

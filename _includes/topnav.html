@@ -1,4 +1,25 @@
 <!-- Navigation -->
+<header class="main-header">
+    <div class="container">
+        <div class="main-header-inner">
+            <div class="main-header-left">
+                <strong class="main-header-logo">
+                    <a href="/index.html">
+                        <img src="{{ "/images/header-logo.svg" }}" alt="Spryker Documentation" class="main-header-logo" />
+                    </a>
+                </strong>
+
+                {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+            </div>
+            <div class="main-header-right">
+                <a href="#" class="button">
+                    <i class="icon-rss"></i>
+                    RSS
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
 <nav class="navbar navbar-inverse navbar-static-top">
     <div class="container topnavlinks">
         <div class="navbar-header">
@@ -56,7 +77,7 @@
                 <!--comment out this block if you want to hide search-->
                 <li>
                     <!--start search-->
-                    {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                    
                     <!--end search-->
                 </li>
             </ul>

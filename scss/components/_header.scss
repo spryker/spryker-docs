@@ -1,0 +1,39 @@
+.main-header {
+	background: #fff;
+	padding: 15px 0;
+	z-index: 100;
+	&-inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.container {
+		&:before,
+		&:after {
+			content: none;
+		}
+	}
+
+	&-left {
+		display: flex;
+		align-items: center;
+	}
+
+	&-right {
+		display: flex;
+		align-items: center;
+		padding: 0 0 0 15px;
+	}
+
+	&-logo {
+		display: block;
+		width: 156px;
+		margin: 0 23px 0 0;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+}

@@ -216,3 +216,6 @@ entries:
 
         - title: File details - merchant_profile.csv
           url: /docs/marketplace/dev/data-import/file-details-merchant-profilecsv.html
+
+        - title: File details - merchant_user.csv
+          url: /docs/marketplace/dev/data-import/file-details-merchant-usercsv.html

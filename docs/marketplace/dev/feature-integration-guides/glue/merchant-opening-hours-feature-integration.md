@@ -7,6 +7,7 @@ description: This document describes how to integrate the Merchant Opening Hours
 This document describes how to integrate the [Merchant Opening Hours Glue API](https://github.com/spryker-feature/merchant-opening-hours) feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Merchant Opening Hours Glue API feature core.
 
 ### Prerequisites
@@ -15,7 +16,7 @@ To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | ----------- | ------ | --------------|
-| Merchant Opening Hours | dev-master  | [Merchant Opening Hours feature integration](docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html) |
+| Merchant Opening Hours | dev-master  | [Merchant Opening Hours feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -30,7 +31,7 @@ composer require spryker/merchant-opening-hours-rest-api:"^0.1.0"
 
 Make sure that the following modules have been installed:
 
-| MODULE   | EXPECTED DIRECTORY   |
+| MODULE   | EXPECTED DIRECTORY |
 | ------------------ | ----------------- |
 | MerchantOpeningHoursRestApi | spryker/merchant-opening-hours-rest-api |
 

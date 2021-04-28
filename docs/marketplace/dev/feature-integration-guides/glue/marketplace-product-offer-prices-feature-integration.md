@@ -16,9 +16,10 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product Offer Prices | dev-master | [Marketplace Product Offer Prices feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html) |
+| Marketplace Product Offer Prices | dev-master | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
+
 Install the required modules:
 
 ```bash
@@ -62,6 +63,7 @@ Make sure that the following changes have been applied in transfer objects:
 ---
 
 ### 3) Enable Product Offer Prices resources and relationships
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |

@@ -28,12 +28,96 @@
 	&-logo {
 		display: block;
 		width: 156px;
-		margin: 0 23px 0 0;
+		margin: 0 24px 0 0;
 
 		img {
 			display: block;
 			width: 100%;
 			height: auto;
+		}
+	}
+
+	.button {
+		.icon-rss {
+			font-size: 16px;
+		}
+	}
+
+	&-search {
+		position: relative;
+		z-index: 3;
+
+		& > .icon-search {
+			position: absolute;
+			z-index: 4;
+			pointer-events: none;
+			color: $grey;
+			font-size: 16px;
+			top: 15px;
+			left: 5px;
+		}
+
+		input[type="text"],
+		input[type="search"] {
+			display: block;
+			height: 46px;
+			padding: 12px 40px;
+			border: 1px solid transparent;
+			border-bottom-color: #ebebeb;
+			font-size: 16px;
+			line-height: 20px;
+			font-weight: 500;
+			color: $grey;
+			background: none;
+			outline: none;
+			outline-width: 0;
+			letter-spacing: .02em;
+			transition: color .3s linear, background .3s linear, border-color .3s linear;
+
+			&:focus {
+				border-bottom-color: $black;
+			}
+		}
+
+		.algolia-autocomplete {
+			display: block !important;
+		}
+	}
+}
+
+.main-nav {
+	margin: 0 24px 0 0;
+
+	&-opener {
+		display: flex;
+		align-items: center;
+		color: $black;
+		background: $grey-lightest;
+		border: 2px solid #ebebeb;
+		font-size: 10px;
+		line-height: 1.4;
+		font-weight: 800;
+		padding: 16px 20px;
+		text-decoration: none;
+		width: 300px;
+
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+		}
+
+		&-text {
+			flex: 1 1 auto;
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		[class*="icon-"] {
+			flex: 0 0 auto;
+			margin: 0 0 0 10px;
 		}
 	}
 }

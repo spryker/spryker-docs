@@ -5,14 +5,24 @@
             <div class="main-header-left">
                 <strong class="main-header-logo">
                     <a href="/index.html">
-                        <img src="{{ "/images/header-logo.svg" }}" alt="Spryker Documentation" class="main-header-logo" />
+                        <img src="{{ "/images/logo.svg" }}" alt="Spryker Documentation" class="main-header-logo" />
                     </a>
                 </strong>
 
-                {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                <div class="main-nav">
+                    <a href="#" class="main-nav-opener">
+                        <span class="main-nav-opener-text">Select Product</span>
+                        <i class="icon-arrow-down"></i>
+                    </a>
+                </div>
+
+                <div class="main-header-search">
+                    <i class="icon-search"></i>
+                    {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                </div>
             </div>
             <div class="main-header-right">
-                <a href="#" class="button">
+                <a href="#" class="button small">
                     <i class="icon-rss"></i>
                     RSS
                 </a>

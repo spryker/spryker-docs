@@ -1,0 +1,35 @@
+.button {
+	display: inline-flex;
+	vertical-align: top;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #dfe2e6;
+	font-weight: 800;
+	background: #fff;
+	border-radius: 2px;
+	text-decoration: none;
+	color: $grey;
+	height: 50px;
+	padding: 0 20px;
+	min-width: 130px;
+	transition: color .3 linear, background .3 linear, border-color .3 linear;
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+		background: #eaedf0;
+		color: #767c81;
+		border-color: #dfe2e6;
+	}
+
+	[class*="icon-"] {
+		margin: 0 .7em 0 0;
+	}
+
+	&.small {
+		height: 40px;
+		min-width: 100px;
+		font-size: 12px;
+	}
+}

@@ -1,6 +1,8 @@
 @import 'variables';
+@import 'components/fonts';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/button';
 
 html, body {
 	height: 100%;
@@ -10,6 +12,7 @@ body {
 	background: $grey-lightest;
 	display: flex;
 	flex-direction: column;
+	font-family: $main-font;
 }
 
 .page-wrapper {
@@ -27,4 +30,9 @@ body {
 	width: 100%;
 	padding: 0 24px;
 	margin: 0 auto;
+}
+
+/* remove */
+.navbar-static-top {
+	z-index: 10;
 }

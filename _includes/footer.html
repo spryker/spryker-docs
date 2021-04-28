@@ -11,34 +11,46 @@
 
 <footer class="main-footer">
 	<div class="main-footer-top">
-		<div class="main-footer-block">
-			<div class="main-footer-column-1">
-				<img src="{{ "/images/logo-footer.svg" }}" alt="Company logo" class="main-footer-logo" />
-			</div>
-			<div class="main-footer-column-2">
-				<nav class="main-footer-nav">
-					<ul>
-						<li><a href="#">Release Notes</a></li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">Events</a></li>
-						<li><a href="#">Bootcamp Training</a></li>
+		<div class="container">
+			<div class="main-footer-block">
+				<div class="main-footer-column-1">
+					<img src="{{ "/images/logo-footer.svg" }}" alt="Company logo" class="main-footer-logo" />
+				</div>
+				<div class="main-footer-column-2">
+					<nav class="main-footer-nav">
+						<ul>
+							<li><a target="_blank" href="https://documentation.spryker.com/docs/release-notes">Release Notes</a></li>
+							<li><a target="_blank" href="https://spryker.force.com/support/s/">Support</a></li>
+							<li><a target="_blank" href="https://spryker.com/en/events/">Events</a></li>
+							<li><a target="_blank" href="https://training.spryker.com/courses/developer-bootcamp">Bootcamp Training</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="main-footer-column-3">
+					<ul class="main-footer-socials">
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-instagram"></i></a></li>
+						<li><a href="#"><i class="icon-youtube"></i></a></li>
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
 					</ul>
-				</nav>
-			</div>
-			<div class="main-footer-column-3">
-				<ul class="main-footer-socials">
-					<li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-				</ul>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="main-footer-bottom">
 		<div class="container">
-			<p>&copy;{{ site.time | date: "%Y"  }} {{site.company_name}} Systems GmbH</p>
+			<div class="main-footer-bottom-block">
+				<div class="main-footer-bottom-column">
+					<p class="copyright">&copy;{{ site.time | date: "%Y"  }} - {{site.company_name}} Systems GmbH</p>
+				</div>
+				<div class="main-footer-bottom-column">
+					<ul class="main-footer-links">
+						<li><a href="mailto:&#100;&#111;&#099;&#117;&#109;&#101;&#110;&#116;&#097;&#116;&#105;&#111;&#110;&#064;&#115;&#112;&#114;&#121;&#107;&#101;&#114;&#046;&#099;&#111;&#109;"><i class="icon-email"></i>&#100;&#111;&#099;&#117;&#109;&#101;&#110;&#116;&#097;&#116;&#105;&#111;&#110;&#064;&#115;&#112;&#114;&#121;&#107;&#101;&#114;&#046;&#099;&#111;&#109;</a></li>
+						<li><a href="#"><i class="icon-location"></i>Heidestraße 9-10, 10557 Berlin</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 </footer>

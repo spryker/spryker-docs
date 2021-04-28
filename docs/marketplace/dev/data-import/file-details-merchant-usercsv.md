@@ -4,6 +4,8 @@ last_updated: Mar 01, 2021
 description: This document describes the merchant_user.csv file to configure merchant information in your Spryker shop.
 ---
 
+This document describes the `merchant-user.csv` file to configure [merchant user](/docs/marketplace/user/features/merchants/merchant-users-feature-overview.html) information in your Spryker shop.
+
 ## Import file parameters
 
 The file should have the following parameters:

@@ -10,7 +10,7 @@ This document describes how to integrate the [Marketplace Product Glue API](http
 Follow the steps below to install the Marketplace Product Glue API feature core.
 
 ### Prerequisites
-To start feature integration, integrate the following features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|

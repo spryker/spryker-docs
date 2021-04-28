@@ -58,6 +58,8 @@ For shoppers, it's convenient to find the necessary and relevant merchants and t
 On the Storefront, customers can check the relevant merchant information on the *Merchant Profile* page. The information can be defined whether by the Marketplace administrator in the Back Office or by the merchant in the Merchant Portal.
 ![Merchant profile page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-profile-page.png)
 
+![Viewing merchant profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/view-merchant-profile.gif)
+
 ### Merchant opening hours
 According to the statuses described in the [Merchant statuses](#merchant-statuses) section, the merchant profile page is available only if the merchant has the `Active`status. Otherwise, the 404 error (page not found) is displayed when navigating to the profile page. To provide maximum selling activity, merchants can provide their working schedule, by defining the opening hours on weekdays, holidays and exceptional cases.
 

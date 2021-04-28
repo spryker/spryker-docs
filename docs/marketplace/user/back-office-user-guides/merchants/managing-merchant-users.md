@@ -10,7 +10,7 @@ To start managing  merchant users navigate to the *Marketplace* > *Merchants* > 
 
 ## Creating a merchant user
 
-{% include note.html content="To be able to create a Merchant User, create a Merchant first." %}
+{% include note.html content="To create a Merchant User, create a Merchant first." %}
 
 To create a merchant user, do the following:
 

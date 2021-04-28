@@ -6,9 +6,9 @@ description: This topic describes how to view and manage merchant product offers
 
 This topic describes how to view and manage [merchant product offers](/docs/marketplace/user/features/products-and-offers/product-offer-feature-overview.html) in the Back Office.
 
----
-
 To start working with offers, go to *Marketplace* > *Offers*.
+
+---
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ You can deny the offer by clicking **Deny** on the *Offers* page in the *Actions
 
 You can sort by offers belonging to a certain Merchant:
 
-![filter-offers-by-merchant](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/offers/filter-offers-by-merchant.gif)
+![filter-offers-by-merchant](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/offers/offers/filter-offers-by-merchant.gif)
 
 ## Viewing an offer
 

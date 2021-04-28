@@ -1,5 +1,5 @@
 ---
-title: Offers - reference information
+title: Abstract product - reference information
 last_updated: Apr 19, 2021
 description: This document contains reference information for creating and editing concrete and abstract products.
 ---
@@ -8,14 +8,14 @@ description: This document contains reference information for creating and editi
 
 The following tables describe the attributes that you use when creating and editing concrete and abstract products.
 
-{% include note.html content="The set of tabs for the Create and Edit pages, as well as for abstract and concrete products, is different. Hence the additional columns with identifiers are added for your convenience." %}
+{% include note.html content="The set of tabs for the Create and Edit pages, as well as for abstract and concrete products, is different. Hence, the additional columns with identifiers are added for your convenience." %}
 
 ### General tab
 
 | ATTRIBUTE | DESCRIPTION | CREATE ABSTRACT PRODUCT | UPDATE ABSTRACT PRODUCT |
 |-|-|-|-|
 | Store relation | Defines the store for which the product can be available. You can select multiple values. | Yes | Yes |
-| SKU Prefix | A number that you assign to the product will help to track unique information related to that product. | Yes | Display Only |
+| SKU Prefix | Number that you assign to the product will help to track unique information related to that product. | Yes | Display Only |
 | Name | Name of your product that is displayed in the online store for your customers. | Yes | Yes |
 | Description | Description of the product that your customer sees in the online store. | Yes | Yes |
 | New from New to | Defines the period of time for which a dynamic label New will be assigned to the product. Either no dates can be selected, or both. | Yes | Yes |
@@ -27,7 +27,7 @@ The following tables describe the attributes that you use when creating and edit
 | Merchant Price Dimension | **B2B Only** <br>Allows selecting a merchant relation and setting up a specific price for a specific merchant. If the Default value is selected, the prices will be the same for everyone. The values available for selection derive from [Marketplace > Merchant Relations](https://documentation.spryker.com/docs/managing-merchant-relations). Only one value can be selected. | Yes | Yes |
 | Gross price Net price | Price value for gross and net mode. The price you populate is inherited by all product variants you add during the abstract product creation. | Yes | Yes |
 | Default Original | Default prices are prices your customers will pay, whereas original prices are the "previous price" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop. | Yes | Yes |
-| Add Product Volume Price Edit Product Volume Price | Once selected, the *Add volume price* (*Edit volume price*) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. It works only in the case of Default prices. The **Add Product Volume Price** button appears only when the gross and/or net prices for a store were set up beforehand and saved. *Edit Product Volume Price* appears only if the volume price has already been set up for a currency. | No | Yes |
+| Add Product Volume Price Edit Product Volume Price | Once selected, the *Add volume price* (*Edit volume price*) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. It works only in the case of Default prices. The **Add Product Volume Price** button appears only when the gross and/or net prices for a store are set up beforehand and saved. *Edit Product Volume Price* appears only if the volume price has already been set up for a currency. | No | Yes |
 | Tax Set | Conditions under which a product is going to be taxed. The values available for selection derive from [Taxes > Tax Sets](https://documentation.spryker.com/docs/managing-tax-rates-sets). Only one value can be selected. | Yes | Yes |
 
 ### Variants tab
@@ -51,9 +51,9 @@ The following tables describe the attributes that you use when creating and edit
 | ATTRIBUTE | DESCRIPTION | CREATE ABSTRACT PRODUCT | UPDATE ABSTRACT PRODUCT |
 |-|-|-|-|
 | Image Set Name | Name of your image set. | Yes | Yes |
-| Small | The link of the image that is going to be used in the product catalogs. | Yes | Yes |
+| Small | Link of the image that is going to be used in the product catalogs. | Yes | Yes |
 | Large | Link to the image that is going to be used on the product details page. | Yes | Yes |
-| Sort Order | If you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using the *Sort Order* fields. The order of the images is defined by the order of entered numbers where the image set with the sort order "0" is the first to be shown. | Yes | Yes |
+| Sort Order | If you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using the *Sort Order* fields. The order of the images is defined by order of entered numbers where the image set with the sort order "0" is the first to be shown. | Yes | Yes |
 
 ## Scheduled Prices tab
 In this tab, there is a table with the scheduled prices imported via a CSV file. The following information is available:
@@ -65,4 +65,4 @@ In this tab, there is a table with the scheduled prices imported via a CSV file.
 ## View Abstract Product page
 On this page, you can view all the information entered while creating or editing an abstract product.
 
-Note that for the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) projects, you can check what Merchant owns the product on this page.
+For the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) projects, you can check what Merchant owns the product on this page.

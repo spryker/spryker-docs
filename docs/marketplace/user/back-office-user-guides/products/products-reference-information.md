@@ -1,10 +1,10 @@
 ---
 title: Products - reference information
-last_updated: Apr 19, 2021
+last_updated: Feb 02, 2021
 description: This document describes the attributes that you see and enter on different product's pages.
 ---
 
-This topic describes the attributes that you see and enter on different product's pages.
+This topic describes the attributes that you see and enter on different product pages.
 
 ---
 
@@ -38,7 +38,7 @@ A set of the following examples will help you understand what your online store 
 
 ## Volume prices
 
-Let's say you have a product that you want to sell at a special price if a user wants to buy a specific number of the same product. For example, a Smartphone with a flash memory equals to 16GB costs 25 Euros per item, but you have defined that if a user buys three items, the cost will be 23 Euros instead of 25.
+Let's say you have a product that you want to sell at a special price if a user wants to buy a specific number of the same product. For example, a Smartphone with a flash memory equals 16GB costs 25 Euros per item, but you have defined that if a user buys three items, the cost will be 23 Euros instead of 25.
 
 ![volume-prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/Volume-prices.gif)
 

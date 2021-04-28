@@ -15,6 +15,18 @@ entries:
 
       - title: Back Office user guides
         nested:
+        - title: Abstract product
+          nested:
+
+          - title: Abstract product - reference information
+            url: /docs/marketplace/user/back-office-user-guides/abstract-product/abstract-product-reference-information.html
+
+        - title: Availability
+          nested:
+
+          - title: Availability - reference information
+            url: /docs/marketplace/user/back-office-user-guides/availability/availability-reference-information.html
+
         - title: Merchants
           nested:
 
@@ -26,6 +38,21 @@ entries:
 
           - title: Merchants - reference information
             url: /docs/marketplace/user/back-office-user-guides/merchants/merchants-reference-information.html
+
+        - title: Offers
+          nested:
+
+          - title: Offers - reference information
+            url: /docs/marketplace/user/back-office-user-guides/offers/offers-reference-information.html
+
+          - title: Offers
+            url: /docs/marketplace/user/back-office-user-guides/offers/offers.html
+
+        - title: Products
+          nested:
+
+          - title: Products - reference information
+            url: /docs/marketplace/user/back-office-user-guides/products/products-reference-information.html  
 
       - title: Features
         nested:

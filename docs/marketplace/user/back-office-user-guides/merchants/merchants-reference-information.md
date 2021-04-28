@@ -34,13 +34,13 @@ This tab contains the main information about the Merchant.
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
-| Name | A text field where you specify the name of the Merchant that you create or edit. | &check; |
-| Registration number | A text field where you specify the number assigned to the company at the point of registration. |  |
-| Merchant Reference | A text field where you specify a unique identifier between Administrator's ERP and Spryker. | &check; |
-| Email | A field where you specify the email address associated with the Merchant. **NOTE**: The email address is unique, meaning one value cannot be used for several Merchants. If the Merchant with the same email already exists, the following message is displayed for the *Email* field when trying to save the record: <br><br>"Email is already used." <br><br>However, the email can be the same as the email of a Marketplace Administrator that operates in the Administration Interface (Back Office). <br><br>**NOTE**: This email will be used by a Merchant to log in to the Merchant Portal. | &check; |
-| Is Active | A checkbox that, once checked, gets the merchant profile page in the Storefront online. |  |
-| Store Relation | A list of stores where the merchant is present. |  |
-| Merchant URL | A text field where, during editing, you can update the URL that is used to access the Merchant profile. The profile URL is specified per locale. | &check; |
+| Name | Text field where you specify the name of the Merchant that you create or edit. | &check; |
+| Registration number | Text field where you specify the number assigned to the company at the point of registration. |  |
+| Merchant Reference | Text field where you specify a unique identifier between Administrator's ERP and Spryker. | &check; |
+| Email | Field where you specify the email address associated with the Merchant. **NOTE**: The email address is unique, meaning one value cannot be used for several Merchants. If the Merchant with the same email already exists, the following message is displayed for the *Email* field when trying to save the record: <br><br>"Email is already used." <br><br>However, the email can be the same as the email of a Marketplace Administrator that operates in the Administration Interface (Back Office). <br><br>**NOTE**: This email will be used by a Merchant to log in to the Merchant Portal. | &check; |
+| Is Active | Checkbox that, once checked, gets the merchant profile page in the Storefront online. |  |
+| Store Relation | List of stores where the merchant is present. |  |
+| Merchant URL | Text field where, during editing, you can update the URL that is used to access the Merchant profile. The profile URL is specified per locale. | &check; |
 | Warehouses | Name of the Warehouse assigned to the Merchant. For more details on the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/merchants/merchants-feature-overview.html#merchant-warehouse.html#merchant-warehouse). |  |
 
 ### Contact Person Details tab
@@ -49,11 +49,11 @@ This tab contains information about the contact person. The contact person infor
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
-| Title | A formal salutation for your contact person (e.g. Mr, Ms, Mrs, Dr). There is no default value selected. |  |
-| Role | A text field where you can define the role the contact person performs. |  |
-| Phone | A text field where you can enter the phone number of the contact person. |  |
-| First Name | A text field where you can specify the first name of the contact person. | &check; |
-| Last Name | A text field where you can specify the last name of the contact person. | &check; |
+| Title | Formal salutation for your contact person (e.g. Mr, Ms, Mrs, Dr). There is no default value selected. |  |
+| Role | Text field where you can define the role the contact person performs. |  |
+| Phone | Text field where you can enter the phone number of the contact person. |  |
+| First Name | Text field where you can specify the first name of the contact person. | &check; |
+| Last Name | Text field where you can specify the last name of the contact person. | &check; |
 
 ### Merchant Profile tab
 
@@ -61,21 +61,21 @@ This tab includes the public information about the merchant that is displayed in
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
-| Public Email | A text field where you specify the business/public email address for the Merchant.  |  |
-| Public Phone | A text field where you specify the Merchant's public phone number. |  |
-| Fax Number | A text field where you specify the Merchant's fax number. |  |
-| Logo URL | A text field where you can specify the logo URL for the Merchant profile. |  |
-| Description | A text field where you can add a description for the Merchant for a locale. |  |
-| Average Delivery Time | A text field where you specify the average time during which the order is shipped for a locale. |  |
-| Banner URL | A text field where you can add a link to the Merchant's banner for a locale. |  |
-| Country | A drop-down list where you specify the country of the Merchant's business address. There is no value selected by default. |  |
-| Street | A text field where you specify the street of the Merchant's business address. |  |
-| Number | A text field where you can specify the number included to the Merchant's business address. |  |
-| Zip Code | A text field where you specify the ZIP code of the Merchant's business address. |  |
-| City | A text field where you specify the city of the merchant's business address. |  |
-| Addition to Address | A text field where you can specify any additional information included in the Merchant's business address. |  |
-| Longitude | A text field that is used to identify the Merchant location. |  |
-| Latitude | A text field that is used to identify the Merchant location. |  |
+| Public Email | Text field where you specify the business/public email address for the Merchant.  |  |
+| Public Phone | Text field where you specify the Merchant's public phone number. |  |
+| Fax Number | Text field where you specify the Merchant's fax number. |  |
+| Logo URL | Text field where you can specify the logo URL for the Merchant profile. |  |
+| Description | Text field where you can add a description for the Merchant for a locale. |  |
+| Average Delivery Time | Text field where you specify the average time during which the order is shipped for a locale. |  |
+| Banner URL | Text field where you can add a link to the Merchant's banner for a locale. |  |
+| Country | Drop-down list where you specify the country of the Merchant's business address. There is no value selected by default. |  |
+| Street | Text field where you specify the street of the Merchant's business address. |  |
+| Number | Text field where you can specify the number included to the Merchant's business address. |  |
+| Zip Code | Text field where you specify the ZIP code of the Merchant's business address. |  |
+| City | Text field where you specify the city of the merchant's business address. |  |
+| Addition to Address | Text field where you can specify any additional information included in the Merchant's business address. |  |
+| Longitude | Text field that is used to identify the Merchant location. |  |
+| Latitude | Text field that is used to identify the Merchant location. |  |
 
 ## Legal Information tab
 

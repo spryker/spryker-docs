@@ -1,0 +1,60 @@
+
+.warningBox, .infoBox, .errorBox{
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: Montserrat,sans-serif,Helvetica,Arial!important;
+    word-break: break-word;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.57;
+    letter-spacing: .07px;
+    border-left: 4px solid transparent;
+    background: #f5f5fc;
+    color: #48494e;
+}
+
+.warningBox {
+    border-color: #ff9b10;
+}
+.warningBox > .title {
+    color: #ff9b10;
+}
+
+.infoBox {
+    border-color: #377ee3;
+}
+.infoBox > .title {
+    color: #377ee3;
+}
+
+.errorBox {
+    border-color: #eb553b;
+}
+.errorBox > .title {
+    color: #eb553b;
+}
+
+.title {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: Montserrat,sans-serif,Helvetica,Arial!important;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.57;
+    letter-spacing: .07px;
+    box-sizing: border-box;
+    font-weight: 600;
+    display: block;
+    padding-bottom: 5px;
+}
+
+section > div.content {
+    max-width: none;
+}

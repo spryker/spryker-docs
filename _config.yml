@@ -1,3 +1,5 @@
+current_version: "202106.0"
+
 repository: spryker/spryker.github.io
 
 output: web
@@ -79,6 +81,13 @@ defaults:
       type: "pages"
     values:
       sidebar: mydoc_sidebar
+
+# version-related scopes
+  -
+    scope:
+      path: "docs/**/202106.0"
+    values:
+      version: "202106.0"
 
 # these are defaults used for the frontmatter for these file types
 

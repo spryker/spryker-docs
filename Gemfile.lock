@@ -1,3 +1,8 @@
+PATH
+  remote: _plugins/spryker_documentation
+  specs:
+    spryker_documentation (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -275,6 +280,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
+    unf_ext (0.0.7.7-x64-mingw32)
     unicode-display_width (1.7.0)
     verbal_expressions (0.1.5)
     webrick (1.7.0)
@@ -288,7 +294,8 @@ DEPENDENCIES
   github-pages
   jekyll-algolia (~> 1.0)
   jekyll-commonmark-ghpages
+  spryker_documentation!
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.2.15
+   2.2.16

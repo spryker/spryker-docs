@@ -1,23 +1,15 @@
 # frozen_string_literal: true
 
-require_relative "lib/spryker_documentation/version"
+require_relative "lib/page_template_validator/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "spryker_documentation"
+  spec.name          = "page_template_validator"
   spec.version       = SprykerDocumentation::VERSION
   spec.authors       = ["Anton Sakharov"]
   spec.email         = ["anton.sakharov@spryker.com"]
 
-  spec.summary       = "Summary of the gem."
-  spec.description   = "Gem description."
-  spec.homepage      = "https://github.com/spryker/spryker.github.io"
+  spec.summary       = "Validates Spryker documentation pages templates."
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
-
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-
-  spec.metadata["homepage_uri"] = 'https://github.com/spryker/spryker.github.io'
-  spec.metadata["source_code_uri"] = "https://github.com/spryker/spryker.github.io"
-  spec.metadata["changelog_uri"] = "https://github.com/spryker/spryker.github.io"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

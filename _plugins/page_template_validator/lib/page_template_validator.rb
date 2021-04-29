@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "spryker_documentation/version"
+require_relative "page_template_validator/version"
 require 'yaml'
 
 module Spryker
-  class PageValidationCommand < Jekyll::Command
+  class PageTemplateValidationCommand < Jekyll::Command
     class << self
       def init_with_program(prog)
         prog.command(:validate) do |c|

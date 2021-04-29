@@ -6,17 +6,22 @@ before_install:
 rvm:
   - 2.5
 
+_GEM_INSTALL: &GEM_INSTALL
+  - echo "_GEM_INSTALL"
+  - gem install bundler
+
 jobs:
   include:
     - name: Page validation
       script:
         - bundle exec jekyll validate
-      before_install:
-        - gem install bundler
+      install:
+        - *GEM_INSTALL
 
     - name: Push pages to Algolia
+      if: branch = master
       script:
         - bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
         - bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_user.yml
-      before_install:
-        - gem install bundler
+      install:
+        - *GEM_INSTALL

@@ -2,9 +2,6 @@ language: ruby
 cache: bundler
 before_install:
   - gem install bundler
-script:
-  - bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
-  - bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_user.yml
 branches:
   only:
     - master
@@ -16,8 +13,12 @@ jobs:
     - name: Page validation
       script:
         - bundle exec jekyll validate
+      before_install:
+        - gem install bundler
 
     - name: Push pages to Algolia
       script:
         - bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
         - bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_user.yml
+      before_install:
+        - gem install bundler

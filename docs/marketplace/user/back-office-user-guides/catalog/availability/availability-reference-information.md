@@ -2,6 +2,7 @@
 title: Availability - reference information
 last_updated: Feb 02, 2021
 description: This document contains reference information for working with the Availability section in Back Office.
+template: back-office-user-guide-template
 ---
 
 This article includes the information you need to know when working with the **Availability** section in Back Office.

@@ -2,6 +2,7 @@
 title: Abstract product - reference information
 last_updated: Apr 19, 2021
 description: This document contains reference information for creating and editing concrete and abstract products.
+template: back-office-user-guide-template
 ---
 
 ## Create/edit abstract product

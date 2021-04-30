@@ -2,6 +2,7 @@
 title: Offers - reference information
 last_updated: Apr 19, 2021
 description: This document contains reference information for working with merchant product offers in Marketplace > Offers.
+template: back-office-user-guide-template
 ---
 
 This topic contains reference information for working with merchant product offers in *Marketplace* > *Offers*.

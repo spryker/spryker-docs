@@ -1,3 +1,8 @@
+---
+title: Marketplace and merchant state machines interaction
+template: concept-topic-template
+---
+
 When viewed independently of each other, the Marketplace and Merchant State Machines workflows look like this:
 
 Marketplace State Machine workflow:

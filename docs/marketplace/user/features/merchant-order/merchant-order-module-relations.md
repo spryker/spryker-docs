@@ -1,3 +1,8 @@
+---
+title: Merchant order module relations
+template: concept-topic-template
+---
+
 The schema below illustates relations between modules in the [Merchant Order](https://documentation.spryker.com/marketplace/docs/merchant-order-feature-overview) feature.
 
 ![Merchant order module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/merchant-order-module-relations.png)

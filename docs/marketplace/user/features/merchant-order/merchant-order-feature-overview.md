@@ -1,3 +1,8 @@
+---
+title: Merchant order feature overview
+template: concept-topic-template
+---
+
 In the marketplace, when a buyer goes through checkout, the [Marketplace order](https://documentation.spryker.com/marketplace/docs/marketplace-order-feature-overview) is created. Such an order can contain offers and products from different merchants. The part of the order that belongs to a certain merchant is called *merchant order*, and it’s created in the system after the Marketplace order is has been placed. Thus, each merchant order contains at least one item from the Marketplace order.
 
 ![Merchant order](https://confluence-connect.gliffy.net/embed/image/1c2da1e6-9e30-4413-a799-bcf18d401167.png?utm_medium=live&utm_source=custom)

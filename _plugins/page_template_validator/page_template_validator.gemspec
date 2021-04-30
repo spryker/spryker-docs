@@ -4,7 +4,7 @@ require_relative "lib/page_template_validator/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "page_template_validator"
-  spec.version       = SprykerDocumentation::VERSION
+  spec.version       = PageTemplateValidator::VERSION
   spec.authors       = ["Anton Sakharov"]
   spec.email         = ["anton.sakharov@spryker.com"]
 

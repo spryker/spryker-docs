@@ -1,7 +1,7 @@
 PATH
-  remote: _plugins/spryker_documentation
+  remote: _plugins/page_template_validator
   specs:
-    spryker_documentation (0.1.0)
+    page_template_validator (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -294,7 +294,7 @@ DEPENDENCIES
   github-pages
   jekyll-algolia (~> 1.0)
   jekyll-commonmark-ghpages
-  spryker_documentation!
+  page_template_validator!
   webrick (~> 1.7)
 
 BUNDLED WITH

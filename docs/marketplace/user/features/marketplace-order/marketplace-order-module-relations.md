@@ -1,3 +1,7 @@
+---
+title: Marketplace order module relations
+template: concept-topic-template
+---
 
 The schema below illustates relations between modules in the [Marketplace Order](https://documentation.spryker.com/marketplace/docs/marketplace-order-feature-overview) feature.
 

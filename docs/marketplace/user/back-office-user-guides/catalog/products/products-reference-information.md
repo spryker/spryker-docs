@@ -2,6 +2,7 @@
 title: Products - reference information
 last_updated: Feb 02, 2021
 description: This document describes the attributes that you see and enter on different product's pages.
+template: back-office-user-guide-template
 ---
 
 This topic describes the attributes that you see and enter on different product pages.

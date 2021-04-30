@@ -1,6 +1,6 @@
 ---
 title: Product offers feature overview 
-summary: "Learn the concept of merproduct offers in the Spryker Marketplace."
+template: concept-topic-template
 ---
 
 The *product offer* entity is created when multiple merchants need to sell the same product on the Marketplace. 

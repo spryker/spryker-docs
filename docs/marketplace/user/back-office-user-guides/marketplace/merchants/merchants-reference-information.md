@@ -2,6 +2,7 @@
 title: Merchants - reference information
 last_updated: Apr 23, 2021
 description: This document contains the reference information that you need to know when working in the Marketplace > Merchants section in the Back Office.
+template: back-office-user-guide-template
 ---
 
 This topic contains the reference information that you need to know when working in the *Marketplace* > *Merchants* section in the Back Office.

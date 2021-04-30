@@ -6,9 +6,17 @@ rvm:
 _GEM_INSTALL: &GEM_INSTALL
   - echo "_GEM_INSTALL"
   - gem install bundler
+  - bundle install
+  - bundle exec jekyll build
 
 jobs:
   include:
+    - name: Links validation
+      script:
+        - bundle exec htmlproofer ./_site
+      install:
+        - *GEM_INSTALL
+
     - name: Page validation
       script:
         - bundle exec jekyll validate

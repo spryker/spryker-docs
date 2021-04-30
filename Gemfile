@@ -7,6 +7,8 @@ gem 'github-pages', group: :jekyll_plugins
 #gem "jekyll"
 
 gem "webrick", "~> 1.7"
+gem "rake"
+gem 'html-proofer'
 
 group :jekyll_plugins do
   gem 'jekyll-commonmark-ghpages'

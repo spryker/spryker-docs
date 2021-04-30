@@ -84,10 +84,13 @@
                     </ul>
                 </div>
 
-                <div class="main-header__search">
-                    <i class="icon-search"></i>
-                    {% include search/{{ site.search | default "default" }}_quicksearch.html %}
-                </div>
+                {% if page.url != "/index.html" %}
+                    <div class="main-header__search">
+                        <i class="icon-search"></i>
+                        {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                    </div>
+                {% endif %}
+
             </div>
             <div class="main-header__right">
                 <a href="#" class="button button_default button_small">

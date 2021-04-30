@@ -3,6 +3,8 @@
 @import 'components/header';
 @import 'components/footer';
 @import 'components/button';
+@import 'components/search-section';
+@import 'components/cards';
 
 html, body {
     height: 100%;
@@ -13,6 +15,12 @@ body {
     display: flex;
     flex-direction: column;
     font-family: $main-font;
+}
+
+.home-page {
+    .navbar {
+        display: none;
+    }
 }
 
 .page-wrapper {

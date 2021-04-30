@@ -4,13 +4,15 @@ last_updated: Dec 16, 2020
 description: This document describes the process how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
 ---
 
-This document describes how to integrate the [Marketplace Inventory Management + Packaging Units]() feature into a Spryker project.
+This document describes how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Inventory Management + Packaging Units feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -19,11 +21,13 @@ To start feature integration, overview and install the necessary features:
 | Marketplace Inventory Management + Order Management | master | [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-order-management-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
-Run the following commands to install the required modules:
+
+Install the required modules:
 
 ```bash
 composer require spryker/product-offer-packaging-unit:"^0.1.0" --update-with-dependencies
 ```
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -31,8 +35,10 @@ Make sure that the following modules have been installed:
 |-|-|
 | ProductOfferPackagingUnit | vendor/spryker/product-offer-packaging-unit |
 
-### 2) Set up behavior
-#### Enable resources and relationships
+{% endinfo_block %}
+
+### 2) Enable resources and relationships
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -62,9 +68,12 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+{% info_block warningBox "Verification" %}
 
 Make sure that availability calculated properly for the product offers that belong to product with packaging units.
 
 * Add such product offer to the cart.
 * Place order.
 * Make sure that `spy_product_offer_reservation` contains new row which have reserved the quantity equal bought packaging unit amount.
+
+{% endinfo_block %}

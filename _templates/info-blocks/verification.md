@@ -1,4 +1,5 @@
 {% info_block warningBox "Warning" %}
+
 Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |

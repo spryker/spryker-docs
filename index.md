@@ -17,11 +17,10 @@ Ensure that the following modules have been updated:
 {% endinfo_block %}
 
 {% info_block errorBox "Error block demo" %}
-Ensure that the following modules have been updated:
+Ensure that *the* following modules have been updated:
 {% endinfo_block %}
 
 <p>Demo WarningBlock without title:</p>
 {% info_block warningBox %}
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds:
 {% endinfo_block %}
-

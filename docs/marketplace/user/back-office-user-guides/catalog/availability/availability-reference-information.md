@@ -17,9 +17,15 @@ On the *Overview of Products Availability* page, you see the following:
 * The number of products in current stock and the number of reserved products (meaning ordered ones).
 * The identifier for the bundled product and those that are *never out of stock* (Yes/No values).
 
-{% include note.html content="For multi-store projects, you can filter the products according to the store the product is available." %}
+{% info_block infoBox "Info" %}
+For multi-store projects, you can filter the products according to the store the product is available.
+{% endinfo_block %}
+
+{% info_block infoBox "Info" %}
 
 For the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) project, you can also filter the products according to the Merchant the product belongs to.
+
+{% endinfo_block %}
 
 ![merchants-switcher-on-availabilities](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Availability/availability-reference-information/merchants-switcher-on-availabilities.gif)
 
@@ -34,9 +40,18 @@ On the *View Product Availability* page, you see 2 sections:
 
 The *Abstract Product availability* section is not modifiable. It only provides basic information. As the abstract product itself does not have any stock, the *Current Stock* value reflects the summarized value of all its variants.
 
-{% include note.html content="The Abstract Product contains a drop-down list where you can select the store for which you need to view the availability of the product." %}
+
+{% info_block infoBox "Info" %}
+
+The *Abstract Product* contains a drop-down list where you can select the store for which you need to view the availability of the product.
+
+{% endinfo_block %}
+
+{% info_block infoBox "Info" %}
 
 For the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) project, a merchant name is available for a specific product. The availability of a certain merchant warehouse is provided.
+
+{% endinfo_block %}
 
 Unlike the abstract product availability, the variant availability provides you with an option to edit stock. You invoke the edit stock flow from the *Actions* column. It also has the identifier of the product bundle.
 

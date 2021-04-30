@@ -4,13 +4,13 @@ last_updated: Dec 16, 2020
 description: This document describes the process how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.
 ---
 
-This document describes how to integrate the [Marketplace Inventory Management + Order Management]() feature into a Spryker project.
+This document describes how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.
 
 ## Install feature core
 Follow the steps below to install the Marketplace Inventory Management + Order Management feature core.
 
 ### Prerequisites
-To start feature integration, integra the required features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -18,14 +18,14 @@ To start feature integration, integra the required features:
 | Inventory Management | master |  [Inventory Management Feature Integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
 
 ### 1) Install the required modules using Composer
-Run the following command to install the required modules:
+
+Install the required modules:
 
 ```bash
 composer require spryker/oms-product-offer-reservation: "^0.1.0" --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -34,9 +34,10 @@ Make sure that the following modules have been installed:
 | OmsProductOfferReservation | vendor/spryker/oms-product-offer-reservation |
 | OmsProductOfferReservationGui | vendor/spryker/product-offer-reservation-gui |
 
----
+{% endinfo_block %}
 
 ### 2) Set up the database schema
+
 Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/OmsProductOfferReservation/Persistence/Propel/Schema/spy_oms_product_offer_reservation.schema.xml**
@@ -59,7 +60,7 @@ Adjust the schema definition so entity changes trigger events:
 </database>
 ```
 
-Run the following commands to apply database changes and to generate entity and transfer changes:
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -67,8 +68,7 @@ console propel:install
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied by checking your database:
 
@@ -76,17 +76,17 @@ Make sure that the following changes have been applied by checking your database
 |-|-|-|
 | spy_oms_product_offer_reservation | table | created |
 
----
+{% endinfo_block %}
 
 ### 3) Set up transfer objects
-Run the following command to generate transfer changes:
+
+Generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -96,9 +96,10 @@ Make sure that the following changes have been applied in transfer objects:
 | OmsProductOfferReservationCriteria | object | Created | src/Generated/Shared/Transfer/OmsProductOfferReservationCriteriaTransfer |
 | OmsProductOfferReservation | object | Created | src/Generated/Shared/Transfer/OmsProductOfferReservationTransfer |
 
----
+{% endinfo_block %}
 
 ### 5) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
@@ -168,8 +169,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure if you add a product offer to the cart, place the order, reserved product offers count changes in the `spy_oms_product_offer_reservation` table.
 
@@ -177,7 +177,7 @@ Make sure that a product offer available at PDP if it’s stock > 0 in the `spy_
 
 Make sure that the concrete product availability (in the `spy_availability` table) not affected when you place an order with a product offer.
 
----
+{% endinfo_block %}
 
 **src/Pyz/Zed/ProductOfferStockGui/ProductOfferStockGuiDependencyProvider.php**
 
@@ -203,9 +203,8 @@ class ProductOfferStockGuiDependencyProvider extends SprykerProductOfferStockGui
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that at if you open some product offer in view mode at `http://glue.mysprykershop.com/product-offer-gui/view?id-product-offer={% raw %}{{idProductOffer}}{% endraw %}`, stock table contains the `Reservations` column.
 
----
+{% endinfo_block %}

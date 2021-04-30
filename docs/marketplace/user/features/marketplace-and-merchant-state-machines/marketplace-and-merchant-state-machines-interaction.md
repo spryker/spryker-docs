@@ -1,5 +1,6 @@
 ---
 title: Marketplace and merchant state machines interaction
+description: This document contains details on how the Marketplace and merchant state machines interact with each other in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 

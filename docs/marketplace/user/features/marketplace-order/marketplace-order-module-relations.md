@@ -1,5 +1,6 @@
 ---
 title: Marketplace order module relations
+description: This document contains module schema for the Marketplace order feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 

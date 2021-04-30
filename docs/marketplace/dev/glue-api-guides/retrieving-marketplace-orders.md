@@ -1,8 +1,8 @@
 ---
 title: Installation
 description: Retrieve information about Marketplace offers via API
-
 ---
+
 Every registered customer can retrieve the list of orders for their account, as well as the detailed order information, including every step of the calculation and addresses used in the orders.
 
 In your development, this resource can help you to:

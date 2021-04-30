@@ -1,11 +1,12 @@
 ---
 title: Product offers feature overview 
+description: This document contains concept information for the Product offers feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 
 The *product offer* entity is created when multiple merchants need to sell the same product on the Marketplace. 
 
-Product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference mandatory and can only be defined once.
+Product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *product offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference is mandatory and can only be defined once.
 
 Every merchant can have multiple offers for the same concrete product. However, a product offer is related to a single merchant and cannot be shared between other merchants:
 
@@ -27,7 +28,7 @@ To define visibility of a product offer on the Storefront, the following details
 | Status               | Approval status: <ul><li>Approval status (Waiting for approval, Approved, Denied).</li><li>Visibility: Visibility (Active, Inactive).</li></ul> |
 | Validity Dates       | Specifies the period during which the product offer is visible on the Storefront. Concrete product validity dates have higher priority over the Offer validity dates. |
 
-A merchant can create product offers in the Merchnt Portal or import them using the data import.
+A merchant can create product offers in the Merchant Portal or import them using the data import.
 
 ## Product offer status 
 Product offer status defines whether the offer is active and displayed on the Storefront. Based on this, the product offer may have:
@@ -114,7 +115,7 @@ The decision of whether the product offer can be purchased depends on the offer 
 
 ### Product offers on the product details page
 
-All available product offers are listed in the **Sold by** area. If there are multiple product offers for a concrete product, there is always a default product offer pre-checked. Currently, a random offer is selected as a default one, however, you can change this logic on the project level. 
+All available product offers are listed in the **Sold by** area. If there are multiple product offers for a concrete product, there is always a default product offer pre-checked. Currently, a random offer is selected as the default one, however, you can change this logic on the project level. 
 
 ![Product offers on product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/product-offers-on-pdp.gif)
 
@@ -128,6 +129,11 @@ A customer can review the merchant information by clicking the link in the **Sol
 During the checkout, offers from the same merchant are grouped together for delivery so that the customer can always know how many shipments to expect and the merchants can smoothly fulfill the orders.
 
 ![Product offers during checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/product-offers-during-checkout.gif)
+
+### Product offers in the wishlist
+Customers can add the product offers to wishlist for future purchase. Merchant information is kept for the offer when it is added to wishlist. Further, customers can add the offer from wishlist to cart.
+
+![Product offers in wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/add-product-offer-to-wl-and-from-wl-to-cart.gif)
 
 ## Current constraints
 

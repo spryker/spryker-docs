@@ -9,7 +9,11 @@ template: back-office-user-guide-template
 
 The following tables describe the attributes that you use when creating and editing concrete and abstract products.
 
-{% include note.html content="The set of tabs for the Create and Edit pages, as well as for abstract and concrete products, is different. Hence, the additional columns with identifiers are added for your convenience." %}
+{% info_block infoBox "Info" %}
+
+The set of tabs for the *Create* and *Edit* pages, as well as for abstract and concrete products, is different. Hence, the additional columns with identifiers are added for your convenience.
+
+{% endinfo_block %}
 
 ### General tab
 
@@ -33,7 +37,11 @@ The following tables describe the attributes that you use when creating and edit
 
 ### Variants tab
 
-{% include note.html content="No values are available for selection when you create a product bundle. When you create a bundle, one product variant will be added by default." %}
+{% info_block infoBox "Info" %}
+
+No values are available for selection when you create a product bundle. When you create a bundle, one product variant will be added by default.
+
+{% endinfo_block %}
 
 * **While creating** an abstract product, you see a list of super attributes that derive from *[Catalog > Attributes](https://documentation.spryker.com/docs/managing-attributes)*. You can select as many super attributes as you need and define from one to many values for them (those values will define the difference between the product variants). Please keep in mind that moving forward, you will be able to create product variants only based on the selected super attributes. To add more product variants in the future, add at least one super attribute and define at least one value for it.
 
@@ -66,4 +74,8 @@ In this tab, there is a table with the scheduled prices imported via a CSV file.
 ## View Abstract Product page
 On this page, you can view all the information entered while creating or editing an abstract product.
 
+{% info_block infoBox "Info" %}
+
 For the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) projects, you can check what Merchant owns the product on this page.
+
+{% endinfo_block %}

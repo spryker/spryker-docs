@@ -73,10 +73,10 @@ entries:
               nested:
 
               - title: Abstract products - reference information
-                url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products-reference-information.html
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-product-reference-information.html
 
               - title: Products - reference information
-                url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html  
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html
 
             - title: Availability
               nested:
@@ -93,7 +93,7 @@ entries:
 
                 - title: Managing merchants
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html
-          
+
                 - title: Managing merchant users
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html
 
@@ -108,5 +108,3 @@ entries:
 
                 - title: Offers - reference information
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers-reference-information.html
-
-        

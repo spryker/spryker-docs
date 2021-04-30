@@ -5,13 +5,15 @@ description: This guide explains how Marketplace Administrator can manage mercha
 template: back-office-user-guide-template
 ---
 
-Merchant user is the user that performs tasks on behalf of the merchant in the Merchant Portal. Marketplace Administrator can manage merchant users in the Back Office.
+A merchant user is the user that performs tasks on behalf of the merchant in the Merchant Portal. Marketplace Administrator can manage merchant users in the Back Office.
 
 To start managing  merchant users navigate to the *Marketplace* > *Merchants* > *Edit Merchant* page.
 
 ## Creating a merchant user
 
-{% include note.html content="To create a Merchant User, create a Merchant first." %}
+{% info_block infoBox "Info" %}
+To create a merchant user, create a Merchant first.
+{% endinfo_block %}
 
 To create a merchant user, do the following:
 
@@ -23,7 +25,7 @@ To create a merchant user, do the following:
 
 4. Click **Create**.
 
-By default, each Merchant User obtains the role of Merchant Portal Administrator. To change it, [edit the Back Office](https://documentation.spryker.com/docs/managing-users#editing-a-user) user record.
+By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the Back Office](https://documentation.spryker.com/docs/managing-users#editing-a-user) user record.
 
 
 ## Editing the merchant user
@@ -37,15 +39,21 @@ On the *Edit Merchant user* page, edit the merchant user details.
 
 Once the merchant user is created, they need to be activated in order to be able to access the Merchant Portal.
 
-{% include note.html content="Make sure that the merchant is approved in the Back Office to be able to proceed with the merchant user activation. You will not be able to activate the merchant user if the merchant is denied." %}
+{% info_block infoBox "Info" %}
+Make sure that the merchant is approved in the Back Office to be able to proceed with the merchant user activation. You will not be able to activate the merchant user if the merchant is denied.
+{% endinfo_block %}
 
 To activate the merchant user, click **Activate** in the *Actions* column of the *Merchant Users* page.
 
-Once the merchant user is activated, they receive the email message with the reset password instructions to the email address specified at the step of [Merchant user creation](/docs/marketplace/user/back-office-user-guides/merchants/managing-merchant-users.html#creating-a-merchant-user).
+Once the merchant user is activated, they receive the email message with the reset password instructions to the email address specified at the step of [merchant user creation](/docs/marketplace/user/back-office-user-guides/merchants/managing-merchant-users.html#creating-a-merchant-user).
 
-{% include note.html content="To deactivate the merchant user, click Deactivate in the Actions column of the Merchant Users page." %}
+{% info_block infoBox "Info" %}
+To deactivate the merchant user, click Deactivate in the Actions column of the Merchant Users page.
+{% endinfo_block %}
 
-{% include note.html content="Merchant user gets automatically deactivated when the merchant gets denied." %}
+{% info_block infoBox "Info" %}
+Merchant user gets automatically deactivated when the merchant gets denied.
+{% endinfo_block %}
 
 Once the merchant user is created and activated, they can log in to the Merchant Portal.
 
@@ -55,4 +63,6 @@ If you do not need a merchant user anymore, you can delete it.
 
 To delete the merchant user, click **Delete** on the *Edit Merchant* page in the *Users* tab.
 
-{% include note.html content="In the current implementation, the Delete button only restricts the merchant user’s access to the Merchant Portal. However, you can change the behavior in your project." %}
+{% info_block infoBox "Info" %}
+In the current implementation, the Delete button only restricts the merchant user’s access to the Merchant Portal. However, you can change the behavior in your project.
+{% endinfo_block %}

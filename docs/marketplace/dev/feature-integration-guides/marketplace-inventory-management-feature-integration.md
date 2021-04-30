@@ -4,7 +4,7 @@ last_updated: Dec 16, 2020
 description: This document describes the process how to integrate the Marketplace Inventory Management feature into a Spryker project.
 ---
 
-This document describes how to integrate the [Marketplace Inventory Management](https://github.com/spryker-feature/marketplace-inventory-management) feature into a Spryker project.
+This document describes how to integrate the Marketplace Inventory Management feature into a Spryker project.
 
 ## Install feature core
 Follow the steps below to install the Marketplace Inventory Management feature core.
@@ -25,7 +25,7 @@ Install the required modules:
 ```bash
 composer require spryker-feature/marketplace-inventory-management: "dev-master" --update-with-dependencies
 ```
-
+{% info_block warningBox "Verification" %}
 Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
@@ -39,6 +39,9 @@ Make sure that the following modules have been installed:
 | ProductOfferStockGuiExtension | vendor/spryker/product-offer-stock-gui-extension |
 | ProductOfferAvailability | vendor/spryker/product-offer-availability |
 | ProductOfferAvailabilityStorage | vendor/spryker/product-offer-availability-storage |
+
+{% endinfo_block %}
+
 
 ### 2) Set up the database schema
 
@@ -71,8 +74,7 @@ console propel:install
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied by checking your database:
 
@@ -82,17 +84,17 @@ Make sure that the following changes have been applied by checking your database
 | spy_product_offer_stock | table | created |
 | spy_product_offer_availability_storage | table | created |
 
----
+{% endinfo_block %}
 
 ### 3) Set up transfer objects
+
 Generate transfers:
 
 ```bash
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -112,7 +114,7 @@ Make sure that the following changes have been applied in transfer objects:
 | SpyProductOfferAvailabilityStorageEntity | object | Created | src/Generated/Shared/Transfer/SpyProductOfferAvailabilityStorageEntityTransfer |
 | SpyProductOfferStockEntity | object | Created | src/Generated/Shared/Transfer/SpyProductOfferStockEntityTransfer |
 
----
+{% endinfo_block %}
 
 ### 4) Add Zed translations
 
@@ -170,14 +172,13 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that when you retrieve merchant using `MerchantFacade::get()` the response transfer contains merchant stocks.
 
 Make sure that when you create a merchant in Zed UI, its stock also gets created in `spy_merchant_stock` table.
 
----
+{% endinfo_block %}
 
 **src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php**
 
@@ -203,12 +204,11 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that when you edit some merchant on http://zed.de.demo-spryker.com/merchant-gui/list-merchant, you can see the `Wherehouses` field.
 
----
+{% endinfo_block %}
 
 <details><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
@@ -258,8 +258,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that when you create a product offer using `ProductOfferFacade::create()` with provided stock data, it persists to `spy_product_offer_stock`.
 
@@ -267,7 +266,7 @@ Make sure that when you update a product offer using `ProductOfferFacade::create
 
 Make sure that when you retrieve a product offer using `ProductOfferFacade::findOne()` the response data contains info about product offer stocks.
 
----
+{% endinfo_block %}
 
 **src/Pyz/Zed/Availability/AvailabilityDependencyProvider.php**
 
@@ -293,12 +292,11 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySkuForStore()` returns not a product but a product offer availability if the product offer reference passed in the request.
 
----
+{% endinfo_block %}
 
 ### 6) Configure export to Redis
 
@@ -451,14 +449,13 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the command `console sync:data merchant_profile` exports data from `spy_product_offer_availability_storage` table to Redis.
 
 Make sure that when a product offer availability entities get created or updated through ORM, it is exported to Redis accordingly.
 
----
+{% endinfo_block %}
 
 ### 8) Import data
 Import the following data.
@@ -647,16 +644,15 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import merchant-stock
 console data:import product-offer-stock
 ```
 
----
-**Verification**
+{% info_block warningBox "Warning" %}
 
 Make sure that imported data is added to the `spy_merchant_stock` and `spy_product_offer_stock` tables.
 
----
+{% endinfo_block %}

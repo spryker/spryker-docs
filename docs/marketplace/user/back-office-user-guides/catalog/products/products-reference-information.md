@@ -3,6 +3,7 @@ title: Products - reference information
 last_updated: Feb 02, 2021
 description: This document describes the attributes that you see and enter on different product's pages.
 template: back-office-user-guide-template
+
 ---
 
 This topic describes the attributes that you see and enter on different product pages.
@@ -25,11 +26,20 @@ On the *Products* page, you see the following:
 
 * Stores where the product is available (in case you have multiple stores in your project).
 
-Note that for the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) project, you can also filter the products belonging to a certain Merchant:
+{% info_block infoBox "Info" %}
+
+For the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) project, you can also filter the products belonging to a certain Merchant:
+
+{% endinfo_block %}
+
 
 ![merchants-switcher-on-products](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/products/products-reference-information/merchants-switcher-on-products.gif)
 
-{% include note.html content="Upon entering the page, all merchants are enabled by default." %}
+{% info_block infoBox "Info" %}
+
+Upon entering the page, all merchants are enabled by default.
+
+{% endinfo_block %}
 
 ---
 

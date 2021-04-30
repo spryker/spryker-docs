@@ -20,9 +20,6 @@ gulp.task('browser-sync', function() {
 			baseDir: '_site'
 		},
 		notify: false,
-		// open: false,
-		// online: false, // Work Offline Without Internet Connection
-		// tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
 	})
 });
 
@@ -46,17 +43,9 @@ gulp.task('scripts', function() {
 	.pipe(browserSync.reload({ stream: true }))
 });
 
-// HTML Live Reload
-// gulp.task('code', function() {
-// 	return gulp.src('**/*.html')
-// 	.pipe(browserSync.reload({ stream: true }))
-// });
-
-
 gulp.task('watch', function() {
 	gulp.watch(syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
 	gulp.watch(['js/**/*.js', '_site/js/common.js'], gulp.parallel('scripts'));
-	//gulp.watch('**/*.html', gulp.parallel('code'));
 });
 gmWatch ? gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch')) 
 				: gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));

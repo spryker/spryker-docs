@@ -1,28 +1,28 @@
 <!-- Navigation -->
 <header class="main-header">
     <div class="container">
-        <div class="main-header-inner">
-            <div class="main-header-left">
-                <strong class="main-header-logo">
-                    <a href="/index.html">
-                        <img src="{{ "/images/logo.svg" }}" alt="Spryker Documentation" class="main-header-logo" />
+        <div class="main-header__inner">
+            <div class="main-header__left">
+                <strong class="main-header__logo">
+                    <a href="/">
+                        <img src="{{ "/images/logo.svg" }}" alt="Spryker Documentation" class="main-header-logo">
                     </a>
                 </strong>
 
                 <div class="main-nav">
-                    <a href="#" class="main-nav-opener">
+                    <a href="#" class="main-nav__opener">
                         <span class="main-nav-opener-text">Select Product</span>
                         <i class="icon-arrow-down"></i>
                     </a>
                 </div>
 
-                <div class="main-header-search">
+                <div class="main-header__search">
                     <i class="icon-search"></i>
                     {% include search/{{ site.search | default "default" }}_quicksearch.html %}
                 </div>
             </div>
-            <div class="main-header-right">
-                <a href="#" class="button small">
+            <div class="main-header__right">
+                <a href="#" class="button button_default button_small">
                     <i class="icon-rss"></i>
                     RSS
                 </a>

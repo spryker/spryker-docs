@@ -19,6 +19,6 @@ topnav_dropdowns:
     - title: Products
       folderitems:
         - title: Developer Documentation
-          url: /docs/marketplace/dev/setup/system-requirements.html
+          url: /docs/marketplace/dev/setup/202106.0/system-requirements.html
         - title: User Documentation
-          url: /docs/marketplace/user/intro-to-spryker/marketplace-concept
+          url: /docs/marketplace/user/intro-to-spryker/202106.0/marketplace-concept

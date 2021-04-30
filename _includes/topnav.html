@@ -10,10 +10,78 @@
                 </strong>
 
                 <div class="main-nav">
-                    <a href="#" class="main-nav__opener">
-                        <span class="main-nav-opener-text">Select Product</span>
-                        <i class="icon-arrow-down"></i>
+                    <a href="#" class="main-nav__opener {% if page.title == 'Spryker Marketplace Documentation' %}main-nav__opener_default{% endif %}">
+                        <span class="main-nav__opener-label">Select Product</span>
+                        <span class="main-nav__opener-text">
+                            {% if page.title == 'Spryker Marketplace Documentation' %}
+                            Select Product
+                            {% else %}
+                            {{ page.title }}
+                            {% endif %}
+                        </span>
+                        <i class="main-nav__opener-icon icon-arrow-down"></i>
                     </a>
+                    <ul class="main-nav__drop">
+                         <li>
+                             <a href="/" class="main-nav__drop-link">
+                                All Products
+                                <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
+                             </a>
+                             <ul class="main-nav__drop">
+                                 <li>
+                                     <a href="/" class="main-nav__drop-link">
+                                        Link 1
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/" class="main-nav__drop-link">
+                                        Link 2
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/" class="main-nav__drop-link">
+                                        Link 3
+                                     </a>
+                                 </li>
+                             </ul>
+                         </li>
+                         <li>
+                             <a href="/" class="main-nav__drop-link">
+                                Spryker Commerce OS
+                             </a>
+                         </li>
+                         <li>
+                             <a href="/" class="main-nav__drop-link">
+                                Marketplace
+                                <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
+                             </a>
+                             <ul class="main-nav__drop">
+                                 <li>
+                                     <a href="/" class="main-nav__drop-link">
+                                        <span class="main-nav__drop-link-title">
+                                            <i class="icon-developer"></i>
+                                            Developer
+                                        </span>
+                                        <span class="main-nav__drop-link-subtitle">Marketplace developer guide</span>
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/" class="main-nav__drop-link">
+                                        <span class="main-nav__drop-link-title">
+                                            <i class="icon-business"></i>
+                                            Business User
+                                        </span>
+                                        <span class="main-nav__drop-link-subtitle">Marketplace users guide</span>
+                                     </a>
+                                 </li>
+                             </ul>
+                         </li>
+                         <li>
+                             <a href="/" class="main-nav__drop-link">
+                                Spryker Cloud Commerce OS
+                             </a>
+                         </li>
+                    </ul>
                 </div>
 
                 <div class="main-header__search">

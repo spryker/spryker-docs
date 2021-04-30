@@ -1,7 +1,8 @@
 .main-header {
-    background: #fff;
+    background: $headerColor;
     padding: 15px 0;
     z-index: 100;
+    position: relative;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -87,24 +88,57 @@
 
 .main-nav {
     margin: 0 24px 0 0;
+    position: relative;
+
+    &:hover {
+        & > .main-nav__drop {
+            display: block;
+        }
+
+        & > .main-nav__opener {
+            border-color: transparent;
+            border-radius: 4px 4px 0 0;
+            .main-nav__opener-label {
+                opacity: 0;
+            }
+        }
+    }
 
     &__opener {
         display: flex;
         align-items: center;
         color: $black;
-        background: $grey-lightest;
+        background: $headerColor;
         border: 2px solid #ebebeb;
-        font-size: 10px;
+        font-size: 12px;
         line-height: 1.4;
         font-weight: 800;
-        padding: 16px 20px;
+        padding: 0 20px;
         text-decoration: none;
+        height: 50px;
         width: 300px;
+        position: relative;
+        z-index: 2;
+        transition: background .2s linear, border-radius .2s linear, border-color .2s linear;
 
         &:hover,
         &:active,
         &:focus {
             text-decoration: none;
+            color: $black;
+        }
+
+        &_default {
+            border-color: $grey-lightest;
+            background: $grey-lightest;
+            font-size: 10px;
+            text-transform: uppercase;
+            .main-nav__opener-label {
+                display: none;
+            }
+            .main-nav-opener-icon {
+                color: #d3d3d4;
+            }
         }
 
         &-text {
@@ -115,9 +149,126 @@
             white-space: nowrap;
         }
 
-        [class*="icon-"] {
+        &-icon {
+            color: $black;
             flex: 0 0 auto;
             margin: 0 0 0 10px;
+            font-size: 10px;
+        }
+
+        &-label {
+            font-size: 9px;
+            line-height: 12px;
+            background: $headerColor;
+            color: #adafb3;
+            position: absolute;
+            top: -7px;
+            left: 13px;
+            z-index: 2;
+            flex: none;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            padding: 0 5px;
+            transition: opacity .2s linear;
+        }
+    }
+
+    &__drop {
+        margin: 0;
+        padding: 50px 0 0;
+        list-style: none;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 600;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        border-radius: 4px;
+        box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.03),
+        0px 3px 8px 0px rgba(0, 0, 0, 0.08),
+        0px 20px 40px 0px rgba(0, 0, 0, 0.08);
+        display: none;
+
+        & > li {
+            position: relative;
+
+            &:hover {
+                & > .main-nav__drop {
+                    display: block;
+                }
+
+                & > .main-nav__drop-link {
+                    background: #ebebeb;
+                    -webkit-text-stroke: .5px currentColor;
+                }
+            }
+        }
+
+        a {
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: none;
+                color: $black;
+            }
+
+            &:focus {
+                text-decoration: none;
+                outline-color: $red;
+            }
+        }
+
+        &-link {
+            display: block;
+            position: relative;
+            padding: 13px 40px 13px 30px;
+            color: $black;
+            transition: background .2s linear;
+
+            &-arrow {
+                position: absolute;
+                right: 18px;
+                top: 16px;
+                font-size: 10px;
+                color: #d3d3d4;
+            }
+
+            &:hover {
+                background: $grey-lightest !important;
+                -webkit-text-stroke: .5px currentColor;
+            }
+
+            &-title {
+                margin: 0 0 5px;
+                display: flex;
+                align-items: center;
+                font-weight: 800;
+
+                [class*="icon-"] {
+                    color: $red;
+                    margin: 0 10px 0 0;
+                    font-size: 22px;
+                    line-height: 1;
+                    display: block;
+                }
+            }
+
+            &-subtitle {
+                display: block;
+            }
+        }
+
+        .main-nav__drop {
+            padding: 0;
+            left: 100%;
+            top: 0;
+            border-top-left-radius: 0;
+
+            .main-nav__drop-link {
+                -webkit-text-stroke: 0 !important;
+            }
         }
     }
 }

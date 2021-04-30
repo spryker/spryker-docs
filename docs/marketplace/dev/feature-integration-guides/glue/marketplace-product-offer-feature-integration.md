@@ -10,7 +10,7 @@ This document describes how to integrate the [Marketplace Product Offer Glue API
 Follow the steps below to install the Marketplace Product Offer Glue API feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the following features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|

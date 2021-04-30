@@ -302,7 +302,7 @@ Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySku
 
 ### 6) Configure export to Redis
 
-This step will publish tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronize the data to Storage.
+This step will publish tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronize the data to the storage.
 
 #### Set up event, listeners, and publishers
 

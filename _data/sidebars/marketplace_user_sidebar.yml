@@ -9,9 +9,7 @@ entries:
       - title: Intro to Spryker
         nested:
           - title: Marketplace concept
-            url: "/docs/marketplace/user/intro-to-spryker/marketplace-concept.html"
-
-          - title: Item 3
+            url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
 
       - title: Features
         nested:
@@ -63,3 +61,52 @@ entries:
 
           - title: Marketplace and merchant state machine module schema
             url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machine-module-schema.html
+
+      - title: Back Office user guides
+        nested:
+
+        - title: Catalog
+
+          nested:
+
+            - title: Products
+              nested:
+
+              - title: Abstract products - reference information
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products-reference-information.html
+
+              - title: Products - reference information
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html  
+
+            - title: Availability
+              nested:
+
+              - title: Availability - reference information
+                url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
+
+        - title: Marketplace
+
+          nested:
+
+            - title: Merchants
+              nested:
+
+                - title: Managing merchants
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html
+          
+                - title: Managing merchant users
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html
+
+                - title: Merchants - reference information
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/merchants-reference-information.html
+
+            - title: Offers
+              nested:
+
+                - title: Offers
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers.html
+
+                - title: Offers - reference information
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers-reference-information.html
+
+        

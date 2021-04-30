@@ -1,5 +1,6 @@
 ---
 title: Merchant order feature overview
+description: This document contains concept information for the Merchant order feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 

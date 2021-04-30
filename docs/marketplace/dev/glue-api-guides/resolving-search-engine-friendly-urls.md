@@ -2,6 +2,7 @@
 title: Resolving search engine friendly URLs
 description: Learn how to resolve search engine friendly URLs via Glue API in the Spryker Marketplace
 ---
+
 This endpoints allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
 
 For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see: 

@@ -2,6 +2,7 @@
 title: Managing guest cart items
 description: Retrieve details about guest cart items and learn what else you can do with the resource in the Spryker Marketplace
 ---
+
 This endpoint allows you to manage guest cart items.
 
 ## Installation

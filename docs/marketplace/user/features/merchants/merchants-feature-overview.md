@@ -1,5 +1,6 @@
 ---
 title: Merchants feature overview 
+description: This document contains concept information for the Merchants feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 

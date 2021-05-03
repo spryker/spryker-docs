@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Offer + Checkout feature integration
-last_updated: Apr 28, 2021
+last_updated: May 3, 2021
 description: This document describes the process how to integrate the Marketplace Product Offer + Checkout feature into a Spryker project.
 ---
 
@@ -16,6 +16,8 @@ To start feature integration, integrate the required features:
 |-|-|-|
 | Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
 | Marketplace Product Offer | dev-master | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
+| Checkout | 202001.0 | [Checkout feature integration](https://github.com/spryker-feature/checkout) |
+
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:
@@ -31,11 +33,8 @@ Make sure that the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
-| CartExtension | spryker/cart-extension |
 | CheckoutExtension | spryker/checkout-extension |
-| Product | spryker/product |
-| ProductOfferExtension | spryker/product-offer-extension |
-| Store | spryker/store |
+| ProductOffer | spryker/product-offer |
 
 ---
 
@@ -63,7 +62,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferCheckoutPreConditionPlugin | Checks if at least one quote item transfer has items with inactive or not approved ProductOffer. |   | Spryker/Zed/ProductOffer/Communication/Plugin/Checkout/ProductOfferCheckoutPreConditionPlugin.php |
+| ProductOfferCheckoutPreConditionPlugin | Blocks checkout if at least one quote item transfer has items with inactive or not approved ProductOffer. |   | Spryker/Zed/ProductOffer/Communication/Plugin/Checkout/ProductOfferCheckoutPreConditionPlugin.php |
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 
@@ -86,8 +85,6 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     protected function getCheckoutPreConditions(Container $container)
     {
         return [
-            // other plugins ..
-
             new ProductOfferCheckoutPreConditionPlugin(),
         ];
     }
@@ -97,6 +94,6 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 ---
 **Verification**
 
-Make sure that when refreshing the checkout summary page, after changing `active` or `approved` status of a product offer, the status is reflected accordingly.
-
+Make sure that when refreshing the checkout summary page, after changing `active` or `approved` status of a product offer, the status is reflected accordingly. The checkout button will be disabled and a message is shown on bottom of checkout summary page: "Product offer inactive for product with SKU '<SKU>'.".
+The offer's `active` status can be toggled in Merchant Portal (`Offer visibility`). There's no UI to unset the approval status for an offer yet (only via data-importer: edit `data/import/common/common/marketplace/merchant_product_offer.csv` and execute `console data:import merchant-product-offer` command).
 ---

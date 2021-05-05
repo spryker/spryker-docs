@@ -5,7 +5,7 @@
             <div class="main-header__left">
                 <strong class="main-header__logo">
                     <a href="/">
-                        <img src="{{ "/images/logo.svg" }}" alt="Spryker Documentation" class="main-header-logo">
+                        <img src="{{ "/images/logo.svg" }}" alt="Spryker Documentation">
                     </a>
                 </strong>
 
@@ -86,14 +86,14 @@
 
                 {% if page.url != "/index.html" %}
                     <div class="main-header__search">
-                        <i class="icon-search"></i>
+                        <i class="main-header__search-icon icon-search"></i>
                         {% include search/{{ site.search | default "default" }}_quicksearch.html %}
                     </div>
                 {% endif %}
 
             </div>
             <div class="main-header__right">
-                <a href="#" class="button button_default button_small">
+                <a href="#" class="button main-header__button button--small">
                     <i class="icon-rss"></i>
                     RSS
                 </a>
@@ -153,8 +153,8 @@
                 {% endfor %}
                 {% endfor %}
                 {% if site.feedback_disable == null or site.feedback_disable == false %}
-			{% include feedback.html %}
-		{% endif %}
+                        {% include feedback.html %}
+                {% endif %}
                 <!--comment out this block if you want to hide search-->
                 <li>
                     <!--start search-->

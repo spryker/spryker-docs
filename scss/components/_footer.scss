@@ -9,6 +9,7 @@
     a {
         transition: color .3s linear;
         outline-offset: 4px;
+        text-decoration: none;
 
         &[href^="http://"]:after,
         &[href^="https://"]:after {
@@ -16,7 +17,7 @@
         }
     }
 
-    &__bottom { 
+    &__bottom {
         background: $grey-lightest;
         color: #aeb2b6;
         padding: 13px 0;
@@ -80,112 +81,115 @@
     .copyright {
         font-weight: bold;
     }
-}
 
-.main-footer__top {
-    background: #fff;
-    padding: 18px 0;
-}
-.main-footer__block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-.main-footer__column {
-    flex: 0 0 auto;
-    min-width: 250px;
-
-    &_1 {
-        flex: 1 1 auto;
-        padding: 0 20px 0 0;
+    &__top {
+        background: #fff;
+        padding: 18px 0;
     }
 
-    &_2 {
-        flex: 1 1 auto;
-    }
-
-    &_3 {
-        flex: 1 1 auto;
-        padding: 0 0 0 20px;
-    }
-}
-.main-footer__logo {
-    display: block;
-    width: 136px;
-    height: auto;
-    margin: 0 0 10px;
-}
-.main-footer__nav {
-    text-align: center;
-    ul {
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1400px;
         margin: 0 auto;
+    }
+
+    &__column {
+        flex: 0 0 auto;
+        min-width: 250px;
+
+        &_1 {
+            flex: 1 1 auto;
+            padding: 0 20px 0 0;
+        }
+
+        &_2 {
+            flex: 1 1 auto;
+        }
+
+        &_3 {
+            flex: 1 1 auto;
+            padding: 0 0 0 20px;
+        }
+    }
+    &__logo {
+        display: block;
+        width: 136px;
+        height: auto;
+        margin: 0 0 10px;
+    }
+    &__nav {
+        text-align: center;
+        ul {
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            display: inline-flex;
+            vertical-align: top;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 12px;
+            line-height: 1.6667;
+            font-weight: 600;
+            letter-spacing: .02em;
+            min-width: 600px;
+        }
+        li {
+            padding: 15px 10px;
+        }
+        a {
+            color: $grey;
+            transition: color .3s linear;
+            display: inline-block;
+            vertical-align: top;
+            padding: 5px 0;
+            &:hover,
+            &:active {
+                color: $black;
+                text-decoration: none;
+            }
+            &:focus {
+                text-decoration: none;
+                outline-color: $red;
+            }
+        }
+    }
+
+    &__socials {
+        margin: 0;
         padding: 0;
         list-style: none;
-        display: inline-flex;
-        vertical-align: top;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        font-size: 12px;
-        line-height: 1.6667;
-        font-weight: 600;
-        letter-spacing: .02em;
-        min-width: 600px;
-    }
-    li {
-        padding: 15px 10px;
-    }
-    a {
-        color: $grey;
-        transition: color .3s linear;
-        display: inline-block;
-        vertical-align: top;
-        padding: 5px 0;
-        &:hover,
-        &:active {
-            color: $black;
-            text-decoration: none;
-        }
-        &:focus {
-            text-decoration: none;
-            outline-color: $red;
-        }
-    }
-}
-.main-footer__socials {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
 
-    li {
-        margin: 0 0 0 25px;
-    }
-    a {
-        color: $grey;
-        font-size: 0;
-        &:hover,
-        &:active {
-            color: $black;
-            text-decoration: none;
+        li {
+            margin: 0 0 0 25px;
         }
-        &:focus {
-            text-decoration: none;
-            outline-color: $red;
+        a {
+            color: $grey;
+            font-size: 0;
+            &:hover,
+            &:active {
+                color: $black;
+                text-decoration: none;
+            }
+            &:focus {
+                text-decoration: none;
+                outline-color: $red;
+            }
         }
-    }
 
-    [class*="icon-"] {
-        display: block;
-        font-size: 15px;
-    }
-    .icon-youtube {
-        font-size: 17px;
-    }
-    .icon-facebook {
-        font-size: 15px;
+        [class*="icon-"] {
+            display: block;
+            font-size: 15px;
+        }
+        .icon-youtube {
+            font-size: 17px;
+        }
+        .icon-facebook {
+            font-size: 15px;
+        }
     }
 }

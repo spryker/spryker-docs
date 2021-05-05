@@ -2,10 +2,6 @@
 layout: default
 ---
 
-<div class="post-header">
-   <h1 class="post-title-main">{{ page.title }}</h1>
-</div>
-
 {% if page.simple_map == true %}
 
 <script>
@@ -28,39 +24,56 @@ layout: default
 
 {% endif %}
 
-<div class="post-content">
+<div class="page-content page-content--post">
 
-   {% if page.summary %}
-    <div class="summary">{{page.summary}}</div>
-   {% endif %}
+    <aside class="main-sidebar">
+        <div class="main-sidebar__inner">
+            <h3>Marketplace Developer Guide</h3>
 
-    {% unless page.toc == false %}
-    {% include toc.html %}
-    {% endunless %}
+            {% unless page.hide_sidebar %}
+                <div class="" id="tg-sb-sidebar">
+                    {% include sidebar.html %}
+                </div>
+            {% endunless %}
+        </div>
+    </aside>
+    <div class="post-content">
+        <div class="post-header">
+           <h1 class="post-title-main">{{ page.title }}</h1>
+        </div>
 
+       {% if page.summary %}
+        <div class="summary">{{page.summary}}</div>
+       {% endif %}
 
-    {% if site.github_editme_path %}
-
-    <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
-
-    {% endif %}
-
-   {{content}}
-
-    <div class="tags">
-        {% if page.tags != null %}
-        <b>Tags: </b>
-        {% assign projectTags = site.data.tags.allowed-tags %}
-        {% for tag in page.tags %}
-        {% if projectTags contains tag %}
-        <a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+        {% if site.github_editme_path %}
+            <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
         {% endif %}
-        {% endfor %}
-        {% endif %}
+
+        {{content}}
+
+        <div class="tags">
+            {% if page.tags != null %}
+            <b>Tags: </b>
+            {% assign projectTags = site.data.tags.allowed-tags %}
+            {% for tag in page.tags %}
+            {% if projectTags contains tag %}
+            <a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </div>
+
+        {% include commento.html %}
     </div>
 
-{% include commento.html %}
+    <aside class="alt-sidebar">
+        <p>Versions</p>
 
+        {% unless page.toc == false %}
+        {% include toc.html %}
+        {% endunless %}
+    </aside>
 </div>
 
 {{site.data.alerts.hr_shaded}}

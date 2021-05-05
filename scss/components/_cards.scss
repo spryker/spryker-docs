@@ -1,7 +1,3 @@
-.home-section {
-    padding: 60px 0 35px;
-}
-
 .cards-block {
     display: flex;
     flex-wrap: wrap;
@@ -94,6 +90,7 @@
             padding: 15px 24px;
             text-align: center;
             transition: background .3s linear, border-color .3s linear;
+            text-decoration: none;
 
             &:hover,
             &:active,

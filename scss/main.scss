@@ -1,46 +1,17 @@
 @import 'variables';
-@import 'components/fonts';
+@import 'base/normalize';
+@import 'base/reset';
+@import 'layout';
+@import 'components/icons';
 @import 'components/header';
+@import 'components/main-nav';
 @import 'components/footer';
 @import 'components/button';
 @import 'components/search-section';
 @import 'components/cards';
+@import 'pages/home';
 
-html, body {
-    height: 100%;
-}
-
-body {
-    background: $grey-lightest;
-    display: flex;
-    flex-direction: column;
-    font-family: $main-font;
-}
-
-.home-page {
-    .navbar {
-        display: none;
-    }
-}
-
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-}
-
-.page-content {
-    flex: 1 1 auto;
-}
-
-.container {
-    max-width: 1440px;
-    width: 100%;
-    padding: 0 24px;
-    margin: 0 auto;
-}
-
-/* remove */
-.navbar-static-top {
-    z-index: 10;
+// temporary fix
+.navbar {
+    display: none;
 }

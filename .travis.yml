@@ -6,6 +6,7 @@ rvm:
 _GEM_INSTALL: &GEM_INSTALL
   - echo "_GEM_INSTALL"
   - gem install bundler
+  - bundle install
 
 jobs:
   include:

@@ -21,7 +21,7 @@
         align-items: center;
         color: $black;
         background: $header-bg-color;
-        border: 2px solid #ebebeb;
+        border: 2px solid $grey-lighten;
         font-size: 12px;
         line-height: 1.4;
         font-weight: 800;
@@ -40,7 +40,7 @@
             color: $black;
         }
 
-        &_default {
+        &--grey {
             border-color: $grey-lightest;
             background: $grey-lightest;
             font-size: 10px;
@@ -96,7 +96,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background: rgb(255, 255, 255);
+        background: #fff;
         border-radius: 4px;
         box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.03),
         0px 3px 8px 0px rgba(0, 0, 0, 0.08),
@@ -112,7 +112,7 @@
                 }
 
                 & > .main-nav__drop-link {
-                    background: #ebebeb;
+                    background: $grey-lighten;
                     -webkit-text-stroke: .5px currentColor;
                 }
             }

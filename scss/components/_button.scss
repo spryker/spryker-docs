@@ -3,7 +3,7 @@
     vertical-align: top;
     align-items: center;
     justify-content: center;
-    border: 2px solid #dfe2e6;
+    border: 2px solid $silver;
     color: $grey;
     font-weight: 800;
     border-radius: 2px;
@@ -19,7 +19,7 @@
         text-decoration: none;
         background: #eaedf0;
         color: #767c81;
-        border-color: #dfe2e6;
+        border-color: $silver;
     }
 
     [class*="icon-"] {

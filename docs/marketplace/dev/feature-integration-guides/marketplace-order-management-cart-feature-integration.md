@@ -2,6 +2,7 @@
 title: Marketplace Order Management + Cart feature integration
 last_updated:  Jan 05, 2021
 description: This document describes the process how to integrate the Marketplace Order Management Feature + Cart integration feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 This document describes how to integrate the [Marketplace Order Management + Cart](https://github.com/spryker-feature/marketplace-merchant) feature into a Spryker project.

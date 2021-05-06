@@ -1,3 +1,8 @@
+---
+title: Marketplace order feature overview
+description: This document contains concept information for the Marketplace order feature in the Spryker Commerce OS.
+template: concept-topic-template
+---
 
 When a customer places an order on the Marketplace, the system creates the *Marketplace order*. The Marketplace order, in comparison to a regular order in Spryker Commerce OS, contains information about merchant(s) and one or several [merchant orders](https://documentation.spryker.com/marketplace/docs/merchant-order-feature-overview). Thus, the Marketplace order represents a list of items the customer has bought from one or multiple merchants in a single order.
 

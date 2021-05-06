@@ -2,6 +2,7 @@
 title: File details - merchant_profile.csv
 last_updated: Feb 26, 2021
 description: This document describes the merchant_profile.csv file to configure merchant information in your Spryker shop.
+template: import-file-template
 ---
 
 This document describes the `merchant_profile.csv` file to configure merchant profile information in your Spryker shop.

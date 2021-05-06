@@ -1,7 +1,7 @@
 ---
 title: {Meta name}
 description: {Meta description}
-tags: [, ]
+template: howto-guide-template
 ---
 
 #{Title} <!---in -ing form, e.g. Creating a new CMS page)-->

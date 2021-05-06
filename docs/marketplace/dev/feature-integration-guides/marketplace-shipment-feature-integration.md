@@ -2,6 +2,7 @@
 title: Marketplace Shipment feature integration
 description: Integrate Marketplace Shipment feature into your project
 tags:
+template: feature-integration-guide-template
 ---
 
 ## Install feature core

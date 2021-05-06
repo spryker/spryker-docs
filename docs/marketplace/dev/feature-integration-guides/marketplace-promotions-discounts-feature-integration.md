@@ -2,6 +2,7 @@
 title: Marketplace Promotions & Discounts feature integration
 last_updated: Jan 04, 2021
 description: This document describes the process how to integrate the Marketplace Promotions & Discounts feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 ## Install feature core

@@ -2,6 +2,7 @@
 title: Managing merchants
 last_updated: Apr 23, 2021
 description: This guide explains how to create and manage merchant records on the Merchants page.
+template: back-office-user-guide-template
 ---
 
 In the *Merchants* page, you can manage the merchants' records and facilitate the merchant registration and approval process, as well as apply any changes to the existing merchants' records. This topic describes the procedures of creating and managing merchant records.
@@ -28,7 +29,9 @@ To **edit a merchant**, do the following:
 
 Merchant approval is the process when a Marketplace Administrator changes the status of the merchant record according to the flow described in the [Merchant statuses](/docs/marketplace/user/features/merchants/merchants-feature-overview.html#merchant-statuses) section. After the initial merchant registration, the status is always set to **Waiting for Approval** and is subject to change by a Marketplace Administrator after their review. To approve the merchant, click **Approve Access** in the *Actions* column of the *Merchants* page.
 
-{% include note.html content="To restrict access to the Merchant Portal, on the Merchants page, in the Actions column click Deny Access." %}
+{% info_block infoBox "Info" %}
+To restrict access to the Merchant Portal, on the Merchants page, in the Actions column click Deny Access.
+{% endinfo_block %}
 
 ![approving-and-denying-merchants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/Merchants/approving-and-denying-merchants.png)
 
@@ -36,7 +39,9 @@ Merchant approval is the process when a Marketplace Administrator changes the st
 
 Activating or deactivating the merchant indicates whether the merchant profile page, product offers, and merchant products are available in the Storefront or not. To activate the merchant, click **Activate** in the *Actions* column of the *Merchants* page.
 
-{% include note.html content="You can deactivate the merchant by clicking Deactivate on the Merchants page, in the Actions column." %}
+{% info_block infoBox "Info" %}
+You can deactivate the merchant by clicking Deactivate on the Merchants page, in the Actions column.
+{% endinfo_block %}
 
 ![activating-and-deactivating-merchants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/Merchants/activating-mechants.png)
 

@@ -2,6 +2,7 @@
 title: Merchants - reference information
 last_updated: Apr 23, 2021
 description: This document contains the reference information that you need to know when working in the Marketplace > Merchants section in the Back Office.
+template: back-office-user-guide-template
 ---
 
 This topic contains the reference information that you need to know when working in the *Marketplace* > *Merchants* section in the Back Office.
@@ -92,7 +93,9 @@ This tab contains legal information that is displayed on the Merchant Profile pa
 
 This tab contains information about creating and editing [Merchant Users](/docs/marketplace/user/features/merchants/merchant-users-feature-overview.html) for Merchant.
 
-{% include note.html content="You can create the merchant users only after the merchant is created. During the merchant creation process, this tab exists but all the actions are disabled." %}
+{% info_block infoBox "Info" %}
+To restrict access to the Merchant Portal, on the Merchants page, in the Actions You can create the merchant users only after the merchant is created. During the merchant creation process, this tab exists but all the actions are disabled."
+{% endinfo_block %}
 
 
 **Merchant users page**

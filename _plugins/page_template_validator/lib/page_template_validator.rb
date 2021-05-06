@@ -41,7 +41,7 @@ module Spryker
 
     def self.validate_page(file_name)
       front_matter = get_front_matter(file_name)
-      if nil == front_matter || nil == front_matter['template_id']
+      if nil == front_matter || nil == front_matter['template']
         return false
       end
       return true

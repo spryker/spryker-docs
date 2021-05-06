@@ -1,7 +1,7 @@
 ---
 title: {Meta name}
 description: {Meta description}
-tags: [, ]
+template: module-migration-guide-template
 ---
 
 # Upgrading from version {version number} to version {version number}

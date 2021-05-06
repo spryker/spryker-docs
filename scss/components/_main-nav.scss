@@ -1,6 +1,7 @@
 .main-nav {
     margin: 0 24px 0 0;
     position: relative;
+    flex: 0 0 auto;
 
     &:hover {
         & > .main-nav__drop {

@@ -176,7 +176,6 @@ table tr td {
     hyphens: auto;
 }
 
-
 p.external a {
     text-align:right;
     font-size:12px;
@@ -222,41 +221,6 @@ ul#results-container a:hover {
     margin: 3px;
 }
 
-div#toc ul li {
-    margin: 8px 0px 8px 22px;
-    font-size: 90%;
-    list-style: square;
-}
-div#toc ul {
-    background-color: whitesmoke;
-    padding: 5px;
-    border-radius: 5px;
-    max-width: 300px;
-    color: gray;
-}
-
-div#toc ul li ul {
-    padding-left:8px;
-
-}
-
-div#toc ul li ul li::before {
-    content: "–  ";
-}
-
-div#toc >ul::before {
-    content: "Table of Contents";
-    font-weight: 500;
-    color: #555;
-    text-align:center;
-    margin-left:auto;
-    margin-right:auto;
-    width:70px;
-    padding-top:20px;
-    padding-bottom:20px;
-    padding-left:10px;
-}
-
 li.dropdownActive a {
     font-weight: bold;
 }
@@ -274,10 +238,6 @@ li.dropdownActive a {
 
 .post-content .rssfeedLink {
     color: #248EC2;
-}
-
-footer {
-    font-size: smaller;
 }
 
 /* FAQ page */
@@ -590,11 +550,6 @@ ol li ul li {list-style-type: disc;}
 
 li img {clear:both; }
 
-div#toc ul li ul li {
-    list-style-type: none;
-    margin: 5px 0px 0px 0px;
-}
-
 .tab-content {
     padding: 15px;
     background-color: #FAFAFA;
@@ -774,7 +729,7 @@ dd {margin-left:20px;}
     font-weight: bold;
 }
 
-.note code, .alert code, .warning code, div#toc code, h2 code, h3 code, h4 code {
+.note code, .alert code, .warning code, h2 code, h3 code, h4 code {
     color: inherit;
     padding: 0px;
 }

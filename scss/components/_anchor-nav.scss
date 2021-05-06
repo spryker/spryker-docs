@@ -1,0 +1,37 @@
+.anchor {
+    &__container {
+        background: $grey-lightest;
+        border-radius: 4px;
+
+        & > ul::before {
+            font-size: 12px;
+            line-height: 16px;
+            text-transform: uppercase;
+            content: "Table of Contents";
+            font-weight: bold;
+            color: $darkest;
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;
+            display: block;
+            padding: 0 16px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 12px;
+            line-height: 16px;
+
+            a {
+                color: $grey;
+                text-decoration: none;
+
+                &:hover {
+                    color: $darkest;
+                }
+            }
+        }
+    }
+}

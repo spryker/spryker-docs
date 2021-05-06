@@ -1,3 +1,9 @@
+---
+title: Merchant order module relations
+description: This document contains module schema for the Merchant order feature in the Spryker Commerce OS.
+template: concept-topic-template
+---
+
 The schema below illustates relations between modules in the [Merchant Order](https://documentation.spryker.com/marketplace/docs/merchant-order-feature-overview) feature.
 
 ![Merchant order module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/merchant-order-module-relations.png)

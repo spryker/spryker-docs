@@ -3,6 +3,7 @@ title: Catalog search
 description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values in the Spryker Marketplace
 template: glue-api-storefront-guide-template
 ---
+
 The implementation of the search API offers you the same search experience as in the Spryker Demo Shops. The search engine used is Elasticsearch, and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration, and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
 In your development, this endpoint can help you to:
 

@@ -17,7 +17,7 @@ Ensure that the following modules have been updated:
 {% endinfo_block %}
 
 {% info_block errorBox "Error block demo" %}
-Ensure that the following modules have been updated:
+Ensure that *the* following modules have been updated:
 {% endinfo_block %}
 
 <p>Demo WarningBlock without title:</p>

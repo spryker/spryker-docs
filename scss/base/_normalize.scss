@@ -10,6 +10,13 @@ html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /**
@@ -18,6 +25,11 @@ html {
 
 body {
   margin: 0;
+  color: $grey-dark;
+  background: $white;
+  font: 500 16px/1.75 $main-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* HTML5 display definitions
@@ -88,6 +100,15 @@ template {
 
 a {
   background-color: transparent;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.2s linear, background 0.2s linear, opacity 0.2s linear, border-color 0.2s linear;
 }
 
 /**
@@ -184,7 +205,13 @@ sub {
 
 img {
   border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
 }
+
+// google map fix
+.gm-style img { max-width: none; }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
@@ -374,7 +401,7 @@ input[type="search"]::-webkit-search-decoration {
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid $grey;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -421,4 +448,8 @@ table {
 td,
 th {
   padding: 0;
+}
+
+iframe {
+  max-width: 100%;
 }

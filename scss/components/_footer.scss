@@ -19,7 +19,7 @@
 
     &__bottom {
         background: $grey-lightest;
-        color: #aeb2b6;
+        color: $grey-5;
         padding: 13px 0;
         font-size: 10px;
         line-height: 1.4;
@@ -62,7 +62,7 @@
 
             &:hover,
             &:active {
-                color: $black;
+                color: $darkest;
                 text-decoration: none;
             }
 
@@ -83,7 +83,7 @@
     }
 
     &__top {
-        background: #fff;
+        background: $white;
         padding: 18px 0;
     }
 
@@ -146,7 +146,7 @@
             padding: 5px 0;
             &:hover,
             &:active {
-                color: $black;
+                color: $darkest;
                 text-decoration: none;
             }
             &:focus {
@@ -172,7 +172,7 @@
             font-size: 0;
             &:hover,
             &:active {
-                color: $black;
+                color: $darkest;
                 text-decoration: none;
             }
             &:focus {

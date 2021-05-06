@@ -8,12 +8,12 @@
 .card {
     width: calc(33.3333% - 16px);
     margin: 0 8px 15px;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    color: #646473;
+    background: $white;
+    border: 1px solid $grey-3;
+    color: $grey-dark-2;
     border-radius: 4px;
-    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.03),
-    0px 3px 8px 0px rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 20px 30px 0px rgba($black, 0.03),
+    0px 3px 8px 0px rgba($black, 0.02);
     display: flex;
     flex-direction: column;
 
@@ -41,7 +41,7 @@
             font-weight: 800;
             padding: 0 !important;
             margin: 0 !important;
-            color: #363639;
+            color: $dark-2;
         }
 
         &-icon {
@@ -84,9 +84,9 @@
         }
 
         a {
-            color: $black;
+            color: $darkest;
             display: block;
-            border-top: 1px solid #e0e0e0;
+            border-top: 1px solid $grey-3;
             padding: 15px 24px;
             text-align: center;
             transition: background .3s linear, border-color .3s linear;
@@ -95,7 +95,7 @@
             &:hover,
             &:active,
             &:focus {
-                color: $black;
+                color: $darkest;
                 text-decoration: none;
                 background: $grey-lightest;
             }

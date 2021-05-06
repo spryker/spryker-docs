@@ -31,7 +31,7 @@ layout: default
             <h3>Marketplace Developer Guide</h3>
 
             {% unless page.hide_sidebar %}
-                <div class="" id="tg-sb-sidebar">
+                <div id="tg-sb-sidebar">
                     {% include sidebar.html %}
                 </div>
             {% endunless %}
@@ -39,12 +39,12 @@ layout: default
     </aside>
     <div class="post-content">
         <div class="post-header">
-           <h1 class="post-title-main">{{ page.title }}</h1>
+            <h1 class="post-title-main">{{ page.title }}</h1>
         </div>
 
-       {% if page.summary %}
-        <div class="summary">{{page.summary}}</div>
-       {% endif %}
+        {% if page.summary %}
+            <div class="summary">{{page.summary}}</div>
+        {% endif %}
 
         {% if site.github_editme_path %}
             <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>

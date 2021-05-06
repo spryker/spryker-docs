@@ -19,7 +19,7 @@
     &__opener {
         display: flex;
         align-items: center;
-        color: $black;
+        color: $darkest;
         background: $header-bg-color;
         border: 2px solid $grey-lighten;
         font-size: 12px;
@@ -37,7 +37,7 @@
         &:active,
         &:focus {
             text-decoration: none;
-            color: $black;
+            color: $darkest;
         }
 
         &--grey {
@@ -49,7 +49,7 @@
                 display: none;
             }
             .main-nav-opener-icon {
-                color: #d3d3d4;
+                color: $grey-4;
             }
         }
 
@@ -62,7 +62,7 @@
         }
 
         &-icon {
-            color: $black;
+            color: $darkest;
             flex: 0 0 auto;
             margin: 0 0 0 10px;
             font-size: 10px;
@@ -72,7 +72,7 @@
             font-size: 9px;
             line-height: 12px;
             background: $header-bg-color;
-            color: #adafb3;
+            color: $grey-6;
             position: absolute;
             top: -7px;
             left: 13px;
@@ -96,11 +96,11 @@
         top: 0;
         left: 0;
         width: 100%;
-        background: #fff;
+        background: $white;
         border-radius: 4px;
-        box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.03),
-        0px 3px 8px 0px rgba(0, 0, 0, 0.08),
-        0px 20px 40px 0px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 1px 0px 0px rgba($black, 0.03),
+        0px 3px 8px 0px rgba($black, 0.08),
+        0px 20px 40px 0px rgba($black, 0.08);
         display: none;
 
         & > li {
@@ -123,7 +123,7 @@
             &:active,
             &:focus {
                 text-decoration: none;
-                color: $black;
+                color: $darkest;
             }
 
             &:focus {
@@ -136,7 +136,7 @@
             display: block;
             position: relative;
             padding: 13px 40px 13px 30px;
-            color: $black;
+            color: $darkest;
             transition: background .2s linear;
             text-decoration: none;
 
@@ -145,7 +145,7 @@
                 right: 18px;
                 top: 16px;
                 font-size: 10px;
-                color: #d3d3d4;
+                color: $grey-4;
             }
 
             &:hover {

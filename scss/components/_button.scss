@@ -17,8 +17,8 @@
     &:active,
     &:focus {
         text-decoration: none;
-        background: #eaedf0;
-        color: #767c81;
+        background: $grey-light;
+        color: $grey-2;
         border-color: $silver;
     }
 

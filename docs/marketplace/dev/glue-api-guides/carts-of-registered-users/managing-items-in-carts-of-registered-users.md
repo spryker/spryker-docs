@@ -1,6 +1,7 @@
 ---
 title: Managing items in carts of registered users
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource in the Spryker Marketplace
+template: glue-api-storefront-guide-template
 ---
 This endpoint allows managing items in carts of registered users by adding, changing, and deleting them.
 

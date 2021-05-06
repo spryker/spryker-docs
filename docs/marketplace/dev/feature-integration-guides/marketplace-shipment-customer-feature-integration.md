@@ -2,6 +2,7 @@
 title: Marketplace Shipment + Customer feature integration
 description: Integrate Marketplace Shipment + Customer feature into your project
 tags:
+template: feature-integration-guide-template
 ---
 
 This document describes how to integrate the Marketplace Shipment + Customer feature into a Spryker project.

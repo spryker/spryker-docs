@@ -1,3 +1,8 @@
+PATH
+  remote: _plugins/page_template_validator
+  specs:
+    page_template_validator (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -121,6 +126,7 @@ DEPENDENCIES
   jekyll-commonmark-ghpages
   jekyll-feed (~> 0.12)
   jekyll-sitemap
+  page_template_validator!
   rake
   tzinfo (~> 1.2)
   tzinfo-data

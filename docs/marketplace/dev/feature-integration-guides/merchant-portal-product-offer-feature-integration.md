@@ -2,6 +2,7 @@
 title: Merchant Portal - Product Offer feature integration
 last_updated: Jan 05, 2021
 description: This integration guide provides steps on how to integrate the Merchant Portal - Product Offer feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 ## Install feature core

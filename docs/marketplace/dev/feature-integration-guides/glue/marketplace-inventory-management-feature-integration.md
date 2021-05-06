@@ -2,6 +2,7 @@
 title: Glue API - Marketplace Inventory Management feature integration
 last_updated: Dec 16, 2020
 description: This document describes the process how to integrate the Marketplace Inventory Management Glue API feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 This document describes how to integrate the [Marketplace Inventory Management Glue API](https://github.com/spryker-feature/marketplace-inventory-management) feature into a Spryker project.

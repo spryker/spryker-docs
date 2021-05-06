@@ -2,6 +2,7 @@
 title: Glue API - Marketplace Return Management feature integration
 last_updated: Apr 8, 2021
 description: This document describes the process how to integrate the Marketplace Return Management API feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 This document describes how to integrate the [Marketplace Return Management API](https://github.com/spryker-feature/marketplace-return-management) feature into a Spryker project.

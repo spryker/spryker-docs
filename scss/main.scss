@@ -11,8 +11,13 @@
 @import 'components/cards';
 @import 'components/anchor-nav';
 @import 'pages/home';
+@import 'pages/inner';
 
 // temporary fix
 .navbar {
     display: none;
+}
+
+h1 {
+
 }

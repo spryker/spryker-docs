@@ -1,8 +1,25 @@
 $( document ).ready(function() {
+    $('#toc').toc({
+        minimumHeaders: 0,
+        listType: 'ul',
+        showEffect: 'none', // values: [show|slideDown|fadeIn|none]
+        headers: '.post-content h2, .post-content h3, .post-content h4'
+    });
+
+    /* this offset helps account for the space taken up by the floating toolbar. */
+    $('#toc').on('click', 'a', function() {
+        var target = $(this.getAttribute('href')),
+            scroll_target = target.offset().top;
+
+        $(window).scrollTop(scroll_target - 10);
+        return false;
+    });
+
     /**
      * AnchorJS
      */
     anchors.add('.post-content h2,.post-content h3,.post-content h4,.post-content h5');
+
 });
 
 // needed for nav tabs on pages. See Formatting > Nav tabs for more details.

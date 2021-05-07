@@ -44,10 +44,17 @@ body {
 
 .post-content {
     flex: 1 1 auto;
+    padding: 40px 0 0;
 }
 
 .alt-sidebar {
     flex: 0 0 auto;
     width: 200px;
     margin: 0 85px 0 30px;
+    padding: 40px 0 0;
+
+    &__sticky {
+        position: sticky;
+        top: 40px;
+    }
 }

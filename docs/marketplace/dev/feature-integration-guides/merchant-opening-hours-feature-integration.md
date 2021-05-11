@@ -2,6 +2,7 @@
 title: Merchant Opening Hours feature integration
 last_updated: Mar 31, 2021
 description: This document describes how to integrate the Merchant Portal Core feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 ## Install Feature Core

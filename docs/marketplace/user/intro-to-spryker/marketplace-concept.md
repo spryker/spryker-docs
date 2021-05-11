@@ -1,6 +1,7 @@
 ---
 title: Marketplace concept
-summary: "This page provides an overview of what a Marketplace is in the Spryker Commerce OS."
+description: This document describes what a Marketplace is in the Spryker Commerce OS.
+template: concept-topic-template
 ---
 
 An online *Marketplace* is a type of e-commerce business where products or services are sold and fulfilled by multiple sellers (*merchants*). The growing number of large companies are adopting the Marketplace business model to create new revenue streams, differentiate from the competition, get a better ROI, and increase customer loyalty by adding more products or services to their assortment.

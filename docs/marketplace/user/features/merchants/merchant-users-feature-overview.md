@@ -1,6 +1,7 @@
 ---
 title: Merchant users feature overview 
-summary: "Learn the concept of merchant users in the Spryker Marketplace."
+description: This document contains concept information for the Merchant users feature in the Spryker Commerce OS.
+template: concept-topic-template
 ---
 
 The merchant concept presupposes having employees with access to the Merchant Portal that will perform various actions on behalf of the merchants. To allow that, the *merchant user* entity is introduced.

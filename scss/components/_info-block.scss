@@ -1,0 +1,40 @@
+.info-block {
+    margin: 0 0 1em;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: .07px;
+    background: $grey-lightest;
+    border-left: 4px solid #377ee3;
+    color: $grey-dark;
+
+    &__title {
+        font-family: $montserrat;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: .07px;
+        font-weight: 600;
+        display: block;
+        padding-bottom: 5px;
+        color: #377ee3;
+    }
+
+    &.warningBox {
+        border-color: #ff9b10;
+
+        .info-block__title {
+            color: #ff9b10;
+        }
+    }
+
+    &.errorBox {
+        border-color: #eb553b;
+
+        .info-block__title {
+            color: #eb553b;
+        }
+    }
+}

@@ -41,6 +41,11 @@
                 }
             }
         }
+
+        .active > a {
+            color: $darkest;
+            border-left-color: $red;
+        }
     }
 }
 

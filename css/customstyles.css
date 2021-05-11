@@ -153,12 +153,6 @@ li.dropdownActive a {
     color: orange;
 }
 
-
-.navbar-inverse .navbar-nav > li > a {
-    background-color: transparent;
-    margin-top:10px;
-}
-
 .post-content .rssfeedLink {
     color: #248EC2;
 }
@@ -171,120 +165,6 @@ li.dropdownActive a {
 a.accordion-toggle, a.accordion-collapsed {
     font-size: 14px;
     text-decoration: none;
-}
-
-/* navgoco sidebar styles (customized) */
-.nav, .nav ul, .nav li {
-    list-style: none;
-}
-
-.nav ul {
-    padding: 0;
-    /*margin: 0 0 0 18px;*/
-    margin:0px;
-}
-
-.nav {
-    /* padding: 4px;*/
-    padding:0px;
-    margin: 0px;
-}
-
-.nav > li {
-    margin: 1px 0;
-}
-
-.nav > li li {
-    margin: 2px 0;
-}
-
-.nav a {
-    color: #333;
-    display: block;
-    outline: none;
-    /*-webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;*/
-    text-decoration: none;
-}
-
-.nav li > a > span {
-    float: right;
-    font-size: 19px;
-    font-weight: bolder;
-}
-
-
-.nav li > a > span:after {
-    content: '\25be';
-}
-.nav li.active > a > span:after {
-    content: '\25b4';
-}
-
-.nav a:hover, .nav li.active > a {
-    background-color: #8D8D8D;
-    color: #f5f5f5;
-}
-
-.nav > li.active > a  {
-background-color: #347DBE;
-}
-
-.nav li a {
-    font-size: 12px;
-    line-height: 18px;
-    padding: 2px 10px;
-    background-color: #f1f1f1;
-}
-
-.nav > li > a {
-    font-size: 14px;
-    line-height: 20px;
-    padding: 4px 10px;
-}
-
-ul#mysidebar {
-    border-radius:0px;
-}
-
-.nav ul li ul li a {
-    padding-left:40px;
-}
-
-.nav li.thirdlevel > a {
-    color: #248EC2;
-    font-weight:bold;
-    padding-left:20px;
-    background-color: whitesmoke !important;
-}
-
-
-.nav ul li a {
-    background-color: #FAFAFA;
-}
-
-.nav li a {
-    padding-right:10px;
-}
-
-.nav li a:hover {
-    background-color: #8D8D8D;
-}
-
-.nav ul li a {
-    border-top:1px solid whitesmoke;
-    padding-left:10px;
-}
-
-/* end sidebar */
-
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    border-radius:5px;
-}
-
-.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
-    border-radius: 5px;
 }
 
 span.projectTitle {
@@ -361,7 +241,7 @@ button.cursorNorm {
     cursor: default;
 }
 
-a.dropdown-toggle, .navbar-inverse .navbar-nav > li > a  {
+a.dropdown-toggle {
     margin-left: 10px;
 }
 
@@ -418,11 +298,6 @@ a.fa.fa-envelope-o.mailto {
 
 .alert, .callout {
     overflow: hidden;
-}
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    background-color: #248ec2;
-    color: white;
 }
 
 ol li ol li {list-style-type: lower-alpha;}
@@ -518,30 +393,6 @@ ol.series li {
     color: silver;
     color: #444;
     display:block;
-}
-
-/* not sure if using this ...*/
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #248ec2 !important;
-}
-
-#mysidebar .nav ul {
-    background-color: #FAFAFA;
-}
-.nav ul.series li {
-    list-style: decimal;
-    font-size:12px;
-}
-
-.nav ul.series li a:hover {
-    background-color: gray;
-}
-.nav ul.series {
-    padding-left: 30px;
-}
-
-.nav ul.series {
-    background-color: #FAFAFA;
 }
 
 /*
@@ -642,12 +493,6 @@ span.soft {
     padding: 15px;
     margin: 15px 0px;
     background-color: whitesmoke;
-}
-
-@media (max-width: 767px) {
-    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-        color: #444;
-    }
 }
 
 @media (max-width: 990px) {
@@ -772,14 +617,6 @@ span.label.label-default {
 span.label.label-primary {
     background-color: #f0ad4e;
 }
-.col-lg-12 .nav li a {background-color: white}
-
-
-.nav li.active > a.subfoldersTitle {
-    background-color: whitesmoke;
-    font-weight: bold;
-    color: black;
-    }
 
 a code {
     color: #248EC2;
@@ -844,10 +681,6 @@ div.arrow {
     margin-left: 15px;
     margin-right: 15px;
     font-size: 20px;
-}
-
-div.content {
-    max-width: 110px
 }
 
 #userMap div.arrow, #userMap div.content {

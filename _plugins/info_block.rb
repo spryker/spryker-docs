@@ -12,10 +12,10 @@ module Jekyll
     def render(context)
       titleSection = ''
       if @title != ''
-        titleSection = "<div class=\"title\">#{@title}</div>"
+        titleSection = "<div class=\"info-block__title\">#{@title}</div>"
       end
       content = super
-      "<section class='#{@type}'>#{titleSection}<div class='content'>#{content}</div></section>"
+      "<section class='info-block #{@type}'>#{titleSection}<div class='info-block__content'>#{content}</div></section>"
     end
 
   end

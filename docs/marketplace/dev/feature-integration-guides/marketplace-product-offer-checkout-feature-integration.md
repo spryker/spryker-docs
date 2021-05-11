@@ -4,13 +4,13 @@ last_updated: May 3, 2021
 description: This document describes the process how to integrate the Marketplace Product Offer + Checkout feature into a Spryker project.
 ---
 
-This document describes how to integrate the [Marketplace Product Offer + Checkout feature integration]() feature into a Spryker project.
+This document describes how to integrate the Marketplace Product Offer + Checkout feature into a Spryker project.
 
 ## Install feature core
-Follow the steps below to install the Marketplace Product Offer + Checkout feature integration feature core.
+Follow the steps below to install the Marketplace Product Offer + Checkout feature core.
 
 ### Prerequisites
-To start feature integration, integrate the required features:
+To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -27,6 +27,7 @@ composer require spryker/product-offer: "^0.6.1" --update-with-dependencies
 ```
 
 ---
+
 **Verification**
 
 Make sure that the following modules were installed:
@@ -40,12 +41,14 @@ Make sure that the following modules were installed:
 
 ### 2) Set up transfer objects
 
-Generate transfer changes:
+Generate the transfer changes:
+
 ```bash
 console transfer:generate
 ```
 
 ---
+
 **Verification**
 
 Make sure that the following changes have been applied in transfer objects:
@@ -58,7 +61,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ---
 
-### 3) Configure Checkout Pre Condition Plugins
+### 3) Configure checkout pre-condition plugins
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -92,8 +95,10 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 ```
 
 ---
+
 **Verification**
 
-Make sure that when refreshing the checkout summary page, after changing `active` or `approved` status of a product offer, the status is reflected accordingly. The checkout button will be disabled and a message is shown on bottom of checkout summary page: "Product offer inactive for product with SKU '<SKU>'.".
-The offer's `active` status can be toggled in Merchant Portal (`Offer visibility`). There's no UI to unset the approval status for an offer yet (only via data-importer: edit `data/import/common/common/marketplace/merchant_product_offer.csv` and execute `console data:import merchant-product-offer` command).
+Make sure that when refreshing the checkout summary page, after changing the `active` or `approved` status of a product offer, the status is reflected accordingly. The checkout button is disabled, and a message is shown at the bottom of the checkout summary page: "Product offer inactive for the product with SKU '<SKU>'.".
+You can toggle offer's `active` status in the Merchant Portal (`Offer visibility`). There's no UI to unset the approval status for an offer yet (only via data-importer: edit `data/import/common/common/marketplace/merchant_product_offer.csv` and execute `console data:import merchant-product-offer` command).
+
 ---

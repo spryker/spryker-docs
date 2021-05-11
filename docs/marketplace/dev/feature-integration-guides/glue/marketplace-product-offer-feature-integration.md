@@ -2,6 +2,7 @@
 title: Glue API - Marketplace Product Offer feature integration
 last_updated: Dec 17, 2020
 description: This document describes the process how to integrate the Marketplace Product Offer Glue API feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 This document describes how to integrate the [Marketplace Product Offer Glue API](https://github.com/spryker-feature/marketplace-product-offer) feature into a Spryker project.
@@ -10,7 +11,7 @@ This document describes how to integrate the [Marketplace Product Offer Glue API
 Follow the steps below to install the Marketplace Product Offer Glue API feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the following features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|

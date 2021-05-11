@@ -1,6 +1,7 @@
 ---
 title: Managing guest carts
 description: Retrieve details about guest carts and learn what else you can do with the resource in the Spryker Marketplace
+template: glue-api-storefront-guide-template
 ---
 
 This endpoint allows managing guest carts.

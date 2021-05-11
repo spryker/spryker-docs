@@ -1,7 +1,9 @@
 _site/
-.sass-cache/
+.sass-cache
+.jekyll-cache
 .jekyll-metadata
 _pdf
 .DS_Store
 .idea
 vendor/
+/node_modules

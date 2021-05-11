@@ -2,6 +2,7 @@
 title: Glue API - Merchant Category feature integration
 last_updated: Mar 04, 2021
 description: This document describes the process how to integrate the Merchant Category Glue API feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 This document describes how to integrate the Merchant Category Glue API feature into a Spryker project.
@@ -17,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME   | VERSION | INTEGRATION GUIDE   |
 | ---------------- | ------ | ------------------ |
 | Spryker Core   | master   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant Category | master  | [Marketplace Merchant Category feature integration](docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html) |
+| Marketplace Merchant Category | master  | [Marketplace Merchant Category feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -94,6 +95,6 @@ class MerchantsRestApiDependencyProvider extends SprykerMerchantsRestApiDependen
 
 Make sure that when you sending the request `GET http://glue.mysprykershop.com/merchants`, you can see the category keys and names for merchants that assigned to categories.
 
-Make sure that when you sending the request `GET http://glue.mysprykershop.com/merchants?categoryKeys[]={% raw %}{{some-category-key}}{% endraw %}`, you can see only merchants that belongs to the particular category in the response.
+Make sure that when you send the request `GET http://glue.mysprykershop.com/merchants?categoryKeys[]={% raw %}{{some-category-key}}{% endraw %}`, you can see only merchants that belongs to the particular category in the response.
 
 ---

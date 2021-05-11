@@ -1,6 +1,7 @@
 ---
 title: Retrieving product offers for a concrete product
 description: Retrieve details about product offers in the Spryker Marketplace
+template: glue-api-storefront-guide-template
 ---
 
 :::(Warning) (Warning!)

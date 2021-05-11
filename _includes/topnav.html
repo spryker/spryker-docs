@@ -1,4 +1,83 @@
 <!-- Navigation -->
+<header class="main-header">
+    <div class="container">
+        <div class="main-header__inner">
+            <div class="main-header__left">
+                <strong class="main-header__logo">
+                    <a href="/">
+                        <img src="{{ "/images/logo.svg" }}" alt="Spryker Documentation">
+                    </a>
+                </strong>
+
+                <div class="main-nav">
+                    <a href="#" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %}">
+                        <span class="main-nav__opener-label">Select Product</span>
+                        <span class="main-nav__opener-text">
+                            {% if page.title == 'Spryker Marketplace Documentation' %}
+                            Select Product
+                            {% else %}
+                            {{ page.title }}
+                            {% endif %}
+                        </span>
+                        <i class="main-nav__opener-icon icon-arrow-down"></i>
+                    </a>
+                    <ul class="main-nav__drop">
+                         <li>
+                             <a href="https://documentation.spryker.com" class="main-nav__drop-link">
+                                Spryker Commerce OS
+                             </a>
+                         </li>
+                         <li>
+                             <a href="/" class="main-nav__drop-link">
+                                Marketplace
+                                <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
+                             </a>
+                             <ul class="main-nav__drop">
+                                 <li>
+                                     <a href="/docs/marketplace/dev/setup/system-requirements" class="main-nav__drop-link">
+                                        <span class="main-nav__drop-link-title">
+                                            <i class="icon-developer"></i>
+                                            Developer
+                                        </span>
+                                        <span class="main-nav__drop-link-subtitle">Marketplace developer guide</span>
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/docs/marketplace/user/intro-to-spryker/marketplace-concept" class="main-nav__drop-link">
+                                        <span class="main-nav__drop-link-title">
+                                            <i class="icon-business"></i>
+                                            Business User
+                                        </span>
+                                        <span class="main-nav__drop-link-subtitle">Marketplace users guide</span>
+                                     </a>
+                                 </li>
+                             </ul>
+                         </li>
+                         <li>
+                             <a href="https://documentation.spryker.com/" class="main-nav__drop-link">
+                                Spryker Cloud Commerce OS
+                             </a>
+                         </li>
+                    </ul>
+                </div>
+
+                {% if page.url != "/index.html" %}
+                    <div class="main-header__search">
+                        <i class="main-header__search-icon icon-search"></i>
+                        {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                    </div>
+                {% endif %}
+
+            </div>
+            <div class="main-header__right">
+                <a href="/feed.xml" class="button main-header__button button--small">
+                    <i class="icon-rss"></i>
+                    RSS
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
 <nav class="navbar navbar-inverse navbar-static-top">
     <div class="container topnavlinks">
         <div class="navbar-header">
@@ -51,12 +130,12 @@
                 {% endfor %}
                 {% endfor %}
                 {% if site.feedback_disable == null or site.feedback_disable == false %}
-			{% include feedback.html %}
-		{% endif %}
+                    {% include feedback.html %}
+                {% endif %}
                 <!--comment out this block if you want to hide search-->
                 <li>
                     <!--start search-->
-                    {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                    
                     <!--end search-->
                 </li>
             </ul>

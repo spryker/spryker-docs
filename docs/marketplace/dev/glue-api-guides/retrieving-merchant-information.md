@@ -1,6 +1,7 @@
 ---
 title: Retrieving merchant information
 description: Retrieve the Marketplace merchant information via API
+template: glue-api-storefront-guide-template
 ---
 
 Merchant is the individual or an organization selling products on the Marketplace. Every Merchant has a profile page where the customer can check contact information, opening hours, legal details, etc.

@@ -2,6 +2,7 @@
 title: Product Offer + Cart feature integration
 last_updated: Dec 17, 2020
 description: This integration guide provides steps on how to integrate the Product Offer + Cart feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 ## Install feature core

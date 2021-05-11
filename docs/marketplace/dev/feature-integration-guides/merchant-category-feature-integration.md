@@ -2,6 +2,7 @@
 title: Merchant Category feature integration
 last_updated: Mar 04, 2021
 description: This document describes the process how to integrate the Merchant Category feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 ## Install feature core

@@ -58,6 +58,9 @@ entries:
           - title: Marketplace Product Offer Prices feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html
 
+          - title: Marketplace Product Offer + Checkout feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-checkout-feature-integration.html
+
           - title: Marketplace Promotions & Discounts feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-promotions-discounts-feature-integration.html
 

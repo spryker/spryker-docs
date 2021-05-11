@@ -1,7 +1,3 @@
-body {
-    font-size:15px;
-}
-
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
@@ -217,20 +213,6 @@ ul#results-container a:hover {
     color: black;
 }
 
-
-#search-demo-container a:hover {
-    color: black;
-}
-#search-input, .search-input {
-    padding: .5em;
-    margin-left:20px;
-    width:20em;
-    font-size: 0.8em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin-top:10px;
-}
 /* end search */
 
 .filter-options {
@@ -429,10 +411,6 @@ ul#mysidebar {
 span.projectTitle {
     font-family: Helvetica;
     font-weight: bold;
-}
-
-.footer {
-    text-align: right;
 }
 
 .footerMeta {

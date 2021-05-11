@@ -151,6 +151,9 @@ entries:
               - title: Glue API - Marketplace Product Offer + Cart feature integration
                 url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html
 
+              - title: Glue API - Marketplace Product Offer + Wishlist feature integration
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-wishlist-feature-integration.html
+
       - title: Glue API guides
         nested:
 

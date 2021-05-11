@@ -14,6 +14,114 @@
         font-size: 28px;
         font-weight: 600;
     }
+
+    a:not(.button) {
+        text-decoration: none;
+        color: $green-light;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    table {
+        max-width: 100%;
+        margin-bottom: 20px;
+        border: 1px solid $grey-7;
+        border-radius: 4px;
+        text-align: left;
+        word-break: break-word;
+        color: $grey-8;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+
+    caption {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: left;
+    }
+
+    th,
+    td {
+        padding: 10px 15px;
+        hyphens: auto;
+        min-width: 100px;
+        border: 1px solid $grey-7;
+    }
+
+    th {
+        color: rgb(153, 155, 170);
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    td {
+    }
+
+    /* customstyles.css*/
+    tr.success {
+        background-color: #dff0d8 !important;
+    }
+
+    tr.info {
+        background-color: #d9edf7 !important;
+    }
+
+    table tr.warning, table tr.testing, table tr.testing > td.sorting_1  {
+        background-color: #fcf8e3 !important;
+    }
+    table tr.danger, table tr.preference, table tr.preference > td.sorting_1  {
+        background-color: #f2dede !important;
+    }
+
+    .orange {
+        color: orange;
+    }
+
+    table.profile thead tr th {
+        background-color: #248ec2;
+    }
+
+    table.request thead tr th {
+        background-color: #ED1951;
+    }
+    /* end customstyles.css*/
+
+    details {
+        margin: 0 0 1em;
+        summary {
+            display: block;
+            padding: 0 0 0 18px;
+            position: relative;
+            font-size: 16px;
+            line-height: 1.5;
+            cursor: pointer;
+            margin: 0 0 10px;
+            transition: color .2s linear;
+            &:hover {
+                color: $black;
+            }
+            &:before {
+                position: absolute;
+                top: 8px;
+                left: 0;
+                @extend %icon;
+                @extend .icon-arrow-right:before;
+                font-size: 10px;
+            }
+        }
+        &[open] {
+            summary:before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    ol {
+        padding: 0;
+        list-style-position: inside;
+    }
 }
 
 .post-header {
@@ -61,5 +169,21 @@
         margin: 0 0 0 16px;
         font-size: 12px;
         min-width: 100px;
+    }
+}
+
+.highlight,
+pre {
+    background: $grey-lightest;
+    padding: 10px;
+    word-break: break-word;
+}
+
+.highlight {
+    margin: 0 0 1em;
+    & &,
+    pre {
+        padding: 0;
+        margin: 0;
     }
 }

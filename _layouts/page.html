@@ -27,14 +27,21 @@ layout: default
 <div class="page-content page-content--post">
 
     <aside class="main-sidebar">
+        <a href="#" class="main-sidebar__opener">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
         <div class="main-sidebar__inner">
-            <h3>Marketplace Developer Guide</h3>
+            <div class="main-sidebar__slide">
+                <h3 class="main-sidebar__title">Marketplace Developer Guide</h3>
 
-            {% unless page.hide_sidebar %}
-                <div id="tg-sb-sidebar">
-                    {% include sidebar.html %}
-                </div>
-            {% endunless %}
+                {% unless page.hide_sidebar %}
+                    <div id="tg-sb-sidebar">
+                        {% include sidebar.html %}
+                    </div>
+                {% endunless %}
+            </div>
         </div>
     </aside>
     <div class="post-content">
@@ -95,5 +102,3 @@ layout: default
         </div>
     </aside>
 </div>
-
-{{site.data.alerts.hr_shaded}}

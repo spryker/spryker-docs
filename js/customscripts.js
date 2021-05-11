@@ -20,6 +20,14 @@ $( document ).ready(function() {
      */
     anchors.add('.post-content h2,.post-content h3,.post-content h4,.post-content h5');
 
+    initSidebarToggle();
+    $('.sidebar-nav').navgoco({
+        openClass: 'active',
+        slide: {
+            duration: 300,
+            easing: 'linear'
+        }
+    });
 });
 
 // needed for nav tabs on pages. See Formatting > Nav tabs for more details.
@@ -52,3 +60,14 @@ $(function() {
         }
     });
 });
+
+function initSidebarToggle() {
+    var sidebar = $('.main-sidebar'),
+        opener = sidebar.find('.main-sidebar__opener');
+
+    opener.on('click', function(e){
+        e.preventDefault();
+
+        sidebar.toggleClass('main-sidebar--collapsed');
+    });
+}

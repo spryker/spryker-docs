@@ -100,72 +100,6 @@
     color: gray;
 }
 
-table {
-    background-color: transparent;
-}
-caption {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    color: #777;
-    text-align: left;
-}
-th {
-    text-align: left;
-}
-table {
-    max-width: 90%;
-    margin-bottom: 20px;
-    border: 1px solid #dedede;
-}
-
-table > thead > tr > th,
-table > tbody > tr > th,
-table > tfoot > tr > th,
-table > thead > tr > td,
-table > tbody > tr > td,
-table > tfoot > tr > td {
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-    border-top: 1px solid #ddd;
-}
-table > thead > tr > th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #ddd;
-    text-transform: none;
-    background-color: #777;
-    color: white;
-    text-align: left;
-}
-table > caption + thead > tr:first-child > th,
-table > colgroup + thead > tr:first-child > th,
-table > thead:first-child > tr:first-child > th,
-table > caption + thead > tr:first-child > td,
-table > colgroup + thead > tr:first-child > td,
-table > thead:first-child > tr:first-child > td {
-    border-top: 0;
-}
-
-table > tbody > tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
-}
-
-table col[class*="col-"] {
-    position: static;
-    display: table-column;
-    float: none;
-}
-table td[class*="col-"],
-table th[class*="col-"] {
-    position: static;
-    display: table-cell;
-    float: none;
-}
-
-table tr td {
-    hyphens: auto;
-}
-
 p.external a {
     text-align:right;
     font-size:12px;
@@ -192,7 +126,6 @@ p.post-meta {font-size: 80%; color: #777;}
     width:223px;
     border-left: 1px solid #dedede;
 }
-
 
 ul#results-container a {
     background-color: transparent;
@@ -344,10 +277,6 @@ ul#mysidebar {
     padding-left:10px;
 }
 
-#tg-sb-sidebar ul {
-    list-style-type: none;
-    padding-left: 10px;
-}
 /* end sidebar */
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -411,41 +340,6 @@ figcaption {
     color: red;
 }
 
-
-table.dataTable thead {
-    background-color: #444;
-}
-table td {
-    hyphens: auto;
-}
-
-section table tr.success {
-    background-color: #dff0d8 !important;
-}
-
-table tr.info {
-    background-color: #d9edf7 !important;
-}
-
-section table tr.warning, table tr.testing, table tr.testing > td.sorting_1  {
-    background-color: #fcf8e3 !important;
-}
-section table tr.danger, table tr.preference, table tr.preference > td.sorting_1  {
-    background-color: #f2dede !important;
-}
-
-.orange {
-    color: orange;
-}
-
-table.profile thead tr th {
-    background-color: #248ec2;
-}
-
-table.request thead tr th {
-    background-color: #ED1951;
-}
-
 .audienceLabel {
     margin: 10px;
     float: right;
@@ -485,7 +379,6 @@ hr.shaded {
     border: 0;
     margin-top: 70px;
     background: white;
-    width: 100%;
     margin-bottom: 10px;
 }
 
@@ -574,10 +467,8 @@ div.tags {padding: 10px 5px;}
 
 hr {
     background: #999;
-    margin: 30px 0px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
+    width: 100%;
 }
 
 button.cursorNorm {
@@ -661,23 +552,13 @@ a.dropdown-toggle.otherProgLangs {
 
 span.muted {color: #666;}
 
-table code {background-color: transparent;}
-
 .highlight .err {
     color: #a61717;
     background-color: transparent !important;
 }
 
-table p {
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-
 pre, table code {
     white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
@@ -789,25 +670,6 @@ span.soft {
     }
 }
 
-.col-md-9 img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-.post-content img {
-    margin: 12px 0px 3px 0px;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-.col-md-9 img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
 .post-content img {
     margin: 12px 0px 3px 0px;
     width: auto;
@@ -820,14 +682,6 @@ span.soft {
     float: left;
     margin:15px 15px 15px 0px;
     border: 1px solid #dedede;
-}
-
-
-@media only screen and (min-width: 900px), only screen and (min-device-width: 900px) {
-    .col-md-9 img {
-        max-width: 700px;
-        max-height: 700px;
-    }
 }
 
 *:hover > .anchorjs-link {
@@ -935,10 +789,6 @@ code + a > code {
     margin-left: -7px;
 }
 
-table th code {
-    color: white;
-}
-
 ol li ul li ol li {
     list-style: decimal;
 }
@@ -947,14 +797,9 @@ ol li ul li ol li ul li{
     list-style: disc;
 }
 
-.post-content table th {
-    vertical-align: top;
-}
-
 table thead th code.highlighter-rouge {
     background-color: transparent;
 }
-
 
 .box {
     padding: 10px;
@@ -1056,62 +901,7 @@ div.box.box1 {
         font-size: 14px;
     }
 
-/*
- * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
- *
- * [1] IE9
- * [2] IE10+
- */
-/* 1 */
-.ie9 img[src$=".svg"] {
-    width: 100%;
-}
-/* 2 */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    img[src$=".svg"] {
-        width: 100%;
-    }
-}
-
 h4.panel-title {
     padding-top: 0px;
     margin-top: 0px;
-}
-
-/*set navbar breakpoint so that it converts to hamburger earlier */
-
-@media (max-width: 1200px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-left,.navbar-right {
-        float: none !important;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-    }
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .collapse.in{
-        display:block !important;
-    }
 }

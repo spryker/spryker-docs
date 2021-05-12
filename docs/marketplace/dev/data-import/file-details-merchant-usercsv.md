@@ -27,4 +27,4 @@ Find the template and an example of the file below:
 |FILE|DESCRIPTION|
 |-|-|
 | [template_merchant_user.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/template_merchant_user.csv) | Import file template with headers only. |
-| [merchant_user.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/merchant_user.csv) | Exemplary import file with Demo Shop data. |
+| [merchant_user.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/merchant_user.csv) | Example of an import file with Demo Shop data content. |

@@ -50,8 +50,16 @@ Make sure that the following changes have been applied in transfer objects:
 |-|-|-|-|
 | MerchantProductTableCriteria | class | Created | src/Generated/Shared/Transfer/MerchantProductTableCriteriaTransfer |
 | ProductAbstractCollection | class | Created | src/Generated/Shared/Transfer/ProductAbstractCollectionTransfer |
-| PriceProductAbstractTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableCriteriaTransfer |
-| PriceProductAbstractTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewCollectionTransfer |
-| PriceProductAbstractTableView | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewTransfer |
+| PriceProductTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableCriteriaTransfer |
+| PriceProductTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewCollectionTransfer |
+| PriceProductTableView | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewTransfer |
+| PriceProduct.stocks | property | Created | src/Generated/Shared/Transfer/PriceProductTransfer |
+| ProductManagementAttributeCollection | class | Created | src/Generated/Shared/Transfer/ProductManagementAttributeCollectionTransfer |
+| ProductManagementAttribute | class | Created | src/Generated/Shared/Transfer/ProductManagementAttributeTransfer |
+| ProductManagementAttributeFilter | class | Created | src/Generated/Shared/Transfer/ProductManagementAttributeFilterTransfer |
+| Merchant | class | Created | src/Generated/Shared/Transfer/MerchantTransfer |
+| StockProduct | class | Created | src/Generated/Shared/Transfer/StockProductTransfer |
+| ReservationRequest | class | Created | src/Generated/Shared/Transfer/ReservationRequestTransfer |
+| ReservationResponse | class | Created | src/Generated/Shared/Transfer/ReservationResponseTransfer |
 
 ---

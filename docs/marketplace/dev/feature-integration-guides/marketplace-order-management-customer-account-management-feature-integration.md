@@ -21,23 +21,21 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Set up the transfer objects
 
-Run the following commands to generate transfer changes.
+Generate transfer changes.
 
 ```bash
 console transfer:generate
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes were applied in transfer objects.
 
-| TRANSFER  | TYPE  | EVENT | PATH  |
+| TRANSFER  | TYPE | EVENT | PATH |
 | ---------------- | --------- | --------- | ------------------------------- |
 | ShopContext.merchantReference | attribute | created   | src/Generated/Shared/Transfer/ShopContextTransfer |
 
----
+{% endinfo_block %}
 
 ### 2) Set up behavior
 
@@ -71,9 +69,9 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
+
 
 Make sure that after customers log in, their selected merchant is not changed and set correctly.
 
----
+{% endinfo_block %}

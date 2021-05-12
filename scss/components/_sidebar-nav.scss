@@ -17,13 +17,10 @@
         display: block;
         border-left: 4px solid transparent;
         padding: 14px 5px 14px 64px;
-        text-decoration: none;
-
-        &.active {
-        }
 
         &:hover {
             background: $grey-lighten;
+            text-decoration: none;
         }
     }
 
@@ -48,6 +45,7 @@
         display: flex;
 
         &:hover {
+            text-decoration: none;
             [class*="icon-"] {
                 background: $grey-lighten;
             }

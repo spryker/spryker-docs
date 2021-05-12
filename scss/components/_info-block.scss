@@ -1,18 +1,18 @@
 .info-block {
-    margin: 0 0 1em;
-    padding: 0.75rem 1.25rem;
+    margin: 0 0 16px;
+    padding: 15px 18px;
     border-radius: 4px;
     position: relative;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: .07px;
+    line-height: 28px;
+    letter-spacing: .3px;
     background: $grey-lightest;
-    border-left: 4px solid #377ee3;
     color: $grey-dark;
+    display: flex;
+    align-items: flex-start;
 
     &__title {
-        font-family: $montserrat;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: .07px;
@@ -22,19 +22,32 @@
         color: #377ee3;
     }
 
-    &.warningBox {
-        border-color: #ff9b10;
+    &__icon {
+        font-size: 20px;
+        flex: 0 0 auto;
+        margin: 2px 18px 0 0;
+        color: $blue;
+    }
 
-        .info-block__title {
-            color: #ff9b10;
+    &__content {
+        flex: 1 1 auto;
+
+        p {
+            margin-top: 0;
         }
     }
 
-    &.errorBox {
-        border-color: #eb553b;
+    &--warning {
+        .info-block__title,
+        .info-block__icon {
+            color: $darkest;
+        }
+    }
 
-        .info-block__title {
-            color: #eb553b;
+    &--error {
+        .info-block__title,
+        .info-block__icon {
+            color: $red;
         }
     }
 }

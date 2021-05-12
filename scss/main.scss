@@ -10,16 +10,10 @@
 @import 'components/search-drop';
 @import 'components/cards';
 @import 'components/anchor-nav';
+@import 'components/alt-nav';
 @import 'components/main-sidebar';
 @import 'components/sidebar-nav';
 @import 'components/info-block';
+@import 'components/confirm-block';
 @import 'pages/home';
 @import 'pages/content';
-// temporary fix
-.navbar {
-    display: none;
-}
-
-h1 {
-
-}

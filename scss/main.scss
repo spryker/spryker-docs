@@ -7,10 +7,10 @@
 @import 'components/footer';
 @import 'components/button';
 @import 'components/search-section';
+@import 'components/search-drop';
 @import 'components/cards';
+@import 'components/anchor-nav';
+@import 'components/alt-nav';
+@import 'components/confirm-block';
 @import 'pages/home';
-
-// temporary fix
-.navbar {
-    display: none;
-}
+@import 'pages/inner';

@@ -68,16 +68,6 @@
 .breadcrumb > .active {color: #777 !important;}
 
 /* make room for the nav bar */
-h1[id],
-h2[id],
-h3[id],
-h4[id],
-h5[id],
-h6[id],
-dt[id]{
-padding-top: 60px;
-margin-top: -40px
-}
 
 .post-content img {
     margin: 12px 0px 3px 0px;
@@ -176,7 +166,6 @@ table tr td {
     hyphens: auto;
 }
 
-
 p.external a {
     text-align:right;
     font-size:12px;
@@ -222,41 +211,6 @@ ul#results-container a:hover {
     margin: 3px;
 }
 
-div#toc ul li {
-    margin: 8px 0px 8px 22px;
-    font-size: 90%;
-    list-style: square;
-}
-div#toc ul {
-    background-color: whitesmoke;
-    padding: 5px;
-    border-radius: 5px;
-    max-width: 300px;
-    color: gray;
-}
-
-div#toc ul li ul {
-    padding-left:8px;
-
-}
-
-div#toc ul li ul li::before {
-    content: "–  ";
-}
-
-div#toc >ul::before {
-    content: "Table of Contents";
-    font-weight: 500;
-    color: #555;
-    text-align:center;
-    margin-left:auto;
-    margin-right:auto;
-    width:70px;
-    padding-top:20px;
-    padding-bottom:20px;
-    padding-left:10px;
-}
-
 li.dropdownActive a {
     font-weight: bold;
 }
@@ -274,10 +228,6 @@ li.dropdownActive a {
 
 .post-content .rssfeedLink {
     color: #248EC2;
-}
-
-footer {
-    font-size: smaller;
 }
 
 /* FAQ page */
@@ -573,9 +523,6 @@ a.fa.fa-envelope-o.mailto {
     font-weight: 600;
 }
 
-h3 {color: #ED1951; font-weight:normal; font-size:130%;}
-h4 {color: #808080; font-weight:normal; font-size:120%; font-style:italic;}
-
 .alert, .callout {
     overflow: hidden;
 }
@@ -589,11 +536,6 @@ ol li ol li {list-style-type: lower-alpha;}
 ol li ul li {list-style-type: disc;}
 
 li img {clear:both; }
-
-div#toc ul li ul li {
-    list-style-type: none;
-    margin: 5px 0px 0px 0px;
-}
 
 .tab-content {
     padding: 15px;
@@ -642,10 +584,6 @@ button.cursorNorm {
     cursor: pointer;
 }
 
-h2  {
-    font-size:24px;
-    line-height:29px;
-}
 span.otherProgrammingLanguages {
     font-style: normal;
 }
@@ -774,7 +712,7 @@ dd {margin-left:20px;}
     font-weight: bold;
 }
 
-.note code, .alert code, .warning code, div#toc code, h2 code, h3 code, h4 code {
+.note code, .alert code, .warning code, h2 code, h3 code, h4 code {
     color: inherit;
     padding: 0px;
 }
@@ -802,10 +740,6 @@ h3.codeExplanation {
 
 span.soft {
     color: #c0c0c0;
-}
-
-.githubEditButton {
-    margin-bottom:7px;
 }
 
 .endpoint {

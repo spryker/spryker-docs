@@ -43,42 +43,10 @@
     }
 
     th {
-        color: rgb(153, 155, 170);
+        color: $grey-9;
         font-size: 13px;
         font-weight: 600;
     }
-
-    td {
-    }
-
-    /* customstyles.css*/
-    tr.success {
-        background-color: #dff0d8 !important;
-    }
-
-    tr.info {
-        background-color: #d9edf7 !important;
-    }
-
-    table tr.warning, table tr.testing, table tr.testing > td.sorting_1  {
-        background-color: #fcf8e3 !important;
-    }
-    table tr.danger, table tr.preference, table tr.preference > td.sorting_1  {
-        background-color: #f2dede !important;
-    }
-
-    .orange {
-        color: orange;
-    }
-
-    table.profile thead tr th {
-        background-color: #248ec2;
-    }
-
-    table.request thead tr th {
-        background-color: #ED1951;
-    }
-    /* end customstyles.css*/
 
     details {
         margin: 0 0 1em;

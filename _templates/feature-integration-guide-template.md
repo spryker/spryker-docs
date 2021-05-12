@@ -1,3 +1,9 @@
+---
+title: {Feature Name} feature integration
+description: Integrate the {Feature Name} into your project
+template: feature-integration-guide-template
+---
+
 <!-- This document is an integration guide template.
 All the described steps are optional. If you want to add a step that's not described in the template, contact Karoly Gerner.
 

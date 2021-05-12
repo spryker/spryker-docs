@@ -1,3 +1,9 @@
+---
+title: Marketplace and merchant state machines feature overview
+description: This document contains concept information on the Marketplace and merchant state machines in the Spryker Commerce OS.
+template: concept-topic-template
+---
+
 The basic concept of state machines allows creating a patterned behavior and automation for complicated processes defined by the business, for example, order processes. 
 With the help of the state machine, a business owner can coordinate the process of changing the statuses of orders and order items according to the business logic.
 To provide the algorithm of dealing with orders for Marketplace administrators and merchants simultaneously, we have implemented multiple state machine templates. These templates help the Marketplace owners to make the order management process flexible and corresponding to the business logic. As the process of managing marketplace orders is different from managing the merchant orders, there are two separate state machine engine templates: *Marketplace state machine* and *Merchant state machine*. 

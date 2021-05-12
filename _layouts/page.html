@@ -2,10 +2,6 @@
 layout: default
 ---
 
-<div class="post-header">
-   <h1 class="post-title-main">{{ page.title }}</h1>
-</div>
-
 {% if page.simple_map == true %}
 
 <script>
@@ -28,41 +24,76 @@ layout: default
 
 {% endif %}
 
-<div class="post-content">
+<div class="page-content page-content--post">
 
-   {% if page.summary %}
-    <div class="summary">{{page.summary}}</div>
-   {% endif %}
+    <aside class="main-sidebar">
+        <div class="main-sidebar__inner">
+            <h3>Marketplace Developer Guide</h3>
 
-    {% unless page.toc == false %}
-    {% include toc.html %}
-    {% endunless %}
+            {% unless page.hide_sidebar %}
+                <div id="tg-sb-sidebar">
+                    {% include sidebar.html %}
+                </div>
+            {% endunless %}
+        </div>
+    </aside>
+    <div class="post-content">
+        <div class="post-header">
+            <h1 class="post-header__title">{{ page.title }}</h1>
 
+            {% if site.github_editme_path %}
+                <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="button post-header__button button--small" role="button"><i class="icon-github"></i> Edit on GitHub</a>
+            {% endif %}
+        </div>
 
-    {% if site.github_editme_path %}
-
-    <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
-
-    {% endif %}
-
-   {{content}}
-
-    <div class="tags">
-        {% if page.tags != null %}
-        <b>Tags: </b>
-        {% assign projectTags = site.data.tags.allowed-tags %}
-        {% for tag in page.tags %}
-        {% if projectTags contains tag %}
-        <a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+        {% if page.summary %}
+            <div class="summary">{{page.summary}}</div>
         {% endif %}
-        {% endfor %}
-        {% endif %}
+
+        {{content}}
+
+        <div class="confirm-block">
+            <strong class="confirm-block__title">
+                Was this article helpful?
+            </strong>
+            <div class="confirm-block__buttons">
+                <a href="#" class="button confirm-block__button button--black">No</a>
+                <a href="#" class="button confirm-block__button button--red">Yes</a>
+            </div>
+        </div>
+
+        <div class="tags">
+            {% if page.tags != null %}
+            <b>Tags: </b>
+            {% assign projectTags = site.data.tags.allowed-tags %}
+            {% for tag in page.tags %}
+            {% if projectTags contains tag %}
+            <a href="{{ "tag_" | append: tag | append: ".html" }}" class="button button--small cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </div>
+
+        {% include commento.html %}
     </div>
 
-{% include commento.html %}
+    <aside class="alt-sidebar">
+        <div class="alt-sidebar__sticky">
+            <div class="alt-nav">
+                <span class="alt-nav__opener">This document has only one version 202009.0</span>
+                <span class="alt-nav__opener-label">Versions</span>
+                <ul class="alt-nav__drop">
+                    <li><a href="#">version 1</a></li>
+                    <li><a href="#">version 2</a></li>
+                    <li><a href="#">version 3</a></li>
+                </ul>
+            </div>
 
+            {% unless page.toc == false %}
+                {% include toc.html %}
+            {% endunless %}
+        </div>
+    </aside>
 </div>
 
 {{site.data.alerts.hr_shaded}}
-
-{% include footer.html %}

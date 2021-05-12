@@ -18,7 +18,7 @@ const Suggestions = {
             ),
             name: indexConfig.name,
             templates: {
-                header: `<div>${indexConfig.title}</div>`,
+                header: `<div class="aa-dropdown-menu__title">${indexConfig.title}</div>`,
                 suggestion(suggestion) {
                     let title = suggestion._highlightResult.title
                         ? suggestion._highlightResult.title.value
@@ -30,7 +30,7 @@ const Suggestions = {
 
                     return `<a href="${suggestion.url}">${title}</a>`;
                 },
-                empty: '<p>No matching results</p>',
+                empty: '<div class="aa-dropdown-menu__empty"><i class="icon-search"></i>No results found</div>',
             },
         };
     },

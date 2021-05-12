@@ -31,25 +31,33 @@ port: 4000
 exclude:
   - .idea/
   - .gitignore
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - docker-compose.yml
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - static.json
+  - node_modules/
   - vendor
+  - node_modules
+  - package.json
+  - package-lock.json
+  - gulpfile.js
 # these are the files and directories that jekyll will exclude from the build
 
 highlighter: rouge
 # library used for syntax highlighting
 
-#markdown: kramdown
-#kramdown:
-#  input: GFM
-#  auto_ids: true
-#  hard_wrap: false
-#  syntax_highlighter: rouge
-#  parse_block_html: true
-#  parse_span_html: true
-
 markdown: CommonMarkGhPages
 commonmark:
   options: ["SMART", "FOOTNOTES"]
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
+plugins:
+  - jekyll-feed
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 

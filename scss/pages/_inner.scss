@@ -33,33 +33,3 @@
         }
     }
 }
-
-.confirm-block {
-    display: flex;
-    background: $grey-lightest;
-    border-radius: 4px;
-    padding: 17px 20px;
-    margin: 0 0 30px;
-
-    &__title {
-        display: block;
-        color: $grey-dark;
-        flex: 1 1 auto;
-        font-size: 20px;
-        line-height: 1.4;
-        font-weight: 800;
-        margin: 0;
-        padding: 10px 0 0;
-    }
-
-    &_buttons {
-        text-align: right;
-        flex: 0 0 auto;
-    }
-
-    &__button {
-        margin: 0 0 0 16px;
-        font-size: 12px;
-        min-width: 100px;
-    }
-}

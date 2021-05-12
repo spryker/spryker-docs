@@ -8,7 +8,7 @@ $( document ).ready(function() {
 
     /* this offset helps account for the space taken up by the floating toolbar. */
     $('#toc').on('click', 'a', function() {
-        var target = $(this.getAttribute('href')),
+        let target = $(this.getAttribute('href')),
             scroll_target = target.offset().top;
 
         $(window).scrollTop(scroll_target - 10);

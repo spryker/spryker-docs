@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'base/normalize';
+@import 'base/mixins';
 @import 'layout';
 @import 'components/icons';
 @import 'components/header';
@@ -15,5 +16,6 @@
 @import 'components/sidebar-nav';
 @import 'components/info-block';
 @import 'components/confirm-block';
+@import 'components/feedback-form';
 @import 'pages/home';
 @import 'pages/content';

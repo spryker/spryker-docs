@@ -18,7 +18,7 @@ $( document ).ready(function() {
     /**
      * AnchorJS
      */
-    anchors.add('.post-content h2,.post-content h3,.post-content h4,.post-content h5');
+    anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
 
     initSidebarToggle();
 
@@ -29,7 +29,34 @@ $( document ).ready(function() {
             easing: 'linear'
         }
     });
+
+    initFeedbackForm();
 });
+
+function initFeedbackForm() {
+  $('.form-collapse').each(function(){
+      let container = $(this),
+          opener = container.find('.form-collapse__opener'),
+          close = container.find('.form-collapse__close'),
+          slide = container.find('.form-collapse__slide'),
+          buttonValue,
+          form = container.find('form');
+
+      opener.on('click', function(e){
+          e.preventDefault();
+
+          slide.stop().slideDown(300);
+
+          buttonValue = $(this).data('feedback');
+      });
+
+      close.on('click', function(e){
+          e.preventDefault();
+
+          slide.stop().slideUp(300);
+      });
+  });
+}
 
 function initSidebarToggle() {
     let sidebar = $('.main-sidebar'),

@@ -11,11 +11,22 @@ module Jekyll
 
     def render(context)
       titleSection = ''
+      blockIcon = ''
+      blockModifier = ''
       if @title != ''
-        titleSection = "<div class=\"title\">#{@title}</div>"
+        titleSection = "<div class=\"info-block__title\">#{@title}</div>"
+      end
+      if @type == 'warningBox'
+        blockIcon = 'icon-note'
+        blockModifier = 'info-block--warning'
+      elsif @type == 'errorBox'
+        blockIcon = 'icon-error'
+        blockModifier = 'info-block--error'
+      else
+        blockIcon = 'icon-info'
       end
       content = super
-      "<section class='#{@type}'>#{titleSection}<div class='content'>#{content}</div></section>"
+      "<section class='info-block #{blockModifier}'><i class='info-block__icon #{blockIcon}'></i><div class='info-block__content'>#{titleSection}#{content}</div></section>"
     end
 
   end

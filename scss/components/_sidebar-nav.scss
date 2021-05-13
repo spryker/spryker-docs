@@ -1,5 +1,5 @@
 .sidebar-nav {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
     font-weight: 500;
     padding: 0;
@@ -10,13 +10,77 @@
         padding: 0;
         margin: 0;
         list-style: none;
+
+        a {
+            //padding-left: 68px;
+        }
+        .sidebar-nav__opener {
+            padding-left: 68px;
+        }
+        .sidebar-nav__link {
+        }
+
+        [class*=icon-] {
+            left: 28px;
+        }
+        ul {
+             a {
+                //padding-left: 84px;
+            }
+            .sidebar-nav__opener {
+                padding-left: 84px;
+            }
+            .sidebar-nav__link {
+                padding-left: 68px;
+            }
+            [class*=icon-] {
+                left: 44px;
+            }
+        }
+        ul ul {
+            a {
+                //padding-left: 100px;
+            }
+            .sidebar-nav__opener {
+                padding-left: 100px;
+            }
+            .sidebar-nav__link {
+                padding-left: 84px;
+            }
+            [class*=icon-] {
+                left: 60px;
+            }
+        }
+        ul ul ul {
+            .sidebar-nav__opener {
+                padding-left: 116px;
+            }
+            .sidebar-nav__link {
+                padding-left: 100px;
+            }
+            [class*=icon-] {
+                left: 76px;
+            }
+        }
+        ul ul ul ul {
+            .sidebar-nav__opener {
+                padding-left: 132px;
+            }
+            .sidebar-nav__link {
+                padding-left: 116px;
+            }
+            [class*=icon-] {
+                left: 92px;
+            }
+        }
     }
 
     &__link {
         color: $dark-2;
         display: block;
         border-left: 4px solid transparent;
-        padding: 14px 5px 14px 64px;
+        padding: 9px 10px 9px 52px;
+        position: relative;
 
         &:hover {
             background: $grey-lighten;
@@ -40,12 +104,15 @@
     &__opener {
         color: $dark-2;
         display: block;
-        padding: 14px 5px 14px 24px;
+        padding: 9px 10px 9px 52px;
         text-decoration: none;
         display: flex;
+        position: relative;
+        border-left: 4px solid transparent;
 
         &:hover {
             text-decoration: none;
+            background: $grey-lighten;
             [class*="icon-"] {
                 background: $grey-lighten;
             }
@@ -63,6 +130,17 @@
             font-size: 10px;
             color: $grey;
             margin: 0 16px 0 0;
+            flex: none;
+            position: absolute;
+            z-index: 2;
+            top: 8px;
+            left: 12px;
         }
+    }
+
+    &__title {
+        flex: 1 1 auto;
+        display: block;
+        word-break: break-word;
     }
 }

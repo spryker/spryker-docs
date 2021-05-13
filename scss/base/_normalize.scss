@@ -100,8 +100,10 @@ template {
 
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: $red;
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 

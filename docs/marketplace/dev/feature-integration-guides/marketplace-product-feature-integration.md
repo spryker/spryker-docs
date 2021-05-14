@@ -12,7 +12,7 @@ Follow the steps below to install the Marketplace Product feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME            | VERSION | INTEGRATION GUIDE        |
+| NAME | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
 | Spryker Core         | master      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Marketplace Merchant | master      | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
@@ -20,11 +20,12 @@ To start feature integration, integrate the required features:
 
 ### 1) Install the required modules using Composer
 
-Run the following commands to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-product: "dev-master" --update-with-dependencies
 ```
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -35,6 +36,8 @@ Make sure that the following modules have been installed:
 | MerchantProductGui        | vendor/spryker/merchant-product-gui         |
 | MerchantProductSearch     | vendor/spryker/merchant-product-search      |
 | MerchantProductStorage    | vendor/spryker/merchant-product-storage     |
+
+{% endinfo_block %}
 
 ### 2) Set up the database schema
 
@@ -59,14 +62,13 @@ Adjust the schema definition so entity changes trigger events:
 </database>
 ```
 
-Run the following commands to apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate 2console propel:install 3console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Verify the following changes by checking your database
 
@@ -74,18 +76,17 @@ Verify the following changes by checking your database
 | ----------------------------- | ----- | ------- |
 | spy_merchant_product_abstract | table | created |
 
----
+{% endinfo_block %}
 
 ### 3) Set up transfer objects
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -98,10 +99,11 @@ Make sure that the following changes have been applied in transfer objects:
 | MerchantSearchCollection  | object | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
 | MerchantProductStorage    | object | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
 
----
+{% endinfo_block %}
+
 ### 3) Add Zed translations
 
-Run the following command to generate a new translation cache for Zed:
+Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
@@ -113,12 +115,12 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
 | --------------------- | ------------------- | --------- | -------------------- |
-| MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.   | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
-| MerchantProductProductTableQueryCriteriaExpanderPlugin       | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
-| MerchantProductAbstractMapExpanderPlugin                     | Adds merchant names to product abstract search data.         | None          | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| MerchantProductPageDataExpanderPlugin                        | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names. | None          | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   | None          | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. | None          | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
+| MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.   |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
+| MerchantProductProductTableQueryCriteriaExpanderPlugin       | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
+| MerchantProductAbstractMapExpanderPlugin                     | Adds merchant names to product abstract search data.         |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
+| MerchantProductPageDataExpanderPlugin                        | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
+| MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
+| MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
@@ -154,12 +156,11 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that when you can filter products by merchant at http://zed.de.demo-spryker.com/availability-gui.
 
----
+{% endinfo_block %}
 
 **src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
@@ -212,12 +213,11 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure the `de_page` Easticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana—see for docker https://documentation.spryker.com/docs/services configuration details.)
 
----
+{% endinfo_block %}
 
 **src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
@@ -245,12 +245,11 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 ---
 
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that data in  `spy_product_abstract_storage` contains `merchant_references`'s for merchant products.
 
----
-
+{% endinfo_block %}
 
 ### 5) Import Merchant Product data
 
@@ -411,7 +410,7 @@ Register the following plugins to enable data import:
 
 | PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
 | ------------------ | ----------------- | --------- | -------------------------- |
-| MerchantProductDataImportPlugin | Imports merchant product data into the database. | None          | Spryker\Zed\MerchantProductDataImport\Communication\Plugin |
+| MerchantProductDataImportPlugin | Imports merchant product data into the database. |           | Spryker\Zed\MerchantProductDataImport\Communication\Plugin |
 
  **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -440,12 +439,11 @@ Run the following console command to import data:
 console data:import merchant-product
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that imported data is added to the `spy_merchant_product` table.
 
----
+{% endinfo_block %}
 
 ## Install feature front end
 
@@ -455,8 +453,8 @@ Register the following plugins to enable widgets:
 
 | PLUGIN  | DESCRIPTION | Prerequisites | NAMESPACE |
 | ----------- | ----------- | ---------- | --------- |
-| MerchantProductWidget | Displays alternative product. | None | SprykerShop\Yves\MerchantProductWidget\Widget |
-| ProductSoldByMerchantWidget | Displays list of products for replacement. | None | SprykerShop\Yves\MerchantProductWidget\Widget |
+| MerchantProductWidget | Displays alternative product. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
+| ProductSoldByMerchantWidget | Displays list of products for replacement. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
 
 ```php
 <?php
@@ -488,14 +486,13 @@ Run the following command to enable Javascript and CSS changes:
 console frontend:yves:build
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that on the product detail page for merchant products you can see the seller name.
 
 Make sure that when you add merchant product to cart, on a cart page is has the Sold By: widget shown.
 
----
+{% endinfo_block %}
 
 ### 2) Set up behavior
 
@@ -503,9 +500,9 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | DESCRIPTION    | PREREQUISITES | NAMESPACE  |
 | ----------------- | ---------------------- | ------------ | -------------------- |
-| MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       | None          | Spryker\Client\MerchantProductSearch\Plugin\Search          |
-| ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. | None          | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
-| MerchantProductPreAddToCartPlugin                     | Sets merchant reference to item transfer on add to cart.     | None          | SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage      |
+| MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       |           | Spryker\Client\MerchantProductSearch\Plugin\Search          |
+| ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. |           | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
+| MerchantProductPreAddToCartPlugin                     | Sets merchant reference to item transfer on add to cart.     |           | SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage      |
 
 **src/Pyz/Client/SearchElasticsearch/SearchElasticsearchDependencyProvider.php**
 
@@ -534,12 +531,11 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that when you enter the merchant name in the search field, the return list contains merchant products.
 
----
+{% endinfo_block %}
 
 **src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
 
@@ -566,12 +562,11 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that merchant product is selected on the Product Details Page by default.
 
----
+{% endinfo_block %}
 
 **src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 
@@ -597,12 +592,11 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
 
----
+{% endinfo_block %}
 
 ## Related features
 

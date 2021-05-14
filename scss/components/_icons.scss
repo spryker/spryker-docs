@@ -2,14 +2,15 @@
     font-family: 'icomoon';
     src:  url('../fonts/icomoon.eot?huxsqd');
     src:  url('../fonts/icomoon.eot?huxsqd#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?huxsqd') format('truetype'),
-      url('../fonts/icomoon.woff?huxsqd') format('woff'),
-      url('../fonts/icomoon.svg?huxsqd#icomoon') format('svg');
+        url('../fonts/icomoon.ttf?huxsqd') format('truetype'),
+        url('../fonts/icomoon.woff?huxsqd') format('woff'),
+        url('../fonts/icomoon.svg?huxsqd#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
 
+%icon,
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
@@ -25,6 +26,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-github:before {
+    content: "\e910";
+}
 .icon-arrow-down:before {
     content: "\e90c";
 }
@@ -36,6 +40,15 @@
 }
 .icon-arrow-right:before {
     content: "\e90f";
+}
+.icon-error:before {
+    content: "\e911";
+}
+.icon-info:before {
+    content: "\e912";
+}
+.icon-note:before {
+    content: "\e913";
 }
 .icon-business:before {
     content: "\e900";

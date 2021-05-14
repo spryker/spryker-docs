@@ -24,11 +24,46 @@
 
     [class*="icon-"] {
         margin: 0 .7em 0 0;
+        font-size: 16px;
+    }
+
+    .icon-github {
+        font-size: 20px;
     }
 
     &--small {
         height: 40px;
         min-width: 100px;
         font-size: 12px;
+    }
+
+    &--black {
+        background: $darkest;
+        border-color: $darkest;
+        color: $white;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            background: $grey;
+            border: 1px solid $grey;
+            color: $white;
+        }
+    }
+
+    &--red {
+        background: $red;
+        border-color: $red;
+        color: $white;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            background: $red;
+            border: 1px solid $red-dark;
+            color: $white;
+        }
     }
 }

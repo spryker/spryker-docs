@@ -301,7 +301,7 @@ Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySku
 
 ### 6) Configure export to Redis
 
-This step will publish tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronize the data to the storage.
+This step publishes tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronize the data to the storage.
 
 #### Set up event, listeners, and publishers
 
@@ -461,7 +461,7 @@ Make sure that when a product offer availability entities get created or updated
 ### 8) Import data
 Import the following data.
 
-#### Import Merchant Stock data
+#### Import merchant stock data
 Prepare your data according to your requirements using our demo data:
 
 ```bash
@@ -477,7 +477,7 @@ MER000006,Sony Experts MER000006 Warehouse 1
 | merchant_reference | &check; | string | MER000001 | Merchant identifier. |
 | stock_name | &check; | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
 
-#### Import Product Offer Stock data
+#### Import product offer stock data
 
 <details>
 <summary markdown='span'>Prepare your data according to your requirements using our demo data:</summary>

@@ -1,9 +1,8 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
+title: Marketplace User Guides
 entries:
-  - title: Marketplace User Guides
-    product: Marketplace
-    version: 202106.0
+  - product: Marketplace
     nested:
 
       - title: Intro to Spryker

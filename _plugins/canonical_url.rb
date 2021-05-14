@@ -9,7 +9,6 @@ end
 
 Jekyll::Hooks.register :pages, :post_init do |page|
     next page unless File.extname(page.path).match?(/md|html/)
-    next page if not page.name == 'marketplace-concept.md'
 
     latest_page_version_url = get_latest_page_version_url page
     page.data['canonical_url'] = latest_page_version_url if page.data['canonical_url'].nil?

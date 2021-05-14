@@ -53,10 +53,5 @@
         &:after {
             content: none !important;
         }
-
-        @at-root {
-            span#{&} {
-            }
-        }
     }
 }

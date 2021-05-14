@@ -99,9 +99,9 @@ const AlgoliaSearch = {
                             let url = item.url
 
                             return (
-                                '<div class="search-results__item"><h2 class="search-results__item-title">' +
-                                `<a href="${url}" class="search-results__item-link">${title}</a>` +
-                                `</h2><div class="search-results__item-content"><p>${content}</p></div></div>`
+                                `<div class="search-results__item"><h2 class="search-results__item-title">
+                                <a href="${url}" class="search-results__item-link">${title}</a>
+                                </h2><div class="search-results__item-content"><p>${content}</p></div></div>`
                             );
                         },
                         empty: '',

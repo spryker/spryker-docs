@@ -5,14 +5,15 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Marketplace Order Management + Customer Account Management feature into a Spryker project.
 
 ## Install feature front end
 
-Follow the steps below to install the Marketplace Order Management Feature + Order Threshold feature front end.
+Follow the steps below to install the Marketplace Order Management + Customer Account Management feature front end.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | ------------------ | ----------- | ----------|

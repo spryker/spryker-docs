@@ -5,14 +5,18 @@ summary: This document describes the process how to integrate the Marketplace wi
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Marketplace Wishlist feature into a Spryker project.
+
+
 ## Install feature core
+
 Follow the steps below to install the Marketplace Wishlist feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| Name            | Version | Link        |
+| NAME | VERSION | LINK |
 | --------------- | ------- | ---------- |
 | Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Marketplace Merchant | master      | [Marketplace Merchant Feature Integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
@@ -26,23 +30,23 @@ To start feature integration, overview and install the necessary features:
 ```bash
 composer require spryker-feature/marketplace-wishlist:"dev-master" --update-with-dependencies
 ```
----
 
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantProductOfferWishlist | vendor/spryker/merchant-product-offer-wishlist |
 | MerchantProductWishlist | vendor/spryker/merchant-product-offer-wishlist |
 
----
+{% endinfo_block %}
 
 ### 2) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | WishlistProductOfferPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollection` transfer object with not valid product offers as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
 | WishlistMerchantProductPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollection` transfer object with not valid merchant products as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
@@ -88,20 +92,18 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
     }
 }
 ```
----
 
-**Verification**
-
+{% info_block warningBox "Verification" %}
 
 Make sure that you can add a product offer to a wishlist and see the product offer data in there.
-Make sure that you can see the merchant information when the merchant product is added to a wishlist.
-Make sure that you can move the wishlist with the product offers to a shopping cart and vise versa.
+Make sure that you can see the merchant information when the merchant product is added to the wishlist.
+Make sure that you can move the wishlist with the product offers to a shopping cart and vice versa.
 
----
+{% endinfo_block %}
 
 ### 3) Set up database schema and transfer objects
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -109,8 +111,7 @@ console propel:install
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied by checking your database:
 
@@ -121,7 +122,7 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure  the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
 | WishlistMoveToCartRequestCollection | object | Created | src/Generated/Shared/Transfer/WishlistMoveToCartRequestCollectionTransfer |
 | WishlistItemCollection | object | Created | src/Generated/Shared/Transfer/WishlistItemCollectionTransfer |
@@ -138,4 +139,4 @@ Make sure  the following changes have been applied in transfer objects:
 | MerchantProductCriteria | object | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
 | Merchant | object | Created | src/Generated/Shared/Transfer/MerchantTransfer |
 
----
+{% endinfo_block %}

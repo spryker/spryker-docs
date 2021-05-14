@@ -5,14 +5,15 @@ description: This integration guide provides steps on how to integrate the Merch
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Marketplace Merchants](https://github.com/spryker-feature/marketplace-merchant) feature into a Spryker project.
+This document describes how to integrate the Marketplace Merchants feature into a Spryker project.
 
 
 ## Install feature core
 Follow the steps below to install the Marketplace Merchant feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+
+To start feature integration, integrate the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -1042,7 +1043,9 @@ Make sure that imported data has been added to the `spy_merchant_profile` and `s
 Follow the steps below to install the Marketplace Merchants feature front end.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+
+To start feature integration, integrate the required features:
+
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |

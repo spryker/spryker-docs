@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Marketplace Return Management]({https://github.com/spryker-feature/marketplace-return-management}) feature into a Spryker project.
+This document describes how to integrate the Marketplace Return Management feature into a Spryker project.
 
 ## Install feature core
 
@@ -21,10 +21,9 @@ composer require spryker-feature/marketplace-return-management --update-with-dep
 composer require spryker/sales-return ^1.1.0 --update-with-dependencies
 ```
 <!-- Have to be deleted after Return Management feature will be released with a new version-->
----
 
-**Verification**
-<!--Describe how a developer can check they have completed the step correctly.-->
+
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -34,8 +33,7 @@ Make sure that the following modules have been installed:
 | MerchantSalesReturnGui | spryker/merchant-sales-return-gui |
 | MerchantSalesReturnMerchantUserGui | spryker/merchant-sales-return-merchant-user-gui |
 
----
-
+{% endinfo_block %}
 
 ### 2) Set up the configuration
 <!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
@@ -351,7 +349,7 @@ Add the following configuration:
 * Code snippets with transfer schema changes.
 * The console command to apply the changes in project and core. -->
 
-Run the following commands to apply database changes and to generate entity and transfer changes:
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -359,10 +357,7 @@ console propel:install
 console transfer:generate
 ```
 
----
-
-**Verification**
-<!--Describe how a developer can check they have completed the step correctly.-->
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied by checking your database:
 
@@ -381,7 +376,7 @@ Make sure that the following changes have been triggered in transfer objects:
 | ReturnCreateRequest | class | created | src/Generated/Shared/Transfer/ReturnCreateRequest |
 | Return.merchantOrders | attribute | created | src/Generated/Shared/Transfer/ReturnRequest |
 
----
+{% endinfo_block %}
 
 ### 4) Add translations
 <!--Provide glossary keys for `DE` and `EN` of your feature as a code snippet. When a glossary key is dynamically generated, describe how to construct the key.-->
@@ -409,20 +404,18 @@ merchant_sales_return_widget.create_form.different_merchants_info,Diese Bestellu
 console data:import glossary
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the configured data has been added to the `spy_glossary` table.
 
----
+{% endinfo_block %}
 
 ### 5) Set up behavior
 <!--This is a comment, it will not be included -->
 Enable the following behaviors by adding and registering the plugins:
 
-| Plugin  | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
 | MerchantReturnPreCreatePlugin | Sets merchant reference to the return transfer. |  |   Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |
 | MerchantReturnCreateRequestValidatorPlugin | Checks if each item in the `itemTransfers` has the same merchant reference. |  |   Spryker\Zed\MerchantSalesReturn\Communication\Plugin |
@@ -465,7 +458,7 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
             new MerchantReturnCreateRequestValidatorPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\SalesReturnExtension\Dependency\Plugin\ReturnExpanderPluginInterface[]
      */
@@ -480,16 +473,15 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 
 </details>
 
----
+{% info_block warningBox "Verification" %}
 
-**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 1. To verify `MerchantReturnPreCreatePlugin` make sure that when you create return for merchant order items, row in `spy_sales_return` that identifies the new return has `spy_sales_return.merchant_reference` field populated.
 2. To verify `MerchantReturnCreateRequestValidatorPlugin` make sure, that you can't create return for items from different merchants.
 3. To verify `MerchantReturnExpanderPlugin` make sure that you can see merchant order references on return detail page.
----
 
+{% endinfo_block %}
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/AbstractTriggerOmsEventCommandPlugin.php</summary>
@@ -836,7 +828,7 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
             'MarketplaceReturn/ShipReturnForOrderItem' => new ShipReturnMarketplaceOrderItemCommandPlugin(),
         ];
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -850,7 +842,7 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
 
         return $container;
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -892,12 +884,12 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
-        
+
         $container = $this->extendCommandPlugins($container);
-        
+
         return $container;
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -907,10 +899,10 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     {
         $container->extend(static::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
             $commandCollection->add(new ReturnMerchantOrderItemCommandPlugin(), 'MerchantOms/ReturnOrderItem');
-            
+
             return $commandCollection;
         });
-        
+
         return $container;
     }
 }
@@ -949,9 +941,8 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 
 </details>
 
----
+{% info_block warningBox "Verification" %}
 
-**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that when you create and process return for merchant order items, it's statuses synced between state machines in the following way:
@@ -960,14 +951,13 @@ Make sure that when you create and process return for merchant order items, it's
 | -------- | ------------------- | ---------- |
 | Used by Operator	 | Used by 3rd-party Merchant	 | Used by Main Merchant
 | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return	  | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return	 | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return
-| execute return --> returned   | execute return (manually executable) --> returned 	 | execute return (manually executable) --> returned 
+| execute return --> returned   | execute return (manually executable) --> returned 	 | execute return (manually executable) --> returned
 | refund --> refunded		  | refund (manually executable) --> refunded	 | refund (manually executable) --> refunded
-| cancel return --> return canceled	  | cancel return (manually executable) --> return canceled 	 | cancel return (manually executable) --> return canceled 
+| cancel return --> return canceled	  | cancel return (manually executable) --> return canceled 	 | cancel return (manually executable) --> return canceled
 | ship return --> shipped to customer 	  | ship return (manually executable) --> shipped to customer	 | ship return (manually executable) --> shipped to customer
 | deliver return --> delivered		  | deliver return (manually executable) --> delivered	 | deliver return (manually executable) --> delivered
 
-
----
+{% endinfo_block %}
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/SalesReturnGui/SalesReturnGuiDependencyProvider.php</summary>
@@ -997,14 +987,13 @@ class SalesReturnGuiDependencyProvider extends SprykerSalesReturnGuiDependencyPr
 
 </details>
 
----
+{% info_block warningBox "Verification" %}
 
-**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that when you open any order http://zed.de.spryker.local/sales-return-gui that contain products from different merchants, you see a message that says "You can only return products from one merchant at a time".
+Make sure when you open any order on http://zed.de.spryker.local/sales-return-gui containing products from different merchants, you see the message: "You can only return products from one merchant at a time".
 
----
+{% endinfo_block %}
 
 Add config for the `SalesReturn`:
 
@@ -1036,6 +1025,7 @@ class SalesReturnConfig extends SprykerSalesReturnConfig
 Follow the steps below to install the Marketplace return management feature front end.
 
 ### 1) Install required modules using Сomposer
+
 <!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
@@ -1044,9 +1034,8 @@ Install the required modules:
 composer require spryker-shop/merchant-sales-return-widget ^0.1.0 --update-with-dependencies
 ```
 
----
+{% info_block warningBox "Verification" %}
 
-**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following modules have been installed:
@@ -1055,9 +1044,10 @@ Make sure that the following modules have been installed:
 | -------- | ------------------- |
 | MerchantSalesReturnWidget | spryker-shop/merchant-sales-return-widget |
 
----
+{% endinfo_block %}
 
 ### 2) Set up widgets
+
 <!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->
 
 Set up widgets as follows:
@@ -1066,7 +1056,7 @@ Set up widgets as follows:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE   |
 | --------------- | -------------- | ------ | -------------- |
-| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget` |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
+| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget`. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
 | MerchantSalesReturnCreateFormWidget |  Provides "Create Return" only with the items of one merchant order at a time and only for the returnable items. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
 
 
@@ -1102,20 +1092,19 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
----
+{% info_block warningBox "Verification" %}
 
-**Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET | VERIFICATION |
 | ---------------- | ----------------- |
-| MerchantSalesReturnCreateFormWidget | Go through the  Return flow in the same way as now by clicking the **Create Return** button on the top of the *Order Details* page. Go on the *Create Return* page, and create a return only with the items of one merchant order at a time and only for returnable items. |
+| MerchantSalesReturnCreateFormWidget | Go through the Return flow in the same way as now by clicking the **Create Return** button on the top of the *Order Details* page. Go to the *Create Return* page and create a return only with the items of one merchant order at a time and only for returnable items. |
 
----
+{% endinfo_block %}
 
-1. Enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

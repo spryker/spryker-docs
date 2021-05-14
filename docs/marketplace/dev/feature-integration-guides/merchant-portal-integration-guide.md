@@ -1,6 +1,6 @@
 ---
 title: Merchant Portal feature integration
-last_updated: Dec 11, 2020 
+last_updated: Dec 11, 2020
 description: This document describes the process how to integrate the Merchant Portal feature into a Spryker project.
 draft: true
 template: feature-integration-guide-template
@@ -50,27 +50,27 @@ Install needed packages for Merchant Portal with dependencies, see the available
    ],
    ```
 
-   
+
 
    1. Connect users and merchant using Zed UI (Backoffice) or data import with data/import/ files.
 
-      1. merchant.csv 
+      1. merchant.csv
 
          ```yaml
          merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
          sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
          ```
 
-         
 
-      2. merchant_user.csv 
+
+      2. merchant_user.csv
 
          ```yaml
          merchant_key,username
          sony-experts,michele@sony-experts.com
          ```
 
-         
+
 
       3. Enable importer command and plugins:
 
@@ -80,14 +80,14 @@ Install needed packages for Merchant Portal with dependencies, see the available
 
             ```php
             \Pyz\Zed\DataImport\Business\DataImportBusinessFactory::getDataImporterByType()
-            
+
             ...
             case DataImportConfig::IMPORT_TYPE_MERCHANT_USER:
                return $this->createMerchantUserImporter($dataImportConfigurationActionTransfer);
             ...
             ```
 
-            
+
 
          3. Add both of them to full import config (if needed)`\Pyz\Zed\DataImport\DataImportConfig::getFullImportTypes()`
 
@@ -95,15 +95,15 @@ Install needed packages for Merchant Portal with dependencies, see the available
 
 1. Create ACL group to allow Merchant Portal pages (*-merchant-portal-gui) for merchant users (optionally deny access to them for Admin roles)
 
-   1. Use `\Spryker\Zed\MerchantUser\Communication\Plugin\Acl\MerchantUserAclInstallerPlugin` to install additional roles for ACL during install command. 
+   1. Use `\Spryker\Zed\MerchantUser\Communication\Plugin\Acl\MerchantUserAclInstallerPlugin` to install additional roles for ACL during install command.
 
       ```php
       <?php
       namespace Pyz\Zed\Acl;
-      
+
       use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
       use Spryker\Zed\MerchantUser\Communication\Plugin\Acl\MerchantUserAclInstallerPlugin;
-      
+
       class AclDependencyProvider extends SprykerAclDependencyProvider
       {
           /**
@@ -143,7 +143,7 @@ For default users (defined in UserConfig) you can add default group in `\Pyz\Zed
     }
 ```
 
-Run console setup:init-db to create users with ACL rules, 
+Run console setup:init-db to create users with ACL rules,
 
 Run `console data:import merchant`
 
@@ -153,7 +153,7 @@ Run `console data:import:merchant-user`
 
 **Merchant Portal Navigation Links in Sidebar**
 
-Add installed MP modules into `config/Zed/navigation.xml` at the end of the file. 
+Add installed MP modules into `config/Zed/navigation.xml` at the end of the file.
 
 ```xml
 <merchant-portal-dashboard>
@@ -266,7 +266,7 @@ Apply changes from https://github.com/spryker/suite-nonsplit/pull/4786/files.
 
 Go to http://zed.de.spryker.local/security-merchant-portal-gui/login or http://zed.de.spryker.local/authentication-merchant-portal-gui/login (abandoned module name)
 
-The Merchant Portal should look like on the picture 
+The Merchant Portal should look like on the picture:
 
 ![Merchant Portal login](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Marketplace/Merchant+Portal+feature+integration/mp-login.png)
 

@@ -5,13 +5,15 @@ tags:
 template: feature-integration-guide-template
 ---
 
-## Install feature core
-Follow the steps below to install the Marketplace Shipment feature core.
+This document describes how to integrate the Marketplace Shipment feature into a Spryker project.
 
+## Install feature core
+
+Follow the steps below to install the Marketplace Shipment feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -19,13 +21,14 @@ To start feature integration, overview and install the necessary features:
 
 
 ### 1) Install the required modules using Composer
-Run the following command to install the required modules:
+
+Install the required modules:
+
 ```bash
 composer require spryker-feature/marketplace-shipment --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
@@ -33,9 +36,11 @@ Make sure that the following modules were installed:
 |-|-|
 | MerchantShipment | spryker/merchant-shipment |
 | MerchantShipmentGui | spryker/merchant-shipment-gui |
----
+
+{% endinfo_block %}
 
 ### 2) Set up configuration
+
 Add the following configuration to your project:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
@@ -64,15 +69,15 @@ class ShipmentConfig extends SprykerShipmentConfig
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using merchant reference.
 
----
+{% endinfo_block %}
 
 ### 3) Set up the database schema and transfer definitions
-Run the following commands to apply database changes and to generate entity and transfer changes.
+
+Apply database changes and to generate entity and transfer changes.
 
 ```bash
 console transfer:generate
@@ -80,8 +85,7 @@ console propel:install
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Verify that the following changes have been implemented by checking your database:
 
@@ -91,13 +95,14 @@ Verify that the following changes have been implemented by checking your databas
 
 Make sure that the following changes were applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER  | TYPE  | EVENT | PATH  |
 |-|-|-|-|
 | Shipment.merchantReference | class | created | src/Generated/Shared/Transfer/ShipmentTransfer |
 
----
+{% endinfo_block %}
 
 ### 4) Setup behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
@@ -137,6 +142,6 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE| INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Shipment + Cart | | [Marketplace Shipment + Cart feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-shipment-cart-feature-integration.html) |
+| Marketplace Shipment + Cart | | [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-cart-feature-integration.html) |
 | Marketplace Shipment + Checkout | | [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature-integration.html) |
 | Marketplace Shipment + Customer | | [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-customer-feature-integration.html) |

@@ -5,6 +5,9 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Marketplace Order Management + Order Threshold feature into a Spryker project.
+
+
 ## Install feature core
 Follow the steps below to install the Marketplace Order Management Feature + Order Threshold feature core.
 

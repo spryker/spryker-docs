@@ -90,12 +90,6 @@ defaults:
     values:
       sidebar: marketplace_user_sidebar
       role: "user"
-  -
-    scope:
-      path: "theme_manual"
-      type: "pages"
-    values:
-      sidebar: mydoc_sidebar
 
 # version-related scopes
   -
@@ -120,7 +114,6 @@ versioned_categories:
 sidebars:
   - marketplace_dev_sidebar
   - marketplace_user_sidebar
-  - mydoc_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file

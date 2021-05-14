@@ -9,7 +9,7 @@ entries:
       - title: Intro to Spryker
         nested:
           - title: Marketplace concept
-            url: /docs/marketplace/user/intro-to-spryker/202106.0/marketplace-concept.html
+            url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
 
       - title: Features
         nested:
@@ -17,50 +17,50 @@ entries:
           nested:
 
           - title: Merchants feature overview
-            url: /docs/marketplace/user/features/202106.0/merchants/merchants-feature-overview.html
+            url: /docs/marketplace/user/features/merchants/merchants-feature-overview.html
 
           - title: Merchant users feature overview
-            url: /docs/marketplace/user/features/202106.0/merchants/merchant-users-feature-overview.html
+            url: /docs/marketplace/user/features/merchants/merchant-users-feature-overview.html
 
         - title: Products and offers
 
           nested:
 
           - title: Product Offer feature overview
-            url: /docs/marketplace/user/features/202106.0/products-and-offers/product-offer-feature-overview.html
+            url: /docs/marketplace/user/features/products-and-offers/product-offer-feature-overview.html
 
         - title: Marketplace order
 
           nested:
 
           - title: Marketplace Order feature overview
-            url: /docs/marketplace/user/features/202106.0/marketplace-order/marketplace-order-feature-overview.html
+            url: /docs/marketplace/user/features/marketplace-order/marketplace-order-feature-overview.html
 
           - title: Marketplace Order module relations
-            url: /docs/marketplace/user/features/202106.0/marketplace-order/marketplace-order-module-relations.html
+            url: /docs/marketplace/user/features/marketplace-order/marketplace-order-module-relations.html
 
         - title: Merchant order
 
           nested:
 
           - title: Merchant Order feature overview
-            url: /docs/marketplace/user/features/202106.0/merchant-order/merchant-order-feature-overview.html
+            url: /docs/marketplace/user/features/merchant-order/merchant-order-feature-overview.html
 
           - title: Marketplace Order module relations
-            url: /docs/marketplace/user/features/202106.0/merchant-order/merchant-order-module-relations.html
+            url: /docs/marketplace/user/features/merchant-order/merchant-order-module-relations.html
 
         - title: Marketplace and merchant state machines
 
           nested:
 
           - title: Marketplace and Merchant State Machines feature overview
-            url: /docs/marketplace/user/features/202106.0/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html
+            url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html
 
           - title: Marketplace and merchant state machines interaction
-            url: /docs/marketplace/user/features/202106.0/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-interaction.html
+            url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-interaction.html
 
           - title: Marketplace and merchant state machine module schema
-            url: /docs/marketplace/user/features/202106.0/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machine-module-schema.html
+            url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machine-module-schema.html
 
       - title: Back Office user guides
         nested:
@@ -73,16 +73,16 @@ entries:
               nested:
 
               - title: Abstract products - reference information
-                url: /docs/marketplace/user/back-office-user-guides/202106.0/catalog/products/abstract-product-reference-information.html
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-product-reference-information.html
 
               - title: Products - reference information
-                url: /docs/marketplace/user/back-office-user-guides/202106.0/catalog/products/products-reference-information.html
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html
 
             - title: Availability
               nested:
 
               - title: Availability - reference information
-                url: /docs/marketplace/user/back-office-user-guides/202106.0/catalog/availability/availability-reference-information.html
+                url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
 
         - title: Marketplace
 
@@ -92,18 +92,19 @@ entries:
               nested:
 
                 - title: Managing merchants
-                  url: /docs/marketplace/user/back-office-user-guides/202106.0/marketplace/merchants/managing-merchants.html
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html
+
                 - title: Managing merchant users
-                  url: /docs/marketplace/user/back-office-user-guides/202106.0/marketplace/merchants/managing-merchant-users.html
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html
 
                 - title: Merchants - reference information
-                  url: /docs/marketplace/user/back-office-user-guides/202106.0/marketplace/merchants/merchants-reference-information.html
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/merchants-reference-information.html
 
             - title: Offers
               nested:
 
                 - title: Offers
-                  url: /docs/marketplace/user/back-office-user-guides/202106.0/marketplace/offers/offers.html
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers.html
 
                 - title: Offers - reference information
-                  url: /docs/marketplace/user/back-office-user-guides/202106.0/marketplace/offers/offers-reference-information.html
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers-reference-information.html

@@ -86,15 +86,7 @@ layout: default
 
     <aside class="alt-sidebar">
         <div class="alt-sidebar__sticky">
-            <div class="alt-nav">
-                <span class="alt-nav__opener">This document has only one version 202009.0</span>
-                <span class="alt-nav__opener-label">Versions</span>
-                <ul class="alt-nav__drop">
-                    <li><a href="#">version 1</a></li>
-                    <li><a href="#">version 2</a></li>
-                    <li><a href="#">version 3</a></li>
-                </ul>
-            </div>
+            {% include version_selector.html %}
 
             {% unless page.toc == false %}
                 {% include toc.html %}

@@ -1,4 +1,4 @@
-current_version: "202106.0"
+version: "202106.0"
 
 repository: spryker/spryker.github.io
 
@@ -71,18 +71,25 @@ defaults:
       comments: false
       search: true
       topnav: topnav
+  - scope:
+      path: "docs/marketplace"
+      type: "pages"
+    values:
+      product: marketplace
   -
     scope:
       path: "docs/marketplace/dev"
       type: "pages"
     values:
-      sidebar: marketplace_developer_sidebar
+      sidebar: marketplace_dev_sidebar
+      role: "dev"
   -
     scope:
       path: "docs/marketplace/user"
       type: "pages"
     values:
       sidebar: marketplace_user_sidebar
+      role: "user"
   -
     scope:
       path: "theme_manual"
@@ -97,12 +104,23 @@ defaults:
     values:
       version: "202106.0"
 
+# versioned categories - these must match corresponding directories
+versioned_categories:
+  marketplace:
+    user:
+      - features
+      - back-office-user-guides
+      - merchant-portal-user-guide
+    dev:
+      - feature-integration-guides
+      - glue-api-guides
+
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
-- marketplace_developer_sidebar
-- marketplace_user_sidebar
-- mydoc_sidebar
+  - marketplace_dev_sidebar
+  - marketplace_user_sidebar
+  - mydoc_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file

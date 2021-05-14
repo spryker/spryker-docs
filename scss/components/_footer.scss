@@ -1,0 +1,195 @@
+.main-footer {
+    margin: 0;
+    flex: none;
+
+    .container {
+        width: 1430px;
+    }
+
+    a {
+        transition: color .3s linear;
+        outline-offset: 4px;
+        text-decoration: none;
+
+        &[href^="http://"]:after,
+        &[href^="https://"]:after {
+            content: none;
+        }
+    }
+
+    &__bottom {
+        background: $grey-lightest;
+        color: $grey-5;
+        padding: 13px 0;
+        font-size: 10px;
+        line-height: 1.4;
+
+        p {
+            margin: 0;
+        }
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-column {
+            max-width: 50%;
+        }
+    }
+
+    &__links {
+        margin: 0;
+        padding: 0 55px 0 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 600;
+        letter-spacing: .02em;
+
+        li {
+            margin: 0 0 0 30px;
+        }
+
+        a {
+            display: inline-flex;
+            vertical-align: top;
+            align-items: center;
+            color: $grey;
+
+            &:hover,
+            &:active {
+                color: $darkest;
+                text-decoration: none;
+            }
+
+            &:focus {
+                outline-color: $red;
+                text-decoration: none;
+            }
+
+            [class*="icon-"] {
+                font-size: 1.6em;
+                margin: 0 .5em 0 0;
+            }
+        }
+    }
+
+    .copyright {
+        font-weight: bold;
+    }
+
+    &__top {
+        background: $white;
+        padding: 18px 0;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    &__column {
+        flex: 0 0 auto;
+        min-width: 250px;
+
+        &_1 {
+            flex: 1 1 auto;
+            padding: 0 20px 0 0;
+        }
+
+        &_2 {
+            flex: 1 1 auto;
+        }
+
+        &_3 {
+            flex: 1 1 auto;
+            padding: 0 0 0 20px;
+        }
+    }
+    &__logo {
+        display: block;
+        width: 136px;
+        height: auto;
+        margin: 0 0 10px;
+    }
+    &__nav {
+        text-align: center;
+        ul {
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            display: inline-flex;
+            vertical-align: top;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 12px;
+            line-height: 1.6667;
+            font-weight: 600;
+            letter-spacing: .02em;
+            min-width: 600px;
+        }
+        li {
+            padding: 15px 10px;
+        }
+        a {
+            color: $grey;
+            transition: color .3s linear;
+            display: inline-block;
+            vertical-align: top;
+            padding: 5px 0;
+            &:hover,
+            &:active {
+                color: $darkest;
+                text-decoration: none;
+            }
+            &:focus {
+                text-decoration: none;
+                outline-color: $red;
+            }
+        }
+    }
+
+    &__socials {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        li {
+            margin: 0 0 0 25px;
+        }
+        a {
+            color: $grey;
+            font-size: 0;
+            &:hover,
+            &:active {
+                color: $darkest;
+                text-decoration: none;
+            }
+            &:focus {
+                text-decoration: none;
+                outline-color: $red;
+            }
+        }
+
+        [class*="icon-"] {
+            display: block;
+            font-size: 15px;
+        }
+        .icon-youtube {
+            font-size: 17px;
+        }
+        .icon-facebook {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 ---
 title: Retrieving product offers 
 description: Retrieve Marketplace product offers via API
+template: glue-api-storefront-guide-template
 ---
 
 Product offers allow different merchants to sell the same product on the Marketplace. Product offers are created per concrete products, and you can get the offer information via retrieving the product information.

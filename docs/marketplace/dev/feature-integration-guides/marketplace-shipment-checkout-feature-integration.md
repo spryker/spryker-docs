@@ -2,6 +2,7 @@
 title: Marketplace Shipment + Checkout feature integration
 description: Integrate Marketplace Shipment + Checkout feature into your project
 tags:
+template: feature-integration-guide-template
 ---
 
 This document describes how to integrate the Marketplace Shipment + Checkout feature into a Spryker project.

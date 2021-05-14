@@ -1,5 +1,6 @@
 ---
 title: Merchant order module relations
+description: This document contains module schema for the Merchant order feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 

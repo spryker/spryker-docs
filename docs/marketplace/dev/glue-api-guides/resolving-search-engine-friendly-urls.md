@@ -1,7 +1,9 @@
 ---
 title: Resolving search engine friendly URLs
 description: Learn how to resolve search engine friendly URLs via Glue API in the Spryker Marketplace
+template: glue-api-storefront-guide-template
 ---
+
 This endpoints allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
 
 For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see: 
@@ -27,12 +29,12 @@ For detailed information on the modules that provide the API functionality and r
 To resolve a SEF URL into a Glue API URL, send the request:
 
 ***
-`GET` **/url-resolver?url=*{{{SEF URL}}}*****
+`GET` **/url-resolver?url=*{% raw %}{{{SEF URL}}}{% endraw %}*****
 ***
 
 | Path parameter  | Description       |
 | --------------- | ---------------- |
-| ***{{{SEF URL}}}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)</li><li>[retrieving category nodes](https://documentation.spryker.com/docs/retrieving-category-nodes)</li><li>[retrieving cms pages](https://documentation.spryker.com/upcoming-release/docs/retrieving-cms-pages)</li><li>[retrieving merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)</li></ul>|
+| ***{% raw %}{{{SEF URL}}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)</li><li>[retrieving category nodes](https://documentation.spryker.com/docs/retrieving-category-nodes)</li><li>[retrieving cms pages](https://documentation.spryker.com/upcoming-release/docs/retrieving-cms-pages)</li><li>[retrieving merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)</li></ul>|
 
 ### Request
 

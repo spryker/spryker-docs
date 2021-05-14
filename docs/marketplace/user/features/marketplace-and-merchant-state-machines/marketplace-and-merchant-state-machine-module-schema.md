@@ -1,5 +1,6 @@
 ---
 title: Marketplace and merchant state machine module schema
+description: This document contains module schema for the Marketplace and merchant state machines in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 The following schema demonstrates the connections between the Marketplace and merchant state machine.

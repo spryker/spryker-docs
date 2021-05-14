@@ -1,5 +1,6 @@
 ---
 title: Marketplace concept
+description: This document describes what a Marketplace is in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 

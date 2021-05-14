@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<div class="page-content">
+    <section class="search-section">
+        <div class="container">
+            <h1 class="search-section__title">Welcome to the Spryker <br>documentation center</h1>
+            <div class="search-section__panel dropdown-menu dropdown-menu--dark">
+                <i class="search-section__panel-icon icon-search"></i>
+                {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+            </div>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <div class="container">
+            <div class="cards-block">
+                <div class="card">
+                    <div class="card__content">
+                        <div class="card__heading">
+                            <i class="card__heading-icon icon-developer"></i>
+                            <h2 class="card__heading-title">Developers</h2>
+                        </div>
+                        <p>Developer Documentation is intended for backend developers, frontend developers, devOps engineers. It covers all the technical aspects of the Spryker Commerce OS and will help you to improve your understanding of the system, install your Spryker project, and customize it to your needs.</p>
+                    </div>
+                    <div class="card__footer">
+                        <ul class="card__links">
+                            <li><a href="https://documentation.spryker.com">SCOS developer guides</a></li>
+                            <li><a href="/docs/marketplace/dev/setup/system-requirements.html">Marketplace developer guides</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__content">
+                        <div class="card__heading">
+                            <i class="card__heading-icon icon-business"></i>
+                            <h2 class="card__heading-title">Business Users</h2>
+                        </div>
+                        <p>The Business user guides help shop administrators and shop owners manage their stores from the shop administration area or the Back Office.</p>
+                    </div>
+                    <div class="card__footer">
+                        <ul class="card__links">
+                            <li><a href="https://documentation.spryker.com">SCOS developer guides</a></li>
+                            <li><a href="/docs/marketplace/user/intro-to-spryker/marketplace-concept.html">Marketplace user guides</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__content">
+                        <div class="card__heading">
+                            <i class="card__heading-icon icon-cloud"></i>
+                            <h2 class="card__heading-title">Cloud Administrators</h2>
+                        </div>
+                        <p>The Cloud documentation in this portal is all you need to develop with Spryker Cloud Commerce OS (SCCOS). After the initial setup of your SCCOS project, use the documentation as step-by-step instructions on how to go live.</p>
+                    </div>
+                    <div class="card__footer">
+                        <ul class="card__links">
+                            <li><a href="https://documentation.spryker.com">SCOS developer guides</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -2,12 +2,15 @@
 title: Marketplace Product + Cart feature integration
 last_updated: Dec 16, 2020
 description: This document describes the process how to integrate the Marketplace Product + Cart feature into a Spryker project.
+template: feature-integration-guide-template
 ---
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product + Cart feature core.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE  |
@@ -17,13 +20,15 @@ To start feature integration, overview and install the necessary features:
 | Cart | master | [Cart Feature Integration](https://github.com/spryker-feature/cart) |
 
 ### 1) Set up transfer objects
-Run the following command to generate transfer changes:
+
+Generate transfer changes:
 ```bash
 console transfer:generate
 ```
 
----
-**Verification**
+
+
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -31,7 +36,7 @@ Make sure that the following changes have been applied in transfer objects:
 |-|-|-|-|
 | Item.merchantReference | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
 
----
+{% endinfo_block %}
 
 ### 2) Set up behavior
 Enable the following behaviors by registering the plugins:
@@ -67,9 +72,8 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that you can’t add an item with `merchantReference` and `sku` that do not belong to the same `MerchantProduct`(see `spy_merchant_product_abstract`).
 
----
+{% endinfo_block %}

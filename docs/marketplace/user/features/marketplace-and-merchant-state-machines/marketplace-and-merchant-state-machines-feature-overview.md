@@ -1,5 +1,6 @@
 ---
-title: Marketplace and merchant state machine feature overview
+title: Marketplace and merchant state machines feature overview
+description: This document contains concept information on the Marketplace and merchant state machines in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 

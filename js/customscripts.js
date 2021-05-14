@@ -36,18 +36,14 @@ $( document ).ready(function() {
 function initFeedbackForm() {
   $('.form-collapse').each(function(){
       let container = $(this),
-          opener = container.find('.form-collapse__opener'),
-          close = container.find('.form-collapse__close'),
-          slide = container.find('.form-collapse__slide'),
-          buttonValue,
-          form = container.find('form');
+          opener = container.find('.js-form-collapse__opener'),
+          close = container.find('.js-form-collapse__close'),
+          slide = container.find('.js-form-collapse__slide');
 
       opener.on('click', function(e){
           e.preventDefault();
 
           slide.stop().slideDown(300);
-
-          buttonValue = $(this).data('feedback');
       });
 
       close.on('click', function(e){

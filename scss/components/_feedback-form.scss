@@ -73,9 +73,10 @@
 
     &__submit {
         margin: 15px 0;
-        &-row {
-            text-align: center;
-        }
+    }
+
+    &__action-row {
+        text-align: center;
     }
 
     &__link {
@@ -85,13 +86,5 @@
             color: $red;
             text-decoration: none;
         }
-    }
-}
-
-.form-collapse {
-    margin: 0 0 30px;
-
-    &__slide {
-        display: none;
     }
 }

@@ -1,7 +1,6 @@
 ---
 title: Marketplace Order Management feature integration
-description: {Meta description}
-tags: []
+description: This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 

@@ -5,33 +5,34 @@ description: This document describes how to integrate the Merchant Portal Core f
 template: feature-integration-guide-template
 ---
 
-## Install Feature Core
+This document describes how to integrate the Merchant Opening Hours feature into a Spryker project.
+
+## Install feature core
+
 Follow the steps below to install the Merchant Opening Hours feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
-| Spryker Core         | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html)
+| Spryker Core | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html)
 
 ###  1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/merchant-opening-hours
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed: `ModuleExpected DirectoryMerchantOpeningHoursspryker/merchant-opening-hoursMerchantOpeningHoursDataImportspryker/merchant-opening-hours-data-importMerchantOpeningHoursStoragespryker/merchant-opening-hours-storageWeekdaySchedulespryker/weekday-schedule`
 
----
+{% endinfo_block %}
 
 ### 2) Set up database schema
 
@@ -80,15 +81,13 @@ Adjust the schema definition so entity changes will trigger events:
 </database>
 ```
 
-Run the following commands to apply database changes and to generate entity and transfer changes.
+Generate entity and transfer changes:
 
 ```bash
 console transfer:generate console propel:install console transfer:generate
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Verify the following changes have been applied by checking your database:
 
@@ -109,11 +108,11 @@ Make sure that the following changes in transfer objects:
 | MerchantCriteria                | class | created | src/Generated/Shared/Transfer/MerchantCriteriaTransfer       |
 | MerchantOpeningHoursStorage     | class | created | src/Generated/Shared/Transfer/MerchantOpeningHoursStorageTransfer |
 
----
+{% endinfo_block %}
 
 ### 3) Add Zed translations
 
-Run the following command to generate a new translation cache for Zed:
+Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
@@ -121,7 +120,7 @@ console translator:generate-cache
 
 ### 4) Configure export to Redis
 
-This step will publish change events to the spy_merchant_opening_hours_storage and synchronize the data to Storage.
+This step publishes change events to `spy_merchant_opening_hours_storage` and synchronizes the data to the storage.
 
 #### Set up event, listeners, and publishers
 
@@ -238,10 +237,9 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-1. Make sure that after step #1 commands `console sync:data merchant_opening_hours` exports data from `spy_merchant_opening_hours_storage` table to Redis.
+1. Make sure that after step 1 the command `console sync:data merchant_opening_hours` exports data from the `spy_merchant_opening_hours_storage` table to Redis.
 
 2. Make sure that when merchant opening hours entities get created or updated through ORM, it is exported to Redis accordingly.
 
@@ -314,7 +312,7 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
 ```
 </details>
 
----
+{% endinfo_block %}
 
 ### 5) Import data
 
@@ -347,7 +345,7 @@ merchant_reference,week_day_key,time_from,time_to MER000001,MONDAY,7:00:00,13:00
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ----------- | ---------- | --------- | ------------ | ---------------- |
 | `merchant_reference` | &check; | string | MER000005 | Merchant identifier.  |
-| week_day_key | &check; | `string`  | MONDAY | Day of the week to assign opening hours to a merchant.It is an enum in database with the following values:MONDAYTUESDAYWEDNESDAYTHURSDAYFRIDAYSATURDAYSUNDAY |
+| week_day_key | &check; | `string`  | MONDAY | Day of the week to assign opening hours to a merchant.It is an enum in database with the following values:MONDAYTUESDAYWEDNESDAYTHURSDAYFRIDAYSATURDAYSUNDAY. |
 | `time_from`   |  | string | `8:00:00`  | Time start when the merchant is open on this week day. Empty means open ended. |
 | `time_to`  |   | string | `19:00:00`| Time end when the merchant is open on this week day. Empty means open ended. |
 
@@ -355,8 +353,8 @@ Register the following plugins to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | -------------------- | ----------- | ------------- | ------------ |
-| MerchantOpeningHoursDateScheduleDataImportPlugin | Imports special dates opening hours into the database  |   | Spryker\Zed\MerchantOpeningHoursDataImport\Communication\Plugin |
-| MerchantOpeningHoursWeekdayScheduleDataImportPlugin | Imports weekly schedule opening hours into the database |  | Spryker\Zed\MerchantOpeningHoursDataImport\Communication\Plugin |
+| MerchantOpeningHoursDateScheduleDataImportPlugin | Imports special dates opening hours into the database.  |   | Spryker\Zed\MerchantOpeningHoursDataImport\Communication\Plugin |
+| MerchantOpeningHoursWeekdayScheduleDataImportPlugin | Imports weekly schedule opening hours into the database. |  | Spryker\Zed\MerchantOpeningHoursDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -381,19 +379,22 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import merchant-opening-hours-date-schedule console data:import merchant-opening-hours-weekday-schedule
 ```
+{% info_block warningBox "Verification" %}
 
 Make sure that the opening hours data is added to the `spy_merchant_opening_hours_weekday_schedule`and `spy_merchant_opening_hours_date_schedule` tables in the database.
+
+{% endinfo_block %}
 
 ## Install feature front end
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features::
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
@@ -405,8 +406,7 @@ To start feature integration, overview, and install the necessary features:
 
 If installed before, not needed.
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Verify if the following modules were installed:
 
@@ -414,7 +414,7 @@ Verify if the following modules were installed:
 | ------------------- | ------------------- |
 | MerchantOpeningHoursWidget | spryker-shop/merchant-opening-hours-widget |
 
----
+{% endinfo_block %}
 
 ### 2) Add Yves translations
 
@@ -426,18 +426,17 @@ Append glossary according to your configuration:
 merchant_opening_hours.opening_hours_title,Opening Hours,en_US merchant_opening_hours.opening_hours_title,Öffnungszeiten,de_DE merchant_opening_hours.special_opening_hours_title,Special Opening Hours,en_US merchant_opening_hours.special_opening_hours_title,Besondere Öffnungszeiten,de_DE merchant_opening_hours.public_holidays_title,Public Holidays,en_US merchant_opening_hours.public_holidays_title,Feiertage,de_DE merchant_opening_hours.opening_hours_closed,Closed,en_US merchant_opening_hours.opening_hours_closed,Geschlossen,de_DE merchant_opening_hours.day.title.monday,Monday,en_US merchant_opening_hours.day.title.monday,Montag,de_DE merchant_opening_hours.day.title.tuesday,Tuesday,en_US merchant_opening_hours.day.title.tuesday,Dienstag,de_DE merchant_opening_hours.day.title.wednesday,Wednesday,en_US merchant_opening_hours.day.title.wednesday,Mittwoch,de_DE merchant_opening_hours.day.title.thursday,Thursday,en_US merchant_opening_hours.day.title.thursday,Donnerstag,de_DE merchant_opening_hours.day.title.friday,Friday,en_US merchant_opening_hours.day.title.friday,Freitag,de_DE merchant_opening_hours.day.title.saturday,Saturday,en_US merchant_opening_hours.day.title.saturday,Samstag,de_DE merchant_opening_hours.day.title.sunday,Sunday,en_US merchant_opening_hours.day.title.sunday,Sonntag,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that in the database, the configured data is added to the spy_glossary table.
 
----
+{% endinfo_block %}
 
 ## 3) Set up widgets
 
@@ -471,14 +470,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following widget was registered:
 
@@ -486,7 +484,7 @@ Make sure that the following widget was registered:
 | ------------- | ------------- |
 | MerchantOpeningHoursWidget | Go to a MerchantPage on the storefront and ensure that merchant working hours are displayed on the page. |
 
----
+{% endinfo_block %}
 
 ## Related features
 

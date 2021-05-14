@@ -1,7 +1,7 @@
 ---
 title: Marketplace Order Management feature integration
 description: {Meta description}
-tags: [, ]
+tags: []
 template: feature-integration-guide-template
 ---
 

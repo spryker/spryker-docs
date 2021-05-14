@@ -29,12 +29,12 @@ For detailed information on the modules that provide the API functionality and r
 To resolve a SEF URL into a Glue API URL, send the request:
 
 ***
-`GET` **/url-resolver?url=*{{{SEF URL}}}*****
+`GET` **/url-resolver?url=*{% raw %}{{{SEF URL}}}{% endraw %}*****
 ***
 
 | Path parameter  | Description       |
 | --------------- | ---------------- |
-| ***{{{SEF URL}}}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)</li><li>[retrieving category nodes](https://documentation.spryker.com/docs/retrieving-category-nodes)</li><li>[retrieving cms pages](https://documentation.spryker.com/upcoming-release/docs/retrieving-cms-pages)</li><li>[retrieving merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)</li></ul>|
+| ***{% raw %}{{{SEF URL}}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)</li><li>[retrieving category nodes](https://documentation.spryker.com/docs/retrieving-category-nodes)</li><li>[retrieving cms pages](https://documentation.spryker.com/upcoming-release/docs/retrieving-cms-pages)</li><li>[retrieving merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)</li></ul>|
 
 ### Request
 

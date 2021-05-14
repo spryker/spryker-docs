@@ -75,18 +75,14 @@ defaults:
       type: "pages"
     values:
       sidebar: marketplace_developer_sidebar
+      product-type: 'marketplace/dev'
   -
     scope:
       path: "docs/marketplace/user"
       type: "pages"
     values:
       sidebar: marketplace_user_sidebar
-  -
-    scope:
-      path: "theme_manual"
-      type: "pages"
-    values:
-      sidebar: mydoc_sidebar
+      product-type: 'marketplace/user'
 
 # these are defaults used for the frontmatter for these file types
 

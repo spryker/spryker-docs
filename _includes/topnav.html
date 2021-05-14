@@ -10,13 +10,15 @@
                 </strong>
 
                 <div class="main-nav">
-                    <a href="#" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %}">
+                    <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %}">
                         <span class="main-nav__opener-label">Select Product</span>
                         <span class="main-nav__opener-text">
-                            {% if page.title == 'Spryker Marketplace Documentation' %}
-                            Select Product
+                            {% if page.product-type == 'marketplace/dev' %}
+                            Marketplace developer guide
+                            {% elsif page.product-type == 'marketplace/user' %}
+                            Marketplace users guide
                             {% else %}
-                            {{ page.title }}
+                            Select Product
                             {% endif %}
                         </span>
                         <i class="main-nav__opener-icon icon-arrow-down"></i>
@@ -34,7 +36,7 @@
                              </a>
                              <ul class="main-nav__drop">
                                  <li>
-                                     <a href="/docs/marketplace/dev/setup/system-requirements" class="main-nav__drop-link">
+                                     <a href="/docs/marketplace/dev/setup/system-requirements.html" class="main-nav__drop-link">
                                         <span class="main-nav__drop-link-title">
                                             <i class="icon-developer"></i>
                                             Developer
@@ -43,7 +45,7 @@
                                      </a>
                                  </li>
                                  <li>
-                                     <a href="/docs/marketplace/user/intro-to-spryker/marketplace-concept" class="main-nav__drop-link">
+                                     <a href="/docs/marketplace/user/intro-to-spryker/marketplace-concept.html" class="main-nav__drop-link">
                                         <span class="main-nav__drop-link-title">
                                             <i class="icon-business"></i>
                                             Business User

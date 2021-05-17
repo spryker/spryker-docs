@@ -1,0 +1,97 @@
+.feedback-form {
+    background: $grey-lightest;
+    border-radius: 4px;
+    padding: 17px 20px;
+    margin: 0 0 20px;
+
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: $grey-dark;
+        margin: 0 0 1.5em !important;
+    }
+
+    &__block {
+        margin: 0 auto;
+        max-width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__column {
+        width: 50%;
+        padding: 0 15px 15px;
+
+        &--full {
+            width: 100%;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        display: block;
+        height: 56px;
+        width: 100%;
+        padding: 17px 20px;
+        border: 1px solid $grey;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: $grey;
+        background: transparent !important;
+        outline: none;
+        outline-width: 0;
+        letter-spacing: .02em;
+        border-radius: 2px;
+        transition: color .2s linear, background .2s linear, border-color .2s linear;
+
+        @include placeholder {
+            color: $grey;
+            transition: opacity 0.2s linear;
+        }
+
+        &:focus {
+            border-color: $grey-darker;
+            color: $dark;
+
+            @include placeholder {
+                opacity: 0;
+            }
+        }
+    }
+
+    textarea {
+        max-width: 100%;
+        min-width: 100%;
+        height: 150px;
+        min-height: 150px;
+        max-height: 300px;
+    }
+
+    &__submit {
+        margin: 15px 0;
+        &-row {
+            text-align: center;
+        }
+    }
+
+    &__link {
+        color: $grey;
+
+        &:hover {
+            color: $red;
+            text-decoration: none;
+        }
+    }
+}
+
+.form-collapse {
+    margin: 0 0 30px;
+
+    &__slide {
+        display: none;
+    }
+}

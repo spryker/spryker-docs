@@ -59,15 +59,40 @@ layout: default
 
         {{content}}
 
-        <div class="confirm-block">
-            <strong class="confirm-block__title">
-                Was this article helpful?
-            </strong>
-            <div class="confirm-block__buttons">
-                <a href="#" class="button confirm-block__button button--black">No</a>
-                <a href="#" class="button confirm-block__button button--red">Yes</a>
+        <aside class="form-collapse">
+            <div class="confirm-block">
+                <strong class="confirm-block__title">
+                    Was this article helpful?
+                </strong>
+                <div class="confirm-block__buttons">
+                    <a href="#" class="button confirm-block__button button--black form-collapse__opener" data-feedback="no">No</a>
+                    <a href="#" class="button confirm-block__button button--red form-collapse__opener" data-feedback="yes">Yes</a>
+                </div>
             </div>
-        </div>
+
+            <div class="form-collapse__slide">
+                <form class="feedback-form">
+                    <h3 class="feedback-form__title" data-toc-skip>Please provide feedback</h3>
+                    <div class="feedback-form__block">
+                        <div class="feedback-form__column">
+                            <input type="text" placeholder="Name (Optional)" class="feedback-form__input">
+                        </div>
+                        <div class="feedback-form__column">
+                            <input type="email" placeholder="Email (Optional)" class="feedback-form__input">
+                        </div>
+                        <div class="feedback-form__column feedback-form__column--full">
+                            <textarea placeholder="Any additional feedback?" class="feedback-form__textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="feedback-form__submit-row">
+                        <input type="submit" value="Submit" class="feedback-form__submit button button--red">
+                    </div>
+                    <div class="feedback-form__submit-row">
+                        <a href="#" class="feedback-form__link form-collapse__close">Skip</a>
+                    </div>
+                </form>
+            </div>
+        </aside>
 
         <div class="tags">
             {% if page.tags != null %}

@@ -30,13 +30,13 @@
     &__inner {
         flex: 1 1 auto;
         overflow: hidden;
-        width: 294px;
+        width: 310px;
         transition: width .3s linear;
     }
 
     &__slide {
         transition: transform .3s linear, opacity .3s linear;
-        width: 294px;
+        width: 310px;
     }
 
     &--collapsed {

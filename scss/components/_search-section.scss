@@ -23,7 +23,7 @@
             position: absolute;
             z-index: 2;
             pointer-events: none;
-            color: $white;
+            color: $grey-dark;
             font-size: 16px;
             top: 20px;
             left: 5px;
@@ -47,10 +47,18 @@
             letter-spacing: .02em;
             transition: color .2s linear, background .2s linear, border-color .2s linear;
 
-            // placeholder  #48494e
+            @include placeholder {
+                color: $grey-dark;
+                transition: opacity 0.2s linear;
+            }
+
             &:focus {
                 border-bottom-color: $grey-lighten;
                 color: $grey-lighten;
+
+                @include placeholder {
+                    opacity: 0;
+                }
             }
         }
     }

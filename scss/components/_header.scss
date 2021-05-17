@@ -55,7 +55,7 @@
             pointer-events: none;
             color: $grey;
             font-size: 16px;
-            top: 15px;
+            top: 10px;
             left: 5px;
         }
 
@@ -63,8 +63,8 @@
         input[type="search"] {
             display: block;
             width: 100%;
-            height: 46px;
-            padding: 12px 40px;
+            height: 40px;
+            padding: 6px 40px 12px;
             border: 1px solid transparent;
             border-bottom-color: $grey-lighten;
             font-size: 16px;
@@ -77,8 +77,17 @@
             letter-spacing: .02em;
             transition: color .3s linear, background .3s linear, border-color .3s linear;
 
+            @include placeholder {
+                color: $grey;
+                transition: opacity 0.2s linear;
+            }
+
             &:focus {
                 border-bottom-color: $darkest;
+
+                @include placeholder {
+                    opacity: 0;
+                }
             }
         }
     }

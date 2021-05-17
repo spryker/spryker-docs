@@ -65,12 +65,12 @@ layout: default
                     Was this article helpful?
                 </strong>
                 <div class="confirm-block__buttons">
-                    <a href="#" class="button confirm-block__button button--black form-collapse__opener" data-feedback="no">No</a>
-                    <a href="#" class="button confirm-block__button button--red form-collapse__opener" data-feedback="yes">Yes</a>
+                    <a href="#" class="button confirm-block__button button--black js-form-collapse__opener">No</a>
+                    <a href="#" class="button confirm-block__button button--red js-form-collapse__opener">Yes</a>
                 </div>
             </div>
 
-            <div class="form-collapse__slide">
+            <div class="js-form-collapse__slide">
                 <form class="feedback-form">
                     <h3 class="feedback-form__title" data-toc-skip>Please provide feedback</h3>
                     <div class="feedback-form__block">
@@ -84,11 +84,11 @@ layout: default
                             <textarea placeholder="Any additional feedback?" class="feedback-form__textarea"></textarea>
                         </div>
                     </div>
-                    <div class="feedback-form__submit-row">
+                    <div class="feedback-form__action-row">
                         <input type="submit" value="Submit" class="feedback-form__submit button button--red">
                     </div>
-                    <div class="feedback-form__submit-row">
-                        <a href="#" class="feedback-form__link form-collapse__close">Skip</a>
+                    <div class="feedback-form__action-row">
+                        <a href="#" class="feedback-form__link js-form-collapse__close">Skip</a>
                     </div>
                 </form>
             </div>

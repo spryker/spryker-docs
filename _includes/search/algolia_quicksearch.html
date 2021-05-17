@@ -4,7 +4,7 @@
 {% include search/algolia_config.html %}
 <div id="search-demo-container">
     <form action="{% link search.md %}" class="quick-search-form">
-        <input type="text" class="search-input"/>
+        <input type="text" class="search-input" placeholder="Search documentation" />
     </form>
 </div>
 <script type="text/javascript">
@@ -15,7 +15,7 @@
             searchInput: '.quick-search-form .search-input',
             options: {
                 debug: true,
-                hitsPerPage: 5
+                hitsPerPage: 5,
             }
         },
     );

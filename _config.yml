@@ -81,7 +81,8 @@ defaults:
       path: "docs/marketplace/dev"
       type: "pages"
     values:
-      sidebar: marketplace_dev_sidebar
+      sidebar: marketplace_developer_sidebar
+      product-type: 'marketplace/dev'
       role: "dev"
   -
     scope:
@@ -89,6 +90,7 @@ defaults:
       type: "pages"
     values:
       sidebar: marketplace_user_sidebar
+      product-type: 'marketplace/user'
       role: "user"
 
 # version-related scopes

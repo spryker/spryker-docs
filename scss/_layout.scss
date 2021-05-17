@@ -19,6 +19,14 @@ body {
     &--post {
         display: flex;
     }
+
+    &--search {
+        padding: 40px 0;
+
+        .container {
+            max-width: 1078px;
+        }
+    }
 }
 
 .container {

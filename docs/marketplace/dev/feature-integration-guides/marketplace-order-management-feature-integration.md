@@ -1,9 +1,10 @@
 ---
 title: Marketplace Order Management feature integration
-description: {Meta description}
-tags: [, ]
+last_updated: Jan 06, 2021
+description: This document describes the process how to integrate the Marketplace Order Management feature.
 template: feature-integration-guide-template
 ---
+
 
 This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 
@@ -28,8 +29,8 @@ Install the required modules:
 ```bash
 composer require spryker-feature/marketplace-order-management --update-with-dependencies
 ```
----
-**Verification**
+
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -43,7 +44,8 @@ Make sure that the following modules have been installed:
 | MerchantSalesOrderDataExport | spryker/merchant-sales-order-data-export |
 | ProductOfferSales | spryker/product-offer-sales |
 
----
+{% endinfo_block %}
+
 ### 2) Set up database schema and transfer objects
 Apply database changes and generate entity and transfer changes:
 
@@ -53,10 +55,9 @@ console propel:install
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied by checking your database:
+Check your database to make sure that the following changes have been applied:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --------------- | ---- | ------ |
@@ -67,6 +68,10 @@ Make sure that the following changes have been applied by checking your database
 |spy_merchant_sales_order_totals | table |created |
 |spy_sales_expense.merchant_reference | column |created |
 |spy_sales_order_item.merchant_reference | column |created  |
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been triggered in transfer objects:
 
@@ -79,7 +84,7 @@ Make sure that the following changes have been triggered in transfer objects:
 | MerchantOrderItem.idMerchantOrderItem | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
 | Item.productOfferReference | attribute | created| src/Generated/Shared/Transfer/ItemTransfer |
 
----
+{% endinfo_block %}
 
 ### 3) Add translations
 Generate a new translation cache for Zed:
@@ -148,12 +153,11 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 console data:import merchant-oms-process
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that in the `spy_merchant` table, merchants have correct `fk_process id` in their columns.
 
----
+{% endinfo_block %}
 
 ### 5) Export data
 
@@ -415,7 +419,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information, view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\StateMachine;
@@ -464,12 +468,13 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 ```
 </details>
 
----
-**Verification**
-1. Make sure that the Merchant State Machine is executed on Merchant Orders after the order has been split.
-2. Make sure that when retrieving an order in the Sales module, it is split by the Merchant Order and that the Order state is derived from the Merchant State Machine.
+{% info_block warningBox "Verification" %}
 
----
+Make sure that the Merchant State Machine is executed on Merchant Orders after the order has been split.
+
+Make sure that when retrieving an order in the *Sales* module, it is split by the Merchant Order and that the Order state is derived from the Merchant State Machine.
+
+{% endinfo_block %}
 
 ## Install feature front end
 
@@ -501,8 +506,7 @@ Apply database changes and to generate entity and transfer changes:
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Ensure the following transfers have been created:
 
@@ -511,7 +515,7 @@ Ensure the following transfers have been created:
 | MerchantOrderTableCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
 | MerchantOrderItemTableCriteria | class | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer |
 
----
+{% endinfo_block %}
 
 ### 3) Set up plugins
 Register the following plugins to enable widgets:
@@ -545,16 +549,15 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET | VERIFICATION |
 | ----------- | ---------- |
-| SalesMerchantPortalGui| Open MerchantDashboard at `http://mysprykershop.com/dashboard-merchant-portal-gui` and check that Sales widget is available. |
+| SalesMerchantPortalGui| Open MerchantDashboard at `http://mysprykershop.com/dashboard-merchant-portal-gui` and check that the Sales widget is available. |
 
----
+{% endinfo_block %}
 
 ## Related features
 Integrate the following related features:

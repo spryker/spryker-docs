@@ -5,13 +5,15 @@ description: This document describes the process how to integrate the Merchant C
 template: feature-integration-guide-template
 ---
 
-## Install feature core
-Follow the steps below to install the Merchant Category feature core.
+This document describes how to integrate the Merchant Category feature into a Spryker project.
 
+## Install feature core
+
+Follow the steps below to install the Merchant Category feature core.
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | LINK |
 | --------- | ----- | ---------- |
@@ -20,12 +22,13 @@ To start feature integration, overview, and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Run the following commands to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/merchant-category:"^0.2.0" spryker/merchant-category-data-import:"^0.2.0" spryker/merchant-category-search:"^0.1.0"  --update-with-dependencies
 ```
 
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -33,6 +36,8 @@ Make sure that the following modules have been installed:
 | ----------- | ------------ |
 | MerchantCategory | vendor/spryker/merchant-category  |
 | MerchantCategoryDataImport | vendor/spryker/merchant-category-data-import |
+
+{% endinfo_block %}
 
 ## 2) Set up database schema
 
@@ -50,7 +55,7 @@ Adjust the schema definition so that entity changes trigger the events:
 </database>
 ```
 
-Run the following commands to apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes.
 
 ```bash
 console transfer:generate
@@ -58,27 +63,25 @@ console propel:install
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Verify the following changes by checking your database
-
----
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --------------------- | ----- | ------- |
 | spy_merchant_category | table | created |
 
+{% endinfo_block %}
+
 ### 3) Set up transfer objects
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -90,7 +93,8 @@ Make sure that the following changes have been applied in transfer objects:
 | MerchantSearch            | object | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
 | DataImporterConfiguration | object | Created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer |
 
----
+{% endinfo_block %}
+
 ### 4) Set up behavior
 
 Activate the following plugins:
@@ -130,16 +134,17 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure when you delete category, that has a relation to merchant, in Zed UI there is no exception and merchant category removed as well.
+Make sure when you delete category that has a relation to merchant in Zed UI, there is no exception and merchant category removed as well.
 
----
+{% endinfo_block %}
 
 **src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
 
-```
+```php
+<?php
+
 namespace Pyz\Zed\Merchant;
 
 use Spryker\Zed\Merchant\MerchantDependencyProvider as SprykerMerchantDependencyProvider;
@@ -156,14 +161,14 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
             new MerchantCategoryMerchantExpanderPlugin(),
         ];
     }
+}
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the `MerchantFacade::get()` response contains merchant categories.
 
----
+{% endinfo_block %}
 
 **src/Pyz/Zed/MerchantSearch/MerchantSearchDependencyProvider.php**
 
@@ -188,12 +193,11 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
     }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that index data http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes contains merchant category keys for the merchants that assigned to categories.
 
----
+{% endinfo_block %}
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -221,12 +225,11 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that changing of category keys triggers those changes http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes.
 
----
+{% endinfo_block %}
 
 ### 5) Import merchant categories data
 
@@ -270,25 +273,25 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import merchant-category
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that imported data is added to the spy_merchant_category table.
+Make sure that imported data is added to the `spy_merchant_category` table.
 
----
+{% endinfo_block %}
 
 ## Install feature front end
+
 Follow the steps below to install the Merchant Category feature front end.
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Integrate the required features before beginning the integration step.
 
 | NAME | VERSION | LINK |
 | -------- | ------ | -------------- |
@@ -327,9 +330,8 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that `MerchantSearchClient::search()` allows filtering merchants by category keys, if an array of categoryKeys is provided as the request parameter.
 
----
+{% endinfo_block %}

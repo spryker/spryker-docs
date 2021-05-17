@@ -13,29 +13,32 @@ Follow the steps below to install the Marketplace Shipment + Checkout feature co
 
 ### Prerequisites
 
+To start feature integration, integrate the required features:
+
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | -----------|
-| Marketplace Shipment | dev-master | [Marketplace Shipment feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html) |
+| Marketplace Shipment | dev-master | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html) |
 | Checkout | 202001.0 | [Checkout feature integration](https://github.com/spryker-feature/checkout) |
 
 ### 1) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
-| MerchantShipmentCheckoutPageStepEnginePreRenderPlugin | Copies all item merchant references to their attached shipment merchant reference before rendering checkout steps. | None |   Spryker\Yves\MerchantShipment\Plugin\CheckoutPage |
+| MerchantShipmentCheckoutPageStepEnginePreRenderPlugin | Copies all item merchant references to their attached shipment merchant reference before rendering checkout steps. |  |   Spryker\Yves\MerchantShipment\Plugin\CheckoutPage |
 
 <details>
 <summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CartPage;
- 
+
 use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
 use Spryker\Yves\MerchantShipment\Plugin\CheckoutPage\MerchantShipmentCheckoutPageStepEnginePreRenderPlugin;
- 
+
 class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
 {
     /**
@@ -52,9 +55,8 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that during the checkout steps, items and their shipments have the same merchant reference attached to them.
 
----
+{% endinfo_block %}

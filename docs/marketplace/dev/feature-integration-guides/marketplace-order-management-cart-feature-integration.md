@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Marketplace Order Management + Cart](https://github.com/spryker-feature/marketplace-merchant) feature into a Spryker project.
+This document describes how to integrate the Marketplace Order Management + Cart feature into a Spryker project.
 
 ## Install feature core
 Follow the steps below to install the Marketplace Order Management Feature + Cart feature core.
@@ -22,15 +22,13 @@ To start feature integration, integrate the required features:
 
 ### 1) Install the required modules using Composer
 
-Run the following commands to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/cart-note-merchant-sales-order-gui:"^0.1.0" --update-with-dependencies
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -38,27 +36,25 @@ Make sure that the following modules have been installed:
 | ----------------------------- | ------------------------------------------ |
 | CartNoteMerchantSalesOrderGui | spryker/cart-note-merchant-sales-order-gui |
 
----
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
 
-Run the following commands to generate transfer changes.
+Generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes were applied in transfer objects.
 
 | TRANSFER      | TYPE  | EVENT | PATH                                            |
-| ------------------- | --------- | --------- | --------------------------------------------------- |
+| - | - | - | - |
 | MerchantOrder.order | attribute | created   | src/Generated/Shared/Transfer/MerchantOrderTransfer |
 
----
+{% endinfo_block %}
 
 ### 3) Set up behavior
 
@@ -86,20 +82,19 @@ class MerchantSalesOrderMerchantUserGuiConfig extends SprykerMerchantSalesOrderM
 
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Ensure that cart notes are shown on the order view page when looking at merchant orders in Zed GUI.
 
----
+{% endinfo_block %}
 
 ## Install feature front end
+
 Follow the steps below to install the Marketplace Order Management Feature + Cart feature front end.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME            | VERSION |
 | -------------------- | ----------- |
@@ -115,9 +110,7 @@ Install the required modules:
 composer require spryker/cart-note-merchant-portal-gui:"^0.1.2" --update-with-dependencies
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -125,7 +118,7 @@ Make sure that the following modules have been installed:
 | ------------------------- | ------------------------------------- |
 | CartNoteMerchantPortalGui | spryker/cart-note-merchant-portal-gui |
 
----
+{% endinfo_block %}
 
 ### 2) Set up behavior
 
@@ -158,11 +151,8 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
     }
 }
 ```
+{% info_block warningBox "Verification" %}
 
----
+Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any order and check that the *Cart Note* column  is present.
 
-**Verification**
-
-Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` plugin is set up by opening  `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that column “Cart Note” is present.
-
----
+{% endinfo_block %}

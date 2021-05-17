@@ -12,12 +12,16 @@ This document describes how to integrate the Marketplace Shipment + Customer fea
 Follow the steps below to install the Marketplace Shipment + Customer feature core.
 
 ### Prerequisites
+
+To start feature integration, integrate the required features:
+
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | -----------|
 | Marketplace Shipment | dev-master | [Marketplace Shipment feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html) |
 | Customer | 202001.0 |  |
 
 ### 1) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -51,9 +55,8 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that during the checkout steps, items and their shipments have the same merchant reference attached to them.
 
----
+{% endinfo_block %}

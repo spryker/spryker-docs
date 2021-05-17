@@ -5,14 +5,15 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Marketplace Order Management + Customer Account Management feature into a Spryker project.
 
 ## Install feature front end
 
-Follow the steps below to install the Marketplace Order Management Feature + Order Threshold feature front end.
+Follow the steps below to install the Marketplace Order Management + Customer Account Management feature front end.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | ------------------ | ----------- | ----------|
@@ -21,23 +22,21 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Set up the transfer objects
 
-Run the following commands to generate transfer changes.
+Generate transfer changes.
 
 ```bash
 console transfer:generate
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes were applied in transfer objects.
 
-| TRANSFER  | TYPE  | EVENT | PATH  |
+| TRANSFER  | TYPE | EVENT | PATH |
 | ---------------- | --------- | --------- | ------------------------------- |
 | ShopContext.merchantReference | attribute | created   | src/Generated/Shared/Transfer/ShopContextTransfer |
 
----
+{% endinfo_block %}
 
 ### 2) Set up behavior
 
@@ -71,9 +70,9 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
+
 
 Make sure that after customers log in, their selected merchant is not changed and set correctly.
 
----
+{% endinfo_block %}

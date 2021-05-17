@@ -5,14 +5,15 @@ description: This integration guide provides steps on how to integrate the Merch
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Marketplace Merchants](https://github.com/spryker-feature/marketplace-merchant) feature into a Spryker project.
+This document describes how to integrate the Marketplace Merchants feature into a Spryker project.
 
 
 ## Install feature core
 Follow the steps below to install the Marketplace Merchant feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+
+To start feature integration, integrate the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -25,9 +26,10 @@ Install the required modules:
 ```bash
 composer require spryker-feature/marketplace-merchant:"dev-master" --update-with-dependencies
 ```
+
+{% info_block warningBox "Verification" %}
+
 Make sure that the following modules have been installed:
-
-
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -40,7 +42,10 @@ Make sure that the following modules have been installed:
 | MerchantUserGui |	vendor/spryker/merchant-user-gui |
 | MerchantStorage | vendor/spryker/merchant-storage |
 
+{% endinfo_block %}
+
 ### 2) Set up database schema
+
 Set up database schema:
 1. Adjust the schema definition so entity changes trigger events:
 
@@ -72,8 +77,7 @@ console transfer:generate
 ```
 
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred in the database:
 
@@ -84,7 +88,7 @@ Make sure that the following changes have occurred in the database:
 | spy_merchant_profile | table | created |
 | spy_merchant_user | table | created |
 
----
+{% endinfo_block %}
 
 ### 3) Set up transfer objects
 Generate transfer changes:
@@ -93,8 +97,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred in transfer objects:
 
@@ -115,7 +118,8 @@ Make sure that the following changes have occurred in transfer objects:
 | SpyMerchantStorageEntity |  object | Created | src/Generated/Shared/Transfer/SpyMerchantStorageEntityTransfer |
 | SpyMerchantUserEntity | object | Created |src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
 
----
+{% endinfo_block %}
+
 
 ### 4) Add Zed translations
 Generate a new translation cache for Zed:
@@ -191,22 +195,19 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that, when you create a merchant using `MerchantFacade::updateMerchant()`, its profile also gets created.
+Make sure the following:
+* When you create a merchant using `MerchantFacade::updateMerchant()`, its profile also gets created.
+* When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
+* When you fetch a merchant using `MerchantFacade::findOne()`, its profile data also gets fetched.
+* When you deactivate a merchant in the **Merchants** section of the Back Office, its merchant users are deactivated in the **Users** section.
 
-Make sure that, when you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
-
-Make sure that when you fetch a merchant using `MerchantFacade::findOne()`, its profile data also gets fetched.
-
-Make sure that, when you deactivate a merchant in the *Merchants* section of the Back Office, its merchant users are deactivated in the Users section.
-
----
+{% endinfo_block %}
 
 <details><summary markdown='span'>src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php</summary>
-```php
 
+```php
 <?php
 
 namespace Pyz\Zed\MerchantGui;
@@ -257,10 +258,14 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 }
 
 ```
+
 </details>
 
+{% info_block warningBox "Verification" %}
 
 Make sure that when you edit a merchant in the Merchants section of the Back Office, you can see merchant profile related tabs: Contact Person, Merchant Profile, Legal Information, Merchant User.
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/Acl/AclDependencyProvider.php**
 
@@ -287,9 +292,13 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 
 ```
 
-Make sure that, after executing `console setup:init-db`, the Merchant Admin role is present in `spy_acl_role`.
+{% info_block warningBox "Verification" %}
 
-Make sure that the `console sync:data url` command exports the merchant URL data from `spy_url`  to Redis.
+Make sure after executing `console setup:init-db`, the Merchant Admin role is present in `spy_acl_role`.
+
+Make sure the `console sync:data url` command exports the merchant URL data from `spy_url`  to Redis.
+
+{% endinfo_block %}
 
 ### 6) Configure navigation
 Add marketplace section to `navigation.xml`:
@@ -316,12 +325,11 @@ Add marketplace section to `navigation.xml`:
 </config>
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace** button.
 
----
+{% endinfo_block %}
 
 ### 7) Configure export to Redis
 This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes the data to Storage.
@@ -485,12 +493,11 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that when merchant profile entities are created or updated through ORM, they are exported to Redis accordingly.
 
----
+{% endinfo_block %}
 
 ### 8) Configure export to Elastica
 This step publishes tables on change (create, edit) to `spy_merchant_search` and synchronizes the data to Search.
@@ -637,15 +644,16 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
 ```
 
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that, when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
+Make sure that when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
 
 
 | TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
 |---|---|
 | Merchant | merchant:1 |
+
+{% endinfo_block %}
 
 <details>
 <summary markdown='span'>Example of the expected data fragment</summary>
@@ -835,8 +843,6 @@ Make sure that, when merchant entities are created or updated through ORM, they 
  ```
  </details>
 
- ---
-
 1. Set up result formatters:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -864,12 +870,13 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
     }
 }
 ```
+
 7. Set up query expanders:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |----|----|----|----|
-| PaginatedMerchantSearchQueryExpanderPlugin | Allows to use pagination for merchant search. |   | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
-| StoreQueryExpanderPlugin | Allows search to filter out merchants that do not belong to the current store. |   | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
+| PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search. |   | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
+| StoreQueryExpanderPlugin | Allows searching to filter out merchants that do not belong to the current store. |   | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
 
 ```php
 <?php
@@ -912,11 +919,12 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 ```
 
 ### 9) Import data
+
 To import data:
 1. Prepare merchant profile data according to your requirements using our demo data:
 
 <details>
-<summary markdown='span'>click to view the demo data</summary>
+<summary markdown='span'>Click to view the demo data</summary>
 
 ```html
 merchant_reference,contact_person_role,contact_person_title,contact_person_first_name,contact_person_last_name,contact_person_phone,banner_url,logo_url,public_email,public_phone,description_glossary_key.en_US,description_glossary_key.de_DE,banner_url_glossary_key.en_US,banner_url_glossary_key.de_DE,delivery_time_glossary_key.en_US,delivery_time_glossary_key.de_DE,terms_conditions_glossary_key.en_US,terms_conditions_glossary_key.de_DE,cancellation_policy_glossary_key.en_US,cancellation_policy_glossary_key.de_DE,imprint_glossary_key.en_US,imprint_glossary_key.de_DE,data_privacy_glossary_key.en_US,data_privacy_glossary_key.de_DE,is_active,fax_number,longitude,latitude
@@ -931,10 +939,9 @@ MER000007,,,,,,,,,,,,,,,,,,,,,,,,0,,,
 MER000005,Merchandise Manager,Mr,Jason,Weidmann,030/123456789,https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-logo.png,support@budgetcamerasonline.com,+49 30 234567591,"DSLR and mirrorless cameras are by far the most popular with filmmakers on a tight budget when you can't afford multiple specialist cameras.
 Budget Cameras is offering a great selection of digital cameras with the lowest prices.","DSLR- und spiegellose Kameras sind bei Filmemachern mit knappem Budget bei weitem am beliebtesten, wenn sie sich bestimmte Spezialkameras nicht leisten können.
 Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten Preisen.",https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,2-4 days,2-4 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-E-Mail. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",<p>Budget Cameras<br><br>Spitalerstraße 3<br>20095 Hamburg<br>DE<br><br>Phone: 030 1234567<br>Email: support@budgetcamerasonline.com<br><br>Represented by<br>Managing Director: Max Mustermann<br>Register Court: Hamburg<br>Register Number: HXX 134305<br></p>,<p>Budget Cameras<br><br>Spitalerstraße 3<br>20095 Hamburg<br>DE<br><br>Phone: 030 1234567<br>Email: support@budgetcamerasonline.com<br><br>Vertreten durch<br>Geschäftsführer: Max Mustermann<br>Registergericht: Hamburg<br>Registernummer: HXX 134305<br></p>,Budget Cameras values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Budget Cameras.,1,+49 30 234567500,53.552463,10.004663
-
 ```
-</details>
 
+</details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
@@ -966,7 +973,7 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 | longitude |   | String | 52.534105 | Longitude value of a merchant. |
 | latitude |   | String | 13.384458 | Latitude value of a merchant. |
 
-1. Prepare merchant profile address data according to your requirements using our demo data:
+2. Prepare merchant profile address data according to your requirements using our demo data:
 
 ```
 merchant_reference,country_iso2_code,country_iso3_code,address1,address2,address3,city,zip_code
@@ -1026,24 +1033,26 @@ console data:import merchant-profile
 console data:import merchant-profile-address
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that imported data has been added to the `spy_merchant_profile` and `spy_merchant_profile_address` tables.
 
----
+{% endinfo_block %}
 
 ## Install feature front end
 Follow the steps below to install the Marketplace Merchants feature front end.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+
+To start feature integration, integrate the required features:
+
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 ### 1) Install the required modules using Composer
-Run the following commands to install the required modules:
+
+Install the required modules:
 ```bash
 composer require spryker-feature/marketplace-merchant: "dev-master" --update-with-dependencies
 ```
@@ -1084,12 +1093,11 @@ merchant_profile.delivery_time,Lieferzeit,de_DE
 console data:import glossary
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
+Make sure that the configured data has been added to the `spy_glossary` table in the database.
 
----
+{% endinfo_block %}
 
 ### 3) Set up behavior
 To set up behavior:
@@ -1149,12 +1157,11 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that you can open the merchant page at link `http://yves.de.demo-spryker.com/de/merchant/roan`.
 
----
+{% endinfo_block %}
 
 2. Enable Javascript and CSS changes:
 
@@ -1162,16 +1169,16 @@ Make sure that you can open the merchant page at link `http://yves.de.demo-spryk
 console frontend:yves:build
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that you can view merchant profile data at http://yves.de.demo-spryker.com/de/merchant/roan.
 
----
+{% endinfo_block %}
 
 ## Related features
+
 Integrate the following related features:
 
 | FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
-| -------------- | -------------------------------- | ----------------- |
+| - | - | -|
 | Marketplace Merchant  API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html) |

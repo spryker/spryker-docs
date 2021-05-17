@@ -5,27 +5,31 @@ description: This document describes how to integrate the Merchant Portal Core f
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Marketplace Merchant Portal Core feature into a Spryker project.
+
 ## Install feature core
 
 Follow the steps below to install the Merchant Portal Core feature core.
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | -------------------- | ---------- | ---------|
 | Spryker Core         | dev-master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 | Spryker Core BO      | dev-master | [Spryker Core Back Office feature integration](https://github.com/spryker-feature/spryker-core-back-office)
-| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html)
+| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html)
 
 ###  1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-merchantportal-core:"dev-master" --update-with-dependencies
 ```
+
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -36,6 +40,8 @@ Make sure that the following modules have been installed:
 | SecurityMerchantPortalGui  | vendor/spryker/security-merchant-portal-gui |
 | ZedUi  | vendor/spryker/zed-ui |
 | GuiTable | vendor/spryker/gui-table |
+
+{% endinfo_block %}
 
 ### 2) Set up behavior
 
@@ -150,7 +156,7 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 
 ### 3) Set up transfer objects
 
-Run the following commands to apply database changes and generate transfer changes:
+Apply database changes and generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -158,8 +164,7 @@ console navigation:build-cache
 console navigation:build-cache
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -168,7 +173,7 @@ Make sure that the following changes have been applied in transfer objects:
 | MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCard  |
 | MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButton |
 
----
+{% endinfo_block %}
 
 ## Install feature front end
 
@@ -193,7 +198,7 @@ To start builder integration, check the Spryker packages versions:
 
 ### 1) Set up Marketplace builder configs
 
-Add `angular.json` file.
+Add the `angular.json` file.
 
 ```bash
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/master/angular.json
@@ -227,7 +232,7 @@ Install npm dev dependencies
 npm i -D @angular-builders/custom-webpack@~9.1.0 @angular-devkit/build-angular@~0.901.11 @angular/cli@~9.1.11 @angular/common@~9.1.12 @angular/compiler@~9.1.12 @angular/compiler-cli@~9.1.12 @angular/core@~9.1.12 @angular/language-service@~9.1.12 @angular/platform-browser@~9.1.12 @angular/platform-browser-dynamic@~9.1.12 @babel/plugin-proposal-class-properties@~7.10.4 @babel/plugin-transform-runtime@~7.10.5 @babel/preset-typescript@~7.10.4 @jsdevtools/file-path-filter@~3.0.2 @nrwl/jest@~9.4.4 @nrwl/workspace@~9.4.4 @spryker/oryx-for-zed@~2.8.1 @types/jest@~26.0.4 @types/node@~12.11.1 @types/webpack@~4.41.17 jest@~26.1.0 jest-preset-angular@~8.2.1 node-sass@~4.14.1 npm-run-all@~4.1.5 rimraf@~3.0.2 ts-jest@~26.1.3 ts-node@~8.3.0 tslib@~1.11.1 typescript@~3.8.3
 ```
 
-Update package.json with the following fields:
+Update `package.json` with the following fields:
 
 **package.json**
 
@@ -257,7 +262,7 @@ Update package.json with the following fields:
 }
 ```
 
-Update frontend/settings.js to point to an updated `tsconfig` for Yves in the `globalSettings.paths` object:
+Update `frontend/settings.js` to point to an updated `tsconfig` for Yves in the `globalSettings.paths` object:
 
 **frontend/settings.js**
 
@@ -271,7 +276,7 @@ const globalSettings = {
 };
 ```
 
-Add .yarnrc.yml file.
+Add a .yarnrc.yml file.
 
 **.yarnrc.yml**
 
@@ -301,7 +306,7 @@ Run commands from the root of the project:
 npm i -g yarn @angular/cli@9.1.11
 ```
 
-Run yarn `-v` to check if the yarn was installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
+Run `yarn -v` to check if the yarn was installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
 
 `ng --version` should show Angular CLI: 9.1.11 version.
 
@@ -332,12 +337,42 @@ wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spry
 wget -O frontend/merchant-portal/webpack.config.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/webpack.config.js
 ```
 
+**frontend/merchant-portal/webpack.config.ts**
+
+```ts
+import {
+    CustomWebpackBrowserSchema,
+    TargetOptions,
+} from "@angular-builders/custom-webpack";
+import * as webpack from "webpack";
+
+import { getMPEntryPointsMap } from "./entry-points";
+
+export default async (
+    config: webpack.Configuration,
+    options: CustomWebpackBrowserSchema,
+    targetOptions: TargetOptions
+): Promise<webpack.Configuration> => {
+    console.log("Resolving entry points...");
+
+    const entryPointsMap = await getMPEntryPointsMap();
+
+    console.log(`Found ${Object.keys(entryPointsMap).length} entry point(s)!`);
+
+    config.entry = {
+        ...(config.entry as any),
+        ...entryPointsMap,
+    };
+
+    return config;
+};
+```
 ---
-**Verification**
+{% info_block warningBox "Verification" %}
 
 `npm run mp:build` should pass successfully.
 
----
+{% endinfo_block %}
 
 ### 3) Adjust deployment configs
 
@@ -427,14 +462,14 @@ server {
 }
 ```
 
-After the Nginx config was modified, run the following command to apply the new config:f
+After the Nginx config was modified, apply the new `config:f`
 
 ```bash
 sudo service nginx reload
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
+
 Make sure to use environment variables in config-default.php:
 
 **config/Shared/config_default.php**
@@ -448,8 +483,12 @@ $config[PropelConstants::ZED_DB_USERNAME] = getenv('SPRYKER_DB_USERNAME');
 $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
 ```
 
----
+{% endinfo_block %}
 
 The following page should now show the login page for MerchantPortal: https://you-merchant-portal.domain/security-merchant-portal-gui/login
 
+{% info_block warningBox "Verification" %}
+
 Make sure the following pages do not open https://you-merchant-portal.domain/security-gui/login, https://you-merchant-portal.domain/
+
+{% endinfo_block %}

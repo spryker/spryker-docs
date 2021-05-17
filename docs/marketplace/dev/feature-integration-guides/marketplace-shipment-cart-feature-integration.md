@@ -5,11 +5,15 @@ tags:
 template: feature-integration-guide-template
 ---
 
-## Install Feature Core
+This document describes how to integrate the Marketplace Shipment + Cart feature into a Spryker project.
+
+## Install feature core
+
 Follow the steps below to install the Marketplace Shipment + Cart feature core.
 
 ### Prerequisites
-To start feature integration, overview, and install the necessary features:
+
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -17,6 +21,7 @@ To start feature integration, overview, and install the necessary features:
 | Cart | 202001.0 | [Cart feature integration](https://github.com/spryker-feature/cart) |
 
 ## 1) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
@@ -25,6 +30,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantShipmentQuoteExpanderPlugin | Expands Quote items with merchant shipment | None | Spryker\Zed\MerchantShipment\Communication\Plugin\Quote |
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
+
 ```php
 <?php
 
@@ -50,6 +56,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 ```
 
 **src/Pyz/Zed/Quote/QuoteDependencyProvider.php**
+
 ```php
 <?php
 
@@ -77,32 +84,36 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that merchant sold items have merchant reference attached to their selected shipment.
+Make sure that merchant sold items have a merchant reference attached to their selected shipment.
+
 Make sure that correct merchant reference is saved in `spy_sales_shipment`.
 
----
+{% endinfo_block %}
 
 ## Install feature front end
+
 Follow the steps below to install the Marketplace Shipment + Cart feature front end.
 
 ### Prerequisites
-To start feature integration, overview, and install the necessary features:
 
-| Name | Version |
+To start feature integration, integrate the required features:
+
+| NAME | VERSION |
 |-|-|
 | Cart | 202001.0 |
 | Marketplace Shipment | dev-master |
 |   |   |
 
-1) Set up Behavior
+1) Set up behavior
+2)
 Enable the following behaviors by registering the plugins:
 
-| Plugin | Description | Prerequisites | Namespace |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+
 |-|-|-|-|
-| MerchantShipmentPreAddToCartPlugin | Adds cart item merchant reference to shipment transfer | None | Spryker\Yves\MerchantShipment\Plugin\CartPage |
+| MerchantShipmentPreAddToCartPlugin | Adds cart item merchant reference to shipment transfer |  | Spryker\Yves\MerchantShipment\Plugin\CartPage |
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
 ```php
@@ -128,9 +139,8 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that items that belong to a merchant being added to cart have the same merchant reference added to their shipments.
 
----
+{% endinfo_block %}

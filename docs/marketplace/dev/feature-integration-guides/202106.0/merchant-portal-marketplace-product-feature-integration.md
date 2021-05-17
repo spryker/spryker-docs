@@ -5,26 +5,30 @@ description: This integration guide provides steps on how to integrate the Merch
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Merchant Portal - Marketplace Product feature into a Spryker project.
+
 ## Install feature core
+
 Follow the steps below to install the Merchant Portal - Marketplace Product feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product | dev-master | [Marketplace Product feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html) |
-| Marketplace Merchant Portal Core | dev-master | [Merchant Portal Core feature integration](docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html) |
+| Marketplace Product | dev-master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/202106.0/marketplace-product-feature-integration.html) |
+| Marketplace Merchant Portal Core | dev-master | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/202106.0/merchant-portal-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-Run the following commands to install the required modules:
+
+Install the required modules:
 
 ```bash
 composer require spryker/product-merchant-portal-gui:"dev-master" --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -33,17 +37,17 @@ Make sure that the following modules have been installed:
 | ProductMerchantPortalGui | spryker/product-merchant-portal-gui |
 | ProductMerchantPortalGuiExtension | spryker/product-merchant-portal-gui-extension |
 
----
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
-Run the following command to generate transfer changes:
+
+Generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -55,4 +59,4 @@ Make sure that the following changes have been applied in transfer objects:
 | PriceProductAbstractTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewCollectionTransfer |
 | PriceProductAbstractTableView | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewTransfer |
 
----
+{% endinfo_block %}

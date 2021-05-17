@@ -5,26 +5,30 @@ description: This integration guide provides steps on how to integrate the Merch
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Merchant Portal - Marketplace Product + Tax feature into a Spryker project.
+
 ## Install feature core
+
 Follow the steps below to install the Merchant Portal - Marketplace Product + Tax feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION | integration guide |
+To start feature integration, integrate the required features:
+
+| NAME | VERSION | INTEGRATION guide |
 |-|-|-|
-| Marketplace Product | dev-master | [Marketplace Product feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html) |
+| Marketplace Product | dev-master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html) |
 | Tax | dev-master | [Tax feature integration](https://github.com/spryker-feature/tax)
 
 ### 1) Install the required modules using Composer
-Run the following commands to install the required modules:
+
+Install the required modules:
 
 ```bash
 composer require spryker/tax-merchant-portal-gui:"dev-master" --update-with-dependencies
 ```
 
-***
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -32,17 +36,17 @@ Make sure that the following modules have been installed:
 |-|-|
 | TaxMerchantPortalGui | spryker/tax-merchant-portal-gui |
 
-***
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
-Run the following command to generate transfer changes:
+
+Generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
-***
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -51,9 +55,10 @@ Make sure that the following changes have been applied in transfer objects:
 | TaxSetCollection | class | Created | src/Generated/Shared/Transfer/TaxSetCollectionTransfer |
 | TaxSet | class | Created | src/Generated/Shared/Transfer/TaxSetTransfer |
 
-***
+{% endinfo_block %}
 
 ### 3) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
@@ -84,9 +89,8 @@ class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantP
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure `ProductAbstractForm` has the `TaxSet` field.
 
----
+{% endinfo_block %}

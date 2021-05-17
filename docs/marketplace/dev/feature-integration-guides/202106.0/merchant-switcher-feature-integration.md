@@ -5,30 +5,30 @@ description: This integration guide provides steps on how to integrate the Merch
 template: feature-integration-guide-template
 ---
 
-## Install Feature Core
+This document describes how to integrate the Merchant Switcher feature into a Spryker project.
 
-Follow the steps below to install the Merchant Switcher feature core.
+## Install feature core
+
+Follow the steps below to install the Merchant Switcher feature.
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ---------- | --------|
 | Spryker Core | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Product Offer | dev-master | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
+| Marketplace Product Offer | dev-master | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
 
 ###  1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/merchant-switcher --update-with-dependencies
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
@@ -36,19 +36,17 @@ Make sure that the following modules were installed:
 | --------------- | ------------------------ |
 | MerchantSwitcher | spryker/merchant-switcher |
 
----
+{% endinfo_block %}
 
 ### 2) Set up the transfer objects
 
-Run the following commands to generate transfer changes.
+Generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes were applied in transfer objects:
 
@@ -56,11 +54,11 @@ Make sure that the following changes were applied in transfer objects:
 | ------------------ | --- | ---- | ------------------- |
 | MerchantSwitchRequest | class | created | src/Generated/Shared/Transfer/MerchantSwitchRequestTransfer |
 
----
+{% endinfo_block %}
 
 ## Install feature front end
 
-Follow the steps below to install the Merchant Switcher feature Ffront end.
+Follow the steps below to install the Merchant Switcher feature front end.
 
 ### Prerequisites
 
@@ -72,15 +70,13 @@ To start feature integration, overview, and install the necessary features:
 
 ###  1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-shop/merchant-switcher-widget --update-with-dependencies
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
@@ -88,19 +84,17 @@ Make sure that the following modules were installed:
 | ----------- | -------------- |
 | MerchantSwitcher | spryker/merchant-switcher |
 
----
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
 
-Run the following commands to generate transfer changes.
+Generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes were applied in transfer objects:
 
@@ -108,7 +102,7 @@ Make sure that the following changes were applied in transfer objects:
 | ----------- | ---- | ------ | ----------------------- |
 | MerchantSwitchRequest | class | created | src/Generated/Shared/Transfer/MerchantSwitchRequestTransfer |
 
----
+{% endinfo_block %}
 
 ### 2) Add translations
 
@@ -125,19 +119,17 @@ merchant_switcher.label,My Merchant,en_US
 merchant_switcher.label,Mein Händler,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the configured data is added to the `spy_glossary` table in the database.
 
----
+{% endinfo_block %}
 
 ### 3) Set up behavior
 
@@ -145,8 +137,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | --------------- | --------------- | ------------- | ------------ |
-| MerchantSwitcherWidgetRouteProviderPlugin | Wires Merchant switch request route to shop Router |  | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\Router        |
-| MerchantShopContextExpanderPlugin         | Adds Merchant reference from cookie to ShopContext |  | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication |
+| MerchantSwitcherWidgetRouteProviderPlugin | Wires the merchant switch request route to the shop router. |  | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\Router        |
+| MerchantShopContextExpanderPlugin         | Adds the merchant reference from cookie to `ShopContext`. |  | SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -257,13 +249,13 @@ class ShopContextDependencyProvider extends SprykerShopContextDependencyProvider
 }
 ```
 
-### 4) Set up Widgets
+### 4) Set up widgets
 
 Register the following plugins to enable widgets:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | -------------------- | -------------- | ------------- | --------------------- |
-| MerchantSwitcherSelectorFormWidget | Shows a list of Merchants that you can switch the shop context in between |  | SprykerShop\Yves\MerchantSwitcherWidget\Widget |
+| MerchantSwitcherSelectorFormWidget | Shows a list of merchants that you can switch the shop context in between. |  | SprykerShop\Yves\MerchantSwitcherWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -289,23 +281,21 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
 ```
 
----
-
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following widgets were registered:
 
 | MODULE | TEST |
 | ------------------- | ------------------------ |
-| MerchantSwitcherSelectorFormWidget | Check the top navigation and change the merchant, wait for page reload and the shop context to be changed (default selected product offers) |
+| MerchantSwitcherSelectorFormWidget | Check the top navigation and change the merchant, wait for page reload and the shop context to be changed (default selected product offers). |
 
----
+{% endinfo_block %}
 
 ## Related features
 

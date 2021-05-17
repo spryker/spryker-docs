@@ -482,7 +482,7 @@ Make sure that the following widget was registered:
 
 | MODULE | TEST |
 | ------------- | ------------- |
-| MerchantOpeningHoursWidget | Go to a MerchantPage on the storefront and ensure that merchant working hours are displayed on the page. |
+| MerchantOpeningHoursWidget | Go to a Merchant page on the storefront and ensure that merchant working hours are displayed. |
 
 {% endinfo_block %}
 

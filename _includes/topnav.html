@@ -63,7 +63,7 @@
                     </ul>
                 </div>
 
-                {% if page.url != "/index.html" %}
+                {% if page.url != "/index.html" and page.url != "/search/" %}
                     <div class="main-header__search">
                         <i class="main-header__search-icon icon-search"></i>
                         {% include search/{{ site.search | default "default" }}_quicksearch.html %}

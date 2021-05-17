@@ -1,9 +1,10 @@
 ---
 title: Marketplace Order Management feature integration
-last_updated: Jan 06, 202
+last_updated: Jan 06, 2021
 description: This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
+
 
 This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 
@@ -418,7 +419,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information, view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\StateMachine;

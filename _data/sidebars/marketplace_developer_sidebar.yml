@@ -67,7 +67,7 @@ entries:
           - title: Marketplace Return Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
 
-          - title: Marketplace Shipment Cart feature integration
+          - title: Marketplace Shipment + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-cart-feature-integration.html
 
           - title: Marketplace Shipment + Checkout feature integration

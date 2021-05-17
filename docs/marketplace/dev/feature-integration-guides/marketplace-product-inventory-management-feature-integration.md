@@ -5,11 +5,14 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
+
 ## Install feature core
 Follow the steps below to install the Marketplace Product + Inventory Management feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -59,9 +62,9 @@ class AvailabilityGuiDependencyProvider extends SprykerAvailabilityGuiDependency
     }
 }
 ```
----
-**Verification**
+
+{% info_block warningBox "Verification" %}
 
 Make sure that you can filter product availabilities by merchant at `http://zed.de.demo-spryker.com/product-management`.
 
----
+{% endinfo_block %}

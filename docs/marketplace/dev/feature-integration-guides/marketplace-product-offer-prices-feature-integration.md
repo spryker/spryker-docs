@@ -5,11 +5,15 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Marketplace Product Offer Prices feature into a Spryker project.
+
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product Offer Prices feature core.
 
 ### Prerequisites
-To start feature integration, overview, and install the necessary features:
+
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -19,13 +23,13 @@ To start feature integration, overview, and install the necessary features:
 
 
 ### 1) Install the required modules using Composer
-Run the following command to install the required modules:
+
+Install the required modules:
 ```bash
 composer require spryker-feature/marketplace-product-offer-prices --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
@@ -39,7 +43,7 @@ Make sure that the following modules were installed:
 | PriceProductOfferVolume | spryker/price-product-offer-volume |
 | PriceProductOfferVolumeGui | spryker/price-product-offer-volume-gui |
 
----
+{% endinfo_block %}
 
 ### 2) Set up the database schema
 Adjust the schema definition so that entity changes will trigger events:
@@ -62,7 +66,7 @@ Adjust the schema definition so that entity changes will trigger events:
 </database>
 ```
 
-Run the following commands to apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes.
 
 ```bash
 console transfer:generate
@@ -71,8 +75,7 @@ console transfer:generate
 ```
 
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Verify that the following changes have been implemented by checking your database:
 
@@ -91,15 +94,16 @@ Make sure that the following changes were applied in transfer objects:
 | PriceProductFilter.Filter | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
 | PriceProductFilter.value | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
 
----
+{% endinfo_block %}
 
 ### 3) Add Zed translations
-Run the following command to generate a new translation cache for Zed:
+
+Generate a new translation cache for Zed:
 ```bash
 console translator:generate-cache
 ```
 
-### 4) Configure export to Redis and ElasticSearch
+### 4) Configure export to Redis and Elasticsearch
 #### Set up event listeners
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -248,8 +252,7 @@ class PriceProductOfferStorageConfig extends SprykerPriceProductOfferStorageConf
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that after setting up the event listeners, `console sync:data product_concrete_product_offer_price` exports data from the `spy_product_concrete_product_offer_price_storage` table to Redis.
 
@@ -339,7 +342,8 @@ Make sure that when the following entities get updated via the ORM, the correspo
 ]
 ```
 </details>
----
+
+{% endinfo_block %}
 
 ### 5) Import data
 Prepare your data according to your requirements using our demo data:
@@ -394,18 +398,17 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import price-product-offer
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that the Product Offer prices data is in the `spy_price_product_offer` table as well as its attached `spy_price_product` entities as foreign keys.
+Make sure that the Product Offer Prices data is in the `spy_price_product_offer` table as well as its attached `spy_price_product` entities as foreign keys.
 
----
+{% endinfo_block %}
 
 ### 6) Set up behavior
 Enable the following behaviors by registering the plugins:
@@ -415,14 +418,14 @@ Enable the following behaviors by registering the plugins:
 | PriceProductOfferProductOfferExpanderPlugin | Expands Product Offer entity with prices |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
 | PriceProductOfferProductOfferPostCreatePlugin | Saves Product Offer price data after Product Offer creation |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
 | PriceProductOfferProductOfferPostUpdatePlugin | Update Product Offer price data after Product Offer updating |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
-| PriceProductOfferPriceDimensionConcreteSaverPlugin | Saves Product Offer prices when Product Concrete prices are saved |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
-| PriceProductOfferPriceDimensionQueryCriteriaPlugin | Adds the Product Offer prices as extra price dimensions when reading Product Concrete prices |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
+| PriceProductOfferPriceDimensionConcreteSaverPlugin | Saves product offer prices when product concrete prices are saved |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
+| PriceProductOfferPriceDimensionQueryCriteriaPlugin | Adds the product offer prices as extra price dimensions when reading product concrete prices |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
 | PriceProductOfferPriceProductDimensionExpanderStrategyPlugin | Sets PriceProductDimensionTransfer to PRODUCT_OFFER when it has Product Offer reference attached to it |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
 | LowestPriceProductOfferStorageCollectionSorterPlugin | Sorts ProductOfferCollectionTransfer Product Offers by lowest price first |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
 | PriceProductOfferStorageDimensionPlugin | Fetches an array of Product Offer PriceProductTransfers and attaches them to the list of PriceProductTransfers that are fetched for a product concrete  |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
 | PriceProductOfferStorageExpanderPlugin | Expands ProductOfferStorageTransfer with Product Offer price |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
 | PriceProductOfferStorageFilterExpanderPlugin | Expands PriceProductFilterTransfer with ProductOfferReference when a ProductViewTransfer has a ProductOfferReference |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
-| ProductOfferPriceProductFilterPlugin | Filters out inapplicable Product Offer prices and Product Concrete prices when a Product Offer is selected |   | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct |
+| ProductOfferPriceProductFilterPlugin | Filters out inapplicable product offer prices and product concrete prices when a Product Offer is selected |   | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct |
 | PriceProductOfferVolumeExtractorPlugin | Maps out JSON entries from price_data of PriceProductTransfer to new PriceProductTransfers with volume prices |   | Spryker\Client\PriceProductOfferVolume\Plugin\PriceProductOfferStorage |
 | PriceProductOfferVolumeFilterPlugin | Applies correct volume pricing when applicable and quantity is selected |   | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer |
 
@@ -643,15 +646,14 @@ class PriceProductOfferStorageDependencyProvider extends SprykerPriceProductOffe
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that when a Product Offer is selected, its price is shown as the current price.
+Make sure that when a product offer is selected, its price is shown as the current price.
 
-Make sure that Product Offer prices are saved when Product Concrete and Product Offer prices are saved.
+Make sure that product offer prices are saved when Product Concrete and product offer prices are saved.
 
-Make sure that Product Offers are sorted by the lowest price first when fetched as a collection with product concrete.
+Make sure that product offers are sorted by the lowest price first when fetched as a collection with product concrete.
 
-Make sure that when a Product Offer with a volume price is selected and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
+Make sure that when a product offer with a volume price is selected and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
 
----
+{% endinfo_block %}

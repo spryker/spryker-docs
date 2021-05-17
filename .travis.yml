@@ -13,7 +13,7 @@ jobs:
   include:
     - name: Links validation
       script:
-        - bundle exec htmlproofer ./_site
+        - bundle exec htmlproofer ./_site --allow-hash-href
       install:
         - *GEM_INSTALL
 

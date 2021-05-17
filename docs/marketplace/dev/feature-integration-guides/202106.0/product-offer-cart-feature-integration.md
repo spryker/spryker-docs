@@ -5,17 +5,19 @@ description: This integration guide provides steps on how to integrate the Produ
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Product Offer + Car feature into a Spryker project.
+
 ## Install feature core
 Follow the steps below to install the Product Offer + Cart feature core.
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME      | VERSION  | INTEGRATION GUIDE |
 | --------- | -------- | ------------------|
 | Marketplace Product Offer | dev-master | [Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html)
-| Cart                      | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart)
+| Cart | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart)
 
 ##  1) Set up behavior
 
@@ -23,9 +25,9 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------- | ------------- | ----------- | ------------ |
-| ProductOfferGroupKeyItemExpanderPlugin         | Adds Product Offer reference to group key that separates items in the cart. |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
-| ProductOfferCartPreCheckPlugin                 | Checks if the Product Offer belongs to the product concrete before adding an item to cart. |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
-| FilterInactiveProductOfferPreReloadItemsPlugin | Removes inactive Product Offer from cart when reloading it   |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
+| ProductOfferGroupKeyItemExpanderPlugin         | Adds a product offer reference to group key that separates items in the cart. |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
+| ProductOfferCartPreCheckPlugin                 | Checks if the product offer belongs to the concrete product before adding an item to cart. |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
+| FilterInactiveProductOfferPreReloadItemsPlugin | Removes an inactive product offer from cart when reloading it.   |  | Spryker\Zed\ProductOffer\Communication\Plugin\Cart |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
@@ -82,16 +84,16 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that inactive Product Offers get removed from cart on reload.
+Make sure that inactive product offers get removed from cart on reload.
 
-Make sure that it is only possible to have items in cart where the Product Offer reference belongs to the correct Product sConcrete.
+Make sure that it is only possible to have items in cart where the product offer reference belongs to the correct concrete product.
 
----
+{% endinfo_block %}
 
 ## Install feature front end
+
 Follow the steps below to install the Product Offer + Cart feature front end.
 
 ### Prerequisites
@@ -109,7 +111,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | - | - | - | - |
-| MerchantProductOfferPreAddToCartPlugin | Sets Product Offer reference to item transfer |  | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\CartPage |
+| MerchantProductOfferPreAddToCartPlugin | Sets the product offer reference to the item transfer |  | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\CartPage |
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
@@ -135,12 +137,11 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that the Product Offer reference (and sold by merchant) is added to CartPage when adding a Product Offer to cart.
+Make sure that the product offer reference (and sold by merchant) is added to the Cart page when adding a product offer to cart.
 
----
+{% endinfo_block %}
 
 ## Related features
 

@@ -5,12 +5,14 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Marketplace Product Offer into a Spryker project.
+
 ## Install feature core
 Follow the steps below to install the Marketplace Product Offer feature core.
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | -------|
@@ -20,14 +22,13 @@ To start feature integration, overview, and install the necessary features:
 
 ###  1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-product-offer --update-with-dependencies
 ```
 
----
-**Verificaiton**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
@@ -45,7 +46,7 @@ Make sure that the following modules were installed:
 | ProductOfferValidityGui        | spryker/product-offer-validity-gui         |
 | ProductOfferValidityDataImport | spryker/product-offer-validity-data-import |
 
----
+{% endinfo_block %}
 
 ### 2) Set up database schema
 
@@ -78,14 +79,13 @@ Adjust the schema definition so that entity changes will trigger events:
 </database>
 ```
 
-Run the following commands to apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes.
 
 ```bash
 console transfer:generate``console propel:``install``console transfer:generate
 ```
 
----
-**Verificaiton**
+{% info_block warningBox "Verification" %}
 
 Verify that the following changes have been implemented by checking your database:
 
@@ -114,26 +114,27 @@ Make sure that the following changes were applied in transfer objects:
 | ProductOfferValidity               | class     | created | src/Generated/Shared/Transfer/ProductOfferValidityTransfer   |
 | ProductOffer.productOfferValidity  | attribute | created | src/Generated/Shared/Transfer/ProductOfferTransfer           |
 
----
+{% endinfo_block %}
 
 ### 3) Add Zed translations
 
-Run the following command to generate a new translation cache for Zed:
+Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
 ```
 
-### 4) Configure export to Redis and ElasticSearch
+### 4) Configure export to Redis and Elasticsearch
+
 To configure export to Redis and ElasticSearch, take the following steps:
 
 #### Set up event listeners
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- | ------------- | ----------- | ---------------- |
-| MerchantProductOfferStorageEventSubscriber | Registers listeners that are responsible for publishing Merchant Product Offers to storage. |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Event\Subscriber |
-| MerchantProductOfferSearchEventSubscriber  | Registers listeners that are responsible for publishing Merchant Product Offer search to storage. |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
-| MerchantSearchEventSubscriber              | Registers listeners that are responsible for publishing Merchant search to storage. |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
+| MerchantProductOfferStorageEventSubscriber | Registers listeners responsible for publishing merchant product offers to storage. |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Event\Subscriber |
+| MerchantProductOfferSearchEventSubscriber  | Registers listeners responsible for publishing merchant product offer search to storage. |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
+| MerchantSearchEventSubscriber              | Registers listeners responsible for publishing merchant search to storage. |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -192,7 +193,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------------- | -------------- | -------- | ------------ |
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all Merchant Product Offers to sync with Redis storage, and marks messages as failed in case of error. |           | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant product offers to sync with Redis storage and marks messages as failed in case of error. |           | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -282,8 +283,7 @@ class MerchantProductOfferStorageConfig extends SprykerMerchantProductOfferStora
 }
 ```
 
----
-**Verificaiton**
+{% info_block warningBox "Verification" %}
 
  Make sure that after setting up the event listeners, the following commands do the following:
 
@@ -297,7 +297,7 @@ Make sure that when the following entities get updated via the ORM, the correspo
 | ProductOffer  | kv:product_offer:offer2     | {“id_product_offer”:1,“id_merchant”:6,“product_offer_reference”:“offer1",“merchant_sku”:“GS952M00H-Q11"} |
 | ProductOffer  | kv:product_concrete_product_offers:093_24495843 | [“offer3”,“offer4"]   |
 
----
+{% endinfo_block %}
 
 ### 5) Import data
 
@@ -311,12 +311,12 @@ product_offer_reference,concrete_sku,merchant_reference,merchant_sku,is_active,a
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------------- | ----------- | -------- | --------- | ------------------ |
-| product_offer_reference | &check;      | string    | offer1        | Product Offer reference that will be referenced to this Merchant. |
-| concrete_sku            | &check;        | string    | 093_24495843  | Concrete product SKU this Product Offer is attached to.      |
+| product_offer_reference | &check;      | string    | offer1        | Product offer reference that will be referenced to this merchant. |
+| concrete_sku            | &check;        | string    | 093_24495843  | Concrete product SKU this product offer is attached to.      |
 | merchant_reference      | &check;        | string    | `MER000002`   | Merchant identifier.                                         |
-| merchant_sku            |        | string    | GS952M00H-Q11 | Merchant internal SKU for the Product Offer.                 |
-| is_active               |        | boolean   | 1             | Product Offer status, defaults to 1                          |
-| approval_status         |        | string    | approved      | Approval Status (Waiting for Approval – Approved – Denied)Denied and Waiting for Approval statuses mean that the Offer is not visible on PDP regardless of Product Offer → Active = true.This can be configured (along with the transition between statuses in ProductOfferConfig). If not supplied, ProductOfferConfig → getDefaultStatus is applied |
+| merchant_sku            |        | string    | GS952M00H-Q11 | merchant internal SKU for the product offer.                 |
+| is_active               |        | boolean   | 1             | Product offer status, defaults to 1.                          |
+| approval_status         |        | string    | approved      | Approval status (Waiting for Approval – Approved – Denied). Denied and Waiting for Approval statuses mean that the offer is not visible on PDP regardless of Product Offer → Active = true.This can be configured (along with the transition between statuses in ProductOfferConfig). If not supplied, ProductOfferConfig → getDefaultStatus is applied. |
 
 **data/import/marketplace/merchant_product_offer_store.csv**
 
@@ -337,17 +337,17 @@ product_offer_reference,valid_from,valid_to``offer1,,``offer2,2020-05-05,2020-12
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------ | ----------- | ------ | ----------- | ---------------- |
-| product_offer_reference | &check; | string    | offer1       | Unique Product Offer identifier.             |
-| valid_from              |  | `string`  | 2020-01-01   | Date since which the Product Offer is valid. |
-| valid_to                |  | `string`  | 2020-01-01   | Date till which the Product Offer is valid.  |
+| product_offer_reference | &check; | string    | offer1       | Unique product offer identifier.             |
+| valid_from              |  | `string`  | 2020-01-01   | Date since which the product offer is valid. |
+| valid_to                |  | `string`  | 2020-01-01   | Date till which the product offer is valid.  |
 
 Register the following plugins to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------------ | ---------------------- | ---------- | ---------------------- |
-| MerchantProductOfferDataImportPlugin      | Imports Merchant Product Offer data          |           | Spryker\Zed\MerchantProductOfferDataImport\Communication\Plugin |
-| MerchantProductOfferStoreDataImportPlugin | Imports Product Offer to store relation data |           | Spryker\Zed\MerchantProductOfferDataImport\Communication\Plugin |
-| ProductOfferValidityDataImportPlugin      | Imports Product Offer validities             |           | Spryker\Zed\ProductOfferValidityDataImport\Communication     |
+| MerchantProductOfferDataImportPlugin      | Imports merchant product offer data.          |           | Spryker\Zed\MerchantProductOfferDataImport\Communication\Plugin |
+| MerchantProductOfferStoreDataImportPlugin | Imports the product offer to store relation data. |           | Spryker\Zed\MerchantProductOfferDataImport\Communication\Plugin |
+| ProductOfferValidityDataImportPlugin      | Imports product offer validities.             |           | Spryker\Zed\ProductOfferValidityDataImport\Communication     |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -374,22 +374,21 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:``import` `merchant-product-offer``console data:``import` `merchant-product-offer-store``console data:``import` `product-offer-validity
 ```
 
----
-**Verificaiton**
+{% info_block warningBox "Verification" %}
 
-Make sure that the Product Offer data is attached to Merchants in `spy_product_offer`.
+Make sure that the product offer data is attached to Merchants in `spy_product_offer`.
 
-Make sure that the Product Offer data is attached to Stores in `spy_product_offer_store`.
+Make sure that the product offer data is attached to Stores in `spy_product_offer_store`.
 
-Make sure that the Product Offer validity data is correctly imported in `spy_product_offer_validity`.
+Make sure that the product offer validity data is correctly imported in `spy_product_offer_validity`.
 
----
+{% endinfo_block %}
 
 ### 6) Set up behavior
 
@@ -397,23 +396,23 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | ---------------- | --------------- | -------------- | ---------------- |
-| MerchantProductOfferTableExpanderPlugin              | Expands ProductOfferGui product table with Merchant data     |                            | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin\ProductOfferGui |
-| MerchantProductOfferViewSectionPlugin                | Adds a new Merchant section to the ProductOfferGui view      |                            | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin     |
-| ProductOfferValidityProductOfferViewSectionPlugin    | Adds a new validity section to the ProductOfferGui view      |                            | Spryker\Zed\ProductOfferValidityGui\Communication\Plugin\ProductOfferGui |
-| MerchantProductOfferListActionViewDataExpanderPlugin | Expands Product Offer view data with Merchant data when showing it in ProductOfferGui module |                            | Spryker\Zed\MerchantGui\Communication\Plugin\ProductOffer    |
-| MerchantReferenceQueryExpanderPlugin                 | Adds filter by Merchant reference to search query.           |                            | Spryker\Client\MerchantProductOfferSearch\Plugin             |
-| MerchantNameSearchConfigExpanderPlugin               | Expands facet configuration with Merchant name filter.       |                            | Spryker\Client\MerchantProductOfferSearch\Plugin             |
-| MerchantProductPageDataExpanderPlugin                | Expands the provided ProductAbstractPageSearch transfer object's data by Merchant names. |                            | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageDataExpander |
-| MerchantProductPageDataLoaderPlugin                  | Expands ProductPageLoadTransfer object with Merchant data.   |                            | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageDataLoader |
-| MerchantNamesProductAbstractMapExpanderPlugin        | Adds Merchant names to product abstract search data.         |                            | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageMapExpander |
-| MerchantReferencesProductAbstractsMapExpanderPlugin  | Adds Merchant references to product abstract search data.    |                            | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageMapExpander |
-| DefaultProductOfferReferenceStrategyPlugin           | Sets default selected Product Offer in PDP for a product concrete. It selects the first Product Offer in the list. | ProductViewOfferExpanderPlugin | Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage |
-| ProductOfferReferenceStrategyPlugin                  | Sets selected Product Offer in ProductConcreteTransfer if one is already selected on PDP | ProductViewOfferExpanderPlugin | Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage |
-| ProductViewOfferExpanderPlugin                       | Adds Product Offer data to ProductViewTransfer when retrieving product. |                            | Spryker\Client\MerchantProductOfferStorage\Plugin\ProductStorage |
-| ProductOfferValidityProductOfferPostCreatePlugin     | Creates Product Offer validity dates after Product Offer is created |                            | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer |
-| ProductOfferValidityProductOfferPostUpdatePlugin     | Updates Product Offer validity dates after Product Offer is updated |                            | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer |
-| ProductOfferValidityProductOfferExpanderPlugin       | Expands Product Offer data with validity dates when Product Offer is fetched |                            | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer |
-| ProductOfferValidityConsole                          | Updates Product Offers to have isActive flag to be false where their validity date is not current anymore |                            | Spryker\Zed\ProductOfferValidity\Communication\Console       |
+| MerchantProductOfferTableExpanderPlugin              | Expands the  `ProductOfferGui` product table with merchant data.     |                            | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin\ProductOfferGui |
+| MerchantProductOfferViewSectionPlugin                | Adds a new merchant section to the `ProductOfferGui` view.     |                            | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin     |
+| ProductOfferValidityProductOfferViewSectionPlugin    | Adds a new validity section to the `ProductOfferGui` view.      |                            | Spryker\Zed\ProductOfferValidityGui\Communication\Plugin\ProductOfferGui |
+| MerchantProductOfferListActionViewDataExpanderPlugin | Expands product offer view data with merchant data when showing it in the  `ProductOfferGui` module. |                            | Spryker\Zed\MerchantGui\Communication\Plugin\ProductOffer    |
+| MerchantReferenceQueryExpanderPlugin                 | Adds filter by the merchant reference to the search query.           |                            | Spryker\Client\MerchantProductOfferSearch\Plugin             |
+| MerchantNameSearchConfigExpanderPlugin               | Expands facet configuration with the merchant name filter.       |                            | Spryker\Client\MerchantProductOfferSearch\Plugin             |
+| MerchantProductPageDataExpanderPlugin                | Expands the provided `ProductAbstractPageSearch` transfer object's data by merchant names. |                            | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageDataExpander |
+| MerchantProductPageDataLoaderPlugin                  | Expands the `ProductPageLoadTransfer` object with merchant data.   |                            | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageDataLoader |
+| MerchantNamesProductAbstractMapExpanderPlugin        | Adds merchant names to product abstract search data.         |                            | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageMapExpander |
+| MerchantReferencesProductAbstractsMapExpanderPlugin  | Adds merchant references to product abstract search data.    |                            | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\PageMapExpander |
+| DefaultProductOfferReferenceStrategyPlugin           | Sets the default selected product offer in PDP for a concrete product. It selects the first product offer in the list. | ProductViewOfferExpanderPlugin | Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage |
+| ProductOfferReferenceStrategyPlugin                  | Sets selected oroduct offer in `ProductConcreteTransfer` if one is already selected on PDP. | ProductViewOfferExpanderPlugin | Spryker\Client\MerchantProductOfferStorage\Plugin\MerchantProductOfferStorage |
+| ProductViewOfferExpanderPlugin | Adds product offer data to `ProductViewTransfer` when a retrieving product. |                            | Spryker\Client\MerchantProductOfferStorage\Plugin\ProductStorage |
+| ProductOfferValidityProductOfferPostCreatePlugin     | Creates product offer validity dates after the product offer is created. |                            | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer |
+| ProductOfferValidityProductOfferPostUpdatePlugin     | Updates product offer validity dates after the product offer is updated. |                            | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer |
+| ProductOfferValidityProductOfferExpanderPlugin       | Expands product offer data with validity dates when the product offer is fetched. |                            | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer |
+| ProductOfferValidityConsole                          | Updates product offers to have the `isActive` flag to be `false` where their validity date is not current anymore. |                            | Spryker\Zed\ProductOfferValidity\Communication\Console       |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
@@ -739,29 +738,32 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
----
-**Verificaiton**
+{% info_block warningBox "Verification" %}
 
-Make sure that a default Product Offer is given when retrieving product concrete data.
+Make sure that a default product offer is given when retrieving product concrete data.
 
 Make sure that validity data is saved when saving a product offer.
 
-Make sure Merchant and Product Offer Validity sections exist in Product Offer edit page in `ProductOfferGui`.
+Make sure Merchant and Product Offer Validity sections exist on the product offer edit page in `ProductOfferGui`.
 
-Make sure Merchant column is in Product Offers list in `ProductOfferGui`.
+Make sure the Merchant column is in the Product Offers list in `ProductOfferGui`.
 
-Make sure console command invalidates expired Product Offers are reactivates Product Offers that are within their validity datesMake sure that when a merchant gets updated or published, or when a product offer gets published, created or updated, the corresponding product abstracts get updated in the catalog search pages.
-   1. Meaning that if a merchant gets deactivated, `ProductAbstracts` that were on the catalog search only because they had a Product Offer from that merchant get removed.
-   2. Meaning that if a product offer gets created and the `ProductAbstract` related to it was not available on catalog search, would now be available
+Make sure the console command invalidates expired product offers and reactivates product offers that are within their validity dates.
 
----
+Make sure that when a merchant gets updated or published, or when a product offer gets published, created, or updated, the corresponding product abstracts get updated in the catalog search pages.
+It means the following:
+1. If a merchant gets deactivated, `ProductAbstract`s that were on the catalog search only because they had a product offer from that merchant get removed.
+2. If a product offer gets created, and the `ProductAbstract` related to it was not available on catalog search, it would be available now.
+
+{% endinfo_block %}
 
 ## Install feature front end
+
 Follow the steps below to install the Marketplace Product Offer feature front end.
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the following features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | ---------- | ----- | --------------|
@@ -771,8 +773,7 @@ To start feature integration, overview, and install the necessary features:
 
 If installed before, not needed.
 
----
-**Verificaiton**
+{% info_block warningBox "Verification" %}
 
 Verify that the following modules were installed:
 
@@ -780,7 +781,7 @@ Verify that the following modules were installed:
 | ---------- | -------------- |
 | MerchantProductOfferWidget | spryker-shop/merchant-product-offer-widget |
 
----
+{% endinfo_block %}
 
 ### 2) Add Yves Translations
 
@@ -792,18 +793,17 @@ Append glossary according to your configuration:
 merchant_product_offer.view_seller,View Seller,en_US``merchant_product_offer.view_seller,Händler ansehen,de_DE``merchant_product_offer.sold_by,Sold by,en_US``merchant_product_offer.sold_by,Verkauft durch,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:``import` `glossary
 ```
 
----
-**Verificaiton**
+{% info_block warningBox "Verification" %}
 
 Make sure that the configured data is added to the `spy_glossary` table in the database.
 
----
+{% endinfo_block %}
 
 ### 3) Set up widgets
 
@@ -811,8 +811,8 @@ Register the following plugins to enable widgets:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | -------------- | --------------- | ------ | ---------------- |
-| MerchantProductOfferWidget       | Shows the list of the Offers with their prices for a product concrete. |           | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
-| ProductOfferSoldByMerchantWidget | Shows Merchant data for an Offer given a cart item.          |           | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
+| MerchantProductOfferWidget       | Shows the list of the offers with their prices for a concrete product. |           | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
+| ProductOfferSoldByMerchantWidget | Shows merchant data for an offer given a cart item.          |           | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -840,27 +840,26 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
 ```
 
----
-**Verificaiton**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following widgets were registered:
 
 | MODULE | TEST |
 | ----------------- | ----------------- |
-| MerchantProductOfferWidget       | Go to a product concrete detail page that has Offers, and you will see the default Offer selected and the widget displayed. |
-| ProductOfferSoldByMerchantWidget | Go through the checkout process with an Offer, and you will see the sold by text and Merchant data throughout the checkout process. |
+| MerchantProductOfferWidget       | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
+| ProductOfferSoldByMerchantWidget | Go through the checkout process with an offer, and you will see the sold by text and merchant data throughout the checkout process. |
 
----
+{% endinfo_block %}
 
 ## Related features
 
-| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
 | Marketplace Product Offer API | | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html) |
 | Marketplace Product Offer + Cart | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/product-offer-cart-feature-integration.html) |

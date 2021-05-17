@@ -18,7 +18,7 @@ To start feature integration, overview and install the necessary features:
 | NAME  | VERSION | INTEGRATION GUIDE |
 | -------------- | --------- | -------------|
 | Order Threshold              | dev-master  | [Order Threshold feature integration](https://documentation.spryker.com/docs/order-threshold-feature-integration) |
-| Marketplace Order Management | 202001.0    | [Marketplace Order Management feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html) |
+| Marketplace Order Management | 202001.0    | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html) |
 
 ### 1) Install the required modules using composer
 

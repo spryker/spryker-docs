@@ -1,0 +1,19 @@
+{% if page.version %}
+    {% assign current_version = page.version %}
+{% else %}
+    {% assign current_version = site.version %}
+{% endif %}
+
+<div class="alt-nav">
+    {% if page.all_versions.size > 1 %}
+    <span class="alt-nav__opener">{{ current_version }}</span>
+    <span class="alt-nav__opener-label">Versions</span>
+    <ul class="alt-nav__drop">
+        {% for version in page.all_versions %}
+        <li><a href="{{ site.baseurl }}{{ version.url }}">{{ version.version }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <span class="alt-nav__opener">This document has only one version {{ current_version }}</span>
+    {% endif %}
+</div>

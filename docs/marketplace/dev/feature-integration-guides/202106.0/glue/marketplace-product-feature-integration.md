@@ -5,12 +5,14 @@ description: This document describes how to integrate the Marketplace Product Gl
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Marketplace Product Glue API](https://github.com/spryker-feature/marketplace-product) feature into a Spryker project.
+This document describes how to integrate the Marketplace Product Glue API feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product Glue API feature core.
 
 ### Prerequisites
+
 To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
@@ -22,14 +24,11 @@ To start feature integration, integrate the required features:
 
 Install the required modules:
 
-
 ```bash
 composer require spryker/merchant-products-rest-api: "dev-master" --update-with-dependencies
 ```
 
-
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -37,7 +36,7 @@ Make sure that the following modules have been installed:
 |-|-|
 | MerchantProductsRestApi | vendor/spryker/merchant-products-rest-api |
 
----
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
 
@@ -47,8 +46,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -58,7 +56,7 @@ Make sure that the following changes have been applied in transfer objects:
 | RestCartItemsAttributes.merchantReference | property | Created | src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer |
 | CartItemRequest.merchantReference | property | Created | src/Generated/Shared/Transfer/CartItemRequestTransfer |
 
----
+{% endinfo_block %}
 
 ### 3) Set up behavior
 
@@ -139,13 +137,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that you can add a merchant product to the cart using a `POST` request to `http://zed.de.demo-spryker.com/guest-cart-items or http://zed.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}/items`.
 
-Make sure that when you do a `GET` request for the carts with merchant products, their merchants returned as well. `http://zed.de.demo-spryker.com/guest-carts/{idCart}?include=guest-cart-items,merchants` or `http://zed.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}?include=items,merchants`.
+Make sure that when you do a `GET` request for the carts with merchant products, their merchants are returned as well. `http://zed.de.demo-spryker.com/guest-carts/{idCart}?include=guest-cart-items,merchants` or `http://zed.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}?include=items,merchants`.
 
-Make sure that when you do a `GET` request to retrieve abstract products that belong to a specific merchant, it returns product data together with their merchants `http://zed.de.demo-spryker.com/abstract-products/{% raw %}{{abstractProductSku}}{% endraw %}?include=merchants`.
+Make sure that when you do a `GET` request to retrieve abstract products that belong to a specific merchant, it returns products' data together with their merchants `http://zed.de.demo-spryker.com/abstract-products/{% raw %}{{abstractProductSku}}{% endraw %}?include=merchants`.
 
-  ---
+{% endinfo_block %}

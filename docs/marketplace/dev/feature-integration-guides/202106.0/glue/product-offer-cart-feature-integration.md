@@ -18,8 +18,8 @@ To start feature integration, integrate the required features:
 | NAME                  | VERSION | INTEGRATION GUIDE |
 | --------------------- | ------- | ------------------|
 | Cart API                         | dev-master  | [Glue API - Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration) |
-| Marketplace Product Offer API    | dev-master  | [Glue API - Marketplace Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html) |
-| Marketplace Inventory Management | dev-master  | [Marketplace Inventory Management feature integration](docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html) |
+| Marketplace Product Offer API    | dev-master  | [Glue API - Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html) |
+| Marketplace Inventory Management | dev-master  | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html) |
 
 ### 1) Enable adding Merchant Product Offer to cart
 
@@ -27,7 +27,7 @@ Activate the following plugins:
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | - | - | - | - |
-| MerchantProductOfferCartItemMapperPlugin | Maps merchant product offer reference and merchant reference, coming from Glue add to cart request, to persistent cart-specific transfer. |  Spryker\Zed\MerchantProductOffersRestApi\Communication\Plugin\CartsRestApi |
+| MerchantProductOfferCartItemMapperPlugin | Maps the merchant product offer reference and merchant reference, coming from the Glue add to cart request, to persistent cart-specific transfer. |  Spryker\Zed\MerchantProductOffersRestApi\Communication\Plugin\CartsRestApi |
 | MerchantProductOfferCartItemExpanderPlugin | Expands the merchant product offer information with a merchant reference. | | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
 | MerchantProductOfferRestCartItemsAttributesMapperPlugin | Maps merchant product offer reference and merchant reference to items attributes. | | Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi |
 
@@ -90,10 +90,9 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that the `MerchantProductOfferCartItemExpanderPlugin` and `MerchantProductOfferCartItemMapperPlugin` plugins are set up by sending the request `POST https://glue.mysprykershop.com/carts/{% raw %}{{cartUuid}}{% endraw %}/items` with the following body and make sure the product has been added to the cart with the offer.
+Make sure that `MerchantProductOfferCartItemExpanderPlugin` and `MerchantProductOfferCartItemMapperPlugin` are set up by sending the request `POST https://glue.mysprykershop.com/carts/{% raw %}{{cartUuid}}{% endraw %}/items` with the following body and make sure the product has been added to the cart with the offer:
 
 ```json
 {
@@ -108,6 +107,6 @@ Make sure that the `MerchantProductOfferCartItemExpanderPlugin` and `MerchantPro
 }
 ```
 
-Make sure that the `MerchantProductOfferRestCartItemsAttributesMapperPlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/carts/{% raw %}{{cartUuid}}{% endraw %}?include=items` to the cart that has an item with product offer. You should be able to see attributes `productOfferReference` and `merchantReference` among the attributes of the items resource.
+Make sure that `MerchantProductOfferRestCartItemsAttributesMapperPlugin` is set up by sending the request `GET https://glue.mysprykershop.com/carts/{% raw %}{{cartUuid}}{% endraw %}?include=items` to the cart that has an item with a product offer. You should be able to see `productOfferReference` and `merchantReference` attributes among the attributes of the items resource.
 
----
+{% endinfo_block %}

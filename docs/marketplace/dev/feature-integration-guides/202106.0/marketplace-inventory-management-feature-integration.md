@@ -27,6 +27,7 @@ Install the required modules:
 composer require spryker-feature/marketplace-inventory-management: "dev-master" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
+
 Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |

@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Marketplace Product Offer Prices Glue API](https://github.com/spryker-feature/marketplace-product-offer-prices) feature into a Spryker project.
+This document describes how to integrate the Marketplace Product Offer Prices Glue API feature into a Spryker project.
 
 ## Install feature core
 
@@ -27,8 +27,7 @@ Install the required modules:
 composer require spryker/spryker/product-offer-prices-rest-api:"^0.3.0" --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -36,7 +35,7 @@ Make sure that the following modules have been installed:
 |-|-|
 | ProductOfferPricesRestApi | spryker/product-offer-prices-rest-api |
 
----
+{% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
 
@@ -48,8 +47,7 @@ console propel:install
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage.php` class contains the `syncPublishedMessageForMappings` public function.
 
@@ -61,7 +59,7 @@ Make sure that the following changes have been applied in transfer objects:
 |-|-|-|-|
 | RestProductOfferPriceAttributes | class | Created | src/Generated/Shared/Transfer/RestProductOffersAttributesTransfer |
 
----
+{% endinfo_block %}
 
 ### 3) Enable Product Offer Prices resources and relationships
 
@@ -118,11 +116,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the `ProductOfferPricesResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}/product-offer-prices`.
 
 Make sure that the `ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}?include=product-offer-pricess`. You should get `product-offers` with all product offer’s `product-offer-prices` as relationships.
 
----
+{% endinfo_block %}

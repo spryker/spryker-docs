@@ -5,26 +5,28 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Marketplace Product Offer Glue API](https://github.com/spryker-feature/marketplace-product-offer) feature into a Spryker project.
+This document describes how to integrate the Marketplace Product Offer Glue API feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product Offer Glue API feature core.
 
 ### Prerequisites
+
 To start feature integration, integrate the following features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product Offer | dev-master |[Product Offer feature integration](docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
+| Marketplace Product Offer | dev-master |[Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
+
 Install the required modules:
 ```bash
 composer require spryker/merchant-product-offers-rest-api:"^0.4.0" --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -32,7 +34,7 @@ Make sure that the following modules have been installed:
 |-|-|
 | MerchantProductOffersRestApi | spryker/merchant-product-offers-rest-api |
 
----
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
 
@@ -41,8 +43,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -50,9 +51,10 @@ Make sure that the following changes have been applied in transfer objects:
 |-|-|-|-|
 | RestProductOffersAttributes | class | Created | src/Generated/Shared/Transfer/RestProductOffersAttributesTransfer |
 
----
+{% endinfo_block %}
 
 ### Enable resources and relationships
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -115,15 +117,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that the `ProductOffersResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}`.
+Make sure that `ProductOffersResourceRoutePlugin` is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}`.
 
-Make sure that the `ConcreteProductsProductOffersResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/concrete-products/{% raw %}{{sku}}{% endraw %}/product-offers`.
+Make sure that `ConcreteProductsProductOffersResourceRoutePlugin` is set up by sending the request `GET http://glue.mysprykershop.com/concrete-products/{% raw %}{{sku}}{% endraw %}/product-offers`.
 
-Make sure that the `ProductOffersByProductConcreteSkuResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/concrete-products/{% raw %}{{sku}}{% endraw %}?include=product-offers`. You should get `concrete-products` with all product’s `product-offers` as relationships.
+Make sure that `ProductOffersByProductConcreteSkuResourceRelationshipPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/concrete-products/{% raw %}{{sku}}{% endraw %}?include=product-offers`. You should get `concrete-products` with all product’s `product-offers` as relationships.
 
-Make sure that the `MerchantByMerchantReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{sku}}{% endraw %}?include=merchants`. The response should include the `merchants` resource along with the `product-offers`.
+Make sure that `MerchantByMerchantReferenceResourceRelationshipPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{sku}}{% endraw %}?include=merchants`. The response should include the `merchants` resource along with `product-offers`.
 
----
+{% endinfo_block %}

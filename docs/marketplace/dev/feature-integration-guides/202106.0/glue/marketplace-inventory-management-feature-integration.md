@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Marketplace Inventory Management Glue API](https://github.com/spryker-feature/marketplace-inventory-management) feature into a Spryker project.
+This document describes how to integrate the Marketplace Inventory Management Glue API feature into a Spryker project.
 
 ## Install feature core
 
@@ -28,8 +28,7 @@ Install the required modules:
 composer require spryker/product-offer-availabilities-rest-api:"^0.3.0" --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -37,7 +36,7 @@ Make sure that the following modules have been installed:
 |-|-|
 | ProductOfferAvailabilitiesRestApi | vendor/spryker/product-offer-availabilities-rest-api |
 
----
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
 
@@ -47,8 +46,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -56,9 +54,10 @@ Make sure that the following changes have been applied in transfer objects:
 |-|-|-|-|
 | RestProductOfferAvailabilitiesAttributes | object | Created | src/Generated/Shared/Transfer/RestProductOfferAvailabilitiesAttributesTransfer |
 
----
+{% endinfo_block %}
 
 ### 3) Enable resources and relationships
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -111,11 +110,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 </details>
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the `ProductOfferAvailabilitiesResourceRoutePlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/product-offers/{% raw %}{{productOfferReference}}{% endraw %}/product-offer-availabilities`.
 
-Make sure that the `ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com{% raw %}{{url}}{% endraw %}/product-offers/{% raw %}{{productOfferReference}}{% endraw %}?include=product-offer-availabilities`. The response should include the `product-offer-availabilities` resource along with the `product-offers`.
+Make sure that `ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin` is set up by sending the request `GET http://glue.mysprykershop.com{% raw %}{{url}}{% endraw %}/product-offers/{% raw %}{{productOfferReference}}{% endraw %}?include=product-offer-availabilities`. The response should include the `product-offer-availabilities` resource along with `product-offers`.
 
----
+{% endinfo_block %}

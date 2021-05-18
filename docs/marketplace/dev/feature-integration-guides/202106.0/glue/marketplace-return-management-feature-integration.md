@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Marketplace Return Management API](https://github.com/spryker-feature/marketplace-return-management) feature into a Spryker project.
+This document describes how to integrate the Marketplace Return Management API feature into a Spryker project.
 
 ## Install feature core
 
@@ -31,8 +31,7 @@ Install the required modules:
 composer require spryker/merchant-sales-returns-rest-api:"^0.2.0" --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following modules have been installed:
@@ -41,7 +40,7 @@ Make sure that the following modules have been installed:
 | -------- | ------------------- |
 |MerchantSalesReturnsRestApi | spryker/merchant-sales-returns-rest-api |
 
----
+{% endinfo_block %}
 
 
 ### 2) Set up transfer objects
@@ -53,8 +52,7 @@ Generate transfers:
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Ensure the following transfers have been created:
@@ -66,7 +64,8 @@ Ensure the following transfers have been created:
 | RestReturnsAttributes | class | created | src/Generated/Shared/Transfer/RestReturnsAttributesTransfer |
 | RestOrderItemsAttributes | class | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
 | ReturnResponse.messages | attribute | created | src/Generated/Shared/Transfer/ReturnResponseTransfer |
----
+
+{% endinfo_block %}
 
 ### 3) Set up behavior
 <!--This is a comment, it will not be included -->
@@ -105,19 +104,17 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 </details>
 
----
-**Verification**
-
+{% info_block warningBox "Verification" %}
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the `MerchantByMerchantReferenceResourceRelationshipPlugin`
 plugin is set up by:
-1. sending the request `GET http://glue.mysprykershop.com/returns/{% raw %}{{returnId}}{% endraw %}include=merchants`.
+1. Sending the request `GET http://glue.mysprykershop.com/returns/{% raw %}{{returnId}}{% endraw %}include=merchants`.
 
-Verify that the return data includes `merchant` resource attributes.
+Verify that the returned data includes `merchant` resource attributes.
 
 2. Sending the request `GET http://glue.mysprykershop.com/returns`.
 
-Verify that the return data includes the `merchantReference`.
+Verify that the returned data includes the `merchantReference`.
 
----
+{% endinfo_block %}

@@ -28,8 +28,7 @@ Install the required modules:
 composer require spryker/merchant-categories-rest-api:"^0.1.0" --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -37,7 +36,7 @@ Make sure that the following modules have been installed:
 | -------------- | ----------------- |
 | MerchantCategoriesRestApi | vendor/spryker/merchant-categories-rest-api |
 
----
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
 
@@ -47,8 +46,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -56,7 +54,7 @@ Make sure that the following changes have been applied in transfer objects:
 | -------------- | ---- | ----- | ------------------ |
 | RestMerchantsAttributes | object | Created | src/Generated/Shared/Transfer/RestMerchantsAttributes |
 
----
+{% endinfo_block %}
 
 ### 3) Enable resources and relationships
 
@@ -64,7 +62,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- | -------------- | ------------- | ----------------- |
-| MerchantCategoryMerchantRestAttributesMapperPlugin | Maps active categories from MerchantStorageTransfer to RestMerchantsAttributesTransfer. |  | Spryker\Glue\MerchantCategoriesRestApi\Plugin\MerchantsRestApi |
+| MerchantCategoryMerchantRestAttributesMapperPlugin | Maps active categories from MerchantStorageTransfer to `RestMerchantsAttributesTransfer`. |  | Spryker\Glue\MerchantCategoriesRestApi\Plugin\MerchantsRestApi |
 
 **src/Pyz/Glue/MerchantsRestApi/MerchantsRestApiDependencyProvider.php**
 
@@ -90,11 +88,10 @@ class MerchantsRestApiDependencyProvider extends SprykerMerchantsRestApiDependen
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that when you sending the request `GET http://glue.mysprykershop.com/merchants`, you can see the category keys and names for merchants that assigned to categories.
+Make sure that when you send the request `GET http://glue.mysprykershop.com/merchants`, you can see the category keys and names for merchants assigned to categories.
 
-Make sure that when you send the request `GET http://glue.mysprykershop.com/merchants?categoryKeys[]={% raw %}{{some-category-key}}{% endraw %}`, you can see only merchants that belongs to the particular category in the response.
+Make sure that when you send the request `GET http://glue.mysprykershop.com/merchants?categoryKeys[]={% raw %}{{some-category-key}}{% endraw %}`, you can see only merchants that belong to the particular category in the response.
 
----
+{% endinfo_block %}

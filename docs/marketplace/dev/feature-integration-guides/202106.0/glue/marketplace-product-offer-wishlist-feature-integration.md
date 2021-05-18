@@ -8,9 +8,11 @@ template: feature-integration-guide-template
 This document describes how to integrate the Product Offer + Wishlist Glue API feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product Offer + Wishlist Glue API feature core.
 
 ### Prerequisites
+
 To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
@@ -18,23 +20,22 @@ To start feature integration, overview, and install the necessary features:
 | Marketplace Wishlist | dev-master |[Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
+
 Install the required modules:
 
 ```bash
 composer require spryker/merchant-product-offer-wishlist-rest-api:"^0.1.0" --update-with-dependencies
 ```
 
----
+{% info_block warningBox "Verification" %}
 
-**Verification**
-
-Make sure that the following modules were installed:
+Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantProductOfferWishlistRestApi | spryker/merchant-product-offer-wishlist-rest-api |
 
----
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
 
@@ -44,8 +45,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -67,7 +67,7 @@ Make sure that the following changes have been applied in transfer objects:
 | RestProductConcreteAvailability.availability  | attribute | Created | src/Generated/Shared/Transfer/RestProductConcreteAvailabilityTransfer |
 | RestProductConcreteAvailability.quantity  | attribute | Created | src/Generated/Shared/Transfer/RestProductConcreteAvailabilityTransfer |
 
----
+{% endinfo_block %}
 
 #### Enable resources and relationships
 
@@ -75,17 +75,17 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| PriceProductWishlistItemExpanderPlugin | Expands `WishlistItem` transfer object with prices |  | Spryker\Zed\PriceProduct\Communication\Plugin\Wishlist |
-| PriceProductOfferWishlistItemExpanderPlugin | Expands `WishlistItem` transfer object with product offer prices |  | Spryker\Zed\PriceProductOffer\Communication\Plugin\Wishlist |
-| AvailabilityWishlistItemExpanderPlugin | Expands `WishlistItem` transfer object with product concrete availability |  | Spryker\Zed\Availability\Communication\Plugin\Wishlist |
-| SellableWishlistItemExpanderPlugin | Expands `WishlistItem` transfer object with sellable status |  | Spryker\Zed\Availability\Communication\Plugin\Wishlist |
-| MerchantProductOfferAddItemPreCheckPlugin | Returns `WishlistPreAddItemCheckResponse.isSuccess=false` if no one product offers found by `WishlistItem.productOfferReference` transfer property |  | Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist |
-| ProductPriceRestWishlistItemsAttributesMapperPlugin | Maps prices to RestWishlistItemsAttributes transfer object |  | Spryker\Glue\ProductPricesRestApi\Plugin\Wishlist |
-| ProductAvailabilityRestWishlistItemsAttributesMapperPlugin | Maps availability data to `RestWishlistItemsAttributes` transfer object |  | Spryker\Glue\ProductAvailabilitiesRestApi\Plugin\Wishlist |
-| ProductOfferRestWishlistItemsAttributesMapperPlugin | Populates `RestWishlistItemsAttributes.id` with the following pattern: `{WishlistItem.sku}_{WishlistItemTransfer.productOfferReference}` |  | Spryker\Glue\MerchantProductOfferWishlistRestApi\Plugin\Wishlist |
-| PriceProductOfferVolumeExtractorPlugin | Extracts volume prices from price product offer collection |  | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
-| ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin | Checks if requested wishlist item is exist in wishlist item collection. |  | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin |
-| EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin | Checks if requested wishlist item is exist in wishlist item collection |  | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin |
+| PriceProductWishlistItemExpanderPlugin | Expands the `WishlistItem` transfer object with prices. |  | Spryker\Zed\PriceProduct\Communication\Plugin\Wishlist |
+| PriceProductOfferWishlistItemExpanderPlugin | Expands the `WishlistItem` transfer object with product offer prices. |  | Spryker\Zed\PriceProductOffer\Communication\Plugin\Wishlist |
+| AvailabilityWishlistItemExpanderPlugin | Expands the `WishlistItem` transfer object with product concrete availability. |  | Spryker\Zed\Availability\Communication\Plugin\Wishlist |
+| SellableWishlistItemExpanderPlugin | Expands the `WishlistItem` transfer object with sellable status. |  | Spryker\Zed\Availability\Communication\Plugin\Wishlist |
+| MerchantProductOfferAddItemPreCheckPlugin | Returns `WishlistPreAddItemCheckResponse.isSuccess=false` if no product offers found by the `WishlistItem.productOfferReference` transfer property. |  | Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist |
+| ProductPriceRestWishlistItemsAttributesMapperPlugin | Maps prices to the `RestWishlistItemsAttributes` transfer object |  | Spryker\Glue\ProductPricesRestApi\Plugin\Wishlist |
+| ProductAvailabilityRestWishlistItemsAttributesMapperPlugin | Maps availability data to the `RestWishlistItemsAttributes` transfer object. |  | Spryker\Glue\ProductAvailabilitiesRestApi\Plugin\Wishlist |
+| ProductOfferRestWishlistItemsAttributesMapperPlugin | Populates `RestWishlistItemsAttributes.id` with the following pattern: `{WishlistItem.sku}_{WishlistItemTransfer.productOfferReference}`. |  | Spryker\Glue\MerchantProductOfferWishlistRestApi\Plugin\Wishlist |
+| PriceProductOfferVolumeExtractorPlugin | Extracts volume prices from the price product offer collection. |  | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
+| ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin | Checks if requested the wishlist item exists in the wishlist item collection. |  | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin |
+| EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin | Checks if the requested wishlist item exists in the wishlist item collection. |  | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin |
 
 <details><summary markdown='span'>src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php</summary>
 
@@ -210,22 +210,20 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 ```
 </details>
 
----
+{% info_block warningBox "Verification" %}
 
-**Verification**
+Make sure that `PriceProductWishlistItemExpanderPlugin`, `PriceProductOfferWishlistItemExpanderPlugin`, and `ProductPriceRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the price product collection within `attributes` in the response.
 
-Make sure that the `PriceProductWishlistItemExpanderPlugin`, `PriceProductOfferWishlistItemExpanderPlugin` and `ProductPriceRestWishlistItemsAttributesMapperPlugin` plugins are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the price product collection within the `attributes` in the response. 
+Make sure that the `AvailabilityWishlistItemExpanderPlugin` and `ProductAvailabilityRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `quantity` within `attributes` in the response.
 
-Make sure that the `AvailabilityWishlistItemExpanderPlugin` and `ProductAvailabilityRestWishlistItemsAttributesMapperPlugin` plugins are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `quantity` within the `attributes` in the response.
+Make sure that `ProductOfferRestWishlistItemsAttributesMapperPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `attributes` in the response.
 
-Make sure that the `ProductOfferRestWishlistItemsAttributesMapperPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the `attributes` in the response.
+Make sure that `SellableWishlistItemExpanderPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `availability` within the `attributes` in the response.
 
-Make sure that the `SellableWishlistItemExpanderPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `availability` within the `attributes` in the response.
+Make sure that `MerchantProductOfferAddItemPreCheckPlugin` is set up by sending the request `POST http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items`. You should have the wishlist item added only when the product has the specified offer reference.
 
-Make sure that the `MerchantProductOfferAddItemPreCheckPlugin` plugin is set up by sending the request `POST http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items`. You should have the wishlist item added only when the product has the specified offer reference.
+Make sure that `PriceProductOfferVolumeExtractorPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items,selected-product-offers,product-offer-prices`. You should get the product offer volume prices within `prices` in the response.
 
-Make sure that the `PriceProductOfferVolumeExtractorPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items,selected-product-offers,product-offer-prices`. You should get the product offer volume prices within `prices` in the response.
+Make sure that `ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` and `EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` are set up by sending the request `DELETE http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items/{% raw %}{{wishlistItemId}}{% endraw %}`. You should get the product offer wishlist item deleted.
 
-Make sure that the `ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` and `EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` plugins are set up by sending the request `DELETE http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items/{% raw %}{{wishlistItemId}}{% endraw %}`. You should get the  product offer wishlist item deleted.
-
----
+{% endinfo_block %}

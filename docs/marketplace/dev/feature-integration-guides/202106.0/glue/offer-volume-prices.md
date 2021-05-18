@@ -17,19 +17,18 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-| - |
-| Marketplace Product Offer Prices | dev-master | [Marketplace Product Offer Prices feature integration]() |
-| Marketplace Product Offer Volume Prices | dev-master | [Marketplace Product Offer Volume Prices feature integration]() |
+| Marketplace Product Offer Prices | dev-master | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html) |
+| Marketplace Product Offer Volume Prices | dev-master | [Marketplace Product Offer Volume Prices feature integration] |
 
 ### 1) Install the required modules using Composer
 
-Run the following commands to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/spryker/price-product-offer-volumes-rest-api:"^0.1.0" --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -37,7 +36,7 @@ Make sure that the following modules have been installed:
 |-|-|
 | PriceProductOfferVolumesRestApi | spryker/price-product-offer-volumes-rest-api |
 
----
+{% endinfo_block %}
 
 ### 2) Set up database and transfer objects
 
@@ -49,8 +48,7 @@ console propel:install
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -58,7 +56,7 @@ Make sure that the following changes have been applied in transfer objects:
 |-|-|-|-|
 | RestProductOfferPriceAttributes.volumePrices | property | Created | src/Generated/Shared/Transfer/RestProductOffersAttributesTransfer |
 
----
+{% endinfo_block %}
 
 ### 3) Enable Product Offer Prices resources and relationships
 
@@ -66,7 +64,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| RestProductOfferPricesAttributesMapperPlugin | Extends RestProductOfferPricesAttributesTransfer with volume price data |  | Spryker\Glue\PriceProductOfferVolumesRestApi\Plugin |
+| RestProductOfferPricesAttributesMapperPlugin | Extends `RestProductOfferPricesAttributesTransfer` with volume price data. |  | Spryker\Glue\PriceProductOfferVolumesRestApi\Plugin |
 
 **src/Pyz/Glue/ProductOfferPricesRestApi/ProductOfferPricesRestApiDependencyProvider.php**
 
@@ -92,9 +90,8 @@ class ProductOfferPricesRestApiDependencyProvider extends SprykerProductPricesRe
 }
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
-Make sure that the `ProductOfferPricesRestApiDependencyProvider` plugin is set up by having product offer volumes over sending the request `GET http://glue.mysprykershop.com//concrete-products/{% raw %}{{concreteProductId}}{% endraw %}?include=product-offers,product-offer-prices`.
+Make sure that  `ProductOfferPricesRestApiDependencyProvider` plugin is set up by having product offer volumes over sending the request `GET http://glue.mysprykershop.com//concrete-products/{% raw %}{{concreteProductId}}{% endraw %}?include=product-offers,product-offer-prices`.
 
----
+{% endinfo_block %}

@@ -331,7 +331,7 @@ wget -O frontend/merchant-portal/html-transform.js https://raw.githubusercontent
 wget -O frontend/merchant-portal/jest.config.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/jest.config.js
 wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/mp-paths.js
 wget -O frontend/merchant-portal/test-setup.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/test-setup.js
-wget -O frontend/merchant-portal/tsconfig.spec.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/tsconfig.spec.js
+wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/tsconfig.spec.json
 wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/update-config-paths.js
 wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/utils.js
 wget -O frontend/merchant-portal/webpack.config.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/webpack.config.js

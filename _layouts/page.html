@@ -34,7 +34,7 @@ layout: default
         </a>
         <div class="main-sidebar__inner">
             <div class="main-sidebar__slide">
-                <h3 class="main-sidebar__title">Marketplace Developer Guide</h3>
+                <h3 class="main-sidebar__title">{{ site.data.sidebars[page.sidebar].title }}</h3>
 
                 {% unless page.hide_sidebar %}
                     <div id="tg-sb-sidebar">
@@ -59,15 +59,40 @@ layout: default
 
         {{content}}
 
-        <div class="confirm-block">
-            <strong class="confirm-block__title">
-                Was this article helpful?
-            </strong>
-            <div class="confirm-block__buttons">
-                <a href="#" class="button confirm-block__button button--black">No</a>
-                <a href="#" class="button confirm-block__button button--red">Yes</a>
+        <aside class="form-collapse">
+            <div class="confirm-block">
+                <strong class="confirm-block__title">
+                    Was this article helpful?
+                </strong>
+                <div class="confirm-block__buttons">
+                    <a href="#" class="button confirm-block__button button--black js-form-collapse__opener">No</a>
+                    <a href="#" class="button confirm-block__button button--red js-form-collapse__opener">Yes</a>
+                </div>
             </div>
-        </div>
+
+            <div class="js-form-collapse__slide">
+                <form class="feedback-form">
+                    <h3 class="feedback-form__title" data-toc-skip>Please provide feedback</h3>
+                    <div class="feedback-form__block">
+                        <div class="feedback-form__column">
+                            <input type="text" placeholder="Name (Optional)" class="feedback-form__input">
+                        </div>
+                        <div class="feedback-form__column">
+                            <input type="email" placeholder="Email (Optional)" class="feedback-form__input">
+                        </div>
+                        <div class="feedback-form__column feedback-form__column--full">
+                            <textarea placeholder="Any additional feedback?" class="feedback-form__textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="feedback-form__action-row">
+                        <input type="submit" value="Submit" class="feedback-form__submit button button--red">
+                    </div>
+                    <div class="feedback-form__action-row">
+                        <a href="#" class="feedback-form__link js-form-collapse__close">Skip</a>
+                    </div>
+                </form>
+            </div>
+        </aside>
 
         <div class="tags">
             {% if page.tags != null %}
@@ -86,15 +111,7 @@ layout: default
 
     <aside class="alt-sidebar">
         <div class="alt-sidebar__sticky">
-            <div class="alt-nav">
-                <span class="alt-nav__opener">This document has only one version 202009.0</span>
-                <span class="alt-nav__opener-label">Versions</span>
-                <ul class="alt-nav__drop">
-                    <li><a href="#">version 1</a></li>
-                    <li><a href="#">version 2</a></li>
-                    <li><a href="#">version 3</a></li>
-                </ul>
-            </div>
+            {% include version_selector.html %}
 
             {% unless page.toc == false %}
                 {% include toc.html %}

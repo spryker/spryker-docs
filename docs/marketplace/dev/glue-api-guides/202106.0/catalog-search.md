@@ -10,21 +10,23 @@ In your development, this endpoint can help you to:
 * Implement catalog search functionality, including the category tree, facets, and pagination.
 * Retrieve a list of products to be displayed anywhere you want.
 
-## Installation 
+## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see Glue API: Catalog feature integration.
 
 ## Search by products
 To search by products, send the request:
-***
+
+---
 `GET` /**catalog-search**
-***
+
+---
 
 ### Request
 
-| Query parameter | Description  | Possible values |
+| QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ------------------- | ---------------- | ----------------------- |
 | include   | Adds resource relationships to the request.      | abstract-products   |
-| q      | Restricts the set of the returned items to the provided parameter value. | <ul><li>{{null}} (empty)</li><li>{{abstract_product_sku}}</li><li>{{abstract_product_name}}</li><li>{{concrete_product_sku}}</li><li>{{product_attribute}} (brand, color, etc.) - to provide multiple product attributes, use `+`</li> |
+| q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color, etc.)—to provide multiple product attributes, use `+`</li></ul> |
 | price[min]   | Specifies minimum prices of the products     | {{minimum_price}}  |
 | price[max]   | Specifies maximum prices of the products  | {{maximum_price}}  |
 | brand  | Specifies the product brand   | {{brand_name}} |
@@ -69,7 +71,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - empty search criteria</summary>
+<summary markdown='span'>Response sample: empty search criteria</summary>
 
 ```json
 {
@@ -429,7 +431,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Respnse sample - search for an abstract product</summary>
+<summary markdown='span'>Respnse sample: search for an abstract product</summary>
 
 ```json
 {
@@ -706,7 +708,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - search for an abstract product with the included abstract product details</summary>
+<summary markdown='span'>Response sample: search for an abstract product with the included abstract product details</summary>
 
 ```json
 {
@@ -1110,7 +1112,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - search for a concrete product</summary>
+<summary markdown='span'>Response sample: search for a concrete product</summary>
 
 ```json
 {
@@ -1387,7 +1389,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - multiple product attributes in search request</summary>
+<summary markdown='span'>Response sample: multiple product attributes in search request</summary>
 
 ```json
 {
@@ -1804,7 +1806,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - search with minimum and maximum price range</summary>
+<summary markdown='span'>Response sample: search with minimum and maximum price range</summary>
 
 ```json
 {
@@ -2175,7 +2177,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Respnse sample - search by brand</summary>
+<summary markdown='span'>Respnse sample: search by brand</summary>
 
 ```json
 {
@@ -2494,7 +2496,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - search by labels</summary>
+<summary markdown='span'>Response sample: search by labels</summary>
 
 ```json
 {
@@ -2781,7 +2783,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - search by weight</summary>
+<summary markdown='span'>Response sample: search by weight</summary>
 
 ```json
 {
@@ -3098,7 +3100,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - search by color</summary>
+<summary markdown='span'>Response sample: search by color</summary>
 
 ```json
 {
@@ -3452,7 +3454,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response - search by storage capacity</summary>
+<summary markdown='span'>Response: search by storage capacity</summary>
 
 ```json
 {
@@ -3723,7 +3725,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - search by rating</summary>
+<summary markdown='span'>Response sample: search by rating</summary>
 
 ```json
 {
@@ -3965,7 +3967,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - search by category</summary>
+<summary markdown='span'>Response sample: search by category</summary>
 
 ```json
 {
@@ -4177,7 +4179,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - setting the search results currency</summary>
+<summary markdown='span'>Response sample: setting the search results currency</summary>
 
 ```json
 {
@@ -4404,7 +4406,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - sorting order ascending</summary>
+<summary markdown='span'>Response sample: sorting order ascending</summary>
 
 ```json
 {
@@ -4824,7 +4826,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - sorting order descending</summary>
+<summary markdown='span'>Response sample: sorting order descending</summary>
 
 ```json
 {
@@ -5140,7 +5142,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - sorting by rating</summary>
+<summary markdown='span'>Response sample: sorting by rating</summary>
 
 ```json
 {
@@ -5437,7 +5439,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - sorting by price ascending</summary>
+<summary markdown='span'>Response sample: sorting by price ascending</summary>
 
 ```json
 {
@@ -5751,7 +5753,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - setting a page of search</summary>
+<summary markdown='span'>Response sample: setting a page of search</summary>
 
 ```json
 {
@@ -6009,7 +6011,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - setting a number of products per page</summary>
+<summary markdown='span'>Response sample: setting a number of products per page</summary>
 
 ```json
 {
@@ -6315,7 +6317,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample - filtering search results by Merchant name</summary>
+<summary markdown='span'>Response sample: filtering search results by Merchant name</summary>
 
 </b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>
 
@@ -6734,16 +6736,16 @@ To search by products, send the request:
 
 **Sorting parameters**
 
-| Attribute       | Type | Description     |
+| ATTRIBUTE       | TYPE | DESCRIPTION     |
 | --------------- | -------- | ----------------------- |
-| sortParamNames   | Array    | List of the possible sorting parameters. The default Spryker Demo Shop parameters:<ul><li>`rating` - sorting by product rating</li><li>`name_asc` - sorting by name, ascending</li><li>`name_desc` - sorting by name, descending</li><li>`price_asc` - sorting by price, ascending</li><li>`price_desc` - sorting by price, descending</li></ul> |
+| sortParamNames   | Array    | List of the possible sorting parameters. The default Spryker Demo Shop parameters:<ul><li>`rating`—sorting by product rating.</li><li>`name_asc`—sorting by name, ascending.</li><li>`name_desc`—sorting by name, descending.</li><li>`price_asc`—sorting by price, ascending.</li><li>`price_desc`—sorting by price, descending.</li></ul> |
 | sortParamLocalizedNames | Object   | Localized names of the sorting parameters. |
 | currentSortParam  | String   | The currently applied sorting parameter.  |
 | currentSortOrder | String   | The current sorting order. |
 
 **Pagination**
 
-| Attribute  |Type | Description   |
+| ATTRIBUTE  |TYPE | DESCRIPTION   |
 | --------- | -------- | ---------- |
 | numFound | Integer  | Number of the search results found.  |
 | currentPage  | Integer  | The current search results page.   |
@@ -6756,7 +6758,7 @@ To search by products, send the request:
 
 **Abstract products**
 
-| Attribute | Type | Description  |
+| ATTRIBUTE | TYPE | DESCRIPTION  |
 | ---------- | -------- | --------------- |
 | abstractSku   | String   | SKU of the abstract product.  |
 | abstractName  | String   | Name of the abstract product. |
@@ -6764,12 +6766,12 @@ To search by products, send the request:
 
 For other abstract product attributes, see:
 
-* [Retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products){target="_blank"}
-* [Retrieving abstract product prices](https://documentation.spryker.com/docs/retrieving-abstract-product-prices){target="_blank"}
+* [Retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)
+* [Retrieving abstract product prices](https://documentation.spryker.com/docs/retrieving-abstract-product-prices)
 
 **Value facets**
 
-| Attribute| Type | Description  |
+| ATTRIBUTE| TYPE | DESCRIPTION  |
 | ------------- | -------- | ------------------ |
 | name   | String | Name of the value facet.     |
 | localizedName | String   | Localized name of the value facet.  |
@@ -6780,7 +6782,7 @@ For other abstract product attributes, see:
 
 **Range facets**
 
-| Attribute | Type | Description   |
+| ATTRIBUTE | TYPE | DESCRIPTION   |
 | ---------- | -------- | ------------------ |
 | name  | String  | Name of the range facet.  |
 | localizedName | String  | Localized name of the range facet.   |
@@ -6793,7 +6795,7 @@ For other abstract product attributes, see:
 
 **Category tree filter**
 
-| Attribute | Type| Description        |
+| ATTRIBUTE | TYPE| DESCRIPTION        |
 | ------------- | -------- | --------------- |
 | nodeId   | Integer  | Category node ID.   |
 | name    | String   | Category name.      |
@@ -6802,10 +6804,8 @@ For other abstract product attributes, see:
 
 ## Possible errors
 
-| **Code** | **Reason**  |
+| CODE | REASON  |
 | -------- | ------------ |
 | 501      | Invalid currency.   |
 | 502      | Invalid price mode.  |
 | 503      | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
-
-

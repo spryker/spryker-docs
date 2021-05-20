@@ -18,27 +18,32 @@ For detailed information on the modules that provide the API functionality and r
 ## Add an item to a registered user's cart
 To add items to a cart, send the request:
 
-***
-`POST` **carts/*{{cart_uuid}}*/items**
-***
+---
+`POST` **carts/{% raw %}*{{cart_uuid}}*{% endraw %}/items**
 
-| Path parameter | Description |
+---
+
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{{cart_uuid}}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
 
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
-| Query parameter | Description | Possible value |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>items</li><li>product-measurement-units</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>concrete-products</li><li>product-options</li>|
-:::(Info) (Included resources)
+
+{% info_block infoBox "Included resources" %}
+
 To retrieve all the product options of the item in a cart, include `concrete-products` and `product-options`.
-:::
+
+{% endinfo_block %}
+
 
 <details>
 <summary markdown='span'>Request sample</summary>
@@ -63,7 +68,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <summary markdown='span'>Request sample with product measurement units and sales units</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
-    
+
 ```json
 {
     "data": {
@@ -98,7 +103,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 }
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>Request sample with vouchers</summary>
@@ -117,16 +122,17 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 }
 ```
 
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>Request sample with a promotional item and cart rules</summary>
-    
-:::(Info) (Cart rules)
+
+{% info_block infoBox "Cart rules" %}
 
 To add the promotional product to the cart, make sure that the cart fulfills the cart rules for the promotional item.
-:::
-    
+
+{% endinfo_block %}
+
 `POST https://glue.myspsrykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items?include=cart-rules`
 
 ```json
@@ -147,7 +153,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 <summary markdown='span'>Request sample with concrete products and product options</summary>
 
 `POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
-    
+
 ```json
 {
     "data": {
@@ -172,7 +178,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 <details>
 <summary markdown='span'>Request sample with product offers (Marketplace only)</summary>
 
-This option is available only in case you have upgraded your shop to Marketplace provided by Spryker. 
+This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
 
 `POST http://glue.myspsrykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=items`
 
@@ -191,7 +197,8 @@ This option is available only in case you have upgraded your shop to Marketplace
 
 </details>
 
-| Attribute | Type | Required | Description |
+
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU of the concrete product to add to the cart. |
 | quantity | String | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
@@ -201,17 +208,18 @@ This option is available only in case you have upgraded your shop to Marketplace
 | idPromotionalItem | String |  | Promotional item ID. Specify the ID to apply the promotion benefits.  |
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
-| productOfferReference | String | &check;| Unique identifier of the Product Offer in the system. <br> 
-This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.|
+| productOfferReference | String | &check;| Unique identifier of the product offer in the system. <br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
 
-:::(Info) (Conversion)
+{% info_block infoBox "Conversion" %}
+
 When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](https://documentation.spryker.com/docs/measurement-units-feature-overview) to learn more.
-:::
 
+{% endinfo_block %}
 
-:::(Info) (Product options)
+{% info_block infoBox "Product options" %}
 It is the responsibility of the API Client to track whether the selected items are compatible. For example, the client should not allow a 2-year and a 4-year warranty service to be applied to the same product. The API endpoints allow any combination of items, no matter whether they are compatible or not.
-:::
+
+{% endinfo_block %}
 
 ### Response
 
@@ -1331,7 +1339,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 
 <a name="add-an-item-to-a-registered-users-cart-response-attributes"></a>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | Product SKU. |
 | quantity | Integer | Quantity of the given product in the cart. |
@@ -1340,7 +1348,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 | amount | Integer | Amount of the products in the cart. |
 | unitPrice | Integer | Single item price without assuming if it is net or gross. This value should be used everywhere the price is displayed. It allows switching tax mode without side effects. |
 | sumPrice | Integer | Sum of all items prices calculated. |
-| taxRate | Integer | Current tax rate in per cent. |
+| taxRate | Integer | Current tax rate in percent. |
 | unitNetPrice | Integer | Single item net price. |
 | sumNetPrice | Integer | Sum of prices of all items. |
 | unitGrossPrice | Integer | Single item gross price. |
@@ -1357,9 +1365,9 @@ This option is available only in case you have upgraded your shop to Marketplace
 | sumDiscountAmountFullAggregation | Integer | Item total discount amount with additions. |
 | unitPriceToPayAggregation | Integer | Item total price to pay after discounts with additions. |
 | sumPriceToPayAggregation | Integer | Sum of the prices to pay (after discounts).|
-| salesUnit |Object | List of attributes defining the sales unit to be used for item amount calculation. | 
-| salesUnit.id | Integer | Numeric value the defines the sales units to calculate the item amount in. |
-| salesUnit.amount | Integer | Amount of product in the defined sales units. | 
+| salesUnit |Object | List of attributes defining the sales unit to be used for item amount calculation. |
+| salesUnit.id | Integer | Numeric value that defines the sales units to calculate the item amount in. |
+| salesUnit.amount | Integer | Amount of product in the defined sales units. |
 | selectedProductOptions | array | List of attributes describing the product options that were added to cart with the product. |
 | selectedProductOptions.optionGroupName | String | Name of the group to which the option belongs. |
 | selectedProductOptions.sku | String | SKU of the product option. |
@@ -1367,7 +1375,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 | selectedProductOptions.price | Integer | Product option price in cents. |
 | selectedProductOptions.currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
 
-| Included resource | Attribute | TYPE | DESCRIPTION |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | product-options | optionGroupName | String | Name of the group to which the option belongs. |
 | product-options | sku | String | SKU of the product option. |
@@ -1382,19 +1390,19 @@ This option is available only in case you have upgraded your shop to Marketplace
 | vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| product-offer-availabilities <br>This option is available only in case you have upgraded your shop to Marketplace provided by Spryker. | isNeverOutOfStock| Boolean | A boolean to show if this is an item that is never out of stock. |
-| product-offer-availabilities  | availability | Boolean | A boolean to inform you about availability. |
+| product-offer-availabilities | isNeverOutOfStock| Boolean | Boolean to show if this is an item that is never out of stock.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %} |
+| product-offer-availabilities  | availability | Boolean | Boolean to inform you about availability. |
 | product-offer-availabilities | quantity | Integer | Available stock. |
-| product-offer-prices<br>This option is available only in case you have upgraded your shop to Marketplace provided by Spryker. | price  | Integer | Price to pay for the item in cents. |
-| product-offer-prices  | prices  | Array   | An array of prices for the Product Offer.|
+| product-offer-prices | price  | Integer | Price to pay for the item in cents.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %} |
+| product-offer-prices  | prices  | Array   | Array of prices for the product offer.|
 | product-offer-prices | priceTypeName | String  | Price type. |
 | product-offer-prices | netAmount | Integer | Net price in cents. |
 | product-offer-prices | grossAmount | Integer | Gross price in cents.  |
 | product-offer-prices | currency.code | String  | Currency code. |
-| product-offer-prices | currency.name | String  | Currency name |
+| product-offer-prices | currency.name | String  | Currency name. |
 | product-offer-prices | currency.symbol | String  | Currency symbol.|
-| product-offers<br>This option is available only in case you have upgraded your shop to Marketplace provided by Spryker. | merchantSku | String  | SKU of the Merchant the Product Offer belongs to.|
-| product-offers | merchantReference | String  | Merchant Reference assigned to every Merchant. |
+| product-offers | merchantSku | String  | SKU of the merchant the product offer belongs to.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
+| product-offers | merchantReference | String  | Merchant reference assigned to every merchant. |
 | product-offers | isDefault  | Boolean | Defines whether the product offer is default or not. |
 
 For the attributes of the included resources, see:
@@ -1407,19 +1415,19 @@ For the attributes of the included resources, see:
 To change the number of items in a cart, send the request:
 
 ***
-`PATCH` **/carts/*{{cart_uuid}}*/items/*{{item_group_key}}***
+`PATCH` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}/items/{% raw %}*{{item_group_key}}*{% endraw %}**
 ***
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
-| ***{{item_group_key}}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{item_group_key}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. |
 
 ### Request
 
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -1570,24 +1578,24 @@ Request sample:
 ```    
 </details>
 
-For the attributes of the included resources, see [Retrieving Concrete Products](https://documentation.spryker.com/docs/retrieving-product-information#retrieve-concrete-products).
+For the attributes of the included resources, see [Retrieving concrete products](https://documentation.spryker.com/docs/retrieving-product-information#retrieve-concrete-products).
 
 ## Remove items from a registered user's cart
 
 To remove an item from a registered user's cart, send the request:
 ***
-`DELETE` **/carts/*{{cart_uuid}}*/items/*{{item_group_key}}***
+`DELETE` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}/items/{% raw %}*{{item_group_key}}*{% endraw %}**
 ***
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{{cart_uuid}}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
-| ***{{item_group_key}}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{item_group_key}}***{% endraw %}| Group key of the item. Usually, it is equal to the item’s SKU. |
 
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
@@ -1599,8 +1607,7 @@ If the item is deleted successfully, the endpoint returns the `204 No Content`�
 
 ## Possible errors
 
-
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to a cart. |

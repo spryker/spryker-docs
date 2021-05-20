@@ -1,6 +1,6 @@
 ---
 title: Retrieving abstract products
-description: Retrieve general information about abstract products and related resources in the Spryker Marketplace
+description: This glue API document describes how to retrieve general information about abstract products and related resources in the Spryker Marketplace
 template: glue-api-storefront-guide-template
 ---
 
@@ -20,27 +20,32 @@ For detailed information on the modules that provide the API functionality and r
 To retrieve general information about an abstract product, send the request:
 
 ---
-`GET` **/abstract-products/*{{abstract_product_sku}}***
+`GET` **/abstract-products/{% raw %}*{{abstract_product_sku}}{% endraw %}***
 
 ---
 
-| Path parameter | Description |
+| PATH | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{abstract_product_sku}}{% endraw %}*** | SKU of an abstract product to get information for. |
 
 ### Request
 
-| String parameter | Description | Exemplary values |
+| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | abstract-product-prices, concrete-products, product-labels, abstract-product-image-sets, abstract-product-availabilities, category-nodes, product-tax-sets, product-options, product-reviews, merchants |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
+
+{% info_block warningBox "Performance" %}
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
 * If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
 
+{% endinfo_block %}
 
-| Request | Usage |
+
+
+| REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
@@ -53,8 +58,8 @@ To retrieve general information about an abstract product, send the request:
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options` | Retrieve information about the abstract product with SKU `001` with its product options. |
 | `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
-| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve merchant product with SKU 109.<br>**This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.** |
-| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve merchant product with SKU 109 including the merchant information.<br>**This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.** |
+| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve merchant product with SKU 109.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %} |
+| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve merchant product with SKU 109 including the merchant information.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %} |
 
 
 ### Response
@@ -425,7 +430,7 @@ To retrieve general information about an abstract product, send the request:
             "averageRating": 4.3,
             "reviewCount": 4,
             "name": "Sony SmartWatch 3",
-            "description": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated, casual, vibrant colours and fitness style, all made from the finest materials. Designed to perform and impress, this smartphone watch delivers a groundbreaking combination of technology and style. Downloadable apps let you customise your SmartWatch 3 SWR50 and how you use it.  Tell SmartWatch 3 SWR50 smartphone watch what you want and it will do it. Search. Command. Find.",
+            "description": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps—formal, sophisticated, casual, vibrant colours and fitness style, all made from the finest materials. Designed to perform and impress, this smartphone watch delivers a groundbreaking combination of technology and style. Downloadable apps let you customise your SmartWatch 3 SWR50 and how you use it.  Tell SmartWatch 3 SWR50 smartphone watch what you want and it will do it. Search. Command. Find.",
             "attributes": {
                 "internal_ram": "512 MB",
                 "flash_memory": "4 GB",
@@ -456,7 +461,7 @@ To retrieve general information about an abstract product, send the request:
             },
             "metaTitle": "Sony SmartWatch 3",
             "metaKeywords": "Sony,Smart Electronics",
-            "metaDescription": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated,",
+            "metaDescription": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps—formal, sophisticated,",
             "attributeNames": {
                 "internal_ram": "Internal RAM",
                 "flash_memory": "Flash memory",
@@ -1449,27 +1454,27 @@ To retrieve general information about an abstract product, send the request:
 
 <a name="abstract-products-response-attributes"></a>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | SKU of the abstract product |
-| merchantReference | String | Unique identifier of the merchant in the system.<br>**This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.**|
+| merchantReference | String | Unique identifier of the merchant in the system.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %}|
 | averageRating | String | Average rating of the product based on customer rating. |
 | reviewCount | String | Number of reviews left by customer for this abstract product. |
 | name | String | Name of the abstract product |
 | description | String | Description of the abstract product |
 | attributes | Object | List of attributes and their values |
-| superAttributeDefinition | String[] | Attributes flagged as super attributes, that are however not relevant to distinguish between the product variants |
+| superAttributeDefinition | String | Attributes flagged as super attributes, that are however not relevant to distinguish between the product variants |
 | attributeMap|Object|Each super attribute / value combination and the corresponding concrete product IDs are listed here|
 |attributeMap.super_attributes|Object|Applicable super attribute and its values for the product variants|
 |attributeMap.attribute_variants|Object|List of super attributes with the list of values|
-|attributeMap.product_concrete_ids|String[]|Product IDs of the product variants|
+|attributeMap.product_concrete_ids|String|Product IDs of the product variants|
 |metaTitle|String|Meta title of the product|
 |metaKeywords|String|Meta keywords of the product.|
 |metaDescription|String|Meta description of the product.|
 |attributeNames | Object | All non-super attribute / value combinations for the abstract product. |
 
 
-| Included resource | Attribute | Type | Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | product-options | sku | String | Specifies the SKU of the product option. |
 | product-options | optionName | String | Specifies the option name. |
@@ -1494,7 +1499,7 @@ For the attributes of other included resources, see:
 
 ## Possible errors
 
-| Code | Meaning |
+| CODE | REASON |
 | --- | --- |
 | 301 |  Abstract product is not found. |
 | 311 | Abstract product SKU is not specified. |

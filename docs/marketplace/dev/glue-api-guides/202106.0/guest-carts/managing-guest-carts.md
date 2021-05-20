@@ -21,24 +21,28 @@ To create a guest cart as an unauthenticated user, [add items to a guest cart](h
 
 To retrieve a guest cart, send the request:
 
-***
+---
 `GET` **/guest-carts**
-***
 
-:::(Info) (**Guest cart ID**)
+---
+
+{% info_block infoBox "Guest cart ID*" %}
 
 Guest users have one guest cart by default. If you already have a guest cart, you can optionally specify its ID when adding items. To do that, use the following endpoint. The information in this section is valid for both of the endpoints.
 
-`GET` **/guest-carts/*{{guestCartId}}***
+`GET` **/guest-carts/{% raw %}*{{guestCartId}}*{% endraw %}**
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{{guestCartId}}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](#retrieve-a-guest-cart). |
-:::
+| {% raw %}***{{guestCartId}}***{% endraw %} | Unique identifier of the guest cart. To get it, [retrieve a guest cart](#retrieve-a-guest-cart). |
 
-:::(Warning) (Note)
+{% endinfo_block %}
+
+{% info_block infoBox "Note*" %}
+
 When retrieving the cart with `guestCartId`, the response includes a single object, and when retrieving the resource without specifying it, you get an array containing a single object.
-:::
+
+{% endinfo_block %}
 
 ### Request
 
@@ -46,21 +50,23 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.|
 
-| PATH PARAMETER | DESCRIPTION | Possible values |
+| PATH PARAMETER | DESCRIPTION | POSSIBLE ERRORS |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>cart-rules</li><li>promotional-items</li><li>gift-cards</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>product-labels</li></ul>|
 
-:::(Info) (Included resources)
+{% info_block infoBox "Included resources" %}
+
 * To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
 * To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
 * To retrieve product labels assigned to the products in a cart, include `concrete-products` and `product-labels`.
-:::
+
+{% endinfo_block %}
 
 | PATH PARAMETER| DESCRIPTION | EXEMPLARY VALUES  |
 | ------------- | -------------------- | ---------------------------- |
 | include   | Adds resource relationships to the request. | <ul><li>concrete-products</li><li>product-measurement-units</li><li>sales-units</li><li>promotional-items</li><li>product-offers</li><li>product-offer-availabilities</li><li>product-offer-prices</li><li>guest-cart-items</li></ul>|
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/guest-carts` | Retrieve a guest cart. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items` | Retrieve information about a guest cart with the concrete products included. |
@@ -1391,7 +1397,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 **General Cart Information**
 
-| Attribute | TYPE | DESCRIPTION |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
 | currency | String | Currency that was selected when the cart was created. |
@@ -1401,9 +1407,9 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 **Totals Information**
 
-| Attribute | TYPE | DESCRIPTION |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including e.g. shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart. |
 | taxTotal | String | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart. |
@@ -1411,15 +1417,13 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 **Discount Information**
 
-| Attribute | TYPE | DESCRIPTION |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | displayName | String | Discount name. |
 | code | String | Discount code applied to the cart. |
 | amount | Integer | Discount amount applied to the cart. |
 
-
-
-| Included resource | Attribute | TYPE | DESCRIPTION |
+| INCLUDED RESOURCE | ATTRIBUT | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | product-options | optionGroupName | String | Name of the group to which the option belongs. |
 | product-options | sku | String | SKU of the product option. |
@@ -1435,13 +1439,13 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 | promotional-items  | id  | String | Unique identifier of the promotional item. The ID can be used to apply the promotion to the given purchase. |
-| promotional-items  | quantity  | Integer|  Specifies how many promotions can be applied to the given purchase. |
+| promotional-items  | quantity  | Integer | Specifies how many promotions can be applied to the given purchase. |
 | promotional-items  | sku  | String  | SKU of the promoted abstract product.  |
-| product-offer-availabilities | isNeverOutOfStock | Boolean | A boolean to show if this is an item that is never out of stock. |
-| product-offer-availabilities | availability  | Boolean | A boolean to inform you about availability. |
+| product-offer-availabilities | isNeverOutOfStock | Boolean | Boolean to show if this is an item that is never out of stock. |
+| product-offer-availabilities | availability  | Boolean | Boolean to inform you about availability. |
 | product-offer-availabilities | quantity  | Integer | Available stock for the Product Offer item(s).  |
 | product-offer-prices  | price  | Integer | Price to pay for the item in cents.  |
-| product-offer-prices   | prices   | Array  | An array of prices for the product offer.|
+| product-offer-prices   | prices   | Array  | Array of prices for the product offer.|
 | product-offer-prices  | priceTypeName  | String  | Price type.  |
 | product-offer-prices  | netAmount  | Integer  | Net price in cents. |
 | product-offer-prices  | grossAmount  | Integer  | Gross price in cents. |
@@ -1469,7 +1473,7 @@ To assign a guest cart to a customer, i.e., merge the carts, include the unique 
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](https://documentation.spryker.com/docs/multiple-cart-per-user) environment:
 
-* In a **single cart** environment, the products in the guest cart are added to the customers' own cart;
+* In a **single cart** environment, the products in the guest cart are added to the customers' own cart.
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
 
 The workflow is displayed in the diagram below:
@@ -1496,7 +1500,7 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
 
 | HEADER KEY | HEADER VALUE | DESCRIPTION |
 | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | guest-user-001 | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.. |
+| X-Anonymous-Customer-Unique-Id | guest-user-001 | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.. |
 
 **Response sample**
 ```json
@@ -1551,9 +1555,9 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
 
 Request sample: `GET https://glue.myspsrykershop.com/carts`
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | v | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
 In the **multi-cart** environment, the guest cart has been converted to a regular cart. You can see it in the list of carts with the id `9183f604-9b2c-53d9-acbf-cf59b9b2ff9f`.
 

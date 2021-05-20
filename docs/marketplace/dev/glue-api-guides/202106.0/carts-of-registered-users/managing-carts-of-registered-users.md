@@ -163,7 +163,7 @@ To retrieve all carts, send the request:
 | `GET https://glue.mysprykershop.com/carts?include=items` | Retrieve all carts of a user with the items in them included.  |
 | `GET https://glue.mysprykershop.com/carts?include=cart-permission-groups` | Retrieve all carts of a user with cart permission groups included. |
 | `GET https://glue.mysprykershop.com/carts?include=shared-carts` | Retrieve all carts of a user with shared carts. |
-| `GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users` | Retrieve all carts of a user with information about shared carts and the company uses they are shared with. |
+| `GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users` | Retrieve all carts of a user with information about shared carts, and the company uses they are shared with. |
 | `GET https://glue.mysprykershop.com/carts?include=cart-rules` | Retrieve all carts of a user with cart rules. |
 | `GET https://glue.mysprykershop.com/carts?include=vouchers` | Retrieve all carts of a user with information about applied vouchers. |
 | `GET https://glue.mysprykershop.com/carts?include=promotional-items` | Retrieve information about promotional items for the cart. |
@@ -1915,7 +1915,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected whenthe cart was created. |
+| currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
 | name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
 | isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
@@ -3455,7 +3455,7 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
 
 
 
@@ -3542,7 +3542,7 @@ To delete a cart, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %}| Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %}| Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
 
 
 

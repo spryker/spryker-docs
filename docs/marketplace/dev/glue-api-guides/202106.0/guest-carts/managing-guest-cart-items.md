@@ -10,7 +10,7 @@ This endpoint allows you to manage guest cart items.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Carts API](https://documentation.spryker.com/docs/cart-feature-integration)
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
+* [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
 * [Glue API: Product options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 
@@ -19,35 +19,43 @@ For detailed information on the modules that provide the API functionality and r
 
 To add items to a guest cart, send the request:
 
-***
+---
 `POST` **/guest-cart-items**
-***
 
-:::(Info) (**Creating a guest cart**)
+---
 
-* If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart. 
+{% info_block infoBox "Creating a guest cart" %}
+
+* If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
 * Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
 
-`POST` **/guest-carts/*{{guest_cart_id}}*/guest-cart-items**
+`POST` **/guest-carts/{% raw %}*{{guest_cart_id}}*{% endraw %}/guest-cart-items**
 
-| Path Parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{{guest_cart_id}}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/en/managing-guest-carts#retrieve-a-guest-cart). |
-:::
+| {% raw %}***{{guest_cart_id}}***{% endraw %} | Unique identifier of the guest cart. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/en/managing-guest-carts#retrieve-a-guest-cart). |
+
+{% endinfo_block %}
+
 
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 |&check; | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 |&check; | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
-| QUERY PARAMETER | DESCRIPTION | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>concrete-products</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li></ul> |
-:::(Info) (Included resources)
+
+{% info_block infoBox "Included resources" %}
+
 * To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
 * To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
-:::
+
+{% endinfo_block %}
+
+
 
 <details>
 <summary markdown='span'>Request sample</summary>
@@ -69,10 +77,12 @@ To add items to a guest cart, send the request:
 
 <details>
 <summary markdown='span'>Request sample: adding a promotional item with the cart-rules relationship</summary>
-:::(Info) (**Cart rules**)
+
+{% info_block infoBox "Cart rules" %}
 
 To add the promotional product to cart, make sure that the cart fulfills the cart rules for the promotional item.
-:::
+
+{% endinfo_block %}
 
 `POST https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/guest-cart-items?include=cart-rules`
 
@@ -112,7 +122,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 <summary markdown='span'>Request sample with product measurement units and sales units</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=sales-units`
-    
+
 ```json
 {
     "data": {
@@ -175,7 +185,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 <summary markdown='span'>Request sample with concrete products and product options</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=guest-cart-items,concrete-products,product-options`
-    
+
 ```json
 {
     "data": {
@@ -204,7 +214,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>
 
 `POST https://glue.mysprykershop.com/guest-cart-items`
-    
+
 ```json
 {
     "data": {
@@ -219,11 +229,11 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 ```    
 </details>
 
-| Attribute | TYPE | REQUIRED | DESCRIPTION |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU part number of the item to place on the new guest cart. To use promotions, specify the SKU of one of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| idPromotionalItem | String |  | Promotional item ID. You need to specify the ID to apply the promotion benefits. | 
+| idPromotionalItem | String |  | Promotional item ID. You need to specify the ID to apply the promotion benefits. |
 | salesUnit | Object |  | List of attributes defining the sales unit to be used for item amount calculation. |
 | salesUnit.id | Integer |  | Unique identifier of the sales units to calculate the item amount in. |
 | salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |    
@@ -232,14 +242,16 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | productOfferReference | String |✓|Unique identifier of the Product Offer in the system.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
 
 
-:::(Info) (Conversion)
+{% info_block infoBox "Conversion" %}
 
 When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](https://documentation.spryker.com/docs/measurement-units-feature-overview) to learn more.
-:::
+{% endinfo_block %}
 
-:::(Info) (Product options)
+{% info_block infoBox "Product options" %}
+
 It is the responsibility of the API Client to track whether the selected items are compatible. For example, the client should not allow a 2-year and a 4-year warranty service to be applied to the same product. The API endpoints allow any combination of items, no matter whether they are compatible or not.
-:::
+
+{% endinfo_block %}
 
 ### Response
 
@@ -361,7 +373,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 
 </details>
-    
+
 
 
 <details>
@@ -640,8 +652,8 @@ It is the responsibility of the API Client to track whether the selected items a
 }
 ```
 </details>
-    
-    
+
+
 <details>
 <summary markdown='span'>Response sample: adding a gift cart</summary>
 
@@ -759,11 +771,11 @@ It is the responsibility of the API Client to track whether the selected items a
 }
 ```
 </details>
-    
-    
+
+
 <details>
 <summary markdown='span'>Response sample with concrete products and product options</summary>
-    
+
 ```json
 {
     "data": {
@@ -1465,9 +1477,9 @@ It is the responsibility of the API Client to track whether the selected items a
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | -------------- | ----------- | --------------------- |
-| expenseTotal | String | Total amount of expenses (including e.g. shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
 | discountTotal| Integer | Total amount of discounts applied to the cart.  |
-| taxTotal     | String | Total amount of taxes to be paid.   |
+| taxTotal | String | Total amount of taxes to be paid.   |
 | subTotal   | Integer | Subtotal of the cart.  |
 | grandTotal  | Integer| Grand total of the cart.   |
 
@@ -1481,7 +1493,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 **Cart item information**
 
-| Included resource | Attribute | Type | Type |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | TYPE |
 | --- | --- | --- | --- |
 | guest-cart-items | sku | String | SKU of the product. |
 | guest-cart-items | quantity | Integer | Quantity of the given product in the cart. |
@@ -1543,31 +1555,34 @@ For the attributes of the included resources, see:
 
 To change item quantity, send the request:
 
-***
-`PATCH` **/guest-carts/*{{guest_cart_id}}*/guest-cart-items/*{{groupKey}}***
-***
+---
+`PATCH` **/guest-carts/{% raw %}*{{guest_cart_id}}*{% endraw %}/guest-cart-items/{% raw %}*{{groupKey}}*{% endraw %}**
 
-| Path parameter | Description |
+---
+
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{{guest_cart_id}}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
-| ***{{groupKey}}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart) with the guest cart items included. |
-    
+| {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
+| {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart) with the guest cart items included. |
+
 ### Request
 
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-    
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | guest-cart-items, concrete-products, product-options, sales-units, product-measurement-units |
-:::(Info) (Included resources)
+
+{% info_block infoBox "Included resources" %}
+
 * To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
 * To retrieve product measurement units, include `sales-units` and `product-measurement units`
-:::
 
+{% endinfo_block %}
 
 <details>
 <summary markdown='span'>Sample request</summary>
@@ -1588,12 +1603,12 @@ To change item quantity, send the request:
 </details>
 
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | sku | String |  | SKU of the item to be updated. |
 | quantity | String | &check; | Quantity of the item to be set. |
-    
-    
+
+
 For more request body examples, see [Add items to a guest cart](#add-items-to-a-guest-cart)
 
 ### Response
@@ -1603,22 +1618,22 @@ If the update is successful, the endpoint returns `RestCartsResponse` with the 
 ## Remove an item from a guest cart
 
 To remove an item from a guest cart, send the request:
-    
+
 ***
-`DELETE` **/guest-carts/*{{guest_cart_uuid}}*/guest-cart-items/*{{groupKey}}***
+`DELETE` **/guest-carts/{% raw %}*{{guest_cart_id}}*{% endraw %}/guest-cart-items/{% raw %}*{{groupKey}}*{% endraw %}**
+
 ***
-    
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{{guest_cart_id}}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
-| ***{{groupKey}}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart) with the guest cart items included. |
-    
+| {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
+| {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart) with the guest cart items included. |
+
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart). |
-    
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart). |
+
 Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
 ### Response
@@ -1628,7 +1643,7 @@ If the item is deleted successfully, the endpoint returns the "204 No Content"�
 ## Possible errors
 
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to cart. |
@@ -1650,5 +1665,3 @@ If the item is deleted successfully, the endpoint returns the "204 No Content"�
 | 119 | Price mode is incorrect. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
-
-

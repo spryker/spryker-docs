@@ -127,10 +127,11 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <details>
 <summary markdown='span'>Request sample with a promotional item and cart rules</summary>
 
-:::(Info) (Cart rules)
+{% info_block infoBox "Cart rules" %}
 
 To add the promotional product to the cart, make sure that the cart fulfills the cart rules for the promotional item.
-:::
+
+{% endinfo_block %}
 
 `POST https://glue.myspsrykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items?include=cart-rules`
 
@@ -207,7 +208,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 | idPromotionalItem | String |  | Promotional item ID. Specify the ID to apply the promotion benefits.  |
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
-| productOfferReference | String | &check;| Unique identifier of the Product Offer in the system. <br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
+| productOfferReference | String | &check;| Unique identifier of the product offer in the system. <br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
 
 {% info_block infoBox "Conversion" %}
 
@@ -1347,7 +1348,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 | amount | Integer | Amount of the products in the cart. |
 | unitPrice | Integer | Single item price without assuming if it is net or gross. This value should be used everywhere the price is displayed. It allows switching tax mode without side effects. |
 | sumPrice | Integer | Sum of all items prices calculated. |
-| taxRate | Integer | Current tax rate in per cent. |
+| taxRate | Integer | Current tax rate in percent. |
 | unitNetPrice | Integer | Single item net price. |
 | sumNetPrice | Integer | Sum of prices of all items. |
 | unitGrossPrice | Integer | Single item gross price. |
@@ -1365,7 +1366,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 | unitPriceToPayAggregation | Integer | Item total price to pay after discounts with additions. |
 | sumPriceToPayAggregation | Integer | Sum of the prices to pay (after discounts).|
 | salesUnit |Object | List of attributes defining the sales unit to be used for item amount calculation. |
-| salesUnit.id | Integer | Numeric value the defines the sales units to calculate the item amount in. |
+| salesUnit.id | Integer | Numeric value that defines the sales units to calculate the item amount in. |
 | salesUnit.amount | Integer | Amount of product in the defined sales units. |
 | selectedProductOptions | array | List of attributes describing the product options that were added to cart with the product. |
 | selectedProductOptions.optionGroupName | String | Name of the group to which the option belongs. |
@@ -1389,19 +1390,19 @@ This option is available only in case you have upgraded your shop to Marketplace
 | vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| product-offer-availabilities | isNeverOutOfStock| Boolean | A boolean to show if this is an item that is never out of stock.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %} |
-| product-offer-availabilities  | availability | Boolean | A boolean to inform you about availability. |
+| product-offer-availabilities | isNeverOutOfStock| Boolean | Boolean to show if this is an item that is never out of stock.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %} |
+| product-offer-availabilities  | availability | Boolean | Boolean to inform you about availability. |
 | product-offer-availabilities | quantity | Integer | Available stock. |
 | product-offer-prices | price  | Integer | Price to pay for the item in cents.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %} |
-| product-offer-prices  | prices  | Array   | An array of prices for the Product Offer.|
+| product-offer-prices  | prices  | Array   | Array of prices for the product offer.|
 | product-offer-prices | priceTypeName | String  | Price type. |
 | product-offer-prices | netAmount | Integer | Net price in cents. |
 | product-offer-prices | grossAmount | Integer | Gross price in cents.  |
 | product-offer-prices | currency.code | String  | Currency code. |
-| product-offer-prices | currency.name | String  | Currency name |
+| product-offer-prices | currency.name | String  | Currency name. |
 | product-offer-prices | currency.symbol | String  | Currency symbol.|
-| product-offers | merchantSku | String  | SKU of the Merchant the Product Offer belongs to.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
-| product-offers | merchantReference | String  | Merchant Reference assigned to every Merchant. |
+| product-offers | merchantSku | String  | SKU of the merchant the product offer belongs to.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
+| product-offers | merchantReference | String  | Merchant reference assigned to every merchant. |
 | product-offers | isDefault  | Boolean | Defines whether the product offer is default or not. |
 
 For the attributes of the included resources, see:
@@ -1420,7 +1421,7 @@ To change the number of items in a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
 | {% raw %}***{{item_group_key}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. |
 
 ### Request
@@ -1577,7 +1578,7 @@ Request sample:
 ```    
 </details>
 
-For the attributes of the included resources, see [Retrieving Concrete Products](https://documentation.spryker.com/docs/retrieving-product-information#retrieve-concrete-products).
+For the attributes of the included resources, see [Retrieving concrete products](https://documentation.spryker.com/docs/retrieving-product-information#retrieve-concrete-products).
 
 ## Remove items from a registered user's cart
 
@@ -1588,7 +1589,7 @@ To remove an item from a registered user's cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
 | {% raw %}***{{item_group_key}}***{% endraw %}| Group key of the item. Usually, it is equal to the item’s SKU. |
 
 

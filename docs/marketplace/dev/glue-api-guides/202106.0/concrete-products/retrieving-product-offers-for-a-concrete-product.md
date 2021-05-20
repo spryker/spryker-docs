@@ -4,21 +4,22 @@ description: Retrieve details about product offers in the Spryker Marketplace
 template: glue-api-storefront-guide-template
 ---
 
-:::(Warning) (Warning!)
+{% info_block warningBox "Warning" %}
+
 This endpoint is available only for the Spryker Marketplace shop.
-:::
+
+{% endinfo_block %}
 
 To retrieve information about the existing product offers of a concrete product, send the request:
 
-------
+---
+GET **/concrete-products/{% raw %}*{{concrete_product_sku}}*{% endraw %}/product-offers**
 
-GET **/concrete-products/*{{concrete_product_sku}}*/product-offers**
+---
 
-------
-
-| PATH PARAMETER | DESCRIPTION     |
+| PATH PARAMETER | DESCRIPTION |
 | ------------- | ---------------------- |
-| ***{{concrete_product_sku}}***  | SKU of a concrete product. |
+| {% raw %}***{concrete_product_sku}}***{% endraw %}  | SKU of a concrete product. |
 
 #### Request
 
@@ -50,8 +51,8 @@ Response sample:
 }
 ```
 
-| Attribute      | TYPE   | DESCRIPTION   |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --------------------- | ----------- | --------------------- |
-| merchantSku       | String  | SKU of the Merchant the Product Offer belongs to.   |
-| merchantReference | String  | Merchant Reference assigned to every Merchant. |
+| merchantSku       | String  | SKU of the merchant the product offer belongs to.   |
+| merchantReference | String  | Merchant reference assigned to every merchant. |
 | isDefault         | Boolean | Defines whether the product offer is default or not.  |

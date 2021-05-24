@@ -5,7 +5,7 @@ description: This document contains reference information for working with the A
 template: back-office-user-guide-template
 ---
 
-This article includes the information you need to know when working with the **Availability** section in Back Office.
+This article includes the information you need to know when working with the *Availability* section in Back Office.
 
 ---
 
@@ -13,17 +13,18 @@ This article includes the information you need to know when working with the **A
 
 On the *Overview of Products Availability* page, you see the following:
 
-* The SKUs and names of the abstract products and the SKU values are a hyperlink to this product’s *Edit* page.
+* The SKUs and names of the abstract products and SKU values are a hyperlink to this product’s *Edit* page.
 * The number of products in current stock and the number of reserved products (meaning ordered ones).
 * The identifier for the bundled product and those that are *never out of stock* (Yes/No values).
 
 {% info_block infoBox "Info" %}
+
 For multi-store projects, you can filter the products according to the store the product is available.
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}
 
-For the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) project, you can also filter the products according to the Merchant the product belongs to.
+For the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) project, you can also filter the products according to the merchant the product belongs to.
 
 {% endinfo_block %}
 
@@ -71,7 +72,7 @@ The following table describes the attributes you see and enter on the *Edit Stoc
 |-|-|
 | Stock Type | Name of the corresponding warehouse. The field is auto-populated and is not editable. |
 | Quantity | Number of products available in the stock for a specific store and warehouse. |
-| Never out of stock | A checkbox to set the product to be always available in a specific store and warehouse. Meaning even if the quantity is set to 0, the product will still be available. This option is usually used for digital items, like gift cards, for example. |
+| Never out of stock | Checkbox to set the product to be always available in a specific store and warehouse. Meaning even if the quantity is set to 0, the product will still be available. This option is usually used for digital items, like gift cards, for example. |
 | Available in stores | This value is auto-populated according to your store setup and is not modifiable in UI. It just identifies for which store you define the product availability value. |
 
 ## Availability calculation: example

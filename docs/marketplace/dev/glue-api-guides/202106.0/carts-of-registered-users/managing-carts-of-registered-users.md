@@ -3502,8 +3502,7 @@ Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d3
 
 Response sample:
 
-```
-json
+```json
 {
     "data": {
         "type": "carts",

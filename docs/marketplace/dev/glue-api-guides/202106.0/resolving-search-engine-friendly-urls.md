@@ -15,8 +15,8 @@ For SEO purposes, Spryker automatically generates SEF URLs for products and cate
 
 In your development, the endpoints can help you to:
 
-* significantly boost the SEO presence of your product store
-* increase search engine ranking of your online store
+* significantly boost the SEO presence of your product store.
+* increase the search engine ranking of your online store.
 
 To facilitate their usage, Spryker Glue provides an endpoint that allows resolving an SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `http://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the URLs API.
 

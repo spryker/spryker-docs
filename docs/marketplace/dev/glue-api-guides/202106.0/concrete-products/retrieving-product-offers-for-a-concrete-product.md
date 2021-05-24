@@ -29,7 +29,7 @@ Request sample: `GET https://glue.mysprykershop.com/concrete-products/006_306929
 
 Response sample:
 
-```
+```json
 {
     "data": [
         {

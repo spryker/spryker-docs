@@ -4,30 +4,33 @@ description: Retrieve the Marketplace merchant information via API
 template: glue-api-storefront-guide-template
 ---
 
-Merchant is the individual or an organization selling products on the Marketplace. Every Merchant has a profile page where the customer can check contact information, opening hours, legal details, etc.
+Merchant is the individual or an organization selling products on the Marketplace. Every merchant has a profile page where the customer can check contact information, opening hours, legal details, etc.
 In your development, the Merchant API will help you perform the following tasks:
 
-* Retrieve the profile information of a specific Merchant
-* Retrieve Merchant’s Addresses
-* Retrieve Merchant’s Opening Hours
+* Retrieve the profile information of a specific Merchant.
+* Retrieve Merchant’s Addresses.
+* Retrieve Merchant’s Opening Hours.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see (TODO: Link to IG, when available).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](e/dev/feature-integration-guides/glue/marketplace-merchants-feature-integration.html)
 
 ## Retrieve information about all merchants
 
 To retrieve information about all the active merchants, send the request:
-***
+
+---
 `GET` **/merchants/**
-***
+
+---
+
 ### Request
 
-| Query prameter | Description | Examlary values |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | category-keys[] | Category key that is assigned to a merchant. | {% raw %}{{category key}}{% endraw %} |
 
-| Request | Usage |
+| REQUEST | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/merchants` | Retrieve all active merchants. |
 | `GET https://glue.mysprykershop.com/merchants?category-keys[]=demoshop&category-keys[]=notebooks` | Retrieve merchants with multiple category keys. |
@@ -284,7 +287,7 @@ To retrieve information about all the active merchants, send the request:
 
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | merchantName           | String   | Name of the Merchant.                             |
 | merchantUrl            | String   | Merchant’s profile URL.                           |
@@ -308,29 +311,31 @@ To retrieve information about all the active merchants, send the request:
 | imprint                | String   | Merchant’s imprint information.                       |
 | dataPrivacy            | String   | Merchant’s data privacy conditions.                   |
 | categories             | Array    | List of categories where the merchant belongs.        |
-| categoryKey            | String   | Category key used for Merchant.                       |
+| categoryKey            | String   | Category key used for the erchant.                       |
 | name                   | String   | Name of the merchant category.
 
 ## Retrieve profile information for the specific merchant
 
 To get the details of a specific merchant, send the request:
-***
-`GET` **/merchants/*{% raw %}{{merchantId}}{% endraw %}***
-***
 
-| Path prameter | Description |
+---
+`GET` **/merchants/{% raw %}*{{merchantId}}*{% endraw %}**
+
+---
+
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{merchantId}}{% endraw %}*** | Merchant reference assigned to every merchant. |
+| {% raw %}***{{merchantId}}***{% endraw %} | Merchant reference assigned to every merchant. |
 
 ### Request
 
-| Query prameter | Description | Examlary values |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | `merchant-addresses`, `merchant-opening-hours` |
 
-| Usage     | Description   |
+| USAGE | DESCRIPTION |
 | -------------------- | ---------------------- |
-| `GET http://glue.mysprykershop.com/merchants/MER000006`        | Retrieve information about merchant MER000006. |
+| `GET http://glue.mysprykershop.com/merchants/MER000006` | Retrieve information about merchant MER000006. |
 | `GET http://glue.mysprykershop.com/merchants/MER000006?include=merchant-addresses,merchant-opening-hours` | Retrieve information about merchant MER000006 with the merchant addresses and opening hours included. |
 
 ### Response
@@ -621,13 +626,14 @@ For details about the attributes of the included resources `merchant-addresses` 
 
 To retrieve merchant addresses, send the request:
 
-***
+---
 `GET` **/merchants/*{% raw %}{{merchantId}}{% endraw %}*/merchant-addresses**
-***
 
-| Path Parameter| Description  |
+---
+
+| PATH PARAMETER | DESCRIPTION  |
 | ---------------- | ----------------------- |
-| ***{% raw %}{{merchantId}}{% endraw %}***    | Merchant reference assigned to every merchant. |
+| {% raw %}***{{merchantId}}*** {% endraw %}  | Merchant reference assigned to every merchant. |
 
 ### Request
 
@@ -688,7 +694,7 @@ Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchant-
 </details>
 
 
-| Attribute | Type | Description  |
+| ATTRIBUTE | TYPE | DESCRIPTION  |
 | ------------- | -------- | --------------- |
 | addresses       | Array    | List of merchant addresses information. |
 | countryName     | String   | Name of the country.                |
@@ -706,9 +712,9 @@ To retrieve a merchant opening hours, send the request:
 `GET` **/merchants/*{% raw %}{{merchantId}}{% endraw %}*/merchant-opening-hours**
 ***
 
-| Path Parameter | Description    |
+| PATH PARAMETER | DESCRIPTION    |
 | ------------ | ----------- |
-| ***{% raw %}{{merchantId}}{% endraw %}*** | Merchant reference assigned to every merchant. |
+| {% raw %}***{{merchantId}}***{% endraw %} | Merchant reference assigned to every merchant. |
 
 ### Request
 
@@ -867,10 +873,10 @@ Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchan
 
 </details>
 
-| Attribute| Description |
+| ATTRIBUTE | DESCRIPTION |
 | --------------- | --------------------- |
-| weekdaySchedule | An array of the schedule for weekdays. The following information is available for each weekday:<ul><li>`day`—name of the day.</li><li>`timeFrom`—time when the Merchant starts working on a usual day.</li><li>`timeTo`—time when the Merchant stops working on a usual day.</li></ul> |
-| dateSchedule    | An array of the schedule for special working days, e.g. holidays. Each day exposes the following information:<ul><li>`date`—specifies the date.</li><li>`timeFrom`—time when the Merchant starts working on holiday.</li><li>`timeTo`—time when the Merchant stops working on holiday.</li><li>`note`—name of the holiday or special note.</li>|
+| weekdaySchedule | Array of the schedule for weekdays. The following information is available for each weekday:<ul><li>`day`—name of the day.</li><li>`timeFrom`—time when the merchant starts working on a usual day.</li><li>`timeTo`—time when the Mmrchant stops working on a usual day.</li></ul> |
+| dateSchedule | Array of the schedule for special working days, e.g., holidays. Each day exposes the following information:<ul><li>`date`—specifies the date.</li><li>`timeFrom`—time when the merchant starts working on holiday.</li><li>`timeTo`—time when the merchant stops working on the holiday.</li><li>`note`—name of the holiday or special note.</li>|
 
 ## Possible errors
 

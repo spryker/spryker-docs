@@ -27,22 +27,24 @@ To search by products, send the request:
 | ------------------- | ---------------- | ----------------------- |
 | include   | Adds resource relationships to the request.      | abstract-products   |
 | q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color, etc.)—to provide multiple product attributes, use `+`</li></ul> |
-| price[min]   | Specifies minimum prices of the products     | {{minimum_price}}  |
-| price[max]   | Specifies maximum prices of the products  | {{maximum_price}}  |
-| brand  | Specifies the product brand   | {{brand_name}} |
-| label   | Specifies the product label  | {{label}} |
-| weight  | Specifies the product weight  | {{weight}} |
-| color  | Specifies the product color  | {{color}}     |
-| storage_capacity[]  | Specifies the storage capacity of a product  |{{storage_capacity}}   |
-| rating[min]   | Specifies the minimum rating of a product   | {{rating}}   |
-| category  | Specifies the category to search the products in  | {{category_node_id}}For the category node IDs, retrieve the category tree. |
-| currency   | Sets a currency    | {{currency}}    |
+| price[min]   | Specifies minimum prices of the products     | {% raw %}{{minimum_price}}{% endraw %}  |
+| price[max]   | Specifies maximum prices of the products  | {% raw %}{{maximum_price}}{% endraw %}  |
+| brand  | Specifies the product brand   | {% raw %}{{brand_name}}{% endraw %} |
+| label   | Specifies the product label  | {% raw %}{{label}}{% endraw %} |
+| weight  | Specifies the product weight  | {% raw %}{{weight}}{% endraw %} |
+| color  | Specifies the product color  | {% raw %}{{color}}{% endraw %}     |
+| storage_capacity[]  | Specifies the storage capacity of a product  |{% raw %}{{storage_capacity}}{% endraw %}   |
+| rating[min]   | Specifies the minimum rating of a product   | {% raw %}{{rating}}{% endraw %}   |
+| category  | Specifies the category to search the products in  | {% raw %}{{category_node_id}}{% endraw %}For the category node IDs, retrieve the category tree. |
+| currency   | Sets a currency    | {% raw %}{{currency}}{% endraw %}    |
 | sort  | Sorts the search results   | For the list of possible values, run the [catalog search request and find the list under sortParamNames in the response. For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
-| page  | Sets the number of the search results page from which the results are retrieved | {{page_number}}    |
-| ipp   | Sets the number of products per page  | {{number_of_products}}  |
-| merchant_name | Filters the results by Merchant name.  | {{name_of_the_merchant}} </b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>|
+| page  | Sets the number of the search results page from which the results are retrieved | {% raw %}{{page_number}}{% endraw %}    |
+| ipp   | Sets the number of products per page  | {% raw %}{{number_of_products}}{% endraw %}  |
+| merchant_name | Filters the results by the merchant name.  | {% raw %}{{name_of_the_merchant}}{% endraw %} </b><section contenteditable="false" class="errorBox"><div class="content"><br>{% info_block warningBox "Note" %}This option is available only for the Spryker Marketplace shop.{% endinfo_block %}</div></section>|
 
-| Request   | Usage     |
+
+
+| REQUEST   | USAGE     |
 | --------------- | -------------- |
 | `GET https://glue.mysprykershop.com/catalog-search?q=`       | Search for all available products.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=058`       | Search for an abstract product by SKU *058*.   |
@@ -65,7 +67,7 @@ To search by products, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc` | Sort found products by price ascending.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set number of products per page.   |
-| `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by  the *Spryker* merchant name.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
+| `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by  the *Spryker* merchant name.</b><section contenteditable="false" class="errorBox"><div class="content"><br>{% info_block warningBox "Note" %}This option is available only for the Spryker Marketplace shop.{% endinfo_block %}</div></section> |
 
 ### Response
 
@@ -427,6 +429,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -704,6 +707,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1108,6 +1112,7 @@ To search by products, send the request:
     ]
 }
 ```
+
 </details>
 
 
@@ -1385,6 +1390,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -1802,6 +1808,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2173,6 +2180,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2492,6 +2500,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -2779,6 +2788,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3096,6 +3106,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3450,6 +3461,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3721,6 +3733,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -3963,6 +3976,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4175,6 +4189,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4402,6 +4417,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -4822,6 +4838,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5138,6 +5155,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5435,6 +5453,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -5749,6 +5768,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -6007,6 +6027,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -6313,6 +6334,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
@@ -6730,6 +6752,7 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 <a name="sorting"></a>
@@ -6760,8 +6783,8 @@ To search by products, send the request:
 
 | ATTRIBUTE | TYPE | DESCRIPTION  |
 | ---------- | -------- | --------------- |
-| abstractSku   | String   | SKU of the abstract product.  |
-| abstractName  | String   | Name of the abstract product. |
+| abstractSku   | String   | Abstract product SKU.  |
+| abstractName  | String   | Abstract product name. |
 | images        | Array    | Links to product images.      |
 
 For other abstract product attributes, see:

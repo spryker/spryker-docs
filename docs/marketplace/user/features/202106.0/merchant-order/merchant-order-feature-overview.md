@@ -8,7 +8,7 @@ In the marketplace, when a buyer goes through checkout, the [Marketplace order](
 
 ![Merchant order](https://confluence-connect.gliffy.net/embed/image/1c2da1e6-9e30-4413-a799-bcf18d401167.png?utm_medium=live&utm_source=custom)
 
-Every merchant order has its own shipment and delivery method based on the merchant’s setup. However, a customer can customize the delivery settings at the *Address* step of the checkout and, for example, split one merchant order into several shipments if needed. See [Split Delivery feature overview](https://documentation.spryker.com/docs/split-delivery-overview){target="_blank"} for details.
+Every merchant order has its own shipment and delivery method based on the merchant’s setup. However, a customer can customize the delivery settings at the *Address* step of the checkout and, for example, split one merchant order into several shipments if needed. See [Split Delivery feature overview](https://documentation.spryker.com/docs/split-delivery-overview) for details.
 
 ## Merchant order calculation
 

@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 | --------------------- | ------- | ------------------|
 | Cart API                         | dev-master  | [Glue API - Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration) |
 | Marketplace Product Offer API    | dev-master  | [Glue API - Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html) |
-| Marketplace Inventory Management | dev-master  | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html) |
+| Marketplace Inventory Management | dev-master  | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-inventory-management-feature-integration.html) |
 
 ### 1) Enable adding Merchant Product Offer to cart
 

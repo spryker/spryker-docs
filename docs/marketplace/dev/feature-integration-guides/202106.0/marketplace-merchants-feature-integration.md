@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Merchant | master | [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing) |
+| Spryker Core | {{ page.version }} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Merchant | {{ page.version }} | [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing) |
 
 ### 1) Install the required modules using Composer
 Install the required modules:
@@ -951,14 +951,14 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 | contact_person_first_name |   | String | Harald | First name of the contact person of a merchant. |
 | contact_person_last_name |   | String | Schmidt | Last name of the contact person of a merchant. |
 | contact_person_phone |   | String | 030 234567891a | Phone number of the contact person of a merchant. |
-| banner_url |   | String | http://cdn-link/banner.png | Default banner URL of a merchant if a locale specific one does not exist. |
-| logo_url |   | String | http://cdn-link/logo.png | Logo URL of a merchant. |
-| public_email |   | String | email@merchant-domain.com | Public email for communication of a merchant. |
+| banner_url |   | String | `http://cdn-link/banner.png` | Default banner URL of a merchant if a locale specific one does not exist. |
+| logo_url |   | String | `http://cdn-link/logo.png` | Logo URL of a merchant. |
+| public_email |   | String | `email@merchant-domain.com` | Public email for communication of a merchant. |
 | public_phone |   | String | 030 234567891 | Public phone for communication of a merchant. |
 | description_glossary_key.en_US |   | String | Lorem ipsum dolor sit amet | Description of a merchant in the en_US locale. |
 | description_glossary_key.de_DE |   | String | Lorem ipsum dolor sit amet | Description of a merchant in the de_DE locale. |
-| banner_url_glossary_key.en_US |   | String | http://cdn-link/en-banner.png | Locale specific banner URL of a merchant. |
-| banner_url_glossary_key.de_DE |   | String | http://cdn-link/en-banner.png | Locale specific banner URL of a merchant. |
+| banner_url_glossary_key.en_US |   | String | `http://cdn-link/en-banner.png` | Locale specific banner URL of a merchant. |
+| banner_url_glossary_key.de_DE |   | String | `http://cdn-link/en-banner.png` | Locale specific banner URL of a merchant. |
 | delivery_time_glossary_key.en_US |   | String | 1-3 days | Average delivery time of a merchant in the en_US locale. |
 | delivery_time_glossary_key.de_DE |   | String | 1-3 days | Average delivery time of a merchant in the de_DE locale. |
 | terms_conditions_glossary_key.en_US |   | String | Lorem ipsum dolor sit amet | Terms and conditions of a merchant in the en_US locale. |
@@ -1171,7 +1171,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can view merchant profile data at http://yves.de.demo-spryker.com/de/merchant/roan.
+Make sure that you can view merchant profile data at `http://yves.de.demo-spryker.com/de/merchant/roan`.
 
 {% endinfo_block %}
 
@@ -1181,4 +1181,4 @@ Integrate the following related features:
 
 | FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
-| Marketplace Merchant  API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html) |
+| Marketplace Merchant  API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-merchant-feature-integration.html) |

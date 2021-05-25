@@ -107,3 +107,24 @@ entries:
 
                 - title: Offers - reference information
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers-reference-information.html
+
+      - title: Merchant Portal user guides
+        nested:
+
+        - title: Dashboard
+          nested:
+
+          - title: Dashboard
+              url: /docs/marketplace/user/merchant-portal-user-guides/202106.0/dashboard/dashboard-reference-information.html
+
+          - title: Dashboard - reference information
+              url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard-reference-information.html
+
+        - title: Profile
+          nested:
+
+          - title: Profile
+            url: /docs/marketplace/user/merchant-portal-user-guides/profile/profile.html
+
+          - title: Profile - reference information
+            url: /docs/marketplace/user/merchant-portal-user-guides/profile/profile-reference-information.html

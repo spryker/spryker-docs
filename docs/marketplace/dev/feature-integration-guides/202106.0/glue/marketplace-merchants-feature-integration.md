@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 
 Install the required modules:
 ```bash
-composer require spryker/merchants-rest-api:"^0.2.0" --update-with-dependencies
+composer require spryker/merchants-rest-api:"^0.3.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

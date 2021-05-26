@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product Offer | dev-master | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
-| Prices | 202001.0 |[Prices feature integration](/docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
+| Marketplace Product Offer | dev-master | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/product-offer-feature-integration.html) |
+| Prices | 202001.0 | |
 | Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 

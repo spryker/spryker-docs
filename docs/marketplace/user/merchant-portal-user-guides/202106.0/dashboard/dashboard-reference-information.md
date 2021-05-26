@@ -1,5 +1,5 @@
 ---
-title: Dashboard - reference information
+title: "Dashboard: reference information"
 last_updated: Feb 02, 2021
 description: This topic contains the reference information that you need to know when working in the Dashboard section in the Merchant Portal.
 template: back-office-user-guide-template
@@ -15,11 +15,11 @@ The Offers widget provides the following information:
 
 With Stock—The total number of offers with stock.
 
-Low on Stock—the total number of offers that have less than 5 in the Stock.
+Low on Stock—the total number of offers that have less than 5 in the stock.
 
 ### Validity
 
-Valid—The total number of valid offers, i.e., offers that have no validity dates or *Valid From* & *Valid To* includes today's date.
+Valid—The total number of valid offers, i.e., offers that have no validity dates or *Valid From & Valid To* includes today's date.
 
 Expiring in 5 days—The total number of offers that will expire in the next 5 days.
 
@@ -33,11 +33,11 @@ Offline—The total number of offline offers.
 
 The total number of offers that are available on the Storefront, i.e., ALL of the orders that:
 
-* Have no validity dates or *Valid From* & *Valid To* includes today's date
+* Have no validity dates or *Valid From & Valid To* includes today's date.
 
-* Are online
+* Are online.
 
-* Have stock
+* Have stock.
 
 ## Orders widget
 

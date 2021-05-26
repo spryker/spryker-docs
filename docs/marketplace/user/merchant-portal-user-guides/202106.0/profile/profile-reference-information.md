@@ -17,15 +17,15 @@ This tab includes business details that are not displayed in the Storefront. Thi
 
 #### Contact Person
 
-The contact person is the only contact of the merchant with the Marketplace Administrator.
+The contact person is the only contact of the merchant with the marketplace administrator.
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
 | Role | Role in the company/organization the contact person performs. |   |
 | Title | Formal salutation for your contact person (e.g., Mr, Ms, Mrs, Dr).  |   |
-| First Name | First name of the contact person. The first name is taken from the [*General* tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ site.version }}/marketplace/merchants/merchants-reference-information.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
-| Last Name | Last name of the contact person. The last name is taken from the [*General* tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ site.version }}/marketplace/merchants/merchants-reference-information.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
-| Email | Email address of the contact person. This email is taken from the [*General* tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ site.version }}/marketplace/merchants/merchants-reference-information.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
+| First Name | First name of the contact person. The first name is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/merchants-reference-information.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
+| Last Name | Last name of the contact person. The last name is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/merchants-reference-information.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
+| Email | Email address of the contact person. This email is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/merchants-reference-information.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
 | Phone Number | Phone number of the contact person. |   |
 
 #### Company
@@ -40,7 +40,7 @@ This part contains general information on the company the merchant has.
 
 ### Online Profile tab
 
-This tab contains the information that will further be displayed on the [Merchant Profile page in the Storefront](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-profile).
+This tab contains the information that will further be displayed on the [Merchant Profile page in the Storefront](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html#merchant-profile).
 
 #### Store Profile URL
 
@@ -65,7 +65,7 @@ This tab contains the information that will further be displayed on the [Merchan
 | Zip Code | ZIP code of the merchant's business address. |   |
 | Addition to Address | In this field, you can specify any additional information included in the merchant's business address. |   |
 | City | City of the merchant's business address. |   |
-| Country | A drop-down list where you specify the country of the merchant's business address. |   |
+| Country | Drop-down list where you specify the country of the merchant's business address. |   |
 | Longitude | In this field, you can identify the exact location of the merchant. |   |
 | Latitude | In this field, you can identify the exact location of the merchant. |   |
 | Phone Number | Merchant's public phone number. |   |

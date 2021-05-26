@@ -119,37 +119,37 @@ entries:
 
           - title: Glue API
             nested:
-              - title: Glue API - Marketplace Inventory Management feature integration
+              - title: "Glue API: Marketplace Inventory Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-feature-integration.html
 
-              - title: Glue API - Marketplace Merchants feature integration
+              - title: "Glue API: Marketplace Merchants feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchants-feature-integration.html
 
-              - title: Glue API - Marketplace Product feature integration
+              - title: "Glue API: Marketplace Product feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html
 
-              - title: Glue API - Markteplace Product Offer feature integration
+              - title: "Glue API: Markteplace Product Offer feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
 
-              - title: Glue API - Marketplace Product Offer Prices feature integration
+              - title: "Glue API: Marketplace Product Offer Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html
 
-              - title: Glue API - Marketplace Product Offer + Wishlist feature integration
+              - title: "Glue API: Marketplace Product Offer + Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-wishlist-feature-integration.html
 
-              - title: Glue API - Marketplace Return Management feature integration
+              - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
 
-              - title: Glue API - Merchant Category feature integration
+              - title: "Glue API: Merchant Category feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
 
-              - title: Glue API - Merchant Opening Hours feature integration
+              - title: "Glue API: Merchant Opening Hours feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
 
-              - title: Glue API - Offer Volume Prices feature integration
+              - title: "Glue API: Offer Volume Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/offer-volume-prices.html
 
-              - title: Glue API - Marketplace Product Offer + Cart feature integration
+              - title: "Glue API: Marketplace Product Offer + Cart feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/product-offer-cart-feature-integration.html
 
       - title: Glue API guides

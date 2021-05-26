@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product | dev-master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/202106.0/marketplace-product-feature-integration.html) |
-| Marketplace Merchant Portal Core | dev-master | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/202106.0/merchant-portal-core-feature-integration.html) |
+| Marketplace Product | dev-master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-feature-integration.html) |
+| Marketplace Merchant Portal Core | dev-master | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

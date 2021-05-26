@@ -6,7 +6,7 @@ draft: true
 template: feature-integration-guide-template
 ---
 
-See https://spryker.github.io/docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
+See https://spryker.github.io/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html
 
 ## Environment Requirements
 

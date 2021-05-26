@@ -113,12 +113,11 @@ entries:
 
         - title: Dashboard
           nested:
-
           - title: Dashboard
-              url: /docs/marketplace/user/merchant-portal-user-guides/202106.0/dashboard/dashboard-reference-information.html
+            url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard-reference-information.html
 
           - title: Dashboard - reference information
-              url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard-reference-information.html
+            url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard-reference-information.html
 
         - title: Profile
           nested:

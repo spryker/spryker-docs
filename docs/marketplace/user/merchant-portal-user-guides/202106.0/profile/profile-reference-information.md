@@ -1,5 +1,5 @@
 ---
-title: Profile: reference information
+title: "Profile: reference information"
 last_updated: May 24, 2021
 description: This topic contains the reference information that you need to know when working in the Profile section in the Merchant Portal.
 template: back-office-user-guide-template

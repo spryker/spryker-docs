@@ -13,7 +13,7 @@ In your development, the Merchant API will help you perform the following tasks:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](e/dev/feature-integration-guides/glue/marketplace-merchants-feature-integration.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-merchants-feature-integration.html).
 
 ## Retrieve information about all merchants
 

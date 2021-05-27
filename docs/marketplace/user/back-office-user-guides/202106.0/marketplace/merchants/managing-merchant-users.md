@@ -21,7 +21,7 @@ To create a merchant user, do the following:
 
 2. Click **+Add New User**.
 
-3. Fill in the required information. See [Merchants: Reference Information](/docs/marketplace/user/back-office-user-guides/merchants/merchants-reference-information.html) for details on the attributes you can add.
+3. Fill in the required information. See [Merchants: Reference Information](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/merchants-reference-information.html) for details on the attributes you can add.
 
 4. Click **Create**.
 
@@ -45,7 +45,7 @@ Make sure that the merchant is approved in the Back Office to be able to proceed
 
 To activate the merchant user, click **Activate** in the *Actions* column of the *Merchant Users* page.
 
-Once the merchant user is activated, they receive the email message with the reset password instructions to the email address specified at the step of [merchant user creation](/docs/marketplace/user/back-office-user-guides/merchants/managing-merchant-users.html#creating-a-merchant-user).
+Once the merchant user is activated, they receive the email message with the reset password instructions to the email address specified at the step of [merchant user creation](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html#creating-a-merchant-user).
 
 {% info_block infoBox "Info" %}
 To deactivate the merchant user, click Deactivate in the Actions column of the Merchant Users page.

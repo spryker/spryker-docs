@@ -485,10 +485,10 @@ $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
 
 {% endinfo_block %}
 
-The following page should now show the login page for MerchantPortal: https://you-merchant-portal.domain/security-merchant-portal-gui/login
+The following page should now show the login page for MerchantPortal: `https://your-merchant-portal.domain/security-merchant-portal-gui/login`
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following pages do not open https://you-merchant-portal.domain/security-gui/login, https://you-merchant-portal.domain/
+Make sure the following pages do not open `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`
 
 {% endinfo_block %}

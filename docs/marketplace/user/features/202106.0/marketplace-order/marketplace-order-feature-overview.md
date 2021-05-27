@@ -15,7 +15,7 @@ From the customer perspective, Marketplace oder is a single order with products 
 
 ![Marketplace order structure](https://confluence-connect.gliffy.net/embed/image/66d8ccea-abeb-4121-b2f0-2348356fe481.png?utm_medium=live&utm_source=custom)
 
-The items in the Marketplace order are grouped by merchant and split into different shipments automatically by default. However, you can change this behavior on the project level according to your business requirements. During the checkout, customers can check how many shipments to expect and select different delivery addresses or methods based on their items. To learn more about multiple shipments, see [Split Delivery feature overview](https://documentation.spryker.com/docs/split-delivery-overview){target="_blank"}. 
+The items in the Marketplace order are grouped by merchant and split into different shipments automatically by default. However, you can change this behavior on the project level according to your business requirements. During the checkout, customers can check how many shipments to expect and select different delivery addresses or methods based on their items. To learn more about multiple shipments, see [Split Delivery feature overview](https://documentation.spryker.com/docs/split-delivery-overview). 
 
 As the Marketplace order contains details about offers and products the customer has bought from multiple merchants, the Marketplace order list with the related information is only available to the Marketplace administrator in the Back Office. Each merchant order can be accessed by the relevant merchant in the Merchant Portal.
 

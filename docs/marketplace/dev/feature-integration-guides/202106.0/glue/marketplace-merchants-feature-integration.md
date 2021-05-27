@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core Feature Integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
-| Marketplace Merchant | master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
+| Marketplace Merchant | master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchants-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

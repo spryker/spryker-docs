@@ -264,7 +264,7 @@ Apply changes from https://github.com/spryker-shop/suite/pull/681/files.
 
 **Check it**
 
-Go to http://zed.de.spryker.local/security-merchant-portal-gui/login or `http://zed.de.spryker.local/authentication-merchant-portal-gui/login` (abandoned module name)
+Go to `http://zed.de.spryker.local/security-merchant-portal-gui/login` or `http://zed.de.spryker.local/authentication-merchant-portal-gui/login` (abandoned module name)
 
 The Merchant Portal should look like on the picture:
 

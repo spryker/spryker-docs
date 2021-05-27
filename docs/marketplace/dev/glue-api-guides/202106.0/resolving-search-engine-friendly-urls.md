@@ -46,10 +46,10 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 | Request sample | Usage |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134` | Resolve the following URL of a product: https://mysprykershop.com/de/acer-aspire-s7-134 |
-| `GET https://glue.mysprykershop.com/url-resolver?url=/en/computer` | Resolve the following URL of a category node: https://mysprykershop.com/en/computer |
-| `GET https://glue.mysprykershop.com/url-resolver?url=/de/ruecknahmegarantie` | Resolve the following URL of a CMS page https://mysprykershop.com/de/ruecknahmegarantie |
-| `GET https://glue.mysprykershop.com/url-resolver?url=/en/merchant/budget-cameras` | Resolve the following URL of a merchant page  https://mysprykershop.com/en/merchant/budget-cameras.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
+| `GET https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134` | Resolve the following URL of a product: `https://mysprykershop.com/de/acer-aspire-s7-134`. |
+| `GET https://glue.mysprykershop.com/url-resolver?url=/en/computer` | Resolve the following URL of a category node: `https://mysprykershop.com/en/computer`. |
+| `GET https://glue.mysprykershop.com/url-resolver?url=/de/ruecknahmegarantie` | Resolve the following URL of a CMS page `https://mysprykershop.com/de/ruecknahmegarantie`. |
+| `GET https://glue.mysprykershop.com/url-resolver?url=/en/merchant/budget-cameras` | Resolve the following URL of a merchant page  `https://mysprykershop.com/en/merchant/budget-cameras`.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
 
 ### Response
 

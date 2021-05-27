@@ -42,7 +42,7 @@ This tab contains the main merchant information.
 | Is Active | Checkbox that gets the merchant profile page in the Storefront online once checked. |  |
 | Store Relation | List of stores where the merchant is present. |  |
 | Merchant URL | Text field where, during editing, you can update the URL that is used to access the merchant profile. The profile URL is specified per locale. | &check; |
-| Warehouses | Name of the Warehouse assigned to the merchant. For more details on the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html#merchant-warehouse.html#merchant-warehouse). |  |
+| Warehouses | Name of the Warehouse assigned to the merchant. For more details on the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html#merchant-warehouse). |  |
 
 ### Contact Person Details tab
 

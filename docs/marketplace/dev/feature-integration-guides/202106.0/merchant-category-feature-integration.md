@@ -227,7 +227,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that changing of category keys triggers those changes http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes.
+Make sure that changing of category keys triggers those changes `http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes`.
 
 {% endinfo_block %}
 

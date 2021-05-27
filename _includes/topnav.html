@@ -1,66 +1,82 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container topnavlinks">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="/index.html">&nbsp;<span class="projectTitle"> {{site.topnav_title}}</span></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <!-- toggle sidebar button -->
-                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
-                <!-- entries without drop-downs appear here -->
+<header class="main-header">
+    <div class="container">
+        <div class="main-header__inner">
+            <div class="main-header__left">
+                <strong class="main-header__logo">
+                    <a href="/">
+                        <img src="{{ "/images/logo.svg" }}" alt="Spryker Documentation">
+                    </a>
+                </strong>
 
-{% assign topnav = site.data[page.topnav] %}
-{% assign topnav_dropdowns = site.data[page.topnav].topnav_dropdowns %}
-
-                {% for entry in topnav.topnav %}
-                {% for item in entry.items %}
-                {% if item.external_url %}
-                <li><a href="{{item.external_url}}" target="_blank" rel="noopener">{{item.title}}</a></li>
-                {% elsif page.url contains item.url %}
-                <li class="active"><a href="{{item.url}}">{{item.title}}</a></li>
-                {% else %}
-                <li><a href="{{item.url}}">{{item.title}}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% endfor %}
-                <!-- entries with drop-downs appear here -->
-                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                {% for entry in topnav_dropdowns %}
-                {% for folder in entry.folders %}
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ folder.title }}<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        {% for folderitem in folder.folderitems %}
-                        {% if folderitem.external_url %}
-                        <li><a href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
-                        {% elsif page.url contains folderitem.url %}
-                        <li class="dropdownActive"><a href="{{folderitem.url}}">{{folderitem.title}}</a></li>
-                        {% else %}
-                        <li><a href="{{folderitem.url}}">{{folderitem.title}}</a></li>
-                        {% endif %}
-                        {% endfor %}
+                <div class="main-nav">
+                    <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %}">
+                        <span class="main-nav__opener-label">Select Product</span>
+                        <span class="main-nav__opener-text">
+                            {% if page.product-type == 'marketplace/dev' %}
+                            Marketplace developer guide
+                            {% elsif page.product-type == 'marketplace/user' %}
+                            Marketplace users guide
+                            {% else %}
+                            Select Product
+                            {% endif %}
+                        </span>
+                        <i class="main-nav__opener-icon icon-arrow-down"></i>
+                    </a>
+                    <ul class="main-nav__drop">
+                         <li>
+                             <a href="https://documentation.spryker.com" class="main-nav__drop-link">
+                                Spryker Commerce OS
+                             </a>
+                         </li>
+                         <li>
+                             <a href="/" class="main-nav__drop-link">
+                                Marketplace
+                                <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
+                             </a>
+                             <ul class="main-nav__drop">
+                                 <li>
+                                     <a href="/docs/marketplace/dev/setup/system-requirements.html" class="main-nav__drop-link">
+                                        <span class="main-nav__drop-link-title">
+                                            <i class="icon-developer"></i>
+                                            Developer
+                                        </span>
+                                        <span class="main-nav__drop-link-subtitle">Marketplace developer guide</span>
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="/docs/marketplace/user/intro-to-spryker/marketplace-concept.html" class="main-nav__drop-link">
+                                        <span class="main-nav__drop-link-title">
+                                            <i class="icon-business"></i>
+                                            Business User
+                                        </span>
+                                        <span class="main-nav__drop-link-subtitle">Marketplace users guide</span>
+                                     </a>
+                                 </li>
+                             </ul>
+                         </li>
+                         <li>
+                             <a href="https://cloud.spryker.com/" class="main-nav__drop-link">
+                                Spryker Cloud Commerce OS
+                             </a>
+                         </li>
                     </ul>
-                </li>
-                {% endfor %}
-                {% endfor %}
-                {% if site.feedback_disable == null or site.feedback_disable == false %}
-			{% include feedback.html %}
-		{% endif %}
-                <!--comment out this block if you want to hide search-->
-                <li>
-                    <!--start search-->
-                    {% include search/{{ site.search | default "default" }}_quicksearch.html %}
-                    <!--end search-->
-                </li>
-            </ul>
+                </div>
+
+                {% if page.url != "/index.html" and page.url != "/search/" %}
+                    <div class="main-header__search">
+                        <i class="main-header__search-icon icon-search"></i>
+                        {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                    </div>
+                {% endif %}
+
+            </div>
+            <div class="main-header__right">
+                <a href="/feed.xml" class="button main-header__button button--small">
+                    <i class="icon-rss"></i>
+                    RSS
+                </a>
+            </div>
         </div>
-        </div>
-        <!-- /.container -->
-</nav>
+    </div>
+</header>

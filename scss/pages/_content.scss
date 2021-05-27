@@ -1,0 +1,125 @@
+.post-content {
+    h1, h2, h3, h4, h5, h6 {
+        color: rgb(72, 73, 78);
+        font-weight: bold;
+        margin: 0 0 16px;
+    }
+
+    h1 {
+        font-size: 38px;
+        line-height: 1.369;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    table {
+        max-width: 100%;
+        margin-bottom: 20px;
+        border: 1px solid $grey-7;
+        border-radius: 4px;
+        text-align: left;
+        word-break: break-word;
+        color: $grey-8;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+
+    caption {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: left;
+    }
+
+    th,
+    td {
+        padding: 10px 15px;
+        hyphens: auto;
+        min-width: 100px;
+        border: 1px solid $grey-7;
+    }
+
+    th {
+        color: $grey-9;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    details {
+        margin: 0 0 1em;
+        summary {
+            display: block;
+            padding: 0 0 0 18px;
+            position: relative;
+            font-size: 16px;
+            line-height: 1.5;
+            cursor: pointer;
+            margin: 0 0 10px;
+            transition: color .2s linear;
+            &:hover {
+                color: $black;
+            }
+            &:before {
+                position: absolute;
+                top: 8px;
+                left: 0;
+                @extend %icon;
+                @extend .icon-arrow-right:before;
+                font-size: 10px;
+            }
+        }
+        &[open] {
+            summary:before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    ol {
+        padding: 0;
+        list-style-position: inside;
+
+        & > li {
+            & > p {
+                display: inline;
+            }
+        }
+    }
+}
+
+.post-header {
+    display: flex;
+    align-items: flex-start;
+
+    &__title {
+        flex: 1 1 auto;
+    }
+
+    &__button {
+        flex: 0 0 auto;
+        margin: 0 0 0 20px;
+
+        &:after {
+            content: none !important;
+        }
+    }
+}
+
+.highlight,
+pre {
+    background: $grey-lightest;
+    padding: 10px;
+    word-break: break-word;
+}
+
+.highlight {
+    margin: 0 0 1em;
+    & &,
+    pre {
+        padding: 0;
+        margin: 0;
+    }
+}

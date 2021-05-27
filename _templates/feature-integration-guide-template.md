@@ -310,6 +310,10 @@ Import data as follows:
 {demo data}
 ```
 
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
+| -------- | ------------- | --------------- | --------- |
+| {column_name} | {✓ /  } | {data_type} | {example_of_column_data} | {description} |
+
 2. Import data:
 
 ```bash

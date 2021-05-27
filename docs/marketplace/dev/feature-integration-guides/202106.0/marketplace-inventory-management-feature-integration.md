@@ -208,7 +208,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit some merchant on http://zed.de.demo-spryker.com/merchant-gui/list-merchant, you can see the `Wherehouses` field.
+Make sure that when you edit some merchant on `http://zed.de.demo-spryker.com/merchant-gui/list-merchant`, you can see the `Wherehouses` field.
 
 {% endinfo_block %}
 

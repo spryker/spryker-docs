@@ -246,7 +246,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 
 **Separate Login feature setup (security firewalls)**
 
-It requires upgrading spryker/smyfony:3.5.0 and applying some changes on the project, see https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1754890268
+It requires upgrading spryker/smyfony:3.5.0 and applying some changes on the project, see [Symfony 5 integration](https://documentation.spryker.com/docs/symfony-5-integration).
 
 ```bash
 composer remove spryker/auth spryker/auth-mail-connector spryker/auth-mail-connector-extension spryker/authentication-merchant-portal-gui

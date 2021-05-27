@@ -7,6 +7,8 @@ template: back-office-user-guide-template
 
 ## Offers widget
 
+![offers-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/offers-widget.png)
+
 The Offers widget provides the following information:
 
 `Offers 4`—The total number of offers in the Merchant Portal.
@@ -40,6 +42,8 @@ The total number of offers that are available on the Storefront, i.e., ALL of th
 * Have stock.
 
 ## Orders widget
+
+![orders-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/orders-widget.png)
 
 The Orders widget provides the following information:
 

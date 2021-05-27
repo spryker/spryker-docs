@@ -991,7 +991,7 @@ class SalesReturnGuiDependencyProvider extends SprykerSalesReturnGuiDependencyPr
 
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure when you open any order on http://zed.de.spryker.local/sales-return-gui containing products from different merchants, you see the message: "You can only return products from one merchant at a time".
+Make sure when you open any order on `http://zed.de.spryker.local/sales-return-gui` containing products from different merchants, you see the message: "You can only return products from one merchant at a time".
 
 {% endinfo_block %}
 

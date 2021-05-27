@@ -160,7 +160,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you can filter products by merchant at http://zed.de.demo-spryker.com/availability-gui.
+Make sure that when you can filter products by merchant at `http://zed.de.demo-spryker.com/availability-gui`.
 
 {% endinfo_block %}
 

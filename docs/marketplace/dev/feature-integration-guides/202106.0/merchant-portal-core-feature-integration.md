@@ -284,10 +284,12 @@ Add a .yarnrc.yml file.
 nodeLinker: node-modules
 
 plugins:
-  - path: .yarn/plugins/@yarnpkg/plugin-workspace-tools.js
-    spec: "@yarnpkg/plugin-workspace-tools"
+    - path: .yarn/plugins/@yarnpkg/plugin-workspace-tools.js
+      spec: '@yarnpkg/plugin-workspace-tools'
+    - path: .yarn/plugins/@yarnpkg/plugin-interactive-tools.cjs
+      spec: '@yarnpkg/plugin-interactive-tools'
 
-yarnPath: .yarn/releases/yarn-2.0.0-rc.32.js
+yarnPath: .yarn/releases/yarn-2.3.3.js
 ```
 
 Add the .yarn folder and download plugin-workspace-tools.js and yarn-2.0.0-rc.32.js.
@@ -295,7 +297,7 @@ Add the .yarn folder and download plugin-workspace-tools.js and yarn-2.0.0-rc.32
 ```bash
 mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
 wget -O .yarn/plugins/@yarnpkg/plugin-workspace-tools.js https://raw.githubusercontent.com/spryker-shop/suite/master/.yarn/plugins/%40yarnpkg/plugin-workspace-tools.js
-wget -O .yarn/releases/yarn-2.0.0-rc.32.js https://raw.githubusercontent.com/spryker-shop/suite/master/.yarn/releases/yarn-2.0.0-rc.32.js
+wget -O .yarn/releases/yarn-2.3.3.js https://raw.githubusercontent.com/spryker-shop/suite/master/.yarn/releases/yarn-2.3.3.js
 ```
 
 Run commands from the root of the project:
@@ -318,126 +320,21 @@ Check if the MarketPlace packages are located in the `node_modules/@spryker` fol
 
 ### 2) Install Marketplace builder
 
-Add the frontend/merchant-portal folder with the next files:
+Add the merchant-portal folder and builder files:
 
 **frontend/merchant-portal/entry-points.js**
 
-```js
-const { strings } = require("@angular-devkit/core");
-const glob = require("fast-glob");
-const path = require("path");
-
-const ROOT_DIR = path.resolve(__dirname, "../..");
-
-const SPRYKER_CORE_DIR = path.join(ROOT_DIR, "vendor/spryker");
-
-const MP_ENTRY_POINT_FILE =
-    "*/src/Spryker/Zed/*/Presentation/Components/index.ts";
-
-async function getMPEntryPoints() {
-    return glob(MP_ENTRY_POINT_FILE, {
-        cwd: SPRYKER_CORE_DIR,
-    });
-}
-
-async function getMPEntryPointsMap() {
-    const entryPoints = await getMPEntryPoints();
-
-    return entryPoints.reduce(
-        (acc, entryPoint) => ({
-            ...acc,
-            [entryPointPathToName(entryPoint)]: path.join(
-                SPRYKER_CORE_DIR,
-                entryPoint
-            ),
-        }),
-        {}
-    );
-}
-
-function entryPointPathToName(path) {
-    return 'spy/' + strings.dasherize(path.split("/")[0]);
-}
-
-module.exports = {
-    getMPEntryPoints,
-    getMPEntryPointsMap,
-};
-```
-
-**frontend/merchant-portal/html-transform.js**
-
-```js
-const { getMPEntryPointsMap } = require("./entry-points");
-
-module.exports = async (targetOptions, indexHtml) => {
-    const entryPointsMap = await getMPEntryPointsMap();
-    const entryNames = Object.keys(entryPointsMap);
-
-    return entryNames.reduce((html, entryName) => {
-        entryTag = createScriptTag(entryName + '.js');
-        return insertTextAt(entryTag, html.indexOf("</body>"), html);
-    }, indexHtml);
-};
-
-function createScriptTag(src) {
-    return `<script src="${src}"></script>`;
-}
-
-function insertTextAt(text, idx, fullText) {
-    return `${fullText.slice(0, idx)}${text}${fullText.slice(idx)}`;
-}
-```
-
-**frontend/merchant-portal/jest.config.js**
-
-```js
-module.exports = {
-    name: "merchant-portal",
-    roots: ["<rootDir>/../../vendor/spryker/spryker/Bundles"],
-    testRegex: ["\/src\/Spryker\/Zed\/.+\/Presentation\/Components\/.+\\.(test|spec)\\.[jt]sx?$"],
-    transform: {
-        "^.+\\.(ts|js|html)$": "ts-jest",
-    },
-    resolver: "@nrwl/jest/plugins/resolver",
-    moduleFileExtensions: ["ts", "js", "html"],
-    collectCoverageFrom: ["**/*.ts", "!**/*.stories.ts", "!**/node_modules/**"],
-    coverageReporters: ["lcov", "text"],
-    coverageDirectory: "<rootDir>/../../coverage/merchant-portal",
-    passWithNoTests: true,
-    snapshotSerializers: [
-        "jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js",
-        "jest-preset-angular/build/AngularSnapshotSerializer.js",
-        "jest-preset-angular/build/HTMLCommentSerializer.js",
-    ],
-};
-```
-
-**frontend/merchant-portal/test-setup.ts**
-
-```ts
-import 'core-js/features/reflect';
-import 'jest-preset-angular';
-```
-
-**frontend/merchant-portal/tsconfig.spec.json**
-
-```json
-{
-  "extends": "../../tsconfig.mp.json",
-  "compilerOptions": {
-    "outDir": "./out-tsc/spec",
-    "module": "commonjs",
-    "types": ["jest", "node"]
-  },
-  "files": [
-    "test-setup.ts"
-  ],
-  "include": [
-    "../../vendor/spryker/*/src/Spryker/Zed/*/Presentation/Components/**/*.spec.ts",
-    "../../vendor/spryker/*/src/Spryker/Zed/*/Presentation/Components/**/*.d.ts"
-  ]
-}
+```bash
+mkdir frontend/merchant-portal
+wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/entry-points.js
+wget -O frontend/merchant-portal/html-transform.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/html-transform.js
+wget -O frontend/merchant-portal/jest.config.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/jest.config.js
+wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/mp-paths.js
+wget -O frontend/merchant-portal/test-setup.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/test-setup.js
+wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/tsconfig.spec.json
+wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/update-config-paths.js
+wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/utils.js
+wget -O frontend/merchant-portal/webpack.config.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/webpack.config.js
 ```
 
 **frontend/merchant-portal/webpack.config.ts**
@@ -470,7 +367,7 @@ export default async (
     return config;
 };
 ```
-
+---
 {% info_block warningBox "Verification" %}
 
 `npm run mp:build` should pass successfully.
@@ -588,10 +485,10 @@ $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
 
 {% endinfo_block %}
 
-The following page should now show the login page for MerchantPortal: https://you-merchant-portal.domain/security-merchant-portal-gui/login
+The following page should now show the login page for MerchantPortal: `https://your-merchant-portal.domain/security-merchant-portal-gui/login`
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following pages do not open https://you-merchant-portal.domain/security-gui/login, https://you-merchant-portal.domain/
+Make sure the following pages do not open `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`
 
 {% endinfo_block %}

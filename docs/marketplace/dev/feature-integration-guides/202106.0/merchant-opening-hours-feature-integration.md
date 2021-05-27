@@ -491,3 +491,4 @@ Make sure that the following widget was registered:
 | FEATURE |  REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
 | Merchant Opening Hours API |  | [Glue API: Merchant Opening Hours feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/merchant-opening-hours-feature-integration.html) |
+

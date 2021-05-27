@@ -34,7 +34,7 @@ You can sort by offers belonging to a certain Merchant:
 To view an offer, on the *Offers* page, in the *Actions* column, click **View** next to the offer you want to view.
 
 **What's next?**
-To learn about the attributes you use to manage offers, see [Offers: Reference Information](/docs/marketplace/user/back-office-user-guides/202106.0/marketplace/offers/offers-reference-information.html).
+To learn about the attributes you use to manage offers, see [Offers: Reference Information](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/offers-reference-information.html).
 
 ## Related articles
 

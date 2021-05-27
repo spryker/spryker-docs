@@ -8,40 +8,43 @@ This endpoint allows retrieving general information about concrete products.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration)
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
-* [Glue API: Product Options Feature Integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
+* [Glue API: Products feature integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration)
+* [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
+* [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 * [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
 
 
 ## Retrieve a concrete product
+
 To retrieve general information about a concrete product, send the request:
 
 ---
-`GET` **/concrete-products/*{{concrete_product_sku}}***
+`GET` **/concrete-products/{% raw %}*{{concrete_product_sku}}*{% endraw %}**
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{{concrete_product_sku}}*** | SKU of a concrete product to get information for. |
+| {% raw %}***{{concrete_product_sku}}***{% endraw %} | SKU of a concrete product to get information for. |
 
 ### Request
 
-| String parameter | Description | Exemplary values |
+| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | concrete-product-image-sets, concrete-product-availabilities, product-options, product-reviews, product-offers, concrete-product-prices, product-measurement-units, sales-units, product-labels, product-offers, merchants |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
 
-:::(Warning) (Performance)
+{% info_block warningBox "Warning" %}
+
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
 * If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
 
-:::   
+{% endinfo_block %}
 
 
-| Request  | Usage |
+
+| REQUEST  | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Get information about the `001_25904006` product with its image sets.  |
@@ -51,9 +54,9 @@ To retrieve general information about a concrete product, send the request:
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Get information about the `001_25904006` product with its product options.  |
 | `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Get information about the `001_25904006` product with its product reviews.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Get information about the `001_25904006` product with its product offers.  |
-| `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product mesurement units included. |
+| `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information for a concrete product with SKU `001_25904006` with product offers included.<br>**This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.** |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information for a concrete product with the SKU `001_25904006` with product offers included.<br>**This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.** |
 | `GET https://glue.mysprykershop.com/concrete-products/111_12295890?include=abstract-products,merchants` | Retrieve information for a concrete product with SKU `111_12295890` with details on its abstract product and the merchant who sells it.<br>**This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.** |
 
 
@@ -861,7 +864,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with details on abstract product and the merchant who sells the concrete produuct</summary>
+<summary markdown='span'>Response sample with details on the abstract product and the merchant who sells the concrete product</summary>
 
 ```json
 {
@@ -976,7 +979,7 @@ To retrieve general information about a concrete product, send the request:
 <a name="concrete-products-response-attributes"></a>
 
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | SKU of the concrete product. |
 | name | String | Name of the concrete product. |
@@ -990,7 +993,7 @@ To retrieve general information about a concrete product, send the request:
 | productAbstractSku | String | Unique identifier of the abstract product owning this concrete product. |
 
 
-| Included resource | Attribute |Type |Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | product-options | sku | String | Specifies the SKU of the product option. |
 | product-options | optionName | String | Specifies the option name. |
@@ -1014,7 +1017,7 @@ For other attributes of the included resources, see:
 
 ## Possible errors
 
-| Code | Meaning |
+| CODE | REASON |
 | --- | --- |
 | 302 | Concrete product is not found. |
 

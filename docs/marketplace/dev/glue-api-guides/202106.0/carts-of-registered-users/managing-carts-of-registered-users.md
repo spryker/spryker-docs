@@ -7,10 +7,12 @@ template: glue-api-storefront-guide-template
 This endpoint allows managing carts by creating, retrieving, and deleting them.
 
 ## Multiple carts
+
 Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](https://documentation.spryker.com/docs/multiple-carts-feature-integration-201903), and Glue is [enabled for multi-cart operations](https://documentation.spryker.com/docs/multiple-carts-feature-integration-201903), registered users can have an unlimited number of carts.
 
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration)
 * [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
@@ -23,17 +25,20 @@ For detailed information on the modules that provide the API functionality and r
 
 To create a cart, send the request:
 
-***
+---
 `POST` **/carts**
-***
 
-:::(Info) ()
+---
+
+{% info_block infoBox "Info" %}
+
 Carts created via Glue API are always set as the default carts for the user.
-:::
+
+{% endinfo_block %}
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
 
@@ -53,10 +58,10 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 }
 ```
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | String | &check; | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the "422 Unprocessable Entry" status code. |
-| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](https://documentation.spryker.com/docs/net-gross-price){target="_blank"}. |
+| name | String | &check; | Sets the cart name.</br>This field can be set only if you are using the Multiple Carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the `422 Unprocessable Entry` status code. |
+| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](https://documentation.spryker.com/docs/net-gross-price). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
 
@@ -65,9 +70,9 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 <details>
 <summary markdown='span'>Response sample</summary>
-    
+
 ```json
-"data": 
+"data":
         {
             "type": "carts",
             "id": "f23f5cfa-7fde-5706-aefb-ac6c6bbadeab",
@@ -92,30 +97,32 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
         }
 }
 ```
-    
+
 </details>
 
 **General cart information**
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected whenthe cart was created. |
+| currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
 | name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
 | isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
 
 **Discount information**
-| Attribute | Type | Description |
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | displayName | String | Discount name. |
 | amount | Integer | Discount amount applied to the cart.  |
 | code | String | Discount code applied to the cart. |
 
 **Totals**
-| Attribute | Type | Description |
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including e.g. shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
 | taxTotal | String | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart.  |
@@ -126,48 +133,50 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 To retrieve all carts, send the request:
 
-***
+---
 `GET` **/carts**
-***
 
+---
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
 
-| Query parameter | Description | Exemplary values |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. |<ul><li>items</li><li>cart-permission-groups</li><li>shared-carts</li><li>company-users</li><li>cart-rules</li><li>promotional-items</li><li>vouchers</li><li>gift-cards</li><li>concrete-products</li><li>product-options</li><li>product-labels</li><li>offers</li><li>offer-availabilities</li><li>offer-prices</li></ul> |
-:::(Info) (Included resources)
+
+{% info_block infoBox "Info" %}
 
 * To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
 * To retrieve information about the company user a cart is shared with, include `shared-carts` and `company-users`.
 * To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
 * To retrieve information about product offers, include `items` and `concrete-products`.
-:::
 
-| Request | Usage |
+{% endinfo_block %}
+
+| REQUEST | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/carts` | Retrieve all carts of a user. |
 | `GET https://glue.mysprykershop.com/carts?include=items` | Retrieve all carts of a user with the items in them included.  |
 | `GET https://glue.mysprykershop.com/carts?include=cart-permission-groups` | Retrieve all carts of a user with cart permission groups included. |
 | `GET https://glue.mysprykershop.com/carts?include=shared-carts` | Retrieve all carts of a user with shared carts. |
-| `GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users` | Retrieve all carts of a user with information about shared carts and the company uses they are shared with. |
+| `GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users` | Retrieve all carts of a user with information about shared carts, and the company uses they are shared with. |
 | `GET https://glue.mysprykershop.com/carts?include=cart-rules` | Retrieve all carts of a user with cart rules. |
 | `GET https://glue.mysprykershop.com/carts?include=vouchers` | Retrieve all carts of a user with information about applied vouchers. |
 | `GET https://glue.mysprykershop.com/carts?include=promotional-items` | Retrieve information about promotional items for the cart. |
 | `GET https://glue.mysprykershop.com/carts?include=gift-cards` | Retrieve all carts of a user with applied gift cards. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options` | Retrieve all carts of a user with items, respective concrete product, and their product options. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels` | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
-| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-availabilities,product-offer-prices` | Retrieve all carts of a user with product offers included. <br>**This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.** |
+| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-availabilities,product-offer-prices` | Retrieve all carts of a user with product offers included. <br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %} |
 
 
-### Response 
+### Response
 
 <details>
-<summary markdown='span'>Response sample - no carts</summary>
+<summary markdown='span'>Response sample: no carts</summary>
 
 ```json
 {
@@ -181,7 +190,7 @@ To retrieve all carts, send the request:
 
 <details>
 <summary markdown='span'>Response sample: multiple carts</summary>
- 
+
 ```json
 {
     "data": [
@@ -1902,23 +1911,26 @@ This option is available only in case you have upgraded your shop to Marketplace
 <a name="retrieve-a-registered-users-carts-response-attributes"></a>
 
 **General cart information**
-| Attribute | Type | Description |
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected whenthe cart was created. |
+| currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
 | name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
 | isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
 
 **Discount information**
-| Attribute | Type | Description |
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | displayName | String | Discount name. |
 | amount | Integer | Discount amount applied to the cart.  |
 | code | String | Discount code applied to the cart. |
 
 **Totals**
-| Attribute | Type | Description |
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
@@ -1926,10 +1938,11 @@ This option is available only in case you have upgraded your shop to Marketplace
 | subTotal | Integer | Subtotal of the cart.  |
 | grandTotal | Integer | Grand total of the cart.  |
 | selectedProductOptions | array | List of attributes describing the product options that were added to cart with the product. |
-| priceToPay| Integer | Final price to pay after discounts with additions. | 
+| priceToPay| Integer | Final price to pay after discounts with additions. |
 
 **Product options**
-| Attribute | Type | Description |
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | selectedProductOptions.optionGroupName | String | Name of the group to which the option belongs. |
 | selectedProductOptions.sku | String | SKU of the product option. |
@@ -1937,7 +1950,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 | selectedProductOptions.price | Integer | Product option price in cents. |
 | selectedProductOptions.currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
 
-| Included resource | Attribute | Type | Description |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | promotional-items | id | String | Unique identifier of the promotional item. The ID can be used to apply the promotion to the given purchase. |
 | promotional-items | sku | String | SKU of the promoted abstract product. |
@@ -1962,19 +1975,19 @@ This option is available only in case you have upgraded your shop to Marketplace
 | company-users |  id | String | Unique identifier of the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) with whom the cart is shared. |
 | company-users |  isActive | Boolean | Defines if the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) is active. |
 | company-users |  isDefault | Boolean | Defines if the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) is default for the [customer](https://documentation.spryker.com/docs/authenticating-as-a-customer). |
-| product-offer-availabilities <br>This option is available only in case you have upgraded your shop to Marketplace provided by Spryker. | isNeverOutOfStock| Boolean | A boolean to show if this is an item that is never out of stock. |
+| product-offer-availabilities | isNeverOutOfStock| Boolean | A boolean to show if this is an item that is never out of stock. <br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %} |
 | product-offer-availabilities  | availability | Boolean | A boolean to inform you about availability. |
 | product-offer-availabilities | quantity | Integer | Available stock. |
-| product-offer-prices<br>This option is available only in case you have upgraded your shop to Marketplace provided by Spryker. | price  | Integer | Price to pay for the item in cents. |
-| product-offer-prices  | prices  | Array   | An array of prices for the Product Offer.|
+| product-offer-prices | price  | Integer | Price to pay for the item in cents. |
+| product-offer-prices  | prices  | Array   | An array of prices for the product offer.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
 | product-offer-prices | priceTypeName | String  | Price type. |
 | product-offer-prices | netAmount | Integer | Net price in cents. |
 | product-offer-prices | grossAmount | Integer | Gross price in cents.  |
 | product-offer-prices | currency.code | String  | Currency code. |
-| product-offer-prices | currency.name | String  | Currency name |
+| product-offer-prices | currency.name | String  | Currency name. |
 | product-offer-prices | currency.symbol | String  | Currency symbol.|
-| product-offers<br>This option is available only in case you have upgraded your shop to Marketplace provided by Spryker. | merchantSku | String  | SKU of the Merchant the Product Offer belongs to.|
-| product-offers | merchantReference | String  | Merchant Reference assigned to every Merchant. |
+| product-offers | merchantSku | String  | SKU of the merchant the product offer belongs to.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
+| product-offers | merchantReference | String  | Merchant reference assigned to every merchant. |
 | product-offers | isDefault  | Boolean | Defines whether the product offer is default or not. |
 
 For the attributes of the included resources, see:
@@ -1988,31 +2001,35 @@ For the attributes of the included resources, see:
 To retrieve a particular cart, send the request:
 
 ***
-`GET` **/carts/*{{cart_uuid}}***
+`GET` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}**
 ***
 
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{{cart_uuid}}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's cart](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's cart](#retrieve-a-registered-users-carts) to get it. |
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
 
-| Query parameter | Description | Exemplary values |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>items</li><li>cart-permission-groups</li><li>shared-carts</li><li>company-users</li><li>cart-rules</li><li>promotional-items</li><li>vouchers</li><li>gift-cards</li><li>concrete-products</li><li>product-options</li><li>product-labels</li><li>offers</li><li>offer-availabilities</li><li>offer-prices</li><li>merchants</li></ul> |
-:::(Info) (Included resources)
+
+{% info_block infoBox "Info" %}
+
 * To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
 * To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
 * To retrieve information on product offers, include `items`.
-:::
+
+{% endinfo_block %}
 
 
-| Request | Usage |
+
+| REQUEST | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart. |
 | `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=items` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its items, related concrete products and cart permission groups included. |
@@ -2025,8 +2042,8 @@ To retrieve a particular cart, send the request:
 | `GET https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options` | Retrieve the `8fc45eda-cddf-5fec-8291-e2e5f8014398` cart with items, respective concrete product, and their product options. |
 | `GET https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers` | Retrieve the `976af32f-80f6-5f69-878f-4ea549ee0830` cart with detailed information on its vouchers. |
 | `GET https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels` | Retrieve the `0c3ec260-694a-5cec-b78c-d37d32f92ee9` cart with information about the product labels assigned to the products in the cart. |
-| `GET http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a?include=items,concrete-products,product-offers,product-offer-availabilities,product-offer-prices` |Retrieve the `61ab15e9-e24a-5dec-a1ef-fc333bd88b0` cart with with detailed information on product offers, their prices and availability. <br>**This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.**|
-| `GET http://glue.mysprykershop.com/carts/54a8290f-a2f6-58db-ae5d-ad4d04aad6ae?include=items,merchants` | Retrieve the `54a8290f-a2f6-58db-ae5d-ad4d04aad6ae` cart with detailed information on merchant products.<br>**This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.** |
+| `GET http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a?include=items,concrete-products,product-offers,product-offer-availabilities,product-offer-prices` |Retrieve the `61ab15e9-e24a-5dec-a1ef-fc333bd88b0` cart with with detailed information on product offers, their prices and availability. <br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
+| `GET http://glue.mysprykershop.com/carts/54a8290f-a2f6-58db-ae5d-ad4d04aad6ae?include=items,merchants` | Retrieve the `54a8290f-a2f6-58db-ae5d-ad4d04aad6ae` cart with detailed information on merchant products.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %} |
 
 
 ### Response
@@ -2840,7 +2857,7 @@ To retrieve a particular cart, send the request:
 
 <details>
 <summary markdown='span'>Response sample with vouchers</summary>
-    
+
 ```json
 {
     "data": {
@@ -2911,7 +2928,7 @@ To retrieve a particular cart, send the request:
 
 <details>
 <summary markdown='span'>Response sample with product labels</summary>
-    
+
 ```json
 {
     "data": {
@@ -3432,25 +3449,27 @@ For the attributes of other included resources, see:
 You can edit the name of the cart, change the currency and price mode. To do that, send the request:
 
 ---
-`PATCH` **/carts/*{{cart_uuid}}***
+`PATCH` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}**
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
 
 
 
-:::(Info) (Info)
+{% info_block infoBox "Info" %}
 
 * You can change the price mode of an empty cart but not the one that has items in it.
 * Currency and store can be changed for an empty cart and for a cart with items anytime.
-:::
+
+{% endinfo_block %}
+
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
 | If-Match | 075d700b908d7e41f751c5d2d4392407 | &check; | Makes the request conditional. It matches the listed conditional ETags from the headers when retrieving the cart. The patch is applied only if the tag value matches. |
@@ -3472,10 +3491,10 @@ Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d3
 ```
 
 
-| Attribute | Type | Required | Description |
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | String | &check; | Sets the cart name.This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the `422 Unprocessable Entry` status code. Cart name should be unique and should not be longer than 30 characters.|
-| priceMode | Enum | &check | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net & Gross Prices](https://documentation.spryker.com/docs/net-gross-price). |
+| name | String | &check; | Sets the cart name.This field can be set only if you are using the Multiple Carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the `422 Unprocessable Entry` status code. Cart name should be unique and should not be longer than 30 characters.|
+| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net & Gross Prices](https://documentation.spryker.com/docs/net-gross-price). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
 
@@ -3483,8 +3502,7 @@ Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d3
 
 Response sample:
 
-```
-json
+```json
 {
     "data": {
         "type": "carts",
@@ -3517,23 +3535,25 @@ json
 To delete a cart, send the request:
 
 ---
-`DELETE` **/carts/*{{cart_uuid}}***
+`DELETE` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}**
 
 ---
 
 | Path parameter | Description |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %}| Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
 
 
 
-:::(Info) (Deleting carts)
-You cannot delete a cart if it is the customer's only cart. If you attempt to delete a customer's last cart, the endpoint responds with the **422 Unprocessable Entry** status code. If you delete the default cart of a customer, another cart will be assigned as default automatically.
-:::
+{% info_block infoBox "Deleting carts" %}
+
+You cannot delete a cart if it is the customer's only cart. If you attempt to delete a customer's last cart, the endpoint responds with the `422 Unprocessable Entry` status code. If you delete the default cart of a customer, another cart will be assigned as default automatically.
+
+{% endinfo_block %}
 
 ### Request
 
-| Header key | Header value | Required | Description |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
 
@@ -3548,7 +3568,7 @@ If the cart is deleted successfully, the endpoint returns the `204 No Content`�
 ## Possible errors
 
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to cart. |

@@ -564,5 +564,5 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html) |
-| Marketplace Order Management + Cart |  | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html)|
+| Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-order-management-order-threshold-feature-integration.html) |
+| Marketplace Order Management + Cart |  | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-order-management-cart-feature-integration.html)|

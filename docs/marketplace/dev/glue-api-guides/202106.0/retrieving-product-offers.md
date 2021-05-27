@@ -1,30 +1,35 @@
 ---
-title: Retrieving product offers 
+title: Retrieving product offers
 description: Retrieve Marketplace product offers via API
 template: glue-api-storefront-guide-template
 ---
 
+{% info_block warningBox "Note" %}
+
+This resource is available only in case you have upgraded your shop to the Marketplace provided by Spryker.
+
+{% endinfo_block %}
+
 Product offers allow different merchants to sell the same product on the Marketplace. Product offers are created per concrete products, and you can get the offer information via retrieving the product information.
 
-In your development, roduct offers API can help you to retrieve relevant extended information for product offers.
+In your development, product offers API can help you to retrieve relevant extended information for product offers.
 
-## Installation 
+## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see GLUE API: Merchant Offers Feature Integration.
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html).
 
 ## Retrieve product offers
 
 To retrieve the product offers, send the request:
 
-------
+---
+GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 
-GET **/product-offers/*{{offerId}}***
+---
 
-------
-
-| PATH PARAMETER| DESCRIPTION                |
+| PATH PARAMETER| DESCRIPTION |
 | ------------------ | ------------------------------------------------------------ |
-| ***{{offerID}}***        | A unique identifier of a product offer. You can get it is the response when retrieving the offers available for the product concrete. |
+| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer. You can get it in response when retrieving the offers available for the product concrete. |
 
 ### Request
 
@@ -62,7 +67,7 @@ GET **/product-offers/*{{offerId}}***
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer prices, product offer availabilities and merchant information</summary>
+<summary markdown='span'>Response sample with product offer prices, product offer availabilities, and merchant information</summary>
 
 ```json
 {
@@ -203,23 +208,23 @@ GET **/product-offers/*{{offerId}}***
 
 **General product offer information**
 
-| Attribute   | Type | Description      |
+| ATTRIBUTE   | TYPE | DESCRIPTION      |
 | --------------- | -------- | -------------------- |
-| merchantSku       | String   | SKU which Merchant uses to identify the offer. |
-| merchantReference | String   | Merchant Reference assigned to every Merchant. |
+| merchantSku       | String   | SKU a merchant uses to identify the offer. |
+| merchantReference | String   | Merchant reference assigned to every merchant. |
 | isDefault         | Boolean  | Defines whether the Product Offer is default for the concrete product. |
 
 **Product offer availability information**
 
-| Attribute  | Type| Description          |
+| ATTRIBUTE  | TYPE | DESCRIPTION |
 | ----------------- | -------- | ------------------------ |
-| isNeverOutOfStock | boolean  | A boolean to show if this is an item that is never out of stock. |
+| isNeverOutOfStock | boolean  | Boolean to show if this is an item that is never out of stock. |
 | availability  | boolean  | Boolean to inform you about availability.    |
 | quantity          | integer  | Available stock.  |
 
 **Product offer prices information**
 
-| Attribute | Type | Description*   |
+| ATTRIBUTE  | TYPE | DESCRIPTION |
 | --------------- | -------- | -------------------------------------- |
 | price           | Integer  | Price to pay for the product in cents. |
 | priceTypeName   | String   | Price type.                            |
@@ -231,7 +236,7 @@ GET **/product-offers/*{{offerId}}***
 
 **Merchant information**
 
-| Attribute  | Type | Description       |
+| ATTRIBUTE  | TYPE | DESCRIPTION |
 | ----------------- | -------- | ---------------------- |
 | merchantName           | String   | Merchant’s name. |
 | merchantUrl            | String   | Merchant’s profile URL. |
@@ -262,13 +267,13 @@ To retrieve the product offer availability, send the request:
 
 ------
 
-GET **/product-offers/*{{offerId}}*/product-offer-availabilities**
+GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}/product-offer-availabilities**
 
 ------
 
-| PATH PARAMETER | DESCRIPTION        |
+| PATH PARAMETER | DESCRIPTION |
 | ------------------ | ---------------------- |
-| offerID   | A unique identifier of a product offer. You can get it is the response when retrieving the offers available for the product concrete. |
+| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer. You can get it in response when retrieving the offers available for the product concrete. |
 
 ### Request
 
@@ -278,7 +283,7 @@ Request sample: `https://glue.mysprykershop.com/product-offers/offer56/product-o
 
 Response sample:
 
-```
+```json
 {
     "data": [
         {
@@ -306,15 +311,14 @@ Find all the related attribute descriptions in [Retrieve product offers](#retrie
 
 To retrieve the product offer prices, send the request:
 
-------
+---
+GET **/product-offers/{% raw %}*{{offerID}}*{% endraw %}/product-offer-prices**
 
-GET **/product-offers/*{{offerID}}*/product-offer-prices**
-
-------
+---
 
 | PATH PARAMETER | DESCRIPTION |
 | ------------------ | ------------------------------------------------------------ |
-| offerID      | A unique identifier of a product offer. You can get it is the response when retrieving the offers available for the product concrete. |
+| {% raw %}***{{offerID}}***{% endraw %} | Unique identifier of a product offer. You can get it in response when retrieving the offers available for the product concrete. |
 
 ### Request
 
@@ -324,7 +328,7 @@ Request sample: `GET http://glue.mysprykershop.com/product-offers/offer54/produc
 
 Response sample:
 
-```
+```json
 {
     "data": [
         {
@@ -372,18 +376,17 @@ Find all the related attribute descriptions in [Retrieve product offers](#retrie
 
 You can use the product offers resource as follows:
 
-- Retrieve information about the existing product offers of a concrete product - Retrieve Product Offers
-- Add Product Offers to a guest cart - Creating a Guest Cart
-- Retrieve information for the Product Offers in a guest cart- Retrieving a Guest Cart
-- Add Product Offers to a registered user's cart - Adding items to a Cart of a Registered user
-- Retrieve information for the Product Offers in registered users' carts- Retrieving all Carts
+- Retrieve information about the existing product offers of a concrete product - [Retrieve Product Offers](/docs/marketplace/dev/glue-api-guides/202106.0/retrieving-product-offers.html)
+- Add product offers to a guest cart—[Creating a guest cart](/docs/marketplace/dev/glue-api-guides/202106.0/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
+- Retrieve information for the product offers in a guest cart—[Retrieving a guest cart](/docs/marketplace/dev/glue-api-guides/202106.0/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
+- Add product offers to a registered user's cart—[Adding items to a cart of a registered user](docs/marketplace/dev/glue-api-guides/202106.0/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
+- Retrieve information for the product offers in registered users' carts—[Retrieving all carts](/docs/marketplace/dev/glue-api-guides/202106.0/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts).
 
 ## Possible errors
 
-| CODE | DESCRIPTION           |
-| -------- | ---------------------------------- |
-| 3701     | Product offer was not found.           |
+| CODE | DESCRIPTION |
+| - | -  |
+| 3701     | Product offer was not found. |
 | 3702     | Product offer ID is not specified. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
-

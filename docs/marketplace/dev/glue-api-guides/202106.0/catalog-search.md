@@ -10,37 +10,41 @@ In your development, this endpoint can help you to:
 * Implement catalog search functionality, including the category tree, facets, and pagination.
 * Retrieve a list of products to be displayed anywhere you want.
 
-## Installation 
+## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see Glue API: Catalog feature integration.
 
 ## Search by products
 To search by products, send the request:
-***
+
+---
 `GET` /**catalog-search**
-***
+
+---
 
 ### Request
 
-| Query parameter | Description  | Possible values |
+| QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ------------------- | ---------------- | ----------------------- |
 | include   | Adds resource relationships to the request.      | abstract-products   |
-| q      | Restricts the set of the returned items to the provided parameter value. | <ul><li>{{null}} (empty)</li><li>{{abstract_product_sku}}</li><li>{{abstract_product_name}}</li><li>{{concrete_product_sku}}</li><li>{{product_attribute}} (brand, color, etc.) - to provide multiple product attributes, use `+`</li> |
-| price[min]   | Specifies minimum prices of the products     | {{minimum_price}}  |
-| price[max]   | Specifies maximum prices of the products  | {{maximum_price}}  |
-| brand  | Specifies the product brand   | {{brand_name}} |
-| label   | Specifies the product label  | {{label}} |
-| weight  | Specifies the product weight  | {{weight}} |
-| color  | Specifies the product color  | {{color}}     |
-| storage_capacity[]  | Specifies the storage capacity of a product  |{{storage_capacity}}   |
-| rating[min]   | Specifies the minimum rating of a product   | {{rating}}   |
-| category  | Specifies the category to search the products in  | {{category_node_id}}For the category node IDs, retrieve the category tree. |
-| currency   | Sets a currency    | {{currency}}    |
+| q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color, etc.)—to provide multiple product attributes, use `+`</li></ul> |
+| price[min]   | Specifies minimum prices of the products     | {% raw %}{{minimum_price}}{% endraw %}  |
+| price[max]   | Specifies maximum prices of the products  | {% raw %}{{maximum_price}}{% endraw %}  |
+| brand  | Specifies the product brand   | {% raw %}{{brand_name}}{% endraw %} |
+| label   | Specifies the product label  | {% raw %}{{label}}{% endraw %} |
+| weight  | Specifies the product weight  | {% raw %}{{weight}}{% endraw %} |
+| color  | Specifies the product color  | {% raw %}{{color}}{% endraw %}     |
+| storage_capacity[]  | Specifies the storage capacity of a product  |{% raw %}{{storage_capacity}}{% endraw %}   |
+| rating[min]   | Specifies the minimum rating of a product   | {% raw %}{{rating}}{% endraw %}   |
+| category  | Specifies the category to search the products in  | {% raw %}{{category_node_id}}{% endraw %}For the category node IDs, retrieve the category tree. |
+| currency   | Sets a currency    | {% raw %}{{currency}}{% endraw %}    |
 | sort  | Sorts the search results   | For the list of possible values, run the [catalog search request and find the list under sortParamNames in the response. For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
-| page  | Sets the number of the search results page from which the results are retrieved | {{page_number}}    |
-| ipp   | Sets the number of products per page  | {{number_of_products}}  |
-| merchant_name | Filters the results by Merchant name.  | {{name_of_the_merchant}} </b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>|
+| page  | Sets the number of the search results page from which the results are retrieved | {% raw %}{{page_number}}{% endraw %}    |
+| ipp   | Sets the number of products per page  | {% raw %}{{number_of_products}}{% endraw %}  |
+| merchant_name | Filters the results by the merchant name.  | {% raw %}{{name_of_the_merchant}}{% endraw %} </b><section contenteditable="false" class="errorBox"><div class="content"><br>{% info_block warningBox "Note" %}This option is available only for the Spryker Marketplace shop.{% endinfo_block %}</div></section>|
 
-| Request   | Usage     |
+
+
+| REQUEST   | USAGE     |
 | --------------- | -------------- |
 | `GET https://glue.mysprykershop.com/catalog-search?q=`       | Search for all available products.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=058`       | Search for an abstract product by SKU *058*.   |
@@ -63,13 +67,13 @@ To search by products, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc` | Sort found products by price ascending.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set number of products per page.   |
-| `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by  the *Spryker* merchant name.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
+| `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by  the *Spryker* merchant name.</b><section contenteditable="false" class="errorBox"><div class="content"><br>{% info_block warningBox "Note" %}This option is available only for the Spryker Marketplace shop.{% endinfo_block %}</div></section> |
 
 ### Response
 
 
 <details>
-<summary markdown='span'>Response sample - empty search criteria</summary>
+<summary markdown='span'>Response sample: empty search criteria</summary>
 
 ```json
 {
@@ -425,11 +429,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Respnse sample - search for an abstract product</summary>
+<summary markdown='span'>Respnse sample: search for an abstract product</summary>
 
 ```json
 {
@@ -702,11 +707,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - search for an abstract product with the included abstract product details</summary>
+<summary markdown='span'>Response sample: search for an abstract product with the included abstract product details</summary>
 
 ```json
 {
@@ -1106,11 +1112,12 @@ To search by products, send the request:
     ]
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - search for a concrete product</summary>
+<summary markdown='span'>Response sample: search for a concrete product</summary>
 
 ```json
 {
@@ -1383,11 +1390,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - multiple product attributes in search request</summary>
+<summary markdown='span'>Response sample: multiple product attributes in search request</summary>
 
 ```json
 {
@@ -1800,11 +1808,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - search with minimum and maximum price range</summary>
+<summary markdown='span'>Response sample: search with minimum and maximum price range</summary>
 
 ```json
 {
@@ -2171,11 +2180,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Respnse sample - search by brand</summary>
+<summary markdown='span'>Respnse sample: search by brand</summary>
 
 ```json
 {
@@ -2490,11 +2500,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - search by labels</summary>
+<summary markdown='span'>Response sample: search by labels</summary>
 
 ```json
 {
@@ -2777,11 +2788,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - search by weight</summary>
+<summary markdown='span'>Response sample: search by weight</summary>
 
 ```json
 {
@@ -3094,11 +3106,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - search by color</summary>
+<summary markdown='span'>Response sample: search by color</summary>
 
 ```json
 {
@@ -3448,11 +3461,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response - search by storage capacity</summary>
+<summary markdown='span'>Response: search by storage capacity</summary>
 
 ```json
 {
@@ -3719,11 +3733,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - search by rating</summary>
+<summary markdown='span'>Response sample: search by rating</summary>
 
 ```json
 {
@@ -3961,11 +3976,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - search by category</summary>
+<summary markdown='span'>Response sample: search by category</summary>
 
 ```json
 {
@@ -4173,11 +4189,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - setting the search results currency</summary>
+<summary markdown='span'>Response sample: setting the search results currency</summary>
 
 ```json
 {
@@ -4400,11 +4417,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - sorting order ascending</summary>
+<summary markdown='span'>Response sample: sorting order ascending</summary>
 
 ```json
 {
@@ -4820,11 +4838,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - sorting order descending</summary>
+<summary markdown='span'>Response sample: sorting order descending</summary>
 
 ```json
 {
@@ -5136,11 +5155,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - sorting by rating</summary>
+<summary markdown='span'>Response sample: sorting by rating</summary>
 
 ```json
 {
@@ -5433,11 +5453,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - sorting by price ascending</summary>
+<summary markdown='span'>Response sample: sorting by price ascending</summary>
 
 ```json
 {
@@ -5747,11 +5768,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - setting a page of search</summary>
+<summary markdown='span'>Response sample: setting a page of search</summary>
 
 ```json
 {
@@ -6005,11 +6027,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - setting a number of products per page</summary>
+<summary markdown='span'>Response sample: setting a number of products per page</summary>
 
 ```json
 {
@@ -6311,11 +6334,12 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample - filtering search results by Merchant name</summary>
+<summary markdown='span'>Response sample: filtering search results by Merchant name</summary>
 
 </b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>
 
@@ -6728,22 +6752,23 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 <a name="sorting"></a>
 
 **Sorting parameters**
 
-| Attribute       | Type | Description     |
+| ATTRIBUTE       | TYPE | DESCRIPTION     |
 | --------------- | -------- | ----------------------- |
-| sortParamNames   | Array    | List of the possible sorting parameters. The default Spryker Demo Shop parameters:<ul><li>`rating` - sorting by product rating</li><li>`name_asc` - sorting by name, ascending</li><li>`name_desc` - sorting by name, descending</li><li>`price_asc` - sorting by price, ascending</li><li>`price_desc` - sorting by price, descending</li></ul> |
+| sortParamNames   | Array    | List of the possible sorting parameters. The default Spryker Demo Shop parameters:<ul><li>`rating`—sorting by product rating.</li><li>`name_asc`—sorting by name, ascending.</li><li>`name_desc`—sorting by name, descending.</li><li>`price_asc`—sorting by price, ascending.</li><li>`price_desc`—sorting by price, descending.</li></ul> |
 | sortParamLocalizedNames | Object   | Localized names of the sorting parameters. |
 | currentSortParam  | String   | The currently applied sorting parameter.  |
 | currentSortOrder | String   | The current sorting order. |
 
 **Pagination**
 
-| Attribute  |Type | Description   |
+| ATTRIBUTE  |TYPE | DESCRIPTION   |
 | --------- | -------- | ---------- |
 | numFound | Integer  | Number of the search results found.  |
 | currentPage  | Integer  | The current search results page.   |
@@ -6756,20 +6781,20 @@ To search by products, send the request:
 
 **Abstract products**
 
-| Attribute | Type | Description  |
+| ATTRIBUTE | TYPE | DESCRIPTION  |
 | ---------- | -------- | --------------- |
-| abstractSku   | String   | SKU of the abstract product.  |
-| abstractName  | String   | Name of the abstract product. |
+| abstractSku   | String   | Abstract product SKU.  |
+| abstractName  | String   | Abstract product name. |
 | images        | Array    | Links to product images.      |
 
 For other abstract product attributes, see:
 
-* [Retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products){target="_blank"}
-* [Retrieving abstract product prices](https://documentation.spryker.com/docs/retrieving-abstract-product-prices){target="_blank"}
+* [Retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)
+* [Retrieving abstract product prices](https://documentation.spryker.com/docs/retrieving-abstract-product-prices)
 
 **Value facets**
 
-| Attribute| Type | Description  |
+| ATTRIBUTE| TYPE | DESCRIPTION  |
 | ------------- | -------- | ------------------ |
 | name   | String | Name of the value facet.     |
 | localizedName | String   | Localized name of the value facet.  |
@@ -6780,7 +6805,7 @@ For other abstract product attributes, see:
 
 **Range facets**
 
-| Attribute | Type | Description   |
+| ATTRIBUTE | TYPE | DESCRIPTION   |
 | ---------- | -------- | ------------------ |
 | name  | String  | Name of the range facet.  |
 | localizedName | String  | Localized name of the range facet.   |
@@ -6793,7 +6818,7 @@ For other abstract product attributes, see:
 
 **Category tree filter**
 
-| Attribute | Type| Description        |
+| ATTRIBUTE | TYPE| DESCRIPTION        |
 | ------------- | -------- | --------------- |
 | nodeId   | Integer  | Category node ID.   |
 | name    | String   | Category name.      |
@@ -6802,10 +6827,8 @@ For other abstract product attributes, see:
 
 ## Possible errors
 
-| **Code** | **Reason**  |
+| CODE | REASON  |
 | -------- | ------------ |
 | 501      | Invalid currency.   |
 | 502      | Invalid price mode.  |
 | 503      | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
-
-

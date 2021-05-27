@@ -8,57 +8,56 @@ Every registered customer can retrieve the list of orders for their account, as 
 
 In your development, this resource can help you to:
 
-- Make the order history available to customers
-- Make order details available to enable reordering functionality
+- Make the order history available to customers.
+- Make order details available to enable reordering functionality.
 
 The **Order History API** allows you to retrieve all orders made by a registered customer.
 
 **Authentication**
 
-Since order history is available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [**Authentication and Authorization**](https://documentation.spryker.com/docs/retrieving-customers-order-history).
+Since order history is available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [**Authentication and authorization**](https://documentation.spryker.com/docs/retrieving-customers-order-history).
 
-## Installation 
+## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-- [**Glue API: Order Management Feature Integration**](https://documentation.spryker.com/docs/glue-api-order-management-feature-integration)
+- [**Glue API: Order Management feature integration**](https://documentation.spryker.com/docs/glue-api-order-management-feature-integration)
 
 ## Retrieve all orders
 
 To retrieve a list of all orders made by a registered customer, send the request:
 
-------
-
+---
 `GET` **/orders**
 
-------
+---
 
 ### Request
 
 | HEADER KEY  | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | -------------------------------- |
-| Authorization | string   | ✓  | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
 
-| Query Parameter | Description  | Possible Value  |
+| QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ---------------- | ---------------------- | ----------------------------- |
 | offset | The offset of the order at which to begin the response. Works only together with page[limit]. To work correctly, the value should be devisable by the value of page[limit]. The default value is 0. | From 0 to any. |
 | limit | The maximum number of entries to return. Works only together with page[offset]. The default value is 10. | From 1 to any. |
-| include | Adds resource relationships to the request.  | merchantsThis option is available only in case you have upgraded your shop to the Marketplace provided by Spryker. |
+| include | Adds resource relationships to the request.  | merchants<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %}. |
 
-| Request | Usage  |
+| REQUEST | USAGE  |
 | --------------------- | ------------------ |
 | GET https://glue.mysprykershop.com/orders  | Retrieve all customer’s orders.  |
 | GET https://glue.mysprykershop.com/orders?page[limit]=10  | Retrieve 10 orders. |
 | GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10 | Retrieve orders 11 through 20.  |
-| GET https://glue.mysprykershop.com/orders?page[offset]=20  | Retrieve all orders starting from the twenty first order.  |
-| GET https://glue.mysprykershop.com/orders?include=merchants  | Retrieve all customer’s orders with the information on merchants included.This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker. |
+| GET https://glue.mysprykershop.com/orders?page[offset]=20  | Retrieve all orders starting from the twenty-first order.  |
+| GET https://glue.mysprykershop.com/orders?include=merchants  | Retrieve all customer’s orders with the information on merchants included.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %}. |
 
 ### Response
 
 The endpoint responds with an array of orders placed by the authenticated customer. In response, each order will have a unique identifier. It is specified in the *id* attribute. You can use the ID to retrieve detailed order information. Also, *self* links will be provided to access the order individually using the REST API.
 
 <details>
-<summary markdown='span'>Response sample - all orders</summary>
+<summary markdown='span'>Response sample: all orders</summary>
 
 ```json
 {
@@ -519,17 +518,17 @@ This option is available only in case you have upgraded your shop to the Marketp
 
 | ATTRIBUTE    | TYPE  | DESCRIPTION     |
 | -------------- | -------- | ----------------------- |
-| merchantReferences | Array    | Merchant reference in the system. See https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1003847807 for more details.This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker. |
-| itemStates  | Array  | The state of the item in the order.    |
+| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html) for more details.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %}. |
+| itemStates  | Array  | State of the item in the order.    |
 | createdAt  | String   | Date and time when the order was created.    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
-| priceMode  | String | Price mode that was active when placing the order. Possible values:<ul><li>NET_MODE - prices before tax</li><li>GROSS_MODE - prices after tax</li></ul> |
+| priceMode  | String | Price mode that was active when placing the order. Possible values:<ul><li>NET_MODE—prices before tax</li><li>GROSS_MODE—prices after tax</li></ul> |
 
 **Totals calculation**
 
 |    ATTRIBUTE    | TYPE  |DESCRIPTION               |
 | ----------------- | ------- | ------------------------------------------------------- |
-| expenseTotal      | Integer | Total amount of expenses (for example: shipping costs). |
+| expenseTotal      | Integer | Total amount of expenses (for example, shipping costs). |
 | discountTotal     | Integer | Total amount of discounts applied.                      |
 | taxTotal          | Integer | Total amount of taxes paid.                             |
 | subtotal          | Integer | Subtotal of the order.                                  |
@@ -543,31 +542,30 @@ For the attributes of the included resources, see, [Retrieving merchant informat
 
 To retrieve detailed information on an order, send the request:
 
-------
+---
+GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 
-GET **/orders/*****{{order_id}}***
-
-------
+---
 
 | PATH PARAMETER | DESCRIPTION     |
 | ------------------ | ------------------------------------------------------------ |
-| ***{{order_id}}***         | A unique identifier of an order. [Retrieve all orders](https://documentation.spryker.com/docs/en/retrieving-customers-order-history#retrieving-all-orders) to get it. |
+| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](https://documentation.spryker.com/docs/en/retrieving-customers-order-history#retrieving-all-orders) to get it. |
 
 ### Request
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION |
 | ------------- | ------------ | -------- | ---------------------- |
-| Authorization | string       | ✓        | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
 
-| Request  | Usage    |
+| REQUEST | USAGE |
 | ------------------------ | ------------------------ |
 | `GET http://glue.mysprykershop.com/orders/DE--2`   | Retrieve information about the DE--1 order.  |
-| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order DE--3 with information on merchants.This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker. |
+| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order DE--3 with information on merchants.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %}. |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample - a specific order</summary>
+<summary markdown='span'>Response sample: a specific order</summary>
 
 ```json
 {
@@ -1153,16 +1151,16 @@ GET **/orders/*****{{order_id}}***
 | ATTRIBUTE     | TYPE | DESCRIPTION            |
 | ------------------ | -------- | ------------------------ |
 | merchantReferences | Array    | Merchant reference in the system.This option is available only in case you have upgraded your shop to the Marketplace( provided by Spryker. |
-| itemStates         | Array    | The state of the item in the order.                          |
+| itemStates         | Array    | State of the item in the order.                          |
 | createdAt          | String   | Date and time when the order was created.           |
 | currencyIsoCode    | String   | ISO 4217 code of the currency that was selected when placing the order. |
-| priceMode          | String   | Price mode that was active when placing the order. Possible values:<ul><li>NET_MODE - prices before tax</li><li>GROSS_MODE - prices after tax</li><ul> |
+| priceMode          | String   | Price mode that was active when placing the order. Possible values:<ul><li>NET_MODE—prices before tax.</li><li>GROSS_MODE—prices after tax.</li><ul> |
 
 **Totals calculations**
 
 | ATTRIBUTE     | TYPE | DESCRIPTION                |
 | ----------------- | -------- | --------------- |
-| expenseTotal      | Integer  | Total amount of expenses (for example: shipping costs). |
+| expenseTotal      | Integer  | Total amount of expenses (for example, shipping costs). |
 | discountTotal     | Integer  | Total amount of discounts applied.                      |
 | taxTotal          | Integer  | Total amount of taxes paid.                             |
 | subtotal          | Integer  | Subtotal of the order.                                  |
@@ -1188,8 +1186,8 @@ GET **/orders/*****{{order_id}}***
 | phone             | String   | Specifies the customer's phone number.                       |
 | cellPhone         | String   | Mobile phone number.                                         |
 | email             | String   | Email address to use for communication.                      |
-| isDefaultShipping | Boolean  | Specifies whether the address should be used as the default shipping address of the customer:If the parameter is not set, the default value is *true*.If the customer does not have a default shipping address, the value is *true*. |
-| isDefaultBilling  | Boolean  | Specifies whether the address should be used as the default billing address of the customerIf the parameter is not set, the default value is *true*.If the customer does not have a default billing address, the value is *true*.. |
+| isDefaultShipping | Boolean  | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is `true`. If the customer does not have a default shipping address, the value is 'true'. |
+| isDefaultBilling  | Boolean  | Specifies whether the address should be used as the default billing address of the customerIf the parameter is not set, the default value is `true`. If the customer does not have a default billing address, the value is `true`. |
 | iso2Code          | String   | ISO 2-Letter Country Code to use.                            |
 | description       | String   | Address description.                                         |
 | comment           | String   | Address comment.                                             |
@@ -1240,7 +1238,7 @@ GET **/orders/*****{{order_id}}***
 | taxAmountAfterCancellation    | Integer  | Tax amount after cancellation, recalculated using tax average. |
 | uuid    | String   | Unique identifier of the order.    |
 | isReturnable    | Boolean  | Specifies whether the sales order item is returnable or not. |
-| superAttributes    | String   | *Always empty. Since products purchased are concrete products, and super attributes are available for abstract products, this field is expected to be empty at all times.* |
+| superAttributes    | String   | Always empty. Since products purchased are concrete products, and super attributes are available for abstract products, this field is expected to be empty at all times. |
 | image    | String   | Product image URL.     |
 
 **Calculated discounts for items**
@@ -1270,7 +1268,7 @@ GET **/orders/*****{{order_id}}***
 | sumAmount     | Integer  | Total amount of the discount provided by the given item, in cents. |
 | displayName   | String   | Display name of the given discount.                          |
 | description   | String   | Description of the given discount.                           |
-| voucherCode   | String   | Voucher code applied, if any.                                |
+| voucherCode   | String   | Voucher code applied if any.                                |
 | quantity      | String   | Number of times the discount was applied.                    |
 
 **Expenses**
@@ -1288,7 +1286,7 @@ GET **/orders/*****{{order_id}}***
 | canceledAmount   | Integer  | Total canceled amount for this item (order only).  |
 | unitDiscountAmountAggregation | Integer  | Item total discount amount.   |
 | sumDiscountAmountAggregation  | Integer  | Sum of items' total discount amount.    |
-| unitTaxAmount    | Integer  | Tax amount for a single item, after discounts.   |
+| unitTaxAmount    | Integer  | Tax amount for a single item after discounts.   |
 | sumTaxAmount     | Integer  | Tax amount for a sum of items (order only).   |
 | unitPriceToPayAggregation  | Integer  | Item total price to pay after discounts with additions.   |
 | sumPriceToPayAggregation   | Integer  | Sum of items' total price to pay after discounts with additions. |
@@ -1299,8 +1297,8 @@ GET **/orders/*****{{order_id}}***
 | ATTRIBUTE  | TYPE | DESCRIPTION              |
 | --------------- | -------- | ----------------------------- |
 | salesUnit       | Object   | List of attributes defining the sales unit to be used for item amount calculation. |
-| conversion      | integer  | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
-| precision       | integer  | Ratio between a sales unit and a base unit.                  |
+| conversion      | integer  | Factor to convert a value from sales to a base unit. If it is `null`, the information is taken from the global conversions. |
+| precision       | integer  | Ratio between a sales unit and base unit.                  |
 | measurementUnit | string   | Code of the measurement unit.                                |
 | name            | String   | Name of the measurement unit.                                |
 | code            | String   | Code of the measurement unit.                                |

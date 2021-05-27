@@ -4,9 +4,9 @@ description: Learn how to resolve search engine friendly URLs via Glue API in th
 template: glue-api-storefront-guide-template
 ---
 
-This endpoints allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
+This endpoint allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
 
-For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see: 
+For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see:
 * [Retrieve an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-products#retrieve-an-abstract-product)
 * [Retrieve a category tree](https://documentation.spryker.com/docs/retrieving-category-trees#retrieve-a-category-tree)
 * [Retrieve a category node](https://documentation.spryker.com/docs/retrieving-category-nodes#retrieve-a-category-node)
@@ -15,30 +15,32 @@ For SEO purposes, Spryker automatically generates SEF URLs for products and cate
 
 In your development, the endpoints can help you to:
 
-* significantly boost the SEO presence of your product store
-* increase search engine ranking of your online store
+* significantly boost the SEO presence of your product store.
+* increase the search engine ranking of your online store.
 
-To facilitate their usage, Spryker Glue provides an endpoint that allows resolving a SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `http://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the URLs API.
+To facilitate their usage, Spryker Glue provides an endpoint that allows resolving an SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `http://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the URLs API.
 
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Сore feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration).
 
 ## Resolve a SEF URL into a Glue API URL
 
 To resolve a SEF URL into a Glue API URL, send the request:
 
-***
-`GET` **/url-resolver?url=*{% raw %}{{{SEF URL}}}{% endraw %}*****
-***
+---
+`GET` **/url-resolver?url={% raw %}*{{SEF URL}}*{% endraw %}**
 
-| Path parameter  | Description       |
+---
+
+| PATH PARAMETER  | DESCRIPTION |
 | --------------- | ---------------- |
-| ***{% raw %}{{{SEF URL}}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)</li><li>[retrieving category nodes](https://documentation.spryker.com/docs/retrieving-category-nodes)</li><li>[retrieving cms pages](https://documentation.spryker.com/upcoming-release/docs/retrieving-cms-pages)</li><li>[retrieving merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)</li></ul>|
+| ***{% raw %}{{SEF URL}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)</li><li>[retrieving category nodes](https://documentation.spryker.com/docs/retrieving-category-nodes)</li><li>[retrieving cms pages](https://documentation.spryker.com/upcoming-release/docs/retrieving-cms-pages)</li><li>[retrieving merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)</li></ul>|
 
 ### Request
 
-| Header key  | Header value | Required | Description    |
+| HEADER KEY  | HEADER VALUE | REQUIRED | DESCRIPTION    |
 | -------------- | ------------ | ------------ | -------------- |
 | Accept-Language | de          | ✓      | Specifies the locale. |
 
@@ -53,7 +55,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 <details>
 <summary markdown='span'>Response sample of a product URL</summary>
-    
+
 ```json
 {
     "data": [
@@ -78,7 +80,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 <details>
 <summary markdown='span'>Response sample of a category node URL</summary>
-    
+
 ```json
 {
     "data": [
@@ -153,7 +155,7 @@ This option is available only in case you have upgraded your shop to the Marketp
 ```
 </details>
 
-| Attribute | Type | Description |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | entityType | String | Resource type, like `abstract-products` or `category-nodes`, `cms-pages` or `merchants`. |
 | entityId | String | Unique resource identifier. |
@@ -166,12 +168,9 @@ Using the information from the response and the Glue server name, you can constr
 
 ## Possible errors
 
-| Status | Reason |
+| STATUS | REASON |
 | --- | --- |
 | 404 | The provided URL does not exist. |
 | 422 | The `url` parameter is missing. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
-
-
-

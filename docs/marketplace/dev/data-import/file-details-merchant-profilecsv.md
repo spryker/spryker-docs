@@ -40,7 +40,9 @@ The file should have the following parameters:
 | latitude |   | String |   |   | This field identifies merchant’s location. |
 
 ## Import file dependencies
-The file has the following dependencies: [File details - merchant.csv](/docs/marketplace/dev/data-import/file-details-merchantcsv.html).
+The file has the following dependencies: 
+- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchantcsv.html)
+- [glossary.csv]?(https://documentation.spryker.com/docs/file-details-glossarycsv)
 
 ## Import template file and content example
 Find the template and an example of the file below:

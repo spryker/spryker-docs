@@ -28,7 +28,7 @@ The file should have the following parameters:
 | url.de_DE | &check; | String |   | Defined per locale. | Merchant page URL in the storefront for DE store. |
 
 ## Import file dependencies
-The file has the following dependencies: [File details - merchant_profile.csv](/docs/marketplace/dev/data-import/file-details-merchant-profilecsv.html).
+The file has the following dependencies: [merchant_profile.csv](/docs/marketplace/dev/data-import/file-details-merchant-profilecsv.html).
 
 ## Import template file and content example
 

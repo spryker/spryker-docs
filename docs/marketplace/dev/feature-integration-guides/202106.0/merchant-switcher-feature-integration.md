@@ -301,4 +301,4 @@ Make sure that the following widgets were registered:
 
 | FEATURE | INTEGRATION GUIDE |
 | - | - |
-| Merchant Switcher Feature + Customer Account Management | [Marketplace Order Management + Customer Account Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html) |
+| Merchant Switcher Feature + Customer Account Management | [Marketplace Order Management + Customer Account Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-order-management-customer-account-management-feature-integration.html) |

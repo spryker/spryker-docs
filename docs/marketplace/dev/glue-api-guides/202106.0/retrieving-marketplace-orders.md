@@ -46,11 +46,11 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | REQUEST | USAGE  |
 | --------------------- | ------------------ |
-| GET https://glue.mysprykershop.com/orders  | Retrieve all customer’s orders.  |
-| GET https://glue.mysprykershop.com/orders?page[limit]=10  | Retrieve 10 orders. |
-| GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10 | Retrieve orders 11 through 20.  |
-| GET https://glue.mysprykershop.com/orders?page[offset]=20  | Retrieve all orders starting from the twenty-first order.  |
-| GET https://glue.mysprykershop.com/orders?include=merchants  | Retrieve all customer’s orders with the information on merchants included.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %}. |
+| `GET https://glue.mysprykershop.com/orders`  | Retrieve all customer’s orders.  |
+| `GET https://glue.mysprykershop.com/orders?page[limit]=10`  | Retrieve 10 orders. |
+| `GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10` | Retrieve orders 11 through 20.  |
+| `GET https://glue.mysprykershop.com/orders?page[offset]=20`  | Retrieve all orders starting from the twenty-first order.  |
+| `GET https://glue.mysprykershop.com/orders?include=merchants`  | Retrieve all customer’s orders with the information on merchants included.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %}. |
 
 ### Response
 
@@ -536,7 +536,7 @@ This option is available only in case you have upgraded your shop to the Marketp
 | canceledTotal     | Integer | Total canceled amount.                                  |
 | remunerationTotal | Integer | Total sum of remuneration.                              |
 
-For the attributes of the included resources, see, [Retrieving merchant information](/marketplace/docs/retrieving-merchant-information).
+For the attributes of the included resources, see, [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).
 
 ## Retrieve an order
 
@@ -1322,4 +1322,4 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 | defaultNetPrice    | Integer     | Default net price of delivery, in cents.   |
 | currencyIsoCode    | String      | ISO 4217 code of the currency in which the prices are specified. |
 
-For the attributes of the included resources, see, [Retrieving merchant information](/marketplace/docs/retrieving-merchant-information).
+For the attributes of the included resources, see, [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).

@@ -1408,7 +1408,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 For the attributes of the included resources, see:
 * [Retrieving Measurement Units](https://documentation.spryker.com/docs/retrieving-measurement-units)
 * [Create a cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users#create-a-cart)
-* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users#retrieve-a-registered-users-cart)
+* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html)
 
 ## Change item quantity
 
@@ -1578,7 +1578,7 @@ Request sample:
 ```    
 </details>
 
-For the attributes of the included resources, see [Retrieving concrete products](https://documentation.spryker.com/docs/retrieving-product-information#retrieve-concrete-products).
+For the attributes of the included resources, see [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html).
 
 ## Remove items from a registered user's cart
 

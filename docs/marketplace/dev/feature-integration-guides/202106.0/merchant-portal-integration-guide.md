@@ -6,7 +6,7 @@ draft: true
 template: feature-integration-guide-template
 ---
 
-See https://spryker.github.io/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html
+See [Merchant portal core feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html).
 
 ## Environment Requirements
 
@@ -258,13 +258,13 @@ composer require spryker/security-gui:"^0.1.0" spryker/security-merchant-portal-
 
 Update touched modules in https://release.spryker.com/release-groups/view/3121 to latest minors.
 
-Apply changes from https://github.com/spryker/suite-nonsplit/pull/4786/files.
+Apply changes from https://github.com/spryker-shop/suite/pull/681/files.
 
 
 
 **Check it**
 
-Go to http://zed.de.spryker.local/security-merchant-portal-gui/login or http://zed.de.spryker.local/authentication-merchant-portal-gui/login (abandoned module name)
+Go to http://zed.de.spryker.local/security-merchant-portal-gui/login or `http://zed.de.spryker.local/authentication-merchant-portal-gui/login` (abandoned module name)
 
 The Merchant Portal should look like on the picture:
 

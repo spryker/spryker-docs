@@ -36,6 +36,6 @@ To view an offer, on the *Offers* page, in the *Actions* column, click **View** 
 **What's next?**
 To learn about the attributes you use to manage offers, see [Offers: Reference Information](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/offers-reference-information.html).
 
-## Related Articles
+## Related articles
 
 * [Merchant Product Offer feature overview](/docs/marketplace/user/features/{{ page.version }}/products-and-offers/product-offer-feature-overview.html)

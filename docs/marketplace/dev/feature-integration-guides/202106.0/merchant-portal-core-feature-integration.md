@@ -387,7 +387,7 @@ If you want to configure deployment configuration to automatically install and b
   ```yaml
   mp-build-frontend:
       command: "vendor/bin/console frontend:mp:build"
-      groups:
+      groups:/dev/feature-integration-guides/{{ page.version }}/
           - mp
   ```
 

@@ -20,7 +20,7 @@ To start feature integration, integrate the required features:
 | Marketplace Shipment | dev-master | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-shipment-feature-integration.html) |
 | Cart | 202001.0 | [Cart feature integration](https://github.com/spryker-feature/cart) |
 
-## 1) Set up behavior
+### Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -104,14 +104,12 @@ To start feature integration, integrate the required features:
 |-|-|
 | Cart | 202001.0 |
 | Marketplace Shipment | dev-master |
-|   |   |
 
-1) Set up behavior
-2)
+### Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-
 |-|-|-|-|
 | MerchantShipmentPreAddToCartPlugin | Adds cart item merchant reference to shipment transfer |  | Spryker\Yves\MerchantShipment\Plugin\CartPage |
 

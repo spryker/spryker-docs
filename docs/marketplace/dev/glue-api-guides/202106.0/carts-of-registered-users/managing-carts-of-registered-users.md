@@ -1908,7 +1908,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 
 
 
-<a name="retrieve-a-registered-users-carts-response-attributes"></a>
+<a name="retrieve-registered-users-carts-response-attributes"></a>
 
 **General cart information**
 
@@ -3433,7 +3433,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 ```
 </details>
 
-For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
+For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-registered-users-carts-response-attributes).
 
 For the attributes of other included resources, see:
 * [Add an item to a registered user's cart](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users#add-an-item-to-a-registered-users-cart-response-attributes)

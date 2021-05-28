@@ -21,6 +21,7 @@ To start feature integration, integrate the required features:
 | Merchant | {{ page.version }} | [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing) |
 
 ### 1) Install the required modules using Composer
+
 Install the required modules:
 
 ```bash
@@ -330,7 +331,7 @@ Execute the following command:
 ```bash
 console navigation:build-cache
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace** button.
@@ -1182,7 +1183,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can view merchant profile data at http://yves.de.demo-spryker.com/de/merchant/spryker.
+Make sure that you can view merchant profile data at `http://yves.de.demo-spryker.com/de/merchant/spryker`.
 
 {% endinfo_block %}
 
@@ -1192,4 +1193,4 @@ Integrate the following related features:
 
 | FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
-| Marketplace Merchant  API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-merchants-feature-integration.html) |
+| Marketplace Merchant API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-merchants-feature-integration.html) |

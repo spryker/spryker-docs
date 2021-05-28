@@ -1,5 +1,5 @@
 ---
-title: Glue API - Marketplace Merchants feature integration
+title: "Glue API: Marketplace Merchants feature integration"
 last_updated: Dec 03, 2020
 description: This document describes the process how to integrate the Marketplace Merchant Glue API feature into a Spryker project.
 template: feature-integration-guide-template

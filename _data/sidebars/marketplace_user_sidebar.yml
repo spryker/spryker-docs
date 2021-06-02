@@ -4,8 +4,7 @@ title: Marketplace User Guides
 entries:
   - product: Marketplace
     nested:
-
-      - title: Intro to Spryker
+      - title: Intro to the Spryker Marketplace
         nested:
           - title: Marketplace concept
             url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
@@ -116,7 +115,7 @@ entries:
           - title: Dashboard
             url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard.html
 
-          - title: "Dashboard: reference information"
+          - title: "Dashboard: Reference information"
             url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard-reference-information.html
 
         - title: Profile
@@ -125,5 +124,14 @@ entries:
           - title: Profile
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/profile.html
 
-          - title: "Profile: reference information"
+          - title: "Profile: Reference information"
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/profile-reference-information.html
+
+        - title: My account
+          nested:
+
+          - title: My account
+            url: /docs/marketplace/user/merchant-portal-user-guides/my-account/my-account.html
+
+          - title: "My account: Reference information"
+            url: /docs/marketplace/user/merchant-portal-user-guides/my-account/my-account-reference-information.html

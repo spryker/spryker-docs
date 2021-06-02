@@ -106,7 +106,7 @@ versioned_categories:
     user:
       - features
       - back-office-user-guides
-      - merchant-portal-user-guide
+      - merchant-portal-user-guides
     dev:
       - feature-integration-guides
       - glue-api-guides

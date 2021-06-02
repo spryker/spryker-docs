@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | LINK |
 | --------- | ----- | ---------- |
 | Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | master      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/merchants-feature-integration.html) |
+| Marketplace Merchant | master      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchants-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -195,7 +195,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that index data http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes contains merchant category keys for the merchants that assigned to categories.
+Make sure that index data `http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes` contains merchant category keys for the merchants that assigned to categories.
 
 {% endinfo_block %}
 
@@ -227,7 +227,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that changing of category keys triggers those changes http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes.
+Make sure that changing of category keys triggers those changes `http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes`.
 
 {% endinfo_block %}
 

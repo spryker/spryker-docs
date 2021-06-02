@@ -14,7 +14,7 @@ To start managing merchants, navigate to the *Marketplace* > *Merchants* section
 To **create a merchant**, do the following:
 
 1. On the *Merchants* page, click **+Add Merchant** in the top right corner.
-2. Fill in the required information. See [Merchants: reference information](/docs/marketplace/user/back-office-user-guides/merchants/merchants-reference-information.html) for details on the attributes you can add.
+2. Fill in the required information. See [Merchants: reference information](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/merchants-reference-information.html) for details on the attributes you can add.
 3. Click **Save**.
 
 ## Editing merchants
@@ -22,12 +22,12 @@ To **create a merchant**, do the following:
 To **edit a merchant**, do the following:
 
 1. On the *Merchants* page, in the *Actions* column click **Edit** for a merchant you want to edit.
-2. On the *Edit Merchant* page, edit the merchant details. See [Merchants: reference information](/docs/marketplace/user/back-office-user-guides/merchants/merchants-reference-information.html) on the attributes you can update.
+2. On the *Edit Merchant* page, edit the merchant details. See [Merchants: reference information](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/merchants-reference-information.html) on the attributes you can update.
 3. To save the changes, click **Save**.
 
 ## Approving and denying merchants
 
-Merchant approval is the process when a Marketplace Administrator changes the status of the merchant record according to the flow described in the [Merchant statuses](/docs/marketplace/user/features/merchants/merchants-feature-overview.html#merchant-statuses) section. After the initial merchant registration, the status is always set to **Waiting for Approval** and is subject to change by a Marketplace Administrator after their review. To approve the merchant, click **Approve Access** in the *Actions* column of the *Merchants* page.
+Merchant approval is the process when a Marketplace Administrator changes the status of the merchant record according to the flow described in the [Merchant statuses](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html#merchant-statuses) section. After the initial merchant registration, the status is always set to **Waiting for Approval** and is subject to change by a Marketplace Administrator after their review. To approve the merchant, click **Approve Access** in the *Actions* column of the *Merchants* page.
 
 {% info_block infoBox "Info" %}
 To restrict access to the Merchant Portal, on the *Merchants* page, in the *Actions* column, click **Deny Access**.
@@ -49,4 +49,4 @@ You can deactivate the merchant by clicking Deactivate on the *Merchants* page i
 
 Once you have the merchant record available in the system, you can proceed with creating a merchant user to be able to log in to the Merchant Portal.
 
-See the [Managing merchant users](/docs/marketplace/user/back-office-user-guides/merchants/managing-merchant-users.html) article to know how you create those.
+See the [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html) article to know how you create those.

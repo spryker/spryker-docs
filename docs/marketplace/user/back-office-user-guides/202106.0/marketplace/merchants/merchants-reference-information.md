@@ -1,5 +1,5 @@
 ---
-title: Merchants - reference information
+title: "Merchants: reference information"
 last_updated: Apr 23, 2021
 description: This document contains the reference information that you need to know when working in the Marketplace > Merchants section in the Back Office.
 template: back-office-user-guide-template
@@ -13,8 +13,8 @@ On the *Merchants* page, you see a table with all the merchants. The following i
 
 * Merchant ID
 * Merchant Name
-* Approval status. For more details on the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/merchants/merchants-feature-overview.html#merchant-statuses) section
-* Status (active/inactive). For more details on the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/merchants/merchants-feature-overview.html#merchant-statuses) section
+* Approval status. For more details on the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html#merchant-statuses) section
+* Status (active/inactive). For more details on the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html#merchant-statuses) section
 * Stores
 * Actions
 
@@ -42,7 +42,7 @@ This tab contains the main merchant information.
 | Is Active | Checkbox that gets the merchant profile page in the Storefront online once checked. |  |
 | Store Relation | List of stores where the merchant is present. |  |
 | Merchant URL | Text field where, during editing, you can update the URL that is used to access the merchant profile. The profile URL is specified per locale. | &check; |
-| Warehouses | Name of the Warehouse assigned to the merchant. For more details on the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/merchants/merchants-feature-overview.html#merchant-warehouse.html#merchant-warehouse). |  |
+| Warehouses | Name of the Warehouse assigned to the merchant. For more details on the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html#merchant-warehouse). |  |
 
 ### Contact Person Details tab
 
@@ -91,7 +91,7 @@ This tab contains legal information that is displayed on the *Merchant Profile* 
 
 ## Users tab
 
-This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/merchants/merchant-users-feature-overview.html) for the merchant.
+This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{ page.version }}/merchants/merchant-users-feature-overview.html) for the merchant.
 
 {% info_block infoBox "Info" %}
 To restrict access to the Merchant Portal, on the *Merchants* page, in *Actions*, you can create merchant users only after the merchant is created. During the merchant creation process, this tab exists, but all the actions are disabled."
@@ -119,9 +119,9 @@ The following table describes the attributes you enter and select when creating 
 | Email | Text field where you specify the email address of the merchant mser. The email with the reset password instructions will be sent to this email address.  | &check; |
 | First name | Text field where you specify the first name of the merchant user. | &check; |
 | Last name | Text field where you specify the last name of the merchant user. | &check; |
-| Status | Drop-down menu where you can update the Status of the merchant user. Can be: Active, Blocked, Deleted. This field appears when you [edit the merchant user](/docs/marketplace/user/back-office-user-guides/merchants/managing-merchant-users.html#editing-the-merchant-user). | &check; |
+| Status | Drop-down menu where you can update the Status of the merchant user. Can be: Active, Blocked, Deleted. This field appears when you [edit the merchant user](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html#editing-the-merchant-user). | &check; |
 
 ## Related articles
 
-* [Managing merchants](/docs/marketplace/user/back-office-user-guides/merchants/managing-merchants.html)
-* [Manging merchant users](/docs/marketplace/user/back-office-user-guides/merchants/managing-merchant-users.html)
+* [Managing merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html)
+* [Manging merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html)

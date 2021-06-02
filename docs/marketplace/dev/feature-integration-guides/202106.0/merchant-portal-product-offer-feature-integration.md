@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | ---------------- | ---------- | -----------|
-| Marketplace Product Offer | dev-master | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html) |
-| Marketplace Merchant Portal Core | dev-master | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html) |
+| Marketplace Product Offer | dev-master | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/product-offer-feature-integration.html) |
+| Marketplace Merchant Portal Core | dev-master | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -95,7 +95,7 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up by opening http://zed.mysprykershop.com/sales-merchant-portal-gui/orders. Click on any of the orders and check that columns *Merchant Reference* and *Product Offer SKU* are present.
+Make sure that `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that columns *Merchant Reference* and *Product Offer SKU* are present.
 
 {% endinfo_block %}
 
@@ -132,6 +132,6 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `OffersMerchantDashboardCardPlugin` is set up by opening http://zed.mysprykershop.com/dashboard-portal-gui. The Offers widget should show up at the page.
+Make sure that the `OffersMerchantDashboardCardPlugin` is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up at the page.
 
 {% endinfo_block %}

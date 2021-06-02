@@ -16,7 +16,7 @@ In your development, product offers API can help you to retrieve relevant extend
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html).
 
 ## Retrieve product offers
 
@@ -376,11 +376,11 @@ Find all the related attribute descriptions in [Retrieve product offers](#retrie
 
 You can use the product offers resource as follows:
 
-- Retrieve information about the existing product offers of a concrete product - [Retrieve Product Offers](/docs/marketplace/dev/glue-api-guides/202106.0/retrieving-product-offers.html)
+- Retrieve information about the existing product offers of a concrete product—[Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html)
 - Add product offers to a guest cart—[Creating a guest cart](/docs/marketplace/dev/glue-api-guides/202106.0/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
-- Retrieve information for the product offers in a guest cart—[Retrieving a guest cart](/docs/marketplace/dev/glue-api-guides/202106.0/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
-- Add product offers to a registered user's cart—[Adding items to a cart of a registered user](docs/marketplace/dev/glue-api-guides/202106.0/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
-- Retrieve information for the product offers in registered users' carts—[Retrieving all carts](/docs/marketplace/dev/glue-api-guides/202106.0/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts).
+- Retrieve information for the product offers in a guest cart—[Retrieving a guest cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
+- Add product offers to a registered user's cart—[Adding items to a cart of a registered user](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
+- Retrieve information for the product offers in registered users' carts—[Retrieving all carts](/docs/marketplace/dev/glue-api-guides/{{ page.version }}//carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts).
 
 ## Possible errors
 

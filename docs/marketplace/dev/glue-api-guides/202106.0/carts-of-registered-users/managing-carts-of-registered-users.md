@@ -61,7 +61,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | name | String | &check; | Sets the cart name.</br>This field can be set only if you are using the Multiple Carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the `422 Unprocessable Entry` status code. |
-| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](https://documentation.spryker.com/docs/net-gross-price){target="_blank"}. |
+| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](https://documentation.spryker.com/docs/net-gross-price). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
 
@@ -1908,7 +1908,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 
 
 
-<a name="retrieve-a-registered-users-carts-response-attributes"></a>
+<a name="retrieve-registered-users-carts-response-attributes"></a>
 
 **General cart information**
 
@@ -2007,7 +2007,7 @@ To retrieve a particular cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's cart](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's cart](#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -3433,7 +3433,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 ```
 </details>
 
-For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
+For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-registered-users-carts-response-attributes).
 
 For the attributes of other included resources, see:
 * [Add an item to a registered user's cart](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users#add-an-item-to-a-registered-users-cart-response-attributes)
@@ -3455,7 +3455,7 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 
 
@@ -3541,7 +3541,7 @@ To delete a cart, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %}| Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %}| Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 
 

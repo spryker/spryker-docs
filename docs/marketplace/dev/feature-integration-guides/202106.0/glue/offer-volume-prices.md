@@ -1,5 +1,5 @@
 ---
-title: Glue API - Offer Volume Prices feature integration
+title: "Glue API: Offer Volume Prices feature integration"
 last_updated: Dec 04, 2020
 description: This document describes how to integrate the Offers Volume Prices Glue API feature into a Spryker project.
 template: feature-integration-guide-template
@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-| - |
-| Marketplace Product Offer Prices | dev-master | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html) |
+| Marketplace Product Offer Prices | dev-master | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-prices-feature-integration.html) |
 | Marketplace Product Offer Volume Prices | dev-master | [Marketplace Product Offer Volume Prices feature integration] |
 
 ### 1) Install the required modules using Composer

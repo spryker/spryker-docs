@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
 | Spryker Core         | master      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | master      | [Marketplace Merchants feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchants-feature-integration.html) |
+| Marketplace Merchant | master      | [Marketplace Merchants feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchants-feature-integration.html) |
 | Product   | master      | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
 
 ### 1) Install the required modules using Composer
@@ -160,7 +160,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you can filter products by merchant at http://zed.de.demo-spryker.com/availability-gui.
+Make sure that when you can filter products by merchant at `http://zed.de.demo-spryker.com/availability-gui`.
 
 {% endinfo_block %}
 
@@ -604,6 +604,6 @@ Make sure when you add to cart merchant product, it has `merchantReference` set.
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Marketplace Product API | | [Glue API - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html) |
-| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html) |
-| Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html) |
+| Marketplace Product API | | [Glue API - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-feature-integration.html) |
+| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-inventory-management-feature-integration.html) |
+| Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-marketplace-product-offer-feature-integration.html) |

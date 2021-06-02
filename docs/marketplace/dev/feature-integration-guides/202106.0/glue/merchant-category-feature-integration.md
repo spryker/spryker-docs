@@ -1,5 +1,5 @@
 ---
-title: Glue API - Merchant Category feature integration
+title: "Glue API: Merchant Category feature integration"
 last_updated: Mar 04, 2021
 description: This document describes the process how to integrate the Merchant Category Glue API feature into a Spryker project.
 template: feature-integration-guide-template
@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME   | VERSION | INTEGRATION GUIDE   |
 | ---------------- | ------ | ------------------ |
 | Spryker Core   | master   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant Category | master  | [Marketplace Merchant Category feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html) |
+| Marketplace Merchant Category | master  | [Marketplace Merchant Category feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-category-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

@@ -1,5 +1,5 @@
 ---
-title: Marketplace Product Offer + Cart feature integration
+title: "Glue API: Marketplace Product Offer + Cart feature integration"
 last_updated: Dec 17, 2020
 description: This integration guide provides steps on how to integrate the Marketplace Product Offer + Cart Glue API feature into a Spryker project.
 template: feature-integration-guide-template
@@ -17,9 +17,9 @@ To start feature integration, integrate the required features:
 
 | NAME                  | VERSION | INTEGRATION GUIDE |
 | --------------------- | ------- | ------------------|
-| Cart API                         | dev-master  | [Glue API - Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration) |
-| Marketplace Product Offer API    | dev-master  | [Glue API - Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html) |
-| Marketplace Inventory Management | dev-master  | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html) |
+| Cart API                         | dev-master  | [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration) |
+| Marketplace Product Offer API    | dev-master  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html) |
+| Marketplace Inventory Management | dev-master  | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-inventory-management-feature-integration.html) |
 
 ### 1) Enable adding Merchant Product Offer to cart
 

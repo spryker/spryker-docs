@@ -6,7 +6,7 @@ draft: true
 template: feature-integration-guide-template
 ---
 
-See https://spryker.github.io/docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
+See [Merchant portal core feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html).
 
 ## Environment Requirements
 
@@ -246,7 +246,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 
 **Separate Login feature setup (security firewalls)**
 
-It requires upgrading spryker/smyfony:3.5.0 and applying some changes on the project, see https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1754890268
+It requires upgrading spryker/smyfony:3.5.0 and applying some changes on the project, see [Symfony 5 integration](https://documentation.spryker.com/docs/symfony-5-integration).
 
 ```bash
 composer remove spryker/auth spryker/auth-mail-connector spryker/auth-mail-connector-extension spryker/authentication-merchant-portal-gui
@@ -258,13 +258,13 @@ composer require spryker/security-gui:"^0.1.0" spryker/security-merchant-portal-
 
 Update touched modules in https://release.spryker.com/release-groups/view/3121 to latest minors.
 
-Apply changes from https://github.com/spryker/suite-nonsplit/pull/4786/files.
+Apply changes from https://github.com/spryker-shop/suite/pull/681/files.
 
 
 
 **Check it**
 
-Go to http://zed.de.spryker.local/security-merchant-portal-gui/login or http://zed.de.spryker.local/authentication-merchant-portal-gui/login (abandoned module name)
+Go to `http://zed.de.spryker.local/security-merchant-portal-gui/login` or `http://zed.de.spryker.local/authentication-merchant-portal-gui/login` (abandoned module name)
 
 The Merchant Portal should look like on the picture:
 

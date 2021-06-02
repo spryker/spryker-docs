@@ -1341,6 +1341,8 @@ merchant_product_offer.view_seller,View Seller,en_US
 merchant_product_offer.view_seller,Händler ansehen,de_DE
 merchant_product_offer.sold_by,Sold by,en_US
 merchant_product_offer.sold_by,Verkauft durch,de_DE
+merchant.sold_by,Sold by,en_US
+merchant.sold_by,Verkauft durch,de_DE
 ```
 
 Import data:

@@ -1,5 +1,5 @@
 ---
-title: File details - merchant.csv
+title: "File details: merchant.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant.csv file to configure merchant information in your Spryker shop.
 template: import-file-template

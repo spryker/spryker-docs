@@ -1,5 +1,5 @@
 ---
-title: File details - merchant_profile.csv
+title: "File details: merchant_profile.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant_profile.csv file to configure merchant information in your Spryker shop.
 template: import-file-template
@@ -10,7 +10,7 @@ This document describes the `merchant_profile.csv` file to configure [merchant p
 To import the file, run
 
 ```bash
-data:import merchant_profile 
+data:import merchant_profile
 ```
 
 ## Import file parameters
@@ -40,7 +40,7 @@ The file should have the following parameters:
 | latitude |   | String |   |   | This field identifies merchant’s location. |
 
 ## Import file dependencies
-The file has the following dependencies: 
+The file has the following dependencies:
 - [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchantcsv.html)
 - [glossary.csv]?(https://documentation.spryker.com/docs/file-details-glossarycsv)
 

@@ -1,14 +1,14 @@
 ---
-title: Product Offer + Cart feature integration
+title: Marketplace Product Offer + Cart feature integration
 last_updated: Dec 17, 2020
-description: This integration guide provides steps on how to integrate the Product Offer + Cart feature into a Spryker project.
+description: This integration guide provides steps on how to integrate the Marketplace Product Offer + Cart feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Product Offer + Car feature into a Spryker project.
+This document describes how to integrate the Marketplace Product Offer + Car feature into a Spryker project.
 
 ## Install feature core
-Follow the steps below to install the Product Offer + Cart feature core.
+Follow the steps below to install the Marketplace Product Offer + Cart feature core.
 
 ### Prerequisites
 
@@ -16,7 +16,7 @@ To start feature integration, integrate the required features:
 
 | NAME      | VERSION  | INTEGRATION GUIDE |
 | --------- | -------- | ------------------|
-| Marketplace Product Offer | dev-master | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/product-offer-feature-integration.html)
+| Marketplace Product Offer | dev-master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html)
 | Cart | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart)
 
 ##  1) Set up behavior
@@ -94,7 +94,7 @@ Make sure that it is only possible to have items in cart where the product offer
 
 ## Install feature front end
 
-Follow the steps below to install the Product Offer + Cart feature front end.
+Follow the steps below to install the Marketplace Product Offer + Cart feature front end.
 
 ### Prerequisites
 
@@ -102,7 +102,7 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME        | VERSION    | INTEGRATION GUIDE |
 | ----------- | ---------- | ------------------|
-| Marketplace Product Offer | dev-master | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/product-offer-feature-integration.html) |
+| Marketplace Product Offer | dev-master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html) |
 | Cart                      | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart) |
 
 ## 1) Set up behavior
@@ -147,4 +147,4 @@ Make sure that the product offer reference (and sold by merchant) is added to th
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Marketplace Product Offer API + Cart API | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/product-offer-cart-feature-integration.html) |
+| Marketplace Product Offer API + Cart API | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-cart-feature-integration.html) |

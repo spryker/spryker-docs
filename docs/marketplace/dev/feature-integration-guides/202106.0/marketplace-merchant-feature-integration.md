@@ -1,11 +1,11 @@
 ---
-title: Marketplace Merchants feature integration
+title: Marketplace Merchant feature integration
 last_updated: Mar 23, 2021
 description: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Merchants feature into a Spryker project.
+This document describes how to integrate the Marketplace Merchant feature into a Spryker project.
 
 
 ## Install feature core
@@ -1052,7 +1052,7 @@ Make sure that imported data has been added to the `spy_merchant_profile` and `s
 {% endinfo_block %}
 
 ## Install feature front end
-Follow the steps below to install the Marketplace Merchants feature front end.
+Follow the steps below to install the Marketplace Merchant feature front end.
 
 ### Prerequisites
 
@@ -1193,4 +1193,4 @@ Integrate the following related features:
 
 | FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
-| Marketplace Merchant API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-merchants-feature-integration.html) |
+| Marketplace Merchant API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-merchant-feature-integration.html) |

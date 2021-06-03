@@ -1,16 +1,16 @@
 ---
-title: "Glue API: Marketplace Merchants feature integration"
+title: "Glue API: Marketplace Merchant feature integration"
 last_updated: Dec 03, 2020
 description: This document describes the process how to integrate the Marketplace Merchant Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Merchants Glue API feature into a Spryker project.
+This document describes how to integrate the Marketplace Merchant Glue API feature into a Spryker project.
 
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Merchants Glue API feature core.
+Follow the steps below to install the Marketplace Merchant Glue API feature core.
 
 ### Prerequisites
 
@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core Feature Integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
-| Marketplace Merchant | master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchants-feature-integration.html) |
+| Marketplace Merchant | master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

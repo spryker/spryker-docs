@@ -212,14 +212,26 @@ entries:
           - title: HowTos sample page
             url: /docs/marketplace/dev/howtos/howtos-sample-page.html
 
+      - title: Data export
+        nested:
+
+        - title: Data export Merchant Orders .csv files format
+          url: /docs/marketplace/dev/data-export/data-export-merchant-orders-csv-files-format.html
+
       - title: Data import
         nested:
 
-        - title: File details - merchant.csv
+        - title: Marketplace setup
+          url: /docs/marketplace/dev/data-import/marketplace-setup.html
+
+        - title: "File details: merchant-order-status.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-order-statuscsv.html
+
+        - title: "File details: merchant.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchantcsv.html
 
-        - title: File details - merchant_profile.csv
+        - title: "File details: merchant_profile.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-profilecsv.html
 
-        - title: File details - merchant_user.csv
+        - title: "File details: merchant_user.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-usercsv.html

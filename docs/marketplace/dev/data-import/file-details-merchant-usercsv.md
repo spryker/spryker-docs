@@ -10,7 +10,7 @@ This document describes the `merchant-user.csv` file to configure [merchant user
 To import the file, run
 
 ```bash
-data:import merchant_user
+data:import merchant-user
 ```
 
 ## Import file parameters

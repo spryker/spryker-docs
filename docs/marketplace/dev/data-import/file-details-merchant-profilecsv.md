@@ -10,7 +10,7 @@ This document describes the `merchant_profile.csv` file to configure [merchant p
 To import the file, run
 
 ```bash
-data:import merchant_profile
+data:import merchant-profile
 ```
 
 ## Import file parameters

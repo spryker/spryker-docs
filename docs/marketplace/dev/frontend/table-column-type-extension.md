@@ -42,7 +42,7 @@ export enum ColumnTypeOptionsType {
 
 Column Type is essentially an Angular Component that encapsulates how specific type of the column is going to be rendered withing a table column.
 
-You can configure any action by table config.
+You can configure columns in table config.
 
 ```ts
 <spy-table [config]="{

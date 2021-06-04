@@ -70,7 +70,7 @@ The table module provides an opportunity to register any table column by key via
 
 ### ColumnTypeOption decorator
 
-Allows to validate property in runtime. All properties is showed in the `ColumnTypeOptions` interface
+Allows to validate column configuration properties in runtime. All properties is showed in the `ColumnTypeOptions` interface
 
 ### TableColumnTypeComponent decorator
 
@@ -78,13 +78,13 @@ Merges all default config parameters from argument with dynamic config parameter
 
 ## TableColumnRendererComponent
 
-Allows to insert data/config and context to the specific column type while config/data/context have been changed under the hood.
+Component that is used by table to render every column using configuration and data.
 
 ## Table Column
 
 Table Column is an Angular Component that must implement specific interface (`TableColumnTypeComponent`) and be registered on the Table Module via `TableModule.withColumnComponents()` static method by giving it a string that will be associated with it when rendering table.
 
-Also you have to create own filter module and add it to the RootModule
+Also you have to create own column module and add it to the RootModule
 
 ```ts
 ///// Module augmentation

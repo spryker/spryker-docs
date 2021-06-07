@@ -11,7 +11,7 @@ This document describes how to integrate the Marketplace Merchant feature into a
 ## Install feature core
 Follow the steps below to install the Marketplace Merchant feature core.
 
-### Prerequisites
+### Prerequisites    
 
 To start feature integration, integrate the required features:
 

@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 |-|-|-|
 | Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration)  |
 | Marketplace Product | master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-feature-integration.html)  |
-| Product Offer | master | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/product-offer-feature-integration.html)   |
+| Product Offer | master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html)   |
 
 ### 1) Set up behavior
 Enable the following behaviors by registering the plugins:

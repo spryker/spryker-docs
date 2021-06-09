@@ -5,7 +5,7 @@ description: This document describes the merchant_oms_process.csv file to config
 template: import-file-template
 ---
 
-This document describes the `merchant_oms_process.csv` file to configure [Merchant state machines](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1219657917/Reviewed+Marketplace+and+Merchant+State+Machines+Feature+Overview+MR-52#Merchant-State-Machine) in your Spryker shop.
+This document describes the `merchant_oms_process.csv` file to configure [Merchant state machines](/docs/marketplace/user/features/{{ site.version }}/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html#merchant-state-machine) in your Spryker shop.
 
 To import the file, run
 
@@ -26,7 +26,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant.csv](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2207154250/File+details+merchant.csv)
+- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant-csv.html)
 
 ## Import template file and content example
 

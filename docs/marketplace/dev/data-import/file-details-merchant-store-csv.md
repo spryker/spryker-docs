@@ -5,7 +5,7 @@ description: This document describes the merchant_store.csv file to configure me
 template: import-file-template
 ---
 
-This document describes the merchant_store.csv file to configure merchant store information in your Spryker shop.
+This document describes the `merchant_store.csv` file to configure merchant's stores in your Spryker shop.
 
 To import the file, run
 
@@ -26,8 +26,8 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant.csv](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2207154250/File+details+merchant.csv)
-- stores.php configuration file of the demo shop PHP project, where stores are defined initially
+- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant-csv.md)
+- *stores.php* configuration file of the demo shop PHP project, where stores are defined initially
 
 ## Import template file and content example
 

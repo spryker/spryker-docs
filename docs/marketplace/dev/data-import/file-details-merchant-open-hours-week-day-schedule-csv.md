@@ -1,11 +1,11 @@
 ---
 title: "File details: merchant_open_hours_week_day_schedule.csv"
 last_updated: Jun 07, 2021
-description: This document describes the merchant_open_hours_week_day_schedule.csv file to configure Merchant opening hours information in your Spryker shop.
+description: This document describes the merchant_open_hours_week_day_schedule.csv file to configure merchant opening hours information in your Spryker shop.
 template: import-file-template
 ---
 
-This document describes the `merchant_open_hours_week_day_schedule.csv` file to configure [Merchant opening hours](https://spryker-docs.herokuapp.com/docs/marketplace/user/features/202106.0/merchants/merchants-feature-overview.html#merchant-opening-hours) information in your Spryker shop.
+This document describes the `merchant_open_hours_week_day_schedule.csv` file to configure [default merchant opening hours](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-opening-hours) information in your Spryker shop.
 
 To import the file, run 
 
@@ -28,7 +28,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant.csv](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2207154250/File+details+merchant.csv)
+- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant-csv.html)
 
 ## Import template file and content example
 

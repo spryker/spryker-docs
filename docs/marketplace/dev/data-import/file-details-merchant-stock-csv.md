@@ -5,6 +5,8 @@ description: This document describes the merchant_stock.csv file to configure me
 template: import-file-template
 ---
 
+This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-warehouse) information in your Spryker shop.
+
 To import the file, run
 
 ```bash
@@ -18,14 +20,14 @@ The file should have the following parameters:
 | PARAMETER    | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION      |
 | ------------- | -------- | ------ | ------------- | --------------------------------- | ----------------- |
 | merchant_reference | ✓             | String   |                   | Unique                                                       | Identifier of the merchant in the system. |
-| stock_name         | ✓             | String   |                   | Stock name is defined as described in [Merchant Warehouse](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2217378238/File%2Bdetails%2Bmerchant%2Bstock.csv#). | Name of the stock.                        |
+| stock_name         | ✓             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-warehouse). | Name of the stock.                        |
 
 ## Import file dependencies
 
 The file has the following dependencies:
 
-- [merchant.csv](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2207154250/File+details+merchant.csv)
-- [File details: warehouse.csv - Commerce setup](https://documentation.spryker.com/docs/file-details-warehousecsv) 
+- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant-csv.html)
+- [warehouse.csv](https://documentation.spryker.com/docs/file-details-warehousecsv) 
 
 ## Import template file and content example
 

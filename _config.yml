@@ -110,6 +110,8 @@ versioned_categories:
     dev:
       - feature-integration-guides
       - glue-api-guides
+      - data-import
+      - data-export
 
 # these are defaults used for the frontmatter for these file types
 

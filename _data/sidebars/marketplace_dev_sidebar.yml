@@ -224,14 +224,78 @@ entries:
         - title: Marketplace setup
           url: /docs/marketplace/dev/data-import/marketplace-setup.html
 
-        - title: "File details: merchant-order-status.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-order-statuscsv.html
-
         - title: "File details: merchant.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchantcsv.html
+          url: /docs/marketplace/dev/data-import/file-details-merchant-csv.html
 
         - title: "File details: merchant_profile.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-profilecsv.html
+          url: /docs/marketplace/dev/data-import/file-details-merchant-profile-csv.html
 
-        - title: "File details: merchant_user.csv"
-          url: /docs/marketplace/dev/data-import/file-details-merchant-usercsv.html
+        - title: "File details: merchant_profile_address.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-profile-address-csv.html
+
+        - title: "File details: merchant_open_hours_week_day_schedule.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-week-day-schedule-csv.html
+
+        - title: "File details: merchant_open_hours_date_schedule.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-date-schedule-csv.html
+
+        - title: "File details: merchant_category.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-category-csv.html
+
+        - title: "File details: merchant_stock.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-stock-csv.html
+
+        - title: "File details: merchant_store.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-store-csv.html
+
+        - title: "File details: merchant_oms_process.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-oms-process-csv.html
+
+        - title: "File details: merchant-order-status.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-order-status-csv.html
+
+        - title: "File details: merchant_product_offer.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer-csv.html
+
+        - title: "File details: price-product-offer.csv"
+          url: /docs/marketplace/dev/data-import/file-details-price-product-offer-csv.html
+
+        - title: "File details: product_offer_stock.csv"
+          url: /docs/marketplace/dev/data-import/file-details-product-offer-stock-csv.html
+
+        - title: "File details: merchant_product_offer_store.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer-store-csv.html
+
+        - title: "File details: product_offer_validity.csv"
+          url: /docs/marketplace/dev/data-import/file-details-product-offer-validity-csv.html
+
+        - title: "File details: combined_merchant_product_offer.csv"
+          url: /docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer-csv.html
+
+        - title: "File details: merchant_product.csv"
+          url: /docs/marketplace/dev/data-import/file-details-merchant-product-csv.html
+
+
+      - title: Front-end
+        nested:
+
+        - title: Table design
+          nested:
+
+            - title: "Table Feature extension"
+              url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
+
+            - title: "Table Filter extension"
+              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html
+
+        - title: UI components library
+          nested:
+
+            - title: "Datasources"
+              url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
+
+            - title: "Data transformers"
+              url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers.html
+
+            - title: "Persistence"
+              url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html

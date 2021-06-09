@@ -1,12 +1,12 @@
 ---
 title: "File details: merchant-order-status.csv"
 last_updated: Feb 26, 2021
-description: This document describes the merchant_profile.csv file to configure merchant information in your Spryker shop.
+description: This document describes the merchant-order-status.csv file to update merchant order states in your Spryker shop.
 template: import-file-template
 ---
 
 
-This document describes the `merchant-order-status.csv` file to configure the update of the regular order status information in your Spryker shop.
+This document describes the `merchant-order-status.csv` file to configure the update of the merchant order states in your Spryker Marketplace shop.
 
 To import the file, run:
 
@@ -23,7 +23,7 @@ The file should have the following parameters:
 | merchant_reference |   | String |   | Unique | Identifier of the merchant in the system. |
 | merchant_order_reference |   | String |   | Unique | Identifier of the merchant order in the system. |
 | order_item_reference | &check; | String |   | Unique | Identifier of the  item in the order. |
-| merchant_order_item_event_oms | &check; | String |   | OMS events depend on the  [merchant state machine](https://spryker-docs.herokuapp.com/docs/marketplace/user/features/202106.0/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html#merchant-state-machine) configured. | Desired order-item state. Only this parameter is updated in the database. |
+| merchant_order_item_event_oms | &check; | String |   | OMS events depend on the  [merchant state machine](/docs/marketplace/user/features/{{ site.version }}/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html#merchant-state-machine) configured. | Desired order-item state. Only this parameter is updated in the database. |
 
 ## Import file dependencies
 

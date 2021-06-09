@@ -27,7 +27,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ site.version }}file-details-merchant-product-offer-csv.html) 
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-product-offer-csv.html) 
 
 ## Import template file and content example
 

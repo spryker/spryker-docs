@@ -26,7 +26,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant-csv.html)
+- [merchant.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-csv.html)
 
 ## Import template file and content example
 

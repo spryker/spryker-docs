@@ -8,37 +8,12 @@ template: concept-topic-template
 
 This document provides details about the Datasources service in the Components Library.
 
-## Interfaces
-
-Below you can find interfaces for the Datasource configuration and Datasource type: 
-
-
-
-```
-export interface DatasourceConfig {
-  type: DatasourceType;
-  transform?: DataTransformerConfig;
-  // Specific Datasource types may have custom props
-  [k: string]: unknown;
-}
-
-export interface Datasource<D = unknown, C = unknown> {
-  resolve(
-    injector: Injector,
-    config: DatasourceConfig,
-    context?: C,
-  ): Observable<D>;
-}
-```
-
 ## Overview
 
 Datasources are responsible for providing any data to the system based on a given configuration.
 This allows backend systems to control where the data is coming from without changing the front-end (ex. table data, select options, etc.).
 
 Datasources are used in other components like Table, Select, Autocomplete, etc.
-
-
 
 ```
 <spy-select
@@ -51,21 +26,17 @@ Datasources are used in other components like Table, Select, Autocomplete, etc.
 
 ## Main Service
 
-The main module provides an opportunity to register any datasource by key via static method withDatasources. It assigns the object of datasources to the DatasourceTypesToken under the hood.
+The main module provides an opportunity to register any datasource by key via static method `withDatasources`. It assigns the object of datasources to the `DatasourceTypesToken` under the hood.
 
-The main service injects all registered types from the DatasourceTypesToken and DataTransformerService (see [[Reviewed\] Data Transformers](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2316566812)).
+The main service injects all registered types from the `DatasourceTypesToken` and `DataTransformerService` (see [[Data Transformers](/docs/marketplace/dev/front-end/ui-components-library/data-transformers.html)).
 
-Resolve method finds specific service from the DatasourceTypesToken by config.type(from the argument) and returns observable with data by Datasource.resolve. Data is also transformed by DataTransformerService if config.transform exists.
+Resolve method finds specific service from the `DatasourceTypesToken` by `config.type` (from the argument) and returns observable with data by `Datasource.resolve`. Data is also transformed by `DataTransformerService` if `config.transform` exists.
 
 ## Datasource
 
 Datasource is basically an Angular Service that encapsulates the algorithm of how the data is loaded into the Component.
 
-Datasource must implement a specific interface (Datasource) and then be registered to the Root Module via DatasourceModule.withDatasources().
-
-e.g.
-
-
+Datasource must implement a specific interface (Datasource) and then be registered to the Root Module via `DatasourceModule.withDatasources()`.
 
 ```
 ///// Module augmentation
@@ -115,3 +86,26 @@ There are a few common Datasources that are available in UI library as separate 
 - `inline` - Allows passing data along with the configuration of the Datasource
 - `inline.table` - Allows passing transformed for the table format data along with the configuration of the Datasource
 - `http` - Allows fetching data from URL via HTTP configured in the configuration of the Datasource. HTTP Datasource supports caching strategy (see [Cache](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2317353245/Cache)) that may be configured via config and used before the request is made when applicable.
+
+## Interfaces
+
+Below you can find interfaces for the Datasource configuration and Datasource type: 
+
+```
+export interface DatasourceConfig {
+  type: DatasourceType;
+  transform?: DataTransformerConfig;
+  // Specific Datasource types may have custom props
+  [k: string]: unknown;
+}
+
+export interface Datasource<D = unknown, C = unknown> {
+  resolve(
+    injector: Injector,
+    config: DatasourceConfig,
+    context?: C,
+  ): Observable<D>;
+}
+```
+
+## 

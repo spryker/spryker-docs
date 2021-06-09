@@ -8,40 +8,14 @@ template: concept-topic-template
 
 This document provides details about the Data Transformers service in the Components Library.
 
-## Interfaces
-
-Below you can find interfaces for the Data Transformer service configuration and Data Transformer type.
-
-```
-interface DataTransformerService {
-  transform(data: unknown, config: DataTransformerConfig): Observable<unknown>;
-}
-
-interface DataTransformerConfig {
-  type: DataTransformerType;
-  // Reserved for types that may have extra configuration
-  [extraConfig: string]: unknown;
-}
-
-interface DataTransformer<D, DT> {
-  transform(
-    data: D,
-    config: DataTransformerConfig,
-    injector?: Injector,
-  ): Observable<DT>;
-}
-```
-
 ## Overview
 
 Data Transformers are responsible for transforming data from one form to another based on a certain configuration.
 As a result, backend systems can manipulate data without changing the frontend at all (such as table datasource, select datasource, etc.).
 
-Anyone may use the Data Transformer Service to modify data by configuring a specific DataTransformer.
+Anyone may use the Data Transformer Service to modify data by configuring a specific `DataTransformer`.
 
-e.g.
-
-```
+```js
 <spy-select
   [datasource]="{
     type: 'http',
@@ -88,21 +62,19 @@ e.g.
 
 ## Main Service
 
-With the main module, you can register any data transformer by key via the static method withTransformers. This method assigns the data transformer object to the DataTransformerTypesToken.
+With the main module, you can register any data transformer by key via the static method `withTransformers`. This method assigns the data transformer object to the `DataTransformerTypesToken`.
 
-The main service injects all registered types from the DataTransformerTypesToken
+The main service injects all registered types from the `DataTransformerTypesToken`.
 
-Transform method finds the specific service from the DataTransformerTypesToken by config.type(from the argument) and returns an observable with data by DataTransformer.transform.
+Transform method finds the specific service from the `DataTransformerTypesToken` by `config.type` (from the argument) and returns an observable with data by `DataTransformer.transform`.
 
 ## Data Transformer
 
 Data Transformer is an Angular Service that encapsulates the algorithm of how the data is transformed after a response is received.
 
-Data Transformer must implement a specific interface (DataTransformer) and then be registered to the Data Transformer Module via DataTransformerModule.withTransformers(),e.g.:
+Data Transformer must implement a specific interface (`DataTransformer`) and then be registered to the Data Transformer Module via `DataTransformerModule.withTransformers()`,
 
-
-
-```
+```js
 ///// Module augmentation
 import { DataTransformerConfig } from '@spryker/data-transformer';
 
@@ -146,7 +118,7 @@ export class RootModule
 
 The context in which the Data Transformer operates is determined by the local injector where it is being used.
 
-## Data Transformer Types
+## Data Transformer types
 
 There are a few common Data Transformers that are available in the UI library as separate packages:
 
@@ -164,3 +136,29 @@ There are a few common Data Transformers that are available in the UI library as
     - `text` - Filters values that match a string.
   - Data Configurators - Services that allow configuring repopulation data (sorting, pagination, filtering). This services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
     - `table` - Integrates Table into Collate to re-populate the data.
+
+## Interfaces
+
+Below you can find interfaces for the Data Transformer service configuration and Data Transformer type.
+
+```
+interface DataTransformerService {
+  transform(data: unknown, config: DataTransformerConfig): Observable<unknown>;
+}
+
+interface DataTransformerConfig {
+  type: DataTransformerType;
+  // Reserved for types that may have extra configuration
+  [extraConfig: string]: unknown;
+}
+
+interface DataTransformer<D, DT> {
+  transform(
+    data: D,
+    config: DataTransformerConfig,
+    injector?: Injector,
+  ): Observable<DT>;
+}
+```
+
+## 

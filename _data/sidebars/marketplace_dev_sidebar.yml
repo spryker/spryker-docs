@@ -274,3 +274,28 @@ entries:
 
         - title: "File details: merchant_product.csv"
           url: /docs/marketplace/dev/data-import/file-details-merchant-product-csv.html
+
+
+      - title: Front-end
+        nested:
+
+        - title: Table design
+          nested:
+
+            - title: "Table Feature extension"
+              url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
+
+            - title: "Table Filter extension"
+              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html
+
+        - title: UI components library
+          nested:
+
+            - title: "Datasources"
+              url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
+
+            - title: "Data transformers"
+              url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers.html
+
+            - title: "Persistence"
+              url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html

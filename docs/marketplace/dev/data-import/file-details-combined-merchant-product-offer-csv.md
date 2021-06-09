@@ -5,7 +5,7 @@ description: This document describes the combined_merchant_product_offer.csv fil
 template: import-file-template
 ---
 
-This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](docs/marketplace/user/features/{{ site.version }}/products-and-offers/product-offer-feature-overview.html) information in your Spryker shop.
+This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](/docs/marketplace/user/features/{{ site.version }}/products-and-offers/product-offer-feature-overview.html) information in your Spryker shop.
 
 To import the file, run
 
@@ -50,7 +50,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [File details: merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant-csv.html) 
+- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant-csv.html) 
 - *stores.php* configuration file of the demo shop PHP project  
 
 ## Import template file and content example

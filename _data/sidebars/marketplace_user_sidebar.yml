@@ -1,9 +1,8 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
+title: Marketplace User Guides
 entries:
-  - title: Marketplace user guides
-    product: Marketplace
-    version: 202009.0
+  - product: Marketplace
     nested:
 
       - title: Intro to Spryker
@@ -69,20 +68,20 @@ entries:
 
           nested:
 
-            - title: Products
-              nested:
-
-              - title: Abstract products - reference information
-                url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-product-reference-information.html
-
-              - title: Products - reference information
-                url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html
-
             - title: Availability
               nested:
 
-              - title: Availability - reference information
+              - title: "Availability: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
+
+            - title: Products
+              nested:
+
+              - title: "Abstract products: reference information"
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-product-reference-information.html
+
+              - title: "Products: reference information"
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html
 
         - title: Marketplace
 
@@ -97,7 +96,7 @@ entries:
                 - title: Managing merchant users
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html
 
-                - title: Merchants - reference information
+                - title: "Merchants: reference information"
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/merchants-reference-information.html
 
             - title: Offers
@@ -106,5 +105,25 @@ entries:
                 - title: Offers
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers.html
 
-                - title: Offers - reference information
+                - title: "Offers: reference information"
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers-reference-information.html
+
+      - title: Merchant Portal user guides
+        nested:
+
+        - title: Dashboard
+          nested:
+          - title: Dashboard
+            url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard.html
+
+          - title: "Dashboard: reference information"
+            url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard-reference-information.html
+
+        - title: Profile
+          nested:
+
+          - title: Profile
+            url: /docs/marketplace/user/merchant-portal-user-guides/profile/profile.html
+
+          - title: "Profile: reference information"
+            url: /docs/marketplace/user/merchant-portal-user-guides/profile/profile-reference-information.html

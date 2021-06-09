@@ -14,8 +14,6 @@ topnav_dropdowns:
       folderitems:
         - title: Jekyll documentation
           external_url: http://jekyllrb.com/docs/home/
-        - title: Theme manual
-          url: /mydoc_introduction.html
     - title: Products
       folderitems:
         - title: Developer Documentation

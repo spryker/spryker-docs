@@ -7,7 +7,7 @@
     font-weight: 500;
     line-height: 28px;
     letter-spacing: .3px;
-    background: $grey-lightest;
+    background: $blue-light;
     color: $grey-dark;
     display: flex;
     align-items: flex-start;
@@ -19,7 +19,7 @@
         font-weight: 600;
         display: block;
         padding-bottom: 5px;
-        color: $blue;
+        color: currentColor;
     }
 
     &__icon {
@@ -34,18 +34,28 @@
 
         p {
             margin-top: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        ul {
+            padding: 0;
         }
     }
 
     &--warning {
-        .info-block__title,
+        background: $yellow-light;
+
         .info-block__icon {
-            color: $darkest;
+            color: $orange;
         }
     }
 
     &--error {
-        .info-block__title,
+        background: $pink-light;
+
         .info-block__icon {
             color: $red;
         }

@@ -22,16 +22,39 @@ $( document ).ready(function() {
 
     initSidebarToggle();
 
+    initSidebarAccordion();
+
+    initFeedbackForm();
+
+    initCopyText();
+});
+
+function initCopyText() {
+    jQuery('code').on('click', function(e){
+    let copyText = this,
+        textArea = document.createElement("textarea");
+
+        textArea.value = copyText.textContent.trim();
+        textArea.style.position = "fixed";
+        textArea.style.top = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("Copy");
+    });
+}
+
+function initSidebarAccordion() {
+    $(".sidebar-nav li.active").parents('li').toggleClass("active");
+
     $('.sidebar-nav').navgoco({
         openClass: 'active',
+        save: false,
         slide: {
             duration: 300,
             easing: 'linear'
         }
     });
-
-    initFeedbackForm();
-});
+}
 
 function initFeedbackForm() {
   $('.form-collapse').each(function(){
@@ -506,6 +529,7 @@ function initSidebarToggle() {
         var anchor = this.generateAnchor(headingEl);
         var $heading = $(headingEl);
         var text = $heading.data("toc-text") || $heading.text();
+        var nodeName = $heading.get(0).nodeName;
         return this.generateNavEl(anchor, text);
       },
 
@@ -513,7 +537,7 @@ function initSidebarToggle() {
       getTopLevel: function($scope) {
         for (var i = 1; i <= 6; i++) {
           var $headings = this.findOrFilter($scope, "h" + i);
-          if ($headings.length > 1) {
+          if ($headings.length > 0) {
             return i;
           }
         }
@@ -540,11 +564,12 @@ function initSidebarToggle() {
         var $prevNav;
 
         var helpers = this;
+
         $headings.each(function(i, el) {
           var $newNav = helpers.generateNavItem(el);
           var navLevel = helpers.getNavLevel(el);
 
-          /*
+          
           // determine the proper $context
           if (navLevel === topLevel) {
             // use top level
@@ -553,7 +578,7 @@ function initSidebarToggle() {
             // create a new level of the tree and switch to it
             $context = helpers.createChildNavList($prevNav);
           } // else use the current $context
-          */
+          
           $context.append($newNav);
 
           $prevNav = $newNav;
@@ -590,8 +615,10 @@ function initSidebarToggle() {
 
   $(function() {
     $('nav[data-toggle="toc"]').each(function(i, el) {
-      var $nav = $(el);
-      Toc.init($nav);
+      Toc.init({
+        $nav: $(el),
+        $scope: $(".post-content h2, .post-content h3"),
+      });
     });
   });
 })(jQuery);

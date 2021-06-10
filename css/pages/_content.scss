@@ -67,7 +67,7 @@
                 top: 8px;
                 left: 0;
                 @extend %icon;
-                @extend .icon-arrow-right:before;
+                @extend .icon-arrow-right;
                 font-size: 10px;
             }
         }
@@ -105,21 +105,5 @@
         &:after {
             content: none !important;
         }
-    }
-}
-
-.highlight,
-pre {
-    background: $grey-lightest;
-    padding: 10px;
-    word-break: break-word;
-}
-
-.highlight {
-    margin: 0 0 1em;
-    & &,
-    pre {
-        padding: 0;
-        margin: 0;
     }
 }

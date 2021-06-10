@@ -40,11 +40,20 @@
                     border-left-color: $red;
                 }
             }
+
+            ul {
+                a {
+                    padding-left: 26px;
+                    border-left-width: 2px;
+                }
+            }
         }
 
-        .active > a {
-            color: $darkest;
-            border-left-color: $red;
+        .active {
+            & > a {
+                color: $darkest;
+                border-left-color: $red;
+            }
         }
     }
 }

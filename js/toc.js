@@ -1,5 +1,6 @@
 // https://github.com/ghiculescu/jekyll-table-of-contents
 (function($){
+  return;
   $.fn.toc = function(options) {
     var defaults = {
       noBackToTopLinks: false,

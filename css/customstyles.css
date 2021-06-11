@@ -501,14 +501,10 @@ div.box.box1 {
     background-color: #d6f5d6;
 }
 
-#userMap .btn-lg  {
-        white-space: pre-wrap;       /* css-3 */
-        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-        white-space: -pre-wrap;      /* Opera 4-6 */
-        white-space: -o-pre-wrap;    /* Opera 7 */
-        word-wrap: break-word;       /* Internet Explorer 5.5+ */
-        font-size: 14px;
-    }
+#userMap .btn-lg {
+    word-wrap: break-word;
+    font-size: 14px;
+}
 
 h4.panel-title {
     padding-top: 0px;

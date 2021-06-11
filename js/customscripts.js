@@ -529,7 +529,6 @@ function initSidebarToggle() {
         var anchor = this.generateAnchor(headingEl);
         var $heading = $(headingEl);
         var text = $heading.data("toc-text") || $heading.text();
-        var nodeName = $heading.get(0).nodeName;
         return this.generateNavEl(anchor, text);
       },
 

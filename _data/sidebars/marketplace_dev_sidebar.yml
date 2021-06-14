@@ -279,8 +279,14 @@ entries:
       - title: Front-end
         nested:
 
+        - title: "Project structure"
+          url: /docs/marketplace/dev/front-end/project-structure.html
+
         - title: Table design
           nested:
+
+            - title: "Table Column Type extension"
+              url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension.html
 
             - title: "Table Feature extension"
               url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
@@ -296,6 +302,9 @@ entries:
 
             - title: "Data transformers"
               url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers.html
+
+            - title: "Cache"
+              url: /docs/marketplace/dev/front-end/ui-components-library/cache.html
 
             - title: "Persistence"
               url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html

@@ -15,7 +15,7 @@ This allows backend systems to control where the data is coming from without cha
 
 Datasources are used in other components like Table, Select, Autocomplete, etc.
 
-```
+```ts
 <spy-select
   [datasource]="{
     type: 'inline',
@@ -91,7 +91,7 @@ There are a few common Datasources that are available in UI library as separate 
 
 Below you can find interfaces for the Datasource configuration and Datasource type: 
 
-```
+```ts
 export interface DatasourceConfig {
   type: DatasourceType;
   transform?: DataTransformerConfig;

@@ -119,7 +119,6 @@ In the table configuration, you can enable or disable, and configure any feature
 ```
 
 
-
 ## Interfaces
 
 Below you can find interfaces for the Table Feature extension configuration.

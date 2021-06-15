@@ -30,7 +30,7 @@ $( document ).ready(function() {
 });
 
 function initCopyText() {
-    jQuery('.post-content > pre, div.highlight').each(function(){
+    jQuery('.post-content > pre, .post-content details > pre, div.highlight').each(function(){
         let block = jQuery(this),
             codeContainer = block.find('code').get(0),
             copyButton = jQuery('<div class="code-button"><i class="icon-copy"></i></div>'),

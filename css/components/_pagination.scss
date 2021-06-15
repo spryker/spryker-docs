@@ -17,6 +17,7 @@
                 .pagination__link {
                     color: $red;
                     border-color: $red;
+                    pointer-events: none;
                 }
             }
 

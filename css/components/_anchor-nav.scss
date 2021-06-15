@@ -3,6 +3,7 @@
         background: $grey-lightest;
         border-radius: 4px;
         padding: 16px 0 10px;
+        margin: 0 0 16px;
 
         & > ul::before {
             font-size: 12px;
@@ -37,7 +38,6 @@
 
                 &:hover {
                     color: $darkest;
-                    border-left-color: $red;
                 }
             }
 

@@ -45,6 +45,14 @@
         font-size: 12px;
     }
 
+    &--xs {
+        height: 30px;
+        min-width: 0;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 0 8px;
+    }
+
     &--black {
         background: $darkest;
         border-color: $darkest;

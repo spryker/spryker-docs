@@ -78,3 +78,62 @@ pre {
     .vi { color: #89C6BE } /* Name.Variable.Instance */
     .il { color: #89C6BE } /* Literal.Number.Integer.Long */
 }
+
+.code-header {
+    background: $dark-2;
+    color: $white;
+    border-bottom: 1px solid $grey-darker;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3px 14px;
+
+    & + pre {
+        margin-top: 0;
+    }
+}
+
+.code-button {
+    cursor: pointer;
+    display: inline-flex;
+    vertical-align: top;
+    color: $grey;
+    font-size: 20px;
+    transition: color .2s linear;
+    padding: 5px;
+    position: relative;
+
+    &:hover {
+        color: $white;
+    }
+
+    &:before {
+        content: 'Copied!';
+        position: absolute;
+        top: 0;
+        right: 100%;
+        margin: 0 5px 0 0;
+        font-size: 17px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &.active {
+        &:before {
+            animation: fade-in-out 1s linear 1;
+        }
+    }
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

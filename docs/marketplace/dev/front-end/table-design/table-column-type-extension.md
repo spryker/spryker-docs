@@ -1,13 +1,10 @@
 ---
-title: { Table Column Type Extension }
-description: { Meta description }
+title: Table Column Type Extension
+description: This document provides details about the Table Column Type extension in the Components Library.
 template: concept-topic-template
 ---
 
-# Table Column Type extension
-
 This document provides details about the Table Column Type extension in the Components Library.
-
 
 ## Overview
 

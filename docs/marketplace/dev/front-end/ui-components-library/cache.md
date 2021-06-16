@@ -30,8 +30,6 @@ Cache Service uses Cache Strategy to define caching algorithm (static, cache fir
 
 ## Cache Storage Factory Service
 
-### Overview
-
 The factory creates the `CacheStorage` instance types for a specific configuration.
 
 As an example, to use `PersistenceStrategy` as a Cache Storage, factory-created storage is used.
@@ -44,6 +42,8 @@ The `create` method gets the registered persistence strategy from `PersistenceSt
 `createAll` method gets all the registered persistence strategies from `PersistenceStrategyService.getAll` and returns an array of adapted `CacheStorage` instance types.
 
 ### Interfaces
+
+Below you can find interfaces for Cache Storage Factory Service:
 
 ```ts
 interface CacheStorageFactoryService {
@@ -65,8 +65,6 @@ interface CacheStorage {
 
 ## Main Service
 
-### Overview
-
 The Cache Service provides general capabilities for interacting with different caching strategies.
 
 A Cache Strategy is an Angular Service that implements a specific interface (`CacheStrategy`) and then registers with the Cache Module via `CacheModule.withStrategies()`.
@@ -78,6 +76,8 @@ The `getCached` method finds a specific strategy from the `CacheStrategyTypesTok
 The `clearCache` method returns an array of instances (PersistenceStrategy[]) of all the registered strategies from `PersistenceStrategyTypesToken`.
 
 ### Interfaces
+
+Below you can find interfaces for the Cache Service:
 
 ```ts
 interface CacheService {
@@ -92,8 +92,6 @@ interface CacheService {
 ```
 
 ## Cache Strategy
-
-### Overview
 
 The Cache Strategy is the algorithm for caching data.
 
@@ -139,6 +137,8 @@ export class CustomCacheService implements CacheStrategy {
 export class RootModule
 ```
 ### Interfaces
+
+Below you can find interfaces for the Cache Strategy:
 
 ```ts
 interface CacheId {

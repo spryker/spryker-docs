@@ -15,6 +15,8 @@ $( document ).ready(function() {
         return false;
     });*/
 
+    initCopyText();
+
     /**
      * AnchorJS
      */
@@ -25,8 +27,6 @@ $( document ).ready(function() {
     initSidebarAccordion();
 
     initFeedbackForm();
-
-    initCopyText();
 });
 
 function initCopyText() {
@@ -52,8 +52,7 @@ function initCopyText() {
         let textArea = document.createElement("textarea");
 
         textArea.value = e.data.container.textContent.trim();
-        textArea.style.position = "fixed";
-        textArea.style.top = "-9999px";
+        textArea.classList.add("hidden-item");
         document.body.appendChild(textArea);
         textArea.select();
         document.execCommand("Copy");

@@ -78,3 +78,8 @@ pre {
     .vi { color: #89C6BE } /* Name.Variable.Instance */
     .il { color: #89C6BE } /* Literal.Number.Integer.Long */
 }
+
+.hidden-item {
+    position: fixed;
+    top: -9999px;
+}

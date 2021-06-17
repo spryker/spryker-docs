@@ -26,6 +26,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-article:before {
+    content: "\e915";
+}
+.icon-copy:before {
+    content: "\e916";
+}
+.icon-warning:before {
+    content: "\e914";
+}
 .icon-github:before {
     content: "\e910";
 }

@@ -27,6 +27,7 @@
         padding: 0;
         margin: 0;
         list-style: none;
+        display: none;
     }
 
     &__link {
@@ -35,6 +36,7 @@
         border-left: 4px solid transparent;
         padding: 9px 10px 9px 52px;
         position: relative;
+        word-break: break-word;
 
         &:hover {
             background: $grey-lighten;

@@ -11,7 +11,11 @@
     height: 50px;
     padding: 0 20px;
     min-width: 130px;
-    transition: color .3 linear, background .3 linear, border-color .3 linear;
+    transition: color .3s linear, background .3s linear, border-color .3s linear, box-shadow .3s linear;
+
+    &:hover {
+        box-shadow: 0 3px 10px rgba($silver, 0.5);
+    }
 
     &:hover,
     &:active,
@@ -20,6 +24,10 @@
         background: $grey-light;
         color: $grey-2;
         border-color: $silver;
+    }
+
+    &:active {
+        box-shadow: none;
     }
 
     [class*="icon-"] {
@@ -42,6 +50,10 @@
         border-color: $darkest;
         color: $white;
 
+        &:hover {
+            box-shadow: 0 4px 10px rgba($black, 0.18);
+        }
+
         &:hover,
         &:active,
         &:focus {
@@ -50,12 +62,20 @@
             border: 1px solid $grey;
             color: $white;
         }
+
+        &:active {
+            box-shadow: none;
+        }
     }
 
     &--red {
         background: $red;
         border-color: $red;
         color: $white;
+
+        &:hover {
+            box-shadow: 0 4px 10px rgba($red, 0.18);
+        }
 
         &:hover,
         &:active,
@@ -64,6 +84,10 @@
             background: $red;
             border: 1px solid $red-dark;
             color: $white;
+        }
+
+        &:active {
+            box-shadow: none;
         }
     }
 }

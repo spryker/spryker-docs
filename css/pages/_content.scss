@@ -1,7 +1,7 @@
 .post-content {
     h1, h2, h3, h4, h5, h6 {
         color: rgb(72, 73, 78);
-        font-weight: bold;
+        font-weight: 800;
         margin: 0 0 16px;
     }
 
@@ -12,7 +12,14 @@
 
     h2 {
         font-size: 28px;
-        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
     }
 
     table {
@@ -67,7 +74,7 @@
                 top: 8px;
                 left: 0;
                 @extend %icon;
-                @extend .icon-arrow-right:before;
+                @extend .icon-arrow-right;
                 font-size: 10px;
             }
         }
@@ -93,9 +100,11 @@
 .post-header {
     display: flex;
     align-items: flex-start;
+    margin: 0 0 8px;
 
     &__title {
         flex: 1 1 auto;
+        margin: 0 0 8px;
     }
 
     &__button {
@@ -106,20 +115,16 @@
             content: none !important;
         }
     }
-}
 
-.highlight,
-pre {
-    background: $grey-lightest;
-    padding: 10px;
-    word-break: break-word;
-}
-
-.highlight {
-    margin: 0 0 1em;
-    & &,
-    pre {
-        padding: 0;
+    h1 {
         margin: 0;
     }
+}
+
+.post-meta {
+    font-size: 14px;
+    line-height: 24px;
+    color: $grey-6;
+    width: 100%;
+    margin: 0 0 16px;
 }

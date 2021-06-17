@@ -34,7 +34,7 @@ layout: default
         </a>
         <div class="main-sidebar__inner">
             <div class="main-sidebar__slide">
-                <h3 class="main-sidebar__title">{{ site.data.sidebars[page.sidebar].title }}</h3>
+                <h3 class="main-sidebar__title" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
 
                 {% unless page.hide_sidebar %}
                     <div id="tg-sb-sidebar">
@@ -44,7 +44,7 @@ layout: default
             </div>
         </div>
     </aside>
-    <div class="post-content" data-spy="scroll" data-target="#toc">
+    <div class="post-content">
         <div class="post-header">
             <h1 class="post-header__title">{{ page.title }}</h1>
 
@@ -52,6 +52,8 @@ layout: default
                 <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="button post-header__button button--small" role="button"><i class="icon-github"></i> Edit on GitHub</a>
             {% endif %}
         </div>
+
+        <div class="post-meta">Last updated: <time datetime="">20.05.2021</time></div>
 
         {% if page.summary %}
             <div class="summary">{{page.summary}}</div>

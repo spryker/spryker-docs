@@ -111,7 +111,7 @@ const AlgoliaSearch = {
 
             // pagination
             // Create the render function
-            const renderPagination = (renderOptions, isFirstRender) => {
+            const renderPagination = (renderOptions) => {
                 const {
                     pages,
                     currentRefinement,

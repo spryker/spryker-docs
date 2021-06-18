@@ -4,6 +4,8 @@
 @import 'variables';
 @import 'base/normalize';
 @import 'base/mixins';
+@import 'base/include-media';
+@import 'base/breakpoints';
 @import 'layout';
 @import 'components/icons';
 @import 'components/header';

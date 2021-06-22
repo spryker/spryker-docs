@@ -15,7 +15,7 @@ As a result, backend systems can manipulate data without changing the frontend a
 
 Anyone may use the Data Transformer Service to modify data by configuring a specific `DataTransformer`.
 
-```js
+```ts
 <spy-select
   [datasource]="{
     type: 'http',
@@ -74,7 +74,7 @@ Data Transformer is an Angular Service that encapsulates the algorithm of how th
 
 Data Transformer must implement a specific interface (`DataTransformer`) and then be registered to the Data Transformer Module via `DataTransformerModule.withTransformers()`,
 
-```js
+```ts
 ///// Module augmentation
 import { DataTransformerConfig } from '@spryker/data-transformer';
 
@@ -118,30 +118,11 @@ export class RootModule
 
 The context in which the Data Transformer operates is determined by the local injector where it is being used.
 
-## Data Transformer types
-
-There are a few common Data Transformers that are available in the UI library as separate packages:
-
-- `pluck` - Selects and returns a nested object by path via configuration.
-- `lens` - Updates the nested object by path using another Data Transformer set up with a configuration file.
-- `array-map` - Executes another Data Transformer from the config for every object in the array.
-- `object-map` - Executes another Data Transformer from the config for each object in the object.
-- `chain` - Executes another Data Transformer in sequence via configuration.
-- `date-parse` - Parses the string value as a Date ISO into the JS Date Object.
-- `date-serialize` - Serializes JS Date Object into a Date ISO string.
-- `collate` - Sorts, filters, and paginates data based on configuration. It has extra extension points:
-  - Filters - Services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
-    - `equals` - filters values that are strictly equal.
-    - `range` - Filters values that are within a number range.
-    - `text` - Filters values that match a string.
-  - Data Configurators - Services that allow configuring repopulation data (sorting, pagination, filtering). This services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
-    - `table` - Integrates Table into Collate to re-populate the data.
-
 ## Interfaces
 
 Below you can find interfaces for the Data Transformer service configuration and Data Transformer type.
 
-```
+```ts
 interface DataTransformerService {
   transform(data: unknown, config: DataTransformerConfig): Observable<unknown>;
 }
@@ -161,4 +142,21 @@ interface DataTransformer<D, DT> {
 }
 ```
 
-## 
+## Data Transformer types
+
+There are a few common Data Transformers that are available in the UI library as separate packages:
+
+- `pluck` - Selects and returns a nested object by path via configuration.
+- `lens` - Updates the nested object by path using another Data Transformer set up with a configuration file.
+- `array-map` - Executes another Data Transformer from the config for every object in the array.
+- `object-map` - Executes another Data Transformer from the config for each object in the object.
+- `chain` - Executes another Data Transformer in sequence via configuration.
+- `date-parse` - Parses the string value as a Date ISO into the JS Date Object.
+- `date-serialize` - Serializes JS Date Object into a Date ISO string.
+- `collate` - Sorts, filters, and paginates data based on configuration. It has extra extension points:
+  - Filters - Services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
+    - `equals` - filters values that are strictly equal.
+    - `range` - Filters values that are within a number range.
+    - `text` - Filters values that match a string.
+  - Data Configurators - Services that allow configuring repopulation data (sorting, pagination, filtering). This services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
+    - `table` - Integrates Table into Collate to re-populate the data.

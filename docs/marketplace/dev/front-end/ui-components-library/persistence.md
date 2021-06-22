@@ -16,7 +16,7 @@ Anyone may save any data using the Persistence Service. Anyone may use Persisten
 
 Persistence is used in other components like Cache, Table State Sync Feature etc.
 
-```
+```ts
 <spy-select
   [datasource]="{
     type: 'http',
@@ -45,7 +45,7 @@ Persistence Strategy encapsulates the algorithm of how the data is persisted.
 
 Persistence Strategy must implement a specific interface (`PersistenceStrategy`) and then be registered to the Root Module via `PersistenceModule.withStrategies()`.
 
-```
+```ts
 ///// Module augmentation
 import { PersistenceStrategy } from '@spryker/persistence';
 
@@ -81,19 +81,11 @@ export class CustomPersistenceService implements PersistenceStrategy {
 export class RootModule
 ```
 
-## Persistence strategy types
-
-There are a few common Persistence Strategies that are available in the UI library:
-
-- `InMemoryPersistenceStrategy` - Stores data in memory and will be lost when the browser page is reloaded.
-- `LocalStoragePersistenceStrategy` - Uses browser Local Storage to store the data.
-- `UrlPersistenceStrategy` - Uses browser URL to store the data.
-
 ## Interfaces
 
 Below you can find interfaces for the Persistence service configuration.
 
-```
+```ts
 interface PersistenceStrategyService {
   select(type: PersistenceStrategyType): PersistenceStrategy;
   getAll(): PersistenceStrategy[];
@@ -106,4 +98,10 @@ interface PersistenceStrategy {
 }
 ```
 
-## 
+## Persistence strategy types
+
+There are a few common Persistence Strategies that are available in the UI library:
+
+- `InMemoryPersistenceStrategy` - Stores data in memory and will be lost when the browser page is reloaded.
+- `LocalStoragePersistenceStrategy` - Uses browser Local Storage to store the data.
+- `UrlPersistenceStrategy` - Uses browser URL to store the data.

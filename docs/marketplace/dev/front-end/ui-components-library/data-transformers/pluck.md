@@ -10,7 +10,7 @@ This document provides details about the Data Transformer Pluck service in the C
 ## Overview
 
 Data Transformer Pluck is an Angular Service that selects and returns a nested object by path via configuration.
-In the example below `datasource` will return value of the `three` key ('123') after a response is received.
+In the example below `datasource` will return value of the `three` key ('123') of the `data` input after a response is received.
 
 ```ts
 <spy-select
@@ -40,6 +40,7 @@ export interface PluckDataTransformerConfig extends DataTransformerConfig {
   path: string;
 }
 
+// Service registration
 @NgModule({
   imports: [
     DataTransformerModule.withTransformers({

@@ -110,25 +110,101 @@ const AlgoliaSearch = {
             );
 
             // pagination
-            searchIndex.addWidget(
-                instantsearch.widgets.pagination({
-                    container: $(`#tabs-${searchIndex.indexName} .${this.pageConfig.paginationClassName}`).get(0),
-                    scrollTo: this.pageConfig.searchboxId,
-                    cssClasses: {
-                      root: 'pagination',
-                      list: 'pagination__list',
-                      item: 'pagination__list-item',
-                      link: 'pagination__link',
-                      disabledItem: 'pagination__list-item--disabled',
-                      firstPageItem: 'pagination__list-item--first',
-                      lastPageItem: 'pagination__list-item--last',
-                      previousPageItem: 'pagination__list-item--prev',
-                      nextPageItem: 'pagination__list-item--next',
-                      selectedItem: 'pagination__list-item--active',
-                    },
-                })
+            // Create the render function
+            const renderPagination = (renderOptions) => {
+                const {
+                    pages,
+                    currentRefinement,
+                    nbPages,
+                    isFirstPage,
+                    isLastPage,
+                    refine,
+                    createURL,
+                } = renderOptions;
+
+                const container = $(`#tabs-${searchIndex.indexName} .${this.pageConfig.paginationClassName}`).get(0);
+                const searchboxId = this.pageConfig.searchboxId;
+
+                container.innerHTML = (!currentRefinement && !nbPages)? "": `
+                <div class="search-results__pagination"><div class="pagination"><ul class="pagination__list">
+                  ${
+                    !isFirstPage
+                      ? `
+                        <li class="pagination__list-item pagination__list-item--first">
+                          <a
+                            href="${createURL(0)}"
+                            data-value="${0}"
+                            class="pagination__link"
+                          >«</a>
+                        </li>
+                        <li class="pagination__list-item pagination__list-item--prev">
+                          <a
+                            href="${createURL(currentRefinement - 1)}"
+                            data-value="${currentRefinement - 1}"
+                            class="pagination__link"
+                          >‹</a>
+                        </li>
+                        `
+                      : ''
+                  }
+                  ${pages
+                    .map(
+                      page => `
+                        <li class="pagination__list-item ${currentRefinement === page ? 'pagination__list-item--active' : ''}">
+                          <a
+                            href="${createURL(page)}"
+                            data-value="${page}"
+                            class="pagination__link"
+                          >${page + 1}</a>
+                        </li>
+                      `
+                    )
+                    .join('')}
+                    ${
+                      !isLastPage
+                        ? `
+                          <li class="pagination__list-item pagination__list-item--next">
+                            <a
+                              href="${createURL(currentRefinement + 1)}"
+                              data-value="${currentRefinement + 1}"
+                              class="pagination__link"
+                            >›</a>
+                          </li>
+                          <li class="pagination__list-item pagination__list-item--last">
+                            <a
+                              href="${createURL(nbPages - 1)}"
+                              data-value="${nbPages - 1}"
+                              class="pagination__link"
+                            >»</a>
+                          </li>
+                          `
+                        : ''
+                    }
+                </ul></div></div>
+                `;
+
+                [...container.querySelectorAll('a')].forEach(element => {
+                    element.addEventListener('click', event => {
+                      event.preventDefault();
+                      refine(event.currentTarget.dataset.value);
+                      let scrollPos = document.querySelector(searchboxId).getBoundingClientRect().top + window.scrollY;
+                      window.scrollTo(0, scrollPos);
+                    });
+                });
+            };
+
+            // Create the custom widget
+            const customPagination = instantsearch.connectors.connectPagination(
+              renderPagination
             );
-        })
+
+            // Instantiate the custom widget
+            searchIndex.addWidgets([
+              customPagination({
+                container: $(`#tabs-${searchIndex.indexName} .${this.pageConfig.paginationClassName}`).get(0),
+              })
+            ]);
+        });
     },
     render() {
         let $container = $(this.pageConfig.container);

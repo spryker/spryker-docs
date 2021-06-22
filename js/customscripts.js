@@ -30,16 +30,36 @@ $( document ).ready(function() {
 });
 
 function initCopyText() {
-    jQuery('code').on('click', function(e){
-    let copyText = this,
-        textArea = document.createElement("textarea");
+    jQuery('.post-content > pre, .post-content details > pre, div.highlight').each(function(){
+        let block = jQuery(this),
+            codeContainer = block.find('code').get(0),
+            copyButton = jQuery('<div class="code-button"><i class="icon-copy"></i></div>'),
+            blockHeader = jQuery('<div class="code-header"></div>');
 
-        textArea.value = copyText.textContent.trim();
+        copyButton.bind("click", {
+            container: codeContainer,
+            btn: copyButton,
+        }, copyText);
+
+        blockHeader.append(copyButton);
+        blockHeader.insertBefore(block);
+    });
+
+    function copyText(e){
+        e.preventDefault();
+        e.data.btn.removeClass('active');
+
+        let textArea = document.createElement("textarea");
+
+        textArea.value = e.data.container.textContent.trim();
         textArea.classList.add("hidden-item");
         document.body.appendChild(textArea);
         textArea.select();
         document.execCommand("Copy");
-    });
+        textArea.remove();
+
+        e.data.btn.addClass('active');
+    }
 }
 
 function initSidebarAccordion() {

@@ -96,17 +96,21 @@ layout: default
             </div>
         </aside>
 
-        <div class="tags">
-            {% if page.tags != null %}
-            <b>Tags: </b>
-            {% assign projectTags = site.data.tags.allowed-tags %}
-            {% for tag in page.tags %}
-            {% if projectTags contains tag %}
-            <a href="{{ "tag_" | append: tag | append: ".html" }}" class="button button--small cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-        </div>
+        <aside class="related">
+            <h3 class="related__title" data-toc-skip>Related articles</h3>
+            <a href="#" class="related__link">
+                <i class="icon-article related__link-icon"></i>
+                <span class="related__link-text">Building a return management process: Best practices</span>
+            </a>
+            <a href="#" class="related__link">
+                <i class="icon-article related__link-icon"></i>
+                <span class="related__link-text">Building a return management process: Best practices</span>
+            </a>
+            <a href="#" class="related__link">
+                <i class="icon-article related__link-icon"></i>
+                <span class="related__link-text">Shop Guide - Creating a Return very very long title text Shop Guide - Creating a Return very very long title text</span>
+            </a>
+        </aside>
 
         {% include commento.html %}
     </div>
@@ -118,6 +122,17 @@ layout: default
             {% unless page.toc == false %}
                 {% include toc.html %}
             {% endunless %}
+
+            <div class="tag-list">
+                {% if page.tags != null %}
+                {% assign projectTags = site.data.tags.allowed-tags %}
+                {% for tag in page.tags %}
+                {% if projectTags contains tag %}
+                <a href="{{ "tag_" | append: tag | append: ".html" }}" class="button button--xs tag-item" role="button">{{page.tagName}}{{tag}}</a>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+            </div>
         </div>
     </aside>
 </div>

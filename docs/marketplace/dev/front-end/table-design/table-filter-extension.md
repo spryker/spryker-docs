@@ -15,7 +15,7 @@ A Table Filter is an Angular Component that implements a specific interface (`Ta
 
 Furthermore, you need to create your own filter module and add it to the `RootModule`.
 
-```js
+```ts
 ///// Module augmentation
 import { TableFilterBase } from '@spryker/table.feature.filters';
 
@@ -63,7 +63,7 @@ export class RootModule
 
 You can configure any filter in the table config.
 
-```js
+```ts
 <spy-table [config]="{
     ...,
     filters: {
@@ -82,7 +82,7 @@ You can configure any filter in the table config.
 </spy-table>
 ```
 
-## Main Filter Feature
+## Main Filter feature
 
 Using the static method  `TableFiltersFeatureModule.withFilterComponents`, the table module allows registering any table filter by key. Under the hood, this method assigns the object of filters to `TABLE_FILTERS_TOKEN`.
 
@@ -94,7 +94,7 @@ The main component injects all registered types from the `TABLE_FILTERS_TOKEN` a
 
 Below you can find interfaces for the Table Filter extension configuration.
 
-```js
+```ts
 import { TableFeatureConfig } from '@spryker/table';
 
 export interface TableFiltersConfig extends TableFeatureConfig {
@@ -117,7 +117,7 @@ export interface TableFilterComponent<C extends TableFilterBase> {
 }
 ```
 
-## Table Filter Types
+## Table Filter types
 
 The Table Filters feature ships with a few common Table Filter types:
 

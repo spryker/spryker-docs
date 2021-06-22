@@ -11,12 +11,12 @@ This document provides details about the Table Feature extension in the Componen
 
 The table has the ability to add custom features/components to the defined table locations (`TableFeatureLocation`). By default, the table has a simplified view. However, you can embed additional components to the specified locations and extend the table (title, pagination, totals, etc.).
 
-A Table Feature is essentially an Angular Component encapsulating a piece of UI that is targeted to a specific location within a Table Component or that may provide additional functionality.
+A Table Feature is an Angular Component encapsulating a piece of UI that is targeted to a specific location within a Table Component or that may provide additional functionality.
 
 The Table Feature must extend a specific Angular Component (`TableFeatureComponent`) and provide itself as a `TableFeatureComponent` via `ExistingProvider` in the registry.
 
 
-```js
+```ts
 ///// Module augmentation
 import { TableFeatureConfig } from '@spryker/table';
 
@@ -78,7 +78,7 @@ There are two ways to use the Table Feature:
 
 - Via HTML tag (as a component) being projected into the Table Component - this allows users to control how the Table Feature is loaded on the page, but it does not control its loading from the Table Configuration.
   
-  ```html
+  ```ts
   <spy-table>
   <spy-table-title-feature spy-table-feature></spy-table-title-feature>
   </spy-table>
@@ -88,7 +88,7 @@ There are two ways to use the Table Feature:
   
 - Via the registry of the Table Module - the Table Feature can be lazy-loaded when the Table Component requires it based on the Table Configuration, but it does not allow custom loading (custom loading is possible if the Angular versions are the same and shared). 
 
-  ```js
+  ```ts
   @NgModule({
   imports: [
     TableModule.withFeatures({
@@ -106,7 +106,7 @@ To add a feature via the registry, register the feature in the Table Module usin
 
 In the table configuration, you can enable or disable, and configure any feature.
 
-```js
+```ts
 <spy-table [config]="{
     ...,
     title: {
@@ -119,12 +119,11 @@ In the table configuration, you can enable or disable, and configure any feature
 ```
 
 
-
 ## Interfaces
 
 Below you can find interfaces for the Table Feature extension configuration.
 
-```
+```ts
 export interface ModuleWithFeature {
   featureComponent: Type<TableFeatureComponent>;
 }

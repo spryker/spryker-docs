@@ -136,6 +136,10 @@
         @include media("<desktop") {
             padding: 24px 0 0;
         }
+
+        @include media("<tablet") {
+            background: none;
+        }
     }
 
     &__block {
@@ -173,6 +177,10 @@
             @include media("<desktop") {
                 padding: 0 20px 10px 0;
             }
+
+            @include media("<tablet") {
+                padding: 0 0 10px;
+            }
         }
 
         &_2 {
@@ -182,6 +190,11 @@
                 flex: 0 0 auto;
                 width: calc(100% - 200px);
                 padding: 0 0 10px;
+            }
+
+            @include media("<tablet") {
+                width: auto;
+                margin: 0 -16px;
             }
         }
 
@@ -200,6 +213,12 @@
                 margin: 0 -24px;
                 padding: 20px 24px 10px;
             }
+
+            @include media("<tablet") {
+                margin: 0;
+                border: 0;
+                padding: 20px 16px;
+            }
         }
     }
 
@@ -208,6 +227,10 @@
         width: 136px;
         height: auto;
         margin: 0 0 10px;
+
+        @include media("<tablet") {
+            margin: 0 0 5px;
+        }
     }
 
     &__nav {
@@ -217,6 +240,11 @@
             display: flex;
             justify-content: flex-end;
             text-align: right;
+        }
+
+        @include media("<tablet") {
+            display: block;
+            text-align: left;
         }
 
         ul {
@@ -243,20 +271,34 @@
                 justify-content: space-between;
                 flex: 1 0 auto;
             }
+
+            @include media("<tablet") {
+                display: block;
+                border-bottom: 1px solid $grey-3;
+            }
         }
+
         li {
             padding: 15px 10px;
 
             @include media("<desktop") {
                 padding: 10px 0 10px 10px;
             }
+
+            @include media("<tablet") {
+                border-top: 1px solid $grey-3;
+                padding: 5px 16px;
+            }
+
         }
+
         a {
             color: $grey;
             transition: color .3s linear;
             display: inline-block;
             vertical-align: top;
             padding: 5px 0;
+
             &:hover,
             &:active {
                 color: $darkest;
@@ -265,6 +307,10 @@
             &:focus {
                 text-decoration: none;
                 outline-color: $red;
+            }
+
+            @include media("<tablet") {
+                padding: 10px 0;
             }
         }
     }
@@ -288,11 +334,20 @@
                 margin: 0 20px 10px;
             }
 
+            @include media("<tablet") {
+                margin: 0 14px 10px;
+            }
+
         }
 
         a {
             color: $grey;
             font-size: 0;
+
+            @include media("<tablet") {
+                color: $grey-5;
+            }
+
             &:hover,
             &:active {
                 color: $darkest;
@@ -307,12 +362,24 @@
         [class*="icon-"] {
             display: block;
             font-size: 15px;
+
+            @include media("<tablet") {
+                font-size: 20px;
+            }
         }
         .icon-youtube {
             font-size: 17px;
+
+            @include media("<tablet") {
+                font-size: 22px;
+            }
         }
         .icon-facebook {
             font-size: 15px;
+
+            @include media("<tablet") {
+                font-size: 18px;
+            }
         }
     }
 }

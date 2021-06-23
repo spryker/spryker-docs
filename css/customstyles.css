@@ -158,10 +158,6 @@ i.border {
     background-color: whitesmoke;
 }
 
-a[data-toggle] {
-    color: #248EC2;
-}
-
 .summary {
     font-size:120%;
     color: #808080;
@@ -236,12 +232,6 @@ button.cursorNorm {
 
 span.otherProgrammingLanguages {
     font-style: normal;
-}
-
-a[data-toggle="tooltip"] {
-    color: #649345;
-    font-style: italic;
-    cursor: default;
 }
 
 .seriesNext, .seriesContext {

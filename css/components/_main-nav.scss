@@ -3,14 +3,14 @@
     position: relative;
     flex: 0 0 auto;
 
-    &:hover {
-        & > .main-nav__drop {
-            display: block;
+    &.show {
+        .main-nav__opener-label {
+            opacity: 0;
         }
+    }
 
-        & > .main-nav__opener {
-            border-color: transparent;
-            border-radius: 4px 4px 0 0;
+    &:hover {
+        @include hover {
             .main-nav__opener-label {
                 opacity: 0;
             }
@@ -34,12 +34,22 @@
         z-index: 2;
         transition: background .2s linear, border-radius .2s linear, border-color .2s linear;
 
+        @include media("<desktop") {
+            width: 270px;
+        }
+
         &:hover,
         &:active,
         &:focus {
             text-decoration: none;
             color: $darkest;
         }
+
+        /*&.active {
+            & + .main-nav__drop {
+                display: block;
+            }
+        }*/
 
         &--grey {
             border-color: $grey-lightest;
@@ -107,14 +117,19 @@
         & > li {
             position: relative;
 
-            &:hover {
-                & > .main-nav__drop {
-                    display: block;
-                }
-
+            &.show {
                 & > .main-nav__drop-link {
                     background: $grey-lighten;
                     -webkit-text-stroke: .5px currentColor;
+                }
+            }
+
+            &:hover {
+                & > .main-nav__drop-link {
+                    @media(hover: hover) and (pointer: fine) {
+                        background: $grey-lighten;
+                        -webkit-text-stroke: .5px currentColor;
+                    }
                 }
             }
         }
@@ -176,12 +191,35 @@
 
         .main-nav__drop {
             padding: 0;
-            left: 100%;
+            left: 100% !important;
             top: 0;
             border-top-left-radius: 0;
 
             .main-nav__drop-link {
                 -webkit-text-stroke: 0 !important;
+            }
+        }
+    }
+}
+
+.dropdown {
+    position: relative;
+
+    &:hover {
+        & > .dropdown-menu {
+            @include hover {
+                display: block;
+            }
+        }
+    }
+
+    &-menu {
+        transform: none !important;
+
+        &.show {
+            display: block;
+            @include hover {
+                display: none;
             }
         }
     }

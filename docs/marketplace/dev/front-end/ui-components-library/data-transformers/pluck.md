@@ -33,7 +33,7 @@ In the example below `datasource` will return value of the `three` key ('123') o
 
 ## Interfaces
 
-`path` - the name of the object property, whose value needs to be extracted from the original object.
+`path` - the name of the object property, whose value needs to be extracted from the original object. May contain nested properties separated by dots, just like in a Javascript language.
 
 ```ts
 export interface PluckDataTransformerConfig extends DataTransformerConfig {

@@ -3,14 +3,19 @@
     position: relative;
     flex: 0 0 auto;
 
-    &:hover {
-        & > .main-nav__drop {
-            display: block;
-        }
+    @include media("<tablet") {
+        margin: 0;
+        border-bottom: 1px solid $grey-3;
+    }
 
-        & > .main-nav__opener {
-            border-color: transparent;
-            border-radius: 4px 4px 0 0;
+    &.show {
+        .main-nav__opener-label {
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        @include hover {
             .main-nav__opener-label {
                 opacity: 0;
             }
@@ -33,6 +38,10 @@
         position: relative;
         z-index: 2;
         transition: background .2s linear, border-radius .2s linear, border-color .2s linear;
+
+        @include media("<desktop") {
+            width: 270px;
+        }
 
         &:hover,
         &:active,
@@ -83,6 +92,32 @@
             letter-spacing: .05em;
             padding: 0 5px;
             transition: opacity .2s linear;
+
+            @include media("<tablet") {
+                display: none;
+            }
+        }
+
+        &--mob-static {
+            @include media("<tablet") {
+                background: none;
+                border: 0;
+                pointer-events: none;
+                color: $black;
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 1.4;
+                margin: 0;
+                padding: 16px;
+                text-transform: none;
+                width: auto;
+            }
+
+            .main-nav__opener-icon {
+                @include media("<tablet") {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -104,17 +139,38 @@
         0px 20px 40px 0px rgba($black, 0.08);
         display: none;
 
+        @include media("<tablet") {
+            position: static;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+            border-radius: 0;
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 500;
+        }
+
         & > li {
             position: relative;
 
-            &:hover {
-                & > .main-nav__drop {
-                    display: block;
-                }
-
+            &.show {
                 & > .main-nav__drop-link {
                     background: $grey-lighten;
                     -webkit-text-stroke: .5px currentColor;
+
+                    @include media("<tablet") {
+                        background: none;
+                        -webkit-text-stroke: 0;
+                    }
+                }
+            }
+
+            &:hover {
+                & > .main-nav__drop-link {
+                    @include hover {
+                        background: $grey-lighten;
+                        -webkit-text-stroke: .5px currentColor;
+                    }
                 }
             }
         }
@@ -141,17 +197,30 @@
             transition: background .2s linear;
             text-decoration: none;
 
+            @include media("<tablet") {
+                padding: 11px 40px 11px 16px;
+                border-top: 1px solid $grey-3;
+            }
+
             &-arrow {
                 position: absolute;
                 right: 18px;
                 top: 16px;
                 font-size: 10px;
                 color: $grey-4;
+
+                @include media("<tablet") {
+                    top: 20px;
+                    color: $grey;
+                    right: 24px;
+                }
             }
 
             &:hover {
-                background: $grey-lightest !important;
-                -webkit-text-stroke: .5px currentColor;
+                @include hover {
+                    background: $grey-lightest !important;
+                    -webkit-text-stroke: .5px currentColor;
+                }
             }
 
             &-title {
@@ -160,28 +229,88 @@
                 align-items: center;
                 font-weight: 800;
 
+                @include media("<tablet") {
+                    padding-left: 50px;
+                    margin: 0;
+                }
+
                 [class*="icon-"] {
                     color: $red;
                     margin: 0 10px 0 0;
                     font-size: 22px;
                     line-height: 1;
                     display: block;
+
+                    @include media("<tablet") {
+                        flex: none;
+                        font-size: 36px;
+                        position: absolute;
+                        top: 50%;
+                        margin: -18px 0 0;
+                        left: 17px;
+                    }
                 }
             }
 
             &-subtitle {
                 display: block;
+
+                @include media("<tablet") {
+                    padding: 0 0 0 50px;
+                }
             }
         }
 
         .main-nav__drop {
             padding: 0;
-            left: 100%;
+            left: 100% !important;
             top: 0;
             border-top-left-radius: 0;
 
             .main-nav__drop-link {
                 -webkit-text-stroke: 0 !important;
+
+                @include media("<tablet") {
+                    background: $grey-lightest;
+                }
+
+            }
+        }
+
+        &--mob-static {
+            @include media("<tablet") {
+                display: block;
+            }
+        }
+    }
+}
+
+.dropdown {
+    position: relative;
+
+    &:hover {
+        & > .dropdown-menu {
+            @include hover {
+                display: block;
+            }
+        }
+    }
+
+    &-menu {
+        transform: none !important;
+
+        &.show {
+            display: block;
+            @include hover {
+                display: none;
+            }
+        }
+    }
+
+    &.show {
+        & > .main-nav__drop-link {
+            .main-nav__drop-link-arrow {
+                transform: rotate(90deg);
             }
         }
     }

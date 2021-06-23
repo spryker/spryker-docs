@@ -50,10 +50,8 @@
         }
 
         .active {
-            & > a {
-                color: $darkest;
-                border-left-color: $red;
-            }
+            color: $darkest;
+            border-left-color: $red;
         }
     }
 }

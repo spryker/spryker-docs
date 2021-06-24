@@ -20,7 +20,7 @@ The set of tabs for the *Create* and *Edit* pages, as well as for abstract and c
 | ATTRIBUTE | DESCRIPTION | CREATE ABSTRACT PRODUCT | UPDATE ABSTRACT PRODUCT |
 |-|-|-|-|
 | Store relation | Defines the store for which the product can be available. You can select multiple values. | Yes | Yes |
-| SKU Prefix | Number that you assign to the product will help to track unique information related to that product. | Yes | Display Only |
+| SKU Prefix | Number that you assign to the product will help track unique information related to that product. | Yes | Display Only |
 | Name | Name of your product that is displayed in the online store for your customers. | Yes | Yes |
 | Description | Description of the product that your customer sees in the online store. | Yes | Yes |
 | New from New to | Defines the period of time for which a dynamic label New will be assigned to the product. Either no dates can be selected, or both. | Yes | Yes |

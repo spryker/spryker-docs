@@ -38,8 +38,10 @@ Make sure that the following modules have been installed:
 | DashboardMerchantPortalGui   | vendor/spryker/dashboard-merchant-portal-gui  |
 | DashboardMerchantPortalGuiExtension | vendor/spryker/dashboard-merchant-portal-gui-extension |
 | SecurityMerchantPortalGui  | vendor/spryker/security-merchant-portal-gui |
+| MerchantUserPasswordResetMail | vendor/spryker/merchant-user-password-reset-mail |
 | ZedUi  | vendor/spryker/zed-ui |
 | GuiTable | vendor/spryker/gui-table |
+
 
 {% endinfo_block %}
 
@@ -52,10 +54,12 @@ Set up behavior as follows:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | ------------ | ------------- | --------- |
 | MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security |
-| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
-| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components |  | Spryker\Zed\ZedUi\Communication\Plugin |
-| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
-| GuiTableConfigurationTwigPlugin | Add a new Twig function for rendering GuiTableConfiguration for the GuiTable web component |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig<?php  |
+| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String. |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
+| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components. |  | Spryker\Zed\ZedUi\Communication\Plugin |
+| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed. |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
+| GuiTableConfigurationTwigPlugin | Add a new Twig function for rendering GuiTableConfiguration for the GuiTable web component. |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig<?php  |
+| MailMerchantUserPasswordResetRequestStrategyPlugin | Checks if strategy is applicable for a password reset request. Returns true if merchant user exists, false otherwise. |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset  |
+| MerchantUserPasswordResetMailTypePlugin | Builds the mail of merchant password restore type. |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\Mail  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -136,6 +140,64 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 }
 ```
 
+**src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\UserPasswordReset;
+
+use Spryker\Zed\UserPasswordReset\UserPasswordResetDependencyProvider as SprykerUserPasswordResetDependencyProvider;
+use Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset\MailMerchantUserPasswordResetRequestStrategyPlugin;
+
+class UserPasswordResetDependencyProvider extends SprykerUserPasswordResetDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\UserPasswordResetExtension\Dependency\Plugin\UserPasswordResetRequestStrategyPluginInterface[]
+     */
+    public function getUserPasswordResetRequestStrategyPlugins(): array
+    {
+        return [
+            new MailMerchantUserPasswordResetRequestStrategyPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Mail/MailDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Mail;
+
+use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
+use Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\Mail\MerchantUserPasswordResetMailTypePlugin;
+
+class MailDependencyProvider extends SprykerMailDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    public function provideBusinessLayerDependencies(Container $container)
+    {
+        $container = parent::provideBusinessLayerDependencies($container);
+        $container->extend(static::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
+            $mailCollection
+            ->add(new MerchantUserPasswordResetMailTypePlugin());
+            
+            return $mailCollection;
+        });
+        
+        return $container;
+    }
+}
+```
+
+
+
 Open access to the Merchant Portal login page by default:
 
 **config/Shared/config_default.php**
@@ -146,15 +208,45 @@ Open access to the Merchant Portal login page by default:
 $config[AclConstants::ACL_DEFAULT_RULES] = [
   [
     'bundle' => 'security-merchant-portal-gui',
-    'controller' => 'login',
-    'action' => 'index',
+    'controller' => '*',
+    'action' => '*',
     'type' => 'allow',
   ],
 
 ];
 ```
+### 3) Add translations
+Add Merchant Portal translations:
 
-### 3) Set up transfer objects
+1. Append glossary according to your configuration:
+
+**data/import/common/common/glossary.csv**
+```
+mail.merchant.restore_password.subject,Neues Passwort für Ihren Spryker Merchant Portal Account,de_DE
+mail.merchant.restore_password.subject,New password for your Spryker Merchant Portal account,en_US
+mail.merchant.restore_password.text,"""Es wurde ein neues Passwort für Ihren Spryker Merchant Portal Account angefordert. Wenn Sie nicht um um eine Neueinrichtung des Passworts gebeten haben, ignorieren Sie bitte diese Email. Klicken Sie auf den folgedenen Link, um Ihr Passwort zu ändern:""",de_DE
+mail.merchant.restore_password.text,"""Somebody has requested a new password for your Spryker Merchant Portal account. If it's not you, just ignore this email. If it's you, please follow the link bellow:""",en_US
+mail.merchant.restore_password.label,Passwort ändern,de_DE
+mail.merchant.restore_password.label,Change Password,en_US
+mail.trans.merchant.restore_password.subtitle,"Somebody has requested a new password for your Spryker Merchant Portal account. If it was not you, please ignore this email. If it was you, please follow the instructions in  the button bellow",en_US
+mail.trans.merchant.restore_password.subtitle,"Es wurde ein neues Passwort für dein Merchant Portal-Konto angefordert. Wenn du es nicht warst, kannst du diese E-Mail ignorieren. Wenn du es warst, klicke bitte den Knopf unten an:",de_DE
+mail.trans.merchant.restore_password.title,New password for your Spryker Merchant Portal account,en_US
+mail.trans.merchant.restore_password.title,Neues Passwort für dein Spryker Merchant Portal-Konto,de_DE
+```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data has been added to the `spy_glossary` table in the database.
+
+{% endinfo_block %}
+
+### 4) Set up transfer objects
 
 Apply database changes and generate transfer changes:
 
@@ -170,8 +262,13 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 | ----------- | ----- | ------- | -------------------- |
-| MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCard  |
-| MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButton |
+| MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer  |
+| MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
+| Mail | class | created | src/Generated/Shared/Transfer/MailTransfer |
+| UserPasswordResetRequest | class | created | src/Generated/Shared/Transfer/UserPasswordResetRequestTransfer |
+| User | class | created | src/Generated/Shared/Transfer/UserTransfer |
+| MerchantUser | class | created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| MerchantUserCriteria | class | created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer |
 
 {% endinfo_block %}
 

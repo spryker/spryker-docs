@@ -93,6 +93,9 @@ entries:
           - title: Merchant Portal - Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
 
+          - title: Merchant Portal - Core + CMS feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-cms-feature-integration.html
+
           - title: Merchant Portal - Marketplace Merchant feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-feature-integration.html
 

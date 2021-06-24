@@ -25,7 +25,7 @@ To add items to a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users#retrieve-a-registered-users-cart) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users#retrieve-a-registered-users-cart) to get it. |
 
 
 ### Request

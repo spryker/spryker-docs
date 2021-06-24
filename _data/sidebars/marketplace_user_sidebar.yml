@@ -96,34 +96,22 @@ entries:
                 - title: Managing merchant users
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html
 
-                - title: "Merchants: reference information"
-                  url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/merchants-reference-information.html
-
             - title: Offers
               nested:
 
                 - title: Offers
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers.html
 
-                - title: "Offers: reference information"
-                  url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers-reference-information.html
-
       - title: Merchant Portal user guides
         nested:
 
         - title: Dashboard
           nested:
-          - title: Dashboard
-            url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard.html
-
-          - title: "Dashboard: reference information"
-            url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard-reference-information.html
+          - title: Managing merchant's performance data
+            url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/managing-merchants-performance-data.html
 
         - title: Profile
           nested:
 
-          - title: Profile
-            url: /docs/marketplace/user/merchant-portal-user-guides/profile/profile.html
-
-          - title: "Profile: reference information"
-            url: /docs/marketplace/user/merchant-portal-user-guides/profile/profile-reference-information.html
+          - title: Editing merchant's profile details
+            url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing merchants-profile-details.html

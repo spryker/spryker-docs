@@ -107,11 +107,11 @@ entries:
 
         - title: Dashboard
           nested:
-          - title: Dashboard
-            url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/dashboard.html
+          - title: Managing merchant's performance data
+            url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/managing-merchants-performance-data.html
 
         - title: Profile
           nested:
 
-          - title: Profile
-            url: /docs/marketplace/user/merchant-portal-user-guides/profile/profile.html
+          - title: Editing merchant's profile details
+            url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing merchants-profile-details.html

@@ -1,17 +1,15 @@
 ---
-title: Dashboard
+title: Managing merchant's performance data
 last_updated: Nov 13, 2020
-description: This topic describes what information you can check in Dashboard in the Merchant Portal.
+description: This topic describes what information you can check in Dashboard of the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This topic describes what information you can check in the dashboard in the Merchant Portal.
+This topic describes what information you can check in the dashboard of the Merchant Portal.
 
-*Dashboard* is the hub for merchants' important business and performance data. It allows merchants to monitor their own store inside the Marketplace by having a snapshot view of the most crucial information.
+*Dashboard*  is the hub for merchants' important business and performance data. It allows merchants to monitor their own store inside the Marketplace by having a snapshot view of the most crucial information.
 
-*Dashboard* is the first page a merchant sees after logging into the Merchant Portal.
-
----
+*Dashboard*  is the first page a merchant sees after logging into the Merchant Portal.
 
 ## Prerequisites
 
@@ -26,11 +24,11 @@ To manage the existing offers in the system, click **Manage Offer**. You get red
 
 To create a new offer, click **Add Offer**. See Creating a product offer <!-- add a link when available --> for more detailed instructions on how to create a new offer in the Merchant Portal.
 
-## Reference information: Managing offers in Dashboard
+### Reference information: Managing offers in Dashboard
 
 This section contains the attributes description you see when managing offers in *Dashboard*.
 
-### Offers widget
+#### Offers widget
 
 ![offers-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/offers-widget.png)
 
@@ -61,9 +59,7 @@ Offline—The total number of offline offers.
 The total number of offers that are available on the Storefront, i.e., all of the orders that:
 
 * Have no validity dates or *Valid From & Valid To* includes today's date.
-
 * Are online.
-
 * Have stock.
 
 ## Managing orders in Dashboard
@@ -71,11 +67,11 @@ The total number of offers that are available on the Storefront, i.e., all of th
 To manage orders, click **Manage Orders**. You get redirected to the *Orders* page of the Merchant Portal.<!-- add a link when available -->
 
 
-## Reference information: Managing orders in Dashboard
+### Reference information: Managing orders in Dashboard
 
 This section contains the attributes description you see when managing orders in *Dashboard*.
 
-### Orders widget
+#### Orders widget
 
 ![orders-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/orders-widget.png)
 

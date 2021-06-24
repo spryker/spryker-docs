@@ -1,25 +1,22 @@
 ---
-title: Profile
+title: Editing merchant's profile details
 last_updated: Jul 24, 2020
-description: This topic describes actions a merchant can do in the Profile section of the Merchant Portal.
+description: This topic describes how to edit merchant's profile details in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This topic describes the actions a merchant can do in the *Profile* section of the Merchant Portal.
-
----
+This topic describes how to edit merchant's profile details in the Merchant Portal.
 
 ## Prerequisites
 
 To start managing a merchant profile, navigate to the **Merchant Portal** > **Profile**.
-
 
 This section allows [merchant users](/docs/marketplace/user/features/{{ page.version }}/merchants/merchant-users-feature-overview.html) to check and update the merchant profile information.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
 
-## Editing the merchant's business info
+## Editing merchant's business info
 
 {% info_block infoBox "Info" %}
 
@@ -29,7 +26,7 @@ The merchant's *Business Info* includes the details on contact person and genera
 
 To edit the merchant's business info, in the *Business Info* tab, edit the merchant details and click **Save**.
 
-### Reference information: Editing the merchant's business info
+### Reference information: Editing merchant's business info
 
 This section describes the attributes you enter and select when editing the merchant's business info in the *Business Info* tab. This tab includes business details that are not displayed in the Storefront. This information is needed for the initial merchant setup and further collaboration between the merchant and marketplace administrator.
 
@@ -56,7 +53,7 @@ This section contains general information on the company the merchant has.
 | Registration Number | Number assigned to the company at the point of registration. |   |
 | Merchant Reference | Unique identifier of the merchant in the system. |   |
 
-## Editing the merchant's online profile
+## Editing merchant's online profile
 
 {% info_block infoBox "Info" %}
 
@@ -66,7 +63,7 @@ The *Online Profile* section allows managing the information displayed on the *M
 
 To edit the merchant's online profile, in the *Online Profile* tab, edit the necessary details and click **Save**.
 
-### Reference information: Editing the merchant's online profile
+### Reference information: Editing merchant's online profile
 
 This section describes attributes you see when editing he merchant's online profile in the *Online Profile* tab. This  tab contains the information that will further be displayed on the [Merchant Profile page on the Storefront](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html#merchant-profile).
 

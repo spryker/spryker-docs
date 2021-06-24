@@ -16,16 +16,10 @@ In the example below `datasource` will return object with transformed `date`.
 <spy-select
   [datasource]="{
     type: 'inline',
-    data: [
-      {
-        type: 'date',
-        date: '2020-09-24T15:20:08+02:00',
-      },
-      {
-        type: 'date',
-        date: '2020-09-22T15:20:08+02:00',
-      },
-    ],
+    data: {
+      type: 'date',
+      date: '2020-09-24T15:20:08+02:00',
+    },
     transform: {
       type: 'lens',
       path: 'date',

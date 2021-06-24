@@ -28,7 +28,7 @@ To create a merchant, do the following:
 The following table describes the attributes you enter and select when creating merchants.
 
 
-#### General tab
+#### <a id="general-tab"></a>General tab
 
 This tab contains the main merchant information.
 

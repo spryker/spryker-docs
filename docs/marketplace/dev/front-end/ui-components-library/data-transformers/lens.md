@@ -10,48 +10,39 @@ This document provides details about the Data Transformer Lens service in the Co
 ## Overview
 
 Data Transformer Lens is an Angular Service that updates the nested object by path using another Data Transformer set up with a configuration object.
-In the example below date in `col2` will be transformed.
+In the example below `datasource` will return transformed `date`.
 
 ```ts
-<spy-table
-  [config]="{
-    columns: [
-      { id: 'col1', title: 'Column #1' },
-      { id: 'col2', title: 'Column #2' },
-    ],
-    dataSource: {
-      type: 'table.inline',
-      data: [
-        {
-          col1: 'col',
-          col2: '2020-09-24T15:20:08+02:00',
-        },
-        {
-          col1: 'col',
-          col2: '2020-09-22T15:20:08+02:00',
-        },
-      ],
-      transformerByPropName: {
-        col2: 'date',
+<spy-select
+  [datasource]="{
+    type: 'inline',
+    data: [
+      {
+        type: 'date',
+        date: '2020-09-24T15:20:08+02:00',
       },
-      transform: {
-        type: 'lens',
-        path: 'col2',
-        transformer: {
-          type: 'array-map',
-          mapItems: {
-            type: 'object-map',
-            mapProps: {
-              col2: {
-                type: 'date-parse',
-              },
+      {
+        type: 'date',
+        date: '2020-09-22T15:20:08+02:00',
+      },
+    ],
+    transform: {
+      type: 'lens',
+      path: 'date',
+      transformer: {
+        type: 'array-map',
+        mapItems: {
+          type: 'object-map',
+          mapProps: {
+            date: {
+              type: 'date-parse',
             },
           },
         },
       },
     },
   }"
-></spy-table>
+></spy-select>
 ```
 
 ## Interfaces

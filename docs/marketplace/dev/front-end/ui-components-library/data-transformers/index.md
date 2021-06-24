@@ -148,7 +148,7 @@ There are a few common Data Transformers that are available in the UI library as
 
 - [pluck](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html) - Selects and returns a nested object by path via configuration.
 - [lens](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html) - Updates the nested object by path using another Data Transformer set up with a configuration object.
-- `array-map` - Executes another Data Transformer from the config for every object in the array.
+- [array-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html) - Executes another Data Transformer from the config for every object in the array
 - `object-map` - Executes another Data Transformer from the config for each object in the object.
 - `chain` - Executes another Data Transformer in sequence via configuration.
 - `date-parse` - Parses the string value as a Date ISO into the JS Date Object.

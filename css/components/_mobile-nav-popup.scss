@@ -66,6 +66,10 @@
             z-index: 2000;
         }
 
+        @media (min-width: 768px) {
+            display: block !important;
+        }
+
         &__inner {
             @include media("<tablet") {
                 height: 100%;

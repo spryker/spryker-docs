@@ -30,15 +30,7 @@ In the example below `datasource` will return transformed `date`.
       type: 'lens',
       path: 'date',
       transformer: {
-        type: 'array-map',
-        mapItems: {
-          type: 'object-map',
-          mapProps: {
-            date: {
-              type: 'date-parse',
-            },
-          },
-        },
+        type: 'date-parse',
       },
     },
   }"

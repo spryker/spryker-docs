@@ -17,7 +17,7 @@ module Jekyll
         titleSection = "<div class=\"info-block__title\">#{@title}</div>"
       end
       if @type == 'warningBox'
-        blockIcon = 'icon-note'
+        blockIcon = 'icon-warning'
         blockModifier = 'info-block--warning'
       elsif @type == 'errorBox'
         blockIcon = 'icon-error'

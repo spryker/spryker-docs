@@ -110,6 +110,8 @@ versioned_categories:
     dev:
       - feature-integration-guides
       - glue-api-guides
+      - data-import
+      - data-export
 
 # these are defaults used for the frontmatter for these file types
 
@@ -137,3 +139,8 @@ algolia:
       title: 'Marketplace User'
     - name: 'marketplace_dev'
       title: 'Marketplace Developer'
+
+sass:
+    sass_dir: css
+    style: compressed
+    sourcemap: never

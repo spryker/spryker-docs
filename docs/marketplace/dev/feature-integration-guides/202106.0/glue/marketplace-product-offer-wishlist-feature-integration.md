@@ -5,7 +5,7 @@ description: This document describes how to integrate the Marketplace Product Of
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Product Offer + Wishlist Glue API feature into a Spryker project.
+This document describes how to integrate the Marketplace Product Offer + Wishlist Glue API feature into a Spryker project.
 
 ## Install feature core
 

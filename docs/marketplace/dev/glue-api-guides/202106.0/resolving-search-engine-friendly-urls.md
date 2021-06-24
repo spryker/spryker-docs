@@ -10,7 +10,7 @@ For SEO purposes, Spryker automatically generates SEF URLs for products and cate
 * [Retrieve an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-products#retrieve-an-abstract-product)
 * [Retrieve a category tree](https://documentation.spryker.com/docs/retrieving-category-trees#retrieve-a-category-tree)
 * [Retrieve a category node](https://documentation.spryker.com/docs/retrieving-category-nodes#retrieve-a-category-node)
-* [Retrieve a CMS page](https://documentation.spryker.com/upcoming-release/docs/retrieving-cms-pages)
+* [Retrieve a CMS page](https://documentation.spryker.com/2021080/docs/retrieving-cms-pages)
 * [Retrieve a merchant](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information#retrieve-profile-information-for-the-specific-merchant)
 
 In your development, the endpoints can help you to:

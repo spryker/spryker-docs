@@ -37,7 +37,7 @@ This tab contains the main merchant information.
 | Name | Text field where you specify the name of the merchant that you create. | &check; |
 | Registration number | Text field where you specify the number assigned to the company at the point of registration. |  |
 | Merchant Reference | Text field where you specify a unique identifier between the administrator's ERP and Spryker. | &check; |
-| Email | Field where you specify the email address associated with the merchant. <br>{% info_block warningBox "Note" %}The email address is unique, meaning one value cannot be used for several merchants. If the merchant with the same email already exists, the following message is displayed for the *Email* field when trying to save the record: <br>"Email is already used."{% endinfo_block %}<br>However, the email can be the same as the email of a Marketplace Administrator that operates in the Administration Interface (Back Office). <br>{% info_block warningBox "Note" %}This email will be used by a merchant to log in to the Merchant Portal"{% endinfo_block %}. | &check; |
+| Email | Field where you specify the email address associated with the merchant. <br>{% info_block warningBox "Note" %}The email address is unique, meaning one value cannot be used for several merchants. If the merchant with the same email already exists, the following message is displayed for the *Email* field when trying to save the record: <br>"Email is already used."{% endinfo_block %}<br>However, the email can be the same as the email of a Marketplace administrator that operates in the administration interface (Back Office). <br>{% info_block warningBox "Note" %}This email will be used by a merchant to log in to the Merchant Portal{% endinfo_block %}. | &check; |
 | Is Active | Checkbox that gets the merchant profile page on the Storefront online once checked. |  |
 | Store Relation | List of stores where the merchant is present. |  |
 | Merchant URL | Text field where, during editing, you can update the URL that is used to access the merchant profile. The profile URL is specified per locale. | &check; |
@@ -137,8 +137,8 @@ This tab contains the main merchant information.
 |-|-|-|
 | Name | Text field where you specify the name of the merchant that you edit. | &check; |
 | Registration number | Text field where you specify the number assigned to the company at the point of registration. |  |
-| Merchant Reference | Text field where you specify a unique identifier between Administrator's ERP and Spryker. | &check; |
-| Email | Field where you specify the email address associated with the merchant. <br>{% info_block warningBox "Note" %}The email address is unique, meaning one value cannot be used for several merchants. If the merchant with the same email already exists, the following message is displayed for the *Email* field when trying to save the record: <br>"Email is already used."{% endinfo_block %}<br>However, the email can be the same as the email of a Marketplace Administrator that operates in the Administration Interface (Back Office). <br>{% info_block warningBox "Note" %}This email will be used by a merchant to log in to the Merchant Portal"{% endinfo_block %}. | &check; |
+| Merchant Reference | Text field where you specify a unique identifier between the administrator's ERP and Spryker. | &check; |
+| Email | Field where you specify the email address associated with the merchant. <br>{% info_block warningBox "Note" %}The email address is unique, meaning one value cannot be used for several merchants. If the merchant with the same email already exists, the following message is displayed for the *Email* field when trying to save the record: <br>"Email is already used."{% endinfo_block %}<br>However, the email can be the same as the email of a Marketplace administrator that operates in the administration interface (Back Office). <br>{% info_block warningBox "Note" %}This email will be used by a merchant to log in to the Merchant Portal"{% endinfo_block %}. | &check; |
 | Is Active | Checkbox that gets the merchant profile page on the Storefront online once checked. |  |
 | Store Relation | List of stores where the merchant is present. |  |
 | Merchant URL | Text field where, during editing, you can update the URL that is used to access the merchant profile. The profile URL is specified per locale. | &check; |
@@ -146,7 +146,7 @@ This tab contains the main merchant information.
 
 #### Contact Person Details tab
 
-This tab contains information about the contact person. The contact person information is going to be used to create a **Merchant Admin User** who will be able to log in to **Merchant Portal**.
+This tab contains information about the contact person. The contact person information is going to be used to create a *Merchant Admin User* who will be able to log in to Merchant Portal.
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
@@ -201,7 +201,7 @@ To restrict access to the Merchant Portal, on the *Merchants* page, in *Actions*
 
 ## Approving and denying merchants
 
-Merchant approval is the process when a Marketplace Administrator changes the status of the merchant record according to the flow described in the [Merchant statuses](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html#merchant-statuses) section. After the initial merchant registration, the status is always set to **Waiting for Approval** and is subject to change by a Marketplace Administrator after their review. To approve the merchant, click **Approve Access** in the *Actions* column of the *Merchants* page.
+Merchant approval is the process when a Marketplace administrator changes the status of the merchant record according to the flow described in the [Merchant statuses](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html#merchant-statuses) section. After the initial merchant registration, the status is always set to **Waiting for Approval** and is subject to change by a Marketplace administrator after their review. To approve the merchant, click **Approve Access** in the *Actions* column of the *Merchants* page.
 
 {% info_block infoBox "Info" %}
 
@@ -211,12 +211,14 @@ To restrict access to the Merchant Portal, on the *Merchants* page, in the *Acti
 
 ![approving-and-denying-merchants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/Merchants/approving-and-denying-merchants.png)
 
-## (De)Activating merchants
+## Activating and deactivating merchants
 
 Activating or deactivating the merchant indicates whether the merchant profile page, product offers, and merchant products are available in the Storefront or not. To activate the merchant, click **Activate** in the *Actions* column of the *Merchants* page.
 
 {% info_block infoBox "Info" %}
-You can deactivate the merchant by clicking Deactivate on the *Merchants* page in the Actions column.
+
+You can deactivate the merchant by clicking Deactivate on the *Merchants* page in the *Actions* column.
+
 {% endinfo_block %}
 
 ![activating-and-deactivating-merchants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/Merchants/activating-mechants.png)

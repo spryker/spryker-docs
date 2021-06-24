@@ -9,7 +9,7 @@ This document provides details about the Data Transformer Object-map service in 
 
 ## Overview
 
-Data Transformer Object-map is an Angular Service that executes another Data Transformer from the config for each object in the object.
+Data Transformer Object-map is an Angular Service that executes another Data Transformer from the config for specific properties in the object.
 In the example below `datasource` will return an array with the transformed `date` in the every child object.
 
 ```ts

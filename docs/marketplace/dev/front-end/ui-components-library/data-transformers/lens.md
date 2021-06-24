@@ -9,8 +9,8 @@ This document provides details about the Data Transformer Lens service in the Co
 
 ## Overview
 
-Data Transformer Lens is an Angular Service that updates the nested object by path using another Data Transformer set up with a configuration object.
-In the example below `datasource` will return object with transformed `date`.
+Data Transformer Lens is an Angular Service that updates nested objects by path using another Data Transformer set up with a configuration object.
+In the example below `datasource` will return an object with the transformed `date`.
 
 ```ts
 <spy-select
@@ -33,7 +33,7 @@ In the example below `datasource` will return object with transformed `date`.
 
 ## Interfaces
 
-`path` - the name of the object property, whose value needs to be transformed via configuration. May contain nested properties separated by dots, just like in a Javascript language.  
+`path` - the name of the object property, from which the value needs to be transformed. The `path` may contain nested properties separated by dots, just like in a Javascript language.  
 `transformer` - Data Transformer set up with a configuration object.
 
 ```ts

@@ -8,8 +8,8 @@ This document provides details about the Data Transformer Array-map service in t
 
 ## Overview
 
-Data Transformer Array-map is an Angular Service that executes another Data Transformer from the config for every element in the array.
-In the example below `datasource` will return array with transformed `date` in the every object.
+Data Transformer Array-map is an Angular Service that executes another Data Transformer based on the config for every element in the array.
+In the example below, the `datasource` will return an array with the transformed `date` in every object.
 
 ```ts
 <spy-select

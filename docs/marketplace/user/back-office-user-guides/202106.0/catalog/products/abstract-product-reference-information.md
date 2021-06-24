@@ -20,7 +20,7 @@ The set of tabs for the *Create* and *Edit* pages, as well as for abstract and c
 | ATTRIBUTE | DESCRIPTION | CREATE ABSTRACT PRODUCT | UPDATE ABSTRACT PRODUCT |
 |-|-|-|-|
 | Store relation | Defines the store for which the product can be available. You can select multiple values. | Yes | Yes |
-| SKU Prefix | Number that you assign to the product will help to track unique information related to that product. | Yes | Display Only |
+| SKU Prefix | Number that you assign to the product will help track unique information related to that product. | Yes | Display Only |
 | Name | Name of your product that is displayed in the online store for your customers. | Yes | Yes |
 | Description | Description of the product that your customer sees in the online store. | Yes | Yes |
 | New from New to | Defines the period of time for which a dynamic label New will be assigned to the product. Either no dates can be selected, or both. | Yes | Yes |
@@ -33,7 +33,7 @@ The set of tabs for the *Create* and *Edit* pages, as well as for abstract and c
 | Gross price Net price | Price value for gross and net mode. The price you populate is inherited by all product variants you add during the abstract product creation. | Yes | Yes |
 | Default Original | Default prices are prices your customers will pay, whereas original prices are the "previous price" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop. | Yes | Yes |
 | Add Product Volume Price Edit Product Volume Price | Once selected, the *Add volume price* (*Edit volume price*) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. It works only in the case of Default prices. The **Add Product Volume Price** button appears only when the gross and/or net prices for a store are set up beforehand and saved. *Edit Product Volume Price* appears only if the volume price has already been set up for a currency. | No | Yes |
-| Tax Set | Conditions under which a product is going to be taxed. The values available for selection derive from [Taxes > Tax Sets](https://documentation.spryker.com/docs/managing-tax-rates-sets). Only one value can be selected. | Yes | Yes |
+| Tax Set | Conditions under which a product is going to be taxed. The values available for selection derive from [Taxes > Tax Sets](https://documentation.spryker.com/2021080/docs/managing-tax-sets). Only one value can be selected. | Yes | Yes |
 
 ### Variants tab
 

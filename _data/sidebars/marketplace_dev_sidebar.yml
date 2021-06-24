@@ -313,6 +313,12 @@ entries:
                 - title: "Pluck"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html
 
+                - title: "Lens"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html
+                  
+                - title: "Array-map"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html
+                  
                 - title: "Object-map"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
 

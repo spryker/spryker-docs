@@ -313,6 +313,9 @@ entries:
                 - title: "Pluck"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html
 
+                - title: "Lens"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html
+
             - title: "Cache"
               url: /docs/marketplace/dev/front-end/ui-components-library/cache.html
 

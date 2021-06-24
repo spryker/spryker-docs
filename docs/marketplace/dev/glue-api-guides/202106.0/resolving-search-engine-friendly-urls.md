@@ -36,13 +36,13 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 | PATH PARAMETER  | DESCRIPTION |
 | --------------- | ---------------- |
-| ***{% raw %}{{SEF URL}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)</li><li>[retrieving category nodes](https://documentation.spryker.com/docs/retrieving-category-nodes)</li><li>[retrieving cms pages](https://documentation.spryker.com/upcoming-release/docs/retrieving-cms-pages)</li><li>[retrieving merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)</li></ul>|
+| ***{% raw %}{{SEF URL}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)</li><li>[retrieving category nodes](https://documentation.spryker.com/docs/retrieving-category-nodes)</li><li>[retrieving CMS pages](https://documentation.spryker.com/2021080/docs/retrieving-cms-pages)</li><li>[retrieving merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)</li></ul>|
 
 ### Request
 
 | HEADER KEY  | HEADER VALUE | REQUIRED | DESCRIPTION    |
 | -------------- | ------------ | ------------ | -------------- |
-| Accept-Language | de          | ✓      | Specifies the locale. |
+| Accept-Language | de          | &check;      | Specifies the locale. |
 
 | Request sample | Usage |
 | --- | --- |

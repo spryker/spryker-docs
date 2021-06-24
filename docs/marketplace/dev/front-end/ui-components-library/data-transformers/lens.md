@@ -47,7 +47,7 @@ In the example below `datasource` will return transformed `date`.
 
 ## Interfaces
 
-`path` - the name of the object property, whose value needs to be transformed via configuration. May contain nested properties separated by dots, just like in a Javascript language.<br>
+`path` - the name of the object property, whose value needs to be transformed via configuration. May contain nested properties separated by dots, just like in a Javascript language.  
 `transformer` - Data Transformer set up with a configuration object.
 
 ```ts

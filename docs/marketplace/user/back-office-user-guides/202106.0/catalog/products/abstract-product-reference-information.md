@@ -32,7 +32,7 @@ The set of tabs for the *Create* and *Edit* pages, as well as for abstract and c
 | Merchant Price Dimension | **B2B Only** <br>Allows selecting a merchant relation and setting up a specific price for a specific merchant. If the Default value is selected, the prices will be the same for everyone. The values available for selection derive from [Marketplace > Merchant Relations](https://documentation.spryker.com/docs/managing-merchant-relations). Only one value can be selected. | Yes | Yes |
 | Gross price Net price | Price value for gross and net mode. The price you populate is inherited by all product variants you add during the abstract product creation. | Yes | Yes |
 | Default Original | Default prices are prices your customers will pay, whereas original prices are the "previous price" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop. | Yes | Yes |
-| Add Product Volume Price Edit Product Volume Price | Once selected, the *Add volume price* (*Edit volume price*) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. It works only in the case of Default prices. The **Add Product Volume Price** button appears only when the gross and/or net prices for a store are set up beforehand and saved. *Edit Product Volume Price* appears only if the volume price has already been set up for a currency. | No | Yes |
+| Add Product Volume Price <br>Edit Product Volume Price | Once selected, the *Add volume price* (*Edit volume price*) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. It works only in the case of Default prices. The **Add Product Volume Price** button appears only when the gross and/or net prices for a store are set up beforehand and saved. *Edit Product Volume Price* appears only if the volume price has already been set up for a currency. | No | Yes |
 | Tax Set | Conditions under which a product is going to be taxed. The values available for selection derive from [Taxes > Tax Sets](https://documentation.spryker.com/2021080/docs/managing-tax-sets). Only one value can be selected. | Yes | Yes |
 
 ### Variants tab
@@ -43,7 +43,7 @@ No values are available for selection when you create a product bundle. When you
 
 {% endinfo_block %}
 
-* **While creating** an abstract product, you see a list of super attributes that derive from *[Catalog > Attributes](https://documentation.spryker.com/docs/managing-attributes)*. You can select as many super attributes as you need and define from one to many values for them (those values will define the difference between the product variants). Please keep in mind that moving forward, you will be able to create product variants only based on the selected super attributes. To add more product variants in the future, add at least one super attribute and define at least one value for it.
+* **While creating** an abstract product, you see a list of super attributes that derive from [Catalog > Attributes](https://documentation.spryker.com/docs/managing-attributes). You can select as many super attributes as you need and define from one to many values for them (those values will define the difference between the product variants). Please keep in mind that moving forward, you will be able to create product variants only based on the selected super attributes. To add more product variants in the future, add at least one super attribute and define at least one value for it.
 
 * **While editing the abstract product/product bundle**, you see a table that displays the product variants that exist for this abstract product. From this page, you can view, edit, and manage attributes [for the product variant](https://documentation.spryker.com/docs/managing-attributes).
 
@@ -65,6 +65,7 @@ No values are available for selection when you create a product bundle. When you
 | Sort Order | If you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using the *Sort Order* fields. The order of the images is defined by order of entered numbers where the image set with the sort order "0" is the first to be shown. | Yes | Yes |
 
 ## Scheduled Prices tab
+
 In this tab, there is a table with the scheduled prices imported via a CSV file. The following information is available:
 
 * Currency, store, net, and gross price values.

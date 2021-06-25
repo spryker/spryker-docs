@@ -104,9 +104,7 @@ Make sure that the following changes were applied in transfer objects:
 
 {% endinfo_block %}
 
-### 2) Add translations
-
-#### Yves translations
+### 2) Add Yves translations
 
 Append glossary according to your configuration:
 

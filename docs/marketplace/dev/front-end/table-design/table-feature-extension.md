@@ -5,7 +5,7 @@ description: This document provides details about the Table Feature extension in
 template: concept-topic-template
 ---
 
-This document provides details about the Table Feature extension in the Components Library.
+This document explains the Table Feature extension in the Components Library.
 
 ## Overview
 

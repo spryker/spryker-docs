@@ -4,13 +4,13 @@ description: This document provides details about the Table Column Type extensio
 template: concept-topic-template
 ---
 
-This document provides details about the Table Column Type extension in the Components Library.
+This document explains the Table Column Type extension in the Components library.
 
 ## Overview
 
 Column Type is an Angular Component that describes how a specific type of the column is rendered within a table column.
 
-You can configure columns in the table config.
+You can configure columns in the table config:
 
 ```ts
 <spy-table [config]="{

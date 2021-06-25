@@ -5,7 +5,7 @@ description: This document provides details about the Table Filter extension in 
 template: concept-topic-template
 ---
 
-This document provides details about the Table Filter extension in the Components Library.
+This document explains the Table Filter extension in the Components Library.
 
 ## Overview
 

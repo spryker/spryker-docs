@@ -67,7 +67,9 @@ Adjust the schema definition so entity changes trigger events:
 Apply database changes and to generate entity and transfer changes:
 
 ```bash
-console transfer:generate 2console propel:install 3console transfer:generate
+console transfer:generate 
+console propel:install 
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -118,6 +120,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
 | --------------------- | ------------------- | --------- | -------------------- |
 | MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.   |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
+| MerchantProductProductAbstractListActionViewDataExpanderPlugin | Expands product list data for abstract product data for merchant filter.   |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
 | MerchantProductProductTableQueryCriteriaExpanderPlugin       | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
 | MerchantProductAbstractMapExpanderPlugin                     | Adds merchant names to product abstract search data.         |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataExpanderPlugin                        | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
@@ -131,6 +134,7 @@ Enable the following behaviors by registering the plugins:
 
 namespace Pyz\Zed\ProductManagement;
 
+use Spryker\Zed\MerchantGui\Communication\Plugin\ProductManagement\MerchantProductAbstractListActionViewDataExpanderPlugin;
 use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductAbstractViewActionViewDataExpanderPlugin;
 use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductTableQueryCriteriaExpanderPlugin;
 
@@ -155,12 +159,23 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new MerchantProductProductTableQueryCriteriaExpanderPlugin(),
         ];
     }
+
+    /**
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractListActionViewDataExpanderPluginInterface[]
+     */
+    protected function getProductAbstractListActionViewDataExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductAbstractListActionViewDataExpanderPlugin(),
+        ];
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you can filter products by merchant at `http://zed.de.demo-spryker.com/availability-gui`.
+Make sure that at `http://zed.de.demo-spryker.com/product-management` you can filter products by merchant.
+Make sure that at `http://zed.de.demo-spryker.com/product-management/view?id-product-abstract={id-product-abstract}}` you can see merchant name. (Applicable only for products that are assigned to some merchant. See import step.)
 
 {% endinfo_block %}
 
@@ -197,6 +212,7 @@ namespace Pyz\Zed\ProductPageSearch;
 
 
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataExpanderPlugin as MerchantMerchantProductPageDataExpanderPlugin;
+use Spryker\Shared\MerchantProductSearch\MerchantProductSearchConfig;
 
 use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
 
@@ -221,7 +237,7 @@ Make sure the `de_page` Easticsearch index for any product that belongs (see `sp
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+**src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
 <?php
@@ -464,7 +480,7 @@ Register the following plugins to enable widgets:
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\MerchantProductWidget\Widget\MerchantProductWidget;
-use SprykerShop\Yves\MerchantProductWidget\Widget\ProductSoldByMerchantWidget;
+use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -475,7 +491,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
-            ProductSoldByMerchantWidget::class,
+            SoldByMerchantWidget::class,
             MerchantProductWidget::class,
         ];
     }
@@ -599,6 +615,9 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
 
 {% endinfo_block %}
+
+### 3) Configure export to Redis and Elasticsearch
+
 
 ## Related features
 

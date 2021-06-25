@@ -99,7 +99,7 @@ Import data as follows:
 
 1. Prepare your data according to your requirements using our demo data:
 
-**data/import/common/common/marketplace/merchant_product_offer.csv**
+**data/import/common/common/marketplace/merchant_oms_process.csv**
 ```csv
 merchant_reference,merchant_oms_process_name
 MER000001,MainMerchantStateMachine
@@ -381,7 +381,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 namespace Pyz\Zed\MerchantSalesOrder;
 
-use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder\EventTriggerMerchantOrderPostCreatePlugin;
 use Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder\MerchantOmsMerchantOrderExpanderPlugin;
 use Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderDependencyProvider as SprykerMerchantSalesOrderDependencyProvider;
@@ -445,7 +444,7 @@ class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvid
 <summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php</summary>
 
 ```php
-?php
+<?php
 
 namespace Pyz\Zed\Shipment;
 

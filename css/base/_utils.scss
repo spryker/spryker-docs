@@ -6,3 +6,9 @@
 .overflow {
     overflow: hidden;
 }
+
+.mobile-overflow {
+    @include media("<tablet") {
+        overflow: hidden;
+    }
+}

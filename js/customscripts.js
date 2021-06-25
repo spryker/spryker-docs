@@ -33,8 +33,26 @@ $( document ).ready(function() {
     initDropdown();
 
     initMobileNav();
+
+    initSearchPopup();
 });
 
+function initSearchPopup() {
+    let popup = $('.search-popup'),
+        opener = $('.js-search-popup-opener'),
+        body = jQuery('body');
+
+    // mobile-overflow
+
+      opener.on('click', function(e){
+        e.preventDefault();
+          body.addClass('mobile-overflow');
+          popup.addClass('search-opened');
+          popup.fadeIn(300, function(){
+            $('.search-input.aa-input').focus();
+          });
+      });
+}
 
 function initMobileNav() {
     let page = jQuery(window),

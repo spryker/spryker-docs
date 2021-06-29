@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product feature integration
-last_updated: Dec 16, 2020
+last_updated: Jun 25, 2021
 description: This document describes the process how to integrate the Marketplace Product feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -616,7 +616,7 @@ Make sure when you add to cart merchant product, it has `merchantReference` set.
 
 {% endinfo_block %}
 
-### 3) Configure export to Redis and Elasticsearch
+<!--### 3) Configure export to Redis and Elasticsearch-->
 
 
 ## Related features

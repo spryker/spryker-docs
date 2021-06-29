@@ -1,7 +1,7 @@
 ---
 title: Marketplace Shipment + Cart feature integration
 description: Integrate Marketplace Shipment feature into your project
-tags:
+last_updated: Jun 25, 2021 
 template: feature-integration-guide-template
 ---
 

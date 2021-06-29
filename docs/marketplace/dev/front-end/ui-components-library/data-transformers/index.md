@@ -150,7 +150,7 @@ There are a few common Data Transformers that are available in the UI library as
 - `lens` - Updates the nested object by path using another Data Transformer set up with a configuration file.
 - `array-map` - Executes another Data Transformer from the config for every object in the array.
 - `object-map` - Executes another Data Transformer from the config for each object in the object.
-- `chain` - Executes another Data Transformer in sequence via configuration.
+- [chain](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html) - Executes another Data Transformer in sequence via configuration.
 - `date-parse` - Parses the string value as a Date ISO into the JS Date Object.
 - `date-serialize` - Serializes JS Date Object into a Date ISO string.
 - `collate` - Sorts, filters, and paginates data based on configuration. It has extra extension points:

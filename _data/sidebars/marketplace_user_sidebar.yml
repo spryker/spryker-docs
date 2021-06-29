@@ -112,6 +112,16 @@ entries:
 
         - title: Profile
           nested:
-
           - title: Editing merchant's profile details
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing merchants-profile-details.html
+
+        - title: Products
+          nested:
+
+          - title: Creating merchant abstract products
+            url: /docs/marketplace/user/merchant-portal-user-guides/products/creating-merchant-abstract-products.html
+
+          - title: Editing merchant abstract products
+            url: /docs/marketplace/user/merchant-portal-user-guides/products/editing-merchant-abstract-products.html
+
+

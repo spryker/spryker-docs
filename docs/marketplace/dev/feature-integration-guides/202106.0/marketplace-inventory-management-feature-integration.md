@@ -338,6 +338,8 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 #### Register the synchronization queue and synchronization error queue
 
+**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
+
 ```php
 <?php
 
@@ -376,6 +378,8 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 |-|-|-|-|
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with Redis storage, and marks messages as failed in case of error. |  | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
+**src/Pyz/Zed/ProductOfferAvailabilityStorage/ProductOfferAvailabilityStorageConfig.php**
+
 ```php
 <?php
 
@@ -395,6 +399,8 @@ class ProductOfferAvailabilityStorageConfig extends SprykerProductOfferAvailabil
     }
 }
 ```
+
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
 ```php
 <?php
@@ -428,6 +434,8 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferAvailabilitySynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Synchronization |
+
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
 ```php
 <?php
@@ -465,7 +473,9 @@ Import the following data.
 #### Import merchant stock data
 Prepare your data according to your requirements using our demo data:
 
-```bash
+**data/import/common/common/marketplace/merchant_stock.csv**
+
+```csv
 merchant_reference,stock_name
 MER000001,Spryker MER000001 Warehouse 1
 MER000002,Video King MER000002 Warehouse 1
@@ -479,6 +489,8 @@ MER000006,Sony Experts MER000006 Warehouse 1
 | stock_name | &check; | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
 
 #### Import product offer stock data
+
+**data/import/common/common/marketplace/product_offer_stock.csv**
 
 <details>
 <summary markdown='span'>Prepare your data according to your requirements using our demo data:</summary>

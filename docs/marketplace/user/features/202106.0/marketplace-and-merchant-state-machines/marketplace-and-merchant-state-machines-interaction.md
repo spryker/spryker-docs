@@ -40,10 +40,17 @@ The table below provides an overview of the statuses that are displayed at this 
 | Customer                  | Storefront      | In Progress |
 
 ## Order item’s status progress: Canceled
-After the payment has been made, the customer can still cancel the order during the period outlined by the Marketplace policies. The Marketplace provides the customer with a button on the Storefront to carry out that action. When the customer cancels the order, the state of the marketplace order item becomes *Canceled*. 
-:::(Warning) (Note)
+After the payment has been made, the customer can still cancel the order during the period outlined by the Marketplace policies. The Marketplace provides the customer with a button on the Storefront to carry out that action. When the customer cancels the order, the state of the marketplace order item becomes *Canceled*.
+
+{% info_block warningBox "Note" %}
+
 The Marketplace Administrator can also cancel the order under exceptional circumstances.
-:::
+
+{% endinfo_block %}
+
+
+
+
 ![Order item’s status progress: Canceled](https://confluence-connect.gliffy.net/embed/image/d6ceb379-7990-4bf1-b2d4-a46a80230d58.png?utm_medium=live&utm_source=custom)
 
 The table below provides an overview of the statuses that are displayed at this step:
@@ -107,7 +114,7 @@ The table below provides an overview of the statuses that are displayed at this 
 | Customer  | Storefront   | Shipped Expected by \<date\> |
 
 ## Order item’s status progress: Delivered
-After the shipment, the merchant tracks the delivery with the shipment carrier. When the item is delivered, the carrier notifies the merchant. The merchant triggers the *Deliver* event manually (**Delivered** action button) or automatically by uploading a CSV with the new state to the Merchant Portal. The Marketplace administrator also needs to be aware of this information. The state is also updated on the Marketplace state machine. 
+After the shipment, the merchant tracks the delivery with the shipment carrier. When the item is delivered, the carrier notifies the merchant. The merchant triggers the *Deliver* event manually (**Delivered** action button) or automatically by uploading a CSV with the new state to the Merchant Portal. The Marketplace administrator also needs to be aware of this information. The state is also updated on the Marketplace state machine.
 
 ![Order item’s status progress: Delivered](https://confluence-connect.gliffy.net/embed/image/04b08764-f5c4-4de7-9725-b12557e2ea61.png?utm_medium=live&utm_source=custom)
 
@@ -120,7 +127,7 @@ The table below provides an overview of the statuses that are displayed at this 
 | Customer                  | Storefront      | Delivered on \<date\> |
 
 ## Order item’s status progress: Closed
-Marketplace applies a series of policies that allow customers to return items during a given period of time. When that period expires, the marketplace order item gets the *Closed* state. The Merchant administrator must also be aware of that expiration, and the state closed is also used on the Merchant state machine for the item. 
+Marketplace applies a series of policies that allow customers to return items during a given period of time. When that period expires, the marketplace order item gets the *Closed* state. The Merchant administrator must also be aware of that expiration, and the state closed is also used on the Merchant state machine for the item.
 
 ![Order item’s status progress: Closed](https://confluence-connect.gliffy.net/embed/image/d4583bab-dda6-4ecc-bd92-94388f5e8710.png?utm_medium=live&utm_source=custom)
 

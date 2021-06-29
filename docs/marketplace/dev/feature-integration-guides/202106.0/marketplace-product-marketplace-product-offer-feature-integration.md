@@ -46,7 +46,7 @@ class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProdu
     protected function getProductOfferReferenceStrategyPlugins(): array
     {
         return [
-            new DefaultProductOfferReferenceStrategyPlugin(),
+            new MerchantProductProductOfferReferenceStrategyPlugin(),
         ];
     }
 }

@@ -34,7 +34,7 @@ This section contains the attributes description you see when managing offers in
 
 The *Offers* widget provides the following information:
 
-`Offers 4`—The total number of offers in the Merchant Portal.
+`Offers 4`—the total number of offers in the Merchant Portal.
 
 #### Stock
 
@@ -50,9 +50,9 @@ Expiring in 5 days—The total number of offers that will expire in the next 5 d
 
 #### Visibility
 
-Online—The total number of online offers.
+Online—the total number of online offers.
 
-Offline—The total number of offline offers.
+Offline—the total number of offline offers.
 
 #### On Marketplace
 

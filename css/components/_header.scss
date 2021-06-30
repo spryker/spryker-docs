@@ -129,6 +129,7 @@
         width: 40px;
         height: 40px;
         color: $grey;
+        transition: .3s linear opacity;
 
         &:hover {
             text-decoration: none;
@@ -140,6 +141,18 @@
 
         [class*="icon-"] {
             font-size: 26px;
+        }
+
+        .home-layout & {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &.under-search {
+            .home-layout & {
+                visibility: visible;
+                opacity: 1;
+            }
         }
     }
 }

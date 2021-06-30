@@ -34,7 +34,6 @@
         max-width: 614px;
         margin: 0 auto;
         position: relative;
-        position: relative;
         z-index: 3;
 
         &-icon {
@@ -78,6 +77,54 @@
                     opacity: 0;
                 }
             }
+        }
+    }
+
+    &__fake {
+        display: none;
+        @include media("<tablet") {
+            display: block;
+            max-width: 614px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 3;
+        }
+
+        &-icon {
+            position: absolute;
+            z-index: 2;
+            pointer-events: none;
+            color: $grey-dark;
+            font-size: 16px;
+            top: 20px;
+            left: 5px;
+            pointer-events: none;
+        }
+        &-input {
+            display: block;
+            height: 56px;
+            padding: 17px 40px;
+            border: 1px solid transparent;
+            border-bottom-color: $grey-darker;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            color: $grey-dark;
+            background: transparent !important;
+            letter-spacing: .02em;
+        }
+    }
+}
+
+.home-search {
+    &__opener {
+        @include media("<tablet") {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
         }
     }
 }

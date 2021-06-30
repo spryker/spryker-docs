@@ -1,3 +1,10 @@
+---
+title: Editing merchant abstract products
+last_updated: Jun 30, 2021
+description: This document describes how to modify merchant abstract products in the Merchant Portal.
+template: back-office-user-guide-template
+---
+
 This document describes how to edit the abstract products in the Merchant Portal.
 
 ## Prerequisites

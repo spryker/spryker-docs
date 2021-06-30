@@ -1,3 +1,10 @@
+---
+title: Creating merchant abstract products
+last_updated: Jun 30, 2021
+description: This document describes how to create merchant abstract products in the Merchant Portal.
+template: back-office-user-guide-template
+---
+
 This document describes how to create merchant abstract products.
 
 ## Prerequisites
@@ -21,12 +28,11 @@ To create a new abstract product:
    3. Select **Abstract product has 1 concrete product** if you are creating an abstract product with a single concrete product. *Create an Abstract Product with 1 Concrete Product* drawer opens.
       Select **Abstract product has multiple concrete products** if the abstract product you are creating will contain multiple concrete products assigned to it.
 
-   4. Click **Next**.
+   4. Click **Next**. </br>
 
       
 
-      If the **Abstract product has 1 concrete product** was chosen:
-
+      If the **Abstract product has 1 concrete product** was chosen:</br>
       
 
       1. On the *Create an Abstract Product with 1 Concrete Product* drawer, enter a **Concrete Product SKU.** 
@@ -39,7 +45,7 @@ To create a new abstract product:
 
       
 
-      If the **Abstract product has multiple concrete products** was chosen:
+      If the **Abstract product has multiple concrete products** was chosen:</br>
 
       
 

@@ -72,7 +72,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that availability calculated properly for the product offers that belong to product with packaging units.
+Make sure that availability calculated properly for the product offers that belong to the product with packaging units.
 
 * Add such a product offer to the cart.
 * Place an order.

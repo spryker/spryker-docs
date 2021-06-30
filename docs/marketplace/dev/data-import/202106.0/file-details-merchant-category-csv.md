@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant_category.csv` file to configure [merchant categories](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-category) in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import merchant-category

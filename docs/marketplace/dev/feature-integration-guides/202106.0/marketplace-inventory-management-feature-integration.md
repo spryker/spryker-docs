@@ -8,9 +8,11 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Inventory Management feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Inventory Management feature core.
 
 ### Prerequisites
+
 To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
@@ -127,6 +129,7 @@ console translator:generate-cache
 ```
 
 ### 5) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |

@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the price-product-offer.csv file to configure [Merchant product offer price](/docs/marketplace/user/features/{{ site.version }}/products-and-offers/product-offer-feature-overview.html) information in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import price-product-offer
@@ -31,7 +31,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-product-offer-csv.html) 
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-product-offer-csv.html)
 - [product_price.csv](https://documentation.spryker.com/docs/file-details-product-pricecsv)
 
 ## Import template file and content example

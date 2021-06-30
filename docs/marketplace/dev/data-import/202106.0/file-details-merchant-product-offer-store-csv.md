@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant_product_offer_store.csv` file to configure [merchant product offer stores](/docs/marketplace/user/features/{{ site.version }}/products-and-offers/product-offer-feature-overview.html#product-offer-stores) in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import merchant-product-offer-store
@@ -26,7 +26,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-product-offer-csv.html) 
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-product-offer-csv.html)
 - *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example

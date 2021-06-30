@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant_profile.csv` file to configure [merchant profile](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-profile) information in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import merchant-profile

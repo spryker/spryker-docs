@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant_oms_process.csv` file to configure [Merchant state machines](/docs/marketplace/user/features/{{ site.version }}/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html#merchant-state-machine) in your Spryker shop.
 
-To import the file, run
+To import the file, run:S
 
 ```bash
 data:import merchant-oms-process

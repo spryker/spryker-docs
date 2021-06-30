@@ -69,7 +69,7 @@ Set up database schema:
 
 ```
 
-2. Run the following commands to apply database changes and to generate entity and transfer changes:
+2. Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -92,6 +92,7 @@ Make sure that the following changes have occurred in the database:
 {% endinfo_block %}
 
 ### 3) Set up transfer objects
+
 Generate transfer changes:
 
 ```bash
@@ -123,6 +124,7 @@ Make sure that the following changes have occurred in transfer objects:
 
 
 ### 4) Add Zed translations
+
 Generate a new translation cache for Zed:
 
 ```bash
@@ -130,6 +132,7 @@ console translator:generate-cache
 ```
 
 ### 5) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
@@ -339,6 +342,7 @@ Make sure that, in the navigation menu of the Back Office, you can see the **Mar
 {% endinfo_block %}
 
 ### 7) Configure export to Redis
+
 This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes the data to Storage.
 
 Configure export to Redis:

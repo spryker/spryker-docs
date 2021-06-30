@@ -84,7 +84,7 @@ You can configure any filter in the table config.
 
 ## Main Filter feature
 
-Using the static method  `TableFiltersFeatureModule.withFilterComponents`, the table module allows registering any table filter by key. Under the hood, this method assigns the object of filters to `TABLE_FILTERS_TOKEN`.
+Using the static method  `TableFiltersFeatureModule.withFilterComponents`, the table module allows registering any table filter by a key. Under the hood, this method assigns the object of filters to `TABLE_FILTERS_TOKEN`.
 
 The main component injects all registered types from the `TABLE_FILTERS_TOKEN` and `Injector`.
 

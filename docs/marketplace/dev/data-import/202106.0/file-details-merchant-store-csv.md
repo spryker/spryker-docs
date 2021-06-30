@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant_store.csv` file to configure merchant's stores in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import merchant-store

@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant_open_hours_date_schedule.csv` file to configure [special merchant opening hours](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-opening-hours) in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import merchant-opening-hours-date-schedule

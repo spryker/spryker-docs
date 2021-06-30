@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `product_offer_validity.csv` file to configure product offer validity dates in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import product-offer-validity
@@ -27,7 +27,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-product-offer-csv.html) 
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-product-offer-csv.html)
 
 ## Import template file and content example
 

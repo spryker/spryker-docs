@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-warehouse) information in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import merchant-stock
@@ -27,7 +27,7 @@ The file should have the following parameters:
 The file has the following dependencies:
 
 - [merchant.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-csv.html)
-- [warehouse.csv](https://documentation.spryker.com/docs/file-details-warehousecsv) 
+- [warehouse.csv](https://documentation.spryker.com/docs/file-details-warehousecsv)
 
 ## Import template file and content example
 

@@ -16,17 +16,9 @@ In the example below, the `datasource` will return an object with the parsed `da
 <spy-select
   [datasource]="{
     type: 'inline',
-    data: {
-      type: 'date',
-      date: '2020-09-24T15:20:08+02:00',
-    },
+    data: '2020-09-24T15:20:08+02:00',
     transform: {
-      type: 'object-map',
-      mapProps: {
-        date: {
-          type: 'date-parse',
-        },
-      },
+      type: 'date-parse'
     },
   }"
 ></spy-select>

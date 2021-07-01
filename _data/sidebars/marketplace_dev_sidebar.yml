@@ -161,6 +161,9 @@ entries:
             - title:  Retrieving abstract products
               url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html
 
+            - title:  Retrieving abstract product lists
+              url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-product-lists.html
+
           - title: Concrete products
             nested:
 

@@ -9,7 +9,7 @@ This document provides details about the Data Transformer Chain service in the C
 
 ## Overview
 
-Data Transformer Chain is an Angular Service that executes another Data Transformer in sequence via configuration.
+Data Transformer Chain is an Angular Service that executes another Data Transformers in sequence via configuration.
 In the example below, the `datasource` will return an array with the transformed `date` in every child object via chaining transformers.
 
 ```ts

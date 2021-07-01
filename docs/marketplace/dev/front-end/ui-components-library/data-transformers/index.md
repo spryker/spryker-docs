@@ -152,7 +152,7 @@ There are a few common Data Transformers that are available in the UI library as
 - [object-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html) - Executes another Data Transformer from the config for each object in the object.
 - `chain` - Executes another Data Transformer in sequence via configuration.
 - `date-parse` - Parses the string value as a Date ISO into the JS Date Object.
-- `date-serialize` - Serializes JS Date Object into a Date ISO string.
+- [date-serialize](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html) - Serializes JS Date Object into a Date ISO string.
 - `collate` - Sorts, filters, and paginates data based on configuration. It has extra extension points:
   - Filters - Services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
     - `equals` - filters values that are strictly equal.

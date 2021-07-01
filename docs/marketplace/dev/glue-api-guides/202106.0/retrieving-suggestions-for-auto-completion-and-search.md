@@ -44,7 +44,7 @@ To retrieve a search suggestion, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=Sony&currency=EUR&priceMode=GROSS_MODE` | Set the *EUR* currency and the *GROSS_MODE* price mode in search suggestions. |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=telecom-%26-navigation` | Retrieve suggestions in search by category.                  |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=Smart` | Retrieve suggestions in search by part of a category name (*Smart*). |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=video%20king` | Retrieve suggestions in search by the *video king*Merchant name. </b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=video%20king` | Retrieve suggestions in search by the *video king*Merchant name. {% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 
 ### Response
 
@@ -1625,7 +1625,7 @@ To retrieve a search suggestion, send the request:
 <details>
 <summary markdown='span'>Response sample: retrieve search suggestions by Merchant name—Marketplace ony</summary>
 
-</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
 
 ```json
 {

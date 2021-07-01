@@ -178,7 +178,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 <details>
 <summary markdown='span'>Request sample with product offers (Marketplace only)</summary>
 
-This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
 
 `POST http://glue.myspsrykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=items`
 
@@ -198,6 +198,26 @@ This option is available only in case you have upgraded your shop to Marketplace
 </details>
 
 
+<details>
+<summary markdown='span'>Request sample with merchant products (Marketplace only)</summary>
+
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
+
+`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
+
+```json
+{
+    "data": {
+        "type": "items",
+        "attributes": {
+            "sku": "109_19416433",
+            "quantity": "6"
+        }
+    }
+}
+```
+</details>
+
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU of the concrete product to add to the cart. |
@@ -208,7 +228,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 | idPromotionalItem | String |  | Promotional item ID. Specify the ID to apply the promotion benefits.  |
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
-| productOfferReference | String | &check;| Unique identifier of the product offer in the system. <br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
+| productOfferReference | String | &check;| Unique identifier of the product offer in the system. {% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
 
 {% info_block infoBox "Conversion" %}
 
@@ -1205,7 +1225,7 @@ It is the responsibility of the API Client to track whether the selected items a
 <details>
 <summary markdown='span'>Response sample with product offers (Marketplace only)</summary>
 
-This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
 
 ```json
 {
@@ -1337,6 +1357,95 @@ This option is available only in case you have upgraded your shop to Marketplace
 
 </details>
 
+<details>
+<summary markdown='span'>Response sample with merchant products (Marketplace only)</summary>
+
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "61ab15e9-e24a-5dec-a1ef-fc333bd88b0a",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "My Cart",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 0,
+                "taxTotal": 4935,
+                "subtotal": 75432,
+                "grandTotal": 75432,
+                "priceToPay": 75432
+            },
+            "discounts": []
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
+        },
+        "relationships": {
+            "items": {
+                "data": [
+                    {
+                        "type": "items",
+                        "id": "109_19416433"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "items",
+            "id": "109_19416433",
+            "attributes": {
+                "sku": "109_19416433",
+                "quantity": 6,
+                "groupKey": "109_19416433",
+                "abstractSku": "109",
+                "amount": null,
+                "productOfferReference": null,
+                "merchantReference": "MER000001",
+                "calculations": {
+                    "unitPrice": 12572,
+                    "sumPrice": 75432,
+                    "taxRate": 7,
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitGrossPrice": 12572,
+                    "sumGrossPrice": 75432,
+                    "unitTaxAmountFullAggregation": 822,
+                    "sumTaxAmountFullAggregation": 4935,
+                    "sumSubtotalAggregation": 75432,
+                    "unitSubtotalAggregation": 12572,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 12572,
+                    "sumPriceToPayAggregation": 75432
+                },
+                "configuredBundle": null,
+                "configuredBundleItem": null,
+                "salesUnit": null,
+                "selectedProductOptions": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/109_19416433"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+
 <a name="add-an-item-to-a-registered-users-cart-response-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -1390,10 +1499,10 @@ This option is available only in case you have upgraded your shop to Marketplace
 | vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| product-offer-availabilities | isNeverOutOfStock| Boolean | Boolean to show if this is an item that is never out of stock.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %} |
+| product-offer-availabilities | isNeverOutOfStock| Boolean | Boolean to show if this is an item that is never out of stock.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 | product-offer-availabilities  | availability | Boolean | Boolean to inform you about availability. |
 | product-offer-availabilities | quantity | Integer | Available stock. |
-| product-offer-prices | price  | Integer | Price to pay for the item in cents.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %} |
+| product-offer-prices | price  | Integer | Price to pay for the item in cents.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 | product-offer-prices  | prices  | Array   | Array of prices for the product offer.|
 | product-offer-prices | priceTypeName | String  | Price type. |
 | product-offer-prices | netAmount | Integer | Net price in cents. |
@@ -1401,7 +1510,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 | product-offer-prices | currency.code | String  | Currency code. |
 | product-offer-prices | currency.name | String  | Currency name. |
 | product-offer-prices | currency.symbol | String  | Currency symbol.|
-| product-offers | merchantSku | String  | SKU of the merchant the product offer belongs to.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}|
+| product-offers | merchantSku | String  | SKU of the merchant the product offer belongs to.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
 | product-offers | merchantReference | String  | Merchant reference assigned to every merchant. |
 | product-offers | isDefault  | Boolean | Defines whether the product offer is default or not. |
 

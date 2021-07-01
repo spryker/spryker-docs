@@ -185,4 +185,4 @@ Request sample: `GET http://mysprykershop.com/content-product-abstract-lists/apl
 | attributeNames     | object | All attributes (except for the super attributes) and value combinations for the abstract product. |
 | url | String | Unique address using which the abstract product is found in the shop.
 
-For the abstract product response attributes, see [Retrieving Abstract Products](docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-products.html).
+For the abstract product response attributes, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-products.html).

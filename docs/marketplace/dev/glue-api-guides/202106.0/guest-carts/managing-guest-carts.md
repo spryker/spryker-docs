@@ -1574,7 +1574,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 For the attributes of other included resources, see:
-* [Manage guest cart items](docs/marketplace/dev/glue-api-guides/{{ page.version }}/guest-carts/managing-guest-cart-items.html)
+* [Manage guest cart items](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/guest-carts/managing-guest-cart-items.html)
 * [Retrieve measurement units](https://documentation.spryker.com/docs/retrieving-measurement-units)
 * [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html)
 * [Retrieve gift cards of guest users](https://documentation.spryker.com/docs/en/managing-gift-cards-of-guest-users)

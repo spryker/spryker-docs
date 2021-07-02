@@ -157,7 +157,6 @@ function initDropdown() {
     let mainNav = $('.main-nav'),
         dropdown = mainNav.find('.dropdown'),
         subMenu = mainNav.find('.dropdown-menu');
-        console.log(subMenu);
 
     $('.dropdown-menu .dropdown-toggle').on('click', function (e) {
         let $el = $(this);

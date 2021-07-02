@@ -5,7 +5,9 @@ const Suggestions = {
         this.searchClient = searchClient;
         const sources = indicesConfig.map(indexConfig => this.createSource(indexConfig));
         const {searchInput, options} = autocompleteConfig;
-        autocomplete(searchInput, options, sources);
+        autocomplete(searchInput, options, sources).one("autocomplete:updated", function(e){
+            $('.search-popup__more').show();
+        });
         this.bindSearchEvents(searchInput);
     },
     createSource(indexConfig) {

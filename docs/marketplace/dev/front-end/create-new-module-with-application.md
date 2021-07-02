@@ -1,44 +1,81 @@
 ---
-title: Project structure
-description: This articles provides details about the structure of the front-end project in the Spryker Marketplace.
+title: Create new module with application
+description: This articles provides details how to create new module with application
 template: concept-topic-template
 ---
 
-This articles provides details about the structure of the front-end project in the Spryker Marketplace.
+This articles provides details how to create new module with application.
 
+## Module Scaffolding
 
-## Alias
+First step is to create proper scaffolding structure see [link to the project structure doc](project-structure.md) Module structure section. Every new module may provide it’s own set of Web Components for the Twig.
 
-Use the alias `@mp/spryker-module-name` with the proper Spryker module name to import vendor angular components/modules/services into js files, for example, `import { registerNgModule } from '@mp/zed-ui'`.
+## Module Scaffolding
 
-## Module structure
+To register components a special Angular Module is created that lists all Angular Components that will be exposed as a Web Components in the `components.module.ts` file.
 
-Below you can find a general structure of every front-end module in the Spryker Marketplace:
+Web Components registration:
 
-- MODULE_NAME
-  - src/Spryker/Zed/MODULE_NAME
-    - Presentation - This is the namespace where the marketplace front-end-related files are located.
-      - Components - All Angular files are located here.
-        - entry.ts - registers all Angular NgModules via `registerNgModule` from `@mp/zed-ui/app/registry`
-        - app - contains Angular components and services.
-          - components.module.ts - Angular NgModule with components, such as web components (extends `CustomElementModule` from @spryker/web-components).
-        - public-api - Exports all public components/modules/services/types/tokens.
-      - TWIG_FOLDER - a Folder with twig view.
-  - mp.public-api.ts - Exports the public-api file.
-  - package.json - Adds MODULE_NAME specific packages.
+```ts
+/// Registration
+import { NgModule } from '@angular/core';
+import { WebComponentsModule } from '@spryker/web-components';
 
-## Main entry points
+import { SomeComponentComponent } from './some-component/some-component.component';
+import { SomeComponentModule } from './some-component/some-component.module';
 
-These entry points are needed for the Angular config in order to build the front-end project.
+@NgModule({
+  imports: [
+    WebComponentsModule.withComponents([SomeComponentComponent]),
+    SomeComponentModule,
+  ],
+  providers: [],
+})
+export class ComponentsModule {}
+```
 
-- ZedUi (Project)
-  - Presentation
-    - Components
-      - app
-        - app.module.ts - a module with the default configuration modules and bootstrap for the web-components.
-      - assets - all assets are located here.
-      - environment - this folder contains the base configuration file, environment.ts.
-      - index.html - entry for html file in the `angular.json` (not used for Spryker needs, exists for configuration only).
-      - main.ts - compiles the web-app and bootstraps the AppModule to run in the browser.
-      - polyfills.ts - used to provide modern functionality for older browsers that do not natively support it.
-      - styles.less - extends global styles.
+Then we have to register `ComponentsModule` to the whole modules list inside `entry.ts`
+
+```ts
+import { registerNgModule } from '@mp/zed-ui';
+
+import { ComponentsModule } from './app/components.module';
+
+registerNgModule(ComponentsModule);
+```
+
+When this module is registered and rebuilded a new JS bundle is created and must be manually included in the Twig page so that Web Components are loaded.
+Be aware that on registration Angular Component as Web Component there are will be added `web-` prefix ot the Angular Component selector name.
+e.g
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'mp-some-component',
+    ....
+})
+export class SomeComponentComponent {
+}
+
+/// After web component registration selector will be look like if we use this component as web inside twig file:
+'web-mp-some-component'
+```
+
+```twig
+{% extends '@ZedUi/Layout/merchant-layout-main.twig' %}
+
+{% block headTitle %}
+    {{ 'Module title' | trans }}
+{% endblock %}
+
+{% block content %}
+  <web-some-component></web-some-component>
+{% block content %}
+
+{% block footerJs %}
+    <script src="{{ assetsPath('js/mp/spy/module-name-es2015.js') }}" type="module"></script>
+    <script src="{{ assetsPath('js/mp/spy/module-name-es5.js') }}" nomodule defer></script>
+    {{ parent() }}
+{% endblock %}
+```

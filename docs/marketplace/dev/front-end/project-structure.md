@@ -6,7 +6,6 @@ template: concept-topic-template
 
 This articles provides details about the structure of the front-end project in the Spryker Marketplace.
 
-
 ## Alias
 
 Use the alias `@mp/spryker-module-name` with the proper Spryker module name to import vendor angular components/modules/services into js files, for example, `import { registerNgModule } from '@mp/zed-ui'`.
@@ -19,7 +18,7 @@ Below you can find a general structure of every front-end module in the Spryker 
   - src/Spryker/Zed/MODULE_NAME
     - Presentation - This is the namespace where the marketplace front-end-related files are located.
       - Components - All Angular files are located here.
-        - entry.ts - registers all Angular NgModules via `registerNgModule` from `@mp/zed-ui/app/registry`
+        - entry.ts - registers all Angular NgModules via `registerNgModule` from `@mp/zed-ui`
         - app - contains Angular components and services.
           - components.module.ts - Angular NgModule with components, such as web components (extends `CustomElementModule` from @spryker/web-components).
         - public-api - Exports all public components/modules/services/types/tokens.

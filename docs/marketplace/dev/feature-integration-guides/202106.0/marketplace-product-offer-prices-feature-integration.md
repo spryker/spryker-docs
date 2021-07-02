@@ -257,7 +257,7 @@ Make sure that when the following entities get updated via the ORM, the correspo
 | PriceProductOffer | `kv:product_concrete_product_offer_price:de:6` |
 
 <details>
-<summary markdown='span'>Example of expected data fragment</summary>
+<summary markdown='span'>Example of the expected data fragment</summary>
 
 ```json
 [
@@ -340,9 +340,9 @@ Make sure that when the following entities get updated via the ORM, the correspo
 {% endinfo_block %}
 
 ### 5) Import data
-Prepare your data according to your requirements using our demo data:
+Prepare your data according to your requirements using the demo data:
 
-**data/import/common/common/marketplace/price_product_offer.csv**
+<details><summary>data/import/common/common/marketplace/price_product_offer.csv</summary>
 
 ```csv
 product_offer_reference,price_type,store,currency,value_net,value_gross,price_data.volume_prices
@@ -695,9 +695,11 @@ offer415,DEFAULT,DE,CHF,35000,30000,"[{""quantity"":4,""net_price"":null,""gross
 offer418,DEFAULT,DE,CHF,32000,27000,"[{""quantity"":4,""net_price"":15000,""gross_price"":null}, {""quantity"":7,""net_price"":14500,""gross_price"":null}, {""quantity"":17,""net_price"":14000,""gross_price"":null}]"
 ```
 
+</details>
+
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
-| product_offer_reference | &check; | string | offer1 | Product Offer reference that will have these prices |
+| product_offer_reference | &check; | string | offer1 | Product offer reference that will have these prices |
 | price_type | &check; | string | DEFAULT | Sets price type to product offer price |
 | store | &check; | string | DE | Store in which this price will be shown |
 | currency | &check; | string | EUR | Currency of the price |
@@ -709,7 +711,7 @@ Register the following plugins to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| PriceProductOfferDataImportPlugin | Imports Price Product Offer data |   | Spryker\ |
+| PriceProductOfferDataImportPlugin | Imports Product Offer Price data |   | Spryker\ |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -749,17 +751,17 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| PriceProductOfferProductOfferExpanderPlugin | Expands Product Offer entity with prices |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
-| PriceProductOfferProductOfferPostCreatePlugin | Saves Product Offer price data after Product Offer creation |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
-| PriceProductOfferProductOfferPostUpdatePlugin | Update Product Offer price data after Product Offer updating |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
+| PriceProductOfferProductOfferExpanderPlugin | Expands the Product Offer entity with prices |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
+| PriceProductOfferProductOfferPostCreatePlugin | Saves the Product Offer Price data after the Product Offer creation |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
+| PriceProductOfferProductOfferPostUpdatePlugin | Update the Product Offer Price data after Product Offer updating |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
 | PriceProductOfferPriceDimensionConcreteSaverPlugin | Saves product offer prices when product concrete prices are saved |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
 | PriceProductOfferPriceDimensionQueryCriteriaPlugin | Adds the product offer prices as extra price dimensions when reading product concrete prices |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
-| PriceProductOfferPriceProductDimensionExpanderStrategyPlugin | Sets PriceProductDimensionTransfer to PRODUCT_OFFER when it has Product Offer reference attached to it |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
-| LowestPriceProductOfferStorageCollectionSorterPlugin | Sorts ProductOfferCollectionTransfer Product Offers by lowest price first |   | Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage |
-| PriceProductOfferStorageDimensionPlugin | Fetches an array of Product Offer PriceProductTransfers and attaches them to the list of PriceProductTransfers that are fetched for a product concrete  |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
-| PriceProductOfferStorageExpanderPlugin | Expands ProductOfferStorageTransfer with Product Offer price |   | Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage |
+| PriceProductOfferPriceProductDimensionExpanderStrategyPlugin | Sets PriceProductDimensionTransfer to PRODUCT_OFFER when it has the product offer reference attached to it |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
+| LowestPriceProductOfferStorageCollectionSorterPlugin | Sorts product offers of ProductOfferCollectionTransfer by lowest price first |   | Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage |
+| PriceProductOfferStorageDimensionPlugin | Fetches an array of the Product Offer PriceProductTransfers and attaches them to the list of PriceProductTransfers that are fetched for a product concrete  |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
+| PriceProductOfferStorageExpanderPlugin | Expands ProductOfferStorageTransfer with Product Offer Price |   | Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage |
 | PriceProductOfferStorageFilterExpanderPlugin | Expands PriceProductFilterTransfer with ProductOfferReference when a ProductViewTransfer has a ProductOfferReference |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
-| PriceProductOfferPriceProductFilterPlugin | Filters out inapplicable product offer prices and product concrete prices when a Product Offer is selected |   | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct |
+| PriceProductOfferPriceProductFilterPlugin | Filters out inapplicable product offer prices and product concrete prices when a product offer is selected |   | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct |
 | PriceProductOfferVolumeExtractorPlugin | Maps out JSON entries from price_data of PriceProductTransfer to new PriceProductTransfers with volume prices |   | Spryker\Client\PriceProductOfferVolume\Plugin\PriceProductOfferStorage |
 | PriceProductOfferVolumeFilterPlugin | Applies correct volume pricing when applicable and quantity is selected |   | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer |
 

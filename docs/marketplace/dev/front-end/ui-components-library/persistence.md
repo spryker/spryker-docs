@@ -102,6 +102,6 @@ interface PersistenceStrategy {
 
 There are a few common Persistence Strategies that are available in the UI library:
 
-- `InMemoryPersistenceStrategy` - Stores data in memory and will be lost when the browser page is reloaded.
-- `LocalStoragePersistenceStrategy` - Uses browser Local Storage to store the data.
-- `UrlPersistenceStrategy` - Uses browser URL to store the data.
+- `InMemoryPersistenceStrategy`—Stores data in memory and will be lost when the browser page is reloaded.
+- `LocalStoragePersistenceStrategy`—Uses browser Local Storage to store the data.
+- `UrlPersistenceStrategy`—Uses browser URL to store the data.

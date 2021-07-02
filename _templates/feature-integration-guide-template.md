@@ -304,7 +304,7 @@ Expected data fragment example:
 
 Import data as follows:
 
-1. Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using the demo data:
 
 ```csv
 {demo data}
@@ -312,7 +312,7 @@ Import data as follows:
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
 | -------- | ------------- | --------------- | --------- |
-| {column_name} | {✓ /  } | {data_type} | {example_of_column_data} | {description} |
+| {column_name} | {&check; /  } | {data_type} | {example_of_column_data} | {description} |
 
 2. Import data:
 
@@ -514,4 +514,4 @@ Integrate the following related features:
 
 | FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| {Feature Name} | {✓ /  }    | [{Integration guide name}](link to the integration guide) |
+| {Feature Name} | {&check; /  }    | [{Integration guide name}](link to the integration guide) |

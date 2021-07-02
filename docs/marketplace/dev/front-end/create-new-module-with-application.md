@@ -10,7 +10,7 @@ This articles provides details how to create new module with application.
 
 First step is to create proper scaffolding structure see [link to the project structure doc](project-structure.md) Module structure section. Every new module may provide it’s own set of Web Components for the Twig.
 
-## Module Scaffolding
+## Module Registration
 
 To register components a special Angular Module is created that lists all Angular Components that will be exposed as a Web Components in the `components.module.ts` file.
 

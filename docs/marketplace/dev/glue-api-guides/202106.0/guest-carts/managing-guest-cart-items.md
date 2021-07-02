@@ -9,10 +9,10 @@ This endpoint allows you to manage guest cart items.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Carts API](https://documentation.spryker.com/docs/cart-feature-integration)
+* [Cart feature integration](https://documentation.spryker.com/docs/cart-feature-integration)
 * [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
-* [Glue API: Product options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
+* [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 
 
 ## Add items to a guest cart
@@ -33,7 +33,7 @@ To add items to a guest cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{guest_cart_id}}***{% endraw %} | Unique identifier of the guest cart. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/en/managing-guest-carts#retrieve-a-guest-cart). |
+| {% raw %}***{{guest_cart_id}}***{% endraw %} | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 
 {% endinfo_block %}
 
@@ -46,7 +46,7 @@ To add items to a guest cart, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>concrete-products</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li></ul> |
+| include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>concrete-products</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>items, merchants</li></ul> |
 
 {% info_block infoBox "Included resources" %}
 
@@ -179,8 +179,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 
-
-
 <details>
 <summary markdown='span'>Request sample with concrete products and product options</summary>
 
@@ -211,7 +209,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 <details>
 <summary markdown='span'>Request sample with product offers (Marketplace only)</summary>
 
-</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
 
 `POST https://glue.mysprykershop.com/guest-cart-items`
 
@@ -229,6 +227,27 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 ```    
 </details>
 
+<details>
+<summary markdown='span'>Request sample with merchant products (Marketplace only)</summary>
+
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
+
+`POST https://glue.mysprykershop,com/guest-cart-items?include=items,merchants`
+
+```json
+{
+    "data": {
+        "type": "guest-cart-items",
+        "attributes": {
+            "sku": "109_19416433",
+            "quantity": "1",
+            "merchantReference": "MER000001"
+        }
+    }
+}
+```
+</details>
+
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU part number of the item to place on the new guest cart. To use promotions, specify the SKU of one of a product being promoted. Concrete product SKU required. |
@@ -239,8 +258,8 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |    
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
-| productOfferReference | String |&check;|Unique identifier of the Product Offer in the system.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
-
+| productOfferReference | String |✓|Unique identifier of the Product Offer in the system.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| merchantReference| String| ✓ | Unique identifier of the merchant in the system.
 
 {% info_block infoBox "Conversion" %}
 
@@ -1391,7 +1410,7 @@ It is the responsibility of the API Client to track whether the selected items a
 <details>
 <summary markdown='span'>Response sample with product offers (Marketplace only)</summary>
 
-</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section>
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
 
 ```json
 {
@@ -1463,6 +1482,125 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 </details>
 
+<details>
+<summary markdown='span'>Response sample with merchant products (Marketplace only)</summary>
+
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
+
+```json
+{
+    "data": {
+        "type": "guest-carts",
+        "id": "abf9c01b-6695-58cf-8439-541f8f26a95c",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "Shopping cart",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 0,
+                "taxTotal": 822,
+                "subtotal": 12572,
+                "grandTotal": 12572,
+                "priceToPay": 12572
+            },
+            "discounts": []
+        },
+        "links": {
+            "self": "https://glue.de.merchant.demo-spryker.com:80/guest-carts/abf9c01b-6695-58cf-8439-541f8f26a95c"
+        }
+    },
+    "included": [
+        {
+            "type": "merchants",
+            "id": "MER000001",
+            "attributes": {
+                "merchantName": "Spryker",
+                "merchantUrl": "/en/merchant/spryker",
+                "contactPersonRole": "E-Commerce Manager",
+                "contactPersonTitle": "Mr",
+                "contactPersonFirstName": "Harald",
+                "contactPersonLastName": "Schmidt",
+                "contactPersonPhone": "+49 30 208498350",
+                "logoUrl": "https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-logo.png",
+                "publicEmail": "info@spryker.com",
+                "publicPhone": "+49 30 234567891",
+                "description": "Spryker is the main merchant at the Demo Marketplace.",
+                "bannerUrl": "https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png",
+                "deliveryTime": "1-3 days",
+                "latitude": "13.384458",
+                "longitude": "52.534105",
+                "faxNumber": "+49 30 234567800",
+                "legalInformation": {
+                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
+                    "cancellationPolicy": "You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.",
+                    "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>",
+                    "dataPrivacy": "Spryker Systems GmbH values the privacy of your personal data."
+                },
+                "categories": []
+            },
+            "links": {
+                "self": "https://glue.de.merchant.demo-spryker.com:80/merchants/MER000001"
+            }
+        },
+        {
+            "type": "guest-cart-items",
+            "id": "109_19416433",
+            "attributes": {
+                "sku": "109_19416433",
+                "quantity": "1",
+                "groupKey": "109_19416433",
+                "abstractSku": "109",
+                "amount": null,
+                "productOfferReference": null,
+                "merchantReference": "MER000001",
+                "calculations": {
+                    "unitPrice": 12572,
+                    "sumPrice": 12572,
+                    "taxRate": 7,
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitGrossPrice": 12572,
+                    "sumGrossPrice": 12572,
+                    "unitTaxAmountFullAggregation": 822,
+                    "sumTaxAmountFullAggregation": 822,
+                    "sumSubtotalAggregation": 12572,
+                    "unitSubtotalAggregation": 12572,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 12572,
+                    "sumPriceToPayAggregation": 12572
+                },
+                "configuredBundle": null,
+                "configuredBundleItem": null,
+                "salesUnit": null,
+                "selectedProductOptions": []
+            },
+            "links": {
+                "self": "https://glue.de.merchant.demo-spryker.com:80/guest-carts/abf9c01b-6695-58cf-8439-541f8f26a95c/guest-cart-items/109_19416433"
+            },
+            "relationships": {
+                "merchants": {
+                    "data": [
+                        {
+                            "type": "merchants",
+                            "id": "MER000001"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+</details>
+
 **General cart information**
 
 | ATTRIBUTE | TYPE  | DESCRIPTION |
@@ -1500,8 +1638,8 @@ It is the responsibility of the API Client to track whether the selected items a
 | guest-cart-items | groupKey | String | Unique item identifier. The value is generated based on product parameters. |
 | guest-cart-items |abstractSku |String |SKU number of the abstract product to which the concrete belongs. |
 | guest-cart-items | amount | Integer | Amount of the products in the cart. |
-| guest-cart-items |productOfferReference | String | Unique identifier of the Product Offer in the system.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
-| guest-cart-items | merchantReference | String | Unique identifier of the Merchant in the system. </b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
+| guest-cart-items |productOfferReference | String | Unique identifier of the Product Offer in the system.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| guest-cart-items | merchantReference | String | Unique identifier of the Merchant in the system. {% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 | guest-cart-items | unitPrice | Integer | Single item price without assuming is it net or gross. This value should be used everywhere a price is disabled. It allows switching the tax mode without side effects. |
 | guest-cart-items | sumPrice | Integer | Sum of all items prices calculated. |
 | guest-cart-items | taxRate | Integer | Current tax rate in per cent. |
@@ -1546,10 +1684,11 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 For the attributes of the included resources, see:
-* [Retrieve a guest cart](https://documentation.spryker.com/docs/en/managing-guest-carts#guest-cart-response-attributes)
-* [Gift cards of guest users](https://documentation.spryker.com/docs/en/managing-gift-cards-of-guest-users)
-* [Retrieving concrete products](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes)
-* [Retrieving abstract product](https://documentation.spryker.com/docs/en/retrieving-abstract-products#abstract-products-response-attributes)
+* [Retrieve a guest cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart)
+* [Retrieve gift cards of guest users](https://documentation.spryker.com/docs/en/managing-gift-cards-of-guest-users)
+* [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html)
+* [Retrieve abstract products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-products.html)
+* [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)
 
 ## Change item quantity in a guest cart
 

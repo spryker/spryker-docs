@@ -1,7 +1,7 @@
 ---
 title: Marketplace Shipment + Cart feature integration
 description: This document describes the process how to integrate Marketplace Shipment feature into your project
-tags:
+last_updated: Jun 25, 2021 
 template: feature-integration-guide-template
 ---
 
@@ -89,56 +89,5 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 Make sure that merchant sold items have a merchant reference attached to their selected shipment.
 
 Make sure that correct merchant reference is saved in `spy_sales_shipment`.
-
-{% endinfo_block %}
-
-## Install feature front end
-
-Follow the steps below to install the Marketplace Shipment + Cart feature front end.
-
-### Prerequisites
-
-To start feature integration, integrate the required features:
-
-| NAME | VERSION |
-|-|-|
-| Cart | 202001.0 |
-| Marketplace Shipment | dev-master |
-
-### Set up behavior
-
-Enable the following behaviors by registering the plugins:
-
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-|-|-|-|-|
-| MerchantShipmentPreAddToCartPlugin | Adds cart item merchant reference to shipment transfer |  | Spryker\Yves\MerchantShipment\Plugin\CartPage |
-
-**src/Pyz/Zed/Cart/CartDependencyProvider.php**
-```php
-
-<?php
-
-namespace Pyz\Yves\CartPage;
-
-use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
-use Spryker\Yves\MerchantShipment\Plugin\CartPage\MerchantShipmentPreAddToCartPlugin;
-
-class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
-{
-    /**
-     * @return \SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface[]
-     */
-    protected function getPreAddToCartPlugins(): array
-    {
-        return [
-            new MerchantShipmentPreAddToCartPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that items that belong to a merchant being added to cart have the same merchant reference added to their shipments.
 
 {% endinfo_block %}

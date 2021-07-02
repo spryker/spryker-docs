@@ -1681,7 +1681,7 @@ To retrieve all carts, send the request:
 <details>
 <summary markdown='span'>Response sample with product offers (Marketplace only)</summary>
 
-This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}
 
 ```json
 {
@@ -3084,7 +3084,7 @@ To retrieve a particular cart, send the request:
 <details>
 <summary markdown='span'>Response sample with details on product offers and their prices and availability (Marketplace only)</summary>
 
-This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}
 
 ```json
 {
@@ -3307,7 +3307,7 @@ This option is available only in case you have upgraded your shop to Marketplace
 <details>
 <summary markdown='span'>Response sample with merchant products (Marketplace only)</summary>
 
-This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
+{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.{% endinfo_block %}
 
 ```json
 {

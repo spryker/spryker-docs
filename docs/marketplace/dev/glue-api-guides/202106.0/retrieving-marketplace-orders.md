@@ -19,9 +19,7 @@ Since order history is available for registered users only, the endpoints provid
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
-
-- [**Glue API: Order Management feature integration**](https://documentation.spryker.com/docs/glue-api-order-management-feature-integration)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](https://documentation.spryker.com/docs/glue-api-order-management-feature-integration)
 
 ## Retrieve all orders
 
@@ -206,7 +204,11 @@ The endpoint responds with an array of orders placed by the authenticated custom
 <details>
 <summary markdown='span'>Response sample with information on merchants</summary>
 
-This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.
+{% info_block warningBox "Note" %}
+
+This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
+
+{% endinfo_block %}
 
 ```json
 {
@@ -536,7 +538,7 @@ This option is available only in case you have upgraded your shop to the Marketp
 | canceledTotal     | Integer | Total canceled amount.                                  |
 | remunerationTotal | Integer | Total sum of remuneration.                              |
 
-For the attributes of the included resources, see, [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).
+For the attributes of the included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).
 
 ## Retrieve an order
 
@@ -1322,4 +1324,4 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 | defaultNetPrice    | Integer     | Default net price of delivery, in cents.   |
 | currencyIsoCode    | String      | ISO 4217 code of the currency in which the prices are specified. |
 
-For the attributes of the included resources, see, [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).
+For the attributes of the included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).

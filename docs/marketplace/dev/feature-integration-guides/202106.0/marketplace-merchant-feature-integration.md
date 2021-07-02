@@ -205,7 +205,7 @@ Make sure the following:
 * When you create a merchant using `MerchantFacade::updateMerchant()`, its profile also gets created.
 * When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
 * When you fetch a merchant using `MerchantFacade::findOne()`, its profile data also gets fetched.
-* When you deactivate a merchant in the **Merchants** section of the Back Office, its merchant users are deactivated in the **Users** section.
+* When you deactivate a merchant in the *Merchants* section of the Back Office, its merchant users are deactivated in the *Users* section.
 
 {% endinfo_block %}
 
@@ -514,7 +514,7 @@ This step publishes tables on change (create, edit) to `spy_merchant_search` and
 
 Configure export to Elastica:
 
-1. Setup Event Listeners and Publishers by registering the plugins:
+1. Setup event listeners and publishers by registering the plugins:
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
@@ -931,7 +931,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 ### 9) Import data
 
 To import data:
-1. Prepare merchant profile data according to your requirements using our demo data:
+1. Prepare merchant profile data according to your requirements using the demo data:
 
 
 <details>
@@ -982,7 +982,7 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 | data_privacy_glossary_key.de_DE |   | String | Lorem ipsum dolor sit amet | Data privacy statement of a merchant in the de_DE locale. |
 | fax_number |   | String | 030 234567800 | Fax number of a merchant. |
 
-2. Prepare merchant profile address data according to your requirements using our demo data:
+2. Prepare merchant profile address data according to your requirements using the demo data:
 
 <details>
   <summary markdown='span'>/data/import/common/common/marketplace/merchant_profile_address.csv</summary>
@@ -1051,7 +1051,7 @@ console data:import merchant-profile-address
 
 {% info_block warningBox "Verification" %}
 
-Make sure that imported data has been added to the `spy_merchant_profile` and `spy_merchant_profile_address` tables.
+Make sure that the imported data has been added to the `spy_merchant_profile` and `spy_merchant_profile_address` tables.
 
 {% endinfo_block %}
 

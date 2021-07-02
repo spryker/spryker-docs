@@ -19,8 +19,8 @@ The file should have the following parameters:
 
 | PARAMETER   | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION  |
 | -------------- | ----------- | ------- | ------------- | ------------------- | ---------------------- |
-| sku                | ✓             | String   |                   | Unique                           | SKU of the product.                                          |
-| merchant_reference | ✓             | String   |                   | Unique                           | Unique identifier of the merchant in the system.             |
+| sku                | &check;             | String   |                   | Unique                           | SKU of the product.                                          |
+| merchant_reference | &check;             | String   |                   | Unique                           | Unique identifier of the merchant in the system.             |
 | is_shared          |               | Integer  |                   | 1—is shared</br>0—is not shared | Defines whether the product is shared between the merchants. |
 
 ## Import file dependencies

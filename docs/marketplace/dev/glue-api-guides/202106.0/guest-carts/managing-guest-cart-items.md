@@ -239,7 +239,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |    
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
-| productOfferReference | String |✓|Unique identifier of the Product Offer in the system.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
+| productOfferReference | String |&check;|Unique identifier of the Product Offer in the system.</b><section contenteditable="false" class="errorBox"><div class="content">This option is available only for the Spryker Marketplace shop.</div></section> |
 
 
 {% info_block infoBox "Conversion" %}

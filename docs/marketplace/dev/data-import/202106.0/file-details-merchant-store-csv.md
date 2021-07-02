@@ -19,8 +19,8 @@ The file should have the following parameters:
 
 | PARAMETER    | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION  |
 | -------------- | ----------- | ----- | -------------- | ------------------------ | ----------------------- |
-| merchant_reference | ✓             | String   |                   | Unique                                                       | Identifier of the merchant in the system.       |
-| store_name         | ✓             | String   |                   | Value previously defined in the *stores.php* project configuration. | Store where the merchant product offer belongs. |
+| merchant_reference | &check;             | String   |                   | Unique                                                       | Identifier of the merchant in the system.       |
+| store_name         | &check;             | String   |                   | Value previously defined in the *stores.php* project configuration. | Store where the merchant product offer belongs. |
 
 ## Import file dependencies
 

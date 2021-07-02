@@ -19,8 +19,8 @@ The file should have the following parameters:
 
 | PARAMETER    | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION      |
 | ------------- | -------- | ------ | ------------- | --------------------------------- | ----------------- |
-| merchant_reference | ✓             | String   |                   | Unique                                                       | Identifier of the merchant in the system. |
-| stock_name         | ✓             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-warehouse). | Name of the stock.                        |
+| merchant_reference | &check;             | String   |                   | Unique                                                       | Identifier of the merchant in the system. |
+| stock_name         | &check;             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-warehouse). | Name of the stock.                        |
 
 ## Import file dependencies
 

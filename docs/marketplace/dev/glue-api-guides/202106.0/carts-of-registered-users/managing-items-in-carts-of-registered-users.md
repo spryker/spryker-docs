@@ -178,7 +178,11 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 <details>
 <summary markdown='span'>Request sample with product offers (Marketplace only)</summary>
 
+{% info_block warningBox "Note" %}
+
 This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
+
+{% endinfo_block %}
 
 `POST http://glue.myspsrykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=items`
 
@@ -1205,7 +1209,11 @@ It is the responsibility of the API Client to track whether the selected items a
 <details>
 <summary markdown='span'>Response sample with product offers (Marketplace only)</summary>
 
+{% info_block warningBox "Note" %}
+
 This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.
+
+{% endinfo_block %}
 
 ```json
 {

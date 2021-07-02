@@ -19,8 +19,8 @@ The file should have the following parameters:
 
 | PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ----------- | ----------- | ------- | ------------ | --------------------- | ------------ |
-| product_offer_reference | ✓             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{ site.version }}/products-and-offers/product-offer-feature-overview.html) in the system. |
-| store_name              | ✓             | String   |                   | Value previously defined in the *stores.php* project configuration. | Store where the merchant product offer belongs.              |
+| product_offer_reference | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{ site.version }}/products-and-offers/product-offer-feature-overview.html) in the system. |
+| store_name              | &check;             | String   |                   | Value previously defined in the *stores.php* project configuration. | Store where the merchant product offer belongs.              |
 
 ## Import file dependencies
 

@@ -139,7 +139,7 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the product offer reference (and sold by merchant) is added to the Cart page when adding a product offer to cart.
+Make sure that the product offer reference (and sold by merchant) is added to the *Cart* page when adding a product offer to cart.
 
 {% endinfo_block %}
 

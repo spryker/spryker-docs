@@ -9,7 +9,7 @@ This document provides details about the Table Filter extension in the Component
 
 ## Overview
 
-The Table Filters feature provides filtering functionality to the Core Table Component. The filters, however, are not included in the feature itself - instead, they are registered separately.
+The Table Filters feature provides filtering functionality to the Core Table Component. The filters, however, are not included in the feature itself—instead, they are registered separately.
 
 A Table Filter is an Angular Component that implements a specific interface (`TableFilterComponent`) and is registered to the Table Filters feature module via `TableFiltersFeatureModule.withFilterComponents()`.
 
@@ -121,6 +121,6 @@ export interface TableFilterComponent<C extends TableFilterBase> {
 
 The Table Filters feature ships with a few common Table Filter types:
 
-- `Select` - Allows filtering data via SelectComponent.
-- `Tree Select` - Allows filtering data via TreeSelectComponent.
-- `Date Range` - Allows filtering data via DateRangePickerComponent.
+- `Select`—Allows filtering data via SelectComponent.
+- `Tree Select`—Allows filtering data via TreeSelectComponent.
+- `Date Range`—Allows filtering data via DateRangePickerComponent.

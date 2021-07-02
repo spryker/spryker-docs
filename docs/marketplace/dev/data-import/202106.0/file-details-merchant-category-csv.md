@@ -19,8 +19,8 @@ The file should have the following parameters:
 
 | PARAMETER      | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION      |
 | -------------- | ----------- | ------- | ------------- | -------------------- | ------------------------------- |
-| category_key       | ✓             | String   |                   |                              | Category key to assign the merchant to.   |
-| merchant_reference | ✓             | String   |                   | Unique                       | Identifier of the merchant in the system. |
+| category_key       | &check;             | String   |                   |                              | Category key to assign the merchant to.   |
+| merchant_reference | &check;             | String   |                   | Unique                       | Identifier of the merchant in the system. |
 
 ## Import file dependencies
 

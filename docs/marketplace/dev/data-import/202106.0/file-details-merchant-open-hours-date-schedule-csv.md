@@ -19,8 +19,8 @@ The file should have the following parameters:
 
 | PARAMETER      | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION                               |
 | ------------- | ---------- | ------ | ----------- | ------------------- | ------------------------------------ |
-| merchant_reference | ✓             | String   |                   | Unique                        | Identifier of the merchant in the system.     |
-| date               | ✓             | Date     |                   | Date is in format: yyyy-mm-dd | Date of the described schedule.               |
+| merchant_reference | &check;             | String   |                   | Unique                        | Identifier of the merchant in the system.     |
+| date               | &check;             | Date     |                   | Date is in format: yyyy-mm-dd | Date of the described schedule.               |
 | time_from          |               | Datetime |                   | Time is in format hh:mm:ss    | Time from.                                    |
 | time_to            |               | Datetime |                   | Time is in format hh:mm:ss    | Time to.                                      |
 | note               |               | String   |                   |                               | Additional notes or comments to the schedule. |

@@ -16,7 +16,7 @@ In the example below, the `datasource` will transform `date` object in the data 
 <spy-select
   [datasource]="{
     type: 'inline',
-    data: 1600953608000,
+    data: Date.now(),
     transform: {
       type: 'date-serialize'
     },

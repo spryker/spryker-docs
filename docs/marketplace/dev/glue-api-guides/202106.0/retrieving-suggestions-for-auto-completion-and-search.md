@@ -28,7 +28,7 @@ To retrieve a search suggestion, send the request:
 | q    | Restricts the returned items to the values of the provided parameters. | <ul><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}{% endraw %}</li><li>{% raw %}{{product_attribute}} (for example, brand, color, etc.)—to provide multiple product attributes, use '+'</li><li>{% raw %}{{category_name}}{% endraw %}</li></ul> |
 | include | Adds resource relationships to the request. | abstract-products  |
 | currency | Sets a currency. | {% raw %}{{currency}}{% endraw %} |
-| priceMode  | Sets a price mode.  | <ul><li>NET_MODE<li><li>GROSS_MODE</li> |
+| priceMode  | Sets a price mode.  | <ul><li>NET_MODE</li><li>GROSS_MODE</li></ul> |
 
 | REQUEST | USAGE |
 | ---------------------- | ------------------------ |
@@ -1779,8 +1779,8 @@ To retrieve a search suggestion, send the request:
 | ATTRIBUTE| TYPE | DESCRIPTION |
 | ---------------- | -------- | ---------- |
 | completion         | Array    | Provides a list of autocompletion suggestions for the query string. Each item in the array is a *String*. |
-| categories         | Array    | Contains an array of categories matching the search query. This attribute is deprecated and will be removed soon . For the updated attributes, see Category Collection attributes. |
-| cmsPages           | Array    | Contains an array of CMS pages matching the search query. This attribute is deprecated and will be removed soon. For the updated attributes, see CMS Page Collection attributes. |
+| categories         | Array    | Contains an array of categories matching the search query. This attribute is deprecated and will be removed soon. For the updated attributes, see the *Category collection attributes* table below. |
+| cmsPages           | Array    | Contains an array of CMS pages matching the search query. This attribute is deprecated and will be removed soon. For the updated attributes, see the *CMS page Collection attributes* table below. |
 | abstractProducts   | Array    | Contains an array of abstract products matching the search query. Each item in the array is an *Object* representing a product. |
 | categoryCollection | Array    | Contains an array of categories matching the search query. Each item in the array is an *Object* representing a category. |
 | cmsPageCollection  | Array    | Contains an array of CMS pages. Each item in the array is an *Object* representing a single page. |

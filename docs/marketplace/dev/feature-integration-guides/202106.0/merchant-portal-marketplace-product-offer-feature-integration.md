@@ -59,6 +59,8 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Set up behavior
 
+To set up behavior, take the following steps.
+
 #### Extend OrderItemsTable in SalesMerchantPortalGui
 
 Activate the following plugins:
@@ -131,6 +133,6 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the OffersMerchantDashboardCardPlugin plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up at the page.
+Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up on the page.
 
 {% endinfo_block %}

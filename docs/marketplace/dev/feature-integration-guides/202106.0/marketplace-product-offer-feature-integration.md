@@ -128,7 +128,7 @@ console translator:generate-cache
 
 ### 4) Configure export to Redis and Elasticsearch
 
-To configure export to Redis and ElasticSearch, take the following steps:
+To configure export to Redis and Elasticsearch, take the following steps:
 
 #### Set up event listeners
 
@@ -303,9 +303,9 @@ Make sure that when the following entities get updated via the ORM, the correspo
 
 ### 5) Import data
 
-Prepare your data according to your requirements using our demo data:
+Prepare your data according to your requirements using the demo data:
 
-**data/import/common/common/marketplace/merchant_product_offer.csv**
+<details><summary>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
 
 ```csv
 product_offer_reference,concrete_sku,merchant_reference,merchant_sku,is_active,approval_status
@@ -445,6 +445,8 @@ offer417,112_312526191,MER000005,,1,approved
 offer418,112_312526172,MER000002,,1,approved
 ```
 
+</details>
+
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------------- | ----------- | -------- | --------- | ------------------ |
 | product_offer_reference | &check;      | string    | offer1        | Product offer reference that will be referenced to this merchant. |
@@ -454,7 +456,7 @@ offer418,112_312526172,MER000002,,1,approved
 | is_active               |        | boolean   | 1             | Product offer status, defaults to 1.                          |
 | approval_status         |        | string    | approved      | Approval status (Waiting for Approval – Approved – Denied). Denied and Waiting for Approval statuses mean that the offer is not visible on PDP regardless of Product Offer → Active = true.This can be configured (along with the transition between statuses in ProductOfferConfig). If not supplied, ProductOfferConfig → getDefaultStatus is applied. |
 
-**data/import/common/common/marketplace/merchant_product_offer_store.csv**
+<details><summary>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
 
 ```csv
 product_offer_reference,store_name
@@ -878,11 +880,13 @@ offer94,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 ```
 
+</details>
+
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------ | ----------- | ------ | ----------- | ---------------- |
 | product_offer_reference | &check; | string    | offer1       | Unique product offer identifier.             |
-| valid_from              |  | `string`  | 2020-01-01   | Date since which the product offer is valid. |
-| valid_to                |  | `string`  | 2020-01-01   | Date till which the product offer is valid.  |
+| valid_from              |  | String  | 2020-01-01   | Date since which the product offer is valid. |
+| valid_to                |  | String | 2020-01-01   | Date till which the product offer is valid.  |
 
 Register the following plugins to enable data import:
 

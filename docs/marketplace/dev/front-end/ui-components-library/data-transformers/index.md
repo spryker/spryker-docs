@@ -155,7 +155,7 @@ There are a few common Data Transformers that are available in the UI library as
 - `date-serialize` - Serializes JS Date Object into a Date ISO string.
 - [collate](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate.html) - Sorts, filters, and paginates data based on configuration. It has extra extension points:
   - Filters - Services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
-    - `equals` - filters values that are strictly equal.
+    - `equals` - Filters values that are strictly equal.
     - `range` - Filters values that are within a number range.
     - `text` - Filters values that match a string.
   - Data Configurators - Services that allow configuring repopulation data (sorting, pagination, filtering). This services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:

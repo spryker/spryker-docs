@@ -103,3 +103,14 @@ export type DataFilterTransformerByPropName = Record<string, string>;
 })
 export class RootModule {}
 ```
+
+## Data Transformer Collate types
+
+There are a few common Data Transformers Collate that are available in the UI library as separate packages:
+
+- Filters - Services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
+  - `equals` - Filters values that are strictly equal.
+  - `range` - Filters values that are within a number range.
+  - `text` - Filters values that match a string.
+- Data Configurators - Services that allow configuring repopulation data (sorting, pagination, filtering). This services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
+  - `table` - Integrates Table into Collate to re-populate the data.

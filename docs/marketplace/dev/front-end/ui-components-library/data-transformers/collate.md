@@ -85,7 +85,7 @@ The meaning of the word `collate` is to collect, arrange and assemble in a speci
 
 ##### DataTransformerFilterConfig
 `type` - the name of filter, e.g. `range`.  
-`propNames` - the array with data properties that needs to be transformed.
+`propNames` - the array with property names that filter will be applied to in the data.
 
 ```ts
 export interface CollateDataTransformerConfig extends DataTransformerConfig {

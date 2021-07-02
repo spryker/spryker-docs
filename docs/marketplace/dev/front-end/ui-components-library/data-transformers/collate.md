@@ -15,60 +15,32 @@ The meaning of the word `collate` is to collect, arrange and assemble in a speci
 ```ts
 <spy-table
   [config]="{
-    dataSource: {
-      type: 'table.inline',
-      data: [
-        {
-          col1: '2020-09-24T15:20:08+02:00',
-          col2: 'col 2',
+    datasource: {
+      type: 'inline',
+      data: {
+        col1: '2020-09-24T15:20:08+02:00',
+        col2: 'col 2',
+      },                                                     
+      transform: {
+        type: 'collate',
+        configurator: {
+          type: 'table',
         },
-        {
-          col1: '2020-09-22T15:20:08+02:00',
-          col2: 'col 1',
+        filter: {
+          date: {
+            type: 'range',
+            propNames: 'col1',
+          },
         },
-      ],
-      filter: {
-        date: {
-          type: 'range',
-          propNames: 'col1',
+        search: {
+          type: 'text',
+          propNames: ['col2'],
         },
-      },
-      search: {
-        type: 'text',
-        propNames: ['col2'],
-      },
-      transformerByPropName: {
-        col1: 'date',
+        transformerByPropName: {
+          col1: 'date',
+        },  
       },
     },
-    columns: [ ... ],
-    search: { ... },
-    filters: { ... },                                                            
-    transform: {
-      type: 'chain',
-      transformers: [
-        {
-          type: 'array-map',
-          mapItems: {
-            type: 'object-map',
-            mapProps: {
-              col1: {
-                type: 'date-parse',
-              },
-            },
-          },
-        },
-        {
-          type: 'collate',
-          configurator: {
-            type: 'table',
-          },
-          filter: dataSource.filter,
-          search: dataSource.search,
-        },
-      ],
-      transformerByPropName: dataSource.transformerByPropName,
-    }
   }"
 ></spy-table>
 ```
@@ -114,6 +86,18 @@ export type DataFilterTransformerByPropName = Record<string, string>;
   imports: [
     DataTransformerModule.withTransformers({
       collate: CollateDataTransformerService,
+    }),
+
+    // Filters
+    CollateDataTransformer.withFilters({
+      equals: EqualsDataTransformerFilterService,
+      range: RangeDataTransformerFilterService,
+      text: TextDataTransformerFilterService,
+    }),
+
+    // Configurators
+    CollateDataTransformer.withConfigurators({
+      table: TableDataTransformerConfiguratorService,
     }),
   ],
 })

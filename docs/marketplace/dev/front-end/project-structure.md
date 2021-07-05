@@ -6,7 +6,6 @@ template: concept-topic-template
 
 This articles explains the structure of the front-end project in the Spryker Marketplace.
 
-
 ## Alias
 
 Use the alias `@mp/spryker-module-name` with the proper Spryker module name to import vendor Angular components, modules or services into .js files, for example, `import { registerNgModule } from '@mp/zed-ui'`.

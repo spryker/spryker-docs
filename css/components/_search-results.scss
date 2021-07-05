@@ -2,8 +2,18 @@
     &__stats {
         margin: 0 0 28px;
 
+        @include media("<tablet") {
+            margin: 0 0 20px;
+        }
+
         .ais-Stats-text {
             display: block;
+        }
+    }
+
+    &__main {
+        @include media("<tablet") {
+            margin: 0 0 25px;
         }
     }
 
@@ -26,6 +36,10 @@
 
         &-item {
             margin: 0 0 35px;
+
+            @include media("<tablet") {
+                margin: 0 0 15px;
+            }
         }
     }
 

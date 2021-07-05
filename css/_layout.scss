@@ -23,6 +23,10 @@ body {
     &--search {
         padding: 40px 0;
 
+        @include media("<tablet") {
+            padding: 10px 0 30px;
+        }
+
         .container {
             max-width: 1078px;
         }

@@ -5,6 +5,7 @@
         list-style: none;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
 
         &-item {
             margin: 0 8px 16px;

@@ -147,12 +147,12 @@ export enum ColumnTypeOptionsType {
 
 UI library comes with a number of standard column types that can be used on any project:
 
-- list—renders a list of column types
-- autocomplete—renders `@spryker/input` and `@spryker/autocomplete` components
-- chip—renders `@spryker/chip` component
-- date—renders a formatted date by `config`
-- dynamic—is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`
-- image—renders an image
-- input—renders `@spryker/input`component
-- select—renders `@spryker/select`component
-- text—renders a static text
+- list - renders a list of column types.
+- autocomplete - renders `@spryker/input` and `@spryker/autocomplete` components.
+- chip - renders `@spryker/chip` component.
+- date - renders a formatted date by `config`.
+- dynamic - is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.
+- image - renders an image.
+- input - renders `@spryker/input`component.
+- select - renders `@spryker/select`component.
+- text - renders a static text.

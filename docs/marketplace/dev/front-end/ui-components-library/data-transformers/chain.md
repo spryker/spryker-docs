@@ -9,8 +9,10 @@ This document provides details about the Data Transformer Chain service in the C
 
 ## Overview
 
-Data Transformer Chain is an Angular Service that executes another Data Transformers in sequence via configuration.
-In the example below, the `datasource` will return an array with the transformed `date` in every child object via chaining transformers.
+Data Transformer Chain is an Angular Service that executes other Data Transformers in sequence via configuration.
+
+In the example below, the `datasource` returns an array with the transformed `date` in every child object using chained transformers.
+
 
 ```ts
 <spy-select
@@ -58,7 +60,9 @@ In the example below, the `datasource` will return an array with the transformed
 
 ## Interfaces
 
-`transformers` - array with Data Transformer configuration objects.
+Below you can find interfaces for Data Transformer Chain.
+
+`transformers` - an array with Data Transformer configuration objects.
 
 ```ts
 export interface ChainDataTransformerConfig extends DataTransformerConfig {

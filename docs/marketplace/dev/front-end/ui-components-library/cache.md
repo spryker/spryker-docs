@@ -166,7 +166,7 @@ interface CacheStrategyConfig {
 
 There are a few common Cache Strategies that are available in UI library as separate packages:
 
-- static—adds values immediately to the cache until the expiration date and always retrieves them from cache if requested.
+- static - adds values immediately to the cache until the expiration date and always retrieves them from cache if requested.
 
 ## Related articles
 

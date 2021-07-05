@@ -136,8 +136,8 @@ export interface TableActionHandler<
 
 The following Table Action Handlers are already compiled and distributed with the UI library and can be used in the project:
 
-- Form Overlay—renders dynamic HTML in an Overlay received by HTTP response that will be handled by Ajax on the front-end and then rendered again.
-- HTML Overlay—renders any dynamic HTML received from an HTTP response in an Overlay
-- Url—allows sending an HTTP request via HTTP
+- Form Overlay - renders dynamic HTML in an Overlay received by HTTP response that will be handled by Ajax on the front-end and then rendered again.
+- HTML Overlay - renders any dynamic HTML received from an HTTP response in an Overlay
+- Url - allows sending an HTTP request via HTTP
 
 All of the above Table Action Handlers use Ajax Post Action services to handle responses, which allows them to perform various tasks from the response (close overlays, refresh tables, etc.).

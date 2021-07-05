@@ -282,6 +282,9 @@ entries:
       - title: Front-end
         nested:
 
+        - title: "Building the project"
+          url: /docs/marketplace/dev/front-end/building-the-project.html
+
         - title: "Project structure"
           url: /docs/marketplace/dev/front-end/project-structure.html
 

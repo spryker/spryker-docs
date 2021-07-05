@@ -21,7 +21,7 @@ Below you can find a general structure of every front-end module in the Spryker 
       - Components — all Angular files are located here.
         - entry.ts — registers all Angular NgModules via `registerNgModule` from `@mp/zed-ui/app/registry`
         - app—contains Angular components and services.
-          - components.module.ts — an Angular NgModule with components, such as web components (extends `CustomElementModule` from @spryker/web-components).
+          - components.module.ts — an Angular NgModule with components, such as web components (extends `WebComponentsModule` from @spryker/web-components).
         - public-api — exports all public components / modules / services / types / tokens.
       - TWIG_FOLDER — a folder with twig view.
   - mp.public-api.ts — exports the public-api file.

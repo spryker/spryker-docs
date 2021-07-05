@@ -95,7 +95,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when refreshing the checkout summary page, after changing the `active` or `approved` status of a product offer, the status is reflected accordingly. The checkout button is disabled, and the message is shown at the bottom of the checkout summary page: "Product offer inactive for the product with SKU '<SKU>'".
+Make sure that when refreshing the checkout summary page, after changing the `active` or `approved` status of a product offer, the status is reflected accordingly. The checkout button is disabled, and the message is shown at the bottom of the checkout summary page: "Product offer inactive for the product with SKU <`SKU`>".
 
 You can toggle the offer's `active` status in the Merchant Portal (`Offer visibility`). There's no UI to unset the approval status for an offer yet (only via data-importer: edit `data/import/common/common/marketplace/merchant_product_offer.csv` and execute the `console data:import merchant-product-offer` command).
 

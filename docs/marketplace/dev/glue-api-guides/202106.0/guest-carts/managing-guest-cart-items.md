@@ -261,7 +261,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | productOfferReference | String |✓|Unique identifier of the Product Offer in the system.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 | merchantReference| String| ✓ | Unique identifier of the merchant in the system.
 
-
 {% info_block infoBox "Conversion" %}
 
 When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](https://documentation.spryker.com/docs/measurement-units-feature-overview) to learn more.

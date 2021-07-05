@@ -136,7 +136,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure when you delete category that has a relation to merchant in Zed UI, there is no exception and merchant category removed as well.
+Make sure when you delete category that has a relation to merchant in the Back Office, there is no exception and merchant category removed as well.
 
 {% endinfo_block %}
 
@@ -195,7 +195,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that index data `http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes` contains merchant category keys for the merchants that assigned to categories.
+Make sure that the index data `http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes` contains merchant category keys for the merchants assigned to categories.
 
 {% endinfo_block %}
 
@@ -281,7 +281,7 @@ console data:import merchant-category
 
 {% info_block warningBox "Verification" %}
 
-Make sure that imported data is added to the `spy_merchant_category` table.
+Make sure that the imported data is added to the `spy_merchant_category` table.
 
 {% endinfo_block %}
 

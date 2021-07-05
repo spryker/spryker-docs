@@ -68,8 +68,8 @@ The table below illustrates the logic according to which the product offer is d
 
 | Characteristics    | DE   | AT   | US   |
 | ----------------------------------------- | ---- | ---- | ---- |
-| Store where the abstract product is added | ✓    | ✓    | x    |
-| Store where the product offer is added    | x    | ✓    | ✓    |
+| Store where the abstract product is added | &check;    | &check;    | x    |
+| Store where the product offer is added    | x    | &check;    | &check;    |
 | Is product offer visible?                 | no   | yes  | no   |
 
 ## Product offer stock

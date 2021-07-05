@@ -8,6 +8,7 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Product feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product feature core.
 
 ### Prerequisites
@@ -67,8 +68,8 @@ Adjust the schema definition so entity changes trigger events:
 Apply database changes and to generate entity and transfer changes:
 
 ```bash
-console transfer:generate 
-console propel:install 
+console transfer:generate
+console propel:install
 console transfer:generate
 ```
 
@@ -269,7 +270,7 @@ Make sure that data in  `spy_product_abstract_storage` contains `merchant_refere
 
 {% endinfo_block %}
 
-### 5) Import Merchant Product data
+### 5) Import merchant product data
 
 Prepare your data according to your requirements using the demo data:
 

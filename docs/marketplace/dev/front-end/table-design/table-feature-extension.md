@@ -5,7 +5,7 @@ description: This document provides details about the Table Feature extension in
 template: concept-topic-template
 ---
 
-This document provides details about the Table Feature extension in the Components Library.
+This document explains the Table Feature extension in the Components Library.
 
 ## Overview
 
@@ -155,14 +155,14 @@ export enum TableFeatureLocation {
 
 There are multiple standard Table Features that are shipped with the UI library:
 
-- `Pagination`—renders pagination of the table.
-- `Total`—renders the total number of the data set.
-- `Title`—renders the title of the table.
-- `Selectable`—allows selecting multiple rows.
-- `Row Actions`—allows triggering actions from rows.
-- `Batch Actions`—allows triggering batch/multiple actions from rows.
-- `Filters`—allows filtering the data set.
-- `Search`—allows searching within the data set.
-- `Sync State`—allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
-- `Editable`—allows editing/adding rows of the table.
-- `Settings`—allows customizing columns of the table (show/hide and reorder).
+- `Pagination` - renders pagination of the table.
+- `Total` - renders the total number of the data set.
+- `Title` - renders the title of the table.
+- `Selectable` - allows selecting multiple rows.
+- `Row Actions` - allows triggering actions from rows.
+- `Batch Actions` - allows triggering batch/multiple actions from rows.
+- `Filters` - allows filtering the data set.
+- `Search` - allows searching within the data set.
+- `Sync State` - allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
+- `Editable` - allows editing/adding rows of the table.
+- `Settings` - allows customizing columns of the table (show/hide and reorder).

@@ -46,6 +46,7 @@ Make sure that the following modules were installed:
 {% endinfo_block %}
 
 ### 2) Set up the database schema
+
 Adjust the schema definition so that entity changes will trigger events:
 
 **src/Pyz/Zed/PriceProductOffer/Persistence/Propel/Schema/spy_price_product_offer.schema.xml**
@@ -66,7 +67,7 @@ Adjust the schema definition so that entity changes will trigger events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -104,11 +105,12 @@ console translator:generate-cache
 ```
 
 ### 4) Configure export to Redis and Elasticsearch
-#### Set up event listeners
+
+Set up event listeners
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| PriceProductOfferStorageEventSubscriber | Registers listeners that are responsible for publishing Product Offer Prices to storage. |   | Spryker\Zed\PriceProduc |
+| PriceProductOfferStorageEventSubscriber | Registers listeners that are responsible for publishing Product Offer Prices to storage. |   | Spryker\Zed\PriceProduct |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -158,7 +160,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-#### Configure message processors
+Configure message processors:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -192,7 +194,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Set up re-generate and re-sync features
+Set up re-generate and re-sync features:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -340,6 +342,7 @@ Make sure that when the following entities get updated via the ORM, the correspo
 {% endinfo_block %}
 
 ### 5) Import data
+
 Prepare your data according to your requirements using the demo data:
 
 <details><summary>data/import/common/common/marketplace/price_product_offer.csv</summary>
@@ -747,6 +750,7 @@ Make sure that the Product Offer Prices data is in the `spy_price_product_offer`
 {% endinfo_block %}
 
 ### 6) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |

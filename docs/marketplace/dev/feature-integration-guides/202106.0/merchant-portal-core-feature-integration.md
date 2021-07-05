@@ -11,7 +11,7 @@ This document describes how to integrate the Marketplace Merchant Portal Core fe
 
 Follow the steps below to install the Merchant Portal Core feature core.
 
-## Prerequisites
+### Prerequisites
 
 To start feature integration, integrate the required features:
 

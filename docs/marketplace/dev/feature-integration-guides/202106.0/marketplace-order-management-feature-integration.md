@@ -47,6 +47,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
+
 Apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -87,6 +88,7 @@ Make sure that the following changes have been triggered in transfer objects:
 {% endinfo_block %}
 
 ### 3) Add translations
+
 Generate a new translation cache for Zed:
 
 ```bash
@@ -118,7 +120,6 @@ MER000005,MerchantDefaultStateMachine
 |merchant_oms_process_name     |    &check;     |     string   |  MainMerchantStateMachine       | String identifier for the State Machine processes.|
 
 2. Register the following plugin to enable data import:
-
 
 |PLUGIN  |SPECIFICATION  |PREREQUISITES  |NAMESPACE  |
 |---------|---------|---------|---------|
@@ -277,6 +278,7 @@ console data:export --config=merchant_order_export_config.yml
 ```
 
 ### 6) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -517,6 +519,7 @@ Ensure the following transfers have been created:
 {% endinfo_block %}
 
 ### 3) Set up plugins
+
 Register the following plugins to enable widgets:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |

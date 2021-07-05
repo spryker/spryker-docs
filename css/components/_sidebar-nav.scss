@@ -41,6 +41,10 @@
         margin: 0;
         list-style: none;
         display: none;
+
+        .sidebar-nav__title {
+            font-weight: normal;
+        }
     }
 
     li {
@@ -70,12 +74,6 @@
         & > .sidebar-nav__opener {
             [class*="icon-"] {
                 transform: rotate(90deg);
-            }
-        }
-
-        ul {
-            .sidebar-nav__link {
-                border-left-color: transparent;
             }
         }
     }

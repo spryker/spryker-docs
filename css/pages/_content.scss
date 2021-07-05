@@ -1,6 +1,8 @@
 .post-content {
+    width: calc(100% - $sidebarsWidthDesktop);
+
     h1, h2, h3, h4, h5, h6 {
-        color: rgb(72, 73, 78);
+        color: $grey-dark;
         font-weight: 800;
         margin: 0 0 16px;
     }
@@ -25,10 +27,9 @@
     table {
         max-width: 100%;
         margin-bottom: 20px;
-        border: 1px solid $grey-7;
+        border: 0;
         border-radius: 4px;
         text-align: left;
-        word-break: break-word;
         color: $grey-8;
         font-size: 16px;
         line-height: 1.5;
@@ -46,41 +47,76 @@
         padding: 10px 15px;
         hyphens: auto;
         min-width: 100px;
-        border: 1px solid $grey-7;
+        border: 0;
     }
 
     th {
-        color: $grey-9;
+        color: $white;
         font-size: 13px;
         font-weight: 600;
+        background: $grey;
+
+        &:first-child {
+            border-top-left-radius: 4px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 4px;
+        }
+    }
+
+    td {
+        border-bottom: 2px solid $grey-3;
     }
 
     details {
-        margin: 0 0 1em;
+        margin: 0 0 20px;
+        border-top: 2px solid $grey-3;
+        border-bottom: 2px solid $grey-3;
+
+        & + details {
+            margin-top: -22px;
+        }
+
         summary {
             display: block;
-            padding: 0 0 0 18px;
+            padding: 10px 25px 10px 8px;
             position: relative;
             font-size: 16px;
             line-height: 1.5;
+            font-weight: bold;
             cursor: pointer;
-            margin: 0 0 10px;
-            transition: color .2s linear;
+            margin: 0;
+            transition: color .2s linear, background .2s linear;
+            color: $grey-dark;
+            word-break: break-word;
+
             &:hover {
-                color: $black;
+                background: $grey-lightest;
             }
+
             &:before {
                 position: absolute;
-                top: 8px;
-                left: 0;
+                top: 17px;
+                right: 15px;
+                color: $grey;
                 @extend %icon;
                 @extend .icon-arrow-right;
                 font-size: 10px;
             }
         }
+
         &[open] {
             summary:before {
                 transform: rotate(90deg);
+            }
+        }
+    }
+
+    .info-block {
+        summary {
+            &:hover {
+                background: rgba(0, 0, 0, .1);
             }
         }
     }
@@ -94,6 +130,19 @@
                 display: inline;
             }
         }
+    }
+
+    .table-wrapper {
+        margin: 0 0 20px;
+        overflow: auto;
+
+        table {
+            margin: 0 0 5px;
+        }
+    }
+
+    p {
+        word-break: break-word;
     }
 }
 

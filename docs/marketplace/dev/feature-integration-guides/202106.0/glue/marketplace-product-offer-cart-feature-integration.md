@@ -21,7 +21,7 @@ To start feature integration, integrate the required features:
 | Marketplace Product Offer API    | dev-master  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html) |
 | Marketplace Inventory Management | dev-master  | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-inventory-management-feature-integration.html) |
 
-### 1) Enable adding Merchant Product Offer to cart
+### Enable adding Merchant Product Offer to cart
 
 Activate the following plugins:
 

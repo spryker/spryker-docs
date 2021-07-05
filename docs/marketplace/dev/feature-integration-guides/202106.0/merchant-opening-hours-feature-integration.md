@@ -122,7 +122,7 @@ console translator:generate-cache
 
 This step publishes change events to `spy_merchant_opening_hours_storage` and synchronizes the data to the storage.
 
-#### Set up event, listeners, and publishers
+#### Set up event listeners and publishers
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | -------------- | ------------- | ------------- |
@@ -183,7 +183,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-### Set up re-generate and re-sync features
+### Set up, re-generate, and re-sync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------------- | ------------------ | ------------- | --------------- |

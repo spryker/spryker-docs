@@ -4,6 +4,7 @@
         border-radius: 4px;
         padding: 16px 0 10px;
         margin: 0 0 16px;
+        display: none;
 
         & > ul::before {
             font-size: 12px;
@@ -23,7 +24,7 @@
             padding: 0;
             list-style: none;
             font-size: 12px;
-            line-height: 16px;
+            line-height: 1.5;
 
             li {
                 margin: 0;

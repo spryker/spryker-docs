@@ -1,5 +1,5 @@
 .post-content {
-    width: calc(100% - $sidebarsWidthDesktop);
+    width: calc(100% - #{$sidebarsWidthDesktop});
 
     h1, h2, h3, h4, h5, h6 {
         color: $grey-dark;
@@ -146,6 +146,22 @@
 
     p {
         word-break: break-word;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto 1em;
+        max-width: 50%;
+
+        @include media("<desktop") {
+            max-width: 100%;
+        }
+
+        &[width-100],
+        &.width-100 {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 }
 

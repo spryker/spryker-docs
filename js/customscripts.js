@@ -436,6 +436,14 @@ function initSidebarToggle() {
       var $topContext = this.helpers.createChildNavList(opts.$nav);
       var topLevel = this.helpers.getTopLevel(opts.$scope);
       var $headings = this.helpers.getHeadings(opts.$scope, topLevel);
+
+      if ($headings.length < 2) {
+        opts.$nav.hide();
+        return;
+      } else {
+        opts.$nav.show();
+      }
+
       this.helpers.populateNav($topContext, topLevel, $headings);
     }
   };

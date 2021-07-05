@@ -56,9 +56,8 @@ To retrieve general information about a concrete product, send the request:
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Get information about the `001_25904006` product with its product offers.  |
 | `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information for a concrete product with the SKU `001_25904006` with product offers included.<br>**This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.** |
-| `GET https://glue.mysprykershop.com/concrete-products/111_12295890?include=abstract-products,merchants` | Retrieve information for a concrete product with SKU `111_12295890` with details on its abstract product and the merchant who sells it.<br>**This option is available only in case you have upgraded your shop to Marketplace provided by Spryker.** |
-
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information for a concrete product with the SKU `001_25904006` with product offers included.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| `GET https://glue.mysprykershop.com/concrete-products/111_12295890?include=abstract-products,merchants` | Retrieve information for a concrete product with SKU `111_12295890` with details on its abstract product and the merchant who sells it.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 
 ### Response
 

@@ -96,7 +96,7 @@ export interface CustomDataTransformerConfig extends DataTransformerConfig {
 @Injectable({
   providedIn: 'root',
 })
-export class CustomDataTransformerService implements 
+export class CustomDataTransformerService implements
   DataTransformer<CustomDataTransformerData, CustomDataTransformerDataT> {
   transform(
     data: CustomDataTransformerData,

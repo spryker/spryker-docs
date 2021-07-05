@@ -309,7 +309,7 @@ entries:
             - title: "Datasources"
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
 
-            - title: "Data transformers"
+            - title: "Data Transformers"
               url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/
               nested:
 
@@ -324,6 +324,9 @@ entries:
 
                 - title: "Object-map"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
+
+                - title: "Chain"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html
 
             - title: "Cache"
               url: /docs/marketplace/dev/front-end/ui-components-library/cache.html

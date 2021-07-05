@@ -327,6 +327,9 @@ entries:
 
                 - title: "Date-parse"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html
+                  
+                - title: "Date-serialize"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html
 
                 - title: "Chain"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html

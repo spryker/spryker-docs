@@ -158,5 +158,5 @@ There are a few common Data Transformers that are available in the UI library as
     - `equals` - filters values that are strictly equal.
     - `range` - filters values that are within a number range.
     - `text` - filters values that match a string.
-  - Data Configurators - are services that allow configuring repopulation data (sorting, pagination, filtering). This services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
+  - Data Configurators - are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
     - `table` - integrates Table into Collate to re-populate the data.

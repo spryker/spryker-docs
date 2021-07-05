@@ -10,7 +10,7 @@ This document provides details about the Data Transformer Collate service in the
 ## Overview
 
 Data Transformer Collate is an Angular Service that implements sorting, filtering, and pagination of data based on configuration.
-The meaning of the word `collate` is to collect, arrange and assemble in a specific order of sequence.
+In general, the meaning of the word `collate` is to collect, arrange and assemble in a specific order of sequence.
 
 ```ts
 <spy-table
@@ -45,19 +45,40 @@ The meaning of the word `collate` is to collect, arrange and assemble in a speci
 ></spy-table>
 ```
 
+## Collate Filters
+
+Collate Filters are Angular Services that extend filtering in the Data Transformer.
+These services are registered via `CollateDataTransformer.withFilters()`.
+There are a few common Data Transformer Collate Filters that are available as separate packages in the UI library:
+
+  - `equals` - filters values that are strictly equal.
+  - `range` - filters values that are within a number range.
+  - `text` - filters values that match a string.
+
+## Collate Data Configurators
+
+Data Configurators are Angular Services that enable re-population of data (sorting, pagination, filtering).
+These services are registered via `CollateDataTransformer.withConfigurators()`.
+There are a few common Data Transformers Collate Data Configurators that are available:
+
+  - `table` - integrates Table into Collate to re-populate data when the table updates.
+
 ## Interfaces
-##### DataTransformerConfiguratorConfig
-`configurator` - the object with Data Transformer configurator type and specific extra properties.  
-`filter` - the object based on the specific data property (`filterId`) that defines on which properties initial data object will be filtered via `DataTransformerFilterConfig`.  
-`search` - defines on which properties initial data object will be filtered via `DataTransformerFilterConfig`.  
+
+Below you can find interfaces for Data Transformer Collate.
+
+### DataTransformerConfiguratorConfig
+`configurator` - the object with the Data Transformer configurator type and additional properties.  
+`filter` - the object based on a specific data property (`filterId`) that defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.    
+`search` - defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.  
 `transformerByPropName` - the object with data properties list that needs to be transformed.  
 
-##### DataTransformerConfiguratorConfig
-`type` - the declared name of module whose data needs to be transformed.  
+### DataTransformerConfiguratorConfig
+`type` - the declared name of the module whose data needs to be transformed.  
 
-##### DataTransformerFilterConfig
-`type` - the name of filter, e.g. `range`.  
-`propNames` - the array with property names that filter will be applied to in the data.
+### DataTransformerFilterConfig
+`type` - the name of a filter, for example, `range`.  
+`propNames` - the array with the property names to which the filter is applied.
 
 ```ts
 export interface CollateDataTransformerConfig extends DataTransformerConfig {
@@ -103,21 +124,3 @@ export type DataFilterTransformerByPropName = Record<string, string>;
 })
 export class RootModule {}
 ```
-
-## Collate Filters
-
-Collate Filters are Angular Services that extend the filtering in Data Transformer.
-This services are registered via `CollateDataTransformer.withFilters()`.
-There are a few common Data Transformers Collate Filters that are available in the UI library as separate packages:
-
-  - `equals` - Filters values that are strictly equal.
-  - `range` - Filters values that are within a number range.
-  - `text` - Filters values that match a string.
-
-## Collate Data Configurators
-
-Data Configurators are Angular Services that allow configuring repopulation of data (sorting, pagination, filtering).
-This services are registered via `CollateDataTransformer.withConfigurators()`.
-There are a few common Data Transformers Collate Data Configurators that are available:
-
-  - `table` - Integrates Table into Collate to re-populate the data when table updates.

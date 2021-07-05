@@ -41,7 +41,7 @@ In the example below, the `datasource` will return an array with the transformed
 
 ## Interfaces
 
-`mapItems` - Data Transformer set up with a configuration object.
+`mapItems`—Data Transformer set up with a configuration object.
 
 ```ts
 export interface ArrayMapDataTransformerConfig extends DataTransformerConfig {

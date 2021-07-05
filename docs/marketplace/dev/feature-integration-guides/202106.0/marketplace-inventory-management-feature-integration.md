@@ -8,9 +8,11 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Inventory Management feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Inventory Management feature core.
 
 ### Prerequisites
+
 To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
@@ -127,6 +129,7 @@ console translator:generate-cache
 ```
 
 ### 5) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
@@ -471,7 +474,7 @@ Make sure that when a product offer availability entities get created or updated
 Import the following data.
 
 #### Import merchant stock data
-Prepare your data according to your requirements using our demo data:
+Prepare your data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_stock.csv**
 
@@ -493,7 +496,7 @@ MER000006,Sony Experts MER000006 Warehouse 1
 **data/import/common/common/marketplace/product_offer_stock.csv**
 
 <details>
-<summary markdown='span'>Prepare your data according to your requirements using our demo data:</summary>
+<summary markdown='span'>Prepare your data according to your requirements using the demo data:</summary>
 
 ```
 product_offer_reference,stock_name,quantity,is_never_out_of_stock
@@ -667,6 +670,6 @@ console data:import product-offer-stock
 
 {% info_block warningBox "Warning" %}
 
-Make sure that imported data is added to the `spy_merchant_stock` and `spy_product_offer_stock` tables.
+Make sure that the imported data is added to the `spy_merchant_stock` and `spy_product_offer_stock` tables.
 
 {% endinfo_block %}

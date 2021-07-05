@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant_profile_address.csv` file to configure [merchant profile addresses](/docs/marketplace/user/features/202106.0/merchants/merchants-feature-overview.html#merchant-profile) information in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import merchant-profile-address
@@ -19,7 +19,7 @@ The file should have the following parameters:
 
 | PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ----------- | ---------- | ----- | ------------- | ----------- | ---- |
-| merchant_reference | ✓             | String   |                   | Unique                       | Identifier of the merchant in the system.                    |
+| merchant_reference | &check;             | String   |                   | Unique                       | Identifier of the merchant in the system.                    |
 | country_iso2_code  |               | String   |                   |                              | Currency ISO code.  For more details check [ISO 4217 CURRENCY CODES](https://www.iso.org/iso-4217-currency-codes.html). |
 | country_iso3_code  |               | String   |                   |                              | Currency [ISO 3 code](https://www.iban.com/country-codes).   |
 | address1           |               | String   |                   |                              | Address information of the merchant.                         |

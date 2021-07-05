@@ -81,7 +81,7 @@ The context within which Datasources operate is defined by the local injector wh
 
 ## Interfaces
 
-Below you can find interfaces for the Datasource configuration and Datasource type: 
+Below you can find interfaces for the Datasource configuration and Datasource type:
 
 ```ts
 export interface DatasourceConfig {

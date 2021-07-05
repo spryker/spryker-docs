@@ -96,7 +96,7 @@ export interface CustomDataTransformerConfig extends DataTransformerConfig {
 @Injectable({
   providedIn: 'root',
 })
-export class CustomDataTransformerService implements 
+export class CustomDataTransformerService implements
   DataTransformer<CustomDataTransformerData, CustomDataTransformerDataT> {
   transform(
     data: CustomDataTransformerData,
@@ -150,7 +150,7 @@ There are a few common Data Transformers that are available in the UI library as
 - [lens](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html) - Updates the nested object by path using another Data Transformer set up with a configuration object.
 - [array-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html) - Executes another Data Transformer from the config for every object in the array.
 - [object-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html) - Executes another Data Transformer from the config for each object in the object.
-- `chain` - Executes another Data Transformer in sequence via configuration.
+- [chain](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html) - Executes another Data Transformer in sequence via configuration.
 - `date-parse` - Parses the string value as a Date ISO into the JS Date Object.
 - [date-serialize](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html) - Serializes JS Date Object into a Date ISO string.
 - `collate` - Sorts, filters, and paginates data based on configuration. It has extra extension points:

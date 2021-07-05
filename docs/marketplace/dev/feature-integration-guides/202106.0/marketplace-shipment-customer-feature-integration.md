@@ -1,6 +1,6 @@
 ---
 title: Marketplace Shipment + Customer feature integration
-description: Integrate Marketplace Shipment + Customer feature into your project
+description: This document describes the process how to integrate Marketplace Shipment + Customer feature into your project
 tags:
 template: feature-integration-guide-template
 ---

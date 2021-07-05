@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant-user.csv` file to configure [merchant user](/docs/marketplace/user/features/{{ site.version }}/merchants/merchant-users-feature-overview.html) information in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import merchant-user

@@ -174,9 +174,9 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 Make sure if you add a product offer to the cart, place the order, reserved product offers count changes in the `spy_oms_product_offer_reservation` table.
 
-Make sure that a product offer available at PDP if it’s stock > 0 in the `spy_product_offer_stock` table.
+Make sure that a product offer is available at PDP if its stock > 0 in the `spy_product_offer_stock` table.
 
-Make sure that the concrete product availability (in the `spy_availability` table) not affected when you place an order with a product offer.
+Make sure that the concrete product availability (in the `spy_availability` table) are not affected when you place an order with a product offer.
 
 {% endinfo_block %}
 
@@ -206,6 +206,6 @@ class ProductOfferStockGuiDependencyProvider extends SprykerProductOfferStockGui
 
 {% info_block warningBox "Verification" %}
 
-Make sure that at if you open some product offer in view mode at `http://glue.mysprykershop.com/product-offer-gui/view?id-product-offer={% raw %}{{idProductOffer}}{% endraw %}`, stock table contains the `Reservations` column.
+Make sure that if you open some product offer in view mode at `http://glue.mysprykershop.com/product-offer-gui/view?id-product-offer={% raw %}{{idProductOffer}}{% endraw %}`, stock table contains the `Reservations` column.
 
 {% endinfo_block %}

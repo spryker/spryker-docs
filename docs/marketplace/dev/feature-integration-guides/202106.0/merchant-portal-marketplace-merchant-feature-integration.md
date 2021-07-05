@@ -22,6 +22,7 @@ Install the required modules:
 ```bash
 composer require spryker/merchant-profile-merchant-portal-gui:"^0.3.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -49,9 +50,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Add Translations
-
-#### Zed translations
+### Zed translations
 
 Generate a new translation cache for Zed:
 

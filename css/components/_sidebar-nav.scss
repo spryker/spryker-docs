@@ -10,24 +10,29 @@
     @for $i from 0 through 5 {
         $sel: if($i == 0, "ul", selector-nest($sel, "ul"));
 
-        #{$sel} .sidebar-nav__opener {
-            padding-left: 68px + 16px * $i;
-        }
+        #{$sel} {
+            .sidebar-nav {
+                &__opener {
+                    padding-left: 68px + 16px * $i;
 
-        #{$sel} .sidebar-nav__link {
-            padding-left: 52px + 16px * $i;
-        }
+                    &--small {
+                        left: 32px + 16px * $i;
+                    }
+                }
 
-        #{$sel} [class*=icon-] {
-            left: 28px + 16px * $i;
-        }
+                &__link {
+                    padding-left: 52px + 16px * $i;
 
-        #{$sel} .sidebar-nav__opener--small {
-            left: 32px + 16px * $i;
-        }
+                    &--shifted {
+                        padding-left: 68px + 16px * $i;
+                        font-weight: bold;
+                    }
+                }
+            }
 
-        #{$sel} .sidebar-nav__link--shifted {
-            padding-left: 68px + 16px * $i;
+            [class*=icon-] {
+                left: 28px + 16px * $i;
+            }
         }
     }
 

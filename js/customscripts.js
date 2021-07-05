@@ -122,7 +122,7 @@ function initDropdown() {
 
 function initTableWrapper() {
     jQuery('.post-content table').each(function(){
-        jQuery(this).wrap( "<div class='table-wrapper'></div>" );
+        jQuery(this).wrap('<div class="table-wrapper"></div>');
     });
 }
 

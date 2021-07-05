@@ -88,7 +88,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
 
           - title: Merchant Portal feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-integration-guide.html
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-feature-integration.html
 
           - title: Merchant Portal - Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
@@ -160,6 +160,9 @@ entries:
 
             - title:  Retrieving abstract products
               url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html
+
+            - title:  Retrieving abstract product lists
+              url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-product-lists.html
 
           - title: Concrete products
             nested:
@@ -307,7 +310,20 @@ entries:
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
 
             - title: "Data transformers"
-              url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers.html
+              url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/
+              nested:
+
+                - title: "Pluck"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html
+
+                - title: "Lens"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html
+
+                - title: "Array-map"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html
+
+                - title: "Object-map"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
 
             - title: "Cache"
               url: /docs/marketplace/dev/front-end/ui-components-library/cache.html

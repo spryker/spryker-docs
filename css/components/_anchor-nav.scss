@@ -35,6 +35,7 @@
                 display: block;
                 border-left: 4px solid transparent;
                 padding: 3px 5px 3px 12px;
+                word-break: break-word;
 
                 &:hover {
                     color: $darkest;

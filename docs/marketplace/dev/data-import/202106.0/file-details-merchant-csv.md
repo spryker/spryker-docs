@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant.csv` file to configure [merchant](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html) information in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import merchant
@@ -28,7 +28,7 @@ The file should have the following parameters:
 | url.de_DE | &check; | String |   | Defined per locale. | Merchant page URL in the storefront for DE store. |
 
 ## Import file dependencies
-The file has the following dependencies: 
+The file has the following dependencies:
 
 - [merchant_profile.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-profile-csv.html).
 

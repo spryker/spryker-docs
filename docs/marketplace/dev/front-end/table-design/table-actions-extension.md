@@ -4,13 +4,13 @@ description: This document provides details about the Table Actions extension in
 template: concept-topic-template
 ---
 
-This document provides details about the Table Actions extension in the Component Library.
+This document explains the Table Actions extension in the Component Library.
 
 ## Overview
 
 The table has the ability to trigger an action—it’s an abstract operation that is configured in the Table Configuration and may be triggered by different means (Row Actions Feature / Batch Actions Feature).
 
-You can configure any action in the table config.
+You can configure any action in the table config:
 
 ```ts
 <spy-table [config]="{
@@ -136,8 +136,8 @@ export interface TableActionHandler<
 
 The following Table Action Handlers are already compiled and distributed with the UI library and can be used in the project:
 
-- Form Overlay—renders dynamic HTML in an Overlay received by HTTP response that will be handled by Ajax on the front-end and then rendered again.
-- HTML Overlay—renders any dynamic HTML received from an HTTP response in an Overlay
-- Url—allows sending an HTTP request via HTTP
+- Form Overlay - renders dynamic HTML in an Overlay received by HTTP response that will be handled by Ajax on the front-end and then rendered again.
+- HTML Overlay - renders any dynamic HTML received from an HTTP response in an Overlay
+- Url - allows sending an HTTP request via HTTP
 
 All of the above Table Action Handlers use Ajax Post Action services to handle responses, which allows them to perform various tasks from the response (close overlays, refresh tables, etc.).

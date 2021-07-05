@@ -8,6 +8,7 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Product Offer into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product Offer feature core.
 
 ### Prerequisites
@@ -79,7 +80,7 @@ Adjust the schema definition so that entity changes will trigger events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -225,7 +226,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Set up re-generate and re-sync features
+#### Set up, re-generate, and re-sync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------------- | --------------- | ---------- | ---------------- |

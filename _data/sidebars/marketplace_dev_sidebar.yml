@@ -309,7 +309,7 @@ entries:
             - title: "Datasources"
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
 
-            - title: "Data transformers"
+            - title: "Data Transformers"
               url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/
               nested:
 
@@ -324,6 +324,15 @@ entries:
 
                 - title: "Object-map"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
+
+                - title: "Date-parse"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html
+                  
+                - title: "Date-serialize"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html
+
+                - title: "Chain"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html
 
                 - title: "Collate"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate.html

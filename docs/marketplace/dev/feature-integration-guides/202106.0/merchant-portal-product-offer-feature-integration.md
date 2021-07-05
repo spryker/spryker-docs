@@ -11,7 +11,7 @@ This document describes how to integrate the Merchant Portal - Marketplace Produ
 
 Follow the steps below to install the Merchant Portal - Marketplace Product Offer feature core.
 
-## Prerequisites
+### Prerequisites
 
 To start feature integration, integrate the required features:
 

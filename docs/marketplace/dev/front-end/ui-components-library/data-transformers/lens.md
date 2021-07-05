@@ -33,8 +33,10 @@ In the example below `datasource` will return an object with the transformed `da
 
 ## Interfaces
 
-`path`—the name of the object property, from which the value needs to be transformed. The `path` may contain nested properties separated by dots, just like in a Javascript language.  
-`transformer`—Data Transformer set up with a configuration object.
+Below you can find interfaces for Data Transformer Lens.
+
+`path` — the name of the object property, from which the value needs to be transformed. The `path` may contain nested properties separated by dots, just like in a Javascript language.  
+`transformer` - a Data Transformer that is set up with a configuration object.
 
 ```ts
 export interface LensDataTransformerConfig extends DataTransformerConfig {

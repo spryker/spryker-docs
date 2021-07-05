@@ -4,13 +4,13 @@ description: This document provides details about the Table Actions extension in
 template: concept-topic-template
 ---
 
-This document provides details about the Table Actions extension in the Component Library.
+This document explains the Table Actions extension in the Component Library.
 
 ## Overview
 
 The table has the ability to trigger an action—it’s an abstract operation that is configured in the Table Configuration and may be triggered by different means (Row Actions Feature / Batch Actions Feature).
 
-You can configure any action in the table config.
+You can configure any action in the table config:
 
 ```ts
 <spy-table [config]="{

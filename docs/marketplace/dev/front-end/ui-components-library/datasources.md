@@ -6,7 +6,7 @@ template: concept-topic-template
 ---
 
 
-This document provides details about the Datasources service in the Components Library.
+This document explains the Datasources service in the Components Library.
 
 ## Overview
 

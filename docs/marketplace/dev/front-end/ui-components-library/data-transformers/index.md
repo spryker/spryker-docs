@@ -6,7 +6,7 @@ template: concept-topic-template
 ---
 
 
-This document provides details about the Data Transformers service in the Components Library.
+This document explains the Data Transformers service in the Components Library.
 
 ## Overview
 

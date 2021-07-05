@@ -4,12 +4,12 @@ description: This articles provides details about the structure of the front-end
 template: concept-topic-template
 ---
 
-This articles provides details about the structure of the front-end project in the Spryker Marketplace.
+This articles explains the structure of the front-end project in the Spryker Marketplace.
 
 
 ## Alias
 
-Use the alias `@mp/spryker-module-name` with the proper Spryker module name to import vendor angular components/modules/services into js files, for example, `import { registerNgModule } from '@mp/zed-ui'`.
+Use the alias `@mp/spryker-module-name` with the proper Spryker module name to import vendor Angular components, modules or services into .js files, for example, `import { registerNgModule } from '@mp/zed-ui'`.
 
 ## Module structure
 
@@ -29,7 +29,7 @@ Below you can find a general structure of every front-end module in the Spryker 
 
 ## Main entry points
 
-These entry points are needed for the Angular config in order to build the front-end project.
+The following entry points are needed for the Angular config to build the front-end project.
 
 - ZedUi (Project)
   - Presentation

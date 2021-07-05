@@ -330,3 +330,6 @@ entries:
 
             - title: "Persistence"
               url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
+
+        - title: "How-To: Create a new module with application"
+          url: /docs/marketplace/dev/front-end/how-to-create-a-new-module-with-application.html

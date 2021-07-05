@@ -1,20 +1,20 @@
 ---
-title: Create new module with application
+title: "How-To: Create a new module with application"
 description: This articles provides details how to create new module with application
-template: concept-topic-template
+template: howto-guide-template
 ---
 
 This articles provides details how to create new module with application.
 
-## Module Scaffolding
+## 1) Create module scaffolding structure
 
-First step is to create proper scaffolding structure see [link to the project structure doc](project-structure.md) Module structure section. Every new module may provide it’s own set of Web Components for the Twig.
+A new module needs to have a proper scaffolding structure. The necessary list of files is provided in the [Project structure article, Module structure section](/docs/marketplace/dev/front-end/project-structure.html#module-structure). Every new module can contain its own set of Web Components for the Twig.
 
-## Module Registration
+## 2) Register a new module
 
-To register components a special Angular Module is created that lists all Angular Components that will be exposed as a Web Components in the `components.module.ts` file.
+To register components, a special Angular Module is created. It lists all Angular Components that will be exposed as a Web Components in the `components.module.ts` file.
 
-Web Components registration:
+2.1 Register Web Components:
 
 ```ts
 /// Registration
@@ -34,7 +34,7 @@ import { SomeComponentModule } from './some-component/some-component.module';
 export class ComponentsModule {}
 ```
 
-Then we have to register `ComponentsModule` to the whole modules list inside `entry.ts`
+2.2 Register `ComponentsModule` to the entire modules list inside `entry.ts`
 
 ```ts
 import { registerNgModule } from '@mp/zed-ui';
@@ -44,9 +44,9 @@ import { ComponentsModule } from './app/components.module';
 registerNgModule(ComponentsModule);
 ```
 
-When this module is registered and rebuilded a new JS bundle is created and must be manually included in the Twig page so that Web Components are loaded.
-Be aware that on registration Angular Component as Web Component there are will be added `web-` prefix ot the Angular Component selector name.
-e.g
+Upon registering and rebuilding this module, a new JS bundle is created, which must be manually added to the Twig page in order to load Web Components.
+
+Be aware that Angular Component names will be prefixed with `web-` when registered as Web Components, for example:
 
 ```ts
 import { Component } from '@angular/core';
@@ -63,6 +63,7 @@ export class SomeComponentComponent {
 ```
 
 ```twig
+{%- raw -%}
 {% extends '@ZedUi/Layout/merchant-layout-main.twig' %}
 
 {% block headTitle %}
@@ -78,4 +79,5 @@ export class SomeComponentComponent {
     <script src="{{ assetsPath('js/mp/spy/module-name-es5.js') }}" nomodule defer></script>
     {{ parent() }}
 {% endblock %}
+{% endraw %}
 ```

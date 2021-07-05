@@ -8,6 +8,7 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Product Offer + Car feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product Offer + Cart feature core.
 
 ### Prerequisites
@@ -19,7 +20,7 @@ To start feature integration, integrate the required features:
 | Marketplace Product Offer | dev-master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html)
 | Cart | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart)
 
-##  1) Set up behavior
+### Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -105,7 +106,7 @@ To start feature integration, overview, and install the necessary features:
 | Marketplace Product Offer | dev-master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html) |
 | Cart                      | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart) |
 
-## 1) Set up behavior
+### Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -139,7 +140,7 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the product offer reference (and sold by merchant) is added to the Cart page when adding a product offer to cart.
+Make sure that the product offer reference (and sold by merchant) is added to the *Cart* page when adding a product offer to cart.
 
 {% endinfo_block %}
 

@@ -88,7 +88,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
 
           - title: Merchant Portal feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-integration-guide.html
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-feature-integration.html
 
           - title: Merchant Portal - Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
@@ -287,7 +287,7 @@ entries:
 
         - title: "Migration guide - Extending the project"
           url: /docs/marketplace/dev/front-end/migration-guide-extending-the-project.html
-
+        
         - title: Table design
           nested:
 
@@ -309,7 +309,7 @@ entries:
             - title: "Datasources"
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
 
-            - title: "Data transformers"
+            - title: "Data Transformers"
               url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/
               nested:
 
@@ -318,12 +318,24 @@ entries:
 
                 - title: "Lens"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html
-                  
+
                 - title: "Array-map"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html
-                  
+
                 - title: "Object-map"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
+
+                - title: "Date-parse"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html
+                  
+                - title: "Date-serialize"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html
+
+                - title: "Chain"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html
+
+                - title: "Collate"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate.html
 
             - title: "Cache"
               url: /docs/marketplace/dev/front-end/ui-components-library/cache.html
@@ -333,3 +345,7 @@ entries:
 
         - title: "How-To: Create a new module with application"
           url: /docs/marketplace/dev/front-end/how-to-create-a-new-module-with-application.html
+
+        - title: "Angular Services"
+          url: /docs/marketplace/dev/front-end/angular-services.html
+

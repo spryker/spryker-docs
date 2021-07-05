@@ -8,6 +8,7 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Product feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product feature core.
 
 ### Prerequisites
@@ -67,8 +68,8 @@ Adjust the schema definition so entity changes trigger events:
 Apply database changes and to generate entity and transfer changes:
 
 ```bash
-console transfer:generate 
-console propel:install 
+console transfer:generate
+console propel:install
 console transfer:generate
 ```
 
@@ -233,7 +234,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure the `de_page` Easticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana—see for docker https://documentation.spryker.com/docs/services configuration details.)
+Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana. For Docker configuration details, see [Configuring services](https://documentation.spryker.com/docs/services).
 
 {% endinfo_block %}
 
@@ -269,9 +270,9 @@ Make sure that data in  `spy_product_abstract_storage` contains `merchant_refere
 
 {% endinfo_block %}
 
-### 5) Import Merchant Product data
+### 5) Import merchant product data
 
-Prepare your data according to your requirements using our demo data:
+Prepare your data according to your requirements using the demo data:
 
 <details>
 <summary markdown='span'>data/import/common/common/marketplace/merchant_product.csv</summary>
@@ -451,7 +452,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import merchant-product
@@ -459,11 +460,13 @@ console data:import merchant-product
 
 {% info_block warningBox "Verification" %}
 
-Make sure that imported data is added to the `spy_merchant_product` table.
+Make sure that the imported data is added to the `spy_merchant_product` table.
 
 {% endinfo_block %}
 
 ## Install feature front end
+
+Follow the steps below to install the Marketplace Product feature front end.
 
 ### 1) Set up widgets
 
@@ -498,7 +501,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```
 console frontend:yves:build

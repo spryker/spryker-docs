@@ -26,9 +26,9 @@ The Marketplace administrator manages merchants and sets their statuses on the
 | STATUS | MERCHANT PORTAL ACCESS | STOREFRONT PROFILE PAGE, OFFERS, AND PRODUCTS |
 | --- | --- | --- |
 | Waiting For Approval | ✗ | N/A |
-| Approved | ✓ | N/A |
+| Approved | &check; | N/A |
 | Denied | ✗ | N/A |
-| Active | N/A | ✓ |
+| Active | N/A | &check; |
 | Inactive | N/A | ✗ |
 
 <!--See LINK TO BO GUIDE HOW TO ACTIVATE A MERCHANT for details on to change the merchant user statues in the Back Office-->

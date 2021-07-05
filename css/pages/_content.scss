@@ -1,5 +1,5 @@
 .post-content {
-    width: calc(100% - $sidebarsWidthDesktop);
+    width: calc(100% - #{$sidebarsWidthDesktop});
 
     h1, h2, h3, h4, h5, h6 {
         color: $grey-dark;

@@ -62,7 +62,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- | -------------- | ------------- | ----------------- |
-| MerchantCategoryMerchantRestAttributesMapperPlugin | Maps active categories from MerchantStorageTransfer to `RestMerchantsAttributesTransfer`. |  | Spryker\Glue\MerchantCategoriesRestApi\Plugin\MerchantsRestApi |
+| MerchantCategoryMerchantRestAttributesMapperPlugin | Maps active categories from `MerchantStorageTransfer` to `RestMerchantsAttributesTransfer`. |  | Spryker\Glue\MerchantCategoriesRestApi\Plugin\MerchantsRestApi |
 
 **src/Pyz/Glue/MerchantsRestApi/MerchantsRestApiDependencyProvider.php**
 

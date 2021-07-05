@@ -17,6 +17,8 @@ $( document ).ready(function() {
 
     initCopyText();
 
+    initTableWrapper();
+
     /**
      * AnchorJS
      */
@@ -28,6 +30,12 @@ $( document ).ready(function() {
 
     initFeedbackForm();
 });
+
+function initTableWrapper() {
+    jQuery('.post-content table').each(function(){
+        jQuery(this).wrap('<div class="table-wrapper"></div>');
+    });
+}
 
 function initCopyText() {
     jQuery('.post-content > pre, .post-content details > pre, div.highlight').each(function(){

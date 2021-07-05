@@ -4,7 +4,6 @@ description: This document provides details about the Data Transformer Object-ma
 template: concept-topic-template
 ---
 
-
 This document provides details about the Data Transformer Object-map service in the Components Library.
 
 ## Overview
@@ -43,8 +42,8 @@ In the example below, the `datasource` will return an array with the transformed
 
 ## Interfaces
 
-`mapProps` - Data Transformer set up with a configuration object.  
-`propName` - the name of the property from which the value needs to be transformed.
+`mapProps`—Data Transformer set up with a configuration object.  
+`propName`—the name of the property from which the value needs to be transformed.
 
 ```ts
 export interface ObjectMapDataTransformerConfig extends DataTransformerConfig {

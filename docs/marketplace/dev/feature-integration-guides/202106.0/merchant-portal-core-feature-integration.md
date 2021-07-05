@@ -40,6 +40,7 @@ Make sure that the following modules have been installed:
 | SecurityMerchantPortalGui  | vendor/spryker/security-merchant-portal-gui |
 | ZedUi  | vendor/spryker/zed-ui |
 | GuiTable | vendor/spryker/gui-table |
+| UserMerchantPortalGui | vendor/spryker/user-merchant-portal-gui |
 
 {% endinfo_block %}
 
@@ -55,7 +56,10 @@ Set up behavior as follows:
 | BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
 | ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components |  | Spryker\Zed\ZedUi\Communication\Plugin |
 | GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
-| GuiTableConfigurationTwigPlugin | Add a new Twig function for rendering GuiTableConfiguration for the GuiTable web component |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig<?php  |
+| GuiTableConfigurationTwigPlugin | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
+| MerchantUserPasswordResetMailTypePlugin | Adds a new mail type for a merchant user password reset |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\Mail  |
+| MailMerchantUserPasswordResetRequestStrategyPlugin | Sends merchant user reset password email |  | Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset  |
+| SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -134,6 +138,90 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
         ];
     }
 }
+```
+
+**src/Pyz/Zed/Mail/MailDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Mail;
+
+use Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\Mail\MerchantUserPasswordResetMailTypePlugin;
+
+class MailDependencyProvider extends SprykerMailDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    public function provideBusinessLayerDependencies(Container $container)
+    {
+        $container = parent::provideBusinessLayerDependencies($container);
+
+        $container->extend(static::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
+            $mailCollection
+                ->add(new MerchantUserPasswordResetMailTypePlugin());
+
+            return $mailCollection;
+        });
+
+        return $container;
+    }
+}
+```
+
+**src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\UserPasswordReset;
+
+use Spryker\Zed\MerchantUserPasswordResetMail\Communication\Plugin\UserPasswordReset\MailMerchantUserPasswordResetRequestStrategyPlugin;
+use Spryker\Zed\UserPasswordReset\UserPasswordResetDependencyProvider as SprykerUserPasswordResetDependencyProvider;
+use Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset\MailUserPasswordResetRequestStrategyPlugin;
+
+class UserPasswordResetDependencyProvider extends SprykerUserPasswordResetDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\UserPasswordResetExtension\Dependency\Plugin\UserPasswordResetRequestStrategyPluginInterface[]
+     */
+    public function getUserPasswordResetRequestStrategyPlugins(): array
+    {
+        return [
+            new MailMerchantUserPasswordResetRequestStrategyPlugin(),
+            new MailUserPasswordResetRequestStrategyPlugin(),
+        ];
+    }
+}
+
+```
+
+**src/Pyz/Zed/UserMerchantPortalGui/UserMerchantPortalGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\UserMerchantPortalGui;
+
+use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui\SecurityTokenUpdateMerchantUserPostChangePlugin;
+use Spryker\Zed\UserMerchantPortalGui\UserMerchantPortalGuiDependencyProvider as SprykerUserMerchantPortalGuiDependencyProvider;
+
+class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\UserMerchantPortalGuiExtension\Dependency\Plugin\MerchantUserPostChangePluginInterface[]
+     */
+    public function getMerchantUserPostChangePlugins(): array
+    {
+        return [
+            new SecurityTokenUpdateMerchantUserPostChangePlugin(),
+        ];
+    }
+}
+
 ```
 
 Open access to the Merchant Portal login page by default:

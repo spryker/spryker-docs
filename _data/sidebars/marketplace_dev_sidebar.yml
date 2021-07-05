@@ -330,3 +330,20 @@ entries:
 
             - title: "Persistence"
               url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
+
+      - title: Back-end
+        nested:
+
+          - title: "System requirements"
+            url: /docs/marketplace/dev/back-end/system-requirements.html
+
+          - title: "Marketplace infrastructure setup"
+            url: /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
+
+          - title: "Features"
+            nested:
+
+              - title: "Merchant"
+                url: /docs/marketplace/dev/back-end/features/merchant.html
+
+

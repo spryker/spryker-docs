@@ -1,0 +1,25 @@
+---
+title: Merchant
+description: This articles provides details about the merchant feature of the back-end project in the Spryker Marketplace.
+template: concept-topic-template
+---
+
+This articles provides details about the merchant feature of the back-end project in the Spryker Marketplace.
+
+## Install
+
+For installing the feature please follow:  [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing)
+
+## Overview
+
+The feature provides core Merchant functionality with the basic create-read-update operations over Merchant entity.
+
+Merchant couldn't be completely deleted, only deactivated
+### Main feature modules 
+
+| NAME | Description |
+| -------------------- | ---------- |
+| Merchant          | keeps core create-read-update functionality of a merchant |
+
+### Entity diagram
+![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/47ca3486-ab11-49f5-801e-6043b7a7767a.png?utm_medium=live&utm_source=custom)

@@ -46,6 +46,8 @@ registerNgModule(ComponentsModule);
 
 Upon registering and rebuilding this module, a new JS bundle is created, which must be manually added to the Twig page in order to load Web Components.
 
+{% info_block warningBox "Note" %}
+
 Be aware that Angular Component names will be prefixed with `web-` when registered as Web Components, for example:
 
 ```ts
@@ -81,3 +83,6 @@ export class SomeComponentComponent {
 {% endblock %}
 {% endraw %}
 ```
+
+{% endinfo_block %}
+

@@ -4,17 +4,18 @@ description: This articles provides details about the merchant feature of the ba
 template: concept-topic-template
 ---
 
-This articles provides details about the merchant feature of the back-end project in the Spryker Marketplace.
+This article provides details about the Marketplace Merchant feature of the back-end project in the Spryker Marketplace.
 
-## Install
+## Installation
 
-For installing the feature please follow:  [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing)
+To install the feature, follow [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing)
 
 ## Overview
 
 The feature provides core Merchant functionality with the basic create-read-update operations over Merchant entity.
 
-Merchant couldn't be completely deleted, only deactivated
+The merchant couldn't be completely deleted, only deactivated.
+
 ### Main feature modules 
 
 | NAME | Description |

@@ -115,7 +115,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/product-offer-cart-feature-integration.html
 
           - title: Product Offer feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/product-offer-feature-integration.html
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
 
           - title: Glue API
             nested:

@@ -206,6 +206,6 @@ class ProductOfferStockGuiDependencyProvider extends SprykerProductOfferStockGui
 
 {% info_block warningBox "Verification" %}
 
-Make sure that at if you open some product offer in view mode at `http://glue.mysprykershop.com/product-offer-gui/view?id-product-offer={% raw %}{{idProductOffer}}{% endraw %}`, stock table contains the `Reservations` column.
+Make sure that at if you open some product offer in view mode at `http://zed.mysprykershop.com/product-offer-gui/view?id-product-offer={% raw %}{{idProductOffer}}{% endraw %}`, stock table contains the `Reservations` column.
 
 {% endinfo_block %}

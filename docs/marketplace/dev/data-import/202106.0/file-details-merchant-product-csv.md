@@ -19,16 +19,16 @@ The file should have the following parameters:
 
 | PARAMETER   | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION  |
 | -------------- | ----------- | ------- | ------------- | ------------------- | ---------------------- |
-| sku                | ✓             | String   |                   | Unique                           | SKU of the product.                                          |
-| merchant_reference | ✓             | String   |                   | Unique                           | Unique identifier of the merchant in the system.             |
-| is_shared          |               | Integer  |                   | 1 - is shared</br>0 - is not shared | Defines whether the product is shared between the merchants. |
+| sku                | &check;             | String   |                   | Unique                           | SKU of the product.                                          |
+| merchant_reference | &check;             | String   |                   | Unique                           | Unique identifier of the merchant in the system.             |
+| is_shared          |               | Integer  |                   | 1—is shared</br>0—is not shared | Defines whether the product is shared between the merchants. |
 
 ## Import file dependencies
 
 The file has the following dependencies:
 
 - [merchant.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-csv.html)
-- [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv) 
+- [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
 
 ## Import template file and content example
 

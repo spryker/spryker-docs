@@ -88,6 +88,7 @@ pre {
     align-items: center;
     justify-content: flex-end;
     padding: 3px 14px;
+    margin: 15px 0 0;
 
     & + pre {
         margin-top: 0;
@@ -135,5 +136,16 @@ pre {
     }
     100% {
         opacity: 0;
+    }
+}
+
+table {
+    code {
+        display: inline-block;
+        vertical-align: top;
+        background: $grey-3;
+        color: $grey-dark;
+        padding: 2px 8px;
+        font-size: 14px;
     }
 }

@@ -47,6 +47,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
+
 Apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -87,6 +88,7 @@ Make sure that the following changes have been triggered in transfer objects:
 {% endinfo_block %}
 
 ### 3) Add translations
+
 Generate a new translation cache for Zed:
 
 ```bash
@@ -97,7 +99,7 @@ console translator:generate-cache
 
 Import data as follows:
 
-1. Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_oms_process.csv**
 ```csv
@@ -114,11 +116,10 @@ MER000005,MerchantDefaultStateMachine
 
 |PAREMETER |REQUIRED?  |TYPE  |DATA EXAMPLE | DESCRIPTION |
 |---------|---------|---------|---------| ---------|
-|merchant_reference     |  ✓       |  string       | spryker        |String identifier for merchant in the Spryker system. |
-|merchant_oms_process_name     |    ✓     |     string   |  MainMerchantStateMachine       | String identifier for the State Machine processes.|
+|merchant_reference     |  &check;       |  string       | spryker        |String identifier for merchant in the Spryker system. |
+|merchant_oms_process_name     |    &check;     |     string   |  MainMerchantStateMachine       | String identifier for the State Machine processes.|
 
 2. Register the following plugin to enable data import:
-
 
 |PLUGIN  |SPECIFICATION  |PREREQUISITES  |NAMESPACE  |
 |---------|---------|---------|---------|
@@ -226,8 +227,8 @@ actions:
 
 | PARAMETER |  |  | REQUIRED | POSSIBLE VALUES | DESCRIPTION |
 |-|-|-|-|-|-|
-| data_entity |  |  | ✓ | merchant-order merchant-order-item merchant-order-expense | String identifier for data entity that is expected to be  exported. |
-| filter_criteria | store_name |  | ✓ | All existing store names. | An existing store name for the data to filter on. |
+| data_entity |  |  | &check; | merchant-order merchant-order-item merchant-order-expense | String identifier for data entity that is expected to be  exported. |
+| filter_criteria | store_name |  | &check; | All existing store names. | An existing store name for the data to filter on. |
 |  | merchant_order_created_at | from |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order creation from which the data needs to be filtered. |
 |  |  | to |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order creation up to  which the data needs to be filtered. |
 |  | merchant_order_updated_at | from |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order update from which the data needs to be filtered. |
@@ -237,9 +238,9 @@ actions:
 
  PLUGIN | SPECIFICATION | PREREQUISITES| NAMESPACE|
 | --------------- | -------------- | ------ | -------------- |
-| MerchantOrderDataEntityExporterPlugin | Exports Merchant Order data |   | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport|
-| MerchantOrderItemDataEntityExporterPlugin | Exports Merchant Order Items data |     | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
-|MerchantOrderExpenseDataEntityExporterPlugin  | Exports Merchant Order Expense data |     |Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
+| MerchantOrderDataEntityExporterPlugin | Exports merchant order data |   | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport|
+| MerchantOrderItemDataEntityExporterPlugin | Exports merchant order Items data |     | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
+|MerchantOrderExpenseDataEntityExporterPlugin  | Exports merchant order Expense data |     |Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
 
 **src/Pyz/Zed/DataExport/DataExportDependencyProvider.php**
 
@@ -277,11 +278,12 @@ console data:export --config=merchant_order_export_config.yml
 ```
 
 ### 6) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
-| TriggerEventFromCsvFileConsole |Allows for updating Merchant order status via CSV input.  |  |Spryker\Zed\MerchantOms\Communication\Console |
+| TriggerEventFromCsvFileConsole |Allows for updating merchant order status via CSV input.  |  |Spryker\Zed\MerchantOms\Communication\Console |
 |EventTriggerMerchantOrderPostCreatePlugin  | Triggers new events for the newly created merchant orders | |Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder  |
 | MerchantOmsMerchantOrderExpanderPlugin |Expands merchant order with merchant Oms data (item state and manual events)  | | Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder |
 | MerchantStateMachineHandlerPlugin | Wires merchant order updates in the State Machine module | |Spryker\Zed\MerchantOms\Communication\Plugin\StateMachine |
@@ -469,9 +471,9 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the Merchant State Machine is executed on Merchant Orders after the order has been split.
+Make sure that the Merchant State Machine is executed on merchant orders after the order has been split.
 
-Make sure that when retrieving an order in the *Sales* module, it is split by the Merchant Order and that the Order state is derived from the Merchant State Machine.
+Make sure that when retrieving an order in the *Sales* module, it is split by the merchant order and that the Order state is derived from the Merchant State Machine.
 
 {% endinfo_block %}
 
@@ -517,6 +519,7 @@ Ensure the following transfers have been created:
 {% endinfo_block %}
 
 ### 3) Set up plugins
+
 Register the following plugins to enable widgets:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |

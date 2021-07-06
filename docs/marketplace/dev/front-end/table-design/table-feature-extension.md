@@ -5,7 +5,7 @@ description: This document provides details about the Table Feature extension in
 template: concept-topic-template
 ---
 
-This document provides details about the Table Feature extension in the Components Library.
+This document explains the Table Feature extension in the Components Library.
 
 ## Overview
 
@@ -76,17 +76,17 @@ export class TableCustomFeatureComponent extends TableFeatureComponent<
 
 There are two ways to use the Table Feature:
 
-- Via HTML tag (as a component) being projected into the Table Component - this allows users to control how the Table Feature is loaded on the page, but it does not control its loading from the Table Configuration.
-  
+- Via HTML tag (as a component) being projected into the Table Component—this allows users to control how the Table Feature is loaded on the page, but it does not control its loading from the Table Configuration.
+
   ```ts
   <spy-table>
   <spy-table-title-feature spy-table-feature></spy-table-title-feature>
   </spy-table>
   ```
-  
+
   To add a feature via HTML, it's enough to include a feature tag with a custom attribute (`spy-table-feature`) inside a table. When the table content is initialized, the table receives all templates by attribute and initializes features.
-  
-- Via the registry of the Table Module - the Table Feature can be lazy-loaded when the Table Component requires it based on the Table Configuration, but it does not allow custom loading (custom loading is possible if the Angular versions are the same and shared). 
+
+- Via the registry of the Table Module—the Table Feature can be lazy-loaded when the Table Component requires it based on the Table Configuration, but it does not allow custom loading (custom loading is possible if the Angular versions are the same and shared). 
 
   ```ts
   @NgModule({

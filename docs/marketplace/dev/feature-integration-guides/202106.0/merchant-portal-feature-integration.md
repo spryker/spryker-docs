@@ -6,22 +6,22 @@ draft: true
 template: feature-integration-guide-template
 ---
 
-See [Merchant portal core feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html).
+See [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchant-portal-core-feature-integration.html).
 
-## Environment Requirements
+## Environment requirements
 
 - NodeJs v12+
 - Yarn v2 (or latest Yarn v1)
 - Spryker supported PHP version (7.3, 7.4)
 - Host for Zed application
 
-## Installing Frontend Dependencies
+## Installing frontend dependencies
 
 ```bash
 $ yarn install
 ```
 
-## Building Frontend
+## Building front end
 
 ```bash
 $ yarn mp:build
@@ -33,7 +33,7 @@ For production
 $ yarn mp:build:production
 ```
 
-## Installing Backend
+## Installing back end
 
 Install needed packages for Merchant Portal with dependencies, see the available list here https://github.com/spryker/?q=merchant-portal-gui
 

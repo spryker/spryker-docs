@@ -14,7 +14,7 @@ A new module needs to have a proper scaffolding structure. The necessary list of
 
 To register components, a special Angular Module is created. It lists all Angular Components that will be exposed as a Web Components in the `components.module.ts` file.
 
-2.1 Register Web Components:
+2.1. Register Web Components:
 
 ```ts
 /// Registration
@@ -34,7 +34,7 @@ import { SomeComponentModule } from './some-component/some-component.module';
 export class ComponentsModule {}
 ```
 
-2.2 Register `ComponentsModule` to the entire modules list inside `entry.ts`
+2.2. Register `ComponentsModule` to the entire modules list inside `entry.ts`
 
 ```ts
 import { registerNgModule } from '@mp/zed-ui';

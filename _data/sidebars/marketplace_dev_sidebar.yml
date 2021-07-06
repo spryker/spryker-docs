@@ -351,9 +351,6 @@ entries:
 - title: Back-end
         nested:
 
-          - title: "System requirements"
-            url: /docs/marketplace/dev/back-end/system-requirements.html
-
           - title: "Marketplace infrastructure setup"
             url: /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
 

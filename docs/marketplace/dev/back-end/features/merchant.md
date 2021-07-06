@@ -20,7 +20,7 @@ The merchant couldn't be completely deleted, only deactivated.
 
 | NAME | Description |
 | -------------------- | ---------- |
-| Merchant          | keeps core create-read-update functionality of a merchant |
+| [Merchant](https://github.com/spryker/merchant)          | keeps core create-read-update functionality of a merchant |
 
 ### Entity diagram
-![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/47ca3486-ab11-49f5-801e-6043b7a7767a.png?utm_medium=live&utm_source=custom)
+![Entity diagram](https://confluence-connect.gliffy.net/embed/image/47ca3486-ab11-49f5-801e-6043b7a7767a.png?utm_medium=live&utm_source=custom)

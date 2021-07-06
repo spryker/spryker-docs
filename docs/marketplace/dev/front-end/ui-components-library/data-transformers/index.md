@@ -146,17 +146,17 @@ interface DataTransformer<D, DT> {
 
 There are a few common Data Transformers that are available in the UI library as separate packages:
 
-- [pluck](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html) - selects and returns a nested object by path via configuration.
-- [lens](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html) - updates the nested object by path using another Data Transformer set up with a configuration object.
-- [array-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html) - executes another Data Transformer from the config for every object in the array.
-- [object-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html) - executes another Data Transformer from the config for each object in the object.
-- [chain](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html) - executes another Data Transformer in sequence via configuration.
-- [date-parse](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html) - parses the string value as a Date ISO into the JS Date Object.
-- [date-serialize](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html) - serializes JS Date Object into a Date ISO string.
-- `collate` - sorts, filters, and paginates data based on configuration. It has extra extension points:
-  - Filters - are services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
-    - `equals` - filters values that are strictly equal.
-    - `range` - filters values that are within a number range.
-    - `text` - filters values that match a string.
-  - Data Configurators - are services that allow configuring repopulation data (sorting, pagination, filtering). This services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
-    - `table` - integrates Table into Collate to re-populate the data.
+- [pluck](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html)—selects and returns a nested object by path via configuration.
+- [lens](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html)—updates the nested object by path using another Data Transformer set up with a configuration object.
+- [array-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html)—executes another Data Transformer from the config for every object in the array.
+- [object-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html)—executes another Data Transformer from the config for each object in the object.
+- [chain](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html)—executes another Data Transformer in sequence via configuration.
+- [date-parse](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html)—parses the string value as a Date ISO into the JS Date Object.
+- [date-serialize](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html)—serializes JS Date Object into a Date ISO string.
+- `collate`—sorts, filters, and paginates data based on configuration. It has extra extension points:
+  - Filtersare services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
+    - `equals`filters values that are strictly equal.
+    - `range`filters values that are within a number range.
+    - `text`filters values that match a string.
+  - Data Configuratorsare services that allow configuring repopulation data (sorting, pagination, filtering). This services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
+    - `table`integrates Table into Collate to re-populate the data.

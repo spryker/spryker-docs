@@ -5,7 +5,6 @@ description: This document describes how to integrate the Marketplace Order Mana
 template: feature-integration-guide-template
 ---
 
-
 This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 
 ## Install feature core
@@ -13,6 +12,8 @@ This document describes how to integrate the Marketplace Order Management featur
 Follow the steps below to install the Marketplace Order Management feature core.
 
 ### Prerequisites
+
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|

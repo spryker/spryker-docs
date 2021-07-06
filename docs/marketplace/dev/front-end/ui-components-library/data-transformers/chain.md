@@ -62,7 +62,7 @@ In the example below, the `datasource` returns an array with the transformed `da
 
 Below you can find interfaces for Data Transformer Chain.
 
-`transformers` - an array with Data Transformer configuration objects.
+`transformers`—an array with Data Transformer configuration objects.
 
 ```ts
 export interface ChainDataTransformerConfig extends DataTransformerConfig {

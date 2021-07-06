@@ -43,6 +43,20 @@
             width: 270px;
         }
 
+        @include media("<tablet") {
+            background: none;
+            border: 0;
+            pointer-events: none;
+            color: $black;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1.4;
+            margin: 0;
+            padding: 16px;
+            text-transform: none;
+            width: auto;
+        }
+
         &:hover,
         &:active,
         &:focus {
@@ -55,6 +69,14 @@
             background: $grey-lightest;
             font-size: 10px;
             text-transform: uppercase;
+
+            @include media("<tablet") {
+                background: none;
+                border: 0;
+                font-size: 20px;
+                text-transform: none;
+            }
+
             .main-nav__opener-label {
                 display: none;
             }
@@ -76,6 +98,10 @@
             flex: 0 0 auto;
             margin: 0 0 0 10px;
             font-size: 10px;
+
+            @include media("<tablet") {
+                display: none;
+            }
         }
 
         &-label {
@@ -99,24 +125,8 @@
         }
 
         &--mob-static {
-            @include media("<tablet") {
-                background: none;
-                border: 0;
-                pointer-events: none;
-                color: $black;
-                font-size: 20px;
-                font-weight: 800;
-                line-height: 1.4;
-                margin: 0;
-                padding: 16px;
-                text-transform: none;
-                width: auto;
-            }
 
             .main-nav__opener-icon {
-                @include media("<tablet") {
-                    display: none;
-                }
             }
         }
     }

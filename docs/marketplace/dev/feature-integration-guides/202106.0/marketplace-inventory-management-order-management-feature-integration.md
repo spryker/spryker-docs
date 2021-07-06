@@ -3,6 +3,7 @@ title: Marketplace Inventory Management + Order Management feature integration
 last_updated: Dec 16, 2020
 description: This document describes the process how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.
 template: feature-integration-guide-template
+tags: [B2C]
 ---
 
 This document describes how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.

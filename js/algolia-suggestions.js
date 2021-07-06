@@ -7,6 +7,8 @@ const Suggestions = {
         const {searchInput, options} = autocompleteConfig;
         autocomplete(searchInput, options, sources).one("autocomplete:updated", function(e){
             $('.search-popup__more').show();
+        }).on("autocomplete:updated", function(e){
+            $('.search-popup__more').attr({'href': `/search?query=${e.target.value}`});
         });
         this.bindSearchEvents(searchInput);
     },
@@ -58,3 +60,8 @@ const Suggestions = {
         });
     }
 };
+
+$(function(){
+    let link = $('search-popup__more'),
+        form;
+});

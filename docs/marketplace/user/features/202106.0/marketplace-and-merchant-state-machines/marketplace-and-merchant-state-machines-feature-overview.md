@@ -4,20 +4,22 @@ description: This document contains concept information on the Marketplace and m
 template: concept-topic-template
 ---
 
-The basic concept of state machines allows creating a patterned behavior and automation for complicated processes defined by the business, for example, order processes. 
+The basic concept of state machines allows creating a patterned behavior and automation for complicated processes defined by the business, for example, order processes.
 With the help of the state machine, a business owner can coordinate the process of changing the statuses of orders and order items according to the business logic.
-To provide the algorithm of dealing with orders for Marketplace administrators and merchants simultaneously, we have implemented multiple state machine templates. These templates help the Marketplace owners to make the order management process flexible and corresponding to the business logic. As the process of managing marketplace orders is different from managing the merchant orders, there are two separate state machine engine templates: *Marketplace state machine* and *Merchant state machine*. 
+To provide the algorithm of dealing with orders for Marketplace administrators and merchants simultaneously, we have implemented multiple state machine templates. These templates help the Marketplace owners to make the order management process flexible and corresponding to the business logic. As the process of managing marketplace orders is different from managing the merchant orders, there are two separate state machine engine templates: *Marketplace state machine* and *Merchant state machine*.
 
-:::(Info) (Info)
+{% info_block infoBox "Info" %}
 
 You can set up as many state machines as you need and allow your Marketplace administrator to decide which state machine to use for specific payment methods or countries and stores with different processes. You can also set up different merchant state machines to apply to different merchants according to their processes.
-:::
+
+{% endinfo_block %}
 
 ![Marketplace and merchant state machines](https://confluence-connect.gliffy.net/embed/image/01b89c1e-03f6-448a-90f4-982630e5f96a.png?utm_medium=live&utm_source=custom)
 
 ## Marketplace state machine
-The Marketplace can have one or several state machines assigned to the marketplace orders. Marketplace State Machine processes marketplace order items. 
-Our exemplary Marketplace state machine provides the following states: 
+
+The Marketplace can have one or several state machines assigned to the marketplace orders. Marketplace State Machine processes marketplace order items.
+Our exemplary Marketplace state machine provides the following states:
 
 * New
 * Paid
@@ -30,14 +32,21 @@ Our exemplary Marketplace state machine provides the following states:
 
 To learn more about states, see [State Machine Fundamentals](https://documentation.spryker.com/docs/state-machine-cookbook#state-machine-cookbook---part-i---state-machine-fundamentals).
 
-:::(Warning) (Note)
+{% info_block warningBox "Note" %}
+
 You can set up the states according to your business requirements.
 The status of the Marketplace order is an aggregated state of the Marketplace order items.
-:::
+
+{% endinfo_block %}
+
+
 
 <details open>
+
 <summary>Marketplace state machine flow</summary>
+
 ![Merchant state machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+and+Merchant+State+Machines+feature+overview/marketplace-state-machine.png)
+
 </details>
 
 ### Marketplace state machine in the Back Office
@@ -54,7 +63,7 @@ The Marketplace administrator can define one or several state machines for merch
 
 Merchant state machine processes merchant order items and works in parallel with the Marketplace state machine.
 The status of the merchant order is aggregated from the merchant order item statuses. The merchant order status gets properly updated when the state of the items changes.
-Our exemplary merchant state machine provides the following states: 
+Our exemplary merchant state machine provides the following states:
 
 1. New
 2. Canceled by merchant
@@ -63,11 +72,9 @@ Our exemplary merchant state machine provides the following states:
 5. Closed
 
 <details open>
+
 <summary>Merchant State Machine flow</summary>
 
 ![Merchant state machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+and+Merchant+State+Machines+feature+overview/merchant-state-machine.png)
 
 </details>
-
-
-

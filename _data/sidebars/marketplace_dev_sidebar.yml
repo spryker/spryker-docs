@@ -19,7 +19,7 @@ entries:
       - title: Feature walkthroughs
         nested:
           - title: Merchant
-            url: /docs/marketplace/dev/feature-walkthroughs/202106.0/merchant.html
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
 
       - title: Feature integration guides
         nested:

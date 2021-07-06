@@ -13,7 +13,7 @@ Follow the steps below to install the Marketplace Product Offer + Wishlist Glue 
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -214,7 +214,7 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 
 Make sure that `PriceProductWishlistItemExpanderPlugin`, `PriceProductOfferWishlistItemExpanderPlugin`, and `ProductPriceRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the price product collection within `attributes` in the response.
 
-Make sure that the `AvailabilityWishlistItemExpanderPlugin` and `ProductAvailabilityRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `quantity` within `attributes` in the response.
+Make sure that `AvailabilityWishlistItemExpanderPlugin` and `ProductAvailabilityRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `quantity` within `attributes` in the response.
 
 Make sure that `ProductOfferRestWishlistItemsAttributesMapperPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `attributes` in the response.
 

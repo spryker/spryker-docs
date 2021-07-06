@@ -6,7 +6,7 @@ template: concept-topic-template
 ---
 
 
-This document provides details about the Datasources service in the Components Library.
+This document explains the Datasources service in the Components Library.
 
 ## Overview
 
@@ -28,7 +28,7 @@ Datasources are used in other components like Table, Select, Autocomplete, etc.
 
 The main module provides an opportunity to register any datasource by key via static method `withDatasources`. It assigns the object of datasources to the `DatasourceTypesToken` under the hood.
 
-The main service injects all registered types from the `DatasourceTypesToken` and `DataTransformerService` (see [Data Transformers](/docs/marketplace/dev/front-end/ui-components-library/data-transformers.html)).
+The main service injects all registered types from the `DatasourceTypesToken` and `DataTransformerService` (see [Data Transformers](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/index.html)).
 
 Resolve method finds specific service from the `DatasourceTypesToken` by `config.type` (from the argument) and returns observable with data by `Datasource.resolve`. Data is also transformed by `DataTransformerService` if `config.transform` exists.
 
@@ -81,7 +81,7 @@ The context within which Datasources operate is defined by the local injector wh
 
 ## Interfaces
 
-Below you can find interfaces for the Datasource configuration and Datasource type: 
+Below you can find interfaces for the Datasource configuration and Datasource type:
 
 ```ts
 export interface DatasourceConfig {
@@ -106,4 +106,4 @@ There are a few common Datasources that are available in UI library as separate 
 
 - `inline` - Allows passing data along with the configuration of the Datasource
 - `inline.table` - Allows passing transformed for the table format data along with the configuration of the Datasource
-- `http` - Allows fetching data from URL via HTTP configured in the configuration of the Datasource. HTTP Datasource supports caching strategy (see [Cache](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2317353245/Cache)) that may be configured via config and used before the request is made when applicable.
+- `http` - Allows fetching data from URL via HTTP configured in the configuration of the Datasource. HTTP Datasource supports caching strategy (see [Cache](/docs/marketplace/dev/front-end/ui-components-library/cache.html)) that may be configured via config and used before the request is made when applicable.

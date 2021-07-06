@@ -1,10 +1,15 @@
 ---
 title: Merchant Portal - Marketplace Merchant feature integration
+last_updated: Jul 05, 2021
 description: This document describes the process how to integrate the Marketplace Merchant into the Spryker  Merchant Portal.
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Merchant Portal - Marketplace Merchant feature into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Merchant Portal - Marketplace Merchant feature core.
 
 ### Prerequisites
 
@@ -22,6 +27,7 @@ Install the required modules:
 ```bash
 composer require spryker/merchant-profile-merchant-portal-gui:"^0.3.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -49,9 +55,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Add Translations
-
-#### Zed translations
+### Zed translations
 
 Generate a new translation cache for Zed:
 

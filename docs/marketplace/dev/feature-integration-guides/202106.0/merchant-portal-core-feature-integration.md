@@ -11,7 +11,7 @@ This document describes how to integrate the Marketplace Merchant Portal Core fe
 
 Follow the steps below to install the Merchant Portal Core feature core.
 
-## Prerequisites
+### Prerequisites
 
 To start feature integration, integrate the required features:
 
@@ -136,7 +136,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 }
 ```
 
-Open access to the Merchant Portal login page by default:
+Open access to the *Merchant Portal* login page by default:
 
 **config/Shared/config_default.php**
 
@@ -412,7 +412,7 @@ MerchantPortal **MUST NOT** have access to:
 
 ### 2) Create a dedicated database user
 
-Grant only default CRUD (INSERT, DELETE, UPDATE, SELECT) operations. DO NOT grant ALL PRIVILEGES, GRANT OPTION, DROP, CREATE, and other admin related grants.
+Grant only default CRUD (INSERT, DELETE, UPDATE, SELECT) operations. DO NOT grant ALL PRIVILEGES, GRANT OPTION, DROP, CREATE, and other admin-related grants.
 
 The following code snippet example is for MySQL:
 

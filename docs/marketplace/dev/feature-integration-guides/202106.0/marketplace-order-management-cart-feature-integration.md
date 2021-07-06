@@ -8,8 +8,8 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Order Management + Cart feature into a Spryker project.
 
 ## Install feature core
-Follow the steps below to install the Marketplace Order Management Feature + Cart feature core.
 
+Follow the steps below to install the Marketplace Order Management Feature + Cart feature core.
 
 ### Prerequisites
 

@@ -28,8 +28,6 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
@@ -41,6 +39,7 @@ Make sure that the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
 ### 2) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |

@@ -37,6 +37,10 @@ $( document ).ready(function() {
     initSearchPopup();
 
     initHomeSearchPosition();
+
+    $('[data-spy="scroll"]').each(function () {
+        $(this).scrollspy('refresh');
+    });
 });
 
 function initHomeSearchPosition() {

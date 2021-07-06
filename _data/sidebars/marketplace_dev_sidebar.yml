@@ -30,6 +30,9 @@ entries:
           - title: Marketplace Merchant feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html
 
+          - title: Marketplace Merchant Portal Core feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html
+          
           - title: Marketplace Order Management + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html
 
@@ -57,6 +60,9 @@ entries:
           - title: Marketplace Product Offer Prices feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html
 
+          - title: Marketplace Product Offer + Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-cart-feature-integration.html
+          
           - title: Marketplace Product Offer + Checkout feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-checkout-feature-integration.html
 
@@ -90,9 +96,6 @@ entries:
           - title: Merchant Portal feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-feature-integration.html
 
-          - title: Merchant Portal - Core feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-core-feature-integration.html
-
           - title: Merchant Portal - Marketplace Merchant feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-feature-integration.html
 
@@ -105,14 +108,10 @@ entries:
           - title: Merchant Portal - Marketplace Product + Tax feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html
 
-          - title: Merchant Portal - Marketplace Product Offer feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-product-offer-feature-integration.html
-
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
 
-          - title: Marketplace Product Offer + Cart feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-cart-feature-integration.html
+          
 
           - title: Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
@@ -290,7 +289,7 @@ entries:
 
         - title: "Migration guide - Extending the project"
           url: /docs/marketplace/dev/front-end/migration-guide-extending-the-project.html
-
+        
         - title: Table design
           nested:
 
@@ -312,7 +311,7 @@ entries:
             - title: "Datasources"
               url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
 
-            - title: "Data transformers"
+            - title: "Data Transformers"
               url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/
               nested:
 
@@ -328,8 +327,27 @@ entries:
                 - title: "Object-map"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
 
+                - title: "Date-parse"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html
+                  
+                - title: "Date-serialize"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html
+
+                - title: "Chain"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html
+
+                - title: "Collate"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate.html
+
             - title: "Cache"
               url: /docs/marketplace/dev/front-end/ui-components-library/cache.html
 
             - title: "Persistence"
               url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
+
+        - title: "How-To: Create a new module with application"
+          url: /docs/marketplace/dev/front-end/how-to-create-a-new-module-with-application.html
+
+        - title: "Angular Services"
+          url: /docs/marketplace/dev/front-end/angular-services.html
+

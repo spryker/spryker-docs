@@ -4,7 +4,7 @@ description: This document provides details about the Cache service in the Compo
 template: concept-topic-template
 ---
 
-This document provides details about the Cache service in the Component Library.
+This document explains the Cache service in the Component Library.
 
 ## Overview
 
@@ -166,7 +166,7 @@ interface CacheStrategyConfig {
 
 There are a few common Cache Strategies that are available in UI library as separate packages:
 
-- static—adds values immediately to the cache until the expiration date and always retrieves them from cache if requested.
+- static - adds values immediately to the cache until the expiration date and always retrieves them from cache if requested.
 
 ## Related articles
 

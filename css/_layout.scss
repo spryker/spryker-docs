@@ -5,6 +5,10 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+
+    @include media("<tablet") {
+        padding: 64px 0 0;
+    }
 }
 
 .page-wrapper {
@@ -34,6 +38,10 @@ body {
     width: 100%;
     padding: 0 24px;
     margin: 0 auto;
+
+    @include media("<tablet") {
+        padding: 0 16px;
+    }
 }
 
 .main-sidebar {

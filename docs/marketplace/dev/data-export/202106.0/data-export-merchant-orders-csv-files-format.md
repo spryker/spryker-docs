@@ -23,7 +23,7 @@ These are the parameters included in the `merchant_orders.csv` file:
 | 4 | merchant_order_created_at |   | Date Time |   | Merchant order creation date. |
 | 5 | merchant_order_updated_at |   | Date Time |   | Last update date of the merchant order. |
 | 6 | merchant_order_store |   | String |   | Name of the store where the order to this merchant was placed. |
-| 7 | email |   | String |   | E-mail of the customer. |
+| 7 | email |   | String |   | Email of the customer. |
 | 8 | salutation |   | String |   | Salutation used with the customer. |
 | 9 | first_name |   | String |   | Customer’s first name. |
 | 10 | last_name |   | String |   | Customer’s last name. |
@@ -35,12 +35,12 @@ These are the parameters included in the `merchant_orders.csv` file:
 | 16 | billing_address_first_name | &check; | String |   | Customer’s first name used in the billing address. |
 | 17 | billing_address_last_name | &check; | String |   | Customer’s last name used in the billing address. |
 | 18 | billing_address_middle_name |   | String |   | Customer’s middle name used in the billing address. |
-| 19 | billing_address_email |   | String |   | E-mail used with the billing address. |
+| 19 | billing_address_email |   | String |   | Email used with the billing address. |
 | 20 | billing_address_cell_phone |   | String |   | Cell phone used with the billing address. |
 | 21 | billing_address_phone |   | String |   | Phone used with the billing address. |
-| 22 | billing_address_address1 |   | String |   | Address first line of the billing address. The billing address is the address to which the invoice or bill is registered. |
-| 23 | billing_address_address2 |   | String |   | Address second line of the billing address. |
-| 24 | billing_address_address3 |   | String |   | Address third line of the billing address. |
+| 22 | billing_address_address1 |   | String |   | First line of the billing address. The billing address is the address to which the invoice or bill is registered. |
+| 23 | billing_address_address2 |   | String |   | Second line of the billing address. |
+| 24 | billing_address_address3 |   | String |   | Third line of the billing address. |
 | 25 | billing_address_city | &check; | String |   | City of the billing address. |
 | 26 | billing_address_zip_code | &check; | String |   | Zip code of the billing address. |
 | 27 | billing_address_po_box |   | String |   | P.O. Box of the billing address. |
@@ -111,7 +111,7 @@ These are the header fields included in the `merchant_order_items.csv` file:
 | 43 | shipping_address_first_name |   |   |   | Customer’s first name used in the shipping address. |
 | 44 | shipping_address_last_name |   | String |   | Customer’s last name used in the shipping address. |
 | 45 | shipping_address_middle_name |   | String |   | Customer’s middle name used in the shipping address. |
-| 46 | shipping_address_email |   | String |   | E-mail used with shipping address. |
+| 46 | shipping_address_email |   | String |   | Email used with shipping address. |
 | 47 | shipping_address_cell_phone |   | String |   | Cell phone used with shipping address. |
 | 48 | shipping_address_phone |   | String |   | Phone used with the shipping address. |
 | 49 | shipping_address_address1 |   | String |   | Address first line of the shipping address. The shipping address is the address to where the order is shipped. |

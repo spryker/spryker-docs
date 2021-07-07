@@ -46,7 +46,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the configuration
+### 2) Set up configuration
 
 <!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
 

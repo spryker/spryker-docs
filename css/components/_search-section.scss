@@ -82,6 +82,7 @@
 
     &__fake {
         display: none;
+
         @include media("<tablet") {
             display: block;
             max-width: 614px;

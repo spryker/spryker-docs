@@ -51,11 +51,11 @@ function initHomeSearchPosition() {
         opener = $('.js-search-popup-opener'),
         searchOffsetTop;
 
-    function handleScroll(){
+    function handleScroll (){
         pageOffsetTop = page.scrollTop();
         searchOffsetTop = searchContainer.offset().top;
 
-        if(isScrolled && pageOffsetTop < searchOffsetTop) {
+        if (isScrolled && pageOffsetTop < searchOffsetTop) {
             opener.removeClass('under-search');
             isScrolled = !isScrolled;
         } else if (!isScrolled && pageOffsetTop > searchOffsetTop ) {
@@ -81,7 +81,6 @@ function initSearchPopup() {
     opener.on('click', function(e){
         e.preventDefault();
         body.addClass('mobile-overflow');
-        //popup.addClass('search-opened');
         popup.fadeIn(300, function(){
             input.focus();
         });
@@ -89,11 +88,9 @@ function initSearchPopup() {
 
     close.on('click', function(e){
         e.preventDefault();
-        //popup.removeClass('search-opened');
         body.removeClass('mobile-overflow');
 
-        popup.fadeOut(300, function(){
-        });
+        popup.fadeOut(300);
     });
 }
 

@@ -60,8 +60,3 @@ const Suggestions = {
         });
     }
 };
-
-$(function(){
-    let link = $('search-popup__more'),
-        form;
-});

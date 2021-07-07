@@ -13,9 +13,11 @@
     background: $white;
 
     .dropdown-menu--dark & {
-        color: $grey-2;
-        background: $darkest;
-        border-color: $grey-darker;
+        @include media(">=tablet") {
+            color: $grey-2;
+            background: $darkest;
+            border-color: $grey-darker;
+        }
     }
 
     .ais-Highlight {
@@ -31,7 +33,9 @@
         font-weight: 500;
 
         .dropdown-menu--dark & {
-            border-top-color: $grey-darker;
+            @include media(">=tablet") {
+                border-top-color: $grey-darker;
+            }
         }
 
         &:first-child {
@@ -58,7 +62,9 @@
         transition: color .2s linear;
 
         .dropdown-menu--dark & {
-            color: $grey;
+            @include media(">=tablet") {
+                color: $grey;
+            }
         }
 
         &:hover,
@@ -68,7 +74,9 @@
             color: $darkest;
 
             .dropdown-menu--dark & {
-                color: $grey-lighten;
+                @include media(">=tablet") {
+                    color: $grey-lighten;
+                }
             }
         }
     }
@@ -90,7 +98,9 @@
             color: $grey-darker;
 
             .dropdown-menu--dark & {
-                color: $grey-2;
+                @include media(">=tablet") {
+                    color: $grey-2;
+                }
             }
         }
     }

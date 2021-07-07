@@ -8,7 +8,7 @@
     0px 1px 2px 0px rgba($black, 0.05);
 
     @include media("<tablet") {
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         width: 100%;
@@ -106,6 +106,12 @@
             letter-spacing: .02em;
             transition: color .3s linear, background .3s linear, border-color .3s linear;
 
+            @include media("<tablet") {
+                height: 56px;
+                padding: 17px 40px;
+                color: $grey-lighten;
+            }
+
             @include placeholder {
                 color: $grey;
                 transition: opacity 0.2s linear;
@@ -117,6 +123,41 @@
                 @include placeholder {
                     opacity: 0;
                 }
+            }
+        }
+    }
+
+    &__search-opener {
+        margin: 0 0 0 10px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        color: $grey;
+        transition: .3s linear opacity;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        @include media("<tablet") {
+            display: flex;
+        }
+
+        [class*="icon-"] {
+            font-size: 26px;
+        }
+
+        .home-layout & {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &.under-search {
+            .home-layout & {
+                visibility: visible;
+                opacity: 1;
             }
         }
     }

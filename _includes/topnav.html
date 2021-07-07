@@ -77,14 +77,27 @@
                 </div>
 
                 {% if page.url != "/index.html" and page.url != "/search/" %}
-                    <div class="main-header__search">
-                        <i class="main-header__search-icon icon-search"></i>
-                        {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                    <div class="search-popup">
+                        <div class="search-popup__inner">
+                            <div class="search-popup__content">
+                                <a href="#" class="search-popup__close js-search-popup-close"><i class="icon-arrow-left"></i></a>
+                                <div class="main-header__search">
+                                    <i class="main-header__search-icon icon-search"></i>
+                                    {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                                </div>
+                            </div>
+                            <div class="search-popup__footer">
+                                <a href="/search" class="search-popup__more">Show all results</a>
+                            </div>
+                        </div>
                     </div>
                 {% endif %}
 
             </div>
             <div class="main-header__right">
+                {% if page.url != "/search/" %}
+                    <a href="#" class="main-header__search-opener js-search-popup-opener"><i class="icon-search"></i></a>
+                {% endif %}
                 <a href="/feed.xml" class="button main-header__button button--small">
                     <i class="icon-rss"></i>
                     RSS

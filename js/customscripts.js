@@ -33,8 +33,66 @@ $( document ).ready(function() {
     initDropdown();
 
     initMobileNav();
+
+    initSearchPopup();
+
+    initHomeSearchPosition();
 });
 
+function initHomeSearchPosition() {
+    let homePage = $('.home-layout');
+
+    if (!homePage.length) return;
+
+    let page = jQuery(window),
+        pageOffsetTop,
+        isScrolled = false,
+        searchContainer = $('.js-home-search'),
+        opener = $('.js-search-popup-opener'),
+        searchOffsetTop;
+
+    function handleScroll() {
+        pageOffsetTop = page.scrollTop();
+        searchOffsetTop = searchContainer.offset().top;
+
+        if (isScrolled && pageOffsetTop < searchOffsetTop) {
+            opener.removeClass('under-search');
+            isScrolled = !isScrolled;
+        } else if (!isScrolled && pageOffsetTop > searchOffsetTop ) {
+            opener.addClass('under-search');
+            isScrolled = !isScrolled;
+        }
+    }
+
+    handleScroll();
+
+    page.on('scroll', handleScroll);
+}
+
+function initSearchPopup() {
+    let popup = $('.search-popup'),
+        opener = $('.js-search-popup-opener'),
+        close = $('.js-search-popup-close'),
+        body = jQuery('body'),
+        input = $('.search-input.aa-input');
+
+    // mobile-overflow
+
+    opener.on('click', function(e){
+        e.preventDefault();
+        body.addClass('mobile-overflow');
+        popup.fadeIn(300, function(){
+            input.focus();
+        });
+    });
+
+    close.on('click', function(e){
+        e.preventDefault();
+        body.removeClass('mobile-overflow');
+
+        popup.fadeOut(300);
+    });
+}
 
 function initMobileNav() {
     let page = jQuery(window),
@@ -96,7 +154,6 @@ function initDropdown() {
     let mainNav = $('.main-nav'),
         dropdown = mainNav.find('.dropdown'),
         subMenu = mainNav.find('.dropdown-menu');
-        console.log(subMenu);
 
     $('.dropdown-menu .dropdown-toggle').on('click', function (e) {
         let $el = $(this);

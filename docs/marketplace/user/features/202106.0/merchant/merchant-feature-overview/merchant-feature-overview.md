@@ -1,5 +1,5 @@
 ---
-title: Merchants feature overview
+title: Merchant feature overview
 description: This document contains concept information for the Merchants feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---
@@ -31,7 +31,7 @@ The Marketplace administrator manages merchants and sets their statuses on the
 | Active | N/A | &check; |
 | Inactive | N/A | ✗ |
 
-<!--See LINK TO BO GUIDE HOW TO ACTIVATE A MERCHANT for details on to change the merchant user statues in the Back Office-->
+See [Approving and denying merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) for details on how to change the merchant user statuses and (de)activate merchants in the Back Office.
 
 Schematically, the merchant status change flow looks like this:
 
@@ -59,6 +59,8 @@ Thus, the Merchant entity and Stock entity are connected as follows:
 As the Marketplace environment presupposes having a lot of sellers—merchants, classification and categorization of merchants arise at some point. For this purpose, the Merchant Category entity exists. By defining merchant categories for merchants, you add flexibility to the working process and allow customers to implement different business logic on your project.
 For shoppers, it's convenient to find the necessary and relevant merchants and their products according to certain merchant categories.
 
+To create merchant categories, you should import them. See [File details: merchant_category.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-category-csv.html) for details.
+
 ## Merchants on the Storefront
 
 ### Merchant profile
@@ -69,7 +71,7 @@ On the Storefront, customers can check the relevant merchant information on the 
 ![Viewing merchant profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/view-merchant-profile.gif)
 
 ### Merchant opening hours
-According to the statuses described in the [Merchant statuses](#merchant-statuses) section, the merchant profile page is available only if the merchant has the `Active`status. Otherwise, the 404 error (page not found) is displayed when navigating to the profile page. To provide maximum selling activity, merchants can provide their working schedule, by defining the opening hours on weekdays, holidays and exceptional cases.
+The merchant profile page is available only if the merchant is [Active](#merchant-statuses) . Otherwise, the 404 error (page not found) is displayed when navigating to the profile page. To provide maximum selling activity, merchants can provide their working schedule, by defining the opening hours on weekdays, holidays and exceptional cases.
 
 A merchant has:
 

@@ -16,6 +16,11 @@ entries:
           - title: Post-installation steps
             url: /docs/marketplace/dev/setup/post-installation-steps.html
 
+      - title: Feature walkthroughs
+        nested:
+          - title: Merchant
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
+
       - title: Feature integration guides
         nested:
           - title: Marketplace Inventory Management feature integration

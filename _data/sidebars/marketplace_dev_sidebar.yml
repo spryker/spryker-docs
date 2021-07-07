@@ -37,7 +37,7 @@ entries:
 
           - title: Marketplace Merchant Portal Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html
-          
+
           - title: Marketplace Order Management + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-cart-feature-integration.html
 
@@ -67,7 +67,7 @@ entries:
 
           - title: Marketplace Product Offer + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-cart-feature-integration.html
-          
+
           - title: Marketplace Product Offer + Checkout feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-checkout-feature-integration.html
 
@@ -116,7 +116,7 @@ entries:
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
 
-          
+
 
           - title: Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
@@ -294,7 +294,7 @@ entries:
 
         - title: "Migration guide - Extending the project"
           url: /docs/marketplace/dev/front-end/migration-guide-extending-the-project.html
-        
+
         - title: Table design
           nested:
 
@@ -334,7 +334,7 @@ entries:
 
                 - title: "Date-parse"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html
-                  
+
                 - title: "Date-serialize"
                   url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html
 

@@ -51,7 +51,7 @@ function initHomeSearchPosition() {
         opener = $('.js-search-popup-opener'),
         searchOffsetTop;
 
-    function handleScroll (){
+    function handleScroll() {
         pageOffsetTop = page.scrollTop();
         searchOffsetTop = searchContainer.offset().top;
 

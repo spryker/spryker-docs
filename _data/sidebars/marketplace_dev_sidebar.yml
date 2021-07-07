@@ -292,8 +292,12 @@ entries:
         - title: "Project structure"
           url: /docs/marketplace/dev/front-end/project-structure.html
 
-        - title: "Migration guide - Extending the project"
-          url: /docs/marketplace/dev/front-end/migration-guide-extending-the-project.html
+        - title: "Extending the project"
+          url: /docs/marketplace/dev/front-end/extending-the-project
+          nested:
+        
+          - title: "Migration guide - Extending the project"
+            url: /docs/marketplace/dev/front-end/migration-guide-extending-the-project.html
         
         - title: Table design
           nested:

@@ -80,7 +80,7 @@
         }
     }
 
-    &__fake {
+    .fake-input {
         display: none;
 
         @include media("<tablet") {
@@ -91,7 +91,7 @@
             z-index: 3;
         }
 
-        &-icon {
+        &__icon {
             position: absolute;
             z-index: 2;
             pointer-events: none;
@@ -101,7 +101,7 @@
             left: 5px;
             pointer-events: none;
         }
-        &-input {
+        &__placeholder {
             display: block;
             height: 56px;
             padding: 17px 40px;

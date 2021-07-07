@@ -297,7 +297,7 @@ entries:
           nested:
         
           - title: "Migration guide - Extending the project"
-            url: /docs/marketplace/dev/front-end/migration-guide-extending-the-project.html
+            url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
         
         - title: Table design
           nested:

@@ -1,5 +1,6 @@
 .main-sidebar {
     padding: 40px 0;
+
     &__opener {
         position: absolute;
         z-index: 3;
@@ -32,21 +33,33 @@
         overflow: hidden;
         width: 310px;
         transition: width .3s linear;
+
+        @include media("<desktop") {
+            width: auto;
+        }
     }
 
     &__slide {
         transition: transform .3s linear, opacity .3s linear;
         width: 310px;
+
+        @include media("<desktop") {
+            width: auto;
+        }
     }
 
     &--collapsed {
         .main-sidebar__inner {
-            width: 40px;
+            @include media(">=desktop") {
+                width: 40px;
+            }
         }
 
         .main-sidebar__slide {
-            opacity: 0;
-            transform: translateX(-100%);
+            @include media(">=desktop") {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
         }
     }
 

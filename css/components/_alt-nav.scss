@@ -2,6 +2,11 @@
     position: relative;
     margin: 0 0 16px;
 
+    @include media("<desktop") {
+        margin: 0;
+        flex: 1 1 auto;
+    }
+
     &:hover {
         .alt-nav__drop {
             display: block;

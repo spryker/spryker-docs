@@ -41,7 +41,38 @@ $( document ).ready(function() {
     $('[data-spy="scroll"]').each(function () {
         $(this).scrollspy('refresh');
     });
+
+    initPopup();
 });
+
+function initPopup() {
+    $('.toc').popup({
+        animSpeed: 500
+    });
+}
+
+$.fn.popup = function (options){
+    options = $.extend({
+        animSpeed: 500,
+        effect: 'fade'
+    }, options);
+
+    let popupFunc = function(){
+        let page = jQuery(window),
+            holder = $(this),
+            body = $('body'),
+            popupBox = holder.find('.nav-popup'),
+            popupOpener = holder.find('.nav-opener'),
+            links = holder.find('.main-nav-anchor'),
+            menuIsOpened = false,
+            menuIsAnimated = false;
+
+        
+
+    }
+
+    return this.each(popupFunc);
+}
 
 function initHomeSearchPosition() {
     let homePage = $('.home-layout');
@@ -106,7 +137,6 @@ function initMobileNav() {
         header = jQuery('.main-header'),
         nav = header.find('.nav-popup'),
         links = header.find('.main-nav-anchor'),
-        mobileAnchor = header.find('.mobile-anchor'),
         opener = jQuery('.nav-opener'),
         body = jQuery('body'),
         menuIsOpened = false,
@@ -143,12 +173,6 @@ function initMobileNav() {
     links.on('click', function(e){
       e.preventDefault();
       toggleMenu();
-      handleSection(e);
-    });
-
-    mobileAnchor.on('click', function(e){
-      e.preventDefault();
-      handleSection(e);
     });
 
     opener.on('click', function(e){

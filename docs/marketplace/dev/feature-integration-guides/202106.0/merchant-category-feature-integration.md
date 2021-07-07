@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | LINK |
 | --------- | ----- | ---------- |
 | Spryker Core         | master      | [Spryker Core Feature Integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | master      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchants-feature-integration.html) |
+| Marketplace Merchant | master      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -55,7 +55,7 @@ Adjust the schema definition so that entity changes trigger the events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -136,7 +136,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure when you delete category that has a relation to merchant in Zed UI, there is no exception and merchant category removed as well.
+Make sure when you delete category that has a relation to merchant in the Back Office, there is no exception and merchant category removed as well.
 
 {% endinfo_block %}
 
@@ -195,7 +195,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that index data `http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes` contains merchant category keys for the merchants that assigned to categories.
+Make sure that the index data `http://zed.de.spryker.local/search-elasticsearch-gui/maintenance/list-indexes` contains merchant category keys for the merchants assigned to categories.
 
 {% endinfo_block %}
 
@@ -281,7 +281,7 @@ console data:import merchant-category
 
 {% info_block warningBox "Verification" %}
 
-Make sure that imported data is added to the `spy_merchant_category` table.
+Make sure that the imported data is added to the `spy_merchant_category` table.
 
 {% endinfo_block %}
 

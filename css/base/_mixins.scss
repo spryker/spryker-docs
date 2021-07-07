@@ -1,0 +1,14 @@
+// TODO review code
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content; }
+    &::-moz-placeholder { opacity: 1; @content; }
+    &:-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &.placeholder { @content; }
+}
+
+@mixin hover {
+    @media (hover: hover) and (pointer: fine) {
+        @content;
+    }
+}

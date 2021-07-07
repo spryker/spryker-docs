@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
 | Spryker Core | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchants-feature-integration.html)
+| Marketplace Merchant | dev-master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchant-feature-integration.html)
 
 ###  1) Install the required modules using Composer
 
@@ -122,7 +122,7 @@ console translator:generate-cache
 
 This step publishes change events to `spy_merchant_opening_hours_storage` and synchronizes the data to the storage.
 
-#### Set up event, listeners, and publishers
+#### Set up event listeners and publishers
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | -------------- | ------------- | ------------- |
@@ -212,7 +212,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-### Set up re-generate and re-sync features
+### Set up, re-generate, and re-sync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------------- | ------------------ | ------------- | --------------- |
@@ -343,11 +343,9 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
 
 {% endinfo_block %}
 
-### 5) Import data
+### 5) Import Merchants Opening Hours data
 
-#### Import Merchants Opening Hours data
-
-Prepare your data according to your requirements using our demo data:
+Prepare your data according to your requirements using the demo data:
 
 <details>
 <summary markdown='span'>data/import/common/common/marketplace/merchant_open_hours_date_schedule.csv</summary>
@@ -507,15 +505,17 @@ console data:import merchant-opening-hours-weekday-schedule
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the opening hours data is added to the `spy_merchant_opening_hours_weekday_schedule`and `spy_merchant_opening_hours_date_schedule` tables in the database.
+Make sure that the opening hours data is added to the `spy_merchant_opening_hours_weekday_schedule` and `spy_merchant_opening_hours_date_schedule` tables in the database.
 
 {% endinfo_block %}
 
 ## Install feature front end
 
+Follow the steps below to install the Merchant Opening Hours feature front end.
+
 ### Prerequisites
 
-To start feature integration, integrate the required features::
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
@@ -624,7 +624,7 @@ Make sure that the following widget was registered:
 
 | MODULE | TEST |
 | ------------- | ------------- |
-| MerchantOpeningHoursWidget | Go to a Merchant page on the storefront and ensure that merchant working hours are displayed. |
+| MerchantOpeningHoursWidget | Go to a merchant page on the storefront and ensure that merchant working hours are displayed. |
 
 {% endinfo_block %}
 
@@ -633,4 +633,3 @@ Make sure that the following widget was registered:
 | FEATURE |  REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
 | Merchant Opening Hours API |  | [Glue API: Merchant Opening Hours feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/merchant-opening-hours-feature-integration.html) |
-

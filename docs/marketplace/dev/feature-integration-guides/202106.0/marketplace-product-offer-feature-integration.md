@@ -8,6 +8,7 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Product Offer into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product Offer feature core.
 
 ### Prerequisites
@@ -17,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | -------|
 | Spryker Core         | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | dev-master | [Marketplace Merchants feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchants-feature-integration.html) |
+| Marketplace Merchant | dev-master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchant-feature-integration.html) |
 | Product              | 202001.0   | [Product feature integration](https://github.com/spryker-feature/product) |
 
 ###  1) Install the required modules using Composer
@@ -79,7 +80,7 @@ Adjust the schema definition so that entity changes will trigger events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -128,7 +129,7 @@ console translator:generate-cache
 
 ### 4) Configure export to Redis and Elasticsearch
 
-To configure export to Redis and ElasticSearch, take the following steps:
+To configure export to Redis and Elasticsearch, take the following steps:
 
 #### Set up event listeners
 
@@ -225,7 +226,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Set up re-generate and re-sync features
+#### Set up, re-generate, and re-sync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------------- | --------------- | ---------- | ---------------- |
@@ -303,9 +304,9 @@ Make sure that when the following entities get updated via the ORM, the correspo
 
 ### 5) Import data
 
-Prepare your data according to your requirements using our demo data:
+Prepare your data according to your requirements using the demo data:
 
-**data/import/common/common/marketplace/merchant_product_offer.csv**
+<details><summary>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
 
 ```csv
 product_offer_reference,concrete_sku,merchant_reference,merchant_sku,is_active,approval_status
@@ -445,6 +446,8 @@ offer417,112_312526191,MER000005,,1,approved
 offer418,112_312526172,MER000002,,1,approved
 ```
 
+</details>
+
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------------- | ----------- | -------- | --------- | ------------------ |
 | product_offer_reference | &check;      | string    | offer1        | Product offer reference that will be referenced to this merchant. |
@@ -454,7 +457,7 @@ offer418,112_312526172,MER000002,,1,approved
 | is_active               |        | boolean   | 1             | Product offer status, defaults to 1.                          |
 | approval_status         |        | string    | approved      | Approval status (Waiting for Approval – Approved – Denied). Denied and Waiting for Approval statuses mean that the offer is not visible on PDP regardless of Product Offer → Active = true.This can be configured (along with the transition between statuses in ProductOfferConfig). If not supplied, ProductOfferConfig → getDefaultStatus is applied. |
 
-**data/import/common/common/marketplace/merchant_product_offer_store.csv**
+<details><summary>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
 
 ```csv
 product_offer_reference,store_name
@@ -878,11 +881,13 @@ offer94,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 ```
 
+</details>
+
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------ | ----------- | ------ | ----------- | ---------------- |
 | product_offer_reference | &check; | string    | offer1       | Unique product offer identifier.             |
-| valid_from              |  | `string`  | 2020-01-01   | Date since which the product offer is valid. |
-| valid_to                |  | `string`  | 2020-01-01   | Date till which the product offer is valid.  |
+| valid_from              |  | String  | 2020-01-01   | Date since which the product offer is valid. |
+| valid_to                |  | String | 2020-01-01   | Date till which the product offer is valid.  |
 
 Register the following plugins to enable data import:
 
@@ -1448,4 +1453,4 @@ Make sure that the following widgets were registered:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
 | Marketplace Product Offer API | | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html) |
-| Marketplace Product Offer + Cart | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/product-offer-cart-feature-integration.html) |
+| Marketplace Product Offer + Cart | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-cart-feature-integration.html) |

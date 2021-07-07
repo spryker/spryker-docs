@@ -18,10 +18,20 @@
     </a>
 {% elsif page.url == sidebar_item_url %}
 <li class="active">
-    <a title="{{item.title}}" href="{{sidebar_item_url}}" class="sidebar-nav__link">{{item.title}}</a>
+    <a title="{{item.title}}" href="{{sidebar_item_url}}" class="sidebar-nav__link {% if item.url and item.nested %}sidebar-nav__link--shifted{% endif %}">{{item.title}}</a>
+    {% if item.url and item.nested %}
+        <a href="#" class="sidebar-nav__opener sidebar-nav__opener--small">
+            <i class="icon-arrow-right"></i>
+        </a>
+    {% endif %}
 {% else %}
 <li>
-    <a title="{{item.title}}" href="{{sidebar_item_url}}" class="sidebar-nav__link">{{item.title}}</a>
+    <a title="{{item.title}}" href="{{sidebar_item_url}}" class="sidebar-nav__link {% if item.url and item.nested %}sidebar-nav__link--shifted{% endif %}">{{item.title}}</a>
+    {% if item.url and item.nested %}
+        <a href="#" class="sidebar-nav__opener sidebar-nav__opener--small">
+            <i class="icon-arrow-right"></i>
+        </a>
+    {% endif %}
 {% endif %}
 {% if item.nested %}
     <ul>

@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | --------|
-| Marketplace Merchant | dev-master  | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchants-feature-integration.html) |
+| Marketplace Merchant | dev-master  | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchant-feature-integration.html) |
 | Marketplace Return Management | dev-master | [Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-return-management-feature-integration.html) |
 
 ### 1) Install the required modules using Сomposer

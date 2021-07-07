@@ -18,8 +18,8 @@ Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-return-management --update-with-dependencies
-composer require spryker/sales-return ^1.1.0 --update-with-dependencies
 ```
+
 <!-- Have to be deleted after Return Management feature will be released with a new version-->
 
 
@@ -226,8 +226,8 @@ Add the following configuration:
         </subprocesses>
     </process>
 
-    <process name="MarketplaceReturn" file="MarketplaceSubprocess/MarketplaceReturn01"/>
-    <process name="MarketplaceRefund" file="MarketplaceSubprocess/MarketplaceRefund01"/>
+    <process name="MarketplaceReturn" file="MarketplaceSubprocess/MarketplaceReturn01.xml"/>
+    <process name="MarketplaceRefund" file="MarketplaceSubprocess/MarketplaceRefund01.xml"/>
 
 </statemachine>
 ```
@@ -1018,6 +1018,53 @@ class SalesReturnConfig extends SprykerSalesReturnConfig
 </details>
 
 
+### 6) Configure navigation
+Add product offers section to marketplace section of `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <sales>
+        <pages>
+           <merchant-sales-return>
+                <label>My Returns</label>
+                <title>My Returns</title>
+                <bundle>merchant-sales-return-merchant-user-gui</bundle>
+                <controller>index</controller>
+                <action>index</action>
+                <visible>1</visible>
+            </merchant-sales-return>
+        </pages>
+    </sales>
+    <marketplace>
+        <pages>
+            <returns>
+                <label>Returns</label>
+                <title>Returns</title>
+                <bundle>sales-return-gui</bundle>
+                <controller>index</controller>
+                <action>index</action>
+                <visible>1</visible>
+            </returns>
+        </pages>
+    </marketplace>
+</config>
+```
+
+Execute the following command:
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Returns** as well as **Sales->My Returns** menu items.
+
+{% endinfo_block %}
+
+
 ## Install feature front end
 
 Follow the steps below to install the Marketplace return management feature front end.
@@ -1029,7 +1076,7 @@ Follow the steps below to install the Marketplace return management feature fron
 Install the required modules:
 
 ```bash
-composer require spryker-shop/merchant-sales-return-widget ^0.1.0 --update-with-dependencies
+composer require spryker-feature/marketplace-return-management --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

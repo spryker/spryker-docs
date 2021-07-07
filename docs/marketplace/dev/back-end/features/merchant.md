@@ -8,7 +8,7 @@ This article provides details about the Marketplace Merchant feature of the back
 
 ## Installation
 
-To install the feature, follow [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing).
+To install the feature, follow [Merchant feature integration](https://documentation.spryker.com/2021080/docs/merchant-feature-integration).
 
 ## Overview
 

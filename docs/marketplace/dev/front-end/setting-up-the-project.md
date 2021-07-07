@@ -1,7 +1,7 @@
 ---
 title: Setting up the project
 description: This article provides details about setting up Spryker Marketplace project.
-template: concept-topic-template
+template: howto-guide-templat
 ---
 
 
@@ -31,7 +31,7 @@ The main environmental differences between the existing front-ends (Yves, Zed) a
 Using a "unified" approach, all front-end dependencies must be installed in one step:
 - The entire project is now a "Yarn Workspace," meaning each submodule declares its dependencies. During the installation stage, Yarn installs all of those dependencies and hoists them up into the root of the project.
 
-List of the required commands to install dependencies and build Merchant Portal: 
+## Install dependencies and build Merchant Portal
 
 ```yarn
 yarn install

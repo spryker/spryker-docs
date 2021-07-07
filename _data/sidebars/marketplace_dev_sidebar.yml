@@ -356,3 +356,14 @@ entries:
         - title: "Angular Services"
           url: /docs/marketplace/dev/front-end/angular-services.html
 
+      - title: Back-end
+        nested:
+
+          - title: "Marketplace infrastructure setup"
+            url: /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
+
+          - title: "Features"
+            nested:
+
+              - title: "Merchant"
+                url: /docs/marketplace/dev/back-end/features/merchant.html

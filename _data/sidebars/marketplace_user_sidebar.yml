@@ -13,16 +13,16 @@ entries:
       - title: Features
         url: /docs/marketplace/user/features/
         nested:
-        - title: Merchant
-          url: /docs/marketplace/user/features/merchant/merchant.html
+        - title: Marketplace Merchant
+          url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant.html
           nested:
 
-          - title: Merchant feature overview
-            url: /docs/marketplace/user/features/merchant/merchant-feature-overview/merchant-feature-overview.html
+          - title: Marketplace Merchant feature overview
+            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
             nested:
 
           - title: Merchant users
-            url: /docs/marketplace/user/features/merchant/merchant-feature-overview/merchant-users.html
+            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users.html
 
         - title: Merchant Category
           url: /docs/marketplace/user/features/merchant-category/merchant-category.html

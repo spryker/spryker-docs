@@ -520,7 +520,7 @@ This option is available only in case you have upgraded your shop to the [Market
 
 | ATTRIBUTE    | TYPE  | DESCRIPTION     |
 | -------------- | -------- | ----------------------- |
-| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/merchant/merchant-feature-overview/merchant-feature-overview.html) for more details.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for more details.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 | itemStates  | Array  | State of the item in the order.    |
 | createdAt  | String   | Date and time when the order was created.    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |

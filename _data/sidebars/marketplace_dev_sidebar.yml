@@ -18,11 +18,11 @@ entries:
 
       - title: Feature walkthroughs
         nested:
-          - title: Merchant
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant/merchant.html
+          - title: Marketplace Merchant
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant/marketplace-merchant.html
             nested: 
               - title: "Reference: Merchant entity diagram"
-                url: /docs/marketplace/dev/feature-walkthroughs/merchant/reference-merchant-entity-diagram.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant/reference-merchant-entity-diagram.html
 
           - title: Merchant Category
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html

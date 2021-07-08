@@ -223,6 +223,12 @@ You can deactivate the merchant by clicking Deactivate on the *Merchants* page i
 
 ![activating-and-deactivating-merchants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/Merchants/activating-mechants.png)
 
+{% info_block infoBox "Note" %}
+
+You can not delete merchants, you can only deactivate them.
+
+{% endinfo_block %}
+
 **What's next?**
 
 Once you have the merchant record available in the system, you can proceed with creating a merchant user to be able to log in to the Merchant Portal.

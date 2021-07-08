@@ -24,14 +24,20 @@ entries:
           - title: Merchant users
             url: /docs/marketplace/user/features/merchant/merchant-feature-overview/merchant-users.html
 
-        - title: Products and offers
+        - title: Merchant Category
+          url: /docs/marketplace/user/features/merchant-category/merchant-category.html
+        
+        - title: Merchant Opening Hours
+          url: /docs/marketplace/user/features/merchant-opening-hours/merchant-opening-hours.html
+        
+        - title: Products and Offers
 
           nested:
 
           - title: Product Offer feature overview
             url: /docs/marketplace/user/features/products-and-offers/product-offer-feature-overview.html
 
-        - title: Marketplace order
+        - title: Marketplace Order
 
           nested:
 

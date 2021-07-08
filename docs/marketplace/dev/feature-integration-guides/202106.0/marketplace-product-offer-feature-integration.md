@@ -1309,6 +1309,40 @@ It means the following:
 
 {% endinfo_block %}
 
+### 7) Configure navigation
+Add product offers section to marketplace section of `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <marketplace>
+        <pages>
+            <product-offer-gui>
+                <label>Offers</label>
+                <title>Offers</title>
+                <bundle>product-offer-gui</bundle>
+                <controller>list</controller>
+                <action>index</action>
+            </product-offer-gui>
+        </pages>
+    </marketplace>
+</config>
+```
+
+Execute the following command:
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Offers** menu item.
+
+{% endinfo_block %}
+
+
 ## Install feature front end
 
 Follow the steps below to install the Marketplace Product Offer feature front end.

@@ -1,5 +1,5 @@
 ---
-title: Merchant users feature overview
+title: Merchant users
 description: This document contains concept information for the Merchant users feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---

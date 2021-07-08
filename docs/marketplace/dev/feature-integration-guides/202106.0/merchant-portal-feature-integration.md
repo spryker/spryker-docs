@@ -6,7 +6,7 @@ draft: true
 template: feature-integration-guide-template
 ---
 
-See [Merchant portal core feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html).
+See [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchant-portal-core-feature-integration.html).
 
 ## Environment requirements
 

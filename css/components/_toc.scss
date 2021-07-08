@@ -1,15 +1,15 @@
 .toc {
-    @include media("<desktop") {
+    @include media("<laptop") {
         flex: 0 0 auto;
         margin: 0 0 0 24px;
     }
 
     &__popup {
-        @include media("<desktop") {
+        @include media("<laptop") {
             display: none;
             position: fixed;
             z-index: 2001;
-            background: #fff;
+            background: $white;
             width: 370px;
             top: 0;
             right: 0;
@@ -19,7 +19,7 @@
         &__opener {
             display: none;
 
-            @include media("<desktop") {
+            @include media("<laptop") {
                 display: block;
                 width: 40px;
                 height: 40px;
@@ -43,7 +43,7 @@
         &__header {
             display: none;
 
-            @include media("<desktop") {
+            @include media("<laptop") {
                 display: flex;
                 background: $grey-lightest;
                 justify-content: flex-end;

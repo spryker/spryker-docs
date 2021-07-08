@@ -19,24 +19,32 @@ body {
     &--post {
         display: flex;
 
-        @include media("<desktop") {
-            flex-direction: column;
-            order: 3;
-        }
-
         @include media("<laptop") {
             display: grid;
-            grid-column-gap: 24px;
-            grid-row-gap: 24px;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
             grid-template-rows: auto auto;
             grid-template-columns: auto auto;
             grid-template-areas: "a b"
                                  "a c";
+            padding: 0 24px 0 0;
+        }
+
+        @include media("<desktop") {
+            display: flex;
+            grid-template-areas: none;
+            flex-direction: column;
+            padding: 0;
         }
 
         .post-content {
             @include media("<laptop") {
                 grid-area: c;
+            }
+
+            @include media("<desktop") {
+                grid-area: none;
+                order: 3;
             }
         }
     }
@@ -80,12 +88,21 @@ body {
     @include media("<desktop") {
         margin: 0;
         order: 1;
+        grid-area: none;
     }
 }
 
 .post-content {
     flex: 1 1 auto;
     padding: 40px 0 0;
+
+    @include media("<laptop") {
+        padding: 24px 0 0;
+    }
+
+    @include media("<desktop") {
+        padding: 24px 24px 0;
+    }
 }
 
 .alt-sidebar {
@@ -101,20 +118,23 @@ body {
     @include media("<laptop") {
         grid-area: b;
         width: auto;
+        margin: 0;
+        padding: 22px 0 0;
     }
 
     @include media("<desktop") {
         order: 2;
         margin: 0;
-        padding: 0;
+        padding: 30px 24px 0;
         width: 100%;
+        grid-area: none;
     }
 
     &__sticky {
         position: sticky;
         top: 40px;
 
-        @include media("<desktop") {
+        @include media("<laptop") {
             position: static;
             display: flex;
             align-items: center;

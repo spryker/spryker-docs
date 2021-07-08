@@ -33,7 +33,9 @@ The `datasource` example below will return the value of the `three` key ('123') 
 
 ## Interfaces
 
-`path`-the name of the property from which the value needs to be retrieved. The `path` may contain nested properties separated by dots, just like in a Javascript language.
+Below you can find interfaces for Data Transformer Pluck.
+
+`path` - the name of the property from which the value needs to be retrieved. The `path` may contain nested properties separated by dots, just like in a Javascript language.
 
 ```ts
 export interface PluckDataTransformerConfig extends DataTransformerConfig {

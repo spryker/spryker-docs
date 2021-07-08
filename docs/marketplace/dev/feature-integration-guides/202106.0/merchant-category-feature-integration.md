@@ -55,7 +55,7 @@ Adjust the schema definition so that entity changes trigger the events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate

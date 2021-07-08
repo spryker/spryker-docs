@@ -1,10 +1,15 @@
 ---
 title: Merchant Portal - Marketplace Merchant feature integration
+last_updated: Jul 05, 2021
 description: This document describes the process how to integrate the Marketplace Merchant into the Spryker  Merchant Portal.
 template: feature-integration-guide-template
 ---
 
+This document describes how to integrate the Merchant Portal - Marketplace Merchant feature into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Merchant Portal - Marketplace Merchant feature core.
 
 ### Prerequisites
 

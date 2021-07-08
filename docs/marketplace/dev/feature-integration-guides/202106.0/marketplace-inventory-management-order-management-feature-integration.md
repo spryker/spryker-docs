@@ -3,11 +3,13 @@ title: Marketplace Inventory Management + Order Management feature integration
 last_updated: Dec 16, 2020
 description: This document describes the process how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.
 template: feature-integration-guide-template
+tags: [B2C]
 ---
 
 This document describes how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Inventory Management + Order Management feature core.
 
 ### Prerequisites
@@ -99,7 +101,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -206,6 +208,6 @@ class ProductOfferStockGuiDependencyProvider extends SprykerProductOfferStockGui
 
 {% info_block warningBox "Verification" %}
 
-Make sure that if you open some product offer in view mode at `http://glue.mysprykershop.com/product-offer-gui/view?id-product-offer={% raw %}{{idProductOffer}}{% endraw %}`, stock table contains the `Reservations` column.
+Make sure that if you open some product offer in view mode at `http://zed.mysprykershop.com/product-offer-gui/view?id-product-offer={% raw %}{{idProductOffer}}{% endraw %}`, stock table contains the `Reservations` column.
 
 {% endinfo_block %}

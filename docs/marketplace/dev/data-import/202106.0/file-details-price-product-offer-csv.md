@@ -5,7 +5,7 @@ description: This document describes the price-product-offer.csv file to configu
 template: import-file-template
 ---
 
-This document describes the price-product-offer.csv file to configure [Merchant product offer price](/docs/marketplace/user/features/{{ site.version }}/products-and-offers/product-offer-feature-overview.html) information in your Spryker shop.
+This document describes the `price-product-offer.csv` file to configure [Merchant product offer price](/docs/marketplace/user/features/{{ site.version }}/products-and-offers/product-offer-feature-overview.html) information in your Spryker shop.
 
 To import the file, run:
 

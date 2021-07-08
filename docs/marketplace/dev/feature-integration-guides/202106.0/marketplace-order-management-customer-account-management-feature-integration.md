@@ -72,7 +72,6 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that after customers log in, their selected merchant is not changed and set correctly.
 
 {% endinfo_block %}

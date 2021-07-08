@@ -32,12 +32,124 @@ $( document ).ready(function() {
 
     initDropdown();
 
-    initMobileNav();
+    //initMobileNav();
 
     initSearchPopup();
 
     initHomeSearchPosition();
+
+    $('[data-spy="scroll"]').each(function () {
+        $(this).scrollspy('refresh');
+    });
+
+    initPopup();
 });
+
+function initPopup() {
+    $('.main-header').popup({
+        animSpeed: 300,
+        box: '.nav-popup',
+        opener: '.nav-opener',
+        preventScroll: true,
+    });
+
+    $('.toc').popup({
+        animSpeed: 300,
+        box: '.toc__popup',
+        opener: '.toc__popup__opener',
+        close: '.toc__popup__close, .toc__popup__overlay',
+        overlay: '.toc__popup__overlay',
+    });
+}
+
+$.fn.popup = function (options){
+    options = $.extend({
+        animSpeed: 500,
+        effect: 'fade',
+        box: '.popup__box',
+        opener: '.popup__opener',
+        close: '.popup__close',
+        overlay: null,
+        anchorLinks: '.popup__anchor',
+    }, options);
+
+    let popupFunc = function() {
+        console.log(this.options);
+        let page = jQuery(window),
+            holder = $(this),
+            body = $('body'),
+            popup = holder.find(options.box),
+            opener = holder.find(options.opener),
+            close = holder.find(options.close),
+            overlay = holder.find(options.overlay),
+            links = holder.find(options.anchorLinks),
+            menuIsOpened = false,
+            menuIsAnimated = false,
+            preventScroll = false;
+
+        function toggleMenu() {
+          /*if(window.innerWidth >= 1025) {
+              return;
+          }*/
+
+          menuIsAnimated = !menuIsAnimated;
+
+          if(!menuIsAnimated) {
+             return;
+          }
+
+          if (menuIsOpened) {
+              opener.removeClass('expanded');
+
+              if (options.preventScroll) {
+                body.removeClass('mobile-overflow');
+              }
+
+              popup.fadeOut(300, function() {
+                  menuIsOpened = !menuIsOpened;
+                  menuIsAnimated = !menuIsAnimated;
+              });
+
+              if (options.overlay) {
+                overlay.fadeOut(300);
+              }
+          } else {
+              opener.addClass('expanded');
+
+              if (options.preventScroll) {
+                body.addClass('mobile-overflow');
+              }
+
+              popup.fadeIn(300, function() {
+                  menuIsOpened = !menuIsOpened;
+                  menuIsAnimated = !menuIsAnimated;
+              });
+
+              if (options.overlay) {
+                overlay.fadeIn(300);
+              }
+          }
+        }
+
+        links.on('click', function() {
+          // TODO add scroll to section
+          toggleMenu();
+        });
+
+        opener.on('click', function(e) {
+          e.preventDefault();
+          toggleMenu();
+        });
+
+        close.on('click', function(e) {
+          e.preventDefault();
+          menuIsOpened = true;
+          toggleMenu();
+        });
+    }
+
+    return this.each(popupFunc);
+}
 
 function initHomeSearchPosition() {
     let homePage = $('.home-layout');
@@ -99,7 +211,6 @@ function initMobileNav() {
         header = jQuery('.main-header'),
         nav = header.find('.nav-popup'),
         links = header.find('.main-nav-anchor'),
-        mobileAnchor = header.find('.mobile-anchor'),
         opener = jQuery('.nav-opener'),
         body = jQuery('body'),
         menuIsOpened = false,
@@ -136,12 +247,6 @@ function initMobileNav() {
     links.on('click', function(e){
       e.preventDefault();
       toggleMenu();
-      handleSection(e);
-    });
-
-    mobileAnchor.on('click', function(e){
-      e.preventDefault();
-      handleSection(e);
     });
 
     opener.on('click', function(e){

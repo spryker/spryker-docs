@@ -6,6 +6,11 @@
         margin: 0 0 16px;
         display: none;
 
+        @include media("<laptop") {
+            background: none;
+            margin: 0;
+        }
+
         & > ul::before {
             font-size: 12px;
             line-height: 16px;

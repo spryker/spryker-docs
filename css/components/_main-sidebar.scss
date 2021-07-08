@@ -1,5 +1,21 @@
 .main-sidebar {
     padding: 40px 0;
+
+    @include media("<desktop") {
+        padding: 5px 24px;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    @include media("<tablet") {
+        top: 64px;
+    }
+
     &__opener {
         position: absolute;
         z-index: 3;
@@ -13,6 +29,10 @@
         background: $grey-lighten;
         text-decoration: none;
         border: 2px solid $grey-lighten;
+
+        @include media("<desktop") {
+            position: static;
+        }
 
         &:hover {
             border-color: $silver;
@@ -32,21 +52,42 @@
         overflow: hidden;
         width: 310px;
         transition: width .3s linear;
+
+        @include media("<laptop") {
+            width: 270px;
+        }
+
+        @include media("<desktop") {
+            width: auto;
+            display: none;
+        }
     }
 
     &__slide {
         transition: transform .3s linear, opacity .3s linear;
         width: 310px;
+
+        @include media("<laptop") {
+            width: 270px;
+        }
+
+        @include media("<desktop") {
+            width: auto;
+        }
     }
 
     &--collapsed {
         .main-sidebar__inner {
-            width: 40px;
+            @include media(">=desktop") {
+                width: 40px;
+            }
         }
 
         .main-sidebar__slide {
-            opacity: 0;
-            transform: translateX(-100%);
+            @include media(">=desktop") {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
         }
     }
 

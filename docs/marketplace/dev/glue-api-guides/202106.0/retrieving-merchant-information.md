@@ -314,7 +314,7 @@ To retrieve information about all the active merchants, send the request:
 | categoryKey            | String   | Category key used for the erchant.                       |
 | name                   | String   | Name of the merchant category.
 
-## Retrieve profile information for the specific merchant
+## Retrieve profile information for a merchant
 
 To get the details of a specific merchant, send the request:
 

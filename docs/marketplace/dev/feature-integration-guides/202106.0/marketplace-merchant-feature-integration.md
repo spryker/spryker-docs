@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{ page.version }} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Merchant | {{ page.version }} | [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing) |
+| Merchant | {{ page.version }} | [Merchant feature integration](https://documentation.spryker.com/2021080/docs/merchant-feature-integration) |
 
 ### 1) Install the required modules using Composer
 

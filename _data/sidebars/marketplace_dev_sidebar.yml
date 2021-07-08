@@ -19,7 +19,17 @@ entries:
       - title: Feature walkthroughs
         nested:
           - title: Merchant
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant/merchant.html
+            nested: 
+              - title: Merchant entity diagram
+                url: /docs/marketplace/dev/feature-walkthroughs/merchant/merchant-entity-diagram.html
+
+          - title: Merchant Category
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html
+
+          - title: Merchant Opening Hours
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours.html
+    
 
       - title: Feature integration guides
         nested:

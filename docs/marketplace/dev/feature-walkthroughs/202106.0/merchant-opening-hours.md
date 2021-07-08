@@ -7,7 +7,7 @@ template: concept-topic-template
 
 The *Merchant Opening Hours* feature allows defining opening hours for a merchant.
 
-To learn more about the feature and to find out how end users use it, see [Merchant Opening Hours](/docs/marketplace/user/features/{{ page.version }}/merchant/merchant.html) feature summary for business users.
+To learn more about the feature and to find out how end users use it, see [Merchant Opening Hours](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant.html) feature summary for business users.
 
 ## Related Developer articles
 

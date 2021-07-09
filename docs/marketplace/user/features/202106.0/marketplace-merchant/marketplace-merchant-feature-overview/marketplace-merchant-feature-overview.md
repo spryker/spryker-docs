@@ -134,4 +134,4 @@ Spryker Marketplace provides API to:
 * Retrieve search and filter results by merchant name. For details, see [Searching by products](https://documentation.spryker.com/marketplace/docs/catalog-search#search-by-products) and [Retrieving suggestions](https://documentation.spryker.com/marketplace/docs/retrieving-suggestions-for-auto-completion-and-search#retrieve-a-suggestion).
 
 ## Next steps
-[Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users.md)
+[Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users.html)

@@ -1,7 +1,7 @@
 ---
 title: Marketplace Product Offer
 last_updated: Apr 23, 2021
-description: The title: Product Offer is created when merchants wants to sell products already available on Marketplace.
+description: Product Offer is created when merchants wants to sell products already available on Marketplace.
 template: concept-topic-template
 ---
 

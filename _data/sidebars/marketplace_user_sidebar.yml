@@ -30,12 +30,13 @@ entries:
         - title: Merchant Opening Hours
           url: /docs/marketplace/user/features/merchant-opening-hours/merchant-opening-hours.html
         
-        - title: Products and Offers
+        - title: Marketplace Product Offer
+          url: /docs/marketplace/user/features/marketplace-product-offer/marketplace-product-offer.html
 
           nested:
 
-          - title: Product Offer feature overview
-            url: /docs/marketplace/user/features/products-and-offers/product-offer-feature-overview.html
+          - title: Marketplace Product Offer feature overview
+            url: /docs/marketplace/user/features/marketplace-product-offer/marketplace-product-offer-feature-overview.html
 
         - title: Marketplace Order
 
@@ -108,8 +109,8 @@ entries:
             - title: Offers
               nested:
 
-                - title: Offers
-                  url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers.html
+                - title: Managing merchant product offers
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html
 
       - title: Merchant Portal user guides
         url: /docs/marketplace/user/merchant-portal-user-guides/

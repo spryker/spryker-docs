@@ -56,13 +56,13 @@ Use this hook to unsubscribe observables and detach event handlers to avoid memo
 ### Hooks for the Component’s Children
 
 `ngAfterContentInit`
-Invoked after Angular performs any content projection into the component’s view (see the previous lecture on Content Projection for more info).
+Invoked after Angular performs any content projection into the component’s view (see the previous lecture on Content Projection for more info). To get more info about content query see official documentation [ContentChildren](https://angular.io/api/core/ContentChildren), [ContentChild](https://angular.io/api/core/ContentChild)
 
 `ngAfterContentChecked`
 Invoked each time the content of the given component has been checked by the change detection mechanism of Angular.
 
 `ngAfterViewInit`
-Invoked when the component’s view has been fully initialized.
+Invoked when the component’s view has been fully initialized.To get more info about content query see official documentation [ViewChildren](https://angular.io/api/core/ViewChildren), [ViewChild](https://angular.io/api/core/ViewChild)
 
 `ngAfterViewChecked`
 Invoked each time the view of the given component has been checked by the change detection mechanism of Angular.

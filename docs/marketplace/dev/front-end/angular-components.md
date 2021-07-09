@@ -28,9 +28,9 @@ To define input you have to use `@Input` angular decorator that marks a class fi
 
 ## Component Outputs
 
-Angular Component has Outputs - these are the events that the component may emit at any point in time to the outside. In the web component form outputs are translated to DOM Events.
+Angular Component has Outputs - these are the events that the component may emit at any point in time to the outside. In the web component form outputs are translated to DOM Custom Events.
 
-To define input you have to use `@Output` angular decorator that marks a class field as an output property and supplies configuration metadata. The DOM property bound to the output property is automatically updated during change detection.
+To define input you have to use `@Output` angular decorator that marks a class field as an output property and supplies configuration metadata. The callback method bound to the output property invoked every time output is emitted.
 
 ## Component Lifecycle
 
@@ -40,7 +40,7 @@ To define input you have to use `@Output` angular decorator that marks a class f
 This is invoked when Angular creates a component or directive by calling new on the class.
 
 `ngOnChanges`
-Invoked every time there is a change in one of th input properties of the component.
+Invoked every time there is a change in one of the input properties of the component.
 
 `ngOnInit`
 Invoked when given component has been initialized.
@@ -75,25 +75,25 @@ In addition to containing or pointing to the template, the @Component metadata c
 
 #### Main properties
 
-`Selector`
+`selector`
 It is the CSS selector that identifies this component in a template. This corresponds to the HTML tag that is included in the parent component. You can create your own HTML tag. However, the same has to be included in the parent component.
 
-`Template`
+`template`
 It is an inline-defined template for the view. The template can be used to define some markup. The markup could typically include some headings or paragraphs that are displayed on the UI.
 
-`TemplateUrl`
+`templateUrl`
 It is the URL for the external file containing the template for the view.
 
-`Styles`
+`styles`
 These are inline-defined styles to be applied to the component’s view
 
 `styleUrls`
 List of URLs to stylesheets to be applied to the component’s view.
 
-`Providers`
+`providers`
 It is an array where certain services can be registered for the component
 
-`Animations`
+`animations`
 Animations can be listed for the components
 
 To get full information about component metadata properties list you can check [official documentation](https://angular.io/api/core/Component)

@@ -371,3 +371,6 @@ entries:
 
               - title: "Merchant"
                 url: /docs/marketplace/dev/back-end/features/merchant.html
+
+              - title: "Marketplace Product Offer"
+                url: /docs/marketplace/dev/back-end/features/marketplace-product-offer.html

@@ -8,7 +8,7 @@ template: concept-topic-template
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
-You can [create merchants in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#creating-merchants) or [import merchants](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-csv.html)
+You can [create merchants in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#creating-merchants) or [import merchants](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-csv.html).
 
 {% info_block infoBox "Note" %}
 

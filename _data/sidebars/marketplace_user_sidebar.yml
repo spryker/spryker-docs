@@ -11,24 +11,33 @@ entries:
             url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
 
       - title: Features
+        url: /docs/marketplace/user/features/
         nested:
-        - title: Merchants
+        - title: Marketplace Merchant
+          url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant.html
           nested:
 
-          - title: Merchants feature overview
-            url: /docs/marketplace/user/features/merchants/merchants-feature-overview.html
+          - title: Marketplace Merchant feature overview
+            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+            nested:
 
-          - title: Merchant users feature overview
-            url: /docs/marketplace/user/features/merchants/merchant-users-feature-overview.html
+          - title: Merchant users
+            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users.html
 
-        - title: Products and offers
+        - title: Merchant Category
+          url: /docs/marketplace/user/features/merchant-category/merchant-category.html
+        
+        - title: Merchant Opening Hours
+          url: /docs/marketplace/user/features/merchant-opening-hours/merchant-opening-hours.html
+        
+        - title: Products and Offers
 
           nested:
 
           - title: Product Offer feature overview
             url: /docs/marketplace/user/features/products-and-offers/product-offer-feature-overview.html
 
-        - title: Marketplace order
+        - title: Marketplace Order
 
           nested:
 
@@ -103,6 +112,7 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers.html
 
       - title: Merchant Portal user guides
+        url: /docs/marketplace/user/merchant-portal-user-guides/
         nested:
 
         - title: Dashboard
@@ -114,4 +124,4 @@ entries:
           nested:
 
           - title: Editing merchant's profile details
-            url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing merchants-profile-details.html
+            url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html

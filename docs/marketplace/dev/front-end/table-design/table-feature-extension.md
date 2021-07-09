@@ -86,7 +86,7 @@ There are two ways to use the Table Feature:
 
   To add a feature via HTML, it's enough to include a feature tag with a custom attribute (`spy-table-feature`) inside a table. When the table content is initialized, the table receives all templates by attribute and initializes features.
 
-- Via the registry of the Table Module—the Table Feature can be lazy-loaded when the Table Component requires it based on the Table Configuration, but it does not allow custom loading (custom loading is possible if the Angular versions are the same and shared). 
+- Via the registry of the Table Module—the Table аeature can be lazy-loaded when the Table Component requires it based on the Table Configuration, but it does not allow custom loading (custom loading is possible if the Angular versions are the same and shared).
 
   ```ts
   @NgModule({
@@ -155,14 +155,14 @@ export enum TableFeatureLocation {
 
 There are multiple standard Table Features that are shipped with the UI library:
 
-- `Pagination` - renders pagination of the table.
-- `Total` - renders the total number of the data set.
-- `Title` - renders the title of the table.
-- `Selectable` - allows selecting multiple rows.
-- `Row Actions` - allows triggering actions from rows.
-- `Batch Actions` - allows triggering batch/multiple actions from rows.
-- `Filters` - allows filtering the data set.
-- `Search` - allows searching within the data set.
-- `Sync State` - allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
-- `Editable` - allows editing/adding rows of the table.
-- `Settings` - allows customizing columns of the table (show/hide and reorder).
+- `Pagination`—renders pagination of the table.
+- `Total`—renders the total number of the data set.
+- `Title`—renders the title of the table.
+- `Selectable`—allows selecting multiple rows.
+- `Row Actions`—allows triggering actions from rows.
+- `Batch Actions`—allows triggering batch/multiple actions from rows.
+- `Filters`—allows filtering the data set.
+- `Search`—allows searching within the data set.
+- `Sync State`—allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
+- `Editable`—allows editing/adding rows of the table.
+- `Settings`—allows customizing columns of the table (show/hide and reorder).

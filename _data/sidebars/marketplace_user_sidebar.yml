@@ -38,12 +38,12 @@ entries:
           - title: Marketplace Product Offer feature overview
             url: /docs/marketplace/user/features/marketplace-product-offer/marketplace-product-offer-feature-overview.html
 
-        - title: Marketplace Order
+        - title: Marketplace Order Management
 
           nested:
 
           - title: Marketplace Order feature overview
-            url: /docs/marketplace/user/features/marketplace-order/marketplace-order-feature-overview.html
+            url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-feature-overview.html
 
           - title: Marketplace Order module relations
             url: /docs/marketplace/user/features/marketplace-order/marketplace-order-module-relations.html

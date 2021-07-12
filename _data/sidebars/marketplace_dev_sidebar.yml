@@ -41,6 +41,9 @@ entries:
               
               - title: "Reference: Merchant Order module relations"
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-merchant-order-module-relations.html
+
+              - title: "Reference: Marketplace and merchant state machine module schema"
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-marketplace-and-merchant-state-machine-module-schema.html
     
 
       - title: Feature integration guides

@@ -22,7 +22,7 @@ entries:
             nested:
 
           - title: Merchant users overview
-            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview-overview.html
+            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview.html
 
         - title: Merchant Category
           url: /docs/marketplace/user/features/merchant-category/merchant-category.html

@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace orde
 template: concept-topic-template
 ---
 
-When customer places an order on the Marketplace, the *Marketplace order* is created in the system. The Marketplace order, in comparison to a regular order in Spryker Commerce OS, contains information about merchants and one or several [merchant orders](/marketplace-order-management/marketplace-order-management-feature-overview/merchant-order-overview.html). Thus, the Marketplace order represents a list of items a customer has bought from one or multiple merchants in a single order.
+When customer places an order on the Marketplace, the *Marketplace order* is created in the system. The Marketplace order, in comparison to a regular order in Spryker Commerce OS, contains information about merchants and one or several [merchant orders](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/merchant-order-overview.html). Thus, the Marketplace order represents a list of items a customer has bought from one or multiple merchants in a single order.
 
 ![Marketplace order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/marketplace-order.png)
 
@@ -22,7 +22,7 @@ As the Marketplace order contains details about offers and products a customer h
 ![Merchant order in the Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/merchant-order-in-merchant-portal.png)
 
 ## Marketplace and merchant order states machines
-You can coordinate the Marketplace and merchant orders processing by triggering the state machine events. See [Marketplace and merchant state machines](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview.html) for details on the Marketplace and merchant order state machines and [Marketplace and merchant state machine interactions](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) for details on how the two state machines interact with each other.
+You can coordinate the Marketplace and merchant orders processing by triggering the state machine events. See [Marketplace and merchant state machines](/docs/marketplace/user/features/{{ page.version }}//marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) for details on the Marketplace and merchant order state machines and [Marketplace and merchant state machine interactions](/docs/marketplace/user/features/202106.0/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) for details on how the two state machines interact with each other.
 
 ## Marketplace order calculation
 By default, calculations for the Marketplace order items are performed using the item price (product offer price or the price inherited from the concrete or abstract product), their totals, subtotal aggregation, and tax information.

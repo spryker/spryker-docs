@@ -5,7 +5,7 @@ description: This document describes the merchant_open_hours_week_day_schedule.c
 template: import-file-template
 ---
 
-This document describes the `merchant_open_hours_week_day_schedule.csv` file to configure [default merchant opening hours](/docs/marketplace/user/features/{{ site.version }}/merchant/merchant-feature-overview/merchant-feature-overview.html#merchant-opening-hours) information in your Spryker shop.
+This document describes the `merchant_open_hours_week_day_schedule.csv` file to configure [default merchant opening hours](/docs/marketplace/user/features/{{ site.version }}/merchant-opening-hours/merchant-opening-hours.html) information in your Spryker shop.
 
 To import the file, run:
 

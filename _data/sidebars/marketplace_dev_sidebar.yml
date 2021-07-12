@@ -18,8 +18,21 @@ entries:
 
       - title: Feature walkthroughs
         nested:
-          - title: Merchant
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
+          - title: Marketplace Merchant
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant/marketplace-merchant.html
+            nested: 
+              - title: "Reference: Merchant entity diagram"
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant/reference-merchant-entity-diagram.html
+
+          - title: Merchant Category
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html
+
+          - title: Merchant Opening Hours
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours.html
+
+          - title: Marketplace Product Offer
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer.html
+    
 
       - title: Feature integration guides
         nested:
@@ -58,6 +71,9 @@ entries:
 
           - title: Marketplace Product + Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html
+            
+          - title: Marketplace Product Offer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
 
           - title: Marketplace Product + Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
@@ -115,11 +131,6 @@ entries:
 
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
-
-
-
-          - title: Marketplace Product Offer feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
 
           - title: Glue API
             nested:

@@ -5,7 +5,7 @@ description: This document describes the price-product-offer.csv file to configu
 template: import-file-template
 ---
 
-This document describes the `price-product-offer.csv` file to configure [Merchant product offer price](/docs/marketplace/user/features/{{ site.version }}/products-and-offers/product-offer-feature-overview.html) information in your Spryker shop.
+This document describes the `price-product-offer.csv` file to configure [Merchant product offer price](/docs/marketplace/user/features/{{ site.version }}/marketplace-product-offer/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 
 To import the file, run:
 
@@ -19,7 +19,7 @@ The file should have the following parameters:
 
 | PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ----------- | ---------- | ------- | ------------- | ----------------- | ------------- |
-| product_offer_reference  | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{ site.version }}/products-and-offers/product-offer-feature-overview.html) in the system. |
+| product_offer_reference  | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{ site.version }}/marketplace-product-offer/marketplace-product-offer-feature-overview.html) in the system. |
 | price_type               | &check;             | String   |                   | Can be DEFAULT or ORIGINAL                                   | Price type.                                                  |
 | store                    | &check;             | String   |                   | Value previously defined in the *stores.php* project configuration. | Store the price is defined for.                              |
 | currency                 | &check;             | String   |                   | Defined in the [ISO code](https://en.wikipedia.org/wiki/ISO_4217). | Currency of the price.                                       |

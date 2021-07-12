@@ -1,12 +1,12 @@
 ---
-title: Marketplace and merchant state machines feature overview
+title: Marketplace and merchant state machines overview
 description: This document contains concept information on the Marketplace and merchant state machines in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 
 The basic concept of state machines allows creating a patterned behavior and automation for complicated processes defined by the business, for example, order processes.
 With the help of the state machine, a business owner can coordinate the process of changing the statuses of orders and order items according to the business logic.
-To provide the algorithm of dealing with orders for Marketplace administrators and merchants simultaneously, we have implemented multiple state machine templates. These templates help the Marketplace owners to make the order management process flexible and corresponding to the business logic. As the process of managing marketplace orders is different from managing the merchant orders, there are two separate state machine engine templates: *Marketplace state machine* and *Merchant state machine*.
+To provide the algorithm of dealing with orders for Marketplace administrators and merchants simultaneously,there are multiple state machine templates. These templates help the Marketplace owners to make the order management process flexible and corresponding to the business logic. As the process of managing marketplace orders is different from that of managing the merchant orders, there are two separate state machine engine templates: *Marketplace state machine* and *Merchant state machine*.
 
 {% info_block infoBox "Info" %}
 
@@ -14,7 +14,7 @@ You can set up as many state machines as you need and allow your Marketplace adm
 
 {% endinfo_block %}
 
-![Marketplace and merchant state machines](https://confluence-connect.gliffy.net/embed/image/01b89c1e-03f6-448a-90f4-982630e5f96a.png?utm_medium=live&utm_source=custom)
+![Marketplace and merchant state machines](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+order+management/Marketplace+and+merchant+state+machines+overview/Marketplace-Merchant+state+machine+schema.png)
 
 ## Marketplace state machine
 
@@ -51,7 +51,7 @@ The status of the Marketplace order is an aggregated state of the Marketplace or
 
 ### Marketplace state machine in the Back Office
 
-Marketplace Administrators manage the orders in the Back Office > Marketplace > Orders. See the Back Office user guide - Managing marketplace orders for details. There is a trigger button to change the state of the marketplace order only if there are manually executable events related to the marketplace order items. Triggering the button executes the corresponding event and moves the marketplace order item to the next state. There can be multiple trigger buttons corresponding to several items in the marketplace order. When you click one of those buttons, only the items with such a manually executable event will execute it. The rest stay in the same state and need their trigger to be performed to move to the next state.
+Marketplace administrators manage the orders in the Back Office. See Managing marketplace orders for details <!---LINK TO BO GUIDES FOR ORDERS-->. In the Back Office, the marketplace administrators can change the state of the marketplace order by triggering the states. However, they can do that only if there are manually executable events related to the marketplace order items. Triggering the states executes the corresponding event and moves the marketplace order item to the next state. There can be multiple triggering buttons corresponding to several items in the marketplace order. When you click one of those buttons, only the items with such a manually executable event execute it. The rest stay in the same state and need their trigger to be performed to move to the next state.
 
 If there are no manually executable events applicable to any of the items, there is no button to click in the Back Office interface. In this case, the action is performed automatically.
 
@@ -78,3 +78,6 @@ Our exemplary merchant state machine provides the following states:
 ![Merchant state machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+and+Merchant+State+Machines+feature+overview/merchant-state-machine.png)
 
 </details>
+
+## Next steps
+[Learn how the marketplace and merchant state machines interact with each other](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)

@@ -56,9 +56,6 @@ entries:
               - title: Marketplace and merchant state machines interaction
                 url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
 
-          - title: Marketplace and merchant state machine module schema
-            url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machine-module-schema.html
-
       - title: Back Office user guides
         nested:
 

@@ -32,6 +32,15 @@ entries:
 
           - title: Marketplace Product Offer
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer.html
+          
+          - title: Marketplace Order Management
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/marketplace-order-management.html
+            nested: 
+              - title: "Reference: Marketplace Order module relations"
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-marketplace-order-module-relations.html 
+              
+              - title: "Reference: Merchant Order module relations"
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-merchant-order-module-relations.html
     
 
       - title: Feature integration guides

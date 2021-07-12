@@ -90,7 +90,7 @@ This tab contains legal information that is displayed on the *Merchant Profile* 
 
 #### Users tab
 
-This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users.html) for the merchant.
+This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview.html) for the merchant.
 
 {% info_block infoBox "Info" %}
 
@@ -191,7 +191,7 @@ This tab contains legal information that is displayed on the *Merchant Profile* 
 
 #### Users tab
 
-This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users.html) for the merchant.
+This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview.html) for the merchant.
 
 {% info_block infoBox "Info" %}
 
@@ -233,4 +233,4 @@ You can not delete merchants, you can only deactivate them.
 
 Once you have the merchant record available in the system, you can proceed with creating a merchant user to be able to log in to the Merchant Portal.
 
-See the [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html) article to know how you create those.
+See the [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users-overview.html) article to know how you create those.

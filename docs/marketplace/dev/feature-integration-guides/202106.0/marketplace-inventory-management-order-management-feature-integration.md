@@ -12,6 +12,7 @@ This document describes how to integrate the Marketplace Inventory Management + 
 Follow the steps below to install the Marketplace Inventory Management + Order Management feature core.
 
 ### Prerequisites
+
 To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |

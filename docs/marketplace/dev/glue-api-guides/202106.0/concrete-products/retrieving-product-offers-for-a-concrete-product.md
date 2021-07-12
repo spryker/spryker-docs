@@ -4,12 +4,6 @@ description: Retrieve details about product offers in the Spryker Marketplace
 template: glue-api-storefront-guide-template
 ---
 
-{% info_block warningBox "Warning" %}
-
-This endpoint is available only for the Spryker Marketplace shop.
-
-{% endinfo_block %}
-
 To retrieve information about the existing product offers of a concrete product, send the request:
 
 ---

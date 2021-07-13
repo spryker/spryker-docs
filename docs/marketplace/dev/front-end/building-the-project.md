@@ -1,25 +1,38 @@
 ---
 title: Building the project
-description: This article provides details about the building up Merchant Portal.
+description: This article provides details how to build the frontend part of the Merchant Portal.
 template: concept-topic-template
 ---
 
 
-This article provides details about the building up Merchant Portal.
+This article provides details how to build the front-end part of the Merchant Portal.
 
 ## Overview
-Spryker uses [webpack](https://webpack.js.org/guides/getting-started/) to build Frontend.
-At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes application, 
-it internally builds a dependency graph which maps every module that project needs and generates one or more bundles.
+Spryker uses [webpack](https://webpack.js.org/guides/getting-started/) to build front-end.
+At its core, webpack is a static module bundler for modern JavaScript applications. As webpack processes an application, it builds an internal dependency graph that maps every module that the project requires and generates one or more bundles.
 - All related configs are located in the `/frontend/merchant-portal` folder. 
-- All builded Frontend stuff (css, fonts, images, js) are located in the `/public/Backoffice/assets` folder.
+- The built-in front-end stuff (css, fonts, images, js) is in the `/public/Backoffice/assets` folder.
 
-Merchant Portal is splited by composer modules and has it’s own pieces of application in the form of an Angular Module with Angular+Web Components.
-Every module has an entry point called `entry.ts` that will be collected during the build as webpack entries and included as a chunk in the Merchant Portal build.
-Those chunk names are taken from the module name and then transformed to a `kebab-case`.
-A general structure of every Frontend module in the Spryker Marketplace is available [here](/docs/marketplace/dev/front-end/project-structure.html#module-structure).
-  
-List the commands to build the Merchant Portal Frontend: 
-- `npm run mp:build` - for build
-- `npm run mp:build:watch` - for build in the watch mode
-- `npm run mp:build:production` - for production build
+Modules for Merchant Portal are split into composer modules, and each module has its own application in the form of an Angular Module with Angular+Web Components.
+Every module has an entry point called `entry.ts` that is collected during the build as webpack entries and included in the Merchant Portal build as a chunk.
+Those chunk names are taken from the module name and then transformed into a `kebab-case`.
+
+General structure of the front-end modules in the Spryker Marketplace can be found in the [Module structure](/docs/marketplace/dev/front-end/project-structure.html#module-structure).
+
+The front-end of the Merchant Portal is built using the following commands:
+
+- default build
+    ```npm
+    npm run mp:build
+    ```
+ 
+- build in the watch mode
+    ```npm
+    npm run mp:build:watch
+    ```
+
+- production build
+    ```npm
+    npm run mp:build:production
+    ```
+

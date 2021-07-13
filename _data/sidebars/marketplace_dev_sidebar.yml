@@ -383,6 +383,9 @@ entries:
         - title: "Angular Services"
           url: /docs/marketplace/dev/front-end/angular-services.html
 
+        - title: "Angular Components"
+          url: /docs/marketplace/dev/front-end/angular-components.html
+
       - title: Back-end
         nested:
 

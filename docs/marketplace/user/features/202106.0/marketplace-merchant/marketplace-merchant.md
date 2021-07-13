@@ -20,6 +20,6 @@ Merchants, in their turn, can manage their business and information in the Merch
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Merchant](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchant/marketplace-merchant.html) feature walkthrough for developers. 
+Are you a developer? See [Marketplace Merchant](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchant.html) feature walkthrough for developers. 
 
 {% endinfo_block %}

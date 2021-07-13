@@ -4,7 +4,7 @@ description: This article provides reference information about Marketplace Produ
 template: concept-topic-template
 ---
 
-Validity dates define the date range when product offer is active. It manipulates product offer activity field (spy_product_offer.is_active),
+Validity dates define the date range when product offer is active. The Validity Dates entity manipulates the product offer activity field (spy_product_offer.is_active),
 activating and deactivating it based on the validity date range. 
 
 To update the product offer activity by validity dates data, run:

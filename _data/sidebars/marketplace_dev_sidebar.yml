@@ -19,11 +19,8 @@ entries:
       - title: Feature walkthroughs
         nested:
           - title: Marketplace Merchant
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant/marketplace-merchant.html
-            nested:
-              - title: "Reference: Merchant entity diagram"
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant/reference-merchant-entity-diagram.html
-
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant.html
+            
           - title: Merchant Category
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html
 
@@ -46,17 +43,8 @@ entries:
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-validity-dates.html  
           
           - title: Marketplace Order Management
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/marketplace-order-management.html
-            nested:
-              - title: "Reference: Marketplace Order module relations"
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-marketplace-order-module-relations.html
-
-              - title: "Reference: Merchant Order module relations"
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-merchant-order-module-relations.html
-
-              - title: "Reference: Marketplace and merchant state machine module schema"
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-marketplace-and-merchant-state-machine-module-schema.html
-
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management.html
+            
       - title: Feature integration guides
         nested:
           - title: Marketplace Inventory Management feature integration

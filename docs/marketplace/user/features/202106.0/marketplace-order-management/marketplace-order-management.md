@@ -20,6 +20,6 @@ Marketplace administrators can view and manage Marketplace orders in the Back Of
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Order Management](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management/marketplace-order-management.html) feature walkthrough for developers. 
+Are you a developer? See [Marketplace Order Management](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management.html) feature walkthrough for developers. 
 
 {% endinfo_block %}

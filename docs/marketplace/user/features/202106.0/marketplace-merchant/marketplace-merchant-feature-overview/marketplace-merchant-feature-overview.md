@@ -4,7 +4,7 @@ description: This document contains concept information for the Merchants featur
 template: concept-topic-template
 ---
 
-*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](https://documentation.spryker.com/marketplace/docs/product-offer-feature-overview), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users.html).  
+*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](https://documentation.spryker.com/marketplace/docs/product-offer-feature-overview), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview.html).  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
@@ -134,4 +134,4 @@ Spryker Marketplace provides API to:
 * Retrieve search and filter results by merchant name. For details, see [Searching by products](https://documentation.spryker.com/marketplace/docs/catalog-search#search-by-products) and [Retrieving suggestions](https://documentation.spryker.com/marketplace/docs/retrieving-suggestions-for-auto-completion-and-search#retrieve-a-suggestion).
 
 ## Next steps
-[Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users.html)
+[Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview.html)

@@ -42,7 +42,7 @@ The table below provides an overview of the statuses that are displayed at this 
 ## Order item’s status progress: Canceled
 After the payment has been made, the customer can still cancel the order during the period outlined by the Marketplace policies. The Marketplace provides the customer with a button on the Storefront to carry out that action. When the customer cancels the order, the state of the marketplace order item becomes *Canceled*.
 
-{% info_block warningBox "Note" %}
+{% info_block infoBox "Note" %}
 
 The Marketplace Administrator can also cancel the order under exceptional circumstances.
 

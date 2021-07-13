@@ -20,7 +20,7 @@ entries:
         nested:
           - title: Marketplace Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant/marketplace-merchant.html
-            nested: 
+            nested:
               - title: "Reference: Merchant entity diagram"
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant/reference-merchant-entity-diagram.html
 
@@ -32,19 +32,19 @@ entries:
 
           - title: Marketplace Product Offer
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer.html
-          
+
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/marketplace-order-management.html
-            nested: 
+            nested:
               - title: "Reference: Marketplace Order module relations"
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-marketplace-order-module-relations.html 
-              
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-marketplace-order-module-relations.html
+
               - title: "Reference: Merchant Order module relations"
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-merchant-order-module-relations.html
 
               - title: "Reference: Marketplace and merchant state machine module schema"
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-marketplace-and-merchant-state-machine-module-schema.html
-    
+
 
       - title: Feature integration guides
         nested:
@@ -83,7 +83,7 @@ entries:
 
           - title: Marketplace Product + Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html
-            
+
           - title: Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
 
@@ -312,16 +312,19 @@ entries:
         - title: "Setting up the project"
           url: /docs/marketplace/dev/front-end/setting-up-the-project.html
 
+        - title: "Building the project"
+          url: /docs/marketplace/dev/front-end/building-the-project.html
+
         - title: "Project structure"
           url: /docs/marketplace/dev/front-end/project-structure.html
 
         - title: "Extending the project"
           url: /docs/marketplace/dev/front-end/extending-the-project
           nested:
-        
+
           - title: "Migration guide - Extending the project"
             url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
-        
+
         - title: Table design
           nested:
 

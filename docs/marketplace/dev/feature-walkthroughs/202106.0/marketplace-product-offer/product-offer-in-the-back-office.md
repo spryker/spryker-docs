@@ -1,20 +1,20 @@
 ---
-title: Product offer in Back Office
-description: This article provides details about product offer works in back office of the back-end project in the Spryker Marketplace.
+title: Product Offer in the Back Office
+description: This article provides reference information about product offers in the Back Office.
 template: concept-topic-template
 ---
 
-This article provides details about product offer works in Back Office of the back-end project in the Spryker Marketplace.
+To inject the [Marketplace Product Offer](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/marketplace-product-offer.html) feature into the [Back office](https://documentation.spryker.com/docs/spryker-core-back-office) the following modules are used:
 
-To inject Product offer to [Back office](https://documentation.spryker.com/docs/spryker-core-back-office) the following modules have been provided:
-
-| Module | Details |
+| MODULE | DESCRIPTION |
 | -------------------- | ---------- |
-| [ProductOfferGui](https://github.com/spryker/product-offer-gui) | Main module, provides CRUD functionality for product offers in Back Office. Could be extended by implementing interfaces from ProductOfferGuiExtension module | 
-| [ProductOfferGuiExtension](https://github.com/spryker/product-offer-gui-extension) | Provides interfaces for ProductOfferGui module extending | 
-| [MerchantProductOfferGui](https://github.com/spryker/merchant-product-offer-gui) | Extends ProductOfferGui, adds merchant context for managing in Back office |
-| [ProductOfferValidityGui](https://github.com/spryker/product-offer-validity-gui) | Extends ProductOfferGui, adds [validity](/docs/marketplace/dev/back-end/features/marketplace-product-offer-learn-more/validity-dates.html) context for managing in Back office | 
+| [ProductOfferGui](https://github.com/spryker/product-offer-gui) | Main module which provides CRUD functionality for product offers in the Back Office. You can extend the module by implementing interfaces from the ProductOfferGuiExtension module. | 
+| [ProductOfferGuiExtension](https://github.com/spryker/product-offer-gui-extension) | Provides interfaces for extending the ProductOfferGui module.  | 
+| [MerchantProductOfferGui](https://github.com/spryker/merchant-product-offer-gui) | Extends the ProductOfferGui module, adds merchant context for managing offers in the Back office. |
+| [ProductOfferValidityGui](https://github.com/spryker/product-offer-validity-gui) | Extends the ProductOfferGui module, adds the [validity](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/product-offer-validity-dates.html) context for managing offers in the Back office. | 
 
-### Module dependency graph
+## Module relations
+
+The following schema illustrates module relations in the Product Offer entity for the Back Office:
 
 ![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/5db1ea40-576c-4663-b53d-e37469be0f81.png?utm_medium=live&utm_source=custom)

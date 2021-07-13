@@ -1,34 +1,34 @@
 ---
-title: Product offer storage
-description: This article provides details about Marketplace Product Offer storage feature of the back-end project in the Spryker Marketplace.
+title: Product Offer storage
+description: This article provides reference information about Marketplace Product Offer storage.
 template: concept-topic-template
 ---
 
-This article provides details about Marketplace Product Offer storage feature of the back-end project in the Spryker Marketplace.
+Product Offer and data related to it is cached to enhance performance. 
 
-{% info_block infoBox "" %}
+{% info_block infoBox "Note" %}
 
-See Conceptual [Overview](https://documentation.spryker.com/docs/redis-as-kv) to learn more about Using and Configuring Redis as a Key-value Storage in Spryker
+See [Using and configuring Redis as a key-value Storage](https://documentation.spryker.com/docs/redis-as-kv) for details on how to use and configure Redis as a key-value storage.
 
 {% endinfo_block %}
 
-Product offer and related to its data is cached to enhance perfomance and availability. 
-For the details please see the following modules:
+The following modules are used for the Product Offer storage:
 
-| Module | Details |
+| MODULE | DESCRIPTION |
 | -------------------- | ---------- | 
-| [MerchantProductOfferStorage](https://github.com/spryker/merchant-product-offer-storage) | Provides entity listeners and operates over caching data according to entity changes | 
-| [MerchantProductOfferStorageExtension](https://github.com/spryker/merchant-product-offer-storage-extension) | Implement interfaces from the module in order to extend cashing data | 
+| [MerchantProductOfferStorage](https://github.com/spryker/merchant-product-offer-storage) | Provides entity listeners and operates data  caching according to the entity changes | 
+| [MerchantProductOfferStorageExtension](https://github.com/spryker/merchant-product-offer-storage-extension) | Provides interfaces for extending the data caching. | 
 
-Use `Client` of `MerchantProductOfferStorage` module for getting cashed data 
 
 {% info_block infoBox "" %}
 
-See Conceptual [Overview](https://documentation.spryker.com/docs/client) to learn more about how to use Client
+Use `Client` of the `MerchantProductOfferStorage` module for getting the cached data.  See [Client](https://documentation.spryker.com/docs/client) for details on how to use Client.
 
 {% endinfo_block %}
 
-### Module dependency graph
+## Module relations
+
+The following schema illustrates module relations in the Product Offer storage entity:
 
 ![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/088f0f24-b61d-40e0-a402-876fb48915b6.png?utm_medium=live&utm_source=custom)
 

@@ -12,7 +12,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 ## Related Developer articles
 
 
-|Integration guides  |Glue API guides  |Data import  |References  |
+|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES         |
 |---------|---------|---------|---------|
 | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-order-management-feature-integration.html)    | [Retrieving Marketplace orders](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-oms-process-csv.html)        | [Reference: Marketplace Order module relations](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management/reference-marketplace-order-module-relations.html)        |
 | [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-order-management-order-threshold-feature-integration.html)    |         | [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-order-status-csv.html)        |[Reference: Merchant order module relations](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management/reference-merchant-order-module-relations.html)         |

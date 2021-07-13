@@ -12,7 +12,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 ## Related Developer articles
 
 
-|Integration guides  |Glue API guides  |Data import  |References  |
+|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES         |
 |---------|---------|---------|---------|
 |[Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchant-feature-integration.html)     |[Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)         | [File details: merchant.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-csv.html)        | [Merchant entity diagram](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchant/reference-merchant-entity-diagram.html)|
 |[Glue API: Marketplace Merchant integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-merchant-feature-integration.html)     |         | [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-profile-csv.html)        ||

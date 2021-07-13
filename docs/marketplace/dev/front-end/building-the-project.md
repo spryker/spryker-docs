@@ -15,19 +15,9 @@ it internally builds a dependency graph which maps every module that project nee
 - All builded Frontend stuff (css, fonts, images, js) are located in the `/public/Backoffice/assets` folder.
 
 Merchant Portal is splited by composer modules and has it’s own pieces of application in the form of an Angular Module with Angular+Web Components.
-A general structure of every Frontend module in the Spryker Marketplace:
-
-- MODULE_NAME
-  - src/Spryker/Zed/MODULE_NAME
-    - Presentation - this is the namespace where the marketplace front-end-related files are located.
-      - Components — all Angular files are located here.
-        - entry.ts — registers all Angular NgModules via `registerNgModule` from `@mp/zed-ui/app/registry`
-        - app—contains Angular components and services.
-          - components.module.ts — an Angular NgModule with components, such as web components (extends `WebComponentsModule` from @spryker/web-components).
-        - public-api — exports all public components / modules / services / types / tokens.
-      - TWIG_FOLDER — a folder with twig view.
-  - mp.public-api.ts — exports the public-api file.
-  - package.json — adds `MODULE_NAME` specific packages.
+Every module has an entry point called `entry.ts` that will be collected during the build as webpack entries and included as a chunk in the Merchant Portal build.
+Those chunk names are taken from the module name and then transformed to a `kebab-case`.
+A general structure of every Frontend module in the Spryker Marketplace is available [here](/docs/marketplace/dev/front-end/project-structure.html#module-structure).
   
 List the commands to build the Merchant Portal Frontend: 
 - `npm run mp:build` - for build

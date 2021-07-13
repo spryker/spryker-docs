@@ -21,7 +21,7 @@ To start feature integration, integrate the required features:
 | Marketplace Product | master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-feature-integration.html)  |
 | Product Offer | master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html)   |
 
-### 1) Set up behavior
+### Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

@@ -8,6 +8,7 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Product Offer + Checkout feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product Offer + Checkout feature core.
 
 ### Prerequisites

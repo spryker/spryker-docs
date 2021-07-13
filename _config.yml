@@ -109,6 +109,7 @@ versioned_categories:
       - merchant-portal-user-guides
     dev:
       - feature-integration-guides
+      - feature-walkthroughs
       - glue-api-guides
       - data-import
       - data-export

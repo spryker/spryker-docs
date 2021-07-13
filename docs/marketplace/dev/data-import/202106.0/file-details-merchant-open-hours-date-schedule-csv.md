@@ -5,7 +5,7 @@ description: This document describes the merchant_open_hours_date_schedule.csv f
 template: import-file-template
 ---
 
-This document describes the `merchant_open_hours_date_schedule.csv` file to configure [special merchant opening hours](/docs/marketplace/user/features/{{ site.version }}/merchants/merchants-feature-overview.html#merchant-opening-hours) in your Spryker shop.
+This document describes the `merchant_open_hours_date_schedule.csv` file to configure [special merchant opening hours](/docs/marketplace/user/features/{{ site.version }}/merchant-opening-hours/merchant-opening-hours.html) in your Spryker shop.
 
 To import the file, run:
 

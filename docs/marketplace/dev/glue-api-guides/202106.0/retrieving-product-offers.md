@@ -4,12 +4,6 @@ description: Retrieve Marketplace product offers via API
 template: glue-api-storefront-guide-template
 ---
 
-{% info_block warningBox "Note" %}
-
-This resource is available only in case you have upgraded your shop to the Marketplace provided by Spryker.
-
-{% endinfo_block %}
-
 Product offers allow different merchants to sell the same product on the Marketplace. Product offers are created per concrete products, and you can get the offer information via retrieving the product information.
 
 In your development, product offers API can help you to retrieve relevant extended information for product offers.

@@ -11,7 +11,6 @@ This document describes how to integrate the Marketplace Promotions & Discounts 
 
 Follow the steps below to install the Marketplace Promotions & Discounts feature core.
 
-
 ### Prerequisites
 
 To start feature integration, integrate the required features:

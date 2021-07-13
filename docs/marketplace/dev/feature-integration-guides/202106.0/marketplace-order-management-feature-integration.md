@@ -5,7 +5,6 @@ description: This document describes how to integrate the Marketplace Order Mana
 template: feature-integration-guide-template
 ---
 
-
 This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 
 ## Install feature core
@@ -13,6 +12,8 @@ This document describes how to integrate the Marketplace Order Management featur
 Follow the steps below to install the Marketplace Order Management feature core.
 
 ### Prerequisites
+
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|
@@ -46,7 +47,300 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+### 2) Set up configuration
+
+<!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
+
+Add the following configuration:
+
+| CONFIGURATION | SPECIFICATION | NAMESPACE |
+| ------------- | ------------ | ------------ |
+| MainMerchantStateMachine | Introduce `MainMerchantStateMachine` configuration. | config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml |
+| MerchantDefaultStateMachine | Introduce `MerchantDefaultStateMachine` configuration. | config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml |
+| MarketplacePayment  | Introduce `MarketplacePayment` order management system. | config/Zed/oms/MarketplacePayment01.xml |
+| MarketplacePayment  | Introduce `MarketplacePayment` order management system. | config/Zed/oms/MarketplacePayment01.xml |
+
+<details>
+<summary markdown='span'>config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml</summary>
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+    xmlns="spryker:state-machine-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:state-machine-01 http://static.spryker.com/state-machine-01.xsd"
+>
+    <process name="MainMerchantStateMachine" main="true">
+
+        <states>
+            <state name="created"/>
+            <state name="new"/>
+            <state name="canceled"/>
+            <state name="left the merchant location"/>
+            <state name="arrived at distribution center"/>
+            <state name="shipped"/>
+            <state name="delivered"/>
+            <state name="closed"/>
+        </states>
+
+        <transitions>
+            <transition happy="true">
+                <source>created</source>
+                <target>new</target>
+                <event>initiate</event>
+            </transition>
+
+            <transition>
+                <source>new</source>
+                <target>closed</target>
+                <event>close</event>
+            </transition>
+
+            <transition>
+                <source>new</source>
+                <target>canceled</target>
+                <event>cancel</event>
+            </transition>
+
+            <transition>
+                <source>canceled</source>
+                <target>closed</target>
+                <event>close</event>
+            </transition>
+
+            <transition happy="true">
+                <source>new</source>
+                <target>left the merchant location</target>
+                <event>send to distribution</event>
+            </transition>
+
+            <transition happy="true">
+                <source>left the merchant location</source>
+                <target>arrived at distribution center</target>
+                <event>confirm at center</event>
+            </transition>
+
+            <transition happy="true">
+                <source>arrived at distribution center</source>
+                <target>shipped</target>
+                <event>ship</event>
+            </transition>
+
+            <transition happy="true">
+                <source>shipped</source>
+                <target>delivered</target>
+                <event>deliver</event>
+            </transition>
+
+            <transition happy="true">
+                <source>delivered</source>
+                <target>closed</target>
+                <event>close</event>
+            </transition>
+        </transitions>
+
+        <events>
+            <event name="initiate" onEnter="true"/>
+            <event name="send to distribution" manual="true"/>
+            <event name="confirm at center" manual="true"/>
+            <event name="ship" manual="true" command="DummyMarketplacePayment/ShipOrderItem"/>
+            <event name="deliver" manual="true" command="DummyMarketplacePayment/DeliverOrderItem"/>
+            <event name="close"/>
+            <event name="cancel" manual="true"/>
+        </events>
+
+    </process>
+
+</statemachine>
+
+```
+
+</details>
+
+<details>
+<summary markdown='span'>config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml</summary>
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+    xmlns="spryker:state-machine-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:state-machine-01 http://static.spryker.com/state-machine-01.xsd"
+>
+
+    <process name="MerchantDefaultStateMachine" main="true">
+
+        <states>
+            <state name="created"/>
+            <state name="new"/>
+            <state name="canceled by merchant"/>
+            <state name="shipped"/>
+            <state name="delivered"/>
+            <state name="closed"/>
+        </states>
+
+        <transitions>
+            <transition happy="true">
+                <source>created</source>
+                <target>new</target>
+                <event>initiate</event>
+            </transition>
+
+            <transition happy="true">
+                <source>new</source>
+                <target>shipped</target>
+                <event>ship</event>
+            </transition>
+
+            <transition>
+                <source>new</source>
+                <target>closed</target>
+                <event>close</event>
+            </transition>
+
+            <transition>
+                <source>new</source>
+                <target>canceled by merchant</target>
+                <event>cancel by merchant</event>
+            </transition>
+
+            <transition>
+                <source>canceled by merchant</source>
+                <target>closed</target>
+                <event>close</event>
+            </transition>
+
+            <transition happy="true">
+                <source>shipped</source>
+                <target>delivered</target>
+                <event>deliver</event>
+            </transition>
+
+            <transition happy="true">
+                <source>delivered</source>
+                <target>closed</target>
+                <event>close</event>
+            </transition>
+        </transitions>
+
+        <events>
+            <event name="initiate" onEnter="true"/>
+            <event name="ship" manual="true" command="DummyMarketplacePayment/ShipOrderItem"/>
+            <event name="deliver" manual="true" command="DummyMarketplacePayment/DeliverOrderItem"/>
+            <event name="close"/>
+            <event name="cancel by merchant" manual="true"/>
+        </events>
+
+    </process>
+
+</statemachine>
+
+```
+</details>
+
+<details>
+<summary markdown='span'>config/Zed/oms/MarketplacePayment01.xml</summary>
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+    xmlns="spryker:oms-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="MarketplacePayment01" main="true">
+        <states>
+            <state name="new" reserved="true" display="oms.state.new"/>
+            <state name="paid" reserved="true" display="oms.state.paid"/>
+            <state name="canceled" display="oms.state.canceled"/>
+            <state name="refunded" display="oms.state.refunded"/>
+            <state name="merchant split pending" reserved="true" display="oms.state.merchant-split-pending"/>
+            <state name="sent to merchant" reserved="true" display="oms.state.sent-to-merchant"/>
+            <state name="shipped by merchant" reserved="true" display="oms.state.shipped-by-merchant"/>
+            <state name="delivered" reserved="true" display="oms.state.delivered"/>
+            <state name="closed" display="oms.state.closed"/>
+        </states>
+
+        <transitions>
+            <transition happy="true">
+                <source>new</source>
+                <target>paid</target>
+                <event>pay</event>
+            </transition>
+
+            <transition happy="true" condition="MerchantSalesOrder/IsOrderPaid">
+                <source>paid</source>
+                <target>merchant split pending</target>
+            </transition>
+
+            <transition>
+                <source>paid</source>
+                <target>paid</target>
+            </transition>
+
+            <transition happy="true">
+                <source>merchant split pending</source>
+                <target>sent to merchant</target>
+                <event>send to merchant</event>
+            </transition>
+
+            <transition>
+                <source>sent to merchant</source>
+                <target>canceled</target>
+                <event>cancel</event>
+            </transition>
+
+            <transition>
+                <source>canceled</source>
+                <target>refunded</target>
+                <event>refund</event>
+            </transition>
+
+            <transition>
+                <source>refunded</source>
+                <target>closed</target>
+                <event>close</event>
+            </transition>
+
+            <transition happy="true">
+                <source>sent to merchant</source>
+                <target>shipped by merchant</target>
+                <event>ship by merchant</event>
+            </transition>
+
+            <transition happy="true">
+                <source>shipped by merchant</source>
+                <target>delivered</target>
+                <event>deliver</event>
+            </transition>
+
+            <transition happy="true">
+                <source>delivered</source>
+                <target>closed</target>
+                <event>close</event>
+            </transition>
+
+        </transitions>
+
+        <events>
+            <event name="pay" manual="true"/>
+            <event name="cancel" manual="true"/>
+            <event name="refund" manual="true"/>
+            <event name="send to merchant" onEnter="true" command="MerchantSalesOrder/CreateOrders"/>
+            <event name="ship by merchant"/>
+            <event name="deliver"/>
+            <event name="close" manual="true" command="MerchantOms/CloseOrderItem"/>
+        </events>
+    </process>
+
+</statemachine>
+```
+
+</details>
+
+
+### 3) Set up database schema and transfer objects
 Apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -86,14 +380,15 @@ Make sure that the following changes have been triggered in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Add translations
+### 4) Add translations
+
 Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
 ```
 
-### 4) Import data
+### 5) Import data
 
 Import data as follows:
 
@@ -118,7 +413,6 @@ MER000005,MerchantDefaultStateMachine
 |merchant_oms_process_name     |    &check;     |     string   |  MainMerchantStateMachine       | String identifier for the State Machine processes.|
 
 2. Register the following plugin to enable data import:
-
 
 |PLUGIN  |SPECIFICATION  |PREREQUISITES  |NAMESPACE  |
 |---------|---------|---------|---------|
@@ -159,7 +453,7 @@ Make sure that in the `spy_merchant` table, merchants have correct `fk_process i
 
 {% endinfo_block %}
 
-### 5) Export data
+### 6) Export data
 
 Export data as follows:
 
@@ -276,7 +570,8 @@ class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
 console data:export --config=merchant_order_export_config.yml
 ```
 
-### 6) Set up behavior
+### 7) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -517,6 +812,7 @@ Ensure the following transfers have been created:
 {% endinfo_block %}
 
 ### 3) Set up plugins
+
 Register the following plugins to enable widgets:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |

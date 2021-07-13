@@ -7,7 +7,6 @@ template: feature-integration-guide-template
 
 This document describes how to integrate the Marketplace Merchant Glue API feature into a Spryker project.
 
-
 ## Install feature core
 
 Follow the steps below to install the Marketplace Merchant Glue API feature core.

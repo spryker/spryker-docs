@@ -1,6 +1,6 @@
 ---
-title: Installation
-description: Retrieve information about Marketplace offers via API
+title: Retrieving Marketplace orders
+description: Retrieve information about Marketplace orders via Glue API.
 template: glue-api-storefront-guide-template
 ---
 
@@ -11,7 +11,7 @@ In your development, this resource can help you to:
 - Make the order history available to customers.
 - Make order details available to enable reordering functionality.
 
-The **Order History API** allows you to retrieve all orders made by a registered customer.
+The **Marketplace Order Management API** allows you to retrieve all orders made by a registered customer.
 
 **Authentication**
 
@@ -44,11 +44,11 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | REQUEST | USAGE  |
 | --------------------- | ------------------ |
-| `GET https://glue.mysprykershop.com/orders`  | Retrieve all customer’s orders.  |
-| `GET https://glue.mysprykershop.com/orders?page[limit]=10`  | Retrieve 10 orders. |
-| `GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10` | Retrieve orders 11 through 20.  |
-| `GET https://glue.mysprykershop.com/orders?page[offset]=20`  | Retrieve all orders starting from the twenty-first order.  |
-| `GET https://glue.mysprykershop.com/orders?include=merchants`  | Retrieve all customer’s orders with the information on merchants included.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| GET https://glue.mysprykershop.com/orders  | Retrieve all customer’s orders.  |
+| GET https://glue.mysprykershop.com/orders?page[limit]=10  | Retrieve 10 orders. |
+| GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10 | Retrieve orders 11 through 20.  |
+| GET https://glue.mysprykershop.com/orders?page[offset]=20  | Retrieve all orders starting from the twenty-first order.  |
+| GET https://glue.mysprykershop.com/orders?include=merchants  | Retrieve all customer’s orders with the information on merchants included.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 
 ### Response
 
@@ -207,7 +207,7 @@ The endpoint responds with an array of orders placed by the authenticated custom
 {% info_block warningBox "Note" %}
 
 This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.
-                       
+
 {% endinfo_block %}
 
 ```json
@@ -516,17 +516,17 @@ This option is available only in case you have upgraded your shop to the [Market
 ```
 </details>
 
-**General order information**
+#### General order information
 
 | ATTRIBUTE    | TYPE  | DESCRIPTION     |
 | -------------- | -------- | ----------------------- |
-| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/merchants/merchants-feature-overview.html) for more details.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for more details.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 | itemStates  | Array  | State of the item in the order.    |
 | createdAt  | String   | Date and time when the order was created.    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode  | String | Price mode that was active when placing the order. Possible values:<ul><li>NET_MODE—prices before tax</li><li>GROSS_MODE—prices after tax</li></ul> |
 
-**Totals calculation**
+#### Totals calculation
 
 |    ATTRIBUTE    | TYPE  |DESCRIPTION               |
 | ----------------- | ------- | ------------------------------------------------------- |
@@ -550,8 +550,8 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 ---
 
 | PATH PARAMETER | DESCRIPTION     |
-| ------------------ | ------------------------------------------------------------ |
-| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](https://documentation.spryker.com/docs/en/retrieving-customers-order-history#retrieving-all-orders) to get it. |
+| ------------------ | ------------------------------ |
+| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](https://documentation.spryker.com/docs/retrieving-customers-order-history#retrieving-all-orders) to get it. |
 
 ### Request
 
@@ -559,38 +559,265 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 | ------------- | ------------ | -------- | ---------------------- |
 | Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
 
+
+| String parameter | Description     | Possible values    |
+| ---------------- | -------------------- | --------------------- |
+| include          | Adds resource relationships to the request. | order-shipments, concrete-products, abstract-products, merchants |
+
 | REQUEST | USAGE |
-| ------------------------ | ------------------------ |
-| `GET http://glue.mysprykershop.com/orders/DE--2`   | Retrieve information about the DE--1 order.  |
-| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order DE--3 with information on merchants.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| ----------------- | ------------------ |
+| GET http://glue.mysprykershop.com/orders/DE--6   | Retrieve information about the `DE--6` order.  |
+| GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieve information about the order with the id `DE--6` with order shipments included. |
+| GET http://glue.mysprykershop.com/orders/DE--3?include=merchants | Retrieve order `DE--3` with information on merchants.{% info_block warningBox "Note" %}This option is available only if you upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html).{% endinfo_block %} |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: a specific order</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
     "data": {
         "type": "orders",
-        "id": "DE--2",
+        "id": "DE--6",
         "attributes": {
-            "merchantReferences": [
-                "MER000002",
-                "MER000001"
-            ],
+            "merchantReferences": [],
             "itemStates": [
-                "new"
+                "payment pending"
             ],
-            "createdAt": "2020-10-19 15:16:21.879286",
+            "createdAt": "2021-01-05 13:43:23.000000",
             "currencyIsoCode": "EUR",
             "priceMode": "GROSS_MODE",
             "totals": {
-                "expenseTotal": 1590,
-                "discountTotal": 3959,
-                "taxTotal": 4957,
-                "subtotal": 39586,
-                "grandTotal": 37217,
+                "expenseTotal": 1180,
+                "discountTotal": 0,
+                "taxTotal": 12173,
+                "subtotal": 75064,
+                "grandTotal": 76244,
+                "canceledTotal": 0,
+                "remunerationTotal": 0
+            },
+            "billingAddress": {
+                "salutation": "Mr",
+                "firstName": "Spencor",
+                "middleName": null,
+                "lastName": "Hopkin",
+                "address1": "Julie-Wolfthorn-Straße",
+                "address2": "1",
+                "address3": "new address",
+                "company": "spryker",
+                "city": "Berlin",
+                "zipCode": "10115",
+                "poBox": null,
+                "phone": "+49 (30) 2084 98350",
+                "cellPhone": null,
+                "description": null,
+                "comment": null,
+                "email": null,
+                "country": "Germany",
+                "iso2Code": "DE"
+            },
+            "shippingAddress": null,
+            "items": [
+                {
+                    "merchantReference": null,
+                    "state": "payment pending",
+                    "name": "Samsung Galaxy S5 mini",
+                    "sku": "066_23294028",
+                    "sumPrice": 39353,
+                    "quantity": 1,
+                    "unitGrossPrice": 39353,
+                    "sumGrossPrice": 39353,
+                    "taxRate": "19.00",
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitPrice": 39353,
+                    "unitTaxAmountFullAggregation": 6283,
+                    "sumTaxAmountFullAggregation": 6283,
+                    "refundableAmount": 39353,
+                    "canceledAmount": 0,
+                    "sumSubtotalAggregation": 39353,
+                    "unitSubtotalAggregation": 39353,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitExpensePriceAggregation": 0,
+                    "sumExpensePriceAggregation": null,
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 39353,
+                    "sumPriceToPayAggregation": 39353,
+                    "taxRateAverageAggregation": "19.00",
+                    "taxAmountAfterCancellation": null,
+                    "orderReference": null,
+                    "uuid": "3db99597-99a0-58a9-a0ea-696e8da0026e",
+                    "isReturnable": false,
+                    "idShipment": 11,
+                    "bundleItemIdentifier": null,
+                    "relatedBundleItemIdentifier": null,
+                    "salesOrderConfiguredBundle": null,
+                    "salesOrderConfiguredBundleItem": null,
+                    "metadata": {
+                        "superAttributes": {
+                            "color": "Blue"
+                        },
+                        "image": "https://images.icecat.biz/img/gallery_mediums/23294028_3275.jpg"
+                    },
+                    "salesUnit": null,
+                    "calculatedDiscounts": [],
+                    "productOptions": [],
+                    "amount": null
+                },
+                {
+                    "merchantReference": null,
+                    "state": "payment pending",
+                    "name": "Sony Xperia Z3 Compact",
+                    "sku": "076_24394207",
+                    "sumPrice": 35711,
+                    "quantity": 1,
+                    "unitGrossPrice": 35711,
+                    "sumGrossPrice": 35711,
+                    "taxRate": "19.00",
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitPrice": 35711,
+                    "unitTaxAmountFullAggregation": 5702,
+                    "sumTaxAmountFullAggregation": 5702,
+                    "refundableAmount": 35711,
+                    "canceledAmount": 0,
+                    "sumSubtotalAggregation": 35711,
+                    "unitSubtotalAggregation": 35711,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitExpensePriceAggregation": 0,
+                    "sumExpensePriceAggregation": null,
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 35711,
+                    "sumPriceToPayAggregation": 35711,
+                    "taxRateAverageAggregation": "19.00",
+                    "taxAmountAfterCancellation": null,
+                    "orderReference": null,
+                    "uuid": "40274175-4398-5927-8980-48ead5053e69",
+                    "isReturnable": false,
+                    "idShipment": 12,
+                    "bundleItemIdentifier": null,
+                    "relatedBundleItemIdentifier": null,
+                    "salesOrderConfiguredBundle": null,
+                    "salesOrderConfiguredBundleItem": null,
+                    "metadata": {
+                        "superAttributes": {
+                            "color": "White"
+                        },
+                        "image": "https://images.icecat.biz/img/norm/medium/24394207-3552.jpg"
+                    },
+                    "salesUnit": null,
+                    "calculatedDiscounts": [
+                        {
+                            "unitAmount": 786,
+                            "sumAmount": 786,
+                            "displayName": "10% Discount for all orders above",
+                            "description": "Get a 10% discount on all orders above certain value depending on the currency and net/gross price. This discount is not exclusive and can be combined with other discounts.",
+                            "voucherCode": null,
+                            "quantity": 1
+                        }     
+                    ],                   
+                    "productOptions": [],
+                    "amount": null
+                }
+            ],
+            "expenses": [
+                {
+                    "type": "SHIPMENT_EXPENSE_TYPE",
+                    "name": "Express",
+                    "sumPrice": 590,
+                    "unitGrossPrice": 590,
+                    "sumGrossPrice": 590,
+                    "taxRate": "19.00",
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "canceledAmount": null,
+                    "unitDiscountAmountAggregation": null,
+                    "sumDiscountAmountAggregation": null,
+                    "unitTaxAmount": 94,
+                    "sumTaxAmount": 94,
+                    "unitPriceToPayAggregation": 590,
+                    "sumPriceToPayAggregation": 590,
+                    "taxAmountAfterCancellation": null,
+                    "idShipment": 11,
+                    "idSalesExpense": 11
+                },
+                {
+                    "type": "SHIPMENT_EXPENSE_TYPE",
+                    "name": "Express",
+                    "sumPrice": 590,
+                    "unitGrossPrice": 590,
+                    "sumGrossPrice": 590,
+                    "taxRate": "19.00",
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "canceledAmount": null,
+                    "unitDiscountAmountAggregation": null,
+                    "sumDiscountAmountAggregation": null,
+                    "unitTaxAmount": 94,
+                    "sumTaxAmount": 94,
+                    "unitPriceToPayAggregation": 590,
+                    "sumPriceToPayAggregation": 590,
+                    "taxAmountAfterCancellation": null,
+                    "idShipment": 12,
+                    "idSalesExpense": 12
+                }
+            ],
+            "payments": [
+                {
+                    "amount": 76244,
+                    "paymentProvider": "DummyPayment",
+                    "paymentMethod": "Invoice"
+                }
+            ],
+            "shipments": [],
+            "calculatedDiscounts": [],
+            "bundleItems": []
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/orders/DE--6"
+        }
+    }
+}
+```
+
+</details>
+
+
+<details>
+<summary markdown='span'>Response sample with order shipments</summary>
+
+```json
+{
+    "data": {
+        "type": "orders",
+        "id": "DE--6",
+        "attributes": {
+            "merchantReferences": [
+                "MER000005",
+                "MER000002"
+            ],
+            "itemStates": [
+                "sent to merchant",
+                "delivered"
+            ],
+            "createdAt": "2021-06-18 13:44:23.895154",
+            "currencyIsoCode": "EUR",
+            "priceMode": "GROSS_MODE",
+            "totals": {
+                "expenseTotal": 2500,
+                "discountTotal": 0,
+                "taxTotal": 6976,
+                "subtotal": 41191,
+                "grandTotal": 43691,
                 "canceledTotal": 0,
                 "remunerationTotal": 0
             },
@@ -636,118 +863,106 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
             },
             "items": [
                 {
-                    "merchantReference": "MER000002",
-                    "state": "new",
-                    "name": "Toshiba CAMILEO S30",
-                    "sku": "205_6350138",
-                    "sumPrice": 11611,
+                    "merchantReference": "MER000005",
+                    "state": "sent to merchant",
+                    "name": "Sony Cyber-shot DSC-W830",
+                    "sku": "018_21081477",
+                    "sumPrice": 31140,
                     "quantity": 1,
-                    "unitGrossPrice": 11611,
-                    "sumGrossPrice": 11611,
-                    "taxRate": "7.00",
+                    "unitGrossPrice": 31140,
+                    "sumGrossPrice": 31140,
+                    "taxRate": "19.00",
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
-                    "unitPrice": 11611,
-                    "unitTaxAmountFullAggregation": 684,
-                    "sumTaxAmountFullAggregation": 684,
-                    "refundableAmount": 10450,
+                    "unitPrice": 31140,
+                    "unitTaxAmountFullAggregation": 4972,
+                    "sumTaxAmountFullAggregation": 4972,
+                    "refundableAmount": 31140,
                     "canceledAmount": 0,
-                    "sumSubtotalAggregation": 11611,
-                    "unitSubtotalAggregation": 11611,
+                    "sumSubtotalAggregation": 31140,
+                    "unitSubtotalAggregation": 31140,
                     "unitProductOptionPriceAggregation": 0,
                     "sumProductOptionPriceAggregation": 0,
                     "unitExpensePriceAggregation": 0,
                     "sumExpensePriceAggregation": null,
-                    "unitDiscountAmountAggregation": 1161,
-                    "sumDiscountAmountAggregation": 1161,
-                    "unitDiscountAmountFullAggregation": 1161,
-                    "sumDiscountAmountFullAggregation": 1161,
-                    "unitPriceToPayAggregation": 10450,
-                    "sumPriceToPayAggregation": 10450,
-                    "taxRateAverageAggregation": "7.00",
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 31140,
+                    "sumPriceToPayAggregation": 31140,
+                    "taxRateAverageAggregation": "19.00",
                     "taxAmountAfterCancellation": null,
                     "orderReference": null,
-                    "uuid": "d5e948d9-f470-5b9a-b1c7-c1321761312a",
+                    "uuid": "349f3ce2-0396-5ed4-a2df-c9e053cb3350",
                     "isReturnable": false,
+                    "idShipment": 11,
                     "bundleItemIdentifier": null,
                     "relatedBundleItemIdentifier": null,
+                    "productOfferReference": "offer66",
                     "salesOrderConfiguredBundle": null,
                     "salesOrderConfiguredBundleItem": null,
                     "metadata": {
                         "superAttributes": {
-                            "color": "Grey"
+                            "color": "Pink"
                         },
-                        "image": "https://images.icecat.biz/img/gallery_mediums/img_6350138_medium_1481633011_6285_13738.jpg"
+                        "image": "https://d2s0ynfc62ej12.cloudfront.net/b2c/21081477-Sony.jpg"
                     },
+                    "salesOrderItemConfiguration": null,
                     "salesUnit": null,
-                    "calculatedDiscounts": [
-                        {
-                            "unitAmount": 1161,
-                            "sumAmount": 1161,
-                            "displayName": "10% Discount for all orders above",
-                            "description": "Get a 10% discount on all orders above certain value depending on the currency and net/gross price. This discount is not exclusive and can be combined with other discounts.",
-                            "voucherCode": null,
-                            "quantity": 1
-                        }
-                    ],
+                    "calculatedDiscounts": [],
                     "productOptions": [],
                     "amount": null
                 },
                 {
-                    "merchantReference": "MER000001",
-                    "state": "new",
-                    "name": "Samsung Galaxy Note 4",
-                    "sku": "061_24752508",
-                    "sumPrice": 27975,
+                    "merchantReference": "MER000002",
+                    "state": "delivered",
+                    "name": "Sony Cyber-shot DSC-W830",
+                    "sku": "020_21081478",
+                    "sumPrice": 10051,
                     "quantity": 1,
-                    "unitGrossPrice": 27975,
-                    "sumGrossPrice": 27975,
+                    "unitGrossPrice": 10051,
+                    "sumGrossPrice": 10051,
                     "taxRate": "19.00",
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
-                    "unitPrice": 27975,
-                    "unitTaxAmountFullAggregation": 4020,
-                    "sumTaxAmountFullAggregation": 4020,
-                    "refundableAmount": 25177,
+                    "unitPrice": 10051,
+                    "unitTaxAmountFullAggregation": 1605,
+                    "sumTaxAmountFullAggregation": 1605,
+                    "refundableAmount": 10051,
                     "canceledAmount": 0,
-                    "sumSubtotalAggregation": 27975,
-                    "unitSubtotalAggregation": 27975,
+                    "sumSubtotalAggregation": 10051,
+                    "unitSubtotalAggregation": 10051,
                     "unitProductOptionPriceAggregation": 0,
                     "sumProductOptionPriceAggregation": 0,
                     "unitExpensePriceAggregation": 0,
                     "sumExpensePriceAggregation": null,
-                    "unitDiscountAmountAggregation": 2798,
-                    "sumDiscountAmountAggregation": 2798,
-                    "unitDiscountAmountFullAggregation": 2798,
-                    "sumDiscountAmountFullAggregation": 2798,
-                    "unitPriceToPayAggregation": 25177,
-                    "sumPriceToPayAggregation": 25177,
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 10051,
+                    "sumPriceToPayAggregation": 10051,
                     "taxRateAverageAggregation": "19.00",
                     "taxAmountAfterCancellation": null,
                     "orderReference": null,
-                    "uuid": "dedc66da-9af9-504f-bdfc-e45b23118786",
-                    "isReturnable": false,
+                    "uuid": "2b8ded00-2831-5557-83a2-3d29fc7c9ae8",
+                    "isReturnable": true,
+                    "idShipment": 12,
                     "bundleItemIdentifier": null,
                     "relatedBundleItemIdentifier": null,
+                    "productOfferReference": "offer27",
                     "salesOrderConfiguredBundle": null,
                     "salesOrderConfiguredBundleItem": null,
                     "metadata": {
                         "superAttributes": {
                             "color": "Black"
                         },
-                        "image": "https://images.icecat.biz/img/norm/medium/24752508-8866.jpg"
+                        "image": "https://d2s0ynfc62ej12.cloudfront.net/b2c/21081478-Sony.jpg"
                     },
+                    "salesOrderItemConfiguration": null,
                     "salesUnit": null,
-                    "calculatedDiscounts": [
-                        {
-                            "unitAmount": 2798,
-                            "sumAmount": 2798,
-                            "displayName": "10% Discount for all orders above",
-                            "description": "Get a 10% discount on all orders above certain value depending on the currency and net/gross price. This discount is not exclusive and can be combined with other discounts.",
-                            "voucherCode": null,
-                            "quantity": 1
-                        }
-                    ],
+                    "calculatedDiscounts": [],
                     "productOptions": [],
                     "amount": null
                 }
@@ -755,25 +970,27 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
             "expenses": [
                 {
                     "type": "SHIPMENT_EXPENSE_TYPE",
-                    "name": "Express",
-                    "sumPrice": 590,
-                    "unitGrossPrice": 590,
-                    "sumGrossPrice": 590,
+                    "name": "Next-Day",
+                    "sumPrice": 1500,
+                    "unitGrossPrice": 1500,
+                    "sumGrossPrice": 1500,
                     "taxRate": "19.00",
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
                     "canceledAmount": null,
                     "unitDiscountAmountAggregation": null,
                     "sumDiscountAmountAggregation": null,
-                    "unitTaxAmount": 94,
-                    "sumTaxAmount": 94,
-                    "unitPriceToPayAggregation": 590,
-                    "sumPriceToPayAggregation": 590,
-                    "taxAmountAfterCancellation": null
+                    "unitTaxAmount": 240,
+                    "sumTaxAmount": 240,
+                    "unitPriceToPayAggregation": 1500,
+                    "sumPriceToPayAggregation": 1500,
+                    "taxAmountAfterCancellation": null,
+                    "idShipment": 12,
+                    "idSalesExpense": 12
                 },
                 {
                     "type": "SHIPMENT_EXPENSE_TYPE",
-                    "name": "Air Sonic",
+                    "name": "Premium",
                     "sumPrice": 1000,
                     "unitGrossPrice": 1000,
                     "sumGrossPrice": 1000,
@@ -787,36 +1004,31 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
                     "sumTaxAmount": 159,
                     "unitPriceToPayAggregation": 1000,
                     "sumPriceToPayAggregation": 1000,
-                    "taxAmountAfterCancellation": null
+                    "taxAmountAfterCancellation": null,
+                    "idShipment": 11,
+                    "idSalesExpense": 11
                 }
             ],
             "payments": [
                 {
-                    "amount": 37217,
+                    "amount": 43691,
                     "paymentProvider": "DummyMarketplacePayment",
                     "paymentMethod": "Marketplace Invoice"
                 }
             ],
             "shipments": [],
-            "calculatedDiscounts": {
-                "10% Discount for all orders above": {
-                    "unitAmount": null,
-                    "sumAmount": 3959,
-                    "displayName": "10% Discount for all orders above",
-                    "description": "Get a 10% discount on all orders above certain value depending on the currency and net/gross price. This discount is not exclusive and can be combined with other discounts.",
-                    "voucherCode": null,
-                    "quantity": 2
-                }
-            },
+            "calculatedDiscounts": [],
             "bundleItems": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/orders/DE--2"
+            "self": "https://glue.mysprykershop.com/orders/DE--6"
         }
     }
 }
 ```
+
 </details>
+
 
 <details>
 <summary markdown='span'>Response sample with information on merchants</summary>
@@ -866,26 +1078,7 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
                 "country": "Germany",
                 "iso2Code": "DE"
             },
-            "shippingAddress": {
-                "salutation": "Ms",
-                "firstName": "Sonia",
-                "middleName": null,
-                "lastName": "Wagner",
-                "address1": "Kirncher Str.",
-                "address2": "7",
-                "address3": "",
-                "company": "Spryker Systems GmbH",
-                "city": "Berlin",
-                "zipCode": "10247",
-                "poBox": null,
-                "phone": "4902890031",
-                "cellPhone": null,
-                "description": null,
-                "comment": "",
-                "email": null,
-                "country": "Germany",
-                "iso2Code": "DE"
-            },
+            "shippingAddress": null,
             "items": [
                 {
                     "merchantReference": "MER000002",
@@ -1148,180 +1341,207 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 ```
 </details>
 
-**General order information**
+#### General order information
 
-| ATTRIBUTE     | TYPE | DESCRIPTION            |
-| ------------------ | -------- | ------------------------ |
+| ATTRIBUTE     | TYPE | DESCRIPTION     |
+| ------------------ | -------- | --------------------- |
 | merchantReferences | Array    | Merchant reference in the system. {% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
-| itemStates         | Array    | State of the item in the order.                          |
-| createdAt          | String   | Date and time when the order was created.           |
-| currencyIsoCode    | String   | ISO 4217 code of the currency that was selected when placing the order. |
-| priceMode          | String   | Price mode that was active when placing the order. Possible values:<ul><li>NET_MODE—prices before tax.</li><li>GROSS_MODE—prices after tax.</li><ul> |
+| itemStates      | Array  | Statuses of the order’s items in the [state machine](https://documentation.spryker.com/docs/order-process-modelling-state-machines). |
+| createdAt       | String | Date and time when the order was created.   |
+| currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
+| priceMode       | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
 
-**Totals calculations**
+#### Totals calculations
 
 | ATTRIBUTE     | TYPE | DESCRIPTION                |
 | ----------------- | -------- | --------------- |
-| expenseTotal      | Integer  | Total amount of expenses (for example, shipping costs). |
-| discountTotal     | Integer  | Total amount of discounts applied.                      |
-| taxTotal          | Integer  | Total amount of taxes paid.                             |
-| subtotal          | Integer  | Subtotal of the order.                                  |
-| grandTotal        | Integer  | Grand total of the order                                |
-| canceledTotal     | Integer  | Total canceled amount.                                  |
-| remunerationTotal | Integer  | Total sum of remuneration.                              |
+| totals                   | Object  | Totals calculations.                            |
+| totals.expenseTotal      | Integer | Total amount of expenses (e.g. shipping costs). |
+| totals.discountTotal     | Integer | Total amount of discounts applied.              |
+| totals.taxTotal          | Integer | Total amount of taxes paid.                     |
+| totals.subtotal          | Integer | Subtotal of the order.                          |
+| totals.grandTotal        | Integer | Grand total of the order                        |
+| totals.canceledTotal     | Integer | Total canceled amount.                          |
+| totals.remunerationTotal | Integer | Total sum of remuneration.                      |
 
-**Billing and shipping addresses**
+#### Billing and shipping addresses
 
 | ATTRIBUTE     | TYPE | DESCRIPTION                  |
 | ----------------- | -------- | --------------------------------- |
-| salutation        | String   | Salutation to use when addressing the customer.  |
-| firstName         | String   | Customer's first name.                                       |
-| lastName          | String   | Customer's last name.                                        |
-| address1          | String   | The 1st line of the customer's address.                      |
-| address2          | String   | The 2nd line of the customer's address.                      |
-| address3          | String   | The 3rd line of the customer's address.                      |
-| zipCode           | String   | ZIP code.                                                    |
-| city              | String   | Specifies the city.                                          |
-| country           | String   | Specifies the country.                                       |
-| poBox             | String   | PO Box to use for communication.                             |
-| company           | String   | Specifies the customer's company.                            |
-| phone             | String   | Specifies the customer's phone number.                       |
-| cellPhone         | String   | Mobile phone number.                                         |
-| email             | String   | Email address to use for communication.                      |
-| isDefaultShipping | Boolean  | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is `true`. If the customer does not have a default shipping address, the value is 'true'. |
-| isDefaultBilling  | Boolean  | Specifies whether the address should be used as the default billing address of the customerIf the parameter is not set, the default value is `true`. If the customer does not have a default billing address, the value is `true`. |
-| iso2Code          | String   | ISO 2-Letter Country Code to use.                            |
-| description       | String   | Address description.                                         |
-| comment           | String   | Address comment.                                             |
+| billingAddress             | object | List of attributes describing the billing address of the order. |
+| billingAddress.salutation  | String | Salutation to use when addressing the customer.              |
+| billingAddress.firstName   | String | Customer's first name.                                       |
+| billingAddress.middleName  | String | Customer's middle name.                                      |
+| billingAddress.lastName    | String | Customer's last name.                                        |
+| billingAddress.address1    | String | 1st line of the customer's address.                          |
+| billingAddress.address2    | String | 2nd line of the customer's address.                          |
+| billingAddress.address3    | String | 3rd line of the customer's address.                          |
+| billingAddress.company     | String | Specifies the customer's company.                            |
+| billingAddress.city        | String | Specifies the city.                                          |
+| billingAddress.zipCode     | String | ZIP code.                                                    |
+| billingAddress.poBox       | String | PO Box to use for communication.                             |
+| billingAddress.phone       | String | Specifies the customer's phone number.                       |
+| billingAddress.cellPhone   | String | Mobile phone number.                                         |
+| billingAddress.description | String | Address description.                                         |
+| billingAddress.comment     | String | Address comment.                                             |
+| billingAddress.email       | String | Email address to use for communication.                      |
+| billingAddress.country     | String | Specifies the country.                                       |
+| billingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.                            |
+| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](https://documentation.spryker.com/v6/docs/checking-out-purchases) to learn how to do that. |
 
-**Order item information**
+#### Order item information
 
 | ATTRIBUTE | TYPE | DESCRIPTION     |
-| -------------------- | -------- | ----------------------------- |
-| name                     | String   | Name of the product.                                         |
-| sku                      | String   | SKU of the product.                                          |
-| sumPrice                 | Integer  | Sum of the prices.                                           |
-| sumPriceToPayAggregation | Integer  | Sum of the prices to pay (after discounts).       |
-| quantity                 | Integer  | Quantity of the product ordered.                             |
-| superAttributes          | String   | Since the bought product is a concrete product, and super attributes are saved with the abstract product, this field is expected to stay empty. |
-| image                    | String   | URL to an image of the product.                              |
+| --- | --- | --- |
+| items   | array   | Items in the order.     |
+| merchantReference | String    | Merchant reference in the system. {% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| state  | String  | Defines the state of the item in the state machine.    |
+| items.name | String  | Product name.     |
+| items.sku   | String  | Product SKU.     |
+| items.sumPrice        | Integer | Sum of all product prices.   |
+| items.quantity  | Integer | Product quantity ordered.   |
+| items.unitGrossPrice   | Integer | Single item gross price.  |
+| items.sumGrossPrice   | Integer | Sum of items gross price.  |
+| items.taxRate      | Integer | Current tax rate, in percent.  |
+| items.unitNetPrice   | Integer | Single item net price.  |
+| items.sumNetPrice    | Integer | Sum total of net prices for all items.   |
+| items.unitPrice      | Integer | Single item price without assuming if it is new or gross. {% info_block warningBox "Note" %}This price should be displayed everywhere when a product price is displayed. It allows switching tax mode without side effects.{% endinfo_block %} |
+| items.unitTaxAmountFullAggregation      | Integer | Total tax amount for a given item, with additions.  |
+| items.sumTaxAmountFullAggregation       | Integer | Total tax amount for a given sum of items, with additions.  |
+| items.refundableAmount    | Integer | Available refundable amount for an item (order only).  |
+| items.canceledAmount     | Integer | Total canceled amount for this item (order only).    |
+| items.sumSubtotalAggregation    | Integer | Sum of subtotals of the items.  |
+| items.unitSubtotalAggregation  | Integer | Subtotal for the given item.   |
+| items.unitProductOptionPriceAggregation | Integer | Item total product option price. |
+| items.sumProductOptionPriceAggregation  | Integer | Item total of product options for the given sum of items. |
+| items.unitExpensePriceAggregation   | Integer | Item expense total for a given item.     |
+| items.sumExpensePriceAggregation      | Integer | Total amount of expenses for the given items.    |
+| items.unitDiscountAmountAggregation     | Integer | Item total discount amount.      |
+| items.sumDiscountAmountAggregation      | Integer | Sum of Item total discount amounts. |
+| items.unitDiscountAmountFullAggregation | Integer | Sum of item total discount amount.  |
+| items.sumDiscountAmountFullAggregation  | Integer | Item total discount amount, with additions.     |
+| items.unitPriceToPayAggregation         | Integer | Item total price to pay after discounts, with additions.  |
+| items.sumPriceToPayAggregation          | Integer | Sum of all prices to pay (after discounts were applied).  |
+| items.taxRateAverageAggregation         | Integer | Item tax rate average, with additions. This value is used when recalculating the tax amount after cancellation. |
+| items.taxAmountAfterCancellation        | Integer | Tax amount after cancellation, recalculated using tax average. |
+| items.uuid  | String  | Unique identifier of the item in the order.    |
+| items.isReturnable  | Boolean | Defines if the customer can return the item.   |
+| items.idShipment  | Integer | Unique identifier of the shipment to which the item belongs. To retrieve all the shipments of the order, include the `order-shipments` resource into the request.|
+| items.bundleItemIdentifier   | Integer | Defines the relation between the bundle and its items. The items of the bundle have the same value in the `relatedBundleItemIdentifier` attribute. {% info_block warningBox "Note" %} Bundle products are not supported in the Marketplace environment.{% endinfo_block %} |
+| items.relatedBundleItemIdentifier   | Integer | Defines the relation between the item and its bundle. The bundle to which this the item belongs has the same value in the bundleItemIdentifier attribute. |
+| items.salesOrderConfiguredBundle | Object | Contains information about the purchased configurable bundle.{% info_block warningBox "Note" %} Configured bundles are not supported for the Marketplace environment.{% endinfo_block %}  |
+| items.idSalesOrderConfiguredBundle |Integer | Unique identifier of the purchased configured bundle.|
+| items.idSalesOrderConfiguredBundle.configurableBundleTemplateUuid|String |Unique identifier of the configurable bundle template in the system. |
+| items.idSalesOrderConfiguredBundle.name | String|Name of the configured bundle. |
+| items.idSalesOrderConfiguredBundle.quantity | Integer| Quantity of the ordered configurable bundles.|
+| items.salesOrderConfiguredBundleItem |Object |Contains information about the items of the configured bundle. |
+| items.salesOrderItemConfiguration | String | | 
+| items.salesUnit | String| Sales unit to be used for the item amount calculation.| 
+| items.amount | String| |
+| items.metadata   | object  | Metadata of the concrete product.                            |
+| items.metadata.superAttributes   | String  | [Attributes](https://documentation.spryker.com/docs/product-attribute-overview) of the order item. |
+| items.metadata.image     | String  | Product image URL.   |
 
-**Order item information** (for each item)
 
-| ATTRIBUTE   | TYPE | DESCRIPTION   |
-| ---------------- | -------- | ---------------------------- |
-| name                              | String   | Product name.                                                |
-| SKU                               | String   | Product SKU.                                                 |
-| sumPrice                          | Integer  | Sum of all product prices.       |
-| quantity                          | Integer  | Product quantity ordered.      |
-| unitGrossPrice                    | Integer  | Single item gross price.   |
-| sumGrossPrice                     | Integer  | Sum of items gross price.    |
-| taxRate                           | Integer  | Current tax rate, in percent.  |
-| unitNetPrice                      | Integer  | Single item net price.    |
-| sumNetPrice                       | Integer  | Sum total of net prices for all items.   |
-| unitPrice       | Integer  | Single item price without assuming if it is net or gross. *This price should be displayed everywhere when a product price is displayed. It allows switching tax mode without side effects*. |
-| unitTaxAmountFullAggregation      | Integer  | Total tax amount for a given item, with additions.    |
-| sumTaxAmountFullAggregation   | Integer  | Total tax amount for a given sum of items, with additions.   |
-| refundableAmount   | Integer  | Available refundable amount for an item (order only).   |
-| canceledAmount   | Integer  | Total canceled amount for this item (order only). |
-| sumSubtotalAggregation  | Integer  | Sum of subtotals of the items.  |
-| unitSubtotalAggregation  | Integer  | Subtotal for the given item. |
-| unitProductOptionPriceAggregation | Integer  | Item total product option price.  |
-| sumProductOptionPriceAggregation  | Integer  | Item total of product options for the given sum of items.  |
-| unitExpensePriceAggregation  | Integer  | Item expense total for a given item.  |
-| sumExpensePriceAggregation        | Integer  | Total amount of expenses for the given items.   |
-| unitDiscountAmountAggregation  | Integer  | Item total discount amount.      |
-| sumDiscountAmountAggregation   | Integer  | Sum of item total discount amounts.   |
-| unitDiscountAmountFullAggregation | Integer  | Sum of item total discount amount.   |
-| sumDiscountAmountFullAggregation  | Integer  | Item total discount amount, with additions. |
-| unitPriceToPayAggregation     | Integer  | Item total price to pay after discounts, with additions.     |
-| sumPriceToPayAggregation   | Integer  | Sum of all prices to pay (after discounts were applied).     |
-| taxRateAverageAggregation   | Integer  | Item tax rate average, with additions. This value is used when recalculating the tax amount after cancellation. |
-| taxAmountAfterCancellation    | Integer  | Tax amount after cancellation, recalculated using tax average. |
-| uuid    | String   | Unique identifier of the order.    |
-| isReturnable    | Boolean  | Specifies whether the sales order item is returnable or not. |
-| superAttributes    | String   | Always empty. Since products purchased are concrete products, and super attributes are available for abstract products, this field is expected to be empty at all times. |
-| image    | String   | Product image URL.     |
 
-**Calculated discounts for items**
+#### Calculated discounts for items
 
 | ATTRIBUTE | TYPE | DESCRIPTION         |
 | ------------- | -------- | ------------------------------- |
-| unitAmount    | Integer  | Discount value applied to each order item of the corresponding product. |
-| sumAmount     | Integer  | Sum of the discount values applied to the order items of the corresponding product. |
-| displayName   | String   | Name of the discount applied.                                |
-| description   | String   | Description of the discount.                                 |
-| voucherCode   | String   | Voucher code redeemed.                                       |
-| quantity      | String   | Number of discounts applied to the corresponding product.    |
+| items.calculatedDiscounts | Array   | List of attributes describing the discount calculated for this item. |
+| items.calculatedDiscounts.unitAmount  | Integer | Discount value applied to this order item.               |
+| items.calculatedDiscounts.sumAmount   | Integer | Sum of the discount values applied to this order item.       |
+| items.calculatedDiscounts.displayName | String  | Name of the discount applied.                              |
+| items.calculatedDiscounts.description | String  | Description of the discount.                         |
+| items.calculatedDiscounts.voucherCode | String  | Voucher code redeemed.                             |
+| items.calculatedDiscounts.quantity    | String  | Number of discounts applied to the product.      |
 
-**Product options**
+#### Product options
 
 | ATTRIBUTE  | TYPE | DESCRIPTION      |
 | ------------ | -------- | -------------------------- |
-| sku          | String   | SKU of the product option.    |
-| optionName   | String   | Name of the product option.   |
-| price        | Integer  | Price for the product option. |
+| items.productOptions                 | Array   | Lst of product options ordered with this item.         |
+| items.productOptions.optionGroupName | String  | Name of the group to which the product option belongs. |
+| items.productOptions.sku             | String  | SKU of the product option.                             |
+| items.productOptions.optionName      | String  | Name of the product option.                            |
+| items.productOptions.price           | Integer | Price of the product option.                           |
 
-**Calculated discounts**
+#### Calculated discounts
 
 | ATTRIBUTE | TYPE | DESCRIPTION       |
 | ------------- | -------- | --------------------------- |
-| unitAmount    | Integer  | Amount of the discount provided by the given item for each unit of the product, in cents. |
-| sumAmount     | Integer  | Total amount of the discount provided by the given item, in cents. |
-| displayName   | String   | Display name of the given discount.                          |
-| description   | String   | Description of the given discount.                           |
-| voucherCode   | String   | Voucher code applied if any.                                |
-| quantity      | String   | Number of times the discount was applied.                    |
+| calculatedDiscounts             | Array   | Discounts applied to this order item.                        |
+| calculatedDiscounts.unitAmount  | Integer | Amount of the discount provided by the given item for each unit of the product, in cents. |
+| calculatedDiscounts.sumAmount   | Integer | Total amount of the discount provided by the given item, in cents. |
+| calculatedDiscounts.displayName | String  | Display name of the given discount.                          |
+| calculatedDiscounts.description | String  | Description of the given discount.                           |
+| calculatedDiscounts.voucherCode | String  | Voucher code applied, if any.                                |
+| calculatedDiscounts.quantity    | String  | Number of times the discount was applied.                    |
 
-**Expenses**
+#### Expenses
 
 | ATTRIBUTE    | TYPE | DESCRIPTION          |
 | ------------------- | -------- | ---------------------- |
-| type      | String   | Expense type.       |
-| name       | String   | Expense name.       |
-| sumPrice    | Integer  | Sum of expenses calculated.      |
-| unitGrossPrice    | Integer  | Single item's gross price.    |
-| sumGrossPrice   | Integer  | Sum of items' gross price.    |
-| taxRate    | Integer  | Current tax rate in percent.   |
-| unitNetPrice   | Integer  | Single item net price.      |
-| sumNetPrice     | Integer  | Sum of items' net price.    |
-| canceledAmount   | Integer  | Total canceled amount for this item (order only).  |
-| unitDiscountAmountAggregation | Integer  | Item total discount amount.   |
-| sumDiscountAmountAggregation  | Integer  | Sum of items' total discount amount.    |
-| unitTaxAmount    | Integer  | Tax amount for a single item after discounts.   |
-| sumTaxAmount     | Integer  | Tax amount for a sum of items (order only).   |
-| unitPriceToPayAggregation  | Integer  | Item total price to pay after discounts with additions.   |
-| sumPriceToPayAggregation   | Integer  | Sum of items' total price to pay after discounts with additions. |
-| taxAmountAfterCancellation    | Integer  | Tax amount after cancellation, recalculated using tax average. |
+| expenses                | array   | Additional expenses of the order. |
+| expenses.type           | String  | Expense type.                     |
+| expenses.name           | String  | Expense name.                     |
+| expenses.sumPrice       | Integer | Sum of expenses calculated.       |
+| expenses.unitGrossPrice | Integer | Single item's gross price.        |
+| expenses.sumGrossPrice  | Integer | Sum of items' gross price.        |
+| expenses.taxRate        | Integer | Current tax rate in percent.      |
+| expenses.unitNetPrice                           | Integer | Single item net price.                                       |
+| expenses.sumNetPrice                            | Integer | Sum of items' net price.                                     |
+| expenses.canceledAmount                         | Integer | Total canceled amount for this item (order only).            |
+| expenses.unitDiscountAmountAggregationexpenses. | Integer | Item total discount amount.                                  |
+| expenses.sumDiscountAmountAggregation           | Integer | Sum of items' total discount amount.                         |
+| expenses.unitTaxAmount                          | Integer | Tax amount for a single item, after discounts.               |
+| expenses.sumTaxAmount                           | Integer | Tax amount for a sum of items (order only).                  |
+| expenses.unitPriceToPayAggregation              | Integer | Item total price to pay after discounts with additions.      |
+| expenses.sumPriceToPayAggregation               | Integer | Sum of items' total price to pay after discounts with additions. |
+| expenses.taxAmountAfterCancellation             | Integer | Tax amount after cancellation, recalculated using tax average. |
+| expenses.idShipment                             | Integer | Unique identifier of the shipment to which this expense belongs. To retrieve all the shipments of the order, include the order-shipments resource in the request. |
+| expenses.idSalesExpense       | Integer | Unique identifier of the expense.     |
 
-**Measurement unit calculations**
 
-| ATTRIBUTE  | TYPE | DESCRIPTION              |
-| --------------- | -------- | ----------------------------- |
-| salesUnit       | Object   | List of attributes defining the sales unit to be used for item amount calculation. |
-| conversion      | integer  | Factor to convert a value from sales to a base unit. If it is `null`, the information is taken from the global conversions. |
-| precision       | integer  | Ratio between a sales unit and base unit.                  |
-| measurementUnit | string   | Code of the measurement unit.                                |
-| name            | String   | Name of the measurement unit.                                |
-| code            | String   | Code of the measurement unit.                                |
-
-**Payments**
+#### Payments
 
 | ATTRIBUTE  | TYPE | DESCRIPTION   |
-| --------------- | -------- | -------------------------- |
-| amount          | Integer  | Amount paid via the corresponding payment provider in cents. |
-| paymentProvider | String   | Name of the payment provider.                                |
-| paymentMethod   | String   | Name of the payment method.                                  |
+| payments        | Array   | A list of payments used in this order.                       |
+| amount          | Integer | Amount paid via the corresponding payment provider in cents. |
+| paymentProvider | String  | Name of the payment provider.                                |
+| paymentMethod   | String  | Name of the payment method.                                  |
 
-**Shipments**
+#### Shipments
 
 | ATTRIBUTE     | TYPE | DESCRIPTION      |
 | ------------------ | ----------- | ------------------------ |
-| shipmentMethodName | String      | Shipment method name.   |
-| carrierName        | String      | Shipment method name.        |
-| deliveryTime       | DateTimeUtc | Desired delivery time, if available.    |
-| defaultGrossPrice  | Integer     | Default gross price of delivery, in cents.   |
-| defaultNetPrice    | Integer     | Default net price of delivery, in cents.   |
-| currencyIsoCode    | String      | ISO 4217 code of the currency in which the prices are specified. |
+| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](https://documentation.spryker.com/v6/docs/checking-out-purchases). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders in version 202009.0](https://documentation.spryker.com/docs/retrieving-orders). To retrieve shipment details, include the order-shipments resource in the request. |
 
-For the attributes of the included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE |
+| ---------------- | --------------------- | ------ |
+| order-shipments       | itemUuids                  | String   |
+| order-shipments       | methodName                 | String   |
+| order-shipments       | carrierName                | String   |
+| order-shipments       | requestedDeliveryDate      | Date     |
+| order-shipments       | shippingAddress            | Object   |
+| order-shipments       | shippingAddress.salutation | String   |
+| order-shipments       | shippingAddress.firstName  | String   |
+| order-shipments | shippingAddress.middleName  | String | Customer's middle name.                 |
+| order-shipments | shippingAddress.lastName    | String | Customer's last name.                   |
+| order-shipments | shippingAddress.address1    | String | The 1st line of the customer's address. |
+| order-shipments | shippingAddress.address2    | String | The 2nd line of the customer's address. |
+| order-shipments | shippingAddress.address3    | String | The 3rd line of the customer's address. |
+| order-shipments | shippingAddress.company     | String | Specifies the customer's company.       |
+| order-shipments | shippingAddress.city        | String | Specifies the city.                     |
+| order-shipments | shippingAddress.zipCode     | String | ZIP code.                               |
+| order-shipments | shippingAddress.poBox       | String | PO Box to use for communication.        |
+| order-shipments | shippingAddress.phone       | String | Specifies the customer's phone number.  |
+| order-shipments | shippingAddress.cellPhone   | String | Mobile phone number.                    |
+| order-shipments | shippingAddress.description | String | Address description.                    |
+| order-shipments | shippingAddress.comment     | String | Address comment.                        |
+| order-shipments | shippingAddress.email       | String | Email address to use for communication. |
+| order-shipments | shippingAddress.country     | String | Specifies the country.                  |
+| order-shipments | shippingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.       |
+
+
+For the attributes of other included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).

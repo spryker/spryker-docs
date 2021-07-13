@@ -6,7 +6,7 @@ template: concept-topic-template
 ---
 
 
-This document provides details about the Data Transformers service in the Components Library.
+This document explains the Data Transformers service in the Components Library.
 
 ## Overview
 
@@ -96,7 +96,7 @@ export interface CustomDataTransformerConfig extends DataTransformerConfig {
 @Injectable({
   providedIn: 'root',
 })
-export class CustomDataTransformerService implements
+export class CustomDataTransformerService implements 
   DataTransformer<CustomDataTransformerData, CustomDataTransformerDataT> {
   transform(
     data: CustomDataTransformerData,
@@ -152,11 +152,11 @@ There are a few common Data Transformers that are available in the UI library as
 - [object-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html) - executes another Data Transformer from the config for each object in the object.
 - [chain](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html) - executes another Data Transformer in sequence via configuration.
 - [date-parse](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html) - parses the string value as a Date ISO into the JS Date Object.
-- `date-serialize` - serializes JS Date Object into a Date ISO string.
-- `collate` - sorts, filters, and paginates data based on configuration. It has extra extension points:
+- [date-serialize](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html) - serializes JS Date Object into a Date ISO string.
+- [collate](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate.html) - sorts, filters, and paginates data based on configuration. It has extra extension points:
   - Filters - are services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
-    - `equals` - filters values that are strictly equal.
-    - `range` - filters values that are within a number range.
-    - `text` - filters values that match a string.
-  - Data Configurators - are services that allow configuring repopulation data (sorting, pagination, filtering). This services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
-    - `table` - integrates Table into Collate to re-populate the data.
+    - `equals`—filters values that are strictly equal.
+    - `range`—filters values that are within a number range.
+    - `text`—filters values that match a string.
+  - Data Configurators - are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
+    - `table`—integrates Table into Collate to re-populate the data.

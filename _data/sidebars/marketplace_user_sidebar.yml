@@ -11,55 +11,50 @@ entries:
             url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
 
       - title: Features
+        url: /docs/marketplace/user/features/
         nested:
-        - title: Merchants
+        - title: Marketplace Merchant
+          url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant.html
           nested:
 
-          - title: Merchants feature overview
-            url: /docs/marketplace/user/features/merchants/merchants-feature-overview.html
+          - title: Marketplace Merchant feature overview
+            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+            nested:
 
-          - title: Merchant users feature overview
-            url: /docs/marketplace/user/features/merchants/merchant-users-feature-overview.html
+          - title: Merchant users overview
+            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview.html
 
-        - title: Products and offers
-
-          nested:
-
-          - title: Product Offer feature overview
-            url: /docs/marketplace/user/features/products-and-offers/product-offer-feature-overview.html
-
-        - title: Marketplace order
-
-          nested:
-
-          - title: Marketplace Order feature overview
-            url: /docs/marketplace/user/features/marketplace-order/marketplace-order-feature-overview.html
-
-          - title: Marketplace Order module relations
-            url: /docs/marketplace/user/features/marketplace-order/marketplace-order-module-relations.html
-
-        - title: Merchant order
+        - title: Merchant Category
+          url: /docs/marketplace/user/features/merchant-category/merchant-category.html
+        
+        - title: Merchant Opening Hours
+          url: /docs/marketplace/user/features/merchant-opening-hours/merchant-opening-hours.html
+        
+        - title: Marketplace Product Offer
+          url: /docs/marketplace/user/features/marketplace-product-offer/marketplace-product-offer.html
 
           nested:
 
-          - title: Merchant Order feature overview
-            url: /docs/marketplace/user/features/merchant-order/merchant-order-feature-overview.html
+          - title: Marketplace Product Offer feature overview
+            url: /docs/marketplace/user/features/marketplace-product-offer/marketplace-product-offer-feature-overview.html
 
-          - title: Marketplace Order module relations
-            url: /docs/marketplace/user/features/merchant-order/merchant-order-module-relations.html
-
-        - title: Marketplace and merchant state machines
-
+        - title: Marketplace Order Management
+          url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management.html
           nested:
 
-          - title: Marketplace and Merchant State Machines feature overview
-            url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html
+          - title: Marketplace Order Management feature overview
+            url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+            nested:
 
-          - title: Marketplace and merchant state machines interaction
-            url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-interaction.html
+            - title: Merchant Order overview
+              url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-feature-overview/merchant-order-overview.html
 
-          - title: Marketplace and merchant state machine module schema
-            url: /docs/marketplace/user/features/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machine-module-schema.html
+            - title: Marketplace and merchant state machines overview
+              url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+              nested:
+            
+              - title: Marketplace and merchant state machines interaction
+                url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
 
       - title: Back Office user guides
         nested:
@@ -99,10 +94,11 @@ entries:
             - title: Offers
               nested:
 
-                - title: Offers
-                  url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/offers.html
+                - title: Managing merchant product offers
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html
 
       - title: Merchant Portal user guides
+        url: /docs/marketplace/user/merchant-portal-user-guides/
         nested:
 
         - title: Dashboard
@@ -114,4 +110,4 @@ entries:
           nested:
 
           - title: Editing merchant's profile details
-            url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing merchants-profile-details.html
+            url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html

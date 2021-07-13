@@ -8,6 +8,7 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Product Offer into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product Offer feature core.
 
 ### Prerequisites
@@ -79,7 +80,7 @@ Adjust the schema definition so that entity changes will trigger events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -225,7 +226,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Set up re-generate and re-sync features
+#### Set up, re-generate, and re-sync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------------- | --------------- | ---------- | ---------------- |
@@ -1307,6 +1308,40 @@ It means the following:
 2. If a product offer gets created, and the `ProductAbstract` related to it was not available on catalog search, it would be available now.
 
 {% endinfo_block %}
+
+### 7) Configure navigation
+Add product offers section to marketplace section of `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <marketplace>
+        <pages>
+            <product-offer-gui>
+                <label>Offers</label>
+                <title>Offers</title>
+                <bundle>product-offer-gui</bundle>
+                <controller>list</controller>
+                <action>index</action>
+            </product-offer-gui>
+        </pages>
+    </marketplace>
+</config>
+```
+
+Execute the following command:
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Offers** menu item.
+
+{% endinfo_block %}
+
 
 ## Install feature front end
 

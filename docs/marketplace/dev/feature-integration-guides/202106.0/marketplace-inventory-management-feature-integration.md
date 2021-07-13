@@ -70,7 +70,7 @@ Adjust the schema definition so entity changes trigger events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -141,8 +141,9 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferStockProductOfferPostCreatePlugin | Persists product offer stock on product offer create. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
 | ProductOfferStockProductOfferPostUpdatePlugin | Persists product offer stock on product offer updated. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
 | ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. |  | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
+| ProductOfferStockProductOfferViewSectionPlugin | Shows stock section at product offer view page in Zed. |  | Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer |
 
-**src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
+**src/Pyz/Zed/marketplace-merchant/marketplace-merchantDependencyProvider.php**
 
 ```php
 <?php
@@ -181,7 +182,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 Make sure that when you retrieve merchant using `MerchantFacade::get()` the response transfer contains merchant stocks.
 
-Make sure that when you create a merchant in Zed UI, its stock also gets created in `spy_merchant_stock` table.
+Make sure that when you create a merchant in Zed UI, its stock also gets created in the `spy_merchant_stock` table.
 
 {% endinfo_block %}
 
@@ -212,6 +213,37 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure that when you edit some merchant on `http://zed.de.demo-spryker.com/merchant-gui/list-merchant`, you can see the `Wherehouses` field.
+
+{% endinfo_block %}
+
+**src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOfferGui;
+
+use Spryker\Zed\ProductOfferGui\ProductOfferGuiDependencyProvider as SprykerProductOfferGuiDependencyProvider;
+use Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer\ProductOfferStockProductOfferViewSectionPlugin;
+
+class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface[]
+     */
+    public function getProductOfferViewSectionPlugins(): array
+    {
+        return [
+            new ProductOfferStockProductOfferViewSectionPlugin(),
+        ];
+    }
+}
+
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={idProductOffer}}`, you can see the `Stock` section.
 
 {% endinfo_block %}
 
@@ -269,7 +301,7 @@ Make sure that when you create a product offer using `ProductOfferFacade::create
 
 Make sure that when you update a product offer using `ProductOfferFacade::create()` with provided stock data, it updates stock data in `spy_product_offer_stock`.
 
-Make sure that when you retrieve a product offer using `ProductOfferFacade::findOne()` the response data contains info about product offer stocks.
+Make sure that when you retrieve a product offer using `ProductOfferFacade::findOne()`, the response data contains info about product offer stocks.
 
 {% endinfo_block %}
 
@@ -307,7 +339,7 @@ Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySku
 
 This step publishes tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronize the data to the storage.
 
-#### Set up event, listeners, and publishers
+#### Set up event listeners and publishers
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -432,7 +464,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Set up re-generate and re-sync features
+#### Set up, re-generate, and re-sync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -470,10 +502,12 @@ Make sure that when a product offer availability entities get created or updated
 
 {% endinfo_block %}
 
-### 8) Import data
+### 7) Import data
+
 Import the following data.
 
 #### Import merchant stock data
+
 Prepare your data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_stock.csv**

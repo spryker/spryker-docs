@@ -53,7 +53,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### Enable resources and relationships
+### 3) nable resources and relationships
 
 Activate the following plugins:
 

@@ -1,7 +1,7 @@
 ---
 title: Marketplace Shipment feature integration
+last_updated: Jul 05, 2021
 description: This document describes the process how to integrate Marketplace Shipment feature into your project
-tags:
 template: feature-integration-guide-template
 ---
 
@@ -77,7 +77,7 @@ Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipmen
 
 ### 3) Set up the database schema and transfer definitions
 
-Apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate

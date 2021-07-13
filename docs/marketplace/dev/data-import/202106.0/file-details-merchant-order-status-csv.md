@@ -23,7 +23,7 @@ The file should have the following parameters:
 | merchant_reference |   | String |   | Unique | Identifier of the merchant in the system. |
 | merchant_order_reference |   | String |   | Unique | Identifier of the merchant order in the system. |
 | order_item_reference | &check; | String |   | Unique | Identifier of the  item in the order. |
-| merchant_order_item_event_oms | &check; | String |   | OMS events depend on the  [merchant state machine](/docs/marketplace/user/features/{{ site.version }}/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html#merchant-state-machine) configured. | Desired order-item state. Only this parameter is updated in the database. |
+| merchant_order_item_event_oms | &check; | String |   | OMS events depend on the  [merchant state machine](/docs/marketplace/user/features/{{ site.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) configured. | Desired order-item state. Only this parameter is updated in the database. |
 
 ## Import file dependencies
 

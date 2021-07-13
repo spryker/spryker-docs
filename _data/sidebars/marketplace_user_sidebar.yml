@@ -101,6 +101,12 @@ entries:
         url: /docs/marketplace/user/merchant-portal-user-guides/
         nested:
 
+        - title: Login and logout
+          nested:
+
+          - title: Managing login and logout
+            url: /docs/marketplace/user/merchant-portal-user-guides/login-and-logout/managing-login-and-logout.html
+        
         - title: Dashboard
           nested:
           - title: Managing merchant's performance data
@@ -111,3 +117,6 @@ entries:
 
           - title: Editing merchant's profile details
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html
+
+
+        

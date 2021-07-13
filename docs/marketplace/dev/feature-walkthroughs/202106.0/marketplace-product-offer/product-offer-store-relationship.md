@@ -1,5 +1,5 @@
 ---
-title: Product offer relation with a store
+title: Product Offer store relationship
 description: This article provides details about Marketplace Product Offer relation with a store feature of the back-end project in the Spryker Marketplace.
 template: concept-topic-template
 ---

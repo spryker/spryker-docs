@@ -5,7 +5,7 @@ description: Product Offer is created when merchants wants to sell products alre
 template: concept-topic-template
 ---
 
-The *Marketplace Product Offer* entity is created when multiple merchants sell the same product on the Marketplace.Merchant Offer is based on a concrete product.
+The *Marketplace Product Offer* entity is created when multiple merchants sell the same product on the Marketplace. Merchant Offer is based on a concrete product.
 
 To learn more about the feature and to find out how end users use it, see [Marketplace Product Offer](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer/marketplace-product-offer.html) feature summary for business users.
 

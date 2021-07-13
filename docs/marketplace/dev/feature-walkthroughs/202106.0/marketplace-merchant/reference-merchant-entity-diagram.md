@@ -1,6 +1,6 @@
 ---
 title: Merchant entity diagram
-description: View relations in the Merchant entity
+description: View relations in the Merchant entity.
 template: concept-topic-template
 ---
 

@@ -8,15 +8,15 @@ This article provides details about Marketplace Product Offer feature of the bac
 
 ## Installation
 
-For installing the feature please follow:  [Marketplace product offer feature integration guide](/docs/marketplace/dev/feature-integration-guides/202106.0/marketplace-product-offer-feature-integration.html)
+To install the Marketplace product offer feature, follow [Marketplace product offer feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html).
 
 ## Overview
+ 
+In Spryker, a product offer is a variation of a concrete product with its own specific price (and volume price) and stock. It can be “owned” by any entity, however, in a B2C/B2B marketplace, it is owned by a [merchant](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchant/marketplace-merchant.html).
 
-A product offer is a variation of a product concrete with its own specific price (and volume prices) and stock, it can be “owned” by any entity in Spryker, yet in a B2B/B2C marketplace it is owned by a merchant. 
-It has its own validity dates and its own availability calculation based on its reservations.
+The marketplace product offer has its own validity dates and its own availability calculation based on its reservations.
 
-Offer products re-use and extend concrete product feature, 
-all product related data is stored and processed as concrete products. 
+Offer products re-use and extend concrete product features. All product-related data is stored and processed as concrete products. 
 All offer-related data is stored in a separate entity and linked to a concrete product. 
 
 The feature contains both merchant product offer and product offer concepts. 
@@ -25,7 +25,7 @@ Merchant product offer extends product offer by adding a pointer to a merchant.
 
 ### Main feature modules
 
-| NAME | Description | Manage Entities  |
+| NAME | DESCRIPTION | MANAGED Entities  |
 | -------------------- | ---------- | ----------------- | 
 | [MerchantProductOffer](https://github.com/spryker/merchant-product-offer) | Provides collection of product offers by request, extends ProductOffer with merchant information. Used by MerchantSwitcher for switching merchant functionality  | SpyProductOffer |
 | [ProductOffer](https://github.com/spryker/product-offer) | Main create-read-update product offer functionality  | SpyProductOffer |

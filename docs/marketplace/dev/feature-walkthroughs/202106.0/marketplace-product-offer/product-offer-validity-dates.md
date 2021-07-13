@@ -15,7 +15,7 @@ To update product offer activity by validity dates data, use the command:
 console product-offer:check-validity
 ```
 
-### Module dependancy graph
+### Module dependency graph
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/c49ca6db-3655-4d86-bdb1-ed05d2e1e721.png?utm_medium=live&utm_source=custom)
 

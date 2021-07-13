@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/product-offer-availabilities-rest-api:"^0.3.0" --update-with-dependencies
+composer require spryker/product-offer-availabilities-rest-api:"^0.4.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -112,7 +112,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `ProductOfferAvailabilitiesResourceRoutePlugin` plugin is set up by sending the request GET `http://glue.mysprykershop.com/product-offers/{% raw %}{{productOfferReference}}{% endraw %}/product-offer-availabilities`.
+Make sure that the `ProductOfferAvailabilitiesResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{productOfferReference}}{% endraw %}/product-offer-availabilities`.
 
 Make sure that `ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin` is set up by sending the request `GET http://glue.mysprykershop.com{% raw %}{{url}}{% endraw %}/product-offers/{% raw %}{{productOfferReference}}{% endraw %}?include=product-offer-availabilities`. The response should include the `product-offer-availabilities` resource along with `product-offers`.
 

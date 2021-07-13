@@ -9,72 +9,103 @@
                     </a>
                 </strong>
 
-                <div class="main-nav">
-                    <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %}">
-                        <span class="main-nav__opener-label">Select Product</span>
-                        <span class="main-nav__opener-text">
-                            {% if page.product-type == 'marketplace/dev' %}
-                            Marketplace developer guide
-                            {% elsif page.product-type == 'marketplace/user' %}
-                            Marketplace users guide
-                            {% else %}
-                            Select Product
-                            {% endif %}
-                        </span>
-                        <i class="main-nav__opener-icon icon-arrow-down"></i>
-                    </a>
-                    <ul class="main-nav__drop">
-                         <li>
-                             <a href="https://documentation.spryker.com" class="main-nav__drop-link">
-                                Spryker Commerce OS
-                             </a>
-                         </li>
-                         <li>
-                             <a href="/" class="main-nav__drop-link">
-                                Marketplace
-                                <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
-                             </a>
-                             <ul class="main-nav__drop">
-                                 <li>
-                                     <a href="/docs/marketplace/dev/setup/system-requirements.html" class="main-nav__drop-link">
-                                        <span class="main-nav__drop-link-title">
-                                            <i class="icon-developer"></i>
-                                            Developer
-                                        </span>
-                                        <span class="main-nav__drop-link-subtitle">Marketplace developer guide</span>
-                                     </a>
-                                 </li>
-                                 <li>
-                                     <a href="/docs/marketplace/user/intro-to-spryker/marketplace-concept.html" class="main-nav__drop-link">
-                                        <span class="main-nav__drop-link-title">
-                                            <i class="icon-business"></i>
-                                            Business User
-                                        </span>
-                                        <span class="main-nav__drop-link-subtitle">Marketplace users guide</span>
-                                     </a>
-                                 </li>
-                             </ul>
-                         </li>
-                         <li>
-                             <a href="https://cloud.spryker.com/" class="main-nav__drop-link">
-                                Spryker Cloud Commerce OS
-                             </a>
-                         </li>
-                    </ul>
+                <div class="nav-popup">
+                    <div class="nav-popup__inner">
+                        <div class="nav-popup__header">
+                            <a href="/feed.xml" class="button nav-popup__header-button button--small">
+                                <i class="icon-rss"></i>
+                                RSS
+                            </a>
+                        </div>
+                        <div class="nav-popup__content">
+                            <div class="main-nav dropdown">
+                                <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="main-nav__opener-label">Select Product</span>
+                                    <span class="main-nav__opener-text">
+                                        {% if page.product-type == 'marketplace/dev' %}
+                                        Marketplace developer guide
+                                        {% elsif page.product-type == 'marketplace/user' %}
+                                        Marketplace users guide
+                                        {% else %}
+                                        Select Product
+                                        {% endif %}
+                                    </span>
+                                    <i class="main-nav__opener-icon icon-arrow-down"></i>
+                                </a>
+                                <ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li>
+                                        <a href="https://documentation.spryker.com" class="main-nav__drop-link">
+                                        Spryker Commerce OS
+                                        </a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Marketplace
+                                            <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
+                                        </a>
+                                        <ul class="main-nav__drop dropdown-menu">
+                                            <li>
+                                                <a href="/docs/marketplace/dev/setup/system-requirements.html" class="main-nav__drop-link">
+                                                    <span class="main-nav__drop-link-title">
+                                                        <i class="icon-developer"></i>
+                                                        Developer
+                                                    </span>
+                                                    <span class="main-nav__drop-link-subtitle">Marketplace developer guide</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/docs/marketplace/user/intro-to-spryker/marketplace-concept.html" class="main-nav__drop-link">
+                                                    <span class="main-nav__drop-link-title">
+                                                        <i class="icon-business"></i>
+                                                        Business User
+                                                    </span>
+                                                    <span class="main-nav__drop-link-subtitle">Marketplace users guide</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="https://cloud.spryker.com/" class="main-nav__drop-link">
+                                        Spryker Cloud Commerce OS
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav-popup__footer"></div>
+                    </div>
                 </div>
 
                 {% if page.url != "/index.html" and page.url != "/search/" %}
-                    <div class="main-header__search">
-                        <i class="main-header__search-icon icon-search"></i>
-                        {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                    <div class="search-popup">
+                        <div class="search-popup__inner">
+                            <div class="search-popup__content">
+                                <a href="#" class="search-popup__close js-search-popup-close"><i class="icon-arrow-left"></i></a>
+                                <div class="main-header__search">
+                                    <i class="main-header__search-icon icon-search"></i>
+                                    {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                                </div>
+                            </div>
+                            <div class="search-popup__footer">
+                                <a href="/search" class="search-popup__more">Show all results</a>
+                            </div>
+                        </div>
                     </div>
                 {% endif %}
 
             </div>
             <div class="main-header__right">
+                {% if page.url != "/search/" %}
+                    <a href="#" class="main-header__search-opener js-search-popup-opener"><i class="icon-search"></i></a>
+                {% endif %}
                 <a href="/feed.xml" class="button main-header__button button--small">
                     <i class="icon-rss"></i>
                     RSS
+                </a>
+                <a href="#" class="nav-opener">
+                    <span class="nav-opener__top"></span>
+                    <span class="nav-opener__center"></span>
+                    <span class="nav-opener__bottom"></span>
                 </a>
             </div>
         </div>

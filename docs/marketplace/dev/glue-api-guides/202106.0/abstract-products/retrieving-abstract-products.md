@@ -58,8 +58,8 @@ To retrieve general information about an abstract product, send the request:
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options` | Retrieve information about the abstract product with SKU `001` with its product options. |
 | `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
-| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve merchant product with SKU 109.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %} |
-| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve merchant product with SKU 109 including the merchant information.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %} |
+| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve merchant product with SKU 109.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
+| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve merchant product with SKU 109 including the merchant information.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 
 
 ### Response
@@ -1457,7 +1457,7 @@ To retrieve general information about an abstract product, send the request:
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | SKU of the abstract product |
-| merchantReference | String | Unique identifier of the merchant in the system.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the Marketplace provided by Spryker.{% endinfo_block %}|
+| merchantReference | String | Unique identifier of the merchant in the system.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
 | averageRating | String | Average rating of the product based on customer rating. |
 | reviewCount | String | Number of reviews left by customer for this abstract product. |
 | name | String | Name of the abstract product |
@@ -1486,15 +1486,14 @@ For the attributes of other included resources, see:
 
 * [Retrieve image sets of an abstract product](https://documentation.spryker.com/docs/retrieving-image-sets-of-abstract-products#abstract-product-sets-response-attributes)
 * [Retrieve availability of an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-product-availability#abstract-product-availability-response-attributes)
-
 * [Retrieve prices of an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-product-prices#prices-response-attributes)
-* [Retrieve a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html)
 * [Retrieve a category node](https://documentation.spryker.com/docs/retrieving-category-nodes#category-nodes-response-attributes)
 * [Retrieve tax sets](https://documentation.spryker.com/docs/retrieving-tax-sets#tax-sets-response-attributes)
 * [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
 * [Retrieve product reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
 *  [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units)
-*  [Retrieve merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information#retrieve-profile-information-for-the-specific-merchant)
+*  [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)
 
 
 ## Possible errors

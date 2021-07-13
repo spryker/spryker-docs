@@ -1,7 +1,7 @@
 ---
 title: Marketplace Shipment + Checkout feature integration
-description: Integrate Marketplace Shipment + Checkout feature into your project
-tags:
+description: This document describes the process how to integrate Marketplace Shipment + Checkout feature into your project
+last_updated: Jul 05, 2021
 template: feature-integration-guide-template
 ---
 

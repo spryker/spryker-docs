@@ -11,7 +11,6 @@ This document describes how to integrate the Marketplace Promotions & Discounts 
 
 Follow the steps below to install the Marketplace Promotions & Discounts feature core.
 
-
 ### Prerequisites
 
 To start feature integration, integrate the required features:
@@ -59,9 +58,7 @@ Make sure that the following changes were applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Add translations
-
-#### Zed translations
+### 3) Zed translations
 
 Generate a new translation cache for Zed:
 

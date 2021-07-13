@@ -24,7 +24,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/spryker/product-offer-prices-rest-api:"^0.3.0" --update-with-dependencies
+composer require spryker/product-offer-prices-rest-api:"^0.4.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -50,8 +50,6 @@ console transfer:generate
 {% info_block warningBox "Verification" %}
 
 Make sure that the `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage.php` class contains the `syncPublishedMessageForMappings` public function.
-
-Make sure that the  `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage.php` class contains the syncPublishedMessageForMappings public function.
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -120,6 +118,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that the `ProductOfferPricesResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}/product-offer-prices`.
 
-Make sure that the `ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}?include=product-offer-pricess`. You should get `product-offers` with all product offer’s `product-offer-prices` as relationships.
+Make sure that the `ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}?include=product-offer-prices`. You should get `product-offers` with all product offer’s `product-offer-prices` as relationships.
 
 {% endinfo_block %}

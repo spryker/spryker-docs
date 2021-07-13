@@ -30,10 +30,6 @@
     margin-bottom:12px;
 }
 
-.breadcrumb li {
-    color: gray;
-}
-
 p.external a {
     text-align:right;
     font-size:12px;
@@ -48,29 +44,6 @@ p.post-meta {font-size: 80%; color: #777;}
 
 .entry-date{font-size:14px;font-size:0.875rem;line-height:1.71429;margin-bottom:0;text-transform:uppercase;}
 
-/* search area */
-#search-demo-container ul#results-container {
-    list-style: none;
-    font-size: 12px;
-    background-color: white;
-    position: absolute;
-    top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
-    left: 20px;
-    z-index: -1;
-    width:223px;
-    border-left: 1px solid #dedede;
-}
-
-ul#results-container a {
-    background-color: transparent;
-}
-
-ul#results-container a:hover {
-    color: black;
-}
-
-/* end search */
-
 .filter-options {
     margin-bottom: 20px;
 }
@@ -81,7 +54,6 @@ ul#results-container a:hover {
 li.dropdownActive a {
     font-weight: bold;
 }
-
 
 .post-content a.fa-rss {
     color: orange;
@@ -106,25 +78,13 @@ span.projectTitle {
     font-weight: bold;
 }
 
-.footerMeta {
-    background-color: whitesmoke;
-    padding: 10px;
-    max-width: 250px;
-    border-radius: 5px;
-    margin-top: 50px;
-    font-style:italic;
-    font-size:12px;
-}
-
 img.screenshotSmall {
     max-width: 300px;
 }
 
-
 dl dt p {
     margin-left:20px;
 }
-
 
 dl dd {
     margin-top:10px;
@@ -136,14 +96,12 @@ dl.dl-horizontal dd {
 }
 
 figcaption {
-
     padding-bottom:12px;
     padding-top:6px;
     max-width: 90%;
     margin-bottom:20px;
     font-style: italic;
     color: gray;
-
 }
 
 .testing {
@@ -175,17 +133,10 @@ button.cursorNorm {
     cursor: default;
 }
 
-a.dropdown-toggle {
-    margin-left: 10px;
-}
-
 hr.faded {
     border: 0;
     height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 
 hr.shaded {
@@ -207,17 +158,12 @@ i.border {
     background-color: whitesmoke;
 }
 
-a[data-toggle] {
-    color: #248EC2;
-}
-
 .summary {
     font-size:120%;
     color: #808080;
     margin:20px 0px 20px 0px;
     border-left: 5px solid #ED1951;
     padding-left: 10px;
-
 }
 
 .summary:before {
@@ -288,12 +234,6 @@ span.otherProgrammingLanguages {
     font-style: normal;
 }
 
-a[data-toggle="tooltip"] {
-    color: #649345;
-    font-style: italic;
-    cursor: default;
-}
-
 .seriesNext, .seriesContext {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -329,12 +269,6 @@ ol.series li {
     display:block;
 }
 
-/*
-a.dropdown-toggle.otherProgLangs {
-    color: #f7e68f !important;
-}
-*/
-
 span.muted {color: #666;}
 
 .highlight .err {
@@ -364,7 +298,6 @@ video {
     margin: 30px 0px;
     border: 1px solid #c0c0c0;
 }
-
 
 p.required, p.dataType {display: block; color: #c0c0c0; font-size: 80%; margin-left:4px;}
 
@@ -422,33 +355,6 @@ span.soft {
     color: red !important;
 }
 
-.formBoundary {
-    border: 1px solid gray;
-    padding: 15px;
-    margin: 15px 0px;
-    background-color: whitesmoke;
-}
-
-@media (max-width: 990px) {
-    #mysidebar {
-        position: relative;
-    }
-}
-
-@media (min-width: 1000px) {
-
-    ul#mysidebar {
-        width: 225px;
-    }
-}
-
-@media (max-width: 900px) {
-
-    ul#mysidebar {
-        max-width: 100%;
-    }
-}
-
 .post-content img {
     margin: 12px 0px 3px 0px;
     width: auto;
@@ -493,83 +399,12 @@ a.no_icon:after
     padding-left: 0;
 }
 
-.btn-default {
-    margin-bottom: 10px;
-}
-
-/* algolia search */
-
-.search {
-    text-align: left;
-}
-.search input {
-    font-size: 20px;
-    width: 300px;
-}
-.results {
-    margin: auto;
-    text-align: left;
-}
-.results ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* algolia */
-
-div.results {
-    position: absolute;
-    background-color: white;
-    width: 100%;
-}
-
-.post-meta {
-    font-size: 14px;
-    color: #828282;
-}
-
-.post-link {
-    font-size: 22px;
-}
-
-.post-list p {
-    margin: 10px 0px;
-}
-
-time {
-    margin-right: 10px;
-}
-
-p.post-meta time {
-    margin-right: 0px;
-}
-
-span.label.label-default {
-    background-color: gray;
-}
-
-span.label.label-primary {
-    background-color: #f0ad4e;
-}
-
-a code {
-    color: #248EC2;
-}
-
-code + a > code {
-    margin-left: -7px;
-}
-
 ol li ul li ol li {
     list-style: decimal;
 }
 
 ol li ul li ol li ul li{
     list-style: disc;
-}
-
-table thead th code.highlighter-rouge {
-    background-color: transparent;
 }
 
 .box {
@@ -625,7 +460,6 @@ div.arrow {
     clear: both;
 }
 
-
 #userMap div.arrow {
     position: relative;
     top: 30px;
@@ -646,7 +480,6 @@ div.box.box1 {
 #userMap .btn-lg {
     width: 100px;
     height: 80px;
-
 }
 
 #userMap .complexArrow {
@@ -654,19 +487,14 @@ div.box.box1 {
     margin: 0px 10px;
 }
 
-
 #userMap .btn-lg .active {
     background-color: #d6f5d6;
 }
 
-#userMap .btn-lg  {
-        white-space: pre-wrap;       /* css-3 */
-        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-        white-space: -pre-wrap;      /* Opera 4-6 */
-        white-space: -o-pre-wrap;    /* Opera 7 */
-        word-wrap: break-word;       /* Internet Explorer 5.5+ */
-        font-size: 14px;
-    }
+#userMap .btn-lg {
+    word-wrap: break-word;
+    font-size: 14px;
+}
 
 h4.panel-title {
     padding-top: 0px;

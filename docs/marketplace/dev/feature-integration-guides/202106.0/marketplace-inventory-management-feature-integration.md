@@ -8,15 +8,17 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Inventory Management feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Inventory Management feature core.
 
 ### Prerequisites
+
 To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
-| Marketplace Product Offer | master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/product-offer-feature-integration.html)  |
+| Marketplace Product Offer | master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html)  |
 | Inventory Management | master | [Inventory Management feature integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
 
 ### 1) Install the required modules using Composer
@@ -68,7 +70,7 @@ Adjust the schema definition so entity changes trigger events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes.
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -127,6 +129,7 @@ console translator:generate-cache
 ```
 
 ### 5) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
@@ -138,8 +141,9 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferStockProductOfferPostCreatePlugin | Persists product offer stock on product offer create. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
 | ProductOfferStockProductOfferPostUpdatePlugin | Persists product offer stock on product offer updated. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
 | ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. |  | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
+| ProductOfferStockProductOfferViewSectionPlugin | Shows stock section at product offer view page in Zed. |  | Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer |
 
-**src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
+**src/Pyz/Zed/marketplace-merchant/marketplace-merchantDependencyProvider.php**
 
 ```php
 <?php
@@ -178,7 +182,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 Make sure that when you retrieve merchant using `MerchantFacade::get()` the response transfer contains merchant stocks.
 
-Make sure that when you create a merchant in Zed UI, its stock also gets created in `spy_merchant_stock` table.
+Make sure that when you create a merchant in Zed UI, its stock also gets created in the `spy_merchant_stock` table.
 
 {% endinfo_block %}
 
@@ -209,6 +213,37 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure that when you edit some merchant on `http://zed.de.demo-spryker.com/merchant-gui/list-merchant`, you can see the `Wherehouses` field.
+
+{% endinfo_block %}
+
+**src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOfferGui;
+
+use Spryker\Zed\ProductOfferGui\ProductOfferGuiDependencyProvider as SprykerProductOfferGuiDependencyProvider;
+use Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer\ProductOfferStockProductOfferViewSectionPlugin;
+
+class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface[]
+     */
+    public function getProductOfferViewSectionPlugins(): array
+    {
+        return [
+            new ProductOfferStockProductOfferViewSectionPlugin(),
+        ];
+    }
+}
+
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={idProductOffer}}`, you can see the `Stock` section.
 
 {% endinfo_block %}
 
@@ -266,7 +301,7 @@ Make sure that when you create a product offer using `ProductOfferFacade::create
 
 Make sure that when you update a product offer using `ProductOfferFacade::create()` with provided stock data, it updates stock data in `spy_product_offer_stock`.
 
-Make sure that when you retrieve a product offer using `ProductOfferFacade::findOne()` the response data contains info about product offer stocks.
+Make sure that when you retrieve a product offer using `ProductOfferFacade::findOne()`, the response data contains info about product offer stocks.
 
 {% endinfo_block %}
 
@@ -304,7 +339,7 @@ Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySku
 
 This step publishes tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronize the data to the storage.
 
-#### Set up event, listeners, and publishers
+#### Set up event listeners and publishers
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -337,6 +372,8 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 ```
 
 #### Register the synchronization queue and synchronization error queue
+
+**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
 ```php
 <?php
@@ -376,6 +413,8 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 |-|-|-|-|
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with Redis storage, and marks messages as failed in case of error. |  | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
+**src/Pyz/Zed/ProductOfferAvailabilityStorage/ProductOfferAvailabilityStorageConfig.php**
+
 ```php
 <?php
 
@@ -395,6 +434,8 @@ class ProductOfferAvailabilityStorageConfig extends SprykerProductOfferAvailabil
     }
 }
 ```
+
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
 ```php
 <?php
@@ -423,11 +464,13 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Set up re-generate and re-sync features
+#### Set up, re-generate, and re-sync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferAvailabilitySynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Synchronization |
+
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
 ```php
 <?php
@@ -459,13 +502,17 @@ Make sure that when a product offer availability entities get created or updated
 
 {% endinfo_block %}
 
-### 8) Import data
+### 7) Import data
+
 Import the following data.
 
 #### Import merchant stock data
-Prepare your data according to your requirements using our demo data:
 
-```bash
+Prepare your data according to your requirements using the demo data:
+
+**data/import/common/common/marketplace/merchant_stock.csv**
+
+```csv
 merchant_reference,stock_name
 MER000001,Spryker MER000001 Warehouse 1
 MER000002,Video King MER000002 Warehouse 1
@@ -480,8 +527,10 @@ MER000006,Sony Experts MER000006 Warehouse 1
 
 #### Import product offer stock data
 
+**data/import/common/common/marketplace/product_offer_stock.csv**
+
 <details>
-<summary markdown='span'>Prepare your data according to your requirements using our demo data:</summary>
+<summary markdown='span'>Prepare your data according to your requirements using the demo data:</summary>
 
 ```
 product_offer_reference,stock_name,quantity,is_never_out_of_stock
@@ -655,6 +704,6 @@ console data:import product-offer-stock
 
 {% info_block warningBox "Warning" %}
 
-Make sure that imported data is added to the `spy_merchant_stock` and `spy_product_offer_stock` tables.
+Make sure that the imported data is added to the `spy_merchant_stock` and `spy_product_offer_stock` tables.
 
 {% endinfo_block %}

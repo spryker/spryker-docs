@@ -1,0 +1,58 @@
+.anchor {
+    &__container {
+        background: $grey-lightest;
+        border-radius: 4px;
+        padding: 16px 0 10px;
+        margin: 0 0 16px;
+
+        & > ul::before {
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            content: "Table of Contents";
+            font-weight: bold;
+            color: $darkest;
+            text-align: left;
+            display: block;
+            margin: 0 16px 8px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 12px;
+            line-height: 16px;
+
+            li {
+                margin: 0;
+            }
+
+            a {
+                color: $grey;
+                text-decoration: none;
+                display: block;
+                border-left: 4px solid transparent;
+                padding: 3px 5px 3px 12px;
+                word-break: break-word;
+
+                &:hover {
+                    color: $darkest;
+                }
+            }
+
+            ul {
+                a {
+                    padding-left: 26px;
+                    border-left-width: 2px;
+                }
+            }
+        }
+
+        .active {
+            color: $darkest;
+            border-left-color: $red;
+        }
+    }
+}

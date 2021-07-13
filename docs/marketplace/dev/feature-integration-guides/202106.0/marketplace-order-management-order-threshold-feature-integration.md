@@ -7,20 +7,20 @@ template: feature-integration-guide-template
 
 This document describes how to integrate the Marketplace Order Management + Order Threshold feature into a Spryker project.
 
-
 ## Install feature core
+
 Follow the steps below to install the Marketplace Order Management Feature + Order Threshold feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | -------------- | --------- | -------------|
 | Order Threshold              | dev-master  | [Order Threshold feature integration](https://documentation.spryker.com/docs/order-threshold-feature-integration) |
 | Marketplace Order Management | 202001.0    | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-order-management-feature-integration.html) |
 
-### 1) Install the required modules using composer/dev/feature-integration-guides/{{ page.version }}/
+### Install the required modules using Composer
 
 Install the required modules:
 
@@ -40,6 +40,6 @@ Make sure that the following modules have been installed:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that Merchant Orders have correct threshold expenses shown in order-overview page in `http://zed.mysprykershop.com/merchant-sales-order-merchant-user-gui/detail?id-merchant-sales-order={% raw %}{{idMerchantSalesOrder}}{% endraw %}`
+Make sure that merchant orders have correct threshold expenses shown in order-overview page in `http://zed.mysprykershop.com/merchant-sales-order-merchant-user-gui/detail?id-merchant-sales-order={% raw %}{{idMerchantSalesOrder}}{% endraw %}`
 
 {% endinfo_block %}

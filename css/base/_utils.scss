@@ -1,0 +1,14 @@
+.hidden-item {
+    position: fixed;
+    top: -9999px;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.mobile-overflow {
+    @include media("<tablet") {
+        overflow: hidden;
+    }
+}

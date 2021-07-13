@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product feature integration
-last_updated: Dec 16, 2020
+last_updated: Jun 25, 2021
 description: This document describes the process how to integrate the Marketplace Product feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -8,6 +8,7 @@ template: feature-integration-guide-template
 This document describes how to integrate the Marketplace Product feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the Marketplace Product feature core.
 
 ### Prerequisites
@@ -17,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
 | Spryker Core         | master      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | master      | [Marketplace Merchants feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchants-feature-integration.html) |
+| Marketplace Merchant | master      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-merchant-feature-integration.html) |
 | Product   | master      | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
 
 ### 1) Install the required modules using Composer
@@ -67,7 +68,9 @@ Adjust the schema definition so entity changes trigger events:
 Apply database changes and to generate entity and transfer changes:
 
 ```bash
-console transfer:generate 2console propel:install 3console transfer:generate
+console transfer:generate
+console propel:install
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -118,6 +121,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
 | --------------------- | ------------------- | --------- | -------------------- |
 | MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.   |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
+| MerchantProductProductAbstractListActionViewDataExpanderPlugin | Expands product list data for abstract product data for merchant filter.   |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
 | MerchantProductProductTableQueryCriteriaExpanderPlugin       | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
 | MerchantProductAbstractMapExpanderPlugin                     | Adds merchant names to product abstract search data.         |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductPageDataExpanderPlugin                        | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
@@ -131,6 +135,7 @@ Enable the following behaviors by registering the plugins:
 
 namespace Pyz\Zed\ProductManagement;
 
+use Spryker\Zed\MerchantGui\Communication\Plugin\ProductManagement\MerchantProductAbstractListActionViewDataExpanderPlugin;
 use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductAbstractViewActionViewDataExpanderPlugin;
 use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductTableQueryCriteriaExpanderPlugin;
 
@@ -155,12 +160,23 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new MerchantProductProductTableQueryCriteriaExpanderPlugin(),
         ];
     }
+
+    /**
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractListActionViewDataExpanderPluginInterface[]
+     */
+    protected function getProductAbstractListActionViewDataExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductAbstractListActionViewDataExpanderPlugin(),
+        ];
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you can filter products by merchant at `http://zed.de.demo-spryker.com/availability-gui`.
+Make sure that at `http://zed.de.demo-spryker.com/product-management` you can filter products by merchant.
+Make sure that at `http://zed.de.demo-spryker.com/product-management/view?id-product-abstract={id-product-abstract}}` you can see merchant name. (Applicable only for products that are assigned to some merchant. See import step.)
 
 {% endinfo_block %}
 
@@ -197,6 +213,7 @@ namespace Pyz\Zed\ProductPageSearch;
 
 
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataExpanderPlugin as MerchantMerchantProductPageDataExpanderPlugin;
+use Spryker\Shared\MerchantProductSearch\MerchantProductSearchConfig;
 
 use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
 
@@ -217,11 +234,11 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure the `de_page` Easticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana—see for docker https://documentation.spryker.com/docs/services configuration details.)
+Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana. For Docker configuration details, see [Configuring services](https://documentation.spryker.com/docs/services).
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+**src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
 <?php
@@ -253,9 +270,9 @@ Make sure that data in  `spy_product_abstract_storage` contains `merchant_refere
 
 {% endinfo_block %}
 
-### 5) Import Merchant Product data
+### 5) Import merchant product data
 
-Prepare your data according to your requirements using our demo data:
+Prepare your data according to your requirements using the demo data:
 
 <details>
 <summary markdown='span'>data/import/common/common/marketplace/merchant_product.csv</summary>
@@ -435,7 +452,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import merchant-product
@@ -443,11 +460,13 @@ console data:import merchant-product
 
 {% info_block warningBox "Verification" %}
 
-Make sure that imported data is added to the `spy_merchant_product` table.
+Make sure that the imported data is added to the `spy_merchant_product` table.
 
 {% endinfo_block %}
 
 ## Install feature front end
+
+Follow the steps below to install the Marketplace Product feature front end.
 
 ### 1) Set up widgets
 
@@ -464,7 +483,7 @@ Register the following plugins to enable widgets:
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\MerchantProductWidget\Widget\MerchantProductWidget;
-use SprykerShop\Yves\MerchantProductWidget\Widget\ProductSoldByMerchantWidget;
+use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -475,14 +494,14 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
-            ProductSoldByMerchantWidget::class,
+            SoldByMerchantWidget::class,
             MerchantProductWidget::class,
         ];
     }
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```
 console frontend:yves:build
@@ -599,6 +618,9 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 Make sure when you add to cart merchant product, it has `merchantReference` set. (Can be checked in the `spy_quote` table).
 
 {% endinfo_block %}
+
+<!--### 3) Configure export to Redis and Elasticsearch-->
+
 
 ## Related features
 

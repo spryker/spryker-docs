@@ -109,8 +109,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `MerchantOpeningHoursResourceRoutePlugin` is set up by sending the request `GET http://glue.mysprykershop.com/merchant-opening-hours/{% raw %}{{merchant-reference}}{% endraw %}`
-
 Make sure that `MerchantOpeningHoursByMerchantReferenceResourceRelationshipPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/merchants/{% raw %}{{merchant-reference}}{% endraw %}?include=merchant-opening-hours`. You should get merchants with all merchant opening hours as relationships.
 
 {% endinfo_block %}

@@ -13,11 +13,11 @@ Follow the steps below to install the Marketplace Product Offer Glue API feature
 
 ### Prerequisites
 
-To start feature integration, integrate the following features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product Offer | dev-master |[Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/product-offer-feature-integration.html) |
+| Marketplace Product Offer | dev-master |[Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -53,7 +53,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### Enable resources and relationships
+### 3) nable resources and relationships
 
 Activate the following plugins:
 

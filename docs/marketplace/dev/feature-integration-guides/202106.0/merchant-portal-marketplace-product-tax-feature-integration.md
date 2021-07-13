@@ -15,7 +15,7 @@ Follow the steps below to install the Merchant Portal - Marketplace Product + Ta
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Marketplace Product | dev-master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-feature-integration.html) |
 | Tax | dev-master | [Tax feature integration](https://github.com/spryker-feature/tax)
@@ -63,7 +63,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| TaxProductAbstractFormExpanderPlugin | Expands ProductAbstractForm with Tax Set field. |  | Spryker\Zed\TaxMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
+| TaxProductAbstractFormExpanderPlugin | Expands `ProductAbstractForm` with the *Tax Set* field. |  | Spryker\Zed\TaxMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
 
 **src\Pyz\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvider.php**
 

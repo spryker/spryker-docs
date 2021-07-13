@@ -107,12 +107,10 @@ entries:
 
         - title: Profile
           nested:
-
           - title: Editing merchant's profile details
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html
 
-        - - title: My account
+        - title: My account
           nested:
-
-          - title: Editing merchant's profile details
-            url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html
+          - title: Managing account details and settings
+            url: /docs/marketplace/user/merchant-portal-user-guides/my-account/managing-account-details-and-settings.html

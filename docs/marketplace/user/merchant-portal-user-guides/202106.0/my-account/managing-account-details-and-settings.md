@@ -1,5 +1,5 @@
 ---
-title: My account
+title: Managing account details and settings
 description: This topic describes what you can do in the My account area of the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -9,15 +9,11 @@ This topic describes how to manage merchant user account details in the Merchant
 ## Prerequisites
 
 To start working with the merchant user’s account, go to **Merchant Portal > My account**.
+To open *My account* page, in the top right corner of the Merchant Portal, click the user icon and then click **My account**.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
-## Accessing My account in the Merchant Portal
-
-To open *My account* page, in the top right corner of the Merchant Portal, click the user icon and then click **My account**.
-
-
-## Changing the personal details
+## Changing personal details
 
 To update the personal details, on *My account* page, in the *Personal Details* section, update the necessary fields and click **Save**.
 
@@ -54,7 +50,7 @@ On the *Change password* drawer, you see the following attributes:
 
 To change the interface language of the Merchant Portal, on *My account* page, in the *Language* section, from the drop-down menu, select the necessary language and click **Save**.
 
-### Reference information
+## Reference information
 
 This section describes attributes you see when performing following actions:
 * Accessing *My account* in the Merchant Portal.
@@ -62,7 +58,7 @@ This section describes attributes you see when performing following actions:
 * Changing the email address.
 * Changing the interface language for the Merchant Portal.
 
-#### My account page
+### My account page
 
 The following table describes the attributes on the *My account* page:
 

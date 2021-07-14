@@ -100,17 +100,27 @@ entries:
         url: /docs/marketplace/user/merchant-portal-user-guides/
         nested:
 
+        - title: Login and logout
+          nested:
+
+          - title: Managing login and logout
+            url: /docs/marketplace/user/merchant-portal-user-guides/login-and-logout/managing-login-and-logout.html
+            
+        - title: My account
+          nested:
+
+          - title: Managing account details and settings
+            url: /docs/marketplace/user/merchant-portal-user-guides/my-account/managing-account-details-and-settings.html
+        
         - title: Dashboard
           nested:
+
           - title: Managing merchant's performance data
             url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/managing-merchants-performance-data.html
 
         - title: Profile
           nested:
+
           - title: Editing merchant's profile details
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html
 
-        - title: My account
-          nested:
-          - title: Managing account details and settings
-            url: /docs/marketplace/user/merchant-portal-user-guides/my-account/managing-account-details-and-settings.html

@@ -15,6 +15,6 @@ If a merchant wants to sell an item that already exists on the Marketplace, the 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Product Offer](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer.html) feature walkthrough for developers. 
+Are you a developer? See [Marketplace Product Offer](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/marketplace-product-offer.html) feature walkthrough for developers. 
 
 {% endinfo_block %}

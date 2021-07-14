@@ -30,6 +30,9 @@ entries:
           - title: Marketplace Product Offer
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/marketplace-product-offer.html
             nested:
+              - title: Rendering merchant product offers on the Storefront
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/rendering-merchant-product-offers-on-the-storefront.html
+
               - title: Product Offer in the Back Office
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-in-the-back-office.html
               

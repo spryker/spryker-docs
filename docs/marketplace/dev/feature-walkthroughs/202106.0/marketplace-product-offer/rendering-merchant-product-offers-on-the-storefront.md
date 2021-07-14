@@ -54,9 +54,9 @@ To render the MerchantProductOfferWidget module on the checkout pages, change th
 
 Keep in mind that:
 
-* *summary-node* already includes a new summary-product-packaging-unit-node molecule.
+- *summary-node* already includes a new summary-product-packaging-unit-node molecule.
 
-* *summary-product-packaging-unit-node* molecule already includes a widget with offers.
+- *summary-product-packaging-unit-node* molecule already includes a widget with offers.
 
 {% endinfo_block %}
 

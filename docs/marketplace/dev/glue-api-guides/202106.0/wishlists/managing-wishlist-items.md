@@ -1,3 +1,9 @@
+---
+title: Managing wishlist items
+description: Retrieve details about wishlist items and learn what else you can do with the resource in the Spryker Marketplace.
+template: glue-api-storefront-guide-template
+---
+
 This endpoint allows to add and remove items from wishlists.
 
 ## Installation
@@ -14,13 +20,16 @@ To add an item to a wishlist, send the request:
 
 ------
 
-| PATH PARAMETER        | DESCRIPTION                                                  |
-| :-------------------- | :----------------------------------------------------------- |
-| ***{{wishlist_id}}*** | Unique identifier of the wishlist to add the items to. [Create a wishlist](https://documentation.spryker.com/docs/managing-wishlists#create-a-wishlist) or [retrieve all wishlists](https://documentation.spryker.com/v6/docs/managing-wishlists#retrieve-wishlists) to get it. |
+| PATH PARAMETER   | DESCRIPTION     |
+| --------------- | ---------------- |
+| ***{{wishlist_id}}*** | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 
 ### Request
 
-Request sample - adding a concrete product `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
+<details>
+<summary markdown='span'>Request sample - adding a concrete product</summary>
+
+ `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 
 ```JSON
 {
@@ -32,8 +41,12 @@ Request sample - adding a concrete product `POST https://glue.mysprykershop.com/
 		}
 	}
 ```
+</details>
 
-Request sample - adding a  product offer `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
+<details>
+<summary markdown='span'>Request sample - adding a  product offer</summary>
+
+ `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
 
 ```json
 {
@@ -46,8 +59,12 @@ Request sample - adding a  product offer `POST https://glue.mysprykershop.com/wi
     }
 }
 ```
+</details>
 
-Request sample - adding a merchant product `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
+<details>
+<summary markdown='span'>Request sample - adding a merchant product</summary>
+
+ `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
 
 ```json
 {
@@ -59,15 +76,17 @@ Request sample - adding a merchant product `POST https://glue.mysprykershop.com/
     }
 }
 ```
+</details>
 
-| ATTRIBUTE             | TYPE   | DESCRIPTION                                          |
-| -------------------- | ----- | ---------------------------------------------------- |
+| ATTRIBUTE  | TYPE   | DESCRIPTION   |
+| ------------ | ----- | ---------------- |
 | sku                   | String | SKU of a concrete product to add.                    |
 | productOfferReference | String | Unique identifier of the product offer in the system.|
 
 ### Response
 
-Response sample - adding a concrete product
+<details>
+<summary markdown='span'>Response sample - adding a concrete product</summary>
 
 ```json
 {
@@ -83,8 +102,10 @@ Response sample - adding a concrete product
 		}
 	}
 ```
+</details>
 
-Response sample - adding a  product offer
+<details>
+<summary markdown='span'>Response sample - adding a  product offer</summary>
 
 ```json
 {
@@ -140,8 +161,10 @@ Response sample - adding a  product offer
     }
 }
 ```
+</details>
 
-Response sample -  - adding a merchant product
+<details>
+<summary markdown='span'>Response sample -  - adding a merchant product</summary>
 
 ```json
 {
@@ -161,16 +184,17 @@ Response sample -  - adding a merchant product
             "prices": []
         },
         "links": {
-            "self": "https://glue.de.marketplace.demo-spryker.com:80/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4/wishlist-items/109_19416433"
+            "self": "https://glue.mysprykershop.com/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4/wishlist-items/109_19416433"
         }
     }
 }
 ```
+</details>
 
 
 
-| ATTRIBUTE  | TYPE    | DESCRIPTION      |
-| -------------------- | ------ | --------------------------------- |
+| ATTRIBUTE  | TYPE    | DESCRIPTION  |
+| ----------- | ------ | --------------- |
 | sku       | String  | SKU of the concrete product in the wishlist.     |
 | productOfferReference | String  | Unique identifier of the product offer in the system.|
 | merchantReference | String  | Merchant reference assigned to every merchant.  |
@@ -186,3 +210,37 @@ Response sample -  - adding a merchant product
 | currency.code  | String  | Currency code. |
 | currency.name   | String  | Currency name. |
 | currency.symbol       | String  | Currency symbol.   |
+
+## Delete a wishlist item
+
+To delete wishlist item, send the request:
+
+------
+
+`DELETE` **/wishlists/\*{{wishlist_id}}\*/wishlist-items/\*{{item_sku}}\***
+
+------
+
+| PATH PARAMETER | DESCRIPTION   |
+| -------------- | -------------- |
+| ***{{wishlist_id}}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#create-a-wishlis) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| ***{{item_sku}}***    | Unique identifier of the product to delete.                  |
+
+### Request
+
+Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
+
+### Response
+
+If the item is removed successfully, the endpoint returns the `204 No Content` status code.
+
+## Possible errors
+
+| CODE | REASON  |
+| ------ | --------------- |
+| 201  | Cannot find the wishlist.                                    |
+| 206  | Cannot add an item to the wishlist.                          |
+| 207  | Cannot remove the item.                                      |
+| 208  | An item with the provided SKU does not exist in the wishlist. |
+
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).

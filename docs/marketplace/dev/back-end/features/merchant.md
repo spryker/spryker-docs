@@ -1,6 +1,6 @@
 ---
 title: Merchant
-description: This articles provides details about the merchant feature of the back-end project in the Spryker Marketplace.
+description: This article provides details about the merchant feature of the back-end project in the Spryker Marketplace.
 template: concept-topic-template
 ---
 

@@ -63,4 +63,4 @@ In some cases, due to rounding, the amounts of Marketplace order totals can diff
 
 ## Next steps
 * [Learn about the merchant orders](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/merchant-order-overview.html)
-* [Learn about the Marketplace and merchant state machines](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview.html)
+* [Learn about the Marketplace and merchant state machines](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)

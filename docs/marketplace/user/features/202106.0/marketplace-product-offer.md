@@ -1,5 +1,5 @@
 ---
-title: Marketplace Product Offer feature overview
+title: Marketplace Product Offer
 description: This document contains concept information for the Product offers feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---
@@ -162,3 +162,15 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 * B2B Merchant-specific prices do not work with product offer prices.
 * All cart-related B2B features (e.g., Quick Order, RFQ, Approval Process, etc.) will be supported later.
 * Availability Notification is not supported.
+
+## Related Business User articles
+
+|Feature overviews  |Merchant Portal user guides  |Back Office user guides |
+|---------|---------|---------|
+|[Marketplace Product Offer feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer.html) |<!--link -->  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html)|
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Marketplace Product Offer](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/marketplace-product-offer.html) feature walkthrough for developers. 
+
+{% endinfo_block %}

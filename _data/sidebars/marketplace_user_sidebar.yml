@@ -30,12 +30,7 @@ entries:
           url: /docs/marketplace/user/features/merchant-opening-hours/merchant-opening-hours.html
         
         - title: Marketplace Product Offer
-          url: /docs/marketplace/user/features/marketplace-product-offer/marketplace-product-offer.html
-
-          nested:
-
-          - title: Marketplace Product Offer feature overview
-            url: /docs/marketplace/user/features/marketplace-product-offer/marketplace-product-offer-feature-overview.html
+          url: /docs/marketplace/user/features/marketplace-product-offer.html
 
         - title: Marketplace Order Management
           url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management.html

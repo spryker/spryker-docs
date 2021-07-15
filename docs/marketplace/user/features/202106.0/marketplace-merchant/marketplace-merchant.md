@@ -13,13 +13,13 @@ Merchants, in their turn, can manage their business and information in the Merch
 
 ## Related Business User articles
 
-|Feature overviews  |Merchant Portal user guides  |Back Office user guides |
+|FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Marketplace Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) | [Editing merchant’s profile details](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html)|
-|[Merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html)|
+|[Marketplace Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html) | [Editing merchant’s profile details](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html)|
+|[Merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users-overview.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html)|
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Merchant](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchant/marketplace-merchant.html) feature walkthrough for developers. 
+Are you a developer? See [Marketplace Merchant](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchant.html) feature walkthrough for developers. 
 
 {% endinfo_block %}

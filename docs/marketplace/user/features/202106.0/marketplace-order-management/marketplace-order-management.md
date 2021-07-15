@@ -11,15 +11,15 @@ Marketplace administrators can view and manage Marketplace orders in the Back Of
 
 ## Related Business User articles
 
-|Feature overviews  |Merchant Portal user guides  |Back Office user guides |
+|FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Marketplace Order Management feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) |<!---LINK TO MERCHANT PORTAL ORDER MANAGEMENT-->  | <!---LINK TO BO ORDER MANAGEMENT-->|
-|[Merchant order overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/merchant-order-overview.html) | | |
-|[Marketplace and merchant state machines overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) | | |
-|[Marketplace and merchant state machines interaction](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) | | |
+|[Marketplace Order Management feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-order-management-overview.html) |<!---LINK TO MERCHANT PORTAL ORDER MANAGEMENT-->  | <!---LINK TO BO ORDER MANAGEMENT-->|
+|[Merchant order overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/merchant-order-overview.html) | | |
+|[Marketplace and merchant state machines overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) | | |
+|[Marketplace and merchant state machines interaction](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) | | |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Order Management](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management/marketplace-order-management.html) feature walkthrough for developers. 
+Are you a developer? See [Marketplace Order Management](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management.html) feature walkthrough for developers. 
 
 {% endinfo_block %}

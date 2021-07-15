@@ -41,7 +41,7 @@ The status of the Marketplace order is an aggregated state of the Marketplace or
 
 
 
-<details open>
+<details>
 
 <summary>Marketplace state machine flow</summary>
 
@@ -71,7 +71,7 @@ Our exemplary merchant state machine provides the following states:
 4. Delivered
 5. Closed
 
-<details open>
+<details>
 
 <summary>Merchant State Machine flow</summary>
 
@@ -80,4 +80,4 @@ Our exemplary merchant state machine provides the following states:
 </details>
 
 ## Next steps
-[Learn how the marketplace and merchant state machines interact with each other](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)
+[Learn how the marketplace and merchant state machines interact with each other](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)

@@ -19,10 +19,7 @@ entries:
       - title: Feature walkthroughs
         nested:
           - title: Marketplace Merchant
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant/marketplace-merchant.html
-            nested:
-              - title: "Reference: Merchant entity diagram"
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant/reference-merchant-entity-diagram.html
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant.html
 
           - title: Merchant Category
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html
@@ -31,20 +28,25 @@ entries:
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours.html
 
           - title: Marketplace Product Offer
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer.html
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/marketplace-product-offer.html
+            nested:
+              - title: Rendering merchant product offers on the Storefront
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/rendering-merchant-product-offers-on-the-storefront.html
+
+              - title: Product Offer in the Back Office
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-in-the-back-office.html
+
+              - title: Product Offer storage
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-storage.html
+
+              - title: Product Offer store relation
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-store-relation.html
+
+              - title: Product Offer validity dates
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-validity-dates.html
 
           - title: Marketplace Order Management
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/marketplace-order-management.html
-            nested:
-              - title: "Reference: Marketplace Order module relations"
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-marketplace-order-module-relations.html
-
-              - title: "Reference: Merchant Order module relations"
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-merchant-order-module-relations.html
-
-              - title: "Reference: Marketplace and merchant state machine module schema"
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management/reference-marketplace-and-merchant-state-machine-module-schema.html
-
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management.html
 
       - title: Feature integration guides
         nested:
@@ -229,6 +231,9 @@ entries:
 
           - title: Catalog search
             url: /docs/marketplace/dev/glue-api-guides/catalog-search.html
+
+          - title: Managing the returns
+            url: /docs/marketplace/dev/glue-api-guides/managing-the-returns.html
 
           - title: Resolving search engine friendly URLs
             url: /docs/marketplace/dev/glue-api-guides/resolving-search-engine-friendly-urls.html

@@ -4,7 +4,7 @@ description: This document contains concept information for the Merchants featur
 template: concept-topic-template
 ---
 
-*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](https://documentation.spryker.com/marketplace/docs/product-offer-feature-overview), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview.html).  
+*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](https://documentation.spryker.com/marketplace/docs/product-offer-feature-overview), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users-overview.html).  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
@@ -68,7 +68,7 @@ If you [import the merchant data](/docs/marketplace/dev/data-import/{{ page.vers
 
 ## Merchant category
 
-You can group merchants by categories to make your working process more efficient and simplify merchants search for customers. See [Merchant Category](/docs/marketplace/user/features/{{ page.version }}/merchant-category/merchant-category.html) for details.
+You can group merchants by categories to make your working process more efficient and simplify merchants search for customers. See [Merchant Category](/docs/marketplace/user/features/{{ page.version }}/merchant-category.html) for details.
 
 ## Merchants on the Storefront
 
@@ -92,7 +92,7 @@ The information for the merchant profile can be defined:
 
 
 ### Merchant opening hours
-To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. See [Merchant Opening Hours](/docs/marketplace/user/features/{{ page.version }}/merchant-opening-hours/merchant-opening-hours.html) for details.
+To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. See [Merchant Opening Hours](/docs/marketplace/user/features/{{ page.version }}/merchant-opening-hours.html) for details.
 
 ### Merchant links on the Storefront pages
 
@@ -134,4 +134,4 @@ Spryker Marketplace provides API to:
 * Retrieve search and filter results by merchant name. For details, see [Searching by products](https://documentation.spryker.com/marketplace/docs/catalog-search#search-by-products) and [Retrieving suggestions](https://documentation.spryker.com/marketplace/docs/retrieving-suggestions-for-auto-completion-and-search#retrieve-a-suggestion).
 
 ## Next steps
-[Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview.html)
+[Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users-overview.html)

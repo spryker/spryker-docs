@@ -11,7 +11,7 @@ Merchant Portal Login is the starting point for Merchant users to start their jo
 
 ## Prerequisites
 
-To be able to log in to the Merchant Portal, a [Merchant user](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-feature-overview/merchant-users-overview.html) needs to be [created](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html#creating-a-merchant-user) and [activated in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html#activating-and-deactivating-the-merchant-users).
+To be able to log in to the Merchant Portal, a [Merchant user](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users-overview.html) needs to be [created](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html#creating-a-merchant-user) and [activated in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html#activating-and-deactivating-the-merchant-users).
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 

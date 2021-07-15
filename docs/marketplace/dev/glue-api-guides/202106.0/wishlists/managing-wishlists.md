@@ -458,9 +458,11 @@ To retrieve wishlist items, send the request:
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products,product-labels | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items, respective concrete products and their product labels into the response. |
 | GET https://glue.mysprykershop.com/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4?include=wishlist-items,concrete-products,concrete-product-availabilities | Retrieve the wishlist with the `bb7dbe75-d892-582f-b438-d7f6cbfd3fc4`identifier. Include wishlist items, concrete products and concrete product availabilities in the response. |
 | GET https://glue.mysprykershop.com/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4?include=wishlist-items,concrete-products,concrete-product-prices | Retrieve the wishlist with the `bb7dbe75-d892-582f-b438-d7f6cbfd3fc4`identifier. Include wishlist items, concrete products and their prices. |
-| GET https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094?include=wishlist-items,product-offer-availabilities | Retrieve the wishlist with the `57c96d55-8a37-5998-927f-7bb663b69094`identifier. Include wishlist items and product offer availabilities. |
+| GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items,concrete-products,product-offers | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items, concrete products and product offers for these products. |
+| GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers,product-offer-availabilities | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items and product offer availabilities. |
+| GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers,product-offer-prices | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items and product offer prices. |
 | GET https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094?include=wishlist-items,merchants | Retrieve the wishlist with the `57c96d55-8a37-5998-927f-7bb663b69094`identifier. Include wishlist items and merchant information. |
-| GET https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094?include=wishlist-items,product-offer-prices | Retrieve the wishlist with the `57c96d55-8a37-5998-927f-7bb663b69094`identifier. Include wishlist items and product offer prices. |
+
 
 
 ### Response
@@ -999,28 +1001,36 @@ To retrieve wishlist items, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items and product offer availabilities</summary>
+<summary markdown='span'>Response sample with wishlist items, concrete products, and product offers</summary>
 
 ```json
 {
     "data": {
         "type": "wishlists",
-        "id": "57c96d55-8a37-5998-927f-7bb663b69094",
+        "id": "13c813a3-8916-5444-9f1b-e4d8c56a085d",
         "attributes": {
-            "name": "My_favourite_wishlist",
-            "numberOfItems": 1,
-            "createdAt": "2021-07-13 14:50:08.755124",
-            "updatedAt": "2021-07-13 14:50:08.755124"
+            "name": "My wish list",
+            "numberOfItems": 3,
+            "createdAt": "2021-07-15 08:55:22.109760",
+            "updatedAt": "2021-07-15 08:55:22.109760"
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094"
+            "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers"
         },
         "relationships": {
             "wishlist-items": {
                 "data": [
                     {
                         "type": "wishlist-items",
-                        "id": "092_24495842_offer5"
+                        "id": "011_30775359_offer59"
+                    },
+                    {
+                        "type": "wishlist-items",
+                        "id": "011_30775359_offer18"
+                    },
+                    {
+                        "type": "wishlist-items",
+                        "id": "111_12295890"
                     }
                 ]
             }
@@ -1028,23 +1038,249 @@ To retrieve wishlist items, send the request:
     },
     "included": [
         {
-            "type": "wishlist-items",
-            "id": "092_24495842_offer5",
+            "type": "product-offers",
+            "id": "offer59",
             "attributes": {
-                "productOfferReference": "offer5",
+                "merchantSku": null,
+                "merchantReference": "MER000005",
+                "isDefault": true
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer59"
+            }
+        },
+        {
+            "type": "product-offers",
+            "id": "offer18",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000002",
+                "isDefault": false
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer18"
+            }
+        },
+        {
+            "type": "concrete-products",
+            "id": "011_30775359",
+            "attributes": {
+                "sku": "011_30775359",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "011",
+                "name": "Canon IXUS 180",
+                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7”) LCD screen allows easy viewing and sharing.",
+                "attributes": {
+                    "megapixel": "20 MP",
+                    "sensor_type": "CCD",
+                    "display": "LCD",
+                    "digital_zoom": "4 x",
+                    "brand": "Canon",
+                    "color": "Blue"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Canon IXUS 180",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control",
+                "attributeNames": {
+                    "megapixel": "Megapixel",
+                    "sensor_type": "Sensor type",
+                    "display": "Display",
+                    "digital_zoom": "Digital zoom",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/011_30775359"
+            },
+            "relationships": {
+                "product-offers": {
+                    "data": [
+                        {
+                            "type": "product-offers",
+                            "id": "offer59"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer18"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer59"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer18"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "wishlist-items",
+            "id": "011_30775359_offer59",
+            "attributes": {
+                "productOfferReference": "offer59",
                 "merchantReference": "MER000001",
-                "id": "092_24495842_offer5",
-                "sku": "092_24495842",
+                "id": "011_30775359_offer59",
+                "sku": "011_30775359",
                 "availability": {
                     "isNeverOutOfStock": true,
+                    "availability": true,
+                    "quantity": "0.0000000000"
+                },
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 37881,
+                        "netAmount": 34093,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 32940,
+                        "netAmount": 29646,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items/011_30775359_offer59"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "011_30775359"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "wishlist-items",
+            "id": "011_30775359_offer18",
+            "attributes": {
+                "productOfferReference": "offer18",
+                "merchantReference": "MER000001",
+                "id": "011_30775359_offer18",
+                "sku": "011_30775359",
+                "availability": {
+                    "isNeverOutOfStock": false,
                     "availability": true,
                     "quantity": "10.0000000000"
                 },
                 "prices": [
                     {
-                        "priceTypeName": "ORIGINAL",
-                        "grossAmount": 17459,
-                        "netAmount": 15713,
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 39986,
+                        "netAmount": 35987,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 34770,
+                        "netAmount": 31293,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items/011_30775359_offer18"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "011_30775359"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "concrete-products",
+            "id": "111_12295890",
+            "attributes": {
+                "sku": "111_12295890",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "111",
+                "name": "Sony SmartWatch",
+                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world’s just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that’ll keep you discreetly updated and your hands free.",
+                "attributes": {
+                    "shape": "square",
+                    "bluetooth_version": "3",
+                    "battery_life": "72 h",
+                    "display_type": "LCD",
+                    "brand": "Sony",
+                    "color": "Silver"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Sony SmartWatch",
+                "metaKeywords": "Sony,Smart Electronics",
+                "metaDescription": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your ",
+                "attributeNames": {
+                    "shape": "Shape",
+                    "bluetooth_version": "Blootooth version",
+                    "battery_life": "Battery life",
+                    "display_type": "Display type",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/111_12295890"
+            }
+        },
+        {
+            "type": "wishlist-items",
+            "id": "111_12295890",
+            "attributes": {
+                "productOfferReference": null,
+                "merchantReference": "MER000001",
+                "id": "111_12295890",
+                "sku": "111_12295890",
+                "availability": {
+                    "isNeverOutOfStock": true,
+                    "availability": true,
+                    "quantity": "20.0000000000"
+                },
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 19568,
+                        "netAmount": 17611,
                         "currency": {
                             "code": "EUR",
                             "name": "Euro",
@@ -1053,8 +1289,18 @@ To retrieve wishlist items, send the request:
                     },
                     {
                         "priceTypeName": "DEFAULT",
-                        "grossAmount": 7459,
-                        "netAmount": 5713,
+                        "grossAmount": 22503,
+                        "netAmount": 20253,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 19568,
+                        "netAmount": 17611,
                         "currency": {
                             "code": "EUR",
                             "name": "Euro",
@@ -1063,8 +1309,8 @@ To retrieve wishlist items, send the request:
                     },
                     {
                         "priceTypeName": "DEFAULT",
-                        "grossAmount": 10000,
-                        "netAmount": 8070,
+                        "grossAmount": 22503,
+                        "netAmount": 20253,
                         "currency": {
                             "code": "CHF",
                             "name": "Swiss Franc",
@@ -1074,7 +1320,17 @@ To retrieve wishlist items, send the request:
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items/092_24495842_offer5"
+                "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items/111_12295890"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "111_12295890"
+                        }
+                    ]
+                }
             }
         }
     ]
@@ -1083,10 +1339,748 @@ To retrieve wishlist items, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items and product offer availabilities</summary>
+<summary markdown='span'>Response sample with wishlist items, concrete products, product offers, and product offer availabilities</summary>
 
 ```json
+{
+    "data": {
+        "type": "wishlists",
+        "id": "13c813a3-8916-5444-9f1b-e4d8c56a085d",
+        "attributes": {
+            "name": "My wish list",
+            "numberOfItems": 3,
+            "createdAt": "2021-07-15 08:55:22.109760",
+            "updatedAt": "2021-07-15 08:55:22.109760"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers,product-offer-availabilities"
+        },
+        "relationships": {
+            "wishlist-items": {
+                "data": [
+                    {
+                        "type": "wishlist-items",
+                        "id": "011_30775359_offer59"
+                    },
+                    {
+                        "type": "wishlist-items",
+                        "id": "011_30775359_offer18"
+                    },
+                    {
+                        "type": "wishlist-items",
+                        "id": "111_12295890"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "product-offer-availabilities",
+            "id": "offer59",
+            "attributes": {
+                "isNeverOutOfStock": true,
+                "availability": true,
+                "quantity": "0.0000000000"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer59/product-offer-availabilities"
+            }
+        },
+        {
+            "type": "product-offers",
+            "id": "offer59",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000005",
+                "isDefault": true
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer59"
+            }
+        },
+        {
+            "type": "product-offer-availabilities",
+            "id": "offer18",
+            "attributes": {
+                "isNeverOutOfStock": false,
+                "availability": true,
+                "quantity": "10.0000000000"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer18/product-offer-availabilities"
+            }
+        },
+        {
+            "type": "product-offers",
+            "id": "offer18",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000002",
+                "isDefault": false
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer18"
+            }
+        },
+        {
+            "type": "concrete-products",
+            "id": "011_30775359",
+            "attributes": {
+                "sku": "011_30775359",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "011",
+                "name": "Canon IXUS 180",
+                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7”) LCD screen allows easy viewing and sharing.",
+                "attributes": {
+                    "megapixel": "20 MP",
+                    "sensor_type": "CCD",
+                    "display": "LCD",
+                    "digital_zoom": "4 x",
+                    "brand": "Canon",
+                    "color": "Blue"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Canon IXUS 180",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control",
+                "attributeNames": {
+                    "megapixel": "Megapixel",
+                    "sensor_type": "Sensor type",
+                    "display": "Display",
+                    "digital_zoom": "Digital zoom",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/011_30775359"
+            },
+            "relationships": {
+                "product-offers": {
+                    "data": [
+                        {
+                            "type": "product-offers",
+                            "id": "offer59"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer18"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer59"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer18"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "wishlist-items",
+            "id": "011_30775359_offer59",
+            "attributes": {
+                "productOfferReference": "offer59",
+                "merchantReference": "MER000001",
+                "id": "011_30775359_offer59",
+                "sku": "011_30775359",
+                "availability": {
+                    "isNeverOutOfStock": true,
+                    "availability": true,
+                    "quantity": "0.0000000000"
+                },
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 37881,
+                        "netAmount": 34093,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 32940,
+                        "netAmount": 29646,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items/011_30775359_offer59"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "011_30775359"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "wishlist-items",
+            "id": "011_30775359_offer18",
+            "attributes": {
+                "productOfferReference": "offer18",
+                "merchantReference": "MER000001",
+                "id": "011_30775359_offer18",
+                "sku": "011_30775359",
+                "availability": {
+                    "isNeverOutOfStock": false,
+                    "availability": true,
+                    "quantity": "10.0000000000"
+                },
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 39986,
+                        "netAmount": 35987,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 34770,
+                        "netAmount": 31293,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items/011_30775359_offer18"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "011_30775359"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "concrete-products",
+            "id": "111_12295890",
+            "attributes": {
+                "sku": "111_12295890",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "111",
+                "name": "Sony SmartWatch",
+                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world’s just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that’ll keep you discreetly updated and your hands free.",
+                "attributes": {
+                    "shape": "square",
+                    "bluetooth_version": "3",
+                    "battery_life": "72 h",
+                    "display_type": "LCD",
+                    "brand": "Sony",
+                    "color": "Silver"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Sony SmartWatch",
+                "metaKeywords": "Sony,Smart Electronics",
+                "metaDescription": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your ",
+                "attributeNames": {
+                    "shape": "Shape",
+                    "bluetooth_version": "Blootooth version",
+                    "battery_life": "Battery life",
+                    "display_type": "Display type",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/111_12295890"
+            }
+        },
+        {
+            "type": "wishlist-items",
+            "id": "111_12295890",
+            "attributes": {
+                "productOfferReference": null,
+                "merchantReference": "MER000001",
+                "id": "111_12295890",
+                "sku": "111_12295890",
+                "availability": {
+                    "isNeverOutOfStock": true,
+                    "availability": true,
+                    "quantity": "20.0000000000"
+                },
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 19568,
+                        "netAmount": 17611,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 22503,
+                        "netAmount": 20253,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 19568,
+                        "netAmount": 17611,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 22503,
+                        "netAmount": 20253,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items/111_12295890"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "111_12295890"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+</details>
 
+<details>
+<summary markdown='span'>Response sample with wishlist items, concrete products, product offers, and product offer prices</summary>
+
+```json
+{
+    "data": {
+        "type": "wishlists",
+        "id": "13c813a3-8916-5444-9f1b-e4d8c56a085d",
+        "attributes": {
+            "name": "My wish list",
+            "numberOfItems": 3,
+            "createdAt": "2021-07-15 08:55:22.109760",
+            "updatedAt": "2021-07-15 08:55:22.109760"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers,product-offer-prices"
+        },
+        "relationships": {
+            "wishlist-items": {
+                "data": [
+                    {
+                        "type": "wishlist-items",
+                        "id": "011_30775359_offer59"
+                    },
+                    {
+                        "type": "wishlist-items",
+                        "id": "011_30775359_offer18"
+                    },
+                    {
+                        "type": "wishlist-items",
+                        "id": "111_12295890"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "product-offer-prices",
+            "id": "offer59",
+            "attributes": {
+                "price": 32940,
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": null,
+                        "grossAmount": 32940,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": []
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer59/product-offer-prices"
+            }
+        },
+        {
+            "type": "product-offers",
+            "id": "offer59",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000005",
+                "isDefault": true
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer59"
+            }
+        },
+        {
+            "type": "product-offer-prices",
+            "id": "offer18",
+            "attributes": {
+                "price": 34770,
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": null,
+                        "grossAmount": 34770,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": []
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer18/product-offer-prices"
+            }
+        },
+        {
+            "type": "product-offers",
+            "id": "offer18",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000002",
+                "isDefault": false
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer18"
+            }
+        },
+        {
+            "type": "concrete-products",
+            "id": "011_30775359",
+            "attributes": {
+                "sku": "011_30775359",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "011",
+                "name": "Canon IXUS 180",
+                "description": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control and choose the perfect camera settings for you. Play with your creativity in stills or movies using a range of Creative Filters such as Fish Eye, Miniature and Toy Camera.  Enjoy exceptional quality, detailed images ideal for creating stunning poster sized prints thanks to 20.0 Megapixels and DIGIC 4+ processing. An intelligent optical Image Stabilizer ensures sharp stills and steady movies in any situation, while the 6.8 cm (2.7”) LCD screen allows easy viewing and sharing.",
+                "attributes": {
+                    "megapixel": "20 MP",
+                    "sensor_type": "CCD",
+                    "display": "LCD",
+                    "digital_zoom": "4 x",
+                    "brand": "Canon",
+                    "color": "Blue"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Canon IXUS 180",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Effortless creativity Just point and shoot to capture fantastic photos or movies with one touch of the Auto Button, which allows Smart Auto to take control",
+                "attributeNames": {
+                    "megapixel": "Megapixel",
+                    "sensor_type": "Sensor type",
+                    "display": "Display",
+                    "digital_zoom": "Digital zoom",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/011_30775359"
+            },
+            "relationships": {
+                "product-offers": {
+                    "data": [
+                        {
+                            "type": "product-offers",
+                            "id": "offer59"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer18"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer59"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer18"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "wishlist-items",
+            "id": "011_30775359_offer59",
+            "attributes": {
+                "productOfferReference": "offer59",
+                "merchantReference": "MER000001",
+                "id": "011_30775359_offer59",
+                "sku": "011_30775359",
+                "availability": {
+                    "isNeverOutOfStock": true,
+                    "availability": true,
+                    "quantity": "0.0000000000"
+                },
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 37881,
+                        "netAmount": 34093,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 32940,
+                        "netAmount": 29646,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items/011_30775359_offer59"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "011_30775359"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "wishlist-items",
+            "id": "011_30775359_offer18",
+            "attributes": {
+                "productOfferReference": "offer18",
+                "merchantReference": "MER000001",
+                "id": "011_30775359_offer18",
+                "sku": "011_30775359",
+                "availability": {
+                    "isNeverOutOfStock": false,
+                    "availability": true,
+                    "quantity": "10.0000000000"
+                },
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 39986,
+                        "netAmount": 35987,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 34770,
+                        "netAmount": 31293,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items/011_30775359_offer18"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "011_30775359"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "concrete-products",
+            "id": "111_12295890",
+            "attributes": {
+                "sku": "111_12295890",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "111",
+                "name": "Sony SmartWatch",
+                "description": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your world’s just a tap, swipe or press away. Want to do more with your SmartWatch? Download compatible applications on Google Play™. And customise your SmartWatch to make it exclusively yours. Customise your SmartWatch with a 20mm wristband. Or wear its stylish wristband. You can even use it as a clip. This ultra-thin Android™ remote was designed to impress. An elegant Android watch that’ll keep you discreetly updated and your hands free.",
+                "attributes": {
+                    "shape": "square",
+                    "bluetooth_version": "3",
+                    "battery_life": "72 h",
+                    "display_type": "LCD",
+                    "brand": "Sony",
+                    "color": "Silver"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Sony SmartWatch",
+                "metaKeywords": "Sony,Smart Electronics",
+                "metaDescription": "Your world at your fingertips SmartWatch features an easy-to-use, ultra-responsive touch display. Finding your way around SmartWatch is super simple. Your ",
+                "attributeNames": {
+                    "shape": "Shape",
+                    "bluetooth_version": "Blootooth version",
+                    "battery_life": "Battery life",
+                    "display_type": "Display type",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/111_12295890"
+            }
+        },
+        {
+            "type": "wishlist-items",
+            "id": "111_12295890",
+            "attributes": {
+                "productOfferReference": null,
+                "merchantReference": "MER000001",
+                "id": "111_12295890",
+                "sku": "111_12295890",
+                "availability": {
+                    "isNeverOutOfStock": true,
+                    "availability": true,
+                    "quantity": "20.0000000000"
+                },
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 19568,
+                        "netAmount": 17611,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 22503,
+                        "netAmount": 20253,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 19568,
+                        "netAmount": 17611,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        }
+                    },
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "grossAmount": 22503,
+                        "netAmount": 20253,
+                        "currency": {
+                            "code": "CHF",
+                            "name": "Swiss Franc",
+                            "symbol": "CHF"
+                        }
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items/111_12295890"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "111_12295890"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
 ```
 </details>
 
@@ -1214,14 +2208,6 @@ To retrieve wishlist items, send the request:
 ```
 </details>
 
-<details>
-<summary markdown='span'>Response sample with wishlist items and product offer prices</summary>
-
-```json
-
-```
-</details>
-
 | ATTRIBUTE  | TYPE  | DESCRIPTION     |
 | ---------- | ----- | --------------- |
 | name          | String  | Wishlist name.                      |
@@ -1237,7 +2223,9 @@ For the attributes of the included resources, see
 
 [Retrieving concrete product prices](https://documentation.spryker.com/docs/retrieving-concrete-product-prices)
 
-[Retrieving merchant information](https://spryker-docs.herokuapp.com/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).
+[Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html)
+
+[Retrieving merchant information](https://spryker-docs.herokuapp.com/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)
 
 
 

@@ -90,7 +90,7 @@ This tab contains legal information that is displayed on the *Merchant Profile* 
 
 #### Users tab
 
-This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users-overview.html) for the merchant.
+This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users.html) for the merchant.
 
 {% info_block infoBox "Info" %}
 
@@ -191,7 +191,7 @@ This tab contains legal information that is displayed on the *Merchant Profile* 
 
 #### Users tab
 
-This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users-overview.html) for the merchant.
+This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users.html) for the merchant.
 
 {% info_block infoBox "Info" %}
 

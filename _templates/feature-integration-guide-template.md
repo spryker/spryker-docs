@@ -29,12 +29,12 @@ Follow the steps below to install the {Feature Name} feature core.
 ### Prerequisites
 <!-- List the features a project must have before they can integrate the current feature. -->
 
-To start feature integration, integrate the required features:
+To start feature integration, integrate the required features and Glue APIs:
 <!--See feature mapping at [Features](https://release.spryker.com/features). -->
 
-| NAME           | VERSION           |
-| -------------- | ----------------- |
-| {Feature Name} | {feature version} |
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| {feature name / Glue API name} | {feature version} | {integration guide link} |
 
 ### 1) Install the required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
@@ -403,12 +403,12 @@ Follow the steps below to install the {Feature Name} feature front end.
 ### Prerequisites
 <!--Describe the features the project must have before the current feature can be integrated.-->
 
-To start feature integration, integrate the required features:
-<!--See feature mapping at [Features](https://release.spryker.com/features).-->
+To start feature integration, integrate the required features and Glue APIs:
+<!--See feature mapping at [Features](https://release.spryker.com/features). -->
 
-| NAME           | VERSION           |
-| -------------- | ----------------- |
-| {Feature Name} | {feature version} |
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| {feature name / Glue API name} | {feature version} | {integration guide link} |
 
 ### 1) Install the required modules using Composer
 <!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
@@ -510,8 +510,9 @@ console frontend:yves:build
 
 
 ## Related features
-Integrate the following related features:
 
-| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+Integrate the following related features and Glue APIs:
+
+| NAME        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| {Feature Name} | {&check; /  }    | [{Integration guide name}](link to the integration guide) |
+| {feature name / Glue API name} | {&check; /  }    | [{Integration guide name}](link to the integration guide) |

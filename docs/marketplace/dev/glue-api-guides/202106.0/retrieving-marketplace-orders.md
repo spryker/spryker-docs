@@ -44,11 +44,11 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | REQUEST | USAGE  |
 | --------------------- | ------------------ |
-| GET https://glue.mysprykershop.com/orders  | Retrieve all customer’s orders.  |
-| GET https://glue.mysprykershop.com/orders?page[limit]=10  | Retrieve 10 orders. |
-| GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10 | Retrieve orders 11 through 20.  |
-| GET https://glue.mysprykershop.com/orders?page[offset]=20  | Retrieve all orders starting from the twenty-first order.  |
-| GET https://glue.mysprykershop.com/orders?include=merchants  | Retrieve all customer’s orders with the information on merchants included.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| `GET https://glue.mysprykershop.com/orders`  | Retrieve all customer’s orders.  |
+| `GET https://glue.mysprykershop.com/orders?page[limit]=10`  | Retrieve 10 orders. |
+| `GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10` | Retrieve orders 11 through 20.  |
+| `GET https://glue.mysprykershop.com/orders?page[offset]=20`  | Retrieve all orders starting from the twenty-first order.  |
+| `GET https://glue.mysprykershop.com/orders?include=merchants`  | Retrieve all customer’s orders with the information on merchants included.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
 
 ### Response
 
@@ -566,9 +566,9 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 
 | REQUEST | USAGE |
 | ----------------- | ------------------ |
-| GET http://glue.mysprykershop.com/orders/DE--6   | Retrieve information about the `DE--6` order.  |
-| GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieve information about the order with the id `DE--6` with order shipments included. |
-| GET http://glue.mysprykershop.com/orders/DE--3?include=merchants | Retrieve order `DE--3` with information on merchants.{% info_block warningBox "Note" %}This option is available only if you upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html).{% endinfo_block %} |
+| `GET http://glue.mysprykershop.com/orders/DE--6`   | Retrieve information about the `DE--6` order.  |
+| `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieve information about the order with the id `DE--6` with order shipments included. |
+| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with information on merchants.{% info_block warningBox "Note" %}This option is available only if you upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html).{% endinfo_block %} |
 
 ### Response
 
@@ -1435,8 +1435,8 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 | items.idSalesOrderConfiguredBundle.name | String|Name of the configured bundle. |
 | items.idSalesOrderConfiguredBundle.quantity | Integer| Quantity of the ordered configurable bundles.|
 | items.salesOrderConfiguredBundleItem |Object |Contains information about the items of the configured bundle. |
-| items.salesOrderItemConfiguration | String | | 
-| items.salesUnit | String| Sales unit to be used for the item amount calculation.| 
+| items.salesOrderItemConfiguration | String | |
+| items.salesUnit | String| Sales unit to be used for the item amount calculation.|
 | items.amount | String| |
 | items.metadata   | object  | Metadata of the concrete product.                            |
 | items.metadata.superAttributes   | String  | [Attributes](https://documentation.spryker.com/docs/product-attribute-overview) of the order item. |

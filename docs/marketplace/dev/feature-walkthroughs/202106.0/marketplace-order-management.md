@@ -7,7 +7,7 @@ template: concept-topic-template
 
 With the Marketplace Order Management feature, default orders that contain additional information about the merchants are called Marketplace orders. In turn, every merchant can view and manage only the orders that are related to their items. Such orders are called merchant orders.
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Order Management](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management.html) feature summary for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Order Management](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management.html) feature overview for business users.
 
 ## Module relations
 

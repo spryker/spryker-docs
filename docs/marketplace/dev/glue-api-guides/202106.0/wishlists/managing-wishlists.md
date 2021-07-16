@@ -432,7 +432,7 @@ To retrieve a specific wishlist, send the request:
 
 ------
 
-`GET` **/wishlists/\*{{wishlist_id}}\***
+`GET` **/wishlists/*{{wishlist_id}}***
 
 ------
 

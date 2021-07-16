@@ -8,7 +8,7 @@ This endpoint allows you to add and remove items from wishlists.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see Marketplace Wishlist API Feature Integration.
+For detailed information on the modules that provide the API functionality and related installation instructions, see Marketplace Wishlist API Feature Integration. <!---LINK-->
 
 ## Add an item to a wishlist
 

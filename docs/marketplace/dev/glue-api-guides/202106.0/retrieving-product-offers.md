@@ -35,7 +35,8 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 | REQUEST | USAGE     |
 | ---------- | ----------- |
 | `GET https://glue.mysprykershop.com/product-offers/offer56`| Get information about the offer56.   |
-| `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-prices,product-offer-availabilities,merchants` | Get information about the offer101 with the details on product offer prices and product offer availability and merchants included. |
+| `GET https://glue.mysprykershop.com/product-offers/offer78?product-offer-prices` | Get information about the offer78 with the details on product offer prices (including the volume prices). |
+| `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-availabilities,merchants` | Get information about the offer101 with the details on product offer prices and product offer availability and merchants included. |
 
 ### Response
 
@@ -61,7 +62,70 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer prices, product offer availabilities, and merchant information</summary>
+<summary markdown='span'>Response sample with product offer prices</summary>
+
+```json
+{
+    "data": {
+        "type": "product-offers",
+        "id": "offer78",
+        "attributes": {
+            "merchantSku": null,
+            "merchantReference": "MER000005",
+            "isDefault": true
+        },
+        "links": {
+            "self": "https://glue.de.marketplace.demo-spryker.com:80/product-offers/offer78"
+        },
+        "relationships": {
+            "product-offer-prices": {
+                "data": [
+                    {
+                        "type": "product-offer-prices",
+                        "id": "offer78"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "product-offer-prices",
+            "id": "offer78",
+            "attributes": {
+                "price": 40522,
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": null,
+                        "grossAmount": 40522,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"                        
+                    },
+                        "volumePrices": [
+                            {
+                                "grossAmount": 38400,
+                                "netAmount": 39100,
+                                "quantity": 3
+                            }
+                                 
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.de.marketplace.demo-spryker.com:80/product-offers/offer78/product-offer-prices"
+            }
+        }
+    ]
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample with product offer availabilities and merchant information</summary>
 
 ```json
 {
@@ -99,14 +163,6 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
                     }
                 ]
             },
-            "product-offer-prices": {
-                "data": [
-                    {
-                        "type": "product-offer-prices",
-                        "id": "offer101"
-                    }
-                ]
-            },
             "merchants": {
                 "data": [
                     {
@@ -129,39 +185,7 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
             "links": {
                 "self": "http://glue.mysprykershop.com/product-offers/offer101/product-offer-availabilities"
             }
-        },
-        {
-            "type": "product-offer-prices",
-            "id": "offer101",
-            "attributes": {
-                "price": 4165,
-                "prices": [
-                    {
-                        "priceTypeName": "DEFAULT",
-                        "netAmount": null,
-                        "grossAmount": 4165,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        }
-                    },
-                    {
-                        "priceTypeName": "ORIGINAL",
-                        "netAmount": null,
-                        "grossAmount": 4420,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        }
-                    }
-                ]
-            },
-            "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer101/product-offer-prices"
-            }
-        },
+        },        
         {
             "type": "merchants",
             "id": "MER000006",
@@ -200,13 +224,27 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 
 <a name="product-offers-response-attributes"></a>
 
-**General product offer information**
-
 | ATTRIBUTE   | TYPE | DESCRIPTION      |
 | --------------- | -------- | -------------------- |
 | merchantSku       | String   | SKU a merchant uses to identify the offer. |
 | merchantReference | String   | Merchant reference assigned to every merchant. |
 | isDefault         | Boolean  | Defines whether the Product Offer is default for the concrete product. |
+
+
+|INCLUDED RESOURCE  |ATTRIBUTE  |TYPE  |DESCRIPTION  |
+|---------|---------|---------|---------|
+|product-offer-prices     |  price |  Integer  | Price to pay for the product in cents.        |
+|product-offer-prices     |priceTypeName   | String   |Price type.         |
+|product-offer-prices     | netAmount   | Integer    |Net price in cents.    |
+|product-offer-prices     | grossAmount   |  Integer  | Gross price in cents.  |
+|product-offer-prices     | code   | String  |Currency code.   |
+|product-offer-prices     | name   | String  |  Currency name.  |
+|product-offer-prices     | symbol   | String  |  Currency symbol.  |
+|product-offer-prices     | volumePrices   | Objec  |  An array of objects defining the [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) for the product offer.  |
+|product-offer-prices | grossAmount | Integer   |  Gross volume price in cents.         |
+|product-offer-prices | netAmount | Integer   | Net volume price in cents.          |
+| product-offer-prices | quantity  |  Integer         | Quantity of items in offer when the volume price applies.  |
+
 
 **Product offer availability information**
 

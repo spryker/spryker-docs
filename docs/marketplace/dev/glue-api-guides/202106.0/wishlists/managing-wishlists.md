@@ -428,7 +428,7 @@ For attributes of the included resources, see:
 
 ## Retrieve a wishlist
 
-To retrieve wishlist items, send the request:
+To retrieve a specific wishlist, send the request:
 
 ------
 

@@ -105,7 +105,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample - adding a  product offer</summary>
+<summary markdown='span'>Response sample: adding a  product offer to wishlist</summary>
 
 ```json
 {

@@ -86,7 +86,7 @@ To add an item to a wishlist, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample - adding a concrete product</summary>
+<summary markdown='span'>Response sample: adding a concrete product to wishlist</summary>
 
 ```json
 {

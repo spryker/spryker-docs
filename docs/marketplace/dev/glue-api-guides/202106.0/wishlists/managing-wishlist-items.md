@@ -4,7 +4,7 @@ description: Retrieve details about wishlist items and learn what else you can d
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows to add and remove items from wishlists.
+This endpoint allows you to add and remove items from wishlists.
 
 ## Installation
 

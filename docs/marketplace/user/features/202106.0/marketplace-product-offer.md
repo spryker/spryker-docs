@@ -33,7 +33,7 @@ To define visibility of a product offer on the Storefront, the following details
 | Merchant SKU         | Allows the merchant to identify the product offer in the ERP system. |
 | Offer Reference      | Unique ID that helps to identify the product offer in the Marketplace. Offer reference is mandatory. |
 | Store                | Defines the store where the product offer is available.      |
-| Price                | Allows the merchant to set their price for the offer.        |
+| Price                | Allows the merchant to set their price for the offer. {% info_block infoBox "Info" %} You can also set [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) for a product offer. For now, you can only [import volume prices for product offers](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-price-product-offer-csv.html). {% endinfo_block %}      |
 | Stock                | Allows the merchant to define stock for the product offer. The stock can be reserved and available. |
 | Status               | Approval status: <ul><li>Approval status (Waiting for approval, Approved, Denied).</li><li>Visibility: Visibility (Active, Inactive).</li></ul> |
 | Validity Dates       | Specifies the period during which the product offer is visible on the Storefront. Concrete product validity dates have higher priority over the Offer validity dates. |

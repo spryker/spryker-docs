@@ -20,7 +20,7 @@ entries:
         nested:
           - title: Marketplace Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant.html
-            
+
           - title: Merchant Category
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html
 
@@ -35,19 +35,19 @@ entries:
 
               - title: Product Offer in the Back Office
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-in-the-back-office.html
-              
+
               - title: Product Offer storage
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-storage.html
-              
+
               - title: Product Offer store relation
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-store-relation.html
-              
+
               - title: Product Offer validity dates
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-validity-dates.html  
-          
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-validity-dates.html
+
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management.html
-            
+
       - title: Feature integration guides
         nested:
           - title: Marketplace Inventory Management feature integration
@@ -219,9 +219,21 @@ entries:
 
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
+          
+          - title: Wishlists
+            nested: 
+
+            - title: Managing wishlists
+              url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
+            
+            - title: Managing wishlist items
+              url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 
           - title: Catalog search
             url: /docs/marketplace/dev/glue-api-guides/catalog-search.html
+
+          - title: Managing the returns
+            url: /docs/marketplace/dev/glue-api-guides/managing-the-returns.html
 
           - title: Resolving search engine friendly URLs
             url: /docs/marketplace/dev/glue-api-guides/resolving-search-engine-friendly-urls.html

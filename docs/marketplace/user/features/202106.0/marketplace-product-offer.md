@@ -1,5 +1,5 @@
 ---
-title: Marketplace Product Offer feature overview
+title: Marketplace Product Offer
 description: This document contains concept information for the Product offers feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---
@@ -11,7 +11,7 @@ Product offer is created per concrete product and contains product-specific info
 Merchants can create product offers in the Merchant Portal <!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offers](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-offer-csv.html).
 
  Marketplace administrators can view and approve or deny merchants' product offers in the Back Office. See [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html) for details.
- 
+
  Every merchant can have multiple offers for the same concrete product. However, a product offer is related to a single merchant and cannot be shared between other merchants:
 
 ![Multiple product offers per product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/product-offers-per-product.png)
@@ -162,3 +162,15 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 * B2B Merchant-specific prices do not work with product offer prices.
 * All cart-related B2B features (e.g., Quick Order, RFQ, Approval Process, etc.) will be supported later.
 * Availability Notification is not supported.
+
+## Related Business User articles
+
+|FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
+|---------|---------|---------|
+|[Marketplace Product Offer feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer.html) |<!--link -->  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html)|
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Marketplace Product Offer](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/marketplace-product-offer.html) feature walkthrough for developers.
+
+{% endinfo_block %}

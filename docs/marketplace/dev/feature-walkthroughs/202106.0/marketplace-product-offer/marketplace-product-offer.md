@@ -9,19 +9,19 @@ The *Marketplace Product Offer* entity is created when multiple merchants sell t
 
 The Marketplace product offer has its own validity dates and its own availability calculation based on its reservations.
 
-The offer product re-use and extend concrete product features. All product-related data is stored and processed as concrete products. 
-All offer-related data is stored in a separate entity and linked to a concrete product. 
+The offer product re-use and extend concrete product features. All product-related data is stored and processed as concrete products.
+All offer-related data is stored in a separate entity and linked to a concrete product.
 
 The Marketplace Product Offer feature contains both merchant product offer and product offer concepts. Merchant product offer extends product offer by adding a pointer to a merchant.
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Product Offer](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer/marketplace-product-offer.html) feature summary for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Product Offer](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer.html) feature overview for business users.
 
 ## Main Marketplace Product Offer feature modules
 
 The table below lists the main modules of the Marketplace Product Offer feature.
 
 | NAME | DESCRIPTION | MANAGED ENTITIES  |
-| -------------------- | ---------- | ----------------- | 
+| -------------------- | ---------- | ----------------- |
 | [MerchantProductOffer](https://github.com/spryker/merchant-product-offer) | <ul><li>Provides collection of product offers by request.</li><li>Extends `ProductOffer` with merchant information.</li><li> Used by `MerchantSwitcher` for enabling the merchant functionality.</li></ul>  | SpyProductOffer |
 | [ProductOffer](https://github.com/spryker/product-offer) | Provides the main create-read-update product offer functionality.  | SpyProductOffer |
 | [ProductOfferValidity](https://github.com/spryker/product-offer-validity) | Defines validity period for an offer | SpyProductOfferValidity |

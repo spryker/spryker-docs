@@ -23,7 +23,7 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 
 | PATH PARAMETER| DESCRIPTION |
 | ------------------ | ------------------------------------------------------------ |
-| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer. You can get it in response when retrieving the offers available for the product concrete. |
+| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-product-offers-for-a-concrete-product.html). |
 
 ### Request
 

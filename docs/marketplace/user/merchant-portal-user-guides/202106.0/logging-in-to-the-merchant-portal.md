@@ -41,10 +41,25 @@ To log in to the Merchant Portal, on the login page, enter your email and passwo
 
 This section describes the attributes you enter when logging into the Merchant Portal.
 
-| ATTRIBUTE | DESCRIPTION                                                  |
-| --------- | ------------------------------------------------------------ |
+| ATTRIBUTE | DESCRIPTION  |
+| --------- | --------------- |
 | Email     | Email address associated with the merchant user. The Password Reset link is sent to this email. |
 | Password  | Password for the merchant user account.                      |
+
+## Restoring the password
+
+If you forgot your Merchant Portal password:
+
+* In the login form, click **Forgot password?**.
+  This takes you to the *Reset Password* page.
+* Enter the email that was used for your Merchant Portal account registration and click **Send email**.
+You should receive an email with the link to restore your password.
+* In the email, click the restore password link.
+This takes you to the *Reset Password* page.
+* In the *Password* and *Repeat password* fields, enter your new password.
+* Click **Reset**.
+  
+Your password is now updated. To log in, enter the new password in the login form.
 
 
 <!---

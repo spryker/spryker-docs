@@ -10,7 +10,7 @@ The Marketplace Wishlists API allows creating list and deleting [wishlists](http
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-- Marketplace Wishlist API feature integration
+- Marketplace Wishlist API feature integration <!---LINK-->
 
 ## Create a wishlist
 

@@ -468,7 +468,7 @@ To retrieve a specific wishlist, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieving a wishlist</summary>
 
 ```json{
     "data": {

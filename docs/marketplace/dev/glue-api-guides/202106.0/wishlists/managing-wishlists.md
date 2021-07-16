@@ -2212,7 +2212,7 @@ To retrieve a specific wishlist, send the request:
 | ---------- | ----- | --------------- |
 | name          | String  | Wishlist name.                      |
 | numberOfItems | Integer | Number of items in the wishlist.    |
-| createdAt     | String  | Date when the wishlist was created. |
+| createdAt     | String  | Creation date of the wishlist. |
 | updatedAt     | String  | Date when the wishlist was updated. |
 
 For the attributes of the included resources, see

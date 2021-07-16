@@ -17,9 +17,10 @@ Marketplace administrators can view and manage Marketplace orders in the Back Of
 |[Merchant order overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/merchant-order-overview.html) | | |
 |[Marketplace and merchant state machines overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) | | |
 |[Marketplace and merchant state machines interaction](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) | | |
+|  [Managing merchant orders](/docs/marketplace/user/merchant-portal-user-guides/202106.0/orders/managing-merchant-orders.html) |   |   |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Order Management](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management.html) feature walkthrough for developers. 
+Are you a developer? See [Marketplace Order Management](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management.html) feature walkthrough for developers.
 
 {% endinfo_block %}

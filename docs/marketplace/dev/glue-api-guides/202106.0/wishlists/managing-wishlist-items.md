@@ -27,7 +27,7 @@ To add an item to a wishlist, send the request:
 ### Request
 
 <details>
-<summary markdown='span'>Request sample - adding a concrete product</summary>
+<summary markdown='span'>Request sample: adding a concrete product to wishlist</summary>
 
  `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 

@@ -41,8 +41,8 @@ To log in to the Merchant Portal, on the login page, enter your email and passwo
 
 This section describes the attributes you enter when logging into the Merchant Portal.
 
-| ATTRIBUTE | DESCRIPTION                                                  |
-| --------- | ------------------------------------------------------------ |
+| ATTRIBUTE | DESCRIPTION  |
+| --------- | --------------- |
 | Email     | Email address associated with the merchant user. The Password Reset link is sent to this email. |
 | Password  | Password for the merchant user account.                      |
 

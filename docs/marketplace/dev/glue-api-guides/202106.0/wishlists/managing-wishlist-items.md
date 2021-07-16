@@ -16,7 +16,7 @@ To add an item to a wishlist, send the request:
 
 ------
 
-`POST` **/wishlists/\*{{wishlist_id}}\*/wishlist-items**
+`POST` **/wishlists/*{{wishlist_id}}*/wishlist-items**
 
 ------
 

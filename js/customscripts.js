@@ -32,8 +32,6 @@ $( document ).ready(function() {
 
     initDropdown();
 
-    //initMobileNav();
-
     initSearchPopup();
 
     initHomeSearchPosition();
@@ -74,7 +72,6 @@ $.fn.popup = function (options){
     }, options);
 
     let popupFunc = function() {
-        console.log(this.options);
         let page = jQuery(window),
             holder = $(this),
             body = $('body'),
@@ -88,10 +85,6 @@ $.fn.popup = function (options){
             preventScroll = false;
 
         function toggleMenu() {
-          /*if(window.innerWidth >= 1025) {
-              return;
-          }*/
-
           menuIsAnimated = !menuIsAnimated;
 
           if(!menuIsAnimated) {
@@ -106,8 +99,7 @@ $.fn.popup = function (options){
               }
 
               popup.fadeOut(300, function() {
-                  menuIsOpened = !menuIsOpened;
-                  menuIsAnimated = !menuIsAnimated;
+                  switchMenuState();
               });
 
               if (options.overlay) {
@@ -121,14 +113,18 @@ $.fn.popup = function (options){
               }
 
               popup.fadeIn(300, function() {
-                  menuIsOpened = !menuIsOpened;
-                  menuIsAnimated = !menuIsAnimated;
+                  switchMenuState();
               });
 
               if (options.overlay) {
                 overlay.fadeIn(300);
               }
           }
+        }
+
+        function switchMenuState() {
+            menuIsOpened = !menuIsOpened;
+            menuIsAnimated = !menuIsAnimated;
         }
 
         links.on('click', function() {

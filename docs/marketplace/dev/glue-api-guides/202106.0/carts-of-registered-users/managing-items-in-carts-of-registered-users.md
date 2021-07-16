@@ -1539,7 +1539,7 @@ To change the number of items in a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) to get it. |
 | {% raw %}***{{item_group_key}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. |
 
 ### Request
@@ -1707,7 +1707,7 @@ To remove an item from a registered user's cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) to get it. |
 | {% raw %}***{{item_group_key}}***{% endraw %}| Group key of the item. Usually, it is equal to the item’s SKU. |
 
 

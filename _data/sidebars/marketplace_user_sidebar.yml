@@ -20,8 +20,8 @@ entries:
             url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html
             nested:
 
-          - title: Merchant users overview
-            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-overview/merchant-users-overview.html
+          - title: Merchant users
+            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-overview/merchant-users.html
 
         - title: Merchant Category
           url: /docs/marketplace/user/features/merchant-category.html
@@ -95,11 +95,8 @@ entries:
         url: /docs/marketplace/user/merchant-portal-user-guides/
         nested:
 
-        - title: Login and logout
-          nested:
-
-          - title: Managing login and logout
-            url: /docs/marketplace/user/merchant-portal-user-guides/login-and-logout/managing-login-and-logout.html
+        - title: Logging in to the Merchant Portal
+          url: /docs/marketplace/user/merchant-portal-user-guides/logging-in-to-the-merchant-portal.html
 
         - title: My account
           nested:

@@ -81,7 +81,7 @@ To add an item to a wishlist, send the request:
 | ATTRIBUTE  | TYPE   | DESCRIPTION   |
 | ------------ | ----- | ---------------- |
 | sku                   | String | SKU of a concrete product to add.                    |
-| productOfferReference | String | Unique identifier of the product offer in the system.|
+| productOfferReference | String | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-product-offers-for-a-concrete-product.html).|
 
 ### Response
 

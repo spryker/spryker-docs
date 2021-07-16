@@ -217,7 +217,7 @@ To delete wishlist item, send the request:
 
 ------
 
-`DELETE` **/wishlists/\*{{wishlist_id}}\*/wishlist-items/\*{{item_sku}}\***
+`DELETE` **/wishlists/*{{wishlist_id}}*/wishlist-items/*{{item_sku}}***
 
 ------
 

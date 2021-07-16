@@ -55,7 +55,7 @@ All columns with headers having arrows in *List of orders* are sortable.
 
 | SECTION | ATTRIBUTE | DESCRIPTION |
 |---|---|---|
-| Order Overview |   | Section with the general information on the order. |
+| Order Overview | | Section with the general information on the order. |
 |   | Order reference | Reference number of the order. |
 |   | Order date | Date when the order was placed. |
 |   | Unique Product Quantity | Number of unique products in the order. |

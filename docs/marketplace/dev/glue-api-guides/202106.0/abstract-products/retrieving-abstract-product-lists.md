@@ -98,7 +98,7 @@ The locale must be specified in the **header** of the GET request. If no locale 
                 "url": "/en/sony-pxw-fs5k-204"
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/abstract-products/204"
+                "self": "https://glue.mysprykershop.com/abstract-products/204"
             }
         },
         {
@@ -156,12 +156,12 @@ The locale must be specified in the **header** of the GET request. If no locale 
                 "url": "/en/toshiba-camileo-s30-205"
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/abstract-products/205"
+                "self": "https://glue.mysprykershop.com/abstract-products/205"
             }
         }
     ],
     "links": {
-        "self": "https://glue.de.marketplace.demo-spryker.com:80/content-product-abstract-lists/apl-1/access-tokens"
+        "self": "https://glue.mysprykershop.com/content-product-abstract-lists/apl-1/access-tokens"
     }
 }
 ```

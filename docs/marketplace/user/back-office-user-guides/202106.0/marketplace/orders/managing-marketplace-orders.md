@@ -38,20 +38,20 @@ On the *Orders* page, you see the following:
 * Order state, the grand total of the order, and the number of items ordered.
 * Actions that you can do on this page.
 
-By default, the last created order goes on top of the table. However, you can sort and search _List of orders_.
+By default, the last created order goes on top of the table. However, you can sort and search *List of orders*.
 
 All columns with headers having arrows in *List of orders* are sortable.
 
 **Actions column**
-All the order management options that you can invoke from the _Actions_ column in List of orders are described in the following table.
+<br>All the order management options that you can invoke from the *Actions* column in List of orders are described in the following table.
 
 | ACTION | DESCRIPTION |
 |---|---|
 | View | Takes you to the *View Order: [Return ID]* page. Here, you can find all the information about the chosen order. |
-| Claim | Takes you to the _Create reclamation_ page, where you can [create a reclamation](https://documentation.spryker.com/docs/managing-reclamations) for the order. |
+| Claim | Takes you to the *Create reclamation* page, where you can [create a reclamation](https://documentation.spryker.com/docs/managing-reclamations) for the order. |
 
-**View Order: [order ID]**
-The following table describes the attributes on the _View Order: [Order ID]_ page when you view an order.
+**<a id="view-order-order-id"></a>View Order: [order ID]**
+<br>The following table describes the attributes on the *View Order: [Order ID]* page when you view an order.
 
 | SECTION | ATTRIBUTE | DESCRIPTION |
 |---|---|---|
@@ -98,7 +98,7 @@ To change the state of several items in the order:
 
 1. In the *List of orders* table, in the *Actions* column, click **View** next to the order you want to change the state of.
 You are taken to the *View Order: [order ID]* page.
-2. In the *Trigger all matching states inside this order* section, click **the next available state**. See [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/202106.0/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) for details on the available states.
+2. In the *Trigger all matching states inside this order* section, click **the next available state**. See [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) for details on the available states.
 The page refreshes to show the message about the successful state change. The order will obtain the updated state. In the *Trigger all matching states inside this order* section, you can see the **Cancel** button.
 3. Repeat step 2 until you get the desired order state.
 
@@ -108,18 +108,16 @@ To change the state of the order items in a shipment:
 You are taken to the *View Order: [order ID]* page.
 2. Scroll down to the desired shipment.
 3. Select the checkbox next to the products you want to change the state of.
-4. In the *Trigger all matching states of order inside this shipment* section, click **the next available state**.  See [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/202106.0/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) for details on the available states.
+4. In the *Trigger all matching states of order inside this shipment* section, click **the next available state**.  See [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) for details on the available states.
 The page refreshes to show the message about the successful state change. In the *Trigger all matching states of order inside this shipment* section of the modified shipment, you can see the updated state.
 5. Repeat step 4 until you get the desired shipment state.
 
 To change the state of an item in the merchant order:
 
-In *List of orders*, click **View** next to the order possessing the items you want to change the state of.
+1. In *List of orders*, click **View** next to the order possessing the items you want to change the state of.
 You are taken to the *View Order: [order ID]* page.
-
-Scroll down to the desired item.
-
-In the *Trigger event* column next to the desired product, click **the next available state**. For details on the available states, see [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/202106.0/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)).
+2. Scroll down to the desired item.
+3. In the *Trigger event* column next to the desired product, click **the next available state**. For details on the available states, see [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 The page refreshes to show the message about the successful state change. In the *Trigger event* column next to the product, you can see the **Cancel** button.
 
 ### Reference information: Changing marketplace order states
@@ -139,19 +137,19 @@ Marketplace order states flow:
 * **New**—the initial order state.
 * **Canceled**—the state of the order after it is canceled by the customer on the Storefront or by a Back Office user.
 * **Sent to Merchant**—the state of the order when the payment is made and the marketplace order was successfully split into the merchant orders. The corresponding merchant got notified about the new order.
-* When you select **Pay**, the order state becomes *Paid*. After a while, the status of the order changes to _Sent to Merchant_.
+* When you select **Pay**, the order state becomes *Paid*. After a while, the status of the order changes to *Sent to Merchant*.
 * When you select **Cancel**, the order state becomes *Canceled*.
 * When you select **Close**, the order state becomes *Closed*.
-* If the customer returns the ordered items: when you select **Return**, the state becomes _Waiting for return_. The merchant needs to execute the return in the Merchant Portal.
-* Once the return is executed for the merchant order in the Merchant Portal, the state becomes _Refunded_.
+* If the customer returns the ordered items: when you select **Return**, the state becomes *Waiting for return*. The merchant needs to execute the return in the Merchant Portal.
+* Once the return is executed for the merchant order in the Merchant Portal, the state becomes *Refunded*.
 
 **Tips & tricks**
-To change the state of all the items inside a shipment at once, click **the next available state** in the _Trigger all matching states of order inside this shipment_ section of the corresponding shipment.
+To change the state of all the items inside a shipment at once, click **the next available state** in the *Trigger all matching states of order inside this shipment* section of the corresponding shipment.
 
-For reference information about the _Orders_ and _View Order: [order ID]_ pages, on this page, see
+For reference information about the *Orders* and *View Order: [order ID]* pages, on this page, see:
 
 * [Orders page](#orders-page)
-* [View Order: [order ID]]()
+* [View Order: [order ID]](#view-order-order-id)
 
 
 ## Creating a marketplace return
@@ -162,12 +160,12 @@ To be able to create a return, your marketplace state machine should have the re
 
 {% endinfo_block %}
 
-If an order item is **returnable**, you can create a return for it.
+If an order item is **[returnable](https://documentation.spryker.com/docs/return-management-feature-overview)**, you can create a return for it.
 
 To create a return:
 
-1. On the _View Order: [Order ID]_ page, click **Return** in the top right corner. This opens the _Create Return_ page.
-2. On the _Create Return_ page, select the items you want to return and optionally the return reason for the items. The following return reasons are provided out of the box:
+1. On the *View Order: [Order ID]* page, click **Return** in the top right corner. This opens the *Create Return* page.
+2. On the *Create Return* page, select the items you want to return and optionally the return reason for the items. The following return reasons are provided out of the box:
   * Damaged
   * Wrong item
   * No longer needed
@@ -179,7 +177,7 @@ The products from one merchant can be returned at a time.
 
 {% endinfo_block %}
 
-3. Click **Create return**. This creates the return and takes you to the _Overview of Return [Return reference_] page, where you can change the return states. For details about the return states you can trigger, see [Marketplace return item states](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2481455549/Marketplace+returns+Reference+information+MP-4080#Marketplace-return-item-states)
+3. Click **Create return**. This creates the return and takes you to the *Overview of Return [Return reference]* page, where you can change the return states. For details about the return states you can trigger, see Marketplace return item states.<!-- when https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2464809228/Back+Office+Managing+marketplace+returns+MP-4080 published, add-a-link-to https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2464809228/Back+Office+Managing+marketplace+returns+MP-4080#Marketplace-return-item-state-->
 
 {% info_block infoBox "Info" %}
 
@@ -195,7 +193,7 @@ You can create returns for the items that are in Shipped or Delivered states onl
 | General information |   |   |
 |   | Order reference | Reference of the order the return will be created for. Takes you to the View Order: [Order ID] page, where you can view and manage the order. |
 | Select Items to Return |   |   |
-|   | Fulfilled by merchant | Name of the merchant the item belongs to. Takes to the Edit Merchant: [Merchant ID] page, where you can view and edit information about this merchant. |
+|   | Fulfilled by merchant | Name of the merchant the item belongs to. Takes to the *Edit Merchant: [Merchant ID]* page, where you can view and edit information about this merchant. |
 |   | Merchant Order Reference | Reference of the merchant order in the system. |
 |   | Product | List of all items included in the return. |
 |   | Quantity | Product quantity. |
@@ -204,26 +202,29 @@ You can create returns for the items that are in Shipped or Delivered states onl
 |   | Return policy | Return policy an item is controlled by. |
 |   | State | Return state for the item. |
 
-Once a return has been created, it acquires the _Waiting for return_ state. You can trigger the following states for the returns on the _Overview of Returns [Return ID]_ page.
- For more details, see [Marketplace and merchant state machines feature overview](https://spryker-docs.herokuapp.com/docs/marketplace/user/features/202106.0/marketplace-and-merchant-state-machines/marketplace-and-merchant-state-machines-feature-overview.html).
+Once a return has been created, it acquires the *Waiting for return* state. You can trigger the following states for the returns on the *Overview of Returns [Return ID]* page.
+ For more details, see [Marketplace and merchant state machines feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 
  | RETURN STATE | DESCRIPTION |
 |---|---|
-| execute-return | Select this state if you accept the return. When triggering this state, the return status is changed to Returned. |
-| refund | Select this state if you have refunded the returned items. When triggering this state, the return status is changed to Refunded. |
-| cancel-return | You can trigger this state after the Waiting for return state. Select this state if either customer changed their mind and doesn’t want to make the return any more, or you cancel the return due to the return policy, or for other reasons. When triggering this state, the return status is changed to Canceled. |
-| ship-return | You can trigger this state after the Cancel return state. Select this state if you shipped the canceled return back to customer. The return status is changed to Shipped to customer. |
-| delivery-return | You can trigger this state after the Shipped to customer. Select this state if the return has been delivered to customer. The return status is changed to Delivered. |
-| close | You can trigger this state after the Delivered state. Select this state to close the return. The return status is changed to Closed. |
+| execute-return | Select this state if you accept the return. When triggering this state, the return status is changed to *Returned*. |
+| refund | Select this state if you have refunded the returned items. When triggering this state, the return status is changed to *Refunded*. |
+| cancel-return | You can trigger this state after the *Waiting for return* state. Select this state if either customer changed their mind and doesn’t want to make the return anymore, or you cancel the return due to the return policy, or for other reasons. When triggering this state, the return status is changed to *Canceled*. |
+| ship-return | You can trigger this state after the *Cancel* return state. Select this state if you shipped the canceled return back to the customer. The return status is changed to *Shipped to customer*. |
+| delivery-return | You can trigger this state after the *Shipped to customer*. Select this state if the return has been delivered to the customer. The return status is changed to *Delivered*. |
+| close | You can trigger this state after the *Delivered* state. Select this state to close the return. The return status is changed to *Closed*. |
 
 ## Viewing the returns for marketplace orders
-If returns have been created for a marketplace order, they are displayed on the _View Order: [Order ID]_ page in the _Returns_ section.
 
-To view details on a return, navigate to the _Returns_ page, and in the _Actions_ column of the _List of Returns_ table, click **View**. This takes you to the _Overview of Return: [Return ID]_ page.  For information on how you can manage the returns on this page, see [Managing marketplace returns].
+If returns have been created for a marketplace order, they are displayed on the *View Order: [Order ID]* page in the *Returns* section.
+
+To view details on a return, navigate to the *Returns* page, and in the *Actions* column of the *List of Returns* table, click **View**. This takes you to the *Overview of Return: [Return ID]* page.  For information on how you can manage the returns on this page, see Managing marketplace returns<!-- when https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2464809228/Back+Office+Managing+marketplace+returns+MP-4080 published, add-a-link-->.
 
 ### Reference information: Viewing the returns for marketplace orders
 
-The following tables describe the attributes on the _Overview of Return: [Return reference]_ page when you view a return.
+The following tables describe the attributes on the *Overview of Return: [Return reference]* page when you view a return.
+
+![reference-information-marketplace-return-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Marketplace/Orders/Managing+marketplace+orders/reference-information-marketplace-return-back-office.png)
 
 #### Returned items section
 
@@ -241,7 +242,7 @@ The returned items section displays information on the returned items.
 
 #### Total section
 
-The _Total_ section displays the total amount of items to be returned.
+The *Total* section displays the total amount of items to be returned.
 
 | ATTRIBUTE | DESCRIPTION |
 |---|---|
@@ -270,28 +271,27 @@ The _Total_ section displays the total amount of items to be returned.
 
 To edit a custom order reference:
 
-1. In the _List of orders_ table, next to the order you want to update the custom order reference of, click **View**.
-2. In the _Custom Order Reference_ section of the _View Order: [Order ID]_ page, click **Edit Reference**.
+1. In the *List of orders* table, next to the order you want to update the custom order reference of, click **View**.
+2. In the *Custom Order Reference* section of the *View Order: [Order ID]* page, click **Edit Reference**.
 3. Update the custom order reference.
 4. Click **Save**.
 
-**Tips & Tricks**
+![edit-a-custom-order-reference-for-a-marketplace-order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Marketplace/Orders/Managing+marketplace+orders/edit-a-custom-order-reference-for-a-marketplace-order.png)
 
-To remove the custom order reference, clear the Custom Order Reference field and click **Save**.
+**Tips & tricks**
+<br>To remove the custom order reference, clear the Custom Order Reference field and click **Save**.
 
 ## Claiming marketplace orders
 
 To claim a marketplace order:
 
-On the _Overview of Orders_ page, click **Claim** next to the order you want to create a reclamation for.
-
-On the _Create reclamatio_n page, select one or more products you want to create the reclamation for.
-
-Click **Create Reclamation**.
-The page refreshes to show the success message about reclamation creation.
+1. On the *Overview of Orders* page, click **Claim** next to the order you want to create a reclamation for.
+2. On the *Create reclamation* page, select one or more products you want to create the reclamation for.
+3. Click **Create Reclamation**.
+<br>The page refreshes to show the success message about reclamation creation.
 
 **Tips & tricks**
-Claiming an order does not change the state of the order or the items inside the order. When a reclamation is created, a sales team member processes the order manually.
+<br>Claiming an order does not change the state of the order or the items inside the order. When a reclamation is created, a sales team member processes the order manually.
 
 ### Reference information: Create reclamation page
 
@@ -307,24 +307,24 @@ Claiming an order does not change the state of the order or the items inside the
 To comment on the marketplace order:
 
 1. Click **View** next to the order you want to comment on.
-2. On the _View Order: [Order ID]_ page, scroll down to the *Comments* section.
+2. On the *View Order: [Order ID]* page, scroll down to the *Comments* section.
 3. Enter the comment in the **Message** field.
 4. Click **Send Message**.
-The page refreshes to show the success message about comment creation. Your message is displayed in the _Comments_ section.
+The page refreshes to show the success message about comment creation. Your message is displayed in the *Comments* section.
 
 **Tips & tricks**
 
-* To send an email to a customer, on the _Overview of Orders_ page, click the hyperlinked customer email in the Email column.
+* To send an email to a customer, on the *Overview of Orders* page, click the hyperlinked customer email in the Email column.
 * To view customer details:
-  * On the _Overview of Orders_ page, click the hyperlinked customer name in the _Customer Full Name_ column.
-  * On the _View Order_ page, scroll down to the Customer section and click the hyperlinked **Reference**.
+  * On the *Overview of Orders* page, click the hyperlinked customer name in the *Customer Full Name* column.
+  * On the *View Order* page, scroll down to the Customer section and click the hyperlinked **Reference**.
 
 ## Editing a billing address in the marketplace order
 
 To edit a billing address:
 1. Next to the order you want to edit the billing address of, click **View**.
-2. On the _View Order_ page, scroll down to the _Customer_ section.
-3. Under the _Billing address_, click **Edit**. The_ Edit Address for Order_ page opens.
+2. On the *View Order* page, scroll down to the *Customer* section.
+3. Under the *Billing address*, click **Edit**. The *Edit Address for Order* page opens.
 4. Make the updates and click **Save**.
 
 ### Reference information: Editing a billing address in the marketplace order
@@ -336,4 +336,4 @@ To edit a billing address:
 | Company City Zip Code Po box | Customer's company, city, zip code, and post office box number. |
 | Phone Cell phone | Customer's phone numbers. |
 | Description | Description of the order. |
-| Comment | Any specific comment regarding the customer or customer address (e.g., "_This address is going to be used only if the order costs less than 900 euros._"). |
+| Comment | Any specific comment regarding the customer or customer address (e.g., "*This address is going to be used only if the order costs less than 900 euros.*"). |

@@ -25,10 +25,10 @@ entries:
 
         - title: Merchant Category
           url: /docs/marketplace/user/features/merchant-category/merchant-category.html
-        
+
         - title: Merchant Opening Hours
           url: /docs/marketplace/user/features/merchant-opening-hours/merchant-opening-hours.html
-        
+
         - title: Marketplace Product Offer
           url: /docs/marketplace/user/features/marketplace-product-offer/marketplace-product-offer.html
 
@@ -51,7 +51,7 @@ entries:
             - title: Marketplace and merchant state machines overview
               url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
               nested:
-            
+
               - title: Marketplace and merchant state machines interaction
                 url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
 
@@ -96,6 +96,12 @@ entries:
                 - title: Managing merchant product offers
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html
 
+            - title: Orders
+              nested:
+
+                - title: Managing marketplace orders
+                  url: /docs/marketplace/user/back-office-user-guides/marketplace/orders/managing-marketplace-orders.html
+
       - title: Merchant Portal user guides
         url: /docs/marketplace/user/merchant-portal-user-guides/
         nested:
@@ -105,13 +111,13 @@ entries:
 
           - title: Managing login and logout
             url: /docs/marketplace/user/merchant-portal-user-guides/login-and-logout/managing-login-and-logout.html
-            
+
         - title: My account
           nested:
 
           - title: Managing account details and settings
             url: /docs/marketplace/user/merchant-portal-user-guides/my-account/managing-account-details-and-settings.html
-        
+
         - title: Dashboard
           nested:
 
@@ -123,4 +129,3 @@ entries:
 
           - title: Editing merchant's profile details
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html
-

@@ -1,22 +1,6 @@
 $( document ).ready(function() {
     let pageOffset = 0;
 
-    /*$('#toc').toc({
-        minimumHeaders: 0,
-        listType: 'ul',
-        showEffect: 'none', // values: [show|slideDown|fadeIn|none]
-        headers: '.post-content h2, .post-content h3, .post-content h4'
-    });*/
-
-    /* this offset helps account for the space taken up by the floating toolbar. */
-    /*$('#toc').on('click', 'a', function() {
-        let target = $(this.getAttribute('href')),
-            scroll_target = target.offset().top;
-
-        $(window).scrollTop(scroll_target - 10);
-        return false;
-    });*/
-
     initCopyText();
 
     initTableWrapper();
@@ -190,10 +174,6 @@ $.fn.popup = function (options) {
             toggleMenu();
         });
     };
-
-    this.close = function() {
-        console.log('close');
-    }
 
     return this.each(popupFunc);
 };

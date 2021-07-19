@@ -16,12 +16,20 @@
             line-height: 16px;
             font-weight: 600;
             text-transform: uppercase;
-            content: "Table of Contents";
+            content: "Table of contents";
             font-weight: bold;
             color: $darkest;
             text-align: left;
             display: block;
             margin: 0 16px 8px;
+
+            @include media("<laptop") {
+                font-size: 20px;
+                line-height: 28px;
+                font-weight: 800;
+                text-transform: none;
+                margin-bottom: 20px;
+            }
         }
 
         ul {
@@ -31,8 +39,17 @@
             font-size: 12px;
             line-height: 1.5;
 
+            @include media("<laptop") {
+                font-size: 16px;
+                font-weight: 500;
+            }
+
             li {
                 margin: 0;
+
+                @include media("<laptop") {
+                    margin-bottom: 10px;
+                }
             }
 
             a {
@@ -43,15 +60,16 @@
                 padding: 3px 5px 3px 12px;
                 word-break: break-word;
 
+                @include media("<laptop") {
+                    margin-bottom: 6px;
+                }
+
                 &:hover {
                     color: $darkest;
                 }
-            }
 
-            ul {
-                a {
+                &.nav-link--shifted {
                     padding-left: 26px;
-                    border-left-width: 2px;
                 }
             }
         }

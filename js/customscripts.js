@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+    let pageOffset = 0;
+
     /*$('#toc').toc({
         minimumHeaders: 0,
         listType: 'ul',
@@ -36,12 +38,46 @@ $( document ).ready(function() {
 
     initHomeSearchPosition();
 
-    $('[data-spy="scroll"]').each(function () {
-        $(this).scrollspy('refresh');
-    });
-
     initPopup();
+
+    initSetPageOffset();
+
+    initToc();
 });
+
+function initSetPageOffset() {
+    let header = $('.main-header'),
+        headerElement = header.get(0),
+        menu = $('.main-sidebar'),
+        menuElement = header.get(0),
+        headerPosition,
+        menuPosition,
+        headerOffset = 0,
+        menuOffset = 0;
+
+    function calcOffset() {
+        headerPosition = window.getComputedStyle(headerElement, null).getPropertyValue('position');
+        menuPosition = window.getComputedStyle(menuElement, null).getPropertyValue('position');
+
+        if (headerPosition === 'fixed' || headerPosition === 'sticky') {
+            headerOffset = header.outerHeight();
+        } else {
+            headerOffset = 0;
+        }
+
+        if (menuPosition === 'fixed' || menuPosition === 'sticky') {
+            menuOffset = menu.outerHeight();
+        } else {
+            menuOffset = 0;
+        }
+
+        pageOffset = headerOffset + menuOffset;
+    }
+
+    calcOffset();
+
+    $(window).on('resize orientationchange', calcOffset);
+}
 
 function initPopup() {
     $('.main-header').popup({
@@ -57,6 +93,7 @@ function initPopup() {
         opener: '.toc__popup__opener',
         close: '.toc__popup__close, .toc__popup__overlay',
         overlay: '.toc__popup__overlay',
+        anchorLinks: 'nav-link',
     });
 }
 
@@ -69,7 +106,7 @@ $.fn.popup = function (options) {
             opener: '.popup__opener',
             close: '.popup__close',
             overlay: null,
-            anchorLinks: '.popup__anchor',
+            anchorLinks: null,
         },
         options
     );
@@ -82,7 +119,7 @@ $.fn.popup = function (options) {
             opener = holder.find(options.opener),
             close = holder.find(options.close),
             overlay = holder.find(options.overlay),
-            links = holder.find(options.anchorLinks),
+            links = options.anchorLinks,
             menuIsOpened = false,
             menuIsAnimated = false,
             preventScroll = false;
@@ -130,10 +167,17 @@ $.fn.popup = function (options) {
             menuIsAnimated = !menuIsAnimated;
         }
 
-        links.on('click', function () {
-            // TODO add scroll to section
-            toggleMenu();
-        });
+        if (links) {
+            popup.on('click', function (e) {
+                if ( e.target.classList.contains(links) && window.innerWidth < 1280 && !menuIsAnimated) {
+                    menuIsAnimated = !menuIsAnimated;
+                    setTimeout(function(){
+                        menuIsAnimated = !menuIsAnimated;
+                        toggleMenu();
+                    }, 500);
+                }
+            });
+        }
 
         opener.on('click', function (e) {
             e.preventDefault();
@@ -146,6 +190,10 @@ $.fn.popup = function (options) {
             toggleMenu();
         });
     };
+
+    this.close = function() {
+        console.log('close');
+    }
 
     return this.each(popupFunc);
 };
@@ -365,13 +413,11 @@ function initSidebarToggle() {
     });
 }
 
-
-/*!
- * Bootstrap Table of Contents v<%= version %> (http://afeld.github.io/bootstrap-toc/)
- * Copyright 2015 Aidan Feldman
- * Licensed under MIT (https://github.com/afeld/bootstrap-toc/blob/gh-pages/LICENSE.md) */
-(function ($) {
-    'use strict';
+function initToc() {
+    /*!
+     * Bootstrap Table of Contents v<%= version %> (http://afeld.github.io/bootstrap-toc/)
+     * Copyright 2015 Aidan Feldman
+     * Licensed under MIT (https://github.com/afeld/bootstrap-toc/blob/gh-pages/LICENSE.md) */
 
     window.Toc = {
         helpers: {
@@ -446,20 +492,29 @@ function initSidebarToggle() {
                 return $childList;
             },
 
-            generateNavEl: function (anchor, text) {
-                var $a = $('<a class="nav-link"></a>');
+            generateNavEl: function (anchor, text, navLevel) {
+                var $a = (navLevel == 2) ? $('<a class="nav-link"></a>') : $('<a class="nav-link nav-link--shifted"></a>');
                 $a.attr('href', '#' + anchor);
                 $a.text(text);
                 var $li = $('<li></li>');
                 $li.append($a);
+
+                $a.on('click', function (event) {
+                    event.preventDefault();
+
+                    $('html, body').animate({
+                        scrollTop: $($.attr(this, 'href')).offset().top - pageOffset + 1
+                    }, 500);
+                });
+
                 return $li;
             },
 
-            generateNavItem: function (headingEl) {
+            generateNavItem: function (headingEl, navLevel) {
                 var anchor = this.generateAnchor(headingEl);
                 var $heading = $(headingEl);
                 var text = $heading.data('toc-text') || $heading.text();
-                return this.generateNavEl(anchor, text);
+                return this.generateNavEl(anchor, text, navLevel);
             },
 
             // Find the first heading level (`<h1>`, then `<h2>`, etc.) that has more than one element. Defaults to 1 (for `<h1>`).
@@ -493,26 +548,14 @@ function initSidebarToggle() {
 
             populateNav: function ($topContext, topLevel, $headings) {
                 var $context = $topContext;
-                var $prevNav;
 
                 var helpers = this;
 
                 $headings.each(function (i, el) {
-                    var $newNav = helpers.generateNavItem(el);
                     var navLevel = helpers.getNavLevel(el);
-
-                    // determine the proper $context
-                    if (navLevel === topLevel) {
-                        // use top level
-                        $context = $topContext;
-                    } else if ($prevNav && $context === $topContext) {
-                        // create a new level of the tree and switch to it
-                        $context = helpers.createChildNavList($prevNav);
-                    } // else use the current $context
+                    var $newNav = helpers.generateNavItem(el, navLevel);
 
                     $context.append($newNav);
-
-                    $prevNav = $newNav;
                 });
             },
 
@@ -552,12 +595,33 @@ function initSidebarToggle() {
         },
     };
 
-    $(function () {
-        $('nav[data-toggle="toc"]').each(function (i, el) {
-            Toc.init({
-                $nav: $(el),
-                $scope: $('.post-content h2, .post-content h3'),
-            });
+    $('nav[data-toggle="toc"]').each(function (i, el) {
+        Toc.init({
+            $nav: $(el),
+            $scope: $('.post-content h2, .post-content h3'),
         });
     });
-})(jQuery);
+
+    let $body = $('body'),
+        $window = $(window);
+
+    $body.scrollspy({
+        target: '#toc',
+        offset: pageOffset,
+    });
+
+    $window.on('load', function () {
+        $body.trigger('scroll');
+    });
+
+    function updateOffset() {
+        let cfg = $body.data('bs.scrollspy')._config;
+
+        if (cfg.offset != pageOffset) {
+            cfg.offset = pageOffset;
+            $body.scrollspy('refresh');
+        }
+    }
+
+    $window.on('resize orientationchange', updateOffset);
+}

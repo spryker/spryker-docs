@@ -103,6 +103,10 @@ body {
     @include media("<desktop") {
         padding: 24px 24px 0;
     }
+
+    @include media("<tablet") {
+        padding: 16px 16px 0;
+    }
 }
 
 .alt-sidebar {
@@ -128,6 +132,10 @@ body {
         padding: 30px 24px 0;
         width: 100%;
         grid-area: none;
+    }
+
+    @include media("<tablet") {
+        padding: 15px 16px 0;
     }
 
     &__sticky {

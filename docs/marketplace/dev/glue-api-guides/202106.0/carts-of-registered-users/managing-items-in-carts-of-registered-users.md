@@ -176,13 +176,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Request sample with product offers (Marketplace only)</summary>
-
-{% info_block warningBox "Note" %}
-
-This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.
-
-{% endinfo_block %}
+<summary markdown='span'>Request sample with product offers</summary>
 
 `POST http://glue.myspsrykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=items`
 
@@ -1227,14 +1221,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers (Marketplace only)</summary>
-
-
-{% info_block warningBox "Note" %}
-
-This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.
-
-{% endinfo_block %}
+<summary markdown='span'>Response sample with product offers </summary>
 
 ```json
 {
@@ -1508,7 +1495,7 @@ This option is available only in case you have upgraded your shop to the [Market
 | vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| product-offer-availabilities | isNeverOutOfStock| Boolean | Boolean to show if this is an item that is never out of stock.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| product-offer-availabilities | isNeverOutOfStock| Boolean | Boolean to show if this is an item that is never out of stock.{% info_block warningBox |
 | product-offer-availabilities  | availability | Boolean | Boolean to inform you about availability. |
 | product-offer-availabilities | quantity | Integer | Available stock. |
 | product-offer-prices | price  | Integer | Price to pay for the item in cents.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |

@@ -207,9 +207,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 <details>
-<summary markdown='span'>Request sample with product offers (Marketplace only)</summary>
-
-{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
+<summary markdown='span'>Request sample with product offers</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items`
 
@@ -228,9 +226,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample with merchant products (Marketplace only)</summary>
-
-{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
+<summary markdown='span'>Request sample with merchant products</summary>
 
 `POST https://glue.mysprykershop,com/guest-cart-items?include=items,merchants`
 
@@ -258,7 +254,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |    
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
-| productOfferReference | String |✓|Unique identifier of the Product Offer in the system.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| productOfferReference | String ||Unique identifier of the Product Offer in the system. |
 | merchantReference| String| ✓ | Unique identifier of the merchant in the system.
 
 {% info_block infoBox "Conversion" %}

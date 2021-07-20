@@ -37,8 +37,8 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 | REQUEST | USAGE     |
 | ---------- | ----------- |
 | `GET https://glue.mysprykershop.com/product-offers/offer56`| Get information about the offer56.   |
-| `GET https://glue.mysprykershop.com/product-offers/offer78?product-offer-prices` | Get information about the offer78 with the details on product offer prices (including the volume prices). |
-| `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-availabilities,merchants` | Get information about the offer101 with the details on product offer prices and product offer availability and merchants included. |
+| `GET https://glue.mysprykershop.com/product-offers/offer78?product-offer-prices` | Get information about the offer78 with the details on product offer prices. |
+| `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-availabilities,merchants` | Get information about the offer101 with the details on product offer availability and merchants included. |
 
 ### Response
 

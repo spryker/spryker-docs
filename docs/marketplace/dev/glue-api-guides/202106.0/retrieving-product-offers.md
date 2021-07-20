@@ -10,7 +10,9 @@ In your development, product offers API can help you to retrieve relevant extend
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see:
+* [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/glue-api-marketplace-product-offer-volume-prices.html)
 
 ## Retrieve product offers
 

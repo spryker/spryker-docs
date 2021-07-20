@@ -13,6 +13,8 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
 * [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
+* [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/glue-api-marketplace-product-offer-volume-prices.html)
 
 
 ## Add items to a guest cart
@@ -213,14 +215,14 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 ```json
 {
-    "data": {
-        "type": "guest-cart-items",
-        "attributes": {
-            "sku": "019_21081473",
-            "quantity": "1",
-            "productOfferReference": "offer67"
-        }
+  "data": {
+    "type": "items",
+    "attributes": {
+      "sku": "041_25904691",
+      "quantity": 5,
+      "productOfferReference": "offer48"
     }
+  }
 }
 ```    
 </details>
@@ -1404,9 +1406,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers (Marketplace only)</summary>
-
-{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
+<summary markdown='span'>Response sample with product offers</summary>
 
 ```json
 {
@@ -1417,60 +1417,119 @@ It is the responsibility of the API Client to track whether the selected items a
             "priceMode": "GROSS_MODE",
             "currency": "EUR",
             "store": "DE",
-            "name": "Shopping cart",
+            "name": "newcart",
             "isDefault": true,
             "totals": {
                 "expenseTotal": 0,
                 "discountTotal": 0,
-                "taxTotal": 1437,
-                "subtotal": 9000,
-                "grandTotal": 9000,
-                "priceToPay": 9000
+                "taxTotal": 44988,
+                "subtotal": 281770,
+                "grandTotal": 281770,
+                "priceToPay": 281770
             },
             "discounts": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/beec4b46-5d78-5d20-81f4-1465659277b8"
+        "relationships": {
+            "items": {
+                "data": [
+                    {
+                        "type": "items",
+                        "id": "041_25904691"
+                    },
+                    {
+                        "type": "items",
+                        "id": "041_25904691_offer48"
+                    }
+                ]
+            }
         }
     },
     "included": [
         {
-            "type": "guest-cart-items",
-            "id": "019_21081473_offer67",
+            "type": "items",
+            "id": "041_25904691",
             "attributes": {
-                "sku": "019_21081473",
-                "quantity": "1",
-                "groupKey": "019_21081473_offer67",
-                "abstractSku": "019",
+                "sku": "041_25904691",
+                "quantity": 5,
+                "groupKey": "041_25904691",
+                "abstractSku": "041",
                 "amount": null,
-                "productOfferReference": "offer67",
-                "merchantReference": "MER000005",
+                "productOfferReference": null,
+                "merchantReference": null,
                 "calculations": {
-                    "unitPrice": 9000,
-                    "sumPrice": 9000,
+                    "unitPrice": 1650,
+                    "sumPrice": 8250,
                     "taxRate": 19,
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
-                    "unitGrossPrice": 9000,
-                    "sumGrossPrice": 9000,
-                    "unitTaxAmountFullAggregation": 1437,
-                    "sumTaxAmountFullAggregation": 1437,
-                    "sumSubtotalAggregation": 9000,
-                    "unitSubtotalAggregation": 9000,
+                    "unitGrossPrice": 1650,
+                    "sumGrossPrice": 8250,
+                    "unitTaxAmountFullAggregation": 263,
+                    "sumTaxAmountFullAggregation": 1317,
+                    "sumSubtotalAggregation": 8250,
+                    "unitSubtotalAggregation": 1650,
                     "unitProductOptionPriceAggregation": 0,
                     "sumProductOptionPriceAggregation": 0,
                     "unitDiscountAmountAggregation": 0,
                     "sumDiscountAmountAggregation": 0,
                     "unitDiscountAmountFullAggregation": 0,
                     "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 9000,
-                    "sumPriceToPayAggregation": 9000
+                    "unitPriceToPayAggregation": 1650,
+                    "sumPriceToPayAggregation": 8250
                 },
+                "configuredBundle": null,
+                "configuredBundleItem": null,
+                "productConfigurationInstance": null,
+                "salesUnit": null,
+                "selectedProductOptions": []
+            },
+              },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/beec4b46-5d78-5d20-81f4-1465659277b8/items/041_25904691"
+            }
+        },
+        {
+            "type": "items",
+            "id": "041_25904691_offer48",
+            "attributes": {
+                "sku": "041_25904691",
+                "quantity": 26,
+                "groupKey": "041_25904691_offer48",
+                "abstractSku": "041",
+                "amount": null,
+                "productOfferReference": "offer48",
+                "merchantReference": "MER000002",
+                "calculations": {
+                    "unitPrice": 10520,
+                    "sumPrice": 273520,
+                    "taxRate": 19,
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitGrossPrice": 10520,
+                    "sumGrossPrice": 273520,
+                    "unitTaxAmountFullAggregation": 1680,
+                    "sumTaxAmountFullAggregation": 43671,
+                    "sumSubtotalAggregation": 273520,
+                    "unitSubtotalAggregation": 10520,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 10520,
+                    "sumPriceToPayAggregation": 273520
+                },
+                "configuredBundle": null,
+                "configuredBundleItem": null,
+                "productConfigurationInstance": null,
                 "salesUnit": null,
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/beec4b46-5d78-5d20-81f4-1465659277b8/guest-cart-items/019_21081473_offer67"
+                "self": "https://glue.mysprykershop.com/guest-carts/beec4b46-5d78-5d20-81f4-1465659277b8/guest-cart-items/019_21081473_offer48"
             }
         }
     ]
@@ -1479,9 +1538,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with merchant products (Marketplace only)</summary>
-
-{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
+<summary markdown='span'>Response sample with merchant products</summary>
 
 ```json
 {

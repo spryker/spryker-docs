@@ -25,7 +25,9 @@ Merchant product appears first in the *Sold by* list together with the product o
 
 ### Merchant products during the Checkout
 
-Merchant products are grouped by the merchant and get split into the shipments by merchant.
+Merchant products, as well as product offers, are grouped by the merchant and split into the merchant's shipments.
+
+Searching and filtering merchant products 
 
 ## Merchant Products in the Back Office
 

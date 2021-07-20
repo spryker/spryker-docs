@@ -110,12 +110,6 @@ entries:
           - title: Managing account details and settings
             url: /docs/marketplace/user/merchant-portal-user-guides/my-account/managing-account-details-and-settings.html
 
-        - title: Orders
-          nested:
-
-          - title: Managing merchant orders
-            url: /docs/marketplace/user/merchant-portal-user-guides/orders/managing-merchant-orders.html
-
         - title: Dashboard
           nested:
 
@@ -127,3 +121,15 @@ entries:
 
           - title: Editing merchant's profile details
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html
+
+        - title: Offers
+          nested:
+
+          - title: Managing merchant orders
+            url: /docs/marketplace/user/merchant-portal-user-guides/offers/managing-product-offers.html
+
+        - title: Orders
+          nested:
+
+          - title: Managing merchant orders
+            url: /docs/marketplace/user/merchant-portal-user-guides/orders/managing-merchant-orders.html

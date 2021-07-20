@@ -565,10 +565,10 @@ function initToc() {
             var $headings = this.helpers.getHeadings(opts.$scope, topLevel);
 
             if ($headings.length < 2) {
-                opts.$nav.hide();
+                opts.$nav.closest('.toc').hide();
                 return;
             } else {
-                opts.$nav.show();
+                opts.$nav.closest('.toc').show();
             }
 
             this.helpers.populateNav($topContext, topLevel, $headings);

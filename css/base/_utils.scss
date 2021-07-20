@@ -18,3 +18,9 @@
         display: none !important;
     }
 }
+
+.tablet-show {
+    @include media(">=desktop") {
+        display: none !important;
+    }
+}

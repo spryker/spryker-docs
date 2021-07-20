@@ -1,7 +1,13 @@
 .toc {
+    display: none;
+
     @include media("<laptop") {
         flex: 0 0 auto;
         margin: 0 0 0 24px;
+    }
+
+    @include media("<desktop") {
+        min-width: 40px;
     }
 
     @include media("<tablet") {
@@ -58,6 +64,17 @@
                 position: relative;
             }
 
+            @include media("<desktop") {
+                position: fixed;
+                top: 153px;
+                right: 24px;
+            }
+
+            @include media("<tablet") {
+                right: 16px;
+                top: 132px;
+            }
+
             &__line {
                 position: absolute;
                 width: 16px;
@@ -108,6 +125,10 @@
                 padding: 16px 24px;
                 flex: 0 0 auto;
                 width: 100%;
+            }
+
+            @include media("<tablet") {
+                padding: 16px;
             }
         }
 

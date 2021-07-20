@@ -60,6 +60,10 @@
         hyphens: auto;
         min-width: 100px;
         border: 0;
+
+        @include media("<laptop") {
+            word-break: break-word;
+        }
     }
 
     th {
@@ -133,6 +137,10 @@
             &:hover {
                 background: rgba(0, 0, 0, .1);
             }
+        }
+
+        td, th {
+            word-break: break-word;
         }
     }
 

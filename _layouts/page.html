@@ -28,20 +28,30 @@ layout: default
 
     <aside class="main-sidebar">
         <h3 class="main-sidebar__title tablet-show" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
-        <a href="#" class="main-sidebar__opener">
+        <a href="#" class="main-sidebar__opener tablet-hidden js-main-sidebar-switcher">
             <span class="main-sidebar__opener-decorator"></span>
             <span class="main-sidebar__opener-decorator"></span>
             <span class="main-sidebar__opener-decorator"></span>
         </a>
-        <div class="main-sidebar__inner">
-            <div class="main-sidebar__slide">
-                <h3 class="main-sidebar__title tablet-hidden" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
+        <a href="#" class="main-sidebar__opener tablet-show js-main-sidebar-opener">
+            <span class="main-sidebar__opener-decorator"></span>
+            <span class="main-sidebar__opener-decorator"></span>
+            <span class="main-sidebar__opener-decorator"></span>
+        </a>
+        <div class="main-sidebar__popup">
+            <div class="main-sidebar__inner">
+                <div class="main-sidebar__header">
+                    <a href="#" class="main-sidebar__close"></a>
+                </div>
+                <div class="main-sidebar__slide">
+                    <h3 class="main-sidebar__title" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
 
-                {% unless page.hide_sidebar %}
-                    <div id="tg-sb-sidebar">
-                        {% include sidebar.html %}
-                    </div>
-                {% endunless %}
+                    {% unless page.hide_sidebar %}
+                        <div id="tg-sb-sidebar">
+                            {% include sidebar.html %}
+                        </div>
+                    {% endunless %}
+                </div>
             </div>
         </div>
     </aside>
@@ -124,7 +134,7 @@ layout: default
                 {% include toc.html %}
             {% endunless %}
 
-            <div class="tag-list tablet-hidden">
+            <div class="tag-list desktop-hidden">
                 {% if page.tags != null %}
                 {% assign projectTags = site.data.tags.allowed-tags %}
                 {% for tag in page.tags %}

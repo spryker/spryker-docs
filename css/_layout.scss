@@ -21,10 +21,10 @@ body {
 
         @include media("<laptop") {
             display: grid;
-            grid-column-gap: 0;
+            grid-column-gap: 30px;
             grid-row-gap: 0;
             grid-template-rows: auto 1fr;
-            grid-template-columns: auto 1fr;
+            grid-template-columns: auto auto;
             grid-template-areas: "a b"
                                  "a c";
             padding: 0 24px 0 0;
@@ -83,6 +83,7 @@ body {
 
     @include media("<laptop") {
         grid-area: a;
+        margin: 0;
     }
 
     @include media("<desktop") {

@@ -24,3 +24,9 @@
         display: none !important;
     }
 }
+
+.desktop-hidden {
+    @include media("<laptop") {
+        display: none !important;
+    }
+}

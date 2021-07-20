@@ -6,6 +6,10 @@
     margin: 0;
     list-style: none;
 
+    @include media("<desktop") {
+        border-top: 1px solid $grey-lighten;
+    }
+
     $sel: 'ul';
     @for $i from 0 through 5 {
         $sel: if($i == 0, "ul", selector-nest($sel, "ul"));

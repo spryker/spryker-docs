@@ -123,7 +123,7 @@ layout: default
                 {% include toc.html %}
             {% endunless %}
 
-            <div class="tag-list">
+            <div class="tag-list tablet-hidden">
                 {% if page.tags != null %}
                 {% assign projectTags = site.data.tags.allowed-tags %}
                 {% for tag in page.tags %}

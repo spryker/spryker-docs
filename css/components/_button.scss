@@ -66,8 +66,8 @@
         &:active,
         &:focus {
             text-decoration: none;
-            background: $grey;
-            border: 1px solid $grey;
+            background: $darkest;
+            border-color: $darkest;
             color: $white;
         }
 

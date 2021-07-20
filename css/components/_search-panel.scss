@@ -2,6 +2,10 @@
     position: relative;
     margin: 0 0 30px;
 
+    @include media("<tablet") {
+        margin: 0 0 15px;
+    }
+
     &__icon {
         position: absolute;
         z-index: 4;

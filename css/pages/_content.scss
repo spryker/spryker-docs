@@ -1,6 +1,18 @@
 .post-content {
     width: calc(100% - #{$sidebarsWidthDesktop});
 
+    @include media("<widescreen") {
+        width: calc(100% - #{$sidebarsWidthTablet});
+    }
+
+    @include media("<laptop") {
+        width: auto;
+    }
+
+    @include media("<desktop") {
+        width: 100%;
+    }
+
     h1, h2, h3, h4, h5, h6 {
         color: $grey-dark;
         font-weight: 800;
@@ -146,6 +158,22 @@
 
     p {
         word-break: break-word;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto 1em;
+        max-width: 50%;
+
+        @include media("<desktop") {
+            max-width: 100%;
+        }
+
+        &[width-100],
+        &.width-100 {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 }
 

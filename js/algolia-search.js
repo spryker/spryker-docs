@@ -202,6 +202,7 @@ const AlgoliaSearch = {
             searchIndex.addWidgets([
               customPagination({
                 container: $(`#tabs-${searchIndex.indexName} .${this.pageConfig.paginationClassName}`).get(0),
+                padding: (window.innerWidth < 1024) ? 1 : 2,
               })
             ]);
         });

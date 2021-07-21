@@ -360,9 +360,10 @@ function initCopyText() {
 }
 
 function initSidebarAccordion() {
-    $('.sidebar-nav li.active').parents('li').toggleClass('active');
+    $('.sidebar-nav li.active-page-item').parents('li').toggleClass('active');
 
     $('.sidebar-nav').navgoco({
+        caretHtml: null,
         openClass: 'active',
         save: false,
         slide: {

@@ -12,9 +12,6 @@ Merchant products can be unique or shared between several merchants. In case the
 
 Currently, you can define whether the product is shared or not via [data importer](https://spryker-docs.herokuapp.com/docs/marketplace/dev/data-import/202106.0/file-details-merchant-product-csv.html). 
 
-## Merchant product prices
-
-
 ## Merchant products in the Storefront
 
 Merchant products are displayed in the Storefront when the following conditions are met:
@@ -38,16 +35,25 @@ Product price on top of the product details page is taken from the merchant prod
 Merchant products, as well as product offers, are grouped by the merchant and split into the merchant's shipments.
 
 ### Searching and filtering merchant products
-When the merchant name is entered in the catalog search, not only the offers but also the products belonging to this merchant are displayed.
+When the merchant name is entered in the catalog search, not only the offers but also the products belonging to this merchant are displayed. By selecting a merchant name in the filter, products from this merchant are also displayed.
+
+![Search for merchant products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/search-for-products-by-name-and-sku.gif)
+
+### Merchant products in the wishlist
+When adding a merchant product to a wishlist, merchant information is kept for the product.
+
+![Merchant product on PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/add-merchant-product-to-wl-and-from-wh-to-cart.gif)
+
 
 ## Merchant products in the Back Office
+Before new merchant products can be seen by the Buyers in the Storefront, they must be activated <!---LINK--> in the Back Office.
 
-A Marketplace Administrator can filter the products belonging to merchants in the Back Office.
+A Marketplace Administrator can filter the products belonging to certain merchants in the Back Office.
 
-![merchants-switcher-on-products](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/products/products-reference-information/merchants-switcher-on-products.gif)
+![merchants-switcher-on-products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/filter-merchant-productsby-merchant-back-office.gif)
 
 ## Merchant products in the Merchant Portal
-Merchants create and manage their products <!---LINK--> in the Merchant Portal.
+Merchants create and manage their products <!---LINK--> in the Merchant Portal. They can define their own prices, stock, attributes etc. for their products. See Managing merchant products <!---LINK--> for detailed instructions on how to do that.
 
 ## Merchant products and API
 
@@ -56,3 +62,15 @@ Spryker Marketplace provides API to:
 - [Retrieve abstract products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-products.html)
 - [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html)
 - [Retrieve abstract product lists](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-product-lists.html)
+
+## Related Business User articles
+
+| FEATURE OVERVIEWS  | MERCHANT PORTAL USER GUIDES  | BACK OFFICE USER GUIDES |
+| ------------------- | -------------------- | ----------------------- |
+| [Marketplace Product Offer feature overview](https://spryker-docs.herokuapp.com/docs/marketplace/user/features/202106.0/marketplace-product-offer.html) | Managing merchant products <!---LINK--> | Managing merchant products <!---LINK--> |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See Merchant Products <!---LINK--> feature walkthrough for developers.
+
+{% endinfo_block %}

@@ -223,7 +223,7 @@ To delete wishlist item, send the request:
 
 | PATH PARAMETER | DESCRIPTION   |
 | -------------- | -------------- |
-| ***{{wishlist_id}}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#create-a-wishlis) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| ***{{wishlist_id}}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 | ***{{item_sku}}***    | Unique identifier of the product to delete.                  |
 
 ### Request

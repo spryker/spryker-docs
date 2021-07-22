@@ -13,6 +13,12 @@
     }
 }
 
+.tablet-overflow {
+    @include media("<desktop") {
+        overflow: hidden;
+    }
+}
+
 .tablet-hidden {
     @include media("<desktop") {
         display: none !important;

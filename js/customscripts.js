@@ -27,7 +27,25 @@ $( document ).ready(function() {
     initSetPageOffset();
 
     initToc();
+
+    initVertionDropdown();
 });
+
+function initVertionDropdown() {
+    let body = $('body'),
+        dropdown = $('.alt-nav.dropdown'),
+        overlay = $('.alt-nav__overlay');
+
+    dropdown.on('show.bs.dropdown', function () {
+        overlay.show();
+        body.addClass('tablet-overflow');
+    });
+
+    dropdown.on('hide.bs.dropdown', function () {
+        overlay.hide();
+        body.removeClass('tablet-overflow');
+    });
+}
 
 function initSetPageOffset() {
     let header = $('.main-header'),

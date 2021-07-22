@@ -53,6 +53,12 @@ entries:
       - title: Back Office user guides
         nested:
 
+        - title: Sales
+          nested:
+
+            - title: Managing main merchant orders
+              url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
+
         - title: Catalog
 
           nested:

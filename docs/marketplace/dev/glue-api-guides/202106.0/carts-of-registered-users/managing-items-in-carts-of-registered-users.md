@@ -1494,7 +1494,7 @@ It is the responsibility of the API Client to track whether the selected items a
 | vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| product-offer-availabilities | isNeverOutOfStock| Boolean | Boolean to show if this is an item that is never out of stock.{% info_block warningBox |
+| product-offer-availabilities | isNeverOutOfStock| Boolean | Boolean to show if this is an item that is never out of stock. |
 | product-offer-availabilities  | availability | Boolean | Boolean to inform you about availability. |
 | product-offer-availabilities | quantity | Integer | Available stock. |
 | product-offer-prices | price  | Integer | Price to pay for the item in cents. |

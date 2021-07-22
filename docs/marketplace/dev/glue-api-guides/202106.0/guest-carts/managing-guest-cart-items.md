@@ -217,7 +217,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 ```json
 {
   "data": {
-    "type": "items",
+    "type": "guest-cart-items",
     "attributes": {
       "sku": "041_25904691",
       "quantity": 5,

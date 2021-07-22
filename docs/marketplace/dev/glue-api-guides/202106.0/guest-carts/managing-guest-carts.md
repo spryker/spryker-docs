@@ -4550,7 +4550,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | product-offer-prices  | currency.code | String  | Currency code. |
 | product-offer-prices  | currency.name  | String | Currency name  |
 | product-offer-prices  | currency.symbol | String | Currency symbol. |
-|product-offer-prices     | volumePrices   | Object  |  An array of objects defining the [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) for the product offer.  |
+| product-offer-prices     | volumePrices   | Object  |  An array of objects defining the [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) for the product offer.  |
 | product-offer-prices | grossAmount | Integer   |  Gross volume price in cents.         |
 | product-offer-prices | netAmount | Integer   | Net volume price in cents.          |
 | product-offer-prices | quantity  |  Integer         | Quantity of items in offer when the volume price applies.  |

@@ -176,7 +176,7 @@ To retrieve all carts, send the request:
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options` | Retrieve all carts of a user with items, respective concrete product, and their product options. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels` | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers` | Retrieve all carts of a user with information about product offers. |
-| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-availabilities,product-offer-prices` | Retrieve all carts of a user with product offer availabilities. |
+| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all carts of a user with product offer availabilities. |
 | `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all carts of a user with product offer prices. |
 
 

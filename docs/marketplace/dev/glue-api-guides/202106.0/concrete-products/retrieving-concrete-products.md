@@ -12,6 +12,9 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 * [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
+* [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-prices-feature-integration.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/glue-api-marketplace-product-offer-volume-prices.html)
 
 
 ## Retrieve a concrete product

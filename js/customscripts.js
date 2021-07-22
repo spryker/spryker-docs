@@ -33,7 +33,7 @@ function initSetPageOffset() {
     let header = $('.main-header'),
         headerElement = header.get(0),
         menu = $('.main-sidebar'),
-        menuElement = header.get(0),
+        menuElement = menu.get(0),
         headerPosition,
         menuPosition,
         headerOffset = 0,

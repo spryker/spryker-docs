@@ -19,7 +19,7 @@
     }
 }
 
-.tablet-show {
+.desktop-hidden {
     @include media(">=desktop") {
         display: none !important;
     }

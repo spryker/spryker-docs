@@ -49,7 +49,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 | `GET https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134` | Resolve the following URL of a product: `https://mysprykershop.com/de/acer-aspire-s7-134`. |
 | `GET https://glue.mysprykershop.com/url-resolver?url=/en/computer` | Resolve the following URL of a category node: `https://mysprykershop.com/en/computer`. |
 | `GET https://glue.mysprykershop.com/url-resolver?url=/de/ruecknahmegarantie` | Resolve the following URL of a CMS page `https://mysprykershop.com/de/ruecknahmegarantie`. |
-| `GET https://glue.mysprykershop.com/url-resolver?url=/en/merchant/budget-cameras` | Resolve the following URL of a merchant page  `https://mysprykershop.com/en/merchant/budget-cameras`.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| `GET https://glue.mysprykershop.com/url-resolver?url=/en/merchant/budget-cameras` | Resolve the following URL of a merchant page  `https://mysprykershop.com/en/merchant/budget-cameras`. |
 
 ### Response
 
@@ -130,8 +130,6 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 <details>
 <summary markdown='span'>Response sample of a merchant page URL (Marketplace only)</summary>
-
-{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
 
 ```json
 {

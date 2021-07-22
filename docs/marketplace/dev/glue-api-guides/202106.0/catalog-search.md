@@ -40,7 +40,7 @@ To search by products, send the request:
 | sort  | Sorts the search results   | For the list of possible values, run the [catalog search request and find the list under sortParamNames in the response. For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
 | page  | Sets the number of the search results page from which the results are retrieved | {% raw %}{{page_number}}{% endraw %}    |
 | ipp   | Sets the number of products per page  | {% raw %}{{number_of_products}}{% endraw %}  |
-| merchant_name | Filters the results by the merchant name.  | {% raw %}{{name_of_the_merchant}}{% endraw %} {% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
+| merchant_name | Filters the results by the merchant name.  ||
 
 
 
@@ -67,7 +67,7 @@ To search by products, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc` | Sort found products by price ascending.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set number of products per page.   |
-| `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by  the *Spryker* merchant name.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by  the *Spryker* merchant name. |
 
 ### Response
 
@@ -6340,8 +6340,6 @@ To search by products, send the request:
 
 <details>
 <summary markdown='span'>Response sample: filtering search results by Merchant name</summary>
-
-{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
 
 ```json
 {

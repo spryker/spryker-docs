@@ -13,9 +13,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
 * [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
-* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-prices-feature-integration.html)
-* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/glue-api-marketplace-product-offer-volume-prices.html)
+* [GLUE API: Marketplace Product Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
 
 
 ## Add items to a guest cart
@@ -1692,8 +1690,8 @@ It is the responsibility of the API Client to track whether the selected items a
 | guest-cart-items | groupKey | String | Unique item identifier. The value is generated based on product parameters. |
 | guest-cart-items |abstractSku |String |SKU number of the abstract product to which the concrete belongs. |
 | guest-cart-items | amount | Integer | Amount of the products in the cart. |
-| guest-cart-items |productOfferReference | String | Unique identifier of the Product Offer in the system.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
-| guest-cart-items | merchantReference | String | Unique identifier of the Merchant in the system. {% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| guest-cart-items |productOfferReference | String | Unique identifier of the Product Offer in the system. |
+| guest-cart-items | merchantReference | String | Unique identifier of the Merchant in the system. |
 | guest-cart-items | unitPrice | Integer | Single item price without assuming is it net or gross. This value should be used everywhere a price is disabled. It allows switching the tax mode without side effects. |
 | guest-cart-items | sumPrice | Integer | Sum of all items prices calculated. |
 | guest-cart-items | taxRate | Integer | Current tax rate in per cent. |

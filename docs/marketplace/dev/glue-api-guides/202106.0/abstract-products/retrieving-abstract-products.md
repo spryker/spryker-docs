@@ -58,8 +58,8 @@ To retrieve general information about an abstract product, send the request:
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options` | Retrieve information about the abstract product with SKU `001` with its product options. |
 | `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
-| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve merchant product with SKU 109.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
-| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve merchant product with SKU 109 including the merchant information.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve merchant product with SKU 109.|
+| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve merchant product with SKU 109 including the merchant information. |
 
 
 ### Response
@@ -1457,7 +1457,7 @@ To retrieve general information about an abstract product, send the request:
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | SKU of the abstract product |
-| merchantReference | String | Unique identifier of the merchant in the system.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
+| merchantReference | String | Unique identifier of the merchant in the system.|
 | averageRating | String | Average rating of the product based on customer rating. |
 | reviewCount | String | Number of reviews left by customer for this abstract product. |
 | name | String | Name of the abstract product |

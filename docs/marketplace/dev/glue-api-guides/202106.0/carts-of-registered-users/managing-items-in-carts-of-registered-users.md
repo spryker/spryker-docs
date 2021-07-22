@@ -1357,8 +1357,6 @@ It is the responsibility of the API Client to track whether the selected items a
 <details>
 <summary markdown='span'>Response sample with merchant products (Marketplace only)</summary>
 
-{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
-
 ```json
 {
     "data": {
@@ -1499,7 +1497,7 @@ It is the responsibility of the API Client to track whether the selected items a
 | product-offer-availabilities | isNeverOutOfStock| Boolean | Boolean to show if this is an item that is never out of stock.{% info_block warningBox |
 | product-offer-availabilities  | availability | Boolean | Boolean to inform you about availability. |
 | product-offer-availabilities | quantity | Integer | Available stock. |
-| product-offer-prices | price  | Integer | Price to pay for the item in cents.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| product-offer-prices | price  | Integer | Price to pay for the item in cents. |
 | product-offer-prices  | prices  | Array   | Array of prices for the product offer.|
 | product-offer-prices | priceTypeName | String  | Price type. |
 | product-offer-prices | netAmount | Integer | Net price in cents. |
@@ -1507,7 +1505,7 @@ It is the responsibility of the API Client to track whether the selected items a
 | product-offer-prices | currency.code | String  | Currency code. |
 | product-offer-prices | currency.name | String  | Currency name. |
 | product-offer-prices | currency.symbol | String  | Currency symbol.|
-| product-offers | merchantSku | String  | SKU of the merchant the product offer belongs to.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
+| product-offers | merchantSku | String  | SKU of the merchant the product offer belongs to.|
 | product-offers | merchantReference | String  | Merchant reference assigned to every merchant. |
 | product-offers | isDefault  | Boolean | Defines whether the product offer is default or not. |
 

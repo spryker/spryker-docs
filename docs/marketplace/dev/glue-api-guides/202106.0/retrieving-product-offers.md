@@ -239,6 +239,9 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 
 |INCLUDED RESOURCE  |ATTRIBUTE  |TYPE  |DESCRIPTION  |
 |---------|---------|---------|---------|
+|product-offer-availabilities          | isNeverOutOfStock          |  Boolean         | Boolean to show if this is an item that is never out of stock.          |
+|product-offer-availabilities          | availability          | Boolean          |Boolean to inform you about availability.           |
+|product-offer-availabilities         | quantity          | Integer          |Available stock.           |
 |product-offer-prices     |  price |  Integer  | Price to pay for the product in cents.        |
 |product-offer-prices     |priceTypeName   | String   |Price type.         |
 |product-offer-prices     | netAmount   | Integer    |Net price in cents.    |
@@ -247,56 +250,30 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 |product-offer-prices     | currency.name   | String  |  Currency name.  |
 |product-offer-prices     | currency.symbol   | String  |  Currency symbol.  |
 |product-offer-prices     | volumePrices   | Object  |  An array of objects defining the [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) for the product offer.  |
-|product-offer-prices | grossAmount | Integer   |  Gross volume price in cents.         |
-|product-offer-prices | netAmount | Integer   | Net volume price in cents.          |
-|product-offer-prices | quantity  |  Integer         | Quantity of items in offer when the volume price applies.  |
-
-
-**Product offer availability information**
-
-| ATTRIBUTE  | TYPE | DESCRIPTION |
-| ----------------- | -------- | ------------------------ |
-| isNeverOutOfStock | boolean  | Boolean to show if this is an item that is never out of stock. |
-| availability  | boolean  | Boolean to inform you about availability.    |
-| quantity          | integer  | Available stock.  |
-
-**Product offer prices information**
-
-| ATTRIBUTE  | TYPE | DESCRIPTION |
-| --------------- | -------- | -------------------------------------- |
-| price           | Integer  | Price to pay for the product in cents. |
-| priceTypeName   | String   | Price type.                            |
-| netAmount       | Integer  | Net price in cents.                    |
-| grossAmount     | Integer  | Gross price in cents.                  |
-| currency.code   | String   | Currency code.                         |
-| currency.name   | String   | Currency name.                         |
-| currency.symbol | String   | Currency symbol.                       |
-
-**Merchant information**
-
-| ATTRIBUTE  | TYPE | DESCRIPTION |
-| ----------------- | -------- | ---------------------- |
-| merchantName           | String   | Merchant’s name. |
-| merchantUrl            | String   | Merchant’s profile URL. |
-| contactPersonRole      | String   | Role of the contact person.  |
-| contactPersonTitle     | String   | Salutation to use when addressing the contact person. |
-| contactPersonFirstName | String   | Contact person’s first name. |
-| contactPersonLastName  | String   | Contact person’s last name.  |
-| contactPersonPhone     | String   | Contact person’s phone number. |
-| logoUrl                | String   | Merchant’s logo URL.   |
-| publicEmail            | String   | Merchant’s public email address.  |
-| publicPhone            | String   | Merchant’s public phone number.  |
-| description            | String   | Merchant’s description.  |
-| bannerUrl              | String   | Merchant’s banner URL. |
-| deliveryTime           | String   | Average delivery time.  |
-| latitude               | String   | Merchant’s latitude.|
-| longitude              | String   | Merchant’s longitude.  |
-| faxNumber              | String   | Merchant’s fax number.  |
-| legalInformation       | Object   | List of legal information. |
-| terms                  | String   | Merchant’s terms and conditions.  |
-| cancellationPolicy     | String   | Merchant’s cancellation policy.  |
-| imprint                | String   | Merchant’s imprint information.  |
-| dataPrivacy            | String   | Merchant’s data privacy conditions. |
+|product-offer-prices     | grossAmount | Integer   |  Gross volume price in cents.         |
+|product-offer-prices     | netAmount | Integer   | Net volume price in cents.          |
+|product-offer-prices     | quantity  |  Integer         | Quantity of items in offer when the volume price applies.  |
+|merchant                | merchantName           | String   | Merchant’s name. |
+|merchant                | merchantUrl            | String   | Merchant’s profile URL. |
+|merchant                | contactPersonRole      | String   | Role of the contact person.  |
+|merchant                | contactPersonTitle     | String   | Salutation to use when addressing the contact person. |
+|merchant                | contactPersonFirstName | String   | Contact person’s first name. |
+|merchant                | contactPersonLastName  | String   | Contact person’s last name.  |
+|merchant                | contactPersonPhone     | String   | Contact person’s phone number. |
+|merchant                | logoUrl                | String   | Merchant’s logo URL.   |
+|merchant                | publicEmail            | String   | Merchant’s public email address.  |
+|merchant                | publicPhone            | String   | Merchant’s public phone number.  |
+|merchant                | description            | String   | Merchant’s description.  |
+|merchant                | bannerUrl              | String   | Merchant’s banner URL. |
+|merchant                | deliveryTime           | String   | Average delivery time.  |
+|merchant                | latitude               | String   | Merchant’s latitude.|
+|merchant                | longitude              | String   | Merchant’s longitude.  |
+|merchant                | faxNumber              | String   | Merchant’s fax number.  |
+|merchant                | legalInformation       | Object   | List of legal information. |
+|merchant                | terms                  | String   | Merchant’s terms and conditions.  |
+|merchant                | cancellationPolicy     | String   | Merchant’s cancellation policy.  |
+|merchant                | imprint                | String   | Merchant’s imprint information.  |
+|merchant                | dataPrivacy            | String   | Merchant’s data privacy conditions. |
 
 
 ## Retrieve product offer availability

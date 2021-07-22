@@ -126,12 +126,5 @@ In the catalog and search results pages, there is the merchant multi-select filt
 
 If the merchant is not active, their products and offers are not displayed in the search suggestions, search results and in the merchant filter.
 
-## Merchants and the API
-
-Spryker Marketplace provides API to:
-
-* Retrieve merchant information and display the merchant profile on the custom Storefront. For details, see [Retrieving Merchant Information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information).
-* Retrieve search and filter results by merchant name. For details, see [Searching by products](https://documentation.spryker.com/marketplace/docs/catalog-search#search-by-products) and [Retrieving suggestions](https://documentation.spryker.com/marketplace/docs/retrieving-suggestions-for-auto-completion-and-search#retrieve-a-suggestion).
-
 ## Next steps
 [Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users.html)

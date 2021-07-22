@@ -167,7 +167,7 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 
 |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|
-| [Managing merchant product-offers](docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html)|
+| [Managing merchant product offers](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html)|
 
 {% info_block warningBox "Developer guides" %}
 

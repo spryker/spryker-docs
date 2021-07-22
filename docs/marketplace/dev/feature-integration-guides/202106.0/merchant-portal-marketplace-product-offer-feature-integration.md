@@ -35,6 +35,7 @@ Make sure that the following modules have been installed:
 | MODULE  | EXPECTED DIRECTORY  |
 | ------------- | --------------- |
 | ProductOfferMerchantPortalGui | spryker/product-offer-merchant-portal-gui |
+| PriceProductOfferVolume | spryker/price-product-offer-volume |
 
 {% endinfo_block %}
 
@@ -98,14 +99,65 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that the *Merchant Reference* and *Product Offer SKU* are present.
 
 {% endinfo_block %}
+    
+#### Extend and validate PriceProducts with volume quantity for Offers
 
-#### Add the Offer widget to MerchantDashobard
+Activate the following plugins:
+
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
+| --------------- | ------------ | ----------- | ------------ |
+| PriceProductOfferVolumeExpanderPlugin | Expands `PriceProductTransfer` with `volumeQuantity`. | | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
+| PriceProductOfferVolumeValidatorPlugin | Validates volume prices. | | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
+
+**src/Pyz/Zed/PriceProductOffer/PriceProductOfferDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesMerchantPortalGui;
+
+use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeExpanderPlugin;
+use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeValidatorPlugin;
+
+class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExpanderPluginInterface[]
+     */
+    protected function getPriceProductOfferExpanderPlugins(): array
+    {
+        return [
+            new PriceProductOfferVolumeExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferValidatorPluginInterface[]
+     */
+    protected function getPriceProductOfferValidatorPlugins(): array
+    {
+        return [
+            new PriceProductOfferVolumeValidatorPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+* Make sure the `PriceProductOfferVolumeExpanderPlugin` plugin is set up by checking if the volume quantity field is filled in the PriceProductTable when editing a product offer in the Merchant Portal.
+* Make sure the `PriceProductOfferVolumeValidatorPlugin` plugin is set up by submitting a price with a higher quantity than 1.
+
+{% endinfo_block %}
+
+
+#### Add the Offer widget to MerchantDashboard
 
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE  |
 | ---------------- | ------------- | --------- | ---------------- |
-| OffersMerchantDashboardCardPlugin | Adds Offers widget to `MerchantDashobard`. | | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
+| OffersMerchantDashboardCardPlugin | Adds Offers widget to `MerchantDashboard`. | | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
 
 **src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
 
@@ -135,3 +187,13 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://zed.mysprykershop.com/dashboard-portal-gui`. The Offers widget should show up on the page.
 
 {% endinfo_block %}
+
+### 4) Configure export to Redis
+
+To configure export to Redis, take the following steps:
+
+#### Set up publishers
+
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
+| --------------- | ------------ | ----------- | ------------ |
+| PriceProductOfferVolumeExpanderPlugin | Expands `PriceProductTransfer` with `volumeQuantity`. | | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |

@@ -35,7 +35,7 @@
             width: 280px;
         }
 
-        &__inner {
+        &-inner {
             @include media("<laptop") {
                 height: 100%;
                 display: flex;
@@ -43,7 +43,7 @@
             }
         }
 
-        &__content {
+        &-content {
             @include media("<laptop") {
                 flex: 1 1 auto;
                 overflow: auto;
@@ -51,7 +51,7 @@
             }
         }
 
-        &__opener {
+        &-opener {
             display: none;
 
             @include media("<laptop") {
@@ -75,7 +75,7 @@
                 top: 132px;
             }
 
-            &__line {
+            &-line {
                 position: absolute;
                 width: 16px;
                 height: 2px;
@@ -100,7 +100,7 @@
             }
         }
 
-        &__overlay {
+        &-overlay {
             display: none;
             position: fixed;
             z-index: 2000;
@@ -115,7 +115,7 @@
             }
         }
 
-        &__header {
+        &-header {
             display: none;
 
             @include media("<laptop") {
@@ -132,7 +132,7 @@
             }
         }
 
-        &__close {
+        &-close {
             display: block;
 
             @include media("<laptop") {

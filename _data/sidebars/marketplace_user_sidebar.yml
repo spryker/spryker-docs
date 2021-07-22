@@ -125,7 +125,7 @@ entries:
         - title: Offers
           nested:
 
-          - title: Managing merchant orders
+          - title: Managing product offers
             url: /docs/marketplace/user/merchant-portal-user-guides/offers/managing-product-offers.html
 
         - title: Orders

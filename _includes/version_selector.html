@@ -17,3 +17,13 @@
     <span class="alt-nav__opener">This document has only one version {{ current_version }}</span>
     {% endif %}
 </div>
+
+<div class="alt-nav dropdown">
+    <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ current_version }}</span>
+    <span class="alt-nav__opener-label">Versions</span>
+    <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
+        <li><a href="{{ site.baseurl }}{{ version.url }}">version.version1</a></li>
+        <li><a href="{{ site.baseurl }}{{ version.url }}">version.version2</a></li>
+        <li><a href="{{ site.baseurl }}{{ version.url }}">version.version3</a></li>
+    </ul>
+</div>

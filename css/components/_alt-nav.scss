@@ -47,13 +47,13 @@
 
     &__drop {
         margin: 0;
-        padding: 0;
+        padding: 46px 0 0;
         list-style: none;
         font-size: 12px;
         line-height: 16px;
         font-weight: 800;
         position: absolute;
-        top: 100%;
+        top: 0;
         left: 0;
         width: 100%;
         background: $white;

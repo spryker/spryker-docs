@@ -27,6 +27,7 @@ layout: default
 <div class="page-content page-content--post">
 
     <aside class="main-sidebar">
+        <h3 class="main-sidebar__title desktop-hidden" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
         <a href="#" class="main-sidebar__opener">
             <span class="main-sidebar__opener-decorator"></span>
             <span class="main-sidebar__opener-decorator"></span>
@@ -34,7 +35,7 @@ layout: default
         </a>
         <div class="main-sidebar__inner">
             <div class="main-sidebar__slide">
-                <h3 class="main-sidebar__title" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
+                <h3 class="main-sidebar__title tablet-hidden" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
 
                 {% unless page.hide_sidebar %}
                     <div id="tg-sb-sidebar">

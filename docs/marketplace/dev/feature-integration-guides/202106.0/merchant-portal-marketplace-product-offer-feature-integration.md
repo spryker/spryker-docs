@@ -114,12 +114,12 @@ Activate the following plugins:
 ```php
 <?php
 
-namespace Pyz\Zed\SalesMerchantPortalGui;
+namespace Pyz\Zed\PriceProductOffer;
 
 use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeExpanderPlugin;
 use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeValidatorPlugin;
 
-class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPortalGuiDependencyProvider
+class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDependencyProvider
 {
     /**
      * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExpanderPluginInterface[]
@@ -190,10 +190,41 @@ Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by openi
 
 ### 4) Configure export to Redis
 
-To configure export to Redis, take the following steps:
+To configure the export of product offer prices to Redis, take the following steps:
 
 #### Set up publishers
 
 | PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
 | --------------- | ------------ | ----------- | ------------ |
-| PriceProductOfferVolumeExpanderPlugin | Expands `PriceProductTransfer` with `volumeQuantity`. | | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
+| PriceProductStoreWritePublisherPlugin | Publishes product offer prices data by update events from spy_price_product_store table. | | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer |
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer\PriceProductStoreWritePublisherPlugin;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return array
+     */
+    protected function getPublisherPlugins(): array
+    {
+        return array_merge(
+            $this->getPriceProductOfferStoragePlugins()
+        );
+    }
+    
+    /**
+     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     */
+    protected function getPriceProductOfferStoragePlugins(): array
+    {
+        return [
+            new PriceProductStoreWritePublisherPlugin(),
+        ];
+    }
+}
+```

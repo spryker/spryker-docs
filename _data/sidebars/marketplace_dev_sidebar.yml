@@ -18,6 +18,9 @@ entries:
 
       - title: Feature walkthroughs
         nested:
+          - title: Merchant
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
+
           - title: Marketplace Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant.html
 
@@ -408,9 +411,3 @@ entries:
 
           - title: "Marketplace infrastructure setup"
             url: /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
-
-          - title: "Features"
-            nested:
-
-              - title: "Merchant"
-                url: /docs/marketplace/dev/back-end/features/merchant.html

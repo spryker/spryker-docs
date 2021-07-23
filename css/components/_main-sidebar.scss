@@ -4,34 +4,39 @@
     @include media("<desktop") {
         padding: 5px 24px;
         display: flex;
+        flex-direction: row;
         align-items: center;
         position: sticky;
         top: 78px;
         left: 0;
         width: 100%;
         z-index: 3;
+        min-height: 50px;
     }
 
     @include media("<tablet") {
         top: 64px;
+        padding: 5px 16px;
     }
 
     &__opener {
         position: absolute;
         z-index: 3;
-        top: 45px;
+        top: 44px;
         right: 0;
-        margin: 0 -16px 0 0;
-        padding: 7px 0 0;
-        width: 32px;
-        height: 32px;
+        margin: 0 -20px 0 0;
+        padding: 7px;
+        width: 39px;
+        height: 39px;
         border-radius: 50%;
         background: $grey-lighten;
         text-decoration: none;
         border: 2px solid $grey-lighten;
+        flex: 0 0 auto;
 
         @include media("<desktop") {
             position: static;
+            margin: 0 0 0 15px;
         }
 
         &:hover {
@@ -40,10 +45,12 @@
 
         &-decorator {
             display: block;
-            width: 14px;
-            height: 2px;
-            margin: 0 auto 4px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            margin: 0 auto 3px 0;
             background: $grey;
+            box-shadow: 8px 0 $grey, 16px 0 $grey;
         }
     }
 
@@ -97,5 +104,18 @@
         font-weight: 800;
         color: $grey-dark;
         margin: 0 10px 25px 25px;
+        flex: 1 1 auto;
+
+        @include media("<laptop") {
+            font-size: 18px;
+        }
+
+        @include media("<desktop") {
+            margin: 0;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }

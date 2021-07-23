@@ -55,6 +55,12 @@ entries:
       - title: Back Office user guides
         nested:
 
+        - title: Sales
+          nested:
+
+            - title: Managing main merchant orders
+              url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
+
         - title: Catalog
 
           nested:
@@ -127,7 +133,7 @@ entries:
         - title: Offers
           nested:
 
-          - title: Managing merchant orders
+          - title: Managing product offers
             url: /docs/marketplace/user/merchant-portal-user-guides/offers/managing-product-offers.html
 
         - title: Orders

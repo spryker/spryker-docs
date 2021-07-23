@@ -175,6 +175,12 @@
             width: 100%;
         }
     }
+
+    ul {
+        code {
+            word-break: break-word;
+        }
+    }
 }
 
 .post-header {
@@ -185,6 +191,7 @@
     &__title {
         flex: 1 1 auto;
         margin: 0 0 8px;
+        word-break: break-word;
     }
 
     &__button {

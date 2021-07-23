@@ -9,6 +9,9 @@ entries:
           - title: Marketplace concept
             url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
 
+          - title: Back Office for Marketplace Operator
+            url: /docs/marketplace/user/intro-to-spryker/back-office-for-marketplace-operator.html
+
       - title: Features
         url: /docs/marketplace/user/features/
         nested:

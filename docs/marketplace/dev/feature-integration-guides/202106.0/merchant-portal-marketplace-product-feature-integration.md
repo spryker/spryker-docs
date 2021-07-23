@@ -55,6 +55,7 @@ Make sure that the following changes have been applied in transfer objects:
 |-|-|-|-|
 | MerchantProductTableCriteria | class | Created | src/Generated/Shared/Transfer/MerchantProductTableCriteriaTransfer |
 | ProductAbstractCollection | class | Created | src/Generated/Shared/Transfer/ProductAbstractCollectionTransfer |
+| PriceProductCriteria.onlyConcretePrices | property | Created | src/Generated/Shared/Transfer/PriceProductCriteria |
 | PriceProductTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableCriteriaTransfer |
 | PriceProductTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewCollectionTransfer |
 | PriceProductTableView | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewTransfer |
@@ -66,5 +67,47 @@ Make sure that the following changes have been applied in transfer objects:
 | StockProduct | class | Created | src/Generated/Shared/Transfer/StockProductTransfer |
 | ReservationRequest | class | Created | src/Generated/Shared/Transfer/ReservationRequestTransfer |
 | ReservationResponse | class | Created | src/Generated/Shared/Transfer/ReservationResponseTransfer |
+
+{% endinfo_block %}
+
+### 3) Set up behavior
+
+To set up behavior, take the following steps.
+
+#### Extend price validation in PriceProduct module
+
+Activate the following plugins:
+
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
+| --------------- | ------------ | ----------- | ------------ |
+| PriceProductVolumeValidatorPlugin | Validates volume prices. | | Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct |
+
+**src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\PriceProduct;
+
+use Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct\PriceProductVolumeValidatorPlugin;
+use Spryker\Zed\PriceProduct\PriceProductDependencyProvider as SprykerSalesPriceProductDependencyProvider;
+
+class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceProductValidatorPluginInterface[]
+     */
+    protected function getPriceProductValidatorPlugins(): array
+    {
+        return [
+            new PriceProductVolumeValidatorPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that the *Merchant Reference* and *Product Offer SKU* are present.
 
 {% endinfo_block %}

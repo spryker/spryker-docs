@@ -4,12 +4,6 @@ description: Retrieve Marketplace product offers via API
 template: glue-api-storefront-guide-template
 ---
 
-{% info_block warningBox "Note" %}
-
-This resource is available only in case you have upgraded your shop to the Marketplace provided by Spryker.
-
-{% endinfo_block %}
-
 Product offers allow different merchants to sell the same product on the Marketplace. Product offers are created per concrete products, and you can get the offer information via retrieving the product information.
 
 In your development, product offers API can help you to retrieve relevant extended information for product offers.
@@ -29,7 +23,7 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 
 | PATH PARAMETER| DESCRIPTION |
 | ------------------ | ------------------------------------------------------------ |
-| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer. You can get it in response when retrieving the offers available for the product concrete. |
+| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-product-offers-for-a-concrete-product.html). |
 
 ### Request
 

@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{ page.version }} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Merchant | {{ page.version }} | [Merchant feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/904037045/WIP+Merchant+Feature+Integration+-+ongoing) |
+| Merchant | {{ page.version }} | [Merchant feature integration](https://documentation.spryker.com/2021080/docs/merchant-feature-integration) |
 
 ### 1) Install the required modules using Composer
 
@@ -149,7 +149,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantUserTabMerchantFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 
-<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/marketplace-merchant/marketplace-merchantDependencyProvider.php</summary>
 
 ```php
 <?php

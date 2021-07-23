@@ -22,18 +22,38 @@
     h1 {
         font-size: 38px;
         line-height: 1.369;
+
+        @include media("<tablet") {
+            font-size: 28px;
+        }
     }
 
     h2 {
         font-size: 28px;
+
+        @include media("<tablet") {
+            font-size: 20px;
+            line-height: 1.4;
+            margin: 0 0 8px;
+        }
     }
 
     h3 {
         font-size: 20px;
+
+        @include media("<tablet") {
+            font-size: 16px;
+            margin: 0 0 8px;
+        }
     }
 
     h4 {
         font-size: 18px;
+
+        @include media("<tablet") {
+            font-size: 15px;
+            margin: 0 0 8px;
+        }
     }
 
     table {
@@ -86,9 +106,10 @@
     }
 
     details {
-        margin: 0 0 20px;
-        border-top: 2px solid $grey-3;
-        border-bottom: 2px solid $grey-3;
+        margin: 0 0 24px;
+        border: 2px solid $grey-lighten;
+        background: $grey-lightest;
+        border-radius: 4px;
 
         & + details {
             margin-top: -22px;
@@ -106,9 +127,12 @@
             transition: color .2s linear, background .2s linear;
             color: $grey-dark;
             word-break: break-word;
+            border-radius: 2px;
 
             &:hover {
-                background: $grey-lightest;
+                @include hover {
+                    background: $white;
+                }
             }
 
             &:before {
@@ -127,18 +151,13 @@
                 transform: rotate(90deg);
             }
         }
+
+        pre {
+            margin-bottom: 16px;
+        }
     }
 
     .info-block {
-        details {
-            background: $white;
-        }
-        summary {
-            &:hover {
-                background: rgba(0, 0, 0, .1);
-            }
-        }
-
         td, th {
             word-break: break-word;
         }
@@ -166,6 +185,10 @@
 
     p {
         word-break: break-word;
+
+        @include media("<laptop") {
+            margin-top: .5em;
+        }
     }
 
     img {
@@ -189,30 +212,80 @@
             word-break: break-word;
         }
     }
+
+    .tag-list {
+        display: none;
+
+        @include media("<laptop") {
+            display: block;
+            margin: 25px 0 15px;
+        }
+    }
 }
 
 .post-header {
-    display: flex;
-    align-items: flex-start;
     margin: 0 0 8px;
+
+    @include media("<tablet") {
+        margin: 0 0 16px;
+    }
+
+    @include media(">=tablet") {
+        display: grid;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "a b"
+                             "c c";
+    }
 
     &__title {
         flex: 1 1 auto;
         margin: 0 0 8px;
         word-break: break-word;
+
+        @include media("<desktop") {
+            margin-top: -5px;
+        }
+
+        @include media("<tablet") {
+            margin: 0 0 10px;
+        }
+
+        @include media(">=tablet") {
+            grid-area: a;
+        }
     }
 
     &__button {
         flex: 0 0 auto;
         margin: 0 0 0 20px;
 
+        @include media("<tablet") {
+            margin: 0 0 10px;
+            display: flex;
+        }
+
+        @include media(">=tablet") {
+            grid-area: b;
+        }
+
         &:after {
             content: none !important;
         }
     }
 
-    h1 {
-        margin: 0;
+    .post-meta {
+        margin: 10px 0 0;
+
+        @include media("<tablet") {
+            margin: 0 0 8px;
+        }
+
+        @include media(">=tablet") {
+            grid-area: c;
+        }
     }
 }
 

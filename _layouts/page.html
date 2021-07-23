@@ -59,18 +59,29 @@ layout: default
         <div class="post-header">
             <h1 class="post-header__title">{{ page.title }}</h1>
 
+            <div class="post-meta">Last updated: <time datetime="">20.05.2021</time></div>
+
             {% if site.github_editme_path %}
                 <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="button post-header__button button--small" role="button"><i class="icon-github"></i> Edit on GitHub</a>
             {% endif %}
         </div>
-
-        <div class="post-meta">Last updated: <time datetime="">20.05.2021</time></div>
 
         {% if page.summary %}
             <div class="summary">{{page.summary}}</div>
         {% endif %}
 
         {{content}}
+
+        <div class="tag-list">
+            {% if page.tags != null %}
+            {% assign projectTags = site.data.tags.allowed-tags %}
+            {% for tag in page.tags %}
+            {% if projectTags contains tag %}
+            <a href="{{ "tag_" | append: tag | append: ".html" }}" class="button button--xs tag-item" role="button">{{page.tagName}}{{tag}}</a>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </div>
 
         <aside class="form-collapse">
             <div class="confirm-block">

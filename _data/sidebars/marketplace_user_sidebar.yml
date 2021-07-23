@@ -8,6 +8,8 @@ entries:
         nested:
           - title: Marketplace concept
             url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
+          - title: Operator Back Office
+            url: /docs/marketplace/user/intro-to-spryker/operator-back-office.html
 
           - title: Back Office for Marketplace Operator
             url: /docs/marketplace/user/intro-to-spryker/back-office-for-marketplace-operator.html
@@ -112,7 +114,7 @@ entries:
 
         - title: Logging in to the Merchant Portal
           url: /docs/marketplace/user/merchant-portal-user-guides/logging-in-to-the-merchant-portal.html
-          
+
         - title: My account
           nested:
 

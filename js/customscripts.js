@@ -79,6 +79,15 @@ function initPopup() {
         overlay: '.toc__popup-overlay',
         anchorLinks: 'nav-link',
     });
+
+    $('.main-sidebar').popup({
+        animSpeed: 300,
+        box: '.main-sidebar__popup',
+        opener: '.js-main-sidebar-opener',
+        close: '.main-sidebar__close',
+        preventScroll: true,
+        bodyClass: 'main-sidebar-opened',
+    });
 }
 
 $.fn.popup = function (options) {
@@ -89,6 +98,7 @@ $.fn.popup = function (options) {
             box: '.popup__box',
             opener: '.popup__opener',
             close: '.popup__close',
+            bodyClass: 'mobile-overflow',
             overlay: null,
             anchorLinks: null,
         },
@@ -104,6 +114,7 @@ $.fn.popup = function (options) {
             close = holder.find(options.close),
             overlay = holder.find(options.overlay),
             links = options.anchorLinks,
+            bodyClass = options.bodyClass,
             menuIsOpened = false,
             menuIsAnimated = false,
             preventScroll = false;
@@ -119,7 +130,7 @@ $.fn.popup = function (options) {
                 opener.removeClass('expanded');
 
                 if (options.preventScroll) {
-                    body.removeClass('mobile-overflow');
+                    body.removeClass(bodyClass);
                 }
 
                 popup.fadeOut(300, function () {
@@ -133,7 +144,7 @@ $.fn.popup = function (options) {
                 opener.addClass('expanded');
 
                 if (options.preventScroll) {
-                    body.addClass('mobile-overflow');
+                    body.addClass(bodyClass);
                 }
 
                 popup.fadeIn(300, function () {
@@ -349,9 +360,10 @@ function initCopyText() {
 }
 
 function initSidebarAccordion() {
-    $('.sidebar-nav li.active').parents('li').toggleClass('active');
+    $('.sidebar-nav li.active-page-item').parents('li').toggleClass('active');
 
     $('.sidebar-nav').navgoco({
+        caretHtml: null,
         openClass: 'active',
         save: false,
         slide: {
@@ -384,7 +396,7 @@ function initFeedbackForm() {
 
 function initSidebarToggle() {
     let sidebar = $('.main-sidebar'),
-        opener = sidebar.find('.main-sidebar__opener');
+        opener = sidebar.find('.js-main-sidebar-switcher');
 
     opener.on('click', function (e) {
         e.preventDefault();

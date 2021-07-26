@@ -19,8 +19,16 @@
     }
 }
 
+.tablet-show {
+    display: none !important;
+
+    @include media("<desktop") {
+        display: block !important;
+    }
+}
+
 .desktop-hidden {
-    @include media(">=desktop") {
+    @include media("<laptop") {
         display: none !important;
     }
 }

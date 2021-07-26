@@ -53,6 +53,9 @@ entries:
 
       - title: Feature integration guides
         nested:
+          - title: Marketplace Dummy Payment feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
+
           - title: Marketplace Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
 

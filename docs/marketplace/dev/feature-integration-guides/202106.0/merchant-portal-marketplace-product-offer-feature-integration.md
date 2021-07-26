@@ -145,8 +145,9 @@ class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDepend
 
 {% info_block warningBox "Verification" %}
 
-* Log in to the Merchant Portal, go to the offer list and edit an offer by clicking on a row. Now make sure the `PriceProductOfferVolumeExpanderPlugin` plugin is set up by checking if the volume quantity field is filled in the PriceProductTable.
-* Make sure the `PriceProductOfferVolumeValidatorPlugin` plugin is set up by submitting a price with a higher quantity than 1.
+1. Log in to the Merchant Portal, go to the offer list and edit an offer by clicking on a row.
+2. Now make sure the `PriceProductOfferVolumeExpanderPlugin` plugin is set up by checking if the volume quantity field is filled in the PriceProductTable.
+3. Make sure the `PriceProductOfferVolumeValidatorPlugin` plugin is set up by submitting a price with a higher quantity than 1.
 
 {% endinfo_block %}
 

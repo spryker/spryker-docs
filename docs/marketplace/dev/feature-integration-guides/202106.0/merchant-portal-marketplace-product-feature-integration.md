@@ -108,6 +108,6 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up by opening `http://zed.mysprykershop.com/sales-merchant-portal-gui/orders`. Click on any of the orders and check that the *Merchant Reference* and *Product Offer SKU* are present.
+* Make sure the `PriceProductVolumeValidatorPlugin` plugin is set up by submitting a price with a higher quantity than 1, on the edit product page in the Merchant Portal.
 
 {% endinfo_block %}

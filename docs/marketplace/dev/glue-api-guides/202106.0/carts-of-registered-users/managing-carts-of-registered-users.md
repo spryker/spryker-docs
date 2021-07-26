@@ -1991,7 +1991,7 @@ To retrieve all carts, send the request:
 | product-offers | isDefault  | Boolean | Defines whether the product offer is default or not. |
 
 For the attributes of the included resources, see:
-* [Retrieve a concrete product](docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 * [Add an item to a registered user's cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
 * [Managing Gift Cards of Registered Users](https://documentation.spryker.com/docs/gift-cards-of-registered-users)
 * [Retrieving product labels](https://documentation.spryker.com/docs/en/retrieving-product-labels#product-labels-response-attributes)
@@ -3435,7 +3435,7 @@ To retrieve a particular cart, send the request:
 
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-registered-users-carts-response-attributes).
 
-For the attributes of other included resources, see: 
+For the attributes of other included resources, see:
 * [Add an item to a registered user's cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
 * [Managing gift cards of registered users](https://documentation.spryker.com/docs/managing-gift-cards-of-registered-users).
 * [Cart permission groups](https://documentation.spryker.com/docs/sharing-company-user-carts-201907#retrieving-cart-permission-groups).

@@ -21,6 +21,36 @@ entries:
           - title: Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
 
+          - title: Marketplace Merchant
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant.html
+
+          - title: Merchant Category
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html
+
+          - title: Merchant Opening Hours
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours.html
+
+          - title: Marketplace Product Offer
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/marketplace-product-offer.html
+            nested:
+              - title: Rendering merchant product offers on the Storefront
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/rendering-merchant-product-offers-on-the-storefront.html
+
+              - title: Product Offer in the Back Office
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-in-the-back-office.html
+
+              - title: Product Offer storage
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-storage.html
+
+              - title: Product Offer store relation
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-store-relation.html
+
+              - title: Product Offer validity dates
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-validity-dates.html
+
+          - title: Marketplace Order Management
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management.html
+
       - title: Feature integration guides
         nested:
           - title: Marketplace Inventory Management feature integration
@@ -58,6 +88,9 @@ entries:
 
           - title: Marketplace Product + Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html
+
+          - title: Marketplace Product Offer feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
 
           - title: Marketplace Product + Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
@@ -115,11 +148,6 @@ entries:
 
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
-
-
-
-          - title: Marketplace Product Offer feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
 
           - title: Glue API
             nested:
@@ -194,9 +222,21 @@ entries:
 
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
+          
+          - title: Wishlists
+            nested: 
+
+            - title: Managing wishlists
+              url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
+            
+            - title: Managing wishlist items
+              url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 
           - title: Catalog search
             url: /docs/marketplace/dev/glue-api-guides/catalog-search.html
+
+          - title: Managing the returns
+            url: /docs/marketplace/dev/glue-api-guides/managing-the-returns.html
 
           - title: Resolving search engine friendly URLs
             url: /docs/marketplace/dev/glue-api-guides/resolving-search-engine-friendly-urls.html
@@ -289,16 +329,19 @@ entries:
         - title: "Setting up the project"
           url: /docs/marketplace/dev/front-end/setting-up-the-project.html
 
+        - title: "Building the project"
+          url: /docs/marketplace/dev/front-end/building-the-project.html
+
         - title: "Project structure"
           url: /docs/marketplace/dev/front-end/project-structure.html
 
         - title: "Extending the project"
           url: /docs/marketplace/dev/front-end/extending-the-project
           nested:
-        
+
           - title: "Migration guide - Extending the project"
             url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
-        
+
         - title: Table design
           nested:
 
@@ -360,14 +403,11 @@ entries:
         - title: "Angular Services"
           url: /docs/marketplace/dev/front-end/angular-services.html
 
+        - title: "Angular Components"
+          url: /docs/marketplace/dev/front-end/angular-components.html
+
       - title: Back-end
         nested:
 
           - title: "Marketplace infrastructure setup"
             url: /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
-
-          - title: "Features"
-            nested:
-
-              - title: "Merchant"
-                url: /docs/marketplace/dev/back-end/features/merchant.html

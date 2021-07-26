@@ -26,8 +26,10 @@
 }
 
 .tablet-show {
-    @include media(">=desktop") {
-        display: none !important;
+    display: none !important;
+
+    @include media("<desktop") {
+        display: block !important;
     }
 }
 

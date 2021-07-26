@@ -51,7 +51,7 @@ function initSetPageOffset() {
     let header = $('.main-header'),
         headerElement = header.get(0),
         menu = $('.main-sidebar'),
-        menuElement = header.get(0),
+        menuElement = menu.get(0),
         headerPosition,
         menuPosition,
         headerOffset = 0,
@@ -92,9 +92,9 @@ function initPopup() {
     $('.toc').popup({
         animSpeed: 300,
         box: '.toc__popup',
-        opener: '.toc__popup__opener',
-        close: '.toc__popup__close, .toc__popup__overlay',
-        overlay: '.toc__popup__overlay',
+        opener: '.toc__popup-opener',
+        close: '.toc__popup-close, .toc__popup-overlay',
+        overlay: '.toc__popup-overlay',
         anchorLinks: 'nav-link',
     });
 

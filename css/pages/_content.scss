@@ -58,6 +58,7 @@
 
     table {
         max-width: 100%;
+        width: 100%;
         margin-bottom: 20px;
         border: 0;
         border-radius: 4px;
@@ -66,12 +67,106 @@
         font-size: 16px;
         line-height: 1.5;
         font-weight: 500;
+
+        @include media("<tablet") {
+            margin: 0 0 8px;
+            display: block;
+            border: 1px solid $grey-3;
+        }
+
+        &[width-50],
+        &.width-50 {
+            max-width: 50%;
+            width: 50%;
+
+            @include media("<laptop") {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            td,
+            th {
+                word-break: break-word;
+            }
+        }
+
+        &[width-100],
+        &.width-100 {
+            max-width: 100%;
+            width: 100%;
+
+            td,
+            th {
+                word-break: normal;
+
+                @include media("<laptop") {
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+
+    thead,
+    tbody,
+    tr {
+        @include media("<tablet") {
+            display: block;
+        }
+    }
+
+    thead {
+        tr {
+            @include media("<tablet") {
+                display: none !important;
+            }
+        }
     }
 
     caption {
         padding-top: 8px;
         padding-bottom: 8px;
         text-align: left;
+    }
+
+    tr {
+        @include media("<tablet") {
+            border-bottom: 1px solid $grey-3;
+            background: $white;
+        }
+
+        &:nth-child(odd) {
+            @include media("<tablet") {
+                background: $grey-lightest;
+            }
+        }
+
+        &:first-child {
+            @include media("<tablet") {
+                border-radius: 4px 4px 0 0;
+            }
+
+            td:first-child {
+                @include media("<tablet") {
+                    border-radius: 4px 4px 0 0;
+                }
+            }
+        }
+
+        &:last-child {
+            @include media("<tablet") {
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                border-bottom: 0;
+            }
+
+            td:last-child {
+                @include media("<tablet") {
+                    border-bottom-left-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                    border: 0;
+                }
+            }
+        }
     }
 
     th,
@@ -83,6 +178,11 @@
 
         @include media("<laptop") {
             word-break: break-word;
+        }
+
+        @include media("<tablet") {
+            display: block;
+            padding: 8px 15px;
         }
     }
 
@@ -103,6 +203,26 @@
 
     td {
         border-bottom: 2px solid $grey-3;
+
+        @include media("<tablet") {
+            padding-left: 40%;
+            border-bottom: 1px solid $grey-3;
+            overflow: hidden;
+            min-height: 45px;
+        }
+
+        &:before {
+            @include media("<tablet") {
+                content: attr(data-th-text);
+                float: left;
+                width: 65%;
+                margin: 7px 0 0 -66.666%;
+                font-size: 11px;
+                line-height: 14px;
+                font-weight: 800;
+                color: $black;
+            }
+        }
     }
 
     details {
@@ -178,8 +298,12 @@
         margin: 0 0 20px;
         overflow: auto;
 
+        @include media("<tablet") {
+            overflow: visible;
+        }
+
         table {
-            margin: 0 0 5px;
+            margin: 0 auto 5px;
         }
     }
 

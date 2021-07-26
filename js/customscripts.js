@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
     initCopyText();
 
-    initTableWrapper();
+    initResponsiveTable();
 
     /**
      * AnchorJS
@@ -338,9 +338,23 @@ function initDropdown() {
     });
 }
 
-function initTableWrapper() {
-    jQuery('.post-content table').each(function(){
-        jQuery(this).wrap('<div class="table-wrapper"></div>');
+function initResponsiveTable() {
+    $('.post-content table').each(function () {
+        let table = jQuery(this),
+            th = table.find('th'),
+            tr = table.find('tr');
+
+        if (th.length < 3) {
+            table.addClass('width-50');
+        }
+
+        table.wrap('<div class="table-wrapper"></div>');
+
+        tr.each(function () {
+            $(this).find('td').each(function (i, item) {
+                item.setAttribute('data-th-text', th.eq(i).text());
+            });
+        });
     });
 }
 

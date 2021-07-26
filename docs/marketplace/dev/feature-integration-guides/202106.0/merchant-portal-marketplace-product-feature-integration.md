@@ -108,6 +108,8 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the `PriceProductVolumeValidatorPlugin` plugin is set up by submitting a price with a higher quantity than 1, on the edit product page in the Merchant Portal.
+
+1. Log in to the Merchant Portal, go to the product list and edit a product by clicking on a row.
+2. Make sure the `PriceProductVolumeValidatorPlugin` plugin is set up by submitting a price with a higher quantity than 1, on the edit product page in the Merchant Portal.
 
 {% endinfo_block %}

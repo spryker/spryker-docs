@@ -19,7 +19,7 @@ For detailed instructions on managing merchants, see [Managing merchants](/docs/
 
 ## Offer management
 
-In a marketplace, multiple merchants can sell the same product. That's why, instead of creating duplicate products, merchants create offers. Only the offers approved by a marketplace administrator are displayed in the Storefront. In the **Marketplace** > **Offers** section of the Back Office, a marketplace operator manages offers as follows:
+In a marketplace, multiple merchants can sell the same product. That's why, instead of creating duplicate products, merchants create offers. Only the offers approved by a Marketplace Administrator are displayed in the Storefront. In the **Marketplace** > **Offers** section of the Back Office, a Marketplace Administrator manages offers as follows:
 
 * Views offers
 * Approves and denies offers
@@ -28,7 +28,7 @@ For detailed instructions on managing offers, see [Managing offers](/docs/market
 
 ## Order management
 
-Since many merchants sell products simultaneously, the order management of a marketplace is complex and requires a marketplace operator to facilitate their fulfillment. In the **Marketplace** > **Orders** section of the Back Office, a marketplace administrator manages marketplace orders as follows:
+Since many merchants sell products simultaneously, the order management of a marketplace is complex and requires a marketplace operator to facilitate their fulfillment. In the **Marketplace** > **Orders** section of the Back Office, a Marketplace Administrator manages marketplace orders as follows:
 
 * Views marketplace orders
 * Changes marketplace order states
@@ -43,7 +43,7 @@ For detailed instructions on managing orders, see [Managing marketplace orders](
 
 ### Return management
 
-As a part of order management, a marketplace administrator helps merchants manage marketplace order returns. In the **Marketplace** > **Returns** section of the Back Office, a marketplace administrator manages marketplace order returns as follows:
+As a part of order management, a Marketplace Administrator helps merchants manage marketplace order returns. In the **Marketplace** > **Returns** section of the Back Office, a Marketplace Administrator manages marketplace order returns as follows:
 
 * Sets marketplace return states
 * Prints marketplace return slips

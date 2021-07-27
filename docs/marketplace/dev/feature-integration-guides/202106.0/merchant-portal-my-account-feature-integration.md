@@ -163,6 +163,12 @@ class MerchantUserConfig extends SprykerMerchantUserConfig
 }
 ```
 
+{% info_block warningBox "Verification" %}
+
+Make sure that after executing `console setup:init-db`, the `'user-merchant-portal-gui'` rule is present in the `spy_acl_rule` table.
+
+{% endinfo_block %}
+
 ### 5) Update navigation
 
 Remove the Logout button from the `navigation.xml`

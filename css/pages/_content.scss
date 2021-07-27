@@ -73,9 +73,10 @@
             display: block;
             border: 1px solid $grey-3;
         }
+    }
 
-        &[width-50],
-        &.width-50 {
+    .width-50 {
+        table {
             max-width: 50%;
             width: 50%;
 
@@ -89,9 +90,10 @@
                 word-break: break-word;
             }
         }
+    }
 
-        &[width-100],
-        &.width-100 {
+    .width-100 {
+        table {
             max-width: 100%;
             width: 100%;
 
@@ -103,6 +105,11 @@
                     word-break: break-word;
                 }
             }
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
         }
     }
 
@@ -117,7 +124,7 @@
     thead {
         tr {
             @include media("<tablet") {
-                display: none !important;
+                display: none;
             }
         }
     }
@@ -156,14 +163,14 @@
             @include media("<tablet") {
                 border-bottom-left-radius: 4px;
                 border-bottom-right-radius: 4px;
-                border-bottom: 0;
+                border-bottom: none;
             }
 
             td:last-child {
                 @include media("<tablet") {
                     border-bottom-left-radius: 4px;
                     border-bottom-right-radius: 4px;
-                    border: 0;
+                    border-bottom: none;
                 }
             }
         }
@@ -211,7 +218,7 @@
             min-height: 45px;
         }
 
-        &:before {
+        &::before {
             @include media("<tablet") {
                 content: attr(data-th-text);
                 float: left;
@@ -322,12 +329,6 @@
 
         @include media("<desktop") {
             max-width: 100%;
-        }
-
-        &[width-100],
-        &.width-100 {
-            max-width: 100%;
-            width: 100%;
         }
     }
 

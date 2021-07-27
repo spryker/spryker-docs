@@ -13,7 +13,7 @@
         <span class="alt-nav__opener-label">Versions</span>
         <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
             {% for version in page.all_versions %}
-            <li><a href="{{ site.baseurl }}{{ version.url }}">{{ version.version }}</a></li>
+                <li><a href="{{ site.baseurl }}{{ version.url }}">{{ version.version }}</a></li>
             {% endfor %}
         </ul>
     </div>

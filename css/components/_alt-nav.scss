@@ -15,39 +15,6 @@
         }
     }
 
-    &.show {
-        z-index: 105;
-
-        .alt-nav__opener-label {
-            @include media("<desktop") {
-                opacity: 1;
-                top: 50%;
-                left: 18px;
-                margin: -6px 0 0;
-                padding: 0;
-            }
-        }
-
-        .alt-nav__opener {
-            @include media("<desktop") {
-                border-color: transparent;
-                border-radius: 4px 4px 0 0;
-            }
-
-            &-text {
-                @include media("<desktop") {
-                    opacity: 0;
-                }
-            }
-
-            &-icon {
-                @include media("<desktop") {
-                    color: $grey;
-                }
-            }
-        }
-    }
-
     &__opener {
         display: flex;
         align-items: center;
@@ -176,6 +143,39 @@
     &.dropdown {
         .alt-nav__opener {
             cursor: pointer;
+        }
+    }
+
+    &.show {
+        z-index: 105;
+
+        .alt-nav__opener {
+            @include media("<desktop") {
+                border-color: transparent;
+                border-radius: 4px 4px 0 0;
+            }
+
+            &-label {
+                @include media("<desktop") {
+                    opacity: 1;
+                    top: 50%;
+                    left: 18px;
+                    margin: -6px 0 0;
+                    padding: 0;
+                }
+            }
+
+            &-text {
+                @include media("<desktop") {
+                    opacity: 0;
+                }
+            }
+
+            &-icon {
+                @include media("<desktop") {
+                    color: $grey;
+                }
+            }
         }
     }
 }

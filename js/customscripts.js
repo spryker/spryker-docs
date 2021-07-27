@@ -344,11 +344,11 @@ function initResponsiveTable() {
             th = table.find('th'),
             tr = table.find('tr');
 
-        if (th.length < 3) {
-            table.addClass('width-50');
-        }
+        let wrapper = table.wrap('<div class="table-wrapper"></div>');
 
-        table.wrap('<div class="table-wrapper"></div>');
+        if (th.length < 3) {
+            table.closest('.table-wrapper').addClass('width-50');
+        }
 
         tr.each(function () {
             $(this).find('td').each(function (i, item) {

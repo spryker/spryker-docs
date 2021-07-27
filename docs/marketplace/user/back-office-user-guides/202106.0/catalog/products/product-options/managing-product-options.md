@@ -32,3 +32,8 @@ On the **View product option** page that opens, you see the following details:
   *  Translation key along with the SKU, gross price and net price values.
 * Translations section with values per each locale.
 * The table with products to which this option is assigned.
+
+
+
+
+ 

@@ -32,6 +32,9 @@ entries:
         - title: Marketplace Product Offer
           url: /docs/marketplace/user/features/marketplace-product-offer.html
 
+        - title: Marketplace Product Options
+          url: /docs/marketplace/user/features/marketplace-product-options.html
+
         - title: Marketplace Order Management
           url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management.html
           nested:
@@ -77,6 +80,15 @@ entries:
 
               - title: "Products: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html
+
+            - title: Product Options
+              nested:
+
+              - title: Creating a product option
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/product-options/creating-a-product-option.html
+
+              - title: Managing product options
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/product-options/managing-product-options.html
 
         - title: Marketplace
 

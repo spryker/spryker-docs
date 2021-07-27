@@ -71,6 +71,7 @@ defaults:
       comments: false
       search: true
       topnav: topnav
+      feed: true
   - scope:
       path: "docs/marketplace"
       type: "pages"

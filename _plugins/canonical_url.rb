@@ -1,10 +1,10 @@
 def get_page_versioned_urls(page)
-    full_url_pattern = %r{\A#{page.url.gsub(%r{/\d+\.\d+/}, '(?<version>/\d+\.\d+/)')}\Z}
+    full_url_pattern = %r{\A#{page.url.gsub(%r{/v\d+/}, '/v\d+/')}\Z}
     page.site.pages.select { |site_page| site_page.url.match full_url_pattern }.map(&:url)
 end
 
 def get_page_latest_version_url(versioned_urls)
-    versioned_urls.sort_by { |version| version.scan(/\d+\.\d+/).first.to_f }.pop
+    versioned_urls.sort_by { |version| version.scan(/(?<=\/v)\d+(?=\/)/).first.to_i }.pop
 end
 
 def is_multiversion_page(page)

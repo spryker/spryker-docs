@@ -1,4 +1,4 @@
-version: "202106.0"
+version: "v7"
 
 repository: spryker/spryker.github.io
 
@@ -58,6 +58,7 @@ commonmark:
 
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
@@ -73,32 +74,31 @@ defaults:
       topnav: topnav
   - scope:
       path: "docs/marketplace"
-      type: "pages"
     values:
-      product: marketplace
+      product: "marketplace"
   -
     scope:
       path: "docs/marketplace/dev"
-      type: "pages"
     values:
-      sidebar: marketplace_dev_sidebar
+      sidebar: "marketplace_dev_sidebar"
       product-type: 'marketplace/dev'
       role: "dev"
   -
     scope:
       path: "docs/marketplace/user"
-      type: "pages"
     values:
-      sidebar: marketplace_user_sidebar
+      sidebar: "marketplace_user_sidebar"
       product-type: 'marketplace/user'
       role: "user"
 
-# version-related scopes
-  -
-    scope:
-      path: "docs/**/202106.0"
-    values:
-      version: "202106.0"
+versions:
+  'v1': '201811.0'
+  'v2': '201903.0'
+  'v3': '201907.0'
+  'v4': '202001.0'
+  'v5': 'Code releases 05.20'
+  'v6': '2020.09'
+  'v7': 'Upcoming'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:

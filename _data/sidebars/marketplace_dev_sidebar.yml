@@ -146,6 +146,9 @@ entries:
           - title: Merchant Portal - Marketplace Product + Tax feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html
 
+          - title: Merchant Portal - My Account feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-my-account-feature-integration.html
+
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
 
@@ -222,13 +225,13 @@ entries:
 
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
-          
+
           - title: Wishlists
-            nested: 
+            nested:
 
             - title: Managing wishlists
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
-            
+
             - title: Managing wishlist items
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 

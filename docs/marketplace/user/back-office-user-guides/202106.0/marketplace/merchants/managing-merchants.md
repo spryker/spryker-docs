@@ -116,8 +116,8 @@ On the *Overview of Merchants* page, you see a table with all the merchants. The
 
 * Merchant ID
 * Merchant Name
-* Approval status. For more details on the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html#merchant-statuses) section
-* Status (active/inactive). For more details on the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html#merchant-statuses) section
+* Approval status. For more details on the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html#merchant-statuses) section.
+* Status (active/inactive). For more details on the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html#merchant-statuses) section.
 * Stores
 * Actions
 

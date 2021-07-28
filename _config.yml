@@ -58,6 +58,7 @@ commonmark:
 
 plugins:
   - jekyll-feed
+  - jekyll-last-modified-at
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
@@ -146,3 +147,6 @@ sass:
     sass_dir: css
     style: compressed
     sourcemap: never
+
+last-modified-at:
+  date-format: '%Y%m%dT%H%M'

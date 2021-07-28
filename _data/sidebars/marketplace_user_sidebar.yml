@@ -6,10 +6,12 @@ entries:
     nested:
       - title: Intro to the Spryker Marketplace
         nested:
+
           - title: Marketplace concept
             url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
-          - title: Operator Back Office
-            url: /docs/marketplace/user/intro-to-spryker/operator-back-office.html
+          
+          - title: Marketplace personas
+            url: /docs/marketplace/user/intro-to-spryker/marketplace-personas.html
 
           - title: Back Office for Marketplace Operator
             url: /docs/marketplace/user/intro-to-spryker/back-office-for-marketplace-operator.html

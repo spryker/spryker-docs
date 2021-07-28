@@ -1,19 +1,19 @@
 ---
 title: Merchant Products
-description: This document contains concept information for the Merchant Products feature in the Spryker Commerce OS.
+description: This document contains concept information for the Marketplace Products feature.
 template: concept-topic-template
 ---
 
-Merchant Products are the products that a Merchant owns. Besides creating the offers for the products of other Merchants or the ones that the Marketplace Administrator suggests, a Merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has Merchant-related information such as merchant reference. Merchants manage stock and set prices in the Merchant Portal. 
+In the Marketplace, products that a Merchant owns, are referred to as *merchant products*. Besides creating offers for products of other Merchants or the ones that the Marketplace Administrator suggests, a Merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has Merchant-related information such as merchant reference. Merchants can [create their products in the Merchant Portal](<!---LINK-->) or [import the merchant products data](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-csv.html, or Merchants manage stock and set prices for their products in the Merchant Portal. See Managing merchant products <!---LINK--> for details.
 
-Merchants can allow creating offers for their unique products for other merchants. It is defined with the help of `is_shared` parameter of the [data importer](https://spryker-docs.herokuapp.com/docs/marketplace/dev/data-import/202106.0/file-details-merchant-product-csv.html). 
+Merchants can allow other merchants to create offers for their unique products. This possibility is defined with the help of `is_shared` parameter of the [merchant product data importer]/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-csv.html). 
 
-## Merchant products in the Storefront
+## Merchant products on the Storefront
 
-Merchant products are displayed in the Storefront when the following conditions are met:
+Merchant products are displayed on the Storefront when the following conditions are met:
 
 1. The product status is *Active*.
-2. The merchant who owns the product is [*Active*](https://spryker-docs.herokuapp.com/docs/marketplace/user/back-office-user-guides/202106.0/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+2. The merchant who owns the product is [*Active*](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
 3. The product visibility state is `Online`.
 4. The product is defined for the current store.
 5. The product has stock or is always in stock.
@@ -21,7 +21,7 @@ Merchant products are displayed in the Storefront when the following conditions 
 
 ### Merchant product on the product details page
 
-Merchant product appears on top of the the *Sold by* list together with the product offers from other merchants. For a Buyer, it doesn't matter whether they are buying a product offer or a merchant product, however in the system, different entities are defined.
+Merchant product appears on top of the the *Sold by* list together with the product offers from other merchants. For a buyer, it doesn't matter whether they are buying a product offer or a merchant product, however in the system, different entities are defined.
 
 Product price on top of the product details page is taken from the merchant product or the product offer. It depends on the option selected in the *Sold by* box.
 
@@ -45,7 +45,7 @@ When the merchant name is entered in the catalog search, not only the offers but
 
 
 ## Merchant products in the Back Office
-Before new merchant products can be seen by the Buyers in the Storefront, they must be activated <!---LINK--> in the Back Office.
+Before new merchant products become visible on the Storefront, they must be activated <!---LINK--> in the Back Office.
 
 A Marketplace Administrator can filter the products belonging to certain merchants in the Back Office.
 
@@ -54,7 +54,7 @@ A Marketplace Administrator can filter the products belonging to certain merchan
 Also, Marketplace administrators can edit products, if needed, and create products when acting as the main merchant<!---LINK-->.
 
 ## Merchant products in the Merchant Portal
-Merchants create and manage their products <!---LINK--> in the Merchant Portal. They can define their own prices, stock, attributes etc. for their products. See Managing merchant products <!---LINK--> for detailed instructions on how to do that.
+Merchants create and manage their products <!---LINK--> in the Merchant Portal. They can define prices, stock, attributes etc. for their products. See Managing merchant products <!---LINK--> for details on how to do that.
 
 ## Merchant products and API
 
@@ -73,6 +73,6 @@ Spryker Marketplace provides API to:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See Merchant Products <!---LINK--> feature walkthrough for developers.
+Are you a developer? See Marketplace Products <!---LINK--> feature walkthrough for developers.
 
 {% endinfo_block %}

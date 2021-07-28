@@ -8,6 +8,11 @@ entries:
         nested:
           - title: Marketplace concept
             url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
+          - title: Operator Back Office
+            url: /docs/marketplace/user/intro-to-spryker/operator-back-office.html
+
+          - title: Back Office for Marketplace Operator
+            url: /docs/marketplace/user/intro-to-spryker/back-office-for-marketplace-operator.html
 
       - title: Features
         url: /docs/marketplace/user/features/
@@ -55,6 +60,12 @@ entries:
 
       - title: Back Office user guides
         nested:
+
+        - title: Sales
+          nested:
+
+            - title: Managing main merchant orders
+              url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
 
         - title: Catalog
 
@@ -106,7 +117,7 @@ entries:
 
         - title: Logging in to the Merchant Portal
           url: /docs/marketplace/user/merchant-portal-user-guides/logging-in-to-the-merchant-portal.html
-          
+
         - title: My account
           nested:
 
@@ -128,7 +139,7 @@ entries:
         - title: Offers
           nested:
 
-          - title: Managing merchant orders
+          - title: Managing product offers
             url: /docs/marketplace/user/merchant-portal-user-guides/offers/managing-product-offers.html
 
         - title: Orders

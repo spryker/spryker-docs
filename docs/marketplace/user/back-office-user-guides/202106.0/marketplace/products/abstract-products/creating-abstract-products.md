@@ -140,9 +140,8 @@ The following table describes the attributes you enter and select when adding im
 |Large| Link to the image that will be displayed for the product on the *Product details* page. |
 |Sort Order| Arrenges the images displayed for the product in an ascending order. The smalles number is `0`. |
 
-## Tips and tricks
-
-To delete an image set with all its pictures, select **Delete image set**.
+**Tips and tricks**
+<br>To delete an image set with all its pictures, select **Delete image set**.
 
 ## Next steps
 

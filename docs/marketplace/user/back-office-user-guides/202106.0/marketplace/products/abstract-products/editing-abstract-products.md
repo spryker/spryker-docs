@@ -72,8 +72,7 @@ To edit volume prices of an abstract product:
 6. Optional: Enter a **Net price**.
 7. Optional: To add more volume prices than the number of the rows displayed on the page, select **Save and add more rows**.
 8. Repeat steps 4 to 7 until you edit all the desired volume prices.
-9. Select **Save and exit**.
-    This opens the *Edit Product Abstract [SKU]* page with the success message displayed.
+9. Select **Save and exit**. This opens the *Edit Product Abstract [SKU]* page with the success message displayed.
 
 <!--
 ### Reference information: Editing volume pirces of an abstract product
@@ -101,8 +100,7 @@ To edit meta information:
     * **Title**
     * **Keywords**
     * **Description**
-4. Select **Save**.
-    The page refreshes with the success message displayed.
+4. Select **Save**. The page refreshes with the success message displayed.
 
 ### Reference information: Editing meta information of an abstract product
 
@@ -130,8 +128,7 @@ To edit product images:
     * To delete large and small images, select **Delete image**.
     * To delete an image set with its images, selecte **Delete image set**.
 5. Repeat step *4* until you update images for all the desired locales.
-6.  Select **Save**.
-    The page refreshes with the success message displayed.
+6. Select **Save**. The page refreshes with the success message displayed.
 
 ### Reference information: Editing product images of an abstract product
 

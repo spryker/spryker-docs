@@ -288,9 +288,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can add a product offer to a wishlist and see the product offer data in there.
-Make sure that you can see the merchant information when the merchant product is added to the wishlist.
-Make sure that you can move the wishlist with the product offers to a shopping cart and vice versa.
+- Make sure that you can add a product offer to a wishlist and see the product offer data in there.
+
+- Make sure that you can see the merchant information when the merchant product is added to the wishlist.
+
+- Make sure that you can move the wishlist with the product offers to a shopping cart and vice versa.
 
 {% endinfo_block %}
 

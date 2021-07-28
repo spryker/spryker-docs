@@ -37,8 +37,8 @@ entries:
         - title: Marketplace Product Offer
           url: /docs/marketplace/user/features/marketplace-product-offer.html
 
-        - title: Merchant Products
-          url: /docs/marketplace/user/features/merchant-products.html
+        - title: Marketplace Product feature overview
+          url: /docs/marketplace/user/features/202106.0/marketplace-product-feature-overview.html
 
         - title: Marketplace Order Management
           url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management.html

@@ -1,10 +1,10 @@
 ---
-title: Merchant Products
+title: Marketplace Products feature overview
 description: This document contains concept information for the Marketplace Products feature.
 template: concept-topic-template
 ---
 
-In the Marketplace, products that a Merchant owns, are referred to as *merchant products*. Besides creating offers for products of other Merchants or the ones that the Marketplace Administrator suggests, a Merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has Merchant-related information such as merchant reference. Merchants can [create their products in the Merchant Portal](<!---LINK-->) or [import the merchant products data](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-csv.html, or Merchants manage stock and set prices for their products in the Merchant Portal. See Managing merchant products <!---LINK--> for details.
+In the Marketplace, products that a merchant owns, are referred to as *merchant products*. Besides creating offers for products of other merchants or the ones that the Marketplace administrator suggests, a merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has merchant-related information such as merchant reference. Merchants can [create their products in the Merchant Portal](<!---LINK-->) or [import the merchant products data](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-csv.html, or merchants manage stock and set prices for their products in the Merchant Portal. See Managing merchant products <!---LINK--> for details.
 
 Merchants can allow other merchants to create offers for their unique products. This possibility is defined with the help of `is_shared` parameter of the [merchant product data importer]/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-csv.html). 
 
@@ -47,7 +47,7 @@ When the merchant name is entered in the catalog search, not only the offers but
 ## Merchant products in the Back Office
 Before new merchant products become visible on the Storefront, they must be activated <!---LINK--> in the Back Office.
 
-A Marketplace Administrator can filter the products belonging to certain merchants in the Back Office.
+A Marketplace administrator can filter the products belonging to certain merchants in the Back Office.
 
 ![merchants-switcher-on-products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/filter-merchant-productsby-merchant-back-office.gif)
 
@@ -55,14 +55,6 @@ Also, Marketplace administrators can edit products, if needed, and create produc
 
 ## Merchant products in the Merchant Portal
 Merchants create and manage their products <!---LINK--> in the Merchant Portal. They can define prices, stock, attributes etc. for their products. See Managing merchant products <!---LINK--> for details on how to do that.
-
-## Merchant products and API
-
-Spryker Marketplace provides API to:
-
-- [Retrieve abstract products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-products.html)
-- [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html)
-- [Retrieve abstract product lists](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-product-lists.html)
 
 ## Related Business User articles
 

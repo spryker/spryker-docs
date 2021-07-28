@@ -1,5 +1,5 @@
 ---
-title: Marketplace Wishlist
+title: Marketplace Wishlist feature overview
 description: This document contains concept information for the Marketplace Wishlist feature in the Spryker Cloud Commerce OS.
 template: concept-topic-template
 ---
@@ -18,6 +18,6 @@ Once the customer is committed to a purchase of a product, they can add it to ca
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See Marketplace Wishlist <!---LINK--> feature walkthrough for developers.
+Are you a developer? See [Marketplace Wishlist](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-wishlist.html) feature walkthrough for developers.
 
 {% endinfo_block %}

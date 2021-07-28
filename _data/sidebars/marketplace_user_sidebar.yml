@@ -55,8 +55,11 @@ entries:
               - title: Marketplace and merchant state machines interaction
                 url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
           
-        - title: Marketplace Wishlist
-          url: /docs/marketplace/user/features/marketplace-wishlist.html
+        - title: Marketplace Promotions and Discounts feature overview
+          url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html
+        
+        - title: Marketplace Wishlist feature overview
+          url: /docs/marketplace/user/features/marketplace-wishlist-feature-overview.html
       
       - title: Back Office user guides
         nested:

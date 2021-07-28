@@ -10,7 +10,7 @@ This article describes how to create a Marketplace product option.
 
 To start working with the product options, go to **Products** > **Product Options**.
 
-You should have an appropriate Tax Set created in the *Taxes* section in order to apply it to the [product option group](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-options.html).
+You should have an appropriate Tax Set created in the *Taxes* section in order to apply it to the [product option group](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-options-feature-overview.html).
 
 Let's say you want to add additional options to your product, like a warranty or a gift box. Those are exactly the things that are created in the *Product Options* section. Such options will have their own prices, and the user will be able to select the most suitable one.
 

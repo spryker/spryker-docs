@@ -1,5 +1,5 @@
 ---
-title: Marketplace Product Options
+title: Marketplace Product Options feature overview
 description: 
 template: concept-topic-template
 ---
@@ -81,6 +81,6 @@ Currently, the feature has the following functional constraints which are going 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Product Options](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/marketplace-product-offer.html) feature walkthrough for developers.
+Are you a developer? See [Marketplace Product Options feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/marketplace-product-options-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

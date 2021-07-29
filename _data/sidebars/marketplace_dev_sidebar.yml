@@ -107,8 +107,11 @@ entries:
           - title: Marketplace Product Offer + Checkout feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-checkout-feature-integration.html
 
-          - title: Marketplace Promotions & Discounts feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-promotions-discounts-feature-integration.html
+          - title: Marketplace Product Offer + Checkout feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-checkout-feature-integration.html
+
+          - title: Marketplace Product Option feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-option-feature-integration.html
 
           - title: Marketplace Return Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
@@ -225,13 +228,13 @@ entries:
 
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
-          
+
           - title: Wishlists
-            nested: 
+            nested:
 
             - title: Managing wishlists
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
-            
+
             - title: Managing wishlist items
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 

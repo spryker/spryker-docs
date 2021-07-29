@@ -5,7 +5,7 @@ description: Product Offer is created when merchants wants to sell products alre
 template: concept-topic-template
 ---
 
-The *Marketplace Product Offer* entity is created when multiple merchants sell the same product on the Marketplace. The product offer is a variation of a concrete product with its own specific price (and volume price) and stock. It can be “owned” by any entity, however, in a B2C or B2B Marketplace, it is owned by a [merchant](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchant.html).
+The *Marketplace Product Offer* entity is created when multiple merchants sell the same product on the Marketplace. The product offer is a variation of a concrete product with its own specific price (and volume price) and stock. It can be “owned” by any entity, however, in a B2C or B2B Marketplace, it is owned by a [merchant](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchant-feature-walkthrough.html).
 
 The Marketplace product offer has its own validity dates and its own availability calculation based on its reservations.
 

@@ -4,7 +4,7 @@ description: This document contains concept information for the Merchants featur
 template: concept-topic-template
 ---
 
-*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](https://documentation.spryker.com/marketplace/docs/product-offer-feature-overview), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users.html).  
+*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](https://documentation.spryker.com/marketplace/docs/product-offer-feature-overview), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
@@ -127,13 +127,13 @@ In the catalog and search results pages, there is the merchant multi-select filt
 If the merchant is not active, their products and offers are not displayed in the search suggestions, search results and in the merchant filter.
 
 ## Next steps
-[Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users.html)
+[Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/merchant-users-overview.html)
 
 ## Related Business User articles
 
 |FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Merchant users overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users.html) | [Editing merchant’s profile details](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html)|
+|[Merchant users overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant’s profile details](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html)|
 || | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html)|
 
 {% info_block warningBox "Developer guides" %}

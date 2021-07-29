@@ -5,7 +5,7 @@ description: This document describes the merchant_profile_address.csv file to co
 template: import-file-template
 ---
 
-This document describes the `merchant_profile_address.csv` file to configure [merchant profile addresses](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html#merchant-profile) information in your Spryker shop.
+This document describes the `merchant_profile_address.csv` file to configure [merchant profile addresses](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.htmll#merchant-profile) information in your Spryker shop.
 
 To import the file, run:
 

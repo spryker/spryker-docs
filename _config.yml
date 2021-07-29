@@ -1,4 +1,4 @@
-version: "202106.0"
+version: "202108.0"
 
 repository: spryker/spryker.github.io
 
@@ -96,9 +96,9 @@ defaults:
 # version-related scopes
   -
     scope:
-      path: "docs/**/202106.0"
+      path: "docs/**/202108.0"
     values:
-      version: "202106.0"
+      version: "202108.0"
 
 # versioned categories - these must match corresponding directories
 versioned_categories:

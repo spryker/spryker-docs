@@ -31,7 +31,37 @@ $( document ).ready(function() {
     initVertionDropdown();
 
     initLightbox();
+
+    initPageScrolling();
 });
+
+function initPageScrolling() {
+    let page = $(window),
+        body = $('body'),
+        lastScrollPosition = 0;
+
+    function changeBodyClass() {
+        let currentScrollPosition = window.pageYOffset;
+
+        if (currentScrollPosition < 1) {
+            body.removeClass('scroll-up');
+        }
+
+        if (currentScrollPosition > lastScrollPosition && !body.hasClass('scroll-down')) {
+            // down
+            body.removeClass('scroll-up').addClass('scroll-down');
+        } else if (currentScrollPosition < lastScrollPosition && body.hasClass('scroll-down')) {
+            // up
+            body.removeClass('scroll-down').addClass('scroll-up');
+        }
+
+        lastScrollPosition = currentScrollPosition;
+    }
+
+    changeBodyClass();
+
+    page.on('scroll', changeBodyClass);
+}
 
 function initLightbox() {
     $('.post-content img').each(function(i, item){

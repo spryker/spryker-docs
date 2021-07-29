@@ -51,10 +51,10 @@ entries:
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management.html
 
-          - title: Marketplace Promotions and Discounts
+          - title: Marketplace Promotions and Discounts feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts.html
         
-          - title: Marketplace Wishlist
+          - title: Marketplace Wishlist feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist.html
 
       - title: Feature integration guides

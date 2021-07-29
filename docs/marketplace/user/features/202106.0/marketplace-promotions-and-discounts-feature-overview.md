@@ -1,10 +1,10 @@
 ---
 title: Marketplace Promotions and Discounts feature overview
-description: This document contains concept information for the Marketplace Promotions and Discounts feature in the Spryker Cloud Commerce OS.
+description: This document contains concept information for the Marketplace Promotions and Discounts feature.
 template: concept-topic-template
 ---
 
-Marketplace Promotions and Discounts feature ensures that the discounts are correctly applied. 
+The *Marketplace Promotions and Discounts* feature ensures that the discounts are applied to orders. 
 
 Discount logic for merchant orders follows these rules:
 
@@ -18,6 +18,6 @@ Discount logic for merchant orders follows these rules:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Promotions and Discounts](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-promotions-and-discounts.html) feature walkthrough for developers.
+Are you a developer? See [Marketplace Promotions and Discounts feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-promotions-and-discounts.html) for developers.
 
 {% endinfo_block %}

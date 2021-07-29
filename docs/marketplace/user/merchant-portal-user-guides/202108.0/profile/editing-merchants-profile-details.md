@@ -65,7 +65,7 @@ To edit the merchant's online profile, in the *Online Profile* tab, edit the nec
 
 ### Reference information: Editing merchant's online profile
 
-This section describes attributes you see when editing he merchant's online profile in the *Online Profile* tab. This  tab contains the information that will further be displayed on the [Merchant Profile page on the Storefront](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.htmll#merchant-profile).
+This section describes attributes you see when editing he merchant's online profile in the *Online Profile* tab. This  tab contains the information that will further be displayed on the [Merchant Profile page on the Storefront](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
 
 #### Store Profile URL
 

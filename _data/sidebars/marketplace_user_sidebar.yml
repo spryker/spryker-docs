@@ -35,23 +35,19 @@ entries:
         - title: Marketplace Product Offer
           url: /docs/marketplace/user/features/marketplace-product-offer.html
 
-        - title: Marketplace Order Management
-          url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management.html
+        - title: Marketplace Order Management feature overview
+          url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
           nested:
+          
+          - title: Merchant order overview
+            url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/merchant-order-overview.html
 
-          - title: Marketplace Order Management overview
-            url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-overview/marketplace-order-management-overview.html
+          - title: Marketplace and merchant state machines overview
+            url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
             nested:
 
-            - title: Merchant Order overview
-              url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-overview/merchant-order-overview.html
-
-            - title: Marketplace and merchant state machines overview
-              url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
-              nested:
-
-              - title: Marketplace and merchant state machines interaction
-                url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+            - title: Marketplace and merchant state machines interaction
+              url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
 
       - title: Back Office user guides
         nested:

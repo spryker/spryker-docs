@@ -138,6 +138,6 @@ If the merchant is not active, their products and offers are not displayed in th
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchantmarketplace-merchant-feature-walkthrough.html) for developers. 
+Are you a developer? See [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchant-feature-walkthrough.html) for developers. 
 
 {% endinfo_block %}

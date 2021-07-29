@@ -24,6 +24,6 @@ To display merchant opening hours on the Storefront, you should import the open 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Merchant Opening Hours](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/merchant-opening-hours.html) feature walkthrough for developers. 
+Are you a developer? See [Merchant Opening Hours feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/merchant-opening-hours-feature-walkthrough.html) for developers. 
 
 {% endinfo_block %}

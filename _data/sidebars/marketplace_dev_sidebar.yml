@@ -48,8 +48,8 @@ entries:
               - title: Product Offer validity dates
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-validity-dates.html
 
-          - title: Marketplace Order Management
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management.html
+          - title: Marketplace Order Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
 
       - title: Feature integration guides
         nested:

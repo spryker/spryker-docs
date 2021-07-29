@@ -64,3 +64,17 @@ In some cases, due to rounding, the amounts of Marketplace order totals can diff
 ## Next steps
 * [Learn about the merchant orders](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/merchant-order-overview.html)
 * [Learn about the Marketplace and merchant state machines](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
+
+## Related Business User articles
+
+|FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
+|---------|---------|---------|
+|[Merchant order overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/merchant-order-overview.html) |[Managing merchant orders](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/orders/managing-merchant-orders.html)  | <!---LINK TO BO ORDER MANAGEMENT-->|
+|[Marketplace and merchant state machines overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) | | |
+|[Marketplace and merchant state machines interaction](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) | | |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Marketplace Order Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

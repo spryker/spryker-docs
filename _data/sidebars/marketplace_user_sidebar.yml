@@ -6,10 +6,12 @@ entries:
     nested:
       - title: Intro to the Spryker Marketplace
         nested:
+
           - title: Marketplace concept
             url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
-          - title: Operator Back Office
-            url: /docs/marketplace/user/intro-to-spryker/operator-back-office.html
+          
+          - title: Marketplace personas
+            url: /docs/marketplace/user/intro-to-spryker/marketplace-personas.html
 
           - title: Back Office for Marketplace Operator
             url: /docs/marketplace/user/intro-to-spryker/back-office-for-marketplace-operator.html
@@ -107,6 +109,30 @@ entries:
 
                 - title: Managing marketplace orders
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/orders/managing-marketplace-orders.html
+
+            - title: Products
+              nested:
+
+                - title: Abstract products
+                  nested:
+
+                    - title: Creating abstract products
+                      url: /docs/marketplace/user/back-office-user-guides/marketplace/products/abstract-products/creating-abstract-products.html
+
+                    - title: Editing abstract products
+                      url: /docs/marketplace/user/back-office-user-guides/marketplace/products/abstract-products/editing-abstract-products.html
+
+                - title: Concrete products
+                  nested:
+
+                    - title: Creating product variants
+                      url: /docs/marketplace/user/back-office-user-guides/marketplace/products/concrete-products/creating-product-variants.html
+
+                - title: Concrete products
+                  nested:
+
+                    - title: Managing products
+                      url: /docs/marketplace/user/back-office-user-guides/marketplace/products/managing-products/managing-products.html
 
       - title: Merchant Portal user guides
         url: /docs/marketplace/user/merchant-portal-user-guides/

@@ -26,14 +26,3 @@ The merchant order consists of the merchant order items, which are the items (pr
 | Marketplace Operator fees total | Total amount of fees paid to the Marketplace Administrator.  |
 
 Rounding logic for the calculations is the same as the one used for the Marketplace order. See [Rounding in the Marketplace Order feature overview](https://documentation.spryker.com/marketplace/docs/marketplace-order-feature-overview#rounding) for details.
-
-### Discounts total calculation
-Discount totals calculations for merchant orders follow these rules:
-
-* If the discount applies to the whole Marketplace order, the discount is distributed among all the merchant orders and calculated according to the total volume of each of the items.
-
-![Merchant discount 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/mp-discount.png)
-
-* If the discount is related to a single product item, then the whole discount is assigned only to the merchant order that contains the discounted item.
-
-![Merchant discount 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/mp-discount-2.png)

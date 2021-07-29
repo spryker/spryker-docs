@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Offer
-description: This document contains concept information for the Product offers feature in the Spryker Commerce OS.
+description: This document contains concept information for the Product Offers feature.
 template: concept-topic-template
 ---
 
@@ -95,7 +95,7 @@ In cases when an offer doesn't have any physical stock and can always be purchas
 When `is_never_out_of_stock` is set to `true`, then this offer is always available in terms of stock.
 When the offer is out of stock, it is displayed as an out-of-stock product.
 
-Merchants can define product offer stocks in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer stock](/docs/marketplace/dev/data-import/202106.0/file-details-product-offer-stock-csv.html).
+Merchants can define product offer stocks in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer stock](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock-csv.html).
 
 ### Product offer availability
 Product offer availability calculation differs from the calculation of concrete products availability:
@@ -134,7 +134,7 @@ The decision of whether the product offer can be purchased depends on the offer 
 
 ### Product offers on the product details page
 
-All available product offers are listed in the *Sold by* area of the product details page. If there are multiple product offers for a concrete product, there is always a default product offer pre-checked. Currently, a random offer is selected as the default one, however, you can change this logic on the project level.
+All available product offers are listed in the *Sold by* area of the product details page. The offers are sorted by price from the lowest to the highest. An offer with the lowest price is selected by default if there are multiple offers for the product.
 
 ![Product offers on product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/product-offers-on-pdp.gif)
 

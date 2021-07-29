@@ -18,6 +18,6 @@ Discount logic for merchant orders follows these rules:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Promotions and Discounts feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-promotions-and-discounts.html) for developers.
+Are you a developer? See [Marketplace Promotions and Discounts feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-promotions-and-discounts-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -18,6 +18,6 @@ Once the customer decides to buy a product, they can add it to cart directly fro
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Wishlist feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-wishlist.html) for developers.
+Are you a developer? See [Marketplace Wishlist feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-wishlist-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

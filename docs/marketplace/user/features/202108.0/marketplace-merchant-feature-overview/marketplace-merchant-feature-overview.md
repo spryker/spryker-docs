@@ -92,7 +92,7 @@ The information for the merchant profile can be defined:
 
 
 ### Merchant opening hours
-To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. See [Merchant Opening Hours](/docs/marketplace/user/features/{{ page.version }}/merchant-opening-hours.html) for details.
+To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. See [Merchant Opening Hours feature overview](/docs/marketplace/user/features/{{ page.version }}/merchant-opening-hours-feature-overview.html) for details.
 
 ### Merchant links on the Storefront pages
 
@@ -128,3 +128,16 @@ If the merchant is not active, their products and offers are not displayed in th
 
 ## Next steps
 [Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users.html)
+
+## Related Business User articles
+
+|FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
+|---------|---------|---------|
+|[Merchant users overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/merchant-users.html) | [Editing merchant’s profile details](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html)|
+|| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html)|
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchantmarketplace-merchant-feature-walkthrough.html) for developers. 
+
+{% endinfo_block %}

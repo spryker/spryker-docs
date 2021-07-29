@@ -21,14 +21,14 @@ entries:
           - title: Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
 
-          - title: Marketplace Merchant
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant.html
+          - title: Marketplace Merchant feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
 
           - title: Merchant Category
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html
 
-          - title: Merchant Opening Hours
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours.html
+          - title: Merchant Opening Hours feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
 
           - title: Marketplace Product Offer
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/marketplace-product-offer.html

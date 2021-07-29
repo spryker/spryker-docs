@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Offer
-description: This document contains concept information for the Product offers feature in the Spryker Commerce OS.
+description: This document contains concept information for the Product Offers feature.
 template: concept-topic-template
 ---
 

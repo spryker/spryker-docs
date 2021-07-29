@@ -95,7 +95,7 @@ In cases when an offer doesn't have any physical stock and can always be purchas
 When `is_never_out_of_stock` is set to `true`, then this offer is always available in terms of stock.
 When the offer is out of stock, it is displayed as an out-of-stock product.
 
-Merchants can define product offer stocks in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer stock](/docs/marketplace/dev/data-import/202106.0/file-details-product-offer-stock-csv.html).
+Merchants can define product offer stocks in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer stock](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock-csv.html).
 
 ### Product offer availability
 Product offer availability calculation differs from the calculation of concrete products availability:

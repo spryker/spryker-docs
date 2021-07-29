@@ -438,7 +438,7 @@ To retrieve a specific wishlist, send the request:
 
 | PATH PARAMETER        | DESCRIPTION      |
 | ---------------- | ------------------------- |
-| ***{{wishlist_id}}*** | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/202106.0/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](https://documentation.spryker.com/docs/managing-wishlists#retrieve-wishlists) to get it. |
+| ***{{wishlist_id}}*** | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](https://documentation.spryker.com/docs/managing-wishlists#retrieve-wishlists) to get it. |
 
 ### Request
 

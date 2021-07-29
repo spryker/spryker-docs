@@ -83,6 +83,7 @@
             border-bottom: 1px solid $grey-lighten;
         }
 
+        & > .sidebar-nav__link,
         & > a > .sidebar-nav__title {
             font-weight: bold;
         }

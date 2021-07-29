@@ -1,4 +1,4 @@
-*Marketplace Storefront* is a web application designed for the marketplace business model. Being based on the regular Storefront, it supports all the Spryker Commerce OS features. Marketplace specific functionalities enable buyers to effectively browse shops, view and buy products from multiple merchants.
+*Marketplace Storefront* is a web application designed for the [marketplace business model](./{{ site.version }}/marketplace-storefront.html). Being based on the regular Storefront, it supports all the Spryker Commerce OS features. Marketplace specific functionalities enable buyers to effectively browse shops, view and buy products from multiple merchants.
 
 
 ## Shop by merchant

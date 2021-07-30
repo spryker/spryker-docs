@@ -432,13 +432,13 @@ To retrieve a specific wishlist, send the request:
 
 ------
 
-`GET` **/wishlists/*{{wishlist_id}}***
+`GET` **/wishlists/*{% raw %}{{wishlist_id}}{% endraw %}***
 
 ------
 
 | PATH PARAMETER        | DESCRIPTION      |
 | ---------------- | ------------------------- |
-| ***{{wishlist_id}}*** | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](https://documentation.spryker.com/docs/managing-wishlists#retrieve-wishlists) to get it. |
+| ***{% raw %}{{wishlist_id}}{% endraw %}*** | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](https://documentation.spryker.com/docs/managing-wishlists#retrieve-wishlists) to get it. |
 
 ### Request
 

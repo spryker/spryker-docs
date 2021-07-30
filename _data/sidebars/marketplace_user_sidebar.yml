@@ -32,6 +32,9 @@ entries:
         - title: Merchant Opening Hours feature overview
           url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
 
+        - title: Marketplace Product feature overview
+          url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
+
         - title: Marketplace Product Offer feature overview
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 
@@ -48,6 +51,12 @@ entries:
 
             - title: Marketplace and merchant state machines interaction
               url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+              
+        - title: Marketplace Promotions and Discounts feature overview
+          url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html
+        
+        - title: Marketplace Wishlist feature overview
+          url: /docs/marketplace/user/features/marketplace-wishlist-feature-overview.html
 
       - title: Back Office user guides
         nested:

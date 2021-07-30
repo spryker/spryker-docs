@@ -336,13 +336,14 @@ entries:
           url: /docs/marketplace/dev/front-end/project-structure.html
 
         - title: "Extending the project"
-          url: /docs/marketplace/dev/front-end/extending-the-project
+          url: /docs/marketplace/dev/front-end/extending-the-project/
           nested:
 
           - title: "Migration guide - Extending the project"
             url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 
-        - title: Table design
+        - title: "Table design"
+          url: /docs/marketplace/dev/front-end/table-design/
           nested:
 
             - title: "Table Column Type extension"
@@ -357,7 +358,7 @@ entries:
             - title: "Table Filter extension"
               url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html
 
-        - title: UI components library
+        - title: "UI components library"
           nested:
 
             - title: "Datasources"

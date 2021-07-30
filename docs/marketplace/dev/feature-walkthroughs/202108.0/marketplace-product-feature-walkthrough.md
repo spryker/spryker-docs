@@ -1,5 +1,5 @@
 ---
-title: Marketplace Product
+title: Marketplace Product feature walkthrough
 last_updated: Jul 29, 2021
 description: A Marketplace Product feature adds merchant information to the product that a merchant sells. 
 template: concept-topic-template
@@ -7,7 +7,7 @@ template: concept-topic-template
 
 A Marketplace Product feature adds merchant information to the product that a merchant sells. 
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Product](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-feature-overview.html) feature overview for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Product feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-feature-overview.html) feature overview for business users.
 
 ## Related Developer articles
 

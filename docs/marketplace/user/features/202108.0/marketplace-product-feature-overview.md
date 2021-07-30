@@ -4,9 +4,9 @@ description: This document contains concept information for the Marketplace Prod
 template: concept-topic-template
 ---
 
-In the Marketplace, products that a merchant owns, are referred to as *merchant products*. Besides creating offers for products of other merchants or the ones that the Marketplace administrator suggests, a merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has merchant-related information such as merchant reference. Merchants can [create their products in the Merchant Portal](<!---LINK-->) or [import the merchant products data](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-csv.html, or merchants manage stock and set prices for their products in the Merchant Portal. See Managing merchant products <!---LINK--> for details.
+In the Marketplace, products that a merchant owns, are referred to as *merchant products*. Besides creating offers for products of other merchants or the ones that the Marketplace administrator suggests, a merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has merchant-related information such as merchant reference. Merchants can [create their products in the Merchant Portal](<!---LINK-->) or [import the merchant products data](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-csv.html), or merchants manage stock and set prices for their products in the Merchant Portal. See Managing merchant products <!---LINK--> for details.
 
-Merchants can allow other merchants to create offers for their unique products. This possibility is defined with the help of `is_shared` parameter of the [merchant product data importer]/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-csv.html). 
+Merchants can allow other merchants to create offers for their unique products. This possibility is defined with the help of `is_shared` parameter of the [merchant product data importer](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-csv.html). 
 
 ## Merchant products on the Storefront
 
@@ -65,6 +65,6 @@ Merchants create and manage their products <!---LINK--> in the Merchant Portal. 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See Marketplace Products <!---LINK--> feature walkthrough for developers.
+Are you a developer? See [Marketplace Products feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}marketplace-product-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

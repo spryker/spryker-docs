@@ -25,7 +25,7 @@ The table below lists the main modules of the Marketplace Product Offer feature.
 | [MerchantProductOffer](https://github.com/spryker/merchant-product-offer) | <ul><li>Provides collection of product offers by request.</li><li>Extends `ProductOffer` with merchant information.</li><li> Used by `MerchantSwitcher` for enabling the merchant functionality.</li></ul>  | SpyProductOffer |
 | [ProductOffer](https://github.com/spryker/product-offer) | Provides the main create-read-update product offer functionality.  | SpyProductOffer |
 | [ProductOfferValidity](https://github.com/spryker/product-offer-validity) | Defines validity period for an offer | SpyProductOfferValidity |
-| [Shop.MerchantProductOfferWidget](https://github.com/spryker/spryker-shop) | Provides merchant product offer information for `spryker-shop`. | - |
+| [Shop.MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget) | Provides merchant product offer information for `spryker-shop`. | - |
 
 ## Entity diagram
 

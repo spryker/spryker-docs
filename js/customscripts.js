@@ -5,9 +5,6 @@ $( document ).ready(function() {
 
     initResponsiveTable();
 
-    /**
-     * AnchorJS
-     */
     anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
 
     initSidebarToggle();
@@ -43,8 +40,10 @@ function initPageScrolling() {
     function changeBodyClass() {
         let currentScrollPosition = window.pageYOffset;
 
-        if (currentScrollPosition < 1) {
-            body.removeClass('scroll-up');
+        if (currentScrollPosition < 2) {
+            body.removeClass('scroll-up page-scrolled');
+        } else {
+            body.addClass('page-scrolled');
         }
 
         if (currentScrollPosition > lastScrollPosition && !body.hasClass('scroll-down')) {
@@ -291,14 +290,14 @@ function initSearchPopup() {
     let popup = $('.search-popup'),
         opener = $('.js-search-popup-opener'),
         close = $('.js-search-popup-close'),
-        body = jQuery('body'),
+        body = $('body'),
         input = $('.search-input.aa-input');
 
     // mobile-overflow
 
     opener.on('click', function(e){
         e.preventDefault();
-        body.addClass('mobile-overflow');
+        body.addClass('tablet-overflow');
         popup.fadeIn(300, function(){
             input.focus();
         });
@@ -306,7 +305,7 @@ function initSearchPopup() {
 
     close.on('click', function(e){
         e.preventDefault();
-        body.removeClass('mobile-overflow');
+        body.removeClass('tablet-overflow');
 
         popup.fadeOut(300);
     });

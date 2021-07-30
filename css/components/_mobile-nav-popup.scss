@@ -55,6 +55,8 @@
     }
 
     &-popup {
+        transition: opacity .2s linear;
+
         @include media("<tablet") {
             display: none;
             background: $white;
@@ -66,8 +68,15 @@
             z-index: 2000;
         }
 
-        @media (min-width: 768px) {
+        @include media(">=tablet") {
             display: block !important;
+        }
+
+        .page-scrolled & {
+            @include media(">=desktop") {
+                opacity: 0;
+                pointer-events: none;
+            }
         }
 
         &__inner {

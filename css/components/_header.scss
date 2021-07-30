@@ -1,34 +1,54 @@
 .main-header {
-    background: $header-bg-color;
-    padding: 15px 0;
     z-index: 100;
-    position: relative;
-    box-shadow: 0px 6px 10px 0px rgba($black, 0.05),
-    0px 1px 0px 0px $grey-light,
-    0px 1px 2px 0px rgba($black, 0.05);
-    transition: transform .3s linear;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 94px;
 
     @include media("<laptop") {
-        padding: 7px 0;
+        min-height: 78px;
     }
 
     @include media("<desktop") {
-        position: sticky;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-
-    @include media("<tablet") {
-        padding: 5px 0;
+        min-height: 0;
     }
 
     .scroll-down & {
         @include media("<desktop") {
-            transform: translateY(-128px);
+            pointer-events: none;
         }
+    }
+
+    &__bg {
+        background: $header-bg-color;
+        box-shadow: 0px 6px 10px 0px rgba($black, 0.05),
+        0px 1px 0px 0px $grey-light,
+        0px 1px 2px 0px rgba($black, 0.05);
+        transition: transform .3s linear, padding .1s linear;
+        padding: 15px 0;
+
+        @include media("<laptop") {
+            padding: 7px 0;
+        }
+
         @include media("<tablet") {
-            transform: translateY(-114px);
+            padding: 5px 0;
+        }
+
+        .scroll-down & {
+            @include media("<desktop") {
+                transform: translateY(-128px);
+            }
+            @include media("<tablet") {
+                transform: translateY(-114px);
+            }
+        }
+
+        .page-scrolled & {
+            @include media(">=desktop") {
+                padding: 10px 0;
+            }
         }
     }
 
@@ -62,7 +82,6 @@
 
     &__logo {
         display: block;
-        width: 156px;
         margin: 0 24px 0 0;
         flex: 0 0 auto;
 
@@ -71,18 +90,26 @@
             margin: 0 20px 0 0;
         }
 
+        @include media(">=desktop") {
+            min-width: 155px;
+        }
+
         img {
             display: block;
-            width: 100%;
-            height: auto;
-
-            @include media("<laptop") {
-                width: auto;
-                height: 64px;
-            }
+            width: auto;
+            height: 64px;
+            transition: height .1s linear, opacity .1s linear;
 
             @include media("<tablet") {
                 height: 54px;
+            }
+
+            .page-scrolled & {
+                @include media(">=desktop") {
+                    height: 40px;
+                    opacity: 0;
+                    pointer-events: none;
+                }
             }
         }
     }
@@ -127,7 +154,7 @@
             letter-spacing: .02em;
             transition: color .3s linear, background .3s linear, border-color .3s linear;
 
-            @include media("<tablet") {
+            @include media("<desktop") {
                 height: 56px;
                 padding: 17px 40px;
                 color: $grey-lighten;

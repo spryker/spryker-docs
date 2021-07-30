@@ -4,7 +4,7 @@ description: This article provides reference information about product offers in
 template: concept-topic-template
 ---
 
-To inject the [Marketplace Product Offer](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/marketplace-product-offer-feature-overview.html) feature into the [Back office](https://documentation.spryker.com/docs/spryker-core-back-office) the following modules are used:
+To inject the [Marketplace Product Offer](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html) feature into the [Back office](https://documentation.spryker.com/docs/spryker-core-back-office) the following modules are used:
 
 | MODULE | DESCRIPTION |
 | -------------------- | ---------- |

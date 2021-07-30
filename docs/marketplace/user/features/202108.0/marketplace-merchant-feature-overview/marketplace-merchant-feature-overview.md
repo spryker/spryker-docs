@@ -68,7 +68,7 @@ If you [import the merchant data](/docs/marketplace/dev/data-import/{{ page.vers
 
 ## Merchant category
 
-You can group merchants by categories to make your working process more efficient and simplify merchants search for customers. See [Merchant Category](/docs/marketplace/user/features/{{ page.version }}/merchant-category.html) for details.
+You can group merchants by categories to make your working process more efficient and simplify merchants search for customers. See [Merchant Category](/docs/marketplace/user/features/{{ page.version }}/merchant-category-feature-overview.html) for details.
 
 ## Merchants on the Storefront
 

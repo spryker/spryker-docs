@@ -24,8 +24,8 @@ entries:
           - title: Marketplace Merchant feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
 
-          - title: Merchant Category
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html
+          - title: Merchant Category feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category-feature-walkthrough.html
 
           - title: Merchant Opening Hours feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html

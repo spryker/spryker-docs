@@ -1,5 +1,5 @@
 ---
-title: Merchant Category
+title: Merchant Category feature walkthrough
 last_updated: Apr 23, 2021
 description: Merchant categories allows grouping merchants by categories.
 template: concept-topic-template
@@ -7,7 +7,7 @@ template: concept-topic-template
 
 The *Merchant Category* feature allows grouping merchants by categories.
 
-To learn more about the feature and to find out how end users use it, see [Merchant Category](/docs/marketplace/user/features/{{ page.version }}/merchant-category.html) feature overview for business users.
+To learn more about the feature and to find out how end users use it, see [Merchant Category feature overview](/docs/marketplace/user/features/{{ page.version }}/merchant-category-feature-overview.html) for business users.
 
 ## Related Developer articles
 

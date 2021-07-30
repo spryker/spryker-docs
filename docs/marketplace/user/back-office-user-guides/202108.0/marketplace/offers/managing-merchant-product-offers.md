@@ -5,7 +5,7 @@ description: This topic describes how to view and manage merchant product offers
 template: back-office-user-guide-template
 ---
 
-This topic describes how to view and manage [merchant product offers](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer.html) in the Back Office.
+This topic describes how to view and manage [merchant product offers](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer-feature-overview.html) in the Back Office.
 
 ## Prerequisites
 
@@ -75,4 +75,4 @@ The following table describes the attributes on the *View Offer:[Offer Reference
 
 ## Related articles
 
-* [Merchant Product Offer feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer.html)
+* [Merchant Product Offer feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer-feature-overview.html)

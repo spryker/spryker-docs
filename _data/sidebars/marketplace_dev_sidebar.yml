@@ -48,6 +48,9 @@ entries:
               - title: Product Offer validity dates
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-validity-dates.html
 
+          - title: Marketplace Inventory management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-inventory-management-feature-walkthrough.html
+          
           - title: Marketplace Product
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product.html
 

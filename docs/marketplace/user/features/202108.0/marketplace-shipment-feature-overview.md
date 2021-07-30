@@ -1,6 +1,20 @@
+---
+title: Marketplace Shipment feature overview
+description: This document contains concept information for the Marketplace Shipment feature.
+template: concept-topic-template
+---
+
 The *Marketplace Shipment* allows splitting the [marketplace order](/docs/marketplace/user/features/202108.0/marketplace-order-management/marketplace-order-management-overview/marketplace-order-management-overview.html) into different shipments based on merchants who will process it.
 
 A *shipment* is a set of two or more products combined by the same delivery address.
+
+{% info_block infoBox "Info" %}
+
+To learn more about Shipment feature in the SCCOS, see [Shipment feature overview](https://documentation.spryker.com/docs/shipment-feature-overview).
+
+{% endinfo_block %}
+
+
 
 ## Marketplace Shipment on the Storefront
 In the *Address* checkout step, you can define a common delivery address where all the shipments will be delivered.
@@ -28,3 +42,8 @@ Every merchant can view only the shipment of their product offers and products o
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/shipment-merchant-portal.png)
 
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See Marketplace Shipment feature walkthrough <!---LINK--> for developers.
+
+{% endinfo_block %}

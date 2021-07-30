@@ -97,26 +97,6 @@ When the offer is out of stock, it is displayed as an out-of-stock product.
 
 Merchants can define product offer stocks in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer stock](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock-csv.html).
 
-### Product offer availability
-Product offer availability calculation differs from the calculation of concrete products availability:
-
-| Concrete product availability   | Product offer availability   |
-| --------------------- | ------------------------ |
-| Formula: Concrete product availability = Concrete product quantity – Concrete product reservations | Formula: Offer availability = Offer quantity – Offer reservations |
-
-Thus, the algorithm of calculating offer availability is updated, but the algorithm of calculating reservations is preserved.
-Offer availability is considered on the Storefront: 
-
-* On the product details page while adding the offer to cart.
-* On the cart page: Product stays in the cart if the attached offer is not available anymore and a hint is shown.
-* During the checkout: When pressing **Buy now** the availability is checked one more time.
-
-{% info_block infoBox "Example" %}
-
-Let's assume that a merchant has defined quantity 10 for product offer 1. The customer adds 8 items of the product offer 1 to a shopping cart, and later updates the quantity to 12. In such a situation, the availability of the product offer 1 is checked and the customer is notified to update the quantity of the product offer to the available number to proceed with the purchase. 
-
-{% endinfo_block %}
-
 
 ## Product offers on the Storefront
 

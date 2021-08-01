@@ -1,4 +1,4 @@
-version: "v7"
+version: "202108.0"
 
 repository: spryker/spryker.github.io
 
@@ -58,7 +58,7 @@ commonmark:
 
 plugins:
   - jekyll-feed
-  - jekyll-redirect-from
+  - jekyll-last-modified-at
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
@@ -72,6 +72,7 @@ defaults:
       comments: false
       search: true
       topnav: topnav
+      feed: true
   - scope:
       path: "docs/marketplace"
     values:
@@ -145,3 +146,6 @@ sass:
     sass_dir: css
     style: compressed
     sourcemap: never
+
+last-modified-at:
+  date-format: '%Y%m%dT%H%M'

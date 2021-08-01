@@ -11,6 +11,7 @@ group :jekyll_plugins do
   gem 'page_template_validator', path: "./_plugins/page_template_validator"
   gem "jekyll-feed", "~> 0.12"
   gem 'jekyll-sitemap'
+  gem 'jekyll-last-modified-at'
 end
 
 gem "rake"

@@ -34,7 +34,7 @@ The following table describes the attributes you enter and select when editing g
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. |
 | Name | Name that's displayed for the product on the Storefront. |
 | Description | Description that's displayed for the product on the Storefront. |
-| New from</br>New to  | Defines the period of time for which: </br><ul><li>A [dynamic product label](https://documentation.spryker.com/docs/product-labels-feature-overview) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](https://documentation.spryker.com/docs/category-management-feature-overview0).</li></ul></br> You can either select no dates or both. |
+| New from</br>New to  | Defines the period of time for which: </br><ul><li>A [dynamic product label](https://documentation.spryker.com/docs/product-labels-feature-overview) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](https://documentation.spryker.com/docs/category-management-feature-overview).</li></ul></br> You can either select no dates or both. |
 
 ## Editing prices of an abstract product
 

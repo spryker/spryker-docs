@@ -1,14 +1,14 @@
 def setup_current_page_version(page, config)
     return if config['page']['version']
 
-    page.url.match(%r{/(?<version>v\d+)/});
+    page.url.match(%r{/(?<version>\d+\.\d+)/});
     version = Regexp.last_match(:version)
 
     config['page']['version'] = version
 end
 
 def setup_all_page_versions(page, config)
-    full_url_pattern = %r{\A#{page.url.gsub(%r{/v\d+/}, '/v\d+/')}\Z}
+    full_url_pattern = %r{\A#{page.url.gsub(%r{/\d+\.\d+/}, '/\d+\.\d+/')}\Z}
     versioned_page_urls = page.site.pages.select do |site_page|
       site_page.url.match full_url_pattern
     end.map(&:url)
@@ -17,7 +17,7 @@ def setup_all_page_versions(page, config)
 end
 
 def get_versions(versioned_page_urls)
-    version_pattern = %r{/(?<page_version>v\d+)/}
+    version_pattern = %r{/(?<page_version>\d+\.\d+)/}
 
     versioned_page_urls.map do |url|
         version_pattern.match(url)
@@ -33,7 +33,7 @@ def is_multiversion(page)
     role = page['role']
     versioned_categories = page.site.config['versioned_categories']
 
-    # TODO: add proper SCOS categories later
+    # TODO: add proper SCOS categories
     return true if product == 'scos'
 
     return false if versioned_categories[product] == nil or

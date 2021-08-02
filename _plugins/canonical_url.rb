@@ -1,13 +1,13 @@
 def get_page_versioned_urls(page)
-    full_url_pattern = %r{\A#{page.url.gsub(%r{/v\d+/}, '/v\d+/')}\Z}
+    full_url_pattern = %r{\A#{page.url.gsub(%r{/\d+\.\d+/}, '/\d+\.\d+/')}\Z}
     page.site.pages.select { |site_page| site_page.url.match full_url_pattern }.map(&:url)
 end
 
 def get_page_latest_version_url(versioned_urls)
-    versioned_urls.sort_by { |version| version.scan(/(?<=\/v)\d+(?=\/)/).first.to_i }.pop
+    versioned_urls.sort_by { |version| version.scan(/(?<=\/v)\d+(?=\/)/).first.to_i }.max
 end
 
-def is_multiversion_page(page)
+def is_multiversion(page)
     product = page['product']
     role = page['role']
 
@@ -23,7 +23,7 @@ end
 
 Jekyll::Hooks.register :pages, :pre_render do |page, config|
     next page unless File.extname(page.path).match?(/md|html/)
-    next page unless is_multiversion_page page
+    next page unless is_multiversion page
 
     versioned_urls = get_page_versioned_urls page
 

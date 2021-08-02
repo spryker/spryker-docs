@@ -13,7 +13,6 @@ To start working with products:
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
-
 {% info_block warningBox "Warning" %}
 
 You can add super attributes to product variants only when creating an abstract product.
@@ -51,6 +50,7 @@ The following table describes the attributes you enter and select when defining 
 | Name | Name that will be displayed for the product on the Storefront. |
 | Description | Description that will be displayed for the product on the Storefront. |
 | New from</br>New to  | Defines the period of time for which: </br><ul><li>A [dynamic product label](https://documentation.spryker.com/docs/product-labels-feature-overview) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](https://documentation.spryker.com/docs/category-management-feature-overview)</li></ul></br> You can either select no dates or both. |
+
 
 ## Defining prices
 
@@ -110,6 +110,7 @@ The following table describes the attributes you enter and select when defining 
 |Title| Meta title that will be used for the abstract product.|
 |Keywords| Meta keywords that will be used for the abstract product. |
 |Description| Meta description that will be used for the abstract product.|
+
 
 ## Adding images
 

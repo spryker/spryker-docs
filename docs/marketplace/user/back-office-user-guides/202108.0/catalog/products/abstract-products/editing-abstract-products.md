@@ -26,7 +26,7 @@ To edit general settings of an abstract product:
 
 ### Reference information: Editing general settings of an abstract product
 
- The following table describes the attributes you enter and select when editing general settings of an abstract product.
+The following table describes the attributes you enter and select when editing general settings of an abstract product.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -34,7 +34,7 @@ To edit general settings of an abstract product:
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. |
 | Name | Name that's displayed for the product on the Storefront. |
 | Description | Description that's displayed for the product on the Storefront. |
-| New from</br>New to  | Defines the period of time for which: </br><ul><li>A [dynamic product label](https://documentation.spryker.com/docs/product-labels-feature-overview) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](https://documentation.spryker.com/docs/category-management-feature-overview0</li></ul></br> You can either select no dates or both. |
+| New from</br>New to  | Defines the period of time for which: </br><ul><li>A [dynamic product label](https://documentation.spryker.com/docs/product-labels-feature-overview) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](https://documentation.spryker.com/docs/category-management-feature-overview).</li></ul></br> You can either select no dates or both. |
 
 ## Editing prices of an abstract product
 
@@ -60,7 +60,7 @@ The following table describes the attributes you enter and select when editing p
 |Add Product Volume Price</br>Edit Product Volume Price| This option allows you to define the prices that are based on the quantity of products that a customer selects. Works only with the default prices.</br>Add Product Volume Price appears only when the price for a currency was set up and saved.</br>Edit Product Volume Price appears only what the volume price was already set up for a currency.||✓|
 |Tax Set|The conditions under which a product is going to be taxed.</br>The values available for selection derive from Taxes > Tax Sets</br>Only one value can be selected.|
 
-## Editing volume pirces of an abstract product
+## Editing volume prices of an abstract product
 
 To edit volume prices of an abstract product:
 

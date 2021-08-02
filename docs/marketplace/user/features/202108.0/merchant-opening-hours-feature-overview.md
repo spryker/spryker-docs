@@ -1,5 +1,5 @@
 ---
-title: Merchant Opening Hours
+title: Merchant Opening Hours feature overview
 last_updated: Jul 27, 2021
 description: The Merchant Opening Hours feature allows you to define opening hours for a merchant.
 template: concept-topic-template
@@ -24,6 +24,6 @@ To display merchant opening hours on the Storefront, you should import the open 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Merchant Opening Hours](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/merchant-opening-hours.html) feature walkthrough for developers. 
+Are you a developer? See [Merchant Opening Hours feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/merchant-opening-hours-feature-walkthrough.html) for developers. 
 
 {% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: Merchant Category
+title: Merchant Category feature overview
 last_updated: Apr 23, 2021
 description: Merchant categories help you easily find relevant merchants.
 template: concept-topic-template
@@ -12,6 +12,6 @@ To create merchant categories, you should import them. See [File details: mercha
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Merchant Category](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/merchant-category.html) feature walkthrough for developers. 
+Are you a developer? See [Merchant Category feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/merchant-category-feature-walkthrough.html) for developers. 
 
 {% endinfo_block %}

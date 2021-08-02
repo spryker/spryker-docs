@@ -1,6 +1,6 @@
 ---
-title: Marketplace Product Offer
-description: This document contains concept information for the Product Offers feature.
+title: Marketplace Product Offer feature overview
+description: This document contains concept information for the Product offers feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 
@@ -151,6 +151,6 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Product Offer](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/marketplace-product-offer.html) feature walkthrough for developers.
+Are you a developer? See [Marketplace Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}//marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html) and [Marketplace Product Offer Prices feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer-prices-feature-walkthrough.html for developers.
 
 {% endinfo_block %}

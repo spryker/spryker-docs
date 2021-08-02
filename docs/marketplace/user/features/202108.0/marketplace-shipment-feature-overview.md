@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Ship
 template: concept-topic-template
 ---
 
-The *Marketplace Shipment* allows splitting the [marketplace order](/docs/marketplace/user/features/202108.0/marketplace-order-management/marketplace-order-management-overview/marketplace-order-management-overview.html) into different shipments based on merchants who will process it.
+The *Marketplace Shipment* allows splitting the [marketplace order](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-order-management-overview.html) into different shipments based on merchants who will process it.
 
 A *shipment* is a set of two or more products combined by the same delivery address.
 
@@ -13,7 +13,6 @@ A *shipment* is a set of two or more products combined by the same delivery addr
 To learn more about Shipment feature in the SCCOS, see [Shipment feature overview](https://documentation.spryker.com/docs/shipment-feature-overview).
 
 {% endinfo_block %}
-
 
 
 ## Marketplace Shipment on the Storefront
@@ -28,14 +27,9 @@ Or you can use the **Deliver to multiple addresses** drop-down option that will 
 
 
 ## Marketplace Shipment in the Back Office
-In the Back Office, the shipments are displayed in the Order Items section on the View Order: [Order ID] page.
+In the Back Office, the shipments are displayed in the *Order Items* section on the *View Order: [Order ID]* page. Marketplace Administrator can view them
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/shipments-back-office.png)
-
-Here you can perform the following actions on shipments:
-
-* Create a new shipment for the whole order
-* Modify a delivery address, a shipment method (without any impact on order totals), and a delivery date
 
 ## Marketplace Shipment in the Merchant Portal
 Every merchant can view only the shipment of their product offers and products on the Order [Order ID] drawer.
@@ -44,6 +38,7 @@ Every merchant can view only the shipment of their product offers and products o
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See Marketplace Shipment feature walkthrough <!---LINK--> for developers.
+Are you a developer? See [Marketplace Shipment](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-shipment-feature-walkthrough.html) feature walkthrough <!---LINK--> for developers.
 
 {% endinfo_block %}
+

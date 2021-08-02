@@ -1,9 +1,15 @@
-Marketplace invetory management includes maintaining stock and availability of product offers for sale in the Marketplace.
+---
+title: Marketplace Inventory Management feature overview
+description: This document contains concept information for the Marketplace Products feature.
+template: concept-topic-template
+---
+
+The *Marketplace Inventory Management* feature includes maintaining stock and availability of product offers for sale in the Marketplace.
 The *warehouse* is the physical place where your products are stored, and stock is the number of products available in the warehouse. 
 
 {% info_block infoBox "Info" %}
 
-To learn more about Inventory Management feature in the SCCOS, see [Shipment feature overview](https://documentation.spryker.com/docs/inventory-management-feature-overview).
+To learn more about Inventory Management feature in SCCOS, see [Shipment feature overview](https://documentation.spryker.com/docs/inventory-management-feature-overview).
 
 {% endinfo_block %}
 
@@ -20,7 +26,7 @@ When a merchant is created, the corresponding warehouse is created for this merc
 A warehouse can be assigned to a single store or shared between several stores. See [Managing warehouses](https://documentation.spryker.com/docs/managing-warehouses#managing-warehouses) for details on how you can manage warehouses and stores in the back office
 
 ## Marketplace stock management
-The stock for product offers is defined in the corresponding merchant warehouse. The stock does not reflect the actual availability of products, as not all the items available in stock are available for sale. For example, when there are pending orders with the offers, these items are *reserved*, so they are not available for ordering, even if they are phisically on hand. 
+The stock for product offers is defined in the corresponding merchant warehouse. The stock does not reflect the actual availability of products, as not all the items available in stock are available for sale. For example, when there are pending orders with the offers, these items are *reserved*, so they are not available for ordering, even if they are physically on hand. 
 
 When `is_never_out_of_stock` attribute is set to `true`, then this offer is always available in terms of stock.
 
@@ -51,7 +57,18 @@ Let's assume that a merchant has defined quantity 10 for product offer 1. The cu
 
 {% endinfo_block %}
 
+{% info_block warningBox "Developer guides" %}
 
+Are you a developer? See [Marketplace Inventory Management](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-inventory-management-feature-walkthrough.html) feature walkthrough <!---LINK--> for developers.
+
+{% endinfo_block %}
+
+
+## Related Business User articles
+
+| MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
+| --------------------------- | ----------------------- |
+| [Editing a product offer](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html#editing-a-product-offer)                            | [Managing warehouses](https://documentation.spryker.com/docs/managing-warehouses) <!--- UPDATE LINK-->                        |
 
 
 

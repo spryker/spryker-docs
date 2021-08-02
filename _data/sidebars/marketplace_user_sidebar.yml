@@ -42,6 +42,9 @@ entries:
         - title: Marketplace Product feature overview
           url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
 
+        - title: Marketplace Inventory Management feature overview
+          url: /docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html
+        
         - title: Marketplace Order Management
           url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management.html
           nested:
@@ -60,6 +63,9 @@ entries:
               - title: Marketplace and merchant state machines interaction
                 url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
           
+        - title: Marketplace Shipment feature overview
+          url: /docs/marketplace/user/features/marketplace-shipment-feature-overview.html
+        
         - title: Marketplace Promotions and Discounts feature overview
           url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html
         

@@ -4,7 +4,7 @@ description:
 template: concept-topic-template
 ---
 
-With the *Marketplace Product Options* feature, merchants and Marketplace administrators can create *product options* for merchant offers and abstract products.
+With the *Marketplace Product Options* feature, merchants and Marketplace administrators can create *product options* for merchant products.
 
 Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, warranty, etc. Product options do not have stock, but a SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
 

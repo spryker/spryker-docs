@@ -1,5 +1,5 @@
 ---
-title: Marketplace Product Offer
+title: Marketplace Product Offer feature overview
 description: This document contains concept information for the Product offers feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---
@@ -134,7 +134,7 @@ The decision of whether the product offer can be purchased depends on the offer 
 
 ### Product offers on the product details page
 
-All available product offers are listed in the *Sold by* area of the product details page. If there are multiple product offers for a concrete product, there is always a default product offer pre-checked. Currently, a random offer is selected as the default one, however, you can change this logic on the project level.
+All available product offers are listed in the *Sold by* area of the product details page. The offers are sorted by price from the lowest to the highest. An offer with the lowest price is selected by default if there are multiple offers for the product.
 
 ![Product offers on product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Products+and+offers/Product+offer+feature+overview/product-offers-on-pdp.gif)
 
@@ -171,6 +171,6 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Product Offer](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/marketplace-product-offer.html) feature walkthrough for developers.
+Are you a developer? See [Marketplace Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}//marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html) and [Marketplace Product Offer Prices feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer-prices-feature-walkthrough.html for developers.
 
 {% endinfo_block %}

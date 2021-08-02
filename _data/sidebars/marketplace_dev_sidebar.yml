@@ -360,9 +360,6 @@ entries:
             - title: "Table Column Type extension"
               url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension.html
 
-            - title: "Table Actions extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-actions-extension.html
-
             - title: "Table Feature extension"
               url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
 

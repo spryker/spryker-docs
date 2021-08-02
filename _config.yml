@@ -80,32 +80,31 @@ defaults:
   -
     scope:
       path: "docs/marketplace"
-      type: "pages"
     values:
-      product: marketplace
+      product: "marketplace"
   -
     scope:
       path: "docs/marketplace/dev"
-      type: "pages"
     values:
-      sidebar: marketplace_dev_sidebar
+      sidebar: "marketplace_dev_sidebar"
       product-type: 'marketplace/dev'
       role: "dev"
   -
     scope:
       path: "docs/marketplace/user"
-      type: "pages"
     values:
-      sidebar: marketplace_user_sidebar
+      sidebar: "marketplace_user_sidebar"
       product-type: 'marketplace/user'
       role: "user"
 
-# version-related scopes
-  -
-    scope:
-      path: "docs/**/202108.0"
-    values:
-      version: "202108.0"
+versions:
+  '201811.0': '201811.0'
+  '201903.0': '201903.0'
+  '201907.0': '201907.0'
+  '202001.0': '202001.0'
+  '202005.0': 'Code releases 05.20'
+  '202009.0': '202009.0'
+  '202108.0': '202108.0'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:

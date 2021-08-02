@@ -8,15 +8,21 @@ module Jekyll
             role = Regexp.last_match(:role)
             category = Regexp.last_match(:category)
 
-            # check if url should be versioned
-            versioned_categories = @context.registers[:site].config['versioned_categories']
-
-            return url if versioned_categories[product] == nil or
-                versioned_categories[product][role] == nil or not
-                versioned_categories[product][role].include? category
+            return url if not shouldBeVersioned(product, role, category)
 
             url_prefix = "/docs/#{product}/#{role}/#{category}/"
             url.clone.insert(url_prefix.length, version + "/")
+        end
+
+        def shouldBeVersioned(product, role, category)
+            # TODO: add proper SCOS categories later
+            return true if product == 'scos'
+
+            versioned_categories = @context.registers[:site].config['versioned_categories']
+
+            versioned_categories[product] != nil and
+                versioned_categories[product][role] != nil and
+                versioned_categories[product][role].include? category
         end
     end
 end

@@ -6,7 +6,7 @@ template: concept-topic-template
 
 With the *Marketplace Product Options* feature, merchants and Marketplace administrators can create *product options* for merchant products.
 
-Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, warranty, etc. Product options do not have stock, but a SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
+Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, warranty, etc. Product options do not have stock but an SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
 
 Each product option is defined by:
 
@@ -15,7 +15,7 @@ Each product option is defined by:
 * option value
 * translation
 
-*Product option group* holds all available options, or *option values* that buyers select. For example, you can have the "Warranty" product option group and create "1-year warranty" and "2-year warranty" values for it.
+*Product option group* holds all available options or *option values* that buyers select. For example, you can have the "Warranty" product option group and create "1-year warranty" and "2-year warranty" values for it.
 
 {% info_block infoBox "Info" %}
 
@@ -29,15 +29,15 @@ Product option groups created by merchants can have the following statuses:
 
 * *Waiting for approval*: The product option group has been created by a merchant and waits for the Marketplace administrator's approval. This is the default status assigned to all Marketplace product options that do not have a different approval status set.
 * *Approved*: The product option group has been approved by the Marketplace administrator. Merchants can use it for their products and offers, so if it is [active](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/product-options/creating-a-product-option.html#activating-a-product-option), the product option will be visible on the Storefront.
-* *Denied*: The product option has been rejected by the Marketplace administrator and Merchants cannot use it for their products and offers. If they still use it, it will not be applied and will not be visible on the Storefront.
+* *Denied*: The product option has been rejected by the Marketplace administrator, and Merchants cannot use it for their products and offers. If they still use it, it will not be applied and will not be visible on the Storefront.
 
 Currently, you can only import the Marketplace options approval statuses. See [File details: merchant product option group](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-option-group.html) for details.
 
 ## Marketplace product options in the Back Office
 In the Back Office, a Marketplace administrator can:
-* [create general product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/product-options/creating-a-product-option.html),
-* [manage general product options](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/products/product-options/managing-product-options.html),
-* [view product options for all or individual merchants](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/products/product-options/managing-product-options.html#filtering-product-options-by-merchants) .
+* [create general product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/product-options/creating-a-product-option.html);
+* [manage general product options](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/products/product-options/managing-product-options.html);
+* [view product options for all or individual merchants](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/products/product-options/managing-product-options.html#filtering-product-options-by-merchants).
 
 ## Marketplace product options on the Storefront
 
@@ -49,13 +49,13 @@ The merchant product option groups display on the Storefront only when:
 * The product option group status is [active](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/product-options/creating-a-product-option.html#activating-a-product-option).
 * The product option group approval status is []approved](l#marketplace-product-options-approval-statuses).
 
-After a merchant created a product option group and assigned it to their products, the product option group is displayed for all offers of the products, including the offers of other merchants.
+After a merchant created a product option group and assigned it to their products, the product option group is displayed for all offers of the products, including offers of other merchants.
 
 ![Marketplace product options on the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product+options/merchant-prodcut-options-on-the-storefront.png)
 
 ## Marketplace product options in the Merchant Portal
 
-In the Merchant Portal, the product options are displayed as part of the order, on the order details page:
+In the Merchant Portal, the product options are displayed on the order details page as part of the order:
 
 <img class="width-100" ALT="Product options on the order details page" SRC="https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product+options/product-options-in-the-merchant-portal.png"/>
 
@@ -65,10 +65,7 @@ Currently, the feature has the following functional constraints which are going 
 
 * Product options in a single group can be only from one merchant.
 * Product options of a merchant can be used with all offers from all merchants.
-* Merchant Switcher has no effect on the available product options.
-* There is no Back Office UI for creating merchant product offers.
 * There is no Back Office UI for approving or denying merchant product options.
-* It is not possible to create offers for product option groups and values.
 * Glue API does not support merchant product option groups and values.
 * Merchants can not create and manage product option groups and values in the Merchant Portal.
 
@@ -77,7 +74,7 @@ Currently, the feature has the following functional constraints which are going 
 |BACK OFFICE USER GUIDES |
 |---------|
 | [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/product-options/creating-a-product-option.html)  
-| [Managing product options](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/products/product-options/managing-product-options.html)|
+| [Managing product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/product-options/managing-product-options.html)|
 
 {% info_block warningBox "Developer guides" %}
 

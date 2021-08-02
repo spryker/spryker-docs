@@ -1,6 +1,7 @@
 .search-popup {
     flex: 1 1 auto;
     max-width: 612px;
+    margin: 0 auto;
 
     @include media("<desktop") {
         background: $white;

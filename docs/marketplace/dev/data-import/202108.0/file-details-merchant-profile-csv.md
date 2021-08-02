@@ -5,7 +5,7 @@ description: This document describes the merchant_profile.csv file to configure 
 template: import-file-template
 ---
 
-This document describes the `merchant_profile.csv` file to configure [merchant profile](/docs/marketplace/user/features/{{ site.version }}/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html#merchant-profile) information in your Spryker shop.
+This document describes the `merchant_profile.csv` file to configure [merchant profile](/docs/marketplace/user/features/{{ site.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile) information in your Spryker shop.
 
 To import the file, run:
 

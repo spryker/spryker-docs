@@ -21,38 +21,41 @@ entries:
           - title: Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
 
-          - title: Marketplace Merchant
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant.html
+          - title: Marketplace Merchant feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
 
-          - title: Merchant Category
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html
+          - title: Merchant Category feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category-feature-walkthrough.html
 
-          - title: Merchant Opening Hours
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours.html
+          - title: Merchant Opening Hours feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
 
-          - title: Marketplace Product Offer
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/marketplace-product-offer.html
+          - title: Marketplace Product feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
+
+          - title: Marketplace Product Offer feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
             nested:
               - title: Rendering merchant product offers on the Storefront
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/rendering-merchant-product-offers-on-the-storefront.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/rendering-merchant-product-offers-on-the-storefront.html
 
               - title: Product Offer in the Back Office
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-in-the-back-office.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-in-the-back-office.html
 
               - title: Product Offer storage
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-storage.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-storage.html
 
               - title: Product Offer store relation
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-store-relation.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-store-relation.html
 
               - title: Product Offer validity dates
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-validity-dates.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html
 
-          - title: Marketplace Product
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product.html
+          - title: Marketplace Product Offer Prices feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
 
-          - title: Marketplace Order Management
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management.html
+          - title: Marketplace Order Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
 
           - title: Marketplace Promotions and Discounts feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html

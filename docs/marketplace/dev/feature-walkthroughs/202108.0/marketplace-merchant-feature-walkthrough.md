@@ -1,5 +1,5 @@
 ---
-title: Marketplace Merchant
+title: Marketplace Merchant feature walkthrough
 last_updated: Apr 23, 2021
 description: Merchants are product and service sellers in the Marketplace.
 template: concept-topic-template
@@ -7,7 +7,7 @@ template: concept-topic-template
 
 The *Marketplace Merchant* feature allows you to create, read, and update a merchant in the Marketplace.
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant.html) feature overview for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for business users.
 
 ## Related Developer articles
 

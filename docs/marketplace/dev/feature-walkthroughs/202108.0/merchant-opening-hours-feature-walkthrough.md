@@ -1,5 +1,5 @@
 ---
-title: Merchant Opening Hours
+title: Merchant Opening Hours feature walkthrough
 last_updated: Apr 23, 2021
 description: The Merchant Opening Hours allows you to define opening hours for a merchant.
 template: concept-topic-template
@@ -7,7 +7,7 @@ template: concept-topic-template
 
 The *Merchant Opening Hours* feature allows merchants to have their opening hours saved in the system and be retrievable for customers. A merchant can have a weekday schedule, which is a daily schedule for every day of the week, as well as date-based exceptions where they set up different opening hours for specific dates, for example, during the holiday season.
 
-To learn more about the feature and to find out how end users use it, see [Merchant Opening Hours](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant.html) feature overview for business users.
+To learn more about the feature and to find out how end users use it, see [Merchant Opening Hours feature overview](/docs/marketplace/user/features/{{ page.version }}/merchant-opening-hours-feature-overview.html) for business users.
 
 ## Related Developer articles
 

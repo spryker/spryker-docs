@@ -72,8 +72,13 @@ defaults:
       comments: false
       search: true
       topnav: topnav
+  -
+    scope:
+      path: "docs/"
+    values:
       feed: true
-  - scope:
+  -
+    scope:
       path: "docs/marketplace"
       type: "pages"
     values:

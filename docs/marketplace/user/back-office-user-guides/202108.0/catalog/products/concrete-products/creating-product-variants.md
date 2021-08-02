@@ -7,7 +7,7 @@ template: back-office-user-guide-template
 
 This topic describes how to add a product variant for an abstract product.
 
-## Prerequisistes
+## Prerequisites
 
 To create a product variant, navigate to **Catalog** > **Products** section.
 

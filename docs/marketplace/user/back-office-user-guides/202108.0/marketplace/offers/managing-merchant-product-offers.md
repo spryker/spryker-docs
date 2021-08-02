@@ -60,8 +60,8 @@ The following table describes the attributes on the *View Offer:[Offer Reference
 | SECTION | ATTRIBUTE | DESCRIPTION |
 |-|-|-|
 | Offer | Reference | Unique identifier of the merchant product offer in the system. |
-|  | Status | Current status of the offer. Can be: <ul><li>waiting for approval</li><li>approved</li><li>denied</li></ul>See [Product offer status](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer-feature-overview.html#product-offer-status) for details on the statuses flow. |
-|  | Visibility | Visibility state of the offer. Can be <ul><li>active</li><li>inactive</li></ul>See [Product offer status](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer-feature-overview.html#product-offer-status) for details on the visibility flow. |
+|  | Status | Current status of the offer. Can be: <ul><li>waiting for approval</li><li>approved</li><li>denied</li></ul>See [Product offer status](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer.html#product-offer-status) for details on the statuses flow. |
+|  | Visibility | Visibility state of the offer. Can be <ul><li>active</li><li>inactive</li></ul>See [Product offer status](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer.html#product-offer-status) for details on the visibility flow. |
 |  | Stores | Stores for which the offer is assigned. |
 | Product | SKU | SKU of the product. |
 |  | Type | Type of the item. |

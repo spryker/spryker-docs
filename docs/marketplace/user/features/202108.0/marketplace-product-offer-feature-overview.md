@@ -85,19 +85,6 @@ The table below illustrates the logic according to which the product offer is d
 
 Merchants can define product offer stores in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer store](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-offer-store-csv.html).
 
-## Product offer stock
-A product offer has its own stock in one or many warehouses. A warehouse can hold stock for multiple offers.
-
-The stock per offer in the warehouse is defined by merchant the same way it is defined for concrete product. It means that offer reservation is assigned to every product offer separately. 
-
-In cases when an offer doesn't have any physical stock and can always be purchased, there is the `is_never_out_of_stock` attribute that is added to the offer entity.
-
-When `is_never_out_of_stock` is set to `true`, then this offer is always available in terms of stock.
-When the offer is out of stock, it is displayed as an out-of-stock product.
-
-Merchants can define product offer stocks in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer stock](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock-csv.html).
-
-
 ## Product offers on the Storefront
 
 Merchant product offer with all the related offer information is visible on the product detail page, and further on the shopping cart page and checkout pages when the following conditions are met:
@@ -145,9 +132,9 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 
 ## Related Business User articles
 
-|MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
-|---------|---------|
-| [Managing merchant product offers](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html)|
+| FEATURE OVERVIEWS | MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
+|---------|---------|---------|
+|[Marketplace Inventory Management](docs/marketplace/user/features/{{ page.version }}/marketplace-inventory-management-feature-overview.html) | [Managing merchant product offers](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html)|
 
 {% info_block warningBox "Developer guides" %}
 

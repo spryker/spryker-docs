@@ -19,43 +19,44 @@ entries:
       - title: Features
         url: /docs/marketplace/user/features/
         nested:
-        - title: Marketplace Merchant
-          url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant.html
+        - title: Marketplace Merchant feature overview
+          url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
           nested:
 
-          - title: Marketplace Merchant overview
-            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html
-            nested:
+          - title: Merchant users overview
+            url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html
 
-          - title: Merchant users
-            url: /docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-overview/merchant-users.html
+        - title: Merchant Category feature overview
+          url: /docs/marketplace/user/features/merchant-category-feature-overview.html
 
-        - title: Merchant Category
-          url: /docs/marketplace/user/features/merchant-category.html
+        - title: Merchant Opening Hours feature overview
+          url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
 
-        - title: Merchant Opening Hours
-          url: /docs/marketplace/user/features/merchant-opening-hours.html
+        - title: Marketplace Product feature overview
+          url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
 
-        - title: Marketplace Product Offer
-          url: /docs/marketplace/user/features/marketplace-product-offer.html
+        - title: Marketplace Product Offer feature overview
+          url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 
-        - title: Marketplace Order Management
-          url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management.html
+        - title: Marketplace Order Management feature overview
+          url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
           nested:
+          
+          - title: Merchant order overview
+            url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/merchant-order-overview.html
 
-          - title: Marketplace Order Management overview
-            url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-overview/marketplace-order-management-overview.html
+          - title: Marketplace and merchant state machines overview
+            url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
             nested:
 
-            - title: Merchant Order overview
-              url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-overview/merchant-order-overview.html
-
-            - title: Marketplace and merchant state machines overview
-              url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
-              nested:
-
-              - title: Marketplace and merchant state machines interaction
-                url: /docs/marketplace/user/features/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+            - title: Marketplace and merchant state machines interaction
+              url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+              
+        - title: Marketplace Promotions and Discounts feature overview
+          url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html
+        
+        - title: Marketplace Wishlist feature overview
+          url: /docs/marketplace/user/features/marketplace-wishlist-feature-overview.html
 
       - title: Back Office user guides
         nested:

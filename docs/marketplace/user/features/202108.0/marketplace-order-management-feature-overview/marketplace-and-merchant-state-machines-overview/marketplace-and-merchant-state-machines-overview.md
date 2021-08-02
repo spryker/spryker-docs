@@ -80,4 +80,4 @@ Our exemplary merchant state machine provides the following states:
 </details>
 
 ## Next steps
-[Learn how the marketplace and merchant state machines interact with each other](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)
+[Learn how the marketplace and merchant state machines interact with each other](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)

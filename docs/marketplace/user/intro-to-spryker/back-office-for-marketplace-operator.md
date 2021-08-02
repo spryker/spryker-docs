@@ -24,7 +24,7 @@ In a marketplace, multiple merchants can sell the same product. That's why, inst
 * Views offers
 * Approves and denies offers
 
-For detailed instructions on managing offers, see [Managing offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html).
+For detailed instructions on managing offers, see [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html).
 
 ## Order management
 

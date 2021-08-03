@@ -6,6 +6,8 @@ template: concept-topic-template
 
 The *Marketplace Promotions and Discounts* feature ensures that the discounts are applied to orders. 
 
+Discounts are applied to merchant orders in the form of the [cart rules](https://documentation.spryker.com/docs/promotions-discounts-feature-overview#cart-rule).
+
 Discount logic for merchant orders follows these rules:
 
 * If the discount applies to the whole Marketplace order, the discount is distributed among all the merchant orders and calculated according to the total volume of each of the items.

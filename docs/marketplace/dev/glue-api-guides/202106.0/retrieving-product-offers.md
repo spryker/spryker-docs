@@ -41,7 +41,8 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 | ---------- | ----------- |
 | `GET https://glue.mysprykershop.com/product-offers/offer56`| Get information about the offer56.   |
 | `GET https://glue.mysprykershop.com/product-offers/offer78?product-offer-prices` | Get information about the offer78 with the details on product offer prices. |
-| `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-availabilities,merchants` | Get information about the offer101 with the details on product offer availability and merchants included. |
+| `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-availabilities` | Get information about the offer101 with the details on product offer availability and merchants. |
+| `GET https://glue.mysprykershop.com/product-offers/offer101?merchants` | Get information about the offer101 with the details on merchants. |
 
 ### Response
 
@@ -130,23 +131,9 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer availabilities and merchant information</summary>
+<summary markdown='span'>Response sample with product offer availabilities</summary>
 
 ```json
-{
-    "data": {
-        "type": "product-offers",
-        "id": "offer56",
-        "attributes": {
-            "merchantSku": null,
-            "merchantReference": "MER000005",
-            "isDefault": false
-        },
-        "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer56"
-        }
-    }
-}
 {
     "data": {
         "type": "product-offers",
@@ -157,7 +144,7 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
+            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities"
         },
         "relationships": {
             "product-offer-availabilities": {
@@ -167,16 +154,7 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
                         "id": "offer101"
                     }
                 ]
-            },
-            "merchants": {
-                "data": [
-                    {
-                        "type": "merchants",
-                        "id": "MER000006"
-                    }
-                ]
-            }
-        }
+           }
     },
     "included": [
         {
@@ -190,7 +168,40 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
             "links": {
                 "self": "http://glue.mysprykershop.com/product-offers/offer101/product-offer-availabilities"
             }
-        },        
+            
+        }
+    ]
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample with product offer and merchant information</summary>
+
+```json
+{
+    "data": {
+        "type": "product-offers",
+        "id": "offer101",
+        "attributes": {
+            "merchantSku": null,
+            "merchantReference": "MER000006",
+            "isDefault": false
+        },
+        "links": {
+            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
+        },
+            "merchants": {
+                "data": [
+                    {
+                        "type": "merchants",
+                        "id": "MER000006"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
         {
             "type": "merchants",
             "id": "MER000006",
@@ -235,26 +246,10 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 | merchantReference | String   | Merchant reference assigned to every merchant. |
 | isDefault         | Boolean  | Defines whether the Product Offer is default for the concrete product. |
 
-<a name="prices"></a>
-
 |INCLUDED RESOURCE  |ATTRIBUTE  |TYPE  |DESCRIPTION  |
 |---------|---------|---------|---------|
-|product-offer-availabilities          | isNeverOutOfStock          |  Boolean         | Boolean to show if this is an item that is never out of stock.          |
-|product-offer-availabilities          | availability          | Boolean          |Boolean to inform you about availability.           |
-|product-offer-availabilities         | quantity          | Integer          |Available stock.           |
-|product-offer-prices     |  price |  Integer  | Price to pay for the product in cents.        |
-|product-offer-prices     |priceTypeName   | String   |Price type.         |
-|product-offer-prices     | netAmount   | Integer    |Net price in cents.    |
-|product-offer-prices     | grossAmount   |  Integer  | Gross price in cents.  |
-|product-offer-prices     | currency.code   | String  |Currency code.   |
-|product-offer-prices     | currency.name   | String  |  Currency name.  |
-|product-offer-prices     | currency.symbol   | String  |  Currency symbol.  |
-|product-offer-prices     | volumePrices   | Object  |  An array of objects defining the [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) for the product offer.  |
-|product-offer-prices     | grossAmount | Integer   |  Gross volume price in cents.         |
-|product-offer-prices     | netAmount | Integer   | Net volume price in cents.          |
-|product-offer-prices     | quantity  |  Integer         | Quantity of items in offer when the volume price applies.  |
 |merchant                | merchantName           | String   | Merchant’s name. |
-|merchant                | merchantUrl            | String   | Merchant’s profile URL. |
+|merchant                | merchantUrl            | String   | Relative merchant's profile URL. |
 |merchant                | contactPersonRole      | String   | Role of the contact person.  |
 |merchant                | contactPersonTitle     | String   | Salutation to use when addressing the contact person. |
 |merchant                | contactPersonFirstName | String   | Contact person’s first name. |
@@ -274,6 +269,10 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 |merchant                | cancellationPolicy     | String   | Merchant’s cancellation policy.  |
 |merchant                | imprint                | String   | Merchant’s imprint information.  |
 |merchant                | dataPrivacy            | String   | Merchant’s data privacy conditions. |
+
+See attribute descriptions of other included resources in:
+* [Retrieve product offer prices](#prices)
+* [Retrieve product offer availability](#product-offer-availabilities)
 
 
 ## Retrieve product offer availability
@@ -319,8 +318,13 @@ Response sample:
     }
 }
 ```
+<a name="product-offer-availabilities"></a>
 
-Find all the related attribute descriptions in [Retrieve product offers](#retrieve-product-offers).
+|ATTRIBUTE  |TYPE  |DESCRIPTION  |
+|---------|---------|---------|---------|
+| isNeverOutOfStock          |  Boolean         | Boolean to show if this is an item that is never out of stock.          |
+| availability          | Boolean          |Defines if the product offer is available.           |
+| quantity          | Integer          |Stock of the product offer.           |
 
 ## Retrieving product offer prices
 
@@ -383,9 +387,21 @@ Response sample:
     }
 }
 ```
+<a name="prices"></a>
 
-See the attribute descriptions in [Retrieve product offers](#prices).
-
+|ATTRIBUTE  |TYPE  |DESCRIPTION  |
+|---------|---------|---------|
+| price |  Integer  | Price to pay for the product in cents.        |
+| priceTypeName   | String   |Price type.         |
+| netAmount   | Integer    |Net price in cents.    |
+| grossAmount   |  Integer  | Gross price in cents.  |
+| currency.code   | String  |Currency code.   |
+| currency.name   | String  |  Currency name.  |
+| currency.symbol   | String  |  Currency symbol.  |
+| volumePrices   | Object  |  An array of objects defining the [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) of the product offer.  |
+| grossAmount | Integer   |  Gross volume price in cents.         |
+| netAmount | Integer   | Net volume price in cents.          |
+| quantity  |  Integer         | Quantity of items in offer when the volume price applies.  |
 
 {% info_block infoBox "Info" %}
 

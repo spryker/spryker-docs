@@ -62,7 +62,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 * To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
 * To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
 * To retrieve product labels assigned to the products in a cart, include `concrete-products` and `product-labels`.
-* * To retrieve product offers, include `items` and `concrete-products`.
+* To retrieve product offers, include `items` and `concrete-products`.
 * To retrieve product offer availabilities, include `items`, `concrete-products`, and `product-offer-availabilities`.
 * To retrieve product offer prices, include `items`, `concrete-products`, and `product-offer-prices`.
 
@@ -80,8 +80,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | `GET https://glue.mysprykershop.com/guest-carts?include=concrete-products,product-labels` | Retrieve a guest cart with information about concrete products and the product labels assigned to the products in it. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=promotional-items,abstract-products,concrete-product`| Retrieve detailed information on the promotional items for the guest cart. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers` | Retrieve all guest carts of a user with information about product offers. |
-| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-availabilities,product-offer-prices` | Retrieve all guest carts of a user with product offer availabilities. |
-| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all carts of a user with product offer prices. |
+| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all guest carts of a user with product offer availabilities. |
+| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all guest carts of a user with product offer prices. |
 | `GET https://glue.mysprykershop.com/guest-carts/f0d01709-4dea-5ac3-8ceb-873875446ab0?include=items,merchants` | Retrieve a guest cart with merchant products. |
 
 
@@ -1123,525 +1123,30 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 ```json
 {
-    "data": [
-        {
-            "type": "carts",
-            "id": "b19a657b-1b4b-5222-9988-15dcdeb0f621",
-            "attributes": {
-                "priceMode": "GROSS_MODE",
-                "currency": "EUR",
-                "store": "DE",
-                "name": "SoniaCart1_71221",
-                "isDefault": false,
-                "totals": {
-                    "expenseTotal": 0,
-                    "discountTotal": 0,
-                    "taxTotal": 5416,
-                    "subtotal": 33927,
-                    "grandTotal": 33927,
-                    "priceToPay": 33927
-                },
-                "discounts": []
+    "data": {
+        "type": "guest-carts",
+        "id": "6851dc6a-ebed-52ed-b229-81a35fe94c49",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "Shopping cart",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 0,
+                "taxTotal": 35273,
+                "subtotal": 220920,
+                "grandTotal": 220920,
+                "priceToPay": 220920
             },
-            "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/b19a657b-1b4b-5222-9988-15dcdeb0f621"
-            },
-            "relationships": {
-                "items": {
-                    "data": [
-                        {
-                            "type": "items",
-                            "id": "021_21081475-2-5"
-                        },
-                        {
-                            "type": "items",
-                            "id": "078_24602396_offer171"
-                        }
-                    ]
-                }
-            }
+            "discounts": []
         },
-        {
-            "type": "carts",
-            "id": "50ea7615-ccfd-5c16-956c-fe561a5f9b7e",
-            "attributes": {
-                "priceMode": "GROSS_MODE",
-                "currency": "EUR",
-                "store": "DE",
-                "name": "Guest shopping cart",
-                "isDefault": false,
-                "totals": {
-                    "expenseTotal": 500,
-                    "discountTotal": 0,
-                    "taxTotal": 13856,
-                    "subtotal": 96773,
-                    "grandTotal": 97273,
-                    "priceToPay": 97273
-                },
-                "discounts": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/50ea7615-ccfd-5c16-956c-fe561a5f9b7e"
-            },
-            "relationships": {
-                "items": {
-                    "data": [
-                        {
-                            "type": "items",
-                            "id": "006_30692993"
-                        },
-                        {
-                            "type": "items",
-                            "id": "009_30692991"
-                        },
-                        {
-                            "type": "items",
-                            "id": "206_6429825"
-                        }
-                    ]
-                }
-            }
-        },
-    ...
+        "links": {
+            "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
+        }
     },
     "included": [
-        {
-            "type": "product-offers",
-            "id": "offer95",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000006",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer95"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer69",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000005",
-                "isDefault": false
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer69"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer28",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000002",
-                "isDefault": false
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer28"
-            }
-        },
-        {
-            "type": "concrete-products",
-            "id": "021_21081475",
-            "attributes": {
-                "sku": "021_21081475",
-                "isDiscontinued": false,
-                "discontinuedNote": null,
-                "averageRating": null,
-                "reviewCount": 0,
-                "productAbstractSku": "021",
-                "name": "Sony Cyber-shot DSC-W830",
-                "description": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There’s a range of modes to choose from – you don’t even have to download image-editing software.",
-                "attributes": {
-                    "hdmi": "no",
-                    "sensor_type": "CCD",
-                    "display": "TFT",
-                    "usb_version": "2",
-                    "brand": "Sony",
-                    "color": "Purple"
-                },
-                "superAttributesDefinition": [
-                    "color"
-                ],
-                "metaTitle": "Sony Cyber-shot DSC-W830",
-                "metaKeywords": "Sony,Entertainment Electronics",
-                "metaDescription": "Styled for your pocket  Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing i",
-                "attributeNames": {
-                    "hdmi": "HDMI",
-                    "sensor_type": "Sensor type",
-                    "display": "Display",
-                    "usb_version": "USB version",
-                    "brand": "Brand",
-                    "color": "Color"
-                },
-                "productConfigurationInstance": null
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/021_21081475"
-            },
-            "relationships": {
-                "product-offers": {
-                    "data": [
-                        {
-                            "type": "product-offers",
-                            "id": "offer95"
-                        },
-                        {
-                            "type": "product-offers",
-                            "id": "offer69"
-                        },
-                        {
-                            "type": "product-offers",
-                            "id": "offer28"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "items",
-            "id": "021_21081475-2-5",
-            "attributes": {
-                "sku": "021_21081475",
-                "quantity": "1",
-                "groupKey": "021_21081475-2-5",
-                "abstractSku": "021",
-                "amount": null,
-                "productOfferReference": null,
-                "merchantReference": "MER000001",
-                "calculations": {
-                    "unitPrice": 10680,
-                    "sumPrice": 10680,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 10680,
-                    "sumGrossPrice": 10680,
-                    "unitTaxAmountFullAggregation": 1944,
-                    "sumTaxAmountFullAggregation": 1944,
-                    "sumSubtotalAggregation": 12180,
-                    "unitSubtotalAggregation": 12180,
-                    "unitProductOptionPriceAggregation": 1500,
-                    "sumProductOptionPriceAggregation": 1500,
-                    "unitDiscountAmountAggregation": 0,
-                    "sumDiscountAmountAggregation": 0,
-                    "unitDiscountAmountFullAggregation": 0,
-                    "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 12180,
-                    "sumPriceToPayAggregation": 12180
-                },
-                "configuredBundle": null,
-                "configuredBundleItem": null,
-                "productConfigurationInstance": null,
-                "salesUnit": null,
-                "selectedProductOptions": [
-                    {
-                        "optionGroupName": "Three (3) year limited warranty",
-                        "sku": "OP_2_year_warranty",
-                        "optionName": "Two (2) year limited warranty",
-                        "price": 1000
-                    },
-                    {
-                        "optionGroupName": "Gift wrapping",
-                        "sku": "OP_gift_wrapping",
-                        "optionName": "Gift wrapping",
-                        "price": 500
-                    }
-                ]
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/29f5d310-e6f3-56ed-b64a-1fd834dbc486/items/021_21081475-2-5"
-            },
-            "relationships": {
-                "concrete-products": {
-                    "data": [
-                        {
-                            "type": "concrete-products",
-                            "id": "021_21081475"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer171",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000006",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer171"
-            }
-        },
-                ...
-            },
-            "relationships": {
-                "product-offers": {
-                    "data": [
-                        {
-                            "type": "product-offers",
-                            "id": "offer171"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "items",
-            "id": "078_24602396_offer171",
-            "attributes": {
-                "sku": "078_24602396",
-                "quantity": "1",
-                "groupKey": "078_24602396_offer171",
-                "abstractSku": "078",
-                "amount": null,
-                "productOfferReference": "offer171",
-                "merchantReference": "MER000006",
-                "calculations": {
-                    "unitPrice": 21747,
-                    "sumPrice": 21747,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 21747,
-                    "sumGrossPrice": 21747,
-                    "unitTaxAmountFullAggregation": 3472,
-                    "sumTaxAmountFullAggregation": 3472,
-                    "sumSubtotalAggregation": 21747,
-                    "unitSubtotalAggregation": 21747,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 0,
-                    "sumDiscountAmountAggregation": 0,
-                    "unitDiscountAmountFullAggregation": 0,
-                    "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 21747,
-                    "sumPriceToPayAggregation": 21747
-                },
-                "configuredBundle": null,
-                "configuredBundleItem": null,
-                "productConfigurationInstance": null,
-                "salesUnit": null,
-                "selectedProductOptions": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/29f5d310-e6f3-56ed-b64a-1fd834dbc486/items/078_24602396_offer171"
-            },
-            "relationships": {
-                "concrete-products": {
-                    "data": [
-                        {
-                            "type": "concrete-products",
-                            "id": "078_24602396"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer54",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000005",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer54"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer13",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000002",
-                "isDefault": false
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer13"
-            }
-        },
-        {...},
-            "relationships": {
-                "product-offers": {
-                    "data": [
-                        {
-                            "type": "product-offers",
-                            "id": "offer54"
-                        },
-                        {
-                            "type": "product-offers",
-                            "id": "offer13"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            ...
-            },
-            "relationships": {
-                "concrete-products": {
-                    "data": [
-                        {
-                            "type": "concrete-products",
-                            "id": "006_30692993"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer57",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000005",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer57"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer16",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000002",
-                "isDefault": false
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer16"
-            }
-        },
-        {...
-            },
-            "relationships": {
-                "product-offers": {
-                    "data": [
-                        {
-                            "type": "product-offers",
-                            "id": "offer57"
-                        },
-                        {
-                            "type": "product-offers",
-                            "id": "offer16"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "items",
-            "id": "009_30692991",
-            "attributes": {
-                "sku": "009_30692991",
-                "quantity": "1",
-                "groupKey": "009_30692991",
-                "abstractSku": "009",
-                "amount": null,
-                "productOfferReference": null,
-                "merchantReference": null,
-                "calculations": {
-                    "unitPrice": 9999,
-                    "sumPrice": 9999,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 9999,
-                    "sumGrossPrice": 9999,
-                    "unitTaxAmountFullAggregation": 1597,
-                    "sumTaxAmountFullAggregation": 1596,
-                    "sumSubtotalAggregation": 9999,
-                    "unitSubtotalAggregation": 9999,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 0,
-                    "sumDiscountAmountAggregation": 0,
-                    "unitDiscountAmountFullAggregation": 0,
-                    "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 9999,
-                    "sumPriceToPayAggregation": 9999
-                },
-                "configuredBundle": null,
-                "configuredBundleItem": null,
-                "productConfigurationInstance": null,
-                "salesUnit": null,
-                "selectedProductOptions": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/50ea7615-ccfd-5c16-956c-fe561a5f9b7e/items/009_30692991"
-            },
-            "relationships": {
-                "concrete-products": {
-                    "data": [
-                        {
-                            "type": "concrete-products",
-                            "id": "009_30692991"
-                        }
-                    ]
-                }
-            }
-        },
-        ...
-            
-        {
-            "type": "items",
-            "id": "206_6429825",
-            "attributes": {
-                "sku": "206_6429825",
-                "quantity": "1",
-                "groupKey": "206_6429825",
-                "abstractSku": "206",
-                "amount": null,
-                "productOfferReference": null,
-                "merchantReference": null,
-                "calculations": {
-                    "unitPrice": 17774,
-                    "sumPrice": 17774,
-                    "taxRate": 7,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 17774,
-                    "sumGrossPrice": 17774,
-                    "unitTaxAmountFullAggregation": 1163,
-                    "sumTaxAmountFullAggregation": 1163,
-                    "sumSubtotalAggregation": 17774,
-                    "unitSubtotalAggregation": 17774,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 0,
-                    "sumDiscountAmountAggregation": 0,
-                    "unitDiscountAmountFullAggregation": 0,
-                    "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 17774,
-                    "sumPriceToPayAggregation": 17774
-                },
-                "configuredBundle": null,
-                "configuredBundleItem": null,
-                "productConfigurationInstance": null,
-                "salesUnit": null,
-                "selectedProductOptions": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/50ea7615-ccfd-5c16-956c-fe561a5f9b7e/items/206_6429825"
-            },
-            "relationships": {
-                "concrete-products": {
-                    "data": [
-                        {
-                            "type": "concrete-products",
-                            "id": "206_6429825"
-                        }
-                    ]
-                }
-            }
-        },
         {
             "type": "product-offers",
             "id": "offer89",
@@ -1651,7 +1156,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "isDefault": true
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer89"
+                "self": "https://glue.mysprykershop.com:80/product-offers/offer89"
             }
         },
         {
@@ -1663,41 +1168,94 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "isDefault": false
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer48"
+                "self": "https://glue.mysprykershop.com:80/product-offers/offer48"
             }
         },
-        ...
         {
-            "type": "items",
+            "type": "concrete-products",
             "id": "041_25904691",
             "attributes": {
                 "sku": "041_25904691",
-                "quantity": "3",
-                "groupKey": "041_25904691",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "041",
+                "name": "Canon PowerShot SX610",
+                "description": "Optical Quality Capture quality images from a distance with a 20.2 MP, 25mm wide, 18x optical zoom lens. Hybrid Auto mode records 4 seconds of video before each shot then compiles them all into a single video. With built in NFC and Wi-Fi its so easy to share your happy snaps to your favourite social media platforms. Expand your creative photography skills through applying a range of artistic presets such as toy camera or fish eye effect.  Capture images remotely and view live images from the camera via your phone and the Camera Connect app. Bring your memories to life as you experience videos on Full HD quality in 30p/MP4 recording.",
+                "attributes": {
+                    "hd_type": "Full HD",
+                    "megapixel": "20.2 MP",
+                    "optical_zoom": "18 x",
+                    "display": "LCD",
+                    "brand": "Canon",
+                    "color": "White"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Canon PowerShot SX610",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Optical Quality Capture quality images from a distance with a 20.2 MP, 25mm wide, 18x optical zoom lens. Hybrid Auto mode records 4 seconds of video before",
+                "attributeNames": {
+                    "hd_type": "HD type",
+                    "megapixel": "Megapixel",
+                    "optical_zoom": "Optical zoom",
+                    "display": "Display",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com:80/concrete-products/041_25904691"
+            },
+            "relationships": {
+                "product-offers": {
+                    "data": [
+                        {
+                            "type": "product-offers",
+                            "id": "offer89"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer48"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "guest-cart-items",
+            "id": "041_25904691_offer48",
+            "attributes": {
+                "sku": "041_25904691",
+                "quantity": 21,
+                "groupKey": "041_25904691_offer48",
                 "abstractSku": "041",
                 "amount": null,
-                "productOfferReference": null,
-                "merchantReference": null,
+                "productOfferReference": "offer48",
+                "merchantReference": "MER000002",
                 "calculations": {
-                    "unitPrice": 10380,
-                    "sumPrice": 31140,
+                    "unitPrice": 10520,
+                    "sumPrice": 220920,
                     "taxRate": 19,
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
-                    "unitGrossPrice": 10380,
-                    "sumGrossPrice": 31140,
-                    "unitTaxAmountFullAggregation": 1657,
-                    "sumTaxAmountFullAggregation": 4972,
-                    "sumSubtotalAggregation": 31140,
-                    "unitSubtotalAggregation": 10380,
+                    "unitGrossPrice": 10520,
+                    "sumGrossPrice": 220920,
+                    "unitTaxAmountFullAggregation": 1680,
+                    "sumTaxAmountFullAggregation": 35273,
+                    "sumSubtotalAggregation": 220920,
+                    "unitSubtotalAggregation": 10520,
                     "unitProductOptionPriceAggregation": 0,
                     "sumProductOptionPriceAggregation": 0,
                     "unitDiscountAmountAggregation": 0,
                     "sumDiscountAmountAggregation": 0,
                     "unitDiscountAmountFullAggregation": 0,
                     "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 10380,
-                    "sumPriceToPayAggregation": 31140
+                    "unitPriceToPayAggregation": 10520,
+                    "sumPriceToPayAggregation": 220920
                 },
                 "configuredBundle": null,
                 "configuredBundleItem": null,
@@ -1706,7 +1264,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/b19a657b-1b4b-5222-9988-15dcdeb0f621/items/041_25904691"
+                "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49/guest-cart-items/041_25904691_offer48"
             },
             "relationships": {
                 "concrete-products": {
@@ -1729,151 +1287,59 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 ```json
 {
-    "data": [
-        {
-            "type": "carts",
-            "id": "29f5d310-e6f3-56ed-b64a-1fd834dbc486",
-            "attributes": {
-                "priceMode": "GROSS_MODE",
-                "currency": "EUR",
-                "store": "DE",
-                "name": "SoniaCart1_71221",
-                "isDefault": false,
-                "totals": {
-                    "expenseTotal": 0,
-                    "discountTotal": 0,
-                    "taxTotal": 5416,
-                    "subtotal": 33927,
-                    "grandTotal": 33927,
-                    "priceToPay": 33927
-                },
-                "discounts": []
+    "data": {
+        "type": "guest-carts",
+        "id": "6851dc6a-ebed-52ed-b229-81a35fe94c49",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "Shopping cart",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 0,
+                "taxTotal": 35273,
+                "subtotal": 220920,
+                "grandTotal": 220920,
+                "priceToPay": 220920
             },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/29f5d310-e6f3-56ed-b64a-1fd834dbc486"
-            },
-            "relationships": {
-                "items": {
-                    "data": [
-                        {
-                            "type": "items",
-                            "id": "021_21081475-2-5"
-                        },
-                        {
-                            "type": "items",
-                            "id": "078_24602396_offer171"
-                        }
-                    ]
-                }
-            }
+            "discounts": []
         },
-        {
-            "type": "carts",
-            "id": "50ea7615-ccfd-5c16-956c-fe561a5f9b7e",
-            "attributes": {
-                "priceMode": "GROSS_MODE",
-                "currency": "EUR",
-                "store": "DE",
-                "name": "Guest shopping cart",
-                "isDefault": false,
-                "totals": {
-                    "expenseTotal": 500,
-                    "discountTotal": 0,
-                    "taxTotal": 13856,
-                    "subtotal": 96773,
-                    "grandTotal": 97273,
-                    "priceToPay": 97273
-                },
-                "discounts": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/50ea7615-ccfd-5c16-956c-fe561a5f9b7e"
-            },
-            "relationships": {
-                "items": {
-                    "data": [
-                        {
-                            "type": "items",
-                            "id": "006_30692993"
-                        },
-                        {
-                            "type": "items",
-                            "id": "009_30692991"
-                        },
-                        {
-                            "type": "items",
-                            "id": "206_6429825"
-                        }
-                    ]
-                }
-            }
-        },
-      ...
+        "links": {
+            "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
+        }
     },
     "included": [
         {
             "type": "product-offer-availabilities",
-            "id": "offer95",
+            "id": "offer89",
             "attributes": {
                 "isNeverOutOfStock": true,
                 "availability": true,
                 "quantity": "0.0000000000"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer95/product-offer-availabilities"
+                "self": "https://glue.mysprykershop.com:80/product-offers/offer89/product-offer-availabilities"
             }
         },
         {
             "type": "product-offers",
-            "id": "offer95",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000006",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer95"
-            },
-            "relationships": {
-                "product-offer-availabilities": {
-                    "data": [
-                        {
-                            "type": "product-offer-availabilities",
-                            "id": "offer95"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "product-offer-availabilities",
-            "id": "offer69",
-            "attributes": {
-                "isNeverOutOfStock": true,
-                "availability": true,
-                "quantity": "0.0000000000"
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer69/product-offer-availabilities"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer69",
+            "id": "offer89",
             "attributes": {
                 "merchantSku": null,
                 "merchantReference": "MER000005",
-                "isDefault": false
+                "isDefault": true
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer69"
+                "self": "https://glue.mysprykershop.com:80/product-offers/offer89"
             },
             "relationships": {
                 "product-offer-availabilities": {
                     "data": [
                         {
                             "type": "product-offer-availabilities",
-                            "id": "offer69"
+                            "id": "offer89"
                         }
                     ]
                 }
@@ -1881,200 +1347,123 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
         },
         {
             "type": "product-offer-availabilities",
-            "id": "offer28",
+            "id": "offer48",
             "attributes": {
-                "isNeverOutOfStock": false,
+                "isNeverOutOfStock": true,
                 "availability": true,
-                "quantity": "10.0000000000"
+                "quantity": "20.0000000000"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer28/product-offer-availabilities"
+                "self": "https://glue.mysprykershop.com:80/product-offers/offer48/product-offer-availabilities"
             }
         },
         {
             "type": "product-offers",
-            "id": "offer28",
+            "id": "offer48",
             "attributes": {
                 "merchantSku": null,
                 "merchantReference": "MER000002",
                 "isDefault": false
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer28"
+                "self": "https://glue.mysprykershop.com:80/product-offers/offer48"
             },
             "relationships": {
                 "product-offer-availabilities": {
                     "data": [
                         {
                             "type": "product-offer-availabilities",
-                            "id": "offer28"
-                        }
-                    ]
-                }
-            }
-        },
-       ...
-            "relationships": {
-                "product-offers": {
-                    "data": [
-                        {
-                            "type": "product-offers",
-                            "id": "offer95"
-                        },
-                        {
-                            "type": "product-offers",
-                            "id": "offer69"
-                        },
-                        {
-                            "type": "product-offers",
-                            "id": "offer28"
+                            "id": "offer48"
                         }
                     ]
                 }
             }
         },
         {
-            "type": "items",
-            "id": "021_21081475-2-5",
+            "type": "concrete-products",
+            "id": "041_25904691",
             "attributes": {
-                "sku": "021_21081475",
-                "quantity": "1",
-                "groupKey": "021_21081475-2-5",
-                "abstractSku": "021",
-                "amount": null,
-                "productOfferReference": null,
-                "merchantReference": "MER000001",
-                "calculations": {
-                    "unitPrice": 10680,
-                    "sumPrice": 10680,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 10680,
-                    "sumGrossPrice": 10680,
-                    "unitTaxAmountFullAggregation": 1944,
-                    "sumTaxAmountFullAggregation": 1944,
-                    "sumSubtotalAggregation": 12180,
-                    "unitSubtotalAggregation": 12180,
-                    "unitProductOptionPriceAggregation": 1500,
-                    "sumProductOptionPriceAggregation": 1500,
-                    "unitDiscountAmountAggregation": 0,
-                    "sumDiscountAmountAggregation": 0,
-                    "unitDiscountAmountFullAggregation": 0,
-                    "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 12180,
-                    "sumPriceToPayAggregation": 12180
+                "sku": "041_25904691",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "041",
+                "name": "Canon PowerShot SX610",
+                "description": "Optical Quality Capture quality images from a distance with a 20.2 MP, 25mm wide, 18x optical zoom lens. Hybrid Auto mode records 4 seconds of video before each shot then compiles them all into a single video. With built in NFC and Wi-Fi its so easy to share your happy snaps to your favourite social media platforms. Expand your creative photography skills through applying a range of artistic presets such as toy camera or fish eye effect.  Capture images remotely and view live images from the camera via your phone and the Camera Connect app. Bring your memories to life as you experience videos on Full HD quality in 30p/MP4 recording.",
+                "attributes": {
+                    "hd_type": "Full HD",
+                    "megapixel": "20.2 MP",
+                    "optical_zoom": "18 x",
+                    "display": "LCD",
+                    "brand": "Canon",
+                    "color": "White"
                 },
-                "configuredBundle": null,
-                "configuredBundleItem": null,
-                "productConfigurationInstance": null,
-                "salesUnit": null,
-                "selectedProductOptions": [
-                    {
-                        "optionGroupName": "Three (3) year limited warranty",
-                        "sku": "OP_2_year_warranty",
-                        "optionName": "Two (2) year limited warranty",
-                        "price": 1000
-                    },
-                    {
-                        "optionGroupName": "Gift wrapping",
-                        "sku": "OP_gift_wrapping",
-                        "optionName": "Gift wrapping",
-                        "price": 500
-                    }
-                ]
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Canon PowerShot SX610",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Optical Quality Capture quality images from a distance with a 20.2 MP, 25mm wide, 18x optical zoom lens. Hybrid Auto mode records 4 seconds of video before",
+                "attributeNames": {
+                    "hd_type": "HD type",
+                    "megapixel": "Megapixel",
+                    "optical_zoom": "Optical zoom",
+                    "display": "Display",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/carts/29f5d310-e6f3-56ed-b64a-1fd834dbc486/items/021_21081475-2-5"
+                "self": "https://glue.mysprykershop.com:80/concrete-products/041_25904691"
             },
-            "relationships": {
-                "concrete-products": {
-                    "data": [
-                        {
-                            "type": "concrete-products",
-                            "id": "021_21081475"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "product-offer-availabilities",
-            "id": "offer171",
-            "attributes": {
-                "isNeverOutOfStock": true,
-                "availability": true,
-                "quantity": "0.0000000000"
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer171/product-offer-availabilities"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer171",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000006",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer171"
-            },
-            "relationships": {
-                "product-offer-availabilities": {
-                    "data": [
-                        {
-                            "type": "product-offer-availabilities",
-                            "id": "offer171"
-                        }
-                    ]
-                }
-            }
-        },
-        ...
             "relationships": {
                 "product-offers": {
                     "data": [
                         {
                             "type": "product-offers",
-                            "id": "offer171"
+                            "id": "offer89"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer48"
                         }
                     ]
                 }
             }
         },
         {
-            "type": "items",
-            "id": "078_24602396_offer171",
+            "type": "guest-cart-items",
+            "id": "041_25904691_offer48",
             "attributes": {
-                "sku": "078_24602396",
-                "quantity": "1",
-                "groupKey": "078_24602396_offer171",
-                "abstractSku": "078",
+                "sku": "041_25904691",
+                "quantity": 21,
+                "groupKey": "041_25904691_offer48",
+                "abstractSku": "041",
                 "amount": null,
-                "productOfferReference": "offer171",
-                "merchantReference": "MER000006",
+                "productOfferReference": "offer48",
+                "merchantReference": "MER000002",
                 "calculations": {
-                    "unitPrice": 21747,
-                    "sumPrice": 21747,
+                    "unitPrice": 10520,
+                    "sumPrice": 220920,
                     "taxRate": 19,
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
-                    "unitGrossPrice": 21747,
-                    "sumGrossPrice": 21747,
-                    "unitTaxAmountFullAggregation": 3472,
-                    "sumTaxAmountFullAggregation": 3472,
-                    "sumSubtotalAggregation": 21747,
-                    "unitSubtotalAggregation": 21747,
+                    "unitGrossPrice": 10520,
+                    "sumGrossPrice": 220920,
+                    "unitTaxAmountFullAggregation": 1680,
+                    "sumTaxAmountFullAggregation": 35273,
+                    "sumSubtotalAggregation": 220920,
+                    "unitSubtotalAggregation": 10520,
                     "unitProductOptionPriceAggregation": 0,
                     "sumProductOptionPriceAggregation": 0,
                     "unitDiscountAmountAggregation": 0,
                     "sumDiscountAmountAggregation": 0,
                     "unitDiscountAmountFullAggregation": 0,
                     "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 21747,
-                    "sumPriceToPayAggregation": 21747
+                    "unitPriceToPayAggregation": 10520,
+                    "sumPriceToPayAggregation": 220920
                 },
                 "configuredBundle": null,
                 "configuredBundleItem": null,
@@ -2083,153 +1472,17 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/carts/29f5d310-e6f3-56ed-b64a-1fd834dbc486/items/078_24602396_offer171"
+                "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49/guest-cart-items/041_25904691_offer48"
             },
             "relationships": {
                 "concrete-products": {
                     "data": [
                         {
                             "type": "concrete-products",
-                            "id": "078_24602396"
+                            "id": "041_25904691"
                         }
                     ]
                 }
-            }
-        },
-        {
-            "type": "product-offer-availabilities",
-            "id": "offer54",
-            "attributes": {
-                "isNeverOutOfStock": true,
-                "availability": true,
-                "quantity": "0.0000000000"
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer54/product-offer-availabilities"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer54",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000005",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer54"
-            },
-            "relationships": {
-                "product-offer-availabilities": {
-                    "data": [
-                        {
-                            "type": "product-offer-availabilities",
-                            "id": "offer54"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "product-offer-availabilities",
-            "id": "offer13",
-            "attributes": {
-                "isNeverOutOfStock": false,
-                "availability": false,
-                "quantity": "0.0000000000"
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer13/product-offer-availabilities"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer13",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000002",
-                "isDefault": false
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer13"
-            },
-            "relationships": {
-                "product-offer-availabilities": {
-                    "data": [
-                        {
-                            "type": "product-offer-availabilities",
-                            "id": "offer13"
-                        }
-                    ]
-                }
-            }
-        },
-...
-        {
-            "type": "product-offer-availabilities",
-            "id": "offer57",
-            "attributes": {
-                "isNeverOutOfStock": true,
-                "availability": true,
-                "quantity": "0.0000000000"
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer57/product-offer-availabilities"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer57",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000005",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer57"
-            },
-            "relationships": {
-                "product-offer-availabilities": {
-                    "data": [
-                        {
-                            "type": "product-offer-availabilities",
-                            "id": "offer57"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "product-offer-availabilities",
-            "id": "offer16",
-            "attributes": {
-                "isNeverOutOfStock": false,
-                "availability": false,
-                "quantity": "0.0000000000"
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer16/product-offer-availabilities"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer16",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000002",
-                "isDefault": false
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer16"
-            },
-            "relationships": {
-                "product-offer-availabilities": {
-                    "data": [
-                        {
-                            "type": "product-offer-availabilities",
-                            "id": "offer16"
-                            ...
-                       
             }
         }
     ]
@@ -2242,137 +1495,30 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 ```json
 {
-    "data": [
-        {
-            "type": "guest-carts",
-            "id": "29f5d310-e6f3-56ed-b64a-1fd834dbc486",
-            "attributes": {
-                "priceMode": "GROSS_MODE",
-                "currency": "EUR",
-                "store": "DE",
-                "name": "SoniaCart1_71221",
-                "isDefault": false,
-                "totals": {
-                    "expenseTotal": 0,
-                    "discountTotal": 0,
-                    "taxTotal": 5416,
-                    "subtotal": 33927,
-                    "grandTotal": 33927,
-                    "priceToPay": 33927
-                },
-                "discounts": []
+    "data": {
+        "type": "guest-carts",
+        "id": "6851dc6a-ebed-52ed-b229-81a35fe94c49",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "Shopping cart",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 0,
+                "taxTotal": 35273,
+                "subtotal": 220920,
+                "grandTotal": 220920,
+                "priceToPay": 220920
             },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/29f5d310-e6f3-56ed-b64a-1fd834dbc486"
-            },
-            "relationships": {
-                "items": {
-                    "data": [
-                        {
-                            "type": "items",
-                            "id": "021_21081475-2-5"
-                        },
-                        {
-                            "type": "items",
-                            "id": "078_24602396_offer171"
-                        }
-                    ]
-                }
-            }
+            "discounts": []
         },
-        ...
+        "links": {
+            "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
+        }
+    },
     "included": [
-        {
-            "type": "product-offer-prices",
-            "id": "offer95",
-            "attributes": {
-                "price": 9078,
-                "prices": [
-                    {
-                        "priceTypeName": "DEFAULT",
-                        "netAmount": null,
-                        "grossAmount": 9078,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        },
-                        "volumePrices": []
-                    }
-                ]
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer95/product-offer-prices"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer95",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000006",
-                "isDefault": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer95"
-            },
-            "relationships": {
-                "product-offer-prices": {
-                    "data": [
-                        {
-                            "type": "product-offer-prices",
-                            "id": "offer95"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "product-offer-prices",
-            "id": "offer69",
-            "attributes": {
-                "price": 9612,
-                "prices": [
-                    {
-                        "priceTypeName": "DEFAULT",
-                        "netAmount": null,
-                        "grossAmount": 9612,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        },
-                        "volumePrices": []
-                    }
-                ]
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer69/product-offer-prices"
-            }
-        },
-        {
-            "type": "product-offers",
-            "id": "offer69",
-            "attributes": {
-                "merchantSku": null,
-                "merchantReference": "MER000005",
-                "isDefault": false
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer69"
-            },
-            "relationships": {
-                "product-offer-prices": {
-                    "data": [
-                        {
-                            "type": "product-offer-prices",
-                            "id": "offer69"
-                        }
-                    ]
-                }
-            }
-        },
-        ...
         {
             "type": "product-offer-prices",
             "id": "offer89",
@@ -2409,7 +1555,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer89/product-offer-prices"
+                "self": "https://glue.mysprykershop.com:80/product-offers/offer89/product-offer-prices"
             }
         },
         {
@@ -2421,7 +1567,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "isDefault": true
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer89"
+                "self": "https://glue.mysprykershop.com:80/product-offers/offer89"
             },
             "relationships": {
                 "product-offer-prices": {
@@ -2470,9 +1616,136 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/product-offers/offer48/product-offer-prices"
+                "self": "https://glue.mysprykershop.com:80/product-offers/offer48/product-offer-prices"
             }
-     ...
+        },
+        {
+            "type": "product-offers",
+            "id": "offer48",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000002",
+                "isDefault": false
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com:80/product-offers/offer48"
+            },
+            "relationships": {
+                "product-offer-prices": {
+                    "data": [
+                        {
+                            "type": "product-offer-prices",
+                            "id": "offer48"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "concrete-products",
+            "id": "041_25904691",
+            "attributes": {
+                "sku": "041_25904691",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "041",
+                "name": "Canon PowerShot SX610",
+                "description": "Optical Quality Capture quality images from a distance with a 20.2 MP, 25mm wide, 18x optical zoom lens. Hybrid Auto mode records 4 seconds of video before each shot then compiles them all into a single video. With built in NFC and Wi-Fi its so easy to share your happy snaps to your favourite social media platforms. Expand your creative photography skills through applying a range of artistic presets such as toy camera or fish eye effect.  Capture images remotely and view live images from the camera via your phone and the Camera Connect app. Bring your memories to life as you experience videos on Full HD quality in 30p/MP4 recording.",
+                "attributes": {
+                    "hd_type": "Full HD",
+                    "megapixel": "20.2 MP",
+                    "optical_zoom": "18 x",
+                    "display": "LCD",
+                    "brand": "Canon",
+                    "color": "White"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Canon PowerShot SX610",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Optical Quality Capture quality images from a distance with a 20.2 MP, 25mm wide, 18x optical zoom lens. Hybrid Auto mode records 4 seconds of video before",
+                "attributeNames": {
+                    "hd_type": "HD type",
+                    "megapixel": "Megapixel",
+                    "optical_zoom": "Optical zoom",
+                    "display": "Display",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com:80/concrete-products/041_25904691"
+            },
+            "relationships": {
+                "product-offers": {
+                    "data": [
+                        {
+                            "type": "product-offers",
+                            "id": "offer89"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer48"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "guest-cart-items",
+            "id": "041_25904691_offer48",
+            "attributes": {
+                "sku": "041_25904691",
+                "quantity": 21,
+                "groupKey": "041_25904691_offer48",
+                "abstractSku": "041",
+                "amount": null,
+                "productOfferReference": "offer48",
+                "merchantReference": "MER000002",
+                "calculations": {
+                    "unitPrice": 10520,
+                    "sumPrice": 220920,
+                    "taxRate": 19,
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitGrossPrice": 10520,
+                    "sumGrossPrice": 220920,
+                    "unitTaxAmountFullAggregation": 1680,
+                    "sumTaxAmountFullAggregation": 35273,
+                    "sumSubtotalAggregation": 220920,
+                    "unitSubtotalAggregation": 10520,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 10520,
+                    "sumPriceToPayAggregation": 220920
+                },
+                "configuredBundle": null,
+                "configuredBundleItem": null,
+                "productConfigurationInstance": null,
+                "salesUnit": null,
+                "selectedProductOptions": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49/guest-cart-items/041_25904691_offer48"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "041_25904691"
+                        }
+                    ]
+                }
+            }
         }
     ]
 }
@@ -2626,7 +1899,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | code | String | Discount code applied to the cart. |
 | amount | Integer | Discount amount applied to the cart. |
 
-**Included resources**
+**Included resource attributes**
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |

@@ -210,7 +210,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 <details>
 <summary markdown='span'>Request sample with product offers</summary>
 
-`POST https://glue.mysprykershop.com/guest-cart-items`
+`POST https://glue.mysprykershop.com/guest-cart-items?include=items`
 
 ```json
 {
@@ -255,8 +255,8 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |    
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
-| productOfferReference | String ||Unique identifier of the Product Offer in the system. |
-| merchantReference| String| ✓ | Unique identifier of the merchant in the system.
+| productOfferReference | String |Required when adding a product offer to cart|Unique identifier of the product offer to a cart. |
+| merchantReference| String| ✓ | Unique identifier of the merchant.
 
 {% info_block infoBox "Conversion" %}
 
@@ -1411,34 +1411,31 @@ It is the responsibility of the API Client to track whether the selected items a
 {
     "data": {
         "type": "guest-carts",
-        "id": "beec4b46-5d78-5d20-81f4-1465659277b8",
+        "id": "6851dc6a-ebed-52ed-b229-81a35fe94c49",
         "attributes": {
             "priceMode": "GROSS_MODE",
             "currency": "EUR",
             "store": "DE",
-            "name": "newcart",
+            "name": "Shopping cart",
             "isDefault": true,
             "totals": {
                 "expenseTotal": 0,
                 "discountTotal": 0,
-                "taxTotal": 44988,
-                "subtotal": 281770,
-                "grandTotal": 281770,
-                "priceToPay": 281770
+                "taxTotal": 35273,
+                "subtotal": 220920,
+                "grandTotal": 220920,
+                "priceToPay": 220920
             },
             "discounts": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/beec4b46-5d78-5d20-81f4-1465659277b8"
+            "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
+        },
         "relationships": {
-            "items": {
+            "guest-cart-items": {
                 "data": [
                     {
-                        "type": "items",
-                        "id": "041_25904691"
-                    },
-                    {
-                        "type": "items",
+                        "type": "guest-cart-items",
                         "id": "041_25904691_offer48"
                     }
                 ]
@@ -1447,54 +1444,11 @@ It is the responsibility of the API Client to track whether the selected items a
     },
     "included": [
         {
-            "type": "items",
-            "id": "041_25904691",
-            "attributes": {
-                "sku": "041_25904691",
-                "quantity": 5,
-                "groupKey": "041_25904691",
-                "abstractSku": "041",
-                "amount": null,
-                "productOfferReference": null,
-                "merchantReference": null,
-                "calculations": {
-                    "unitPrice": 1650,
-                    "sumPrice": 8250,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 1650,
-                    "sumGrossPrice": 8250,
-                    "unitTaxAmountFullAggregation": 263,
-                    "sumTaxAmountFullAggregation": 1317,
-                    "sumSubtotalAggregation": 8250,
-                    "unitSubtotalAggregation": 1650,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 0,
-                    "sumDiscountAmountAggregation": 0,
-                    "unitDiscountAmountFullAggregation": 0,
-                    "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 1650,
-                    "sumPriceToPayAggregation": 8250
-                },
-                "configuredBundle": null,
-                "configuredBundleItem": null,
-                "productConfigurationInstance": null,
-                "salesUnit": null,
-                "selectedProductOptions": []
-            },
-              },
-            "links": {
-                "self": "https://glue.mysprykershop.com/carts/beec4b46-5d78-5d20-81f4-1465659277b8/items/041_25904691"
-            }
-        },
-        {
-            "type": "items",
+            "type": "guest-cart-items",
             "id": "041_25904691_offer48",
             "attributes": {
                 "sku": "041_25904691",
-                "quantity": 26,
+                "quantity": 21,
                 "groupKey": "041_25904691_offer48",
                 "abstractSku": "041",
                 "amount": null,
@@ -1502,15 +1456,15 @@ It is the responsibility of the API Client to track whether the selected items a
                 "merchantReference": "MER000002",
                 "calculations": {
                     "unitPrice": 10520,
-                    "sumPrice": 273520,
+                    "sumPrice": 220920,
                     "taxRate": 19,
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
                     "unitGrossPrice": 10520,
-                    "sumGrossPrice": 273520,
+                    "sumGrossPrice": 220920,
                     "unitTaxAmountFullAggregation": 1680,
-                    "sumTaxAmountFullAggregation": 43671,
-                    "sumSubtotalAggregation": 273520,
+                    "sumTaxAmountFullAggregation": 35273,
+                    "sumSubtotalAggregation": 220920,
                     "unitSubtotalAggregation": 10520,
                     "unitProductOptionPriceAggregation": 0,
                     "sumProductOptionPriceAggregation": 0,
@@ -1519,7 +1473,7 @@ It is the responsibility of the API Client to track whether the selected items a
                     "unitDiscountAmountFullAggregation": 0,
                     "sumDiscountAmountFullAggregation": 0,
                     "unitPriceToPayAggregation": 10520,
-                    "sumPriceToPayAggregation": 273520
+                    "sumPriceToPayAggregation": 220920
                 },
                 "configuredBundle": null,
                 "configuredBundleItem": null,
@@ -1528,7 +1482,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/beec4b46-5d78-5d20-81f4-1465659277b8/guest-cart-items/019_21081473_offer48"
+                "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49/guest-cart-items/041_25904691_offer48"
             }
         }
     ]
@@ -1690,8 +1644,8 @@ It is the responsibility of the API Client to track whether the selected items a
 | guest-cart-items | groupKey | String | Unique item identifier. The value is generated based on product parameters. |
 | guest-cart-items |abstractSku |String |SKU number of the abstract product to which the concrete belongs. |
 | guest-cart-items | amount | Integer | Amount of the products in the cart. |
-| guest-cart-items |productOfferReference | String | Unique identifier of the Product Offer in the system. |
-| guest-cart-items | merchantReference | String | Unique identifier of the Merchant in the system. |
+| guest-cart-items |productOfferReference | String | Unique identifier of the Product Offer. |
+| guest-cart-items | merchantReference | String | Unique identifier of the Merchant. |
 | guest-cart-items | unitPrice | Integer | Single item price without assuming is it net or gross. This value should be used everywhere a price is disabled. It allows switching the tax mode without side effects. |
 | guest-cart-items | sumPrice | Integer | Sum of all items prices calculated. |
 | guest-cart-items | taxRate | Integer | Current tax rate in per cent. |
@@ -1753,7 +1707,7 @@ To change item quantity, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
+| {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
 | {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart) with the guest cart items included. |
 
 ### Request
@@ -1816,7 +1770,7 @@ To remove an item from a guest cart, send the request:
 ***
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
+| {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
 | {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart) with the guest cart items included. |
 
 ### Request

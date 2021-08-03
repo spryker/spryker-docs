@@ -58,8 +58,8 @@ To retrieve general information about an abstract product, send the request:
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options` | Retrieve information about the abstract product with SKU `001` with its product options. |
 | `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
-| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve merchant product with SKU 109.|
-| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve merchant product with SKU 109 including the merchant information. |
+| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve the merchant product with SKU 109.|
+| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve the merchant product with SKU 109 including the merchant information. |
 
 
 ### Response

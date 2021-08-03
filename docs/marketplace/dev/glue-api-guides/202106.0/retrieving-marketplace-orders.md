@@ -44,11 +44,11 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | REQUEST | USAGE  |
 | --------------------- | ------------------ |
-| `GET https://glue.mysprykershop.com/orders`  | Retrieve all customer’s orders.  |
+| `GET https://glue.mysprykershop.com/orders`  | Retrieve all orders of the customer.  |
 | `GET https://glue.mysprykershop.com/orders?page[limit]=10`  | Retrieve 10 orders. |
 | `GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10` | Retrieve orders 11 through 20.  |
 | `GET https://glue.mysprykershop.com/orders?page[offset]=20`  | Retrieve all orders starting from the twenty-first order.  |
-| `GET https://glue.mysprykershop.com/orders?include=merchants`  | Retrieve all customer’s orders with the information on merchants included. |
+| `GET https://glue.mysprykershop.com/orders?include=merchants`  | Retrieve all orders of the customer with the information on merchants included. |
 
 ### Response
 

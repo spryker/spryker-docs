@@ -18,11 +18,13 @@
     </a>
 {% elsif page.url == sidebar_item_url %}
 <li class="active-page-item">
-    <a title="{{item.title}}" href="{{sidebar_item_url}}" class="sidebar-nav__link {% if item.url and item.nested %}sidebar-nav__link--shifted{% endif %}">{{item.title}}</a>
     {% if item.url and item.nested %}
-        <a href="#" class="sidebar-nav__opener sidebar-nav__opener--small">
+        <a title="{{item.title}}" href="#" class="sidebar-nav__opener sidebar-nav__link {% if item.url and item.nested %}sidebar-nav__link--shifted{% endif %}">
             <i class="icon-arrow-right"></i>
+            <strong class="sidebar-nav__title">{{item.title}}</strong>
         </a>
+    {% else %}
+        <a title="{{item.title}}" href="{{sidebar_item_url}}" class="sidebar-nav__link {% if item.url and item.nested %}sidebar-nav__link--shifted{% endif %}">{{item.title}}</a>
     {% endif %}
 {% else %}
 <li>

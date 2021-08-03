@@ -88,6 +88,14 @@
             td,
             th {
                 word-break: break-word;
+
+                &:first-child {
+                    width: 35%;
+
+                    @include media("<tablet") {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -290,7 +298,7 @@
     }
 
     ol {
-        padding: 0;
+        padding: 0 0 0 40px;
         list-style-position: inside;
 
         & > li {
@@ -298,6 +306,14 @@
                 display: inline;
             }
         }
+
+        ol ol li {
+            list-style-type: decimal;
+        }
+    }
+
+    & > ol {
+        padding: 0;
     }
 
     .table-wrapper {

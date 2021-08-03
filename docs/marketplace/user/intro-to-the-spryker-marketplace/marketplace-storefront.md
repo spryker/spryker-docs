@@ -1,20 +1,20 @@
-*Marketplace Storefront* is a web application designed for the [marketplace business model](./{{ site.version }}/marketplace-storefront.html). Being based on the regular Storefront, it supports all the Spryker Commerce OS features. Marketplace specific functionalities enable buyers to effectively browse shops, view and buy products from multiple merchants.
+*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/marketplace/user/intro-to-the-spryker-marketplace/{{ site.version }}/marketplace-concept.html). Based on the regular Storefront, it supports all Spryker Commerce OS features. Marketplace functionality enables buyers to browse for products, view and purchase them across different merchants.
 
 In every section of the Marketplace Storefront, products are either sorted or customers can filter them by merchants.
 
 ## Catalog and Search pages
 
-On the *Catalog* and *Search* pages, the left-side navigation menu contains the *Merchant* section. In this section, customers can select one or more merchants they want to view products from.
+On the *Catalog* and *Search* pages, the left-side navigation menu contains the *Merchant* filter. Customers can select one or more merchants from which to view products.
 
 ![Catalog and Search pages](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/catalog-and-search-pages.png)
 
 ## Product Details pages
 
-On the *Product Details* page, the *Sold by* section contains the product itself and the offers of all the merchants for it. Each entry has a price and a link to the respective [merchant's profile page](#merchant profiles).
+On the *Product Details* page, the *Sold by* section contains the [marketplace products](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-feature-overview.html) and the [offers](docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer-feature-overview.html) from other merchants for that product. Each entry has a price and a link to the respective [merchant's profile page](#merchant-profiles).
 
 ![Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/product-details-page.png)
 
-When a customer opens a *Product Details* page, in the *Sold by* section, the product is pre-selected, and they can switch to any other offer. The pre-selected product is always first on the list and is followed by offers in the ascending order of price. If the product is not available, but there are offers for it, the cheapest offer is pre-selected.
+In the *Sold by* section, when a customer opens a *Product Details* page, the product is pre-selected, and they can switch to any other offer. In the list, the pre-selected [marketplace product](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-feature-overview.html) always appears first, followed by offers in ascending order of price. If the product is not available, but there are offers for it, the cheapest offer is pre-selected.
 
 The sorting of the *Sold by* section is configurable on a project level.
 
@@ -30,10 +30,10 @@ On the *Cart* page, a merchant relation is displayed for each product. The merch
 
 ## Checkout
 
-At the Shipment checkout step, a merchant relation is displayed for each product. The merchant names are clickable and lead to the merchant profile pages.
+At the Shipment checkout step, a merchant relation is displayed for each item. The merchant names are clickable and lead to the merchant profile pages.
 
 
-If a customer is ordering products from multiple merchants, the products are going to be shipped from multiple location, so the [shipments](https://documentation.spryker.com/docs/split-delivery-overview) are automatically grouped by merchants.
+If a customer is ordering products from multiple merchants, the products are going to be shipped from multiple locations, so the shipments <!---LINK--> are automatically grouped by merchants.
 
 ![Shipment step](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/shipment-step.png)
 
@@ -44,13 +44,13 @@ At the Summary checkout step,  merchant relation is displayed for each product. 
 
 ### Order Details pages
 
- On the *Order Details* page, a merchant relation is displayed for each product. The merchant names are clickable and lead to the merchant profile pages. If a customer ordered products from multiple merchants, the products are grouped by merchants, which also represents the order's shipments.
+On the *Order Details* page, a merchant relation is displayed for each product. The merchant names are clickable and lead to the merchant profile pages. If a customer ordered products from multiple merchants, the products are grouped by merchants, which also represents the order's shipments.
 
- ![Order Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/order-details-page.png)
+![Order Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/order-details-page.png)
 
 If the customer clicks **Reorder all**, the items are added to their current cart with the merchant relations from the order.
 
-### Returns
+### Marketplace Returns
 
 On the *Create Return* page, products are grouped by merchants. Merchant names are clickable and lead to the merchant profile pages. A customer can return products from one merchant at a time. After creating a return for the products of one merchant, they can create a return for the products of another merchant from the same order.
 
@@ -59,8 +59,7 @@ On the *Create Return* page, products are grouped by merchants. Merchant names a
 The *Return Details* page follows the same behavior.
 
 
-### Wishlists
-
+### Marketplace Wishlists
 
 When a customer adds a product to a wishlist, the product is added with the merchant relation selected in the *Sold by* section.
 

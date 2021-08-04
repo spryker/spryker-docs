@@ -156,7 +156,7 @@ To retrieve all carts, send the request:
 * To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
 * To retrieve information about the company user a cart is shared with, include `shared-carts` and `company-users`.
 * To retrieve product labels of the products in a cart, include `items`, `concrete-products`, and `product-labels`.
-* To retrieve product offers, include `items` and `concrete-products`.
+* To retrieve product offers, include `items`, `concrete-products`, and `product-offers`.
 * To retrieve product offer availabilities, include `items`, `concrete-products`, and `product-offer-availabilities`.
 * To retrieve product offer prices, include `items`, `concrete-products`, and `product-offer-prices`.
 

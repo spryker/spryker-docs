@@ -321,8 +321,8 @@ Response sample:
 <a name="product-offer-availabilities"></a>
 
 |ATTRIBUTE  |TYPE  |DESCRIPTION  |
-|---------|---------|---------|---------|
-| isNeverOutOfStock          |  Boolean         | Boolean to show if this is an item that is never out of stock.          |
+|---------|---------|---------|
+| isNeverOutOfStock          |  Boolean         | Shows if the product offer is never out of stock.          |
 | availability          | Boolean          |Defines if the product offer is available.           |
 | quantity          | Integer          |Stock of the product offer.           |
 

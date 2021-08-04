@@ -40,7 +40,7 @@ To search by products, send the request:
 | sort  | Sorts the search results   | For the list of possible values, run the [catalog search request and find the list under sortParamNames in the response. For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
 | page  | Sets the number of the search results page from which the results are retrieved | {% raw %}{{page_number}}{% endraw %}    |
 | ipp   | Sets the number of products per page  | {% raw %}{{number_of_products}}{% endraw %}  |
-| merchant_name | Filters the results by the merchant name.  ||
+| merchant_name | Filters the results by a merchant name.  ||
 
 
 

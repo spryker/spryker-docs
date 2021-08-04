@@ -17,7 +17,7 @@ To learn more about Shipment feature in the SCCOS, see [Shipment feature overvie
 
 ## Marketplace Shipment on the Storefront
 In the *Address* checkout step, you can define a common delivery address where all the shipments will be delivered.
-Then, in the *Shipment* checkout step, you can see that by default the products are grouped by merchant. For each shipment, you can select a delivery date (optional).
+Then, in the *Shipment* checkout step, you can see that by default the products are grouped by a merchant into different shipments. For each shipment, you can select a shipping method and a delivery date (optional).
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/shipment-to-single-address.png)
 
@@ -41,4 +41,3 @@ Every merchant can view only the shipment of their product offers and products o
 Are you a developer? See [Marketplace Shipment](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-shipment-feature-walkthrough.html) feature walkthrough <!---LINK--> for developers.
 
 {% endinfo_block %}
-

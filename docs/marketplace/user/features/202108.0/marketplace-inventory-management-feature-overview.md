@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Prod
 template: concept-topic-template
 ---
 
-The *Marketplace Inventory Management* feature includes maintaining stock and availability of product offers for sale in the Marketplace.
+The *Marketplace Inventory Management* feature includes maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.
 The *warehouse* is the physical place where your products are stored, and stock is the number of products available in the warehouse. 
 
 {% info_block infoBox "Info" %}
@@ -69,7 +69,6 @@ Are you a developer? See [Marketplace Inventory Management](/docs/marketplace/de
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
 | [Editing a product offer](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html#editing-a-product-offer)                            | [Managing warehouses](https://documentation.spryker.com/docs/managing-warehouses) <!--- UPDATE LINK-->                        |
-
 
 
 

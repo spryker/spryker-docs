@@ -28,7 +28,7 @@ def get_versions(versioned_page_urls)
     end
 end
 
-def is_multiversion(page)
+def can_be_versioned(page)
     product = page['product']
     role = page['role']
     versioned_categories = page.site.config['versioned_categories']
@@ -48,7 +48,7 @@ end
 Jekyll::Hooks.register :pages, :pre_render do |page, config|
     next page unless File.extname(page.path).match?(/md|html/)
     next page unless page.url.start_with? '/docs/'
-    next page unless is_multiversion page
+    next page unless can_be_versioned page
 
     setup_current_page_version page, config
     setup_all_page_versions page, config

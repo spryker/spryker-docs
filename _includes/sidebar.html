@@ -1,9 +1,0 @@
-{% assign sidebar_data = site.data.sidebars[page.sidebar].entries %}
-
-{% if page.version %}
-    {% assign current_version = page.version %}
-{% else %}
-    {% assign current_version = site.version %}
-{% endif %}
-
-{% render_sidebar sidebar_data current_version page.url %}

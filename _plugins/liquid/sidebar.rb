@@ -7,15 +7,30 @@ module Jekyll
     end
 
     def render(context)
-      @context = context
-      data = @markup.split(" ")
-      sidebar_data = @context[data[0].strip][0]
-      @version = @context[data[1].strip]
-      @page_url = @context[data[2].strip]
+        @context = context
+        @version = get_current_version
+        @page_url = get_page_url
+        sidebar_data = get_sidebar_data
 
-      return '' if sidebar_data.nil? or sidebar_data['nested'].nil?
+        return '' if sidebar_data.nil? or sidebar_data['nested'].nil?
 
-      '<ul class="sidebar-nav">' + build_sidebar_string(sidebar_data['nested']) + '</ul>'
+        '<ul class="sidebar-nav">' + build_sidebar_string(sidebar_data['nested']) + '</ul>'
+    end
+
+    def get_current_version()
+        !@context['page']['version'].nil? ? @context['page']['version'] : @context['site']['version']
+    end
+
+    def get_page_url()
+        @context['page']['url']
+    end
+
+    def get_sidebar_name()
+        @context['page']['sidebar']
+    end
+
+    def get_sidebar_data()
+        @context['site']['data']['sidebars'][get_sidebar_name]['entries'][0]
     end
 
     def build_sidebar_string(sidebar_data)

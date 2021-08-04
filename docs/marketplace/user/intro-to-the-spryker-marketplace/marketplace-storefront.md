@@ -1,3 +1,9 @@
+---
+title: Marketplace Storefront
+description: This document describes the peculiarities of the Marketplace Storefront application.
+template: concept-topic-template
+---
+
 *Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/marketplace/user/intro-to-the-spryker-marketplace/{{ site.version }}/marketplace-concept.html). Based on the regular Storefront, it supports all Spryker Commerce OS features. Marketplace functionality enables buyers to browse for products, view and purchase them across different merchants.
 
 In every section of the Marketplace Storefront, products are either sorted or customers can filter them by merchants.

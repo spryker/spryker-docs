@@ -1,0 +1,3312 @@
+title: SCOS Developer Guides
+entries:
+  - product: SCOS
+    nested:
+    - title: User guides
+      nested:
+        - title: About User Guides
+          url: /docs/scos/dev/user-guides/about-user-guid.html
+          include_versions:
+            - '201811.0'
+            - '201903.0'
+            - '201907.0'
+            - '202001.0'
+            - '202005.0'
+        - title: Back Office user guide
+          nested:
+            - title: Customers
+              nested:
+                - title: 'Customers, Customer Access, Customer Groups'
+                  nested:
+                    - title: Managing Customer Addresses
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/customers/customers-customer-access-customer-groups/managing-custom.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: References
+                  nested:
+                    - title: Customers- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/customers/references/customers-refer.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Customers
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/customers/customers.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+            - title: General Back Office Overview
+              url: /docs/scos/dev/user-guides/back-office-user-guide/general-back-of.html
+              include_versions:
+                - '201811.0'
+                - '201903.0'
+                - '201907.0'
+                - '202001.0'
+                - '202005.0'
+            - title: Products
+              nested:
+                - title: Product Barcode
+                  nested:
+                    - title: Product Barcodes
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-barcode/product-barcode.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Product reviews
+                  nested:
+                    - title: Product Reviews
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-reviews/product-reviews.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Managing Product Reviews
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-reviews/managing-produc.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Products
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/products/products.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Configurable bundle templates
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Configurable Bundle Templates- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/products/configurable-bundle-templates/references/configurable-bu.html
+                          include_versions:
+                            - '202001.0'
+                    - title: Managing Configurable Bundle Templates
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/configurable-bundle-templates/managing-config.html
+                      include_versions:
+                        - '202001.0'
+                    - title: Creating Configurable Bundle Templates
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/configurable-bundle-templates/creating-config.html
+                      include_versions:
+                        - '202001.0'
+                    - title: Configurable Bundle Templates
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/configurable-bundle-templates/configurable-bu.html
+                      include_versions:
+                        - '202001.0'
+                - title: Attributes
+                  nested:
+                    - title: Managing Attributes
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/attributes/managing-attrib.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: References
+                      nested:
+                        - title: Attributes- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/products/attributes/references/attributes-refe.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Creating a Product Attribute
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/attributes/creating-a-prod.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Attributes
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/attributes/attributes.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Creating Service Offerings
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/products/creating-servic.html
+                  include_versions:
+                    - '202001.0'
+                - title: Availability
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Availability- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/products/availability/references/availability-re.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Managing Products Availability
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/availability/managing-produc.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Product relations
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Product Relations- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-relations/references/product-relatio.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Creating a Product Relation
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-relations/creating-a-prod.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Managing Product Relations
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-relations/managing-produc.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Product Relations
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-relations/product-relatio.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Product lists
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Product Lists- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-lists/references/product-lists-r.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Creating a Product List
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-lists/creating-a-prod.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Managing Product Lists
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-lists/managing-produc.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Product Lists
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-lists/product-lists.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Product options
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Product Options- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-options/references/product-options.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Product Options
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-options/product-options.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Creating a Product Option
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-options/creating-a-prod.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Managing Product Options
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-options/managing-produc.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Product labels
+                  nested:
+                    - title: Product Labels
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-labels/product-labels.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: References
+                      nested:
+                        - title: Product Labels- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-labels/references/product-labels-.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Creating a Product Label
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-labels/creating-a-prod.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Managing Product Labels
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-labels/managing-produc.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Prioritizing Labels
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-labels/prioritizing-la.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Product sets
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Product Sets- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-sets/references/product-sets-re.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Creating a Product Set
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-sets/creating-a-prod.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Product Sets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-sets/product-sets.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Managing Product Sets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/products/product-sets/managing-produc.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+            - title: About the Back Offfice User Guide
+              url: /docs/scos/dev/user-guides/back-office-user-guide/about-the-back-.html
+              include_versions:
+                - '202001.0'
+                - '202005.0'
+            - title: Thresholds
+              nested:
+                - title: Threshold
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/thresholds/threshold.html
+                  include_versions:
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: References
+                  nested:
+                    - title: Threshold- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/thresholds/references/threshold-refer.html
+                      include_versions:
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Threshold Settings
+                  nested:
+                    - title: Managing Threshold Settings
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/thresholds/threshold-settings/managing-thresh.html
+                      include_versions:
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Global Threshold
+                  nested:
+                    - title: Managing Global Threshold
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/thresholds/global-threshold/managing-global.html
+                      include_versions:
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Merchant Relationships
+                  nested:
+                    - title: Managing Merchant Relationships Thresholds
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/thresholds/merchant-relationships/managing-mercha.html
+                      include_versions:
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+            - title: Category
+              nested:
+                - title: Creating Categories
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/category/creating-catego.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Managing Categories
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/category/managing-catego.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: References
+                  nested:
+                    - title: Category- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/category/references/category-refere.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Category
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/category/category.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Assigning Products to Categories
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/category/assigning-produ.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+            - title: Sales
+              nested:
+                - title: Sales
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/sales/sales-managemen.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                    - '202005.0'
+                - title: Reclamations
+                  nested:
+                    - title: Managing Reclamations
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/reclamations/managing-reclam.html
+                      include_versions:
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                        - '202005.0'
+                    - title: References
+                      nested:
+                        - title: Reclamations- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/sales/reclamations/references/reclamations-re.html
+                          include_versions:
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                            - '202005.0'
+                        - title: Reference information- reclamations
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/sales/reclamations/references/reclamations-re.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Managing reclamations
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/reclamations/managing-reclam.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Order matrix
+                  nested:
+                    - title: Order Matrix- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/order-matrix/order-matrix-re.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                        - '202005.0'
+                    - title: Reference information- order matrix
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/order-matrix/order-matrix-re.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Refunds
+                  nested:
+                    - title: Refunds- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/refunds/refunds-referen.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                        - '202005.0'
+                    - title: Reference information- refunds
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/refunds/refunds-referen.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Orders
+                  nested:
+                    - title: Managing Order Shipments
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/orders/managing-order-.html
+                      include_versions:
+                        - '202001.0'
+                        - '202005.0'
+                    - title: References
+                      nested:
+                        - title: Orders- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/sales/orders/references/orders-referenc.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                            - '202005.0'
+                        - title: Reference information- orders
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/sales/orders/references/orders-referenc.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Managing Orders
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/orders/managing-orders.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                        - '202005.0'
+                    - title: Managing order shipments
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/orders/managing-order-.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing orders
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/orders/managing-orders.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Returns
+                  nested:
+                    - title: Managing Returns
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/returns/managing-return.html
+                      include_versions:
+                        - '202005.0'
+                    - title: References
+                      nested:
+                        - title: Return Item States- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/sales/returns/references/return-item-sta.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Returns- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/sales/returns/references/returns-referen.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- return item states
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/sales/returns/references/return-item-sta.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Reference information- returns
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/sales/returns/references/returns-referen.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Managing returns
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/sales/returns/managing-return.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+            - title: Punch out
+              nested:
+                - title: References
+                  nested:
+                    - title: Punch Out- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/punch-out/references/punch-out-refer.html
+                      include_versions:
+                        - '201907.0'
+                        - '202001.0'
+                        - '202005.0'
+                    - title: Reference information- Punchout
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/punch-out/references/punch-out-refer.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Managing Transactions Log
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/punch-out/managing-transa.html
+                  include_versions:
+                    - '201907.0'
+                    - '202001.0'
+                    - '202005.0'
+                - title: Managing Punch Out Connections
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/punch-out/managing-puncho.html
+                  include_versions:
+                    - '201907.0'
+                    - '202001.0'
+                    - '202005.0'
+                - title: Punch Out
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/punch-out/punch-out.html
+                  include_versions:
+                    - '201907.0'
+                    - '202001.0'
+                    - '202005.0'
+                - title: Managing transactions log
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/punch-out/managing-transa.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+                - title: Managing Punch out connections
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/punch-out/managing-puncho.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+            - title: Navigation
+              nested:
+                - title: References
+                  nested:
+                    - title: Navigation Node Types
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/navigation/references/navigation-node.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Managing Navigation
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/navigation/managing-naviga.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Navigation
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/navigation/navigation-guid.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+            - title: Company account
+              nested:
+                - title: Company Account
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/company-account/company-account.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: References
+                  nested:
+                    - title: Company Account- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/company-account/references/company-account.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Managing a Company Account
+                  nested:
+                    - title: Managing Companies
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/company-account/managing-a-company-account/managing-compan.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+            - title: Discount
+              nested:
+                - title: References
+                  nested:
+                    - title: Discount Conditions- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/discount/references/discount-condit.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Discount- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/discount/references/discount-refere.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Voucher Codes- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/discount/references/voucher-codes-r.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Discount Calculation- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/discount/references/discount-calcul.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Token Description Tables
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/discount/references/token-descripti.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Creating a Discount
+                  nested:
+                    - title: Creating a Discount Voucher
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/discount/creating-a-discount/creating-a-disc.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Creating a Cart Rule Discount
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/discount/creating-a-discount/creating-a-cart.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Discount
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/discount/discount-1.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Managing Discounts
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/discount/managing-discou.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+            - title: Merchants
+              nested:
+                - title: Merchants
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/merchants/merchants.html
+                  include_versions:
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Merchants and merchant relations
+                  nested:
+                    - title: Managing Merchants
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-mercha.html
+                      include_versions:
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+            - title: Dashboard
+              nested:
+                - title: Dashboard
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/dashboard/dashboard.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                    - '202005.0'
+                - title: References
+                  nested:
+                    - title: Dashboard- Reference Information
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/dashboard/references/dashboard-refer.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                        - '202005.0'
+                - title: Reference information- Dashboard
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/dashboard/reference-infor.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+            - title: Price
+              nested:
+                - title: Scheduled prices
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Scheduled Prices- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/price/scheduled-prices/references/scheduled-price.html
+                          include_versions:
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Managing Scheduled Prices
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/price/scheduled-prices/managing-schedu.html
+                      include_versions:
+                        - '202001.0'
+                    - title: Creating Scheduled Prices
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/price/scheduled-prices/creating-schedu.html
+                      include_versions:
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Scheduled Prices
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/price/scheduled-prices/managing-schedu.html
+                      include_versions:
+                        - '201907.0'
+            - title: Taxes
+              nested:
+                - title: Taxes
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/taxes/taxes.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Tax Rates and Tax Sets
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Taxes- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Managing Tax Rates and Sets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/taxes/tax-rates-and-tax-sets/managing-tax-ra.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+            - title: Glossary
+              nested:
+                - title: Glossary
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/glossary/glossary.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Managing Glossary
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/glossary/managing-glossa.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+            - title: Content Management
+              nested:
+                - title: Blocks
+                  nested:
+                    - title: References
+                      nested:
+                        - title: CMS Block- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/blocks/references/cms-block-refer.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: CMS Block
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/blocks/cms-block-guide.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Assigning Blocks to Category or Product Pages
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/blocks/assigning-block.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Defining Validity Period for CMS Blocks
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/blocks/defining-validi.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Managing CMS Blocks
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/blocks/managing-cms-bl.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Creating a CMS Block
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/blocks/creating-cms-bl.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Content Management System
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/cms-guide.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Content items
+                  nested:
+                    - title: Content Item Widgets
+                      nested:
+                        - title: Adding Content Item Widgets to Pages and Blocks
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-items/content-item-widgets/adding-content-.html
+                          include_versions:
+                            - '202001.0'
+                        - title: Content Item Widgets
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-items/content-item-widgets/content-item-wi.html
+                          include_versions:
+                            - '202001.0'
+                        - title: References
+                          nested:
+                            - title: Content Item Widgets types- Reference
+                                Information
+                              url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-items/content-item-widgets/references/content-item-wi.html
+                              include_versions:
+                                - '202001.0'
+                        - title: Editing Content Item Widgets
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-items/content-item-widgets/editing-content.html
+                          include_versions:
+                            - '202001.0'
+                    - title: References
+                      nested:
+                        - title: Content Items- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-items/references/content-items-r.html
+                          include_versions:
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Editing Content Items
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-items/editing-content.html
+                      include_versions:
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Creating Content Items
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-items/creating-conten.html
+                      include_versions:
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Content Items
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-items/content-items-g.html
+                      include_versions:
+                        - '201907.0'
+                - title: Redirects
+                  nested:
+                    - title: Redirects
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/redirects/redirects.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: References
+                      nested:
+                        - title: CMS Redirects- References
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/redirects/references/cms-redirects-r.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Creating CMS Redirects
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/redirects/creating-cms-re.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Managing CMS Redirects
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/redirects/editing-cms-red.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Pages
+                  nested:
+                    - title: References
+                      nested:
+                        - title: CMS Pages- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/pages/references/cms-pages-refer.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Managing CMS Pages
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/pages/managing-cms-pa.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: CMS Pages
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/pages/cms-pages.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Editing CMS Pages
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/pages/editing-cms-pag.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Creating a CMS Page
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/pages/creating-a-cms-.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: CMS Pages Versioning
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/pages/cms-pages-versi.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Assigning Blocks to Category and Product Pages
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/pages/assigning-block.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                - title: Slots
+                  nested:
+                    - title: Adding Content to Storefront Pages Using Templates &
+                        Slots
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/slots/adding-content-.html
+                      include_versions:
+                        - '202001.0'
+                    - title: References
+                      nested:
+                        - title: Slots- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/slots/references/slots-reference.html
+                          include_versions:
+                            - '202001.0'
+                    - title: Managing Slots
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/slots/managing-slots.html
+                      include_versions:
+                        - '202001.0'
+                    - title: Slots
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/slots/slots.html
+                      include_versions:
+                        - '202001.0'
+                - title: Content Item Widgets
+                  nested:
+                    - title: Adding Content Item Widgets to Pages and Blocks
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-item-widgets/adding-content-.html
+                      include_versions:
+                        - '201907.0'
+                    - title: Content Item Widgets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-item-widgets/content-item-wi.html
+                      include_versions:
+                        - '201907.0'
+                    - title: References
+                      nested:
+                        - title: Content Item Widgets types- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-item-widgets/references/content-item-wi.html
+                          include_versions:
+                            - '201907.0'
+                    - title: Editing Content Item Widgets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-item-widgets/editing-content.html
+                      include_versions:
+                        - '201907.0'
+                - title: Content Widgets
+                  nested:
+                    - title: Content Widgets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content-management/content-widgets/content-widgets.html
+                      include_versions:
+                        - '201903.0'
+            - title: Maintenance
+              nested:
+                - title: Maintenance
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/maintenance/maintenance.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                    - '202005.0'
+            - title: Administration
+              nested:
+                - title: Warehouses
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Warehouses- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/warehouses/references/warehouses-refe.html
+                          include_versions:
+                            - '202001.0'
+                            - '202005.0'
+                        - title: Reference information- Warehouses
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/warehouses/references/warehouses-refe.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Creating a Warehouse
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/warehouses/creating-a-ware.html
+                      include_versions:
+                        - '202001.0'
+                        - '202005.0'
+                    - title: Managing Warehouses
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/warehouses/managing-wareho.html
+                      include_versions:
+                        - '202001.0'
+                        - '202005.0'
+                    - title: Creating a warehouse
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/warehouses/creating-a-ware.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing warehouses
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/warehouses/managing-wareho.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Payment Management
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Payment Methods- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/payment-management/references/payment-methods.html
+                          include_versions:
+                            - '202001.0'
+                    - title: Managing Payment Methods
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/payment-management/managing-paymen.html
+                      include_versions:
+                        - '202001.0'
+                - title: Administration
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/administration/administration-.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                - title: Stores
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/administration/stores-referenc.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                    - '202009.0'
+                    - '202108.0'
+                - title: Shipment
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Delivery Methods- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/shipment/references/delivery-method.html
+                          include_versions:
+                            - '202001.0'
+                    - title: Shipment
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/shipment/shipment-manage.html
+                      include_versions:
+                        - '201903.0'
+                        - '202001.0'
+                    - title: Creating a Carrier Company
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/shipment/creating-a-carr.html
+                      include_versions:
+                        - '201903.0'
+                        - '202001.0'
+                    - title: Creating and Managing Delivery Methods
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/shipment/creating-and-ma.html
+                      include_versions:
+                        - '202001.0'
+                    - title: Creating and Managing Shipment Methods
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/shipment/creating-and-ma.html
+                      include_versions:
+                        - '201903.0'
+                - title: MIME type settings
+                  nested:
+                    - title: Managing MIME Type Settings
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/mime-type-settings/managing-mime-t.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing MIME type settings
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/mime-type-settings/managing-mime-t.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Thresholds
+                  nested:
+                    - title: Threshold
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/thresholds/threshold.html
+                      include_versions:
+                        - '202005.0'
+                        - '202009.0'
+                    - title: References
+                      nested:
+                        - title: Threshold- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/thresholds/references/threshold-refer.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- Threshold
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/thresholds/references/threshold-refer.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Threshold Settings
+                      nested:
+                        - title: Managing Threshold Settings
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/thresholds/threshold-settings/managing-thresh.html
+                          include_versions:
+                            - '202005.0'
+                    - title: Global Threshold
+                      nested:
+                        - title: Managing Global Threshold
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/thresholds/global-threshold/managing-global.html
+                          include_versions:
+                            - '202005.0'
+                    - title: Merchant Relationships
+                      nested:
+                        - title: Managing Merchant Relationships Thresholds
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/thresholds/merchant-relationships/managing-mercha.html
+                          include_versions:
+                            - '202005.0'
+                    - title: Managing merchant order thresholds
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/thresholds/managing-mercha.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing threshold settings
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/thresholds/managing-thresh.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing global thresholds
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/thresholds/managing-global.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Taxes
+                  nested:
+                    - title: Taxes
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/taxes/taxes.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Tax Rates and Tax Sets
+                      nested:
+                        - title: References
+                          nested:
+                            - title: Taxes- Reference Information
+                              url: /docs/scos/dev/user-guides/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/references/taxes-reference.html
+                              include_versions:
+                                - '202005.0'
+                        - title: Managing Tax Rates and Sets
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/managing-tax-ra.html
+                          include_versions:
+                            - '202005.0'
+                - title: Glossary
+                  nested:
+                    - title: Glossary
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/glossary/glossary.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Glossary
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/glossary/managing-glossa.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing glossary
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/glossary/managing-glossa.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Payment methods
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Payment Methods- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/payment-methods/references/payment-methods.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- Payment methods
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/payment-methods/references/payment-methods.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Managing Payment Methods
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/payment-methods/managing-paymen.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing payment methods
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/payment-methods/managing-paymen.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Delivery methods
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Delivery Methods- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/delivery-methods/references/delivery-method.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- Delivery methods
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/administration/delivery-methods/references/delivery-method.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Delivery Methods
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/delivery-methods/delivery-method.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating a Carrier Company
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/delivery-methods/creating-a-carr.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating and Managing Delivery Methods
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/delivery-methods/creating-and-ma.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating a carrier company
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/delivery-methods/creating-a-carr.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating and managing delivery methods
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/delivery-methods/creating-and-ma.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Tax rates
+                  nested:
+                    - title: Managing tax rates
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/tax-rates/managing-tax-ra.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Tax sets
+                  nested:
+                    - title: Managing tax sets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/administration/tax-sets/managing-tax-se.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+            - title: Users Control
+              nested:
+                - title: 'Roles, groups and users'
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Roles- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/users-control/roles-groups-and-users/references/roles-reference.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                        - title: User- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/users-control/roles-groups-and-users/references/user-reference-.html
+                          include_versions:
+                            - '201811.0'
+                            - '201903.0'
+                            - '201907.0'
+                            - '202001.0'
+                    - title: Managing Roles
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/users-control/roles-groups-and-users/managing-roles.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Managing Users
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/users-control/roles-groups-and-users/managing-users.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Managing Groups
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/users-control/roles-groups-and-users/managing-groups.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Users Control
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/users-control/users-control.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+            - title: File Manager
+              nested:
+                - title: File Manager
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/file-manager/file-manager.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Managing File Tree
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/file-manager/managing-file-t.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Managing File List
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/file-manager/managing-file-l.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Managing MIME Type Settings
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/file-manager/managing-mime-t.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+            - title: Search and filters
+              nested:
+                - title: Managing Category Filters
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/search-and-filters/managing-catego.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: References
+                  nested:
+                    - title: Reference- Search Preferences
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/search-and-filters/references/reference-searc.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                    - title: Search Preferences Types
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/search-and-filters/references/search-preferen.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                        - '202001.0'
+                - title: Managing Search Preferences
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/search-and-filters/managing-search.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Managing Filter Preferences
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/search-and-filters/managing-filter.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+                - title: Search and Filters
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/search-and-filters/search-and-filt.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                    - '202001.0'
+            - title: About the Administration Interface Guide
+              url: /docs/scos/dev/user-guides/back-office-user-guide/about-the-back-.html
+              include_versions:
+                - '201811.0'
+                - '201903.0'
+            - title: Catalog
+              nested:
+                - title: Product reviews
+                  nested:
+                    - title: Product Reviews
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-reviews/product-reviews.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Product Reviews
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-reviews/managing-produc.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing product reviews
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-reviews/managing-produc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Products
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Concrete Product- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/references/concrete-produc.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Products- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/references/products-refere.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Abstract Product- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/references/abstract-produc.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- concrete product
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/references/concrete-produc.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Reference information- products
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/references/products-refere.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Reference information- abstract product
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/references/abstract-produc.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Abstract and Concrete Products
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/abstract-and-co.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Concrete products
+                      nested:
+                        - title: Updating a Product Variant
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/concrete-products/updating-a-prod.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Creating a Product Variant
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/concrete-products/creating-a-prod.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Editing a product variant
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/concrete-products/editing-a-produ.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Creating a product variant
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/concrete-products/creating-a-prod.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Creating Service Offerings
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/creating-servic.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing products
+                      nested:
+                        - title: Discontinuing a Product
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/managing-products/discontinuing-a.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Adding Product Alternatives
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/managing-products/adding-product-.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Managing Products
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/managing-products/managing-produc.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Creating Product Bundles
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/managing-products/creating-produc.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Adding Volume Prices
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/managing-products/adding-volume-p.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Discontinuing a product
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/managing-products/discontinuing-a.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Adding product alternatives
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/managing-products/adding-product-.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Managing products
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/managing-products/managing-produc.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Abstract products
+                      nested:
+                        - title: Creating an Abstract Product
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/abstract-products/creating-an-abs.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Editing an Abstract Product
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/abstract-products/editing-an-abst.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Adding scheduled prices to abstract products
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/abstract-products/adding-schedule.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Editing abstract products
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/abstract-products/editing-abstrac.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Creating abstract products and product bundles
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/abstract-products/creating-abstra.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Creating product bundles
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/abstract-products/creating-produc.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Adding volume prices to abstract products
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/abstract-products/adding-volume-p.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Creating service offerings- best practices
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/products/creating-servic.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Category
+                  nested:
+                    - title: Creating Categories
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/category/creating-catego.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Categories
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/category/managing-catego.html
+                      include_versions:
+                        - '202005.0'
+                    - title: References
+                      nested:
+                        - title: Category- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/category/references/category-refere.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- category
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/category/references/category-refere.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Category
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/category/category.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Assigning Products to Categories
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/category/assigning-produ.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating categories
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/category/creating-catego.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing categories
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/category/managing-catego.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Assigning products to categories
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/category/assigning-produ.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Attributes
+                  nested:
+                    - title: Managing Attributes
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/attributes/managing-attrib.html
+                      include_versions:
+                        - '202005.0'
+                    - title: References
+                      nested:
+                        - title: Attributes- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/attributes/references/attributes-refe.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- product attributes
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/attributes/references/reference-infor.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Creating a Product Attribute
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/attributes/creating-a-prod.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Attributes
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/attributes/attributes.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing product attributes
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/attributes/managing-attrib.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating product attributes
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/attributes/creating-produc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Catalog
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/catalog.html
+                  include_versions:
+                    - '202005.0'
+                - title: Availability
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Availability- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/availability/references/availability-re.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- availability
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/availability/references/availability-re.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Managing Products Availability
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/availability/managing-produc.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing products availability
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/availability/managing-produc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Product lists
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Product Lists- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-lists/references/product-lists-r.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- product lists
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-lists/references/product-lists-r.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Creating a Product List
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-lists/creating-a-prod.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Product Lists
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-lists/managing-produc.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Product Lists
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-lists/product-lists.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating a product list
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-lists/creating-a-prod.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing product lists
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-lists/managing-produc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Product options
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Product Options- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-options/references/product-options.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- product options
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-options/references/product-options.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Product Options
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-options/product-options.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating a Product Option
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-options/creating-a-prod.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Product Options
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-options/managing-produc.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating a product option
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-options/creating-a-prod.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing product options
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-options/managing-produc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Scheduled prices
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Scheduled Prices- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/scheduled-prices/references/scheduled-price.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- scheduled prices
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/scheduled-prices/references/scheduled-price.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Managing Scheduled Prices
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/scheduled-prices/managing-schedu.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating Scheduled Prices
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/scheduled-prices/creating-schedu.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing scheduled prices
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/scheduled-prices/managing-schedu.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating scheduled prices
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/scheduled-prices/creating-schedu.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Product barcodes
+                  nested:
+                    - title: Product Barcodes
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-barcodes/product-barcode.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Viewing product barcodes
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/catalog/product-barcodes/viewing-product.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+            - title: Marketplace
+              nested:
+                - title: Marketplace
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/marketplace/marketplace.html
+                  include_versions:
+                    - '202005.0'
+                - title: Merchants and merchant relations
+                  nested:
+                    - title: Managing Merchants
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-mercha.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing merchants
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-mercha.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+            - title: Content
+              nested:
+                - title: Blocks
+                  nested:
+                    - title: References
+                      nested:
+                        - title: CMS Block- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/blocks/references/cms-block-refer.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- CMS block
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/blocks/references/cms-block-refer.html
+                          include_versions:
+                            - '202009.0'
+                    - title: CMS Block
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/blocks/cms-block-guide.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing CMS Blocks
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/blocks/managing-cms-bl.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating a CMS Block
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/blocks/creating-cms-bl.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing CMS blocks
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/blocks/managing-cms-bl.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating a CMS block
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/blocks/creating-cms-bl.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing content of emails via CMS blocks
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/blocks/managing-conten.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Adding Content to Storefront Pages Using Templates & Slots
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/content/adding-content-.html
+                  include_versions:
+                    - '202005.0'
+                - title: Content items
+                  nested:
+                    - title: Adding Content Items to CMS Pages and Blocks
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/content-items/adding-content-.html
+                      include_versions:
+                        - '202005.0'
+                    - title: References
+                      nested:
+                        - title: Content Item Widgets templates- Reference
+                            Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/content-items/references/content-item-wi.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Content Items- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/content-items/references/content-items-r.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- content Item widgets
+                            templates
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/content-items/references/content-item-wi.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Reference information- content items
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/content-items/references/content-items-r.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Editing Content Items in CMS Pages and Blocks
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/content-items/editing-content.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating Content Items
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/content-items/creating-conten.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Adding content items to CMS pages and blocks
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/content-items/adding-content-.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Editing content items in CMS pages and blocks
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/content-items/editing-content.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating content items
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/content-items/creating-conten.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Content
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/content/content.html
+                  include_versions:
+                    - '202005.0'
+                - title: Navigation
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Navigation- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/navigation/references/navigation-refe.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- navigation
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/navigation/references/navigation-refe.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Managing Navigation Elements
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/navigation/managing-naviga.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Navigation
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/navigation/navigation-guid.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing navigation elements
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/navigation/managing-naviga.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Redirects
+                  nested:
+                    - title: Redirects
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/redirects/redirects.html
+                      include_versions:
+                        - '202005.0'
+                    - title: References
+                      nested:
+                        - title: CMS Redirects- References
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/redirects/references/cms-redirects-r.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference Information- CMS redirects
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/redirects/references/cms-redirects-r.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Creating CMS Redirects
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/redirects/creating-cms-re.html
+                      include_versions:
+                        - '202005.0'
+                        - '202009.0'
+                    - title: Managing CMS Redirects
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/redirects/editing-cms-red.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing CMS redirects
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/redirects/managing-cms-re.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating CMS redirects
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/redirects/creating-cms-re.html
+                      include_versions:
+                        - '202108.0'
+                - title: File Manager
+                  nested:
+                    - title: File Manager
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/file-manager/file-manager.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing File Tree
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/file-manager/managing-file-t.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing File List
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/file-manager/managing-file-l.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing file tree
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/file-manager/managing-file-t.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing file list
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/file-manager/managing-file-l.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Pages
+                  nested:
+                    - title: References
+                      nested:
+                        - title: CMS Pages- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/pages/references/cms-pages-refer.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- CMS pages
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/pages/references/cms-pages-refer.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Managing CMS Pages
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/pages/managing-cms-pa.html
+                      include_versions:
+                        - '202005.0'
+                    - title: CMS Pages
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/pages/cms-pages.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Editing CMS Pages
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/pages/editing-cms-pag.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating a CMS Page
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/pages/creating-a-cms-.html
+                      include_versions:
+                        - '202005.0'
+                    - title: CMS Pages Versioning
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/pages/cms-pages-versi.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing CMS pages
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/pages/managing-cms-pa.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Editing CMS pages
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/pages/editing-cms-pag.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating a CMS page
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/pages/creating-a-cms-.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Slots
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Slots- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/slots/references/slots-reference.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- slots
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/content/slots/references/slots-reference.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Managing Slots
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/slots/managing-slots.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Slots
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/slots/slots.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing slots
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/content/slots/managing-slots.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Adding content to storefront pages using templates & slots-
+                    Best practices
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/content/adding-content-.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+            - title: Users
+              nested:
+                - title: 'Roles, groups and users'
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Roles- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/references/roles-reference.html
+                          include_versions:
+                            - '202005.0'
+                        - title: User- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/references/user-reference-.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- Roles
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/references/roles-reference.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Reference information- User
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/references/user-reference-.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Managing Roles
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/managing-roles.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Users
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/managing-users.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Groups
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/managing-groups.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing roles
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/managing-roles.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing users
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/managing-users.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing groups
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/managing-groups.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Users
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/users/users.html
+                  include_versions:
+                    - '202005.0'
+            - title: Merchandising
+              nested:
+                - title: Configurable bundle templates
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Configurable Bundle Templates- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/configurable-bundle-templates/references/configurable-bu.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- Configurable bundle templates
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/configurable-bundle-templates/references/configurable-bu.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Managing Configurable Bundle Templates
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/configurable-bundle-templates/managing-config.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating Configurable Bundle Templates
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/configurable-bundle-templates/creating-config.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Configurable Bundle Templates
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/configurable-bundle-templates/configurable-bu.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing configurable bundle templates
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/configurable-bundle-templates/managing-config.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating configurable bundle templates
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/configurable-bundle-templates/creating-config.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Discount
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Discount Conditions- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/references/discount-condit.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Discount- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/references/discount-refere.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Voucher Codes- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/references/voucher-codes-r.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Discount Calculation- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/references/discount-calcul.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Token Description Tables
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/references/token-descripti.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- discount conditions
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/references/discount-condit.html
+                          include_versions:
+                            - '202009.0'
+                        - title: Reference information- discount
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/references/discount-refere.html
+                          include_versions:
+                            - '202009.0'
+                        - title: Reference information- voucher codes
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/references/voucher-codes-r.html
+                          include_versions:
+                            - '202009.0'
+                        - title: Reference information- discount calculation
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/references/discount-calcul.html
+                          include_versions:
+                            - '202009.0'
+                        - title: Token description tables
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/references/token-descripti.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Creating a Discount
+                      nested:
+                        - title: Creating a Cart Rule
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Creating a Voucher
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-vouc.html
+                          include_versions:
+                            - '202005.0'
+                    - title: Discount
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/discount-1.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Discounts
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/managing-discou.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Creating a cart rule
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/creating-a-cart.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating a voucher
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/creating-a-vouc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing discounts
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/discount/managing-discou.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Product relations
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Product Relations- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-relations/references/product-relatio.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- product relations
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-relations/references/product-relatio.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Creating a Product Relation
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-relations/creating-a-prod.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Product Relations
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-relations/managing-produc.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Product Relations
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-relations/product-relatio.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing product relations
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-relations/managing-produc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating product relations
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-relations/creating-produc.html
+                      include_versions:
+                        - '202108.0'
+                    - title: Creating a product relation
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-relations/creating-a-prod.html
+                      include_versions:
+                        - '202009.0'
+                - title: Product labels
+                  nested:
+                    - title: Product Labels
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-labels/product-labels.html
+                      include_versions:
+                        - '202005.0'
+                    - title: References
+                      nested:
+                        - title: Product Labels- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-labels/references/product-labels-.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- product labels
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-labels/references/product-labels-.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Creating a Product Label
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-labels/creating-a-prod.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Product Labels
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-labels/managing-produc.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Prioritizing Labels
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-labels/prioritizing-la.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing product labels
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-labels/managing-produc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating product labels
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-labels/creating-produc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Search and filters
+                  nested:
+                    - title: Managing Category Filters
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/managing-catego.html
+                      include_versions:
+                        - '202005.0'
+                    - title: References
+                      nested:
+                        - title: Reference- Search Preferences
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/references/reference-searc.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Search Preferences Types
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/references/search-preferen.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- Search preferences
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/references/reference-searc.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                        - title: Reference information- Search preferences types
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/references/search-preferen.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Managing Search Preferences
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/managing-search.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Filter Preferences
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/managing-filter.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Search and Filters
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/search-and-filt.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing category filters
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/managing-catego.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing search preferences
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/managing-search.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Managing filter preferences
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/managing-filter.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Product sets
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Product Sets- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-sets/references/product-sets-re.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- Product sets
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-sets/references/product-sets-re.html
+                          include_versions:
+                            - '202009.0'
+                    - title: Creating a Product Set
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-sets/creating-a-prod.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Product Sets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-sets/product-sets.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing Product Sets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-sets/managing-produc.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing product sets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-sets/managing-produc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Creating product sets
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/product-sets/creating-produc.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+            - title: Customer
+              nested:
+                - title: 'Customer, customer access, customer groups'
+                  nested:
+                    - title: References
+                      nested:
+                        - title: Customers- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/customer/customer-customer-access-customer-groups/references/customers-refer.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- customers
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/customer/customer-customer-access-customer-groups/references/customers-refer.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Managing Customer Addresses
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-custom.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Managing customer addresses
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-custom.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Customer
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/customer/customer.html
+                  include_versions:
+                    - '202005.0'
+                - title: Company account
+                  nested:
+                    - title: Company Account
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/customer/company-account/company-account.html
+                      include_versions:
+                        - '202005.0'
+                    - title: References
+                      nested:
+                        - title: Company Account- Reference Information
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/customer/company-account/references/company-account.html
+                          include_versions:
+                            - '202005.0'
+                        - title: Reference information- Company account
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/customer/company-account/references/company-account.html
+                          include_versions:
+                            - '202009.0'
+                            - '202108.0'
+                    - title: Managing a Company Account
+                      nested:
+                        - title: Managing Companies
+                          url: /docs/scos/dev/user-guides/back-office-user-guide/customer/company-account/managing-a-company-account/managing-compan.html
+                          include_versions:
+                            - '202005.0'
+                    - title: Managing companies
+                      url: /docs/scos/dev/user-guides/back-office-user-guide/customer/company-account/managing-compan.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+            - title: Overview of the Back Office user guide
+              url: /docs/scos/dev/user-guides/back-office-user-guide/overview-of-the.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Logging in to the Back Office
+              url: /docs/scos/dev/user-guides/back-office-user-guide/logging-in-to-t.html
+              include_versions:
+                - '202108.0'
+            - title: About the Back Office Guide
+              url: /docs/scos/dev/user-guides/back-office-user-guide/about-the-back-.html
+              include_versions:
+                - '201907.0'
+            - title: Shipment
+              nested:
+                - title: Shipment
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/shipment/shipment-manage.html
+                  include_versions:
+                    - '201907.0'
+                - title: Creating a Carrier Company
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/shipment/creating-a-carr.html
+                  include_versions:
+                    - '201907.0'
+                - title: Creating and Managing Shipment Methods
+                  url: /docs/scos/dev/user-guides/back-office-user-guide/shipment/creating-and-ma.html
+                  include_versions:
+                    - '201907.0'
+        - title: Shop user guide
+          nested:
+            - title: Shop Guide - Company Users
+              url: /docs/scos/dev/user-guides/shop-user-guide/company-users-s.html
+              include_versions:
+                - '201811.0'
+                - '201903.0'
+                - '201907.0'
+                - '202001.0'
+                - '202005.0'
+            - title: Shop Guide - Shopping Lists
+              url: /docs/scos/dev/user-guides/shop-user-guide/shopping-lists-.html
+              include_versions:
+                - '201811.0'
+                - '201903.0'
+                - '201907.0'
+                - '202001.0'
+            - title: Shop Guide - Agent Account
+              nested:
+                - title: Shop Guide - Managing Agent Account
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-agent-account/shop-guide-mana.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                - title: Shop Guide - Agent Account
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-agent-account/shop-guide-agen.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+            - title: Shop Guide - Company Account
+              url: /docs/scos/dev/user-guides/shop-user-guide/company-account.html
+              include_versions:
+                - '201811.0'
+                - '201903.0'
+                - '201907.0'
+                - '202001.0'
+                - '202005.0'
+            - title: Shop Guide - Quick Order
+              url: /docs/scos/dev/user-guides/shop-user-guide/quick-order-sho.html
+              include_versions:
+                - '201903.0'
+                - '201907.0'
+                - '202001.0'
+                - '202005.0'
+            - title: About Shop User Guide
+              url: /docs/scos/dev/user-guides/shop-user-guide/about-shop-user.html
+              include_versions:
+                - '201811.0'
+                - '201903.0'
+                - '201907.0'
+                - '202001.0'
+                - '202005.0'
+            - title: Shop Guide - Wishlists
+              url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-wish.html
+              include_versions:
+                - '202001.0'
+            - title: Shop Guide - Searching within CMS Pages
+              url: /docs/scos/dev/user-guides/shop-user-guide/searching-withi.html
+              include_versions:
+                - '202001.0'
+                - '202005.0'
+            - title: Shop Guide - Company Roles
+              url: /docs/scos/dev/user-guides/shop-user-guide/company-roles-s.html
+              include_versions:
+                - '201811.0'
+                - '201903.0'
+                - '201907.0'
+                - '202001.0'
+            - title: Shop Guide - Shopping Carts
+              nested:
+                - title: Shopping Carts- Reference Information
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-shopping-carts/shop-guide-shop.html
+                  include_versions:
+                    - '202001.0'
+                - title: Shop Guide - Creating a Shopping Cart
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-shopping-carts/creating-shoppi.html
+                  include_versions:
+                    - '202001.0'
+                - title: Shop Guide - Managing Shopping Carts
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-shopping-carts/shop-guide-mana.html
+                  include_versions:
+                    - '202001.0'
+            - title: Shop Guide - Comments
+              nested:
+                - title: Shop Guide - Comments
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-comments/comments-shop-g.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                - title: Shop Guide - Managing Comments
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-comments/managing-commen.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+            - title: Shop Guide -  Quotation Process & RFQ
+              nested:
+                - title: Shop Guide - Request for Quote- Reference Information
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-quotation-process-and-rfq/rfq-reference-i.html
+                  include_versions:
+                    - '202001.0'
+                - title: Shop Guide - Request for Quote
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-quotation-process-and-rfq/request-for-quo.html
+                  include_versions:
+                    - '202001.0'
+                - title: Shop Guide - Managing Requests for Quotes for a Sales
+                    Representative
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-quotation-process-and-rfq/managing-rfqs-s.html
+                  include_versions:
+                    - '202001.0'
+                - title: Shop Guide - Creating a Request for Quote
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-quotation-process-and-rfq/creating-rfq-sh.html
+                  include_versions:
+                    - '202001.0'
+                - title: Shop Guide - Managing Requests for Quotes for a Buyer
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-quotation-process-and-rfq/managing-rfqs-f.html
+                  include_versions:
+                    - '202001.0'
+            - title: Shop guide - Configurator
+              nested:
+                - title: Shop Guide - Configurator
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-configurator/shop-guide-conf.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                - title: Shop Guide - Managing Configurable Bundles
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-configurator/shop-guide-mana.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                - title: Shop guide - Configurator
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-configurator/shop-guide-conf.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+                - title: Shop guide - Managing configurable bundles
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-configurator/shop-guide-mana.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+            - title: Shop Guide - Approval Process
+              url: /docs/scos/dev/user-guides/shop-user-guide/approval-proces.html
+              include_versions:
+                - '201903.0'
+                - '201907.0'
+                - '202001.0'
+                - '202005.0'
+            - title: Shop Guide - Business on Behalf
+              url: /docs/scos/dev/user-guides/shop-user-guide/business-on-beh.html
+              include_versions:
+                - '201903.0'
+                - '201907.0'
+                - '202001.0'
+                - '202005.0'
+            - title: Shop Guide - Managing Products
+              url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-mana.html
+              include_versions:
+                - '202001.0'
+                - '202005.0'
+            - title: Shop Guide - Checkout
+              nested:
+                - title: Shop Guide - Shipment Step
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-checkout/shipment-step-s.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                - title: Shop Guide - Payment Step
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-checkout/payment-step-sh.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                - title: Shop Guide - Summary Step
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-checkout/summary-step-sh.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                - title: Shop Guide - Checkout
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-checkout/checkout-shop-g.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                - title: Shop Guide - Address Step
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-checkout/address-step-sh.html
+                  include_versions:
+                    - '202001.0'
+                    - '202005.0'
+                - title: Shop Guide - Login Step
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-checkout/shop-guide-logi.html
+                  include_versions:
+                    - '202005.0'
+            - title: Shop Application Guide
+              nested:
+                - title: Cart
+                  nested:
+                    - title: Multiple Carts per User Feature Overview
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-application-guide/cart/multiple-carts-.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                    - title: Shared Cart Feature Overview
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-application-guide/cart/shared-cart-fea.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                    - title: Minimum Order Value Feature Overview
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-application-guide/cart/minimum-order-v.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+                    - title: Shopping Cart Widget Feature Overview
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-application-guide/cart/shopping-cart-w.html
+                      include_versions:
+                        - '201811.0'
+                        - '201903.0'
+                        - '201907.0'
+            - title: Checkout
+              nested:
+                - title: Shop Guide - Shipment Step
+                  url: /docs/scos/dev/user-guides/shop-user-guide/checkout/shipment-step-s.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                - title: Shop Guide - Payment Step
+                  url: /docs/scos/dev/user-guides/shop-user-guide/checkout/payment-step-sh.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                - title: Shop Guide - Summary Step
+                  url: /docs/scos/dev/user-guides/shop-user-guide/checkout/summary-step-sh.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                - title: Shop Guide - Checkout
+                  url: /docs/scos/dev/user-guides/shop-user-guide/checkout/checkout-shop-g.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+                - title: Shop Guide - Address Step
+                  url: /docs/scos/dev/user-guides/shop-user-guide/checkout/address-step-sh.html
+                  include_versions:
+                    - '201811.0'
+                    - '201903.0'
+                    - '201907.0'
+            - title: Shop guide - Customer account
+              nested:
+                - title: Shop Guide - Shopping Lists
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shopping-lists-.html
+                  include_versions:
+                    - '202005.0'
+                - title: References
+                  nested:
+                    - title: Request for Quote- Reference Information
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/references/rfq-reference-i.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Addresses- Reference Information
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/references/addresses-refer.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Shopping Carts- Reference Information
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/references/shop-guide-shop.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Order History- Reference Information
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/references/order-history-r.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Return Details- Reference Information
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/references/return-details-.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Reference information- request for quote
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/references/rfq-reference-i.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Reference information- Addresses
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/references/addresses-refer.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Reference information- Shopping carts
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/references/shop-guide-shop.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Reference information- Order history
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/references/order-history-r.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Reference information- Return details
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/references/return-details-.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Shop Guide - Wishlists
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-wish.html
+                  include_versions:
+                    - '202005.0'
+                - title: Shop Guide - Customer Addresses
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-cust.html
+                  include_versions:
+                    - '202005.0'
+                - title: Shop Guide - Order History
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-orde.html
+                  include_versions:
+                    - '202005.0'
+                - title: Shop Guide - Newsletter
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-news.html
+                  include_versions:
+                    - '202005.0'
+                - title: Shop Guide - Shopping Carts
+                  nested:
+                    - title: Shopping Carts
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-shop.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Shop Guide - Creating a Shopping Cart
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-carts/creating-shoppi.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Shop Guide - Managing a Shopping Cart
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-mana.html
+                      include_versions:
+                        - '202005.0'
+                - title: Shop Guide -  Quote Requests
+                  nested:
+                    - title: Shop Guide - Request for Quote
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-quote-requests/request-for-quo.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Shop Guide - Managing Requests for Quotes for a Sales
+                        Representative
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-quote-requests/managing-rfqs-s.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Shop Guide - Creating a Request for Quote
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-quote-requests/creating-rfq-sh.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Shop Guide - Managing Requests for Quotes for a Buyer
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-quote-requests/managing-rfqs-f.html
+                      include_versions:
+                        - '202005.0'
+                - title: Shop Guide - Returns Management
+                  nested:
+                    - title: Shop Guide - Creating a Return
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-crea.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Shop Guide - Printing a Return Slip
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-prin.html
+                      include_versions:
+                        - '202005.0'
+            - title: Shop guide - Company roles
+              nested:
+                - title: References
+                  nested:
+                    - title: Company Roles- Reference Information
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-company-roles/references/company-roles-r.html
+                      include_versions:
+                        - '202005.0'
+                    - title: Reference information- Company roles
+                      url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-company-roles/references/company-roles-r.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Shop Guide - Managing Company Roles
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-company-roles/company-roles-s.html
+                  include_versions:
+                    - '202005.0'
+                - title: Shop Guide - Creating a New Company Role
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-company-roles/shop-guide-crea.html
+                  include_versions:
+                    - '202005.0'
+            - title: Shop Guide - Cancelling Orders
+              url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-canc.html
+              include_versions:
+                - '202005.0'
+            - title: Shop guide - Searching within CMS pages
+              url: /docs/scos/dev/user-guides/shop-user-guide/searching-withi.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Shop guide - Managing products
+              url: /docs/scos/dev/user-guides/shop-user-guide/shop-guide-mana.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: About shop user guide
+              url: /docs/scos/dev/user-guides/shop-user-guide/about-shop-user.html
+              include_versions:
+                - '202009.0'
+            - title: Comments
+              nested:
+                - title: Shop Guide - Comments
+                  url: /docs/scos/dev/user-guides/shop-user-guide/comments/comments-shop-g.html
+                  include_versions:
+                    - '201907.0'
+                - title: Shop Guide - Managing Comments
+                  url: /docs/scos/dev/user-guides/shop-user-guide/comments/managing-commen.html
+                  include_versions:
+                    - '201907.0'
+            - title: Quotation Proces & RFQ
+              nested:
+                - title: Shop Guide - Request for Quote- Reference Information
+                  url: /docs/scos/dev/user-guides/shop-user-guide/quotation-proces-and-rfq/rfq-reference-i.html
+                  include_versions:
+                    - '201907.0'
+                - title: Shop Guide - Request for Quote
+                  url: /docs/scos/dev/user-guides/shop-user-guide/quotation-proces-and-rfq/request-for-quo.html
+                  include_versions:
+                    - '201907.0'
+                - title: Shop Guide - Managing Requests for Quotes for a Sales
+                    Representative
+                  url: /docs/scos/dev/user-guides/shop-user-guide/quotation-proces-and-rfq/managing-rfqs-s.html
+                  include_versions:
+                    - '201907.0'
+                - title: Shop Guide - Creating a Request for Quote
+                  url: /docs/scos/dev/user-guides/shop-user-guide/quotation-proces-and-rfq/creating-rfq-sh.html
+                  include_versions:
+                    - '201907.0'
+                - title: Shop Guide - Managing Requests for Quotes for a Buyer
+                  url: /docs/scos/dev/user-guides/shop-user-guide/quotation-proces-and-rfq/managing-rfqs-f.html
+                  include_versions:
+                    - '201907.0'
+            - title: Agent Account
+              nested:
+                - title: Shop Guide - Managing Agent Account
+                  url: /docs/scos/dev/user-guides/shop-user-guide/agent-account/shop-guide-mana.html
+                  include_versions:
+                    - '201907.0'
+                - title: Shop Guide - Agent Account
+                  url: /docs/scos/dev/user-guides/shop-user-guide/agent-account/shop-guide-agen.html
+                  include_versions:
+                    - '201907.0'
+            - title: Searching within CMS Pages
+              url: /docs/scos/dev/user-guides/shop-user-guide/searching-withi.html
+              include_versions:
+                - '201903.0'
+                - '201907.0'
+            - title: Shopping Carts
+              nested:
+                - title: Shopping Carts- Reference Information
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shopping-carts/shop-guide-shop.html
+                  include_versions:
+                    - '201907.0'
+                - title: Creating a Shopping Cart
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shopping-carts/creating-shoppi.html
+                  include_versions:
+                    - '201907.0'
+                - title: Managing Shopping Carts
+                  url: /docs/scos/dev/user-guides/shop-user-guide/shopping-carts/shop-guide-mana.html
+                  include_versions:
+                    - '201907.0'
+        - title: About user guides
+          url: /docs/scos/dev/user-guides/about-user-guid.html
+          include_versions:
+            - '202009.0'
+            - '202108.0'
+    - title: Intro to Spryker
+      nested:
+        - title: Spryker videos
+          url: /docs/scos/dev/intro-to-spryker/spryker-videos.html
+          include_versions:
+            - '202009.0'
+            - '202108.0'
+        - title: What's new
+          nested:
+            - title: VAT rates reduction in Germany between July 2020 and January
+                2021
+              url: /docs/scos/dev/intro-to-spryker/whats-new/vat-rates-reduc.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Supported versions of PHP
+              url: /docs/scos/dev/intro-to-spryker/whats-new/supported-versi.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Documentation updates
+              url: /docs/scos/dev/intro-to-spryker/whats-new/documentation-u.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Upcoming major module releases
+              url: /docs/scos/dev/intro-to-spryker/whats-new/upcoming-major-.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Security updates
+              url: /docs/scos/dev/intro-to-spryker/whats-new/security-update.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: What's new
+              url: /docs/scos/dev/intro-to-spryker/whats-new/whats-new.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Roadmap
+              url: /docs/scos/dev/intro-to-spryker/whats-new/roadmap.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Security audit reports
+              nested:
+                - title: Security audit
+                  url: /docs/scos/dev/intro-to-spryker/whats-new/security-audit-reports/security-audit.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+                - title: Penetration test executive summary
+                  url: /docs/scos/dev/intro-to-spryker/whats-new/security-audit-reports/penetration-tes.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+        - title: Releases
+          nested:
+            - title: Releases
+              url: /docs/scos/dev/intro-to-spryker/releases/releases.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Archive
+              nested:
+                - title: 2017
+                  nested:
+                    - title: Release Notes - May - 2 2017
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2017/release-notes-m.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes - August - 2 2017
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2017/release-notes-a.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes - December - 2017
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2017/release-notes-d.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes - September - 2 2017
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2017/release-notes-s.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes - October - 1 2017
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2017/release-notes-o.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes - November - 1 2017
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2017/release-notes-n.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes - June - 2 2017
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2017/release-notes-j.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: 2018
+                  nested:
+                    - title: Release Notes - March - 2018
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2018/release-notes-m.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes - February - 1 2018
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2018/release-notes-f.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes - April - 2018
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2018/release-notes-a.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes - January - 2018
+                      url: /docs/scos/dev/intro-to-spryker/releases/archive/2018/release-notes-j.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+            - title: Release notes
+              nested:
+                - title: Release Notes
+                  url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+                - title: Release notes 201903.0
+                  nested:
+                    - title: Security Release Notes 201903.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-201903.0/security-releas.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes 201903.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-201903.0/release-notes-2.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Release notes 201907.0
+                  nested:
+                    - title: Security Release Notes 201907.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-201907.0/security-releas.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes 201907.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-201907.0/release-notes-2.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Security release notes- 202102.0 SEC
+                  url: /docs/scos/dev/intro-to-spryker/releases/release-notes/security-releas.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+                - title: Release notes 202009.0
+                  nested:
+                    - title: Security release notes- 202009.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-releas.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release notes 202009.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-202009.0/release-notes-2.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Release Notes 2018.12.0
+                  url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-2.html
+                  include_versions:
+                    - '202009.0'
+                    - '202108.0'
+                - title: Release notes 202108.0
+                  nested:
+                    - title: Security release notes 202108.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-202108.0/security-releas.html
+                      include_versions:
+                        - '202108.0'
+                    - title: Release notes 202108.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-202108.0/release-notes-2.html
+                      include_versions:
+                        - '202108.0'
+                - title: Release notes 2018.11.0
+                  nested:
+                    - title: Security Release Notes 2018.11.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-releas.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes 2018.11.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/release-notes-2.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: 'Release notes Code Releases May, 2020'
+                  nested:
+                    - title: 'Release Notes- Code Releases May, 2020'
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/release-notes-c.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: 'Security Release Notes- Code Releases May, 2020'
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/security-releas.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                - title: Release notes 202001.0
+                  nested:
+                    - title: Security Release Notes 202001.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-202001.0/security-releas.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Release Notes 202001.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-202001.0/release-notes-2.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+                    - title: Known Issues 202001.0
+                      url: /docs/scos/dev/intro-to-spryker/releases/release-notes/release-notes-202001.0/known-issues-20.html
+                      include_versions:
+                        - '202009.0'
+                        - '202108.0'
+            - title: Releases archive
+              url: /docs/scos/dev/intro-to-spryker/releases/releases-archiv.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+        - title: FAQ
+          url: /docs/scos/dev/intro-to-spryker/faq.html
+          include_versions:
+            - '202009.0'
+            - '202108.0'
+        - title: About Spryker documentation
+          url: /docs/scos/dev/intro-to-spryker/about-documenta.html
+          include_versions:
+            - '202009.0'
+            - '202108.0'
+        - title: Spryker release process
+          url: /docs/scos/dev/intro-to-spryker/spryker-release.html
+          include_versions:
+            - '202009.0'
+            - '202108.0'
+        - title: Support
+          nested:
+            - title: Handling new feature requests
+              url: /docs/scos/dev/intro-to-spryker/support/handling-new-fe.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: How Spryker Support works
+              url: /docs/scos/dev/intro-to-spryker/support/how-spryker-sup.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Getting support
+              url: /docs/scos/dev/intro-to-spryker/support/getting-support.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Special- Prepare for a busy season
+              url: /docs/scos/dev/intro-to-spryker/support/special-prepare.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Case Escalation
+              url: /docs/scos/dev/intro-to-spryker/support/case-escalation.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: How to share secrets with the Spryker Support Team
+              url: /docs/scos/dev/intro-to-spryker/support/how-to-share-se.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Understanding Project and Core Level Fixes
+              url: /docs/scos/dev/intro-to-spryker/support/understanding-p.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Understanding ticket status
+              url: /docs/scos/dev/intro-to-spryker/support/understanding-t.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: How to get the most out of Spryker Support
+              url: /docs/scos/dev/intro-to-spryker/support/how-to-get-the-.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: How to use the Support Portal
+              url: /docs/scos/dev/intro-to-spryker/support/how-to-use-the-.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Guidelines for new GDPR rules
+              url: /docs/scos/dev/intro-to-spryker/support/guidelines-for-.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Understand SLAs
+              url: /docs/scos/dev/intro-to-spryker/support/understand-slas.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: Handling security issues
+              url: /docs/scos/dev/intro-to-spryker/support/handling-securi.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+            - title: How to contact Spryker Support
+              url: /docs/scos/dev/intro-to-spryker/support/how-to-contact-.html
+              include_versions:
+                - '202009.0'
+                - '202108.0'
+        - title: B2C Suite
+          url: /docs/scos/dev/intro-to-spryker/b2c-suite.html
+          include_versions:
+            - '202009.0'
+            - '202108.0'
+        - title: B2B Suite
+          url: /docs/scos/dev/intro-to-spryker/b2b-suite.html
+          include_versions:
+            - '202009.0'
+            - '202108.0'
+        - title: Master Suite
+          url: /docs/scos/dev/intro-to-spryker/master-suite.html
+          include_versions:
+            - '202009.0'
+            - '202108.0'
+        - title: About Spryker
+          url: /docs/scos/dev/intro-to-spryker/about-spryker.html
+          include_versions:
+            - '202009.0'
+            - '202108.0'
+        - title: MVP project structuring
+          url: /docs/scos/dev/intro-to-spryker/mvp-project-str.html
+          include_versions:
+            - '202009.0'
+            - '202108.0'

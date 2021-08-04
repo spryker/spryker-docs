@@ -59,6 +59,8 @@ commonmark:
 plugins:
   - jekyll-feed
   - jekyll-last-modified-at
+  - jekyll-redirect-from
+  - jekyll-include-cache
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
@@ -95,6 +97,25 @@ defaults:
     values:
       sidebar: "marketplace_user_sidebar"
       product-type: 'marketplace/user'
+      role: "user"
+  -
+    scope:
+      path: "docs/scos"
+    values:
+      product: "scos"
+  -
+    scope:
+      path: "docs/scos/dev"
+    values:
+      sidebar: "scos_dev_sidebar"
+      product-type: 'scos/dev'
+      role: "dev"
+  -
+    scope:
+      path: "docs/scos/user"
+    values:
+      sidebar: "scos_user_sidebar"
+      product-type: 'scos/user'
       role: "user"
 
 versions:
@@ -154,3 +175,6 @@ sass:
 
 last-modified-at:
   date-format: '%Y%m%dT%H%M'
+
+redirect_from:
+  json: false

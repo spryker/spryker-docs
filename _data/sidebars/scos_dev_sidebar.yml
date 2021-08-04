@@ -3567,7 +3567,7 @@ entries:
               include_versions:
                 - '202009.0'
                 - '202108.0'
-            - title: Reference information- Avalara integration—module relations
+            - title: Reference information- Tax module
               url: /docs/scos/dev/features/tax/reference-infor.html
               include_versions:
                 - '202108.0'
@@ -5284,13 +5284,10 @@ entries:
                 - '202005.0'
             - title: Wishlist
               url: /docs/scos/dev/features/wishlist/wishlist.html
-              include_versions:
-                - '201903.0'
             - title: Wishlist feature overview
               url: /docs/scos/dev/features/wishlist/wishlist-featur.html
               include_versions:
                 - '202009.0'
-                - '202108.0'
         - title: Product Management
           nested:
             - title: Product Attributes
@@ -5473,13 +5470,6 @@ entries:
               url: /docs/scos/dev/features/comments/comments.html
               include_versions:
                 - '202009.0'
-        - title: Reorder
-          nested:
-            - title: Reorder
-              url: /docs/scos/dev/features/reorder/reorder.html
-              include_versions:
-                - '202009.0'
-                - '202108.0'
         - title: Payments
           nested:
             - title: Payments- module relations
@@ -5560,6 +5550,10 @@ entries:
               url: /docs/scos/dev/features/configurable-product/configurable-pr.html
               include_versions:
                 - '202108.0'
+        - title: Refunds feature overview
+          url: /docs/scos/dev/features/refunds-feature.html
+          include_versions:
+            - '202108.0'
         - title: Spryker Core Back Office
           nested:
             - title: Spryker Core Back Office feature overview
@@ -5629,6 +5623,10 @@ entries:
                   url: /docs/scos/dev/features/shopping-lists/shopping-lists-feature-overview/multiple-and-sh.html
                   include_versions:
                     - '202108.0'
+        - title: Reorder feature overview
+          url: /docs/scos/dev/features/reorder-feature.html
+          include_versions:
+            - '202108.0'
         - title: Product Labels feature overview
           url: /docs/scos/dev/features/product-labels-.html
           include_versions:
@@ -5652,18 +5650,6 @@ entries:
               url: /docs/scos/dev/features/merchant-product-restrictions/merchant-produc.html
               include_versions:
                 - '202009.0'
-        - title: Reclamations
-          nested:
-            - title: Reclamations
-              url: /docs/scos/dev/features/reclamations/reclamations.html
-              include_versions:
-                - '202009.0'
-                - '202108.0'
-            - title: Reclamations feature overview
-              url: /docs/scos/dev/features/reclamations/reclamations-fe.html
-              include_versions:
-                - '202009.0'
-                - '202108.0'
         - title: Quotation Process
           nested:
             - title: Quotation Process feature overview
@@ -5797,6 +5783,14 @@ entries:
                   url: /docs/scos/dev/features/search/search-feature-overview/category-filter.html
                   include_versions:
                     - '202108.0'
+        - title: Reclamations feature overview
+          url: /docs/scos/dev/features/reclamations-fe.html
+          include_versions:
+            - '202108.0'
+        - title: Wishlist feature overview
+          url: /docs/scos/dev/features/wishlist-featur.html
+          include_versions:
+            - '202108.0'
         - title: Customer Access feature overview
           url: /docs/scos/dev/features/customer-access.html
           include_versions:
@@ -5808,11 +5802,14 @@ entries:
               include_versions:
                 - '202009.0'
                 - '202108.0'
+            - title: Return Management feature overview
+              url: /docs/scos/dev/features/return-management/return-manageme.html
+              include_versions:
+                - '202108.0'
             - title: Return management
               url: /docs/scos/dev/features/return-management/return-manageme.html
               include_versions:
                 - '202009.0'
-                - '202108.0'
         - title: Packaging Units feature overview
           url: /docs/scos/dev/features/packaging-units.html
           include_versions:
@@ -5863,24 +5860,20 @@ entries:
           url: /docs/scos/dev/features/gift-cards-feat.html
           include_versions:
             - '202108.0'
-        - title: Shared Carts
-          nested:
-            - title: Shared Carts
-              url: /docs/scos/dev/features/shared-carts/shared-carts.html
-              include_versions:
-                - '202009.0'
-                - '202108.0'
-            - title: Shared Carts feature overview
-              url: /docs/scos/dev/features/shared-carts/shared-carts-fe.html
-              include_versions:
-                - '202009.0'
-                - '202108.0'
         - title: Measurement Units feature overview
           url: /docs/scos/dev/features/measurement-uni.html
           include_versions:
             - '202108.0'
+        - title: Resource Sharing feature overview
+          url: /docs/scos/dev/features/resource-sharin.html
+          include_versions:
+            - '202108.0'
         - title: Category Management feature overview
           url: /docs/scos/dev/features/category-manage.html
+          include_versions:
+            - '202108.0'
+        - title: Scheduled prices feature overview
+          url: /docs/scos/dev/features/scheduled-price.html
           include_versions:
             - '202108.0'
         - title: Catalog
@@ -5897,6 +5890,10 @@ entries:
               url: /docs/scos/dev/features/availability-notification/availability-no.html
               include_versions:
                 - '202009.0'
+        - title: Shared Carts feature overview
+          url: /docs/scos/dev/features/shared-carts-fe.html
+          include_versions:
+            - '202108.0'
         - title: Cart
           nested:
             - title: Cart feature overview
@@ -5967,25 +5964,6 @@ entries:
               include_versions:
                 - '202009.0'
                 - '202108.0'
-        - title: Resource Sharing
-          nested:
-            - title: Resource Sharing feature overview
-              url: /docs/scos/dev/features/resource-sharing/resource-sharin.html
-              include_versions:
-                - '202108.0'
-            - title: Unique URL per cart for easy sharing
-              nested:
-                - title: Unique URL per Cart for Easy Sharing- module relations
-                  url: /docs/scos/dev/features/resource-sharing/unique-url-per-cart-for-easy-sharing/unique-url-per-.html
-                  include_versions:
-                    - '202009.0'
-        - title: Refunds
-          nested:
-            - title: Refunds
-              url: /docs/scos/dev/features/refunds/refunds.html
-              include_versions:
-                - '202009.0'
-                - '202108.0'
         - title: File Manager
           nested:
             - title: File Manager
@@ -6021,13 +5999,10 @@ entries:
               url: /docs/scos/dev/features/quick-add-to-cart/quick-add-to-ca.html
               include_versions:
                 - '202108.0'
-        - title: Product lists
-          nested:
-            - title: Product Lists
-              url: /docs/scos/dev/features/product-lists/product-lists.html
-              include_versions:
-                - '202009.0'
-                - '202108.0'
+        - title: Product Lists feature overview
+          url: /docs/scos/dev/features/product-lists-f.html
+          include_versions:
+            - '202108.0'
         - title: Product options
           nested:
             - title: Product Options
@@ -6050,24 +6025,6 @@ entries:
           url: /docs/scos/dev/features/agent-assist-ov.html
           include_versions:
             - '202108.0'
-        - title: Product labels
-          nested:
-            - title: Product Labels
-              url: /docs/scos/dev/features/product-labels/product-labels.html
-              include_versions:
-                - '202009.0'
-                - '202108.0'
-            - title: Product Labels feature overview
-              url: /docs/scos/dev/features/product-labels/product-labels-.html
-              include_versions:
-                - '202009.0'
-        - title: Scheduled prices
-          nested:
-            - title: Scheduled prices feature overview
-              url: /docs/scos/dev/features/scheduled-prices/scheduled-price.html
-              include_versions:
-                - '202009.0'
-                - '202108.0'
         - title: Customer Account Management
           nested:
             - title: Customer Account Management feature overview
@@ -6136,6 +6093,12 @@ entries:
               url: /docs/scos/dev/features/product-barcode/product-barcode.html
               include_versions:
                 - '202009.0'
+        - title: Reorder
+          nested:
+            - title: Reorder
+              url: /docs/scos/dev/features/reorder/reorder.html
+              include_versions:
+                - '202009.0'
         - title: Product Bundles
           nested:
             - title: Product Bundles
@@ -6146,6 +6109,16 @@ entries:
           nested:
             - title: Alternative Products feature overview
               url: /docs/scos/dev/features/alternative-products/alternative-pro.html
+              include_versions:
+                - '202009.0'
+        - title: Reclamations
+          nested:
+            - title: Reclamations
+              url: /docs/scos/dev/features/reclamations/reclamations.html
+              include_versions:
+                - '202009.0'
+            - title: Reclamations feature overview
+              url: /docs/scos/dev/features/reclamations/reclamations-fe.html
               include_versions:
                 - '202009.0'
         - title: Merchant Custom Prices
@@ -6180,6 +6153,16 @@ entries:
               url: /docs/scos/dev/features/agent-assist/agent-assist-ov.html
               include_versions:
                 - '202009.0'
+        - title: Shared Carts
+          nested:
+            - title: Shared Carts
+              url: /docs/scos/dev/features/shared-carts/shared-carts.html
+              include_versions:
+                - '202009.0'
+            - title: Shared Carts feature overview
+              url: /docs/scos/dev/features/shared-carts/shared-carts-fe.html
+              include_versions:
+                - '202009.0'
         - title: Packaging units
           nested:
             - title: Packaging units feature overview
@@ -6208,6 +6191,20 @@ entries:
                   url: /docs/scos/dev/features/mailing-and-notifications/mailing-and-notifications-feature-overview/newsletter-subs.html
                   include_versions:
                     - '202009.0'
+        - title: Resource Sharing
+          nested:
+            - title: Unique URL per cart for easy sharing
+              nested:
+                - title: Unique URL per Cart for Easy Sharing- module relations
+                  url: /docs/scos/dev/features/resource-sharing/unique-url-per-cart-for-easy-sharing/unique-url-per-.html
+                  include_versions:
+                    - '202009.0'
+        - title: Refunds
+          nested:
+            - title: Refunds
+              url: /docs/scos/dev/features/refunds/refunds.html
+              include_versions:
+                - '202009.0'
         - title: Customer Access
           nested:
             - title: Customer Access feature overview
@@ -6224,6 +6221,22 @@ entries:
               url: /docs/scos/dev/features/product-groups/product-group-f.html
               include_versions:
                 - '202009.0'
+        - title: Product lists
+          nested:
+            - title: Product Lists
+              url: /docs/scos/dev/features/product-lists/product-lists.html
+              include_versions:
+                - '202009.0'
+        - title: Product labels
+          nested:
+            - title: Product Labels
+              url: /docs/scos/dev/features/product-labels/product-label.html
+              include_versions:
+                - '202009.0'
+            - title: Product Labels feature overview
+              url: /docs/scos/dev/features/product-labels/product-labels-.html
+              include_versions:
+                - '202009.0'
         - title: Multiple Carts
           nested:
             - title: Multiple Carts feature overview
@@ -6232,6 +6245,12 @@ entries:
                 - '202009.0'
             - title: Multiple Carts
               url: /docs/scos/dev/features/multiple-carts/multiple-carts.html
+              include_versions:
+                - '202009.0'
+        - title: Scheduled prices
+          nested:
+            - title: Scheduled prices feature overview
+              url: /docs/scos/dev/features/scheduled-prices/scheduled-price.html
               include_versions:
                 - '202009.0'
         - title: Merchant B2B Contracts

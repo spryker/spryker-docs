@@ -1,0 +1,360 @@
+---
+title: Configuring the search query
+originalLink: https://documentation.spryker.com/v6/docs/configuring-search-query
+redirect_from:
+  - /v6/docs/configuring-search-query
+  - /v6/docs/en/configuring-search-query
+---
+
+Once we have all the necessary data in Elasticsearch, it’s time to display it on Yves.
+
+To achieve this, we first need to [query Elasticsearch](#quering), which will return raw data for us that we need to [Process Query Result](#process) to display it in our templates.
+
+In `SearchClient` you can find the `search()` method `(\Spryker\Client\Search\SearchClientInterface::search())`. You need to call this method to execute any search query. It expects to receive an instance of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface` as the first parameter, which represents the query itself, and a collection of `\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface` instances which will be applied on the response data to format it.
+
+<a name="quering"></a>
+
+## Querying Elasticsearch
+The first thing we need to do is to implement the QueryInterface. To communicate with Elasticsearch, Spryker uses the [Elastica](http://elastica.io/) library as a Data Query Language.
+
+Inside `QueryInterface`, you need to create an instance of `\Elastica\Query`, configure it to fit your needs, then return it with `getSearchQuery()`.
+
+This is the point where configuring the query is completely up to you. Use Elastica to alter the query to your needs, add filters, aggregations, boosts, sorting, pagination, or anything else you like, and Elasticsearch allows you to.
+{% info_block infoBox %}
+The `QueryInterface` instance is a stateful class; sometimes `getSearchQuery(
+{% endinfo_block %}` method is called multiple times and alters the original query (see [Expandig queries](#expanding)), so you need to make sure that it returns the same instance. This can be achieved by creating the `\Elastica\Query` instance at construction time and returning it in the `getSearchQuery()` method.)
+Besides, this new `QueryInterface ` isntance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed to be able to set and maintain a search context which would later be used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search Migration Concept](https://documentation.spryker.com/docs/search-migration-concept).
+
+<details open>
+<summary>Query</summary>
+   
+```php
+<?php
+
+namespace Pyz\Client\Catalog\Plugin\Query;
+
+use Elastica\Query;
+use Elastica\Query\MatchAll;
+use Generated\Shared\Search\PageIndexMap;
+use Spryker\Client\Kernel\AbstractPlugin;
+use Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface;
+use Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface;
+
+class MatchAllQueryPlugin extends AbstractPlugin implements QueryInterface, SearchContextAwareQueryInterface
+{
+
+    protected const SOURCE_IDENTIFIER = 'page';
+
+    /**
+     * @var \Elastica\Query
+     */
+    protected $query;
+    
+    /**
+     * @var \Generated\Shared\Transfer\SearchContextTransfer
+     */
+    protected $searchContextTransfer;
+
+    /**
+     * @param string $searchString
+     */
+    public function __construct()
+    {
+        $this-->query = $this->createSearchQuery();
+    }
+
+    /**
+     * @return \Elastica\Query
+     */
+    public function getSearchQuery()
+    {
+        return $this-->query;
+    }
+
+    /**
+     * @return \Elastica\Query
+     */
+    protected function createSearchQuery()
+    {
+        $query = new Query();
+        $query = $this->addMatchAllQuery($query);
+        $query->setSource([PageIndexMap::SEARCH_RESULT_DATA]);
+
+        return $query;
+    }
+
+    /**
+     * @param \Elastica\Query $baseQuery
+     *
+     * @return \Elastica\Query
+     */
+    protected function addMatchAllQuery(Query $baseQuery)
+    {
+        $baseQuery->setQuery(new MatchAll());
+
+        return $baseQuery;
+    }
+    
+    /**
+     * @return \Generated\Shared\Transfer\SearchContextTransfer
+     */
+    public function getSearchContext(): SearchContextTransfer
+    {
+        if (!$this->hasSearchContext()) {
+            $this->setupDefaultSearchContext();
+        }
+
+        return $this->searchContextTransfer;
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\SearchContextTransfer $searchContextTransfer
+     *
+     * @return void
+     */
+    public function setSearchContext(SearchContextTransfer $searchContextTransfer): void
+    {
+        $this->searchContextTransfer = $searchContextTransfer;
+    }
+
+    /**
+     * @return void
+     */
+    protected function setupDefaultSearchContext(): void
+    {
+        $searchContextTransfer = new SearchContextTransfer();
+        $searchContextTransfer->setSourceIdentifier(static::SOURCE_IDENTIFIER);
+
+        $this->searchContextTransfer = $searchContextTransfer;
+    }
+
+    /**
+     * @return bool
+     */
+    protected function hasSearchContext(): bool
+    {
+        return (bool)$this->searchContextTransfer;
+    }
+
+}
+```
+</details>
+
+In the example above, a simple query is created, which will return all the documents from our mapping type.
+To execute this query, you need to call the `search()` method of the `SearchClient`.
+
+<a name="expanding"></a>
+
+## Expanding queries
+
+Query expanders are a way to reuse partial queries to build more complex ones.
+
+The suggested way to create queries is to create the simplest possible query as a base query for your use case, then use query expanders to expand it with other reusable behaviors, such as pagination, sorting, etc.
+
+You can create a new expander by implementing `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface`.
+
+Again, if you use query expanders, make sure that your base query is expandable, so it provides the same instance by calling `getSearchQuery()` multiple times.
+
+To expand a base query with a collection of expanders, use `expandQuery()` method from the `SearchClient`:
+
+```php
+<?php
+    // ...
+
+    /**
+     * @var \Spryker\Client\Search\SearchClientInterface
+     */
+    protected $searchClient;
+
+    // ...
+
+    /**
+     * @param \Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface $baseQuery
+     * @param \Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[] $queryExpanders
+     * @param array $requestParameters
+     *
+     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface
+     */
+    protected function expandBaseQuery(QueryInterface $baseQuery, array $queryExpanders, array $requestParameters)
+    {
+        $searchQuery =  $this
+            ->searchClient
+            ->expandQuery($baseQuery, $queryExpanders, $requestParameters);
+
+        return $searchQuery;
+    }
+
+    // ...
+```
+### Query expander plugins
+Spryker provides the following query expander plugins:
+
+#### Filtering by store
+The Filter by Store feature is a background capability that enables filtering content according to the request’s store.
+To filter content according to the request’s store, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPlugin`.
+
+#### Filtering by locale
+The Filter by Locale feature is a background capability that enables filtering content according to the request’s locale.
+To filter content according to the request’s store, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\LocalizedQueryExpanderPlugin`.
+
+#### Filtering by "is active" flag
+To display only active records in search results, you can use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\IsActiveQueryExpanderPlugin`. Add this to expander plugin stack, for example `\Pyz\Client\Catalog\CatalogDependencyProvider::createSuggestionQueryExpanderPlugins`. You also have to export `is-active` field by your search collector. The value for it is boolean.
+
+#### Filtering by "is active" within a given date range
+To display only records which are active within a given date range, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\IsActiveInDateRangeQueryExpanderPlugin`. Add this plugin to expander plugin stack, for example `\Pyz\Client\Catalog\CatalogDependencyProvider::createSuggestionQueryExpanderPlugins`. You also have to export `active-from` and  `active-to` by your search collector. The value is any valid Elasticsearch Date datatype value. For more information, see [Elasticsearch reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/date.html#date).
+
+#### Faceted navigation and filters
+The Faceted Navigation and Filtering feature allows to re-filter search results by the specific criteria. The filters are commonly displayed on the left side of the catalog page.
+
+The responsibility of `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is to add the necessary aggregations to your query based on a predefined configuration (see: [Configure Search Features](/docs/scos/dev/features/202001.0/search-and-filter/search-widget-for-concrete-products/configure-searc) ). You can use this plugin to get the necessary data for faceted navigation of your search results. If you use this plugin, also make sure to add `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\FacetResultFormatterPlugin` to your result formatter collection, which processes the returned raw aggregation data.
+
+To optimize facet aggregations, Search module combines all fields in groups of simple faceted aggregations (e.g. string-facet). But in some cases you need more control on facet generation.
+
+To manage each facet filter separately, check the `aggregationParams` field in `FacetConfigTransfer`. If no custom parameters are set to a facet config, it will be grouped by default.
+
+But if your project requires more, feel free to replace the default behavior in the provided extension points. `FacetQueryExpanderPlugin`, `FacetResultFormatterPlugin` are good points to start.
+
+#### Paginating the results
+Provides information about paginating the catalog pages and their current state.
+
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\PaginatedQueryExpanderPlugin` takes care of paginating your results based on the predefined configuration. If you use this plugin, also make sure to add `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\PaginatedResultFormatterPlugin` to your result formatter collection.
+
+#### Sorting the results
+Provides information and functionality necessary for sorting the results.
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SortedQueryExpanderPlugin` takes care of sorting your results based on the predefined configuration. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SortedResultFormatterPlugin`
+
+#### Spelling suggestion
+Adds a spelling correction suggestion to search results.
+Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SpellingSuggestionQueryExpanderPlugin` to let Elasticsearch provide the “did you mean” suggestions for full-text search typos. The suggestions are collected from the `suggestion_terms` field of `page` index map, so you need to make sure to store only those information inside this field that you’d like to use for this purpose. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SpellingSuggestionResultFormatterPlugin`
+
+#### Suggestions by page type
+Provides results by page type such as products, category and CMS pages.
+Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SuggestionByTypeQueryExpanderPlugin` to return sets of documents matching a full-text search query grouped by type, i.e. “product”, “category”, “cms page”, etc. Typical usage for this plugin is suggesting the top results by type when the user is typing in the search field. The necessary result formatter for this plugin is` \Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SuggestionByTypeResultFormatterPlugin`.
+
+#### Autocompletion
+Will add the functionality to predict the rest of the word or search string.
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\CompletionQueryExpanderPlugin` provides top completion terms for full-text search queries. Typical usage for this plugin is autocompleting the input of the user with the top result when they type something in the full-text search field and also to provide more suggestions as they type. The suggestions are collected from the `completion_terms` field of `page` index map, so you need to make sure to store only those information inside the field that you’d like to use for this purpose. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\CompletionResultFormatterPlugin`.
+
+{% info_block infoBox "Autocompletion preparations" %}
+To enable autocompletion when the user types, you need to add some analyzers to the full-text search fields. Without this, the standard analyzer of Elasticsearch will only provide suggestions after each completed word. The solution to provide mid-word suggestions is to add [edge ngram filter](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-edgengram-tokenfilter.html
+{% endinfo_block %} to the fields in which we are searching. To add this behavior to our `page` index, you'll need to add the following settings to your `src/Pyz/Shared/Search/Schema/page.json` file. Keep in mind, that changing the analyzers is not possible for existing indexes, so you'll need to set it up from the ground.)
+
+<details open>
+<summary>src/Pyz/Shared/Search/Schema/page.json</summary>
+   
+```json
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "fulltext_index_analyzer": {
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "fulltext_index_ngram_filter"
+          ]
+        },
+        "fulltext_search_analyzer": {
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "filter": {
+        "fulltext_index_ngram_filter": {
+          "type": "edge_ngram",
+          "min_gram": 2,
+          "max_gram": 20
+        }
+      }
+    }
+  },
+  "mappings": {
+    "page": {
+      "properties": {
+        "full-text": {
+          "analyzer": "fulltext_index_analyzer",
+          "search_analyzer": "fulltext_search_analyzer"
+        },
+        "full-text-boosted": {
+          "analyzer": "fulltext_index_analyzer",
+          "search_analyzer": "fulltext_search_analyzer"
+        }
+      }
+    }
+  }
+}
+```
+</details>
+
+<a name="process"></a>
+
+#### Process query result
+After you’ve created your query, you also need to process the raw response from Elasticsearch. This is done by providing a collection of `\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface`.
+To create one, you need to extend `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\AbstractElasticsearchResultFormatterPlugin`
+It’s also possible to not provide any result formatters; in this caseб the raw response will be returned at the end.
+
+<details open>
+<summary>Pyz\Client\Catalog\Plugin\ResultFormatter</summary>
+   
+```php
+<?php
+
+namespace Pyz\Client\Catalog\Plugin\ResultFormatter;
+
+use Elastica\Result;
+use Elastica\ResultSet;
+use Generated\Shared\Search\PageIndexMap;
+use Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\AbstractElasticsearchResultFormatterPlugin;
+
+class DummyResultFormatterPlugin extends AbstractElasticsearchResultFormatterPlugin
+{
+
+    const NAME = 'test';
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return static::NAME;
+    }
+
+    /**
+     * @param \Elastica\ResultSet $searchResult
+     * @param array $requestParameters
+     *
+     * @return array
+     */
+    protected function formatSearchResult(ResultSet $searchResult, array $requestParameters)
+    {
+        $results = [];
+
+        foreach ($resultSet->getResults() as $result) {
+            $results[] = $this->formatResult($result);
+        }
+
+        return $results;
+    }
+
+    /**
+     * @param \Elastica\Result $result
+     *
+     * @return mixed
+     */
+    protected function formatResult(Result $result)
+    {
+        // do something with the result ...
+        return $result;
+    }
+
+}
+```
+</details>
+
+To execute the previously created query along with this result formatter plugin, you need to call the `search()` method of `SearchClient` and provide this formatter to its second parameter.
+
+When you use the result formatter plugins, the result of the `SearchClient::search()` method will be an associative array, where the keys are the name of each result formatters (provided by `getName()` method) and the values are the response for each result formatter.
+
+This way in your controller, where at the end you get the response, you can simply provide everything you got right to the template to care of.

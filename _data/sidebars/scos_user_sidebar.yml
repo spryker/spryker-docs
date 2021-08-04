@@ -1,4 +1,4 @@
-title: SCOS Developer Guides
+title: SCOS User Guides
 entries:
   - product: SCOS
     nested:
@@ -2102,12 +2102,10 @@ entries:
                           url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/references/roles-reference.html
                           include_versions:
                             - '202009.0'
-                            - '202108.0'
                         - title: Reference information- User
                           url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/references/user-reference-.html
                           include_versions:
                             - '202009.0'
-                            - '202108.0'
                     - title: Managing Roles
                       url: /docs/scos/dev/user-guides/back-office-user-guide/users/roles-groups-and-users/managing-roles.html
                       include_versions:
@@ -2347,12 +2345,10 @@ entries:
                           url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/references/reference-searc.html
                           include_versions:
                             - '202009.0'
-                            - '202108.0'
                         - title: Reference information- Search preferences types
                           url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/references/search-preferen.html
                           include_versions:
                             - '202009.0'
-                            - '202108.0'
                     - title: Managing Search Preferences
                       url: /docs/scos/dev/user-guides/back-office-user-guide/merchandising/search-and-filters/managing-search.html
                       include_versions:

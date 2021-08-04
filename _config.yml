@@ -174,3 +174,6 @@ sass:
 
 last-modified-at:
   date-format: '%Y%m%dT%H%M'
+
+redirect_from:
+  json: false

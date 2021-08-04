@@ -1429,7 +1429,7 @@ It is the responsibility of the API Client to track whether the selected items a
             "discounts": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
+            "self": "https://glue.mysprykershop.com/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
         },
         "relationships": {
             "guest-cart-items": {

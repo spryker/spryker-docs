@@ -4,34 +4,52 @@
     @include media("<desktop") {
         padding: 5px 24px;
         display: flex;
+        flex-direction: row;
         align-items: center;
         position: sticky;
         top: 78px;
         left: 0;
         width: 100%;
         z-index: 3;
+        min-height: 50px;
     }
 
     @include media("<tablet") {
         top: 64px;
+        padding: 5px 16px;
+    }
+
+    .main-sidebar-opened & {
+        @include media("<desktop") {
+            position: static;
+            z-index: auto;
+        }
+    }
+
+    &-opened {
+        @include media("<desktop") {
+            overflow: hidden;
+        }
     }
 
     &__opener {
         position: absolute;
         z-index: 3;
-        top: 45px;
+        top: 44px;
         right: 0;
-        margin: 0 -16px 0 0;
-        padding: 7px 0 0;
-        width: 32px;
-        height: 32px;
+        margin: 0 -20px 0 0;
+        padding: 7px;
+        width: 39px;
+        height: 39px;
         border-radius: 50%;
         background: $grey-lighten;
         text-decoration: none;
         border: 2px solid $grey-lighten;
+        flex: 0 0 auto;
 
         @include media("<desktop") {
             position: static;
+            margin: 0 0 0 15px;
         }
 
         &:hover {
@@ -40,10 +58,31 @@
 
         &-decorator {
             display: block;
-            width: 14px;
-            height: 2px;
-            margin: 0 auto 4px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            margin: 0 auto 3px 0;
             background: $grey;
+            box-shadow: 8px 0 $grey, 16px 0 $grey;
+        }
+    }
+
+    &__popup {
+        @include media("<desktop") {
+            width: auto;
+            display: none;
+            position: fixed;
+            z-index: 2001;
+            background: $white;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        @include media(">=desktop") {
+            display: block !important;
+            opacity: 1 !important;
         }
     }
 
@@ -58,8 +97,11 @@
         }
 
         @include media("<desktop") {
-            width: auto;
-            display: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            transition: none;
         }
     }
 
@@ -73,6 +115,16 @@
 
         @include media("<desktop") {
             width: auto;
+            flex: 1 1 auto;
+            overflow: auto;
+            width: 100%;
+        }
+
+        .main-sidebar__title {
+            @include media("<desktop") {
+                padding: 14px 16px;
+                font-size: 20px;
+            }
         }
     }
 
@@ -97,5 +149,67 @@
         font-weight: 800;
         color: $grey-dark;
         margin: 0 10px 25px 25px;
+        flex: 1 1 auto;
+
+        @include media("<laptop") {
+            font-size: 18px;
+        }
+
+        @include media("<desktop") {
+            margin: 0;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__header {
+        display: none;
+
+        @include media("<desktop") {
+            display: flex;
+            background: $grey-lightest;
+            justify-content: flex-end;
+            padding: 16px 24px;
+            flex: 0 0 auto;
+            width: 100%;
+            border-bottom: 1px solid $grey-lighten;
+        }
+
+        @include media("<tablet") {
+            padding: 16px;
+        }
+    }
+
+    &__close {
+        display: block;
+
+        @include media("<laptop") {
+            width: 22px;
+            height: 22px;
+            position: relative;
+
+            &:before,
+            &:after {
+                position: absolute;
+                content: '';
+                top: -1px;
+                left: 1px;
+                width: 28px;
+                height: 3px;
+                background: $grey;
+                transform: rotate(45deg);
+                transform-origin: 0 2px;
+                border-radius: 2px;
+            }
+
+            &:after {
+                top: auto;
+                bottom: 0;
+                left: 2px;
+                transform: rotate(-45deg);
+            }
+        }
     }
 }

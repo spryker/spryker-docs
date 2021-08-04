@@ -22,22 +22,43 @@
     h1 {
         font-size: 38px;
         line-height: 1.369;
+
+        @include media("<tablet") {
+            font-size: 28px;
+        }
     }
 
     h2 {
         font-size: 28px;
+
+        @include media("<tablet") {
+            font-size: 20px;
+            line-height: 1.4;
+            margin: 0 0 8px;
+        }
     }
 
     h3 {
         font-size: 20px;
+
+        @include media("<tablet") {
+            font-size: 16px;
+            margin: 0 0 8px;
+        }
     }
 
     h4 {
         font-size: 18px;
+
+        @include media("<tablet") {
+            font-size: 15px;
+            margin: 0 0 8px;
+        }
     }
 
     table {
         max-width: 100%;
+        width: 100%;
         margin-bottom: 20px;
         border: 0;
         border-radius: 4px;
@@ -46,6 +67,66 @@
         font-size: 16px;
         line-height: 1.5;
         font-weight: 500;
+
+        @include media("<tablet") {
+            margin: 0 0 8px;
+            display: block;
+            border: 1px solid $grey-3;
+        }
+    }
+
+    .width-50 {
+        table {
+            max-width: 50%;
+            width: 50%;
+
+            @include media("<laptop") {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            td,
+            th {
+                word-break: break-word;
+            }
+        }
+    }
+
+    .width-100 {
+        table {
+            max-width: 100%;
+            width: 100%;
+
+            td,
+            th {
+                word-break: normal;
+
+                @include media("<laptop") {
+                    word-break: break-word;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    thead,
+    tbody,
+    tr {
+        @include media("<tablet") {
+            display: block;
+        }
+    }
+
+    thead {
+        tr {
+            @include media("<tablet") {
+                display: none;
+            }
+        }
     }
 
     caption {
@@ -54,12 +135,54 @@
         text-align: left;
     }
 
+    tr {
+        @include media("<tablet") {
+            border-bottom: 1px solid $grey-3;
+            background: $white;
+        }
+
+        &:nth-child(odd) {
+            @include media("<tablet") {
+                background: $grey-lightest;
+            }
+        }
+
+        &:first-child {
+            &,
+            td:first-child {
+                @include media("<tablet") {
+                    border-radius: 4px 4px 0 0;
+                }
+            }
+        }
+
+        &:last-child {
+            &,
+            td:last-child {
+                @include media("<tablet") {
+                    border-bottom-left-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
     th,
     td {
         padding: 10px 15px;
         hyphens: auto;
         min-width: 100px;
         border: 0;
+
+        @include media("<laptop") {
+            word-break: break-word;
+        }
+
+        @include media("<tablet") {
+            display: block;
+            padding: 8px 15px;
+        }
     }
 
     th {
@@ -79,12 +202,33 @@
 
     td {
         border-bottom: 2px solid $grey-3;
+
+        @include media("<tablet") {
+            padding-left: 40%;
+            border-bottom: 1px solid $grey-3;
+            overflow: hidden;
+            min-height: 45px;
+        }
+
+        &::before {
+            @include media("<tablet") {
+                content: attr(data-th-text);
+                float: left;
+                width: 65%;
+                margin: 7px 0 0 -66.666%;
+                font-size: 11px;
+                line-height: 14px;
+                font-weight: 800;
+                color: $black;
+            }
+        }
     }
 
     details {
-        margin: 0 0 20px;
-        border-top: 2px solid $grey-3;
-        border-bottom: 2px solid $grey-3;
+        margin: 0 0 24px;
+        border: 2px solid $grey-lighten;
+        background: $grey-lightest;
+        border-radius: 4px;
 
         & + details {
             margin-top: -22px;
@@ -102,9 +246,12 @@
             transition: color .2s linear, background .2s linear;
             color: $grey-dark;
             word-break: break-word;
+            border-radius: 2px;
 
             &:hover {
-                background: $grey-lightest;
+                @include hover {
+                    background: $white;
+                }
             }
 
             &:before {
@@ -123,16 +270,15 @@
                 transform: rotate(90deg);
             }
         }
+
+        pre {
+            margin-bottom: 16px;
+        }
     }
 
     .info-block {
-        details {
-            background: $white;
-        }
-        summary {
-            &:hover {
-                background: rgba(0, 0, 0, .1);
-            }
+        td, th {
+            word-break: break-word;
         }
     }
 
@@ -151,13 +297,21 @@
         margin: 0 0 20px;
         overflow: auto;
 
+        @include media("<tablet") {
+            overflow: visible;
+        }
+
         table {
-            margin: 0 0 5px;
+            margin: 0 auto 5px;
         }
     }
 
     p {
         word-break: break-word;
+
+        @include media("<laptop") {
+            margin-top: .5em;
+        }
     }
 
     img {
@@ -168,36 +322,87 @@
         @include media("<desktop") {
             max-width: 100%;
         }
+    }
 
-        &[width-100],
-        &.width-100 {
-            max-width: 100%;
-            width: 100%;
+    ul {
+        code {
+            word-break: break-word;
+        }
+    }
+
+    .tag-list {
+        display: none;
+
+        @include media("<laptop") {
+            display: block;
+            margin: 25px 0 15px;
         }
     }
 }
 
 .post-header {
-    display: flex;
-    align-items: flex-start;
     margin: 0 0 8px;
+
+    @include media("<tablet") {
+        margin: 0 0 16px;
+    }
+
+    @include media(">=tablet") {
+        display: grid;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "a b"
+                             "c c";
+    }
 
     &__title {
         flex: 1 1 auto;
         margin: 0 0 8px;
+        word-break: break-word;
+
+        @include media("<desktop") {
+            margin-top: -5px;
+        }
+
+        @include media("<tablet") {
+            margin: 0 0 10px;
+        }
+
+        @include media(">=tablet") {
+            grid-area: a;
+        }
     }
 
     &__button {
         flex: 0 0 auto;
         margin: 0 0 0 20px;
 
+        @include media("<tablet") {
+            margin: 0 0 10px;
+            display: flex;
+        }
+
+        @include media(">=tablet") {
+            grid-area: b;
+        }
+
         &:after {
             content: none !important;
         }
     }
 
-    h1 {
-        margin: 0;
+    .post-meta {
+        margin: 10px 0 0;
+
+        @include media("<tablet") {
+            margin: 0 0 8px;
+        }
+
+        @include media(">=tablet") {
+            grid-area: c;
+        }
     }
 }
 

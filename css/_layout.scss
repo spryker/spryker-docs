@@ -21,9 +21,9 @@ body {
 
         @include media("<laptop") {
             display: grid;
-            grid-column-gap: 0;
+            grid-column-gap: 30px;
             grid-row-gap: 0;
-            grid-template-rows: auto auto;
+            grid-template-rows: auto 1fr;
             grid-template-columns: auto auto;
             grid-template-areas: "a b"
                                  "a c";
@@ -83,6 +83,7 @@ body {
 
     @include media("<laptop") {
         grid-area: a;
+        margin: 0;
     }
 
     @include media("<desktop") {
@@ -102,6 +103,10 @@ body {
 
     @include media("<desktop") {
         padding: 24px 24px 0;
+    }
+
+    @include media("<tablet") {
+        padding: 16px 16px 0;
     }
 }
 
@@ -125,9 +130,13 @@ body {
     @include media("<desktop") {
         order: 2;
         margin: 0;
-        padding: 30px 24px 0;
+        padding: 24px 24px 0;
         width: 100%;
         grid-area: none;
+    }
+
+    @include media("<tablet") {
+        padding: 15px 16px 0;
     }
 
     &__sticky {

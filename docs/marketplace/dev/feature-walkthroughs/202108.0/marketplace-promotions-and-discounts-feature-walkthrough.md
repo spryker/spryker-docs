@@ -9,6 +9,6 @@ With the *Marketplace Promotions and Discounts* feature, the discounts are appli
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | GLUE API GUIDES | DATA IMPORT |
-| --------------- | --------------- | ----------- |
-| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-promotions-discounts-feature-integration.html) |                 |             |
+| INTEGRATION GUIDES  | 
+| --------------- | 
+| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-promotions-discounts-feature-integration.html) | 

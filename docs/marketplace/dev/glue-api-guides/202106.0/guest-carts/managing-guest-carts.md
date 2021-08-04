@@ -1143,7 +1143,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
             "discounts": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
+            "self": "https://glue.mysprykershop.com/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
         }
     },
     "included": [
@@ -1156,7 +1156,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "isDefault": true
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/product-offers/offer89"
+                "self": "https://glue.mysprykershop.com/product-offers/offer89"
             }
         },
         {
@@ -1168,7 +1168,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "isDefault": false
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/product-offers/offer48"
+                "self": "https://glue.mysprykershop.com/product-offers/offer48"
             }
         },
         {
@@ -1208,7 +1208,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "productConfigurationInstance": null
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/concrete-products/041_25904691"
+                "self": "https://glue.mysprykershop.com/concrete-products/041_25904691"
             },
             "relationships": {
                 "product-offers": {
@@ -1264,7 +1264,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49/guest-cart-items/041_25904691_offer48"
+                "self": "https://glue.mysprykershop.com/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49/guest-cart-items/041_25904691_offer48"
             },
             "relationships": {
                 "concrete-products": {
@@ -1307,7 +1307,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
             "discounts": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
+            "self": "https://glue.mysprykershop.com/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
         }
     },
     "included": [
@@ -1320,7 +1320,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "quantity": "0.0000000000"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/product-offers/offer89/product-offer-availabilities"
+                "self": "https://glue.mysprykershop.com/product-offers/offer89/product-offer-availabilities"
             }
         },
         {
@@ -1332,7 +1332,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "isDefault": true
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/product-offers/offer89"
+                "self": "https://glue.mysprykershop.com/product-offers/offer89"
             },
             "relationships": {
                 "product-offer-availabilities": {
@@ -1354,7 +1354,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "quantity": "20.0000000000"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/product-offers/offer48/product-offer-availabilities"
+                "self": "https://glue.mysprykershop.com/product-offers/offer48/product-offer-availabilities"
             }
         },
         {
@@ -1366,7 +1366,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "isDefault": false
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/product-offers/offer48"
+                "self": "https://glue.mysprykershop.com/product-offers/offer48"
             },
             "relationships": {
                 "product-offer-availabilities": {
@@ -1416,7 +1416,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "productConfigurationInstance": null
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/concrete-products/041_25904691"
+                "self": "https://glue.mysprykershop.com/concrete-products/041_25904691"
             },
             "relationships": {
                 "product-offers": {
@@ -1472,7 +1472,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49/guest-cart-items/041_25904691_offer48"
+                "self": "https://glue.mysprykershop.com/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49/guest-cart-items/041_25904691_offer48"
             },
             "relationships": {
                 "concrete-products": {
@@ -1515,7 +1515,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
             "discounts": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
+            "self": "https://glue.mysprykershop.com/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49"
         }
     },
     "included": [
@@ -1555,7 +1555,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/product-offers/offer89/product-offer-prices"
+                "self": "https://glue.mysprykershop.com/product-offers/offer89/product-offer-prices"
             }
         },
         {
@@ -1567,7 +1567,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "isDefault": true
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/product-offers/offer89"
+                "self": "https://glue.mysprykershop.com/product-offers/offer89"
             },
             "relationships": {
                 "product-offer-prices": {
@@ -1616,7 +1616,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/product-offers/offer48/product-offer-prices"
+                "self": "https://glue.mysprykershop.com/product-offers/offer48/product-offer-prices"
             }
         },
         {
@@ -1628,7 +1628,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "isDefault": false
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/product-offers/offer48"
+                "self": "https://glue.mysprykershop.com/product-offers/offer48"
             },
             "relationships": {
                 "product-offer-prices": {
@@ -1678,7 +1678,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "productConfigurationInstance": null
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/concrete-products/041_25904691"
+                "self": "https://glue.mysprykershop.com/concrete-products/041_25904691"
             },
             "relationships": {
                 "product-offers": {
@@ -1734,7 +1734,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com:80/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49/guest-cart-items/041_25904691_offer48"
+                "self": "https://glue.mysprykershop.com/guest-carts/6851dc6a-ebed-52ed-b229-81a35fe94c49/guest-cart-items/041_25904691_offer48"
             },
             "relationships": {
                 "concrete-products": {

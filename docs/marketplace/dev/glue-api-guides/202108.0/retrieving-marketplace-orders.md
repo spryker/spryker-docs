@@ -514,7 +514,7 @@ The endpoint responds with an array of orders placed by the authenticated custom
 
 | ATTRIBUTE    | TYPE  | DESCRIPTION     |
 | -------------- | -------- | ----------------------- |
-| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html) for more details. |
+| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for more details. |
 | itemStates  | Array  | State of the item in the order.    |
 | createdAt  | String   | Date and time when the order was created.    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |

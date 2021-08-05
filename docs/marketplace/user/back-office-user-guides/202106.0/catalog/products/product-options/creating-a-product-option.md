@@ -1,5 +1,5 @@
 ---
-title: Creating a product option
+title: Creating product options
 last_updated: Apr 21, 2021
 description: Use this procedure to create Marketplace product option groups and values in the Back Office.
 template: back-office-user-guide-template
@@ -19,21 +19,17 @@ Each section in this article contains reference information. Make sure to review
 To create a product option:
 
 1. On the *Product option list* page, select **Create product option** in the top right corner.
-    This opens the *Create new Product Options* page with *General Information* and *Products* tabs.
-2. In the *General Information* tab, do the following:
-    1. Add a **Group name translation key**.
-    2. Select a **Tax set**.
-    3. In the *Option Values* section, enter an **Option name translation key**. {% info_block infoBox "Info" %} You can remove an option value by clicking **Remove** next to the *Option name translation key* and *SKU* fields.{% endinfo_block %}
-    4. Enter a **SKU** or proceed with the auto-generated one.
-    5. In the *Prices* section, enter **Gross price** and **Net price** for all the desired stores and currencies. 
-    6. Optional: To add one more product options value, select **Add option**, and repeat step 5.
-    7. In the *Translation* section, enter **Group name** and **Option name** for all the locales. {% info_block infoBox "Info" %} To copy a **Group name** or **Option name** from one locale to another, select the *Copy* icon next to the desired value.  {% endinfo_block %}
-    8. To proceed to the *Products* tab, select **Next** .    
-       
-3. In the *Products* tab, select one or more products to be assigned to the product option. 
-    {% info_block infoBox "Info" %} To select all the products on the page, select **Select all on the page**. This is usually useful when you filter the products using the search field. {% endinfo_block %}
-4. Select **Save**.
-    This refreshes the page with the success message displayed. 
+    This opens the  with *General Information* and *Products* tabs.
+2. On the *Create new Product Options* page , enter a **Group name translation key**.
+3. Select a **Tax set**.
+4. In the *Option Values* section, enter an **Option name translation key**. {% info_block infoBox "Info" %} You can remove an option value by clicking **Remove** next to the *Option name translation key* and *SKU* fields.{% endinfo_block %}
+5. Enter a **SKU** or proceed with the auto-generated one.
+6. In the *Prices* section, enter **Gross price** and **Net price** for all the desired stores and currencies. 
+7. Optional: To add one more product options value, select **Add option**, and repeat step 5.
+8. In the *Translation* section, enter **Group name** and **Option name** for all the locales. {% info_block infoBox "Info" %} To copy a **Group name** or **Option name** from one locale to another, select the *Copy* icon next to the desired value.  {% endinfo_block %}
+9. To save the changes, select **Save**.
+    This refreshes the page with the success message displayed.
+10. [Assign products to the product option](#assigning-products-to-a-product-option).       
 
 ### Reference information: Creating a product option 
 
@@ -49,18 +45,22 @@ The following table describes the attributes you enter and select while creating
 | Group name | Option group name that's displayed on the Storefront. |
 | Option name | Option name that's displayed on the Storefront. |
 
-**Tips & tricks**
 
-* In the **Products** tab, after selecting products to assign, you can see the selected products in the **Products to be assigned** subtab. To unselect a product, select **Remove** next to the desired product.
+## Assigning products to a prooduct option
 
-While creating a product option, if you want to remove some product from the selected, clear check boxes next to the products you selected or click **Deselect all on the page** (this removes all products from the to-be-assigned list you selected on this page).
+To assign products to a product option, do the following:
+1. Select **Edit** next to the product option you want to assign product to.
+2. On the *Edit product option* page, switch to **Products** tab. 
+3. Select the desired products. 
+4. Select **Save**
+    This refershes the page with the success message displayed. 
 
-You can switch between **All products** and **Products to be assigned** view by selecting the respective options on the top of the products table.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Creating+a+product+option/product-to-be-assigned-tab.png)
+**Tips and tricks**
 
-If you know the name or the SKU of the product to which an option should be assigned, you can search for it in the *Search* field.
 
-Each product abstract can have multiple product option groups assigned.
+* To select all the products on the page, select **Deselect all on the page**. This is usually useful when you filter the products using the search field.
+* After selecting products, you can view the products to be assigned in the **Products to be assigned** subtab. To unselect a product from being assigned, select **Remove** next to the desired product. 
+
 
 
 ## Deassigning products from a product option
@@ -74,19 +74,15 @@ To deassign products from a product option, do the following:
 
 **Tips and tricks**
 
-* After deselecting products, you can view the products to be deassigned in the **Products to be deassigned** subtab. To unselect a product from being deassigned, select **Remove** next to the desired product. 
 * To deselect all the products on the page, select **Deselect all on the page**. This is usually useful when you filter the products using the search field.
+* After deselecting products, you can view the products to be deassigned in the **Products to be deassigned** subtab. To unselect a product from being deassigned, select **Remove** next to the desired product. 
+
 
 
 
 ## Activating a product option
-Your product option is created, however, it is not activated. Thus, it will not be seen on the product details page. 
 
-To activate a product option:
-
-On the *Edit product option* page, click **Activate** in the top right corner.
-**OR**
-On the *Product option list* page, click **Activate** for a specific product option in the _Actions_ column.
+To activate a product option, on the *Product option list* page, select **Activate** next to the desired product option.
 
 ### Reference information: Activating a product option
 

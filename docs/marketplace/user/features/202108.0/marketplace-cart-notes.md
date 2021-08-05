@@ -1,0 +1,16 @@
+---
+title: Marketplace Cart Notes feature overview
+description: This document contains concept information for the Marketplace Cart Notes feature.
+template: concept-topic-template
+---
+
+The **Marketplace Cart Notes** feature allows you to include a "Notes" field on the cart page. Buyers can add notes to a particular item or the whole cart, for example, some special instructions about how to prepare and deliver an order.
+
+![Marketplace Cart Notes on the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Cart+Notes/mp-cart-notes-on-the-storefront.png)
+
+The Marketplace administrator can see the special request in the [order details section of the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/sales/managing-main-merchant-orders.html#merchant-order-overview-page):
+
+![Cart Notes in Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart+Notes/cart-notes-admin.png){height="" width=""}
+
+## Current constraints
+In a situation, when the same product variants are added to the cart with different notes, the variants get merged with the same note.

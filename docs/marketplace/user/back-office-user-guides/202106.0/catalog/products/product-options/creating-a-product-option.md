@@ -1,18 +1,16 @@
 ---
 title: Creating a product option
 last_updated: Apr 21, 2021
-description: Use this procedure to create a Marketplace product option group and its values in the Back Office.
+description: Use this procedure to create Marketplace product option groups and values in the Back Office.
 template: back-office-user-guide-template
 ---
-This article describes how to create a Marketplace product option.
+This article describes how to create Marketplace product options.
 
 ## Prerequisites
 
-To start working with the product options, go to **Products** > **Product Options**.
+To start working with product options, go to **Catalog** > **Product Options**.
 
-You should have an appropriate Tax Set created in the *Taxes* section in order to apply it to the [product option group](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-options-feature-overview.html).
-
-Let's say you want to add additional options to your product, like a warranty or a gift box. Those are exactly the things that are created in the *Product Options* section. Such options will have their own prices, and the user will be able to select the most suitable one.
+There should be an existing tax set to apply it to the [product option group](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-options-feature-overview.html). See [Managing tax sets](https://documentation.spryker.com/docs/managing-tax-sets) for detailed instructions on creating tax sets.
 
 Each section in this article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
@@ -20,19 +18,22 @@ Each section in this article contains reference information. Make sure to review
 
 To create a product option:
 
-1. Click **Create product option** in the top right corner of the *Product option list* page.
-2. On the *Create new Product Options* page, you see *General Information* and *Products* tabs. In the *General Information* tab:
-    1. Add the group name translation key. The format of the group name translation key should be as follows: *product.option.group.name.[your key]*. For example, `product.option.group.name.test`.
-    2. Define a tax set assigned to your product option group by selecting the appropriate value from the drop-down list.
-    3. In the *Option Values* section, enter an option name translation key value. The format of the option name translation key should be as follows: *product.option.[your key]* (for example, `product.option.newtest`).{% info_block infoBox "Info" %} You can remove an option value by clicking **Remove** next to the *Option name translation key* and *SKU* fields.{% endinfo_block %}
-    4. Add a unique SKU for a product option value or proceed with the auto-generated one.
-    5. the *Prices* section, specify gross and net prices for a product option value. If you want to add several product options values, click **Add option** below the *Prices* section, and repeat the same step. Prices are integer values and stored in their normalized form. For example, 4EUR is stored as 400 in the database.If price is not defined, the product option value is considered *inactive* for that specific currency and price mode. If price is set to 0, it is considered *free of charge*.
-    6. In the *Translation* section, add a group name and option name that will be displayed in the shop application per each locale. You can copy the Group and Option names from one locale to another using the corresponding **Copy** icon. 
-    7. Click **Next** to proceed to the *Products* tab, or just click on it.    
+1. On the *Product option list* page, select **Create product option** in the top right corner.
+    This opens the *Create new Product Options* page with *General Information* and *Products* tabs.
+2. In the *General Information* tab, do the following:
+    1. Add a **Group name translation key**.
+    2. Select a **Tax set**.
+    3. In the *Option Values* section, enter an **Option name translation key**. {% info_block infoBox "Info" %} You can remove an option value by clicking **Remove** next to the *Option name translation key* and *SKU* fields.{% endinfo_block %}
+    4. Enter a **SKU** or proceed with the auto-generated one.
+    5. In the *Prices* section, enter **Gross price** and **Net price** for all the desired stores and currencies. 
+    6. Optional: To add one more product options value, select **Add option**, and repeat step 5.
+    7. In the *Translation* section, enter **Group name** and **Option name** for all the locales. {% info_block infoBox "Info" %} To copy a **Group name** or **Option name** from one locale to another, select the *Copy* icon next to the desired value.  {% endinfo_block %}
+    8. To proceed to the *Products* tab, select **Next** .    
        
-3. In the *Products* tab, select product(s) to be assigned to the product. 
-    Alternatively, you can click **Select all on the page**. In this case, all the products displayed on the page will be selected and added to the product option. The products you select will appear in the *Products to be assigned* tab.
-4. Click **Save**.
+3. In the *Products* tab, select one or more products to be assigned to the product option. 
+    {% info_block infoBox "Info" %} To select all the products on the page, select **Select all on the page**. This is usually useful when you filter the products using the search field. {% endinfo_block %}
+4. Select **Save**.
+    This refreshes the page with the success message displayed. 
 
 ### Reference information: Creating a product option 
 
@@ -42,13 +43,15 @@ The following table describes the attributes you enter and select while creating
 | --- | --- |
 | Group name translation key | Glossary key for a product option group. The format of the group name translation key should be as follows: *product.option.group.name.[your key]*. For example, product.option.group.name.test.</br></br>This field is not available for modification on the *Edit Product Option* page. |
 | Tax Set | Conditions under which a specific product option group is going to be taxed. A drop-down list with the values from **Taxes** > **Tax Sets**. |
-| Option name translation key | Glossary key for a product option value. The format of the option name translation key should be as follows: *product.option.[your key]*. For example, product.option.newtest.</br></br>This field is not available for modification on the Edit Product Option page. |
+| Option name translation key | Glossary key for the product option value. The format of the option name translation key should be as follows: *product.option.[your key]*. For example, product.option.newtest.</br></br>This field is not available for modification on the Edit Product Option page. |
 | SKU | Unique SKU for a product option value. This value can be autogenerated, and you can use the autogenerated one.</br>This field is not available for modification on the Edit Product Option page. |
-| Gross price and Net price | Price value for gross and net mode.|
-|Group name | Name of your option group. |
-| Option name | Name of your option. |
+| Gross price and Net price | Price values of the product option value for gross and net modes. Prices are integer values and, in the database, they are stored in their normalized form. For example, `4EUR` is stored as `400`. If you do not define a price for a product option value, it is considered *inactive* for that specific currency and price mode. If a price is `0`, it is considered *free of charge*.|
+| Group name | Option group name that's displayed on the Storefront. |
+| Option name | Option name that's displayed on the Storefront. |
 
 **Tips & tricks**
+
+* In the **Products** tab, after selecting products to assign, you can see the selected products in the **Products to be assigned** subtab. To unselect a product, select **Remove** next to the desired product.
 
 While creating a product option, if you want to remove some product from the selected, clear check boxes next to the products you selected or click **Deselect all on the page** (this removes all products from the to-be-assigned list you selected on this page).
 
@@ -58,6 +61,23 @@ You can switch between **All products** and **Products to be assigned** view by 
 If you know the name or the SKU of the product to which an option should be assigned, you can search for it in the *Search* field.
 
 Each product abstract can have multiple product option groups assigned.
+
+
+## Deassigning products from a product option
+
+To deassign products from a product option, do the following:
+1. Select **Edit** next to the product option you want to deassign product from.
+2. On the *Edit product option* page, switch to **Products** > **Assigned products** subtab. 
+3. Deselect the desired products. 
+4. Select **Save**
+    This refershes the page with the success message displayed. 
+
+**Tips and tricks**
+
+* After deselecting products, you can view the products to be deassigned in the **Products to be deassigned** subtab. To unselect a product from being deassigned, select **Remove** next to the desired product. 
+* To deselect all the products on the page, select **Deselect all on the page**. This is usually useful when you filter the products using the search field.
+
+
 
 ## Activating a product option
 Your product option is created, however, it is not activated. Thus, it will not be seen on the product details page. 

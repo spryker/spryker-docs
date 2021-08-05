@@ -52,6 +52,7 @@
         }
 
         &-opener {
+            transition: transform .3s linear;
             display: none;
 
             @include media("<laptop") {
@@ -73,6 +74,15 @@
             @include media("<tablet") {
                 right: 16px;
                 top: 132px;
+            }
+
+            .scroll-down & {
+                @include media("<desktop") {
+                    transform: translateY(-128px);
+                }
+                @include media("<tablet") {
+                    transform: translateY(-114px);
+                }
             }
 
             &-line {

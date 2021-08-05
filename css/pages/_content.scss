@@ -280,6 +280,13 @@
         td, th {
             word-break: break-word;
         }
+
+        .width-50 {
+            table {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
     }
 
     ol {
@@ -302,7 +309,7 @@
         }
 
         table {
-            margin: 0 auto 5px;
+            margin: 0 0 5px;
         }
     }
 

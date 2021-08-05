@@ -1,5 +1,6 @@
 .main-sidebar {
     padding: 40px 0;
+    transition: transform .3s linear;
 
     @include media("<desktop") {
         padding: 5px 24px;
@@ -23,6 +24,15 @@
         @include media("<desktop") {
             position: static;
             z-index: auto;
+        }
+    }
+
+    .scroll-down & {
+        @include media("<desktop") {
+            transform: translateY(-128px);
+        }
+        @include media("<tablet") {
+            transform: translateY(-114px);
         }
     }
 

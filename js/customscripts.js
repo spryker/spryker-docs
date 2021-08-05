@@ -3,6 +3,8 @@ $( document ).ready(function() {
 
     initCopyText();
 
+    initSetPageOffset();
+
     initResponsiveTable();
 
     anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
@@ -21,8 +23,6 @@ $( document ).ready(function() {
 
     initPopup();
 
-    initSetPageOffset();
-
     initToc();
 
     initVertionDropdown();
@@ -30,7 +30,18 @@ $( document ).ready(function() {
     initLightbox();
 
     initPageScrolling();
+
+    initPostAnchor();
 });
+
+function initPostAnchor() {
+    let anchor = $('.post-anchor__button');
+
+    anchor.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 300);
+    });
+}
 
 function initPageScrolling() {
     let page = $(window),
@@ -391,12 +402,17 @@ function initResponsiveTable() {
     $('.post-content table').each(function () {
         let table = jQuery(this),
             th = table.find('th'),
-            tr = table.find('tr');
+            tr = table.find('tr'),
+            switcher = $('<div class="table__toggle"><span class="table__toggle-default-text">Show all</span><span class="table__toggle-active-text">Hide</span></div>'),
+            isExpanded = false,
+            wrapper;
 
-        table.wrap('<div class="table-wrapper"></div>');
+        table.wrap($('<div class="table"></div>'));
+        switcher.insertAfter(table);
+        wrapper = table.closest('.table');
 
         if (th.length < 3) {
-            table.closest('.table-wrapper').addClass('width-50');
+            wrapper.addClass('width-50');
         }
 
         tr.each(function () {
@@ -404,9 +420,33 @@ function initResponsiveTable() {
                 item.setAttribute('data-th-text', th.eq(i).text());
             });
         });
+
+        switcher.on('click', function(e) {
+            wrapper.toggleClass('expanded');
+
+            if (isExpanded) {
+                table.get(0).scrollIntoView();
+            }
+
+            isExpanded = !isExpanded;
+        });
+
+        function checkTableHeight() {
+            if (window.innerWidth >= 768) return;
+
+            if (table.outerHeight() > (window.innerHeight - pageOffset)) {
+                wrapper.addClass('has-collapse');
+            } else {
+                wrapper.removeClass('has-collapse');
+            }
+        }
+
+        checkTableHeight();
+
+        $(window).on('resize orientationchange', checkTableHeight);
     });
 }
-
+console.log(window.innerWidth);
 function initCopyText() {
     jQuery('.post-content > pre, .post-content details > pre, div.highlight').each(function () {
         let block = jQuery(this),

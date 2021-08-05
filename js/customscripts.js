@@ -29,7 +29,22 @@ $( document ).ready(function() {
     initToc();
 
     initVertionDropdown();
+
+    initLightbox();
 });
+
+function initLightbox() {
+    $('.post-content img').each(function(i, item){
+        let image = $(this);
+
+        image.wrap('<a href="' + image.attr('src') + '" data-lightbox="content-lightbox"></a>');
+    });
+
+    lightbox.option({
+      'resizeDuration': 300,
+      'wrapAround': false
+    });
+}
 
 function initVertionDropdown() {
     let body = $('body'),
@@ -56,6 +71,11 @@ function initSetPageOffset() {
         menuPosition,
         headerOffset = 0,
         menuOffset = 0;
+
+    if (!menuElement) {
+        pageOffset = 0;
+        return;
+    }
 
     function calcOffset() {
         headerPosition = window.getComputedStyle(headerElement, null).getPropertyValue('position');
@@ -344,7 +364,7 @@ function initResponsiveTable() {
             th = table.find('th'),
             tr = table.find('tr');
 
-        let wrapper = table.wrap('<div class="table-wrapper"></div>');
+        table.wrap('<div class="table-wrapper"></div>');
 
         if (th.length < 3) {
             table.closest('.table-wrapper').addClass('width-50');

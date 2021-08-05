@@ -318,6 +318,7 @@
         display: block;
         margin: 0 auto 1em;
         max-width: 50%;
+        cursor: zoom-in;
 
         @include media("<desktop") {
             max-width: 100%;
@@ -336,6 +337,18 @@
         @include media("<laptop") {
             display: block;
             margin: 25px 0 15px;
+        }
+    }
+
+    [data-lightbox] {
+        pointer-events: none;
+
+        img {
+            pointer-events: auto;
+        }
+
+        &:after {
+            content: none;
         }
     }
 }

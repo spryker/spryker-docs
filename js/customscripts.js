@@ -446,7 +446,7 @@ function initResponsiveTable() {
         $(window).on('resize orientationchange', checkTableHeight);
     });
 }
-console.log(window.innerWidth);
+
 function initCopyText() {
     jQuery('.post-content > pre, .post-content details > pre, div.highlight').each(function () {
         let block = jQuery(this),

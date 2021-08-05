@@ -14,7 +14,7 @@ There should be an existing tax set to apply it to the [product option group](/d
 
 Each section in this article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
-## Defining general settings for a product option
+## Defining general settings of a product option
 
 To create a product option:
 
@@ -35,9 +35,9 @@ To create a product option:
 * To remove an option value, click **Remove** next to the *Option name translation key* and *SKU* fields.
 * To copy a **Group name** or **Option name** from one locale to another, select the *Copy* icon next to the desired value.
 
-### Reference information: Creating a product option 
+### Reference information: Defining general settings of a product option
 
-The following table describes the attributes you enter and select while creating or updating product options.
+The following table describes the attributes you enter and select while defining general settings of a product option.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

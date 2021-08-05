@@ -141,7 +141,7 @@ body {
 
     &__sticky {
         position: sticky;
-        top: 40px;
+        top: 134px;
 
         @include media("<laptop") {
             position: static;

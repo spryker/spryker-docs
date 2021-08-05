@@ -21,7 +21,7 @@ Then, in the *Shipment* checkout step, you can see that by default the products 
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/shipment-to-single-address.png)
 
-Or you can use the **Deliver to multiple addresses** drop-down option that will let you assign a delivery address per cart item.
+Or you can use the **Deliver to multiple addresses** drop-down option that will let you assign a delivery address per cart item. By doing that, even items from the same merchant will have separate shipments configured.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/deliver-shipment.png)
 

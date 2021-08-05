@@ -9,13 +9,14 @@ template: concept-topic-template
 You can manage the relations between merchant and warehouse by importing the warehouse and merchant data. See [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-stock-csv.html)
 
 ## Stock management
-You can manage the stock of product offers for a merchant by importing the product offer and stock data separately. See [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock-csv.html). Or you can define stock when importing the product offer data. See [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-combined-merchant-product-offer-csv.html)
+You can manage the stock of product offers for a merchant by importing the product offer and stock data separately. See [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock-csv.html). Or you can define stock when importing the product offer data. See [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-combined-merchant-product-offer-csv.html).
+To import the stock of merchant products, see 
 
 To learn more about the feature and to find out how end users use it, see [Marketplace Inventory Management](/docs/marketplace/user/features/{{ page.version }}/marketplace-inventory-management-feature-overview.html) feature overview for business users.
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | DATA IMPORT  |
+| INTEGRATION GUIDES | DATA IMPORT  |
 | ------------ | --------------- |
 | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-inventory-management-feature-integration.html) | [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-stock-csv.html) |
 | [Glue API: Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-inventory-management-feature-integration.html)  | [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock-csv.html) |

@@ -6,15 +6,15 @@ template: concept-topic-template
 
 The *Marketplace Promotions and Discounts* feature ensures that the discounts are applied to orders. 
 
-Discounts are applied to merchant orders in the form of the [cart rules](https://documentation.spryker.com/docs/promotions-discounts-feature-overview#cart-rule).
+Discounts are applied to merchant orders in the form of the [cart rules](https://documentation.spryker.com/docs/promotions-discounts-feature-overview#cart-rule). In current implementation, it is not possible to create a cart rule based on any merchant parameters, such as merchant or product offer. However, it is still possible to create cart rules for the merchant products. See [Creating a cart rule](https://documentation.spryker.com/docs/creating-a-cart-rule) for more details.
 
-Discount logic for merchant orders follows these rules:
+Based on the business logic, discounts can be applied in the following ways:
 
-* If the discount applies to the whole Marketplace order, the discount is distributed among all the merchant orders and calculated according to the total volume of each of the items.
+* The discount is applied to the whole Marketplace order. In such a scenario, the discount is distributed among all the merchant orders and calculated according to the total volume of each of the items.
 
 ![Merchant discount 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/mp-discount.png)
 
-* If the discount is related to a single product item, then the whole discount is assigned only to the merchant order that contains the discounted item.
+* The discount is related to a single product item in the Marketplace order. In this case, the whole discount is assigned only to the merchant order that contains the discounted item.
 
 ![Merchant discount 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/mp-discount-2.png)
 

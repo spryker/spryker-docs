@@ -7,15 +7,30 @@ module Jekyll
     end
 
     def render(context)
-      @context = context
-      data = @markup.split(" ")
-      sidebar_data = @context[data[0].strip][0]
-      @version = @context[data[1].strip]
-      @page_url = @context[data[2].strip]
+        @context = context
+        @version = get_current_version
+        @page_url = get_page_url
+        sidebar_data = get_sidebar_data
 
-      return '' if sidebar_data.nil? or sidebar_data['nested'].nil?
+        return '' if sidebar_data.nil? or sidebar_data['nested'].nil?
 
-      '<ul class="sidebar-nav">' + build_sidebar_string(sidebar_data['nested']) + '</ul>'
+        '<ul class="sidebar-nav">' + build_sidebar_string(sidebar_data['nested']) + '</ul>'
+    end
+
+    def get_current_version()
+        !@context['page']['version'].nil? ? @context['page']['version'] : @context['site']['version']
+    end
+
+    def get_page_url()
+        @context['page']['url']
+    end
+
+    def get_sidebar_name()
+        @context['page']['sidebar']
+    end
+
+    def get_sidebar_data()
+        @context['site']['data']['sidebars'][get_sidebar_name]['entries'][0]
     end
 
     def build_sidebar_string(sidebar_data)
@@ -24,6 +39,7 @@ module Jekyll
             sidebar_item_title = nested_item['title']
             sidebar_item_url = versionize_url(nested_item['url'])
             include_versions = nested_item['include_versions']
+            sub_items = nested_item['nested']
 
             next nested_item unless include_versions.nil? or include_versions.include? @version
 
@@ -35,20 +51,22 @@ module Jekyll
         <strong class="sidebar-nav__title">#{sidebar_item_title}</strong>
     </a>
 EOF
-            elsif sidebar_item_url == @page_url then
-                sidebar_string += <<-EOF
-<li class="active-page-item">
-    <a title="#{sidebar_item_title}" href="#{sidebar_item_url}" class="sidebar-nav__link">#{sidebar_item_title}</a>
-EOF
             else
                 sidebar_string += <<-EOF
-<li>
-    <a title="#{sidebar_item_title}" href="#{sidebar_item_url}" class="sidebar-nav__link">#{sidebar_item_title}</a>
+<li#{' class="active-page-item"' if sidebar_item_url == @page_url}>
+    <a title="#{sidebar_item_title}" href="#{sidebar_item_url}" class="sidebar-nav__link#{' sidebar-nav__link--shifted' unless sidebar_item_url.nil? || sub_items.nil? }">#{sidebar_item_title}</a>
 EOF
+                unless sidebar_item_url.nil? || sub_items.nil?
+                    sidebar_string += <<-EOF
+    <a href="#" class="sidebar-nav__opener sidebar-nav__opener--small">
+        <i class="icon-arrow-right"></i>
+    </a>
+EOF
+                end
             end
 
-            if not nested_item['nested'].nil? then
-                sidebar_string += '<ul>' + build_sidebar_string(nested_item['nested']) + '</ul>'
+            if not sub_items.nil? then
+                sidebar_string += '<ul>' + build_sidebar_string(sub_items) + '</ul>'
             end
             sidebar_string += '</li>'
         end

@@ -7,7 +7,7 @@ _GEM_INSTALL: &GEM_INSTALL
   - echo "_GEM_INSTALL"
   - gem install bundler
   - bundle install
-  - bundle exec jekyll build
+  - bundle exec jekyll build --config=_config.yml,_config_production.yml
 
 jobs:
   include:

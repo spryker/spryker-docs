@@ -280,6 +280,13 @@
         td, th {
             word-break: break-word;
         }
+
+        .width-50 {
+            table {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
     }
 
     ol {
@@ -302,7 +309,7 @@
         }
 
         table {
-            margin: 0 auto 5px;
+            margin: 0 0 5px;
         }
     }
 
@@ -318,6 +325,7 @@
         display: block;
         margin: 0 auto 1em;
         max-width: 50%;
+        cursor: zoom-in;
 
         @include media("<desktop") {
             max-width: 100%;
@@ -336,6 +344,18 @@
         @include media("<laptop") {
             display: block;
             margin: 25px 0 15px;
+        }
+    }
+
+    [data-lightbox] {
+        pointer-events: none;
+
+        img {
+            pointer-events: auto;
+        }
+
+        &:after {
+            content: none;
         }
     }
 }

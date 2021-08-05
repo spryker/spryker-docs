@@ -190,8 +190,8 @@ entries:
               - title: "Glue API: Merchant Opening Hours feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
 
-              - title: "Glue API: Offer Volume Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/offer-volume-prices.html
+              - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/glue-api-marketplace-product-offer-volume-prices.html
 
               - title: "Glue API: Marketplace Product Offer + Cart feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html

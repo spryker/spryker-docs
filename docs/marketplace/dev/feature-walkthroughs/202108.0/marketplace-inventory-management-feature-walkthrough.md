@@ -10,7 +10,7 @@ You can manage the relations between merchant and warehouse by importing the war
 
 ## Stock management
 You can manage the stock of product offers for a merchant by importing the product offer and stock data separately. See [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock-csv.html). Or you can define stock when importing the product offer data. See [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-combined-merchant-product-offer-csv.html).
-To import the stock of merchant products, see 
+To import the stock of merchant products, see [File details: product_stock.csv](https://documentation.spryker.com/docs/file-details-product-stockcsv)
 
 To learn more about the feature and to find out how end users use it, see [Marketplace Inventory Management](/docs/marketplace/user/features/{{ page.version }}/marketplace-inventory-management-feature-overview.html) feature overview for business users.
 

@@ -32,7 +32,7 @@ In the Back Office, the shipments are displayed in the *Order Items* section on 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/shipments-back-office.png)
 
 ## Marketplace Shipment in the Merchant Portal
-Every merchant can view only the shipment of their product offers and products on the Order [Order ID] drawer.
+Every merchant can view only the shipment of their product offers and products on the *Order [Order ID]* drawer.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/shipment-merchant-portal.png)
 

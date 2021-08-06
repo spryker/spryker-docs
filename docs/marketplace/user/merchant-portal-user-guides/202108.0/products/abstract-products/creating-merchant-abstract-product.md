@@ -1,11 +1,11 @@
 ---
-title: Creating merchant abstract products
+title: Creating a merchant abstract product
 last_updated: Jun 30, 2021
 description: This document describes how to create merchant abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This document describes how to create merchant abstract products.
+This document describes how to create a merchant abstract product.
 
 ## Prerequisites
 
@@ -60,7 +60,7 @@ To create a new abstract product:
 3. Once done, click **Create**.
 
 **Tips and Tricks**
-To retun to the previous step, click **Back**.
+To return to the previous step, click **Back**.
 
 ### Reference information: Create abstract product
 

@@ -7,7 +7,7 @@ template: back-office-user-guide-template
 
 This topic describes how to manage [{entity}s](Iink to the feature overview or a section in the feature overview where this entity is described).
 
-To start working with {entityjs, go to **{section}** > **{section}**.
+To start working with {entity}, go to **{section}** > **{section}**.
 
 ## Prerequisites
 

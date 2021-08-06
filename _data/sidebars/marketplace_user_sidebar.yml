@@ -51,6 +51,9 @@ entries:
 
             - title: Marketplace and merchant state machines interaction
               url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+
+        - title: Marketplace Cart Notes feature overview
+          url: /docs/marketplace/user/features/marketplace-cart-notes-feature-overview.html
               
         - title: Marketplace Promotions and Discounts feature overview
           url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html

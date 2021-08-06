@@ -10,7 +10,15 @@ The **Marketplace Cart Notes** feature allows you to include a "Notes" field on 
 
 The Marketplace administrator can see the special request in the [order details section of the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/sales/managing-main-merchant-orders.html#merchant-order-overview-page):
 
-![Cart Notes in Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart+Notes/cart-notes-admin.png){height="" width=""}
+![Cart Notes in Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart+Notes/cart-notes-admin.png)
 
 ## Current constraints
 In a situation, when the same product variants are added to the cart with different notes, the variants get merged with the same note.
+
+<!---
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Marketplace Cart Notes feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-cart-notes-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}
+-->

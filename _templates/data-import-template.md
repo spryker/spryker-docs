@@ -4,18 +4,18 @@ description: {Meta description}
 template: data-import-template
 ---
 
-This document describes the {file name with extension} file to configure {feature name} information in your Spryker shop.
+This document describes the {file name with extension} file to configure [{feature name}](link-to-the-related-feature-walkthrough) information in your Spryker shop.
 
-To import the file, run:
-```language
-{Command to import the file}
+To import the file, run the following command:
+```{language}
+{command to import the file}
 ```
 
 ## Import file parameters
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPITON |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |---|---|---|---|---|---|
 | {parameter} | {&check;/ } | {String, Boolean, Number, Integer, Date} |  | {requirements, comments}<!-- If there are no requirements or comments, leave the field blank --> | {description} |
 
@@ -26,7 +26,7 @@ The file has the following dependencies:
 
 <!-- If the file has no dependencies, write "The file has no dependencies" instead.-->
 
-## Import template file and content example
+## Import file template and content example
 
 Find the template and an example of the file below:
 

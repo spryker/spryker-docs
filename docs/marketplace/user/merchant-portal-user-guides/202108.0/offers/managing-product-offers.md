@@ -20,7 +20,7 @@ To create a product offer:
 2. From the list of concrete products, select the  product you want to create an offer for.
 3. In the drawer, fill the necessary fields and click **Create**.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/create-offers.gif)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/creating-product-offers.gif)
 
 
 
@@ -29,7 +29,7 @@ To create a product offer:
 To edit an existing product offer:
 
 1. From the list of offers, select the offer you want to edit.
-2. In the drawer, change the desiredd fields and click **Save**.
+2. In the drawer, change the desired fields and click **Save**.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/edit-offers.gif)
 

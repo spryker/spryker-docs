@@ -33,7 +33,7 @@ To edit general settings of a product option, do the following:
 3. Select **Save**.
  This refershes the page with the success message displayed. 
  
-### Reference information: Editing general settings a product option 
+### Reference information: Editing general settings of a product option 
 
 The following table describes the attributes you enter and select while editing product options.
 
@@ -78,7 +78,7 @@ To deassign products from a product option, do the following:
 * To deselect all the products on the page, select **Deselect all on the page**. This is usually useful when you filter the products using the search field.
 * After deselecting products, you can view the products to be deassigned in the **Products to be deassigned** subtab. To unselect a product from being deassigned, select **Remove** next to the desired product. 
 
-## Activating and deactivating product options
+## Activating and deactivating a product option
 
 To activate a product option, select **Activate** next to the desired product option.
 

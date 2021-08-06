@@ -122,6 +122,12 @@ const AlgoliaSearch = {
                     createURL,
                 } = renderOptions;
 
+                if (renderOptions.nbHits) {
+                    this.pageConfig.badges[renderOptions.instantSearchInstance.indexName].html(renderOptions.nbHits);
+                } else {
+                    this.pageConfig.badges[renderOptions.instantSearchInstance.indexName].html('');
+                }
+
                 const container = $(`#tabs-${searchIndex.indexName} .${this.pageConfig.paginationClassName}`).get(0);
                 const searchboxId = this.pageConfig.searchboxId;
 
@@ -202,6 +208,7 @@ const AlgoliaSearch = {
             searchIndex.addWidgets([
               customPagination({
                 container: $(`#tabs-${searchIndex.indexName} .${this.pageConfig.paginationClassName}`).get(0),
+                padding: (window.innerWidth < 1024) ? 1 : 2,
               })
             ]);
         });
@@ -210,6 +217,7 @@ const AlgoliaSearch = {
         let $container = $(this.pageConfig.container);
         $container = this.addNavigation($container);
         $container = this.addTabs($container);
+        this.findBadges();
         this.addSearchWidgets();
         this.startIndices();
         $container.tabs();
@@ -224,13 +232,22 @@ const AlgoliaSearch = {
     },
     addNavigation($container) {
         let $navList = $(`<ul id="${this.pageConfig.navigationId}" class="tabs__list"></ul>`);
+        this.pageConfig.badges = {};
         this.searchIndices.map(searchIndex => {
-            let $navItem = $(`<li class="tabs__list-item"><a href="#tabs-${searchIndex.indexName}" class="tabs__link">${searchIndex.title}</a></li>`);
+            let $navItem = $(`<li class="tabs__list-item"><a href="#tabs-${searchIndex.indexName}" class="tabs__link">${searchIndex.title}<span class="badge" id="badge-${searchIndex.indexName}"></span></a></li>`);
             $navList.append($navItem);
+            this.pageConfig.badges[searchIndex.indexName] = searchIndex.indexName;
         });
         $container.append($navList);
 
         return $container;
+    },
+    findBadges() {
+        for (let key in this.pageConfig.badges) {
+            if (this.pageConfig.badges.hasOwnProperty(key)) {
+                this.pageConfig.badges[key] = $(`#badge-${this.pageConfig.badges[key]}`);
+            }
+        }
     },
     addTabs($container) {
         this.searchIndices.forEach(searchIndex => {

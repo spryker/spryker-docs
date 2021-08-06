@@ -1,5 +1,5 @@
 .info-block {
-    margin: 0 0 16px;
+    margin: 16px 0;
     padding: 15px 18px;
     border-radius: 4px;
     position: relative;
@@ -9,8 +9,7 @@
     letter-spacing: .3px;
     background: $blue-light;
     color: $grey-dark;
-    display: flex;
-    align-items: flex-start;
+    overflow: hidden;
 
     &__title {
         font-size: 16px;
@@ -27,10 +26,11 @@
         flex: 0 0 auto;
         margin: 2px 18px 0 0;
         color: $blue;
+        float: left;
     }
 
     &__content {
-        flex: 1 1 auto;
+        overflow: hidden;
 
         p {
             margin-top: 0;

@@ -7,14 +7,6 @@
 
 /* make room for the nav bar */
 
-.post-content img {
-    margin: 12px 0px 3px 0px;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-
 .post-content ol li, .post-content ul li {
     margin: 10px 0px;
 }
@@ -158,10 +150,6 @@ i.border {
     background-color: whitesmoke;
 }
 
-a[data-toggle] {
-    color: #248EC2;
-}
-
 .summary {
     font-size:120%;
     color: #808080;
@@ -236,12 +224,6 @@ button.cursorNorm {
 
 span.otherProgrammingLanguages {
     font-style: normal;
-}
-
-a[data-toggle="tooltip"] {
-    color: #649345;
-    font-style: italic;
-    cursor: default;
 }
 
 .seriesNext, .seriesContext {
@@ -363,14 +345,6 @@ span.soft {
 .parameter {
     font-family: courier;
     color: red !important;
-}
-
-.post-content img {
-    margin: 12px 0px 3px 0px;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
 }
 
 .videoThumbs img {

@@ -11,9 +11,13 @@ group :jekyll_plugins do
   gem 'page_template_validator', path: "./_plugins/page_template_validator"
   gem "jekyll-feed", "~> 0.12"
   gem 'jekyll-sitemap'
+  gem 'jekyll-last-modified-at'
+  gem 'jekyll-redirect-from'
+  gem 'jekyll-include-cache'
 end
 
 gem "rake"
+gem "liquid-c"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

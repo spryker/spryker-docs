@@ -52,7 +52,7 @@ The following table describes the attributes you enter and select while defining
 
 ## Assigning products to a prooduct option
 
-To assign products to a product option, do the following:
+To assign products to a product option:
 1. On the *Edit product option* page, switch to **Products** tab. 
 2. Select the desired products. 
 3. Select **Save**

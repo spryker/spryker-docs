@@ -52,6 +52,9 @@ entries:
             - title: Marketplace and merchant state machines interaction
               url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
               
+        - title: Marketplace Return Management
+          url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html 
+        
         - title: Marketplace Promotions and Discounts feature overview
           url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html
         
@@ -64,8 +67,14 @@ entries:
         - title: Sales
           nested:
 
+            - title: Managing marketplace returns
+              url: /docs/marketplace/user/back-office-user-guides/sales/managing-marketplace-returns.html
+            
             - title: Managing main merchant orders
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
+
+            - title: Managing main merchant returns
+              url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-returns.html
 
         - title: Catalog
 

@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
     initResponsiveTable();
 
-    anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
+    initAnchors();
 
     initSidebarToggle();
 
@@ -33,6 +33,18 @@ $( document ).ready(function() {
 
     initPostAnchor();
 });
+
+function initAnchors() {
+    anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
+
+    let anchorLinks = $('.anchorjs-link'),
+        $window = $(window);
+
+    anchorLinks.on('click', function(e){
+        e.preventDefault();
+        $window.scrollTop($(e.target).offset().top - pageOffset + 1);
+    });
+}
 
 function initPostAnchor() {
     let anchor = $('.post-anchor__button');
@@ -156,6 +168,14 @@ function initPopup() {
         close: '.toc__popup-close, .toc__popup-overlay',
         overlay: '.toc__popup-overlay',
         anchorLinks: 'nav-link',
+        showPopup: function() {
+            $('body').addClass('toc-active');
+        },
+        hidePopup: function() {
+            setTimeout(function(){
+                $('body').removeClass('toc-active scroll-down');
+            }, 100);
+        }, 
     });
 
     $('.main-sidebar').popup({
@@ -218,6 +238,10 @@ $.fn.popup = function (options) {
                 if (options.overlay) {
                     overlay.fadeOut(300);
                 }
+
+                if (typeof options.hidePopup === 'function') {
+                    options.hidePopup();
+                }
             } else {
                 opener.addClass('expanded');
 
@@ -231,6 +255,10 @@ $.fn.popup = function (options) {
 
                 if (options.overlay) {
                     overlay.fadeIn(300);
+                }
+
+                if (typeof options.showPopup === 'function') {
+                    options.showPopup();
                 }
             }
         }
@@ -618,6 +646,8 @@ function initToc() {
                     $('html, body').animate({
                         scrollTop: $($.attr(this, 'href')).offset().top - pageOffset + 1
                     }, 500);
+
+                    window.history.replaceState('', '', '#' + anchor);
                 });
 
                 return $li;
@@ -716,15 +746,12 @@ function initToc() {
     });
 
     let $body = $('body'),
-        $window = $(window);
+        $window = $(window),
+        tocLinks = $('#toc a');
 
     $body.scrollspy({
         target: '#toc',
         offset: pageOffset,
-    });
-
-    $window.on('load', function () {
-        $body.trigger('scroll');
     });
 
     function updateOffset() {
@@ -736,5 +763,33 @@ function initToc() {
         }
     }
 
+    function checkHash() {
+        if (location.hash) {
+            let target = $(location.hash);
+
+            $window.scrollTop(target.offset().top - pageOffset + 1);
+            //window.location = location.hash;
+        }
+    }
+
+    checkHash();
+
+    $window.on('load', function () {
+        $body.trigger('scroll');
+    });
+
     $window.on('resize orientationchange', updateOffset);
+
+    $window.on('activate.bs.scrollspy', function (e) {
+        let activeLink = tocLinks.filter(function(i, item){
+                return item.classList.contains('active');
+            }),
+            activeLinkHref;
+
+        if (activeLink) {
+            activeLinkHref = activeLink.attr('href');
+        }
+
+        window.history.replaceState('', '', activeLinkHref);
+    });
 }

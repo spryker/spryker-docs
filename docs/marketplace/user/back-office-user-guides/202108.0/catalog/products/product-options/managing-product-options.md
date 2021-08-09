@@ -48,15 +48,14 @@ The following table describes the attributes you enter and select while editing 
 | Option name | Option name that's displayed on the Storefront. | 
 
 
-
-## Assigning products to a prooduct option
+## Assigning products to a product option
 
 To assign products to a product option, do the following:
 1. Select **Edit** next to the product option you want to assign product to.
 2. On the *Edit product option* page, switch to **Products** tab. 
 3. Select the desired products. 
 4. Select **Save**
-    This refershes the page with the success message displayed. 
+    This refreshes the page with the success message displayed. 
 
 **Tips and tricks**
 
@@ -71,7 +70,7 @@ To deassign products from a product option, do the following:
 2. On the *Edit product option* page, switch to **Products** > **Assigned products** subtab. 
 3. Deselect the desired products. 
 4. Select **Save**
-    This refershes the page with the success message displayed. 
+    This refreshes the page with the success message displayed. 
 
 **Tips and tricks**
 

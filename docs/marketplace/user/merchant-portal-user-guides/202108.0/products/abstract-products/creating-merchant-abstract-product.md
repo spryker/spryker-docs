@@ -87,3 +87,7 @@ You can select as many super attributes as you need and define one or more value
 By selecting **Autogenerate SKU**s, the SKU numbers for the variants are generated automatically, based on the SKU of their abstract product.
 
 By selecting **Same Name as Abstract Product**, the name of the concrete product gets copied from the abstract product’s name.
+
+## Next steps
+
+- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/editing-merchant-abstract-product.html)

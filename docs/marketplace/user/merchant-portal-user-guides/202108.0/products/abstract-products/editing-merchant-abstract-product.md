@@ -49,14 +49,19 @@ You can sort the existing abstract products by:
 | Name        | The name of your product that will be displayed in the online store for your customers. It is set per locale. | ✓         |
 | Description | The description of the product that your customer sees in the online store. It is set per locale. |           |
 | Stores      | Defines the [stores](https://documentation.spryker.com/docs/multiple-stores) the product is available in.<br/>You can select multiple values. |           |
-| Price       | In this pane, you can manage prices for your product. See [Managing abstract product prices](docs/marketplace/user/merchant-portal-user-guides/202108.0/products/abstract-products/managing-abstract-product-prices.html) for more details. |           |
+| Price       | In this pane, you can manage prices for your product. See [Managing abstract product prices](docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-prices.html) for more details. |           |
 | Tax Set     | The conditions under which a product is going to be taxed.<br/>The values available for selection derive from Taxes > Tax Sets<br/>Only one value can be selected. | ✓         |
-| Images      | In this pane, you can manage image sets for your product. See [Managing abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/202108.0/products/abstract-products/managing-abstract-product-image-sets.html) for more details. |           |
-| Attributes  | In this pane, you can manage attributes for your product. See [Managing abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/202108.0/products/abstract-products/managing-abstract-product-attributes.html) for more details. |           |
+| Images      | In this pane, you can manage image sets for your product. See [Managing abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-image-sets.html) for more details. |           |
+| Attributes  | In this pane, you can manage attributes for your product. See [Managing abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-attributes.html) for more details. |           |
 | Categories  | Defines the [categories](https://documentation.spryker.com/docs/category-management-feature-overview) the product is displayed in. |           |
-| SEO         | In this pane, you can manage meta information for your product. See [Managing abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/202108.0/products/abstract-products/managing-abstract-product-meta-information.html) for more details. |           |
+| SEO         | In this pane, you can manage meta information for your product. See [Managing abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-meta-information.html) for more details. |           |
 
+## Next steps
 
+- [Manage abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-prices.html)
+- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-attributes.html)
+- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-image-sets.html)
+- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-meta-information.html)
 
 
 

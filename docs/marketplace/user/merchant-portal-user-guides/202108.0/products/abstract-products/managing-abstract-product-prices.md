@@ -63,3 +63,10 @@ To remove the price of the abstract product:
 | Gross default  | A price of the item after tax displayed in the Storefront.   |
 | Net original   | A price of the item before tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |
 | Gross original | A price of the item after tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |
+
+## Next steps
+
+- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/editing-merchant-abstract-product.html)
+- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-attributes.html)
+- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-image-sets.html)
+- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-meta-information.html)

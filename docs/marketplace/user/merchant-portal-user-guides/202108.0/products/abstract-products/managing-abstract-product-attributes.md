@@ -58,4 +58,10 @@ To remove the attribute from the abstract product:
 | Default                   | Values for you attribute, e.g., if the attribute is a *color*, the values for it can be *red*, *green*, *black*, etc. |
 | Locale value (e.g. DE_DE) | Translation for either an attribute key into the other language based on the locales for which you add the translation. |
 
+## Next steps
+
+- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/editing-merchant-abstract-product.html)
+- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-attributes.html)
+- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-image-sets.html)
+- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-meta-information.html)
 

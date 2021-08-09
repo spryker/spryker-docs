@@ -132,7 +132,7 @@ You can trigger the following states for the returns on the *Overview of Return:
 
 ## Printing a main merchant return slip
 
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/marketplace/user/features/202108.0/marketplace-return-management-feature-overview.html#marketplace-return-slip).
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/marketplace/user/features/{{ page.version }}/marketplace-return-management-feature-overview.html#marketplace-return-slip).
 
 To print the return slip, take one of the following steps:
 

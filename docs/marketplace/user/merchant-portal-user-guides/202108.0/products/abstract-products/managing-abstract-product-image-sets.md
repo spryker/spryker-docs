@@ -19,10 +19,10 @@ Review the reference information before you start, or just look up the necessary
 
 To add an image for an abstract product:
 
-1. Next to the abstract product, you want to create an image set for, hover over the three dots, or just click the line, and scroll down to the **Images* * pane.
+1. Next to the abstract product, you want to create an image set for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Images** pane.
 2. Click **+Add Image Set***. The empty cells will appear.
 3. In the **SET NAME**, enter the name of the set.
-4. In the **IMAGE ORDERED**,enter the 
+4. In the **IMAGE ORDERED**,enter the
 5. In the **SMALL IMAGE URL**, enter the URL.
 6. In the **LARGE IMAGE URL**, enter the URL.
 7. Click **Save**.
@@ -31,7 +31,7 @@ To add an image for an abstract product:
 
 To edit an image of the abstract product:
 
-1. Next to the abstract product, which image you want to edit, hover over the three dots, or just click the line, and scroll down to the **Images* * pane.
+1. Next to the abstract product, which image you want to edit, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Images** pane.
 2. Select a locale you want to update images for.
 3. Update the following:
     - SET NAME
@@ -44,8 +44,8 @@ To edit an image of the abstract product:
 
 To delete an image in the image set for the abstract product:
 
-1. Next to the abstract product, which image you want to delete, hover over the three dots, or just click the line, and scroll down to the **Images* * pane.
-2. Select a locale you want to delete an image for. 
+1. Next to the abstract product, which image you want to delete, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Images** pane.
+2. Select a locale you want to delete an image for.
 3. Click the **Delete** icon.
 
 To delete an image set with its images for the abstract product, click **Delete Image Set**.

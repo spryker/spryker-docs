@@ -18,8 +18,7 @@ Review the reference information before you start, or just look up the necessary
 
 To add meta information for the product:
 
-1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line, and scroll down to the **SEO** pane.
-
+1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **SEO** pane.
 2.  Fill the following fields for the desired locales:
       	- Meta title
       	- Meta keywords
@@ -31,7 +30,7 @@ To add meta information for the product:
 
 To modify meta information for the product:
 
-1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line, and scroll down to the **SEO** pane.
+1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **SEO** pane.
 
 2. Update the following fields for the desired locales:
 
@@ -41,7 +40,7 @@ To modify meta information for the product:
 
 3. Click **Save**.  
 
-### Reference information: SEO pane 
+### Reference information: SEO pane
 
 | ATTRIBUTE        | DESCRIPTION                        |
 | ---------------- | ---------------------------------- |

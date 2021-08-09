@@ -7,8 +7,6 @@ template: back-office-user-guide-template
 
 This topic describes how to manage abstract product prices.
 
-To start working with abstract product prices, go to **{section}** > **{section}**.
-
 ## Prerequisites
 
 To start working with merchant abstract products, go to **Merchant Portal** > **Products**.
@@ -19,7 +17,7 @@ Review the reference information before you start, or just look up the necessary
 
 To add a new price of an abstract product:
 
-1. Next to the abstract product, you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]* drawer.
+1. Next to the abstract product, you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Price** pane.
 2. In the **Price** pane, click **+Add**. The empty cells will appear in the table below.
 3. From the drop-down menu **Store**, select the store for which the price is created.
 4. From the drop-down menu **Currency**, select the currency in which the price is defined.
@@ -37,8 +35,8 @@ Click **Cancel** to stop creating a new price.
 
 To edit prices of an abstract product:
 
-1. Next to the abstract product, you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]* drawer.
-2. Scroll down to the **Price** pane, hover over the table and update the necessary columns.
+1. Next to the abstract product, you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Price** pane.
+2. Hover over the table and update the necessary columns.
 
 **Tips & Tricks**
 
@@ -49,8 +47,8 @@ To edit prices of an abstract product:
 
 To remove the price of the abstract product:
 
-1. Next to the abstract product, the price of which you want to delete, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]* drawer.
-2. Scroll down to the **Price** pane, hover over the three dots in the table, and click **Delete**. 
+1. Next to the abstract product, the price of which you want to delete, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Price** pane.
+2. Scroll down to the **Price** pane, hover over the three dots in the table, and click **Delete**.
 
 
 ### Reference information: Price pane

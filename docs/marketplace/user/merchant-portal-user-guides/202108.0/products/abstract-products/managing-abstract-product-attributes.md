@@ -18,7 +18,7 @@ Review the reference information before you start, or just look up the necessary
 
 To add an attribute for an abstract product:
 
-1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line, and scroll down to the **Attributes** pane.
+1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Attributes** pane.
 2. In the **Attributes** pane, click **+Add**. The empty cells will appear in the table below.
 3. From the drop-down menu **Attribute**, select the attribute you would like to add.
 4. Depending on the attribute selected in the step below, for the  **Default** cell, select or enter the predefined value.
@@ -34,7 +34,7 @@ Click **Cancel** to stop adding a new attribute for an abstract product.
 
 To edit the attributes for an abstract product:
 
-1. Next to the abstract product, you want to create an attribute for, hover over the three dots, or just click the line, and scroll down to the **Attributes** pane.
+1. Next to the abstract product, you want to create an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Attributes** pane.
 2. In the **Attributes** pane, hover over the table and update the necessary columns.
 
 **Tips & Tricks**
@@ -47,7 +47,7 @@ You can rearrange the columns' order, hide and show the columns by clicking the 
 
 To remove the attribute from the abstract product:
 
-1. Next to the abstract product, you want to create an attribute for, hover over the three dots, or just click the line, and scroll down to the **Attributes** pane.
+1. Next to the abstract product, you want to create an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Attributes** pane.
 2. In the **Attributes** pane, next to the attribute you want to delete, hover over the three dots and click **Delete**.
 
 ### Reference information: Attributes pane
@@ -64,4 +64,3 @@ To remove the attribute from the abstract product:
 - [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-attributes.html)
 - [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-image-sets.html)
 - [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-meta-information.html)
-

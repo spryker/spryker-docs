@@ -1,7 +1,7 @@
 ---
-title: Editing a merchant abstract product
+title: Editing a marketplace abstract product
 last_updated: Jun 30, 2021
-description: This document describes how to modify merchant abstract products in the Merchant Portal.
+description: This document describes how to modify marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
@@ -17,13 +17,13 @@ Review the reference information before you start, or just look up the necessary
 
 To edit the existing merchant abstract products:
 
-1. Next to the product, you want to edit, hover over the three dots and click **Manage Product**. This takes you to the *[Product name]* drawer.
+1. Next to the product, you want to edit, hover over the three dots and click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab.
 2. In the **Name & Description** pane, edit **Name** and **Description** for every locale.
 3. In the **Stores** pane, in the drop-down menu select the stores where the product is available.
 4. In the **Tax Set** pane, in the drop-down menu, select the necessary tax set.
 5. In the **Categories** pane, in the drop-down menu, select the categories where your product is available.
 
- 
+
 
 #### Filtering merchant products
 
@@ -34,7 +34,7 @@ You can filter the existing abstract products by:
 - Stores
 
 
-Sorting merchant products 
+Sorting merchant products
 
 You can sort the existing abstract products by:
 - SKU
@@ -62,6 +62,3 @@ You can sort the existing abstract products by:
 - [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-attributes.html)
 - [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-image-sets.html)
 - [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-meta-information.html)
-
-
-

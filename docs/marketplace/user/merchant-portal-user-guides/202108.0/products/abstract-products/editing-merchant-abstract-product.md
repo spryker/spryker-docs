@@ -17,7 +17,7 @@ Review the reference information before you start, or just look up the necessary
 
 To edit the existing merchant abstract products:
 
-1. Next to the product, you want to edit, hover over the three dots and click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab.
+1. Next to the abstract product, you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
 2. In the **Name & Description** pane, edit **Name** and **Description** for every locale.
 3. In the **Stores** pane, in the drop-down menu select the stores where the product is available.
 4. In the **Tax Set** pane, in the drop-down menu, select the necessary tax set.
@@ -42,10 +42,10 @@ You can sort the existing abstract products by:
 - Number of variants
 - Visibility status
 
-### Reference information: [Product name] drawer
+### Reference information: [Product name] drawer, *Abstract Product Details* tab
 
-| ATTRIBUTE   | DESCRIPTION                                                  | Required? |
-| ----------- | ------------------------------------------------------------ | --------- |
+| ATTRIBUTE   | DESCRIPTION  | Required? |
+| ----------- | -------------- | --------- |
 | Name        | The name of your product that will be displayed in the online store for your customers. It is set per locale. | ✓         |
 | Description | The description of the product that your customer sees in the online store. It is set per locale. |           |
 | Stores      | Defines the [stores](https://documentation.spryker.com/docs/multiple-stores) the product is available in.<br/>You can select multiple values. |           |

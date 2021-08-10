@@ -182,7 +182,7 @@ entries:
           nested:
 
           - title: Creating merchant abstract products
-            url: /docs/marketplace/user/merchant-portal-user-guides/products/creating-merchant-abstract-products.html
+            url: /docs/marketplace/user/merchant-portal-user-guides/products/creating-marketplace-abstract-products.html
 
           - title: Editing merchant abstract products
             url: /docs/marketplace/user/merchant-portal-user-guides/products/editing-merchant-abstract-products.html

@@ -16,9 +16,11 @@ Review the reference information before you start, or just look up the necessary
 
 You can create a marketplace concrete product following two scenarios:
 
-- while [creating an abstract marketplace product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/creating-merchant-abstract-product.html)
+- while [creating an abstract marketplace product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/creating-marketplace-abstract-product.html)
 - By creating a concrete product for the existing abstract product. To do so:
-  1. 
+  1. Next to the abstract product, for which you are going to create a concrete product, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer. Navigate to the *Concrete Products* tab.
+  2. On the *Concrete Products* page, click **Add concrete Products**. *Create Concrete Products for [Abstract product name]* drawer opens.
+  3. Based on the super attribute selected
 
 
 

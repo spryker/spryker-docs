@@ -120,14 +120,14 @@ entries:
               - title: "Products: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html
 
-            - title: Product Options
-              nested:
+        - title: Product Options
+          nested:
 
-              - title: Creating a product option
-                url: /docs/marketplace/user/back-office-user-guides/catalog/products/product-options/creating-a-product-option.html
+            - title: Creating a product option
+              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
 
-              - title: Managing product options
-                url: /docs/marketplace/user/back-office-user-guides/catalog/products/product-options/managing-product-options.html
+            - title: Managing product options
+              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
 
         - title: Marketplace
 

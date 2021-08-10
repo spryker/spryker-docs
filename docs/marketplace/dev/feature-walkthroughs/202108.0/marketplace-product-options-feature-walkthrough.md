@@ -1,7 +1,7 @@
 ---
 title: Marketplace Product Options feature walkthrough
 last_updated: Apr 23, 2021
-description: Merchant categories allows grouping merchants by categories.
+description: Merchant categories allows creating product options and groups.
 template: concept-topic-template
 ---
 
@@ -14,4 +14,4 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 |INTEGRATION GUIDES  |DATA IMPORT  |
 |---------|---------|
-|     |[File details: merchant product option group](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-option-group.html)       |
+|<!---LINK TO IG-->     |[File details: merchant product option group](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-option-group.html)       |

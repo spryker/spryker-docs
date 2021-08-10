@@ -27,7 +27,7 @@ To view a product option, select **View** next to the desired product option.
 
 ## Editing general settings of a product option
 
-To edit general settings of a product option, do the following:
+To edit general settings of a product option, follow these steps:
 1. Select **Edit** next to the product option you want to edit the general settings of.
 2. Update the desired settings.
 3. Select **Save**.
@@ -50,7 +50,7 @@ The following table describes the attributes you enter and select while editing 
 
 ## Assigning products to a product option
 
-To assign products to a product option, do the following:
+To assign products to a product option, follow these steps:
 1. Select **Edit** next to the product option you want to assign product to.
 2. On the *Edit product option* page, switch to **Products** tab. 
 3. Select the desired products. 
@@ -65,7 +65,7 @@ To assign products to a product option, do the following:
 
 ## Deassigning products from a product option
 
-To deassign products from a product option, do the following:
+To deassign products from a product option, follow these steps:
 1. Select **Edit** next to the product option you want to deassign product from.
 2. On the *Edit product option* page, switch to **Products** > **Assigned products** subtab. 
 3. Deselect the desired products. 

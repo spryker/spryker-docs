@@ -16,7 +16,7 @@ Each section in this article contains reference information. Make sure to review
 
 ## Creating a product option
 
-To create a product option:
+To create a product option, follow these steps:
 
 1. On the *Product option list* page, select **Create product option** in the top right corner.
     This opens the  with *General Information* and *Products* tabs.
@@ -52,7 +52,7 @@ The following table describes the attributes you enter and select while creating
 
 ## Assigning products to a product option
 
-To assign products to a product option:
+To assign products to a product option, follow these steps:
 1. On the *Edit product option* page, switch to **Products** tab. 
 2. Select the desired products. 
 3. Select **Save**

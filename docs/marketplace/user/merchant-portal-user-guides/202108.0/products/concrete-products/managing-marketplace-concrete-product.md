@@ -1,0 +1,68 @@
+---
+title: Editing a marketplace concrete product
+last_updated: Jun 30, 2021
+description: This document describes how to modify marketplace abstract products in the Merchant Portal.
+template: back-office-user-guide-template
+---
+
+This document describes how to edit an abstract product in the Merchant Portal.
+
+## Prerequisites
+
+To start working with marketplace concrete products, go to the **Merchant Portal** > **Products**.  Hover over the three dots next to the abstract product for which you will create a concrete product and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer. Navigate to the *Concrete Products* tab. 
+
+Review the reference information before you start, or just look up the necessary information as you go through the process.
+
+## Filtering and sorting concrete abstract products
+
+The following drop-down menus can be used to filter the marketplace concrete products on the *Concrete Products* page:
+- Status of the concrete product
+- Validity dates
+
+Select one or more sorting parameters from the drop-down menu on the *Concrete Products* page to sort the existing abstract products. Choose among the following sort criteria:
+- SKU
+- Name
+- Status
+- Valid from
+- Valid to
+
+By default, the table is sorted descendingly by SKU.
+
+## Editing concrete product details
+
+To edit the existing marketplace concrete product:
+
+1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page.
+2. In the *Status* pane, (de)select *Concrete Product is online* to make the concrete product online/offline.
+3. In the *Stock* pane, enter the quantity in the *Quantity* field. 
+4. In the *Name* pane, edit *Name* for every locale.
+5. In the *Description* pane, edit *Description* for every locale.
+6. In the *Validity Dates & Time* pane, populate the *Valid from* and *Valid to* fields.
+7. In the *Searchability* pane, from the drop-down menu select the locale(s) where the product is searchable.
+8. Click **Save**.
+
+
+
+### Reference information: *Concrete Product SKU, Name* page
+
+| PANE    | ATTRIBUTE     | DESCRIPTION | REQUIRED? |
+| -------------- | ---------------- | ----------- | --------- |
+| Status         |                  | Defines the status of the concrete product. |           |
+|                |  Concrete Product is online    | The check-box that once selected will make the product active and available in the store. |               |
+| Stock          |                  | Defines the stock of the concrete product. |           |
+|                 |   Reserved Stock           | The number of items of this concrete product that are reserved according to *Orders*. |               |
+|                  |  Quantity                 | The number of items available in the warehouse. The default is 0. | ✓ |
+|                  |  Always in Stock           | The check-box that once selected will make the product always available to be purchased. |               |
+| Name                  |  | The name of your product that will be displayed in the online store for your customers. | ✓ |
+|               |  Use Abstract Product name for all locales   | Once the checkbox is selected, the name from the abstract product is taken over. |              |
+| Description           |  | The description of the product that your customer sees in the online store. |           |
+|              |  Use Abstract Product description for all locales    | Once the checkbox is selected, the description from the abstract product is taken over. |       |
+| Validity Dates & Time |  | Defines the period of time when the product is in active state. The **Valid from** date triggers the activation, while the **Valid to** date triggers the deactivation. Either no dates can be selected, or both. |           |
+| Price                 |  | In this pane, you can manage prices for your concrete product. See [Managing marketplace concrete product prices]() for more details. |           |
+| Images                |  | In this pane, you can manage image sets for your concrete product. See [Managing concrete product image sets]() for more details. |           |
+| Attributes            |  | In this pane, you can manage attributes for your product. See [Managing concrete product attributes]() for more details. |           |
+| Searchability         |  | Defines the stores where the concrete product can be searched via the Search function in the online store. If not selected, no values will be displayed when searching for this product. |           |
+
+## Deleting a concrete product
+
+To delete a concrete product:

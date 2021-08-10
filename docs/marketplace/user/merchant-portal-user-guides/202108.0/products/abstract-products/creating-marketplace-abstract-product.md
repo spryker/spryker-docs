@@ -1,6 +1,6 @@
 ---
 title: Creating a marketplace abstract product
-last_updated: Jun 30, 2021
+last_updated: Aug 10, 2021
 description: This document describes how to create marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -23,10 +23,18 @@ To create a new abstract product:
 
    1. Enter an **SKU Prefix**.
 
-   2. Enter a **Name** for the EN locale. The rest of the locales will be defined once the product is created.
+   2. Enter a **Name** for the default locale. The rest of the locales will be defined once the product is created.
 
    3. Select **Abstract product has 1 concrete product** if you are creating an abstract product with a single concrete product. *Create an Abstract Product with 1 Concrete Product* drawer opens.
-      Select **Abstract product has multiple concrete products** if the abstract product you are creating will contain multiple concrete products assigned to it.
+
+   {% info_block warningBox "Warning" %}
+
+   It is not possible to save the abstract product unless it is accompanied by at least one concrete product.
+
+   {% endinfo_block %}
+
+   
+   Select **Abstract product has multiple concrete products** if the abstract product you are creating will contain multiple concrete products assigned to it.
 
    4. Click **Next**. </br>
 
@@ -35,8 +43,8 @@ To create a new abstract product:
       If the **Abstract product has 1 concrete product** was chosen:</br>
 
 
-      1. On the *Create an Abstract Product with 1 Concrete Product* drawer, enter a **Concrete Product SKU.**
-      2. Enter a **Concrete Product Name.**
+      1. On the *Create an Abstract Product with 1 Concrete Product* drawer, enter a **Concrete Product SKU**.
+      2. Enter a **Concrete Product Name**.
       3. Click **Create** to finish the product creation.
 
 
@@ -49,20 +57,28 @@ To create a new abstract product:
 
 
 
-      1. Select one or more super attributes that define your concrete products.
-      2. In the field next to the super attribute you've selected, select one or more product attribute values.
-      3. Repeat the previous step until you select at least one value for each selected super attribute.
-
-
-
+      1. Select a super attribute that define your concrete products.
+      2. In the field next to the super attribute you've selected, select one or more product attribute values. Upon adding the super attribute values, the preview of the concrete products will be displayed.
+    
+      {% info_block infoBox "Info" %}
+    
+      Removing a super attribute or its value will remove the appropriate concrete product(s) or concrete product values from the preview.
+    
+      {% endinfo_block %}
+    
+      1. (Optional) Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute. 
+    
       ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-multiple-variants-mp.gif)
+    
+      **Tips and Tricks**
+      You can remove a concrete product from the preview list by clicking the **Remove** icon.
 
 3. Once done, click **Create**.
 
 **Tips and Tricks**
 To return to the previous step, click **Back**.
 
-Once the product is created, it needs to be [activated by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/managing-products/managing-products.html#activating-a-product). Only the approved marketplace products are displayed in the Storefront.
+Once the product is created, it needs to be [activated by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/managing-products/managing-products.html#activating-a-product). Only the approved marketplace products are displayed in the Merchant Portal and Marketplace Storefront.
 
 ### Reference information: Create abstract product
 
@@ -92,4 +108,4 @@ By selecting **Same Name as Abstract Product**, the name of the concrete product
 
 ## Next steps
 
-- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/editing-merchant-abstract-product.html)
+- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product.html)

@@ -1,11 +1,12 @@
 ---
-title: Managing abstract product prices
-description: {Meta description}
+title: Managing marketplace abstract product prices
+last_updated: Aug 10, 2021
+description: This topic describes how to manage marketplace abstract product prices in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
 
-This topic describes how to manage abstract product prices.
+This topic describes how to manage marketplace abstract product prices in the Merchant Portal.
 
 ## Prerequisites
 
@@ -13,19 +14,19 @@ To start working with merchant abstract products, go to **Merchant Portal** > **
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
-## Adding an abstract product price
+## Adding a marketplace abstract product price
 
-To add a new price of an abstract product:
+To add a new price for a marketplace abstract product:
 
-1. Next to the abstract product, you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Price** pane.
-2. In the **Price** pane, click **+Add**. The empty cells will appear in the table below.
-3. From the drop-down menu **Store**, select the store for which the price is created.
-4. From the drop-down menu **Currency**, select the currency in which the price is defined.
-5. For **NET DEFAULT** cell, enter a price. Use `.` separator.
-6. For **GROSS DEFAULT** cell, enter a price. Use `.` separator.
-7. (Optional) For **GROSS DEFAULT** cell, enter a price. Use `.` separator.
-8. (Optional) For **NET ORIGINAL** cell, enter a price. Use `.` separator.
-9. (Optional) For **GROSS ORIGINAL** cell, enter a price. Use `.` separator.
+1. Next to the abstract product, you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Price* pane.
+2. In the *Price* pane, click **+Add**. The empty cells appear in the table below.
+3. From the drop-down menu *Store*, select the store for which the price is created.
+4. From the drop-down menu *Currency*, select the currency in which the price is defined.
+5. For *NET DEFAULT* cell, enter a price. Use `.` separator.
+6. For *GROSS DEFAULT* cell, enter a price. Use `.` separator.
+7. (Optional) For *GROSS DEFAULT* cell, enter a price. Use `.` separator.
+8. (Optional) For *NET ORIGINAL* cell, enter a price. Use `.` separator.
+9. (Optional) For *GROSS ORIGINAL* cell, enter a price. Use `.` separator.
 
 **Tips & Tricks**
 
@@ -64,7 +65,7 @@ To remove the price of the abstract product:
 
 ## Next steps
 
-- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/editing-merchant-abstract-product.html)
-- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-attributes.html)
-- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-image-sets.html)
-- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-meta-information.html)
+- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product.html)
+- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-attributes.html)
+- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-image-sets.md.html)
+- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html)

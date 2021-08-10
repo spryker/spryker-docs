@@ -1,12 +1,11 @@
 ---
-title: Managing abstract product prices
-description: {Meta description}
+title: Managing marketplace abstract product attributes
+last_updated: Aug 10, 2021
+description: This document describes how to manage marketplace abstract product attributes in the Merchant Portal. 
 template: back-office-user-guide-template
 ---
 
-This topic describes how to manage attributes of the abstract products.
-
-To start working with abstract product attributes, go to ***\*Products\**** > ***\*{section}\****.
+This topic describes how to manage attributes of the marketplace abstract products in the Merchant Portal.
 
 ## Prerequisites
 
@@ -16,7 +15,7 @@ Review the reference information before you start, or just look up the necessary
 
 ## Adding abstract product attributes
 
-To add an attribute for an abstract product:
+To add an attribute for a marketplace abstract product:
 
 1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Attributes** pane.
 2. In the **Attributes** pane, click **+Add**. The empty cells will appear in the table below.
@@ -32,7 +31,7 @@ Click **Cancel** to stop adding a new attribute for an abstract product.
 
 ## Editing abstract product attributes
 
-To edit the attributes for an abstract product:
+To edit the attributes for a marketplace abstract product:
 
 1. Next to the abstract product, you want to create an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Attributes** pane.
 2. In the **Attributes** pane, hover over the table and update the necessary columns.
@@ -60,7 +59,7 @@ To remove the attribute from the abstract product:
 
 ## Next steps
 
-- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/editing-merchant-abstract-product.html)
+- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product.html)
 - [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-attributes.html)
-- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-image-sets.html)
-- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-meta-information.html)
+- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-image-sets.md.html)
+- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html)

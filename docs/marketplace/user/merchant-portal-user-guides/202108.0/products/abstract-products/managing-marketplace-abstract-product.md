@@ -1,0 +1,64 @@
+---
+title: Managing marketplace abstract product
+last_updated: Aug 10, 2021
+description: This document describes how to modify marketplace abstract products in the Merchant Portal.
+template: back-office-user-guide-template
+---
+
+This document describes how to manage a marketplace abstract product in the Merchant Portal.
+
+## Prerequisites
+
+To start working with marketplace abstract products, go to the **Merchant Portal** > **Products**.
+
+Review the reference information before you start, or just look up the necessary information as you go through the process.
+
+
+## Filtering and sorting marketplace abstract products
+
+The following drop-down menus can be used to filter the marketplace abstract products on the *Products* page:
+    - Categories where the abstract product belongs
+    - Visibility (defines whether the product is online or offline)
+    - Stores where the abstract product is available.
+
+The page refreshes and displays the available options as soon as the filter parameters are selected.
+
+Select one or more sorting parameters from the drop-down menu on the *Products* page to sort the existing abstract products. Choose among the following sort criteria:
+- SKU
+- Name
+- Number of variants
+- Visibility status
+
+By default, the table is sorted descendingly by SKU.
+
+## Editing abstract product details
+
+To edit the existing marketplace abstract product:
+
+1. Next to the abstract product, you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
+2. In the *Name & Description* pane, edit *Name* and *Description* for every locale.
+3. In the *Stores* pane, in the drop-down menu select the stores where the product is available.
+4. In the *Tax Set* pane, in the drop-down menu, select the necessary tax set.
+5. In the *Categories* pane, in the drop-down menu, select the categories where your product is available.
+
+
+### Reference information: [Product name] drawer, Abstract Product Details tab
+
+| ATTRIBUTE   | DESCRIPTION  | REQUIRED? |
+| ----------- | -------------- | --------- |
+| Name        | The name of your product that will be displayed in the online store for your customers. It is set per locale. | ✓         |
+| Description | The description of the product that your customer sees in the online store. It is set per locale. |           |
+| Stores      | Defines the [stores](https://documentation.spryker.com/docs/multiple-stores) the product is available in.<br/>You can select multiple values. |           |
+| Price       | In this pane, you can manage prices for your abstract product. See [Managing abstract product prices](docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-prices.html) for more details. |           |
+| Tax Set     | The conditions under which a product is going to be taxed.<br/>The values available for selection derive from Taxes > Tax Sets<br/>Only one value can be selected. | ✓         |
+| Images      | In this pane, you can manage image sets for your abstract product. See [Managing abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-image-sets.md.html) for more details. |           |
+| Attributes  | In this pane, you can manage attributes for your product. See [Managing abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) for more details. |           |
+| Categories  | Defines the [categories](https://documentation.spryker.com/docs/category-management-feature-overview) the product is displayed in. |           |
+| SEO         | In this pane, you can manage meta information for your product. See [Managing abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html) for more details. |           |
+
+## Next steps
+
+- [Manage abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-prices.html)
+- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-attributes.html)
+- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-image-sets.md.html)
+- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html)

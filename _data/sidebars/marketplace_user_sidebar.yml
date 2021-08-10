@@ -184,11 +184,11 @@ entries:
         - title: Products
           nested:
 
-          - title: Creating merchant abstract products
+          - title: Creating marketplace abstract products
             url: /docs/marketplace/user/merchant-portal-user-guides/products/creating-marketplace-abstract-products.html
 
-          - title: Editing merchant abstract products
-            url: /docs/marketplace/user/merchant-portal-user-guides/products/editing-merchant-abstract-products.html
+          - title: Editing marketplace abstract products
+            url: /docs/marketplace/user/merchant-portal-user-guides/products/managing-marketplace-abstract-products.html
 
-          - title: Managing abstract product prices
-            url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-abstract-product-prices.html
+          - title: Managing marketplace abstract product prices
+            url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-prices.html

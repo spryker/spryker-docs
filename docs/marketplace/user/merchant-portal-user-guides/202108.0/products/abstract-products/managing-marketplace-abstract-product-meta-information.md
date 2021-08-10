@@ -1,12 +1,11 @@
 ---
-title: Managing abstract product meta information
-description: {Meta description}
+title: Managing marketplace abstract product meta information
+last_updated: Aug 10, 2021
+description: This document describes how to manage marketplace abstract product meta information in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This topic describes how to manage abstract product meta information.
-
-To start working with abstract product prices, go to **{section}** > **{section}**.
+This topic describes how to manage marketplace abstract product meta information in the Merchant Portal.
 
 ## Prerequisites
 
@@ -49,7 +48,7 @@ To modify meta information for the product:
 
 ## Next steps
 
-- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/editing-merchant-abstract-product.html)
-- [Manage abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-prices.html)
-- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-attributes.html)
-- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-abstract-product-image-sets.html)
+- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product.html)
+- [Manage abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-prices.html)
+- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-attributes.html)
+- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-image-sets.md.html)

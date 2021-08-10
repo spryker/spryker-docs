@@ -9,18 +9,18 @@ This topic describes how to manage attributes of the marketplace abstract produc
 
 ## Prerequisites
 
-To start working with merchant abstract products, go to **Merchant Portal** > **Products**.
+To start working with marketplace abstract products, go to **Merchant Portal** > **Products**.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
-## Adding abstract product attributes
+## Adding marketplace abstract product attributes
 
 To add an attribute for a marketplace abstract product:
 
-1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Attributes** pane.
-2. In the **Attributes** pane, click **+Add**. The empty cells will appear in the table below.
-3. From the drop-down menu **Attribute**, select the attribute you would like to add.
-4. Depending on the attribute selected in the step below, for the  **Default** cell, select or enter the predefined value.
+1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Attributes* pane.
+2. In the *Attributes* pane, click **+Add**. The empty cells will appear in the table below.
+3. From the drop-down menu *Attribute*, select the attribute you would like to add.
+4. Depending on the attribute selected in the step below, for the *Default* cell, select or enter the predefined value.
 5. Add/select translations for the attribute values for the desired locales.
 
 **Tips & Tricks**
@@ -28,26 +28,24 @@ To add an attribute for a marketplace abstract product:
 Click **Cancel** to stop adding a new attribute for an abstract product.
 
 
-
-## Editing abstract product attributes
+## Editing marketplace abstract product attributes
 
 To edit the attributes for a marketplace abstract product:
 
-1. Next to the abstract product, you want to create an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Attributes** pane.
-2. In the **Attributes** pane, hover over the table and update the necessary columns.
+1. Next to the abstract product, you want to create an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Attributes* pane.
+2. In the *Attributes* pane, hover over the table and update the necessary columns.
 
 **Tips & Tricks**
 
 You can rearrange the columns' order, hide and show the columns by clicking the settings cogwheel next to the table.
 
 
-
-## Deleting abstract product attributes
+## Deleting marketplace abstract product attributes
 
 To remove the attribute from the abstract product:
 
-1. Next to the abstract product, you want to create an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Attributes** pane.
-2. In the **Attributes** pane, next to the attribute you want to delete, hover over the three dots and click **Delete**.
+1. Next to the abstract product, you want to create an attribute for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Attributes* pane.
+2. In the *Attributes* pane, next to the attribute you want to delete, hover over the three dots and click **Delete**.
 
 ### Reference information: Attributes pane
 

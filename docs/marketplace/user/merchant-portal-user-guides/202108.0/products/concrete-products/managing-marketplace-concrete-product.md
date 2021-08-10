@@ -9,7 +9,7 @@ This document describes how to edit an abstract product in the Merchant Portal.
 
 ## Prerequisites
 
-To start working with marketplace concrete products, go to the **Merchant Portal** > **Products**.  Hover over the three dots next to the abstract product for which you will create a concrete product and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer. Navigate to the *Concrete Products* tab. 
+To start working with marketplace concrete products, go to the **Merchant Portal** > **Products**.  Hover over the three dots next to the abstract product for which you manage a concrete product and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer. Navigate to the *Concrete Products* tab. 
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -63,6 +63,3 @@ To edit the existing marketplace concrete product:
 | Attributes            |  | In this pane, you can manage attributes for your product. See [Managing concrete product attributes]() for more details. |           |
 | Searchability         |  | Defines the stores where the concrete product can be searched via the Search function in the online store. If not selected, no values will be displayed when searching for this product. |           |
 
-## Deleting a concrete product
-
-To delete a concrete product:

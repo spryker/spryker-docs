@@ -14,23 +14,23 @@ To start working with merchant abstract products, go to **Merchant Portal** > **
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
-##  Adding images for abstract products
+##  Adding images for marketplace abstract products
 
-To add an image for an abstract product:
+To add an image set for a marketplace abstract product:
 
-1. Next to the abstract product, you want to create an image set for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Images** pane.
-2. Click **+Add Image Set***. The empty cells will appear.
-3. In the **SET NAME**, enter the name of the set.
-4. In the **IMAGE ORDERED**,enter the
-5. In the **SMALL IMAGE URL**, enter the URL.
-6. In the **LARGE IMAGE URL**, enter the URL.
+1. Next to the abstract product, you want to create an image set for, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Images* pane.
+2. Click **+Add Image Set***. The empty cells appear.
+3. In the *SET NAME*, enter the name of the set.
+4. In the *IMAGE ORDERED*, enter the number which defines the order of the images displayed. 
+5. In the *SMALL IMAGE URL*, enter the URL.
+6. In the *LARGE IMAGE URL*, enter the URL.
 7. Click **Save**.
 
-## Editing images for abstract products
+## Editing images for marketplace abstract products
 
-To edit an image of the abstract product:
+To edit an image of the marketplace abstract product:
 
-1. Next to the abstract product, which image you want to edit, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Images** pane.
+1. Next to the abstract product, which image you want to edit, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Images* pane.
 2. Select a locale you want to update images for.
 3. Update the following:
     - SET NAME
@@ -39,17 +39,15 @@ To edit an image of the abstract product:
     - LARGE IMAGE URL
 4. Click **Save**.
 
-## Deleting images for abstract products
+## Deleting images for marketplace abstract products
 
-To delete an image in the image set for the abstract product:
+To delete an image in the image set for the marketplace abstract product:
 
-1. Next to the abstract product, which image you want to delete, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Images** pane.
+1. Next to the abstract product, which image you want to delete, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Images* pane.
 2. Select a locale you want to delete an image for.
 3. Click the **Delete** icon.
 
 To delete an image set with its images for the abstract product, click **Delete Image Set**.
-
-
 
 ### Reference information: Images pane
 

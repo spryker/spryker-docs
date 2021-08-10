@@ -16,95 +16,40 @@ Review the reference information in this article before you start, or just look 
 
 To create a product offer:
 
-1. Click **Add Offer**.
-2. From the list of concrete products, select the necessary product you want to create an offer for, hover over the three dots, or just click the line and then click **Create Offer**.
-3. In the drawer, fill the necessary fields and click **Create**.
+1. Click **+Add Offer**.
+2. On the _Create Offer_ page, in the list of concrete products, click on the necessary product you want to create an offer for, or hover over the three dots and then click **Create Offer**. The drawer opens.
+3. In the _Offer status_ pane, select the **Offers is Active** check box to make the offer visible on the Storefront. Otherwise, skip this step.
+4. In the _Merchant SKU_ pane, enter an SKU,
+5. In the _Stores_ pane, from the drop-down list, select stores for which the offer is available.
+6. In the _Available Stock_ pane, in the **QUANTITY** field, enter the quantity of the product currently available in stock. You can select **Always in Stock**, if the stock quantity is unlimited.
+7. In the _Price_ pane, click **+Add** to set the price for your offer per store. The empty cells appear in the table below.
+   1. From the *Store* drop-down list, select the store for which the price is created.
+   1. From the *Currency* drop-down list, select the currency in which the price is defined.
+   1. In the *NET DEFAULT* field, enter a price. Use `.` separator.
+   1. In the *GROSS DEFAULT* field, enter a price. Use `.` separator.
+   1. (Optional) For *GROSS DEFAULT* cell, enter a price. Use the `.` separator for decimal values.
+   1. (Optional) For *NET ORIGINAL* cell, enter a price. Use the `.` separator for decimal values.
+   1. (Optional) For *GROSS ORIGINAL* cell, enter a price. Use the `.` separator for decimal values.
+8. Repeat step 7 to set the price for other stores. Otherwise, proceed to the next step.
+9. In the _Validity Dates_ pane, set the dates when the offer is valid.
+
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/create-offers.gif)
-
-
 
 ## Editing a product offer
 
 To edit an existing product offer:
 
-1. From the list of offers, select the offer you want to edit, hover over the three dots, or you can just click the line and then click **Manage Offer**.
-2. In the drawer, change the necessary fields and click **Save**.
+1. On the _Offers_ page, in the list of offers, click on the necessary product offer you want to edit, or hover over the three dots and then click **Manage Offer**. The drawer opens.
+2. Change the necessary fields and click **Save**.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/edit-offers.gif)
 
- 
-
 ## Reference information: Creating/editing a product offer
 
-This section describes attributes you see when creating/editing a product offer.
+This section describes attributes you see when creating or editing a product offer.
 
-### Offers page
-
-On the *Offers* page, you see the following:
-
-- Offer reference
-- Merchant SKU
-- Product SKU
-- Image
-- Name
-- Stores
-- Stock
-- Valid from
-- Valid to
-- Created
-- Updated
-- Status (active/inactive)
-- Approval status (approved, denied, pending)
-
-#### **Tips & tricks**
-
-##### Filtering product offers
-
-You can filter the existing product offers by:
-
-- Stock
-- Visibility
-- Stores
-- Creation period (from and to)
-- The period when the offer was updated (from and to)
-- Validity dates (from and to)
-
-##### Sorting product offers
-
-You can sort the existing product offers list by:
-
-- Offer Reference
-- Merchant SKU
-- Product SKU
-- Product Name
-- Stock
-- Visibility
-- Valid from date
-- Valid to date
-
-##### Searching product offers
-
-You can search the existing offers by:
-
-- Offer reference
-- merchant reference
-- product SKU
-
-### Create offer page
-
-On the *Create Offer* page, you see the following:
-
-- SKU
-- Image
-- Name
-- Stores
-- Status
-- Valid from
-- Valid to
-- Number of offers
-
-**Tips & Tricks**
+**Tips & tricks**
 
 You can rearrange the columns' order, hide and show the columns by clicking the settings cogwheel next to the table.
 
@@ -114,7 +59,7 @@ The following table describes the attributes on the *Create/Edit offer* drawer:
 
 | ATTRIBUTE    | DESCRIPTION |
 | ------------- | ------------- |
-| Offer visibility | A toggle that defines whether the offer appears online and is available for buyers. By default, the offer is online. |
+| Offer visibility | Toggle in the _Offer status_ pane that defines whether the offer appears online and is available for buyers. By default, the offer is online. |
 | Merchant SKU     | Unique identifier of the merchant in their ERP.              |
 | Offer Reference  | Unique ID that helps identify the product offer in the Marketplace. Offer Reference is mandatory. |
 | Stores           | Defines the store where the product offer is available.      |

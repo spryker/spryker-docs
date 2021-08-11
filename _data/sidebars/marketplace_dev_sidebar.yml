@@ -57,6 +57,9 @@ entries:
           - title: Marketplace Order Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
 
+          - title: Marketplace Return Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
+
           - title: Marketplace Promotions and Discounts feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html
 

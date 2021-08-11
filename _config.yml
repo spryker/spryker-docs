@@ -57,7 +57,6 @@ commonmark:
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
 plugins:
-  - jekyll-feed
   - jekyll-last-modified-at
   - jekyll-include-cache
 

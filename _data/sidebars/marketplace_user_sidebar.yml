@@ -123,11 +123,11 @@ entries:
         - title: Product Options
           nested:
 
-            - title: Creating a product option
+            - title: Creating product options
               url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
 
             - title: Managing product options
-              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
+              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/managing-product-options.html
 
         - title: Marketplace
 

@@ -19,7 +19,7 @@ Each product option is defined by:
 
 {% info_block infoBox "Info" %}
 
-Currently, you can create and manage general product options via the Back Office, however, you can only import merchant product options. See [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html) for details on how you can create product options in the Back Office, [Managing product options](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/products/product-options/managing-product-options.html) on how you can manage the product options in the Back Office, and [File details: merchant product option group](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-option-group.html) on how you can import merchant product options.
+Currently, you can create and manage general product options via the Back Office, however, you can only import merchant product options. See [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html) for details on how you can create product options in the Back Office, [Managing product options](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/product-options/creating-product-options.html) on how you can manage the product options in the Back Office, and [File details: merchant product option group](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-option-group.html) on how you can import merchant product options.
 
 {% endinfo_block %}
 
@@ -36,8 +36,8 @@ Currently, you can only import the Marketplace options approval statuses. See [F
 ## Marketplace product options in the Back Office
 In the Back Office, a Marketplace administrator can:
 * [create general product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html);
-* [manage general product options](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/products/product-options/managing-product-options.html);
-* [view product options for all or individual merchants](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/products/product-options/managing-product-options.html#filtering-product-options-by-merchants).
+* [manage general product options](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/product-options/creating-product-options.html);
+* [view product options for all or individual merchants](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/product-options/creating-product-options.html#filtering-product-options-by-merchants).
 
 ## Marketplace product options on the Storefront
 
@@ -74,10 +74,10 @@ Currently, the feature has the following functional constraints which are going 
 |BACK OFFICE USER GUIDES |
 |---------|
 | [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html)  
-| [Managing product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/product-options/managing-product-options.html)|
+| [Managing product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html)|
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Product Options feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer/marketplace-product-options-feature-walkthrough.html) for developers.
+Are you a developer? See [Marketplace Product Options feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-options-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

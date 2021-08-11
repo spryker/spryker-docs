@@ -82,4 +82,4 @@ And the values available in the drop-down lists are the product options:
 
 ## Next steps
 
-* [Managing product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/product-options/managing-product-options.html)
+* [Managing product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html)

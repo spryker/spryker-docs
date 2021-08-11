@@ -13,7 +13,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
 * [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [GLUE API: Marketplace Product Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
 
 
 ## Add items to a guest cart
@@ -30,7 +30,7 @@ To add items to a guest cart, send the request:
 * If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
 * Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
 
-`POST` **/guest-carts/{% raw %}*{{guest_cart_id}}*{% endraw %}/guest-cart-items**
+`POST` {% raw %}**/guest-carts/*{{guest_cart_id}}*/guest-cart-items**{% endraw %}
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |

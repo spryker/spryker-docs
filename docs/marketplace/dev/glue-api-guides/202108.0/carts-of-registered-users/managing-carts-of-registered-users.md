@@ -8,7 +8,7 @@ This endpoint allows managing carts by creating, retrieving, and deleting them.
 
 ## Multiple carts
 
-Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](https://documentation.spryker.com/docs/multiple-carts-feature-integration-201903), and Glue is [enabled for multi-cart operations](https://documentation.spryker.com/docs/multiple-carts-feature-integration-201903), registered users can have an unlimited number of carts.
+Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the [Multiple Carts feature is integrated into your project](https://documentation.spryker.com/docs/multiple-carts-feature-integration), and [Glue API is enabled for multi-cart operations](https://documentation.spryker.com/docs/multiple-carts-feature-integration), registered users can have an unlimited number of carts.
 
 
 ## Installation
@@ -20,7 +20,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
 * [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 * [Shared Carts feature integration](https://documentation.spryker.com/docs/shared-carts-feature-integration)
-* [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-prices-feature-integration.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/glue-api-marketplace-product-offer-volume-prices.html)
 
@@ -28,10 +28,9 @@ For detailed information on the modules that provide the API functionality and r
 
 To create a cart, send the request:
 
----
+***
 `POST` **/carts**
-
----
+***
 
 {% info_block infoBox "Info" %}
 
@@ -63,8 +62,8 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | String | &check; | Sets the cart name.</br>This field can be set only if you are using the Multiple Carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the `422 Unprocessable Entry` status code. |
-| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](https://documentation.spryker.com/docs/net-gross-price). |
+| name | String | &check; | Sets the cart name.</br>You can pass this field only with the Multiple Carts feature integrated. If you are operating in a single-cart environment, an attempt to set the value returns the `422 Unprocessable Entry` error. |
+| priceMode | Enum | &check; | Sets the price mode for the cart. Possible values:<ul><li>GROSS_MODE: prices after tax</li><li>NET_MODE: prices before tax</li></ul>For details, see [Net &amp; gross prices management](https://documentation.spryker.com/docs/net-gross-prices-management). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
 
@@ -107,11 +106,11 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected when the cart was created. |
-| store | String | Store for which the cart was created. |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| priceMode | String | Price mode of the cart. |
+| currency | String | Currency of the cart. |
+| store | String | Store in which the cart is created. |
+| name | String | Cart name.</br>The field is available only in multi-cart environments. |
+| isDefault | Boolean | Specifies if the cart is the default one for the customer.</br>The field is available only in multi-cart environments.  |
 
 **Discount information**
 
@@ -125,11 +124,12 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
-| discountTotal | Integer | Total amount of discounts applied to the cart.  |
-| taxTotal | String | Total amount of taxes to be paid. |
-| subTotal | Integer | Subtotal of the cart.  |
-| grandTotal | Integer | Grand total of the cart.  |
+| totals | Object | Discribes the total calculations. |
+| totals.expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| totals.discountTotal | Integer | Total amount of discounts applied to the cart.  |
+| totals.taxTotal | String | Total amount of taxes to be paid. |
+| totals.subTotal | Integer | Subtotal of the cart.  |
+| totals.grandTotal | Integer | Grand total of the cart.  |
 
 
 ## Retrieve registered user's carts
@@ -164,20 +164,20 @@ To retrieve all carts, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/carts` | Retrieve all carts of a user. |
-| `GET https://glue.mysprykershop.com/carts?include=items` | Retrieve all carts of a user with the items in them included.  |
-| `GET https://glue.mysprykershop.com/carts?include=cart-permission-groups` | Retrieve all carts of a user with cart permission groups included. |
-| `GET https://glue.mysprykershop.com/carts?include=shared-carts` | Retrieve all carts of a user with shared carts. |
-| `GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users` | Retrieve all carts of a user with information about shared carts, and the company uses they are shared with. |
-| `GET https://glue.mysprykershop.com/carts?include=cart-rules` | Retrieve all carts of a user with cart rules. |
-| `GET https://glue.mysprykershop.com/carts?include=vouchers` | Retrieve all carts of a user with information about applied vouchers. |
-| `GET https://glue.mysprykershop.com/carts?include=promotional-items` | Retrieve information about promotional items for the cart. |
-| `GET https://glue.mysprykershop.com/carts?include=gift-cards` | Retrieve all carts of a user with applied gift cards. |
-| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options` | Retrieve all carts of a user with items, respective concrete product, and their product options. |
-| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels` | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
-| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers` | Retrieve all carts of a user with information about product offers. |
-| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all carts of a user with product offer availabilities. |
-| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all carts of a user with product offer prices. |
+| `GET https://glue.mysprykershop.com/carts` | Retrieve all carts. |
+| `GET https://glue.mysprykershop.com/carts?include=items` | Retrieve all carts with the items in them included.  |
+| `GET https://glue.mysprykershop.com/carts?include=cart-permission-groups` | Retrieve all carts with cart permission groups included. |
+| `GET https://glue.mysprykershop.com/carts?include=shared-carts` | Retrieve all carts with shared carts included. |
+| `GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users` | Retrieve all carts with included information about shared carts, and the company uses they are shared with. |
+| `GET https://glue.mysprykershop.com/carts?include=cart-rules` | Retrieve all carts with cart rules included. |
+| `GET https://glue.mysprykershop.com/carts?include=vouchers` | Retrieve all carts with  applied vouchers included. |
+| `GET https://glue.mysprykershop.com/carts?include=promotional-items` | Retrieve all carts with promotional items included. |
+| `GET https://glue.mysprykershop.com/carts?include=gift-cards` | Retrieve all carts with applied gift cards included. |
+| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options` | Retrieve all carts with items, respective concrete product, and their product options included. |
+| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels` | Retrieve all carts with the included information: concrete products and the product labels assigned to the products in the carts. |
+| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers` | Retrieve all carts with product offers included. |
+| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all carts with product offer availabilities included. |
+| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all carts with product offer prices included. |
 
 
 ### Response
@@ -263,7 +263,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with items</summary>
+<summary markdown='span'>Response sample with items included</summary>
 
 ```json
 {
@@ -557,7 +557,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with cart permission groups</summary>
+<summary markdown='span'>Response sample with cart permission groups included</summary>
 
 ```json
 {
@@ -694,7 +694,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with shared carts</summary>
+<summary markdown='span'>Response sample with shared carts included</summary>
 
 ```json
 {
@@ -830,7 +830,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
+<summary markdown='span'>Response sample with the included information: shared carts and company users they are shared with</summary>
 
 ```json
 {
@@ -935,7 +935,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample with cart rules included</summary>
 
 ```json
 {
@@ -1066,7 +1066,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary markdown='span'>Response sample with vouchers included</summary>
 
 ```json
 {
@@ -1137,7 +1137,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with a promotional item</summary>
+<summary markdown='span'>Response sample with a promotional item included</summary>
 
 ```json
 {
@@ -1203,7 +1203,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with gift cards applied</summary>
+<summary markdown='span'>Response sample with applied gift cards included</summary>
 
 ```json
 {
@@ -1273,7 +1273,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with items, concrete products, and product options</summary>
+<summary markdown='span'>Response sample with items, concrete products, and product options included</summary>
 
 ```json
 {
@@ -1526,7 +1526,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample with product labels included</summary>
 
 ```json
 {
@@ -1686,7 +1686,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers</summary>
+<summary markdown='span'>Response sample with product offers included</summary>
 
 ```json
 {
@@ -1854,7 +1854,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with product offer availabilities</summary>
+<summary markdown='span'>Response sample with product offer availabilities included</summary>
 
 ```json
 {
@@ -2043,7 +2043,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer prices</summary>
+<summary markdown='span'>Response sample with product offer prices included</summary>
 
 ```json
 {
@@ -2325,14 +2325,11 @@ To retrieve all carts, send the request:
 | company-users |  id | String | Unique identifier of the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) with whom the cart is shared. |
 | company-users |  isActive | Boolean | Defines if the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) is active. |
 | company-users |  isDefault | Boolean | Defines if the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) is default for the [customer](https://documentation.spryker.com/docs/authenticating-as-a-customer). |
-| product-offer-availabilities | isNeverOutOfStock| Boolean | A boolean to show if this is an item that is never out of stock. |
-| product-offers | merchantReference | String  | Merchant reference assigned to every merchant. |
-| product-offers | isDefault  | Boolean | Defines whether the product offer is default or not. |
 
 For the attributes of the included resources, see:
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 * [Add an item to a registered user's cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Managing Gift Cards of Registered Users](https://documentation.spryker.com/docs/gift-cards-of-registered-users)
+* [Managing gift cards of registered users](https://documentation.spryker.com/docs/gift-cards-of-registered-users)
 * [Retrieving product labels](https://documentation.spryker.com/docs/en/retrieving-product-labels#product-labels-response-attributes)
 * [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html#retrieve-product-offers)
 

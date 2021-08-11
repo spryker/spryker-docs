@@ -1110,9 +1110,9 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 | attributes | Object | List of attribute keys and their values for the product. |
 | superAttributeDefinition | String | List of attributes that are flagged as super attributes. |
 | metaTitle|String|Meta title of the product. |
-|metaKeywords|String|Meta keywords of the product. |
-|metaDescription|String|Meta description of the product. |
-|attributeNames | String | List of attribute keys and their translations. |
+| metaKeywords|String|Meta keywords of the product. |
+| metaDescription|String|Meta description of the product. |
+| attributeNames | String | List of attribute keys and their translations. |
 | productAbstractSku | String | Unique identifier of the abstract product owning this concrete product. |
 
 
@@ -1124,7 +1124,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 | product-options | price | Integer | Specifies the option price in cents. |
 | product-options | currencyIsoCode | String | Specifies the ISO 4217 code of the currency in which the product option price is specified. |
 
-For other attributes of the included resources, see:
+For attributes of the other included resources, see the following:
 
 * [Retrieve sales units of a concrete product](https://documentation.spryker.com/docs/retrieving-sales-units#sales-units-response-attributes)
 * [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units#measurement-units-response-attributes)
@@ -1133,10 +1133,10 @@ For other attributes of the included resources, see:
 * [Retrieve prices of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-prices#concrete-product-prices-response-attributes)
 * [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
 * [Retrieve product ratings and reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
-* [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html#product-offers-response-attributes)
-* [Retrieve product offer prices] (/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html#retrieving-product-offer-prices)
-* [Retrieve abstract products](https://documentation.spryker.com/marketplace/docs/retrieving-abstract-products)
-* [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}//merchants/retrieving-merchants.html#merchants-response-attributes)
+* [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
+* [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
+* [Retrieving abstract products](https://documentation.spryker.com/marketplace/docs/retrieving-abstract-products#abstract-products-response-attributes)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}//merchants/retrieving-merchants.html#merchants-response-attributes)
 
 
 ## Possible errors

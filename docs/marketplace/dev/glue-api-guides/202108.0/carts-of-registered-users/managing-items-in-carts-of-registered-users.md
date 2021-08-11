@@ -9,7 +9,7 @@ This endpoint allows managing items in carts of registered users by adding, chan
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration)
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
+* [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 * [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
 * [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
@@ -1510,7 +1510,7 @@ It is the responsibility of the API Client to track whether the selected items a
 | product-offers | isDefault  | Boolean | Defines whether the product offer is default or not. |
 
 For the attributes of the included resources, see:
-* [Retrieving Measurement Units](https://documentation.spryker.com/docs/retrieving-measurement-units)
+* [Retrieving measurement units](https://documentation.spryker.com/docs/retrieving-measurement-units)
 * [Create a cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html)
 

@@ -27,9 +27,9 @@ Currently, you can create and manage general product options via the Back Office
 
 Product option groups created by merchants can have the following statuses:
 
-* *Waiting for approval*: The product option group has been created by a merchant and waits for the Marketplace administrator's approval. This is the default status assigned to all Marketplace product options that do not have a different approval status set.
-* *Approved*: The product option group has been approved by the Marketplace administrator. Merchants can use it for their products and offers, so if it is [active](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html#activating-a-product-option), the product option is displayed on the Storefront.
-* *Denied*: The product option has been rejected by the Marketplace administrator, and Merchants cannot use it for their products and offers. If they still use it, it will not be applied and will not be displayed on the Storefront.
+* *Waiting for approval*: The product option group was created by a merchant and waits for the Marketplace administrator's approval. This is the default status assigned to all Marketplace product options that do not have a different approval status set.
+* *Approved*: The product option group was approved by the Marketplace administrator. Merchants can use it for their products and offers, so if it is [active](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html#activating-a-product-option), the product option is displayed on the Storefront.
+* *Denied*: The product option was rejected by the Marketplace administrator, and Merchants cannot use it for their products and offers. If they still use it, it will not be applied and will not be displayed on the Storefront.
 
 Currently, you can only import the Marketplace options approval statuses. See [File details: merchant product option group](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-option-group.html) for details.
 
@@ -45,11 +45,11 @@ On the product detail page, the product option group (1) is displayed as a drop-
 
 ![Product options on the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product+options/product-options-on-the-storefront.png)
 
-The merchant product option groups display on the Storefront only when: 
+The merchant product option groups are displayed on the Storefront only when: 
 * The product option group status is [active](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html#activating-a-product-option).
 * The product option group approval status is [approved](#marketplace-product-options-approval-statuses).
 
-After a merchant created a product option group and assigned it to their products, the product option group is displayed for all offers of the products, including offers of other merchants. For example, in the image below, the Video King merchant's offer is selected, but the Spryker merchant's product option group is still displayed:
+After a merchant created a product option group and assigned it to their products, the product option group is displayed for all the offers of the products, including offers of other merchants. For example, in the image below, the Video King merchant's offer is selected, but the Spryker merchant's product option group is still displayed:
 
 ![Marketplace product options on the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product+options/merchant-prodcut-options-on-the-storefront.png)
 
@@ -63,7 +63,7 @@ In the Merchant Portal, the product options are displayed on the order details p
 
 Currently, the feature has the following functional constraints which are going to be resolved in the future:
 
-* Product options in a single group can be only from one merchant.
+* Product option values of a product option group can be only from one merchant.
 * Product options of a merchant can be used with all offers from all merchants.
 * There is no Back Office UI for approving or denying merchant product options.
 * [Glue API](https://documentation.spryker.com/docs/glue-rest-api) does not support merchant product option groups and values.

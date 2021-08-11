@@ -57,7 +57,14 @@ To assign products to a product option, follow these steps:
 2. Select the desired products. 
 3. Select **Save**
     This refreshes the page with the success message displayed. 
-4. Optional: To display the product option on the Storefront, activate it by selecting **Activate** in the top right corner.     
+
+<a name=activating-a-product-option></a>
+
+{% info_block infoBox "Activating product options" %}
+
+To display the product option on the Storefront, activate it by selecting **Activate** in the top right corner.
+
+{% endinfo_block %}     
 
 **Tips and tricks**
 

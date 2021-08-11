@@ -12,11 +12,11 @@ Based on the business logic, discounts can be applied in the following ways:
 
 * The discount is applied to the whole Marketplace order. In such a scenario, the discount is distributed among all the merchant orders and calculated according to the total volume of each of the items.
 
-![Merchant discount 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/mp-discount.png)
+![Merchant discount 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Order+Management/mp-discount-1.png)
 
 * The discount is related to a single product item in the Marketplace order. In this case, the whole discount is assigned only to the merchant order that contains the discounted item.
 
-![Merchant discount 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Merchant+order+feature+overview/mp-discount-2.png)
+![Merchant discount 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Order+Management/mp-discount-2.png)
 
 {% info_block warningBox "Developer guides" %}
 

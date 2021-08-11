@@ -5,8 +5,8 @@ template: data-export-template
 ---
 
 This document describes the content of the following files you get when exporting data on {exported resource name} generated in your Spryker shop:
-
 <!-- Provide a bulleted list of files generated upon export -->
+* {file name with extension}
 
 ## {File name with extension} export file parameters
 

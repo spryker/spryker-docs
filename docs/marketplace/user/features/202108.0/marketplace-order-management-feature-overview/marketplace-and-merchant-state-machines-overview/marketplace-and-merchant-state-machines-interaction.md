@@ -22,7 +22,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE | APPLICATION | STATUS |
 | ------------------------ | -------------- | ------------------- |
-| Marketplace Administrator | Back Office     | New                  |
+| Marketplace administrator | Back Office     | New                  |
 | Merchant                  | Merchant Portal | N/A                  |
 | Customer                  | Storefront      | Confirmed / Accepted |
 
@@ -35,7 +35,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE   | APPLICATION | STATUS  |
 | ------------------------ | -------------- | ---------- |
-| Marketplace Administrator | Back Office     | Paid   |
+| Marketplace administrator | Back Office     | Paid   |
 | Merchant                  | Merchant Portal | N/A         |
 | Customer                  | Storefront      | In Progress |
 
@@ -44,7 +44,7 @@ After the payment has been made, the customer can still cancel the order during 
 
 {% info_block infoBox "Note" %}
 
-The Marketplace Administrator can also cancel the order under exceptional circumstances.
+The Marketplace administrator can also cancel the order under exceptional circumstances.
 
 {% endinfo_block %}
 
@@ -57,7 +57,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE                  | APPLICATION | STATUS |
 | ------------------------ | -------------- | --------- |
-| Marketplace Administrator | Back Office     | Canceled   |
+| Marketplace administrator | Back Office     | Canceled   |
 | Merchant                  | Merchant Portal | N/A        |
 | Customer                  | Storefront      | Canceled   |
 
@@ -70,7 +70,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE                  | APPLICATION | STATUS |
 | ------------------------ | -------------- | --------- |
-| Marketplace Administrator | Back Office     | Refunded   |
+| Marketplace administrator | Back Office     | Refunded   |
 | Merchant                  | Merchant Portal | N/A        |
 | Customer                  | Storefront      | Refunded   |
 
@@ -83,7 +83,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE   | APPLICATION | STATUS |
 | ----------------- | -------------- | --------- |
-| Marketplace Administrator | Back Office   | Sent to Merchant |
+| Marketplace administrator | Back Office   | Sent to Merchant |
 | Merchant      | Merchant Portal | New |
 | Customer   | Storefront      | In Progress      |
 
@@ -96,7 +96,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE       | APPLICATION | STATUS |
 | ----------- | -------------- | --------- |
-| Marketplace Administrator | Back Office    | Canceled   |
+| Marketplace administrator | Back Office    | Canceled   |
 | Merchant       | Merchant Portal | Canceled by Merchant|
 | Customer    | Storefront      | Canceled    |
 
@@ -109,7 +109,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE   | APPLICATION | STATUS |
 | ------------- | -------------- | --------- |
-| Marketplace Administrator | Back Office     | Shipped by Merchant  |
+| Marketplace administrator | Back Office     | Shipped by Merchant  |
 | Merchant       | Merchant Portal | Shipped  |
 | Customer  | Storefront   | Shipped Expected by \<date\> |
 
@@ -122,7 +122,7 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE   | APPLICATION | STATUS |
 | ------------- | -------------- | --------- |
-| Marketplace Administrator | Back Office     | Delivered           |
+| Marketplace administrator | Back Office     | Delivered           |
 | Merchant                  | Merchant Portal | Delivered           |
 | Customer                  | Storefront      | Delivered on \<date\> |
 
@@ -135,6 +135,6 @@ The table below provides an overview of the statuses that are displayed at this 
 
 | ROLE     | APPLICATION| STATUS      |
 | --------- | ------------- | --------------- |
-| Marketplace Administrator | Back Office     | Delivered           |
+| Marketplace administrator | Back Office     | Delivered           |
 | Merchant   | Merchant Portal | Delivered   |
 | Customer    | Storefront      | Delivered on \<date\> |

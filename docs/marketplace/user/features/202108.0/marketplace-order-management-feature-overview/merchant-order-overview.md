@@ -23,6 +23,6 @@ The merchant order consists of the merchant order items, which are the items (pr
 | Merchant Order refund total  | Total refundable amount.   |
 | Merchant Order subtotal  | Total amount before taxes and discounts.  |
 | Merchant Order tax total  | Total tax amount from the grand total.   |
-| Marketplace Operator fees total | Total amount of fees paid to the Marketplace Administrator.  |
+| Marketplace Operator fees total | Total amount of fees paid to the Marketplace administrator.  |
 
 Rounding logic for the calculations is the same as the one used for the Marketplace order. See [Rounding in the Marketplace Order feature overview](https://documentation.spryker.com/marketplace/docs/marketplace-order-feature-overview#rounding) for details.

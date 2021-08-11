@@ -6,11 +6,11 @@ template: concept-topic-template
 
 *Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/marketplace/user/intro-to-the-spryker-marketplace/{{ site.version }}/marketplace-concept.html). Based on the regular Storefront, it supports all Spryker Commerce OS features. Marketplace functionality enables buyers to browse for products, view and purchase them across different merchants.
 
-In every section of the Marketplace Storefront, products are either sorted or customers can filter them by merchants.
+In most sections of the Marketplace Storefront, it is visible to the customer who is the seller of the particular products and offers.
 
 ## Catalog and Search pages
 
-On the *Catalog* and *Search* pages, the left-side navigation menu contains the *Merchant* filter. Customers can select one or more merchants from which to view products.
+On the *Catalog* and *Search* pages, the left-side navigation menu contains the *Merchant* filter. Customers can select one or more merchants from which to view products or offers.
 
 ![Catalog and Search pages](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/catalog-and-search-pages.png)
 
@@ -28,7 +28,7 @@ The product price on top of the *Product Details* page is taken from the selecte
 
 ## Cart page
 
-On the *Cart* page, a merchant relation is displayed for each product. The merchant names are clickable and lead to the merchant profile pages.
+On the *Cart* page, a merchant reference is displayed for each product. The merchant names are clickable and lead to the merchant profile pages.
 
 ![Cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/cart-merchant-relations.png)
 
@@ -36,25 +36,25 @@ On the *Cart* page, a merchant relation is displayed for each product. The merch
 
 ## Checkout
 
-At the Shipment checkout step, a merchant relation is displayed for each item. The merchant names are clickable and lead to the merchant profile pages.
+At the Shipment checkout step, a merchant reference is displayed for each item. The merchant names are clickable and lead to the merchant profile pages.
 
 
 If a customer is ordering products from multiple merchants, the products are going to be shipped from multiple locations, so the shipments <!---LINK--> are automatically grouped by merchants.
 
 ![Shipment step](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/shipment-step.png)
 
-At the Summary checkout step,  merchant relation is displayed for each product. The merchant names are clickable and lead to the merchant profile pages. If a customer is ordering products from multiple merchants, the products are automatically grouped by merchants, which also represents the order's shipments.
+At the Summary checkout step,  merchant reference is displayed for each product. The merchant names are clickable and lead to the merchant profile pages. If a customer is ordering products from multiple merchants, the products are automatically grouped by merchants, which also represents the order's shipments.
 
 ![Summary step](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/summary-step.png)
 
 
 ### Order Details pages
 
-On the *Order Details* page, a merchant relation is displayed for each product. The merchant names are clickable and lead to the merchant profile pages. If a customer ordered products from multiple merchants, the products are grouped by merchants, which also represents the order's shipments.
+On the *Order Details* page, a merchant reference is displayed for each product. The merchant names are clickable and lead to the merchant profile pages. If a customer ordered products from multiple merchants, the products are grouped by merchants, which also represents the order's shipments.
 
 ![Order Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/order-details-page.png)
 
-If the customer clicks **Reorder all**, the items are added to their current cart with the merchant relations from the order.
+If the customer clicks **Reorder all**, the items are added to their current cart with the merchant references from the order.
 
 ### Marketplace Returns
 
@@ -73,9 +73,9 @@ On the page of the wishlist, a merchant relation is displayed for each product. 
 
 ![Wishlist page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/wishlist-page.png)
 
-If, after a product was added to a wishlist, a merchant becomes inactive, the merchant relation is no longer displayed for the product and the customer can't add it to cart. If the merchant becomes active again, the relation is displayed and the customer can add the product to cart.
+If, after a product was added to a wishlist, a merchant becomes inactive, the merchant reference is no longer displayed for the product and the customer can't add it to cart. If the merchant becomes active again, the relation is displayed and the customer can add the product to cart.
 
-If a product in a wishlist is out of stock, an [alternative product](https://documentation.spryker.com/docs/alternative-products-overview) is displayed. A merchant relation is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so the product displayed is a merchant or a regular product.
+If a product in a wishlist is out of stock, an [alternative product](https://documentation.spryker.com/docs/alternative-products-overview) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only merchant products can be displayed there.
 
 
 

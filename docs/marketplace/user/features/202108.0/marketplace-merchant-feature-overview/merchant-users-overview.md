@@ -29,7 +29,7 @@ The table below explains all the statuses that may apply to a merchant user.
 | STATUS | DESCRIPTION |
 | --- | --- |
 | Active | When the merchant user has the `Active` status, it means that the merchant is approved, the merchant user account is activated, the email with reset password instructions has been sent, and the merchant user has access to the Merchant Portal. |
-| Deactivated | Access to the Merchant Portal is revoked for the deactivated merchant user. Merchant user can be deactivated when:<ul><li>Merchant or Marketplace Administrator deactivated the Merchant User.</li><li>Merchant is [denied](https://documentation.spryker.com/marketplace/docs/merchants-feature-overview#denied).</li></ul> |
+| Deactivated | Access to the Merchant Portal is revoked for the deactivated merchant user. Merchant user can be deactivated when:<ul><li>Merchant or Marketplace administrator deactivated the Merchant User.</li><li>Merchant is [denied](https://documentation.spryker.com/marketplace/docs/merchants-feature-overview#denied).</li></ul> |
 | Deleted | Access to the Merchant Portal is revoked for the deleted merchant user. In the current implementation, both statuses `Deactivated` and `Deleted` have the same functionality—they restrict access to the Merchant Portal. However, this can be changed and adapted on the project level. |
 
 <!--See LINK TO BO GUIDE HOW TO ACTIVATE A MERCHANT USER for details on to change the merchant user statues in the Back Office-->

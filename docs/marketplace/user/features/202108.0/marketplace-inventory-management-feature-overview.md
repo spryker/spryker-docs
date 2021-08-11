@@ -9,18 +9,18 @@ In the context of the inventory management, the *warehouse* is the physical plac
 
 ## Marketplace warehouse management
 
-When a merchant is created, the corresponding warehouse is created for this merchant. The warehouse name is based on the following schema: `merchant name + merchant reference + warehouse + index starting with 1, 2, etc.`
+When a merchant is created, the corresponding warehouse is created for this merchant. The warehouse name is composed of the following parts: `merchant name + merchant reference + warehouse + index starting with 1, 2, etc.`
 
-{% info_block infoBox "Example name" %}
+{% info_block infoBox "Example" %}
 
 "Spryker MER000001 Warehouse 1" where `Spryker` is the merchant name, MER000001 is the merchant reference, and the index is 1 as it is the first warehouse created.
 
 {% endinfo_block %}
 
-A warehouse can be assigned to a single store or shared between several stores. See [Managing warehouses](https://documentation.spryker.com/docs/managing-warehouses#managing-warehouses) for details on how you can manage warehouses and stores in the back office
+A warehouse can be assigned to a single store or shared between several stores. See [Managing warehouses](https://documentation.spryker.com/docs/managing-warehouses#managing-warehouses) for details on how you can manage warehouses and stores in the Back Office.
 
 ## Marketplace stock management
-The stock for product offers is defined in the corresponding merchant warehouse. The stock does not reflect the actual availability of products, as not all the items available in stock are available for sale. For example, when there are pending orders with the offers, these items are *reserved*, so they are not available for ordering, even if they are physically on hand. 
+The stock for product offers is defined in the corresponding merchant warehouse. The stock does not reflect the actual availability of products, as not all the items available in stock are available for sale. For example, when there are pending orders with offers, these order items are *reserved*, so they are not available for ordering, even if they are physically on hand. 
 
 When `is_never_out_of_stock` attribute is set to `true`, then this offer is always available in terms of stock.
 
@@ -42,17 +42,17 @@ Offer availability is considered on the Storefront: 
 
 * On the product details page while adding the offer to cart.
 * On the cart page: Product stays in the cart if the attached offer is not available anymore and a hint is shown.
-* During the checkout: When pressing **Buy now** the availability is checked one more time.
+* During the checkout: When clicking **Buy now**, the availability is rechecked.
 
 {% info_block infoBox "Example" %}
 
-Let's assume that a merchant has defined quantity 10 for product offer 1. The customer adds 8 items of the product offer 1 to a shopping cart, and later updates the quantity to 12. In such a situation, the availability of the product offer 1 is checked and the customer is notified to update the quantity of the product offer to the available number to proceed with the purchase. 
+Let's assume that a merchant has defined quantity 10 for product offer 1. The customer adds 8 items of the product offer 1 to cart, and later updates the quantity to 12. In such a situation, the availability of the product offer 1 is checked and the customer is notified to update the quantity of the product offer to the available number to proceed with the purchase. 
 
 {% endinfo_block %}
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Inventory Management](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-inventory-management-feature-walkthrough.html) feature walkthrough <!---LINK--> for developers.
+Are you a developer? See [Marketplace Inventory Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-inventory-management-feature-walkthrough.html) <!---LINK--> for developers.
 
 {% endinfo_block %}
 
@@ -62,6 +62,5 @@ Are you a developer? See [Marketplace Inventory Management](/docs/marketplace/de
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
 | [Editing a product offer](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html#editing-a-product-offer)                            | [Managing warehouses](https://documentation.spryker.com/docs/managing-warehouses) <!--- UPDATE LINK-->                        |
-
 
 

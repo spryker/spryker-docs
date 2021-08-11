@@ -5,9 +5,9 @@ description: Merchants are product and service sellers in the Marketplace.
 template: concept-topic-template
 ---
 
-With the Marketplace shipment feature, the [marketplace orders](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management-feature-walkthrough.html) are split into several shipments based on the merchants from which the items were bought. Merchants can only see shipments with products and offers that belong to them.
+With the *Marketplace Shipment* feature, the [marketplace orders](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-order-management-feature-walkthrough.html) are split into several shipments based on the merchants from which the items were bought. Merchants can see only shipments with products and offers that belong to them.
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Shipment](/docs/marketplace/user/features/{{ page.version }}/marketplace-shipment-feature-overview.html) feature overview for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Shipment feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-shipment-feature-overview.html) for business users.
 
 | INTEGRATION GUIDES | GLUE API GUIDES  |
 | ---------------------- | ---------------- |

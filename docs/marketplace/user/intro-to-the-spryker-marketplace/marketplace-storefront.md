@@ -14,6 +14,8 @@ On the *Catalog* and *Search* pages, the left-side navigation menu contains the 
 
 ![Catalog and Search pages](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/catalog-and-search-pages.png)
 
+If searching by merchant name in the search field, the products and offers of the relevant merchant are displayed in the search suggestions and search results.
+
 ## Product Details pages
 
 On the *Product Details* page, the *Sold by* section contains the [marketplace products](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-feature-overview.html) and the [offers](docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer-feature-overview.html) from other merchants for that product. Each entry has a price and a link to the respective [merchant's profile page](#merchant-profiles).

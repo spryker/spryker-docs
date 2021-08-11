@@ -1,0 +1,40 @@
+---
+title: File details- product_price.csv
+originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-pricecsv
+redirect_from:
+  - /2021080/docs/file-details-product-pricecsv
+  - /2021080/docs/en/file-details-product-pricecsv
+---
+
+This article contains content of the **product_price.csv** file to configure [prices](https://documentation.spryker.com/docs/price) of the products/services in your Spryker Demo Dhop.
+
+## Headers & Mandatory Fields 
+These are the header fields to be included in the .csv file:
+
+| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+| --- | --- | --- | --- | --- |
+| **abstract_sku** | Yes (if `concrete_sku` is empty) | String |Either this field or `concrete_sku` needs to be filled. | SKU of the abstract product to which the price should apply. |
+| **concrete_sku** | Yes (if `abstract_sku` is empty) | String |Either this field or `abstract_sku` needs to be filled. | SKU of the concrete product to which the price should apply. |
+| **price_type** | No | String |N/A* | Defines the price type. |
+| **store** | Yes | String |N/A | Store to which this price should apply. |
+| **currency** | No | String |N/A | Defines in which currency the price is. |
+| **value_net** | No | Integer |N/A | Sets the net price. |
+| **value_gross** | No | Integer |N/A | Sets the gross price. |
+| **price_data.volume_prices** | No | String |N/A | Price data which can be used to define alternative prices, i.e volume prices, overwriting  the given net or gross price values. |
+*N/A: Not applicable.
+
+## Dependencies
+
+This file has the following dependencies:
+
+* [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+* [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
+*     *stores.php* configuration file of the Demo Shop PHP project
+
+## Template File & Content Example
+A template and an example of the *product_price.csv*  file can be downloaded here:
+
+| File | Description |
+| --- | --- |
+| [product_price.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Pricing/Template+product_price.csv) | Product Price .csv template file (empty content, contains headers only). |
+| [product_price.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Pricing/product_price.csv) | Product Price .csv file containing a Demo Shop data sample. |

@@ -1,0 +1,32 @@
+---
+title: File details- product_group.csv
+originalLink: https://documentation.spryker.com/v5/docs/file-details-product-groupcsv
+redirect_from:
+  - /v5/docs/file-details-product-groupcsv
+  - /v5/docs/en/file-details-product-groupcsv
+---
+
+This article contains content of the **product_group.csv** file to configure [Product Group](https://documentation.spryker.com/docs/en/product-gropus) information on your Spryker Demo Shop.
+
+## Headers & Mandatory Fields 
+These are the header fields to be included in the .csv file:
+
+| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+| --- | --- | --- | --- | --- |
+| **group_key** | Yes (*unique*) | String |N/A* | Product group unique string identifier. |
+| **abstract_sku** | Yes | String |N/A | SKU of the abstract product. |
+| **position** | No | Integer |N/A | The position of the product within that group. |
+*N/A: Not applicable.
+
+## Dependencies
+
+This file has the following dependency:
+*    [product_abstract.csv](https://documentation.spryker.com/docs/en/file-details-product-abstractcsv)
+
+## Template File & Content Example
+A template and an example of the *product_group.csv*  file can be downloaded here:
+
+| File | Description |
+| --- | --- |
+| [product_group.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/Template+product_group.csv) | Payment Method Store .csv template file (empty content, contains headers only). |
+| [product_group.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/product_group.csv) | Payment Method Store .csv file containing a Demo Shop data sample. |

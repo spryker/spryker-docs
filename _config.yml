@@ -144,6 +144,8 @@ versioned_categories:
 sidebars:
   - marketplace_dev_sidebar
   - marketplace_user_sidebar
+  - scos_dev_sidebar
+  - scos_user_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file

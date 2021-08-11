@@ -1,0 +1,32 @@
+---
+title: File details- shipment.csv
+originalLink: https://documentation.spryker.com/v6/docs/file-details-shipmentcsv
+redirect_from:
+  - /v6/docs/file-details-shipmentcsv
+  - /v6/docs/en/file-details-shipmentcsv
+---
+
+This article contains content of the **shipment.csv** file to configure [Shipment](https://documentation.spryker.com/docs/shipment) information on your Spryker Demo Shop.
+
+## Headers & Mandatory Fields 
+These are the header fields to be included in the .csv file:
+
+| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+| --- | --- | --- | --- | --- |
+| **shipment_method_key** | Yes (*unique*) | String | N/A*| Identifier of the shipment method. |
+| **name** | Yes | String | N/A | Name of the shipment method. |
+| **carrier** | Yes | String | N/A | Name of the shipment carrier. |
+| **taxSetName** | Yes | String | N/A| 	Name of the tax set. |
+
+N/A: Not applicable.
+
+## Dependencies
+This file has no dependencies.
+
+## Template File & Content Example
+A template and an example of the *shipment.csv* file can be downloaded here:
+
+| File | Description |
+| --- | --- |
+| [shipment.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+shipment.csv) | Shipment .csv template file (empty content, contains headers only). |
+| [shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/shipment.csv) | Shipment .csv file containing a Demo Shop data sample. |

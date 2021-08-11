@@ -16,6 +16,17 @@ entries:
           - title: Post-installation steps
             url: /docs/marketplace/dev/setup/post-installation-steps.html
 
+      - title: SCOSS
+        nested:
+          - title: Feature walkthroughs
+            nested:
+
+              - title: Agenst Assist feature walkthrough
+                url: /docs/marketplace/dev/feature-walkthroughs/scos/agent-assist-feature-walkthrough.html
+
+              - title: Alternate Products feature walkthrough
+                url: /docs/marketplace/dev/feature-walkthroughs/scos/alternative-products-feature-walkthrough.html
+
       - title: Feature walkthroughs
         nested:
           - title: Merchant

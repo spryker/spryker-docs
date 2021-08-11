@@ -22,7 +22,7 @@ For detailed information on the modules that provide the API functionality and r
 To add items to a cart, send the request:
 
 ---
-`POST` **carts/{% raw %}*{{cart_uuid}}*{% endraw %}/items**
+`POST` {% raw %}**carts/*{{cart_uuid}}*/items**{% endraw %}
 
 ---
 
@@ -1519,7 +1519,7 @@ For the attributes of the included resources, see:
 To change the number of items in a cart, send the request:
 
 ***
-`PATCH` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}/items/{% raw %}*{{item_group_key}}*{% endraw %}**
+`PATCH` {% raw %}**/carts/*{{cart_uuid}}*/items/*{{item_group_key}}***{% endraw %}
 ***
 
 
@@ -1688,7 +1688,7 @@ For the attributes of the included resources, see [Retrieving concrete products]
 
 To remove an item from a registered user's cart, send the request:
 ***
-`DELETE` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}/items/{% raw %}*{{item_group_key}}*{% endraw %}**
+`DELETE` {% raw %}**/carts/*{{cart_uuid}}*/items/*{{item_group_key}}***{% endraw %}
 ***
 
 | PATH PARAMETER | DESCRIPTION |

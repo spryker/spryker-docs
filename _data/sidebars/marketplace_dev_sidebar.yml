@@ -59,7 +59,7 @@ entries:
 
           - title: Marketplace Promotions and Discounts feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html
-        
+
           - title: Marketplace Wishlist feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
 
@@ -205,17 +205,14 @@ entries:
             - title:  Retrieving abstract products
               url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html
 
-            - title:  Retrieving abstract product lists
-              url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-product-lists.html
-
           - title: Concrete products
             nested:
 
             - title:  Retrieving concrete products
               url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
 
-            - title:  Retrieving product offers for a concrete product
-              url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-for-a-concrete-product.html
+            - title:  Retrieving product offers of concrete products
+              url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-of-concrete-products.html
 
           - title: Сarts of registered users
             nested:
@@ -226,6 +223,12 @@ entries:
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 
+          - title: Content items
+            nested:
+
+            - title:  Retrieving abstract products in abstract product lists
+              url: /docs/marketplace/dev/glue-api-guides/content-items/retrieving-abstract-products-in-abstract-product-lists.html
+
           - title: Guest carts
             nested:
 
@@ -234,13 +237,41 @@ entries:
 
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
-          
+
+          - title: Merchants
+            nested:
+
+            - title:  Retrieving merchants
+              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html
+
+            - title:  Retrieving merchant addresses
+              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html
+
+            - title:  Retrieving merchant opening hours
+              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-opening-hours.html
+
+          - title: Product offers
+            nested:
+
+            - title: Retrieving product offers
+              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html
+
+            - title: Retrieving product offer availability
+              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-availability.html
+
+            - title: Retrieving product offer prices
+              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer prices.html
+
+
+
+
+
           - title: Wishlists
-            nested: 
+            nested:
 
             - title: Managing wishlists
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
-            
+
             - title: Managing wishlist items
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 

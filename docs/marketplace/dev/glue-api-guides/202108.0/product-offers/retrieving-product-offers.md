@@ -15,18 +15,18 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-prices-feature-integration.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/glue-api-marketplace-product-offer-volume-prices.html)
 
-## Retrieve product offers
+## Retrieve a product offer
 
 To retrieve the product offers, send the request:
 
 ---
-GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
+`GET` {% raw %}**/product-offers/*{{offerId}}***{% endraw %}
 
 ---
 
-| PATH PARAMETER| DESCRIPTION |
-| ------------------ | ------------------------------------------------------------ |
-| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-product-offers-for-a-concrete-product.html). |
+| PATH PARAMETER | DESCRIPTION |
+| ------------------ | ---------------------- |
+| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer to retrieve the availability of. To get it, [retrieve the offers of a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-product-offers-of-a-concrete-product.html). |
 
 <a name="product-offer-included-resources"></a>
 
@@ -39,10 +39,10 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 
 | REQUEST | USAGE     |
 | ---------- | ----------- |
-| `GET https://glue.mysprykershop.com/product-offers/offer56`| Get information about the offer56.   |
-| `GET https://glue.mysprykershop.com/product-offers/offer78?product-offer-prices` | Get information about the offer78 with the details on product offer prices. |
-| `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-availabilities` | Get information about the offer101 with the details on product offer availability and merchants. |
-| `GET https://glue.mysprykershop.com/product-offers/offer101?merchants` | Get information about the offer101 with the details on merchants. |
+| `GET https://glue.mysprykershop.com/product-offers/offer56`| Retrieve information about the with the `offer56` ID.   |
+| `GET https://glue.mysprykershop.com/product-offers/offer78?product-offer-prices` | Retrieve information about the offer with `offer78` ID with the product offer prices. |
+| `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-availabilities` | Retrieve the product offer with the `offer101` ID with the product offer availability. |
+| `GET https://glue.mysprykershop.com/product-offers/offer101?merchants` | Retrieve the product offer with the `offer101` ID, including the merchant it belongs to. |
 
 ### Response
 
@@ -116,7 +116,7 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
                                 "netAmount": 39100,
                                 "quantity": 3
                             }
-                                 
+
                         ]
                     }
                 ]
@@ -168,15 +168,16 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
             "links": {
                 "self": "http://glue.mysprykershop.com/product-offers/offer101/product-offer-availabilities"
             }
-            
+
         }
     ]
 }
 ```
+
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer and merchant information</summary>
+<summary markdown='span'>Response sample with merchant information</summary>
 
 ```json
 {
@@ -242,178 +243,25 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 
 | ATTRIBUTE   | TYPE | DESCRIPTION      |
 | --------------- | -------- | -------------------- |
-| merchantSku       | String   | SKU a merchant uses to identify the offer. |
-| merchantReference | String   | Merchant reference assigned to every merchant. |
-| isDefault         | Boolean  | Defines whether the Product Offer is default for the concrete product. |
+| merchantSku       | String   | The merchant's unique identifier of the product offer. |
+| merchantReference | String   | Unique identifier of the merchant. |
+| isDefault         | Boolean  | Defines if the product offer is [default](docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer-feature-overview.html#product-offers-on-the-product-details-page) for the concrete product. |
 
-|INCLUDED RESOURCE  |ATTRIBUTE  |TYPE  |DESCRIPTION  |
-|---------|---------|---------|---------|
-|merchant                | merchantName           | String   | Merchant’s name. |
-|merchant                | merchantUrl            | String   | Relative merchant's profile URL. |
-|merchant                | contactPersonRole      | String   | Role of the contact person.  |
-|merchant                | contactPersonTitle     | String   | Salutation to use when addressing the contact person. |
-|merchant                | contactPersonFirstName | String   | Contact person’s first name. |
-|merchant                | contactPersonLastName  | String   | Contact person’s last name.  |
-|merchant                | contactPersonPhone     | String   | Contact person’s phone number. |
-|merchant                | logoUrl                | String   | Merchant’s logo URL.   |
-|merchant                | publicEmail            | String   | Merchant’s public email address.  |
-|merchant                | publicPhone            | String   | Merchant’s public phone number.  |
-|merchant                | description            | String   | Merchant’s description.  |
-|merchant                | bannerUrl              | String   | Merchant’s banner URL. |
-|merchant                | deliveryTime           | String   | Average delivery time.  |
-|merchant                | latitude               | String   | Merchant’s latitude.|
-|merchant                | longitude              | String   | Merchant’s longitude.  |
-|merchant                | faxNumber              | String   | Merchant’s fax number.  |
-|merchant                | legalInformation       | Object   | List of legal information. |
-|merchant                | terms                  | String   | Merchant’s terms and conditions.  |
-|merchant                | cancellationPolicy     | String   | Merchant’s cancellation policy.  |
-|merchant                | imprint                | String   | Merchant’s imprint information.  |
-|merchant                | dataPrivacy            | String   | Merchant’s data privacy conditions. |
 
 See attribute descriptions of other included resources in:
 * [Retrieve product offer prices](#prices)
 * [Retrieve product offer availability](#product-offer-availabilities)
+* [Retrieving merchants](docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 
-## Retrieve product offer availability
 
-To retrieve the product offer availability, send the request:
 
-------
-
-GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}/product-offer-availabilities**
-
-------
-
-| PATH PARAMETER | DESCRIPTION |
-| ------------------ | ---------------------- |
-| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer. You can get it in response when retrieving the offers available for the product concrete. |
-
-### Request
-
-Request sample: `https://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities`
-
-### Response
-
-Response sample:
-
-```json
-{
-    "data": [
-        {
-            "type": "product-offer-availabilities",
-            "id": "offer56",
-            "attributes": {
-                "isNeverOutOfStock": true,
-                "availability": true,
-                "quantity": "0.0000000000"
-            },
-            "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities"
-            }
-        }
-    ],
-    "links": {
-        "self": "http://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities"
-    }
-}
-```
-<a name="product-offer-availabilities"></a>
-
-|ATTRIBUTE  |TYPE  |DESCRIPTION  |
-|---------|---------|---------|
-| isNeverOutOfStock          |  Boolean         | Shows if the product offer is never out of stock.          |
-| availability          | Boolean          |Defines if the product offer is available.           |
-| quantity          | Integer          |Stock of the product offer.           |
-
-## Retrieving product offer prices
-
-To retrieve the product offer prices, send the request:
-
----
-GET **/product-offers/{% raw %}*{{offerID}}*{% endraw %}/product-offer-prices**
-
----
-
-| PATH PARAMETER | DESCRIPTION |
-| ------------------ | ------------------------------------------------------------ |
-| {% raw %}***{{offerID}}***{% endraw %} | Unique identifier of a product offer. You can get it in response when retrieving the offers available for the product concrete. |
-
-### Request
-
-Request sample: `GET http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices`
-
-### Response
-
-Response sample:
-
-```json
-{
-    "data": [
-        {
-            "type": "product-offer-prices",
-            "id": "offer78",
-            "attributes": {
-                "price": 40522,
-                "prices": [
-                    {
-                        "priceTypeName": "DEFAULT",
-                        "netAmount": null,
-                        "grossAmount": 40522,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"                        
-                        },
-                        "volumePrices": [
-                            {
-                                "grossAmount": 38400,
-                                "netAmount": 39100,
-                                "quantity": 3
-                            }
-                                 
-                        ]
-                    }
-                ]
-            },
-           
-            "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
-            }
-        }
-    ],
-    "links": {
-        "self": "http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
-    }
-}
-```
-<a name="prices"></a>
-
-|ATTRIBUTE  |TYPE  |DESCRIPTION  |
-|---------|---------|---------|
-| price |  Integer  | Price to pay for the product in cents.        |
-| priceTypeName   | String   |Price type.         |
-| netAmount   | Integer    |Net price in cents.    |
-| grossAmount   |  Integer  | Gross price in cents.  |
-| currency.code   | String  |Currency code.   |
-| currency.name   | String  |  Currency name.  |
-| currency.symbol   | String  |  Currency symbol.  |
-| volumePrices   | Object  |  An array of objects defining the [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) of the product offer.  |
-| grossAmount | Integer   |  Gross volume price in cents.         |
-| netAmount | Integer   | Net volume price in cents.          |
-| quantity  |  Integer         | Quantity of items in offer when the volume price applies.  |
-
-{% info_block infoBox "Info" %}
-
-You can also retrieve the product offer prices as an included resource of the `product-offer-prices` endpoint. See [Retrieve product offers](#product-offer-included-resources) for details.
-
-{% endinfo_block %}
 
 ## Other management options
 
 You can use the product offers resource as follows:
 
-- Retrieve information about the existing product offers of a concrete product—[Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html)
+- [Retrieve product offers of a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-product-offers-of-a-concrete-product.html)
 - Add product offers to a guest cart—[Creating a guest cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
 - Retrieve information for the product offers in a guest cart—[Retrieving a guest cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
 - Add product offers to a registered user's cart—[Adding items to a cart of a registered user](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).

@@ -2341,7 +2341,7 @@ For the attributes of the included resources, see:
 To retrieve a particular cart, send the request:
 
 ***
-`GET` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}**
+`GET` {% raw %}**/carts/*{{cart_uuid}}***{% endraw %}
 ***
 
 
@@ -4234,7 +4234,7 @@ For the attributes of the included resources, see:
 You can edit the name of the cart, change the currency and price mode. To do that, send the request:
 
 ---
-`PATCH` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}**
+`PATCH` {% raw %}**/carts/*{{cart_uuid}}***{% endraw %}
 
 ---
 
@@ -4320,7 +4320,7 @@ Response sample:
 To delete a cart, send the request:
 
 ---
-`DELETE` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}**
+`DELETE` {% raw %}**/carts/*{{cart_uuid}}***{% endraw %}
 
 ---
 

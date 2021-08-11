@@ -950,7 +950,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
                                 "netAmount": 39100,
                                 "quantity": 3
                             }
-                                 
+
                         ]
                     }
                 ]
@@ -1136,7 +1136,7 @@ For other attributes of the included resources, see:
 * [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html#product-offers-response-attributes)
 * [Retrieve product offer prices] (/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html#retrieving-product-offer-prices)
 * [Retrieve abstract products](https://documentation.spryker.com/marketplace/docs/retrieving-abstract-products)
-* [Retrieve merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)
+* [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}//merchants/retrieving-merchants.html#merchants-response-attributes)
 
 
 ## Possible errors

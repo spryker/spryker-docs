@@ -9,8 +9,8 @@ This endpoint allows retrieving general information about abstract products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration)
-* [Glue API: Product Options Feature Integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
+* [Glue API: Products feature integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration)
+* [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 * [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
 
 
@@ -20,17 +20,17 @@ For detailed information on the modules that provide the API functionality and r
 To retrieve general information about an abstract product, send the request:
 
 ---
-`GET` **/abstract-products/{% raw %}*{{abstract_product_sku}}{% endraw %}***
+`GET` {% raw %}**/abstract-products/*{{abstract_product_sku}}***{% endraw %}
 
 ---
 
 | PATH | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{abstract_product_sku}}{% endraw %}*** | SKU of an abstract product to get information for. |
+| {% raw %}***{{abstract_product_sku}}***{% endraw %} | SKU of an abstract product to get information for. |
 
 ### Request
 
-| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | abstract-product-prices, concrete-products, product-labels, abstract-product-image-sets, abstract-product-availabilities, category-nodes, product-tax-sets, product-options, product-reviews, merchants |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
@@ -51,15 +51,15 @@ To retrieve general information about an abstract product, send the request:
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its [default prices](https://documentation.spryker.com/docs/products-reference-information#default-and-original-prices). |
-| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](https://documentation.spryker.com/docs/volume-prices)). |
+| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](https://documentation.spryker.com/docs/volume-prices)). <!-- Incorrect description. Fix in SCOS and MP docs after the migration --> |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
-| `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product lables. |
+| `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product labels. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options` | Retrieve information about the abstract product with SKU `001` with its product options. |
 | `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
-| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve the merchant product with SKU 109.|
-| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve the merchant product with SKU 109 including the merchant information. |
+| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve the merchant product with SKU `109`.|
+| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve the merchant product with SKU `109` including the merchant information. |
 
 
 ### Response
@@ -1493,7 +1493,7 @@ For the attributes of other included resources, see:
 * [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
 * [Retrieve product reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
 *  [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units)
-*  [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)
+*  [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html#merchants-response-attributes)
 
 
 ## Possible errors

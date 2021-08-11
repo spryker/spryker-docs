@@ -115,13 +115,11 @@ To retrieve all wishlists of a customer, send the request:
 	}
 ```
 
-Response sample with existing wishlists
+<details>
+<summary markdown='span'>Response sample with existing wishlists</summary>
+
 
 ```json
-{
-		"data": {
-  
- 
 	{
 		"data": [
 			{
@@ -411,6 +409,7 @@ Response sample with existing wishlists
     ]
 }
 ```
+
 </details>
 
 | ATTRIBUTE     | TYPE    | DESCRIPTION  |
@@ -457,7 +456,7 @@ To retrieve a specific wishlist, send the request:
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items and respective concrete products in the response. |
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products,product-labels | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items, respective concrete products and their product labels in the response. |
 | GET https://glue.mysprykershop.com/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4?include=wishlist-items,concrete-products,concrete-product-availabilities | Retrieve the wishlist with the `bb7dbe75-d892-582f-b438-d7f6cbfd3fc4`identifier. Include wishlist items, concrete products and concrete product availabilities in the response. |
-| GET https://glue.mysprykershop.com/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4?include=wishlist-items,concrete-products,concrete-product-prices | Retrieve the wishlist with the `bb7dbe75-d892-582f-b438-d7f6cbfd3fc4`identifier. Include wishlist items, concrete products and their prices. |
+| GET https://glue.mysprykershop.com/wishlists/bb7dbe75-d892-582f-b438-d7f6cbfd3fc4?include=wishlist-items,concrete-products,concrete-product-prices | Retrieve the wishlist with the `bb7dbe75-d892-582f-b438-d7f6cbfd3fc4`identifier. Include wishlist items, concrete products, and their prices. |
 | GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d/wishlist-items,concrete-products,product-offers | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items, concrete products and product offers for these products. |
 | GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers,product-offer-availabilities | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items and product offer availabilities. |
 | GET https://glue.mysprykershop.com/wishlists/13c813a3-8916-5444-9f1b-e4d8c56a085d?include=wishlist-items,concrete-products,product-offers,product-offer-prices | Retrieve the wishlist with the `13c813a3-8916-5444-9f1b-e4d8c56a085d`identifier. Include wishlist items and product offer prices. |
@@ -2206,6 +2205,7 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
+
 </details>
 
 | ATTRIBUTE  | TYPE  | DESCRIPTION     |
@@ -2219,13 +2219,15 @@ For the attributes of the included resources, see
 
 [Adding items to wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlist-items.html#add-an-item-to-a-wishlist)
 
+[Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+
 [Retrieving concrete product availabilities](https://documentation.spryker.com/docs/retrieving-concrete-product-availability)
 
 [Retrieving concrete product prices](https://documentation.spryker.com/docs/retrieving-concrete-product-prices)
 
 [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html)
 
-[Retrieving merchant information](https://spryker-docs.herokuapp.com/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)
+[Retrieving merchants](docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 
 

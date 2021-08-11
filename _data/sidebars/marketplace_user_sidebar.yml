@@ -184,11 +184,43 @@ entries:
         - title: Products
           nested:
 
-          - title: Creating marketplace abstract products
-            url: /docs/marketplace/user/merchant-portal-user-guides/products/creating-marketplace-abstract-products.html
+          - title: Abstract products
+            nested:
 
-          - title: Editing marketplace abstract products
-            url: /docs/marketplace/user/merchant-portal-user-guides/products/managing-marketplace-abstract-products.html
+            - title: Creating a marketplace abstract product
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/creating-marketplace-abstract-product.html
 
-          - title: Managing marketplace abstract product prices
-            url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-prices.html
+            - title: Managing a marketplace abstract product
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product.html
+
+            - title: Managing marketplace abstract product prices
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-prices.html
+
+            - title: Managing marketplace abstract product image sets
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-image-sets.html
+
+            - title: Managing marketplace abstract product attributes
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-attributes.html
+
+            - title: Managing marketplace abstract product meta information
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-meta-information.html
+
+          - title: Concrete products
+            nested:
+
+            - title: Creating a marketplace concrete product
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/creating-marketplace-concrete-product.html
+
+            - title: Managing a marketplace concrete product
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/managing-marketplace-concrete-product.html
+
+            - title: Managing marketplace concrete product prices
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/managing marketplace-concrete-product-prices.html
+
+            - title: Managing marketplace concrete product image sets
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/managing-marketplace-concrete-products-image-sets.html
+
+            - title: Managing marketplace concrete product attributes
+              url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/managing-marketplace-concrete-product-attributes.html
+
+

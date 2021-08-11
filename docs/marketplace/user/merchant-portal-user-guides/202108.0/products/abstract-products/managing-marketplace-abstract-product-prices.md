@@ -1,6 +1,6 @@
 ---
 title: Managing marketplace abstract product prices
-last_updated: Aug 10, 2021
+last_updated: Aug 11, 2021
 description: This topic describes how to manage marketplace abstract product prices in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -18,7 +18,7 @@ Review the reference information before you start, or just look up the necessary
 
 To add a new price for a marketplace abstract product:
 
-1. Next to the abstract product, you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Price* pane.
+1. Next to the abstract product, where you want to add a price, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Price* pane.
 2. In the *Price* pane, click **+Add**. The empty cells appear in the table below.
 3. From the drop-down menu *Store*, select the store for which the price is created.
 4. From the drop-down menu *Currency*, select the currency in which the price is defined.
@@ -36,12 +36,12 @@ Click **Cancel** to stop creating a new price.
 
 To edit prices of a marketplace abstract product:
 
-1. Next to the abstract product, you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Price** pane.
-2. Hover over the table and update the necessary columns.
+1. Next to the abstract product, the price of which you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Price** pane.
+2. Next to the price you want to edit, hover over the table and update the necessary columns.
 
 **Tips & Tricks**
 
-- You can sort the prices by stores and currencies. To do that, in the *Price* pane, in the *Stores* drop-down menu, select the stores for which the price is defined, and in the *Currencies* drop-down menu, select the currencies in which the price is defined.
+You can sort the prices by stores and currencies. To do that, in the *Price* pane, in the *Stores* drop-down menu, select the stores for which the price is defined, and in the *Currencies* drop-down menu, select the currencies in which the price is defined.
 
 
 ## Deleting abstract product prices
@@ -52,7 +52,7 @@ To remove the price of the abstract product:
 2. Next to the price you want to remove, hover over the three dots in the table, and click **Delete**.
 
 
-### Reference information: Price pane
+## Reference information: Price pane
 
 |ATTRIBUTE  | DESCRIPTION   |
 | ------------- | --------------------- |
@@ -67,5 +67,5 @@ To remove the price of the abstract product:
 
 - [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product.html)
 - [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-attributes.html)
-- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-image-sets.md.html)
+- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-image-set.html)
 - [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html)

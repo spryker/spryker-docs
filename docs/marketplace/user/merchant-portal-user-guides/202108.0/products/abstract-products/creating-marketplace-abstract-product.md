@@ -1,6 +1,6 @@
 ---
 title: Creating a marketplace abstract product
-last_updated: Aug 10, 2021
+last_updated: Aug 11, 2021
 description: This document describes how to create marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -38,7 +38,7 @@ To create a new abstract product:
 
    4. Click **Next**. </br>
 
-
+   </br>
 
       If the **Abstract product has 1 concrete product** was chosen:</br>
 
@@ -55,7 +55,7 @@ To create a new abstract product:
 
       If the **Abstract product has multiple concrete products** was chosen:</br>
 
-
+   </br>
 
       1. Select a super attribute that define your concrete products.
       2. In the field next to the super attribute you've selected, select one or more product attribute values. Upon adding the super attribute values, the preview of the concrete products will be displayed.
@@ -66,19 +66,21 @@ To create a new abstract product:
     
       {% endinfo_block %}
     
-      1. (Optional) Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute. 
+      3. (Optional) Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute. 
     
       ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-multiple-variants-mp.gif)
     
-      **Tips and Tricks**
+      **Tips and Tricks** </br>
+
       You can remove a concrete product from the preview list by clicking the **Remove** icon.
 
 3. Once done, click **Create**.
 
-**Tips and Tricks**
+**Tips and Tricks** </br>
+
 To return to the previous step, click **Back**.
 
-Once the product is created, it needs to be [activated by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/managing-products/managing-products.html#activating-a-product). Only the approved marketplace products are displayed in the Merchant Portal and Marketplace Storefront.
+Once the product is created, it needs to be [activated by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/managing-products/managing-products.html#activating-a-product). Only the active marketplace products are displayed in the Merchant Portal and Marketplace Storefront.
 
 ### Reference information: Create abstract product
 
@@ -100,7 +102,7 @@ Once the product is created, it needs to be [activated by the Marketplace admini
 
 ### Reference information: Create an Abstract Product with multiple Concrete Products
 
-You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product. In the *Concrete Products’ Preview* pane you can view the products to be created.
+You can select as many super attributes as you need and define one or more values for them. When you select a product attribute value, a concrete product based on this value is displayed. In the *Concrete Products’ Preview* pane you can view the products to be created.
 
 By selecting **Autogenerate SKU**s, the SKU numbers for the variants are generated automatically, based on the SKU of their abstract product.
 
@@ -108,4 +110,4 @@ By selecting **Same Name as Abstract Product**, the name of the concrete product
 
 ## Next steps
 
-- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product.html)
+- [Manage abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product.html)

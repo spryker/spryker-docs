@@ -1,6 +1,6 @@
 ---
 title: Managing marketplace concrete product attributes
-last_updated: Aug 10, 2021
+last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace concrete product attributes in the Merchant Portal. 
 template: back-office-user-guide-template
 ---
@@ -52,5 +52,11 @@ To remove the attribute from the concrete product:
 | Attribute                 | Name of the attribute, for example, *color*.                 |
 | Default                   | Values for you attribute, e.g., if the attribute is a *color*, the values for it can be *red*, *green*, *black*, etc. |
 | Locale value (e.g. DE_DE) | Translation for either an attribute key into the other language based on the locales for which you add the translation. |
+
+## Next steps
+
+- [Manage concrete product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html)
+- [Manage concrete product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing marketplace-concrete-product-prices.html)
+- [Manage concrete product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-products-image-sets.html)
 
 

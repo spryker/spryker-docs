@@ -1,6 +1,6 @@
 ---
 title: Managing marketplace concrete product image sets
-last_updated: Aug 10, 2021
+last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace concrete product image sets in the Merchant Portal. 
 template: back-office-user-guide-template
 ---
@@ -56,3 +56,9 @@ To delete an image set with its images for the abstract product, click **Delete 
 | Image ordered   | If you add several images to an image set, specify the order in which they are to be shown in the front end and back end using *Image ordered* field. The order of images is defined by the order of entered numbers where the image set with "0" is the first to be shown. |
 | Small image URL | Link of the image that is going to be used in the product catalogs. |
 | Large image URL | Link to the image that is going to be used on the product details page. |
+
+## Next steps
+
+- [Manage a concrete product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/creating-marketplace-concrete-product.html)
+- [Manage concrete product prices](docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing marketplace-concrete-product-prices.html)
+- [Manage concrete product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product-attributes.html)

@@ -1,6 +1,6 @@
 ---
 title: Managing marketplace abstract product meta information
-last_updated: Aug 10, 2021
+last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace abstract product meta information in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -17,7 +17,7 @@ Review the reference information before you start, or just look up the necessary
 
 To add meta information for the product:
 
-1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **SEO** pane.
+1. Next to the abstract product, you want to add meta information for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **SEO** pane.
 2.  Fill the following fields for the desired locales:
       	- Meta title
       	- Meta keywords
@@ -29,7 +29,7 @@ To add meta information for the product:
 
 To modify meta information for the product:
 
-1. Next to the abstract product, you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **SEO** pane.
+1. Next to the abstract product, you want to edit meta information for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **SEO** pane.
 2. Update the following fields for the desired locales:
 
     - Meta title
@@ -38,7 +38,7 @@ To modify meta information for the product:
 
 3. Click **Save**.  
 
-### Reference information: SEO pane
+## Reference information: SEO pane
 
 | ATTRIBUTE        | DESCRIPTION                        |
 | ---------------- | ---------------------------------- |
@@ -51,4 +51,4 @@ To modify meta information for the product:
 - [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product.html)
 - [Manage abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-prices.html)
 - [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-attributes.html)
-- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-image-sets.md.html)
+- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product-image-sets.html)

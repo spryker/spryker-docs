@@ -1,6 +1,6 @@
 ---
-title: Editing a marketplace concrete product
-last_updated: Jun 30, 2021
+title: Managing a marketplace concrete product
+last_updated: Aug 11, 2021
 description: This document describes how to modify marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -28,7 +28,7 @@ Select one or more sorting parameters from the drop-down menu on the *Concrete P
 
 By default, the table is sorted descendingly by SKU.
 
-## Editing concrete product details
+## Editing marketplace concrete product details
 
 To edit the existing marketplace concrete product:
 
@@ -40,8 +40,6 @@ To edit the existing marketplace concrete product:
 6. In the *Validity Dates & Time* pane, populate the *Valid from* and *Valid to* fields.
 7. In the *Searchability* pane, from the drop-down menu select the locale(s) where the product is searchable.
 8. Click **Save**.
-
-
 
 ### Reference information: *Concrete Product SKU, Name* page
 
@@ -58,8 +56,13 @@ To edit the existing marketplace concrete product:
 | Description           |  | The description of the product that your customer sees in the online store. |           |
 |              |  Use Abstract Product description for all locales    | Once the checkbox is selected, the description from the abstract product is taken over. |       |
 | Validity Dates & Time |  | Defines the period of time when the product is in active state. The **Valid from** date triggers the activation, while the **Valid to** date triggers the deactivation. Either no dates can be selected, or both. |           |
-| Price                 |  | In this pane, you can manage prices for your concrete product. See [Managing marketplace concrete product prices]() for more details. |           |
-| Images                |  | In this pane, you can manage image sets for your concrete product. See [Managing concrete product image sets]() for more details. |           |
-| Attributes            |  | In this pane, you can manage attributes for your product. See [Managing concrete product attributes]() for more details. |           |
+| Price                 |  | In this pane, you can manage prices for your concrete product. See [Managing marketplace concrete product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing marketplace-concrete-product-prices.html) for more details. |           |
+| Images                |  | In this pane, you can manage image sets for your concrete product. See [Managing concrete product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-products-image-sets.html) for more details. |           |
+| Attributes            |  | In this pane, you can manage attributes for your product. See [Managing concrete product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product-attributes.html) for more details. |           |
 | Searchability         |  | Defines the stores where the concrete product can be searched via the Search function in the online store. If not selected, no values will be displayed when searching for this product. |           |
 
+## Next steps
+
+- [Manage concrete product prices](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing marketplace-concrete-product-prices.html)
+- [Manage concrete product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-products-image-sets.html)
+- [Manage concrete product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product-attributes.html)

@@ -1,6 +1,6 @@
 ---
 title: Managing marketplace concrete product prices
-last_updated: Aug 10, 2021
+last_updated: Aug 11, 2021
 description: This topic describes how to manage marketplace concrete product prices in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -63,3 +63,9 @@ To remove the price of the marketplace concrete product:
 | Net original   | A price of the item before tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |
 | Gross original | A price of the item after tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |
 | Quantity       | A number of items for which the price is defined. This field id used to define the volume prices for the concrete product.  |
+
+## Next steps
+
+- [Manage concrete product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html)
+- [Manage concrete product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-products-image-sets.html)
+- [Manage concrete product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product-attributes.html)

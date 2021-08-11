@@ -1,6 +1,6 @@
 ---
 title: Creating a marketplace concrete product
-last_updated: Aug 10, 2021
+last_updated: Aug 11, 2021
 description: This document describes how to create a marketplace concrete product in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -31,10 +31,22 @@ You can create a marketplace concrete product following two scenarios:
 
   4. Click **Save**.
 
-  **Tips and Tricks**
+  **Tips and Tricks** </br>
+
   You can remove a concrete product from the preview list by clicking the **Remove** icon.
 
-Once the product is created, it needs to be [activated by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/managing-products/managing-products.html#activating-a-product). Only the approved marketplace products are displayed in the Merchant Portal and Marketplace Storefront.
+Once the product is created, it needs to be [activated by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/managing-products/managing-products.html#activating-a-product). Only the active marketplace products are displayed in the Merchant Portal and Marketplace Storefront.
+
+### Reference information: Create Concrete Products for [Abstract product name SKU]
+
+This page contains a drop-down menu that displays the super attribute values based on the super attribute selected while [creating a marketplace abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/creating-marketplace-abstract-product.html). When you select a product attribute value, a concrete product based on this value is displayed. In the *Concrete Products’ Preview* pane you can view the products to be created.
+
+By selecting **Autogenerate SKU**s, the SKU numbers for the concrete products are generated automatically, based on the SKU of their abstract product.
+
+By selecting **Same Name as Abstract Product**, the name of the concrete product gets copied from the abstract product’s name.
 
 
+## Next steps
+
+[Manage concrete product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html)
 

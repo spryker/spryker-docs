@@ -17,11 +17,11 @@ When creating an offer, they can define the following settings:
 
 |SETTING|DESCRIPTION|
 |---|---|
-| Status: Active or Inactive |
-| Merchnat SKU | Unique identifier of the merchants' offer. |
+| Status| Active or Inactive |
+| Merchnat SKU | Unique identifier of the offer in the merchants' system. |
 | Stores| Spryker Marketplace is a multi-store environment, and merchants can define which stores to display their offers in. |
 |Stock | Offer's own stock that's not dependent on the respective product's stock. |
-|Prices | Product offers support all types of Spryker Commerce OS prices: default, original, and [volume](https://documentation.spryker.com/docs/volume-prices-overview). |
+|Prices | Product offers support all types of Spryker Commerce OS prices: [default](https://documentation.spryker.com/docs/prices-overview#prices-overview), [original](https://documentation.spryker.com/docs/prices-overview#prices-overview), and [volume](https://documentation.spryker.com/docs/volume-prices-overview). |
 | Validity dates | Defines the period when and offer is displayed on the Storefront. Even if the respective product is no longer available, the offer can still be displayed. |
 
 

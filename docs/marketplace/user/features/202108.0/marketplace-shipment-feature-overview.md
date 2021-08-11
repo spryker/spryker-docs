@@ -8,12 +8,7 @@ The *Marketplace Shipment* allows splitting the [marketplace order](/docs/market
 
 A *shipment* is a set of two or more products combined by the same delivery address.
 
-{% info_block infoBox "Info" %}
-
-To learn more about Shipment feature in the SCCOS, see [Shipment feature overview](https://documentation.spryker.com/docs/shipment-feature-overview).
-
-{% endinfo_block %}
-
+With the Marketplace Shipment feature, every merchant can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store. Thus, a [marketplace order](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management-feature-overview/marketplace-order-management-overview/marketplace-order-management-feature-overview.html) has multiple delivery methods from different merchants.
 
 ## Marketplace Shipment on the Storefront
 In the *Address* checkout step, you can define a common delivery address where all the shipments will be delivered.

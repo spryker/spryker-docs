@@ -112,7 +112,7 @@ If the merchant is not active, their products and offers are not displayed in th
 |FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
 |[Merchant users overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html)|
-|[Marketplace inventory management feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-inventory-management-feature-overview.md)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html)|
+|[Main merchant concept](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/main-merchant-concept.md)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html)|
 
 {% info_block warningBox "Developer guides" %}
 

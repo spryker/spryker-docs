@@ -5,13 +5,7 @@ template: concept-topic-template
 ---
 
 The *Marketplace Inventory Management* feature includes maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.
-The *warehouse* is the physical place where your products are stored, and stock is the number of products available in the warehouse. 
-
-{% info_block infoBox "Info" %}
-
-To learn more about Inventory Management feature in SCCOS, see [Shipment feature overview](https://documentation.spryker.com/docs/inventory-management-feature-overview).
-
-{% endinfo_block %}
+In the context of the inventory management, the *warehouse* is the physical place where your products are stored, and stock is the number of products available in the warehouse. 
 
 ## Marketplace warehouse management
 
@@ -44,7 +38,6 @@ Product offer availability calculation differs from the calculation of concrete 
 | --------------------- | ------------------------ |
 | Formula: Concrete product availability = Concrete product quantity – Concrete product reservations | Formula: Offer availability = Offer quantity – Offer reservations |
 
-Thus, the algorithm of calculating offer availability is updated, but the algorithm of calculating reservations is preserved.
 Offer availability is considered on the Storefront: 
 
 * On the product details page while adding the offer to cart.

@@ -4,7 +4,7 @@ description: Retrieve details about wishlists and learn what else you can do wit
 template: glue-api-storefront-guide-template
 ---
 
-The Marketplace Wishlists API allows creating list and deleting [wishlists](https://documentation.spryker.com/docs/wishlist) in the Marketplace, as well as managing the items in them.
+The Marketplace Wishlists API allows creating list and deleting [wishlists](https://documentation.spryker.com/docs/wishlist-feature-overview) in the Marketplace, as well as managing the items in them.
 
 ## Installation
 

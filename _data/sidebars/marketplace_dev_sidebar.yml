@@ -57,9 +57,12 @@ entries:
           - title: Marketplace Order Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
 
+          - title: Marketplace Return Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
+
           - title: Marketplace Promotions and Discounts feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html
-        
+
           - title: Marketplace Wishlist feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
 
@@ -190,8 +193,8 @@ entries:
               - title: "Glue API: Merchant Opening Hours feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
 
-              - title: "Glue API: Offer Volume Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/offer-volume-prices.html
+              - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/glue-api-marketplace-product-offer-volume-prices.html
 
               - title: "Glue API: Marketplace Product Offer + Cart feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
@@ -234,13 +237,13 @@ entries:
 
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
-          
+
           - title: Wishlists
-            nested: 
+            nested:
 
             - title: Managing wishlists
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
-            
+
             - title: Managing wishlist items
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 

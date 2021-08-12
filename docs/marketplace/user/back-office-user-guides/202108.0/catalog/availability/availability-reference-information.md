@@ -24,7 +24,7 @@ For multi-store projects, you can filter the products according to the store the
 
 {% info_block infoBox "Info" %}
 
-For the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) project, you can also filter the products according to the merchant the product belongs to.
+For the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) project, you can also filter the products according to the merchant the product belongs to.
 
 {% endinfo_block %}
 
@@ -50,7 +50,7 @@ The *Abstract Product* contains a drop-down list where you can select the store 
 
 {% info_block infoBox "Info" %}
 
-For the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) project, a merchant name is available for a specific product. The availability of a certain merchant warehouse is provided.
+For the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) project, a merchant name is available for a specific product. The availability of a certain merchant warehouse is provided.
 
 {% endinfo_block %}
 

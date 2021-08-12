@@ -4,13 +4,13 @@ description: This document contains concept information for the main merchant in
 template: concept-topic-template
 ---
 
-The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/marketplace/user/intro-to-spryker/{{ site.version }}/marketplace-concept.html) model, not only the 3rd party merchants but also the company-owner of the Marketplace store can sell their products and offers online. We call this company the **main merchant**.
+The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) model, not only the 3rd party merchants but also the company-owner of the Marketplace store can sell their products and offers online. We call this company the **main merchant**.
 
 Thus, the main merchant acts as a common [marketplace merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics. 
 
 ## Main merchant orders and returns
 
-Being both the [Marketplace Operator](/docs/marketplace/user/intro-to-the-spryker-marketplace/{{ site.version }}/marketplace-personas.html) and the seller, and already performing tasks in the Back Office, the main merchant manages their [merchant orders](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management-feature-overview/merchant-order-overview.html) also in the Back Office. See [Managing main merchant orders](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/orders/managing-merchant-orders.html) for details.
+Being both the [Marketplace Operator](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html) and the seller, and already performing tasks in the Back Office, the main merchant manages their [merchant orders](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management-feature-overview/merchant-order-overview.html) also in the Back Office. See [Managing main merchant orders](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/orders/managing-merchant-orders.html) for details.
 
 ## Main merchant state machine
 

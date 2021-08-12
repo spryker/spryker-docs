@@ -4,11 +4,11 @@ description: This document describes how a Marketplace Operator works in the Bac
 template: concept-topic-template
 ---
 
-A *Marketplace Operator* is a company that owns the marketplace. In a marketplace business model, one or more of such a company's employees represent the marketplace operator and manage the store. We call such users as [Marketplace administrator](/docs/marketplace/user/intro-to-spryker/marketplace-personas.html#marketplace-administrator). Depending on the marketplace model, the marketplace operator either manages only other merchants' orders or also sells products as a [main merchant](/docs/marketplace/user/features/{{ site.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html)).  
+A *Marketplace Operator* is a company that owns the marketplace. In a marketplace business model, one or more of such a company's employees represent the marketplace operator and manage the store. We call such users as [Marketplace administrator](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html#marketplace-administrator). Depending on the marketplace model, the marketplace operator either manages only other merchants' orders or also sells products as a [main merchant](/docs/marketplace/user/features/{{ site.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html)).  
 
 ## Merchant management
 
-Merchant accounts are created in the Back Office, and a Marketplace administrator](/docs/marketplace/user/intro-to-spryker/marketplace-personas.html#marketplace-administrator) is required to facilitate their creation. In the **Marketplace** > **Merchants** section of the Back Office, a marketplace operator manages merchants, that is:
+Merchant accounts are created in the Back Office, and a Marketplace administrator](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html#marketplace-administrator) is required to facilitate their creation. In the **Marketplace** > **Merchants** section of the Back Office, a marketplace operator manages merchants, that is:
 
 * Creates merchants
 * Edits merchants
@@ -53,6 +53,6 @@ For detailed instructions on managing returns, see [Managing marketplace returns
 
 ## Main merchant sales
 
-In a [enterprise marketplace business model](/docs/marketplace/user/intro-to-spryker/{{ site.version }}/marketplace-concept.html), apart from managing the marketplace, a marketplace operator sells products as a [main merchant](/docs/marketplace/user/features/{{ site.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html). In the Back Office, they manage their orders and returns in **Sales** > **My Orders** and **Sales** > **My returns** sections respectively. With their own orders, they can perform the same actions as they do with other merchants' as described in [Order management](#order-management) and [Return management](#return-management). Apart from that, they can create and edit shipments for their orders.
+In a [enterprise marketplace business model](/docs/marketplace/user/intro-to-the-spryker-marketplace/{{ site.version }}/marketplace-concept.html), apart from managing the marketplace, a marketplace operator sells products as a [main merchant](/docs/marketplace/user/features/{{ site.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html). In the Back Office, they manage their orders and returns in **Sales** > **My Orders** and **Sales** > **My returns** sections respectively. With their own orders, they can perform the same actions as they do with other merchants' as described in [Order management](#order-management) and [Return management](#return-management). Apart from that, they can create and edit shipments for their orders.
 
 For detailed instructions on managing main merchant orders and returns, see [Managing main merchant orders](/docs/marketplace/user/back-office-user-guides/{{ site.version }}/sales/managing-main-merchant-orders.html) and [Managing main merchant returns](/docs/marketplace/user/back-office-user-guides/{{ site.version }}/sales/managing-main-merchant-returns.html).

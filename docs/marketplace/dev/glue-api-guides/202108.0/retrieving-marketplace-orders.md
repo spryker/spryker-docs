@@ -562,7 +562,7 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 | ----------------- | ------------------ |
 | `GET http://glue.mysprykershop.com/orders/DE--6`   | Retrieve information about the `DE--6` order.  |
 | `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieve information about the order with the id `DE--6` with order shipments included. |
-| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with information on merchants.{% info_block warningBox "Note" %}This option is available only if you upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html).{% endinfo_block %} |
+| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with information on merchants.{% info_block warningBox "Note" %}This option is available only if you upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html).{% endinfo_block %} |
 
 ### Response
 

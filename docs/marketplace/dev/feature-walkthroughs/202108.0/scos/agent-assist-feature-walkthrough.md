@@ -15,7 +15,7 @@ To learn more about the feature and to find out how end users use it, see [Agent
 
 |INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|
-| Agent Assist feature integration  | Authenticating as an agent assist  |   |
-| Agent Assist Glue API feature integration | Searching by customers as an agent assist |   |
-| Customer Account Management feature integration | Impersonating customers as an agent assist |   |
-|  Customer Account Management + Agent Assist feature integration | Managing agent assist authentication tokens|   |
+| Agent Assist feature integration  | Authenticating as an agent assist  |
+| Glue API: Agent Assist feature integration | Searching by customers as an agent assist |
+| Customer Account Management feature integration | Impersonating customers as an agent assist |
+|  Customer Account Management + Agent Assist feature integration | Managing agent assist authentication tokens|

@@ -27,8 +27,8 @@ The following schema illustrates relations between alternative products:
 |INTEGRATION GUIDES  | GLUE API GUIDES  | DATA IMPORT |
 |---------|---------|---------|
 | Alternative products feature integration  | Retrieving alternative products  | File details: product_alternative.csv  |
-| Alternative Products + Discontinued Products feature integration |   |   |
-| Alternative Products + Product Label feature integration |   |   |
-| Alternative products + Inventory Management feature integration   |   |   |
-| Alternative products + Wishlist feature integration |   |   |
-| Glue API: Alternative products feature integration |   |   |
+| Alternative Products + Discontinued Products feature integration |   |
+| Alternative Products + Product Label feature integration |   |
+| Alternative products + Inventory Management feature integration   |   |
+| Alternative products + Wishlist feature integration |   |
+| Glue API: Alternative products feature integration |   |

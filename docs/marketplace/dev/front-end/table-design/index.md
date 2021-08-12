@@ -26,3 +26,7 @@ const config: TableConfig = {
   ],
 };
 ```
+
+## Architecture
+
+![Table Architecture](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/dev+guides/Front-end/table-architecture.svg)

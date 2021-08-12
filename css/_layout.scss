@@ -18,6 +18,7 @@ body {
 
     &--post {
         display: flex;
+        position: relative;
 
         @include media("<laptop") {
             display: grid;
@@ -95,18 +96,18 @@ body {
 
 .post-content {
     flex: 1 1 auto;
-    padding: 40px 0 0;
+    padding: 40px 0 30px;
 
     @include media("<laptop") {
-        padding: 24px 0 0;
+        padding: 24px 0 30px;
     }
 
     @include media("<desktop") {
-        padding: 24px 24px 0;
+        padding: 24px 24px 30px;
     }
 
     @include media("<tablet") {
-        padding: 16px 16px 0;
+        padding: 16px 16px 30px;
     }
 }
 

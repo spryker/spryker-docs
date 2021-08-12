@@ -36,7 +36,7 @@ Currently, you can only import the Marketplace options approval statuses. See [F
 ## Marketplace product options in the Back Office
 In the Back Office, a Marketplace administrator can:
 * [create general product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html);
-* [manage general product options](/docs/marketplace/user/back-office-user-guides/202106.0/catalog/product-options/creating-product-options.html);
+* [manage general product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html);
 * [view product options for all or individual merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/managing-product-options.html#filtering-product-options-by-merchants).
 
 ## Marketplace product options on the Storefront

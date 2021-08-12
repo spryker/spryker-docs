@@ -25,10 +25,6 @@
         pointer-events: auto;
     }
 
-    .toc-active & {
-        //pointer-events: auto;
-    }
-
     &__bg {
         background: $header-bg-color;
         box-shadow: 0px 6px 10px 0px rgba($black, 0.05),

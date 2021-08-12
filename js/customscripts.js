@@ -96,6 +96,12 @@ function initLightbox() {
       'resizeDuration': 300,
       'wrapAround': false
     });
+
+    let closeButton = $('.lightbox .lb-close');
+
+    if (closeButton) {
+        $('.lightbox .lb-container').append(closeButton);
+    }
 }
 
 function initVertionDropdown() {
@@ -768,7 +774,6 @@ function initToc() {
             let target = $(location.hash);
 
             $window.scrollTop(target.offset().top - pageOffset + 1);
-            //window.location = location.hash;
         }
     }
 

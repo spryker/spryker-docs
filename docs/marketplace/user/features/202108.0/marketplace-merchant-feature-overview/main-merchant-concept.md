@@ -6,7 +6,7 @@ template: concept-topic-template
 
 The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) model, not only the 3rd party merchants but also the company-owner of the Marketplace store can sell their products and offers online. We call this company the **main merchant**.
 
-Thus, the main merchant acts as a common [marketplace merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics. 
+Thus, the main merchant acts as a common [marketplace merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics.
 
 ## Main merchant orders and returns
 
@@ -32,7 +32,7 @@ To manage merchant orders of the main merchant, the *Main merchant state machine
 
 - closed
 
-  
+
 
 The workflow of the Main merchant state machine is schematically displayed in the diagram below:
 
@@ -43,5 +43,3 @@ The workflow of the Main merchant state machine is schematically displayed in th
 If the [Marketplace Return Management](/docs/marketplace/user/features/{{ page.version }}/marketplace-return-management-feature-overview.html) feature is integrated into the project, the main merchant state machine obtains an additional return subprocess and the flow looks like this:
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Merchant/Main+merchant+concept/marketplace-main-merchant-return-process.png)
-
- 

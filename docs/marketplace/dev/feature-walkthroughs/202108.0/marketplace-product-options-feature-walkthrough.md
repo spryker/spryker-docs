@@ -7,7 +7,7 @@ template: concept-topic-template
 
 The *Marketplace Product Options* feature allows merchants to create their product option groups and values.
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Product Options feature overview](//docs/marketplace/user/features/{{ page.version }}/marketplace-product-options-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Product Options feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-options-feature-overview.html) for business users.
 
 ## Related Developer articles
 

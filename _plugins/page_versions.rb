@@ -13,7 +13,7 @@ def setup_all_page_versions(page, config)
       site_page.url.match full_url_pattern
     end.map(&:url)
     versions = get_versions versioned_page_urls
-    config['page']['all_versions'] = versions.sort_by { |version| version['version'].to_f }.reverse!
+    config['page']['all_versions'] = versions.sort_by { |version| version['version'] }.reverse!
 end
 
 def get_versions(versioned_page_urls)
@@ -28,10 +28,13 @@ def get_versions(versioned_page_urls)
     end
 end
 
-def is_multiversion_page(page)
+def can_be_versioned(page)
     product = page['product']
     role = page['role']
     versioned_categories = page.site.config['versioned_categories']
+
+    # TODO: add proper SCOS categories
+    return true if product == 'scos'
 
     return false if versioned_categories[product] == nil or
         versioned_categories[product][role] == nil
@@ -45,7 +48,7 @@ end
 Jekyll::Hooks.register :pages, :pre_render do |page, config|
     next page unless File.extname(page.path).match?(/md|html/)
     next page unless page.url.start_with? '/docs/'
-    next page unless is_multiversion_page page
+    next page unless can_be_versioned page
 
     setup_current_page_version page, config
     setup_all_page_versions page, config

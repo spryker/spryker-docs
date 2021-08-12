@@ -12,7 +12,7 @@ The table has the ability to trigger an action—it’s an abstract operation th
 
 You can configure any action in the table config:
 
-```ts
+```html
 <spy-table [config]="{
     ...,
     rowActions: {

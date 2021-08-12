@@ -12,6 +12,9 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 * [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
+* [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-prices-feature-integration.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/glue-api-marketplace-product-offer-volume-prices.html)
 
 
 
@@ -176,24 +179,18 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Request sample with product offers (Marketplace only)</summary>
+<summary markdown='span'>Request sample with product offers</summary>
 
-{% info_block warningBox "Note" %}
-
-This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.
-
-{% endinfo_block %}
-
-`POST http://glue.myspsrykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=items`
+`POST http://glue.myspsrykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff/items?include=items`
 
 ```json
 {
   "data": {
     "type": "items",
     "attributes": {
-      "sku": "027_26976107",
-      "quantity": 1,
-      "productOfferReference": "offer101"
+      "sku": "041_25904691",
+      "quantity": 5,
+      "productOfferReference": "offer48"
     }
   }
 }
@@ -203,9 +200,7 @@ This option is available only in case you have upgraded your shop to the [Market
 
 
 <details>
-<summary markdown='span'>Request sample with merchant products (Marketplace only)</summary>
-
-{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
+<summary markdown='span'>Request sample with merchant products</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 
@@ -232,7 +227,7 @@ This option is available only in case you have upgraded your shop to the [Market
 | idPromotionalItem | String |  | Promotional item ID. Specify the ID to apply the promotion benefits.  |
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
-| productOfferReference | String | &check;| Unique identifier of the product offer in the system. {% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
+| productOfferReference | String | | Unique identifier of the product offer in the system.|
 
 {% info_block infoBox "Conversion" %}
 
@@ -1227,55 +1222,42 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers (Marketplace only)</summary>
-
-
-{% info_block warningBox "Note" %}
-
-This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.
-
-{% endinfo_block %}
+<summary markdown='span'>Response sample with product offers </summary>
 
 ```json
 {
     "data": {
         "type": "carts",
-        "id": "61ab15e9-e24a-5dec-a1ef-fc333bd88b0a",
+        "id": "bef3732e-bc7a-5c07-a40c-f38caf1c40ff",
         "attributes": {
             "priceMode": "GROSS_MODE",
             "currency": "EUR",
             "store": "DE",
-            "name": "My Cart",
+            "name": "newcart",
             "isDefault": true,
             "totals": {
                 "expenseTotal": 0,
-                "discountTotal": 3522,
-                "taxTotal": 5060,
-                "subtotal": 35215,
-                "grandTotal": 31693,
-                "priceToPay": 31693
+                "discountTotal": 0,
+                "taxTotal": 44988,
+                "subtotal": 281770,
+                "grandTotal": 281770,
+                "priceToPay": 281770
             },
-            "discounts": [
-                {
-                    "displayName": "10% Discount for all orders above",
-                    "amount": 3522,
-                    "code": null
-                }
-            ]
+            "discounts": []
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
+            "self": "https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff"
         },
         "relationships": {
             "items": {
                 "data": [
                     {
                         "type": "items",
-                        "id": "006_30692993_offer54"
+                        "id": "041_25904691"
                     },
                     {
                         "type": "items",
-                        "id": "027_26976107_offer101"
+                        "id": "041_25904691_offer48"
                     }
                 ]
             }
@@ -1284,80 +1266,86 @@ This option is available only in case you have upgraded your shop to the [Market
     "included": [
         {
             "type": "items",
-            "id": "006_30692993_offer54",
+            "id": "041_25904691",
             "attributes": {
-                "sku": "006_30692993",
-                "quantity": "1",
-                "groupKey": "006_30692993_offer54",
-                "abstractSku": "006",
+                "sku": "041_25904691",
+                "quantity": 5,
+                "groupKey": "041_25904691",
+                "abstractSku": "041",
                 "amount": null,
-                "productOfferReference": "offer54",
-                "merchantReference": "MER000005",
+                "productOfferReference": null,
+                "merchantReference": null,
                 "calculations": {
-                    "unitPrice": 31050,
-                    "sumPrice": 31050,
+                    "unitPrice": 1650,
+                    "sumPrice": 8250,
                     "taxRate": 19,
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
-                    "unitGrossPrice": 31050,
-                    "sumGrossPrice": 31050,
-                    "unitTaxAmountFullAggregation": 4462,
-                    "sumTaxAmountFullAggregation": 4462,
-                    "sumSubtotalAggregation": 31050,
-                    "unitSubtotalAggregation": 31050,
+                    "unitGrossPrice": 1650,
+                    "sumGrossPrice": 8250,
+                    "unitTaxAmountFullAggregation": 263,
+                    "sumTaxAmountFullAggregation": 1317,
+                    "sumSubtotalAggregation": 8250,
+                    "unitSubtotalAggregation": 1650,
                     "unitProductOptionPriceAggregation": 0,
                     "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 3105,
-                    "sumDiscountAmountAggregation": 3105,
-                    "unitDiscountAmountFullAggregation": 3105,
-                    "sumDiscountAmountFullAggregation": 3105,
-                    "unitPriceToPayAggregation": 27945,
-                    "sumPriceToPayAggregation": 27945
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 1650,
+                    "sumPriceToPayAggregation": 8250
                 },
+                "configuredBundle": null,
+                "configuredBundleItem": null,
+                "productConfigurationInstance": null,
                 "salesUnit": null,
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/006_30692993_offer54"
+                "self": "https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff/items/041_25904691"
             }
         },
         {
             "type": "items",
-            "id": "027_26976107_offer101",
+            "id": "041_25904691_offer48",
             "attributes": {
-                "sku": "027_26976107",
-                "quantity": 1,
-                "groupKey": "027_26976107_offer101",
-                "abstractSku": "027",
+                "sku": "041_25904691",
+                "quantity": 26,
+                "groupKey": "041_25904691_offer48",
+                "abstractSku": "041",
                 "amount": null,
-                "productOfferReference": "offer101",
-                "merchantReference": "MER000006",
+                "productOfferReference": "offer48",
+                "merchantReference": "MER000002",
                 "calculations": {
-                    "unitPrice": 4165,
-                    "sumPrice": 4165,
+                    "unitPrice": 10520,
+                    "sumPrice": 273520,
                     "taxRate": 19,
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
-                    "unitGrossPrice": 4165,
-                    "sumGrossPrice": 4165,
-                    "unitTaxAmountFullAggregation": 598,
-                    "sumTaxAmountFullAggregation": 598,
-                    "sumSubtotalAggregation": 4165,
-                    "unitSubtotalAggregation": 4165,
+                    "unitGrossPrice": 10520,
+                    "sumGrossPrice": 273520,
+                    "unitTaxAmountFullAggregation": 1680,
+                    "sumTaxAmountFullAggregation": 43671,
+                    "sumSubtotalAggregation": 273520,
+                    "unitSubtotalAggregation": 10520,
                     "unitProductOptionPriceAggregation": 0,
                     "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 417,
-                    "sumDiscountAmountAggregation": 417,
-                    "unitDiscountAmountFullAggregation": 417,
-                    "sumDiscountAmountFullAggregation": 417,
-                    "unitPriceToPayAggregation": 3748,
-                    "sumPriceToPayAggregation": 3748
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 10520,
+                    "sumPriceToPayAggregation": 273520
                 },
+                "configuredBundle": null,
+                "configuredBundleItem": null,
+                "productConfigurationInstance": null,
                 "salesUnit": null,
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com//carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/027_26976107_offer101"
+                "self": "https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff/items/041_25904691_offer48"
             }
         }
     ]
@@ -1367,9 +1355,7 @@ This option is available only in case you have upgraded your shop to the [Market
 </details>
 
 <details>
-<summary markdown='span'>Response sample with merchant products (Marketplace only)</summary>
-
-{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}
+<summary markdown='span'>Response sample with merchant products</summary>
 
 ```json
 {
@@ -1508,10 +1494,10 @@ This option is available only in case you have upgraded your shop to the [Market
 | vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| product-offer-availabilities | isNeverOutOfStock| Boolean | Boolean to show if this is an item that is never out of stock.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
-| product-offer-availabilities  | availability | Boolean | Boolean to inform you about availability. |
+| product-offer-availabilities | isNeverOutOfStock| Boolean | Shows if this is an item that is never out of stock. |
+| product-offer-availabilities  | availability | Boolean | Informs you about availability. |
 | product-offer-availabilities | quantity | Integer | Available stock. |
-| product-offer-prices | price  | Integer | Price to pay for the item in cents.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| product-offer-prices | price  | Integer | Price to pay for the item in cents. |
 | product-offer-prices  | prices  | Array   | Array of prices for the product offer.|
 | product-offer-prices | priceTypeName | String  | Price type. |
 | product-offer-prices | netAmount | Integer | Net price in cents. |
@@ -1519,7 +1505,7 @@ This option is available only in case you have upgraded your shop to the [Market
 | product-offer-prices | currency.code | String  | Currency code. |
 | product-offer-prices | currency.name | String  | Currency name. |
 | product-offer-prices | currency.symbol | String  | Currency symbol.|
-| product-offers | merchantSku | String  | SKU of the merchant the product offer belongs to.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
+| product-offers | merchantSku | String  | SKU of the merchant the product offer belongs to.|
 | product-offers | merchantReference | String  | Merchant reference assigned to every merchant. |
 | product-offers | isDefault  | Boolean | Defines whether the product offer is default or not. |
 

@@ -7,7 +7,7 @@ template: back-office-user-guide-template
 
 This topic describes how to add a product variant for an abstract product.
 
-## Prerequisistes
+## Prerequisites
 
 To create a product variant, navigate to **Catalog** > **Products** section.
 
@@ -38,7 +38,7 @@ To create a product variant:
     {% endinfo_block %}
 
     2. Otherwise, enter Original and eventually Default prices for the product for Gross and Net price modes.
-    3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants](https://documentation.spryker.com/docs/merchants) for more information.
+    3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation.
     4. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 5. **Optionally**: Click **Next** to go to the *Image* to add images for the product and define the image order.
 6. **Optionally**: Click **Next** of select the *Assign bundled products* tab to create a bundles product. See [Creating and Managing Product Bundles](https://documentation.spryker.com/v4/docs/creating-and-managing-product-bundles) to know more.

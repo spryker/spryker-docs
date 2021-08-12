@@ -5,11 +5,11 @@ description: This guide explains how to manage main merchant orders in the Back 
 template: back-office-user-guide-template
 ---
 
-*My Orders* is a dedicated page for managing the orders that customers completed from the main merchant (Marketplace owner) within the Marketplace.
+*My Orders* is a dedicated page for managing the orders that customers completed from the [main merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html) (Marketplace owner) within the Marketplace.
 
 ## Prerequisites
 
-To start managing merchant orders for the main merchant, navigate to **Sales** *>* **My orders**.
+To start managing merchant orders for the [main merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales** *>* **My orders**.
 
 The instructions assume that there is an existing order with the *New* status.
 
@@ -17,14 +17,14 @@ Each section in this article contains reference information. Make sure to review
 
 ## Viewing main merchant orders
 
-To view the main merchant orders, in the *List of Orders* table, click **View** next to the order you want to check.
+To view the [main merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html) orders, in the *List of Orders* table, click **View** next to the order you want to check.
 This takes you to the *Merchant Order Overview* page.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Sales/main-merchant-order-back-office.png)
 
 ### Reference information: Viewing main merchant orders
 
-This section holds reference information related to viewing the main merchant orders.
+This section holds reference information related to viewing the [main merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html) orders.
 
 #### Overview of Orders page
 

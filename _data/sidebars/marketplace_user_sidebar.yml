@@ -9,7 +9,7 @@ entries:
 
           - title: Marketplace concept
             url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
-          
+
           - title: Marketplace personas
             url: /docs/marketplace/user/intro-to-spryker/marketplace-personas.html
 
@@ -25,6 +25,9 @@ entries:
 
           - title: Merchant users overview
             url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html
+
+          - title: Main merchant concept
+            url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/main-merchant-concept.html
 
         - title: Merchant Category feature overview
           url: /docs/marketplace/user/features/merchant-category-feature-overview.html
@@ -52,6 +55,9 @@ entries:
             - title: Marketplace and merchant state machines interaction
               url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
               
+        - title: Marketplace Return Management
+          url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html 
+        
         - title: Marketplace Promotions and Discounts feature overview
           url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html
         
@@ -64,8 +70,14 @@ entries:
         - title: Sales
           nested:
 
+            - title: Managing marketplace returns
+              url: /docs/marketplace/user/back-office-user-guides/sales/managing-marketplace-returns.html
+            
             - title: Managing main merchant orders
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
+
+            - title: Managing main merchant returns
+              url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-returns.html
 
         - title: Catalog
 
@@ -79,6 +91,28 @@ entries:
 
             - title: Products
               nested:
+
+              - title: Abstract products
+                nested:
+
+                - title: Creating abstract products
+                  url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/creating-abstract-products.html
+
+                - title: Editing abstract products
+                  url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/editing-abstract-products.html
+
+              - title: Concrete products
+                nested:
+
+                - title: Creating product variants
+                  url: /docs/marketplace/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
+
+              - title: Managing products
+                nested:
+
+                - title: Managing products
+                  url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
+
 
               - title: "Abstract products: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-product-reference-information.html
@@ -110,30 +144,6 @@ entries:
 
                 - title: Managing marketplace orders
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/orders/managing-marketplace-orders.html
-
-            - title: Products
-              nested:
-
-                - title: Abstract products
-                  nested:
-
-                    - title: Creating abstract products
-                      url: /docs/marketplace/user/back-office-user-guides/marketplace/products/abstract-products/creating-abstract-products.html
-
-                    - title: Editing abstract products
-                      url: /docs/marketplace/user/back-office-user-guides/marketplace/products/abstract-products/editing-abstract-products.html
-
-                - title: Concrete products
-                  nested:
-
-                    - title: Creating product variants
-                      url: /docs/marketplace/user/back-office-user-guides/marketplace/products/concrete-products/creating-product-variants.html
-
-                - title: Concrete products
-                  nested:
-
-                    - title: Managing products
-                      url: /docs/marketplace/user/back-office-user-guides/marketplace/products/managing-products/managing-products.html
 
       - title: Merchant Portal user guides
         url: /docs/marketplace/user/merchant-portal-user-guides/

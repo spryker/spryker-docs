@@ -50,7 +50,7 @@ To retrieve general information about an abstract product, send the request:
 | `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its [default prices](https://documentation.spryker.com/v4/docs/products-reference-information#default-and-original-prices). |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its [default prices](https://documentation.spryker.com/docs/products-reference-information#default-and-original-prices). |
 | `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](https://documentation.spryker.com/docs/volume-prices)). |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
@@ -58,8 +58,8 @@ To retrieve general information about an abstract product, send the request:
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options` | Retrieve information about the abstract product with SKU `001` with its product options. |
 | `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
-| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve merchant product with SKU 109.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
-| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve merchant product with SKU 109 including the merchant information.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve the merchant product with SKU 109.|
+| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve the merchant product with SKU 109 including the merchant information. |
 
 
 ### Response
@@ -1457,7 +1457,7 @@ To retrieve general information about an abstract product, send the request:
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | SKU of the abstract product |
-| merchantReference | String | Unique identifier of the merchant in the system.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
+| merchantReference | String | Unique identifier of the merchant in the system.|
 | averageRating | String | Average rating of the product based on customer rating. |
 | reviewCount | String | Number of reviews left by customer for this abstract product. |
 | name | String | Name of the abstract product |

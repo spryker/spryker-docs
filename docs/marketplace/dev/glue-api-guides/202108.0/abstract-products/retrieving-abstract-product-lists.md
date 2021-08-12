@@ -171,7 +171,7 @@ The locale must be specified in the **header** of the GET request. If no locale 
 | ---------------- | ----- | ----------------------- |
 | attributes     | string | List of the abstract product's attributes and their values.  |
 | sku      | string | SKU of the abstract product.    |
-| merchantReference | string | Unique identifier of the merchant in the system.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
+| merchantReference | string | Unique identifier of the merchant in the system.|
 | averageRating | String | Average rating of the product based on customer rating. |
 | reviewCount | String | Number of reviews left by customer for this abstract product. |
 | name     | string | Name of the abstract product.        |

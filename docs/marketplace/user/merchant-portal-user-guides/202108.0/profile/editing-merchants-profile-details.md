@@ -28,11 +28,11 @@ To edit the merchant's business info, in the *Business Info* tab, edit the merch
 
 ### Reference information: Editing merchant's business info
 
-This section describes the attributes you enter and select when editing the merchant's business info in the *Business Info* tab. This tab includes business details that are not displayed in the Storefront. This information is needed for the initial merchant setup and further collaboration between the merchant and marketplace administrator.
+This section describes the attributes you enter and select when editing the merchant's business info in the *Business Info* tab. This tab includes business details that are not displayed in the Storefront. This information is needed for the initial merchant setup and further collaboration between the merchant and Marketplace administrator.
 
 #### Contact Person Details section
 
-The contact person is the only contact of the merchant with the marketplace administrator.
+The contact person is the only contact of the merchant with the Marketplace administrator.
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|

@@ -57,8 +57,8 @@ commonmark:
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
 plugins:
-  - jekyll-feed
   - jekyll-last-modified-at
+  - jekyll-include-cache
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
@@ -72,35 +72,58 @@ defaults:
       comments: false
       search: true
       topnav: topnav
-      feed: true
-  - scope:
-      path: "docs/marketplace"
-      type: "pages"
+  -
+    scope:
+      path: "docs/"
     values:
-      product: marketplace
+      feed: true
+  -
+    scope:
+      path: "docs/marketplace"
+    values:
+      product: "marketplace"
   -
     scope:
       path: "docs/marketplace/dev"
-      type: "pages"
     values:
-      sidebar: marketplace_dev_sidebar
+      sidebar: "marketplace_dev_sidebar"
       product-type: 'marketplace/dev'
       role: "dev"
   -
     scope:
       path: "docs/marketplace/user"
-      type: "pages"
     values:
-      sidebar: marketplace_user_sidebar
+      sidebar: "marketplace_user_sidebar"
       product-type: 'marketplace/user'
       role: "user"
-
-# version-related scopes
   -
     scope:
-      path: "docs/**/202108.0"
+      path: "docs/scos"
     values:
-      version: "202108.0"
+      product: "scos"
+  -
+    scope:
+      path: "docs/scos/dev"
+    values:
+      sidebar: "scos_dev_sidebar"
+      product-type: 'scos/dev'
+      role: "dev"
+  -
+    scope:
+      path: "docs/scos/user"
+    values:
+      sidebar: "scos_user_sidebar"
+      product-type: 'scos/user'
+      role: "user"
+
+versions:
+  '201811.0': '201811.0'
+  '201903.0': '201903.0'
+  '201907.0': '201907.0'
+  '202001.0': '202001.0'
+  '202005.0': 'Code releases 05.20'
+  '202009.0': '202009.0'
+  '202108.0': '202108.0'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -150,3 +173,6 @@ sass:
 
 last-modified-at:
   date-format: '%Y%m%dT%H%M'
+
+redirect_from:
+  json: false

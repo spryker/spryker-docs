@@ -51,7 +51,7 @@ A Marketplace administrator can filter the products belonging to certain merchan
 
 ![merchants-switcher-on-products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/filter-merchant-productsby-merchant-back-office.gif)
 
-Also, Marketplace administrators can edit products, if needed, and create products when acting as the main merchant<!---LINK-->.
+Also, Marketplace administrators can edit products, if needed, and create products when acting as the [main merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html).
 
 ## Merchant products in the Merchant Portal
 Merchants create and manage their products <!---LINK--> in the Merchant Portal. They can define prices, stock, attributes etc. for their products. See Managing merchant products <!---LINK--> for details on how to do that.

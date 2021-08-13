@@ -20,7 +20,7 @@ Merchants can create product offers in the Merchant Portal <!---LINK TO MERCHANT
 
 {% info_block infoBox "Note" %}
 
-You can retrieve product offer details via Glue API. See [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html) and [Retrieving product offers for a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-product-offers-for-a-concrete-product.html) for details.
+You can retrieve product offer details via Glue API. See [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offers.html) and [Retrieving product offers for a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-product-offers-of-concrete-products.html) for details.
 
 {% endinfo_block %}
 

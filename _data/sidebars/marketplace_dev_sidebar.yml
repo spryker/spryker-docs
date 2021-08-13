@@ -63,6 +63,12 @@ entries:
           - title: Marketplace Promotions and Discounts feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html
 
+          - title: Marketplace Product Options feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
+
+          - title: Marketplace Cart Notes feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-cart-notes-feature-walkthrough.html
+
           - title: Marketplace Wishlist feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
 

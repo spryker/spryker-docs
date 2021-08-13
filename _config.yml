@@ -46,6 +46,7 @@ exclude:
   - package.json
   - package-lock.json
   - gulpfile.js
+  - redirect.html
 # these are the files and directories that jekyll will exclude from the build
 
 highlighter: rouge

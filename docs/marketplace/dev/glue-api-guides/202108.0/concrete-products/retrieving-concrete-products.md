@@ -21,10 +21,9 @@ For detailed information on the modules that provide the API functionality and r
 
 To retrieve general information about a concrete product, send the request:
 
----
-`GET` **/concrete-products/{% raw %}*{{concrete_product_sku}}*{% endraw %}**
-
----
+***
+`GET` {% raw %}**/concrete-products/*{{concrete_product_sku}}***{% endraw %}
+***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |

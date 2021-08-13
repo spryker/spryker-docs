@@ -263,7 +263,7 @@ entries:
               url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-availability.html
 
             - title: Retrieving product offer prices
-              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer prices.html
+              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-prices.html
 
           - title: Wishlists
             nested:
@@ -285,9 +285,6 @@ entries:
 
           - title: Retrieving Marketplace orders
             url: /docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html
-
-          - title: Retrieving merchant information
-            url: /docs/marketplace/dev/glue-api-guides/retrieving-merchant-information.html
 
           - title: Retrieving product offers
             url: /docs/marketplace/dev/glue-api-guides/retrieving-product-offers.html

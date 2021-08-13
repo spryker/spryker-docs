@@ -1493,7 +1493,7 @@ For the attributes of other included resources, see:
 * [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
 * [Retrieve product reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
 *  [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units)
-*  [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html#merchants-response-attributes)
+*  [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 
 ## Possible errors

@@ -215,11 +215,11 @@ To add an item to a wishlist, send the request:
 
 To delete wishlist item, send the request:
 
-------
 
+***
 `DELETE` {% raw %}**/wishlists/*{{wishlist_id}}*/wishlist-items/*{{item_sku}}***{% endraw %}
+***
 
-------
 
 | PATH PARAMETER | DESCRIPTION   |
 | -------------- | -------------- |

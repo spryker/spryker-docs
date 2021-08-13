@@ -26,7 +26,7 @@ In the *Sold by* section, when a customer opens a *Product Details* page, the pr
 
 Sorting of the *Sold by* section is configurable on a project level.
 
-The product price on top of the *Product Details* page is taken from the selected merchant's product or offer. When a customer selects a product or offer in the *Sold by* section, the page refreshes showing the selected merchant's price.
+The product price on top of the *Product Details* page is taken from the selected merchant's product or offer. When a customer selects a product or offer in the *Sold by* section, the page refreshes, showing the selected merchant's price.
 
 ## Cart page
 
@@ -75,7 +75,7 @@ On the page of the wishlist, a merchant relation is displayed for each product. 
 
 ![Wishlist page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/wishlist-page.png)
 
-If, after a product was added to a wishlist, a merchant becomes inactive, the merchant reference is no longer displayed for the product and the customer can't add it to cart. If the merchant becomes active again, the relation is displayed and the customer can add the product to cart.
+If, after a product was added to a wishlist, a merchant becomes inactive, the merchant reference is no longer displayed for the product and the customer can't add it to cart. If the merchant becomes active again, the relation is displayed, and the customer can add the product to cart.
 
 If a product in a wishlist is out of stock, an [alternative product](https://documentation.spryker.com/docs/alternative-products-overview) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only merchant products can be displayed there.
 
@@ -85,7 +85,7 @@ If a product in a wishlist is out of stock, an [alternative product](https://doc
 
 A merchant profile is a page where all the information about a merchant is located. From all the pages where a Merchant is mentioned, customers can access the merchant profile by selecting the merchant name.
 
-On the *Merchant Profile* page, customers can find the following merchant- specific information:
+On the *Merchant Profile* page, customers can find the following merchant-specific information:
 * Logo
 * Banner
 * Contact details and address

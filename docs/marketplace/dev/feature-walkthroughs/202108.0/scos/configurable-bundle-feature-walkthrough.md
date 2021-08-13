@@ -33,12 +33,12 @@ The following schemas illustrates module relations in the Configurable Bundle fe
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | HOWTOS |
+|INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
-| Configurable Bundle feature integration | Migration Guide - ConfigurableBundle | Retrieving configurable bundle templates | HowTo - Render Configurable Bundle Templates in the Storefront  |
-| Merchant Product Restrictions feature integration | Migration Guide - ConfigurableBundleStorage |   |   |
-| Product Lists + Catalog feature integration  | Migration Guide - ProductListGui |   |   |
-| Prices feature integration  | Migration Guide - MerchantRelationshipProductListGui  |   |   |
+| Configurable Bundle feature integration | ConfigurableBundle migration guide | Retrieving configurable bundle templates | HowTo - Render Configurable Bundle Templates in the Storefront  |
+| Merchant Product Restrictions feature integration | ConfigurableBundleStorage migration guide |   |   |
+| Product Lists + Catalog feature integration  | ProductListGui migration guide |   |   |
+| Prices feature integration  | MerchantRelationshipProductListGui migration guide  |   |   |
 | Product feature integration |   |   |   |
 | Product Images + Configurable Bundle feature integration  |   |   |   |
 |Glue API: Configurable Bundle integration |   |   |   |

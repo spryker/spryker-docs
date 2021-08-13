@@ -24,7 +24,7 @@ The following schema illustrates module relations in the Approval Process featur
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | Feature HowTos |
+|INTEGRATION GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|
 | Approval Process feature integration | HowTo - Implement Customer Approval Process Based on a Generic State Machine  |
 | Shipment + Approval Process feature integration  |   |

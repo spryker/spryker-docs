@@ -14,7 +14,7 @@ To learn more about the feature and to find out how end users use it, see [ feat
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | GLUE API GUIDES | HOWTOS |
+|INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|
 |  Cart feature integration |  Managing guest carts | HowTo - define if a cart should be deleted after placing an order  |
 | Glue API: Cart feature integration  |  Managing carts of registered users |   |

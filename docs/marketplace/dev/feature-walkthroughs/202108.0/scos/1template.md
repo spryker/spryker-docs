@@ -1,5 +1,5 @@
 ---
-title:  feature walkthrough
+title: feature walkthrough
 last_updated: Aug , 2021
 description:
 template: concept-topic-template
@@ -24,5 +24,5 @@ The following schema illustrates relations between alternative products:
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | GLUE API GUIDES  | DATA IMPORT | HOWTOS |
-|---------|---------|---------|---------|
+|INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES  | DATA IMPORT | TUTORIALS AND HOWTOS | TECHNICAL ENHANCEMENTS |REFERENCES|
+|---------|---------|---------|---------|---------|---------|---------|

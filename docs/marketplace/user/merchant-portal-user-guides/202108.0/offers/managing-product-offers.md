@@ -21,7 +21,7 @@ To create a product offer:
 3. In the _Offer status_ pane, select the **Offers is Active** check box to make the product offer visible on the Storefront. Otherwise, skip this step.
 4. In the _Merchant SKU_ pane, enter an SKU.
 5. In the _Stores_ pane, from the drop-down list, select stores for which the offer is available.
-6. In the _Available Stock_ pane, set configure the product offer quantity:
+6. In the _Available Stock_ pane, set the product offer quantity:
     1. In the **QUANTITY** field, enter the quantity of the product currently available in stock.
     2. (Optional) Select **Always in Stock** to make the product offer always available in terms of stock. Otherwise, when the number of orders exceeds the number of products set in the **QUANTITY** field, the product offer becomes out-of-stock on the Storefront.
 7. In the _Price_ pane, click **+Add** to set the price for your offer per store. The empty fields appear in the table below.

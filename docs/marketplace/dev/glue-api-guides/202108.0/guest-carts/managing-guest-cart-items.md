@@ -43,11 +43,11 @@ To add items to a guest cart, send the request:
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 |&check; | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>concrete-products</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>items, merchants</li></ul> |
+| include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>concrete-products</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>product-offers</li><li>merchants</li></ul> |
 
 {% info_block infoBox "Included resources" %}
 
@@ -227,9 +227,9 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample with merchant products</summary>
+<summary markdown='span'>Request sample: adding a merchant product</summary>
 
-`POST https://glue.mysprykershop,com/guest-cart-items?include=items,merchants`
+`POST https://glue.mysprykershop,com/guest-cart-items`
 
 ```json
 {
@@ -243,20 +243,42 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
+
 </details>
+
+<details>
+<summary markdown='span'>Request sample with guest cart items and merchants</summary>
+
+`POST https://glue.mysprykershop,com/guest-cart-items?include=guest-cart-items,merchants`
+
+```json
+{
+    "data": {
+        "type": "guest-cart-items",
+        "attributes": {
+            "sku": "109_19416433",
+            "quantity": "1",
+            "merchantReference": "MER000001"
+        }
+    }
+}
+```
+
+</details>
+
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| sku | String | &check; | Specifies the SKU part number of the item to place on the new guest cart. To use promotions, specify the SKU of one of a product being promoted. Concrete product SKU required. |
-| quantity | Integer | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| idPromotionalItem | String |  | Promotional item ID. You need to specify the ID to apply the promotion benefits. |
+| sku | String | &check; | SKU of the concrete product to add to the guest cart. To use promotions, specify the SKU of a product being promoted. |
+| quantity | Integer | &check; | Number of items to add to the guest cart. If you add a promotional item, and the number of products exceeds the number of promotions, the exceeding items are added without the promotional benefits. |
+| merchantReference | String | Required when adding a merchant product. | Unique identifier of the merchant the product of which to add to the guest cart. |
+| idPromotionalItem | String |  | Unique identifier of a promotional item to add to the cart. |
 | salesUnit | Object |  | List of attributes defining the sales unit to be used for item amount calculation. |
 | salesUnit.id | Integer |  | Unique identifier of the sales units to calculate the item amount in. |
 | salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |    
-| productOptions | Array |  | List of attributes defining the product option to add to the cart. |
+| productOptions | Array |  | List of attributes defining the product options to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
-| productOfferReference | String |Required when adding a product offer to cart|Unique identifier of the product offer to a cart. |
-| merchantReference| String| ✓ | Unique identifier of the merchant.
+| productOfferReference | String |Required when adding a product offer. |Unique identifier of the product offer to add to the cart. |
 
 {% info_block infoBox "Conversion" %}
 
@@ -1490,8 +1512,39 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 </details>
 
+
 <details>
-<summary markdown='span'>Response sample with merchant products</summary>
+<summary markdown='span'>Response sample: adding a merchant product</summary>
+
+```json
+{
+    "data": {
+        "type": "guest-carts",
+        "id": "54ac21a6-c08a-5d09-a2f0-9f9ef8f634cd",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "Shopping cart",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 0,
+                "taxTotal": 8446,
+                "subtotal": 52900,
+                "grandTotal": 52900,
+                "priceToPay": 52900
+            },
+            "discounts": []
+        },
+        "links": {
+            "self": "http://glue.mysprykershop.com/guest-carts/54ac21a6-c08a-5d09-a2f0-9f9ef8f634cd"
+        }
+    }
+}
+
+<details>
+<summary markdown='span'>Response sample with guest cart items and merchants</summary>
 
 ```json
 {
@@ -1515,7 +1568,7 @@ It is the responsibility of the API Client to track whether the selected items a
             "discounts": []
         },
         "links": {
-            "self": "https://glue.de.merchant.demo-spryker.com:80/guest-carts/abf9c01b-6695-58cf-8439-541f8f26a95c"
+            "self": "https://glue.mysprykershop.com/guest-carts/abf9c01b-6695-58cf-8439-541f8f26a95c"
         }
     },
     "included": [
@@ -1548,7 +1601,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "categories": []
             },
             "links": {
-                "self": "https://glue.de.merchant.demo-spryker.com:80/merchants/MER000001"
+                "self": "https://glue.mysprykershop.com/merchants/MER000001"
             }
         },
         {
@@ -1589,7 +1642,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.de.merchant.demo-spryker.com:80/guest-carts/abf9c01b-6695-58cf-8439-541f8f26a95c/guest-cart-items/109_19416433"
+                "self": "https://glue.mysprykershop.com/guest-carts/abf9c01b-6695-58cf-8439-541f8f26a95c/guest-cart-items/109_19416433"
             },
             "relationships": {
                 "merchants": {
@@ -1694,14 +1747,15 @@ For the attributes of the included resources, see:
 * [Retrieve gift cards of guest users](https://documentation.spryker.com/docs/en/managing-gift-cards-of-guest-users)
 * [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html)
 * [Retrieve abstract products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-products.html)
-* [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#merchants-response-attributes)
+* [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
 
 ## Change item quantity in a guest cart
 
 To change item quantity, send the request:
 
 ---
-`PATCH` **/guest-carts/{% raw %}*{{guest_cart_id}}*{% endraw %}/guest-cart-items/{% raw %}*{{groupKey}}*{% endraw %}**
+`PATCH` {% raw %}**/guest-carts/*{{guest_cart_id}}*/guest-cart-items/*{{groupKey}}***{% endraw %}
 
 ---
 
@@ -1765,7 +1819,7 @@ If the update is successful, the endpoint returns `RestCartsResponse` with the 
 To remove an item from a guest cart, send the request:
 
 ***
-`DELETE` **/guest-carts/{% raw %}*{{guest_cart_id}}*{% endraw %}/guest-cart-items/{% raw %}*{{groupKey}}*{% endraw %}**
+`DELETE` {% raw %}**/guest-carts/*{{guest_cart_id}}*/guest-cart-items/*{{groupKey}}***{% endraw %}
 
 ***
 | PATH PARAMETER | DESCRIPTION |

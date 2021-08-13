@@ -8,7 +8,7 @@ template: glue-api-storefront-guide-template
 To retrieve the product offers of a concrete product, send the request:
 
 ***
-`GET` **/concrete-products/{% raw %}*{{concrete_product_sku}}*{% endraw %}/product-offers**
+`GET` {% raw %}**/concrete-products/*{{concrete_product_sku}}*/product-offers**{% endraw %}
 ***
 
 | PATH PARAMETER | DESCRIPTION |

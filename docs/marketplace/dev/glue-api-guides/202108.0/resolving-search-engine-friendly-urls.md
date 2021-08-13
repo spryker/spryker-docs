@@ -11,7 +11,7 @@ For SEO purposes, Spryker automatically generates SEF URLs for products and cate
 * [Retrieve a category tree](https://documentation.spryker.com/docs/retrieving-category-trees#retrieve-a-category-tree)
 * [Retrieve a category node](https://documentation.spryker.com/docs/retrieving-category-nodes#retrieve-a-category-node)
 * [Retrieve a CMS page](https://documentation.spryker.com/2021080/docs/retrieving-cms-pages)
-* [Retrieve a merchant](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information#retrieve-profile-information-for-the-specific-merchant)
+* [Retrieve a merchant](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#retrieve-a-merchant)
 
 In your development, the endpoints can help you to:
 
@@ -30,13 +30,13 @@ For detailed information on the modules that provide the API functionality and r
 To resolve a SEF URL into a Glue API URL, send the request:
 
 ---
-`GET` **/url-resolver?url={% raw %}*{{SEF URL}}*{% endraw %}**
+`GET` {% raw %}**/url-resolver?url=*{{SEF URL}}***{% endraw %}
 
 ---
 
 | PATH PARAMETER  | DESCRIPTION |
 | --------------- | ---------------- |
-| ***{% raw %}{{SEF URL}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)</li><li>[retrieving category nodes](https://documentation.spryker.com/docs/retrieving-category-nodes)</li><li>[retrieving CMS pages](https://documentation.spryker.com/2021080/docs/retrieving-cms-pages)</li><li>[retrieving merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)</li></ul>|
+| {% raw %}***{{SEF URL}}***{% endraw %} | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)</li><li>[retrieving category nodes](https://documentation.spryker.com/docs/retrieving-category-nodes)</li><li>[retrieving CMS pages](https://documentation.spryker.com/2021080/docs/retrieving-cms-pages)</li><li>[retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html)</li></ul>|
 
 ### Request
 

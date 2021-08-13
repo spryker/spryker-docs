@@ -33,7 +33,7 @@ To retrieve a guest cart, send the request:
 
 Guest users have one guest cart by default. If you already have a guest cart, you can optionally specify its ID when adding items. To do that, use the following endpoint. The information in this section is valid for both of the endpoints.
 
-`GET` **/guest-carts/{% raw %}*{{guestCartId}}*{% endraw %}**
+`GET` {% raw %}**/guest-carts/*{{guestCartId}}***{% endraw %}
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -55,7 +55,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | PATH PARAMETER | DESCRIPTION | POSSIBLE ERRORS |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>cart-rules</li><li>promotional-items</li><li>gift-cards</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>product-labels</li><li>product-offers</li><li>product-offer-availabilities</li><li>product-offer-prices</li><li>items, merchants</li></ul>|
+| include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>cart-rules</li><li>promotional-items</li><li>gift-cards</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>product-labels</li><li>product-offers</li><li>product-offer-availabilities</li><li>product-offer-prices</li><li>merchants</li></ul>|
 
 {% info_block infoBox "Included resources" %}
 
@@ -82,7 +82,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers` | Retrieve all guest carts of a user with information about product offers. |
 | `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all guest carts of a user with product offer availabilities. |
 | `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all guest carts of a user with product offer prices. |
-| `GET https://glue.mysprykershop.com/guest-carts/f0d01709-4dea-5ac3-8ceb-873875446ab0?include=items,merchants` | Retrieve a guest cart with merchant products. |
+| `GET https://glue.mysprykershop.com/guest-carts/f0d01709-4dea-5ac3-8ceb-873875446ab0?include=guest-cart-items,merchants` | Retrieve a guest cart with items and respective merchants included. |
 
 
 ### Response
@@ -1283,7 +1283,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer availabilities</summary>
+<summary markdown='span'>Response sample with availability of product offers</summary>
 
 ```json
 {
@@ -1753,7 +1753,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with merchant products</summary>
+<summary markdown='span'>Response sample with items and merchant</summary>
 
 ```json
 {
@@ -1931,8 +1931,10 @@ For the attributes of other included resources, see:
 * [Retrieve gift cards of guest users](https://documentation.spryker.com/docs/en/managing-gift-cards-of-guest-users)
 * [Retrieve a measurement units](https://documentation.spryker.com/docs/retrieving-measurement-units#measurement-units-response-attributes)
 * [Retrieve product labels](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
-* [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)
-* [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html#retrieve-product-offers)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchnats/retrieving-merchants.html#merchants-response-attributes)
+* [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
+* [Retrieving product offer availability](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
+* [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
 
 ## Assign a guest cart to a registered customer
 
@@ -2055,6 +2057,7 @@ In the **multi-cart** environment, the guest cart has been converted to a regu
 In a **single cart** environment, items from the guest cart have been added to the user's own cart.
 
 **Response body**
+
 ```json
 {
     "data": [

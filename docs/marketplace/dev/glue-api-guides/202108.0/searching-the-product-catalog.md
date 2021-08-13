@@ -1,6 +1,6 @@
 ---
-title: Catalog search
-description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values in the Spryker Marketplace
+title: Search the product catalog
+description: Search the product catalog via Glue API
 template: glue-api-storefront-guide-template
 ---
 
@@ -11,7 +11,7 @@ In your development, this endpoint can help you to:
 * Retrieve a list of products to be displayed anywhere you want.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see Glue API: Catalog feature integration.
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](https://documentation.spryker.com/docs/catalog-api-feature-integration).
 
 ## Search by products
 To search by products, send the request:
@@ -40,7 +40,7 @@ To search by products, send the request:
 | sort  | Sorts the search results   | For the list of possible values, run the [catalog search request and find the list under sortParamNames in the response. For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
 | page  | Sets the number of the search results page from which the results are retrieved | {% raw %}{{page_number}}{% endraw %}    |
 | ipp   | Sets the number of products per page  | {% raw %}{{number_of_products}}{% endraw %}  |
-| merchant_name | Filters the results by a merchant name.  ||
+| merchant_name | Filters the results by a merchant name.  | {% raw %}{{merchnat_name}}{% endraw %}  |
 
 
 
@@ -6339,7 +6339,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: filtering search results by Merchant name</summary>
+<summary markdown='span'>Response sample: filtering search results by merchant name</summary>
 
 ```json
 {
@@ -6759,7 +6759,7 @@ To search by products, send the request:
 
 | ATTRIBUTE       | TYPE | DESCRIPTION     |
 | --------------- | -------- | ----------------------- |
-| sortParamNames   | Array    | List of the possible sorting parameters. The default Spryker Demo Shop parameters:<ul><li>`rating`—sorting by product rating.</li><li>`name_asc`—sorting by name, ascending.</li><li>`name_desc`—sorting by name, descending.</li><li>`price_asc`—sorting by price, ascending.</li><li>`price_desc`—sorting by price, descending.</li></ul> |
+| sortParamNames   | Array    | Sorting parameters. The default Spryker Demo Shop parameters:<ul><li>`rating`—sorting by product rating.</li><li>`name_asc`—sorting by name, ascending.</li><li>`name_desc`—sorting by name, descending.</li><li>`price_asc`—sorting by price, ascending.</li><li>`price_desc`—sorting by price, descending.</li></ul> |
 | sortParamLocalizedNames | Object   | Localized names of the sorting parameters. |
 | currentSortParam  | String   | The currently applied sorting parameter.  |
 | currentSortOrder | String   | The current sorting order. |
@@ -6768,60 +6768,75 @@ To search by products, send the request:
 
 | ATTRIBUTE  |TYPE | DESCRIPTION   |
 | --------- | -------- | ---------- |
-| numFound | Integer  | Number of the search results found.  |
-| currentPage  | Integer  | The current search results page.   |
-| maxPage  | Integer  | Total number of the search results pages. |
-| currentItemsPerPage  | Integer  | Current number of the search results per page. |
-| parameterName  | String | Parameter name for setting the page number.  |
-| itemsPerPageParameterName | String | Parameter name for setting number of items per page. |
-| defaultItemsPerPage | Integer  | Default number of items per one search results page. |
-| validItemsPerPageOptions | Array | Options for numbers per search results page. |
+| pagination.pagination | Object | Attributes that define the pagination. |
+| pagination.numFound | Integer  | Number of the search results found.  |
+| pagination.currentPage  | Integer  | The current search results page.   |
+| pagination.maxPage  | Integer  | Total number of the search results pages. |
+| pagination.currentItemsPerPage  | Integer  | Current number of the search results per page. |
+| pagination.parameterName  | String | Parameter name for setting the page number.  |
+| pagination.itemsPerPageParameterName | String | Parameter name for setting number of items per page. |
+| pagination.defaultItemsPerPage | Integer  | Default number of items per one search results page. |
+| pagination.validItemsPerPageOptions | Array | Options for numbers per search results page. |
 
 **Abstract products**
 
 | ATTRIBUTE | TYPE | DESCRIPTION  |
 | ---------- | -------- | --------------- |
-| abstractSku   | String   | Abstract product SKU.  |
-| abstractName  | String   | Abstract product name. |
-| images        | Array    | Links to product images.      |
+| abstractProducts | Array | Abstract products in the search results. |
+| abstractProducts.abstractSku   | String   | Unique identifier of the abstract product.  |
+| abstractProducts.price | Integer | Price to pay for that product in cents. |
+| abstractProducts.abstractName  | String   | Abstract product name. |
+| abstractProducts.images        | Array    | Product images of the abstract product.      |
+| abstractProducts.prices | Integer | Attributes describing the abstract product's price. |
+| abstractProducts.prices.priceTypeName | String | Price type. |
+| abstractProducts.prices.currency | String | Attriebutes describing the currency of the abstract product's price. |
+| abstractProducts.prices.currency.code | String | Currency code. |
+| abstractProducts.prices.currency.name | String | Currency name. |
+| abstractProducts.prices.currency.symbol | String | Currency symbol. |
+| abstractProducts.prices.grossAmount | Integer | Gross price in cents. |
+| abstractProducts.images | Array | Images of the abstract product. |
+| abstractProducts.images.externalUrlLarge | URL of the large image. |
+| abstractProducts.images.externalUrlSmall | URL of the small image. |
 
-For other abstract product attributes, see:
-
-* [Retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)
-* [Retrieving abstract product prices](https://documentation.spryker.com/docs/retrieving-abstract-product-prices)
 
 **Value facets**
 
 | ATTRIBUTE| TYPE | DESCRIPTION  |
 | ------------- | -------- | ------------------ |
-| name   | String | Name of the value facet.     |
-| localizedName | String   | Localized name of the value facet.  |
-| values    | Array | Values of the facet for the found items.     |
-| activeValue | Integer| Value of the facet specified in the current search request. |
-| parameterName | String | Parameter name. |
-| isMultiValued | Boolean | Indicates whether several values of the facet can be specified. |
+| valueFacets | Array | Objects describing the value facets. |
+| valueFacets.name   | String | Name of the value facet.     |
+| valueFacets.localizedName | String   | Localized name of the value facet.  |
+| valueFacets.values    | Array | Values of the facet for the found items.     |
+| valueFacets.activeValue | Integer| Value of the facet specified in the current search request. |
+| valueFacets.config | Object | Parameters describing the value facet's configuration. |
+| valueFacets.config.parameterName | String | Parameter name. |
+| valueFacets.config.isMultiValued | Boolean | Defines if several values of the facet can be specified. |
 
 **Range facets**
 
 | ATTRIBUTE | TYPE | DESCRIPTION   |
 | ---------- | -------- | ------------------ |
-| name  | String  | Name of the range facet.  |
-| localizedName | String  | Localized name of the range facet.   |
-| min | Integer  | Minimum value of the range for the found items. |
-| max | Integer  | Maximum value of the range for the found items.   |
-| activeMin  | Integer | Minimum value of the range specified in the current search request. |
-| activeMax | Integer | Maximum value of the range specified in the current search request. |
-| parameterName | String | Parameter name.   |
-| isMultiValued | Boolean  | Indicates whether several values of the facet can be specified. |
+| rangeFacets | Array | Objects describing the range facets. |
+| rangeFacets.name  | String  | Name of the range facet.  |
+| rangeFacets.localizedName | String  | Localized name of the range facet.   |
+| rangeFacets.min | Integer  | Minimum value of the range for the found items. |
+| rangeFacets.max | Integer  | Maximum value of the range for the found items.   |
+| rangeFacets.activeMin  | Integer | Minimum value of the range specified in the current search request. |
+| rangeFacets.activeMax | Integer | Maximum value of the range specified in the current search request. |
+| rangeFacets.config | Object | Parameters describing the range facet's configuration. |
+| rangeFacets.config.parameterName | String | Parameter name.   |
+| rangeFacets.config.isMultiValued | Boolean  | Defines if several values of the facet can be specified. |
 
 **Category tree filter**
 
 | ATTRIBUTE | TYPE| DESCRIPTION        |
 | ------------- | -------- | --------------- |
-| nodeId   | Integer  | Category node ID.   |
+| categoryTreeFilter | Array | Category tree filters. |
+| nodeId   | Integer  | Unique identifier of the category.   |
 | name    | String   | Category name.      |
 | docCount      | Integer  | Number of the found items in the category.    |
-| children      | Array    | Array of node elements nested within the current category. |
+| children      | Array    | Child categories of the category. The child categories have the same parameters.  |
+
 
 ## Possible errors
 

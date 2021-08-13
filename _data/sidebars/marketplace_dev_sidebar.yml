@@ -274,8 +274,8 @@ entries:
             - title: Managing wishlist items
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 
-          - title: Catalog search
-            url: /docs/marketplace/dev/glue-api-guides/catalog-search.html
+          - title: Searching the product catalog
+            url: /docs/marketplace/dev/glue-api-guides/searching-the-product-catalog.html
 
           - title: Managing the returns
             url: /docs/marketplace/dev/glue-api-guides/managing-the-returns.html
@@ -292,8 +292,8 @@ entries:
           - title: Retrieving product offers
             url: /docs/marketplace/dev/glue-api-guides/retrieving-product-offers.html
 
-          - title: Retrieving suggestions for auto-completion and search
-            url: /docs/marketplace/dev/glue-api-guides/retrieving-suggestions-for-auto-completion-and-search.html
+          - title: Retrieving autocomplete and search suggestions
+            url: /docs/marketplace/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
 
 
       - title: HowTos

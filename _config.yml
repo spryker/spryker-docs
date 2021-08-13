@@ -138,6 +138,18 @@ versioned_categories:
       - glue-api-guides
       - data-import
       - data-export
+  scos:
+    user:
+      - features
+      - back-office-user-guides
+    dev:
+      - feature-walkthroughs
+      - feature-integration-guides
+      - module-migration-guides
+      - data-import
+      - data-export
+      - glue-api-guide
+      - technology-partners
 
 # these are defaults used for the frontmatter for these file types
 

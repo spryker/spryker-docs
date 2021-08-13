@@ -324,7 +324,7 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{ page.vers
 To retrieve a merchant, send the request:
 
 ---
-`GET` **/merchants/{% raw %}*{{merchantId}}*{% endraw %}**
+`GET` {% raw %}**/merchants/*{{merchantId}}***{% endraw %}
 
 ---
 

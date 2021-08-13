@@ -2,6 +2,7 @@
 title: Permission & ACL Management
 description: Clearly define access permissions and roles of all Back Office users where needed and set initial passwords.
 originalLink: https://documentation.spryker.com/v1/docs/permission-acl-management
+originalArticleId: 3130e307-e706-4ed7-8f26-49048ca96a3d
 redirect_from:
   - /v1/docs/permission-acl-management
   - /v1/docs/en/permission-acl-management

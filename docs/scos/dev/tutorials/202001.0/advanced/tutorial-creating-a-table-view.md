@@ -2,6 +2,7 @@
 title: Tutorial - Creating a Table View
 description: Use the guide to render data, fetched from the database, in the table.
 originalLink: https://documentation.spryker.com/v4/docs/t-create-table-view
+originalArticleId: ba608b24-8baf-49a5-8235-17c967e77254
 redirect_from:
   - /v4/docs/t-create-table-view
   - /v4/docs/en/t-create-table-view

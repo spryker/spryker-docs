@@ -2,6 +2,7 @@
 title: Using a Facade
 description: This article describes the cases when the facade is used.
 originalLink: https://documentation.spryker.com/v3/docs/using-facade
+originalArticleId: 317df907-f000-41b1-a6dd-ac0b8550b6f0
 redirect_from:
   - /v3/docs/using-facade
   - /v3/docs/en/using-facade

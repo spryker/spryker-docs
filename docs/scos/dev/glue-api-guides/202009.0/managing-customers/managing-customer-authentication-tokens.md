@@ -1,6 +1,7 @@
 ---
 title: Managing customer authentication tokens
 originalLink: https://documentation.spryker.com/v6/docs/managing-customer-authentication-tokens
+originalArticleId: 44cabfbd-cc55-433f-8d8d-23fd8d753816
 redirect_from:
   - /v6/docs/managing-customer-authentication-tokens
   - /v6/docs/en/managing-customer-authentication-tokens
@@ -9,7 +10,7 @@ redirect_from:
 This endpoint allows refreshing customer authentication tokens and revoking customer refresh tokens. You may want to refresh an authentication token when it expires. Revocation is useful when an authentication token is compromised.
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Refresh an authentication token
 
@@ -113,7 +114,7 @@ To revoke a refresh token, send the request:
 
 For security purposes, the endpoint always returns the `204 No Content` status code, regardless of any refresh tokens being revoked. 
 
-The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/docs/configuring-outdated-refresh-token-life-time). 
+The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/v6/docs/configuring-outdated-refresh-token-life-time). 
 
 
 ## Possible errors
@@ -121,12 +122,12 @@ The tokens are marked as expired on the date and time of the request. You can co
 | Code  | Reason |
 | --- | --- |
 | 004 | Failed to refresh the token. |
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Authenticate as a customer](https://documentation.spryker.com/docs/customer-password)
-* [Manage customer passwords](https://documentation.spryker.com/docs/customer-password)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html)
 
 
 

@@ -2,9 +2,12 @@
 title: Code Coverage
 description: Learn how to generate the code coverage report.
 originalLink: https://documentation.spryker.com/2021080/docs/code-coverage
+originalArticleId: 630a5773-8205-4f00-a6ee-d1876e76d975
 redirect_from:
   - /2021080/docs/code-coverage
   - /2021080/docs/en/code-coverage
+  - /docs/code-coverage
+  - /docs/en/code-coverage
 ---
 
 To be aware of what you are testing, you should know the code coverage. To get the code coverage report generated, make sure Xdebug is enabled and run your tests with an additional flag:

@@ -2,6 +2,7 @@
 title: Managing Filter Preferences
 description: Use the procedure to reorder filters, specify a filter type and add translations to the filter name in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/managing-filter-preferences
+originalArticleId: 0dda1c26-b1bf-4983-9e3a-66148fb71cda
 redirect_from:
   - /v1/docs/managing-filter-preferences
   - /v1/docs/en/managing-filter-preferences

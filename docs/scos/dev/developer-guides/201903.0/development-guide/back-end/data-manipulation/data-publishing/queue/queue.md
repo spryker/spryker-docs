@@ -1,6 +1,7 @@
 ---
 title: Queue
 originalLink: https://documentation.spryker.com/v2/docs/queue
+originalArticleId: 164a8930-5e7a-4e7e-bc4f-5bcb4edd6fa1
 redirect_from:
   - /v2/docs/queue
   - /v2/docs/en/queue

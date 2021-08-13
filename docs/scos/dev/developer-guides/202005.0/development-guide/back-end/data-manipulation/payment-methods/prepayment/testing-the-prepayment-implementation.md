@@ -2,12 +2,13 @@
 title: Testing the Prepayment Implementation
 description: This article describes how to test the prepayment implementation.
 originalLink: https://documentation.spryker.com/v5/docs/ht-prepayment-test
+originalArticleId: 73cbe295-1cd5-4b64-adc4-481a8b977dd5
 redirect_from:
   - /v5/docs/ht-prepayment-test
   - /v5/docs/en/ht-prepayment-test
 ---
 
-When you have completed the instructions on [front end](https://documentation.spryker.com/docs/en/ht-prepayment-fe), [back end](https://documentation.spryker.com/docs/en/ht-prepayment-be) and [shared](https://documentation.spryker.com/docs/en/ht-prepayment-shared) implementation, you are able to test the payment method you just implemented.
+When you have completed the instructions on [front end](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html), [back end](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html) and [shared](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html) implementation, you are able to test the payment method you just implemented.
 
  This is the last step for this tutorial.
 

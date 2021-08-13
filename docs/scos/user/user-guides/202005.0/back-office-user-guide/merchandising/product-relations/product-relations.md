@@ -2,6 +2,7 @@
 title: Product Relations
 description: This section can be used to define and manage product relations, set types of relations and assign related products in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/product-relations-management
+originalArticleId: 895cbfac-815a-448f-9419-2e4520aba1e7
 redirect_from:
   - /v5/docs/product-relations-management
   - /v5/docs/en/product-relations-management
@@ -20,6 +21,6 @@ To summarize, you can:
 ***
 **What's next?**
 
-* To know how you create the product relation, see [Creating a Product Relation](https://documentation.spryker.com/docs/en/creating-a-product-relation).
-* To know the product relations are managed, see [Managing Product Relations](https://documentation.spryker.com/docs/en/managing-product-relations).
-* To know more about the attributes that you select and enter while creating or managing a product relation and see some examples of how the product relations look in the online store, see [Product Relations: Reference Information](https://documentation.spryker.com/docs/en/product-relations-reference-information).
+* To know how you create the product relation, see [Creating a Product Relation](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/creating-a-product-relation.html).
+* To know the product relations are managed, see [Managing Product Relations](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/managing-product-relations.html).
+* To know more about the attributes that you select and enter while creating or managing a product relation and see some examples of how the product relations look in the online store, see [Product Relations: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html).

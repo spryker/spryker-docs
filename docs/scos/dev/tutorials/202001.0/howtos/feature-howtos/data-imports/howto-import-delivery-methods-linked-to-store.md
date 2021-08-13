@@ -2,6 +2,7 @@
 title: HowTo - Import Delivery Methods Linked to Store
 description: Use the guide to learn how to import delivery methods assigned to specific stores in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/ht-import-delivery-methods-linked-to-store
+originalArticleId: f6c8b9e7-5656-45e9-9249-4aa8d5ddcc79
 redirect_from:
   - /v4/docs/ht-import-delivery-methods-linked-to-store
   - /v4/docs/en/ht-import-delivery-methods-linked-to-store

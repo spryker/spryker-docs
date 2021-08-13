@@ -2,6 +2,7 @@
 title: Controllers and Actions
 description: Controllers are placed inside the Controllers folder in Yves; they provide an entry point to the system for requests submitted by the front-end users.
 originalLink: https://documentation.spryker.com/v3/docs/yves-controllers-actions
+originalArticleId: ec53a9ba-bdf3-4097-bd9d-2d4da06fad1f
 redirect_from:
   - /v3/docs/yves-controllers-actions
   - /v3/docs/en/yves-controllers-actions
@@ -76,7 +77,7 @@ Now the data can be accessed in the twig template like this: `{% raw %}{{{% endr
 
 URL routing in Yves is not the same as URL routing in Zed. You can route a custom URL to a module-controller-action triple.
 
-To learn more about URL routing in Yves, check out [Implementing URL Routing in Yves](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/yves/implementing-url-routing-in-yves.html).
+To learn more about URL routing in Yves, check out [Implementing URL Routing in Yves](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/yves/implementing-url-routing-in-yves.html).
 
 ## Twig Template in Yves
 

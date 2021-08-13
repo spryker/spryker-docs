@@ -2,9 +2,12 @@
 title: Tutorial - Database Transaction Handling
 description: Use the guide to understand how to handle database transactions.
 originalLink: https://documentation.spryker.com/2021080/docs/t-database-transactions
+originalArticleId: a9cf7e3b-bf1d-4e27-9614-478a6dcc5204
 redirect_from:
   - /2021080/docs/t-database-transactions
   - /2021080/docs/en/t-database-transactions
+  - /docs/t-database-transactions
+  - /docs/en/t-database-transactions
 ---
 
 <!--Used to be: http://spryker.github.io/tutorials/zed/database-transaction-handling/-->

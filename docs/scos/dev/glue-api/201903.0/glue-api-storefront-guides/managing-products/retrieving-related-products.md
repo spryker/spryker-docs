@@ -1,6 +1,7 @@
 ---
 title: Retrieving Related Products
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-related-products-201903
+originalArticleId: e6cb2f93-5755-4c51-a4ce-7e97afc94999
 redirect_from:
   - /v2/docs/retrieving-related-products-201903
   - /v2/docs/en/retrieving-related-products-201903
@@ -9,7 +10,7 @@ redirect_from:
 Using the **Product Relations** feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called Related Products, in search and in the cart together with the products selected by customers. This can help boosting the cross- and up-selling performance of the outlet.
 
 {% info_block infoBox %}
-Only [abstract](https://documentation.spryker.com/v2/docs/product-abstraction#differentiate-between-abstract-and-concrete-products
+Only [abstract](/docs/scos/dev/features/201903.0/product-management/product-abstraction.html#differentiate-between-abstract-and-concrete-products
 {% endinfo_block %} products support Product Relations. For more details, see [Product Relations](/docs/scos/dev/features/201903.0/product-management/product-relations/product-relations.html).)
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
@@ -31,7 +32,7 @@ Different types of relations, as well as their logic, are defined on the project
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Relations API Feature Integration](/docs/scos/dev/migration-and-integration/201903.0/feature-integration-guides/glue-api/product-relations-api-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Relations API Feature Integration](/docs/scos/dev/features/201903.0/product-management/product-relations/product-relations.html-api-feature-integration-201903).
 
 ## Getting Related Items for an Abstract Product
 To get related items for an abstract product, send a GET request to the following endpoint:
@@ -44,7 +45,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 
 #### Response Fields
 
-For a detailed list of the fields included in the response for each product, see [General Product Information](https://documentation.spryker.com/v2/docs/retrieving-product-information#general-product-information).
+For a detailed list of the fields included in the response for each product, see [General Product Information](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html#general-product-information).
 
 <details open>
 <summary>Sample Response </summary>
@@ -307,7 +308,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 
 #### Response Fields
 
-For a detailed list of the fields included in the response for each product, see [General Product Information](https://documentation.spryker.com/v2/docs/retrieving-product-information#general-product-information).
+For a detailed list of the fields included in the response for each product, see [General Product Information](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html#general-product-information).
 
 <details open>
 <summary> Sample Response</summary>
@@ -1397,7 +1398,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 
 #### Response Fields
 
-For a detailed list of the fields included in the response for each product, see [General Product Information](https://documentation.spryker.com/v2/docs/retrieving-product-information#general-product-information).
+For a detailed list of the fields included in the response for each product, see [General Product Information](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html#general-product-information).
 
 <details open>
 <summary>Sample Response </summary>

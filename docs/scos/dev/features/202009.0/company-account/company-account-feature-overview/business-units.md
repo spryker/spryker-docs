@@ -2,6 +2,7 @@
 title: Business units
 description: Once a company administrator has created a company, and it has been activated and approved, they can start building the organizational structure.
 originalLink: https://documentation.spryker.com/v6/docs/business-units
+originalArticleId: 6d25eeff-7418-4fbc-8af0-73350f966051
 redirect_from:
   - /v6/docs/business-units
   - /v6/docs/en/business-units

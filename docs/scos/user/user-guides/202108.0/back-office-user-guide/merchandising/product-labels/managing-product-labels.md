@@ -2,9 +2,12 @@
 title: Managing product labels
 description: The Managing Product Labels section describes the procedures you can use to view, edit, activate and/or deactivate product labels in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-labels
+originalArticleId: 98118a18-5268-42d0-91f0-7b86da390d67
 redirect_from:
   - /2021080/docs/managing-product-labels
   - /2021080/docs/en/managing-product-labels
+  - /docs/managing-product-labels
+  - /docs/en/managing-product-labels
 ---
 
 This topic describes how to manage product labels.
@@ -90,7 +93,7 @@ On the page, you can do the following:
 
 {% info_block warningBox "Dynamic product labels" %}
 
-Products for the [dynamic product labels](https://documentation.spryker.com/docs/product-labels-feature-overview#dynamic-product-label) (like *New*, or *Sale*) are applied dynamically based on the defined rules. There is no way to apply products manually.
+Products for the [dynamic product labels](/docs/scos/dev/features/{{ page.version }}/product-labels-feature-overview.html#dynamic-product-label) (like *New*, or *Sale*) are applied dynamically based on the defined rules. There is no way to apply products manually.
 
 {% endinfo_block %}
 

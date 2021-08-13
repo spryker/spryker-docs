@@ -1,9 +1,12 @@
 ---
 title: About Glue API migration guides
 originalLink: https://documentation.spryker.com/2021080/docs/about-glue-api-migration
+originalArticleId: f7b83e46-1e0f-4336-a0ce-68701a788c6c
 redirect_from:
   - /2021080/docs/about-glue-api-migration
   - /2021080/docs/en/about-glue-api-migration
+  - /docs/about-glue-api-migration
+  - /docs/en/about-glue-api-migration
 ---
 
 The Glue API migration guides provide step-by-step implementation on how to manually update a module to a newer version.

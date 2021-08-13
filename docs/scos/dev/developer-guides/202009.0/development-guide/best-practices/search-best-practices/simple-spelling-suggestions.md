@@ -2,6 +2,7 @@
 title: Simple Spelling Suggestions
 description: Spelling suggestions provide the users with alternative search terms when the search query does not return any results
 originalLink: https://documentation.spryker.com/v6/docs/simple-spelling-suggestions
+originalArticleId: 11d0e6e6-4b34-47b3-b7fc-f7271b5c9ad8
 redirect_from:
   - /v6/docs/simple-spelling-suggestions
   - /v6/docs/en/simple-spelling-suggestions

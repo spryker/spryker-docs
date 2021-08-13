@@ -2,6 +2,7 @@
 title: Roadmap
 description: Spryker Roadmap defines a goal or desired outcome and includes the milestones Spryker needs to reach it.
 originalLink: https://documentation.spryker.com/v6/docs/roadmap
+originalArticleId: fa2befd2-bc0e-4004-8367-842ff8e767bb
 redirect_from:
   - /v6/docs/roadmap
   - /v6/docs/en/roadmap

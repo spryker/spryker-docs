@@ -2,6 +2,7 @@
 title: Implementing a Query Container
 description: To create a new Query Container you can copy and paste the snippet from this article and replace Mymodule with your module name.
 originalLink: https://documentation.spryker.com/v5/docs/implementing-a-query-container
+originalArticleId: b4f80126-a97d-45c1-a2a6-86578e9d664e
 redirect_from:
   - /v5/docs/implementing-a-query-container
   - /v5/docs/en/implementing-a-query-container

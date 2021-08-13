@@ -1,9 +1,12 @@
 ---
 title: Migration Guide - Content
 originalLink: https://documentation.spryker.com/2021080/docs/mg-content-201907
+originalArticleId: 7bca5584-2d31-4d9c-a66c-a168ffd83975
 redirect_from:
   - /2021080/docs/mg-content-201907
   - /2021080/docs/en/mg-content-201907
+  - /docs/mg-content-201907
+  - /docs/en/mg-content-201907
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

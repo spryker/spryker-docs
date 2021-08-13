@@ -2,9 +2,12 @@
 title: Yves multi-themes
 description: Manage multiple themes for Yves by extending them.
 originalLink: https://documentation.spryker.com/2021080/docs/yves-multi-themes
+originalArticleId: c892648b-6bdb-499c-af5a-eefa10fbb45d
 redirect_from:
   - /2021080/docs/yves-multi-themes
   - /2021080/docs/en/yves-multi-themes
+  - /docs/yves-multi-themes
+  - /docs/en/yves-multi-themes
 ---
 
 This document describes how to use and extend themes on the project level. 

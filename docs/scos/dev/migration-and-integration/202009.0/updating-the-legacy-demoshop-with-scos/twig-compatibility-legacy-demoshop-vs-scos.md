@@ -2,6 +2,7 @@
 title: Twig Compatibility- Legacy Demoshop vs SCOS
 description: Use the guide to learn how to configure the Twig variables passed to the global Twig namespace in the demoshop.
 originalLink: https://documentation.spryker.com/v6/docs/twig-compatibility-mode-demoshop-vs-suite
+originalArticleId: ca84f253-0b8f-451d-a25d-4e2e818e2753
 redirect_from:
   - /v6/docs/twig-compatibility-mode-demoshop-vs-suite
   - /v6/docs/en/twig-compatibility-mode-demoshop-vs-suite
@@ -104,4 +105,4 @@ and
 
 can now be used to access variables in Twig.
 
-For more information on Demoshop vs Suite compatibility, see [Making Demoshop Compatible with Shop App, Atomic Design, P&amp;S](/docs/scos/dev/migration-and-integration/202001.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html).
+For more information on Demoshop vs Suite compatibility, see [Making Demoshop Compatible with Shop App, Atomic Design, P&amp;S](/docs/scos/dev/migration-and-integration/202009.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html).

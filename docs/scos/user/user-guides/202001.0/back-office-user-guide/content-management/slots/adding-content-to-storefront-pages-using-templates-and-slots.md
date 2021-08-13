@@ -2,6 +2,7 @@
 title: Adding Content to Storefront Pages Using Templates & Slots
 description: Templates with slots allows managing all the Storefront content in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/adding-content-to-storefront-pages-using-templates-slots
+originalArticleId: a87c791d-e799-4b9c-aafd-fe5d79d371b7
 redirect_from:
   - /v4/docs/adding-content-to-storefront-pages-using-templates-slots
   - /v4/docs/en/adding-content-to-storefront-pages-using-templates-slots
@@ -19,7 +20,7 @@ Let’s say you have *Sticky Notes* and *Writing Materials* categories, and you 
 To do that, you need to create content items, insert them into CMS blocks, assign CMS blocks to slots and select the pages the CMS blocks will be displayed on.
 {% info_block infoBox "Examplary content" %}
 
-All the content used in this guide is shipped by default in our [Demo Shops](https://documentation.spryker.com/v4/docs/demoshops).
+All the content used in this guide is shipped by default in our [Demo Shops](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops).
 
 {% endinfo_block %}
  
@@ -78,7 +79,7 @@ Make sure to activate the CMS blocks. Only active CMS blocks are rendered on Sto
     * Link - `/en/stationery/paper/sticky-notes`.
     * ImageURL  - `/assets/DE/default/images/category-banner-image-3@2x.jpg`.
 
-See [Editing Placeholders](https://documentation.spryker.com/v4/docs/managing-cms-blocks#editing-placeholders) to learn about inserting content into CMS blocks.
+See [Editing Placeholders](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/blocks/managing-cms-blocks.html#editing-placeholders) to learn about inserting content into CMS blocks.
 
  
 ## Select a Template with Slots
@@ -91,16 +92,16 @@ Follow the steps to select a template with slots:
 2. In the **List of Templates**, select the *Product* template with slots. 
     This template with slots is assigned to all the product pages. By selecting it, you select to work with all the product pages at once.
 
-If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](https://documentation.spryker.com/v4/docs/ht-create-cms-templates#template-with-slots) for more details.
+If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/scos/dev/tutorials/202001.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) for more details.
 
 ## Select a Slot
 
-[Slot](https://documentation.spryker.com/v4/docs/templates-slots-feature-overview#slot) defines the Storefront page space you add the CMS blocks to.
+[Slot](/docs/scos/dev/features/202001.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#slot) defines the Storefront page space you add the CMS blocks to.
 
 In the **List of Slots for "Product" Template**, select the *Bottom* slot. This slot is located at the bottom of product pages. By selecting it, you select to work with this Storefront page space in all the product pages.
 
 
-If the slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Correlation](https://documentation.spryker.com/v4/docs/templates-slots-feature-overview#correlation) for more details.
+If the slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Correlation](/docs/scos/dev/features/202001.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#correlation) for more details.
 
 ## Assign CMS Blocks
 

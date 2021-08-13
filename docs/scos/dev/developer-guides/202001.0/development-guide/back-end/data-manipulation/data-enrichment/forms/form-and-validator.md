@@ -2,6 +2,7 @@
 title: Form and Validator
 description: The article describes how to integrate and configure the Forms and Validator components of Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v4/docs/form-and-validator
+originalArticleId: 3ae7fdb0-6489-47bd-855d-65ad5177b78f
 redirect_from:
   - /v4/docs/form-and-validator
   - /v4/docs/en/form-and-validator

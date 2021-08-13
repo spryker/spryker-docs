@@ -2,6 +2,7 @@
 title: HowTo -  Render Configurable Bundle Templates in the Storefront
 description: In this article, we provide you with the instructions on how to render Configurable Bundle Templates in Spryker Storefront on the Cart, Checkout Summary, Order details, and Quote Request pages.
 originalLink: https://documentation.spryker.com/v6/docs/howto-rendering-configurable-bundles-in-the-storefront
+originalArticleId: 14cd24a4-2d58-401a-a5f6-a02aa2e72e7b
 redirect_from:
   - /v6/docs/howto-rendering-configurable-bundles-in-the-storefront
   - /v6/docs/en/howto-rendering-configurable-bundles-in-the-storefront

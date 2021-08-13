@@ -2,6 +2,7 @@
 title: Migration Guide - Category
 description: Use the guide to update versions to the newer ones of the Category module.
 originalLink: https://documentation.spryker.com/v5/docs/mg-category
+originalArticleId: 763e19bd-2a88-4e42-a2c5-e3dc103e5006
 redirect_from:
   - /v5/docs/mg-category
   - /v5/docs/en/mg-category

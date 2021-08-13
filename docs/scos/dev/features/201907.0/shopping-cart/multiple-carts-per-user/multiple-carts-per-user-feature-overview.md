@@ -2,6 +2,7 @@
 title: Multiple Carts per User Feature Overview
 description: Shopping Cart is where the record of the items a buyer has ‘picked up’ from the online store is kept. Select products, review them and add more with ease.
 originalLink: https://documentation.spryker.com/v3/docs/multiple-carts-per-user-overview
+originalArticleId: b64ee821-bfc7-4423-9ee2-728e2f7afca4
 redirect_from:
   - /v3/docs/multiple-carts-per-user-overview
   - /v3/docs/en/multiple-carts-per-user-overview
@@ -32,7 +33,7 @@ The table with shopping carts shows details for each of the carts, including:
 * Number of products added to cart
 * Price mode (Net or Gross)
 * Cart Total
-* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/dev/features/202001.0/shopping-cart/shared-cart/shared-cart-feature-overview.html), delete, switch cart to shopping list (see the *Actions* table for details)
+* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/dev/features/201907.0/shopping-cart/shared-cart/shared-cart-feature-overview.html), delete, switch cart to shopping list (see the *Actions* table for details)
 
 ![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-carts-list.png){height="" width=""}
 
@@ -44,7 +45,7 @@ The table bellow provides detailed information on the possible actions to manage
 | Duplicate | Creates a copy of the chosen shopping cart including the items added to the cart.<br>The duplicate copy of the cart is named according to the template: `<Name of the original cart> Copied At <Mo. dd, yyyy hh:mm>` <br>A cart can be converted into shopping list on Shopping cart page by clicking on **To shopping list**.|
 | Delete | Deletes the shopping cart. <br>Deleting a shopping cart also deletes the items added to it. |
 
-To learn more about sharing the shopping cart, check out [Shared Cart documentation](/docs/scos/dev/features/202001.0/shopping-cart/shared-cart/shared-cart-feature-overview.html).
+To learn more about sharing the shopping cart, check out [Shared Cart documentation](/docs/scos/dev/features/201907.0/shopping-cart/shared-cart/shared-cart-feature-overview.html).
 
 Active shopping cart is highlighted in bold.
 

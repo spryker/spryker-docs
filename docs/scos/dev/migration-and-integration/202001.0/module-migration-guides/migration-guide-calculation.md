@@ -2,6 +2,7 @@
 title: Migration Guide - Calculation
 description: Use the guide to update versions to the newer ones of the Calculation module.
 originalLink: https://documentation.spryker.com/v4/docs/mg-calculation
+originalArticleId: dd99a610-fa07-4de6-99b2-5a5a13e3d366
 redirect_from:
   - /v4/docs/mg-calculation
   - /v4/docs/en/mg-calculation

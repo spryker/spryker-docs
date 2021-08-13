@@ -2,9 +2,12 @@
 title: Glue API- Inventory Management feature integration
 description: Learn how to integrate the Inventory Management feature API into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-inventory-management-feature-integration
+originalArticleId: e7896d23-ba99-4d95-a3cc-654fbfaae463
 redirect_from:
   - /2021080/docs/glue-api-inventory-management-feature-integration
   - /2021080/docs/en/glue-api-inventory-management-feature-integration
+  - /docs/glue-api-inventory-management-feature-integration
+  - /docs/en/glue-api-inventory-management-feature-integration
 ---
 
 This document describes how to install the Inventory Management feature API into a Spryker project.
@@ -15,8 +18,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core| 201907.0| [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)| 
-| Product | 201907.0 | [Glue API: Products feature integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration) | 
+| Spryker Core| 201907.0| [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html)| 
+| Product | 201907.0 | [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) | 
 |Inventory Management| 201907.0| |
 
   

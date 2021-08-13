@@ -2,9 +2,12 @@
 title: Migration Guide - ProductMeasurementUnitWidget
 description: Use the guide to learn how to update the ProductMeasurementUnitWidget module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-measurement-unit-widget
+originalArticleId: ca27930b-5caf-4029-8c1f-a3b682416ae3
 redirect_from:
   - /2021080/docs/mg-product-measurement-unit-widget
   - /2021080/docs/en/mg-product-measurement-unit-widget
+  - /docs/mg-product-measurement-unit-widget
+  - /docs/en/mg-product-measurement-unit-widget
 ---
 
 ## Upgrading from Version 0.6.* to Version 0.8.0

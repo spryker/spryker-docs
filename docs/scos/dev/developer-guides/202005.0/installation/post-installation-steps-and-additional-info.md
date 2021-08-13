@@ -2,6 +2,7 @@
 title: Post-Installation Steps and Additional Info
 description: This article provides post-installation steps and additional info for the Spryker project.
 originalLink: https://documentation.spryker.com/v5/docs/post-installation-steps-and-additional-info
+originalArticleId: ec0eccc8-ccff-49e6-b271-16bb64087967
 redirect_from:
   - /v5/docs/post-installation-steps-and-additional-info
   - /v5/docs/en/post-installation-steps-and-additional-info
@@ -140,7 +141,7 @@ echo "127.0.0.1 {endpointName}" | sudo tee -a /etc/hosts
 | PostgreSQL Server | 5432 | Username is development, password is mate20mg. |
 | Redis | 10009 | You can explore Redis with Redis Desktop Manager or a similar tool. |
 | Mailcatcher|1080|Catches all the mails that are sent during development in the Dev VM.|
-|Management UI|15672|See [Default Queue Engine](https://documentation.spryker.com/docs/en/queue#default-queue-engine) for more information. |
+|Management UI|15672|See [Default Queue Engine](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/queue/queue.html#default-queue-engine) for more information. |
 
 ## Activating the Opcache Module
 To optimize the performance of the system, you can enable the Opcache. This is not recommend for development, because you may get strange results. To activate the Opcache, just put the following lines at the end of the `php.ini` and `restart.php`.
@@ -201,7 +202,7 @@ $config[ApplicationConstants::HOST_YVES] = 'www.de.XXX.local';
 The first key is responsible for proper call from Yves to Zed, while the second one is used for domain name used for session cookies.
 
 ## Upgrading to a Newer Version
-To check for newer released versions, we recommend that you follow the steps described in [Core Updates](https://documentation.spryker.com/docs/en/composer#core-updates).
+To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/scos/dev/developer-guides/202005.0/installation/composer.html#core-updates).
 
 <!-- Last review date: Feb 11, 2019-- by Volodymyr Volkov -->
 

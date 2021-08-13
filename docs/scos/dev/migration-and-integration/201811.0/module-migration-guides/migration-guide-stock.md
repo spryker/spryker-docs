@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Stock
 originalLink: https://documentation.spryker.com/v1/docs/mg-stock
+originalArticleId: fc8f3cb4-d9aa-47c6-be02-7827041a1b80
 redirect_from:
   - /v1/docs/mg-stock
   - /v1/docs/en/mg-stock

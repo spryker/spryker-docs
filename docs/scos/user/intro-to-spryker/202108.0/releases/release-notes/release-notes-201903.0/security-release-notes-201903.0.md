@@ -2,9 +2,12 @@
 title: Security Release Notes 201903.0
 description: The following information pertains to security-related issues that were discovered and resolved during the 201903.0 release.
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-201903-0
+originalArticleId: 11ab0ed2-762f-485e-b145-316cf52922f1
 redirect_from:
   - /2021080/docs/security-release-notes-201903-0
   - /2021080/docs/en/security-release-notes-201903-0
+  - /docs/security-release-notes-201903-0
+  - /docs/en/security-release-notes-201903-0
 ---
 
 The following information pertains to security-related issues that were discovered and resolved.

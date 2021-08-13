@@ -2,6 +2,7 @@
 title: Shop Guide - Managing Requests for Quotes for a Buyer
 description: The guide provides procedures on how to send a request for quote, negotiate the price, update or cancel an RFQ.
 originalLink: https://documentation.spryker.com/v5/docs/managing-rfqs-for-buyer-shop-guide
+originalArticleId: c70d37b0-fcfa-41bf-b7a2-f945e194f0a1
 redirect_from:
   - /v5/docs/managing-rfqs-for-buyer-shop-guide
   - /v5/docs/en/managing-rfqs-for-buyer-shop-guide
@@ -16,10 +17,10 @@ This topic describes the procedure for managing the Request for Quotes (RFQs) fr
 
 You can start managing quote requests on the **Edit Quote Request** page. To navigate to this page, use one of the following options:
 
-* On the **Cart** page, create an RFQ from the **Cart** page. See [Creating an RFQ](https://documentation.spryker.com/docs/en/creating-rfq-shop-guide) for more information. Then, on the **Quote Request** page, click **Edit**.
+* On the **Cart** page, create an RFQ from the **Cart** page. See [Creating an RFQ](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-creating-a-request-for-quote.html) for more information. Then, on the **Quote Request** page, click **Edit**.
 * In the **Customer Account > Quote Requests** section, in the *Actions* column, click the **View** icon for the quote request in the *Dr*aft status you want to edit. Then, on the **View Quote Request** page, click **Edit**.
 
-See [RFQ: Reference Information](https://documentation.spryker.com/docs/en/rfq-reference-information-shop-guide) for details on components the Quote Request page consists of.
+See [RFQ: Reference Information](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/references/request-for-quote-reference-information.html) for details on components the Quote Request page consists of.
 ***
 ## Adding Delivery Information
 Once you created a Quote Request, you can set a delivery address and select a shipment method.
@@ -31,7 +32,7 @@ To add a delivery address and a shipment method:
 2. On the **Edit Quote Request** page, click **Add address**. This will redirect you to the **Address** page where you can select one of the following options and populate the fields:
     * **Define new address** to add the delivery address for the whole order. This will open the form to populate the fields with the necessary information.
     * Select one of the existing addresses.
-    * Deliver to multiple addresses to set a delivery address per item. See [Shop Guide - Delivery Address](https://documentation.spryker.com/docs/en/address-step-shop-guide-201911) for more information.
+    * Deliver to multiple addresses to set a delivery address per item. See [Shop Guide - Delivery Address](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html) for more information.
 
 3. In the Billing Address section, select the necessary address or add a new one.
 {% info_block infoBox "Info" %}
@@ -49,7 +50,7 @@ On the **Edit Quote Request** page, clicking **Add shipment method** should redi
 5. Select the shipment method and the delivery date (if needed), and click **Save**. The Quote Request will be updated successfully and redirect you to the **Edit Quote Request** page.
 
 **Tips & Tricks**
-You can add a delivery address and a shipment method during the checkout prior to creating a Quote Request. To do this, follow the instructions in the [Address](https://documentation.spryker.com/docs/en/address-step-shop-guide-201911) and [Shipment](https://documentation.spryker.com/docs/en/shipment-step-shop-guide-201911) steps. Once done, the changes will be saved. To proceed with the quote request, click **Back to Cart**.
+You can add a delivery address and a shipment method during the checkout prior to creating a Quote Request. To do this, follow the instructions in the [Address](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html) and [Shipment](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-shipment-step.html) steps. Once done, the changes will be saved. To proceed with the quote request, click **Back to Cart**.
 ___
 
 ## Editing an RFQ
@@ -74,8 +75,8 @@ Keep in mind that measurement units cannot be updated. You can only add a new pr
     * On the **Cart** page in the **Quick add to Cart** widget, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**.
 ![quick-add-to-cart-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/quick-add-to-cart-widget.png){height="" width=""}
     * From the catalog, select the product, choose the options and quantity, and click **Add to Cart**.
-    * On the **Quick Order** page, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Quick Order](https://documentation.spryker.com/docs/en/quick-order-shop-guide).
-    * On the **Shopping list** page, click the shopping list, select the checkboxes for the items you want to add from the shopping list, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Shopping Lists](https://documentation.spryker.com/docs/en/shopping-lists-shop-guide).
+    * On the **Quick Order** page, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Quick Order](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-quick-order.html).
+    * On the **Shopping list** page, click the shopping list, select the checkboxes for the items you want to add from the shopping list, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Shopping Lists](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-lists.html).
 
 3.  To keep changes, click **Save and Back to Edit**. The Quote Request will be updated.
 
@@ -97,7 +98,7 @@ If the delivery address hasn’t been defined yet, the Address step will open fi
 {% endinfo_block %}
 ![update-delivery-information](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/update-delivery-information.png){height="" width=""}
 
-2. On the **Address** page, select the new delivery and billing addresses. See [Shop Guide - Delivery Address](https://documentation.spryker.com/docs/en/address-step-shop-guide-201911) for more information on the options you have in the **Select a delivery address** field.
+2. On the **Address** page, select the new delivery and billing addresses. See [Shop Guide - Delivery Address](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html) for more information on the options you have in the **Select a delivery address** field.
 
 3. To proceed to the **Shipment** tab, click **Next**.
 
@@ -129,7 +130,7 @@ This will send the Quote Request to a Sales Representative for further processin
 
 To check the RFQ's status, navigate to the **Customer Account -> Quote Requests** section.
 
-See [Buyer Workflow](https://documentation.spryker.com/docs/en/quotation-process-rfq-feature-overview-201907#buyer-workflow) for more information on quote request statuses and workflow.
+See [Buyer Workflow](https://documentation.spryker.com/v5/docs/en/quotation-process-feature-overview#buyer-workflow) for more information on quote request statuses and workflow.
 ___
 
 ## Processing a Ready RFQ
@@ -137,7 +138,7 @@ Once a Sales Representative has prepared a price suggestion and sent it to you, 
 
 To convert an RFQ to cart, on the **View Quote Request** page for the RFQ that is in the Ready status, click **Convert to Cart**.
 
-After that, you can continue to [Checkout](https://documentation.spryker.com/docs/en/checkout-shop-guide-201911).
+After that, you can continue to [Checkout](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html).
 
 To request an even better price, **revise** the RFQ.
 {% info_block warningBox "Note" %}

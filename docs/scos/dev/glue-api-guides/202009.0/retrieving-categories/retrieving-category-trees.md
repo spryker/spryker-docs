@@ -2,6 +2,7 @@
 title: Retrieving category trees
 description: Retrieve a full navigation tree with child category nodes.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-category-trees
+originalArticleId: e85112d8-8488-49e4-a3c8-0e943fe85645
 redirect_from:
   - /v6/docs/retrieving-category-trees
   - /v6/docs/en/retrieving-category-trees
@@ -10,7 +11,7 @@ redirect_from:
 By means of the category API, you are able to retrieve the exact structure of your category tree with its hierarchical characteristics.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](https://documentation.spryker.com/docs/category-management-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](https://documentation.spryker.com/v6/docs/category-management-feature-integration-201907).
 
 ## Retrieve a category tree
 
@@ -162,9 +163,9 @@ Sample request: `GET http://glue.mysprykershop.com/category-trees`
 | order | Integer | Digits between 1 and 100, with 100 ranking the highest (on one level under the parent node) |
 | name | String | Name of category associated with the node |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Retrieve a category node](https://documentation.spryker.com/docs/retrieving-category-nodes)
+* [Retrieve a category node](/docs/scos/dev/glue-api-guides/202009.0/retrieving-categories/retrieving-category-nodes.html)
 

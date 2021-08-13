@@ -2,6 +2,7 @@
 title: Managing Customers
 description: This guide provides instructions on how shop owners can add and manage personal information, customer billing, and shipping addresses in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/managing-customers
+originalArticleId: 758136cb-3766-438b-8be1-b383615b98b2
 redirect_from:
   - /v3/docs/managing-customers
   - /v3/docs/en/managing-customers
@@ -21,7 +22,7 @@ If you don’t select this option, the customer is still able to set a password 
 {% endinfo_block %}
 4. To complete the customer creation, click **Save**.
 
-To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/customers/references/customers-reference-information.html). 
+To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/customers/references/customers-reference-information.html). 
 
 ## Editing Customers 
 **To edit a customer:**

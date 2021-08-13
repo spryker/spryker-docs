@@ -2,6 +2,7 @@
 title: Shipment
 description: During the checkout process your customers can easily select their preferred shipment method and related carrier.
 originalLink: https://documentation.spryker.com/v6/docs/shipment-summary
+originalArticleId: 4f61d80d-e8f6-41a8-a374-3fb086443394
 redirect_from:
   - /v6/docs/shipment-summary
   - /v6/docs/en/shipment-summary

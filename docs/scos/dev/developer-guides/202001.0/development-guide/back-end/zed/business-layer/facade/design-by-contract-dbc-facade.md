@@ -2,6 +2,7 @@
 title: Design by Contract (DBC) - Facade
 description: A contract is a formal and precise specification of a method (or other components) in a facade.
 originalLink: https://documentation.spryker.com/v4/docs/zed-facade-design-by-contract
+originalArticleId: f43dc41c-872c-42c7-b14b-f4bf0b1d1501
 redirect_from:
   - /v4/docs/zed-facade-design-by-contract
   - /v4/docs/en/zed-facade-design-by-contract

@@ -2,9 +2,12 @@
 title: Installing Docker prerequisites on Linux
 description: Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
 originalLink: https://documentation.spryker.com/2021080/docs/installing-docker-prerequisites-on-linux
+originalArticleId: d6edd360-ab5b-49b6-ad6a-b206abd19dfa
 redirect_from:
   - /2021080/docs/installing-docker-prerequisites-on-linux
   - /2021080/docs/en/installing-docker-prerequisites-on-linux
+  - /docs/installing-docker-prerequisites-on-linux
+  - /docs/en/installing-docker-prerequisites-on-linux
 ---
 
 This article describes Docker installation prerequisites for Linux.
@@ -56,10 +59,10 @@ You've installed and configured the required software.
 
 ## Next steps
 
-See [Choosing an installation mode](https://documentation.spryker.com/docs/choosing-an-installation-mode) to choose an installation mode.
+See [Choosing an installation mode](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to choose an installation mode.
 If you've already selected an installation mode, follow one of the guides below:
-* [Installing in Development mode on MacOS and Linux](https://documentation.spryker.com/docs/installing-in-development-mode-on-macos-and-linux)
-* [Installing in Demo mode on MacOS and Linux](https://documentation.spryker.com/docs/installing-in-demo-mode-on-macos-and-linux)
-* [Integrating Docker into existing projects](https://documentation.spryker.com/docs/integrating-docker-into-existing-projects)
-* [Running production](https://documentation.spryker.com/docs/running-production)
+* [Installing in Development mode on MacOS and Linux](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
+* [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
+* [Integrating Docker into existing projects](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
+* [Running production](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/running-production.html)
 

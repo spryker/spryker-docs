@@ -2,6 +2,7 @@
 title: Creating an Order Management System - Legacy Demoshop
 description: This article guides you on how to create a simple state machine that demonstrates an order process.
 originalLink: https://documentation.spryker.com/v2/docs/oms-state-machine
+originalArticleId: 631fe0a9-8ebf-473f-b5bf-3512638c2707
 redirect_from:
   - /v2/docs/oms-state-machine
   - /v2/docs/en/oms-state-machine

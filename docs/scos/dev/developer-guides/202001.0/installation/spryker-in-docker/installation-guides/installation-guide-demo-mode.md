@@ -1,12 +1,13 @@
 ---
 title: Installation Guide - Demo Mode
 originalLink: https://documentation.spryker.com/v4/docs/installation-guide-demo-mode
+originalArticleId: 822f5399-c0e8-4443-b224-97da0484d60f
 redirect_from:
   - /v4/docs/installation-guide-demo-mode
   - /v4/docs/en/installation-guide-demo-mode
 ---
 
-This document describes the procedure of installing Spryker in [Demo Mode](https://documentation.spryker.com/v4/docs/modes-overview#demo-mode).
+This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/installation-guides/modes-overview.html#demo-mode).
 
 {% info_block warningBox %}
 
@@ -19,10 +20,10 @@ Before you start, make sure to fulfill the [prerequisites](/docs/scos/dev/develo
 Follow the steps to install Spryker in Demo Mode:
 1. Open a terminal.
 {% info_block infoBox %}
-In case you are going to run the script on Windows, open Ubuntu (For more details, see the *Install Docker Desktop* section in [Docker Installation Prerequisites - Windows](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-windows.html
+In case you are going to run the script on Windows, open Ubuntu (For more details, see the *Install Docker Desktop* section in [Docker Installation Prerequisites - Windows](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites.html-windows
 {% endinfo_block %}.))
 2. Create a new folder and navigate into this folder.
-3. Depending on the desired [Demo Shop](https://documentation.spryker.com/v4/docs/demoshops):
+3. Depending on the desired [Demo Shop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops):
 
     a. Clone the B2C repository:
 
@@ -130,7 +131,7 @@ Use "spryker" as a username and "secret" as a password. These credentials are de
 Run the `docker/sdk help` command to get the full and up-to-date list of commands.
 
 **What's next?**
-* [Troubleshooting](https://documentation.spryker.com/v4/docs/troubleshooting)
+* [Troubleshooting](https://documentation.spryker.com/v4/docs/peer-authentication-failed-for-user-postgres)
 * [Debugging Setup in Docker](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/debugging-setup-in-docker.html)
 * [Deploy File Reference - 1.0](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html) 
 * [Services](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/configuration/services.html)

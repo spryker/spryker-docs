@@ -2,6 +2,7 @@
 title: Migration Guide - Propel
 description: Use the guide to perform the Propel part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-propel
+originalArticleId: 17c9d823-6427-4e7c-91d5-24dd0e01873f
 redirect_from:
   - /v4/docs/migration-guide-propel
   - /v4/docs/en/migration-guide-propel

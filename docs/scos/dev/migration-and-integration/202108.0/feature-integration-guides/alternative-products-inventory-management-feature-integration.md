@@ -2,9 +2,12 @@
 title: Alternative products + inventory management feature integration
 description: The guide walks you through the process of installing the Alternative products and Inventory features into the project.
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-inventory-management-feature-integration
+originalArticleId: 5bb30c5b-4912-4a16-be29-46f68ef0e0c7
 redirect_from:
   - /2021080/docs/alternative-products-inventory-management-feature-integration
   - /2021080/docs/en/alternative-products-inventory-management-feature-integration
+  - /docs/alternative-products-inventory-management-feature-integration
+  - /docs/en/alternative-products-inventory-management-feature-integration
 ---
 
 ## Install Feature Core

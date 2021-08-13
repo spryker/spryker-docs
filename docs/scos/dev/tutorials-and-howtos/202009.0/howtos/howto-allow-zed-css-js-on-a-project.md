@@ -2,6 +2,7 @@
 title: HowTo - Allow Zed CSS/JS on a project
 description: Learn how you can allow Zed CSS/JS on a project level.
 originalLink: https://documentation.spryker.com/v6/docs/howto-allow-zed-cssjs-on-a-project
+originalArticleId: 7ef2f7f5-cbe7-408b-a4be-ce1f2d6825cc
 redirect_from:
   - /v6/docs/howto-allow-zed-cssjs-on-a-project
   - /v6/docs/en/howto-allow-zed-cssjs-on-a-project

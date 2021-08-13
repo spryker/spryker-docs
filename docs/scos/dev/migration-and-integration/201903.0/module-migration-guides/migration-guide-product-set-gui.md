@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product Set GUI
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-set-gui
+originalArticleId: 3e71b570-a741-48c1-8e80-d755c7a0b1ed
 redirect_from:
   - /v2/docs/mg-product-set-gui
   - /v2/docs/en/mg-product-set-gui

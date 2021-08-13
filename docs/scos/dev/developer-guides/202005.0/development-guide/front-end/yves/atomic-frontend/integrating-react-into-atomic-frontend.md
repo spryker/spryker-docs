@@ -1,6 +1,7 @@
 ---
 title: Integrating React into Atomic Frontend
 originalLink: https://documentation.spryker.com/v5/docs/integrating-react-into-atomic-frontend
+originalArticleId: c0a91497-499c-4694-b501-935b079b3b0a
 redirect_from:
   - /v5/docs/integrating-react-into-atomic-frontend
   - /v5/docs/en/integrating-react-into-atomic-frontend

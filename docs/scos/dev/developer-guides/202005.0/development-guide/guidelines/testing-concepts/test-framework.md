@@ -1,6 +1,7 @@
 ---
 title: Test framework
 originalLink: https://documentation.spryker.com/v5/docs/test-framework
+originalArticleId: fe554abd-fca7-4a8b-a343-8d6e88ee5659
 redirect_from:
   - /v5/docs/test-framework
   - /v5/docs/en/test-framework

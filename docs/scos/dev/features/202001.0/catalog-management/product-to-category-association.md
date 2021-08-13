@@ -2,6 +2,7 @@
 title: Product to Category Association
 description: The feature allows assigning products to categories.
 originalLink: https://documentation.spryker.com/v4/docs/product-to-category-association
+originalArticleId: ef60f40f-5697-4237-a139-403032e105c7
 redirect_from:
   - /v4/docs/product-to-category-association
   - /v4/docs/en/product-to-category-association

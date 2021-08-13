@@ -1,6 +1,7 @@
 ---
 title: Shopmacher
 originalLink: https://documentation.spryker.com/v6/docs/shopmacher
+originalArticleId: 7099886d-8bce-414c-b64e-cb37a01b8117
 redirect_from:
   - /v6/docs/shopmacher
   - /v6/docs/en/shopmacher

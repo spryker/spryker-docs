@@ -1,6 +1,7 @@
 ---
 title: Code Sniffer
 originalLink: https://documentation.spryker.com/v2/docs/code-sniffer
+originalArticleId: 7e615a56-cfb2-4e47-887b-cd27e1dff0b8
 redirect_from:
   - /v2/docs/code-sniffer
   - /v2/docs/en/code-sniffer

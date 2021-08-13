@@ -1,9 +1,12 @@
 ---
 title: Tutorial - Twig extensions
 originalLink: https://documentation.spryker.com/2021080/docs/t-twig-extensions
+originalArticleId: 4a503169-a26b-4a37-bb44-f20b34a81c4e
 redirect_from:
   - /2021080/docs/t-twig-extensions
   - /2021080/docs/en/t-twig-extensions
+  - /docs/t-twig-extensions
+  - /docs/en/t-twig-extensions
 ---
 
 This article will teach you to implement a Twig extension. For the sake of an example, we’ll build a filter which can be used for displaying prices.
@@ -136,7 +139,7 @@ class ExampleTwigExtensionPlugin extends AbstractTwigExtensionPlugin
 ```
 
 ## Register the Twig extension you created
-To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](https://documentation.spryker.com/docs/dependency-provider) for information on the dependency providers.
+To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html) for information on the dependency providers.
 
 First, add a reference to the Twig extension in `TwigDependencyProvider.php`:
 

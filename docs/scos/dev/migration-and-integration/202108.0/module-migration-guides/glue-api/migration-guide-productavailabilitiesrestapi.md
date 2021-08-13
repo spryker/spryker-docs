@@ -2,9 +2,12 @@
 title: Migration Guide - ProductAvailabilitiesRestApi
 description: Use the guide to migrate to a new version of the ProductAvailabilitiesRestApi module.
 originalLink: https://documentation.spryker.com/2021080/docs/productavailabilitiesrestapi-migration-guide
+originalArticleId: 192ef615-640f-48af-aaf3-1b2891dc6570
 redirect_from:
   - /2021080/docs/productavailabilitiesrestapi-migration-guide
   - /2021080/docs/en/productavailabilitiesrestapi-migration-guide
+  - /docs/productavailabilitiesrestapi-migration-guide
+  - /docs/en/productavailabilitiesrestapi-migration-guide
 ---
 
 ## Upgrading from Version 3.* to Version 4.*
@@ -12,7 +15,7 @@ redirect_from:
 In this new version of the **ProductAvailabilitiesRestApi** module, we have added support of decimal stock. You can find more details about the changes on the [ProductAvailabilitiesRestApi module](https://github.com/spryker/product-availabilities-rest-api/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/decimal-stock-migration-concept.html
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/decimal-stock-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

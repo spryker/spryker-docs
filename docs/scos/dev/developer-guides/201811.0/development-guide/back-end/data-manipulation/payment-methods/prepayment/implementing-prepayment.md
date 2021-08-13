@@ -2,6 +2,7 @@
 title: Implementing Prepayment
 description: This section describes how to add a prepayment payment method.
 originalLink: https://documentation.spryker.com/v1/docs/ht-implement-prepayment
+originalArticleId: 6ed2a503-0116-4400-b6b1-1868b5e1b342
 redirect_from:
   - /v1/docs/ht-implement-prepayment
   - /v1/docs/en/ht-implement-prepayment

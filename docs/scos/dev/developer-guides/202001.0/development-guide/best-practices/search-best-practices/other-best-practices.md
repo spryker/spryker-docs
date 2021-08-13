@@ -2,6 +2,7 @@
 title: Other Best Practices
 description: This article provides a list of some additional and potentially useful principles regarding the setup of on-site search experience.
 originalLink: https://documentation.spryker.com/v4/docs/other-best-practices
+originalArticleId: 7e2a20bd-b4db-4758-b274-e20e39b8ff26
 redirect_from:
   - /v4/docs/other-best-practices
   - /v4/docs/en/other-best-practices

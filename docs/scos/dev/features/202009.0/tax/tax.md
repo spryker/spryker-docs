@@ -2,6 +2,7 @@
 title: Tax
 description: The Tax feature allows you to align your business with international tax standards by defining tax rates and sets
 originalLink: https://documentation.spryker.com/v6/docs/tax
+originalArticleId: 1d1c988f-d051-4d6e-a694-d2c3e020d836
 redirect_from:
   - /v6/docs/tax
   - /v6/docs/en/tax

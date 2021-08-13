@@ -2,6 +2,7 @@
 title: Comments + Persistent Cart Feature Integration
 description: The guide walks you through the process of integrating the Comments + Persistent Cart feature into the project.
 originalLink: https://documentation.spryker.com/v5/docs/comments-persistent-cart-feature-integration
+originalArticleId: 36dd5afb-c74c-45b0-8728-4464c62d0b35
 redirect_from:
   - /v5/docs/comments-persistent-cart-feature-integration
   - /v5/docs/en/comments-persistent-cart-feature-integration

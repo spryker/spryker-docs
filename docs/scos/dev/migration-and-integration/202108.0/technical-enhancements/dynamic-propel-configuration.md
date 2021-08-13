@@ -2,9 +2,12 @@
 title: Dynamic Propel Configuration
 description: Learn about dynamic propel configuration and how to integrate it into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/dynamic-propel-configuration
+originalArticleId: 8fd4016c-928a-4abc-968e-0f1518cc96da
 redirect_from:
   - /2021080/docs/dynamic-propel-configuration
   - /2021080/docs/en/dynamic-propel-configuration
+  - /docs/dynamic-propel-configuration
+  - /docs/en/dynamic-propel-configuration
 ---
 
 Previously, it was always necessary to run the `vendor/bin/console propel:config:convert` command for Propel to fetch database configuration and generate the `propel.json` file where it was stored.
@@ -24,7 +27,7 @@ Ensure that the related features are installed:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 202001.0 | [Feature](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/spryker-core-feature-integration.html) |
+| Spryker Core | 202001.0 | [Feature](https://documentation.spryker.com/2021080/docs/spryker-core-feature-integration-201907) |
 
 ### 1) Install the Required Modules Using Composer
 

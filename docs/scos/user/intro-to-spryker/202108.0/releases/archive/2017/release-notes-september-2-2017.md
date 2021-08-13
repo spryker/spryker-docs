@@ -1,9 +1,12 @@
 ---
 title: Release Notes - September - 2 2017
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-september-2-2017
+originalArticleId: 216fee41-bd0d-4b87-9b92-aa1844e4df0c
 redirect_from:
   - /2021080/docs/release-notes-september-2-2017
   - /2021080/docs/en/release-notes-september-2-2017
+  - /docs/release-notes-september-2-2017
+  - /docs/en/release-notes-september-2-2017
 ---
 
 ## Features
@@ -20,7 +23,7 @@ For marketing reasons you, a shop owner, might sometimes give away free or disco
 | [DiscountPromotion 1.0.0](https://github.com/spryker/discount-promotion/releases/tag/1.0.0) | [Discount 4.5.0](https://github.com/spryker/Discount/releases/tag/4.5.0) | <ul><li>[Availability 5.0.3](https://github.com/spryker/Availability/releases/tag/5.0.3)</li><li>[DiscountPromotion 1.0.1](https://github.com/spryker/discount-promotion/releases/tag/1.0.1)</li></ul> |
     
 **Documentation**
-For module documentation, see [Discount Module Guide](/docs/scos/dev/features/202001.0/promotions-and-discounts/discount/discount.html), Extending the Discount Module, [Discount Promotions](/docs/scos/dev/features/202001.0/promotions-and-discounts/promotions-and-discounts.html).
+For module documentation, see [Discount Module Guide](/docs/scos/dev/features/{{ page.version }}/promotions-and-discounts/promotions-and-discounts.html), Extending the Discount Module, [Discount Promotions](/docs/scos/dev/features/{{ page.version }}/promotions-and-discounts/promotions-and-discounts.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -52,7 +55,7 @@ With this release, we are introducing product reviews and ratings. Reviews are a
 **Documentation**
 For documentation, see Under the Hood - Product Reviews <!-- link -->, Product Reviews Feature Configuration, Filter and Sort by Average Rating<!-- link -->
 
-For feature integration, see [Feature Integration - Product Reviews](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/product-reviews-feature-integration.html).
+For feature integration, see [Feature Integration - Product Reviews](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-rating-and-reviews-feature-integration.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -79,7 +82,7 @@ We are currently working on full enablement of multi-store and multi-currency co
 |<ul><li>[Currency 3.0.0](https://github.com/spryker/Currency/releases/tag/3.0.0)</li><li>[Store 1.0.0](https://github.com/spryker/Store/releases/tag/1.0.0)</li></ul> | <ul><li>[Kernel 3.7.0](https://github.com/spryker/Kernel/releases/tag/3.7.0)</li><li>[Money 2.1.0](https://github.com/spryker/Money/releases/tag/2.1.0)</li><li>[ZedRequest 3.2.0](https://github.com/spryker/zed-request/releases/tag/3.2.0)</li></ul> | <ul><li>[Braintree 0.5.5](https://github.com/spryker/Braintree/releases/tag/0.5.5)</li><li>[ProductManagement 0.8.2](https://github.com/spryker/product-management/releases/tag/0.8.2)</li><li>[Kernel 3.7.2](https://github.com/spryker/Kernel/releases/tag/3.7.2)</li></ul> |
 
 **Documentation**
-For detailed migration guides, see [Currency Module Migration Guide from Version 2. to 3](https://documentation.spryker.com/v4/docs/mg-currency#upgrading-from-version-2---to-version-3--).
+For detailed migration guides, see [Currency Module Migration Guide from Version 2. to 3](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-currency.html#upgrading-from-version-2---to-version-3--).
 
 **Migration Guides**
 To upgrade, follow the steps described below:

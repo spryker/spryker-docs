@@ -2,9 +2,12 @@
 title: Handling Internal Server Messages
 description: This document describes how to configure the behavior when an internal server error occurs.
 originalLink: https://documentation.spryker.com/2021080/docs/internal-server-error-handling
+originalArticleId: 768a7105-7a19-4067-837e-238177413911
 redirect_from:
   - /2021080/docs/internal-server-error-handling
   - /2021080/docs/en/internal-server-error-handling
+  - /docs/internal-server-error-handling
+  - /docs/en/internal-server-error-handling
 ---
 
 The document describes how to configure the behavior when an internal server error occurs. Whether you need to show the details of the error or render a static page for any internal error, this is done through configuration.

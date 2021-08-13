@@ -1,12 +1,13 @@
 ---
 title: Installation Guide - Development Mode
 originalLink: https://documentation.spryker.com/v4/docs/installation-guide-development-mode
+originalArticleId: 2b4ead7b-5e86-40ca-b641-814f8355d0cc
 redirect_from:
   - /v4/docs/installation-guide-development-mode
   - /v4/docs/en/installation-guide-development-mode
 ---
 
-This document describes the procedure of installing Spryker in [Development Mode](https://documentation.spryker.com/v4/docs/modes-overview#development-mode).
+This document describes the procedure of installing Spryker in [Development Mode](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/installation-guides/modes-overview.html#development-mode).
 
 
 {% info_block warningBox %}
@@ -21,7 +22,7 @@ Follow the steps to install Spryker in Development mode:
 {% info_block infoBox %}
 In case you are going to run the script on Windows, open Ubuntu (For more details, see the *Install Docker Desktop* section in [Docker Install Prerequisites - Windows](https://documentation.spryker.com/v4/docs/docker-install-prerequisites-windows
 {% endinfo_block %}.))
-2. Depending on the desired [Demo Shop](https://documentation.spryker.com/v4/docs/demoshops):
+2. Depending on the desired [Demo Shop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops):
    
     a. Clone the B2C repository:
 
@@ -128,7 +129,7 @@ Use "spryker" as a username and "secret" as a password. These credentials are de
 Run the `docker/sdk help` command to get the full and up-to-date list of commands.
 
 **What's next?**
-* [Troubleshooting](https://documentation.spryker.com/v4/docs/troubleshooting)
+* [Troubleshooting](https://documentation.spryker.com/v4/docs/peer-authentication-failed-for-user-postgres)
 * [Debugging Setup in Docker](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/debugging-setup-in-docker.html)
 * [Deploy File Reference - 1.0](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html) 
 * [Services](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/configuration/services.html)

@@ -2,6 +2,7 @@
 title: Shipment Carriers and Methods
 description: During the checkout process your customers can easily select their preferred shipment method and related carrier.
 originalLink: https://documentation.spryker.com/v3/docs/shipment-carriers-methods
+originalArticleId: b0235e6f-a139-41f1-ac8f-1f1b4a41ca28
 redirect_from:
   - /v3/docs/shipment-carriers-methods
   - /v3/docs/en/shipment-carriers-methods

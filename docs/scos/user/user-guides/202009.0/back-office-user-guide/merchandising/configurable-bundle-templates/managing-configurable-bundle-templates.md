@@ -2,6 +2,7 @@
 title: Managing configurable bundle templates
 description: Learn how to manage configurable bundle templates in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-configurable-bundle-templates
+originalArticleId: 1fe59e98-967d-48b9-9bc7-73dd4a70c2d4
 redirect_from:
   - /v6/docs/managing-configurable-bundle-templates
   - /v6/docs/en/managing-configurable-bundle-templates
@@ -125,5 +126,5 @@ This opens the *Configurable Bundle Templates* page with the success message dis
 **What's next?**
 Now you know how to manage the configurable bundle templates that already exist in the shop.
 
-See [configurable bundle templates: Reference Information](https://documentation.spryker.com/docs/configurable-bundle-templates-reference-information) to learn about the attributes used to manage configurable bundle templates.
+See [configurable bundle templates: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/configurable-bundle-templates/references/reference-information-configurable-bundle-templates.html) to learn about the attributes used to manage configurable bundle templates.
 

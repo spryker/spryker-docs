@@ -1,6 +1,7 @@
 ---
 title: Retrieving Content Item Data
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-content-item-data-201907
+originalArticleId: 57751ebd-4cae-4a61-b90f-c3a5013d7c08
 redirect_from:
   - /v5/docs/retrieving-content-item-data-201907
   - /v5/docs/en/retrieving-content-item-data-201907
@@ -10,5 +11,5 @@ This section provides guides that can help you access and manage relevant data o
 
 See the following guides for more details:
 
-* [Retrieving Banner Content Item Data](https://documentation.spryker.com/docs/en/retrieving-banner-content-item-data-201907){target="_blank"}
-* [Getting Abstract Product List Content Item Data](https://documentation.spryker.com/docs/en/getting-abstract-product-list-content-item-data-201907){target="_blank"}
+* [Retrieving Banner Content Item Data](/docs/scos/dev/glue-api-guides/202005.0/retrieving-content-item-data/retrieving-banner-content-item-data.html){target="_blank"}
+* [Getting Abstract Product List Content Item Data](/docs/scos/dev/glue-api-guides/202005.0/retrieving-content-item-data/getting-abstract-product-list-content-item-data.html){target="_blank"}

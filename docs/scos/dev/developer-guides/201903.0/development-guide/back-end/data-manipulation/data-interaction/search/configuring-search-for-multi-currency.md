@@ -2,6 +2,7 @@
 title: Configuring Search for Multi-Currency
 description: This article describes how to configure search for multi-currency.
 originalLink: https://documentation.spryker.com/v2/docs/search-multi-currency
+originalArticleId: 96693391-9d87-404f-9280-051d559d2ddb
 redirect_from:
   - /v2/docs/search-multi-currency
   - /v2/docs/en/search-multi-currency

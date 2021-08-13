@@ -2,6 +2,7 @@
 title: Scheduled Prices
 description: Scheduled Prices is a feature that allows creating product price schedules for the specified prices to be applied automatically.
 originalLink: https://documentation.spryker.com/v4/docs/scheduled-prices
+originalArticleId: f1e0df20-8f9d-4975-920c-f00aaf7cff6c
 redirect_from:
   - /v4/docs/scheduled-prices
   - /v4/docs/en/scheduled-prices

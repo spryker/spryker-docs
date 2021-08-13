@@ -1,6 +1,7 @@
 ---
 title: B2C API React Example Installation
 originalLink: https://documentation.spryker.com/v1/docs/b2c-api-react-example-installation
+originalArticleId: aaa7d976-4d59-4aa0-8abf-c2fb39c67210
 redirect_from:
   - /v1/docs/b2c-api-react-example-installation
   - /v1/docs/en/b2c-api-react-example-installation

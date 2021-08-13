@@ -2,9 +2,12 @@
 title: PayOne - Online Transfer Payment
 description: Integrate online transfer payment through Payone into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/2021080/docs/payone-online-trans
+originalArticleId: 88c7cb3d-2f41-4a0c-8c16-0d458b0f180d
 redirect_from:
   - /2021080/docs/payone-online-trans
   - /2021080/docs/en/payone-online-trans
+  - /docs/payone-online-trans
+  - /docs/en/payone-online-trans
 ---
 
 Supported online banking service providers are SofortBanking, Giropay, Electronic Payment Standard (Eps), PostFinance Card, PostFinance E-Finance, iDEAL, Przelewy24, and Bancontact. They are enabled  through the integration with Payone, using the online transfer payment type.

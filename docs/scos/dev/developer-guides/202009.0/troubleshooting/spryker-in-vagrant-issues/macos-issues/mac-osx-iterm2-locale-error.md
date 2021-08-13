@@ -2,6 +2,7 @@
 title: Mac OSX- iterm2 (locale error)
 description: Learn how to fix the issue with Mac OSX- iterm2 (locale error)
 originalLink: https://documentation.spryker.com/v6/docs/mac-osx-iterm2-locale-error
+originalArticleId: 4d9b8a2c-42fe-44a5-abd7-b2f01d1a423d
 redirect_from:
   - /v6/docs/mac-osx-iterm2-locale-error
   - /v6/docs/en/mac-osx-iterm2-locale-error

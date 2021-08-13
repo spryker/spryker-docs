@@ -2,9 +2,12 @@
 title: Composer version 2 compatibility issues
 description: Learn how to solve Composer version 2 compatibility issues.
 originalLink: https://documentation.spryker.com/2021080/docs/composer-version-2-compatibility-issues
+originalArticleId: b110284a-a19f-4c7b-a8fd-769b3dff6ed2
 redirect_from:
   - /2021080/docs/composer-version-2-compatibility-issues
   - /2021080/docs/en/composer-version-2-compatibility-issues
+  - /docs/composer-version-2-compatibility-issues
+  - /docs/en/composer-version-2-compatibility-issues
 ---
 
 After running `composer update spryker/{module_name}`, you get an error similar to the following:

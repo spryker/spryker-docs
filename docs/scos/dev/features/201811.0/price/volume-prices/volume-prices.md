@@ -2,6 +2,7 @@
 title: Volume Prices
 description: Volume Prices is aimed to set specific prices for units based on quantities and incentivize individuals or businesses to purchase goods in multiple units.
 originalLink: https://documentation.spryker.com/v1/docs/volume-prices
+originalArticleId: fcaf69e9-6ae6-4f8e-90de-ac23f20b4964
 redirect_from:
   - /v1/docs/volume-prices
   - /v1/docs/en/volume-prices

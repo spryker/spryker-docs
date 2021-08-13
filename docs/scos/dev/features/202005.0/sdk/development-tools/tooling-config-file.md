@@ -2,6 +2,7 @@
 title: Tooling config file
 description: The article provides information about a tooling config file that contains settings for supported tools and directives.
 originalLink: https://documentation.spryker.com/v5/docs/tooling-config-file
+originalArticleId: 4062eb40-8a79-4053-834c-f163539f1cca
 redirect_from:
   - /v5/docs/tooling-config-file
   - /v5/docs/en/tooling-config-file

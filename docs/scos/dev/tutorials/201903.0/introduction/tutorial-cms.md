@@ -1,6 +1,7 @@
 ---
 title: Tutorial - CMS
 originalLink: https://documentation.spryker.com/v2/docs/t-cms
+originalArticleId: 078e52b4-cdaa-4f45-8d2d-2032f6d5837d
 redirect_from:
   - /v2/docs/t-cms
   - /v2/docs/en/t-cms
@@ -33,7 +34,7 @@ Go back to the [page](http://www.de.demoshop.local/de/contact) and have a look a
 | [CMS Manual](/docs/scos/dev/features/201903.0/cms/cms.html)  |
 |  [Implementing URL Routing in Yves](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/yves/implementing-url-routing-in-yves.html)| Steps to implement URL Routing in Yves |
 | [Glossary Creation](/docs/scos/dev/features/201903.0/internationalization/glossary-creation/glossary-creation.html) |Glossary module documentation  |
-| [Cronjob Scheduling](https://documentation.spryker.com/v2/docs/cronjob-scheduling-1) | Set up cron jobs in Jenkins |
+| [Cronjob Scheduling](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/adding-and-configuring-a-cronjob.html) | Set up cron jobs in Jenkins |
 
 <!-- Last review date: Sep 11, 2017_
 

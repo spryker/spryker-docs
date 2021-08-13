@@ -2,6 +2,7 @@
 title: Shared Cart Feature Overview
 description: In B2B world shopping carts can be created and used by different individuals. A shopping cart can be shared with the users of the current business unit.
 originalLink: https://documentation.spryker.com/v4/docs/shared-cart-overview
+originalArticleId: e76fc0d4-1b1e-449b-99ec-cefde1982a5a
 redirect_from:
   - /v4/docs/shared-cart-overview
   - /v4/docs/en/shared-cart-overview

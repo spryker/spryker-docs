@@ -2,6 +2,7 @@
 title: Form and Validator
 description: The article describes how to integrate and configure the Forms and Validator components of Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v6/docs/form-and-validator
+originalArticleId: d8369c8f-31bb-4770-a2d2-b73cb922fa38
 redirect_from:
   - /v6/docs/form-and-validator
   - /v6/docs/en/form-and-validator
@@ -26,8 +27,8 @@ The following modules are related to the service:
     
 ## Installation
 For information on how to install and integrate _Form_ and _Validator_ in your project, perform the steps detailed in the following guides:
-*   [Migration Guide - Form](https://documentation.spryker.com/docs/migration-guide-form)
-*   [Migration Guide - Validator](https://documentation.spryker.com/docs/migration-guide-validator)
+*   [Migration Guide - Form](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-form.html)
+*   [Migration Guide - Validator](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-validator.html)
 
 ## Extending Form
 The _Form_ Component provides several possibilities to add additional functionality like form types, validators etc. The `spryker/form-extension` module was created for this purpose. It will be installed automatically together with the `spryker/form` module.

@@ -2,9 +2,12 @@
 title: Managing product attributes
 description: Use the Managing Attributes procedures to view and updated product attributes in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-attributes
+originalArticleId: 98bec018-82ee-4960-aed5-fc13ad8429d5
 redirect_from:
   - /2021080/docs/managing-attributes
   - /2021080/docs/en/managing-attributes
+  - /docs/managing-attributes
+  - /docs/en/managing-attributes
 ---
 
 This topic describes how to manage product attributes.
@@ -27,7 +30,7 @@ To edit the product attribute, select **Edit** in the top right corner of the pa
 
 To edit a product attribute:
 1. Select **Edit** next to the product attribute you want to edit. 
-    On the *Edit Product Attributes* page that opends, the **Attribute Key**, **Input type**, and **Super attribute** are disabled. You can define them only when [creating a product attribute](https://documentation.spryker.com/docs/creating-product-attributes).
+    On the *Edit Product Attributes* page that opends, the **Attribute Key**, **Input type**, and **Super attribute** are disabled. You can define them only when [creating a product attribute](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/attributes/creating-product-attributes.html).
 2. Update **Predefined Values**:
     * Delete one or more predefined values by selecting **x** next to the each value you want to remove.
     * Add predefined values:

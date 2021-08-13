@@ -2,6 +2,7 @@
 title: Editing CMS Pages
 description: The guide provides instructions on how to update page layout, SEO data and page content in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/editing-cms-pages
+originalArticleId: f6183f82-b401-421f-bafb-81c773c11097
 redirect_from:
   - /v5/docs/editing-cms-pages
   - /v5/docs/en/editing-cms-pages
@@ -52,7 +53,7 @@ To change the title and content of the page:
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png){height="" width=""}
 
 {% info_block infoBox %}
-In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](https://documentation.spryker.com/docs/en/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-pages
+In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages
 {% endinfo_block %} for more details. )
 
 **Tips & Tricks**
@@ -68,4 +69,4 @@ On the **Edit Placeholders: [Page Name]** editor, you can do the following:
 * Switch to the list of pages by clicking **Back to CMS** on the top of the page.
 ***
 **What's next?**
-To know more about the attributes you see, select and enter while managing CMS pages, see [CMS Pages: Reference Information](https://documentation.spryker.com/docs/en/cms-pages-reference-information).
+To know more about the attributes you see, select and enter while managing CMS pages, see [CMS Pages: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/references/cms-pages-reference-information.html).

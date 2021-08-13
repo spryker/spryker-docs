@@ -2,6 +2,7 @@
 title: Taxes- Reference Information
 description: The guide provides additional information on the values you use when managing tax rates and tax sets in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/taxes-reference-information
+originalArticleId: afe1de9f-49e8-4472-831a-f62109072768
 redirect_from:
   - /v3/docs/taxes-reference-information
   - /v3/docs/en/taxes-reference-information

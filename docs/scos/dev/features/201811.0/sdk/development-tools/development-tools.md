@@ -2,6 +2,7 @@
 title: Development Tools
 description: The Spryker Commerce OS provides your developers with a range of coding tools that make sure your OS run smoothly
 originalLink: https://documentation.spryker.com/v1/docs/development-tools
+originalArticleId: abf104ab-ef8e-4041-8129-3fd72a249c34
 redirect_from:
   - /v1/docs/development-tools
   - /v1/docs/en/development-tools
@@ -15,7 +16,7 @@ The Spryker Commerce OS provides your developers with a range of coding tools th
 
 - [Code generator](/docs/scos/dev/features/201811.0/sdk/code-generator.html): Lets you generate modules or parts of modules (application layers).
 
-- [PHPStan](https://documentation.spryker.com/v1/docs/phpstan-201903): Static code analyzer for code introspection, helps to reduce bugs.
+- [PHPStan](https://documentation.spryker.com/v1/docs/phpstan): Static code analyzer for code introspection, helps to reduce bugs.
 
 <!--
 **See also:**

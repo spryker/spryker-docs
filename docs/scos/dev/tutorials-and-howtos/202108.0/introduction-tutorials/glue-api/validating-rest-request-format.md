@@ -2,15 +2,18 @@
 title: Validating REST request format
 description: Learn about REST request validation format and how to validate requests in Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/validating-rest-request-format
+originalArticleId: 0e9175dc-05b2-4d72-9493-aac6220e27bd
 redirect_from:
   - /2021080/docs/validating-rest-request-format
   - /2021080/docs/en/validating-rest-request-format
+  - /docs/validating-rest-request-format
+  - /docs/en/validating-rest-request-format
 ---
 
 Glue API allows you to validate requests sent to REST endpoints. It allows you to check if all required fields are present, and if the type and format of the fields is correct.
 
 ## Installation
-To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-rest-schema-validation-feature-integration.html). 
+To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation Feature Integration](https://documentation.spryker.com/2021080/docs/glue-api-rest-schema-validation-feature-integration). 
 
 ## Default validation schema
 Spryker Glue API comes with a default validation schema. The schema provides default validation rules for the REST APIs shipped with Spryker. You can find it in `vendor/spryker/spryker/Bundles/RestRequestValidator/config/validation.dist.yaml`. Use the schema as a sample and a  reference for your own validation implementations.
@@ -122,7 +125,7 @@ vendor/bin/console rest-api:build-request-validation-cache
 ```
 {% info_block infoBox %}
 
-Alternatively, use a [Spryk](https://documentation.spryker.com/docs/glue-spryks) for validation. Run the following command: 
+Alternatively, use a [Spryk](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/glue-api/glue-spryks.html) for validation. Run the following command: 
 ```Bash
 cconsole spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
 ```

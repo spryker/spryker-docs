@@ -2,6 +2,7 @@
 title: Product Reviews
 description: The section is used to define the customers who can add reviews and ratings to products, as well as
 originalLink: https://documentation.spryker.com/v5/docs/product-reviews-management
+originalArticleId: b930af34-6ecb-49bf-ac51-2a295e1ef98f
 redirect_from:
   - /v5/docs/product-reviews-management
   - /v5/docs/en/product-reviews-management
@@ -18,4 +19,4 @@ This section allows approving, rejecting, and deleting the reviews sent by shop 
 
 To get information on how to manage the reviews, read the following article:
 
-* [Managing Reviews](https://documentation.spryker.com/docs/en/managing-product-reviews)
+* [Managing Reviews](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-reviews/managing-product-reviews.html)

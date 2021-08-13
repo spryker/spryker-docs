@@ -2,9 +2,12 @@
 title: Security Release Notes 2018.11.0
 description: The following information pertains to security-related issues that were discovered and resolved during 2018.11.0 release.
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-2018-11-0
+originalArticleId: bf1c212d-678b-4494-b427-c8c5b7303d65
 redirect_from:
   - /2021080/docs/security-release-notes-2018-11-0
   - /2021080/docs/en/security-release-notes-2018-11-0
+  - /docs/security-release-notes-2018-11-0
+  - /docs/en/security-release-notes-2018-11-0
 ---
 
 The following information pertains to security related issues that were discovered and resolved.

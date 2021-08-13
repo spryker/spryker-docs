@@ -1,6 +1,7 @@
 ---
 title: Using a Component
 originalLink: https://documentation.spryker.com/v5/docs/t-use-component
+originalArticleId: cfe6dabb-5814-4586-9471-62d89daa21d2
 redirect_from:
   - /v5/docs/t-use-component
   - /v5/docs/en/t-use-component
@@ -48,7 +49,7 @@ The most common attributes to include are:
 * `modifiers` (optional) - used to enable component modifiers.
 
 {% info_block infoBox %}
-For more details, see section _Twig_ in [Atomic Frontend](https://documentation.spryker.com/docs/en/atomic-frontend#twig
+For more details, see section _Twig_ in [Atomic Frontend](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/atomic-frontend-general-overview.html#twig
 {% endinfo_block %}.)
 
 ## Include
@@ -70,7 +71,7 @@ The following block demonstrates how to include component `new-component-counter
 ```
 
 {% info_block infoBox %}
-See component implementation in [How To Create a Component](https://documentation.spryker.com/docs/en/t-create-component
+See component implementation in [How To Create a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html
 {% endinfo_block %}.)
 
 Now, let us have a look at the embedded element on the page:
@@ -114,7 +115,7 @@ The resulting Twig will look as follows:
 ```
 
 {% info_block infoBox %}
-You can find the original Twig of the component in the _Create Component Template_ section of [HowTo - Create a Component](https://documentation.spryker.com/docs/en/t-create-component
+You can find the original Twig of the component in the _Create Component Template_ section of [HowTo - Create a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html
 {% endinfo_block %}.)
 
 Now, let us check how it looks like on the page.

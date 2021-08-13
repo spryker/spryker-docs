@@ -2,16 +2,19 @@
 title: Tutorial - Replacing a default data importer with the queue data importer
 description: This tutorial is a quick step-by-step guide on how to replace a default data importer with a queue data importer.
 originalLink: https://documentation.spryker.com/2021080/docs/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
+originalArticleId: fab80f36-95c1-480d-a5c2-1ad5488587e8
 redirect_from:
   - /2021080/docs/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
   - /2021080/docs/en/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
+  - /docs/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
+  - /docs/en/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
 ---
 
-This tutorial is a quick step-by-step guide on how to replace a default data importer with a [queue data importer](https://documentation.spryker.com/docs/importing-data-with-queue-data-importer). 
+This tutorial is a quick step-by-step guide on how to replace a default data importer with a [queue data importer](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/importing-data-with-the-queue-data-importer.html). 
 Specifically, the `ProductAbstract` data importer is replaced here.
 
 ## Prerequisites
-You should have data in the `PRODUCT_ABSTRACT_QUEUE`. See [Importing data with the queue data importer](https://documentation.spryker.com/docs/importing-data-with-queue-data-importer#exporing-data-from-csv-to-queue) for details on how to import data into the queue.
+You should have data in the `PRODUCT_ABSTRACT_QUEUE`. See [Importing data with the queue data importer](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/importing-data-with-the-queue-data-importer.html#exporing-data-from-csv-to-queue) for details on how to import data into the queue.
 
 ## Step 1. Configuration
 Configure `DataImportConfig` and add a constant to it. You can add a new constant and a public method to  `Pyz\Zed\DataImport\DataImportConfig`. 

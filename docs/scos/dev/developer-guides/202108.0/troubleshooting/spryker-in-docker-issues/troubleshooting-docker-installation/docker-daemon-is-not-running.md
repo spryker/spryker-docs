@@ -2,9 +2,12 @@
 title: Docker daemon is not running
 description: Learn how to fix the issue when the Docker daemon is not running
 originalLink: https://documentation.spryker.com/2021080/docs/docker-daemon-is-not-running
+originalArticleId: 3e6be679-774f-46f8-8287-39256d5ebe6f
 redirect_from:
   - /2021080/docs/docker-daemon-is-not-running
   - /2021080/docs/en/docker-daemon-is-not-running
+  - /docs/docker-daemon-is-not-running
+  - /docs/en/docker-daemon-is-not-running
 ---
 
 ## Description

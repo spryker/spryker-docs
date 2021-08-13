@@ -1,9 +1,12 @@
 ---
 title: Release Notes - February - 1 2018
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-february-2018
+originalArticleId: 89907a6c-6c95-4aaf-a96b-2400e61e1678
 redirect_from:
   - /2021080/docs/release-notes-february-2018
   - /2021080/docs/en/release-notes-february-2018
+  - /docs/release-notes-february-2018
+  - /docs/en/release-notes-february-2018
 ---
 
 {% info_block warningBox %}

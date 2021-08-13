@@ -2,6 +2,7 @@
 title: Migration Guide - CMS Block Category Connector
 description: Use the guide to update versions to the newer ones of the CMS Block Category Connector module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-cms-block-category-connector
+originalArticleId: 8ec3eb69-128e-4178-9720-296866e7fe4f
 redirect_from:
   - /v6/docs/mg-cms-block-category-connector
   - /v6/docs/en/mg-cms-block-category-connector
@@ -29,7 +30,7 @@ Run Propel migrations.  `vendor/bin/console propel:diff`, manual review is neces
 ### 4. Data Migration
 Notice: You can skip this step if you don't have data in `spy_cms_block_category_connector` table.
 We prepared a migration script to migrate relations to Category.
-The script can be found in [Migration Guide - CMS Block Category Connector Console](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html).
+The script can be found in [Migration Guide - CMS Block Category Connector Console](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html).
 Copy script to `src/Pyz/Zed/CmsBlockCategoryConnector/Communication/Console/CmsBlockCategoryPosition.php` and register it in `Pyz\Zed\Console\ConsoleDependencyProvider`.
 Check that the script covers your `Category and CmsBlockCategoryConnector` configuration.
 

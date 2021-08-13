@@ -2,9 +2,12 @@
 title: Measurement Units feature overview
 description: The Measurement Units per Products feature allows selling products by any unit of measure defined by a shop administrator.
 originalLink: https://documentation.spryker.com/2021080/docs/measurement-units-feature-overview
+originalArticleId: c997afab-ce1d-4a05-a627-b6511d74ec86
 redirect_from:
   - /2021080/docs/measurement-units-feature-overview
   - /2021080/docs/en/measurement-units-feature-overview
+  - /docs/measurement-units-feature-overview
+  - /docs/en/measurement-units-feature-overview
 ---
 
 The *Measurement Units* feature allows selling products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet" etc. To support alternate units of measure, there must be a base unit value, relative to which all the internal conversions and calculations will be made. Such value is referred to as base unit. The base unit is assigned to abstract products and by default it is "item", however it can be changed to any other unit.
@@ -62,7 +65,7 @@ If a global unit conversion exists between the base and sales unit, then factor 
 - We strive to shift all business logic to our backend, however, with Measurements Units, a part of the calculations (e.g. quantity restrictions) are performed on Yves.
 - On the shopping cart as well as the shopping list page, products do not have a dropdown to change the measurement units. You can select a measurement unit on the product details page only.
 - A shopper cannot reorder the items with the selected measurement units as they are not added automatically. They should be added manually on the product details page.
-- In the [Quick Order](https://documentation.spryker.com/docs/quick-order-201903) form and [search widget](https://documentation.spryker.com/docs/search-widget-for-concrete-products-201903), the products use the default measurement units that cannot be changed.
+- In the [Quick Order](https://documentation.spryker.com/2021080/docs/quick-add-to-cart) form and [search widget](https://documentation.spryker.com/2021080/docs/search-widget-for-concrete-products), the products use the default measurement units that cannot be changed.
 
 
 

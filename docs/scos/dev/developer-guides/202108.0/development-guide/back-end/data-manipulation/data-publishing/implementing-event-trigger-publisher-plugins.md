@@ -2,9 +2,12 @@
 title: Implementing event trigger publisher plugins
 description: Learn how to implement event trigger publisher plugins.
 originalLink: https://documentation.spryker.com/2021080/docs/howto-implement-event-trigger-publisher-plugins
+originalArticleId: 217a59d0-03ed-4b5b-9be2-01ed9878c9eb
 redirect_from:
   - /2021080/docs/howto-implement-event-trigger-publisher-plugins
   - /2021080/docs/en/howto-implement-event-trigger-publisher-plugins
+  - /docs/howto-implement-event-trigger-publisher-plugins
+  - /docs/en/howto-implement-event-trigger-publisher-plugins
 ---
 
 Sometimes it’s necessary to [publish or re-publish](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1215792106/WIP+Publish+and+Synchronize+Repeated+Export#Published-Data-Re-generation) the model data manually for all or a particular resource. To do that, you need to implement an event trigger publisher plugin.

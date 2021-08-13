@@ -2,6 +2,7 @@
 title: System Requirements
 description: This article provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
 originalLink: https://documentation.spryker.com/v5/docs/system-requirements
+originalArticleId: 5415aefc-891c-49f1-9d64-ad00860e6638
 redirect_from:
   - /v5/docs/system-requirements
   - /v5/docs/en/system-requirements
@@ -11,7 +12,7 @@ redirect_from:
 | ----------------------------------------- | ------------------------------------------------------------ |
 | **Web Server**                                | NginX - preferred. But any webserver which supports PHP will work such as lighttpd, Apache, Cherokee. |
 | **Databases**                             | Depending on the project, one of the databases: PostgreSQL >=9.6 - preferred, or MySQL >=5.7. |
-| **PHP**                                   | Spryker supports PHP >=7.2 with the following extensions: `curl`, `json`, `mysql`, `pdo-sqlite`, `sqlite3`, `gd`, `intl`, `mysqli`, `pgsql`, `ssh2`, `gmp`, `mcrypt`, `pdo-mysql`, `readline`, `twig`, `imagick`, `memcache`, `pdo-pgsql`, `redis`, `xml`, `bz2`, `mbstring`. The preferred version is 7.3.  See [Supported Versions of PHP](https://documentation.spryker.com/docs/en/supported-versions-of-php) for details on the supported PHP versions. |
+| **PHP**                                   | Spryker supports PHP >=7.2 with the following extensions: `curl`, `json`, `mysql`, `pdo-sqlite`, `sqlite3`, `gd`, `intl`, `mysqli`, `pgsql`, `ssh2`, `gmp`, `mcrypt`, `pdo-mysql`, `readline`, `twig`, `imagick`, `memcache`, `pdo-pgsql`, `redis`, `xml`, `bz2`, `mbstring`. The preferred version is 7.3.  See [Supported Versions of PHP](/docs/scos/user/about-spryker/202005.0/whats-new/supported-versions-of-php.html) for details on the supported PHP versions. |
 | **SSL**                                       | For production systems, a valid security certificate is required for HTTPS. |
 | **Redis**                                     | Version >=3.2, >=5.0                                                |
 | **Elasticsearch**                             | Version 5.x or 6.x                                        |
@@ -24,7 +25,7 @@ redirect_from:
 
 
 ### Supported browsers
-The Spryker Commerce OS supports the following browsers for all frontend-related projects/products ([B2B Demo Shop](/docs/scos/dev/about-spryker/202005.0/b2b-suite.html), [B2C Demo Shop](/docs/scos/dev/about-spryker/202005.0/b2c-suite.html), [Master Suite](/docs/scos/dev/about-spryker/202005.0/master-suite.html)):
+The Spryker Commerce OS supports the following browsers for all frontend-related projects/products ([B2B Demo Shop](/docs/scos/user/about-spryker/202005.0/b2b-suite.html), [B2C Demo Shop](/docs/scos/user/about-spryker/202005.0/b2c-suite.html), [Master Suite](/docs/scos/user/about-spryker/202005.0/master-suite.html)):
 
 | Desktop (Yves and Zed) | Mobile (Yves only) | Tablet (Yves only) |
 | --- | --- | --- |

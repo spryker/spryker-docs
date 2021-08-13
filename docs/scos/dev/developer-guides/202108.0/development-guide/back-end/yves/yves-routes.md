@@ -1,9 +1,12 @@
 ---
 title: Yves Routes
 originalLink: https://documentation.spryker.com/2021080/docs/t-yves-routes
+originalArticleId: 163c596a-1229-4345-b524-e404420531aa
 redirect_from:
   - /2021080/docs/t-yves-routes
   - /2021080/docs/en/t-yves-routes
+  - /docs/t-yves-routes
+  - /docs/en/t-yves-routes
 ---
 
 Whenever you need to create a new controller, you’ll need to define a path where it’s available. To do that, register your controllers for a specific path (or in other words, create a new route definition) in a route.

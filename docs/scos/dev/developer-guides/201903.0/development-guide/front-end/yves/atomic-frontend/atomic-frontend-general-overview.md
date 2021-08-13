@@ -1,6 +1,7 @@
 ---
 title: Atomic Frontend- General Overview
 originalLink: https://documentation.spryker.com/v2/docs/atomic-frontend
+originalArticleId: 58956b69-d935-4bfc-83c0-51ce4fb37444
 redirect_from:
   - /v2/docs/atomic-frontend
   - /v2/docs/en/atomic-frontend

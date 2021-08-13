@@ -2,9 +2,12 @@
 title: File details- category_store.csv
 description: Learn the description of the category_store.csv file to configure assignments of categories in your Spkyer shop | Spryker
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-category-storecsv
+originalArticleId: 65ea104d-3682-4f3c-999f-8abc8d45fb72
 redirect_from:
   - /2021080/docs/file-details-category-storecsv
   - /2021080/docs/en/file-details-category-storecsv
+  - /docs/file-details-category-storecsv
+  - /docs/en/file-details-category-storecsv
 ---
 
 This document describes the `category_store.csv`file to configure assignments of categories in your Spryker shop.

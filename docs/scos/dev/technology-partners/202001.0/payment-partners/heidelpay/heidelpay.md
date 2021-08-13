@@ -2,6 +2,7 @@
 title: Heidelpay
 description: Heidelpay is an internationally operating payment institution, authorized and regulated by the Federal Financial Supervisory Authority.
 originalLink: https://documentation.spryker.com/v4/docs/heidelpay
+originalArticleId: a62df4c4-3958-4334-a60f-f8d49b9afaff
 redirect_from:
   - /v4/docs/heidelpay
   - /v4/docs/en/heidelpay
@@ -17,7 +18,7 @@ Heidelpay is an internationally operating payment institution, authorized and re
 To integrate Hidelpay in your project, follow these steps:
 
 1. [Install](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-installation.html) Heidelpay
-2. [Integrate](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html) Heidelpay into your Legacy Demoshop project or [integrate](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html)  Heidelpay into your Spryker Commerce OS project
+2. [Integrate](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html) Heidelpay into your Legacy Demoshop project or [integrate](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html-scos)  Heidelpay into your Spryker Commerce OS project
 3. Configure selected payment methods:
 
   - Paypal ([Paypal Authorize](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-paypal-authorize.html),[Payal Debit](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-paypal-debit-workflow.html))

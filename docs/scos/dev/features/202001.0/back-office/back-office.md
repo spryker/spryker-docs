@@ -2,6 +2,7 @@
 title: Back Office
 description: The Spryker Commerce OS includes a powerful and user-friendly Administration Interface that allows you to manage all back-office tasks with ease.
 originalLink: https://documentation.spryker.com/v4/docs/back-office
+originalArticleId: 8d81c198-0006-4bba-b6b4-b50362f6e21e
 redirect_from:
   - /v4/docs/back-office
   - /v4/docs/en/back-office

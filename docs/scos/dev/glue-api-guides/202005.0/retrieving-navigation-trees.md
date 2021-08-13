@@ -2,6 +2,7 @@
 title: Retrieving Navigation Trees
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-navigation-trees
+originalArticleId: 68e0f13b-0cc4-41eb-88ff-995e64a17185
 redirect_from:
   - /v5/docs/retrieving-navigation-trees
   - /v5/docs/en/retrieving-navigation-trees
@@ -12,7 +13,7 @@ The Navigation <!-- add link to feature overview later --> feature enables back-
 A navigation element with its child nodes forms a navigation tree. You can only retrieve the entire navigation tree, but not a navigation element.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](https://documentation.spryker.com/docs/en/glue-api-navigation-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-navigation-feature-integration.html).
 
 ## Retrieving a Navigation Tree
 To retrieve a navigation tree, send the request:

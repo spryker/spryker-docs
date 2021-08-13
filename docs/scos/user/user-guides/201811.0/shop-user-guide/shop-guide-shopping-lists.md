@@ -2,6 +2,7 @@
 title: Shop Guide - Shopping Lists
 description: Use the procedures to create, update, share, and print shopping lists, dismiss shared shopping lists, and add items to a shopping list.
 originalLink: https://documentation.spryker.com/v1/docs/shopping-lists-shop-guide
+originalArticleId: 7c295ea1-f32b-4350-a794-0bd33737859d
 redirect_from:
   - /v1/docs/shopping-lists-shop-guide
   - /v1/docs/en/shopping-lists-shop-guide
@@ -72,7 +73,7 @@ The _Edit shopping list_ page opens where you can:
 ![Quick add to a shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/quick-add-to-shopping-list-window.png){height="" width=""}
 
 {% info_block warningBox %}
-To be able to search for products, make sure that [Search Widget for Concrete Products](https://documentation.spryker.com/v1/docs/search-widget-for-concrete-products-overview-201903
+To be able to search for products, make sure that [Search Widget for Concrete Products](https://documentation.spryker.com/v1/docs/search-widget-for-concrete-products-overview
 {% endinfo_block %} feature is [integrated](https://documentation.spryker.com/v1/docs/search-widget-for-concrete-products-integration) into your Project.)
 
 * View the shopping list owner and access rights.
@@ -139,7 +140,7 @@ To add a shopping list with product items to cart, select the shopping list (lis
 
 ![Add selected to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/place-order.png){height="" width=""}
 
-The shopping list with the available items will be added to the shopping cart. See [Shopping Cart](https://documentation.spryker.com/v1/docs/shop-guide-managing-shopping-carts) to learn how to manage and purchase items using the cart.
+The shopping list with the available items will be added to the shopping cart. See [Shopping Cart](/docs/scos/dev/features/201811.0/shopping-cart/multiple-carts-per-user/multiple-carts-per-user-feature-overview.html#multiple-carts-per-user-on-the-storefront) to learn how to manage and purchase items using the cart.
 
 ### Dismissing Shared Shopping Lists
 

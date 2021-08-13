@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - NavigationsRestApi
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-navigationsrestapi
+originalArticleId: d596e3f6-5600-470e-87d2-b2d1829b722f
 redirect_from:
   - /v4/docs/migration-guide-navigationsrestapi
   - /v4/docs/en/migration-guide-navigationsrestapi

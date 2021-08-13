@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Zed Rest API
 originalLink: https://documentation.spryker.com/v4/docs/t-zed-rest-api
+originalArticleId: 005d3a74-ef1c-4c4e-ba82-ad78cf9a6d2d
 redirect_from:
   - /v4/docs/t-zed-rest-api
   - /v4/docs/en/t-zed-rest-api

@@ -2,6 +2,7 @@
 title: Mindlab
 description: Integrate Mindlab - a leading implementation of challenging analytics projects for websites, apps and intranet systems.
 originalLink: https://documentation.spryker.com/v1/docs/mindlab
+originalArticleId: 91eb7016-999d-4a92-9bbe-774957ab7b85
 redirect_from:
   - /v1/docs/mindlab
   - /v1/docs/en/mindlab

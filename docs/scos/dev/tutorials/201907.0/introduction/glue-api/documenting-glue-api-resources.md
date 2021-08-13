@@ -1,6 +1,7 @@
 ---
 title: Documenting GLUE API Resources
 originalLink: https://documentation.spryker.com/v3/docs/documenting-glue-api-resources
+originalArticleId: 2fedc88b-b439-429a-830c-3daa0506a19e
 redirect_from:
   - /v3/docs/documenting-glue-api-resources
   - /v3/docs/en/documenting-glue-api-resources
@@ -11,7 +12,7 @@ To help developers understand and use the public API of your project, you need t
 The resulting document is a full description of your REST API following the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification) (formerly known as Swagger Document Format). It can be viewed, edited and consumed with the help of such tools as [Swagger Tools](https://swagger.io/), [Postman](https://www.getpostman.com/) etc.
 
 {% info_block warningBox %}
-REST API endpoints shipped by Spryker will be covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html
+REST API endpoints shipped by Spryker will be covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](/docs/scos/dev/glue-api/201907.0/rest-api-reference.html
 {% endinfo_block %}.)
 
 ## Prerequisites
@@ -38,7 +39,7 @@ After installation, open the file `src/Pyz/Zed/DocumentationGeneratorRestApi/Doc
 | `APPLICATION_PROJECT_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **project** level. | `/Glue/%1$s/Controller/` |
 | `APPLICATION_CORE_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **vendor** level. | `/*/*/src/*/Glue/%1$s/Controller/` |
 
-For details on REST API controllers, see step [4. Create a Resource Controller](https://documentation.spryker.com/v4/docs/implementing-rest-api-resource#4--create-a-resource-controller) in the **Implementing a REST API Resource** article.
+For details on REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials/201907.0/introduction/glue-api/implementing-a-rest-api-resource.html#4--create-a-resource-controller) in the **Implementing a REST API Resource** article.
 
 ## 2. Test Run
 To make sure that the documentation generator is working properly, run the following command in the console:

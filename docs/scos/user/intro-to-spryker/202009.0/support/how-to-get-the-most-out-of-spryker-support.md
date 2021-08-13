@@ -1,6 +1,7 @@
 ---
 title: How to get the most out of Spryker Support
 originalLink: https://documentation.spryker.com/v6/docs/how-to-get-the-most-out-of-spryker-support
+originalArticleId: bd385a09-62f6-46e6-804b-f1b6fb3bb55b
 redirect_from:
   - /v6/docs/how-to-get-the-most-out-of-spryker-support
   - /v6/docs/en/how-to-get-the-most-out-of-spryker-support

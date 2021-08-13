@@ -2,9 +2,12 @@
 title: Retrieving concrete product prices
 description: Retrieve prices of concrete products.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-product-prices
+originalArticleId: 7192572b-0b8e-4bbb-a579-570eecffc1e2
 redirect_from:
   - /2021080/docs/retrieving-concrete-product-prices
   - /2021080/docs/en/retrieving-concrete-product-prices
+  - /docs/retrieving-concrete-product-prices
+  - /docs/en/retrieving-concrete-product-prices
 ---
 
 This endpoint allows retrieving prices of concrete products.
@@ -13,7 +16,7 @@ This endpoint allows retrieving prices of concrete products.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Products feature integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration)
+* [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)
 * [Glue API: Prices feature integration](https://documentation.spryker.com/2021080/docs/glue-api-prices-feature-integration)
 
 ## Retrieve prices of a concrete product
@@ -198,7 +201,7 @@ To retrieve prices of a concrete product, send the request:
 | currency.code | String | Currency code. |
 | currency.name | String | Currency name. |
 | currency.symbol | String | Currency symbol. |
-| volumePrices | Array | An array of objects defining the [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) for the concrete product. |
+| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/dev/features/{{ page.version }}/prices/prices-feature-overview/volume-prices-overview.html) for the concrete product. |
 | netAmount | Integer | Net price in cents. |
 | grossAmount | Integer | Gross price in cents. |
 | quantity | Integer | Number of items. |
@@ -212,4 +215,4 @@ To retrieve prices of a concrete product, send the request:
 | 302 | Concrete product is not found. |
 | 404 | Request URL or type is wrong. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

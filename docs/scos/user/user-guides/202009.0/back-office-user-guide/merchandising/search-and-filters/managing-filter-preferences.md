@@ -2,6 +2,7 @@
 title: Managing filter preferences
 description: Use the procedure to reorder filters, specify a filter type and add translations to the filter name in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-filter-preferences
+originalArticleId: 924f549e-95f9-4cc6-8e71-bbb169a584c5
 redirect_from:
   - /v6/docs/managing-filter-preferences
   - /v6/docs/en/managing-filter-preferences
@@ -48,5 +49,5 @@ To edit a filter preference:
 **What's next?**
 Once the filter preference is created, you can use it in the **Category Filters** section. That is done to enable specific category(s) to which the product with this attribute is assigned, to be filtered based on this specific filter.
 
-See [Managing Category Filters](/docs/scos/user/user-guides/202001.0/back-office-user-guide/search-and-filters/managing-category-filters.html) to know how to set up the category filters.
+See [Managing Category Filters](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html) to know how to set up the category filters.
 

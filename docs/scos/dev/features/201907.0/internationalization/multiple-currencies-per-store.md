@@ -2,6 +2,7 @@
 title: Multiple Currencies per Store
 description: The Spryker Commerce OS lets you define multiple currencies per store for a product, a product option, and a shipping method.
 originalLink: https://documentation.spryker.com/v3/docs/multiple-currencies-per-store
+originalArticleId: 991cbb3c-f59f-4563-b61c-2da27e5fea05
 redirect_from:
   - /v3/docs/multiple-currencies-per-store
   - /v3/docs/en/multiple-currencies-per-store

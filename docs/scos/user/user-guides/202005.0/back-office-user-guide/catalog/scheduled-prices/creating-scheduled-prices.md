@@ -2,6 +2,7 @@
 title: Creating Scheduled Prices
 description: This user guide is about scheduling price changes by creating product price schedules. This functionality is shipped with the Scheduled prices feature.
 originalLink: https://documentation.spryker.com/v5/docs/creating-scheduled-prices
+originalArticleId: 10d46e8c-c8ad-498c-8023-249711b71f8f
 redirect_from:
   - /v5/docs/creating-scheduled-prices
   - /v5/docs/en/creating-scheduled-prices
@@ -21,14 +22,14 @@ Instead of changing prices manually on the starting day of the promotion, you ca
 
 **To create a price schedule:**
 
-1.     Create a CSV file with predefined product price schedules. See [Scheduled Prices: Reference information](https://documentation.spryker.com/docs/en/scheduled-prices-reference-information).
-2.     Enter and select the attributes for your price schedule. See [Scheduled Prices: Reference information](https://documentation.spryker.com/docs/en/scheduled-prices-reference-information).
+1.     Create a CSV file with predefined product price schedules. See [Scheduled Prices: Reference information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/scheduled-prices/references/scheduled-prices-reference-information.html).
+2.     Enter and select the attributes for your price schedule. See [Scheduled Prices: Reference information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/scheduled-prices/references/scheduled-prices-reference-information.html).
 3.     Click **Browse** and select the file you've prepared in step 1.
 4.     Click **Import your CSV file**.
 5. Once redirected to the _Import dry run_ page, check whether there are incorrect entries in your file in the **Errors found inside your file** section.
 
      {% info_block infoBox %}
-If needed, you can [edit the imported scheduled prices](https://documentation.spryker.com/docs/en/managing-scheduled-prices
+If needed, you can [edit the imported scheduled prices](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html
 {% endinfo_block %}.)
     
 6. Check if the successfully imported price schedules are correct in the **Row processed with success** section.

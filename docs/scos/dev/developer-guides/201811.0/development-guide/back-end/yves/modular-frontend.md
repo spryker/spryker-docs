@@ -2,12 +2,13 @@
 title: Modular Frontend
 description: This article provides information on Pages and Widgets, the Pages module and how the Pages module can be extended. Real-life examples included into the article will help you to understand the concept better.
 originalLink: https://documentation.spryker.com/v1/docs/modular-frontend
+originalArticleId: 001b19a9-c2ea-4b62-9c75-c7c09600c76b
 redirect_from:
   - /v1/docs/modular-frontend
   - /v1/docs/en/modular-frontend
 ---
 
-This article provides information on [Pages](https://documentation.spryker.com/v1/docs/modular-frontend#pages) and [Widgets](https://documentation.spryker.com/v1/docs/modular-frontend#widgets), the Pages module and how the Pages module can be extended. Real-life examples included into the article will help you to understand the concept better.
+This article provides information on [Pages](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/yves/modular-frontend.html#pages) and [Widgets](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/yves/modular-frontend.html#widgets), the Pages module and how the Pages module can be extended. Real-life examples included into the article will help you to understand the concept better.
 
 ## General Information 
 ### Pages
@@ -116,7 +117,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 </br>
 </details>
 
-For more informaiton on how to implement a Widget, see the [How to Implement a Widget Plugin](https://documentation.spryker.com/v1/docs/t-widgets-widget-plugins#how-to-implement-a-widget-) section in *Tutorial - Widgets and Widget Plugins*.  
+For more informaiton on how to implement a Widget, see the [How to Implement a Widget Plugin](/docs/scos/dev/tutorials/201811.0/advanced/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-) section in *Tutorial - Widgets and Widget Plugins*.  
 
 ### Widget Twig Tag Reference
 
@@ -190,4 +191,4 @@ class YvesBootstrap extends SprykerYvesBootstrap
 }
 ```
 
-For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial - Widgets and Widget Plugins](https://documentation.spryker.com/v1/docs/t-widgets-widget-plugins#how-to-implement-a-widget-plugin-).  
+For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial - Widgets and Widget Plugins](/docs/scos/dev/tutorials/201811.0/advanced/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-plugin-).  

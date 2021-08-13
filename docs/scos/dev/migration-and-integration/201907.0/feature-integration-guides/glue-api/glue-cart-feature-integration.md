@@ -1,6 +1,7 @@
 ---
 title: Glue- Cart Feature Integration
 originalLink: https://documentation.spryker.com/v3/docs/cart-feature-integration
+originalArticleId: b962e15f-5c4b-4a7d-b7c8-f20685f54066
 redirect_from:
   - /v3/docs/cart-feature-integration
   - /v3/docs/en/cart-feature-integration

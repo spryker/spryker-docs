@@ -2,6 +2,7 @@
 title: Configuring the Search Features
 description: In this article, you’ll learn how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
 originalLink: https://documentation.spryker.com/v2/docs/configuring-the-search-features
+originalArticleId: 73409a92-0fb1-48f2-ad23-9bface3f9eca
 redirect_from:
   - /v2/docs/configuring-the-search-features
   - /v2/docs/en/configuring-the-search-features

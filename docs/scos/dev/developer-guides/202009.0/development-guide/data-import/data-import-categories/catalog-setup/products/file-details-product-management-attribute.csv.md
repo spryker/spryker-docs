@@ -1,12 +1,13 @@
 ---
 title: File details- product_management_attribute.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-management-attributecsv
+originalArticleId: 0d02ef26-201b-4d65-bcc2-9a7c22ba3e10
 redirect_from:
   - /v6/docs/file-details-product-management-attributecsv
   - /v6/docs/en/file-details-product-management-attributecsv
 ---
 
-This article contains content of the **product_management_attribute.csv** file to configure [Product Attribute](https://documentation.spryker.com/docs/product-attributes) information on your Spryker Demo Shop.
+This article contains content of the **product_management_attribute.csv** file to configure [Product Attribute](https://documentation.spryker.com/v6/docs/products-overview) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -29,8 +30,8 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-* [ product_attribute_key.csv](https://documentation.spryker.com/docs/file-details-product-attribute-keycsv)
-* [glossary.csv](https://documentation.spryker.com/docs/file-details-glossarycsv)
+* [ product_attribute_key.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
+* [glossary.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_management_attribute.csv*  file can be downloaded here:

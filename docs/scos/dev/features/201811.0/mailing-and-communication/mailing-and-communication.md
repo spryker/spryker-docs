@@ -2,6 +2,7 @@
 title: Mailing & Communication
 description: Send automated confirmation emails, when an order is being processed or items are being shipped. You can integrate an email provider of your choice.
 originalLink: https://documentation.spryker.com/v1/docs/mailing-communication
+originalArticleId: 42100948-3ca2-4171-bbee-0d3ef6cb0ae5
 redirect_from:
   - /v1/docs/mailing-communication
   - /v1/docs/en/mailing-communication

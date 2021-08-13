@@ -2,6 +2,7 @@
 title: Docker SDK quick start guide
 description: Get started with Spryker Docker SDK.
 originalLink: https://documentation.spryker.com/v6/docs/docker-sdk-quick-start-guide
+originalArticleId: ffa6653a-7d0e-41cc-a24e-074752b2ce1e
 redirect_from:
   - /v6/docs/docker-sdk-quick-start-guide
   - /v6/docs/en/docker-sdk-quick-start-guide
@@ -16,9 +17,9 @@ To run the Docker SDK in a local environment, follow the instructions below.
 ### Installing Docker
 
 For Docker installation instructions, see one of the following:
-* [Installing Docker prerequisites on MacOS](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-macos)
-* [Installing Docker prerequisites on Linux](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-linux)
-* [Installing Docker prerequisites on Windows](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-windows)
+* [Installing Docker prerequisites on MacOS](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
+* [Installing Docker prerequisites on Linux](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
+* [Installing Docker prerequisites on Windows](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows.html)
 
 ### Setting up a project with the Docker SDK
 
@@ -89,12 +90,12 @@ Depending on your requirements, you can select any combination of the following 
 
 ## Troubleshooting
 
-For solutions to common issues, see [Spryker in Docker troubleshooting](https://documentation.spryker.com/docs/spryker-in-docker-troubleshooting).
+For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/scos/dev/developer-guides/202009.0/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html).
 
 
 ## What documents should I use to start developing and configuring my project?
 
-* [Deploy file reference - 1.0](https://documentation.spryker.com/docs/deploy-file-reference-10)
-* [Docker SDK configuration reference](https://documentation.spryker.com/docs/docker-sdk-configuration-reference)
-* [Configuring services](https://documentation.spryker.com/docs/configuring-services)
+* [Deploy file reference - 1.0](/docs/scos/dev/developer-guides/202009.0/docker-sdk/deploy-file-reference-1.0.html)
+* [Docker SDK configuration reference](/docs/scos/dev/developer-guides/202009.0/docker-sdk/docker-sdk-configuration-reference.html)
+* [Configuring services](/docs/scos/dev/developer-guides/202009.0/docker-sdk/configuring-services.html)
 

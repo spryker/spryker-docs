@@ -2,6 +2,7 @@
 title: Category filters
 description: You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.
 originalLink: https://documentation.spryker.com/v6/docs/category-filters
+originalArticleId: ef1cb06c-daad-406c-b99e-b0f0ae100a3b
 redirect_from:
   - /v6/docs/category-filters
   - /v6/docs/en/category-filters
@@ -9,7 +10,7 @@ redirect_from:
 
 To help your customers locate items in your shop more easily you can add customizable Category Filters to the catalog pages or simply fall back to the standard Category Filters. You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.
 
-See [Managing category filters](https://documentation.spryker.com/docs/managing-category-filters) for details on how you can manage Category filters in the Back Office.
+See [Managing category filters](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html) for details on how you can manage Category filters in the Back Office.
 
 ## Current Constraints
 

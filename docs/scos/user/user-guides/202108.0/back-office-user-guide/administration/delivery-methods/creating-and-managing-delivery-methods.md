@@ -2,9 +2,12 @@
 title: Creating and managing delivery methods
 description: Use the procedures to create a delivery method, activate it, set a price and tax set, and define a delivery method per store in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-managing-shipment-methods
+originalArticleId: 66d6acae-6c36-404a-b6fb-0dbd9d71d193
 redirect_from:
   - /2021080/docs/creating-and-managing-shipment-methods
   - /2021080/docs/en/creating-and-managing-shipment-methods
+  - /docs/creating-and-managing-shipment-methods
+  - /docs/en/creating-and-managing-shipment-methods
 ---
 
 This topic describes how to create and manage shipment methods. 
@@ -14,7 +17,7 @@ This topic describes how to create and manage shipment methods.
 
 To start working with the delivery methods, go to **Administration** > **Delivery Methods**.
 
-Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a carrier company](https://documentation.spryker.com/docs/creating-a-carrier-company). You also need to make sure that you have an appropriate tax set in the **Taxes** > **Tax Sets** section, see [Taxes](https://documentation.spryker.com/docs/tax).
+Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a carrier company](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/delivery-methods/creating-a-carrier-company.html). You also need to make sure that you have an appropriate tax set in the **Taxes** > **Tax Sets** section, see [Taxes](/docs/scos/dev/features/{{ page.version }}/tax/tax.html).
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -51,7 +54,7 @@ The fields marked with * are required.
 3. To activate the delivery method, select the **Is active** checkbox.
 4. In the *Price & Tax* tab, do the following:
     * Define the price for the delivery method per specific locale;
-    * Select the tax set from the drop-down list. The values are taken from the **Taxes** > **Tax Sets** section. For more information, see [Managing tax sets](https://documentation.spryker.com/docs/managing-tax-sets).
+    * Select the tax set from the drop-down list. The values are taken from the **Taxes** > **Tax Sets** section. For more information, see [Managing tax sets](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/tax-sets/managing-tax-sets.html).
 
 5. In the *Store Relation* tab, select the stores in which the delivery method should be available.
 ![Store relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/store-relation-delivery-method.png)

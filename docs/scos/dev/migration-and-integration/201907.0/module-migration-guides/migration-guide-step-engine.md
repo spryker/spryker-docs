@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Step Engine
 originalLink: https://documentation.spryker.com/v3/docs/mg-step-engine
+originalArticleId: 20acdeb6-326d-485a-b9e9-dcb81922a06b
 redirect_from:
   - /v3/docs/mg-step-engine
   - /v3/docs/en/mg-step-engine

@@ -2,25 +2,28 @@
 title: Managing carts of registered users
 description: Retrieve details about the carts of the registered users and learn what else you can do with the resource.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-carts-of-registered-users
+originalArticleId: ac357bc6-db9b-43a5-a65a-ef55259cd379
 redirect_from:
   - /2021080/docs/managing-carts-of-registered-users
   - /2021080/docs/en/managing-carts-of-registered-users
+  - /docs/managing-carts-of-registered-users
+  - /docs/en/managing-carts-of-registered-users
 ---
 
 This endpoint allows managing carts by creating, retrieving, and deleting them.
 
 ## Multiple carts
-Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](https://documentation.spryker.com/docs/multiple-carts-feature-integration-201903), and Glue is [enabled for multi-cart operations](https://documentation.spryker.com/docs/multiple-carts-feature-integration-201903), registered users can have an unlimited number of carts.
+Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/multiple-carts-feature-integration.html), and Glue is [enabled for multi-cart operations](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/multiple-carts-feature-integration.html), registered users can have an unlimited number of carts.
 
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration)
-* [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
-* [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
-* [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
-* [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [Shared Carts feature integration](https://documentation.spryker.com/docs/shared-carts-feature-integration)
+* [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html)
+* [Glue API: Measurement Units feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+* [Glue API: Product Options feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Shared Carts feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/shared-carts-feature-integration.html)
 
 ## Create a cart
 
@@ -40,7 +43,7 @@ Carts created via Glue API are always set as the default carts for the user.
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
 Sample request: `POST https://glue.mysprykershop.com/carts`
 
@@ -61,7 +64,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | name | String | &check; | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the "422 Unprocessable Entry" status code. |
-| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](https://documentation.spryker.com/docs/net-gross-price){target="_blank"}. |
+| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html){target="_blank"}. |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
 
@@ -137,13 +140,13 @@ To retrieve all carts, send the request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all carts belonging to a customer through the **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/carts** endpoint. For details, see [Retrieving customer carts](https://documentation.spryker.com/2021080/docs/retrieving-customer-carts).
+Alternatively, you can retrieve all carts belonging to a customer through the **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/carts** endpoint. For details, see [Retrieving customer carts](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/retrieving-customer-carts.html).
 
 {% endinfo_block %}
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -1724,19 +1727,19 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| shared-carts | idCompanyUser | String | Unique identifier of the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) with whom the cart is shared. |
+| shared-carts | idCompanyUser | String | Unique identifier of the [company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html) with whom the cart is shared. |
 | shared-carts | idCartPermissionGroup | Integer | Unique identifier of the cart permission group that describes the permissions granted to the user with whom the cart is shared. |
 | cart-permission-groups | name | String | Permission group name. |
 | cart-permission-groups | isDefault | Boolean | Defines if the permission group is applied to shared carts by default. |
-| company-users |  id | String | Unique identifier of the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) with whom the cart is shared. |
-| company-users |  isActive | Boolean | Defines if the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) is active. |
-| company-users |  isDefault | Boolean | Defines if the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) is default for the [customer](https://documentation.spryker.com/docs/authenticating-as-a-customer). |
+| company-users |  id | String | Unique identifier of the [company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html) with whom the cart is shared. |
+| company-users |  isActive | Boolean | Defines if the [company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html) is active. |
+| company-users |  isDefault | Boolean | Defines if the [company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html) is default for the [customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html). |
 
 For the attributes of the included resources, see:
-* [Retrieve a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes)
-* [Add an item to a registered user's cart](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users#add-an-item-to-a-registered-users-cart-response-attributes)
-* [Managing Gift Cards of Registered Users](https://documentation.spryker.com/docs/gift-cards-of-registered-users)
-* [Retrieving product labels](https://documentation.spryker.com/docs/en/retrieving-product-labels#product-labels-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
+* [Managing Gift Cards of Registered Users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
+* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve a registered user's cart
 
@@ -1755,7 +1758,7 @@ To retrieve a particular cart, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -2822,12 +2825,12 @@ To retrieve a particular cart, send the request:
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
 
 For the attributes of other included resources, see:
-* [Add an item to a registered user's cart](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users#add-an-item-to-a-registered-users-cart-response-attributes)
-* [Managing gift cards of registered users](https://documentation.spryker.com/docs/managing-gift-cards-of-registered-users).
-* [Cart permission groups](https://documentation.spryker.com/docs/sharing-company-user-carts-201907#retrieving-cart-permission-groups).
-* [Managing items in carts of registered users](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users).
-* [Retrieve a concrete product](https://documentation.spryker.com/docs/en/retrieving-concrete-products#concrete-products-response-attributes)
-* [Retrieving product labels](https://documentation.spryker.com/docs/en/retrieving-product-labels#product-labels-response-attributes)
+* [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
+* [Managing gift cards of registered users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html).
+* [Cart permission groups](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html#retrieving-cart-permission-groups).
+* [Managing items in carts of registered users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html).
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Edit a cart
 
@@ -2859,7 +2862,7 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 | If-Match | 075d700b908d7e41f751c5d2d4392407 | &check; | Makes the request conditional. It matches the listed conditional ETags from the headers when retrieving the cart. The patch is applied only if the tag value matches. |
 
 Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9`
@@ -2882,7 +2885,7 @@ Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d3
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | name | String | &check; | Sets the cart name.This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the `422 Unprocessable Entry` status code. Cart name should be unique and should not be longer than 30 characters.|
-| priceMode | Enum | &check | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net & Gross Prices](https://documentation.spryker.com/docs/net-gross-price). |
+| priceMode | Enum | &check | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net & Gross Prices](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
 
@@ -2944,7 +2947,7 @@ You cannot delete a cart if it is the customer's only cart. If you attempt to de
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
 
 
@@ -2977,4 +2980,4 @@ If the cart is deleted successfully, the endpoint returns the `204 No Content`�
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

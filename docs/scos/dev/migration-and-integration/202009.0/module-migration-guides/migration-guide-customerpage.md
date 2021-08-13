@@ -2,6 +2,7 @@
 title: Migration Guide - CustomerPage
 description: Use the guide to update versions to the newer ones of the CustomerPage module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-customerpage
+originalArticleId: c84301d0-bb0b-4e6d-8744-64c1317e5a58
 redirect_from:
   - /v6/docs/mg-customerpage
   - /v6/docs/en/mg-customerpage
@@ -11,7 +12,7 @@ redirect_from:
 In this new version of the **CustomerPage** module, we have added support of split delivery. You can find more details about the changes on the [CustomerPage module](https://github.com/spryker-shop/customer-page/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/split-delivery-migration-concept.html
+This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/split-delivery-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

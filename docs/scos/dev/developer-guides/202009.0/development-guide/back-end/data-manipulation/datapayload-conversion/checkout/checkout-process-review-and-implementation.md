@@ -2,6 +2,7 @@
 title: Checkout Process Review and Implementation
 description: This article provides an overview of the checkout process and how it is implemented in Spryker.
 originalLink: https://documentation.spryker.com/v6/docs/checkout-process-review-and-implementation
+originalArticleId: 8cbde214-f788-47a6-a8ed-1058949b5294
 redirect_from:
   - /v6/docs/checkout-process-review-and-implementation
   - /v6/docs/en/checkout-process-review-and-implementation

@@ -2,9 +2,12 @@
 title: Amazon Pay - API
 description: This article provides details on the API structure of the Amazon Pay module in Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-api
+originalArticleId: 6e619325-2ff8-4781-964d-fd52027fd4fe
 redirect_from:
   - /2021080/docs/amazon-pay-api
   - /2021080/docs/en/amazon-pay-api
+  - /docs/amazon-pay-api
+  - /docs/en/amazon-pay-api
 ---
 
 So far we discussed the client-side implementation provided by Amazon Pay. On the Spryker side, the bundle provides the tools for rendering Amazon Pay widgets.

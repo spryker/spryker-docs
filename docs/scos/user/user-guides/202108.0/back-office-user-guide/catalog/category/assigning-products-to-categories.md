@@ -2,9 +2,12 @@
 title: Assigning products to categories
 description: The guide provides instructions on how to assign products to the category in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/assigning-products-to-categories
+originalArticleId: 4c14098e-c5c1-4f63-9957-202bca4a638a
 redirect_from:
   - /2021080/docs/assigning-products-to-categories
   - /2021080/docs/en/assigning-products-to-categories
+  - /docs/assigning-products-to-categories
+  - /docs/en/assigning-products-to-categories
 ---
 
 This topic describes how to assign products to categories.
@@ -70,4 +73,4 @@ If you have assigned too many products to your category, you can remove some of 
 
 ## Next steps
 
-You have assigned products to a category. Now, you can learn how to [manage categories](https://documentation.spryker.com/docs/managing-categories).
+You have assigned products to a category. Now, you can learn how to [manage categories](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/managing-categories.html).

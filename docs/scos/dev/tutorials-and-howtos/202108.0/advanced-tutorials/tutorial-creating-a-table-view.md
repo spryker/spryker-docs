@@ -2,9 +2,12 @@
 title: Tutorial - Creating a Table View
 description: Use the guide to render data, fetched from the database, in the table.
 originalLink: https://documentation.spryker.com/2021080/docs/t-create-table-view
+originalArticleId: 0cecd405-174d-49d0-a321-6b705b22bef2
 redirect_from:
   - /2021080/docs/t-create-table-view
   - /2021080/docs/en/t-create-table-view
+  - /docs/t-create-table-view
+  - /docs/en/t-create-table-view
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/create-table-view/-->
@@ -13,7 +16,7 @@ This tutorial explains how to retrieve data from the database and render it in a
 
 **Prerequisites:**
 
-* You have created a new [module](https://documentation.spryker.com/docs/t-add-new-bundle).
+* You have created a new [module](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html).
 
 ## Creating a Table
 Create the `ProductTable` class under the `src/Pyz/Zed/HelloWorld/Communication/Table` folder:

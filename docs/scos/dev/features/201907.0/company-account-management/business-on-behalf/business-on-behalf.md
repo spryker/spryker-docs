@@ -2,6 +2,7 @@
 title: Business On Behalf
 description: The Business on Behalf feature enables you to set up multiple company users for one customer account.
 originalLink: https://documentation.spryker.com/v3/docs/business-on-behalf-201903
+originalArticleId: 64d8e2b2-5330-41e3-bce4-ed922cfd71c3
 redirect_from:
   - /v3/docs/business-on-behalf-201903
   - /v3/docs/en/business-on-behalf-201903

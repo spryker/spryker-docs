@@ -2,9 +2,12 @@
 title: Punchout Catalogs overview
 description: The Punch Out feature allows connecting a buyer's procurement software with a seller's e-commerce shop, Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/punchout-catalogs-overview
+originalArticleId: 2a85c1c3-9794-466c-a603-ddbaca93827d
 redirect_from:
   - /2021080/docs/punchout-catalogs-overview
   - /2021080/docs/en/punchout-catalogs-overview
+  - /docs/punchout-catalogs-overview
+  - /docs/en/punchout-catalogs-overview
 ---
 
 A *Punchout* is a technology that connects a buyer's e-procurement software with an e-commerce shops, in our case - with the Spryker Commerce OS. 
@@ -26,7 +29,7 @@ From the B2B buyer perspective, the Punchout process typically involves the foll
 2. The buyer gets immediately forwarded to the supplier's e-commerce store (Spryker web shop) within the buyer's e-procurement system. A Punchout session is initiated.
 ![Supplier store](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/supplier-store.png)
 
-3. Authentication is handled with the help of the [Customer login by token](https://documentation.spryker.com/docs/customer-login-by-token-201907) feature. So, the buyer doesn't need to enter any login details to get to the customer account. The [Vault for Tokens](https://documentation.spryker.com/docs/vault-for-tokens-201907) feature allows securely keeping the sensitive data (username and password) and retrieving it on request.
+3. Authentication is handled with the help of the [Customer login by token](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/customer-login-by-token-overview.html) feature. So, the buyer doesn't need to enter any login details to get to the customer account. The [Vault for Tokens](/docs/scos/dev/features/{{ page.version }}/spryker-core/spryker-core-feature-overview/vault-for-tokens-overview.html) feature allows securely keeping the sensitive data (username and password) and retrieving it on request.
 4. The buyer browses the store and adds items to their shopping cart.
 ![Shopping cart supplier](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/shopping-cart-supplier.png)
 

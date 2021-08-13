@@ -2,6 +2,7 @@
 title: Docker Install Prerequisites - MacOS
 description: Perform the steps described in the guide before you can start working with Spryker in Docker on MacOS.
 originalLink: https://documentation.spryker.com/v3/docs/docker-install-prerequisites-macos-201907
+originalArticleId: 212e5622-ad7e-411e-82a3-b1e545d70f2c
 redirect_from:
   - /v3/docs/docker-install-prerequisites-macos-201907
   - /v3/docs/en/docker-install-prerequisites-macos-201907

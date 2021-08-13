@@ -1,12 +1,13 @@
 ---
 title: File details- sales_order_threshold.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-sales-order-thresholdcsv
+originalArticleId: d51049b5-4b33-4d06-806c-89f1840af350
 redirect_from:
   - /v6/docs/file-details-sales-order-thresholdcsv
   - /v6/docs/en/file-details-sales-order-thresholdcsv
 ---
 
-This article contains content of the **sales_order_threshold.csv** file to configure [Sales Order Threshold](https://documentation.spryker.com/docs/minimum-order-value-201903) information on your Spryker Demo Shop.
+This article contains content of the **sales_order_threshold.csv** file to configure [Sales Order Threshold](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/order-thresholds.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -24,8 +25,8 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 This file has the following dependencies:
 
-*  [currency.csv](https://documentation.spryker.com/docs/file-details-currencycsv)
-*  [glossary.csv](https://documentation.spryker.com/docs/file-details-glossarycsv)
+*  [currency.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-currency.csv.html)
+*  [glossary.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 *  s*tores.php* configuration file of the demo shop PHP project
 
 ## Template File & Content Example

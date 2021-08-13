@@ -2,6 +2,7 @@
 title: Content Items API Feature Integration
 description: The guide walks you through the process of installing and configuring the Content Items feature in the project.
 originalLink: https://documentation.spryker.com/v3/docs/content-items-api-feature-integration
+originalArticleId: afe7bfc3-42ef-4ff8-809d-97ec2dd778ba
 redirect_from:
   - /v3/docs/content-items-api-feature-integration
   - /v3/docs/en/content-items-api-feature-integration

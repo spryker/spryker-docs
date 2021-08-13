@@ -2,6 +2,7 @@
 title: Migrating Projects to the Latest Spryker Version with Spryker Jarvis
 description: Learn how to install and use the Spryker Jarvis tool for upgrade and analysis of your project.
 originalLink: https://documentation.spryker.com/v5/docs/migrating-projects-to-the-latest-spryker-version-with-spryker-jarvis
+originalArticleId: aa20307c-8d6c-4016-b2a0-d884787a252b
 redirect_from:
   - /v5/docs/migrating-projects-to-the-latest-spryker-version-with-spryker-jarvis
   - /v5/docs/en/migrating-projects-to-the-latest-spryker-version-with-spryker-jarvis
@@ -16,7 +17,7 @@ This article will teach you how to install and use the Spryker Jarvis tool for u
 ## Prerequisites
 Before you can install Spryker Jarvis, make sure that you have:
 
-* [Spryker project installed locally.](https://documentation.spryker.com/docs/en/dev-getting-started#step-1--install-spryker)
+* [Spryker project installed locally.](/docs/scos/dev/developer-guides/202005.0/developer-getting-started-guide.html#step-1--install-spryker)
 * [NodeJS installed.](https://nodejs.org/en/download)  
 
 ## Installation
@@ -82,7 +83,7 @@ This view is useful when you want to use Spryker features but do not know which 
 
 This view allows you to see all Spryker features that are compatible with your project and which minimum version you must take.
 
-Here you can also see what modules are already installed on your project and what are missing. To install the missing modules, follow the [integration guide](https://documentation.spryker.com/docs/en/about-integration) of the respective feature.
+Here you can also see what modules are already installed on your project and what are missing. To install the missing modules, follow the [integration guide](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/about-integration-guides.html) of the respective feature.
 
 <video width="720" height="480" controls>
   <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screen+Recording+2020-08-06+at+10.50.47.mov">

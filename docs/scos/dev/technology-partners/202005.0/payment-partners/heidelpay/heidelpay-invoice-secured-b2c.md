@@ -2,13 +2,14 @@
 title: Heidelpay - Invoice Secured B2C
 description: Integrate invoice secured B2C payment through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v5/docs/heidelpay-invoice-secured-b2c
+originalArticleId: 0888d297-e9a1-48b9-8e88-607796ddf7e9
 redirect_from:
   - /v5/docs/heidelpay-invoice-secured-b2c
   - /v5/docs/en/heidelpay-invoice-secured-b2c
 ---
 
 ## Setup
-The following configuration should be made after Heidelpay has been [installed](https://documentation.spryker.com/docs/en/heidelpay-installation) and [integrated](https://documentation.spryker.com/docs/en/heidelpay-integration-scos).
+The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
 
 ## Configuration
 ```php

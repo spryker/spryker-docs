@@ -2,6 +2,7 @@
 title: Agent Assist Feature Integration
 description: This guide describes how to install the Agent Assist feature in your project.
 originalLink: https://documentation.spryker.com/v1/docs/agent-assist-feature-integration
+originalArticleId: ee66ce01-0196-4a85-b5d6-f71f34794f08
 redirect_from:
   - /v1/docs/agent-assist-feature-integration
   - /v1/docs/en/agent-assist-feature-integration

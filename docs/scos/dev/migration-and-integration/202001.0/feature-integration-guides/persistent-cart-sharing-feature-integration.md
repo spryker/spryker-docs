@@ -2,6 +2,7 @@
 title: Persistent Cart Sharing Feature Integration
 description: The guide describes the process of installing the Persistent Cart feature into your project.
 originalLink: https://documentation.spryker.com/v4/docs/persistent-cart-sharing-feature-integration
+originalArticleId: 60b8acff-70de-4820-8be7-be68e323d344
 redirect_from:
   - /v4/docs/persistent-cart-sharing-feature-integration
   - /v4/docs/en/persistent-cart-sharing-feature-integration

@@ -2,9 +2,12 @@
 title: Creating a product list
 description: Use the procedure to create a product list by assigning products and selecting the category in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-list
+originalArticleId: e7682701-b572-4934-9422-2a95d31610a1
 redirect_from:
   - /2021080/docs/creating-a-product-list
   - /2021080/docs/en/creating-a-product-list
+  - /docs/creating-a-product-list
+  - /docs/en/creating-a-product-list
 ---
 
 This article describes how to create a product list.
@@ -65,6 +68,6 @@ All columns with headers having arrows in the *List of Product Lists* table are 
 
 **What's next?**
 
-* To learn how to manage existing product lists, see the [Managing product lists](https://documentation.spryker.com/docs/managing-product-lists).
+* To learn how to manage existing product lists, see the [Managing product lists](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/product-lists/managing-product-lists.html).
 
 

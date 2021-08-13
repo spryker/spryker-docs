@@ -2,6 +2,7 @@
 title: Adding and Using External Libraries in Yves
 description: This article describes how to add external libraries in Yves.
 originalLink: https://documentation.spryker.com/v4/docs/adding-using-external-libraries-yves
+originalArticleId: 1f08c0e6-f12f-45f5-bc09-d7d6936d7074
 redirect_from:
   - /v4/docs/adding-using-external-libraries-yves
   - /v4/docs/en/adding-using-external-libraries-yves

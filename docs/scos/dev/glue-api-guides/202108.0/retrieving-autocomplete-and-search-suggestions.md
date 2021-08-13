@@ -2,18 +2,21 @@
 title: Retrieving autocomplete and search suggestions
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-autocomplete-and-search-suggestions
+originalArticleId: 31e2cfd0-e6e5-46ee-96a9-93ae816d6761
 redirect_from:
   - /2021080/docs/retrieving-autocomplete-and-search-suggestions
   - /2021080/docs/en/retrieving-autocomplete-and-search-suggestions
+  - /docs/retrieving-autocomplete-and-search-suggestions
+  - /docs/en/retrieving-autocomplete-and-search-suggestions
 ---
 
-In addition to [catalog search](https://documentation.spryker.com/docs/catalog-search), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
+In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{ page.version }}/searching-the-product-catalog.html), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](https://documentation.spryker.com/docs/glue-api-catalog-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](https://documentation.spryker.com/2021080/docs/glue-api-catalog-feature-integration).
 
 ## Retrieve a search suggestion
 
@@ -235,11 +238,11 @@ To retrieve a search suggestion, send the request:
 
 {% info_block infoBox "SEO-friendly URLs" %}
 
-The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](https://documentation.spryker.com/docs/resolving-search-engine-friendly-urls).
+The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](/docs/scos/dev/glue-api-guides/{{ page.version }}/resolving-search-engine-friendly-urls.html).
 
 {% endinfo_block %}
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 
 

@@ -2,20 +2,23 @@
 title: Merchant Product Restrictions feature overview
 description: Merchant Product Restrictions allow merchants to define the products that are available to each of their B2B customers.
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-product-restrictions-feature-overview
+originalArticleId: 9d02b7ac-0e20-47bf-8f5b-656279a8278d
 redirect_from:
   - /2021080/docs/merchant-product-restrictions-feature-overview
   - /2021080/docs/en/merchant-product-restrictions-feature-overview
+  - /docs/merchant-product-restrictions-feature-overview
+  - /docs/en/merchant-product-restrictions-feature-overview
 ---
 
 At its core, Product Restrictions allow merchants to define the products that are available to each of their B2B customers.
 
-In terms of [Merchant concept](https://documentation.spryker.com/docs/merchants-and-merchant-relations-overview), the **merchant** is the one who sells products on a marketplace and can set prices.
+In terms of [Merchant concept](/docs/scos/dev/features/{{ page.version }}/merchant-b2b-contracts-feature-overview.html), the **merchant** is the one who sells products on a marketplace and can set prices.
 
 The diagram below shows product restrictions relations within the Merchant concept:
 
 ![product-restrictions-model.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Product+Restrictions+from+Merchant+to+Buyer/Product+Restrictions+from+Merchant+to+Buyer+Overview/product-restrictions-model.png){height="" width=""}
 
-Product Restrictions from Merchant to Buyer give merchants [another layer](https://documentation.spryker.com/docs/hide-content-from-logged-out-users) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
+Product Restrictions from Merchant to Buyer give merchants [another layer](https://documentation.spryker.com/2021080/docs/customer-access) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
 
 * create a list of products;
 * hide the product information for the products (pricing, appearance in the search/filters), and limit access to a product details page.
@@ -24,9 +27,9 @@ Product Restriction feature works on the basis of whitelist/blacklist lists. Tha
 
 To restrict the products, a Shop Administrator needs to create a product list, include the necessary products to the list and blacklist them for a specific merchant relationship. All other products will be available for that merchant relationship.
 
-To create product lists, follow the [guideline for the Back Office](https://documentation.spryker.com/docs/creating-a-product-list).
+To create product lists, follow the [guideline for the Back Office](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/product-lists/creating-a-product-list.html).
 
-You can check more cases of product restrictions workflow on the [Restricted Products Behavior](https://documentation.spryker.com/docs/restricted-products-behavior) page.
+You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/dev/features/{{ page.version }}/merchant-product-restrictions/restricted-products-behavior.html) page.
 
 ## Current Constraints
 - Currently, in the situation, when a single product from the product set is blacklisted, the other items are displayed in the shop. We are going to update the logic in a way, that in case any of the items in the product set gets blacklisted, all relevant product sets containing this item will get blacklisted too.
@@ -42,7 +45,7 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/restricted-products-behavior" class="mr-link">Check out the use cases of the restricted products behavior</a></li>
+                <li><a href="/docs/scos/dev/features/{{ page.version }}/merchant-product-restrictions/restricted-products-behavior.html" class="mr-link">Check out the use cases of the restricted products behavior</a></li>
                 <li>Integrate the Merchant Product Restrictions:</li>
                 <li><a href="https://documentation.spryker.com/docs/merchant-product-restrictions-feature-integration" class="mr-link">Integrate the Merchant Product Restrictions feature</a></li>
                 <li><a href="https://documentation.spryker.com/docs/merchant-feature-integration" class="mr-link">Integrate the Merchant feature</a></li>  
@@ -52,7 +55,7 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-product-list" class="mr-link">Create a product list to set product restrictions</a></li>
+                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/product-lists/creating-a-product-list.html" class="mr-link">Create a product list to set product restrictions</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-product-lists#editing-a-product-list" class="mr-link">Edit a product list</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-product-lists#exporting-a-product-list" class="mr-link">Export a product list</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-product-lists#removing-a-product-list" class="mr-link">Remove a product list from the system</a></li>

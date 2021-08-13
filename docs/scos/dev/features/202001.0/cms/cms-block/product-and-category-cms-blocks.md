@@ -2,6 +2,7 @@
 title: Product and Category CMS Blocks
 description: Use the article to learn more about the category and product blocks.
 originalLink: https://documentation.spryker.com/v4/docs/category-block
+originalArticleId: 9b4bc2bf-e3cd-40c2-a9ee-987b25c25590
 redirect_from:
   - /v4/docs/category-block
   - /v4/docs/en/category-block

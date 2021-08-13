@@ -2,6 +2,7 @@
 title: Product Catalog Management
 description: This feature is used to create a customized product catalog by adding descriptions and images, pricing details and product options.
 originalLink: https://documentation.spryker.com/v3/docs/product-catalog-management
+originalArticleId: ac9efbb1-cfc9-41aa-975a-a25f147ad21c
 redirect_from:
   - /v3/docs/product-catalog-management
   - /v3/docs/en/product-catalog-management

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Search
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-search
+originalArticleId: 244bc99c-9fcb-4f0c-b240-22330e50ad87
 redirect_from:
   - /v4/docs/migration-guide-search
   - /v4/docs/en/migration-guide-search
@@ -18,7 +19,7 @@ composer require spryker/search-elasticsearch
 ```Bash
 console transfer:generate
 ```
-3. Adjust all project-level implementations of `Spryker\Client\Search\Dependency\Plugin\QueryInterface`. First, change `Spryker\Client\Search\Dependency\Plugin\QueryInterface` to `Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`. This does not require changing any implementation details. After that implement `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface` as described in the [Search Migration Concept](https://documentation.spryker.com/v4/docs/search-migration-concept#searching-for-data). 
+3. Adjust all project-level implementations of `Spryker\Client\Search\Dependency\Plugin\QueryInterface`. First, change `Spryker\Client\Search\Dependency\Plugin\QueryInterface` to `Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`. This does not require changing any implementation details. After that implement `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface` as described in the [Search Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/search-migration-concept/search-migration-concept.html#searching-for-data). 
 4. Remove `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigBuilderPlugin()`.
 5. Remove `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigExpanderPlugins()`.
 6. Enable `ElasticsearchSearchAdapterPlugin` and `ElasticsearchSearchContextExpanderPlugin` in `Pyz\Client\Search\SearchDependencyProvider`:

@@ -1,6 +1,7 @@
 ---
 title: Search Migration Concept
 originalLink: https://documentation.spryker.com/v5/docs/search-migration-concept
+originalArticleId: dc004a2b-fc0b-4f89-8422-e1d7d37ab066
 redirect_from:
   - /v5/docs/search-migration-concept
   - /v5/docs/en/search-migration-concept
@@ -135,14 +136,14 @@ As already mentioned before, previously, there was one index per store for all s
 
 The Search migration effort implies an upgrade of the following modules:
 
-* [Search](https://documentation.spryker.com/docs/en/mg-search)
-* [Console](https://documentation.spryker.com/docs/en/mg-console)
-* [CmsPageSearch](https://documentation.spryker.com/docs/en/migration-guide-cmspagesearch)
-* [Catalog](https://documentation.spryker.com/docs/en/mg-catalog)
-* [ProductPageSearch](https://documentation.spryker.com/docs/en/migration-guide-productpagesearch-silex)
-* [ProductReviewSearch](https://documentation.spryker.com/docs/en/migration-guide-productreviewsearch)
-* [ProductLabelSearch](https://documentation.spryker.com/docs/en/migration-guide-productlabelsearch)
-* [ProductSetPageSearch](https://documentation.spryker.com/docs/en/migration-guide-productsetpagesearch)
-* [CategoryPageSearch](https://documentation.spryker.com/docs/en/migration-guide-categorypagesearch)
-* [ProductNew](https://documentation.spryker.com/docs/en/migration-guide-productnew)
+* [Search](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-search.html)
+* [Console](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-console.html)
+* [CmsPageSearch](https://documentation.spryker.com/v5/docs/en/migration-guide-cmspagesearch)
+* [Catalog](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-catalog.html)
+* [ProductPageSearch](https://documentation.spryker.com/v5/docs/en/migration-guide-productpagesearch-silex)
+* [ProductReviewSearch](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-productreviewsearch.html)
+* [ProductLabelSearch](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-productlabelsearch.html)
+* [ProductSetPageSearch](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-productsetpagesearch.html)
+* [CategoryPageSearch](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-categorypagesearch.html)
+* [ProductNew](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-productnew.html)
 

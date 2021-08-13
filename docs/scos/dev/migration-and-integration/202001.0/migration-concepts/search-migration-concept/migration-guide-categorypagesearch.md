@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CategoryPageSearch
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-categorypagesearch
+originalArticleId: 36fa8e9a-ce6e-4f08-8fce-3c175d7b5252
 redirect_from:
   - /v4/docs/migration-guide-categorypagesearch
   - /v4/docs/en/migration-guide-categorypagesearch

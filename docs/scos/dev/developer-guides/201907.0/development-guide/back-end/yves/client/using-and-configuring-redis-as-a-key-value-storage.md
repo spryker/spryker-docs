@@ -2,6 +2,7 @@
 title: Using and Configuring Redis as a Key-value Storage
 description: This article describes how Redis is used within Spryker; the current functionality can be extended according to your needs.
 originalLink: https://documentation.spryker.com/v3/docs/redis-as-kv
+originalArticleId: 47b291d5-58bc-485e-a1a6-f2cdf103d2a7
 redirect_from:
   - /v3/docs/redis-as-kv
   - /v3/docs/en/redis-as-kv
@@ -49,7 +50,7 @@ See [Publish and Synchronization](/docs/scos/dev/developer-guides/201907.0/devel
 
 Of course, the data stored in the SQL database is the subject of change; data can be updated or deleted or new entries can be added. The data currently stored in Redis is a snapshot of the data in the SQL database from when the last update was run. The key-value data storage must be kept in sync with the data persisted in the SQL database. To achieve this, you must set up a cron job that runs on a specified time interval and updates the key-value data storage.
 
-For more information, see [Cronjob Scheduling](/docs/scos/dev/features/202001.0/sdk/cronjob-scheduling.html).
+For more information, see [Cronjob Scheduling](/docs/scos/dev/features/201907.0/sdk/cronjob-scheduling.html).
 
 Also, you must find out which data has changed because you don’t want to completely reload the content stored in Redis. The Touch module takes care of marking the items that were updated in the meantime. You must keep in mind that every time you make an update/delete/insert for data that’s also stored in Redis, you must touch that data, so that it’s marked for export when the next storage update task will run.
 

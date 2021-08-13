@@ -1,6 +1,7 @@
 ---
 title: Return Management
 originalLink: https://documentation.spryker.com/v5/docs/return-management
+originalArticleId: 6faea40b-ef3a-47e3-962f-ad661097b2e9
 redirect_from:
   - /v5/docs/return-management
   - /v5/docs/en/return-management

@@ -2,6 +2,7 @@
 title: Promotions and Discounts
 description: Drive your sales with the highly flexible promotion features. Offer free shipping, special prices, free gifts, threshold promotions.
 originalLink: https://documentation.spryker.com/v2/docs/promotions-discount
+originalArticleId: eb5fb30f-2597-4939-af49-0d1b94e60c59
 redirect_from:
   - /v2/docs/promotions-discount
   - /v2/docs/en/promotions-discount

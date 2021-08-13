@@ -2,6 +2,7 @@
 title: On-Site Search
 description: Providing users with a proper on-site search user experience is often one of the major technical challenges in building e-commerce websites.
 originalLink: https://documentation.spryker.com/v2/docs/search-design-patterns
+originalArticleId: dd4ea4d4-b6b9-4358-ba85-82d729773f32
 redirect_from:
   - /v2/docs/search-design-patterns
   - /v2/docs/en/search-design-patterns

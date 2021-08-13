@@ -2,9 +2,12 @@
 title: Managing company unit addresses
 description: Use the procedures to create and update company unit addresses after company units have been created in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-unit-addresses
+originalArticleId: b3bbc8db-3448-4aa1-8d93-eb435113d36c
 redirect_from:
   - /2021080/docs/managing-company-unit-addresses
   - /2021080/docs/en/managing-company-unit-addresses
+  - /docs/managing-company-unit-addresses
+  - /docs/en/managing-company-unit-addresses
 ---
 
 This page describes the procedure of creating and managing company unit addresses. The address is created to be assigned to a company business unit.
@@ -55,4 +58,4 @@ The following table describes the attributes you see, select, or enter while cre
 
 **What's next?**
 
-The next step in the company account setup is to created company roles and users. See the [Managing company roles](https://documentation.spryker.com/docs/managing-company-roles) and [Managing company users](https://documentation.spryker.com/docs/managing-company-users) articles.
+The next step in the company account setup is to created company roles and users. See the [Managing company roles](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-roles.html) and [Managing company users](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-users.html) articles.

@@ -2,6 +2,7 @@
 title: Abstract Product- Reference Information
 description: Use this section to learn more about the attributes you use when creating or updating abstract products in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/abstract-product-reference-information
+originalArticleId: a497a40c-ce0a-4df9-80e3-a0fbc3442fcb
 redirect_from:
   - /v4/docs/abstract-product-reference-information
   - /v4/docs/en/abstract-product-reference-information

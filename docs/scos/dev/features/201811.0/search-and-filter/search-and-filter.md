@@ -2,6 +2,7 @@
 title: Search and Filter
 description: The out-of-the-box Elasticsearch technology allows you to include full-text search, autosuggest and autocomplete.
 originalLink: https://documentation.spryker.com/v1/docs/search-filter
+originalArticleId: 78928439-6ae0-4177-b8db-dbfbc36f20b9
 redirect_from:
   - /v1/docs/search-filter
   - /v1/docs/en/search-filter

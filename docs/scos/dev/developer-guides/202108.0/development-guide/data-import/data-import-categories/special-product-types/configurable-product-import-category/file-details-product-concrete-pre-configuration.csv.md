@@ -2,12 +2,15 @@
 title: File details- product_concrete_pre_configuration.csv
 description: Description of the `product_concrete_pre_configuration.csv` import file.
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-concrete-pre-configurationcsv
+originalArticleId: 81e75f7f-b1bd-4707-870a-dbea4a001273
 redirect_from:
   - /2021080/docs/file-details-product-concrete-pre-configurationcsv
   - /2021080/docs/en/file-details-product-concrete-pre-configurationcsv
+  - /docs/file-details-product-concrete-pre-configurationcsv
+  - /docs/en/file-details-product-concrete-pre-configurationcsv
 ---
 
-This document describes the `product_concrete_pre_configuration.csv` file to configure [configurable product](https://documentation.spryker.com/2021080/docs/configurable-product-feature-overview) information in your Spryker shop.
+This document describes the `product_concrete_pre_configuration.csv` file to configure [configurable product](/docs/scos/dev/features/{{ page.version }}/configurable-product/configurable-product-feature-overview.html) information in your Spryker shop.
 
 To import the file, run
 
@@ -32,7 +35,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-*   [File details: product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv#headers---mandatory-fields)
+*   [File details: product_concrete.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#headers---mandatory-fields)
     
 
 ## Import template file and content example

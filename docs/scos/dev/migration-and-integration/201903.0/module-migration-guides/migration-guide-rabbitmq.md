@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - RabbitMQ
 originalLink: https://documentation.spryker.com/v2/docs/mg-rabbitmq
+originalArticleId: 1875f7bf-ce42-4a1e-990b-ce50452f9ca8
 redirect_from:
   - /v2/docs/mg-rabbitmq
   - /v2/docs/en/mg-rabbitmq

@@ -1,6 +1,7 @@
 ---
 title: Router Zed
 originalLink: https://documentation.spryker.com/v3/docs/router-zed-201907
+originalArticleId: b3e84fab-83f5-4f70-a13c-1c17b9d6ba14
 redirect_from:
   - /v3/docs/router-zed-201907
   - /v3/docs/en/router-zed-201907

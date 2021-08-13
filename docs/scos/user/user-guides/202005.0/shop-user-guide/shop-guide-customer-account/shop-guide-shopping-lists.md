@@ -2,6 +2,7 @@
 title: Shop Guide - Shopping Lists
 description: Use the procedures to create, update, share, and print shopping lists, dismiss shared shopping lists, and add items to a shopping list.
 originalLink: https://documentation.spryker.com/v5/docs/shopping-lists-shop-guide
+originalArticleId: db6f52aa-4503-4340-906e-bfee40f69fa8
 redirect_from:
   - /v5/docs/shopping-lists-shop-guide
   - /v5/docs/en/shopping-lists-shop-guide
@@ -72,8 +73,8 @@ The _Edit shopping list_ page opens where you can:
 ![Quick add to a shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/quick-add-to-shopping-list-window.png){height="" width=""}
 
 {% info_block warningBox %}
-To be able to search for products, make sure that [Search Widget for Concrete Products](https://documentation.spryker.com/docs/en/search-widget-for-concrete-products-overview-201903
-{% endinfo_block %} feature is [integrated](https://documentation.spryker.com/docs/en/search-widget-for-concrete-products-integration) into your Project.)
+To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/dev/features/202005.0/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products-overview.html
+{% endinfo_block %} feature is [integrated](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/search-widget-for-concrete-products-feature-integration.html) into your Project.)
 
 * View the shopping list owner and access rights.
 ![View a shopping list owner and access rights](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/view-owner-on-edit-page.png){height="" width=""}
@@ -82,7 +83,7 @@ To be able to search for products, make sure that [Search Widget for Concrete Pr
 * Change the product item quantity using minus and plus buttons.
 ![View details](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/view-details.png){height="" width=""}
 
-* Add a note to the item. To save the note, click **Save**. See [Shopping List Notes Feature Overview](https://documentation.spryker.com/docs/en/shopping-list-notes-overview) for more details.
+* Add a note to the item. To save the note, click **Save**. See [Shopping List Notes Feature Overview](/docs/scos/dev/features/202005.0/shopping-list/shopping-list-notes/shopping-list-notes-feature-overview.html) for more details.
 
 * Select the warranty option from the drop-down list. 
 ![Warranty options](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/warranty-options.png){height="" width=""}
@@ -110,7 +111,7 @@ To share a shopping list:
 2. From the **drop-down list** next to the business unit or customer you want to share a shopping list with, select the appropriate access rights level.
 
 {% info_block infoBox %}
-See [Permissions Management for Shared Shopping Lists](https://documentation.spryker.com/docs/en/printing-shopping-list
+See [Permissions Management for Shared Shopping Lists](/docs/scos/dev/features/202005.0/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html
 {% endinfo_block %} to learn more about types of shopping list access rights.)
 ![Share page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/share-page.png){height="" width=""}
 
@@ -139,7 +140,7 @@ To add a shopping list with product items to cart, select the shopping list (lis
 
 ![Add selected to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/place-order.png){height="" width=""}
 
-The shopping list with the available items will be added to the shopping cart. See [Shopping Cart](https://documentation.spryker.com/docs/en/shop-guide-managing-shopping-carts) to learn how to manage and purchase items using the cart.
+The shopping list with the available items will be added to the shopping cart. See [Shopping Cart](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html) to learn how to manage and purchase items using the cart.
 
 ### Dismissing Shared Shopping Lists
 

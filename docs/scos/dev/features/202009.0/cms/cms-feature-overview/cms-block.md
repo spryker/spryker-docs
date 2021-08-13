@@ -2,6 +2,7 @@
 title: CMS block
 description: With the CMS Block feature, you can easily add promotional banners and define validity date ranges to emphasize specific, time-limited content.
 originalLink: https://documentation.spryker.com/v6/docs/cms-block
+originalArticleId: 6f3811a4-dab1-4689-8d8a-61d0f73364bf
 redirect_from:
   - /v6/docs/cms-block
   - /v6/docs/en/cms-block
@@ -13,7 +14,7 @@ A *CMS block* is a piece of reusable content which you can add to multipe CMS pa
 
 A *CMS block template* is a Twig file that, when applied to a block, defines its design, layout, and functionality.
 
-You can create templates to effectively create similar content. However, as CMS block, is a multi-purpose  entity, you can create templates that allow you to manage the content of different functionalities in your shop. For example, you can [manage emails via CMS blocks](https://documentation.spryker.com/docs/email-as-a-cms-block).
+You can create templates to effectively create similar content. However, as CMS block, is a multi-purpose  entity, you can create templates that allow you to manage the content of different functionalities in your shop. For example, you can [manage emails via CMS blocks](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/email-as-a-cms-block.html).
 
 The CMS feature is shipped with several block templates by default. A developer can create more templates.
 
@@ -88,4 +89,4 @@ Product blocks are blocks that can be embedded in the product template, for whic
                 
 ## See next
 
-* [Templates and slots](https://documentation.spryker.com/docs/templates-and-slots)
+* [Templates and slots](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/templates-and-slots.html)

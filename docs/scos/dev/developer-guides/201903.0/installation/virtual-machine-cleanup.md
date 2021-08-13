@@ -2,6 +2,7 @@
 title: Virtual Machine Cleanup
 description: If you need to cleanup the environment set up in the virtual machine, you can either do this by running a script or execute the cleanup steps manually.
 originalLink: https://documentation.spryker.com/v2/docs/vm-cleanup
+originalArticleId: ac978cc0-621c-4291-b551-e77af8d4e3d2
 redirect_from:
   - /v2/docs/vm-cleanup
   - /v2/docs/en/vm-cleanup

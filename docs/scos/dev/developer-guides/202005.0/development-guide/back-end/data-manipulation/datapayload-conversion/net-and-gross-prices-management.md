@@ -2,6 +2,7 @@
 title: Net & Gross Prices Management
 description: The article describes the net & gross prices management
 originalLink: https://documentation.spryker.com/v5/docs/net-gross-prices-management
+originalArticleId: 00c35a2d-5a9f-4975-a175-425607831999
 redirect_from:
   - /v5/docs/net-gross-prices-management
   - /v5/docs/en/net-gross-prices-management
@@ -75,7 +76,7 @@ To use it, do the following:
 
    The switch can happen only if quote have to items.
 
-   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](https://documentation.spryker.com/docs/en/mg-price).
+   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-price.html).
    
    
  {% info_block infoBox "Switching shop to Net prices:" %}

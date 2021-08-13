@@ -2,9 +2,12 @@
 title: `nc` command tells that the port is opened
 description: Learn how to fix the issue when `nc` command tells that the port is opened
 originalLink: https://documentation.spryker.com/2021080/docs/nc-command-tells-that-the-port-is-opened
+originalArticleId: 4a169ffc-dd56-4026-b17f-44981617e0fe
 redirect_from:
   - /2021080/docs/nc-command-tells-that-the-port-is-opened
   - /2021080/docs/en/nc-command-tells-that-the-port-is-opened
+  - /docs/nc-command-tells-that-the-port-is-opened
+  - /docs/en/nc-command-tells-that-the-port-is-opened
 ---
 
 ## Description

@@ -2,6 +2,7 @@
 title: CrefoPay - Capture and Refund Processes
 description: This article describes the capture and refund processes for the Crefopay module in Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v1/docs/crefopay-capture-refund-processes
+originalArticleId: 4faf3cbb-b1ef-481f-9710-f7416d4a0522
 redirect_from:
   - /v1/docs/crefopay-capture-refund-processes
   - /v1/docs/en/crefopay-capture-refund-processes

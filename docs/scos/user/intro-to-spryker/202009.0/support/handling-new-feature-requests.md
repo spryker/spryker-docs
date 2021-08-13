@@ -2,6 +2,7 @@
 title: Handling new feature requests
 description: In this article, we describe how we handle requests for the new features and improvements from our customers.
 originalLink: https://documentation.spryker.com/v6/docs/handling-new-feature-requests
+originalArticleId: 282d325a-6726-4076-8603-9d569658d1a2
 redirect_from:
   - /v6/docs/handling-new-feature-requests
   - /v6/docs/en/handling-new-feature-requests

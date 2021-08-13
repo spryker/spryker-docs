@@ -2,9 +2,12 @@
 title: Managing product sets
 description: Use these procedures to view, update or change the order of product sets, as well as activate/deactivate and/or delete them in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-sets
+originalArticleId: eaa91090-6e3e-4af1-bc98-f9bae069939a
 redirect_from:
   - /2021080/docs/managing-product-sets
   - /2021080/docs/en/managing-product-sets
+  - /docs/managing-product-sets
+  - /docs/en/managing-product-sets
 ---
 
 This article describes how to manage product sets.
@@ -13,7 +16,7 @@ This article describes how to manage product sets.
 
 To start working with product sets, go to **Merchandising** > **Product Sets**.
 
-For reference information, see [Reference information: Creating product sets](https://documentation.spryker.com/docs/creating-product-sets#reference-information-creating-product-sets).
+For reference information, see [Reference information: Creating product sets](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-sets/creating-product-sets.html#reference-information-creating-product-sets).
 
 ## Editing product sets
 
@@ -25,7 +28,7 @@ To edit a product set:
 ![Editing a product set](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/editing-product-set.png)
 
     {% info_block infoBox "Info" %}
-The attributes you see are described in [Product Sets: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-sets/references/product-sets-reference-information.html
+The attributes you see are described in [Product Sets: Reference Information](https://documentation.spryker.com/2021080/docs/product-sets-reference-information
 {% endinfo_block %}.)
 3. Click **Submit**.
 

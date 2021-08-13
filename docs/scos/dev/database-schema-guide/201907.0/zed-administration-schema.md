@@ -1,6 +1,7 @@
 ---
 title: Zed Administration Schema
 originalLink: https://documentation.spryker.com/v3/docs/db-schema-zed-administration
+originalArticleId: aba026c9-d4fc-4be7-a7d7-af4875be189f
 redirect_from:
   - /v3/docs/db-schema-zed-administration
   - /v3/docs/en/db-schema-zed-administration

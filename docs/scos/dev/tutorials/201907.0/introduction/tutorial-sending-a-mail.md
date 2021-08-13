@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Sending a Mail
 originalLink: https://documentation.spryker.com/v3/docs/mail-how-to-send
+originalArticleId: 6d84194a-049f-4a70-a834-78e21dfa20cb
 redirect_from:
   - /v3/docs/mail-how-to-send
   - /v3/docs/en/mail-how-to-send
@@ -106,7 +107,7 @@ protected function sendRegistrationToken()
 ```
 ## 2. Creating a MailTypePlugin
 
-Now, create the `MailType` plugin for this example. See [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials/202001.0/howtos/howto-create-and-register-a-mailtypeplugin.html) for more information on creating a MailTypePlugin:
+Now, create the `MailType` plugin for this example. See [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials/201907.0/howtos/howto-create-and-register-a-mailtypeplugin.html) for more information on creating a MailTypePlugin:
 
 <details open>
 <summary>Code sample:</summary>

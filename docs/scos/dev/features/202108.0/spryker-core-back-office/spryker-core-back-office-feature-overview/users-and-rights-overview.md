@@ -2,9 +2,12 @@
 title: Users and Rights overview
 description: Users can be assigned to different groups while groups can have different roles that have resources assigned to them which identify what rights users have
 originalLink: https://documentation.spryker.com/2021080/docs/user-and-rights-overview
+originalArticleId: 4006b24f-fd0a-480a-9589-d2b822fdbde3
 redirect_from:
   - /2021080/docs/user-and-rights-overview
   - /2021080/docs/en/user-and-rights-overview
+  - /docs/user-and-rights-overview
+  - /docs/en/user-and-rights-overview
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.
@@ -30,7 +33,7 @@ Also, you can find bundle names as well as controllers and actions in the file `
 
 ![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png){height="" width=""}
 
-See [Managing users](https://documentation.spryker.com/docs/managing-users) to learn how to create and manage users, groups, and roles .
+See [Managing users](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
 
 <a name="add-acl"></a>
 
@@ -117,7 +120,7 @@ In the example, we grant the user **winner@spryker.com** access to all Zed resou
                 <li class="mr-title"> Back Office User</li>
                 <li><a href="https://documentation.spryker.com/docs/managing-roles" class="mr-link">Create and manage roles</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-groups" class="mr-link">Create and manage groups</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-users" class="mr-link">Create and manage users</a></li>
+                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html" class="mr-link">Create and manage users</a></li>
             </ul>
         </div>
  </div>

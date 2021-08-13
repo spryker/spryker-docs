@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product Option Cart Connector
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-option-cart-connector
+originalArticleId: b4d9b3c1-c724-418f-b775-887fef35881a
 redirect_from:
   - /v2/docs/mg-product-option-cart-connector
   - /v2/docs/en/mg-product-option-cart-connector

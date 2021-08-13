@@ -1,6 +1,7 @@
 ---
 title: Project Implementation - Zed API
 originalLink: https://documentation.spryker.com/v1/docs/zed-api-project-implementation
+originalArticleId: e07045d9-2937-491f-b56a-7fad46c64077
 redirect_from:
   - /v1/docs/zed-api-project-implementation
   - /v1/docs/en/zed-api-project-implementation

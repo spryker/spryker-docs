@@ -2,6 +2,7 @@
 title: HowTo - Import Payment Method Store Relation Data
 description: Use the guide to learn how to import payment methods assigned to stores via s .CSV file.
 originalLink: https://documentation.spryker.com/v6/docs/ht-import-payment-method-store-relation-data
+originalArticleId: 6b371e74-bbc9-496b-ba7f-ac1b4c7683a6
 redirect_from:
   - /v6/docs/ht-import-payment-method-store-relation-data
   - /v6/docs/en/ht-import-payment-method-store-relation-data

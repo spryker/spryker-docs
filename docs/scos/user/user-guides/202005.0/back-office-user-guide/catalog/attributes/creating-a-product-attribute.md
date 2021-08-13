@@ -2,6 +2,7 @@
 title: Creating a Product Attribute
 description: Use the Creating a product attribute procedure to add an attribute key, a super attribute and other values to create an attribute.
 originalLink: https://documentation.spryker.com/v5/docs/creating-a-product-attribute
+originalArticleId: 718e283f-71de-4ca7-aada-94d3ac2d852a
 redirect_from:
   - /v5/docs/creating-a-product-attribute
   - /v5/docs/en/creating-a-product-attribute
@@ -34,7 +35,7 @@ Keep in mind that it should not contain any special symbols.
 If you want to apply this translation to other languages, click **Copy to other languages** icon next to the translation field.
 ***
 **What's next?**
-Learn how the product attributes are managed in the [Managing Product Attributes](https://documentation.spryker.com/docs/en/managing-attributes) article. 
+Learn how the product attributes are managed in the [Managing Product Attributes](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/attributes/managing-attributes.html) article. 
 
-Review the [References](https://documentation.spryker.com/docs/en/attributes-reference-information) section to learn more about the attributes you populate for the Attribute entity and the examples of how the attributes are used. 
+Review the [References](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/attributes/references/attributes-reference-information.html) section to learn more about the attributes you populate for the Attribute entity and the examples of how the attributes are used. 
 

@@ -2,6 +2,7 @@
 title: Managing Carts of Registered Users
 description: This article describes the endpoints that provide access to shopping carts management functionality for the carts of the registered users.
 originalLink: https://documentation.spryker.com/v4/docs/managing-carts-of-registered-users-201907
+originalArticleId: ee189fe4-1899-4c19-a482-3c58678db3df
 redirect_from:
   - /v4/docs/managing-carts-of-registered-users-201907
   - /v4/docs/en/managing-carts-of-registered-users-201907
@@ -19,7 +20,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Guest Carts and Carts of Registered Users
 Access to carts for registered users is provided by the **/carts** resource. Before accessing the resource, you need to authenticate a user first. For more details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html){target="_blank"}.
 
-Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the multiple carts feature is [integrated into your project](https://documentation.spryker.com/v4/docs/multiple-carts-feature-integration-201903){target="_blank"} and Glue is [enabled for multi-cart operations](https://documentation.spryker.com/v4/docs/multiple-carts-feature-integration-201903){target="_blank"}, registered users can have as many carts as they want. In the B2B scenario, this allows for creating different carts for different purposes. For instance, registered users can have a cart for daily purchases and one more for purchases made once a month.
+Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the multiple carts feature is [integrated into your project](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/multiple-carts-feature-integration.html){target="_blank"} and Glue is [enabled for multi-cart operations](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/multiple-carts-feature-integration.html){target="_blank"}, registered users can have as many carts as they want. In the B2B scenario, this allows for creating different carts for different purposes. For instance, registered users can have a cart for daily purchases and one more for purchases made once a month.
 
 ## Owned and Shared Carts
 Registered users can [share carts](/docs/scos/dev/features/202001.0/shopping-cart/shared-cart/shared-cart.html) they own. Thus, a registered user can access both their personal carts and carts shared with them by other users. This feature allows company users to collaborate on company purchases as a team.
@@ -104,7 +105,7 @@ For more details, see section *Retrieving Cart Permission Groups* in [Sharing Co
 
 ## Creating Carts
 To create a cart for a registered user, send a *POST* request to the following endpoint:
-[/carts](https://documentation.spryker.com/v4/docs/rest-api-reference#/carts)
+[/carts](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/carts)
 
 ### Request
 Sample request: *POST http://glue.mysprykershop.com/carts*
@@ -225,13 +226,13 @@ Totals
 ### Request
 To access all available carts, send a GET request to the following endpoint:
 
-[/carts](https://documentation.spryker.com/v4/docs/rest-api-reference#/carts){target="_blank"}
+[/carts](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/carts){target="_blank"}
 
 Sample request: *GET http://glue.mysprykershop.com/carts*
 
 To get a specific cart by ID, use the following endpoint:
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](https://documentation.spryker.com/v4/docs/rest-api-reference#/carts){target="_blank"}
+[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/carts){target="_blank"}
 
 Sample request: *GET http://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054*
 
@@ -458,7 +459,7 @@ The response will include the following additional attributes:
 ## Adding Items
 To add items to a cart, send a POST request to the following endpoint:
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items](https://documentation.spryker.com/v4/docs/rest-api-reference#/carts)
+[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/carts)
 
 ### Request
 
@@ -515,7 +516,7 @@ In case of a successful update, the endpoint will respond with a RestCartsRespon
 ## Removing Items
 To remove an item from a cart, send a DELETE request to the following endpoint:
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}](https://documentation.spryker.com/v4/docs/rest-api-reference#/carts)
+[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/carts)
 
 ### Request
 
@@ -542,7 +543,7 @@ If the item was deleted successfully, the endpoint will respond with a **204 No 
 ## Changing Item Quantity
 To change the quantity of certain items in a cart, use the following endpoint with the PATCH method:
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}](https://documentation.spryker.com/v4/docs/rest-api-reference#/carts){target="_blank"}
+[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/carts){target="_blank"}
 
 ### Request
 
@@ -588,7 +589,7 @@ In case of a successful update, the endpoint will respond with a **RestCartsResp
 ## Deleting Registered User's Cart
 To delete a cart of a registered user, send a DELETE request to the following endpoint::
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](https://documentation.spryker.com/v4/docs/rest-api-reference#/carts){target="_blank"}
+[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/carts){target="_blank"}
 
 {% info_block errorBox %}
 You cannot delete a cart if it is the customer's only cart. If you attempt to delete a customer's last cart, the endpoint responds with the **422 Unprocessable Entry** status code.If you delete the default cart of a customer, another cart will be assigned as default automatically.

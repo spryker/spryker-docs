@@ -1,13 +1,14 @@
 ---
 title: Migration Guide - ContentGui
 originalLink: https://documentation.spryker.com/v5/docs/mg-contentgui-201907
+originalArticleId: 14c2cd90-cdb4-4468-8650-9dcd77d62d6b
 redirect_from:
   - /v5/docs/mg-contentgui-201907
   - /v5/docs/en/mg-contentgui-201907
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
-Version 2.0.0 of the `ContentGui` module introduces the [Content Items](https://documentation.spryker.com/docs/en/content-items-overview-201907) functionality that allows creating and managing content and later selecting where it should be inserted.
+Version 2.0.0 of the `ContentGui` module introduces the [Content Items](https://documentation.spryker.com/v5/docs/en/content-items-overview-201907) functionality that allows creating and managing content and later selecting where it should be inserted.
 
 The `ContentGui` module version 2.0.0 introduced the following changes:
 
@@ -19,7 +20,7 @@ The `ContentGui` module version 2.0.0 introduced the following changes:
 You can find more details about the changes on the [ContentGui module release notes](https://github.com/spryker/content-gui/releases/tag/2.0.0) page.
 
 **To upgrade to the new version of the module, do the following:**
-1. Perform the steps in [Migration Guide - Content](https://documentation.spryker.com/docs/en/mg-content-201907).
+1. Perform the steps in [Migration Guide - Content](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-content.html).
 2. Upgrade the `ContentGui` module to version 2.0.0:
 
 ```bash

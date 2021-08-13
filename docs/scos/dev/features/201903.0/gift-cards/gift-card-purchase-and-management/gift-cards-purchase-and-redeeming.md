@@ -1,6 +1,7 @@
 ---
 title: Gift Cards Purchase and Redeeming
 originalLink: https://documentation.spryker.com/v2/docs/gift-cards-purchase-redeeming
+originalArticleId: 9934f0e1-3100-4bb0-a3ee-5d8c00e0f086
 redirect_from:
   - /v2/docs/gift-cards-purchase-redeeming
   - /v2/docs/en/gift-cards-purchase-redeeming

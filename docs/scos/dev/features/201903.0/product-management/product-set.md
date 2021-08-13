@@ -2,6 +2,7 @@
 title: Product Set
 description: Let your customers shop for special product sets that can be manually curated based on any characteristic of the products you wish.
 originalLink: https://documentation.spryker.com/v2/docs/product-set
+originalArticleId: 7be98e77-c38b-483f-82ea-c77b5ca3d076
 redirect_from:
   - /v2/docs/product-set
   - /v2/docs/en/product-set

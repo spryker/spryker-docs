@@ -2,6 +2,7 @@
 title: Showing Messages in Zed
 description: This article describes how to show a message in the Zed GUI.
 originalLink: https://documentation.spryker.com/v1/docs/flash-messenger
+originalArticleId: 3795459e-66b8-42c9-8169-a6fcc6a712a7
 redirect_from:
   - /v1/docs/flash-messenger
   - /v1/docs/en/flash-messenger

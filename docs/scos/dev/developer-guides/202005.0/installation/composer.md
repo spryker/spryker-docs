@@ -2,6 +2,7 @@
 title: Composer
 description: Spryker Commerce OS uses Composer as a dependency manager.
 originalLink: https://documentation.spryker.com/v5/docs/composer
+originalArticleId: e577f346-6ae9-4dda-9bbe-719938f34ba1
 redirect_from:
   - /v5/docs/composer
   - /v5/docs/en/composer
@@ -126,7 +127,7 @@ Execute `composer update` command at least weekly to assert you have the latest 
 
 ## Replace Spryker Module Dependencies
 
-Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](https://documentation.spryker.com/docs/en/plugin) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a 3rd party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
+Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/implementing-and-using-plugins.html) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a 3rd party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
 
 The following process describes adding a replace command into a new module to indicate that it replaces a core module.
 

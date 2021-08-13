@@ -2,6 +2,7 @@
 title: Retrieving abstract product list content items
 description: Abstract Product List API provides resources to retrieve data on abstract products included in the Abstract Product List content item for all or specific locale
 originalLink: https://documentation.spryker.com/v6/docs/retireving-abstract-product-list-content-items
+originalArticleId: 86b93b27-d9ed-474c-b42e-a2333c04aa92
 redirect_from:
   - /v6/docs/retireving-abstract-product-list-content-items
   - /v6/docs/en/retireving-abstract-product-list-content-items
@@ -10,7 +11,7 @@ redirect_from:
 This endpoint allows retrieving information about abstract product list content items.
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](https://documentation.spryker.com/docs/content-items-api-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html).
 
 ## Retrieve an abstract product list content item
 
@@ -1152,12 +1153,12 @@ To retrieve information about an abstract product list content item, send the re
 
 
 For the attributes of the included resource, see:
-* [Retrieve availability of an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-product-availability#abstract-product-availability-response-attributes)
-* [Retrieve image sets of an abstract product](https://documentation.spryker.com/docs/retrieving-image-sets-of-abstract-products#abstract-product-sets-response-attributes)
-* [Retrieve prices of an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-product-prices#prices-response-attributes)
-* [Retrieve a category node](https://documentation.spryker.com/docs/retrieving-category-nodes#category-nodes-response-attributes)
-* [Retrieve tax sets](https://documentation.spryker.com/docs/retrieving-tax-sets#tax-sets-response-attributes)
-* [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
+* [Retrieve availability of an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-abstract-product-availability.html#abstract-product-availability-response-attributes)
+* [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
+* [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-abstract-product-prices.html#prices-response-attributes)
+* [Retrieve a category node](/docs/scos/dev/glue-api-guides/202009.0/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
+* [Retrieve tax sets](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-tax-sets.html#tax-sets-response-attributes)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/202009.0/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 
 ## Possible errors
@@ -1168,4 +1169,4 @@ For the attributes of the included resource, see:
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).

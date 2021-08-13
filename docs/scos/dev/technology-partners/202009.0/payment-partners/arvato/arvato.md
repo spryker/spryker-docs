@@ -2,6 +2,7 @@
 title: Arvato
 description: Evaluate the profitability of your customer relationships through early identification of credit and fraud risks by integrating the Arvato module into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v6/docs/arvato
+originalArticleId: 6545c99d-14b0-48aa-abae-b1200e39d2b0
 redirect_from:
   - /v6/docs/arvato
   - /v6/docs/en/arvato

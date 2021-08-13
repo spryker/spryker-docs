@@ -2,6 +2,7 @@
 title: Shared Cart
 description: Shared Shopping Carts feature allows you to share shopping carts within an entire business unit or with individual users belonging to the business unit.
 originalLink: https://documentation.spryker.com/v2/docs/shared-cart
+originalArticleId: 35d67e5c-528f-409b-b70d-3c012c5a2b76
 redirect_from:
   - /v2/docs/shared-cart
   - /v2/docs/en/shared-cart

@@ -1,6 +1,7 @@
 ---
 title: Demo Shop Data Import Categories
 originalLink: https://documentation.spryker.com/v5/docs/data-import-categories
+originalArticleId: 9d6f9887-f467-4fb7-9686-7a9abe11afad
 redirect_from:
   - /v5/docs/data-import-categories
   - /v5/docs/en/data-import-categories

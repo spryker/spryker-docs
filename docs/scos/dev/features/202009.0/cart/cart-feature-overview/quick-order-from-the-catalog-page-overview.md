@@ -2,6 +2,7 @@
 title: Quick order from the catalog page overview
 description: The Quick Order from the Catalog Page Feature allows Buyers to add products with one product variant to cart directly from the Category page.
 originalLink: https://documentation.spryker.com/v6/docs/quick-order-from-the-catalog-page-overview
+originalArticleId: 69b0475b-9f16-4b21-b9e3-c753d6d6d91c
 redirect_from:
   - /v6/docs/quick-order-from-the-catalog-page-overview
   - /v6/docs/en/quick-order-from-the-catalog-page-overview
@@ -14,12 +15,12 @@ For the **Add to cart** icon to be active for the product on the Catalog page, t
 
 * The product should be abstract with only one variant.
 * The product should be available.
-* The product should not have [attributes](https://documentation.spryker.com/docs/attributes).
-* The product should not have [measurement](https://documentation.spryker.com/docs/measurement-units) or [packaging units](https://documentation.spryker.com/docs/packaging-units-202001).
+* The product should not have [attributes](https://documentation.spryker.com/v6/docs/attributes).
+* The product should not have [measurement](/docs/scos/dev/features/202009.0/measurement-units/measurement-units.html) or [packaging units](/docs/scos/dev/features/202009.0/packaging-units/packaging-units.html).
 
-Product belonging to a [product group](https://documentation.spryker.com/docs/product-abstraction) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available. 
+Product belonging to a [product group](https://documentation.spryker.com/v6/docs/products-overview) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available. 
 
-If a product has [options](https://documentation.spryker.com/docs/product-options-2), it can be added to cart from the Category page, but it will be added without any options.
+If a product has [options](/docs/scos/dev/features/202009.0/product-options/product-options.html), it can be added to cart from the Category page, but it will be added without any options.
 
 
 

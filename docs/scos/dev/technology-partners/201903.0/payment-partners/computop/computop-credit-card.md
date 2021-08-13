@@ -2,6 +2,7 @@
 title: Computop - Credit Card
 description: Integrate  Credit Card payment through Computop into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v2/docs/computop-credit-card
+originalArticleId: d3e31474-ec4c-43d6-afa5-0d19c64fde73
 redirect_from:
   - /v2/docs/computop-credit-card
   - /v2/docs/en/computop-credit-card
@@ -59,14 +60,14 @@ You capture a partial amount of the authorization => The rest of the amount forf
 **See also:**
 
 * [Get a general idea about Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html)
-* [Learn about Computop API](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-api.html)
-* [Get acquainted with Computop OMS functioning](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-oms.html)
-* [Configure Computop CRIF](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-crif.html)
-* [Configure Direct Debit payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-direct-debit.html)
-* [Configure Easy Credit payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-easy-credit.html)
-* [Configure iDeal payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-ideal.html)
-* [Configure Paydirekt payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-paydirekt.html)
-* [Configure PayNow payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-paynow.html)
-* [Configure PayPal payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-paypal.html)
-* [Configure Sofort payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop-sofort.html)
+* [Learn about Computop API](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html-api-details)
+* [Get acquainted with Computop OMS functioning](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html-oms-details)
+* [Configure Computop CRIF](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html-crif)
+* [Configure Direct Debit payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html-direct-debit)
+* [Configure Easy Credit payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html-easy-credit)
+* [Configure iDeal payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html-ideal)
+* [Configure Paydirekt payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html-paydirekt)
+* [Configure PayNow payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html-paynow)
+* [Configure PayPal payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html-paypal)
+* [Configure Sofort payment method for Computop](/docs/scos/dev/technology-partners/201903.0/payment-partners/computop/computop.html-sofort)
 

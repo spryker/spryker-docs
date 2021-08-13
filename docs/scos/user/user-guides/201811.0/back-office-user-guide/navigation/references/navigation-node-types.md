@@ -2,6 +2,7 @@
 title: Navigation Node Types
 description: The guide provides the navigation node types and additional node-related information.
 originalLink: https://documentation.spryker.com/v1/docs/navigation-node-types
+originalArticleId: 07415859-7edf-4866-ad2d-f837d45e723c
 redirect_from:
   - /v1/docs/navigation-node-types
   - /v1/docs/en/navigation-node-types

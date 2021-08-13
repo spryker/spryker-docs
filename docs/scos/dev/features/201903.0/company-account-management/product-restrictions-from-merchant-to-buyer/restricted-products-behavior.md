@@ -2,6 +2,7 @@
 title: Restricted Products Behavior
 description: In this article, you can find commonly encountered cases of product restrictions behavior.
 originalLink: https://documentation.spryker.com/v2/docs/restricted-products-behavior
+originalArticleId: 3ec96279-49a9-4904-b3ee-22cd586e12b7
 redirect_from:
   - /v2/docs/restricted-products-behavior
   - /v2/docs/en/restricted-products-behavior

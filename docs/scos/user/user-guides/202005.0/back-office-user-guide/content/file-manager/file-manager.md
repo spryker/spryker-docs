@@ -2,6 +2,7 @@
 title: File Manager
 description: The section can be used to upload media files, build a file tree structure, view existing files, and set MIME types in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/file-manager
+originalArticleId: 3ecef1bc-435e-44ab-a0ba-68753fb9b9d1
 redirect_from:
   - /v5/docs/file-manager
   - /v5/docs/en/file-manager
@@ -16,5 +17,5 @@ In the File Manager section, a Marketing Content Manager can do the following:
 * review the files available in the system
 ***
 To know more about the procedures that you need to follow to work in a File Manager section, see the following articles:
-* [Managing File Tree](https://documentation.spryker.com/docs/en/managing-file-tree)
-* [Managing File List](https://documentation.spryker.com/docs/en/managing-file-list)
+* [Managing File Tree](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/file-manager/managing-file-tree.html)
+* [Managing File List](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/file-manager/managing-file-list.html)

@@ -2,6 +2,7 @@
 title: Migration Guide - Validator
 description: Use the guide to perform the Validator part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-validator
+originalArticleId: 8914504d-9d67-4ee3-8b76-850c86e8d5b6
 redirect_from:
   - /v6/docs/migration-guide-validator
   - /v6/docs/en/migration-guide-validator
@@ -9,7 +10,7 @@ redirect_from:
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

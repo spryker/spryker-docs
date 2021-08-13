@@ -2,6 +2,7 @@
 title: Packaging & Measurement Units
 description: You can define values for selling products in weight, length, quantity. Depending on the items you are selling, you can offer different measurement units.
 originalLink: https://documentation.spryker.com/v4/docs/packaging-measurement-units
+originalArticleId: 458a6b42-5497-4f22-8570-11899679f142
 redirect_from:
   - /v4/docs/packaging-measurement-units
   - /v4/docs/en/packaging-measurement-units

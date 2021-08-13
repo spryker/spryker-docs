@@ -1,6 +1,7 @@
 ---
 title: About User Guides
 originalLink: https://documentation.spryker.com/v2/docs/about-user-guides
+originalArticleId: 4d14849e-2960-49fd-bf40-b258737e7e4e
 redirect_from:
   - /v2/docs/about-user-guides
   - /v2/docs/en/about-user-guides

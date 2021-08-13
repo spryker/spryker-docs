@@ -2,9 +2,12 @@
 title: Gift Cards feature overview
 description: This article describes general concepts of gift cards, gift card’s purchase and redeeming process, as well as the various use case scenarios.
 originalLink: https://documentation.spryker.com/2021080/docs/gift-cards-feature-overview
+originalArticleId: 942e081b-6312-483d-bc93-761af98f1f44
 redirect_from:
   - /2021080/docs/gift-cards-feature-overview
   - /2021080/docs/en/gift-cards-feature-overview
+  - /docs/gift-cards-feature-overview
+  - /docs/en/gift-cards-feature-overview
 ---
 
 The Gift Card feature allows you to create a virtual product with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout. 
@@ -36,7 +39,7 @@ The diagram below shows the gift card product-voucher transition workflow:
 When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is a “noshipment” constant in the app configuration, which can be selected to configure shipment for a specific type of products, in our case, for gift cards.
 
 
-When customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details on how toset the custom state names on the Storefront for refunded orders, see [HowTo - Display custom names for order item states on the Storefront](https://documentation.spryker.com/docs/howto-display-custom-names-for-order-item-states-on-the-storefront).
+When customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details on how toset the custom state names on the Storefront for refunded orders, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ## Buying with gift cards
 With a gift card code in place, users get an alternative payment method to pay for their orders. The payment workflow with the gift card would be as follows:

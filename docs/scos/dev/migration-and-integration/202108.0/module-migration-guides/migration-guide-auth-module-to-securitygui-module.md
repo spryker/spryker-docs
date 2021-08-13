@@ -1,9 +1,12 @@
 ---
 title: Migration guide- Auth module to SecurityGui module
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-auth-module-to-securitygui-module
+originalArticleId: 3c77ca14-9017-4a29-8576-aea8a0bd3294
 redirect_from:
   - /2021080/docs/migration-guide-auth-module-to-securitygui-module
   - /2021080/docs/en/migration-guide-auth-module-to-securitygui-module
+  - /docs/migration-guide-auth-module-to-securitygui-module
+  - /docs/en/migration-guide-auth-module-to-securitygui-module
 ---
 
 We gave up the `Auth` module in favor of using `Symfony Security`. `Symfony Security` allows more flexible customization of the authorization system. More detailed information can be found in the [official documentation](https://symfony.com/doc/current/security.html){target="_blank"}.

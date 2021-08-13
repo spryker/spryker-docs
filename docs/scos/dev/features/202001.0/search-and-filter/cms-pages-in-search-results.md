@@ -2,6 +2,7 @@
 title: CMS Pages in Search Results
 description: The CMS Pages in Search Results feature allows searching not only for products but for CMS pages content as well.
 originalLink: https://documentation.spryker.com/v4/docs/cms-pages-in-search-results
+originalArticleId: da7f170d-7348-4a72-9935-81e48289dd9b
 redirect_from:
   - /v4/docs/cms-pages-in-search-results
   - /v4/docs/en/cms-pages-in-search-results
@@ -24,15 +25,15 @@ To sum it up, this advanced tool for browsing and searching will not only enhanc
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://https://documentation.spryker.com/v4/docs/cms-page-search-product-lists-catalog-feature-integration-201903" class="mr-link">Integrate CMS page search + Product Lists + Catalog Feature v. 201903.0 into your project</a></li>
-                <li><a href="https://documentation.spryker.com/v4/docs/cms-pages-in-search-results-integration-201903" class="mr-link">Integrate CMS page search + Catalog Feature v. 201903.0 into your project</a></li>
+                <li><a href="https:///docs/scos/dev/features/202001.0/cms/cms-page/cms-page.html-search-product-lists-catalog-feature-integration-201903" class="mr-link">Integrate CMS page search + Product Lists + Catalog Feature v. 201903.0 into your project</a></li>
+                <li><a href="/docs/scos/dev/features/202001.0/cms/cms-page/cms-page.htmls-in-search-results-integration-201903" class="mr-link">Integrate CMS page search + Catalog Feature v. 201903.0 into your project</a></li>
             </ul>
         </div>
          <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                  <li><a href="https://documentation.spryker.com/v4/docs/cms-page" class="mr-link">Familiarize yourself with CMS Page feature</a></li>
+                  <li><a href="/docs/scos/dev/features/202001.0/cms/cms-page/cms-page.html" class="mr-link">Familiarize yourself with CMS Page feature</a></li>
             </ul>
         </div>
          <!-- col3 -->

@@ -2,6 +2,7 @@
 title: Developer Getting Started Guide
 description: This is a step-by-step checklist that you can follow  through all the stages of working with Spryker.
 originalLink: https://documentation.spryker.com/v2/docs/dev-getting-started
+originalArticleId: a1afe29f-fcd1-4510-be47-4b371c567757
 redirect_from:
   - /v2/docs/dev-getting-started
   - /v2/docs/en/dev-getting-started
@@ -23,7 +24,7 @@ You can chose from the following options:
 * **Legacy Demoshop** - an old version of Spryker Demo Shop for legacy projects. Use this option only if your project was started before the [November release](http://documentation.spryker.com/v2/docs/release-notes-2018-11-0), and you did not [take steps to make it compatible](/docs/scos/dev/migration-and-integration/201903.0/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html) with the new Spryker architecture.
 
 {% info_block infoBox %}
-For more information, see [Demo Shops](/docs/scos/dev/about-spryker/201903.0/demo-shops.html
+For more information, see [Demo Shops](/docs/scos/user/about-spryker/201903.0/demo-shops.html
 {% endinfo_block %}.)
 
 **Using the Development Virtual Machine**
@@ -34,8 +35,8 @@ Chose an Installation Guide that suites your needs best:
 
 |          Operating system               | B2B Shop                                                     | B2C Shop                                                     |  Legacy Demoshop                                              |
 | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| DevVM on Linux / Mac OS | [B2B Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-b2b#mac-os-or-linux--with-development-virtual-machine) | [B2C Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-b2c#mac-os-or-linux--with-development-virtual-machine) | [Legacy Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-legacy-demoshop#mac-os-or-linux--with-development-virtual-machine) |
-| DevVM on Windows        | [B2B Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-b2b#windows--with-development-virtual-machine) | [B2C Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-b2c#windows--with-development-virtual-machine) | [Legacy Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-legacy-demoshop#windows--with-development-virtual-machine) |
+| DevVM on Linux / Mac OS | [B2B Demoshop Installation Guide](/docs/scos/dev/developer-guides/201903.0/installation/b2b-demo-shop-installation-guide.html#mac-os-or-linux--with-development-virtual-machine) | [B2C Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm#mac-os-or-linux--with-development-virtual-machine) | [Legacy Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-legacy-demoshop#mac-os-or-linux--with-development-virtual-machine) |
+| DevVM on Windows        | [B2B Demoshop Installation Guide](/docs/scos/dev/developer-guides/201903.0/installation/b2b-demo-shop-installation-guide.html#windows--with-development-virtual-machine) | [B2C Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm#windows--with-development-virtual-machine) | [Legacy Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-legacy-demoshop#windows--with-development-virtual-machine) |
 
 **Independent Installation**
 Alternatively, you can install Spryker on an operating system that fulfills Spryker [System Requirements](/docs/scos/dev/developer-guides/201903.0/installation/system-requirements.html) without the use of a virtual machine. This option is recommended for production implementations.
@@ -44,7 +45,7 @@ Chose an Installation Guide that suites your needs best:
 
 | B2B Shop | B2C Shop | Legacy Demoshop |
 | --- | --- | --- | --- |
-| [B2B Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-b2b#without-development-virtual-machine) | [B2C Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-b2c#without-development-virtual-machine) | [Legacy Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-legacy-demoshop#without-development-virtual-machine) |
+| [B2B Demoshop Installation Guide](/docs/scos/dev/developer-guides/201903.0/installation/b2b-demo-shop-installation-guide.html#without-development-virtual-machine) | [B2C Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm#without-development-virtual-machine) | [Legacy Demoshop Installation Guide](https://documentation.spryker.com/v2/docs/installation-guide-legacy-demoshop#without-development-virtual-machine) |
 
 **Spryker in Docker**
 Finally,  you can start with a docker-sdk environment. This option includes Docker and related tools to build images and run containers which match your requirements. 
@@ -138,7 +139,7 @@ To better understand the Spryker Commerce OS, the next step is to visit our Arch
 * The [development guide](https://documentation.spryker.com/v2/docs/developer-guide) where you will find API documentation and instructions describing how to extend Spryker Capabilities.
 * The [module guide](https://documentation.spryker.com/v20/docs) for an overview of each module and previous versions
 * [Tooling guide](https://documentation.spryker.com/v2/docs/about-resources), how to test code quality, monitoring, logging, deployment and hosting
-* [Ecosystem Guide](https://documentation.spryker.com/v2/docs/partner-integration) for information about our third party technology partners and how to integrate with them.
+* [Ecosystem Guide](/docs/scos/dev/technology-partners/201903.0/technology-partner-integration.html) for information about our third party technology partners and how to integrate with them.
 * [Advanced development concepts](https://documentation.spryker.com/v2/docs/architecture-concepts) - a deeper look into the Spryker Commerce OS architecture, naming and design concepts
 * Check out our [how-tos](/docs/scos/dev/tutorials/201903.0/howtos/about-howtos.html) and [tutorials](/docs/scos/dev/tutorials/201903.0/about-tutorials.html)
 

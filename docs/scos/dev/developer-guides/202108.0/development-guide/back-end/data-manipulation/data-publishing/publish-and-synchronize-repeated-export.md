@@ -2,12 +2,15 @@
 title: Publish and Synchronize repeated export
 description: By following the steps from this article, you can re-generate published data and re-write data of database tables in Storage and Search modules with subsequent update of Redis and Elasticsearch records
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronize-repeated-export
+originalArticleId: f1d13f30-7763-4804-8674-e87edf95653f
 redirect_from:
   - /2021080/docs/publish-and-synchronize-repeated-export
   - /2021080/docs/en/publish-and-synchronize-repeated-export
+  - /docs/publish-and-synchronize-repeated-export
+  - /docs/en/publish-and-synchronize-repeated-export
 ---
 
-Automatic execution of the [Publish & Synchronize process](https://documentation.spryker.com/docs/t-handling-data-publish-and-sync-scos) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to re-generate the published data and re-write the data of the database tables in the Storage and Search modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.
+Automatic execution of the [Publish & Synchronize process](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to re-generate the published data and re-write the data of the database tables in the Storage and Search modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.
 
 ## Data re-synchronization
 
@@ -39,7 +42,7 @@ For example, the command to re-sync data for `CMS Block` looks as follows:
 vendor/bin/console sync:data cms_block
 ```
 
-To trigger data re-sync for a resource, there should be a corresponding sync plugin created for this resource. See [Implementing synchronization plugins](https://documentation.spryker.com/docs/implementing-synchronization-plugins) to learn how to create it.
+To trigger data re-sync for a resource, there should be a corresponding sync plugin created for this resource. See [Implementing synchronization plugins](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-publishing/implementing-synchronization-plugins.html) to learn how to create it.
 
 ## Published data re-generation
 
@@ -81,5 +84,5 @@ vendor/bin/console publish:trigger-events -r cms_block,availability -i 1,2
 
 To trigger data re-publish for a resource, there should be a corresponding publisher plugin created for this resource.
 
-See [Implementing event trigger publisher plugins](https://documentation.spryker.com/docs/howto-implement-event-trigger-publisher-plugins) to learn how to create it.
+See [Implementing event trigger publisher plugins](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html) to learn how to create it.
 

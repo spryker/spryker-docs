@@ -2,9 +2,12 @@
 title: Importing data with the queue data importer
 description: This article describes the process of importing data with the Queue Data Importer in the Spryker OS.
 originalLink: https://documentation.spryker.com/2021080/docs/importing-data-with-queue-data-importer
+originalArticleId: c20bef51-1460-4459-b45e-c13b92798a19
 redirect_from:
   - /2021080/docs/importing-data-with-queue-data-importer
   - /2021080/docs/en/importing-data-with-queue-data-importer
+  - /docs/importing-data-with-queue-data-importer
+  - /docs/en/importing-data-with-queue-data-importer
 ---
 
 Queue data import allows you to import data via message queues. It increases data import performance by using performance-related abilities and properties of message queues, like:
@@ -24,7 +27,7 @@ Regular data import is done as a single-step process: data is read from a data s
 Queue data import is designed to be done in two separate steps.
 
 1. Data is relocated from the original data source into the queues. Each resource, like abstract product data, is imported into a dedicated queue without pre-processing.
-2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial - Replacing a default data importer with the queue data importer](https://documentation.spryker.com/docs/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer). 
+2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial - Replacing a default data importer with the queue data importer](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html). 
 
 ## Exporing data from CSV to queue 
 

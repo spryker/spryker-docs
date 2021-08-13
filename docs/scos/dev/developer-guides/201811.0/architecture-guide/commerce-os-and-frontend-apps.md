@@ -2,6 +2,7 @@
 title: Commerce OS and Frontend Apps
 description: This article describes the two applications in Spryker- front end and back end.
 originalLink: https://documentation.spryker.com/v1/docs/commerce-os-and-frontend-apps
+originalArticleId: 6bcda677-01e1-449f-9235-4b02f982226f
 redirect_from:
   - /v1/docs/commerce-os-and-frontend-apps
   - /v1/docs/en/commerce-os-and-frontend-apps

@@ -1,6 +1,7 @@
 ---
 title: Advanced Tutorials
 originalLink: https://documentation.spryker.com/v5/docs/advanced-tutorials
+originalArticleId: e892537e-75bf-4755-b8dd-0f06373653fe
 redirect_from:
   - /v5/docs/advanced-tutorials
   - /v5/docs/en/advanced-tutorials

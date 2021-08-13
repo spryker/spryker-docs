@@ -1,6 +1,7 @@
 ---
 title: Catalog Search
 originalLink: https://documentation.spryker.com/v2/docs/catalog-search
+originalArticleId: 3b73442c-1db2-401f-aa10-37fa915c64b7
 redirect_from:
   - /v2/docs/catalog-search
   - /v2/docs/en/catalog-search

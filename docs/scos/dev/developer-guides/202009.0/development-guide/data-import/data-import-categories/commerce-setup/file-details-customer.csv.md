@@ -1,12 +1,13 @@
 ---
 title: File details- customer.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-customercsv
+originalArticleId: a5731400-2246-44db-9128-68ef9fd57090
 redirect_from:
   - /v6/docs/file-details-customercsv
   - /v6/docs/en/file-details-customercsv
 ---
 
-This article contains content of the **customer.csv** file to configure [Customer](https://documentation.spryker.com/docs/crm) information on your Spryker Demo Shop.
+This article contains content of the **customer.csv** file to configure [Customer](/docs/scos/dev/features/202009.0/customer-account-management/customer-account-management.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

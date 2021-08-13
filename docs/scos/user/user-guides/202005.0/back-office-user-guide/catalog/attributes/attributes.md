@@ -2,6 +2,7 @@
 title: Attributes
 description: Use the Attributes  section to add super attributes to product variants to highlight its specific peculiarities.
 originalLink: https://documentation.spryker.com/v5/docs/attributes
+originalArticleId: 1502581d-c63d-4dbe-8bae-4a4c3a324c32
 redirect_from:
   - /v5/docs/attributes
   - /v5/docs/en/attributes
@@ -18,7 +19,7 @@ Super Attributes in the Spryker Commerce OS are used to distinguish between the 
 ***
 **What's next?**
 To know how that attributes are created and managed, see the following articles:
-* [Creating Product Attributes](https://documentation.spryker.com/docs/en/creating-a-product-attribute)
-* [Managing Product Attributes](https://documentation.spryker.com/docs/en/managing-attributes)
+* [Creating Product Attributes](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/attributes/creating-a-product-attribute.html)
+* [Managing Product Attributes](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/attributes/managing-attributes.html)
 
-To know more about the fields you enter and select when working with attributes, see the [References](https://documentation.spryker.com/docs/en/attributes-reference-information) section.
+To know more about the fields you enter and select when working with attributes, see the [References](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/attributes/references/attributes-reference-information.html) section.

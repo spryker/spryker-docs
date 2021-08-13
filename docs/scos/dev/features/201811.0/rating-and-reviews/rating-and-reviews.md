@@ -2,6 +2,7 @@
 title: Rating and Reviews
 description: Drive your sales by including user reviews and ratings. They are proven to be a sign of trust and allow brands to receive valuable feedback.
 originalLink: https://documentation.spryker.com/v1/docs/rating-reviews
+originalArticleId: 334602e6-f5a6-4ae0-908c-af398dffef35
 redirect_from:
   - /v1/docs/rating-reviews
   - /v1/docs/en/rating-reviews

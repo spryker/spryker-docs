@@ -2,6 +2,7 @@
 title: Migration guide- SalesMerchantConnector
 description: This guide contains instructions on migrating the deprecated SalesMerchantConnector to SalesOms modules provided by Spryker.
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-salesmerchantconnector
+originalArticleId: 7d3cd59e-7b03-42fb-ba64-f614a631709b
 redirect_from:
   - /v6/docs/migration-guide-salesmerchantconnector
   - /v6/docs/en/migration-guide-salesmerchantconnector

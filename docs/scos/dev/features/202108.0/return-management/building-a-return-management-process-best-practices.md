@@ -2,12 +2,15 @@
 title: Building a return management process- Best practices
 description: Choose a suitable return management process for your project.
 originalLink: https://documentation.spryker.com/2021080/docs/building-a-return-management-process-best-practices
+originalArticleId: 4082625a-ef83-4e10-b517-716042ef8282
 redirect_from:
   - /2021080/docs/building-a-return-management-process-best-practices
   - /2021080/docs/en/building-a-return-management-process-best-practices
+  - /docs/building-a-return-management-process-best-practices
+  - /docs/en/building-a-return-management-process-best-practices
 ---
 
-Before you can start accepting returns from Buyers, you need to build the returns management strategy that suits your business the best. This article contains scenarios that can help you choose the most suitable returns workflow and implement it using the Spryker [Return Management](https://documentation.spryker.com/docs/return-management) functionality.
+Before you can start accepting returns from Buyers, you need to build the returns management strategy that suits your business the best. This article contains scenarios that can help you choose the most suitable returns workflow and implement it using the Spryker [Return Management](https://documentation.spryker.com/2021080/docs/return-management) functionality.
 
 <a name="scenario1"></a>
 
@@ -36,7 +39,7 @@ This scenario is typical for most B2C models, and its main advantages are:
 
 * Suits perfectly for the 14-days returns.
 * Requires minimum human intervention.
-* Can be implemented with the default Spryker [Return Management](https://documentation.spryker.com/docs/en/return-management) functionality, without extra development effort.
+* Can be implemented with the default Spryker [Return Management](https://documentation.spryker.com/2021080/docs/en/return-management) functionality, without extra development effort.
 
 <a name="scenario2"></a>
 

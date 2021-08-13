@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - API Module
 originalLink: https://documentation.spryker.com/v6/docs/mg-api-module
+originalArticleId: 50cd4600-ad6b-439e-895f-35d3b9bfc800
 redirect_from:
   - /v6/docs/mg-api-module
   - /v6/docs/en/mg-api-module

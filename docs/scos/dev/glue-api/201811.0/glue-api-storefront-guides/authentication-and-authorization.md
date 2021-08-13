@@ -1,6 +1,7 @@
 ---
 title: Authentication and Authorization
 originalLink: https://documentation.spryker.com/v1/docs/authentication-and-authorization
+originalArticleId: 5555295f-2ede-43ad-86e4-ba8c03dd7968
 redirect_from:
   - /v1/docs/authentication-and-authorization
   - /v1/docs/en/authentication-and-authorization

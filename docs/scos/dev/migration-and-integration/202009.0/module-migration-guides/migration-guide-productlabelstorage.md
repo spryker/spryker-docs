@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductLabelStorage
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-productlabelstorage
+originalArticleId: 0ef5b9d6-1237-4003-af63-668aa241d539
 redirect_from:
   - /v6/docs/migration-guide-productlabelstorage
   - /v6/docs/en/migration-guide-productlabelstorage

@@ -2,9 +2,12 @@
 title: Arvato - Store Order
 description: In this article, you can get details about the  Store Order service in the Arvato module.
 originalLink: https://documentation.spryker.com/2021080/docs/arvato-store-order-2-0
+originalArticleId: 24cf640b-da52-4d4e-a912-ceacb443f1cd
 redirect_from:
   - /2021080/docs/arvato-store-order-2-0
   - /2021080/docs/en/arvato-store-order-2-0
+  - /docs/arvato-store-order-2-0
+  - /docs/en/arvato-store-order-2-0
 ---
 
  As soon as the order is activated in the eShop it has to be directly delivered by the service call StoreOrder in risk solution services. Based on the transmitted data a limit check is processed again. The result and action codes returned by `StoreOrder` should be analyzed and the order process should be stopped if applicable.

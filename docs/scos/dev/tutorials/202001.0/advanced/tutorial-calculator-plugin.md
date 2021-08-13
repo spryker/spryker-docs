@@ -2,6 +2,7 @@
 title: Tutorial - Calculator Plugin
 description: Use the guide to create and register a calculator plugin to the calculator plugin stack.
 originalLink: https://documentation.spryker.com/v4/docs/t-calculator-plugin
+originalArticleId: aa6761c8-3b44-434c-963c-bec6fa9c235b
 redirect_from:
   - /v4/docs/t-calculator-plugin
   - /v4/docs/en/t-calculator-plugin

@@ -2,14 +2,17 @@
 title: Migration Guide - Messenger
 description: Use the guide to perform the Messenger part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-messenger
+originalArticleId: f29de7bd-4c9c-422a-9e91-89db100698ba
 redirect_from:
   - /2021080/docs/migration-guide-messenger
   - /2021080/docs/en/migration-guide-messenger
+  - /docs/migration-guide-messenger
+  - /docs/en/migration-guide-messenger
 ---
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

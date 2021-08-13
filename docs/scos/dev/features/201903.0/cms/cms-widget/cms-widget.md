@@ -2,6 +2,7 @@
 title: CMS Widget
 description: CMS Widgets will help you to enrich the content of your CMS pages and blocks, as well as effectively implement your marketing campaigns and activities
 originalLink: https://documentation.spryker.com/v2/docs/cms-widget
+originalArticleId: e3d78f9f-fefa-433c-aa0e-5619d0ab6a32
 redirect_from:
   - /v2/docs/cms-widget
   - /v2/docs/en/cms-widget

@@ -1,6 +1,7 @@
 ---
 title: Customer Schema
 originalLink: https://documentation.spryker.com/v6/docs/db-schema-customer
+originalArticleId: 35582003-0389-4a7b-9306-b58b3759baf2
 redirect_from:
   - /v6/docs/db-schema-customer
   - /v6/docs/en/db-schema-customer

@@ -2,6 +2,7 @@
 title: Multiple Currencies per Store Configuration
 description: The article describes the configuration of multiple currencies per store.
 originalLink: https://documentation.spryker.com/v5/docs/multiple-currencies-per-store-configuration
+originalArticleId: 733e7c5b-f16a-47b6-acc3-30e77cfdaae8
 redirect_from:
   - /v5/docs/multiple-currencies-per-store-configuration
   - /v5/docs/en/multiple-currencies-per-store-configuration
@@ -34,7 +35,7 @@ In addition, `CurrencyTransfer` contains information that specifies if it is the
 From currency version 3, we have introduced currency table where currencies are persisted. Also, currency facade provides API to read this data. 
 {% info_block infoBox "Info" %}
 
-Check the [Curency migration guide](https://documentation.spryker.com/docs/en/mg-currency) to migrate to the latest  module version.
+Check the [Curency migration guide](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-currency.html) to migrate to the latest  module version.
 
 {% endinfo_block %}
  We have also introduced a currency switcher to Yves. To use it, do the following: 

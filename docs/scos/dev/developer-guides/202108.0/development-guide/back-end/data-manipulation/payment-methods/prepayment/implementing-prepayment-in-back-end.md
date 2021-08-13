@@ -2,9 +2,12 @@
 title: Implementing Prepayment in Back End
 description: This article describes how to implement prepayment in the back end.
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-be
+originalArticleId: 2ee681bb-c2b1-4a78-93c7-2c6914fc6c64
 redirect_from:
   - /2021080/docs/ht-prepayment-be
   - /2021080/docs/en/ht-prepayment-be
+  - /docs/ht-prepayment-be
+  - /docs/en/ht-prepayment-be
 ---
 
 To integrate the prepayment method into the checkout, we need to provide implementations for these 2 plugins:

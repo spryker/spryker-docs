@@ -2,6 +2,7 @@
 title: Router Zed
 description: The article provides instructions on how to install and configure Router in Zed.
 originalLink: https://documentation.spryker.com/v6/docs/router-zed
+originalArticleId: 8dcb6989-7e57-4c83-9e3b-a1fcbca0c835
 redirect_from:
   - /v6/docs/router-zed
   - /v6/docs/en/router-zed
@@ -18,7 +19,7 @@ You can find the list of all the modules related to the service below:
 
 ### Installation
 
-For information on the installtion, see [Migration Guide - Router](https://documentation.spryker.com/docs/migration-guide-router). 
+For information on the installtion, see [Migration Guide - Router](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-router.html). 
 
 Additionally, you need to add the following plugins to the `\Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider`:
 

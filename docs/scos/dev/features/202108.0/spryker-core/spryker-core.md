@@ -1,9 +1,12 @@
 ---
 title: Spryker Core
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-core
+originalArticleId: 422423d0-beff-4da2-9ab7-4940262da733
 redirect_from:
   - /2021080/docs/spryker-core
   - /2021080/docs/en/spryker-core
+  - /docs/spryker-core
+  - /docs/en/spryker-core
 ---
 
 The Spryker Core feature is the very basis of all the functionality in Spryker. 

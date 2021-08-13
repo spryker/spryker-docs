@@ -2,6 +2,7 @@
 title: Tutorial - Handling Data - Publish and Synchronization - Legacy Demoshop
 description: Use the tutorial to learn how Publish and Synchronization work and how to export data using a simple Publish and Synchronization module.
 originalLink: https://documentation.spryker.com/v4/docs/handling-data-publish-and-synchronization
+originalArticleId: e83b6c98-cdbf-4658-977a-e690c3ea2e5f
 redirect_from:
   - /v4/docs/handling-data-publish-and-synchronization
   - /v4/docs/en/handling-data-publish-and-synchronization

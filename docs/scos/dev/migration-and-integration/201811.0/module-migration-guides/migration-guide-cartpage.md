@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CartPage
 originalLink: https://documentation.spryker.com/v1/docs/mg-cart-page
+originalArticleId: 8cc8b305-1cba-4f3f-b4c1-f617007e72c0
 redirect_from:
   - /v1/docs/mg-cart-page
   - /v1/docs/en/mg-cart-page

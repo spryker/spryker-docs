@@ -1,12 +1,15 @@
 ---
 title: File details- cms_slot_template.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-slot-templatecsv
+originalArticleId: ce6ee377-92eb-4297-9a05-a188447f5865
 redirect_from:
   - /2021080/docs/file-details-cms-slot-templatecsv
   - /2021080/docs/en/file-details-cms-slot-templatecsv
+  - /docs/file-details-cms-slot-templatecsv
+  - /docs/en/file-details-cms-slot-templatecsv
 ---
 
-This article contains content of the **cms_slot_template.csv** file to configure  [CMS Slot Template](https://documentation.spryker.com/docs/ht-create-cms-templates#template-with-slots) information on your Spryker Demo Shop.
+This article contains content of the **cms_slot_template.csv** file to configure  [CMS Slot Template](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

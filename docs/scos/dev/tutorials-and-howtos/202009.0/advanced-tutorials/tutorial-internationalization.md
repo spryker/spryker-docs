@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Internationalization
 originalLink: https://documentation.spryker.com/v6/docs/t-internationalization
+originalArticleId: 0f0eca61-a253-4f30-84d1-2fa0e5324f99
 redirect_from:
   - /v6/docs/t-internationalization
   - /v6/docs/en/t-internationalization

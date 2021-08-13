@@ -1,15 +1,18 @@
 ---
 title: Migration Guide - CmsPageSearch
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cmspagesearch
+originalArticleId: c549427a-a784-47d9-938d-984b9b52fc23
 redirect_from:
   - /2021080/docs/mg-cmspagesearch
   - /2021080/docs/en/mg-cmspagesearch
+  - /docs/mg-cmspagesearch
+  - /docs/en/mg-cmspagesearch
 ---
 
 ## Upgrading from Version 2.1.* to Version 2.2.*
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](https://documentation.spryker.com/docs/search-migration-concept). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](https://documentation.spryker.com/docs/mg-search#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
 
 {% endinfo_block %}
 To upgrade the module, do the following:
@@ -78,7 +81,7 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
 Spryker\Zed\CmsPageSearch\Communication\Plugin\Search\CmsDataPageMapBuilder
 ```
 ## Upgrading from Version 1.* to Version 2.*
-Version 2.0.0 of the CmsPageSearch module introduces the [multi-store functionality](https://documentation.spryker.com/v2/docs/multi-store-cms-pages-201903). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 2.0.0 of the CmsPageSearch module introduces the [multi-store functionality](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 To avoid the BC break, a synchronization behavior must be removed.
 

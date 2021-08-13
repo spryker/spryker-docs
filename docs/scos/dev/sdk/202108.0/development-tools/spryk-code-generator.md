@@ -2,9 +2,12 @@
 title: Spryk code generator
 description: This article describes how to install and use Spryker new code generation tool that enables you to avoid tedious work by writing boilerplate code for you
 originalLink: https://documentation.spryker.com/2021080/docs/spryk
+originalArticleId: 75d7b12b-6bf1-4ace-a09d-37033947d5e5
 redirect_from:
   - /2021080/docs/spryk
   - /2021080/docs/en/spryk
+  - /docs/spryk
+  - /docs/en/spryk
 ---
 
 The Spryk Code Generator is a tool developed to ease the process of generating pieces of code on core and project level. Furthermore, it links individual code generation definitions into specific scenarios you need on a daily basis.

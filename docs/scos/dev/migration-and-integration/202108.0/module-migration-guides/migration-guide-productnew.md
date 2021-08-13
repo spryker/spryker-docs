@@ -1,15 +1,18 @@
 ---
 title: Migration Guide - ProductNew
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productnew
+originalArticleId: 89798e9a-5600-4e1e-b252-70491bd3ad8e
 redirect_from:
   - /2021080/docs/migration-guide-productnew
   - /2021080/docs/en/migration-guide-productnew
+  - /docs/migration-guide-productnew
+  - /docs/en/migration-guide-productnew
 ---
 
 ## Upgarding from Version 1.1* to Version 1.2*
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](https://documentation.spryker.com/docs/search-migration-concept). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](https://documentation.spryker.com/docs/mg-search#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
 
 {% endinfo_block %}
 To upgrade the module, do the following:

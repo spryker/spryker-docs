@@ -2,6 +2,7 @@
 title: Release Notes 2018.12.0
 description: This document contains business level description of major new features and enhancements released in November of 2018.
 originalLink: https://documentation.spryker.com/v6/docs/release-notes-2018-12-0
+originalArticleId: 2ac63981-0799-45fa-b71a-31baec12c8a1
 redirect_from:
   - /v6/docs/release-notes-2018-12-0
   - /v6/docs/en/release-notes-2018-12-0
@@ -9,7 +10,7 @@ redirect_from:
 
  The Spryker Commerce OS is an end-to-end solution for e-commerce. This document contains business level description of major new features and enhancements released in November of 2018.
  
-For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-guides/201811.0/installation/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-guides/202009.0/developer-getting-started-guide.html).
 
 ## Spryker Glue REST API
 In response to multiple customer requests, we are happy to introduce Glue as a new application layer to the Spryker Commerce OS architecture. Glue provides API infrastructure, own application, feature resources, and documentation generators.
@@ -22,34 +23,34 @@ The Glue allows you to use the power of the Spryker Commerce OS in a variety of 
 ### Catalog Browsing
 The catalog browsing endpoints allow you to request search results and also use the Elasticsearch facet implementation. Furthermore, you can retrieve product-related information beyond price and category, including product labels and relations.
 
-**Documentation**: [Catalog Search](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/catalog-search.html).
+**Documentation**: [Catalog Search](/docs/scos/dev/glue-api-guides/202009.0/catalog-search.html).
 
 ### Login/Registration
 Endpoints ensure access-token login and retrieval. Customers can also register and request new passwords in case they forgot or want to change their current password.
 
-**Documentation**: [Managing Customers](/docs/scos/user/user-guides/201811.0/back-office-user-guide/customers/customers-customer-access-customer-groups/managing-customers.html).
+**Documentation**: [Managing Customers](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html).
 
 ### Cart
 Customers and guests can add products to their cart. Guest carts are now also persisted and retrievable via anonymous IDs, handled by your client application.
 
-**Documentation**: [Managing Carts](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/managing-carts/managing-carts.html).
+**Documentation**: [Managing Carts](https://documentation.spryker.com/v6/docs/managing-carts).
 
 ### Checkout
 Retrieve all the necessary information to build your checkout for guest customers and already registered customers with their personal data. If you offer different shipment or payment methods on your own conditions, they will be considered.
 
-**Documentation**: [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/checking-out-purchases-and-getting-checkout-data.html).
+**Documentation**: [Checking Out Purchases and Getting Checkout Data](https://documentation.spryker.com/v6/docs/checking-out-purchases-and-getting-checkout-data).
 
 ### Customer Account
 Your customers can benefit from the same shop experience with the customer account endpoints. Not only can basic customer information be administered, but also wishlist and order history functionality is offered.
 
-**Documentation**: [Managing Customers](/docs/scos/user/user-guides/201811.0/back-office-user-guide/customers/customers-customer-access-customer-groups/managing-customers.html), [Managing Wishlists](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/managing-wishlists.html), [Retrieving Customer's Order History](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/retrieving-customers-order-history.html).
+**Documentation**: [Managing Customers](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html), [Managing Wishlists](/docs/scos/dev/glue-api-guides/202009.0/managing-wishlists/managing-wishlists.html), [Retrieving Customer's Order History](https://documentation.spryker.com/v6/docs/retrieving-order-history).
 
 ## Documentation Swagger Generator
 ![Documentation Swagger generator](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image3.png){height="" width=""}
 
 To help you keep track of your API development, we implemented a simple command that will create a YAML file to be used in your Swagger implementation to share the progress of development in your company.
 
-**Documentation**: [REST API Reference](/docs/scos/dev/glue-api/201811.0/rest-api-reference.html).
+**Documentation**: [REST API Reference](/docs/scos/dev/glue-api-guides/202009.0/rest-api-reference.html).
 
 ## B2C API React Example
 ![B2C API React example](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image2.png){height="" width=""}

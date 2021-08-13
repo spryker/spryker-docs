@@ -1,6 +1,7 @@
 ---
 title: HowTo - Build Your Own Product Relation Type
 originalLink: https://documentation.spryker.com/v2/docs/ht-build-product-relation
+originalArticleId: a7e991a1-7b27-4aec-9974-6d845a31cec6
 redirect_from:
   - /v2/docs/ht-build-product-relation
   - /v2/docs/en/ht-build-product-relation

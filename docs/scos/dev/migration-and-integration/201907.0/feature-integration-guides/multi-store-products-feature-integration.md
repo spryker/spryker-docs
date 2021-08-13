@@ -2,6 +2,7 @@
 title: Multi-Store Products Feature Integration
 description: The guide describes the process of installing the Multi-Store Products into your project.
 originalLink: https://documentation.spryker.com/v3/docs/product-store-relation-feature-integration
+originalArticleId: 35e2121e-9328-4605-881a-10a7796af3e6
 redirect_from:
   - /v3/docs/product-store-relation-feature-integration
   - /v3/docs/en/product-store-relation-feature-integration
@@ -15,12 +16,12 @@ By default abstract products are available in all stores. This feature provides 
 ## Prerequisites
 To prepare your project to work with multi-store abstract products:
 
-1. Update/install `spryker/collector` to at least 6.0.0 version. You can find additional help for feature migration in [Migration Guide - Collector](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-collector.html).
-2. Update/install `spryker/touch` to at least 4.0.0 version. You can find additional help for feature migration in [_Migration Guide - Touch_](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-touch.html). 
+1. Update/install `spryker/collector` to at least 6.0.0 version. You can find additional help for feature migration in [Migration Guide - Collector](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-collector.html).
+2. Update/install `spryker/touch` to at least 4.0.0 version. You can find additional help for feature migration in [_Migration Guide - Touch_](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-touch.html). 
 3. Update/install `spryker/store` to at least 1.3.0 version.
-4. Update/install `spryker/product` to at least 6.0.0 version. You can find additional help for feature migration in [Migration Guide - Product](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-product.html).
+4. Update/install `spryker/product` to at least 6.0.0 version. You can find additional help for feature migration in [Migration Guide - Product](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-product.html).
 5. If you want to have Zed Admin UI support for the multi-store abstract product management:
-* Update/install `spryker/productmanagement` to at least 0.10.0 version. You can find additional help for feature migration in [Migration Guide - ProductManagement](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productmanagement.html). 
+* Update/install `spryker/productmanagement` to at least 0.10.0 version. You can find additional help for feature migration in [Migration Guide - ProductManagement](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-product.html-management). 
 * Override `Spryker\Zed\Store\StoreConfig::isMultiStorePerZedEnabled()` in your project to return `true`. This will enable the store management inside the Product Information Management (PIM) Zed Admin UI.
 
 <details open>

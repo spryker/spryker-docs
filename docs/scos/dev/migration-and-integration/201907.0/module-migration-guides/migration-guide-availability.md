@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Availability
 originalLink: https://documentation.spryker.com/v3/docs/mg-availability
+originalArticleId: edf48565-4edb-413f-9d48-cace6db4f0d0
 redirect_from:
   - /v3/docs/mg-availability
   - /v3/docs/en/mg-availability
@@ -107,7 +108,7 @@ ALTER TABLE "spy_availability" ADD CONSTRAINT "spy_availability-fk_spy_availabil
 
 As this involves more than availability module, to start using it some configuration needed per module basis.
 
-Oms version >= 4 is required. See the [Migration Guide - OMS](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-oms.html) to version 4 step by step guide how to migrate OMS to have new availability integrated.
+Oms version >= 4 is required. See the [Migration Guide - OMS](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-oms.html) to version 4 step by step guide how to migrate OMS to have new availability integrated.
 
 Cart > 2.1 and AvailabilityCartConnector > 2.0. To have cart availability pre check. You will need to add new plugin `Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` into Cart project dependency provider. `Pyz\Zed\Cart\CartDependencyProvider::getCartPreCheckPlugins()` which is core implementation of cart availability check.
 New availability collector is required. Take it from demoshop, `Pyz\Zed\Collector\Business\Storage\AvailabilityCollector`, this have to be added to `Pyz\Zed\Collector\CollectorDependencyProvider` storage plugin stack.

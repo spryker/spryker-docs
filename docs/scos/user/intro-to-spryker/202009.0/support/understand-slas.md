@@ -1,6 +1,7 @@
 ---
 title: Understand SLAs
 originalLink: https://documentation.spryker.com/v6/docs/understand-slas
+originalArticleId: 737d0768-7854-479d-b687-77befd8a2122
 redirect_from:
   - /v6/docs/understand-slas
   - /v6/docs/en/understand-slas
@@ -26,7 +27,7 @@ If you discover a problem with Spryker Software, please let us know immediately.
 Please ensure that every case you open with us includes the information we need to work on it. Take a look [here](/docs/scos/user/intro-to-spryker/202009.0/support/how-to-get-the-most-out-of-spryker-support.html) to learn what info matters most.
 
 ## What you can expect from us
-In our SLAs, we guarantee certain [First Response Times](https://documentation.spryker.com/docs/how-spryker-support-works-1#first-response-time)
+In our SLAs, we guarantee certain [First Response Times](/docs/scos/user/intro-to-spryker/202009.0/support/how-spryker-support-works.html#first-response-time)
 you can expect us to react to your cases within the time that is specified in your SLA. While we work to resolve high priority issues as fast as possible, we do not and cannot guarantee resolution times for the issues you open with us because of the breadth of cases we offer to work on. Guaranteeing resolution times would make it necessary for us to make the definition of the cases we accept stricter which ultimately will make it harder and more bureaucratic for you to work with us. 
 
 ### Infrastructure Support

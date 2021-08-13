@@ -2,6 +2,7 @@
 title: Checking Out Purchases and Getting Checkout Data
 description: This article will help you set up the endpoint functionality for creating checkout experience, like placing orders and retrieving checkout information.
 originalLink: https://documentation.spryker.com/v4/docs/checking-out-purchases-and-getting-checkout-data-201907
+originalArticleId: 6c58fc13-365b-4b14-96a1-f7b0ba1ceff4
 redirect_from:
   - /v4/docs/checking-out-purchases-and-getting-checkout-data-201907
   - /v4/docs/en/checking-out-purchases-and-getting-checkout-data-201907
@@ -50,7 +51,7 @@ A typical API Client workflow is as follows:
 ## Submitting Checkout Data
 To submit checkout data without order confirmation, you need to use the `/checkout-data` endpoint:
 
-[/checkout-data](https://documentation.spryker.com/v4/docs/rest-api-reference#/checkout-data){target="_blank"}
+[/checkout-data](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/checkout-data){target="_blank"}
 
 Sample request: *POST http://glue.mysprykershop.com/checkout-data*
 
@@ -560,7 +561,7 @@ If the payment and/or shipment methods have been specified in the request to the
 ## Placing Orders
 To finalize checkout and place an order, send a POST request to the following endpoint:
 
-[/checkout](https://documentation.spryker.com/v4/docs/rest-api-reference#/checkout){target="_blank"}
+[/checkout](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/checkout){target="_blank"}
 
 Sample request: *POST http://glue.mysprykershop.com/checkout*
 
@@ -758,7 +759,7 @@ Among the attributes returned, there is **orderReference** that can be used to r
 You can extend the response with the **orders** resource relationship in order to obtain detailed order information.
 
 {% info_block infoBox "Info" %}
-For detailed information and a list of attributes, see section [Retrieving Specific Order](https://documentation.spryker.com/v4/docs/retrieving-order-history#retrieving-specific-order
+For detailed information and a list of attributes, see section [Retrieving Specific Order](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/retrieving-customers-order-history.html#retrieving-specific-order
 {% endinfo_block %}{target="_blank"}.)
 
 Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*
@@ -997,7 +998,7 @@ When placing an order, you need to check the value of the **redirectURL** attrib
 It is the responsibility of the API Client to redirect the customer to the page and capture the response. For information on how to process it, see information on the payment service provider's API.
 {% endinfo_block %}
 
-The formats of the payloads used in the request and response to the third party page are defined by the respective **Eco** layer module that implements the interaction with the payment provider. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](https://documentation.spryker.com/v4/docs/t-interacting-with-third-party-payment-providers-via-glue-api#3--implement-payload-processor-plugin){target="_blank"}.
+The formats of the payloads used in the request and response to the third party page are defined by the respective **Eco** layer module that implements the interaction with the payment provider. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](/docs/scos/dev/tutorials/202001.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3--implement-payload-processor-plugin){target="_blank"}.
 
 **Interaction Diagram**
 
@@ -1006,7 +1007,7 @@ The formats of the payloads used in the request and response to the third party 
 ## Updating Payment Data
 If the user is redirected to a third-party page for payment verification, you need to update the payment with the payload received from the payment provider. To do so, post the payload to the following endpoint:
 
-[/order-payments](https://documentation.spryker.com/v4/docs/rest-api-reference#/order-payments){target="_blank"}
+[/order-payments](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/order-payments){target="_blank"}
 
 Sample request: *POST http://glue.mysprykershop.com/order-payments*
 
@@ -1021,7 +1022,7 @@ The identifier is specified in the **orderReference** attribute of the `/checkou
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| paymentIdentifier | String | x | Payment ID.</br>The value of the payment identifier depends on the payment services provider plugin used to process the payment. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](https://documentation.spryker.com/v4/docs/t-interacting-with-third-party-payment-providers-via-glue-api#3--implement-payload-processor-plugin){target="_blank"}. |
+| paymentIdentifier | String | x | Payment ID.</br>The value of the payment identifier depends on the payment services provider plugin used to process the payment. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](/docs/scos/dev/tutorials/202001.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3--implement-payload-processor-plugin){target="_blank"}. |
 | dataPayload | Array | v | Payload received from the payment service provider. |
 
 {% info_block warningBox "Note" %}

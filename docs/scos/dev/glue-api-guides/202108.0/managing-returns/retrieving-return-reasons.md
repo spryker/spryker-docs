@@ -2,15 +2,18 @@
 title: Retrieving return reasons
 description: In this article, you will find details on how to retrieve the return reasons via the Spryker Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-return-reasons
+originalArticleId: 469a4a94-e7b3-4c0c-a814-837f20bdc9e4
 redirect_from:
   - /2021080/docs/retrieving-return-reasons
   - /2021080/docs/en/retrieving-return-reasons
+  - /docs/retrieving-return-reasons
+  - /docs/en/retrieving-return-reasons
 ---
 
 This endpoint allows retrieving returns reasons.
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](https://documentation.spryker.com/docs/glue-api-return-management-feature-integration)
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-return-management-feature-integration.html)
 
 ## Retrieve return reasons
 
@@ -76,5 +79,5 @@ Request sample :  `GET https://glue.mysprykershop.com/return-reasons`
 | --- | --- | --- |
 | reason | String | Predefined return reason. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 

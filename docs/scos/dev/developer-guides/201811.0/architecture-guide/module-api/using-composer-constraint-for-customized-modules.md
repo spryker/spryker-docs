@@ -2,6 +2,7 @@
 title: Using ~ Composer Constraint for Customized Modules
 description: To avoid BC breaking changes and keep project updates safe and predictable, a project should use ~ (tilde) composer constraint instead of ^ (caret) for the customized modules.
 originalLink: https://documentation.spryker.com/v1/docs/using-composer-constraint
+originalArticleId: 0e69774b-c4f3-4773-9a2c-3f17867ce669
 redirect_from:
   - /v1/docs/using-composer-constraint
   - /v1/docs/en/using-composer-constraint

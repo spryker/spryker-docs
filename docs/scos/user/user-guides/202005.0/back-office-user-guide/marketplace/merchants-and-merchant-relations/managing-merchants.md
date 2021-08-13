@@ -2,6 +2,7 @@
 title: Managing Merchants
 description: Use the procedures to create, update and/or delete merchants in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-merchants
+originalArticleId: 258477d1-08cb-43c5-b045-08c5f13e88b0
 redirect_from:
   - /v5/docs/managing-merchants
   - /v5/docs/en/managing-merchants
@@ -33,5 +34,5 @@ This action cannot be undone and will erase all the merchant relations and other
 **What's next?**
 Once you have the merchant record available in the system, you can proceed with creating a merchant relation.
 
-See [Managing Merchant Relations](https://documentation.spryker.com/docs/en/managing-merchant-relations) to know how you create those.
+See [Managing Merchant Relations](/docs/scos/user/user-guides/202005.0/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to know how you create those.
 

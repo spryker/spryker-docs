@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Setup
 originalLink: https://documentation.spryker.com/v1/docs/mg-setup
+originalArticleId: 34ce1316-0847-44bd-8b17-4c2593403b2f
 redirect_from:
   - /v1/docs/mg-setup
   - /v1/docs/en/mg-setup

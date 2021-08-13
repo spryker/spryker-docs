@@ -2,6 +2,7 @@
 title: HowTo — Set up multiple stores
 description: Learn how to set up multiple stores for your project.
 originalLink: https://documentation.spryker.com/v6/docs/howto-set-up-multiple-stores
+originalArticleId: 4f4ccb18-0e34-4718-827c-0082b7dcb15a
 redirect_from:
   - /v6/docs/howto-set-up-multiple-stores
   - /v6/docs/en/howto-set-up-multiple-stores
@@ -92,7 +93,7 @@ stores['DE'] = [
        'de' => 'de_DE',
     ],
  ```
- See [HowTo - Set up stores with multiple locales](https://documentation.spryker.com/docs/ht-setup-stores-with-multiple-locales) for details on how to configure stores with multiple locales.
+ See [HowTo - Set up stores with multiple locales](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/howto-set-up-stores-with-multiple-locales.html) for details on how to configure stores with multiple locales.
  
  * Specify currency and country for the store you configure:
  ```php
@@ -183,4 +184,4 @@ return 'DE';
 
 ## 4. Verification
 
-Once done, you can check the list of the created stores in the Back Office, in [**Administration > Stores**](https://documentation.spryker.com/docs/stores-reference-information-201911).	
+Once done, you can check the list of the created stores in the Back Office, in [**Administration > Stores**](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/stores.html).	

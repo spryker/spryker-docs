@@ -2,6 +2,7 @@
 title: Migration Guide - CMS Block Category Connector Migration Console
 description: Use the guide to update versions to the newer ones of the CMS Block Category Connector Console module.
 originalLink: https://documentation.spryker.com/v5/docs/mg-cms-block-category-connector-console
+originalArticleId: 87e6273c-db53-46ba-8ab9-63e6745ab68c
 redirect_from:
   - /v5/docs/mg-cms-block-category-connector-console
   - /v5/docs/en/mg-cms-block-category-connector-console

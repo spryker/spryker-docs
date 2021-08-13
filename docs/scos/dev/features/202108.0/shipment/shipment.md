@@ -2,9 +2,12 @@
 title: Shipment
 description: During the checkout process your customers can easily select their preferred shipment method and related carrier.
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-summary
+originalArticleId: d6a60d84-630b-4572-aee6-9113b97fc8b9
 redirect_from:
   - /2021080/docs/shipment-summary
   - /2021080/docs/en/shipment-summary
+  - /docs/shipment-summary
+  - /docs/en/shipment-summary
 ---
 
 Choosing the best and effective strategy to ship products to your customers is an essential element for the success of your shop. With the *Shipment* feature, you can integrate several carrier companies and delivery methods and define their availability, as well as set  stores in which the delivery method will be available.

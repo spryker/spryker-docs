@@ -2,6 +2,7 @@
 title: Implementing Direct Debit Payment
 description: This set of articles will guide you through the implementation of the Direct Debit payment method without integrating with a third-party payment service provider.
 originalLink: https://documentation.spryker.com/v2/docs/ht-implement-dd
+originalArticleId: f408e15f-6405-43eb-bf96-519fd1f52687
 redirect_from:
   - /v2/docs/ht-implement-dd
   - /v2/docs/en/ht-implement-dd

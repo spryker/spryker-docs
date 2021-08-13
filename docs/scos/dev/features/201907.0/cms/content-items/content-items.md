@@ -2,6 +2,7 @@
 title: Content Items
 description: Content Items allow creating content and selecting where it should be inserted. It can also be retrieved and displayed on multiple touchpoints via API
 originalLink: https://documentation.spryker.com/v3/docs/content-items
+originalArticleId: d1ef8f3a-e7df-4113-9ad1-698557604d58
 redirect_from:
   - /v3/docs/content-items
   - /v3/docs/en/content-items

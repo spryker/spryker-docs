@@ -2,6 +2,7 @@
 title: Project Development Guidelines
 description: This article describes the strategies a project team can take while building a Spryker-based project.
 originalLink: https://documentation.spryker.com/v6/docs/project-development-guidelines
+originalArticleId: c79a32a4-2d9f-4178-80d9-bb0cc2ff0c08
 redirect_from:
   - /v6/docs/project-development-guidelines
   - /v6/docs/en/project-development-guidelines

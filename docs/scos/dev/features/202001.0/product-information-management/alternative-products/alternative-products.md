@@ -2,6 +2,7 @@
 title: Alternative Products
 description: It is important to set alternative products for the products that are unavailable for some reason. This helps users to find the “right” product.
 originalLink: https://documentation.spryker.com/v4/docs/alternative-products
+originalArticleId: 7084a778-dd76-43f4-8667-c8f77e4aec3e
 redirect_from:
   - /v4/docs/alternative-products
   - /v4/docs/en/alternative-products

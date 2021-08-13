@@ -2,6 +2,7 @@
 title: MVP project structuring
 description: This article helps with the project planning stage.
 originalLink: https://documentation.spryker.com/v6/docs/mvp-project-structuring
+originalArticleId: 29247a6e-a8f7-4c36-a95a-81647c69b0d8
 redirect_from:
   - /v6/docs/mvp-project-structuring
   - /v6/docs/en/mvp-project-structuring

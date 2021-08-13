@@ -2,6 +2,7 @@
 title: Creating and Configuring Zed Tables
 description: This article helps you to get started on working with tables.
 originalLink: https://documentation.spryker.com/v3/docs/t-working-tables
+originalArticleId: 9a69e467-dcb2-4c29-aa6c-9053cb324271
 redirect_from:
   - /v3/docs/t-working-tables
   - /v3/docs/en/t-working-tables
@@ -11,10 +12,10 @@ Spryker has a dedicated component to help you build tables for the Zed UI.
 
 This article will help you get started on working with tables:
 
-* [Creating a New Table](https://documentation.spryker.com/v4/docs/t-working-tables#creating-a-new-table)
-* [Configure the Table](https://documentation.spryker.com/v4/docs/t-working-tables#configure-the-table)
-* [Prepare the Data](https://documentation.spryker.com/v4/docs/t-working-tables#prepare-the-data)
-* [Render the Table](https://documentation.spryker.com/v4/docs/t-working-tables#render-the-table)
+* [Creating a New Table](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/zed-ui-tables/creating-and-configuring-zed-tables.html#creating-a-new-table)
+* [Configure the Table](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/zed-ui-tables/creating-and-configuring-zed-tables.html#configure-the-table)
+* [Prepare the Data](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/zed-ui-tables/creating-and-configuring-zed-tables.html#prepare-the-data)
+* [Render the Table](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/zed-ui-tables/creating-and-configuring-zed-tables.html#render-the-table)
 
 ## Creating a New Table
 To get started defining the new table, create a new class in your module, under the `/Communication/Table/` folder that extends the `AbstractTable` class.

@@ -2,6 +2,7 @@
 title: Availability- Reference Information
 description: The guide provides additional information you see when working with the product availability in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/availability-reference-information
+originalArticleId: 8872cb3e-5bfd-4a39-8641-2d2438635688
 redirect_from:
   - /v4/docs/availability-reference-information
   - /v4/docs/en/availability-reference-information

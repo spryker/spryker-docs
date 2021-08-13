@@ -2,6 +2,7 @@
 title: Retrieving Navigation Trees
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-navigation-trees-201907
+originalArticleId: b99b0a42-7f08-419f-a379-cf6b1a50657e
 redirect_from:
   - /v4/docs/retrieving-navigation-trees-201907
   - /v4/docs/en/retrieving-navigation-trees-201907
@@ -27,7 +28,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Usage
 To retrieve a navigation tree with detailed information on each node, send a GET request to the following endpoint:
 
-[/navigations/{% raw %}{{{% endraw %}navigation_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/v4/docs/rest-api-reference#/navigations)
+[/navigations/{% raw %}{{{% endraw %}navigation_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/navigations)
 
 Sample request: GET *http://glue.mysprykershop.com/navigations/**SOCIAL_LINKS***
 

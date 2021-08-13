@@ -2,6 +2,7 @@
 title: Managing Merchant Relationships Thresholds
 description: Use the procedures to edit soft and hard thresholds per specific merchant relationship in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/managing-merchant-relationships-thresholds
+originalArticleId: 2aeec6b1-90a3-4640-b14b-194d8d29f184
 redirect_from:
   - /v3/docs/managing-merchant-relationships-thresholds
   - /v3/docs/en/managing-merchant-relationships-thresholds
@@ -29,7 +30,7 @@ To set up a hard threshold for a specific merchant relation:
 4. Enter the message for both locales.
 5. For the Soft Threshold, select **None** and click **Save**.
 
-See [Threshold: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/thresholds/references/threshold-reference-information.html) to know more about the hard threshold.
+See [Threshold: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/thresholds/references/threshold-reference-information.html) to know more about the hard threshold.
 ***
 ## Setting up a Soft Threshold
 
@@ -48,7 +49,7 @@ To set up a soft threshold for a merchant relation:
 6. Populate the **Message** field for both locales.
 7. Click **Save**.
 
-See [Threshold: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/thresholds/references/threshold-reference-information.html) to know more about the soft threshold and its types.
+See [Threshold: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/thresholds/references/threshold-reference-information.html) to know more about the soft threshold and its types.
 ***
 ## Setting up both Hard and Soft Threshold
 

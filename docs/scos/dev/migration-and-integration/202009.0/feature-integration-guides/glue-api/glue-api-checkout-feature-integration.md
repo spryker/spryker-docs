@@ -1,6 +1,7 @@
 ---
 title: Glue API- Checkout feature integration
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-checkout-feature-integration
+originalArticleId: 3a50ec89-a41d-4591-84c3-bb5bcb7fac54
 redirect_from:
   - /v6/docs/glue-api-checkout-feature-integration
   - /v6/docs/en/glue-api-checkout-feature-integration
@@ -17,11 +18,11 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Glue Application](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-application-feature-integration.html) |
-| Cart | 202009.0 | [Cart API](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-cart-feature-integration.html) |
+| Spryker Core | 202009.0 | [Glue Application](https://documentation.spryker.com/v6/docs/glue-application-feature-integration-201907) |
+| Cart | 202009.0 | [Cart API](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/cart-feature-integration.html) |
 | Customer Account Management | 202009.0 | |
-| Payments | 202009.0 | [Payments API](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-payments-feature-integration.html) |
-|Shipments| 202009.0 | [Shipments API](https://documentation.spryker.com/docs/glue-api-shipment-feature-integration) | 
+| Payments | 202009.0 | [Payments API](https://documentation.spryker.com/v6/docs/payments-api-feature-integration-201907) |
+|Shipments| 202009.0 | [Shipments API](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html) | 
 
 ## 1)  Install the Required Modules Using Composer
 Run the following command(s) to install the required modules:
@@ -394,7 +395,7 @@ To verify that `OrderPaymentsResourceRoutePlugin` is activated, make sure that t
 }
 ```
 
-For more details, see [Updating Payment Data](https://documentation.spryker.com/v4/docs/checking-out-purchases-and-getting-checkout-data-201907#updating-payment-data).
+For more details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html#updating-payment-data).
 
 ### Configure mapping
 Mappers should be configured on the project level to map the data from the request to `QuoteTransfer`:
@@ -490,8 +491,8 @@ To verify that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activa
 
 | Feature | Link |
 | --- | --- |
-| Shipment API | [Glue API: Shipment Feature Integration](https://documentation.spryker.com/docs/glue-api-shipment-feature-integration) |
-| Payments API | [Glue API: Payments Feature Integration](https://documentation.spryker.com/docs/glue-api-payments-feature-integration) |
+| Shipment API | [Glue API: Shipment Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html) |
+| Payments API | [Glue API: Payments Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html) |
 
 
 

@@ -2,6 +2,7 @@
 title: Getting an Overview of the Used Plugins
 description: Plugin Overview gives you several ways of displaying plugin usages.
 originalLink: https://documentation.spryker.com/v2/docs/plugin-overview
+originalArticleId: 0d748545-b3f8-483c-80e2-ed46057ec5df
 redirect_from:
   - /v2/docs/plugin-overview
   - /v2/docs/en/plugin-overview

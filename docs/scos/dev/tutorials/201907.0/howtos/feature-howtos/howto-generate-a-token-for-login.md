@@ -1,12 +1,13 @@
 ---
 title: HowTo - Generate a Token for Login
 originalLink: https://documentation.spryker.com/v3/docs/ht-generating-token-for-login-201907
+originalArticleId: 3611ede4-726f-4b21-94b0-a50781be72ca
 redirect_from:
   - /v3/docs/ht-generating-token-for-login-201907
   - /v3/docs/en/ht-generating-token-for-login-201907
 ---
 
-[Customer Login by Token](https://documentation.spryker.com/v3/docs/customer-login-by-token-201907) feature allows B2B users to log in to a Spryker Shop using a token.
+[Customer Login by Token](https://documentation.spryker.com/v3/docs/customer-login-by-token-overview) feature allows B2B users to log in to a Spryker Shop using a token.
 
 A token is a unique identifier that contains all the information needed for authentication to fetch a specific resource without using a username and password. The tokens are JSON strings that are encoded in `base64url` format.
 

@@ -1,9 +1,12 @@
 ---
 title: Retrieving bundled products
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-bundled-products
+originalArticleId: f77455d1-e0ca-470c-a6f6-15a060ea2647
 redirect_from:
   - /2021080/docs/retrieving-bundled-products
   - /2021080/docs/en/retrieving-bundled-products
+  - /docs/retrieving-bundled-products
+  - /docs/en/retrieving-bundled-products
 ---
 
 This endpoint allows to retrieve the products that belong to a bundle.
@@ -12,13 +15,13 @@ This endpoint allows to retrieve the products that belong to a bundle.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-*   [Glue API: Product Bundles feature integration](https://documentation.spryker.com/2021080/docs/glue-api-product-bundles-feature-integration)
+*   [Glue API: Product Bundles feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-bundles-feature-integration.html)
 
-*   [Glue API: Products feature integration](https://documentation.spryker.com/2021080/docs/glue-api-products-feature-integration)
+*   [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)
     
-*   [Glue API: Cart feature integration - ongoing](https://documentation.spryker.com/2021080/docs/glue-api-cart-feature-integration)
+*   [Glue API: Cart feature integration - ongoing](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)
     
-*   [Glue API: Product Bundle + Cart feature integration](https://documentation.spryker.com/2021080/docs/glue-api-product-bundle-cart-feature-integration)
+*   [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-bundle-cart-feature-integration.html)
     
 
 ## Retrieve bundled products
@@ -799,21 +802,21 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 For the attributes of the included resources, see:
 
-*   [Retrieving concrete products](https://documentation.spryker.com/2021080/docs/retrieving-concrete-products#concrete-products-response-attributes)
+*   [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
     
-*   [Retrieving abstract products](https://documentation.spryker.com/docs/2021080/retrieving-abstract-products#abstract-products-response-attributes)
+*   [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
     
 
 ## Other management options
 
 You can also manage the `bundled-products` resource as follows:
 
-*   [Retrieve bundled products of a concrete product](https://documentation.spryker.com/2021080/docs/retrieving-concrete-products#retrieve-a-concrete-product)
+*   [Retrieve bundled products of a concrete product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
     
-*   [Retrieve bundled products of an abstract product](https://documentation.spryker.com/2021080/docs/retrieving-abstract-products)
+*   [Retrieve bundled products of an abstract product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html)
     
-*   [Manage bundled products in carts of registered users](https://documentation.spryker.com/2021080/docs/managing-items-in-carts-of-registered-users#add-an-item-to-a-registered-user-s-cart)
+*   [Manage bundled products in carts of registered users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-user-s-cart)
     
-*   [Manage bundled products in guest carts](https://documentation.spryker.com/2021080/docs/managing-guest-cart-items#add-items-to-a-guest-cart)
+*   [Manage bundled products in guest carts](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart)
     
 

@@ -2,6 +2,7 @@
 title: Braintree - Performing Requests
 description: This article contains information on the state machine commands and conditions for the Braintree module in the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v5/docs/braintree-performing-requests
+originalArticleId: 90009c74-d477-4516-82d0-9d78ab328ba3
 redirect_from:
   - /v5/docs/braintree-performing-requests
   - /v5/docs/en/braintree-performing-requests

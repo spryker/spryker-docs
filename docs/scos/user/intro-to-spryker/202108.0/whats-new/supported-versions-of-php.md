@@ -2,9 +2,12 @@
 title: Supported versions of PHP
 description: This article provides information about the PHP versions Spryker supports.
 originalLink: https://documentation.spryker.com/2021080/docs/supported-versions-of-php
+originalArticleId: 9eba7382-df72-44fd-b601-a3de5c592455
 redirect_from:
   - /2021080/docs/supported-versions-of-php
   - /2021080/docs/en/supported-versions-of-php
+  - /docs/supported-versions-of-php
+  - /docs/en/supported-versions-of-php
 ---
 
 **PHP 7.3** is supported until the end of August 2021. Therefore, we strongly recommend switching to **PHP 7.4+** until then.

@@ -1,6 +1,7 @@
 ---
 title: Development Virtual Machine, Docker Containers & Console
 originalLink: https://documentation.spryker.com/v2/docs/devvm
+originalArticleId: d266b0f4-6fdd-43e5-a6a0-f6fea5dd7cea
 redirect_from:
   - /v2/docs/devvm
   - /v2/docs/en/devvm

@@ -1,6 +1,7 @@
 ---
 title: HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage Module
 originalLink: https://documentation.spryker.com/v2/docs/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
+originalArticleId: 1f33305a-2490-4d8e-8f88-693953426661
 redirect_from:
   - /v2/docs/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
   - /v2/docs/en/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module

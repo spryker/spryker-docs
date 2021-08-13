@@ -2,6 +2,7 @@
 title: Creating a Product List
 description: Use the procedure to create a product list by assigning products and selecting the category in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/creating-a-product-list
+originalArticleId: 821d5028-384f-4608-a2d3-fd9d832525a9
 redirect_from:
   - /v3/docs/creating-a-product-list
   - /v3/docs/en/creating-a-product-list
@@ -53,5 +54,5 @@ When you assign categories, in the **Categories** field, start typing the name o
 ***
 **What's next?**
 
-* To learn what managing actions you can do with the product lists, see the [Managing Product Lists](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-lists/managing-product-lists.html) article.
-* To learn more about the attributes you select and enter while creating a product list, see the [Product Lists: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-lists/references/product-lists-reference-information.html) article.
+* To learn what managing actions you can do with the product lists, see the [Managing Product Lists](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-lists/managing-product-lists.html) article.
+* To learn more about the attributes you select and enter while creating a product list, see the [Product Lists: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-lists/references/product-lists-reference-information.html) article.

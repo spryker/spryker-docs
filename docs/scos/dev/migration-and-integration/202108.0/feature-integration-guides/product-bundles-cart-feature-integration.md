@@ -2,9 +2,12 @@
 title: Product bundles + cart feature integration
 description: This guide provides step-by-step instructions on integrating Product Bundles + Cart feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-cart-feature-integration
+originalArticleId: f069a875-5736-4134-a2c9-34a54b2dfdd0
 redirect_from:
   - /2021080/docs/product-bundles-cart-feature-integration
   - /2021080/docs/en/product-bundles-cart-feature-integration
+  - /docs/product-bundles-cart-feature-integration
+  - /docs/en/product-bundles-cart-feature-integration
 ---
 
 ## Install Feature Core

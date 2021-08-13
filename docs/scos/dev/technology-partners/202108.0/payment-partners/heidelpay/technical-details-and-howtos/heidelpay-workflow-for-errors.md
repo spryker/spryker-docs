@@ -2,9 +2,12 @@
 title: Heidelpay - Workflow for Errors
 description: This article describes the procedure for handling errors in Heidelpay.
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-error-workflow
+originalArticleId: 0330a859-8c49-422b-8ad6-700adf488be6
 redirect_from:
   - /2021080/docs/heidelpay-error-workflow
   - /2021080/docs/en/heidelpay-error-workflow
+  - /docs/heidelpay-error-workflow
+  - /docs/en/heidelpay-error-workflow
 ---
 
 From the user's perspective, there is almost no difference between successful and unsuccessful order flow.

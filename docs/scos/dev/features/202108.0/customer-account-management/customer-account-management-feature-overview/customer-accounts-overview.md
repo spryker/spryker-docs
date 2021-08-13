@@ -1,9 +1,12 @@
 ---
 title: Customer Accounts overview
 originalLink: https://documentation.spryker.com/2021080/docs/customer-accounts-overview
+originalArticleId: 94150bcb-e1c5-4290-b661-71af9fc3cbb3
 redirect_from:
   - /2021080/docs/customer-accounts-overview
   - /2021080/docs/en/customer-accounts-overview
+  - /docs/customer-accounts-overview
+  - /docs/en/customer-accounts-overview
 ---
 
 A *customer account* contains the following customer information on the Storefront:
@@ -26,7 +29,7 @@ There are slight differences in customer accounts' information for the B2B and B
 | Shopping Carts | ✓ |  |
 | Wishlist |  | ✓ |
 
-See [Customer Registration overview](https://documentation.spryker.com/docs/customer-registration-overview) for details on how customer accounts can be created.
+See [Customer Registration overview](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html) for details on how customer accounts can be created.
 
 
 Customers manage their accounts directly on the Storefront. If a customer updates an account, the data is synchronized, and the Back Office user sees the updated information in the Back Office > **Customers** > **Customers** section. The exceptions are newsletter subscriptions and password changes: this information is not stored in the Back Office.
@@ -50,7 +53,7 @@ A Back Office user can do the following:
 * Send a password token via email.
 * Check last orders of a customer in the shop.
 
-See [Managing customers](https://documentation.spryker.com/docs/managing-customers) for details.
+See [Managing customers](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
 
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:
@@ -93,7 +96,7 @@ Customer can perform the following actions the Storefront:
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                  <li><a href="https://documentation.spryker.com/docs/reference-information-customer-module-overview" class="mr-link">Referene information: Customer module overview 7.0</a></li>
-                <li><a href="<li><a href="https://documentation.spryker.com/docs/managing-customers-via-glue-api" class="mr-link">Manage customer accounts via Glue API</a></li>
+                <li><a href="<li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html-via-glue-api" class="mr-link">Manage customer accounts via Glue API</a></li>
                 <li><a href="<li><a href="https://documentation.spryker.com/docs/managing-customer-addresses-via-glue-api" class="mr-link">Manage customer account addresses via Glue API</a></li>
                 <li><a href="<li><a href="https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration" class="mr-link">Integrate the Customer Account Management Glue API</a></li>
                 <li>Enable Customer Accounts:</li>
@@ -105,7 +108,7 @@ Customer can perform the following actions the Storefront:
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-customers" class="mr-link">Manage customer accounts</a></li>
+                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html" class="mr-link">Manage customer accounts</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-customer-addresses" class="mr-link">Manage customer addresses</a></li>
             </ul>
         </div>

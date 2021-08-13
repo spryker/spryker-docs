@@ -2,9 +2,12 @@
 title: Configuring dynamic Yves-Zed tokens
 description: Improve security between Yves and Zed communication layers with dynamic tokens.
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-dynamic-yves-zed-tokens
+originalArticleId: c0839fc5-7812-47d6-9dc5-fc06c6a71159
 redirect_from:
   - /2021080/docs/configuring-dynamic-yves-zed-tokens
   - /2021080/docs/en/configuring-dynamic-yves-zed-tokens
+  - /docs/configuring-dynamic-yves-zed-tokens
+  - /docs/en/configuring-dynamic-yves-zed-tokens
 ---
 
 This document describes how to improve security between Yves and Zed communication layers by implementing dynamic Yves-Zed tokens.

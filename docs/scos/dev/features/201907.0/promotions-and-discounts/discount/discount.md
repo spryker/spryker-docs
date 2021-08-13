@@ -2,6 +2,7 @@
 title: Discount
 description: Discounts are a tool to support sales and marketing activities. Gain the flexibility of using the tool in the ways that meet your business needs.
 originalLink: https://documentation.spryker.com/v3/docs/discount
+originalArticleId: fc6d55ba-5c17-4dcb-b26e-2b6ebf4eeb9d
 redirect_from:
   - /v3/docs/discount
   - /v3/docs/en/discount

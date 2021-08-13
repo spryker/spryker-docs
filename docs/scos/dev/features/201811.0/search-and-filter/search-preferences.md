@@ -1,6 +1,7 @@
 ---
 title: Search Preferences
 originalLink: https://documentation.spryker.com/v1/docs/search-preferences
+originalArticleId: 155fd355-4af5-4255-8928-3685983f778f
 redirect_from:
   - /v1/docs/search-preferences
   - /v1/docs/en/search-preferences

@@ -2,6 +2,7 @@
 title: Tutorial - Stores - Legacy Demoshop
 description: The tutorial provides steps on how to override a Zed core module on a project and a store module. The steps can be performed on an Yves module.
 originalLink: https://documentation.spryker.com/v4/docs/tutorial-stores-legacy-demoshop
+originalArticleId: 9a83d01b-3a98-4024-8b8b-15ac22bf2c3e
 redirect_from:
   - /v4/docs/tutorial-stores-legacy-demoshop
   - /v4/docs/en/tutorial-stores-legacy-demoshop

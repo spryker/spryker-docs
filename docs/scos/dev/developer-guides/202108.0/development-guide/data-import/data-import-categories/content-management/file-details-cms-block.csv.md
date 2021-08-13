@@ -1,12 +1,15 @@
 ---
 title: File details- cms_block.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-blockcsv
+originalArticleId: 2fde5c8a-6217-4151-a511-23b71759feb0
 redirect_from:
   - /2021080/docs/file-details-cms-blockcsv
   - /2021080/docs/en/file-details-cms-blockcsv
+  - /docs/file-details-cms-blockcsv
+  - /docs/en/file-details-cms-blockcsv
 ---
 
-This article contains content of the **cms_block.csv** file to configure [CMS Block](https://documentation.spryker.com/docs/cms-block) information on your Spryker Demo Shop.
+This article contains content of the **cms_block.csv** file to configure [CMS Block](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-blocks-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

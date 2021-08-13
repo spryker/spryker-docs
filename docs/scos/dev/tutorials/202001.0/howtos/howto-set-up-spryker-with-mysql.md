@@ -2,6 +2,7 @@
 title: HowTo - Set up Spryker with MySQL
 description: Use the guide to install Spryker to run with MySQL.
 originalLink: https://documentation.spryker.com/v4/docs/ht-setup-spryker-with-mysql
+originalArticleId: 6651507a-a75c-490d-82b5-0543ad756df9
 redirect_from:
   - /v4/docs/ht-setup-spryker-with-mysql
   - /v4/docs/en/ht-setup-spryker-with-mysql

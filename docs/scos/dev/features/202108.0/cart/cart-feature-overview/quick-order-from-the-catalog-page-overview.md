@@ -2,9 +2,12 @@
 title: Quick Order from the Catalog Page overview
 description: The Quick Order from the Catalog Page Feature allows Buyers to add products with one product variant to cart directly from the Category page.
 originalLink: https://documentation.spryker.com/2021080/docs/quick-order-from-the-catalog-page-overview
+originalArticleId: a931a32d-1f7d-4177-b99c-1146e26b885e
 redirect_from:
   - /2021080/docs/quick-order-from-the-catalog-page-overview
   - /2021080/docs/en/quick-order-from-the-catalog-page-overview
+  - /docs/quick-order-from-the-catalog-page-overview
+  - /docs/en/quick-order-from-the-catalog-page-overview
 ---
 
 Buyers can add simple products with one product variant to cart directly from the Category page by clicking the **Add to cart** icon on the product card. 
@@ -14,12 +17,12 @@ For the **Add to cart** icon to be active for the product on the Catalog page, t
 
 * The product should be abstract with only one variant.
 * The product should be available.
-* The product should not have [attributes](https://documentation.spryker.com/docs/attributes).
-* The product should not have [measurement](https://documentation.spryker.com/docs/measurement-units) or [packaging units](https://documentation.spryker.com/docs/packaging-units-202001).
+* The product should not have [attributes](https://documentation.spryker.com/2021080/docs/attributes).
+* The product should not have [measurement](https://documentation.spryker.com/2021080/docs/measurement-units) or [packaging units](https://documentation.spryker.com/2021080/docs/packaging-units).
 
-Product belonging to a [product group](https://documentation.spryker.com/docs/product-abstraction) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available. 
+Product belonging to a [product group](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available. 
 
-If a product has [options](https://documentation.spryker.com/docs/product-options-2), it can be added to cart from the Category page, but it will be added without any options.
+If a product has [options](/docs/scos/dev/features/{{ page.version }}/product-options/product-options.html), it can be added to cart from the Category page, but it will be added without any options.
 
 
 

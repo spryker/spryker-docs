@@ -2,9 +2,12 @@
 title: Glue API- Spryker Сore feature integration
 description: Use the guide to install the Spryker Core feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-spryker-core-feature-integration
+originalArticleId: e7a1a56e-b305-4a95-87b4-7cf7d6868603
 redirect_from:
   - /2021080/docs/glue-api-spryker-core-feature-integration
   - /2021080/docs/en/glue-api-spryker-core-feature-integration
+  - /docs/glue-api-spryker-core-feature-integration
+  - /docs/en/glue-api-spryker-core-feature-integration
 ---
 
 This document describes how to integrate the Glue API: Spryker Core feature into a Spryker project.
@@ -490,9 +493,9 @@ http://glue.mysprykershop.com/url-resolver/?url=/category-url
 
 {% info_block warningBox "Verification" %}
 
-Make sure `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin` are activated correctly by attempting to get an access token (see [Authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer) with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should be blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts, you get the `429 Too many requests` error.
+Make sure `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin` are activated correctly by attempting to get an access token (see [Authenticating as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html) with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should be blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts, you get the `429 Too many requests` error.
 
-Repeat the same actions for the agent sign-in to check `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin`. The agent should get the blocking configuration specific for agents if you specified the agent-specific settings in step 3 of the integration of the feature core. See  [Authenticating as an agent assist](https://documentation.spryker.com/docs/authenticating-as-an-agent-assist#authenticate-as-an-agent-assist) for agent access tokens manual.
+Repeat the same actions for the agent sign-in to check `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin`. The agent should get the blocking configuration specific for agents if you specified the agent-specific settings in step 3 of the integration of the feature core. See  [Authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) for agent access tokens manual.
 
 
 {% endinfo_block %}

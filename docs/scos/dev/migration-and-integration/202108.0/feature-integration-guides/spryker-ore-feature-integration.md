@@ -2,9 +2,12 @@
 title: Spryker Сore feature integration
 description: The procedure to integrate Spryker Core feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-core-feature-integration
+originalArticleId: f99d3cf9-e933-4a3b-888e-72cf8f4ea31b
 redirect_from:
   - /2021080/docs/spryker-core-feature-integration
   - /2021080/docs/en/spryker-core-feature-integration
+  - /docs/spryker-core-feature-integration
+  - /docs/en/spryker-core-feature-integration
 ---
 
 This document describes how to integrate the Spryker Core feature into a Spryker project.

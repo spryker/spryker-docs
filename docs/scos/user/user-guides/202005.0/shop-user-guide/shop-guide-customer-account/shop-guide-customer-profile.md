@@ -2,6 +2,7 @@
 title: Shop Guide - Customer Profile
 description: This guide provides instructions on managing Customer Profile in the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-customer-profile
+originalArticleId: 52b5fa02-cab2-4fca-8708-e2044e86f418
 redirect_from:
   - /v5/docs/shop-guide-customer-profile
   - /v5/docs/en/shop-guide-customer-profile
@@ -51,8 +52,8 @@ You can **update the password** for your Customer Account at any time in the **C
 ***
 **What’s next?**
 
-To learn more about how to manage your addresses, see [Shop Guide - Customer Addresses](https://documentation.spryker.com/docs/en/shop-guide-customer-addresses).
+To learn more about how to manage your addresses, see [Shop Guide - Customer Addresses](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-customer-addresses.html).
 
-To learn more about how to place the order, see [Shop Guide - Checkout](https://documentation.spryker.com/docs/en/checkout-shop-guide-201911).
+To learn more about how to place the order, see [Shop Guide - Checkout](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html).
 
-To learn more about how to manage your orders, see [Shop Guide - Order History](https://documentation.spryker.com/docs/en/checkout-shop-guide-201911).
+To learn more about how to manage your orders, see [Shop Guide - Order History](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html).

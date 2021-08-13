@@ -2,6 +2,7 @@
 title: Installing the category CMS blocks
 description: The guide describes the process of installing the Category CMS Block in your project.
 originalLink: https://documentation.spryker.com/v6/docs/enabling-category-cms-block
+originalArticleId: 7e9dd589-dd8e-49bf-941c-c0f7d7a15166
 redirect_from:
   - /v6/docs/enabling-category-cms-block
   - /v6/docs/en/enabling-category-cms-block

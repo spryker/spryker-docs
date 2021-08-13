@@ -2,6 +2,7 @@
 title: Migration Guide - Customer
 description: Use the guide to update versions to the newer ones of the Customer module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-customer
+originalArticleId: 4eae0330-307d-4d1c-9001-599cf52431a8
 redirect_from:
   - /v6/docs/mg-customer
   - /v6/docs/en/mg-customer

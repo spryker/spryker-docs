@@ -2,9 +2,12 @@
 title: Managing the returns
 description: In this article, you will find information on retrieving the returned items via the Spryker Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-the-returns
+originalArticleId: bbe2ab03-1413-46f5-858a-9ca6c0bdb531
 redirect_from:
   - /2021080/docs/managing-the-returns
   - /2021080/docs/en/managing-the-returns
+  - /docs/managing-the-returns
+  - /docs/en/managing-the-returns
 ---
 
 The Return Management API allows developers to retrieve return information and create returns. The list of retrievable information includes: 
@@ -25,7 +28,7 @@ In your development, the API can help you:
 
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](https://documentation.spryker.com/docs/glue-api-return-management-feature-integration)
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-return-management-feature-integration.html)
 
 
 

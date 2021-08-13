@@ -2,6 +2,7 @@
 title: Using a Query Container
 description: The query container of the current unterminated query is available via $this->getQueryContainer() in the factory of the communication and the business layer and can be injected into any model.
 originalLink: https://documentation.spryker.com/v1/docs/using-a-query-container
+originalArticleId: e10ed1d9-f543-45da-b999-60e3e89d88c3
 redirect_from:
   - /v1/docs/using-a-query-container
   - /v1/docs/en/using-a-query-container

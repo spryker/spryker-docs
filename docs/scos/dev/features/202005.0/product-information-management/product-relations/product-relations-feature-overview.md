@@ -2,6 +2,7 @@
 title: Product Relations Feature Overview
 description: Product Relations is a feature that allows grouping products by attributes for easier navigation and accessibility.
 originalLink: https://documentation.spryker.com/v5/docs/product-relations-feature-overview
+originalArticleId: 2cdc7608-e904-4733-97a8-74e37edb333a
 redirect_from:
   - /v5/docs/product-relations-feature-overview
   - /v5/docs/en/product-relations-feature-overview
@@ -18,7 +19,7 @@ For example, you can:
 
 Product relations are established only between abstract products. An abstract product can have multiple product relations. 
 
-See [Creating a Product Relation](https://documentation.spryker.com/docs/en/creating-a-product-relation) to learn how a product catalog manager can create a product relation.
+See [Creating a Product Relation](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/creating-a-product-relation.html) to learn how a product catalog manager can create a product relation.
 
 A developer can import<!-- link to new import page --> product relations.
 
@@ -39,7 +40,7 @@ With Upselling, when the product owing the relation is added to cart, related pr
 
 
 
-A product catalog manager can select a product relation type when [creating](https://documentation.spryker.com/docs/en/creating-a-product-relation) or [editing](https://documentation.spryker.com/docs/en/managing-product-relations#editing-a-product-relation) a product relation in the Back Office.
+A product catalog manager can select a product relation type when [creating](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/creating-a-product-relation.html) or [editing](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/managing-product-relations.html#editing-a-product-relation) a product relation in the Back Office.
 
 
 ## Product Types in Product Relations
@@ -113,7 +114,7 @@ If selected, the product catalog is automatically evaluated against the defined 
 
 If you do not select this option, the product catalog is evaluated against the defined rules only at the stage of product relation creation. 
 
-A product catalog manager can select this option when [creating](https://documentation.spryker.com/docs/en/creating-a-product-relation) a product relation.
+A product catalog manager can select this option when [creating](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/creating-a-product-relation.html) a product relation.
 
 A developer can do the following:
 
@@ -123,7 +124,7 @@ A developer can do the following:
 
 ## Store Relation
 
-A product catalog manager can define the [stores](https://documentation.spryker.com/docs/en/multiple-stores) each product relation is displayed in. 
+A product catalog manager can define the [stores](/docs/scos/dev/features/202005.0/internationalization/multiple-stores.html) each product relation is displayed in. 
 
 If no store relation is defined for a product relation, it is not displayed on Storefront.
 

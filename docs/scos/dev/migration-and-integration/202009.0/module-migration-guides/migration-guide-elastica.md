@@ -2,6 +2,7 @@
 title: Migration guide- Elastica
 description: Learn how to upgrade the Elastica module to a newer version
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-elastica
+originalArticleId: 895cf3e4-06b6-4f2d-8b91-1322b6bee4ce
 redirect_from:
   - /v6/docs/migration-guide-elastica
   - /v6/docs/en/migration-guide-elastica
@@ -9,7 +10,7 @@ redirect_from:
 
 {% info_block infoBox %}
 
-This migration guide is a part of the [Search migration effort](https://documentation.spryker.com/docs/search-migration-concept).
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/search-migration-concept/search-migration-concept.html).
 
 {% endinfo_block %}
 

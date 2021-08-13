@@ -1,6 +1,7 @@
 ---
 title: Order Cancellation
 originalLink: https://documentation.spryker.com/v5/docs/order-cancellation
+originalArticleId: ae2e2339-620b-4819-a844-12c4ca91837c
 redirect_from:
   - /v5/docs/order-cancellation
   - /v5/docs/en/order-cancellation

@@ -2,6 +2,7 @@
 title: Comments feature overview
 description: Comments feature provides the ability for online owners to add Comments Widget that  allows the customers to leave comments or special requests.
 originalLink: https://documentation.spryker.com/v6/docs/comments-feature-overview
+originalArticleId: d072bee9-4239-4b5f-a972-87cf8b0f8f89
 redirect_from:
   - /v6/docs/comments-feature-overview
   - /v6/docs/en/comments-feature-overview
@@ -41,7 +42,7 @@ Every comment may be tagged.
 
 
 <!---{% info_block warningBox "Note" %}
-To create a new tag, see [HowTo - Add a New Tag for Comment](https://documentation.spryker.com/docs/ht-adding-new-tag-for-comment
+To create a new tag, see [HowTo - Add a New Tag for Comment](https://documentation.spryker.com/v6/docs/ht-adding-new-tag-for-comment
 {% endinfo_block %}.)-->
 
 ## Comments on the Storefront

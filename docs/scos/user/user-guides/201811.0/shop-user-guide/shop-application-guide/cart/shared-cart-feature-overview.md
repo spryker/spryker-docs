@@ -1,6 +1,7 @@
 ---
 title: Shared Cart Feature Overview
 originalLink: https://documentation.spryker.com/v1/docs/shared-cart-feature-overview-1
+originalArticleId: f188d1db-05b3-48f8-b39e-8f828ac9dd90
 redirect_from:
   - /v1/docs/shared-cart-feature-overview-1
   - /v1/docs/en/shared-cart-feature-overview-1

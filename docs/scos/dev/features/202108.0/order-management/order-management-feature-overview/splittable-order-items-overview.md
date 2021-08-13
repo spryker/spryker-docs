@@ -2,9 +2,12 @@
 title: Splittable Order Items overview
 description: Product concretes are splittable. Avoid the creation of numerous sales order items, make them non-splittable (no many sales orders, only one will be created).
 originalLink: https://documentation.spryker.com/2021080/docs/splittable-order-items-overview
+originalArticleId: 9f4bfeca-f799-42ba-ac91-0c8052aa6970
 redirect_from:
   - /2021080/docs/splittable-order-items-overview
   - /2021080/docs/en/splittable-order-items-overview
+  - /docs/splittable-order-items-overview
+  - /docs/en/splittable-order-items-overview
 ---
 
 As a final step of checkout, for each item in the cart, sales order items are created. By default, each product concrete is splittalble: i.e. if the product concrete is a pallet containing 1000 cans, 1000 sales order items will be created in the database upon checkout. To avoid creation of numerous individual sales order items for such products, you can make them non-splittable - i.e instead of many sales orders, just one will be created. This can be achieved by specifying either "true" of "false" value for `is_quantity_splittable` field in the product table. `is_quantity_splittable` attribute (true by default) controls how many sales order items should be created as a result of checkout.

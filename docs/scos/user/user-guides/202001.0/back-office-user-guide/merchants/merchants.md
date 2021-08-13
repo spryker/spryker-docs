@@ -2,6 +2,7 @@
 title: Merchants
 description: The section can be used to set up merchant relations and create merchants based on the contract conditions in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/merchants
+originalArticleId: aa81f467-5055-46e5-80b3-bf2f92ccb56a
 redirect_from:
   - /v4/docs/merchants
   - /v4/docs/en/merchants

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductSetPageSearch
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-productsetpagesearch
+originalArticleId: d2aa1e1f-f22c-48e0-bf0c-4a291fde8553
 redirect_from:
   - /v4/docs/migration-guide-productsetpagesearch
   - /v4/docs/en/migration-guide-productsetpagesearch

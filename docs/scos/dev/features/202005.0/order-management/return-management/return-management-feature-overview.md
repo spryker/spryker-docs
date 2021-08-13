@@ -2,6 +2,7 @@
 title: Return Management Feature Overview
 description: This Article provides a description for the feature Return Management in the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v5/docs/return-management-feature-overview
+originalArticleId: fa2a64bc-089e-4a58-85e4-995c59415a64
 redirect_from:
   - /v5/docs/return-management-feature-overview
   - /v5/docs/en/return-management-feature-overview
@@ -9,11 +10,11 @@ redirect_from:
 
 The *Return Management* feature allows you to create and manage returns for a sales order. 
 
-Once an order has been shipped, a Buyer or a Back Office User can initiate a return of the whole order or its individual items. See [Shop Guide - Creating a Return](https://documentation.spryker.com/docs/en/shop-guide-creating-a-return) and [Managing Orders](https://documentation.spryker.com/docs/en/managing-orders) for details on how they can do that.
+Once an order has been shipped, a Buyer or a Back Office User can initiate a return of the whole order or its individual items. See [Shop Guide - Creating a Return](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html) and [Managing Orders](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/managing-orders.html) for details on how they can do that.
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns via Glue API. For details, see [Retrieving Return Management Information](https://documentation.spryker.com/docs/en/retrieving-return-management-information).
+You can also create and manage returns via Glue API. For details, see [Retrieving Return Management Information](/docs/scos/dev/glue-api-guides/202005.0/retrieving-return-management-information/retrieving-return-management-information.html).
 
 {% endinfo_block %}
 
@@ -27,7 +28,7 @@ The *Return Policy* is a set of rules that defines what items can be returned: i
 
 {% info_block infoBox "Info" %}
 
-For now, you can set the Return Policy period in code only, there is no UI for that. See [HowTo - Set Number of Days for a Return Policy](https://documentation.spryker.com/docs/en/howto-set-number-of-days-for-a-return-policy) for details.
+For now, you can set the Return Policy period in code only, there is no UI for that. See [HowTo - Set Number of Days for a Return Policy](/docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html) for details.
 
 {% endinfo_block %}
 
@@ -55,16 +56,16 @@ Buyers and Back Office users can have a paper version of the return by printing 
 ![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-slip.png){height="" width=""}
 
 ## Return Management on the Storefront
-Buyers can return entire orders or individual sales order items as soon as they have been delivered to them. When returning, the Buyers can select select or enter a return reason. See [Shop Guide - Creating a Return](https://documentation.spryker.com/docs/en/shop-guide-creating-a-return)  for details on how the Buyers create the returns.
+Buyers can return entire orders or individual sales order items as soon as they have been delivered to them. When returning, the Buyers can select select or enter a return reason. See [Shop Guide - Creating a Return](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html)  for details on how the Buyers create the returns.
 
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](https://documentation.spryker.com/docs/en/configurable-bundle), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](https://documentation.spryker.com/docs/en/product-bundle), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+For a [Configurable Bundle](/docs/scos/dev/features/202005.0/product-information-management/configurable-bundle/configurable-bundle.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+The [Product Bundles](/docs/scos/dev/features/202005.0/product-information-management/product-bundles.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office User [processes the return](https://documentation.spryker.com/docs/en/managing-orders#creating-a-return). See [Return Items States](https://documentation.spryker.com/docs/en/return-item-states-reference-information) for details on the return states.
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office User [processes the return](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return). See [Return Items States](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/references/return-item-states-reference-information.html) for details on the return states.
 ![Create return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-return.png){height="" width=""}
 
 {% info_block infoBox "Info" %}
@@ -73,11 +74,11 @@ Next to each sales order item, there is the date till which the item can be retu
 
 {% endinfo_block %}
 
-All the returns created by the Buyer or by the Back Office User for the Buyer, are listed on the *Returns* page in the Customer Account. From here, the Buyer can [view the return details](https://documentation.spryker.com/docs/en/return-details-reference-information) and [print the return slip](https://documentation.spryker.com/docs/en/shop-guide-printing-a-return-slip).
+All the returns created by the Buyer or by the Back Office User for the Buyer, are listed on the *Returns* page in the Customer Account. From here, the Buyer can [view the return details](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/references/return-details-reference-information.html) and [print the return slip](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html).
 ![Returns details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-details.png){height="" width=""}
 
 ## Return Management in the Back Office
-A Back Office User can create returns for the [returnable items](#returnable-items-and-a-return-policy) in the *Ordres* section of the Back Office. See [Back Office User Guide - Managing Orders](https://documentation.spryker.com/docs/en/managing-orders) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office User Guide - Return Management](https://documentation.spryker.com/docs/en/managing-returns)  for instructions on how to manage the returns in the Back Office.
+A Back Office User can create returns for the [returnable items](#returnable-items-and-a-return-policy) in the *Ordres* section of the Back Office. See [Back Office User Guide - Managing Orders](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/managing-orders.html) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office User Guide - Return Management](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/managing-returns.html)  for instructions on how to manage the returns in the Back Office.
 
 ## Current Constraints
 Currently, the feature has the following functional constraints which are going to be resolved in the future:

@@ -2,6 +2,7 @@
 title: Configurable Bundle Feature Overview
 description: A configurable bundle is a product bundle, that a customer can configure in the Storefront on the go by choosing the suggested concrete products.
 originalLink: https://documentation.spryker.com/v5/docs/configurable-bundle-feature-overview
+originalArticleId: 3725cdc6-4deb-454f-92f4-78a767fc8646
 redirect_from:
   - /v5/docs/configurable-bundle-feature-overview
   - /v5/docs/en/configurable-bundle-feature-overview
@@ -27,7 +28,7 @@ A Configurable Bundle contains:
 Read on to learn more about these elements.
 
 ## Configurable Bundle Template
-Every configurable bundle is created per a template. The **template** is a model that contains the configuration details for the bundle, i.e., the number of slots it may provide, product lists assigned to a slot, etc. A Back Office User creates the template in the Back Office, and the Shop User then uses the template to configure the bundle. See [Configurable Bundle Templates](https://documentation.spryker.com/docs/en/configurable-bundle-templates) on working with templates in the Back Office.
+Every configurable bundle is created per a template. The **template** is a model that contains the configuration details for the bundle, i.e., the number of slots it may provide, product lists assigned to a slot, etc. A Back Office User creates the template in the Back Office, and the Shop User then uses the template to configure the bundle. See [Configurable Bundle Templates](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/configurable-bundle-templates/configurable-bundle-templates.html) on working with templates in the Back Office.
 {% info_block infoBox "Example" %}
 
 A shop owner can have various templates: a sport suit, a car, a kitchen set.
@@ -70,7 +71,7 @@ A slot is an entity with a list of assigned products for the configurable bundle
 * Configurable Bundle Slot ID
 * Product List ID
 
-A Back Office User can [create an unlimited number of slots](https://documentation.spryker.com/docs/en/managing-configurable-bundle-templates#creating-a-slot-for-a-configurable-bundle-template) for a template.
+A Back Office User can [create an unlimited number of slots](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-a-slot-for-a-configurable-bundle-template) for a template.
 {% info_block infoBox "Example" %}
 
 `Kitchen furniture set` configurable bundle contains eight slots:
@@ -228,7 +229,7 @@ Pay attention, that product splitting logic does not support Packaging Units for
 Configurator is a page where a shopper assembles a Configurable Bundle. It allows customers to choose compound and technically feasible product combinations online, making the shopping experience interactive for companies and their customers.
 
 ### Configurable Bundle List
-This page contains a list of all Configurable Bundle Templates that are active. All the templates are taken from the **Back Office > Configurable Bundle Templates** section. To configure the template, use our [Configurable Bundle Template Back Office guide](https://documentation.spryker.com/docs/en/configurable-bundle-templates).
+This page contains a list of all Configurable Bundle Templates that are active. All the templates are taken from the **Back Office > Configurable Bundle Templates** section. To configure the template, use our [Configurable Bundle Template Back Office guide](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/configurable-bundle-templates/configurable-bundle-templates.html).
 ![Configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+storefront.png){height="" width=""}
 
 ### Configurator Page
@@ -243,7 +244,7 @@ All slots are optional, so you can fill, for example, only two slots from the ex
 * The shopper cannot return to the Configurator page from the cart, reorder, or shopping list pages.
 * The following products cannot be displayed in the Configurator:
     - products with the Measurement or Packaging Units
-    - default [product bundles](https://documentation.spryker.com/docs/en/product-bundle)
+    - default [product bundles](/docs/scos/dev/features/202005.0/product-information-management/product-bundles.html)
     - gift cards
 * Product options are not displayed for concrete products.
 * Product labels are not displayed for concrete products.

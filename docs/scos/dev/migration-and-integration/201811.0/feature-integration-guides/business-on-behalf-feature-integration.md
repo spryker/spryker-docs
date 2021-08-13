@@ -2,6 +2,7 @@
 title: Business on Behalf Feature Integration
 description: The guide walks you through the process of installing the Business on Behalf feature into the project.
 originalLink: https://documentation.spryker.com/v1/docs/business-on-behalf-feature-integration
+originalArticleId: 2288cede-f50a-43d6-ac91-7d58b0a96e21
 redirect_from:
   - /v1/docs/business-on-behalf-feature-integration
   - /v1/docs/en/business-on-behalf-feature-integration

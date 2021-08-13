@@ -1,33 +1,36 @@
 ---
 title: Extending a REST API Resource
 originalLink: https://documentation.spryker.com/2021080/docs/extending-a-rest-request-resource
+originalArticleId: 765f9daa-fe09-4e7b-9344-17dd4e65a952
 redirect_from:
   - /2021080/docs/extending-a-rest-request-resource
   - /2021080/docs/en/extending-a-rest-request-resource
+  - /docs/extending-a-rest-request-resource
+  - /docs/en/extending-a-rest-request-resource
 ---
 
 Spryker Glue REST API comes with a set of predefined APIs out of the box. You have the possibility to extend and customize them to your own project needs. For this purpose, you need to extend the Glue API modules that provide the relevant functionality on your project level.
 
 {% info_block infoBox "Before You Begin" %}
-The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](https://documentation.spryker.com/v4/docs/glue-infrastructure#resource-modules
+The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/glue-api/glue-infrastructure.html#resource-modules
 {% endinfo_block %} section in **Glue Infrastructure**.)
 
 ## Prerequisites:
 To complete this tutorial, you need to comply with the following prerequisites:
 
-* [Install Spryker Development Machine](/docs/scos/dev/features/202001.0/sdk/development-virtual-machine-docker-containers-and-console.html); 
-* [Enable Glue Rest API](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html); 
-* [Integrate Products API](https://documentation.spryker.com/docs/glue-api-products-feature-integration).
+* [Install Spryker Development Machine](/docs/scos/dev/sdk/{{ page.version }}/development-virtual-machine-docker-containers-and-console.html); 
+* [Enable Glue Rest API](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html); 
+* [Integrate Products API](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html).
 
 {% info_block infoBox %}
-If you have a development virtual machine with the [B2C Demo Shop](https://documentation.spryker.com/v4/docs/demoshops
+If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/{{ page.version }}/about-spryker.html#spryker-b2b-b2c-demo-shops
 {% endinfo_block %} installed, all the required components will be available out of the box.)
 
 Also, let us assume that you modified the product storage data to match your product requirements. For example, let's assume that you added the `manufacturerCountry` field to the product data not as an attribute, but as another field in the database.
 
 {% info_block warningBox %}
-For more details, see [Product Attributes](https://documentation.spryker.com/v4/docs/db-schema-catalog#product-attributes
-{% endinfo_block %} and [Extending the Database Schema](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).)
+For more details, see [Product Attributes](/docs/scos/dev/database-schema-guide/{{ page.version }}/catalog-schema.html#product-attributes
+{% endinfo_block %} and [Extending the Database Schema](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).)
 
 Now, let us add this field to responses of the _Products API_ endpoints:
 
@@ -68,7 +71,7 @@ All transfer file names end with `.transfer.xml`.
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](https://documentation.spryker.com/docs/glue-spryks) to extend Glue transfers. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/glue-api/glue-spryks.html) to extend Glue transfers. Run the following command:  
 ```Bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
 ```
@@ -115,7 +118,7 @@ As you can see from the code, the mapper that you implemented extends the origin
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](https://documentation.spryker.com/docs/glue-spryks) to put data. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/glue-api/glue-spryks.html) to put data. Run the following command:  
 ```Bash
 console spryk:run AddGlueResourceMapper --mode=project --module=ResourcesRestApi --organization=Pyz  --subDirectory=Mapper --className=Resource
 ```
@@ -156,7 +159,7 @@ The same as the mapper, `ProductsRestApiFactory` extends the core factory and on
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](https://documentation.spryker.com/docs/glue-spryks) to override mapper initialization. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/glue-api/glue-spryks.html) to override mapper initialization. Run the following command:  
 ```Bash
 console spryk:run AddGlueMapperFactoryMethod --mode=project --module=ResourcesRestApi --organization=Pyz --subDirectory=Mapper --className=Resource
 ```
@@ -165,5 +168,5 @@ This will add mapper initialization to the project level factory.
 {% endinfo_block %}
 
 ## 4. Verify implementation
-No, you can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving Product Information](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html).
+No, you can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving Product Information](https://documentation.spryker.com/2021080/docs/retrieving-product-information).
 

@@ -2,6 +2,7 @@
 title: Heidelpay - Configuration for SCOS
 description: This article contains information on configuring the Heidelpay module for the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v6/docs/heidelpay-configuration-scos
+originalArticleId: 623d3000-c56c-4942-b699-b0b92ec2ce76
 redirect_from:
   - /v6/docs/heidelpay-configuration-scos
   - /v6/docs/en/heidelpay-configuration-scos
@@ -39,7 +40,7 @@ Store sensitive settings (DE, AT etc) can be found in `config/Shared/config_defa
 |  `HeidelpayConstants::CONFIG_YVES_CHECKOUT_ASYNC_RESPONSE_URL` | string | URL to receive async requests from Heidelpay. |
 |  `HeidelpayConstants::CONFIG_YVES_CHECKOUT_REGISTRATION_SUCCESS_URL` | string | URL to finish success registration of Credit Card. |
 
-Also, you have to add payment methods to [State Machine (OMS) configuration](https://documentation.spryker.com/v4/docs/heidelpay#building-a-state-machine-workflow-to-use-heidelpay-payment-methods):
+Also, you have to add payment methods to [State Machine (OMS) configuration](/docs/scos/dev/technology-partners/202009.0/payment-partners/heidelpay/heidelpay.html#building-a-state-machine-workflow-to-use-heidelpay-payment-methods):
 ```php
 $config[OmsConstants::PROCESS_LOCATION] = [
  ...

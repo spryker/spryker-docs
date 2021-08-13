@@ -2,9 +2,12 @@
 title: Overriding Webpack, JS, SCSS for ZED on project level
 description: Learn how to override Webpack, JS, SCSS for ZED on a project level
 originalLink: https://documentation.spryker.com/2021080/docs/overriding-webpack-js-scss-for-zed-on-project-level
+originalArticleId: 3b57ce80-48b2-47b1-afd0-cd14bf6e07fb
 redirect_from:
   - /2021080/docs/overriding-webpack-js-scss-for-zed-on-project-level
   - /2021080/docs/en/overriding-webpack-js-scss-for-zed-on-project-level
+  - /docs/overriding-webpack-js-scss-for-zed-on-project-level
+  - /docs/en/overriding-webpack-js-scss-for-zed-on-project-level
 ---
 
 To override or expand core JS and SCSS files, you need to expand the oryx-for-zed building system with an additional config:

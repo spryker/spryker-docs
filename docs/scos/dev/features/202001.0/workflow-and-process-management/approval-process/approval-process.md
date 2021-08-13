@@ -2,6 +2,7 @@
 title: Approval Process
 description: As technology is developing at a rapid pace, B2B businesses need agility and flexibility to control their purchases in order to stay competitive.
 originalLink: https://documentation.spryker.com/v4/docs/approval-process
+originalArticleId: b76296e8-3250-4503-809d-f2f0f5dff386
 redirect_from:
   - /v4/docs/approval-process
   - /v4/docs/en/approval-process

@@ -1,6 +1,7 @@
 ---
 title: Data builder
 originalLink: https://documentation.spryker.com/v5/docs/data-builder
+originalArticleId: 18245f98-aba6-44c1-88b2-5cec2dc22b5f
 redirect_from:
   - /v5/docs/data-builder
   - /v5/docs/en/data-builder

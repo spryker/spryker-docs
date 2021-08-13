@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Creating a Table View
 originalLink: https://documentation.spryker.com/v1/docs/t-create-table-view
+originalArticleId: bf433a6f-3ce5-4eec-b086-6ab7aee61bca
 redirect_from:
   - /v1/docs/t-create-table-view
   - /v1/docs/en/t-create-table-view

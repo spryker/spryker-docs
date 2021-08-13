@@ -2,6 +2,7 @@
 title: Retrieving Business Unit Information
 description: The article describes how to use Spryker Glue API to retrieve business unit information.
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-business-unit-information-201907
+originalArticleId: afc22012-3e1a-4d60-af8e-e7ba7544aebf
 redirect_from:
   - /v4/docs/retrieving-business-unit-information-201907
   - /v4/docs/en/retrieving-business-unit-information-201907
@@ -16,13 +17,13 @@ The endpoints provided by this API cannot be accessed anonymously. To access the
 In your development, the endpoint can help you to provide information on the Business Units available in the company of the currently logged in user.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/v4/docs/company-account-api-feature-integration-201907#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
 
 ## Retrieving General Business Unit Information
 ### Information on the Business Unit of the User
 To retrieve information on the business unit a user belongs to, send a GET request to the following endpoint:
 
-[/company-business-units/mine](https://documentation.spryker.com/v4/docs/rest-api-reference#/company-business-units)
+[/company-business-units/mine](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/company-business-units)
 
 Sample request: *GET http://glue.mysprykershop.com/company-business-units/mine*
 
@@ -79,7 +80,7 @@ The endpoint responds with a collection of **RestCompanyBusinessUnitResponse**, 
 ### Information on Specific Business Unit
 To retrieve information on a specific Business Unit, send a GET request to the following endpoint:
 
-[/company-business-units/{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/v4/docs/rest-api-reference#/company-business-units)
+[/company-business-units/{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/company-business-units)
 
 Sample request: *GET http://glue.mysprykershop.com/company-business-units/**b8a06475-73f5-575a-b1e9-1954de7a49ef***
 where **b8a06475-73f5-575a-b1e9-1954de7a49ef** is the ID of the Business Unit you need.
@@ -254,7 +255,7 @@ The response will include the following additional attributes:
 ## Retrieving Business Unit Addresses
 To retrieve a Business Unit address, send a GET request to the following endpoint:
 
-[/company-business-unit-addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/v4/docs/rest-api-reference#/company-business-unit-addresses)
+[/company-business-unit-addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/company-business-unit-addresses)
 
 Sample request: *GET http://glue.mysprykershop.com/company-business-unit-addresses/**eec036ee-b999-5753-a7dd-8d0710a2312f***
 where **eec036ee-b999-5753-a7dd-8d0710a2312f** is the ID of the Business Unit Address you need.

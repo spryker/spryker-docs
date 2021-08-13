@@ -1,6 +1,7 @@
 ---
 title: HowTo - Use Queue Data Importer
 originalLink: https://documentation.spryker.com/v2/docs/ht-use-queue-data-importer-201903
+originalArticleId: 0154c93a-6448-47e2-bb79-7ed3af809d30
 redirect_from:
   - /v2/docs/ht-use-queue-data-importer-201903
   - /v2/docs/en/ht-use-queue-data-importer-201903

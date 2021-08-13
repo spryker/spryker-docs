@@ -1,9 +1,12 @@
 ---
 title: File details- product_option_price.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-option-pricecsv
+originalArticleId: 7990de20-cb7f-467d-80e8-b3ca2cb5ff81
 redirect_from:
   - /2021080/docs/file-details-product-option-pricecsv
   - /2021080/docs/en/file-details-product-option-pricecsv
+  - /docs/file-details-product-option-pricecsv
+  - /docs/en/file-details-product-option-pricecsv
 ---
 
 This article contains content of the **product_option_price.csv** file to configure Product Option Price information on your Spryker Demo Shop. Importing the Product Option Price data sets the net and gross prices for each of the Product Options, per store and per currency.
@@ -23,7 +26,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*     [product_option.csv](https://documentation.spryker.com/docs/file-details-product-optioncsv)
+*     [product_option.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_option_price.csv*  file can be downloaded here:

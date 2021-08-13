@@ -2,6 +2,7 @@
 title: Arvato - Risk Solution Services Integration
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
 originalLink: https://documentation.spryker.com/v5/docs/arvato-2-0
+originalArticleId: fedbe73d-a0db-4f5a-af99-bd186c95a76c
 redirect_from:
   - /v5/docs/arvato-2-0
   - /v5/docs/en/arvato-2-0
@@ -43,8 +44,8 @@ API URLs:
 | Sandbox URL | `https://integration.risk-solution-services.de/rss-services/risk-solution-services.v2.1` |
 
 Services:
-* [Risk Check](https://documentation.spryker.com/docs/en/arvato-risk-check-2-0)
-* [Store Order](https://documentation.spryker.com/docs/en/arvato-store-order-2-0)
+* [Risk Check](/docs/scos/dev/technology-partners/202005.0/payment-partners/arvato/arvato-risk-check.html)
+* [Store Order](/docs/scos/dev/technology-partners/202005.0/payment-partners/arvato/arvato-store-order.html)
 
 To implement Arvato RSS you should be familiar with concept of extending the
 

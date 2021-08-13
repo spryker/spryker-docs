@@ -2,12 +2,13 @@
 title: Reference information- navigation
 description: Reference information for managing navigation elements in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/navigation-reference-information
+originalArticleId: 322e5db0-1f41-4a6e-915c-9c7b72b5affc
 redirect_from:
   - /v6/docs/navigation-reference-information
   - /v6/docs/en/navigation-reference-information
 ---
 
-This topic contains the reference information for working with [navigation elements](https://documentation.spryker.com/docs/navigation-feature-overview#navigation-element) in **Content** > **Navigation**.
+This topic contains the reference information for working with [navigation elements](/docs/scos/dev/features/202009.0/navigation/navigation-feature-overview.html#navigation-element) in **Content** > **Navigation**.
 
 ## Overview of Navigation Elements Page
 

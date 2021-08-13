@@ -2,9 +2,12 @@
 title: Multi-Term Auto Completion
 description: Term completion is a feature where a user gets suggestions for search terms and matching search results as he types the query.
 originalLink: https://documentation.spryker.com/2021080/docs/multi-term-auto-completion
+originalArticleId: 3856974a-ffa5-411d-ae2d-328dcfe5b405
 redirect_from:
   - /2021080/docs/multi-term-auto-completion
   - /2021080/docs/en/multi-term-auto-completion
+  - /docs/multi-term-auto-completion
+  - /docs/en/multi-term-auto-completion
 ---
 
 Term completion is a feature where a user gets suggestions for search terms and matching search results as he types the query. We call a completion multi-term when it is able to combine terms from different attributes in an open-ended fashion. In the below example, a user entered “fortis” (a brand) and started typing “hammer” (a category):

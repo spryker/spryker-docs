@@ -2,6 +2,7 @@
 title: Proclane
 description: Connect SAP and other ERP systems with your shop application by integrating Proclane into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v2/docs/proclane
+originalArticleId: afea3395-6513-4289-a7f4-deafbef63d1c
 redirect_from:
   - /v2/docs/proclane
   - /v2/docs/en/proclane

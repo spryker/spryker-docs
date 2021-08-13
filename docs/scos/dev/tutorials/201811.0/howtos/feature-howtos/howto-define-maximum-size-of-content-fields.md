@@ -1,6 +1,7 @@
 ---
 title: HowTo - Define Maximum Size of Content Fields
 originalLink: https://documentation.spryker.com/v1/docs/content-fields-max-size
+originalArticleId: 029f6f92-6a9d-4101-8998-6f32a0b89efe
 redirect_from:
   - /v1/docs/content-fields-max-size
   - /v1/docs/en/content-fields-max-size

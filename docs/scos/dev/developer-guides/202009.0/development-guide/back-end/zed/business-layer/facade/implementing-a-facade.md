@@ -2,6 +2,7 @@
 title: Implementing a Facade
 description: This article describes how to implement a facade.
 originalLink: https://documentation.spryker.com/v6/docs/implementing-facade
+originalArticleId: 4d8d278e-de9c-4eff-a873-28a2bc45c4d8
 redirect_from:
   - /v6/docs/implementing-facade
   - /v6/docs/en/implementing-facade
@@ -89,4 +90,4 @@ You might use the following definitions to generate related code:
 * Add Zed Business Factory
 * Add Zed Business Factory Method
 
-See the [Spryk](https://documentation.spryker.com/v2/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/202009.0/development-tools/spryk-code-generator.html) documentation for details.

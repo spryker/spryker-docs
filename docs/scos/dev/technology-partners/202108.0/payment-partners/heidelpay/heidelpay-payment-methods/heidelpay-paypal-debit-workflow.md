@@ -2,14 +2,17 @@
 title: Heidelpay - Paypal Debit Workflow
 description: Integrate Paypal debit workflow payment through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-paypal-debit
+originalArticleId: c13ad379-3ad5-477f-bcec-8b0f00d3572a
 redirect_from:
   - /2021080/docs/heidelpay-paypal-debit
   - /2021080/docs/en/heidelpay-paypal-debit
+  - /docs/heidelpay-paypal-debit
+  - /docs/en/heidelpay-paypal-debit
 ---
 
 ### Setup
 
-The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
+The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
 
 #### Configuration
 
@@ -62,6 +65,6 @@ class HeidelpayPostSavePlugin extends BaseAbstractPlugin implements CheckoutPost
 
  The most important data here is the payment reference ID which can be used for further transactions like capture/cancel/etc. 
 
-In the response Heidelpay expects an URL string which shows where customer has to be redirected. In case  if customer successfully confirmed payment, there should be a link to checkout order success step, in case of failure - checkout payment failed action with error code (see`HeidelpayController::paymentFailedAction()` and [Heidelpay - Workflow for Errors](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and payment process is finished. 
+In the response Heidelpay expects an URL string which shows where customer has to be redirected. In case  if customer successfully confirmed payment, there should be a link to checkout order success step, in case of failure - checkout payment failed action with error code (see`HeidelpayController::paymentFailedAction()` and [Heidelpay - Workflow for Errors](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and payment process is finished. 
 
 Now the order can be considered as "paid".

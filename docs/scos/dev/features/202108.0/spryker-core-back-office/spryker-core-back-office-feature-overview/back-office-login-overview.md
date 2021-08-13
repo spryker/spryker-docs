@@ -2,9 +2,12 @@
 title: Back Office Login overview
 description: The Back Office Login allows you to log in to the Back Office either with a regular account, or via the third-party sign-on
 originalLink: https://documentation.spryker.com/2021080/docs/back-office-login-overview
+originalArticleId: 6d3a9dda-3ca5-4da7-99a6-920bd02fc652
 redirect_from:
   - /2021080/docs/back-office-login-overview
   - /2021080/docs/en/back-office-login-overview
+  - /docs/back-office-login-overview
+  - /docs/en/back-office-login-overview
 ---
 
 To be able to use the Spryker Back Office, users have to authenticate to the Back Office. They can authenticate via:
@@ -12,7 +15,7 @@ To be able to use the Spryker Back Office, users have to authenticate to the Bac
 * Regular Back Office user account
 * Third-party sign-on (optional)
 
-To *authenticate as a regular Back Office user*, you should have the Back Office user account. See [Managing user](https://documentation.spryker.com/docs/managing-users#managing-users)s to learn how you can create and manage Back Office user accounts. 
+To *authenticate as a regular Back Office user*, you should have the Back Office user account. See [Managing user](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#managing-users)s to learn how you can create and manage Back Office user accounts. 
 
 You can also enable your users to sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
 
@@ -30,8 +33,8 @@ If a user chooses to log in via a third-party, the user is redirected to the OAu
 
 If a user who does not exist in the Spryker database logs in for the first time, the following happens:
 
-* Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [*Users* page](https://documentation.spryker.com/docs/user-reference-information) in the Back Office.
-* The user is assigned to the default [group](https://documentation.spryker.com/docs/managing-groups). 
+* Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [*Users* page](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html) in the Back Office.
+* The user is assigned to the default [group](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-groups.html). 
 
 With Strategy 1, the login process looks like this:
 

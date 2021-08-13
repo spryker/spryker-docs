@@ -2,6 +2,7 @@
 title: Search and Filters
 description: The article introduces an overview of Search and Filter that enables shop owners to handle and customize search and filtering preferences in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/search-and-filters
+originalArticleId: e3ea8a23-998b-48d5-8df0-e93712ebaff9
 redirect_from:
   - /v3/docs/search-and-filters
   - /v3/docs/en/search-and-filters
@@ -33,7 +34,7 @@ There is no defined flow for working with search and filters. The most important
 4. Set up the search preference.
 
 See the following articles to know more about the search and filter preferences:
-* [Managing Filter Preferences](/docs/scos/user/user-guides/202001.0/back-office-user-guide/search-and-filters/managing-filter-preferences.html)
-* [Managing Category Filters](/docs/scos/user/user-guides/202001.0/back-office-user-guide/search-and-filters/managing-category-filters.html)
-* [Managing Search Preferences](/docs/scos/user/user-guides/202001.0/back-office-user-guide/search-and-filters/managing-search-preferences.html)
-* [Search Preferences Types](/docs/scos/user/user-guides/202001.0/back-office-user-guide/search-and-filters/references/search-preferences-types.html)
+* [Managing Filter Preferences](/docs/scos/user/user-guides/201907.0/back-office-user-guide/search-and-filters/managing-filter-preferences.html)
+* [Managing Category Filters](/docs/scos/user/user-guides/201907.0/back-office-user-guide/search-and-filters/managing-category-filters.html)
+* [Managing Search Preferences](/docs/scos/user/user-guides/201907.0/back-office-user-guide/search-and-filters/managing-search-preferences.html)
+* [Search Preferences Types](/docs/scos/user/user-guides/201907.0/back-office-user-guide/search-and-filters/references/search-preferences-types.html)

@@ -2,6 +2,7 @@
 title: Braintree - Workflow
 description: This article describes the request flow for the Braintree module in the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v5/docs/braintree-workflow
+originalArticleId: de1d1ff6-f069-46b6-b6ec-92779cfb46a5
 redirect_from:
   - /v5/docs/braintree-workflow
   - /v5/docs/en/braintree-workflow

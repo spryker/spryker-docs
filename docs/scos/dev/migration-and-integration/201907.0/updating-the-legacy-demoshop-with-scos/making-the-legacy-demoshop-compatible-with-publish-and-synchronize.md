@@ -1,12 +1,13 @@
 ---
 title: Making the Legacy Demoshop Compatible with Publish & Synchronize
 originalLink: https://documentation.spryker.com/v3/docs/demoshop-with-publish-and-sync
+originalArticleId: 05ec5cf3-9767-461e-bde6-d593eb8e373d
 redirect_from:
   - /v3/docs/demoshop-with-publish-and-sync
   - /v3/docs/en/demoshop-with-publish-and-sync
 ---
 
-By following this document and adjusting all the necessary changes in the Legacy Demoshop, you will be able to set up the infrastructure for Publish &amp; Synchronize. If you need to learn more about any requirements needed and changes made to each particular feature, read their own [installation guides](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/about-integration-guides.html).
+By following this document and adjusting all the necessary changes in the Legacy Demoshop, you will be able to set up the infrastructure for Publish &amp; Synchronize. If you need to learn more about any requirements needed and changes made to each particular feature, read their own [installation guides](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/about-integration.html).
 
 ### 1. Add infrastructure modules
 You need to adjust the `composer.json` to get the latest version of the Storage and Search modules. By executing this code you will be able to update the library you need for running Publish &amp; Synchronize:

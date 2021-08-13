@@ -2,6 +2,7 @@
 title: Shop Guide - Managing Requests for Quotes for a Buyer
 description: The guide provides procedures on how to send a request for quote, negotiate the price, update or cancel an RFQ.
 originalLink: https://documentation.spryker.com/v4/docs/managing-rfqs-for-buyer-shop-guide
+originalArticleId: 7212518b-95fa-4178-8675-7a7c7f975751
 redirect_from:
   - /v4/docs/managing-rfqs-for-buyer-shop-guide
   - /v4/docs/en/managing-rfqs-for-buyer-shop-guide
@@ -29,7 +30,7 @@ You can send the newly-created RFQs and the ones that are in *Draft* status to a
 
 Your Quote Request will be sent to the Sales Representative. You can check the RFQ's status in the **Customer Account -> Quote Request**.
 
-See [Buyer Workflow](https://documentation.spryker.com/v4/docs/quotation-process-rfq-feature-overview-201907#buyer-workflow) for more information on request statuses and workflow.
+See [Buyer Workflow](https://documentation.spryker.com/v4/docs/quotation-process-feature-overview#buyer-workflow) for more information on request statuses and workflow.
 ***
 ## Processing a Ready RFQ
 
@@ -49,7 +50,7 @@ You can revise an RFQ with the status *Ready*. To revise the RFQ:
 2. On the opened page, perform the necessary actions. See *Editing an RFQ* below for details on the possible actions.
 
 {% info_block warningBox %}
-RFQ version number changes upon each revision. Check [RFQ Versioning](https://documentation.spryker.com/v3/quotation-process-rfq-feature-overview-201907#rfq-versioning
+RFQ version number changes upon each revision. Check [RFQ Versioning](https://documentation.spryker.com/v4/quotation-process-feature-overview#rfq-versioning
 {% endinfo_block %} to learn about the version change process.)
 ***
 ## Editing an RFQ
@@ -58,11 +59,11 @@ You can edit the RFQs that are in a *Draft* status. To edit the RFQ:
 
 1. Open the **Quote Request** page.
 2. Click **Edit**.
-3. Change **Purchase order number, Do not ship later than, Notes** fields, and/or [Edit the Items](https://documentation.spryker.com/v4/managing-rfqs-for-buyer-shop-guide#editing-items-in-an-rfq) that are in the RFQ.
+3. Change **Purchase order number, Do not ship later than, Notes** fields, and/or [Edit the Items](/docs/scos/dev/features/202001.0/workflow-and-process-management/quotation-process-and-rfq/quotation-process-and-rfq-feature-overview.html#quotation-process---rfq-on-the-storefront) that are in the RFQ.
 4. Click **Save**.
 
 {% info_block warningBox %}
-RFQ version number changes upon each revision. Check [RFQ Versioning](https://documentation.spryker.com/v3/quotation-process-rfq-feature-overview-201907.htm#rfq-versioning
+RFQ version number changes upon each revision. Check [RFQ Versioning](https://documentation.spryker.com/v4/quotation-process-rfq-feature-overview-201907.htm#rfq-versioning
 {% endinfo_block %} to learn about the version change process.)
 ***
 ## Editing Items in an RFQ

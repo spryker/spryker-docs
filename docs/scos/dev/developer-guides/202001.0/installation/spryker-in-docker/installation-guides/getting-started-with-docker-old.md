@@ -2,6 +2,7 @@
 title: Getting Started with Docker Old
 description: Learn about different modes in which you can work with Spryker in Docker.
 originalLink: https://documentation.spryker.com/v4/docs/getting-started-with-docker-old
+originalArticleId: 6e5cb422-2f28-4c01-bb61-fc6bcc1d57cd
 redirect_from:
   - /v4/docs/getting-started-with-docker-old
   - /v4/docs/en/getting-started-with-docker-old

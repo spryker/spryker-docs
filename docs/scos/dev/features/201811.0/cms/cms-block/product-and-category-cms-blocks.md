@@ -1,6 +1,7 @@
 ---
 title: Product and Category CMS Blocks
 originalLink: https://documentation.spryker.com/v1/docs/category-block
+originalArticleId: e88fc74b-83f0-458f-833e-2f9e95125861
 redirect_from:
   - /v1/docs/category-block
   - /v1/docs/en/category-block

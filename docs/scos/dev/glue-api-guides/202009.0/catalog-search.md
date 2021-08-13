@@ -2,6 +2,7 @@
 title: Catalog search
 description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
 originalLink: https://documentation.spryker.com/v6/docs/catalog-search
+originalArticleId: dde4d14c-50d2-4bad-9de1-d767ffc82236
 redirect_from:
   - /v6/docs/catalog-search
   - /v6/docs/en/catalog-search
@@ -19,7 +20,7 @@ In your development, this endpoint can help you to:
 * Retrieve a list of products to be displayed anywhere you want.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](https://documentation.spryker.com/docs/catalog-api-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-catalog-feature-integration.html).
 
 ## Searching for Products
 To search for products, send GET requests to the following endpoint:

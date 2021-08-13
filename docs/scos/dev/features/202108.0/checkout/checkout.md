@@ -2,9 +2,12 @@
 title: Checkout
 description: The checkout workflow is a multi-step process that can be fullly customized to fit your needs.
 originalLink: https://documentation.spryker.com/2021080/docs/checkout
+originalArticleId: 7dcc5635-2a15-410c-9a0b-bc62a13dd3a1
 redirect_from:
   - /2021080/docs/checkout
   - /2021080/docs/en/checkout
+  - /docs/checkout
+  - /docs/en/checkout
 ---
 
 
@@ -19,7 +22,7 @@ Fulfilling small orders is not always worthwhile for the business, as operating 
 
 Per your business requirements, you can also set up a maximum threshold to disallow placing orders above a defined threshold.
 
-In a B2B scenario, you can define any type of threshold for each [merchant relation](https://documentation.spryker.com/docs/en/merchants-and-merchant-relations-overview) separately.
+In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/scos/dev/features/{{ page.version }}/merchant-b2b-contracts-feature-overview.html) separately.
 
 With order thresholds, you can:
 

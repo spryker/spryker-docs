@@ -2,9 +2,12 @@
 title: Reference information- scheduled prices
 description: The guide provides additional information about the values you use when working with scheduled prices in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/scheduled-prices-reference-information
+originalArticleId: 32df991f-5d11-4d20-b050-dfe3a878d9d1
 redirect_from:
   - /2021080/docs/scheduled-prices-reference-information
   - /2021080/docs/en/scheduled-prices-reference-information
+  - /docs/scheduled-prices-reference-information
+  - /docs/en/scheduled-prices-reference-information
 ---
 
 This topic contains the reference information that you need to know when working in the **Scheduled Prices** section.
@@ -34,7 +37,7 @@ The **Scheduled Prices: Import dry run** page is divided into four sections.
 | Attribute | Description |
 | --- | --- |
 | **Schedule name** |The name of the list of price product schedules which you have just imported.  |
-| **Select your CSV file** |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [HowTo - Import Scheduled Prices](/docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-scheduled-prices.html).  |
+| **Select your CSV file** |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [HowTo - Import Scheduled Prices](https://documentation.spryker.com/2021080/docs/ht-import-scheduled-prices-201907).  |
 | **Row n°** | A numeric identifier of a price schedule entry in the list of price schedules. |
 | **Error** |  Describes why a particular price schedule has not been imported.|
 | **ID** | A numeric identifier of price schedule. |

@@ -2,6 +2,7 @@
 title: Users Control
 description: The section can be used to create, update, and Back Office users, user groups and roles in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/users-control
+originalArticleId: f2648558-492f-4803-9d8f-74a2eeb9f89b
 redirect_from:
   - /v3/docs/users-control
   - /v3/docs/en/users-control
@@ -31,10 +32,10 @@ Thus, first of all, a Spryker Admin identifies the list of roles that each user 
 
 **What's next?**
 To know how to manage roles, groups and users, see the following articles:
-* [Managing Roles](/docs/scos/user/user-guides/202001.0/back-office-user-guide/users-control/roles-groups-and-users/managing-roles.html)
-* [Managing Groups](/docs/scos/user/user-guides/202001.0/back-office-user-guide/users-control/roles-groups-and-users/managing-groups.html)
-* [Managing Users](/docs/scos/user/user-guides/202001.0/back-office-user-guide/users-control/roles-groups-and-users/managing-users.html)
+* [Managing Roles](/docs/scos/user/user-guides/201907.0/back-office-user-guide/users-control/roles-groups-and-users/managing-roles.html)
+* [Managing Groups](/docs/scos/user/user-guides/201907.0/back-office-user-guide/users-control/roles-groups-and-users/managing-groups.html)
+* [Managing Users](/docs/scos/user/user-guides/201907.0/back-office-user-guide/users-control/roles-groups-and-users/managing-users.html)
 
 To know more about the attributes you use to manage roles, groups, and users, see the following articles:
-* [Roles: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/users-control/roles-groups-and-users/references/roles-reference-information.html)
-* [User: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/users-control/roles-groups-and-users/references/user-reference-information.html)
+* [Roles: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/users-control/roles-groups-and-users/references/roles-reference-information.html)
+* [User: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/users-control/roles-groups-and-users/references/user-reference-information.html)

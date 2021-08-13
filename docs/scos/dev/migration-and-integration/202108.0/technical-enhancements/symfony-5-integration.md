@@ -2,9 +2,12 @@
 title: Symfony 5 integration
 description: Learn about the main changes in the new Symfony version 5, and how you can make your project compatible with it
 originalLink: https://documentation.spryker.com/2021080/docs/symfony-5-integration
+originalArticleId: d5e96c3b-3ed6-49ed-982c-aa641e09b558
 redirect_from:
   - /2021080/docs/symfony-5-integration
   - /2021080/docs/en/symfony-5-integration
+  - /docs/symfony-5-integration
+  - /docs/en/symfony-5-integration
 ---
 
 Spryker supports Symfony 5 that was released in November 2019. We tried to keep BC for all three major versions of Symfony, but due to some changes in version 5, we had to partially drop support for Symfony 3. 

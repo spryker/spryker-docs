@@ -2,6 +2,7 @@
 title: Managing Guest Carts
 description: This article describes the endpoints that provide access to shopping carts management functionality for the guest carts.
 originalLink: https://documentation.spryker.com/v5/docs/managing-guest-carts
+originalArticleId: 794ed6c0-fdea-48d5-bb63-5909ee093a2f
 redirect_from:
   - /v5/docs/managing-guest-carts
   - /v5/docs/en/managing-guest-carts
@@ -14,15 +15,15 @@ Guest carts come with an expiration date, which means that unregistered users ca
 Only one cart can be created for each guest customer.
 
 {% info_block infoBox %}
-See [Managing Carts of Registered Users](https://documentation.spryker.com/docs/en/managing-carts-of-registered-users
+See [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts-of-registered-users.html
 {% endinfo_block %} to learn how you can manage carts of registered users via Glue API.)
 
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Carts API](https://documentation.spryker.com/docs/en/glue-api-cart-feature-integration)
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/en/glue-api-measurement-units-feature-integration)
-* [Promotions & Discounts API](https://documentation.spryker.com/docs/en/glue-promotions-discounts-feature-integration)
+* [Carts API](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Promotions & Discounts API](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 
 
@@ -114,7 +115,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between `amount` and `quantity` corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](https://documentation.spryker.com/docs/en/measurement-units-feature-overview) to learn more.
+When defining product amount in sales units, make sure that the correlation between `amount` and `quantity` corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/scos/dev/features/202005.0/packaging-and-measurement-units/measurement-units/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -1775,7 +1776,7 @@ Guest carts are anonymous as they are not related to any user. If a user registe
 
 To assign a guest cart to a customer, i.e. merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
-Upon login, the behavior depends on whether your project is a single cart or [multiple cart](https://documentation.spryker.com/docs/en/multiple-cart-per-user) environment:
+Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/dev/features/202005.0/shopping-cart/multiple-carts-per-user/multiple-carts-per-user.html) environment:
 
 * In a **single cart** environment, the products in the guest cart are added to the customers' own cart;
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
@@ -1867,7 +1868,7 @@ Request sample: `GET https://glue.myspsrykershop.com/carts`
 
 | Header key | Header value | Description | 
 |---|---|---|---|
-| Authorization | Bearer eyJ0eXAiOiJKV1QiLC... | Authorization token. See [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization) for more details about authorization. |
+| Authorization | Bearer eyJ0eXAiOiJKV1QiLC... | Authorization token. See [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html) for more details about authorization. |
 
 
 In the **multi-cart** environment, the guest cart has been converted to a regular  cart. You can see it in the list of carts with the id `9183f604-9b2c-53d9-acbf-cf59b9b2ff9f`.

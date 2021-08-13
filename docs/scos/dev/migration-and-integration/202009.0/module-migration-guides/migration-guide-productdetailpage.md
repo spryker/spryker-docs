@@ -2,6 +2,7 @@
 title: Migration Guide - ProductDetailPage
 description: Use the guide to learn how to update the ProductDetailPage module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-product-details-page
+originalArticleId: 956e15c7-b4c0-4f07-ba4a-e6db5e05de47
 redirect_from:
   - /v6/docs/mg-product-details-page
   - /v6/docs/en/mg-product-details-page

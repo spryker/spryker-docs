@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Hello World - Spryker Commerce OS
 originalLink: https://documentation.spryker.com/v3/docs/tutorial-hello-world-scos
+originalArticleId: 154f903a-51c5-4c1b-beeb-c3d8ea077e5b
 redirect_from:
   - /v3/docs/tutorial-hello-world-scos
   - /v3/docs/en/tutorial-hello-world-scos

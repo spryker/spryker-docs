@@ -1,12 +1,15 @@
 ---
 title: File details- product_alternative.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-alternativecsv
+originalArticleId: cda20a75-66a5-4c07-a130-74725e5e5da0
 redirect_from:
   - /2021080/docs/file-details-product-alternativecsv
   - /2021080/docs/en/file-details-product-alternativecsv
+  - /docs/file-details-product-alternativecsv
+  - /docs/en/file-details-product-alternativecsv
 ---
 
-This article contains content of the **product_alternative.csv** file to configure [Alternative Product](https://documentation.spryker.com/docs/alternative-products) information on your Spryker Demo Shop.
+This article contains content of the **product_alternative.csv** file to configure [Alternative Product](https://documentation.spryker.com/2021080/docs/alternative-products) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -22,8 +25,8 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-* [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
-* [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+* [product_concrete.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [product_abstract.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Recommendations & other information
 It does not exist on by default on the project level. It can be created in order to override the CSV file from module: 

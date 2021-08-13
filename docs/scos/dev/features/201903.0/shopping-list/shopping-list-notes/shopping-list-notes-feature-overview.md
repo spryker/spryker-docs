@@ -1,6 +1,7 @@
 ---
 title: Shopping List Notes Feature Overview
 originalLink: https://documentation.spryker.com/v2/docs/shopping-list-notes-overview
+originalArticleId: 09e6c4bf-1611-4ac8-a77e-8c3b258db514
 redirect_from:
   - /v2/docs/shopping-list-notes-overview
   - /v2/docs/en/shopping-list-notes-overview

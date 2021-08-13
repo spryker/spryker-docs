@@ -2,6 +2,7 @@
 title: docker-sync cannot start
 description: Learn how to fix the issue with docker-sync not starting
 originalLink: https://documentation.spryker.com/v6/docs/docker-sync-cannot-start
+originalArticleId: 4cb809d4-f6b9-4d89-bdc2-42ca16891c90
 redirect_from:
   - /v6/docs/docker-sync-cannot-start
   - /v6/docs/en/docker-sync-cannot-start

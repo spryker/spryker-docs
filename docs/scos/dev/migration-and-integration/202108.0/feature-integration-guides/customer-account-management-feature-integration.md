@@ -2,9 +2,12 @@
 title: Customer Account Management feature integration
 description: The guide walks you through the process of adding Redirect support for Customer login functionality to your project.
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management-feature-integration
+originalArticleId: 859d5c6d-7ca6-4cca-ae87-66f2951c2e96
 redirect_from:
   - /2021080/docs/customer-account-management-feature-integration
   - /2021080/docs/en/customer-account-management-feature-integration
+  - /docs/customer-account-management-feature-integration
+  - /docs/en/customer-account-management-feature-integration
 ---
 
 This document describes how to integrate the Customer Account Management feature into a Spryker project.
@@ -427,7 +430,7 @@ SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 
 {% info_block warningBox "Verification" %}
 
-Ensure that it is possible to obtain the customer OAuth access token with customer credentials or customer reference. See [Glue API: Customer Account Management feature integration](https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration) for details.
+Ensure that it is possible to obtain the customer OAuth access token with customer credentials or customer reference. See [Glue API: Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html) for details.
 
 {% endinfo_block %}
 
@@ -832,8 +835,8 @@ Ensure that when you try to access your account without confirming the registrat
 ## Related features
 | Name | Integration guide |
 | --- | --- |
-| Customer API	 | [Glue API: Customer Account Management feature integration](https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration) |
-| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](https://documentation.spryker.com/docs/customer-account-management-order-management-feature-integration)  |
+| Customer API	 | [Glue API: Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/customer-account-management-order-management-feature-integration.html)  |
 
 
 

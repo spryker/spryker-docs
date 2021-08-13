@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CheckoutRestApi
 originalLink: https://documentation.spryker.com/v4/docs/mg-checkoutrestapi
+originalArticleId: 3c54da07-f365-4c38-ab21-0ecdc03178fb
 redirect_from:
   - /v4/docs/mg-checkoutrestapi
   - /v4/docs/en/mg-checkoutrestapi

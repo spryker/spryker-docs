@@ -2,6 +2,7 @@
 title: Implementing a new Console Command
 description: This article describes how you can implement a new console command.
 originalLink: https://documentation.spryker.com/v3/docs/console-commands
+originalArticleId: 5c309c5a-9aa2-41f4-803b-a7e51a940b02
 redirect_from:
   - /v3/docs/console-commands
   - /v3/docs/en/console-commands
@@ -10,8 +11,8 @@ redirect_from:
 ## Introduction
 This article describes how you can implement a new console command. However before implementing your commands, we recommend you to:
 
-* Getting the list of the console commands already available at Spryker. See [Getting the List of Console Commands and Available Options](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/getting-the-list-of-console-commands-and-available-options.html) for instructions on how to do that. 
-* Check out the what each command does. See [Console Commands in Spryker](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/console-commands-in-spryker.html) for details.
+* Getting the list of the console commands already available at Spryker. See [Getting the List of Console Commands and Available Options](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/getting-the-list-of-console-commands-and-available-options.html) for instructions on how to do that. 
+* Check out the what each command does. See [Console Commands in Spryker](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/console-commands-in-spryker.html) for details.
 
 ## Adding a New Console Command
 To add a new console command, you need to create a new class in:

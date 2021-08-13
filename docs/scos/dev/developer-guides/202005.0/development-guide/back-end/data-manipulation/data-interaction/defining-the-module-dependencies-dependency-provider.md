@@ -2,6 +2,7 @@
 title: Defining the Module Dependencies- Dependency Provider
 description: Each module ships with a DependencyProvider class which explicitly defines services and external dependencies to other modules.
 originalLink: https://documentation.spryker.com/v5/docs/dependency-provider
+originalArticleId: c0223d63-aa22-4f5f-8c8e-fb55cdb99c20
 redirect_from:
   - /v5/docs/dependency-provider
   - /v5/docs/en/dependency-provider
@@ -57,7 +58,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 
 ## How to Use the Provided Class
 
-You can access the classes which are provided by the `DependencyProvider` in the [Factory](https://documentation.spryker.com/docs/en/factory). Technically the `$container` variable is a simple [DI-container](http://martinfowler.com/articles/injection.html) based on [Pimple](http://pimple.sensiolabs.org/). The contained class is initialized only when you use it.
+You can access the classes which are provided by the `DependencyProvider` in the [Factory](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/factory/creating-instances-of-classes-factory.html). Technically the `$container` variable is a simple [DI-container](http://martinfowler.com/articles/injection.html) based on [Pimple](http://pimple.sensiolabs.org/). The contained class is initialized only when you use it.
 
 ```php
 <?php
@@ -157,4 +158,4 @@ You might use the following definitions to generate related code:
 * Add Zed Dependency Service Interface
 * Add Client Dependency Provider
 
-See the [Spryk](https://documentation.spryker.com/docs/en/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/features/202005.0/sdk/spryk-code-generator.html) documentation for details.

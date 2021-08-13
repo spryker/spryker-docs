@@ -1,9 +1,12 @@
 ---
 title: HowTo - Schedule Cron Job for Scheduled Prices
 originalLink: https://documentation.spryker.com/2021080/docs/ht-schedule-cron-job-for-scheduled-prices-201907
+originalArticleId: 612d102b-f61a-4c7b-adec-9a2697ed6349
 redirect_from:
   - /2021080/docs/ht-schedule-cron-job-for-scheduled-prices-201907
   - /2021080/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /docs/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
 ---
 
 This article describes how to change the default behavior of the cron job shipped with the Scheduled Prices feature.

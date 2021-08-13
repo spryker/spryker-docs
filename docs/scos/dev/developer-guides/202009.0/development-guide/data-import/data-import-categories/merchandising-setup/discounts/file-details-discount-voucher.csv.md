@@ -1,6 +1,7 @@
 ---
 title: File details- discount_voucher.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-discount-vouchercsv
+originalArticleId: 3615d558-b57d-4ac0-abbb-f67ef5fd367b
 redirect_from:
   - /v6/docs/file-details-discount-vouchercsv
   - /v6/docs/en/file-details-discount-vouchercsv
@@ -25,7 +26,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*   [ discount.csv ](https://documentation.spryker.com/docs/file-details-discountcsv)
+*   [ discount.csv ](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
 
 ## Recommendations & other information
 The generated voucher code consists of two parts: 

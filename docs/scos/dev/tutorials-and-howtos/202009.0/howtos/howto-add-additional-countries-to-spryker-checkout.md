@@ -2,6 +2,7 @@
 title: HowTo - Add additional countries to Spryker checkout
 description: This HowTo explains how to add additional countries to the checout.
 originalLink: https://documentation.spryker.com/v6/docs/howto-add-additional-countries-to-spryker-checkout
+originalArticleId: e1c25e17-b6b8-4c21-95e5-ca8665b2d10d
 redirect_from:
   - /v6/docs/howto-add-additional-countries-to-spryker-checkout
   - /v6/docs/en/howto-add-additional-countries-to-spryker-checkout

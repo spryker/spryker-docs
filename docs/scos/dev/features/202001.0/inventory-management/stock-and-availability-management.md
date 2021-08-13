@@ -2,6 +2,7 @@
 title: Stock and Availability Management
 description: The fully automated Stock calculation takes into consideration products that are reserved in open orders when defining availability.
 originalLink: https://documentation.spryker.com/v4/docs/stock-availability-management
+originalArticleId: c35dc0da-868b-467d-8c4d-3cab25c9e3ae
 redirect_from:
   - /v4/docs/stock-availability-management
   - /v4/docs/en/stock-availability-management

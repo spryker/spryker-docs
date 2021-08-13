@@ -2,6 +2,7 @@
 title: Dummy Payment
 description: In the article, you can find the aims of using DummyPayment, how it is integrated into the system, and the use of state machine in the module.
 originalLink: https://documentation.spryker.com/v3/docs/dummy-payment
+originalArticleId: 64f7cc1e-90a1-4eae-8ce0-5f205d7f7d13
 redirect_from:
   - /v3/docs/dummy-payment
   - /v3/docs/en/dummy-payment
@@ -26,9 +27,9 @@ A couple of examples which shows how a payment is integrated into the system. Th
 
 * how to integrate forms into Yves checkout
 * how to add PaymentMethodHandler
-* how to add a state machine, commands and conditions to the [Oms module](/docs/scos/dev/features/202001.0/order-management/oms-order-management-system-matrix.html)
+* how to add a state machine, commands and conditions to the [Oms module](/docs/scos/dev/features/201907.0/order-management/oms-order-management-system-matrix.html)
 * how to add CheckoutPlugins to the Payment module
-* how to handle refunds with the [Refund module](https://documentation.spryker.com/v4/docs/refund)
+* how to handle refunds with the [Refund module](/docs/scos/dev/features/201907.0/payment/refund.html)
 
 ## Refunds
 Refunds mostly triggered by a state machine command, this module shows how that could look like. Look into the RefundPlugin. This command can be triggered from Zed’s order detail page when a order item has the state returned.

@@ -2,6 +2,7 @@
 title: Configuring Elasticsearch
 description: Elasticsearch is a NoSQL data store which allows us to predefine the structure of the data we’ll be storing in it.
 originalLink: https://documentation.spryker.com/v1/docs/search-configure-elasticsearch
+originalArticleId: f94dd0c4-133a-48cb-af86-359ba9ac9ac6
 redirect_from:
   - /v1/docs/search-configure-elasticsearch
   - /v1/docs/en/search-configure-elasticsearch

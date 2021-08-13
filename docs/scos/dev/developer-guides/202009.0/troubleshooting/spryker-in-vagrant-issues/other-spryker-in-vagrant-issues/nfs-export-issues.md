@@ -2,6 +2,7 @@
 title: NFS export issues
 description: Learn how to fix the NFS export issue upon installation
 originalLink: https://documentation.spryker.com/v6/docs/nfs-export-issues
+originalArticleId: c6a7f7d2-6427-473f-8b1c-8c0982c2f67c
 redirect_from:
   - /v6/docs/nfs-export-issues
   - /v6/docs/en/nfs-export-issues

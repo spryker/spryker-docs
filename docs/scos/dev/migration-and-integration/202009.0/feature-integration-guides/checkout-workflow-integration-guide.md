@@ -1,6 +1,7 @@
 ---
 title: Checkout Workflow Integration Guide
 originalLink: https://documentation.spryker.com/v6/docs/checkout-workflow-integration
+originalArticleId: 9eca2557-c2de-4688-807d-b4aad0da680e
 redirect_from:
   - /v6/docs/checkout-workflow-integration
   - /v6/docs/en/checkout-workflow-integration

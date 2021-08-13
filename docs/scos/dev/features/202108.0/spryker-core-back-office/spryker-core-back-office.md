@@ -2,9 +2,12 @@
 title: Spryker Core Back Office
 description: Through the Back Office, you can manage all Back Office tasks.
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-core-back-office
+originalArticleId: 701e9b4c-17cf-4afe-93d5-d68a2cb6c92d
 redirect_from:
   - /2021080/docs/spryker-core-back-office
   - /2021080/docs/en/spryker-core-back-office
+  - /docs/spryker-core-back-office
+  - /docs/en/spryker-core-back-office
 ---
 
 From the Back Office, you can manage all the back-office activities. For example, the Back Office users can manage user and administrator accounts, create product pages, check orders, and do many more tasks. 

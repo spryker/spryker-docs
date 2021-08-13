@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS
 originalLink: https://documentation.spryker.com/v1/docs/t-handling-data-publish-and-sync-scos
+originalArticleId: c417b27a-9948-42fb-bd76-9bf0a9f824cd
 redirect_from:
   - /v1/docs/t-handling-data-publish-and-sync-scos
   - /v1/docs/en/t-handling-data-publish-and-sync-scos

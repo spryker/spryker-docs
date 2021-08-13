@@ -1,6 +1,7 @@
 ---
 title: URL Schema
 originalLink: https://documentation.spryker.com/v1/docs/db-schema-url
+originalArticleId: f6cce42d-f1af-490c-a0cf-2dfcf9d5ce7c
 redirect_from:
   - /v1/docs/db-schema-url
   - /v1/docs/en/db-schema-url

@@ -2,6 +2,7 @@
 title: Klarna - Invoice Pay in 14 days
 description: In this article, you will find invoice pay scenarios for the payment process with Klarna.
 originalLink: https://documentation.spryker.com/v6/docs/klarna-invoice-pay-in-14-days
+originalArticleId: ce3c1e61-18c2-4503-8233-e1ad215242e4
 redirect_from:
   - /v6/docs/klarna-invoice-pay-in-14-days
   - /v6/docs/en/klarna-invoice-pay-in-14-days
@@ -51,4 +52,4 @@ You can copy over configuration to your config from the Klarna modules `config.d
 
 ## Perform Requests
 
-In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](/docs/scos/dev/technology-partners/202001.0/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html). The next section gives a summary of them.
+In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](/docs/scos/dev/technology-partners/202009.0/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html). The next section gives a summary of them.

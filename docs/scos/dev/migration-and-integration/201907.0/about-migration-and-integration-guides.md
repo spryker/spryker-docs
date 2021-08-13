@@ -1,6 +1,7 @@
 ---
 title: About Migration and Integration Guides
 originalLink: https://documentation.spryker.com/v3/docs/about-migration-integration
+originalArticleId: cb79cb0b-6ed8-41ed-86d1-a47492b23303
 redirect_from:
   - /v3/docs/about-migration-integration
   - /v3/docs/en/about-migration-integration
@@ -10,7 +11,7 @@ This section of the documentation is dedicated to content describing all the mig
 
 [Module migration guides](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/about-migration-guides.html) explain how to update a module that has structural changes, such as to the database.
 
-[Migration Concepts](/docs/scos/dev/migration-and-integration/201907.0/migration-concepts/about-migration-concepts.html) clarify the steps needed to be taken to migrate in case of extensive module migrations or deprecating some technical solution.
+[Migration Concepts](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/about-migration-guides.html-concepts) clarify the steps needed to be taken to migrate in case of extensive module migrations or deprecating some technical solution.
 
 [Feature integration guides](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/about-integration.html) will guide you through the steps of enabling individual features in your project.
 

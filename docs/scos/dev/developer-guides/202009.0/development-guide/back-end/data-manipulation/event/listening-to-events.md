@@ -1,6 +1,7 @@
 ---
 title: Listening to Events
 originalLink: https://documentation.spryker.com/v6/docs/event-listen
+originalArticleId: 28a89c10-a2f5-410b-82ec-21c4b98cd527
 redirect_from:
   - /v6/docs/event-listen
   - /v6/docs/en/event-listen

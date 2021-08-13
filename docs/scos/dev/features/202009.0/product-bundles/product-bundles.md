@@ -2,6 +2,7 @@
 title: Product Bundles
 description: Product Bundles feature summary.
 originalLink: https://documentation.spryker.com/v6/docs/product-bundles
+originalArticleId: a55fc08d-52a1-478c-82d1-8cf7458de046
 redirect_from:
   - /v6/docs/product-bundles
   - /v6/docs/en/product-bundles

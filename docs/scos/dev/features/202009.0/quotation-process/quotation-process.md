@@ -2,6 +2,7 @@
 title: Quotation Process
 description: The Quotation Process feature allows customers to request suppliers for a better price for products
 originalLink: https://documentation.spryker.com/v6/docs/quotation-process
+originalArticleId: b2741f4d-c358-4eb7-948c-84ff2c6bdd73
 redirect_from:
   - /v6/docs/quotation-process
   - /v6/docs/en/quotation-process

@@ -2,6 +2,7 @@
 title: WYSIWYG Editor
 description: In the editor, you can create and edit content as well as dynamically embed product information and media, such as videos, pictures or any other.
 originalLink: https://documentation.spryker.com/v1/docs/wysiwyg-editor
+originalArticleId: 72b1c8b6-645a-434b-a6fe-984ac4e3dc8b
 redirect_from:
   - /v1/docs/wysiwyg-editor
   - /v1/docs/en/wysiwyg-editor

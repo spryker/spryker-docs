@@ -2,6 +2,7 @@
 title: New Products
 description: New products feature extends product module by two date attributes- "new from" and "new to" dates.
 originalLink: https://documentation.spryker.com/v1/docs/new-products
+originalArticleId: 0f827576-d14f-4d59-a9e9-2e85a475d55a
 redirect_from:
   - /v1/docs/new-products
   - /v1/docs/en/new-products

@@ -2,6 +2,7 @@
 title: Formatter
 description: Learn about the Formatter tool that allows you to find and fix mistakes in the code style.
 originalLink: https://documentation.spryker.com/v6/docs/formatter
+originalArticleId: 776ba318-4023-458b-b79f-c0a769d20c4e
 redirect_from:
   - /v6/docs/formatter
   - /v6/docs/en/formatter
@@ -12,7 +13,7 @@ redirect_from:
 To format files, [Prettier](https://prettier.io/) is used.
 
 ## Installation
-For details on how to install Formatter for your project, see [Formatter integration guide](https://documentation.spryker.com/docs/formatter-integration-guide).
+For details on how to install Formatter for your project, see [Formatter integration guide](/docs/scos/dev/migration-and-integration/202009.0/development-tools/formatter-integration-guide.html).
 
 ## Using formatter
 

@@ -2,6 +2,7 @@
 title: Product Availability Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Product Availability feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v1/docs/product-availability-feature-integration
+originalArticleId: cdd936dc-c376-4fae-9cba-36d43ced869a
 redirect_from:
   - /v1/docs/product-availability-feature-integration
   - /v1/docs/en/product-availability-feature-integration

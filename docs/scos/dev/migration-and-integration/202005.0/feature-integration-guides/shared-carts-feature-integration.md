@@ -1,6 +1,7 @@
 ---
 title: Shared Carts Feature Integration
 originalLink: https://documentation.spryker.com/v5/docs/shared-carts-feature-integration
+originalArticleId: 30e92dfd-8bd7-49b5-ab4d-84a10b9cfd4b
 redirect_from:
   - /v5/docs/shared-carts-feature-integration
   - /v5/docs/en/shared-carts-feature-integration

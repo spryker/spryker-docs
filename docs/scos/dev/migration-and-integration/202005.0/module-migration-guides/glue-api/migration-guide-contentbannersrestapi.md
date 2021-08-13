@@ -1,13 +1,14 @@
 ---
 title: Migration Guide - ContentBannersRestApi
 originalLink: https://documentation.spryker.com/v5/docs/mg-contentbannersrestapi-201907
+originalArticleId: d8ba918c-4a24-4fbf-882e-21a23f7a8a87
 redirect_from:
   - /v5/docs/mg-contentbannersrestapi-201907
   - /v5/docs/en/mg-contentbannersrestapi-201907
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
-ContentBannersRestApi, version 2.0.0 introduces the [Banner content item](https://documentation.spryker.com/docs/en/content-items-types-module-relations-201907) functionality that allows retrieving its data by the content item key via REST API endpoint for all or a specific locale.
+ContentBannersRestApi, version 2.0.0 introduces the [Banner content item](https://documentation.spryker.com/v5/docs/en/content-items-types-module-relations-201907) functionality that allows retrieving its data by the content item key via REST API endpoint for all or a specific locale.
 
 In `ContentBannersRestApi` version 2.0.0, we have:
 
@@ -20,7 +21,7 @@ You can find more details about the changes on the [ContentBannersRestApi module
 
 **To upgrade to the new version of the module, do the following:**
 
-1. Upgrade the **ContentBanner** module to version 2.0.0. See [Migration Guide - ContentBanner](https://documentation.spryker.com/docs/en/mg-contentbanner-201907) for  details on how to upgrade.
+1. Upgrade the **ContentBanner** module to version 2.0.0. See [Migration Guide - ContentBanner](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-contentbanner.html) for  details on how to upgrade.
 
 2. Upgrade the **ContentBannerRestApi** module to version 2.0.0:
 

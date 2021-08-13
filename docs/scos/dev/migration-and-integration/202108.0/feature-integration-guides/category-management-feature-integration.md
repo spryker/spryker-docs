@@ -1,12 +1,15 @@
 ---
 title: Category Management feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/category-management-feature-integration
+originalArticleId: fc4add5d-25e3-4c5c-b171-98726a915e66
 redirect_from:
   - /2021080/docs/category-management-feature-integration
   - /2021080/docs/en/category-management-feature-integration
+  - /docs/category-management-feature-integration
+  - /docs/en/category-management-feature-integration
 ---
 
-This document describes how to integrate the [Category Management](https://documentation.spryker.com/2021080/docs/category-management) feature into a Spryker project.
+This document describes how to integrate the [Category Management](/docs/scos/dev/features/{{ page.version }}/category-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -1378,8 +1381,8 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
 |--- | --- | --- | 
-| GLUE: Category Management  | | [GLUE: Category Management feature integration](https://documentation.spryker.com/2021080/docs/glue-api-category-management-feature-integration) | 
-| Catalog + Category Management  | | [Catalog + Category Management feature integration](https://documentation.spryker.com/2021080/docs/catalog-category-feature-integration) |
+| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-category-management-feature-integration.html) | 
+| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/catalog-category-management-feature-integration.html) |
 | Product + Category Management  | |  [Product + Category Management feature integration](https://documentation.spryker.com/2021080/docs/product-category-management-feature-integration) | 
-| CMS + Category Management | | [CMS + Category Management feature integration](https://documentation.spryker.com/2021080/docs/cms-category-management-feature-integration)|
+| CMS + Category Management | | [CMS + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/cms-category-management-feature-integration.html)|
 

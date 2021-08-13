@@ -2,6 +2,7 @@
 title: OMS (Order Management System) Matrix
 description: Efficiently keep track of the order processing and ensure quick fulfillment. With the Order Management, you can keep your order processing running smoothly.
 originalLink: https://documentation.spryker.com/v1/docs/oms-matrix
+originalArticleId: 0eeea4d1-d793-41b2-ba4c-995893adbdca
 redirect_from:
   - /v1/docs/oms-matrix
   - /v1/docs/en/oms-matrix

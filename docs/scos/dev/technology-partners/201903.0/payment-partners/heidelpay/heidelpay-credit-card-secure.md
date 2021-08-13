@@ -2,6 +2,7 @@
 title: Heidelpay - Credit Card Secure
 description: Integrate Credit Card payment through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v2/docs/heidelpay-credit-card
+originalArticleId: 05de2f83-df9c-4a10-9139-08a24625ed73
 redirect_from:
   - /v2/docs/heidelpay-credit-card
   - /v2/docs/en/heidelpay-credit-card

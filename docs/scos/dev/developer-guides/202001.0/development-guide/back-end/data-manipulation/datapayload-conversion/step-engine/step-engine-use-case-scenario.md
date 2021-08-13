@@ -2,6 +2,7 @@
 title: Step Engine - Use Case Scenario
 description: In this article, you have an example of the checkout process configuration.
 originalLink: https://documentation.spryker.com/v4/docs/step-engine-use-case-scenario
+originalArticleId: ce9f2afa-0cbf-4a8b-843d-f57e7ec81e7d
 redirect_from:
   - /v4/docs/step-engine-use-case-scenario
   - /v4/docs/en/step-engine-use-case-scenario

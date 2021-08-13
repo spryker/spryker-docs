@@ -2,9 +2,12 @@
 title: Managing company units
 description: Use the procedures to create, edit, and delete company units in the Back Office after a company has been created.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-units
+originalArticleId: 6a9bb3d9-ef8f-444e-b5f7-7d6f964792c5
 redirect_from:
   - /2021080/docs/managing-company-units
   - /2021080/docs/en/managing-company-units
+  - /docs/managing-company-units
+  - /docs/en/managing-company-units
 ---
 
 This article describes how to manage company units. 
@@ -44,7 +47,7 @@ The following table describes the attributes you see, select, or enter while cre
 To edit a business unit:
 1. Click **Edit** in the _Actions_ column if you want to change the details for a business unit such as Parent BU, Name, IBAN, and BIC.
     {% info_block infoBox "Info" %}
-Once the company business unit address is created, you can attach it to a business unit on the *Edit Company Business Unit* page. See [Managing company unit addresses](https://documentation.spryker.com/docs/managing-company-unit-addresses
+Once the company business unit address is created, you can attach it to a business unit on the *Edit Company Business Unit* page. See [Managing company unit addresses](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-unit-addresses.html
 {% endinfo_block %} for more details.)
 2. Once done, click **Save**.
 
@@ -66,5 +69,5 @@ The following table describes the attributes you see, select, or enter while edi
 If you want to delete an existing business unit, click **Delete** in the *Actions* column.
 
 **What's next?**
-You need to create a company unit address so that you can attach it to your business unit. See [Managing company unit addresses](https://documentation.spryker.com/docs/managing-company-unit-addresses) for more details.
+You need to create a company unit address so that you can attach it to your business unit. See [Managing company unit addresses](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-unit-addresses.html) for more details.
 

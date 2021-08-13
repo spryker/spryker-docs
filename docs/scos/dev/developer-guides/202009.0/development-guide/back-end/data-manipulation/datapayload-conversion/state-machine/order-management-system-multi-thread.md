@@ -2,12 +2,13 @@
 title: Order management system multi-thread
 description: OMS multi-thread allows you to process OMS timeouts and conditions in parallel. Learn how to enable it.
 originalLink: https://documentation.spryker.com/v6/docs/order-management-system-multi-thread
+originalArticleId: 1a84b84b-083e-40cc-9ae5-622db6e7d9ef
 redirect_from:
   - /v6/docs/order-management-system-multi-thread
   - /v6/docs/en/order-management-system-multi-thread
 ---
 
-Order management system (OMS) heavily relies on the state machine-related concepts like [event timeouts](https://documentation.spryker.com/docs/en/state-machine-cookbook#timeout) and [conditions](https://documentation.spryker.com/docs/en/state-machine-cookbook#conditions). When an order is managed, a lot of the timeout and condition entities are being processed. Processing of timeouts and conditions in Spryker is done by two console commands:
+Order management system (OMS) heavily relies on the state machine-related concepts like [event timeouts](/docs/scos/dev/developer-guides/202009.0/development-guide/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#timeout) and [conditions](/docs/scos/dev/developer-guides/202009.0/development-guide/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#conditions). When an order is managed, a lot of the timeout and condition entities are being processed. Processing of timeouts and conditions in Spryker is done by two console commands:
 
 * `oms:check-timeout`
 * `oms:check-condition`

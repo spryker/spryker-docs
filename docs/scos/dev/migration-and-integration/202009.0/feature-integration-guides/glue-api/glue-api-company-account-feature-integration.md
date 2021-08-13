@@ -1,6 +1,7 @@
 ---
 title: Glue API- Company account feature integration
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-company-account-api-feature-integration
+originalArticleId: 15e70979-0f15-419c-bd1c-603e36b0e006
 redirect_from:
   - /v6/docs/glue-api-company-account-api-feature-integration
   - /v6/docs/en/glue-api-company-account-api-feature-integration
@@ -17,9 +18,9 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-application-feature-integration.html) |
-| Company account | master | [Company Account](https://documentation.spryker.com/docs/company-account-integration-201907) |
-| Customer Account Management | muster | [Customer API](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/customer-account-management-feature-integration.html) |
+| Spryker Core | master | [Glue Application Feature Integration](https://documentation.spryker.com/v6/docs/glue-application-feature-integration-201907) |
+| Company account | master | [Company Account](https://documentation.spryker.com/v6/docs/company-account-feature-integration) |
+| Customer Account Management | muster | [Customer API](https://documentation.spryker.com/v6/docs/customer-account-management-feature-integration-glue-201907) |
 | Uuid generation console | master| UUID Generation Console |
 
 ## 1) Install the Required Modules Using Composer

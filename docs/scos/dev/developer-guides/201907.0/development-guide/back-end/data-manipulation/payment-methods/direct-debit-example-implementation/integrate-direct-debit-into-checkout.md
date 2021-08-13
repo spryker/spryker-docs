@@ -2,6 +2,7 @@
 title: Integrate Direct Debit into Checkout
 description: This article provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
 originalLink: https://documentation.spryker.com/v3/docs/dd-checkout-implementation
+originalArticleId: 0301f861-1186-454c-a3fe-a2d26e358d86
 redirect_from:
   - /v3/docs/dd-checkout-implementation
   - /v3/docs/en/dd-checkout-implementation
@@ -87,6 +88,6 @@ If you re-created this example in Demoshop, perform some adjustments on the `sel
 ***
 **What's next?**
 
-Once done, you need to [create and integrate the Direct Debit payment method in the back-end](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html).
+Once done, you need to [create and integrate the Direct Debit payment method in the back-end](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html).
 
 <!-- Last review date: Sep 27, 2019 -by Alexander Veselov, Yuliia Boiko-->

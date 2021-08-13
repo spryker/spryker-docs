@@ -2,12 +2,13 @@
 title: B2B Demo Shop Installation- Mac OS or Linux, with Development Virtual Machine
 description: This article provides step-by-step instructions on the B2B Demo Shop installation.
 originalLink: https://documentation.spryker.com/v4/docs/installation-guide-b2b
+originalArticleId: d33a50c7-19c6-46da-9caa-96650c2df142
 redirect_from:
   - /v4/docs/installation-guide-b2b
   - /v4/docs/en/installation-guide-b2b
 ---
 
-To install the [Demo Shop for B2B implementations](/docs/scos/dev/about-spryker/202001.0/b2b-suite.html) on Mac OS or Linux with Development Virtual Machine, follow the steps below.
+To install the [Demo Shop for B2B implementations](/docs/scos/user/about-spryker/202001.0/b2b-suite.html) on Mac OS or Linux with Development Virtual Machine, follow the steps below.
 
 ### 1. Install Prerequisites
 

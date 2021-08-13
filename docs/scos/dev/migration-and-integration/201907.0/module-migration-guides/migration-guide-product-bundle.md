@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product Bundle
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-bundle
+originalArticleId: 10aa76a7-dd87-4d4a-afff-c5ff48c88a31
 redirect_from:
   - /v3/docs/mg-product-bundle
   - /v3/docs/en/mg-product-bundle
@@ -13,7 +14,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 ## Upgrading from Version 3.* to Version 4.*
 
-In version 4 we have added support for multi-currency. First, make sure that you [migrated the Price module](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-price.html). If you extended `ProductBundleCartExpander`, then you have to adapt some code because we changed how price is selected for added bundle products, check that core changes and adapt accordingly. We have also added a new plugin to handle cart reload event.
+In version 4 we have added support for multi-currency. First, make sure that you [migrated the Price module](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-price.html). If you extended `ProductBundleCartExpander`, then you have to adapt some code because we changed how price is selected for added bundle products, check that core changes and adapt accordingly. We have also added a new plugin to handle cart reload event.
 
 You will also need to add `\Spryker\Zed\ProductBundle\Communication\Plugin\Cart\CartBundleItemsPreReloadPlugin` plugin to `\Pyz\Zed\Cart\CartDependencyProvider::getPreReloadPlugins()`, this ensures that bundle items are correctly updated when currency is changed and cart reload is invoked.
 

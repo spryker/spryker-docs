@@ -2,6 +2,7 @@
 title: Printing a Shopping List Feature Overview
 description: With the feature in place, shop visitors can print their own shopping lists and shopping lists shared with them from their account or Shopping list view page.
 originalLink: https://documentation.spryker.com/v4/docs/printing-shopping-list-overview
+originalArticleId: 26250c8a-b2e6-4ac6-94cc-228d67e7adf2
 redirect_from:
   - /v4/docs/printing-shopping-list-overview
   - /v4/docs/en/printing-shopping-list-overview

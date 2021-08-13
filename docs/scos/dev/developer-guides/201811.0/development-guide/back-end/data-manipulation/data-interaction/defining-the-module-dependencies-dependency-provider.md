@@ -2,6 +2,7 @@
 title: Defining the Module Dependencies- Dependency Provider
 description: Each module ships with a DependencyProvider class which explicitly defines services and external dependencies to other modules.
 originalLink: https://documentation.spryker.com/v1/docs/dependency-provider
+originalArticleId: e66581a0-e816-45ac-85fd-290b39d4d2b8
 redirect_from:
   - /v1/docs/dependency-provider
   - /v1/docs/en/dependency-provider
@@ -157,4 +158,4 @@ You might use the following definitions to generate related code:
 * Add Zed Dependency Service Interface
 * Add Client Dependency Provider
 
-See the [Spryk](https://documentation.spryker.com/v1/docs/spryk-201903) documentation for details.
+See the [Spryk](https://documentation.spryker.com/v1/docs/spryk) documentation for details.

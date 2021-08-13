@@ -2,6 +2,7 @@
 title: Gift cards feature integration
 description: The guide walks you through the process of installing the Gift Cards feature in the project.
 originalLink: https://documentation.spryker.com/v6/docs/gift-cards-feature-integration
+originalArticleId: f27f2d37-c023-47be-8b1c-f3f42c09c4cf
 redirect_from:
   - /v6/docs/gift-cards-feature-integration
   - /v6/docs/en/gift-cards-feature-integration

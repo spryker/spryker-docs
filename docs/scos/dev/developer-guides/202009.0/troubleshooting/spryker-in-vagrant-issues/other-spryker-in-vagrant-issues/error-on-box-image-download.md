@@ -2,6 +2,7 @@
 title: Error on box image download
 description: Learn how to to fix the error on box image download
 originalLink: https://documentation.spryker.com/v6/docs/error-on-box-image-download
+originalArticleId: 353110d9-9bac-4fa4-91ee-944b45652cac
 redirect_from:
   - /v6/docs/error-on-box-image-download
   - /v6/docs/en/error-on-box-image-download

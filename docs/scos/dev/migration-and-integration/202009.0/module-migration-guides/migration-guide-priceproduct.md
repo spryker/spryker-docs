@@ -2,6 +2,7 @@
 title: Migration Guide - PriceProduct
 description: Use the guide to migrate to a newer version of the PriceProduct module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-priceproduct
+originalArticleId: 8bbe2c33-1598-47af-b9cd-635e29c223d3
 redirect_from:
   - /v6/docs/mg-priceproduct
   - /v6/docs/en/mg-priceproduct
@@ -13,12 +14,12 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 {% endinfo_block %} if you have any questions.)
 
 ## Upgrading from version 1.* to version 2.*
-There are new functionalities and changes that were added in this new module release. First of all, the changes imply implementation of the Price Dimension concept as well as adding of Service layer with PriceProductService. See [PriceProduct module details: Reference information](https://documentation.spryker.com/v6/docs/priceproduct-module-details-reference-information#priceproductservice) for details.
+There are new functionalities and changes that were added in this new module release. First of all, the changes imply implementation of the Price Dimension concept as well as adding of Service layer with PriceProductService. See [PriceProduct module details: Reference information](/docs/scos/dev/features/202009.0/prices/prices-feature-overview/priceproduct-module-details-reference-information.html#priceproductservice) for details.
 
 In the previous version of the PriceProduct module, a product had only one price per store (and multi-currency) with gross and net amounts.
-By adding the [Price dimension](https://documentation.spryker.com/v6/docs/priceproduct-module-details-reference-information#price-dimension) concept to the new release, you can set specific prices for each customer separately. Having logged in, a user with these specific prices will see another prices in Catalog and will be able to buy products for  their own price.
+By adding the [Price dimension](/docs/scos/dev/features/202009.0/prices/prices-feature-overview/priceproduct-module-details-reference-information.html#price-dimension) concept to the new release, you can set specific prices for each customer separately. Having logged in, a user with these specific prices will see another prices in Catalog and will be able to buy products for  their own price.
 
-To save BC, we have implemented Default Price Dimension inside the new `PriceProduct` module, so all prices imported by new `PriceProductDataImport` will be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/dev/features/202001.0/price/prices-per-merchant-relation/prices-per-merchant-relation-feature-overview.html) to learn more about the price dimension.
+To save BC, we have implemented Default Price Dimension inside the new `PriceProduct` module, so all prices imported by new `PriceProductDataImport` will be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/dev/features/202009.0/merchant-custom-prices/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
 Prices from price dimensions could be stored not only in DB, but also in Storage. Therefore, the update of the PriceProductStorage module was necessary. The new version 2.0.0 of the PriceProduct module already supports price dimensions and has Default Price Dimension implemented.
 
 To migrate the changes to the module, do the following:

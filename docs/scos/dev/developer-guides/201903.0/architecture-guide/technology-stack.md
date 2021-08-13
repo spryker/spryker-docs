@@ -2,6 +2,7 @@
 title: Technology Stack
 description: This article provides a general overview of the technologies used while developing Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v2/docs/technology-stack
+originalArticleId: bb12a0ac-d96e-4c8c-bf39-1724fe212b4b
 redirect_from:
   - /v2/docs/technology-stack
   - /v2/docs/en/technology-stack

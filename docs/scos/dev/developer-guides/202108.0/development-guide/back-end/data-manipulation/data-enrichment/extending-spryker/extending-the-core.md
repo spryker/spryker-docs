@@ -2,9 +2,12 @@
 title: Extending the Core
 description: There are three ways to extend classes from the core- replacement class, inheritance object, composition. Each of them has its advantages and disadvantages.
 originalLink: https://documentation.spryker.com/2021080/docs/core-extension
+originalArticleId: 8baa3c78-9795-426b-9df2-576290b2acb4
 redirect_from:
   - /2021080/docs/core-extension
   - /2021080/docs/en/core-extension
+  - /docs/core-extension
+  - /docs/en/core-extension
 ---
 
 We offer several ways like plugins to hook into the core’s behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method which is deep in the core.
@@ -83,7 +86,7 @@ class AnyModel implements AnyModelInterface
 ```
 
 ## Add your Class to the Factory
-When you extend a class from the core, you want the core code to go use that one instead of the original class. To do so, add a [factory](https://documentation.spryker.com/docs/factory) to the same module and same layer. This factory must extend its equivalent from the core. Core will automatically detect the overwritten factory and use it. Now, you can easily exchange the classes and your extension.
+When you extend a class from the core, you want the core code to go use that one instead of the original class. To do so, add a [factory](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/factory/creating-instances-of-classes-factory.html) to the same module and same layer. This factory must extend its equivalent from the core. Core will automatically detect the overwritten factory and use it. Now, you can easily exchange the classes and your extension.
 
 **Example:**
 | Path | Description |

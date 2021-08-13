@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Calculation
 originalLink: https://documentation.spryker.com/v3/docs/mg-calculation
+originalArticleId: 18f8b1fc-1561-4bac-8353-85b8d5d3088f
 redirect_from:
   - /v3/docs/mg-calculation
   - /v3/docs/en/mg-calculation
@@ -40,7 +41,7 @@ new ExpenseTaxCalculatorPlugin(),
 The old Calculator plugins were moved to the following separate repository: `spryker/calculation-migration`. Please include into your `composer.json` like `"spryker/calculation-migration": "dev-master"` and run composer update. This should enable you to use old plugins.
 {% endinfo_block %}
 
-The `Caclulator` module also returns `back sales.fk_customer, sales.fk_shipment_method, sales.shipment_delivery_time` - these are deprecated methods. To safely migrate them, see [Migration Guide - Sales](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-sales.html).
+The `Caclulator` module also returns `back sales.fk_customer, sales.fk_shipment_method, sales.shipment_delivery_time` - these are deprecated methods. To safely migrate them, see [Migration Guide - Sales](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-sales.html).
 
 After this you should see new values calculated + legacy ones.
 

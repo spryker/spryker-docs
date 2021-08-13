@@ -2,12 +2,15 @@
 title: Publish and Synchronization
 description: Publish and Synchronization process synchronizes all changes made on the backend need to be propagated to the client data stores.
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization
+originalArticleId: 58721bca-2881-4583-a9fa-59d698e8b9bb
 redirect_from:
   - /2021080/docs/publish-and-synchronization
   - /2021080/docs/en/publish-and-synchronization
+  - /docs/publish-and-synchronization
+  - /docs/en/publish-and-synchronization
 ---
 
-To access data rapidly, a client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. The client does not have direct access to the [SQL database](https://documentation.spryker.com/docs/persistence-layer) used by the back end. To keep the client data sources always up to date, all the changes made on the back end should be propagated to the front-end data sources. To do this, Spryker implements a two-step process, called Publish and Synchronize:
+To access data rapidly, a client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. The client does not have direct access to the [SQL database](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/zed/persistence-layer/about-the-persistence-layer.html) used by the back end. To keep the client data sources always up to date, all the changes made on the back end should be propagated to the front-end data sources. To do this, Spryker implements a two-step process, called Publish and Synchronize:
 
 1.  Publish:
 
@@ -39,7 +42,7 @@ The advantages of the approach are as follows:
 *   Data can be localized and target a particular store.
 
 
-Both Publish and Synchronize implement the queue pattern. See [Spryker Queue Module](https://documentation.spryker.com/docs/queue) to learn more.
+Both Publish and Synchronize implement the queue pattern. See [Spryker Queue Module](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/queue/queue.html) to learn more.
 
 The process relies heavily on Propel Behaviors. Propel Behaviors are used to trigger actions automatically on updating the database. This way, you don’t need to trigger any step of the process manually in code. See [Boostrapping a Behavior](http://propelorm.org/documentation/cookbook/writing-behavior.html) to learn more.
 
@@ -47,7 +50,7 @@ The process relies heavily on Propel Behaviors. Propel Behaviors are used to tri
 
 There are 2 ways to start the Publish process:
 
-1.  Trigger the publish event manually using the [Event Facade](https://documentation.spryker.com/docs/event-adding):
+1.  Trigger the publish event manually using the [Event Facade](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/event/adding-events.html):
 
 ```php
 $this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventEntityTransfer())->setId($id));

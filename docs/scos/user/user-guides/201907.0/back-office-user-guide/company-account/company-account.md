@@ -2,6 +2,7 @@
 title: Company Account
 description: The section can be used to create a company record, set up company units and company unit addresses, create company user roles, etc in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/company-account-guide
+originalArticleId: 64196ce3-7cae-42ad-b2b2-25e72284c8e3
 redirect_from:
   - /v3/docs/company-account-guide
   - /v3/docs/en/company-account-guide
@@ -39,10 +40,10 @@ Some setup that you do now (creating a company record
 
 So you need to know how the company infrastructure is being set up.
 See the following articles and follow the procedures described there to set up a company account:
-* [Managing Companies](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/managing-a-company-account/managing-companies.html)
-* [Managing Company Units](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-units.html)
-* [Managing Company Unit Addresses](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-unit-addresses.html)
-* [Managing Company Roles](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-roles.html)
-* [Managing Company Users](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-users.html)
+* [Managing Companies](/docs/scos/user/user-guides/201907.0/back-office-user-guide/company-account/managing-a-company-account/managing-companies.html)
+* [Managing Company Units](/docs/scos/user/user-guides/201907.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-units.html)
+* [Managing Company Unit Addresses](/docs/scos/user/user-guides/201907.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-unit-addresses.html)
+* [Managing Company Roles](/docs/scos/user/user-guides/201907.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-roles.html)
+* [Managing Company Users](/docs/scos/user/user-guides/201907.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-users.html)
 
-To know more about the attributes that you see, enter, and select while managing company accounts, see [Company Account: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/references/company-account-reference-information.html).
+To know more about the attributes that you see, enter, and select while managing company accounts, see [Company Account: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/company-account/references/company-account-reference-information.html).

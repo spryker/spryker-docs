@@ -2,6 +2,7 @@
 title: Retrieving image sets of concrete products
 description: Retrieve image sets of concrete products.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-image-sets-of-concrete-products
+originalArticleId: e3168f25-de08-4701-b7cc-8a339e7e82a9
 redirect_from:
   - /v6/docs/retrieving-image-sets-of-concrete-products
   - /v6/docs/en/retrieving-image-sets-of-concrete-products
@@ -11,7 +12,7 @@ This endpoint allows retrieving image sets of concrete products.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration).
+* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html).
 
 
 ## Retrieve image sets of a concrete product
@@ -84,4 +85,4 @@ Sample response
 | --- | --- |
 | 304 | Can't find concrete product image sets. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).

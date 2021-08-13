@@ -2,6 +2,7 @@
 title: Handling concurrent REST requests and caching with entity tags
 description: This article will provide you with information on how to handle concurrent requests and implement client-side caching with the help of entity tags.
 originalLink: https://documentation.spryker.com/v6/docs/handling-concurrent-rest-requests-and-caching-with-entity-tags
+originalArticleId: 3193dbd7-0ed6-4f42-8ef0-56539f0d04af
 redirect_from:
   - /v6/docs/handling-concurrent-rest-requests-and-caching-with-entity-tags
   - /v6/docs/en/handling-concurrent-rest-requests-and-caching-with-entity-tags
@@ -11,7 +12,7 @@ Some Spryker Glue API resources allow concurrent changes from multiple sources. 
 
 To ensure resource integrity and consistency, such resources implement *Entity Tags* (ETags). An ETag is a unique identifier of the state of a specific resource at a certain point in time. It allows a server to identify if the client initiating a change has received the last state of the resource known to the server prior to sending the change request.
 
-Apart from that, ETags can also boost API performance via caching. They can be used by a client to identify when a new version of a resource needs to be requested. For example, a client can cache the state of a user's cart and request an updated version only when the associated ETag changes. Since Etags are stored in Spryker's KV Storage ([Redis](https://documentation.spryker.com/docs/redis-as-kv) by default), tag matching is performed much faster than fetching cart data.
+Apart from that, ETags can also boost API performance via caching. They can be used by a client to identify when a new version of a resource needs to be requested. For example, a client can cache the state of a user's cart and request an updated version only when the associated ETag changes. Since Etags are stored in Spryker's KV Storage ([Redis](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/client/using-and-configuring-redis-as-a-key-value-storage.html) by default), tag matching is performed much faster than fetching cart data.
 
 ## Request flow
 When a client requests a resource that supports ETag optimization and is authorized to use it, the Glue API server responds with a REST response. It contains an identifier of the current state of the resource in the ETag header.
@@ -68,7 +69,7 @@ The following resource support concurrent requests with ETag headers by default
 
 | Endpoint | Methods | Resource |
 | --- | --- | --- |
-| [/carts](https://documentation.spryker.com/docs/rest-api-reference#/carts) | PATCH, DELETE | Registered users' cart. |
+| [/carts](/docs/scos/dev/glue-api-guides/202009.0/rest-api-reference.html#/carts) | PATCH, DELETE | Registered users' cart. |
 
 ## Possible errors
 The following error responses can be returned by the server when a resource supporting ETags is updated:
@@ -78,5 +79,5 @@ The following error responses can be returned by the server when a resource supp
 | 412 | Pre-condition failed.</br>The `If-Match` header value is invalid or outdated. </br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
 | 428 | Pre-condition required.</br>The `If-Match` header is missing. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 

@@ -2,12 +2,13 @@
 title: Сustomization example - B2B Product Details page
 description: Customize any front–end element in Spryker by adjusting a respective SCSS file.
 originalLink: https://documentation.spryker.com/v6/docs/сustomization-example-b2b-product-details-page
+originalArticleId: 17c8586b-2605-47c7-93e0-456b570cb7cf
 redirect_from:
   - /v6/docs/сustomization-example-b2b-product-details-page
   - /v6/docs/en/сustomization-example-b2b-product-details-page
 ---
 
-In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [B2B Demo Shop](https://documentation.spryker.com/docs/b2b-suite#b2b-demo-shop) into separate elements with their respective style files. To customize a particular element, you adjust the code in the respective style file. 
+In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [B2B Demo Shop](/docs/scos/user/intro-to-spryker/202009.0/b2b-suite.html#b2b-demo-shop) into separate elements with their respective style files. To customize a particular element, you adjust the code in the respective style file. 
 
 You can see the [full version of this page](https://www.de.b2b.demo-spryker.com/en/soennecken-permanentmarker-4mm-rundspitze-M22663) in our B2B Demo Shop.
 

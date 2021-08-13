@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product
 originalLink: https://documentation.spryker.com/v2/docs/mg-product
+originalArticleId: ae8f4d1a-d538-4109-88ba-0566978d69f3
 redirect_from:
   - /v2/docs/mg-product
   - /v2/docs/en/mg-product

@@ -2,6 +2,7 @@
 title: Editing Content Items
 description: The guide provides steps on how to update content items in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/editing-content-items
+originalArticleId: 4405c705-4043-4049-85d8-81286d7dcc34
 redirect_from:
   - /v5/docs/editing-content-items
   - /v5/docs/en/editing-content-items
@@ -14,7 +15,7 @@ This topic describes how to edit content items in the Back Office.
 
 1. On the left-side navigation bar, navigate to the **Content Management** section and select **Content Items**.
 2. In the _Actions_ column of the **List of Content Items** table, click **Edit** next to the item you want to modify. The **Edit Content Item Type: Content Item Key** page opens. 
-3. Make changes to the needed attributes. See [Content Items: Reference Information](https://documentation.spryker.com/docs/en/content-items-reference-information) to learn more about content item attributes. 
+3. Make changes to the needed attributes. See [Content Items: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
 4. To save the updates, click **Save**. The updated content item will be displayed on the grid of _List of Content Items_ and the following message is displayed: '_Content item has been successfully updated._'.
 
 **Tips & Tricks**
@@ -31,4 +32,4 @@ Clicking **Back to Content Items** in the top right corner of the page can trigg
 **What's next?**
 The content item is updated. Now, you can add it via content item widgets to a block or a page if needed.
 
-* To learn more about how to add content item widgets to a block or a page, see [Adding Content Item Widgets to Pages and Blocks](https://documentation.spryker.com/docs/en/adding-content-item-widgets-to-pages-and-blocks).
+* To learn more about how to add content item widgets to a block or a page, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).

@@ -2,9 +2,12 @@
 title: Customer Account Management
 description: Let your customers create an account to save their contact details, addresses, order history and preferences, such as language and shipping options.
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management
+originalArticleId: 88f6dffa-517a-4a00-ac9f-4041ba9b9841
 redirect_from:
   - /2021080/docs/customer-account-management
   - /2021080/docs/en/customer-account-management
+  - /docs/customer-account-management
+  - /docs/en/customer-account-management
 ---
 
 The *Customer Account Management* feature enables a wide range of management options for customer accounts, as well as additional functionalities. 

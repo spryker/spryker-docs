@@ -2,6 +2,7 @@
 title: Discount Promotion Feature Integration
 description: This guides provides you with a set of steps needed to be performed in order to integrate the Discount Promotion feature into your project.
 originalLink: https://documentation.spryker.com/v4/docs/discount-promotion-feature-integration
+originalArticleId: 141f961c-2ae2-4ce4-b242-80ad7a5da10d
 redirect_from:
   - /v4/docs/discount-promotion-feature-integration
   - /v4/docs/en/discount-promotion-feature-integration

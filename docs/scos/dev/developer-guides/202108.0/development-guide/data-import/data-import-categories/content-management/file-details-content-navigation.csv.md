@@ -2,12 +2,15 @@
 title: File details- content_navigation.csv
 description: Description of the import file of the navigation content item.
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-content-navigationcsv
+originalArticleId: b553e414-141d-488c-8d1c-0a7980ff1211
 redirect_from:
   - /2021080/docs/file-details-content-navigationcsv
   - /2021080/docs/en/file-details-content-navigationcsv
+  - /docs/file-details-content-navigationcsv
+  - /docs/en/file-details-content-navigationcsv
 ---
 
-This article contains content of the content_navigation.csv file to configure [Content Navigation](https://documentation.spryker.com/docs/content-items-feature-overview#content-item) information on your Spryker Demo Shop.
+This article contains content of the content_navigation.csv file to configure [Content Navigation](/docs/scos/dev/features/{{ page.version }}/content-items/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:
@@ -18,9 +21,9 @@ These are the header fields to be included in the .csv file:
 | 1 | key | v (unique)| *string* | N/A | Unique identifier of the content item. |
 | 2 | name | v | *string* | Human-readable name. | Name of the content. |
 | 3 | description |   | *string* | N/A  | Description of the content. |
-| 4 | navigation_key.default | v | *string* | Key of an existing navigation element. | Default unique identifier of a [navigation element](https://documentation.spryker.com/docs/file-details-navigationcsv).  |
-| 5 | navigation_key.en_US |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](https://documentation.spryker.com/docs/file-details-navigationcsv) for the `en_US` [locale](https://documentation.spryker.com/docs/multi-language-setup). |
-| 6 | title.de_DE |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](https://documentation.spryker.com/docs/file-details-navigationcsv) for the `de_DE` [locale](https://documentation.spryker.com/docs/multi-language-setup). |
+| 4 | navigation_key.default | v | *string* | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html).  |
+| 5 | navigation_key.en_US |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `en_US` [locale](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html). |
+| 6 | title.de_DE |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html). |
 
 
 N/A: Not applicable.
@@ -28,7 +31,7 @@ N/A: Not applicable.
 ## Dependencies
 This file has the following dependencies:
 
-* [navigation.csv](https://documentation.spryker.com/docs/file-details-navigationcsv) 
+* [navigation.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html) 
 
 ## Template File & Content Example
 A template and an example **content_navigation.csv** file can be downloaded here:

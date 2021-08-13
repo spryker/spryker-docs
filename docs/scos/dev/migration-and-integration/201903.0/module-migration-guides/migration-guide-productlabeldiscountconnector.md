@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductLabelDiscountConnector
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-label-discount-connector
+originalArticleId: 38ece27d-5c27-4f7a-b617-c0104e0750d6
 redirect_from:
   - /v2/docs/mg-product-label-discount-connector
   - /v2/docs/en/mg-product-label-discount-connector

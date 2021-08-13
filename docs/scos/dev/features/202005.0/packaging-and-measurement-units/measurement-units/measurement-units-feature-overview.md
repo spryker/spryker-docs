@@ -2,6 +2,7 @@
 title: Measurement Units Feature Overview
 description: The Measurement Units per Products feature allows selling products by any unit of measure defined by a shop administrator.
 originalLink: https://documentation.spryker.com/v5/docs/measurement-units-feature-overview
+originalArticleId: 2ee46c86-99fb-46d6-8a33-f090170b7260
 redirect_from:
   - /v5/docs/measurement-units-feature-overview
   - /v5/docs/en/measurement-units-feature-overview
@@ -62,6 +63,6 @@ If a global unit conversion exists between the base and sales unit, then factor 
 - We strive to shift all business logic to our backend, however, with Measurements Units, a part of the calculations (e.g. quantity restrictions) are performed on Yves.
 - On the shopping cart as well as the shopping list page, products do not have a dropdown to change the measurement units. You can select a measurement unit on the product details page only.
 - A shopper cannot reorder the items with the selected measurement units as they are not added automatically. They should be added manually on the product details page.
-- In the [Quick Order](https://documentation.spryker.com/docs/en/quick-order-201903) form and [search widget](https://documentation.spryker.com/docs/en/search-widget-for-concrete-products-201903), the products use the default measurement units that cannot be changed.
+- In the [Quick Order](https://documentation.spryker.com/v5/docs/en/quick-add-to-cart) form and [search widget](/docs/scos/dev/features/202005.0/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products.html), the products use the default measurement units that cannot be changed.
 
 <!-- Last review date: Feb 6, 2018-- by Karoy Gerner, Anastasija Datsun -->

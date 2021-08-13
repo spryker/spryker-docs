@@ -2,14 +2,17 @@
 title: Container
 description: The article contains information on how to use Container, to check if services are added, removed or extended. Troubleshooting information is included too
 originalLink: https://documentation.spryker.com/2021080/docs/container
+originalArticleId: 4829662a-2b70-425c-8044-ae291d77c208
 redirect_from:
   - /2021080/docs/container
   - /2021080/docs/en/container
+  - /docs/container
+  - /docs/en/container
 ---
 
 A *container* is a class which holds one or more object collections or definitions. The Spryker container implements the [PSR-11 interface](https://www.php-fig.org/psr/psr-11/).
 
-The container is used to add services and allow other application plugins access them. Services are integrations like Twig or Symfony components like Security or Form. To be able to configure or change the services easily, they are added to the applications as a part of [application plugins](https://documentation.spryker.com/docs/application). 
+The container is used to add services and allow other application plugins access them. Services are integrations like Twig or Symfony components like Security or Form. To be able to configure or change the services easily, they are added to the applications as a part of [application plugins](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/application.html). 
 
 
 It's important that almost everything that is accessible through the container should only be instantiated when it is requested. It's not as important for static values like `isDebugMode` as it is important for expensive instantiations.                

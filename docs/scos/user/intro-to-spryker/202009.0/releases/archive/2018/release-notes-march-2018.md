@@ -1,6 +1,7 @@
 ---
 title: Release Notes - March - 2018
 originalLink: https://documentation.spryker.com/v6/docs/release-notes-march-2018
+originalArticleId: 96f3e9ae-62b0-445d-babf-b079cac9c37e
 redirect_from:
   - /v6/docs/release-notes-march-2018
   - /v6/docs/en/release-notes-march-2018
@@ -162,6 +163,6 @@ Previously, there was an issue with the existing tax rates in the Administration
 The following content has been added to the Academy:
 
 <!--* Feature List-->
-* [Testing Concepts](/docs/scos/dev/developer-guides/202001.0/development-guide/guidelines/testing-concepts.html)
+* [Testing Concepts](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing-concepts.html)
 
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

@@ -2,6 +2,7 @@
 title: Product Group + Product Rating & Reviews Feature Integration
 description: Instructions to integrate the Product group + Product rating & reviews feature into a Spryker project.
 originalLink: https://documentation.spryker.com/v5/docs/product-group-product-rating-reviews-feature-integration
+originalArticleId: c6832adb-bce1-4e1b-ac6c-1b1d286886e4
 redirect_from:
   - /v5/docs/product-group-product-rating-reviews-feature-integration
   - /v5/docs/en/product-group-product-rating-reviews-feature-integration

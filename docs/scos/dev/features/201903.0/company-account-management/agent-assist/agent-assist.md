@@ -2,6 +2,7 @@
 title: Agent Assist
 description: An ability to have an agent who gives advice, make purchases and all the activities in your shop for customers, results in more sales and happy customers
 originalLink: https://documentation.spryker.com/v2/docs/agent-assist
+originalArticleId: a4c1d370-b89a-41c0-b7d4-2bef9514c9b5
 redirect_from:
   - /v2/docs/agent-assist
   - /v2/docs/en/agent-assist

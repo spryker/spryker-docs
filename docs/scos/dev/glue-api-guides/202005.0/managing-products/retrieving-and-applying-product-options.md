@@ -1,16 +1,17 @@
 ---
 title: Retrieving and Applying Product Options
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-and-applying-product-options
+originalArticleId: e6b8bc1c-46dc-4116-bbcd-4905bd2c9347
 redirect_from:
   - /v5/docs/retrieving-and-applying-product-options
   - /v5/docs/en/retrieving-and-applying-product-options
 ---
 
-The [Product Options](https://documentation.spryker.com/docs/en/product-options-2) Feature enables shop owners to suggest various additions to the main product. Such extras enhance the customer experience and ensure their loyalty to the shop. These typically include gift wrapping, warranty services, insurance, app installation, etc.
+The [Product Options](/docs/scos/dev/features/202005.0/product-information-management/product-options/product-options.html) Feature enables shop owners to suggest various additions to the main product. Such extras enhance the customer experience and ensure their loyalty to the shop. These typically include gift wrapping, warranty services, insurance, app installation, etc.
 
 Options come with their own prices and tax sets. Also, different options can apply to different products. All product options available in a shop are organized in groups.
 
-Although options are applied to abstract products only, the *Product Options* API enables retrieving available options for both [abstract and concrete](https://documentation.spryker.com/docs/en/abstract-and-concrete-products) products. Also, it enables selecting the necessary options when ordering products and viewing the selected options when an order is complete. For this purpose, product options are retrievable in endpoints related to [products](https://documentation.spryker.com/docs/en/retrieving-product-information) (e.g. `/abstract-products` or `/concrete-products`), [guest carts](https://documentation.spryker.com/docs/en/managing-carts) and [carts of registered users](https://documentation.spryker.com/docs/en/managing-guest-carts) (e.g. `/guest-cart-items` or `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/items`, etc.), as well as [in order history](https://documentation.spryker.com/docs/en/retrieving-order-history).
+Although options are applied to abstract products only, the *Product Options* API enables retrieving available options for both [abstract and concrete](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/abstract-and-concrete-products.html) products. Also, it enables selecting the necessary options when ordering products and viewing the selected options when an order is complete. For this purpose, product options are retrievable in endpoints related to [products](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html) (e.g. `/abstract-products` or `/concrete-products`), [guest carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html) and [carts of registered users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html) (e.g. `/guest-cart-items` or `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/items`, etc.), as well as [in order history](https://documentation.spryker.com/v5/docs/en/retrieving-order-history).
 
 With the help of the data provided by the API resources, you will be able to perform the following tasks:
 
@@ -19,7 +20,7 @@ With the help of the data provided by the API resources, you will be able to per
 * display the selected options during checkout and in the order history.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Product Options Feature Integration](https://documentation.spryker.com/docs/en/glue-product-options-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Product Options Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html).
 
 ## Retrieving Product Options for Products
 To retrieve the product options available for a specific product, send a *GET* request to retrieve the product information and include **product-options** as a relationship.
@@ -184,7 +185,7 @@ Endpoints for **carts of registered users**:
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -198,7 +199,7 @@ Endpoints for **guest carts:**
 
 {% info_block warningBox "Anonymous User ID" %}
 
-When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts).
+When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
 
 {% endinfo_block %}
 
@@ -535,7 +536,7 @@ Sample Request:
 
 {% info_block infoBox "Info" %}
 
-For more details on managing carts of registered users, see [Managing Carts of Registered Users](https://documentation.spryker.com/docs/en/managing-carts-of-registered-users).
+For more details on managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html-of-registered-users).
 
 {% endinfo_block %}
 
@@ -563,7 +564,7 @@ For more details on managing carts of registered users, see [Managing Carts of R
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -580,7 +581,7 @@ Sample Requests:
 
 {% info_block infoBox "Info" %}
 
-For more details on managing carts of registered users, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts).
+For more details on managing carts of registered users, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
 
 {% endinfo_block %}
 
@@ -608,7 +609,7 @@ For more details on managing carts of registered users, see [Managing Guest Cart
 
 {% info_block warningBox "Anonymous User ID" %}
 
-When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts).
+When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
 
 {% endinfo_block %}
 
@@ -624,7 +625,7 @@ No matter which type of cart is created or modified, the following attributes sh
 You can specify a certain product several times with different options. In this case, the product will be added as multiple cart items.
 
 ### Response
-The endpoints respond with information on the cart or item that is being created or modified. For detailed information and the possible error codes, see [Managing Carts of Registered Users](https://documentation.spryker.com/docs/en/managing-carts-of-registered-users) and [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts).
+The endpoints respond with information on the cart or item that is being created or modified. For detailed information and the possible error codes, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html-of-registered-users) and [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
 
 ## Retrieving Product Options for Orders
 To retrieve the product options applied to order items, send a *GET* request to retrieve the order information.
@@ -634,7 +635,7 @@ Endpoint: `/orders/{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}` - ret
 
 {% info_block warningBox "Authentication" %}
 
-Orders cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+Orders cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -692,5 +693,5 @@ The options applied to the order are specified in the `productOptions` attribute
 }
 ```
 
-For detailed information and the possible error codes, see [Retrieving Customer's Order History](https://documentation.spryker.com/docs/en/retrieving-order-history).
+For detailed information and the possible error codes, see [Retrieving Customer's Order History](https://documentation.spryker.com/v5/docs/en/retrieving-order-history).
  

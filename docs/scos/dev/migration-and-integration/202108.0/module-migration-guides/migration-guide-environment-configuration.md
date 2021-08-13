@@ -2,9 +2,12 @@
 title: Migration Guide - Environment Configuration
 description: Use the guide to install new configuration options to update project implementations for Spryker compatibility.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-environment-config
+originalArticleId: 00708858-d760-4e7f-9ad8-b13234e2a9a8
 redirect_from:
   - /2021080/docs/mg-environment-config
   - /2021080/docs/en/mg-environment-config
+  - /docs/mg-environment-config
+  - /docs/en/mg-environment-config
 ---
 
 The environment configuration was restructured to solve a couple of inconsistencies and dependencies within the configuration itself. To untangle some of the configuration options it was necessary to introduce a few new configuration constants. Although the Spryker core should be fully backward compatible it is advised to update project implementations to make use of the new configuration options.

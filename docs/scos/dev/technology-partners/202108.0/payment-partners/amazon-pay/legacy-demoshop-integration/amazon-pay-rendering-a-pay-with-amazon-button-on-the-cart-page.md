@@ -2,9 +2,12 @@
 title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
 description: This article describes the way how to render the "Pay with Amazon" button on the cart page.
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-rendering-pay-demoshop
+originalArticleId: 21338ed7-0fd8-4853-8421-8a1350fab89a
 redirect_from:
   - /2021080/docs/amazon-pay-rendering-pay-demoshop
   - /2021080/docs/en/amazon-pay-rendering-pay-demoshop
+  - /docs/amazon-pay-rendering-pay-demoshop
+  - /docs/en/amazon-pay-rendering-pay-demoshop
 ---
 
 Usually the checkout page includes information for the buyer to review, items in the cart, prices, total price information and some other order related details.

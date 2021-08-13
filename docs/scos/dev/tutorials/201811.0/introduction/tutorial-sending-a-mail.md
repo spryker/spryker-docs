@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Sending a Mail
 originalLink: https://documentation.spryker.com/v1/docs/mail-how-to-send
+originalArticleId: ead0cf0e-1fe1-4323-a123-4fd840f32ed2
 redirect_from:
   - /v1/docs/mail-how-to-send
   - /v1/docs/en/mail-how-to-send

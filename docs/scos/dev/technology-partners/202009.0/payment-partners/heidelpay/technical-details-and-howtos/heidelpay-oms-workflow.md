@@ -1,6 +1,7 @@
 ---
 title: Heidelpay -  OMS Workflow
 originalLink: https://documentation.spryker.com/v6/docs/heidelpay-oms-workflow
+originalArticleId: b9196cba-b79b-404e-b2f7-426d83e42fdc
 redirect_from:
   - /v6/docs/heidelpay-oms-workflow
   - /v6/docs/en/heidelpay-oms-workflow

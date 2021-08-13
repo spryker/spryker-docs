@@ -2,9 +2,12 @@
 title: Glue API- Catalog feature integration
 description: Use the guide to install the Glue Catalog feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-api-feature-integration
+originalArticleId: 8e4c8246-966e-4f6f-b8e8-6e76cc2af23f
 redirect_from:
   - /2021080/docs/catalog-api-feature-integration
   - /2021080/docs/en/catalog-api-feature-integration
+  - /docs/catalog-api-feature-integration
+  - /docs/en/catalog-api-feature-integration
 ---
 
 ## Install Feature API
@@ -13,10 +16,10 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-application-feature-integration.html) |
+| Spryker Core | 201907.0 | [Glue Application Feature Integration](https://documentation.spryker.com/2021080/docs/glue-application-feature-integration-201907) |
 | Search | 201907.0 |  |
 | Catalog | 201907.0 |  |
-| Product | 201907.0 | [Product API Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/products-feature-integration.html) |
+| Product | 201907.0 | [Product API Feature Integration](https://documentation.spryker.com/2021080/docs/products-feature-integration) |
 | Catalog + Price | 201907.0 |  |
 
 ### 1) Install the Required Modules Using Composer

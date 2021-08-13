@@ -2,6 +2,7 @@
 title: Glue API- Content Items API Feature Integration
 description: The guide walks you through the process of installing and configuring the Content Items feature in the project.
 originalLink: https://documentation.spryker.com/v4/docs/glue-api-content-items-api-feature-integration
+originalArticleId: be895e9a-8c1b-412a-98fe-688abefc4741
 redirect_from:
   - /v4/docs/glue-api-content-items-api-feature-integration
   - /v4/docs/en/glue-api-content-items-api-feature-integration

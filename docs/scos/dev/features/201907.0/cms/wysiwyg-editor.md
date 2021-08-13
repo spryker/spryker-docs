@@ -2,6 +2,7 @@
 title: WYSIWYG Editor
 description: In the editor, you can create and edit content as well as dynamically embed product information and media, such as videos, pictures or any other.
 originalLink: https://documentation.spryker.com/v3/docs/wysiwyg-editor
+originalArticleId: 2a56c063-3115-4069-b587-0498b2929e78
 redirect_from:
   - /v3/docs/wysiwyg-editor
   - /v3/docs/en/wysiwyg-editor
@@ -18,7 +19,7 @@ WYSIWYG is an acronym for **what you see is what you get**.
 
 It is avery user-friendly tool that allows you to make a lot of text modifications, as well as to insert some video, images, or link additions.
 
-You can select one of the following for the [content widget](/docs/scos/dev/features/201903.0/cms/cms-widget/cms-widget-overview.html):
+You can select one of the following for the [content widget](https://documentation.spryker.com/v3/docs/cms-widget-overview-201903):
 
 * chart
 * product

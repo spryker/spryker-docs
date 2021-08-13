@@ -1,6 +1,7 @@
 ---
 title: Shipment Schema
 originalLink: https://documentation.spryker.com/v2/docs/db-schema-shipment
+originalArticleId: b18eced1-c496-47e5-b5b6-0eff1842c2db
 redirect_from:
   - /v2/docs/db-schema-shipment
   - /v2/docs/en/db-schema-shipment

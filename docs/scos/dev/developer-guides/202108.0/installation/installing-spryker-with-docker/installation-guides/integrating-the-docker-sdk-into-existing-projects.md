@@ -2,22 +2,25 @@
 title: Integrating the Docker SDK into existing projects
 description: The included instructions describe how to convert an existing non-docker based project into a docker based one.
 originalLink: https://documentation.spryker.com/2021080/docs/integrating-the-docker-sdk-into-existing-projects
+originalArticleId: 8b072734-58f9-4bcf-8545-676e9f37db7b
 redirect_from:
   - /2021080/docs/integrating-the-docker-sdk-into-existing-projects
   - /2021080/docs/en/integrating-the-docker-sdk-into-existing-projects
+  - /docs/integrating-the-docker-sdk-into-existing-projects
+  - /docs/en/integrating-the-docker-sdk-into-existing-projects
 ---
 
-This page describes how you can convert a non-Docker based project into a Docker based one. If you want to install Spryker in Docker from scratch, start with [Development Mode](https://documentation.spryker.com/docs/modes-overview#development-mode) or [Demo Mode](https://documentation.spryker.com/docs/modes-overview#demo-mode).
+This page describes how you can convert a non-Docker based project into a Docker based one. If you want to install Spryker in Docker from scratch, start with [Development Mode](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) or [Demo Mode](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode).
 
 ## Prerequisites
 
 To start integrating Docker into your project:
 
 1. Follow one of the Docker installation prerequisites:
-    * [Installing Docker prerequisites on MacOS](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-macos)
-    * [Installing Docker prerequisites on Linux](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-linux)
-    * [Installing Docker prerequisites on Windows](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-windows)
-2. Integrate the [Spryker Core](https://documentation.spryker.com/docs/spryker-core-feature-integration) feature into your project. 
+    * [Installing Docker prerequisites on MacOS](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
+    * [Installing Docker prerequisites on Linux](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
+    * [Installing Docker prerequisites on Windows](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows.html)
+2. Integrate the [Spryker Core](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-ore-feature-integration.html) feature into your project. 
 
 ## Set up .dockerignore
 
@@ -49,7 +52,7 @@ Make sure to adjust the configuration for each separate store. See [config_defau
 
 ## Set up a Deploy file
 
-Set up a [Deploy file](https://documentation.spryker.com/docs/deploy-file-reference-10) per your infruscturcure requirements using the examples in the table:
+Set up a [Deploy file](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/deploy-file-reference-1.0.html) per your infruscturcure requirements using the examples in the table:
 
 | Development mode | Demo mode |
 | --- | --- |
@@ -106,7 +109,7 @@ Ensure that, in the `hosts` file in the local environment, all the domains from 
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](https://documentation.spryker.com/docs/deploy-file-reference-10) to learn about the Deploy file.
+To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
@@ -121,10 +124,10 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 ## Next steps
-* [Troubleshooting](https://documentation.spryker.com/docs/spryker-in-docker-troubleshooting)
-* [Debugging Setup in Docker](https://documentation.spryker.com/docs/debugging-setup-in-docker)
-* [Deploy File Reference - 1.0](https://documentation.spryker.com/docs/deploy-file-reference-10) 
-* [Services](https://documentation.spryker.com/docs/services)
-* [Self-signed SSL Certificate Setup](https://documentation.spryker.com/docs/self-signed-ssl-certificate-setup) 
-* [Additional DevOPS Guidelines](https://documentation.spryker.com/docs/additional-devops-guidelines)
+* [Troubleshooting](/docs/scos/dev/developer-guides/{{ page.version }}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
+* [Debugging Setup in Docker](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/configuring-debugging-in-docker.html)
+* [Deploy File Reference - 1.0](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/deploy-file-reference-1.0.html) 
+* [Services](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/configuring-services.html)
+* [Self-signed SSL Certificate Setup](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html) 
+* [Additional DevOPS Guidelines](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)
 

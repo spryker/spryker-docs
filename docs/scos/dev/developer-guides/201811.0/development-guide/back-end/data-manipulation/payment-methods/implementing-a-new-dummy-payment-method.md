@@ -1,6 +1,7 @@
 ---
 title: Implementing a New Dummy Payment Method
 originalLink: https://documentation.spryker.com/v1/docs/ht-implement-dummy-payment-methods
+originalArticleId: 9ef340bf-6ffe-4fa2-ad1f-8caf64c8e962
 redirect_from:
   - /v1/docs/ht-implement-dummy-payment-methods
   - /v1/docs/en/ht-implement-dummy-payment-methods

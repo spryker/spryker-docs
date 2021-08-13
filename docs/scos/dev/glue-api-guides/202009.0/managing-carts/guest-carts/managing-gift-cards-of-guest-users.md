@@ -2,19 +2,20 @@
 title: Managing gift cards of guest users
 description: Retrieve details about gift cards of the guest users, and learn what else you can do with the resource.
 originalLink: https://documentation.spryker.com/v6/docs/managing-gift-cards-of-guest-users
+originalArticleId: 827b9b71-ca71-48d1-b23f-276993c23f57
 redirect_from:
   - /v6/docs/managing-gift-cards-of-guest-users
   - /v6/docs/en/managing-gift-cards-of-guest-users
 ---
 
-[Gift сard](https://documentation.spryker.com/docs/gift-card-feature-overview) is an alternative payment method. It is purchased as a regular product in the Spryker Commerce OS and is redeemed as a voucher code during checkout.  When you apply the code of a gift card to a shopping cart, the money value of the gift card is deducted from the total sum of the cart items.
+[Gift сard](/docs/scos/dev/features/202009.0/gift-cards/gift-cards-feature-overview.html) is an alternative payment method. It is purchased as a regular product in the Spryker Commerce OS and is redeemed as a voucher code during checkout.  When you apply the code of a gift card to a shopping cart, the money value of the gift card is deducted from the total sum of the cart items.
 
 In your development, Gift Cards API provides resources for purchasing and redeeming gift cards.
 
 This endpoint allows managing gift cards of guest users.
 
 
-To manage the gift cards of the registered users, see [Managing gift cards of registered users](https://documentation.spryker.com/docs/en/managing-gift-cards-of-registered-users).
+To manage the gift cards of the registered users, see [Managing gift cards of registered users](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html).
 
 ## Installation 
 For detailed information on the modules that provide the API functionality and related installation instructions, see Gift Cards API Integration.
@@ -24,9 +25,9 @@ For detailed information on the modules that provide the API functionality and r
 
 You can purchase a gift card as a regular product. To do that:
 
-1. Add a gift card to a guest cart. See [Add an item to a guest cart](https://documentation.spryker.com/docs/managing-guest-cart-items#additemstoaguestcart) for more details. 
-2. [Submit the checkout data](https://documentation.spryker.com/docs/submitting-checkout-data#submit-checkout-data).
-3. [Place the order](https://documentation.spryker.com/docs/checking-out-purchases#place-an-order).
+1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-cart-items.html#additemstoaguestcart) for more details. 
+2. [Submit the checkout data](/docs/scos/dev/glue-api-guides/202009.0/checking-out/submitting-checkout-data.html#submit-checkout-data).
+3. [Place the order](/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html#place-an-order).
 
 After placing the order, you receive the gift card code to the email address specified in the checkout. You can redeem this code to pay for the products.
 
@@ -41,7 +42,7 @@ To redeem a gift card, send the request:
 
 | Path Parameter | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart) or [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieveaguestcart). |
+| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html#retrieveaguestcart). |
 
 ### Request
 
@@ -135,7 +136,7 @@ Response sample:
     ]
 }
 ```
-For the guest cart attributes, see [Creating Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts#creating-a-guest-cart).
+For the guest cart attributes, see [Creating Guest Carts](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html#creating-a-guest-cart).
 
 | Included resource | Attribute | Type | Description |
 | --- | --- | --- | --- |
@@ -178,5 +179,5 @@ If the item is deleted successfully, the endpoint will respond with a `204 No C
 | 3302| Cart code can't be added. |
 | 3303| Cart code can't be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 

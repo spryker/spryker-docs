@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - QuoteRequestAgentPage
 originalLink: https://documentation.spryker.com/v6/docs/mg-quoterequestagentpage
+originalArticleId: 146d35ef-3037-466b-90bd-d13d5ad76f4c
 redirect_from:
   - /v6/docs/mg-quoterequestagentpage
   - /v6/docs/en/mg-quoterequestagentpage
@@ -13,8 +14,8 @@ The only major change of the `QuoteRequestAgentPage` 2.x.x is the dependency upd
 Also, transfer property `QuoteRequestTranser::isLatestVersionHidden` was replaced by `QuoteRequestTransfer:isLatestVersionVisible`.
 
 **To migrate do the following:**
-1. Update `spryker/quote-request-agent` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-quoterequest.html).
-2. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - Quote Request Agent](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-quoterequestagent.html).
+1. Update `spryker/quote-request-agent` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-quoterequest.html).
+2. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - Quote Request Agent](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-quoterequest.htmlagent).
 3. Update `spryker-shop/quote-request-agent-page:^2.0.0`
 
 ```bash

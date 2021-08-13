@@ -2,6 +2,7 @@
 title: Spryker Core Back Office
 description: Through the Back Office, you can manage all Back Office tasks.
 originalLink: https://documentation.spryker.com/v6/docs/spryker-core-back-office
+originalArticleId: 4a48a207-15c4-4f5e-8b5b-98b8cb0d1f79
 redirect_from:
   - /v6/docs/spryker-core-back-office
   - /v6/docs/en/spryker-core-back-office

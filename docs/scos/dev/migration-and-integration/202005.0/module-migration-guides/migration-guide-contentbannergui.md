@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ContentBannerGui
 originalLink: https://documentation.spryker.com/v5/docs/mg-contentbannergui-201907
+originalArticleId: 7a6ebe25-02b8-432f-90b5-a72cc2feb23a
 redirect_from:
   - /v5/docs/mg-contentbannergui-201907
   - /v5/docs/en/mg-contentbannergui-201907
@@ -8,7 +9,7 @@ redirect_from:
 
 ## Upgrading from Version 1.* to Version 2.*
 
-Version 2.0.0 of the ContentBannerGui module introduces the [Content Items](https://documentation.spryker.com/docs/en/content-items-overview-201907) functionality that allows creating and managing content and later selecting where it should be inserted.
+Version 2.0.0 of the ContentBannerGui module introduces the [Content Items](https://documentation.spryker.com/v5/docs/en/content-items-overview-201907) functionality that allows creating and managing content and later selecting where it should be inserted.
 
 With the ContentBannerGui version 2.0, we have made the following changes:
 
@@ -19,8 +20,8 @@ With the ContentBannerGui version 2.0, we have made the following changes:
 You can find more details about the changes on the [ContentBannerGui module release notes](https://github.com/spryker/content-banner-gui/releases/tag/2.0.0) page.
 
 **To upgrade to the new version of the module, do the following:**
-1. Upgrade the `Content` Module to version 2.0.0. Follow the steps described in [Migration Guide - Content](https://documentation.spryker.com/docs/en/mg-content-201907).
-2. Upgrade the `ContentBanner` to version 2.0.0. Follow the steps described in [Migration Guide - ContentBanner](https://documentation.spryker.com/docs/en/mg-contentbanner-201907).
+1. Upgrade the `Content` Module to version 2.0.0. Follow the steps described in [Migration Guide - Content](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-content.html).
+2. Upgrade the `ContentBanner` to version 2.0.0. Follow the steps described in [Migration Guide - ContentBanner](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-contentbanner.html).
 3. Upgrade the `ContentBannerGui` module to version 2.0.0:
 
 ```bash

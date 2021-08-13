@@ -2,9 +2,12 @@
 title: Navigation module- reference information
 description: The module provides database structure and a public API to manage what’s in the database, and a small toolkit for rendering navigation menus in the frontend
 originalLink: https://documentation.spryker.com/2021080/docs/navigation-module-reference-information
+originalArticleId: 4dc2c0f9-6e18-425a-be43-ff8e01acf726
 redirect_from:
   - /2021080/docs/navigation-module-reference-information
   - /2021080/docs/en/navigation-module-reference-information
+  - /docs/navigation-module-reference-information
+  - /docs/en/navigation-module-reference-information
 ---
 
 ## Overview

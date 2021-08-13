@@ -1,9 +1,12 @@
 ---
 title: Hosting Provider - Heroku
 originalLink: https://documentation.spryker.com/2021080/docs/hosting-provider-continum-1
+originalArticleId: 6070e9b1-450d-4683-94ee-bc7c7594dbc7
 redirect_from:
   - /2021080/docs/hosting-provider-continum-1
   - /2021080/docs/en/hosting-provider-continum-1
+  - /docs/hosting-provider-continum-1
+  - /docs/en/hosting-provider-continum-1
 ---
 
 This article describes the aspects you need to consider when using Heroku as an application hosting solution.

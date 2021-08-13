@@ -2,6 +2,7 @@
 title: Client
 description: This article provides general information about the Client part of the Yves applications layer and describes how to use it.
 originalLink: https://documentation.spryker.com/v2/docs/client
+originalArticleId: 72793f1d-7e59-4572-8694-e6e220ffa41e
 redirect_from:
   - /v2/docs/client
   - /v2/docs/en/client
@@ -36,7 +37,7 @@ The purpose of the Client is to encapsulate the logic which runs the shop indepe
 Spryker provides several clients. For instance there is a cart client which contains methods like `addItem()` or `removeItem()`. And there is a catalog client which handles query strings. In each module you can access the related client with the `getClient()` method which is available in controllers and plugins.
 ![Yves Get Client](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/yves-getclient.png){height="" width=""}
 
-The following example shows the usage of the cart client inside the `CartController`. As you can see the Client uses [transfer objects](https://documentation.spryker.com/v2/docs/ht-use-transfer-objects-201903) as an input parameter.
+The following example shows the usage of the cart client inside the `CartController`. As you can see the Client uses [transfer objects](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) as an input parameter.
 
 ```php
 <?php
@@ -99,5 +100,5 @@ The request from Yves to Zed involves two important classes:
 * The **gateway controller** represents the entry point on Zed side.
 
 ## What's next?
-To imlement a Client for your project, see [Implementing a Client](https://documentation.spryker.com/v2/docs/implementing-a-client ).
+To imlement a Client for your project, see [Implementing a Client](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/yves/client/implementing-a-client.html).
 

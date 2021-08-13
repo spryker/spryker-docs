@@ -2,9 +2,12 @@
 title: Install module structure and configuration
 description: Starting from version 1.0.0 the Install package has become a regular Spryker module that can be extended on the project level
 originalLink: https://documentation.spryker.com/2021080/docs/install-module-structure-and-configuration
+originalArticleId: b3785d03-b408-47db-bf84-5c89dfdcbd11
 redirect_from:
   - /2021080/docs/install-module-structure-and-configuration
   - /2021080/docs/en/install-module-structure-and-configuration
+  - /docs/install-module-structure-and-configuration
+  - /docs/en/install-module-structure-and-configuration
 ---
 
 Starting from [version 1.0.0 the Install package](https://github.com/spryker/install/releases/tag/1.0.0) has become a regular Spryker module, not a standalone tool as it used to be before version 1.0.0. This means that the Install module can be extended on the project level in the same way as any other module.

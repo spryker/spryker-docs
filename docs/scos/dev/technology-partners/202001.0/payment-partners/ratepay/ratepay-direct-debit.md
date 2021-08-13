@@ -2,6 +2,7 @@
 title: RatePay - Direct Debit
 description: Integrate direct debit payment through Ratepay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v4/docs/ratepay-direct-debit
+originalArticleId: 6125acb9-5793-41e8-b953-43c9d80d8a04
 redirect_from:
   - /v4/docs/ratepay-direct-debit
   - /v4/docs/en/ratepay-direct-debit

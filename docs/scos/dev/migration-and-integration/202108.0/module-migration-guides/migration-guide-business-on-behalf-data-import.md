@@ -2,14 +2,17 @@
 title: Migration Guide - Business On Behalf Data Import
 description: Use the guide to update versions to the newer ones of the Business on Behalf Data Import module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-business-on-behalf-data-import
+originalArticleId: 0013bcfa-469e-40c9-9beb-87838ad1519d
 redirect_from:
   - /2021080/docs/mg-business-on-behalf-data-import
   - /2021080/docs/en/mg-business-on-behalf-data-import
+  - /docs/mg-business-on-behalf-data-import
+  - /docs/en/mg-business-on-behalf-data-import
 ---
 
 ## Upgrading from Version 2.* to Version 3.*
     
-In this version, we have changed the dependency to the CompanyUser module. This enables using the `CompanyUserEvents::COMPANY_USER_PUBLISH` constant to trigger [Publish & Syncronization](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html) handling for imported entities.
+In this version, we have changed the dependency to the CompanyUser module. This enables using the `CompanyUserEvents::COMPANY_USER_PUBLISH` constant to trigger [Publish & Syncronization](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html) handling for imported entities.
 No additional actions required.
 
 ## Upgrading from Version 1.1.0 to Version 2.0.0

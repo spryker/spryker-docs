@@ -1,6 +1,7 @@
 ---
 title: common solutions
 originalLink: https://documentation.spryker.com/v3/docs/common-solutions
+originalArticleId: e8f70ab5-6ae3-41fc-bca0-e0fbbc3ffc3d
 redirect_from:
   - /v3/docs/common-solutions
   - /v3/docs/en/common-solutions

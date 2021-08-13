@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Console
 originalLink: https://documentation.spryker.com/v2/docs/mg-console
+originalArticleId: 63288ed5-2496-44d0-8241-24a977f1e360
 redirect_from:
   - /v2/docs/mg-console
   - /v2/docs/en/mg-console

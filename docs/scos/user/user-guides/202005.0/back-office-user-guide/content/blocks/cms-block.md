@@ -2,6 +2,7 @@
 title: CMS Block
 description: The subsection is designed to create, view and update CMS block content in the editor from the Back Office to display it later in the online store.
 originalLink: https://documentation.spryker.com/v5/docs/cms-block-guide
+originalArticleId: 43d3aede-4d5e-4d8f-8d90-bbf04203eda0
 redirect_from:
   - /v5/docs/cms-block-guide
   - /v5/docs/en/cms-block-guide
@@ -18,6 +19,6 @@ You can work with CMS blocks after they have been installed for your project.
 ***
 **What's next?**
 
-* To know more about how to add a CMS block to a page, see [Creating a CMS Block](https://documentation.spryker.com/docs/en/creating-cms-block).
-* To know more about how to update and view CMS blocks, see [Managing CMS Blocks](https://documentation.spryker.com/docs/en/managing-cms-blocks).
-* To learn more about the attributes used to create and edit CMS blocks, see [CMS Blocks: Reference Information](https://documentation.spryker.com/docs/en/cms-block-reference-information) section.
+* To know more about how to add a CMS block to a page, see [Creating a CMS Block](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/creating-a-cms-block.html).
+* To know more about how to update and view CMS blocks, see [Managing CMS Blocks](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/managing-cms-blocks.html).
+* To learn more about the attributes used to create and edit CMS blocks, see [CMS Blocks: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/references/cms-block-reference-information.html) section.

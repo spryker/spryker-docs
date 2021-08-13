@@ -2,6 +2,7 @@
 title: Managing File List
 description: Use the procedures to view, edit, and delete files from the system in the Back Office.
 originalLink: https://documentation.spryker.com/v2/docs/managing-file-list
+originalArticleId: 932008e3-543d-4687-b8f0-cb7e33fd8fde
 redirect_from:
   - /v2/docs/managing-file-list
   - /v2/docs/en/managing-file-list

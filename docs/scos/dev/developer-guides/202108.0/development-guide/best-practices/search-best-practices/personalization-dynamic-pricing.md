@@ -2,9 +2,12 @@
 title: Personalization- Dynamic Pricing
 description: This article describes how to personalize pricing.
 originalLink: https://documentation.spryker.com/2021080/docs/personalization-dymanic-pricing
+originalArticleId: 9c018e4a-9a82-49fd-9e46-d6d02332185b
 redirect_from:
   - /2021080/docs/personalization-dymanic-pricing
   - /2021080/docs/en/personalization-dymanic-pricing
+  - /docs/personalization-dymanic-pricing
+  - /docs/en/personalization-dymanic-pricing
 ---
 
 Especially in businesses with a B2B focus, customers expect to get discounts after they have been using the service/website for a longer period of time. The search infrastructure should be able to handle such use cases and customers should be able to see their own discounted prices while browsing the catalog. Luckily, Elasticsearch enables us to extend basic filtering, aggregation and fetching functionalities with scripts that are executed within the document context and can be used instead of fixed document values.

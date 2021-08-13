@@ -2,6 +2,7 @@
 title: Wishlist API Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Wishlist API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v3/docs/wishlist-api-feature-integration-201907
+originalArticleId: 71227d36-13ea-4921-9684-0bab0736b33e
 redirect_from:
   - /v3/docs/wishlist-api-feature-integration-201907
   - /v3/docs/en/wishlist-api-feature-integration-201907
@@ -138,6 +139,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 **See also:**
 
-* [Managing Wishlists](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-wishlists.html)
+* [Managing Wishlists](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/managing-wishlists.html)
 
 *Last review date: Aug 02, 2019* <!-- by  Tihran Voitov, Yuliia Boiko-->

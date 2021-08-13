@@ -1,6 +1,7 @@
 ---
 title: Installing Spryker with Custom Set of Modules
 originalLink: https://documentation.spryker.com/v6/docs/installation-guide-chose-modules
+originalArticleId: 88c0c0d4-2154-4310-98c1-5659bd8efddb
 redirect_from:
   - /v6/docs/installation-guide-chose-modules
   - /v6/docs/en/installation-guide-chose-modules
@@ -10,7 +11,7 @@ Spryker allows you to change the modules included in a project at your will. You
 
 1. Start with an existing Spryker, such as the B2C, B2B boilerplates or your own project based on Spryker Commerce OS.
 
-2. Add or remove modules as necessary using [Composer](/docs/scos/dev/developer-guides/202001.0/installation/composer.html). All available modules can be found in the following repositories:
+2. Add or remove modules as necessary using [Composer](/docs/scos/dev/developer-guides/202009.0/installation/composer.html). All available modules can be found in the following repositories:
 
    <https://github.com/spryker-shop/>*
 

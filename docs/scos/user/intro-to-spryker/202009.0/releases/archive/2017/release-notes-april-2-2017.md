@@ -1,6 +1,7 @@
 ---
 title: Release Notes - April - 2 2017
 originalLink: https://documentation.spryker.com/v6/docs/release-notes-april-2-2017
+originalArticleId: 7c003f18-53c9-40b0-93f9-27c6300b1ee6
 redirect_from:
   - /v6/docs/release-notes-april-2-2017
   - /v6/docs/en/release-notes-april-2-2017
@@ -17,7 +18,7 @@ This release introduces core functionality to support multiple wishlist handling
 | n/a | <ul><li>[Cart 3.1.0](https://github.com/spryker/Cart/releases/tag/3.1.0)</li><li>[Wishlist 4.1.0](https://github.com/spryker/Wishlist/releases/tag/4.1.0)</li></ul> | <ul><li>[Availability 5.0.1](https://github.com/spryker/Availability/releases/tag/5.0.1)</li><li>[ProductBundle 2.0.2](https://github.com/spryker/product-bundle/releases/tag/2.0.2)</li></ul> |
 
 **Documentation**
-For module documentation, see [Wishlist](/docs/scos/dev/features/202001.0/wishlist/wishlist.html).
+For module documentation, see [Wishlist](/docs/scos/dev/features/202009.0/wishlist/wishlist.html).
 
 ### Generated Directory Removal
 Spryker generates certain files that are stored in configured folders (e.g. transfer-object files). With this release, we introduced a new strategy for removing cache files. Instead of removing the folders that contain the generated files, the respective commands now purge all generated contents from the folders without deleting the folders.

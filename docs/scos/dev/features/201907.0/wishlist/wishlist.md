@@ -2,6 +2,7 @@
 title: Wishlist
 description: Everything you need to know about the Wishlist capability.
 originalLink: https://documentation.spryker.com/v3/docs/wishlist
+originalArticleId: 99868966-cbc1-4ac3-81d2-a07b5679cdba
 redirect_from:
   - /v3/docs/wishlist
   - /v3/docs/en/wishlist

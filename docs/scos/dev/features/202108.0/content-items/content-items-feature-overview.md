@@ -2,12 +2,15 @@
 title: Content Items feature overview
 description: Content item is a preserved content piece that can be used in multiple pages.
 originalLink: https://documentation.spryker.com/2021080/docs/content-items-feature-overview
+originalArticleId: beb3bad2-d08d-42b7-9474-9dedfecae781
 redirect_from:
   - /2021080/docs/content-items-feature-overview
   - /2021080/docs/en/content-items-feature-overview
+  - /docs/content-items-feature-overview
+  - /docs/en/content-items-feature-overview
 ---
 
-The Content Items feature creates an abstraction layer for content management in the Back Office. It allows content managers to create and preserve small content pieces. Later, they are inserted into [CMS blocks](https://documentation.spryker.com/docs/cms-block) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget). 
+The Content Items feature creates an abstraction layer for content management in the Back Office. It allows content managers to create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-blocks-overview.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget). 
 
 ## Content Item
 Content item is the smallest content unit in Spryker. There are four content item types shipped by default:
@@ -21,16 +24,16 @@ You can use each content item for different purposes. For example, the Banner co
 
 {% info_block infoBox %}
 
-For use cases and exmaple of each of the content item, see [Content Item Widgets types: Reference Information](https://documentation.spryker.com/docs/content-item-widgets-types-reference-information) and [Content Item Widgets templates: Reference Information.](https://documentation.spryker.com/docs/content-item-widgets-templates-reference-information)
+For use cases and exmaple of each of the content item, see [Content Item Widgets types: Reference Information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html) and [Content Item Widgets templates: Reference Information.](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html)
 
 {% endinfo_block %}
 
-A content manager can [create content items](https://documentation.spryker.com/docs/creating-content-items) in the Back Office > **Content Management** > **Content Items** section. 
+A content manager can [create content items](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section. 
 A developer can do the following:
-* [Import content items](https://documentation.spryker.com/docs/data-importers-review-implementation)
-* [Get content items data via API](https://documentation.spryker.com/docs/retrieving-content-item-data-201907)
+* [Import content items](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-importers-overview-and-implementation.html)
+* [Get content items data via API](https://documentation.spryker.com/2021080/docs/retrieving-content-item-data-201907)
 
-See [Content Items Types: Module Relations](https://documentation.spryker.com/docs/content-item-types-module-relations) for more information on each content item type and module relations.
+See [Content Items Types: Module Relations](/docs/scos/dev/features/{{ page.version }}/content-items/content-item-types-module-relations.html) for more information on each content item type and module relations.
 
 ## Content Item Widget
 Content Item Widget is a Twig code piece that is used to render a content item on Storefront.
@@ -62,7 +65,7 @@ The schema shows how the Content items feature affects content management in Spr
 
 ![image](https://confluence-connect.gliffy.net/embed/image/b2c37d9d-5350-4535-b437-677bffeb18da.png?utm_medium=live&utm_source=custom){height="" width=""}
 
-See [Adding Content Item Widgets to Pages and Blocks](https://documentation.spryker.com/docs/adding-content-items-to-cms-pages-and-blocks) to learn more about working with content item widgets in the WYSIWYG editor.
+See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html) to learn more about working with content item widgets in the WYSIWYG editor.
 
 ### Content Item Widget Template
 
@@ -100,7 +103,7 @@ You can select a template when inserting a content item widget into a CMS block.
 
 </details>
 
-A developer can create and customize templates. See [Adding a Template for a Content Item Widget](https://documentation.spryker.com/docs/ht-create-cms-templates#adding-a-template-for-a-content-item-widget) for more details.
+A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget) for more details.
 
 
 
@@ -152,8 +155,8 @@ Structure:
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
- <li><a href="https://documentation.spryker.com/docs/creating-content-items" class="mr-link">Create a content item</a></li>
+ <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/creating-content-items.html" class="mr-link">Create a content item</a></li>
                  <li><a href="https://documentation.spryker.com/docs/editing-content-items" class="mr-link">Edit a content item</a></li>   
-                <li><a href="https://documentation.spryker.com/docs/adding-content-items-to-cms-pages-and-blocks" class="mr-link">Add content items to CMS pages and blocks</a></li>   
+                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html" class="mr-link">Add content items to CMS pages and blocks</a></li>   
                 <li><a href="https://documentation.spryker.com/docs/editing-content-items-in-cms-pages-and-blocks" class="mr-link">Edit content items in CMS pages and blocks</a></li>   
                  

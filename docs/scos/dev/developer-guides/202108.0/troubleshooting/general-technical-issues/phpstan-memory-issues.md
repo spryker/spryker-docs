@@ -1,9 +1,12 @@
 ---
 title: PHPStan memory issues
 originalLink: https://documentation.spryker.com/2021080/docs/phpstan-memory-issues
+originalArticleId: c234b12e-5260-4f86-97b4-44c7ef5c8dbf
 redirect_from:
   - /2021080/docs/phpstan-memory-issues
   - /2021080/docs/en/phpstan-memory-issues
+  - /docs/phpstan-memory-issues
+  - /docs/en/phpstan-memory-issues
 ---
 
 ## Cause

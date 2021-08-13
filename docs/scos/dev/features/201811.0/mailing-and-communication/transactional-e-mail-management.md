@@ -2,6 +2,7 @@
 title: Transactional E-Mail Management
 description: Keep your customers updated with a variety of emails you can either send via the internal SMTP system or an external email provider of your choice.
 originalLink: https://documentation.spryker.com/v1/docs/transactional-email-management
+originalArticleId: 458878df-74c1-4e8b-8726-8475c3fd6c16
 redirect_from:
   - /v1/docs/transactional-email-management
   - /v1/docs/en/transactional-email-management

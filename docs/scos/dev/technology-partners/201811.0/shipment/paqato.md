@@ -2,6 +2,7 @@
 title: Paqato
 description: Offer customer communication and shipping analysis by integrating Paqato into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v1/docs/paqato
+originalArticleId: d3af5e77-ec04-4371-831c-8cfd72b96553
 redirect_from:
   - /v1/docs/paqato
   - /v1/docs/en/paqato

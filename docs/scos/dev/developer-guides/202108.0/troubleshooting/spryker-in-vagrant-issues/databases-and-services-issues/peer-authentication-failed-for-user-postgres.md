@@ -2,9 +2,12 @@
 title: Peer authentication failed for user postgres
 description: Learn how to fix the issue Peer authentication failed for user postgres
 originalLink: https://documentation.spryker.com/2021080/docs/peer-authentication-failed-for-user-postgres
+originalArticleId: 62007cfd-f1d2-4cd8-ade0-47a440cfdebf
 redirect_from:
   - /2021080/docs/peer-authentication-failed-for-user-postgres
   - /2021080/docs/en/peer-authentication-failed-for-user-postgres
+  - /docs/peer-authentication-failed-for-user-postgres
+  - /docs/en/peer-authentication-failed-for-user-postgres
 ---
 
 ## Description

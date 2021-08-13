@@ -2,6 +2,7 @@
 title: Penetration test executive summary
 description: Results of penetration tests of the Spryker Commerce B2C and Spryker Commerce B2B.
 originalLink: https://documentation.spryker.com/v6/docs/penetration-test-executive-summary
+originalArticleId: 531afa3b-215b-44cd-a60e-6d52f2de6c0f
 redirect_from:
   - /v6/docs/penetration-test-executive-summary
   - /v6/docs/en/penetration-test-executive-summary

@@ -2,12 +2,15 @@
 title: Managing stocks in a multi-store environment- Best practices
 description: Choose and implement the most suitable warehouse management workflow using the Inventory Management feature.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-stocks-in-a-multi-store-environment-best-practices
+originalArticleId: 9f830de9-a6cc-4062-96c5-f9a17eee9937
 redirect_from:
   - /2021080/docs/managing-stocks-in-a-multi-store-environment-best-practices
   - /2021080/docs/en/managing-stocks-in-a-multi-store-environment-best-practices
+  - /docs/managing-stocks-in-a-multi-store-environment-best-practices
+  - /docs/en/managing-stocks-in-a-multi-store-environment-best-practices
 ---
 
-In a multi-store environment, you can manage the warehouses to stores and database relations in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the [Inventory Management](https://documentation.spryker.com/docs/upcoming-release/docs/inventory-management-feature-overview) feature.
+In a multi-store environment, you can manage the warehouses to stores and database relations in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the [Inventory Management](https://documentation.spryker.com/2021080/docs/upcoming-release/docs/inventory-management-feature-overview) feature.
 
 ## Scenario 1: Separate warehouses and databases
 
@@ -67,7 +70,7 @@ There is a console command to export all reservations: `\Spryker\Zed\Oms\Communi
 
 {% info_block infoBox %}
 
-This is the default scenario implemented in the [Spryker Demo Shops](https://documentation.spryker.com/docs/about-spryker#spryker-b2bb2c-demo-shops).
+This is the default scenario implemented in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/{{ page.version }}/about-spryker.html#spryker-b2bb2c-demo-shops).
 
 {% endinfo_block %}
 

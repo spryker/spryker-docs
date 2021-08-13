@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductManagement
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-management
+originalArticleId: 5854f797-0789-4aea-a1c0-37a2253ecf45
 redirect_from:
   - /v2/docs/mg-product-management
   - /v2/docs/en/mg-product-management

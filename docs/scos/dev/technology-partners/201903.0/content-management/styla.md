@@ -2,6 +2,7 @@
 title: Styla
 description: Design content and make it shoppable and inspiring customers to buy more by integrating  Styla into Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v2/docs/styla
+originalArticleId: b2910d93-34d6-49c1-a622-02a9fff719a4
 redirect_from:
   - /v2/docs/styla
   - /v2/docs/en/styla

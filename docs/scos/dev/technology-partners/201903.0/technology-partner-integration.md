@@ -2,6 +2,7 @@
 title: Technology Partner Integration
 description: Integrate technology partner solutions to boost your Spryker project performance.
 originalLink: https://documentation.spryker.com/v2/docs/technology-partner-integration
+originalArticleId: ca846f85-98bc-4a66-9054-253d212920d3
 redirect_from:
   - /v2/docs/technology-partner-integration
   - /v2/docs/en/technology-partner-integration
@@ -61,7 +62,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
 ### Customer Retention & Loyalty
 
-* [Namogoo](https://documentation.spryker.com/v2/docs/namogoo ) 
+* [Namogoo](/docs/scos/dev/technology-partners/201903.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html) 
 * [Trustpilot](/docs/scos/dev/technology-partners/201903.0/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
 * [Zenloop](/docs/scos/dev/technology-partners/201903.0/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 

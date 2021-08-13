@@ -2,9 +2,12 @@
 title: Editing content items
 description: The guide provides steps on how to update content items in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/editing-content-items
+originalArticleId: 3b56fb8f-8503-472a-8601-b69c876c04b1
 redirect_from:
   - /2021080/docs/editing-content-items
   - /2021080/docs/en/editing-content-items
+  - /docs/editing-content-items
+  - /docs/en/editing-content-items
 ---
 
 This topic describes how to edit content items in the Back Office.
@@ -143,4 +146,4 @@ The following table describes the attributes on the *Create Content Item: Naviga
 
 When content item is updated, you can add it via content item widgets to a block or a page if needed.
 
-* To learn more about adding content item widgets to a block or page, see [Adding Content Item Widgets to Pages and Blocks](https://documentation.spryker.com/docs/adding-content-items-to-cms-pages-and-blocks).
+* To learn more about adding content item widgets to a block or page, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).

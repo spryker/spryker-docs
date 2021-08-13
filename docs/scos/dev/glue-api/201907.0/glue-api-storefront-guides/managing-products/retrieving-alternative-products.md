@@ -1,6 +1,7 @@
 ---
 title: Retrieving Alternative Products
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-alternative-products-201903
+originalArticleId: 8680f558-fd55-4dd1-899f-42284aa9cfdc
 redirect_from:
   - /v3/docs/retrieving-alternative-products-201903
   - /v3/docs/en/retrieving-alternative-products-201903
@@ -9,8 +10,8 @@ redirect_from:
 The _Alternative Products_ feature allows customers to quickly find a substitute product in case if their preferred item runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually seek for a more up-to-date generation of the same product, and suggesting possible alternatives is especially crucial.
 
 {% info_block infoBox %}
-For more details, see [Alternative Products](/docs/scos/dev/features/202001.0/product-information-management/alternative-products/alternative-products.html
-{% endinfo_block %} and [Discontinued Products](/docs/scos/dev/features/202001.0/product-information-management/discontinued-products/discontinued-products.html).)
+For more details, see [Alternative Products](/docs/scos/dev/features/201907.0/product-management/alternative-products/alternative-products.html
+{% endinfo_block %} and [Discontinued Products](/docs/scos/dev/features/201907.0/product-management/discontinued-products/discontinued-products.html).)
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
 

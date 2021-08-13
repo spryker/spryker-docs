@@ -2,9 +2,12 @@
 title: Avalara Tax + Shipment feature integration
 description: Integrate Avalara Tax + Shipment feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-shipment-feature-integration
+originalArticleId: a93d12c8-c40a-4cbb-b866-755ad29f2852
 redirect_from:
   - /2021080/docs/avalara-tax-shipment-feature-integration
   - /2021080/docs/en/avalara-tax-shipment-feature-integration
+  - /docs/avalara-tax-shipment-feature-integration
+  - /docs/en/avalara-tax-shipment-feature-integration
 ---
 
 *Avalara* is a software that calculates sales order taxes during checkout in the US market. It provides real-time tax calculation and automatic filing of returns. 
@@ -24,8 +27,8 @@ To start the feature integration, overview and install the necessary features:
     
 
 | Name | Version | Integration guide | 
-| Shipment | master | [Shipment feature integration guide](https://documentation.spryker.com/docs/shipment-feature-integration) | 
-| Avalara Tax | master | [Avalara Tax integration](https://documentation.spryker.com/docs/avalara-tax-integration) |
+| Shipment | master | [Shipment feature integration guide](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/shipment-feature-integration.html) | 
+| Avalara Tax | master | [Avalara Tax integration](/docs/scos/dev/technology-partners/{{ page.version }}/taxes/avalara-tax-integration.html) |
 
 ### 1) Install the required modules using Composer
 

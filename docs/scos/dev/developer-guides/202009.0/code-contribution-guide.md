@@ -2,6 +2,7 @@
 title: Code contribution guide
 description: Contribute into Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v6/docs/code-contribution-guide
+originalArticleId: 77eea8e9-145d-426d-a0e9-d9cabb2722fa
 redirect_from:
   - /v6/docs/code-contribution-guide
   - /v6/docs/en/code-contribution-guide
@@ -34,5 +35,5 @@ If you create a PR and feel that the issue is important, [contact our support](h
 
 --- 
 **See also:**
-* [Contributing to the Documentation](https://documentation.spryker.com/docs/about-documentation#contributing-to-the-documentation)
+* [Contributing to the Documentation](/docs/scos/user/intro-to-spryker/202009.0/about-spryker-documentation.html#contributing-to-the-documentation)
 

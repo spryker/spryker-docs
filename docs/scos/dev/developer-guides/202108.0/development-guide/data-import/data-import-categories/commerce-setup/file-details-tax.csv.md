@@ -1,12 +1,15 @@
 ---
 title: File details- tax.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-taxcsv
+originalArticleId: c9d15906-3b02-44fd-9bde-eb6883f5f320
 redirect_from:
   - /2021080/docs/file-details-taxcsv
   - /2021080/docs/en/file-details-taxcsv
+  - /docs/file-details-taxcsv
+  - /docs/en/file-details-taxcsv
 ---
 
-This article contains content of the **tax.csv** file to configure [tax](https://documentation.spryker.com/docs/tax) information on your Spryker Demo Shop.
+This article contains content of the **tax.csv** file to configure [tax](/docs/scos/dev/features/{{ page.version }}/tax/tax.html) information on your Spryker Demo Shop.
 
 To import the data, run
 

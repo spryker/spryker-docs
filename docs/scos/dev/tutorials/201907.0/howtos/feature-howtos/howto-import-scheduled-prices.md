@@ -1,6 +1,7 @@
 ---
 title: HowTo - Import Scheduled Prices
 originalLink: https://documentation.spryker.com/v3/docs/ht-import-scheduled-prices-201907
+originalArticleId: ec0daee9-3af7-4a9d-bb7d-8e6424c43772
 redirect_from:
   - /v3/docs/ht-import-scheduled-prices-201907
   - /v3/docs/en/ht-import-scheduled-prices-201907

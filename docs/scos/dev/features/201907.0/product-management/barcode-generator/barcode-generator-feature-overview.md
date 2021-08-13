@@ -2,6 +2,7 @@
 title: Barcode Generator Feature Overview
 description: The Barcode Generator can be used for any kind of entity, and by default, we provide a solution for products.
 originalLink: https://documentation.spryker.com/v3/docs/barcode-generator-feature-overview
+originalArticleId: e520d674-73dd-4ba1-991b-d94d6e7359e4
 redirect_from:
   - /v3/docs/barcode-generator-feature-overview
   - /v3/docs/en/barcode-generator-feature-overview
@@ -17,7 +18,7 @@ A barcode is a square or rectangular image consisting of a series of parallel bl
 In the default configuration, barcodes are generated based on the SKU of a concrete product using [Code128](https://en.wikipedia.org/wiki/Code_128) format. Though, Spryker provides highly customizable solutions through plugins with the help of which the setup can be changed.
 
 {% info_block infoBox %}
-You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/dev/features/202001.0/product-information-management/product-abstraction.html
+You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/dev/features/201907.0/product-management/product-abstraction.html
 {% endinfo_block %}.)
 
 {% info_block errorBox %}

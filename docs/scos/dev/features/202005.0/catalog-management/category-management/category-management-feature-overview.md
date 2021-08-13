@@ -2,6 +2,7 @@
 title: Category Management Feature Overview
 description: The feature allows keeping your product catalog organized and comprehensible for the customers who can easily navigate the storefront and search products quicker
 originalLink: https://documentation.spryker.com/v5/docs/category-management-feature-overview
+originalArticleId: 86a1b5ea-ae52-4064-804c-0fa9ed0c3ea3
 redirect_from:
   - /v5/docs/category-management-feature-overview
   - /v5/docs/en/category-management-feature-overview
@@ -31,7 +32,7 @@ In the screenshot below, the "Tablets" child category is assigned to "Computers"
 
 ![child-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/child-category.png){height="" width=""}
 
-You can assign new child categories to a parent one in the **Back Office > Category** section using the **Add category to this node** action. For more details, see [Creating Categories](https://documentation.spryker.com/docs/en/creating-categories).
+You can assign new child categories to a parent one in the **Back Office > Category** section using the **Add category to this node** action. For more details, see [Creating Categories](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/creating-categories.html).
 
 ![add-new-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/add-new-category.png){height="" width=""}
 
@@ -45,10 +46,10 @@ For example, the "Smart watches" category is assigned to the "Product Bundles" a
 
 ![multiple-parents.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/multiple-parents.png){height="" width=""}
 
-The order of child categories shown in the category tree in the front end can be manually resorted in the **Back Office > Category** section using the **Re-sort child categories** action. For more information, see [Managing Categories](https://documentation.spryker.com/docs/en/managing-categories).
+The order of child categories shown in the category tree in the front end can be manually resorted in the **Back Office > Category** section using the **Re-sort child categories** action. For more information, see [Managing Categories](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/managing-categories.html).
 
 ## Category Templates
-In the front end, a category can be represented by different templates which are used in different scenarios. In the back end, category template is specified in the **Back Office > Category section > Edit Category page > General information** tab. For more details on category template assignment, see [Creating Categories](https://documentation.spryker.com/docs/en/creating-categories).
+In the front end, a category can be represented by different templates which are used in different scenarios. In the back end, category template is specified in the **Back Office > Category section > Edit Category page > General information** tab. For more details on category template assignment, see [Creating Categories](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/creating-categories.html).
 
 ### Catalog
 {% info_block infoBox %}
@@ -80,7 +81,7 @@ For example, the "Computers" category displays the "Notebooks", "PCs & Workstati
 
 ![sub-categories-grid.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/sub-categories-grid.png){height="" width=""}
 
-The images, which are shown in the front end when the sub categories grid category template is chosen, are added in the **Back Office > Category section> Edit Category page > Image** tab. For more details, see [Creating Categories](https://documentation.spryker.com/docs/en/creating-categories).
+The images, which are shown in the front end when the sub categories grid category template is chosen, are added in the **Back Office > Category section> Edit Category page > Image** tab. For more details, see [Creating Categories](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/creating-categories.html).
 
 ## Current Constraints
 Currently, the Category Management feature has the following functional constraints which are going to be resolved in the future:

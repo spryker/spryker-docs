@@ -2,9 +2,12 @@
 title: Checkout Steps
 description: This topic provides information about all checkout steps available for the customers.
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-steps
+originalArticleId: aaea28ee-4c66-4e4d-8a2f-e74a6ead5e6b
 redirect_from:
   - /2021080/docs/checkout-steps
   - /2021080/docs/en/checkout-steps
+  - /docs/checkout-steps
+  - /docs/en/checkout-steps
 ---
 
 The checkout process consists of the following steps:

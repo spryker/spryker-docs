@@ -2,6 +2,7 @@
 title: HowTo - Use Self-Signed SSL Certificates
 description: Learn how to import a self-signed SSL certificate.
 originalLink: https://documentation.spryker.com/v3/docs/ht-use-self-signed-ssl-certificates
+originalArticleId: 36f72c7d-2ac1-4995-afb2-583155ea3aaa
 redirect_from:
   - /v3/docs/ht-use-self-signed-ssl-certificates
   - /v3/docs/en/ht-use-self-signed-ssl-certificates

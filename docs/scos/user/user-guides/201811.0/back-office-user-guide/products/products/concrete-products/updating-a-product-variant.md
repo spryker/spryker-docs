@@ -2,6 +2,7 @@
 title: Updating a Product Variant
 description: The guide describes how to update the product variant in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/updating-a-product-variant
+originalArticleId: 5082b7bb-d9e2-4b41-9261-e06bcb765385
 redirect_from:
   - /v1/docs/updating-a-product-variant
   - /v1/docs/en/updating-a-product-variant

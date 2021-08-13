@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductDiscountConnector
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-discount-connector
+originalArticleId: 23992353-3bea-40d5-bda1-dfa176604b29
 redirect_from:
   - /v3/docs/mg-product-discount-connector
   - /v3/docs/en/mg-product-discount-connector

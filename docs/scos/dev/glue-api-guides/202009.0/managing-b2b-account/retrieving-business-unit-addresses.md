@@ -2,6 +2,7 @@
 title: Retrieving business unit addresses
 description: Learn how to retrieve business unit addresses via Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-business-unit-addresses
+originalArticleId: 5f54981f-acb6-4de1-88dc-dbd13e8d60f7
 redirect_from:
   - /v6/docs/retrieving-business-unit-addresses
   - /v6/docs/en/retrieving-business-unit-addresses
@@ -26,7 +27,7 @@ To retrieve a business unit address, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: `GET http://glue.mysprykershop.com/company-business-unit-addresses/eec036ee-b999-5753-a7dd-8d0710a2312f`
 
@@ -86,9 +87,9 @@ If your current company account is not set, you may get the `404` status code.
 
 {% endinfo_block %}
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 
 ##  Next steps
 
-* [Manage company user authentication tokens](https://documentation.spryker.com/docs/managing-company-user-authentication-tokens)
+* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/managing-company-user-authentication-tokens.html)

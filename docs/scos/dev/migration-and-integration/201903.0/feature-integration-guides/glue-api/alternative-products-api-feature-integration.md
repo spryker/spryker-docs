@@ -2,6 +2,7 @@
 title: Alternative Products API Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Alternative Products API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v2/docs/alternative-products-api-feature-integration-201903
+originalArticleId: a1231041-72f2-4fa1-83f3-c2051fcc8a52
 redirect_from:
   - /v2/docs/alternative-products-api-feature-integration-201903
   - /v2/docs/en/alternative-products-api-feature-integration-201903

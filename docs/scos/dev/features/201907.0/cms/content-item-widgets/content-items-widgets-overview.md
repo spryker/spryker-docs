@@ -2,6 +2,7 @@
 title: Content Items Widgets Overview
 description: The feature allows displaying content on the store website by inserting content items in any placeholders of blocks and pages in the WYSIWYG editor.
 originalLink: https://documentation.spryker.com/v3/docs/content-items-widgets-overview
+originalArticleId: 886036ba-f981-4816-a9a6-ea79b7ea4679
 redirect_from:
   - /v3/docs/content-items-widgets-overview
   - /v3/docs/en/content-items-widgets-overview

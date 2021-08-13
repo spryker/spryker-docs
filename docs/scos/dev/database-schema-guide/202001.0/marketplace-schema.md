@@ -1,6 +1,7 @@
 ---
 title: Marketplace Schema
 originalLink: https://documentation.spryker.com/v4/docs/db-schema-marketplace
+originalArticleId: 9c331055-0700-4823-befb-537a86069949
 redirect_from:
   - /v4/docs/db-schema-marketplace
   - /v4/docs/en/db-schema-marketplace

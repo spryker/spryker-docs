@@ -2,6 +2,7 @@
 title: Managing guest carts
 description: Retrieve details about guest carts and learn what else you can do with the resource.
 originalLink: https://documentation.spryker.com/v6/docs/managing-guest-carts
+originalArticleId: d31912c4-0c24-4a61-9e0b-f0e0a7549226
 redirect_from:
   - /v6/docs/managing-guest-carts
   - /v6/docs/en/managing-guest-carts
@@ -11,14 +12,14 @@ This endpoint allows to manage guest carts.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration)
-* [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
-* [Glue API: Product options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
+* [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+* [Glue API: Product options feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html)
 
 ## Create a guest cart
 
-To create a guest cart as an unauthenticated user, [add items to a guest cart](https://documentation.spryker.com/docs/en/managing-guest-cart-items#add-items-to-a-guest-cart).
+To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
 
 ## Retrieve a guest cart
 
@@ -1015,12 +1016,12 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 For the attributes of other included resources, see:
-* [Managing guest cart items](https://documentation.spryker.com/docs/managing-guest-cart-items)
-* [Retrieving measurement units](https://documentation.spryker.com/docs/retrieving-measurement-units)
-* [Retrieving concrete products](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes)
-* [Gift Cards of Guest Users](https://documentation.spryker.com/docs/en/managing-gift-cards-of-guest-users)
-* [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units#measurement-units-response-attributes)
-* [Retrieving product labels](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
+* [Managing guest cart items](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-cart-items.html)
+* [Retrieving measurement units](/docs/scos/dev/glue-api-guides/202009.0/retrieving-measurement-units.html)
+* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Gift Cards of Guest Users](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html)
+* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/202009.0/retrieving-measurement-units.html#measurement-units-response-attributes)
+* [Retrieving product labels](/docs/scos/dev/glue-api-guides/202009.0/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Assign a guest cart to a registered customer
 
@@ -1028,7 +1029,7 @@ Guest carts are anonymous as they are not related to any user. If a user registe
 
 To assign a guest cart to a customer, i.e., merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
-Upon login, the behavior depends on whether your project is a single cart or [multiple cart](https://documentation.spryker.com/docs/multiple-cart-per-user) environment:
+Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/dev/features/202009.0/multiple-carts/multiple-carts.html) environment:
 
 * In a **single cart** environment, the products in the guest cart are added to the customers' own cart;
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
@@ -1189,4 +1190,4 @@ In a **single cart** environment, items from the guest cart have been added to
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).

@@ -2,9 +2,12 @@
 title: Reference information- Customer module overview
 description: This article describes how new customers can be created and managed and how to enable specific features related to customers.
 originalLink: https://documentation.spryker.com/2021080/docs/reference-information-customer-module-overview
+originalArticleId: 917ec42f-a633-43a9-8749-ee908555b267
 redirect_from:
   - /2021080/docs/reference-information-customer-module-overview
   - /2021080/docs/en/reference-information-customer-module-overview
+  - /docs/reference-information-customer-module-overview
+  - /docs/en/reference-information-customer-module-overview
 ---
 
 The Customer entity wraps data around registered customers. Customer data is managed from the Back Office by the shop administrator and from the shop website itself by customers. This article describes how new customers can be created and managed and how to enable specific features related to customers.
@@ -63,7 +66,7 @@ When creating a custom implementation, check and follow the applicable legislati
 
 ## Customer experience
 
-Spryker consistently delivers the scalable operating system without coupling it to a project infrastructure. As a consequence, the project should take care of the impact of the **Customer Delete** functionality on customer experience. Read more about session sensitive actions in [Migration Guide - Customer](https://documentation.spryker.com/docs/mg-customer).
+Spryker consistently delivers the scalable operating system without coupling it to a project infrastructure. As a consequence, the project should take care of the impact of the **Customer Delete** functionality on customer experience. Read more about session sensitive actions in [Migration Guide - Customer](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-customer.html).
 
 ### Case insensitive queries for email
 

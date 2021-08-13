@@ -1,6 +1,7 @@
 ---
 title: Glue REST API
 originalLink: https://documentation.spryker.com/v3/docs/glue-rest-api
+originalArticleId: 94db11a9-0874-4a38-8a94-d198444b18bd
 redirect_from:
   - /v3/docs/glue-rest-api
   - /v3/docs/en/glue-rest-api

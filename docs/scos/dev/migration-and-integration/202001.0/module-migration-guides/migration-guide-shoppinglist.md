@@ -2,6 +2,7 @@
 title: Migration Guide - ShoppingList
 description: Use the guide to learn how to update the ShoppingList module.
 originalLink: https://documentation.spryker.com/v4/docs/mg-shopping-list
+originalArticleId: d84ca26b-89fd-4ef7-96a2-fe82f767f5ec
 redirect_from:
   - /v4/docs/mg-shopping-list
   - /v4/docs/en/mg-shopping-list

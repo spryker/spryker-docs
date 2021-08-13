@@ -2,6 +2,7 @@
 title: Product Barcodes
 description: Use this section to review in the Back Office what barcodes have been generated for concrete products.
 originalLink: https://documentation.spryker.com/v4/docs/product-barcodes
+originalArticleId: 5c02801c-392b-4215-948b-51d20abbc061
 redirect_from:
   - /v4/docs/product-barcodes
   - /v4/docs/en/product-barcodes

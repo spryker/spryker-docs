@@ -1,6 +1,7 @@
 ---
 title: Customizing Spryker front end
 originalLink: https://documentation.spryker.com/v4/docs/customizing-spryker-front-end
+originalArticleId: 014bb2a2-e4a8-41ea-8783-160255ba8aab
 redirect_from:
   - /v4/docs/customizing-spryker-front-end
   - /v4/docs/en/customizing-spryker-front-end
@@ -206,7 +207,7 @@ Another important aspect you can override are styles. The global styles are defi
 * `util.scss` - can be used for utility stles, like reset, align or is-hidden implementations.
 
 {% info_block infoBox %}
-For detailed information on global styles, see the _SASS Layer_ section in [Atomic Frontend](https://documentation.spryker.com/v4/docs/atomic-frontend#sass-layer
+For detailed information on global styles, see the _SASS Layer_ section in [Atomic Frontend](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/atomic-frontend-general-overview.html#sass-layer
 {% endinfo_block %}.)
 
 Typical implementations on the project level look as follows:

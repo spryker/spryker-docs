@@ -1,12 +1,13 @@
 ---
 title: HowTo - Configure Separators and Default Number of Rows
 originalLink: https://documentation.spryker.com/v3/docs/ht-configure-separators-default-number-rows
+originalArticleId: f3819f8e-18d5-402e-a62f-cb8bb18d6905
 redirect_from:
   - /v3/docs/ht-configure-separators-default-number-rows
   - /v3/docs/en/ht-configure-separators-default-number-rows
 ---
 
-By default, spaces, semicolons and comas are used as separators in **Paste your order** form and there are 8 rows in the [Quick Order](https://documentation.spryker.com/v2/docs/quick-order-overview-201903) form. You can redefine the separators for bulk products entry as well as change the number of rows displayed in `src/Pyz/SprykerShop/Yves/QuickOrderPage/QuickOrderPageConfig.php` respectively:
+By default, spaces, semicolons and comas are used as separators in **Paste your order** form and there are 8 rows in the [Quick Order](https://documentation.spryker.com/v3/docs/quick-add-to-cart-feature-overview) form. You can redefine the separators for bulk products entry as well as change the number of rows displayed in `src/Pyz/SprykerShop/Yves/QuickOrderPage/QuickOrderPageConfig.php` respectively:
 
 <details open>   <summary>src/Pyz/SprykerShop/Yves/QuickOrderPage/QuickOrderPageConfig.php</summary>
     

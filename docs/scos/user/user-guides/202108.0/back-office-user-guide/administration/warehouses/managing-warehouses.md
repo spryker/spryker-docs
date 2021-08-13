@@ -2,9 +2,12 @@
 title: Managing warehouses
 description: Use the procedures to view and update warehouses in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-warehouses
+originalArticleId: 0158ceb8-801b-45ed-bfc1-b34dc098253e
 redirect_from:
   - /2021080/docs/managing-warehouses
   - /2021080/docs/en/managing-warehouses
+  - /docs/managing-warehouses
+  - /docs/en/managing-warehouses
 ---
 
 This topic describes how to manage warehouses.
@@ -13,7 +16,7 @@ This topic describes how to manage warehouses.
 
 To start working with warehouses, go to **Administration** > **Warehouses**.
 
-Review the [reference information](https://documentation.spryker.com/docs/creating-a-warehouse#reference-information--creating-warehouses) before you start, or just look up the necessary information as you go through the process.
+Review the [reference information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/warehouses/creating-a-warehouse.html#reference-information--creating-warehouses) before you start, or just look up the necessary information as you go through the process.
 
 ## Viewing warehouse details
 
@@ -38,4 +41,4 @@ To edit the warehouse details:
 
 ## What's next?
 
-To learn how to manage stock per specific warehouse, see [Managing product availability](https://documentation.spryker.com/docs/managing-products-availability).
+To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/availability/managing-products-availability.html).

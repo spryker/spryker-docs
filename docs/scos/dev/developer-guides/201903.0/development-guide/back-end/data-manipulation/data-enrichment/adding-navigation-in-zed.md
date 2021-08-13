@@ -2,6 +2,7 @@
 title: Adding Navigation in Zed
 description: This article describes how to make your new controller action accessible in the navigation bar.
 originalLink: https://documentation.spryker.com/v2/docs/adding-navigation-in-zed
+originalArticleId: 428dd13d-c14a-4fa0-b2d1-672ae6ab18a6
 redirect_from:
   - /v2/docs/adding-navigation-in-zed
   - /v2/docs/en/adding-navigation-in-zed

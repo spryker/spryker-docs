@@ -2,6 +2,7 @@
 title: File Uploader
 description: File Uploader feature allows a Store Administrator to upload files in accordance to their specifications for a file type to the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/file-uploader
+originalArticleId: 05721975-95e1-4606-9eb1-253c63cdc523
 redirect_from:
   - /v3/docs/file-uploader
   - /v3/docs/en/file-uploader

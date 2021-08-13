@@ -1,21 +1,22 @@
 ---
 title: File details- shipment_price.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-shipment-pricecsv
+originalArticleId: 59d40c42-a29f-40f0-8823-2f128b1c575b
 redirect_from:
   - /v6/docs/file-details-shipment-pricecsv
   - /v6/docs/en/file-details-shipment-pricecsv
 ---
 
-This article contains content of the **shipment_price.csv** file to configure [Shipment Price](https://documentation.spryker.com/docs/shipment) information on your Spryker Demo Dhop.
+This article contains content of the **shipment_price.csv** file to configure [Shipment Price](/docs/scos/dev/features/202009.0/shipment/shipment.html) information on your Spryker Demo Dhop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
-| **shipment_method_key** | Yes | String  | Value previously imported already by its data importer using the [shipment.csv](https://documentation.spryker.com/docs/file-details-shipmentcsv) file.| Identifier of the shipment method. |
+| **shipment_method_key** | Yes | String  | Value previously imported already by its data importer using the [shipment.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
 | **store** | Yes | String | Value previously defined in the *stores.php* project configuration. | Name of the store. |
-| **currency** | Yes | String | Value previously imported already by its data importer using the [currency.csv](https://documentation.spryker.com/docs/file-details-currencycsv) file. | Currency ISO code. |
+| **currency** | Yes | String | Value previously imported already by its data importer using the [currency.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-currency.csv.html) file. | Currency ISO code. |
 | **value_net** | No |Integer | Empty price values will be imported as zeros. | Net value of the shipment cost. |
 | **value_gross** | No | String |Empty price values will be imported as zeros. | Gross value of the shipment cost.  |
 *N/A: Not applicable.
@@ -23,8 +24,8 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 This file has the following dependencies:
 
-*     [shipment.csv](https://documentation.spryker.com/docs/file-details-shipmentcsv)
-*     [currency.csv](https://documentation.spryker.com/docs/file-details-currencycsv)
+*     [shipment.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html)
+*     [currency.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-currency.csv.html)
 *     s*tores.ph*p configuration file of the demo shop PHP project
 
 ## Recommendations & Other Information

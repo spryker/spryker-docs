@@ -2,6 +2,7 @@
 title: PayOne - Authorization and Preauthorization Capture Flows
 description: Payone module makes it possible for a project to choose which Payone flow it wants to implement- authorize or preauthorize + capture.
 originalLink: https://documentation.spryker.com/v3/docs/payone-authorization-and-preauthorization-capture-flows
+originalArticleId: 9afd62e3-50d7-49c8-9942-06e15a7c51b1
 redirect_from:
   - /v3/docs/payone-authorization-and-preauthorization-capture-flows
   - /v3/docs/en/payone-authorization-and-preauthorization-capture-flows

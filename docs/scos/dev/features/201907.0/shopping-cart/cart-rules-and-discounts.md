@@ -2,6 +2,7 @@
 title: Cart Rules and Discounts
 description: With the feature in place, you can create and apply special prices and rules to cart to promote specific products.
 originalLink: https://documentation.spryker.com/v3/docs/cart-rules-discounts
+originalArticleId: 772af57a-779f-4906-8171-4968261248e4
 redirect_from:
   - /v3/docs/cart-rules-discounts
   - /v3/docs/en/cart-rules-discounts

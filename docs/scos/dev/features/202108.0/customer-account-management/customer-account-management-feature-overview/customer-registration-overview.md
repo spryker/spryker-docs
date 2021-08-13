@@ -1,9 +1,12 @@
 ---
 title: Customer Registration overview
 originalLink: https://documentation.spryker.com/2021080/docs/customer-registration-overview
+originalArticleId: b13eea5d-0524-4858-a94a-c993b12606ea
 redirect_from:
   - /2021080/docs/customer-registration-overview
   - /2021080/docs/en/customer-registration-overview
+  - /docs/customer-registration-overview
+  - /docs/en/customer-registration-overview
 ---
 
 In Spryker, customers registration are done via double opt-in. A double opt-in occurs when a user signs up, and an email with a registration confirmation link is sent to them. After they click the verification link, their account is activated and they can start using the online store as a registered customers.
@@ -44,7 +47,7 @@ After checkout registration, the cart created by a customer as a guest user is c
 
 A Back Office user can register a customer by entering customer account details. The verification email is sent to the email address specified by the Back Office user. Until the customer verifies their account via the link in the email, in the Back Office, the status of their account is *Unverified*. Once they click the link, the status changes to *Verified*.
 
-To learn how a Back Office user creates customer accounts, see [Creating customers](https://documentation.spryker.com/docs/en/managing-customers#creating-customers).
+To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-customers).
 
 ### Registration via Glue API
 
@@ -56,9 +59,9 @@ A developer can verify a customer's email address via Glue API regardless of the
 
 {% endinfo_block %}
 
-To learn how a developer creates customer accounts via Glue API, see [Create a customer](https://documentation.spryker.com/docs/managing-customers-via-glue-api#create-a-customer).
+To learn how a developer creates customer accounts via Glue API, see [Create a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html#create-a-customer).
 
-To learn how a developer confirms a customer's email address, see [Confirming customer registration](https://documentation.spryker.com/docs/confirming-customer-registration).
+To learn how a developer confirms a customer's email address, see [Confirming customer registration](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/confirming-customer-registration.html).
 
 ### Registration via import
 
@@ -74,8 +77,8 @@ A developer can register a customer by importing their customer account details.
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                  <li><a href="https://documentation.spryker.com/docs/file-details-customercsv" class="mr-link">Import customers</a></li> 
-                <li><a href="https://documentation.spryker.com/docs/managing-customers-via-glue-api#create-a-customer" class="mr-link">Create a customer via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/confirming-customer-registration" class="mr-link">Confirm a customer registration via Glue API</a></li>
+                <li><a href="/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html#create-a-customer" class="mr-link">Create a customer via Glue API</a></li>
+                <li><a href="/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/confirming-customer-registration.html" class="mr-link">Confirm a customer registration via Glue API</a></li>
                 <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-integration" class="mr-link">Enable Customer Registration by integrating the Customer Registration feature</a></li>
                 <li><a href="https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration" class="mr-link">Enable customer registration via Glue API by integrating the Customer Account Management Glue API</a></li>
             </ul>

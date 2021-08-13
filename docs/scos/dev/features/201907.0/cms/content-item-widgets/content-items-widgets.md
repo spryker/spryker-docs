@@ -2,6 +2,7 @@
 title: Content Items Widgets
 description: The Content Item Widgets come in handy for embedding Content Items in your online store website.
 originalLink: https://documentation.spryker.com/v3/docs/content-item-widgets-201907
+originalArticleId: 4fe3083c-4884-4f52-9f83-df712fbba4b2
 redirect_from:
   - /v3/docs/content-item-widgets-201907
   - /v3/docs/en/content-item-widgets-201907

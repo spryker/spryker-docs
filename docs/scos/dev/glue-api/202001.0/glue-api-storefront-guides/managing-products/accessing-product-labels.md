@@ -2,6 +2,7 @@
 title: Accessing Product Labels
 description: The article explores how to retrieve a product label by the label ID or product provided in the Product Labels API.
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-product-labels
+originalArticleId: f14ed0b0-60bd-4089-bb7f-95150ce88ae4
 redirect_from:
   - /v4/docs/retrieving-product-labels
   - /v4/docs/en/retrieving-product-labels
@@ -263,7 +264,7 @@ The endpoint responds with information on the requested cart, including the prod
 ```
 
 ### Possible Errors
-For information on the possible error responses, see [Managing Guest Carts](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html) and [Managing Carts of Registered Users](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-carts-of-registered-users.html).
+For information on the possible error responses, see [Managing Guest Carts](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html) and [Managing Carts of Registered Users](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-carts.html-of-registered-users-201907).
 
 ## Get Product Labels for Wishlist Items
 To retrieve labels for all products in a wishlist, send a GET request to the following endpoints and include **product-labels** as a relationship:

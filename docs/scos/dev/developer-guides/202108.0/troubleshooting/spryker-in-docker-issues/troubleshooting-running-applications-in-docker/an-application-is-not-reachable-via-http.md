@@ -2,9 +2,12 @@
 title: An application is not reachable via http
 description: Learn how to fix the issue when an application is not reachable via http
 originalLink: https://documentation.spryker.com/2021080/docs/an-application-is-not-reachable-via-http
+originalArticleId: 2a96637b-d930-436b-908a-62f9ddbd8298
 redirect_from:
   - /2021080/docs/an-application-is-not-reachable-via-http
   - /2021080/docs/en/an-application-is-not-reachable-via-http
+  - /docs/an-application-is-not-reachable-via-http
+  - /docs/en/an-application-is-not-reachable-via-http
 ---
 
 ## Description

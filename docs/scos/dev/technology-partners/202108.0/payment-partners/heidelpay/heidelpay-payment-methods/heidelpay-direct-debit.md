@@ -2,13 +2,16 @@
 title: Heidelpay - Direct Debit
 description: Integrate direct debit payment through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-direct-debit
+originalArticleId: eeaea912-0d03-499d-acdd-ad7c448c4cb0
 redirect_from:
   - /2021080/docs/heidelpay-direct-debit
   - /2021080/docs/en/heidelpay-direct-debit
+  - /docs/heidelpay-direct-debit
+  - /docs/en/heidelpay-direct-debit
 ---
 
 ## Setup
-The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
+The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
 
 ## Configuration
 ```php

@@ -1,6 +1,7 @@
 ---
 title: HowTo - Install Spryker in AWS Environment
 originalLink: https://documentation.spryker.com/v1/docs/ht-install-spryker-in-aws-environment
+originalArticleId: 16b6fe21-8e67-45ec-8d30-3c9280bd6887
 redirect_from:
   - /v1/docs/ht-install-spryker-in-aws-environment
   - /v1/docs/en/ht-install-spryker-in-aws-environment

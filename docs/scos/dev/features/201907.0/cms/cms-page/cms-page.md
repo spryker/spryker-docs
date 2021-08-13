@@ -2,6 +2,7 @@
 title: CMS Page
 description: CMS page is an extra HTML page of your Spryker shop that you can create and edit in the Back Office using the WYSIWYG editor.
 originalLink: https://documentation.spryker.com/v3/docs/cms-page
+originalArticleId: 7904c32e-4485-4dbf-b79a-272d39a78732
 redirect_from:
   - /v3/docs/cms-page
   - /v3/docs/en/cms-page

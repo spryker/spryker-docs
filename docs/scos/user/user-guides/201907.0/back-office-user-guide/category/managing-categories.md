@@ -2,6 +2,7 @@
 title: Managing Categories
 description: The guide provides instructions on how to set an order for products in categories, as well as view, update and delete categories.
 originalLink: https://documentation.spryker.com/v3/docs/managing-categories
+originalArticleId: 5a28aa62-f989-431a-bea6-721cc0948996
 redirect_from:
   - /v3/docs/managing-categories
   - /v3/docs/en/managing-categories
@@ -51,7 +52,7 @@ There is no difference between how you will initiate the flow. In any event, you
 ***
 **To edit a category:**
 1. Click **Edit**.
-2. Update the needed values. See [Category: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/category/references/category-reference-information.html).
+2. Update the needed values. See [Category: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/category/references/category-reference-information.html).
 3. Click **Save**.
 ***
 ## Deleting Categories

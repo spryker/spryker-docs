@@ -2,6 +2,7 @@
 title: Discontinuing a Product
 description: Use the guide to make the product variant discontinued in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/discontinuing-a-product
+originalArticleId: d1230f2c-2240-45e9-b58c-1574fd6ba10b
 redirect_from:
   - /v3/docs/discontinuing-a-product
   - /v3/docs/en/discontinuing-a-product

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product Relation Collector
 originalLink: https://documentation.spryker.com/v1/docs/mg-product-relation-collector
+originalArticleId: 22d1124b-a8a2-4862-ad11-0a887c9bba28
 redirect_from:
   - /v1/docs/mg-product-relation-collector
   - /v1/docs/en/mg-product-relation-collector

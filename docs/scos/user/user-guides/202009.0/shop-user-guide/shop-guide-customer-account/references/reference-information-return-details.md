@@ -2,6 +2,7 @@
 title: Reference information- Return details
 description: This article provides reference information while working with returns in the Spryker Storefront.
 originalLink: https://documentation.spryker.com/v6/docs/return-details-reference-information
+originalArticleId: 8ec0b286-4d93-4673-9bd4-c8c4d6f04918
 redirect_from:
   - /v6/docs/return-details-reference-information
   - /v6/docs/en/return-details-reference-information

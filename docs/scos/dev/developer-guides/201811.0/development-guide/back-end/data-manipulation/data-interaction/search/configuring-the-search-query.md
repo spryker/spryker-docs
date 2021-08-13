@@ -2,6 +2,7 @@
 title: Configuring the Search Query
 description: This  article explains how to configure search query.
 originalLink: https://documentation.spryker.com/v1/docs/configuring-search-query
+originalArticleId: 7d60b1d9-8472-474f-af01-e005cfa6e751
 redirect_from:
   - /v1/docs/configuring-search-query
   - /v1/docs/en/configuring-search-query

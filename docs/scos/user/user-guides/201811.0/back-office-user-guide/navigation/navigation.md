@@ -2,6 +2,7 @@
 title: Navigation
 description: The section can be used to create navigation elements with CMS pages, categories, and other relevant links, and build a nested structure with nodes.
 originalLink: https://documentation.spryker.com/v1/docs/navigation-guide
+originalArticleId: 9187174d-a44f-463a-b048-cefce0b61947
 redirect_from:
   - /v1/docs/navigation-guide
   - /v1/docs/en/navigation-guide

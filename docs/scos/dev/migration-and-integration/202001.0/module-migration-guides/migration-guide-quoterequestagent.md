@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - QuoteRequestAgent
 originalLink: https://documentation.spryker.com/v4/docs/mg-quoterequestagent
+originalArticleId: bc293272-ca1c-4926-95f4-246983b4ac62
 redirect_from:
   - /v4/docs/mg-quoterequestagent
   - /v4/docs/en/mg-quoterequestagent

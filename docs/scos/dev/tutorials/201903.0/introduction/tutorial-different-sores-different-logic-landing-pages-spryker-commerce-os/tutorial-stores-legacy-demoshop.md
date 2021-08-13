@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Stores - Legacy Demoshop
 originalLink: https://documentation.spryker.com/v2/docs/stores
+originalArticleId: 7dcd5822-8c3e-4d37-b534-440b59bc8973
 redirect_from:
   - /v2/docs/stores
   - /v2/docs/en/stores

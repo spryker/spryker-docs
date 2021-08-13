@@ -2,6 +2,7 @@
 title: Query Objects- Creation and Usage
 description: Query objects provide an object-oriented API for writing database queries which are used in query containers.
 originalLink: https://documentation.spryker.com/v4/docs/query-objects
+originalArticleId: 170b86dc-d430-46bf-a8f3-efb751c39023
 redirect_from:
   - /v4/docs/query-objects
   - /v4/docs/en/query-objects

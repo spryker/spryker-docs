@@ -2,9 +2,12 @@
 title: Retrieving store configuration
 description: This article explains how to retrieve the store configuration including currencies, countries, locales, and time zones.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-store-configuration
+originalArticleId: 555482d7-5661-42bc-86c7-382a702172ab
 redirect_from:
   - /2021080/docs/retrieving-store-configuration
   - /2021080/docs/en/retrieving-store-configuration
+  - /docs/retrieving-store-configuration
+  - /docs/en/retrieving-store-configuration
 ---
 
 Depending on your project needs, you can set up a single store that serves all your business needs or have multiple stores designed for different applications or available in different countries. Regardless of how many stores you have, a store contains such generic configuration as the currencies that can be used in transactions, countries where a store is available, supported languages, and the time zone of the store.
@@ -12,7 +15,7 @@ Depending on your project needs, you can set up a single store that serves all y
 The configuration of the current store in a project can be retrieved via an endpoint provided by the **Stores API**.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue Application Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-application-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue Application Feature Integration](https://documentation.spryker.com/2021080/docs/glue-application-feature-integration-201907).
 
 ## Retrieve store configuration
 
@@ -108,4 +111,4 @@ Request sample : `GET https://glue.mysprykershop.com/stores`
 | iso2Code | String | Iso 2 code for the region. |
 | name | String | Region name. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

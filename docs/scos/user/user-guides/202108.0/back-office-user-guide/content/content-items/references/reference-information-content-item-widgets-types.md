@@ -2,9 +2,12 @@
 title: Reference information- content item widgets types
 description: The guide provides reference information about content widget types and examples of use cases in B2B, B2C demoshops.
 originalLink: https://documentation.spryker.com/2021080/docs/content-item-widgets-types-reference-information
+originalArticleId: 44bfb58b-4c0d-4d1b-a444-799e4b2384c7
 redirect_from:
   - /2021080/docs/content-item-widgets-types-reference-information
   - /2021080/docs/en/content-item-widgets-types-reference-information
+  - /docs/content-item-widgets-types-reference-information
+  - /docs/en/content-item-widgets-types-reference-information
 ---
 
 This topic contains the reference information you need to know when working with content item widgets in the **Content Management > Pages/Blocks > Edit Placeholders** section.

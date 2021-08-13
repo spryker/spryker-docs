@@ -1,6 +1,7 @@
 ---
 title: Offer Management
 originalLink: https://documentation.spryker.com/v4/docs/offer-management
+originalArticleId: 54b687d9-adff-4b9e-924b-52a12149e25b
 redirect_from:
   - /v4/docs/offer-management
   - /v4/docs/en/offer-management

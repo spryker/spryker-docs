@@ -2,6 +2,7 @@
 title: Product Sets- module relations
 description: Module relations and database schema of the Product Sets feature.
 originalLink: https://documentation.spryker.com/v6/docs/product-sets-module-relations
+originalArticleId: b64964a9-deef-472a-a2d4-0c9bfe53fd4d
 redirect_from:
   - /v6/docs/product-sets-module-relations
   - /v6/docs/en/product-sets-module-relations

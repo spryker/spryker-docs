@@ -1,12 +1,15 @@
 ---
 title: File details- navigation.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-navigationcsv
+originalArticleId: eb25c5b9-7718-4328-b5a5-d93a6a0fb9b7
 redirect_from:
   - /2021080/docs/file-details-navigationcsv
   - /2021080/docs/en/file-details-navigationcsv
+  - /docs/file-details-navigationcsv
+  - /docs/en/file-details-navigationcsv
 ---
 
-This article contains content of the **navigation.csv** file to configure [Navigation](https://documentation.spryker.com/docs/navigation-feature-overview) information on your Spryker Demo Shop.
+This article contains content of the **navigation.csv** file to configure [Navigation](/docs/scos/dev/features/{{ page.version }}/navigation/navigation-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

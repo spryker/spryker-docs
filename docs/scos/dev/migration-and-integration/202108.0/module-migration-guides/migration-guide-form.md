@@ -2,13 +2,16 @@
 title: Migration Guide - Form
 description: Use the guide to perform the Form part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-form
+originalArticleId: 247dae22-d6d9-4fa7-a076-3486705f8582
 redirect_from:
   - /2021080/docs/migration-guide-form
   - /2021080/docs/en/migration-guide-form
+  - /docs/migration-guide-form
+  - /docs/en/migration-guide-form
 ---
 
 :::(Error) 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html).
 :::
 To upgrade the module, do the following:
 
@@ -148,7 +151,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 {% info_block infoBox %}
 
-For information on how to eliminate Silex Validator, see  [Migration Guide - Validator](https://documentation.spryker.com/docs/migration-guide-validator).
+For information on how to eliminate Silex Validator, see  [Migration Guide - Validator](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-validator.html).
 
 {% endinfo_block %}
 

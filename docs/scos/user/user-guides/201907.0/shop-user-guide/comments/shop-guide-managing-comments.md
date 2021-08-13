@@ -2,6 +2,7 @@
 title: Shop Guide - Managing Comments
 description: Use the procedures to add a comment to cart, edit comments, add tags to comments to filter them by tags, and/or removed comments from the cart.
 originalLink: https://documentation.spryker.com/v3/docs/managing-comments-shop-guide
+originalArticleId: 38c3b033-9972-4c11-9e73-9cdb5c736878
 redirect_from:
   - /v3/docs/managing-comments-shop-guide
   - /v3/docs/en/managing-comments-shop-guide

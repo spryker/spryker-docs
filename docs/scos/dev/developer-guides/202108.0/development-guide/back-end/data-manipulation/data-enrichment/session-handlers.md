@@ -2,9 +2,12 @@
 title: Session Handlers
 description: We provide a number of session handlers to work with different storages- File, Couchbase, MySql, Redis, Redis (locking).
 originalLink: https://documentation.spryker.com/2021080/docs/session-handlers
+originalArticleId: 68ebf87c-9ddd-4b0a-8f81-93a229271e09
 redirect_from:
   - /2021080/docs/session-handlers
   - /2021080/docs/en/session-handlers
+  - /docs/session-handlers
+  - /docs/en/session-handlers
 ---
 
 We provide a number of session handlers to work with different storages. By default, the demo-shop uses a locking Redis session handler for *Yves* and a non-locking Redis session handler for *Zed* in the development environment.

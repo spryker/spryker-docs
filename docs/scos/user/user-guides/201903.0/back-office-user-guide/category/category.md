@@ -2,6 +2,7 @@
 title: Category
 description: The section is designed to manage products under the category according to a specific criterion, including search and filter them in the online store.
 originalLink: https://documentation.spryker.com/v2/docs/category
+originalArticleId: 85b1959a-781f-42b8-a03b-1dcd1140b419
 redirect_from:
   - /v2/docs/category
   - /v2/docs/en/category

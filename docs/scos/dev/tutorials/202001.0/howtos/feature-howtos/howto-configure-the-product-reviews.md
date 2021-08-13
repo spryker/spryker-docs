@@ -1,6 +1,7 @@
 ---
 title: HowTo - Configure the Product Reviews
 originalLink: https://documentation.spryker.com/v4/docs/ht-product-review-feature-configuration
+originalArticleId: db5e5b44-c173-43bd-bc2b-5a9b6d3f2e7a
 redirect_from:
   - /v4/docs/ht-product-review-feature-configuration
   - /v4/docs/en/ht-product-review-feature-configuration

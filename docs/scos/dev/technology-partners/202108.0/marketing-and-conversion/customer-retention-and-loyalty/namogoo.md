@@ -2,9 +2,12 @@
 title: Namogoo
 description: Identify and block unauthorized ads injected into consumer web sessions that divert customers to competitor offerings by integrating  Namogoo into Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/namogoo
+originalArticleId: 69018fe0-c91f-48d1-be86-6fa06334ea76
 redirect_from:
   - /2021080/docs/namogoo
   - /2021080/docs/en/namogoo
+  - /docs/namogoo
+  - /docs/en/namogoo
 ---
 
 ## Partner Information

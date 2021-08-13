@@ -2,6 +2,7 @@
 title: Price API Feature Integration
 description: This guide will navigate through the process of installing and configuring of the Price API feature used in Spryker OS.
 originalLink: https://documentation.spryker.com/v2/docs/glue-api-product-price-api-feature-integration
+originalArticleId: c9c43516-2904-45a7-973c-dc60dfdbbcd9
 redirect_from:
   - /v2/docs/glue-api-product-price-api-feature-integration
   - /v2/docs/en/glue-api-product-price-api-feature-integration

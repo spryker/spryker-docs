@@ -2,9 +2,12 @@
 title: Secure Coding Practices
 description: Unsafe coding practices can make the software application vulnerable to theft of sensitive data. In this article, we’ll present a series of coding practices that we recommend using when developing an e-commerce application using Spryker Commerce OS, that will keep your software solution secured.
 originalLink: https://documentation.spryker.com/2021080/docs/secure-coding-practices
+originalArticleId: 8c51239e-377e-427a-9d1f-4d15c355fa3c
 redirect_from:
   - /2021080/docs/secure-coding-practices
   - /2021080/docs/en/secure-coding-practices
+  - /docs/secure-coding-practices
+  - /docs/en/secure-coding-practices
 ---
 
 Unsafe coding practices can make the software application vulnerable to theft of sensitive data. In this article, we’ll present a series of coding practices that we recommend using when developing an e-commerce application using Spryker Commerce OS, that will keep your software solution secured.

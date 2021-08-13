@@ -2,6 +2,7 @@
 title: Multi-Store Products Feature Integration
 description: The guide describes the process of installing the Multi-Store Products into your project.
 originalLink: https://documentation.spryker.com/v4/docs/product-store-relation-feature-integration
+originalArticleId: d5396bd8-d914-4230-8a65-0e3d6299ddbd
 redirect_from:
   - /v4/docs/product-store-relation-feature-integration
   - /v4/docs/en/product-store-relation-feature-integration
@@ -20,7 +21,7 @@ To prepare your project to work with multi-store abstract products:
 3. Update/install `spryker/store` to at least 1.3.0 version.
 4. Update/install `spryker/product` to at least 6.0.0 version. You can find additional help for feature migration in [Migration Guide - Product](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-product.html).
 5. If you want to have Zed Admin UI support for the multi-store abstract product management:
-* Update/install `spryker/productmanagement` to at least 0.10.0 version. You can find additional help for feature migration in [Migration Guide - ProductManagement](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productmanagement.html). 
+* Update/install `spryker/productmanagement` to at least 0.10.0 version. You can find additional help for feature migration in [Migration Guide - ProductManagement](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-product.html-management). 
 * Override `Spryker\Zed\Store\StoreConfig::isMultiStorePerZedEnabled()` in your project to return `true`. This will enable the store management inside the Product Information Management (PIM) Zed Admin UI.
 
 **Example override**

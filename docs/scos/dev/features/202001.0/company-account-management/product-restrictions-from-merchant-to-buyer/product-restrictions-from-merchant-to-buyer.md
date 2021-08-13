@@ -2,6 +2,7 @@
 title: Product Restrictions from Merchant to Buyer
 description: Th feature provides clients with access to the products and information without overwhelming them with non-essential data.
 originalLink: https://documentation.spryker.com/v4/docs/product-restrictions-from-merchant-to-buyer
+originalArticleId: 039eb7b6-00bf-44c3-8c89-af5e717afbbe
 redirect_from:
   - /v4/docs/product-restrictions-from-merchant-to-buyer
   - /v4/docs/en/product-restrictions-from-merchant-to-buyer

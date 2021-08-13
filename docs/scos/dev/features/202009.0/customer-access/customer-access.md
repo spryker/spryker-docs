@@ -2,6 +2,7 @@
 title: Customer Access
 description: The Customer Access feature allows shop owners to avoid showing some product information (e.g. prices) to competitors or other entities
 originalLink: https://documentation.spryker.com/v6/docs/customer-access
+originalArticleId: 9d55a53b-8591-493d-8254-a23d3373f6dc
 redirect_from:
   - /v6/docs/customer-access
   - /v6/docs/en/customer-access

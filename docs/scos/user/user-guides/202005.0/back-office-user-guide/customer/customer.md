@@ -2,6 +2,7 @@
 title: Customer
 description: The Customers section is designed for managing customer's data such as personal information, billing, and shipping addresses.
 originalLink: https://documentation.spryker.com/v5/docs/customer
+originalArticleId: af14811e-d441-4ddf-a3cd-f8a5376d6b5a
 redirect_from:
   - /v5/docs/customer
   - /v5/docs/en/customer
@@ -18,5 +19,5 @@ The customer registration can be completed only by the customer by setting up th
 
 ***
 **What's next?**
-* To start managing customers, see [Managing Customers](https://documentation.spryker.com/docs/en/managing-customers).
-* To start working with companies, see [Company Account](https://documentation.spryker.com/docs/en/company-account-guide).
+* To start managing customers, see [Managing Customers](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html).
+* To start working with companies, see [Company Account](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/company-account.html).

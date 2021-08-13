@@ -2,14 +2,17 @@
 title: Migration Guide - CMS
 description: Use the guide to update versions to the newer ones of the CMS module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cms
+originalArticleId: 2283a672-1ea2-4ddc-9132-ef0ab1fe4e2f
 redirect_from:
   - /2021080/docs/mg-cms
   - /2021080/docs/en/mg-cms
+  - /docs/mg-cms
+  - /docs/en/mg-cms
 ---
 
 ## Upgrading from Version 6.* to Version 7.*
     
-Version 7.0.0 of the CMS module introduces the [multi-store functionality](https://documentation.spryker.com/v2/docs/multi-store-cms-pages-201903). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 ### BC breaks and solutions:
 

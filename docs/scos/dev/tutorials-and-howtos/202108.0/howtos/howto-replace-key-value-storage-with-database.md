@@ -1,9 +1,12 @@
 ---
 title: HowTo - Replace key-value storage with database
 originalLink: https://documentation.spryker.com/2021080/docs/howto-replace-key-value-storage-with-database
+originalArticleId: 76d0dff6-6837-4f27-a64b-d3eacf7134c7
 redirect_from:
   - /2021080/docs/howto-replace-key-value-storage-with-database
   - /2021080/docs/en/howto-replace-key-value-storage-with-database
+  - /docs/howto-replace-key-value-storage-with-database
+  - /docs/en/howto-replace-key-value-storage-with-database
 ---
 
 One of the main ways of transferring data from Zed to Yves is the Publish & Synchronization mechanism. It works by:

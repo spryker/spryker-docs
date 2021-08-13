@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - PersistentCart
 originalLink: https://documentation.spryker.com/v1/docs/mg-persistent-cart
+originalArticleId: 015ed0fa-8154-431c-aadd-6e0cd0ee2ba7
 redirect_from:
   - /v1/docs/mg-persistent-cart
   - /v1/docs/en/mg-persistent-cart

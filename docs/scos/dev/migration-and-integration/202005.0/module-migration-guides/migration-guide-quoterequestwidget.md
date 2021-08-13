@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - QuoteRequestWidget
 originalLink: https://documentation.spryker.com/v5/docs/mg-quoterequestwidget
+originalArticleId: 39da1113-1933-4d80-8781-e9bc7f13a594
 redirect_from:
   - /v5/docs/mg-quoterequestwidget
   - /v5/docs/en/mg-quoterequestwidget
@@ -10,7 +11,7 @@ redirect_from:
 The only major change of the `QuoteRequestWidget` 2.x.x is the dependency update for the `spryker/quote-request:^2.0.0`.
 
 **To migrate do the following:**
-1. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](https://documentation.spryker.com/docs/en/mg-quoterequest).
+1. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-quoterequest.html).
 2. Update `spryker-shop/quote-request-widget:^2.0.0`
 
 ```bash

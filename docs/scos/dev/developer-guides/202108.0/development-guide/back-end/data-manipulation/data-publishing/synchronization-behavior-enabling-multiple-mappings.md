@@ -2,12 +2,15 @@
 title: Synchronization behavior- enabling multiple mappings
 description: Use mappings to get data of any resource without specifying the resource's ID
 originalLink: https://documentation.spryker.com/2021080/docs/synchronization-behavior-enabling-multiple-mappings
+originalArticleId: 2a708a7b-40a0-43ec-bcbd-939b8453aee7
 redirect_from:
   - /2021080/docs/synchronization-behavior-enabling-multiple-mappings
   - /2021080/docs/en/synchronization-behavior-enabling-multiple-mappings
+  - /docs/synchronization-behavior-enabling-multiple-mappings
+  - /docs/en/synchronization-behavior-enabling-multiple-mappings
 ---
 
-During the [Publish and Synchronization](https://documentation.spryker.com/docs/en/publish-and-synchronization) process, a unique key is generated for each resource published. Resource’s denormalized data is then saved with this key to storage for later use. To enforce keys' uniqueness for each resource entity, by default, Spryker uses database IDs of the corresponding records during the key generation.
+During the [Publish and Synchronization](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html) process, a unique key is generated for each resource published. Resource’s denormalized data is then saved with this key to storage for later use. To enforce keys' uniqueness for each resource entity, by default, Spryker uses database IDs of the corresponding records during the key generation.
 
  Let’s take abstract products as an example. A typical key, with which abstract product data is saved to the storage, would look something like this:
  

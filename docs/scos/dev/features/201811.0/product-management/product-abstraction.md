@@ -2,6 +2,7 @@
 title: Product Abstraction
 description: You can easily build a product hierarchy structure with Abstract and Concrete Products. Products can come with multiple Variants, such as size or color.
 originalLink: https://documentation.spryker.com/v1/docs/product-abstraction
+originalArticleId: b18e5328-b2b4-4acf-bda9-c788f44e5214
 redirect_from:
   - /v1/docs/product-abstraction
   - /v1/docs/en/product-abstraction

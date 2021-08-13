@@ -2,9 +2,12 @@
 title: Creating a carrier company
 description: Use the procedure to create a carrier company and activate it in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-carrier-company
+originalArticleId: 7335402c-f389-47c0-952c-59d19580cf37
 redirect_from:
   - /2021080/docs/creating-a-carrier-company
   - /2021080/docs/en/creating-a-carrier-company
+  - /docs/creating-a-carrier-company
+  - /docs/en/creating-a-carrier-company
 ---
 
 The topic describes how to create a carrier company.
@@ -31,4 +34,4 @@ Click **List of shipment methods** to get back to the list of delivery methods. 
 ## What's next?
 
 You have now added a new carrier company for your store.
-The next step is to add a new shipment method to it. For more details, see [Creating and managing delivery methods](https://documentation.spryker.com/docs/creating-and-managing-shipment-methods).
+The next step is to add a new shipment method to it. For more details, see [Creating and managing delivery methods](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html).

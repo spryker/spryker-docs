@@ -2,9 +2,12 @@
 title: Arvato - Installation and Configuration
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
 originalLink: https://documentation.spryker.com/2021080/docs/arvato-installation-configuration
+originalArticleId: 01e4a638-f2ea-4974-8f55-ee85d8745298
 redirect_from:
   - /2021080/docs/arvato-installation-configuration
   - /2021080/docs/en/arvato-installation-configuration
+  - /docs/arvato-installation-configuration
+  - /docs/en/arvato-installation-configuration
 ---
 
 {% info_block errorBox %}
@@ -48,8 +51,8 @@ API URLs:
 | Sandbox URL | `https://integration.risk-solution-services.de/rss-services/risk-solution-services.v2.1` |
 
 Services:
-* [Risk Check](/docs/scos/dev/technology-partners/202001.0/payment-partners/arvato/arvato-risk-check.html)
-* [Store Order](/docs/scos/dev/technology-partners/202001.0/payment-partners/arvato/arvato-store-order.html)
+* [Risk Check](https://documentation.spryker.com/2021080/docs/arvato-risk-check-2-0)
+* [Store Order](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/arvato/arvato-store-order.html)
 
 To implement Arvato RSS you should be familiar with concept of extending the
 

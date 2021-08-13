@@ -2,6 +2,7 @@
 title: Content Items
 description: The section is designed to create and update content items, so later they can be added to pages and blocks through content item widgets in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/content-items-guide-201907
+originalArticleId: f2101b26-58ba-4309-9859-50905f08238f
 redirect_from:
   - /v3/docs/content-items-guide-201907
   - /v3/docs/en/content-items-guide-201907

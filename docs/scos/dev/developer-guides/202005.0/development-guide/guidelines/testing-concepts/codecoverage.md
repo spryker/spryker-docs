@@ -1,6 +1,7 @@
 ---
 title: Codecoverage
 originalLink: https://documentation.spryker.com/v5/docs/codecoverage
+originalArticleId: 00cd827b-721a-4ce7-9e8b-f7c331487a08
 redirect_from:
   - /v5/docs/codecoverage
   - /v5/docs/en/codecoverage

@@ -2,9 +2,12 @@
 title: CrefoPay - Callback
 description: Callbacks are redirects performed by the CrefoPay system.
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-callback
+originalArticleId: 620ac3f8-81fc-4aa3-b8a4-cc489dad20b5
 redirect_from:
   - /2021080/docs/crefopay-callback
   - /2021080/docs/en/crefopay-callback
+  - /docs/crefopay-callback
+  - /docs/en/crefopay-callback
 ---
 
 Callbacks are redirects performed by the CrefoPay system. The CrefoPay system redirects customers back to the URLs configured for the merchants shop. For each shop, you can define a single URL of each of the following types: confirmation, success and error.

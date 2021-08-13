@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - SalesQuantity
 originalLink: https://documentation.spryker.com/v3/docs/mg-sales-quantity
+originalArticleId: 1d5e7511-eef5-49b5-b6af-8bd61f835395
 redirect_from:
   - /v3/docs/mg-sales-quantity
   - /v3/docs/en/mg-sales-quantity

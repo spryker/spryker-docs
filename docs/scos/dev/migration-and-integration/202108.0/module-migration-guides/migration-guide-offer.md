@@ -2,9 +2,12 @@
 title: Migration Guide - Offer
 description: Use the guide to learn how to update the Offer module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-offer
+originalArticleId: 1ffe0839-2ca7-4606-b192-73089d72c4e7
 redirect_from:
   - /2021080/docs/mg-offer
   - /2021080/docs/en/mg-offer
+  - /docs/mg-offer
+  - /docs/en/mg-offer
 ---
 
 ## Upgrading from Version 0.1.* to Version 0.3.0

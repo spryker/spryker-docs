@@ -2,6 +2,7 @@
 title: Multiple Wishlists
 description: Help your customers track and save items for later purchase through multiple Wish Lists, which are connected to the users' accounts.
 originalLink: https://documentation.spryker.com/v4/docs/multiple-wishlists
+originalArticleId: f0886a2b-cf94-4f20-867a-9f0e9e8cfa8b
 redirect_from:
   - /v4/docs/multiple-wishlists
   - /v4/docs/en/multiple-wishlists

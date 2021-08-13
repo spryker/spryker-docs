@@ -2,6 +2,7 @@
 title: Category Filters Feature Integration
 description: The Category Filters Feature allows arranging items into categories and customizing filters. This guide describes how to integrate the feature into your project.
 originalLink: https://documentation.spryker.com/v5/docs/category-filter-feature-integration
+originalArticleId: e5b7cdf6-8ae1-4b49-8101-e661a3b5af52
 redirect_from:
   - /v5/docs/category-filter-feature-integration
   - /v5/docs/en/category-filter-feature-integration

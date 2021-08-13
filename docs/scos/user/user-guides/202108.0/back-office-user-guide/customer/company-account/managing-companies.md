@@ -2,9 +2,12 @@
 title: Managing companies
 description: Use the procedures to create and edit companies, approve and activate/deactivate a company, and/or deny a company in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-companies
+originalArticleId: 5e075d70-a08b-4995-ad61-25bfc5a2e68b
 redirect_from:
   - /2021080/docs/managing-companies
   - /2021080/docs/en/managing-companies
+  - /docs/managing-companies
+  - /docs/en/managing-companies
 ---
 
 This topic describes how to manage company records.
@@ -23,7 +26,7 @@ To create a new company record, do the following:
 3. Click **Save**. 
     The new created company appears in the _List of the Companies_ table on the *Companies* page.
 {% info_block errorBox "Important" %}
-Once the company is created, one business unit for it is created by default. This is considered to be a headquarter and can be managed in the same ways as the other business units. See [Managing company units](https://documentation.spryker.com/docs/managing-company-units
+Once the company is created, one business unit for it is created by default. This is considered to be a headquarter and can be managed in the same ways as the other business units. See [Managing company units](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-units.html
 {% endinfo_block %} for more details.)
 
 The companies can be managed by triggering certain actions in the _Actions_ column in the _List of Companies_ table on the *Companies* page. 
@@ -65,7 +68,7 @@ To change the name of a company:
 The updated company name is displayed in the _List of the Companies_ table of the *Companies* page.
 
 **What's next?**
-The company record is added and now you can proceed with creating a company unit. See [Managing company units](https://documentation.spryker.com/docs/managing-company-units) for more details.
+The company record is added and now you can proceed with creating a company unit. See [Managing company units](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-units.html) for more details.
 
 ### Reference information: Creating and managing companies
 

@@ -2,6 +2,7 @@
 title: Oryx for Zed
 description: oryx-for-zed is an extension of Oryx that performs a full build for Spryker Zed UI applications.
 originalLink: https://documentation.spryker.com/v3/docs/oryx-for-zed
+originalArticleId: b7446a1e-92bd-4388-ba0f-85b4a13f0c7b
 redirect_from:
   - /v3/docs/oryx-for-zed
   - /v3/docs/en/oryx-for-zed
@@ -63,7 +64,7 @@ yarn run build-zed
 
 ### Extend/change settings
 
-Settings are extended and changed by using the onyx-for-zed [API](https://documentation.spryker.com/v4/docs/oryx-for-zed#api).
+Settings are extended and changed by using the onyx-for-zed [API](/docs/scos/dev/developer-guides/201907.0/development-guide/front-end/zed/oryx-for-zed.html#api).
 
 The example below shows how to create a cuostm build:
 
@@ -95,7 +96,7 @@ Add a script into your `package.json` pointing to `build.js`.
 You will now be able to…
 
 ### Extend/change webpack configuration
-`webpack` is customised by using the `onyx-for-zed` [API](https://documentation.spryker.com/v4/docs/oryx-for-zed#api). 
+`webpack` is customised by using the `onyx-for-zed` [API](/docs/scos/dev/developer-guides/201907.0/development-guide/front-end/zed/oryx-for-zed.html#api). 
 The example below shows how to create a custom build:
 
 **Step 1:** `webpack.config.js`

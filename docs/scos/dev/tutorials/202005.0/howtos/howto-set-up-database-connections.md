@@ -1,6 +1,7 @@
 ---
 title: HowTo - Set up Database Connections
 originalLink: https://documentation.spryker.com/v5/docs/ht-setup-database-connections
+originalArticleId: 9912317c-b10b-4083-b501-1ad7bad68374
 redirect_from:
   - /v5/docs/ht-setup-database-connections
   - /v5/docs/en/ht-setup-database-connections

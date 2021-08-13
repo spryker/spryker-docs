@@ -2,9 +2,12 @@
 title: Calculator plugins
 description: The information in this topic covers the available calculator plugins along with their examples.
 originalLink: https://documentation.spryker.com/2021080/docs/calculator-plugins
+originalArticleId: 807b0c1d-5d35-464c-b121-1be5ba987e76
 redirect_from:
   - /2021080/docs/calculator-plugins
   - /2021080/docs/en/calculator-plugins
+  - /docs/calculator-plugins
+  - /docs/en/calculator-plugins
 ---
 
 Calculator plugins are registered in the `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for `QuoteTransfer` and `CalculationDependencyProvider::getOrderCalculatorPluginStack()` or in later versions of the Calculation module 4.00 and above `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for OrderTransfer.

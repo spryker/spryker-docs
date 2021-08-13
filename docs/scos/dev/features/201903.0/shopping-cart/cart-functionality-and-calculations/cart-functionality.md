@@ -2,6 +2,7 @@
 title: Cart Functionality
 description: Our Cart consists of a few components in Yves and Zed. Cart operations are invoked in CartClient, which contains methods for all common operations.
 originalLink: https://documentation.spryker.com/v2/docs/cart-functionality
+originalArticleId: e905d056-63fa-4c93-b7b5-ce70063f60d2
 redirect_from:
   - /v2/docs/cart-functionality
   - /v2/docs/en/cart-functionality

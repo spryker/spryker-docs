@@ -2,9 +2,12 @@
 title: Multi-theme
 description: The feature allows creating different themes for multiple stores on various occasions to attract customers' attention.
 originalLink: https://documentation.spryker.com/2021080/docs/multi-theme
+originalArticleId: 6ec049ed-ee08-4be8-ad33-21cacd90b9fd
 redirect_from:
   - /2021080/docs/multi-theme
   - /2021080/docs/en/multi-theme
+  - /docs/multi-theme
+  - /docs/en/multi-theme
 ---
 
 Every e-commerce shop reaches that moment when they need to stand out among competitors in order to attract more customers. The first thing that a buyer pays attention to when visiting an online store is the interface - layout, colors, design. Creating a perfect theme for multiple stores on various occasions, for example, Hallowing sale, Black Friday sale or Christmas, has become possible with the Multi-Theme feature provided by the Spryker Commerce OS.

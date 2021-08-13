@@ -2,6 +2,7 @@
 title: Creating product attributes
 description: Learn how to create product attributes in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/creating-product-attributes
+originalArticleId: 1f6c5ff9-53b8-4573-b816-21a79aad0c57
 redirect_from:
   - /v6/docs/creating-product-attributes
   - /v6/docs/en/creating-product-attributes
@@ -40,6 +41,6 @@ To apply a translation to all the other locales, select ![copy to other language
 ***
 
 ## Next steps
-* Learn how to [manage the product attributes](https://documentation.spryker.com/docs/managing-attributes). 
-* Learn about the attributes used to created product attributes in [Reference information: product attributes](https://documentation.spryker.com/docs/reference-information-product-attributes).
+* Learn how to [manage the product attributes](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/attributes/managing-product-attributes.html). 
+* Learn about the attributes used to created product attributes in [Reference information: product attributes](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/attributes/references/reference-information-product-attributes.html).
 

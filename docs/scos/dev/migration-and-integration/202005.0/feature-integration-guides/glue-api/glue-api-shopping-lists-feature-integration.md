@@ -1,6 +1,7 @@
 ---
 title: Glue API- Shopping Lists Feature Integration
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-shopping-lists-feature-integration
+originalArticleId: b9a2fd6a-31a7-40f1-9ab3-6495b2650a6b
 redirect_from:
   - /v5/docs/glue-api-shopping-lists-feature-integration
   - /v5/docs/en/glue-api-shopping-lists-feature-integration
@@ -21,8 +22,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature|
 | --- | --- |--- |
-| Spryker Core	 | master |[Glue API: Spryker Core Feature Integration](https://documentation.spryker.com/docs/en/glue-spryker-core-feature-integration) |
-| Shopping Lists	 | master |[Shopping Lists Feature Integration](https://documentation.spryker.com/docs/en/shopping-lists-feature-integration-201907) |
+| Spryker Core	 | master |[Glue API: Spryker Core Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Shopping Lists	 | master |[Shopping Lists Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/shopping-lists-feature-integration.html) |
 
 ## 1) Install the Required Modules Using Composer
 Run the following command to install the required modules:
@@ -110,7 +111,7 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 ### Enable resources
 {% info_block infoBox %}
 
-ShoppingListsResourcePlugin GET, POST, PATCH and DELETE, ShoppingListItemsResourcePlugin POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](https://documentation.spryker.com/docs/en/glue-infrastructure#resource-routing).
+ShoppingListsResourcePlugin GET, POST, PATCH and DELETE, ShoppingListItemsResourcePlugin POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/scos/dev/developer-guides/202005.0/development-guide/glue-api/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

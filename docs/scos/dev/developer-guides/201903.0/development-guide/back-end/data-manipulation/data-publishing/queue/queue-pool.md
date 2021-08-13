@@ -1,12 +1,13 @@
 ---
 title: Queue Pool
 originalLink: https://documentation.spryker.com/v2/docs/queue-pool
+originalArticleId: 0701a99c-da1a-4d00-b0a1-044d18b9ab0b
 redirect_from:
   - /v2/docs/queue-pool
   - /v2/docs/en/queue-pool
 ---
 
-Queue pool is designed to allow P&S ([Publish and Synchronization](https://documentation.spryker.com/v2/docs/publish-and-synchronization )) messages to be sent to several queues.
+Queue pool is designed to allow P&S ([Publish and Synchronization](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html)) messages to be sent to several queues.
 
 ## Configuration
 Queue pools are defined with unique names in `config/Shared/stores.php`

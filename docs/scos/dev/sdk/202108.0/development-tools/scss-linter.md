@@ -2,9 +2,12 @@
 title: SCSS linter
 description: Learn about the SCSS linter tool that allows you to find and fix mistakes in the code style.
 originalLink: https://documentation.spryker.com/2021080/docs/scss-linter
+originalArticleId: 62b2d90c-52f4-4307-b93f-78776f7408aa
 redirect_from:
   - /2021080/docs/scss-linter
   - /2021080/docs/en/scss-linter
+  - /docs/scss-linter
+  - /docs/en/scss-linter
 ---
 
 *SCSS linter* allows you to find and fix code style mistakes. It helps a team to follow the same standards and make code more readable.
@@ -12,7 +15,7 @@ redirect_from:
 To analyze and fix the existing SCSS files, [Stylelint](https://stylelint.io/) is used.
 
 ## Installation
-For details on how to install the SCSS linter for your project, see the [SCSS linter integration guide](https://documentation.spryker.com/docs/scss-linter-integration-guide).
+For details on how to install the SCSS linter for your project, see the [SCSS linter integration guide](/docs/scos/dev/migration-and-integration/{{ page.version }}/development-tools/scss-linter-integration-guide.html).
 
 ## Using SCSS linter
 

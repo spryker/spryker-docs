@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Different Sores Different Logic - Landing Pages - Spryker Commerce OS
 originalLink: https://documentation.spryker.com/v3/docs/t-different-stores-different-logic-landing-pages
+originalArticleId: ef5351b4-882e-49a7-a053-67470a19ebd7
 redirect_from:
   - /v3/docs/t-different-stores-different-logic-landing-pages
   - /v3/docs/en/t-different-stores-different-logic-landing-pages

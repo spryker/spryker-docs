@@ -2,6 +2,7 @@
 title: Database Overview
 description: In this article, you will get an overview of the database in the ORM directory.
 originalLink: https://documentation.spryker.com/v1/docs/database-overview
+originalArticleId: 46d4fe30-c2fb-4149-9d1e-4d496ca54ff8
 redirect_from:
   - /v1/docs/database-overview
   - /v1/docs/en/database-overview

@@ -2,6 +2,7 @@
 title: Managing Product Labels
 description: The Managing Product Labels section describes the procedures you can use to view, edit, activate and/or deactivate product labels in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-product-labels
+originalArticleId: d56c48e3-2d39-445f-be04-0068e0d2715b
 redirect_from:
   - /v5/docs/managing-product-labels
   - /v5/docs/en/managing-product-labels
@@ -34,7 +35,7 @@ Products for the dynamic labels (like **New**, or **Discontinued**
 
 To edit a product label:
 1. Click **Edit** in the _Actions_ column of the **Overview of Product Labels** page. 
-2. On the **Edit Product Label** page, edit the values. See [Product Labels: Reference Information](https://documentation.spryker.com/docs/en/product-labels-reference-information).
+2. On the **Edit Product Label** page, edit the values. See [Product Labels: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-labels/references/product-labels-reference-information.html).
 3. Once done, click **Save**.
 
 ## Activating/Deactivating a Product Label
@@ -49,6 +50,6 @@ There are several ways to activate/deactivate a product label:
 * Activate/deactivate a label by selecting **Activate/Deactivate** in the _Actions_ column of the **Overview of Product Labels** page.
 ***
 **What's next?** 
-* Learn how to prioritize a label in the [Prioritizing Labels](https://documentation.spryker.com/docs/en/prioritizing-labels) topic.
-* To learn what attributes you enter and select while editing the product label, see the [Product Labels: Reference Information](https://documentation.spryker.com/docs/en/product-labels-reference-information) article.
+* Learn how to prioritize a label in the [Prioritizing Labels](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-labels/prioritizing-labels.html) topic.
+* To learn what attributes you enter and select while editing the product label, see the [Product Labels: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-labels/references/product-labels-reference-information.html) article.
 

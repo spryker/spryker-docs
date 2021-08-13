@@ -1,6 +1,7 @@
 ---
 title: Managing Carts
 originalLink: https://documentation.spryker.com/v2/docs/managing-carts
+originalArticleId: 637021d1-b098-459e-ba34-974ae020de38
 redirect_from:
   - /v2/docs/managing-carts
   - /v2/docs/en/managing-carts

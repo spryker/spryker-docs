@@ -2,6 +2,7 @@
 title: Silex replacement
 description: The article contains information on the Silex replacement, backward compatibility, steps to be taken, changes in the old procedure and the new procedure.
 originalLink: https://documentation.spryker.com/v6/docs/silex-replacement
+originalArticleId: 15693385-d9df-4da2-9310-e643d23e335a
 redirect_from:
   - /v6/docs/silex-replacement
   - /v6/docs/en/silex-replacement
@@ -87,21 +88,21 @@ Update the following modules using the provided migration guides:
 
 | MODULE | MIGRATION GUIDE |
 | --- | --- |
-| ErrorHandler | [Migration guide - ErrorHandler](https://documentation.spryker.com/docs/migration-guide-errorhandler) |
-| EventDispatcher | [Migration guide - EventDispatcher](https://documentation.spryker.com/docs/migration-guide-eventdispatcher) |
-| Form | [Migration guide - Form](https://documentation.spryker.com/docs/migration-guide-form) |
-| Http | [Migration guide - Http](https://documentation.spryker.com/docs/migration-guide-http) |
-| Locale | [Migration guide - Locale](https://documentation.spryker.com/docs/migration-guide-locale) |
-|Propel | [Migration guide - Propel](https://documentation.spryker.com/docs/migration-guide-propel) |
-| Messenger | [Migration guide - Messenger](https://documentation.spryker.com/docs/migration-guide-messenger) |
-|Router | [Migration guide - Router](https://documentation.spryker.com/docs/migration-guide-router) |
-| Security| [Migration guide -Security](https://documentation.spryker.com/docs/migration-guide-security) |
-|Session | [Migration guide - Session](https://documentation.spryker.com/docs/migration-guide-session) |
-| Store | [Migration guide - Store](https://documentation.spryker.com/docs/migration-guide-store) |
-| Translator | [Migration guide - Translator](https://documentation.spryker.com/docs/migration-guide-translator) |
-| Twig | [Migration guide -Twig](https://documentation.spryker.com/docs/migration-guide-twig) |
-| Validator | [Migration guide - Validator](https://documentation.spryker.com/docs/migration-guide-validator) |
-| WebProfiler | [Migration guide - WebProfiler](https://documentation.spryker.com/docs/migration-guide-webprofiler) |
+| ErrorHandler | [Migration guide - ErrorHandler](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-errorhandler.html) |
+| EventDispatcher | [Migration guide - EventDispatcher](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-eventdispatcher.html) |
+| Form | [Migration guide - Form](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-form.html) |
+| Http | [Migration guide - Http](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-http.html) |
+| Locale | [Migration guide - Locale](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-locale.html) |
+|Propel | [Migration guide - Propel](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-propel.html) |
+| Messenger | [Migration guide - Messenger](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-messenger.html) |
+|Router | [Migration guide - Router](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-router.html) |
+| Security| [Migration guide -Security](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-security.html) |
+|Session | [Migration guide - Session](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-session.html) |
+| Store | [Migration guide - Store](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-store.html) |
+| Translator | [Migration guide - Translator](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-translator.html) |
+| Twig | [Migration guide -Twig](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-twig.html) |
+| Validator | [Migration guide - Validator](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-validator.html) |
+| WebProfiler | [Migration guide - WebProfiler](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-webprofiler.html) |
 
 You've replaced silex. 
 
@@ -113,7 +114,7 @@ To remove Silex:
 2. In `public/Glue/index.php` replace `Pyz\Glue\GlueApplication\Bootstrap\GlueBootstrap` with `Spryker\Glue\GlueApplication\Bootstrap\GlueBootstrap`. 
 3. Add `Spryker\Shared\Http\Plugin\EventDispatcher\ResponseListenerEventDispatcherPlugin` to `\Pyz\Glue\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`.
 4. Add `Spryker\Glue\Http\Plugin\Application\HttpApplicationPlugin` to `\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider::getApplicationPlugins()`.
-5. Remove the `Pimple` plugin everywhere. To access an [Application](https://documentation.spryker.com/docs/application-201903) service, use `$container->getApplicationService('service id');` in the `DependencyProvider`. Then, you can retrieve it within the modules Factory with `$this->getProvidedDependency()`.
+5. Remove the `Pimple` plugin everywhere. To access an [Application](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/silex-replacement/application.html) service, use `$container->getApplicationService('service id');` in the `DependencyProvider`. Then, you can retrieve it within the modules Factory with `$this->getProvidedDependency()`.
 
 6. Add `Spryker\Shared\Http\Plugin\EventDispatcher\ResponseListenerEventDispatcherPlugin` to `\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`.
 

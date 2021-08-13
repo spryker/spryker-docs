@@ -2,14 +2,17 @@
 title: Configuring the search features
 description: In this article, you’ll learn how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-the-search-features
+originalArticleId: 82a42db7-678d-405c-bc14-44685b7a8099
 redirect_from:
   - /2021080/docs/configuring-the-search-features
   - /2021080/docs/en/configuring-the-search-features
+  - /docs/configuring-the-search-features
+  - /docs/en/configuring-the-search-features
 ---
 
 This article explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
 
-This configuration is only relevant if you enable the three query expanders and the result formatters. See [Configuring the search query](https://documentation.spryker.com/docs/configuring-search-query) for details.
+This configuration is only relevant if you enable the three query expanders and the result formatters. See [Configuring the search query](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-the-search-query.html) for details.
 
 To build configuration for the search features, provide implementation for `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigBuilderPluginInterface`:
 

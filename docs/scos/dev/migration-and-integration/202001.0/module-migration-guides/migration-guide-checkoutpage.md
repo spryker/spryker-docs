@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CheckoutPage
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-checkoutpage
+originalArticleId: 8757b4fb-a92e-4389-ad7b-8ba03e6d4a28
 redirect_from:
   - /v4/docs/migration-guide-checkoutpage
   - /v4/docs/en/migration-guide-checkoutpage

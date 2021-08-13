@@ -1,6 +1,7 @@
 ---
 title: CartsRestApi Migration Guide
 originalLink: https://documentation.spryker.com/v6/docs/cartsrestapi-migration-guide
+originalArticleId: c95262c4-c8b0-4594-b0fa-ab746f37da34
 redirect_from:
   - /v6/docs/cartsrestapi-migration-guide
   - /v6/docs/en/cartsrestapi-migration-guide

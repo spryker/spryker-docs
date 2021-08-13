@@ -1,6 +1,7 @@
 ---
 title: Propel
 originalLink: https://documentation.spryker.com/v5/docs/propel
+originalArticleId: 1319c4cf-7e4f-4813-b424-d72fe64c435f
 redirect_from:
   - /v5/docs/propel
   - /v5/docs/en/propel

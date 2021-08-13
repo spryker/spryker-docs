@@ -1,6 +1,7 @@
 ---
 title: Contentserv
 originalLink: https://documentation.spryker.com/v6/docs/contentserv-1
+originalArticleId: 8e6cc021-8067-4da7-8499-e9d96bde7a7a
 redirect_from:
   - /v6/docs/contentserv-1
   - /v6/docs/en/contentserv-1

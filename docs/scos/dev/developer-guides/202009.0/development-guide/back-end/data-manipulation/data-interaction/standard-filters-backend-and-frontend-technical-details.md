@@ -2,6 +2,7 @@
 title: Standard Filters Backend and Frontend Technical Details
 description: In this article, you will get information on technical details for the frontend and backend development for the standard filters.
 originalLink: https://documentation.spryker.com/v6/docs/standard-filters-backend-and-frontend-technical-details
+originalArticleId: ae7e6107-fddc-4a36-8aad-ad2ad57a4260
 redirect_from:
   - /v6/docs/standard-filters-backend-and-frontend-technical-details
   - /v6/docs/en/standard-filters-backend-and-frontend-technical-details
@@ -14,7 +15,7 @@ The backend part of Standard Filters feature is located in the following modules
 2. ProductCategoryFilterGui (`spryker/product-category-filter-gui`),
 3. ProductCategoryFilterStorage (`spryker/product-category-filter-storage`).
 
-Category Filters management is described in the [Back Office guide](https://documentation.spryker.com/docs/managing-category-filters).
+Category Filters management is described in the [Back Office guide](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html).
 
 ## Frontend Technical Details
 CatalogPage module (`spryker-shop/catalog-page`) provides all applicable product filters and a basic set of templates, used by all pages.

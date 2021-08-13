@@ -1,9 +1,12 @@
 ---
 title: Reference information- Shipment method entities in the database
 originalLink: https://documentation.spryker.com/2021080/docs/reference-information-shipment-method-entities-in-the-database
+originalArticleId: 727c3313-3581-40a6-a567-1ea1f7bda3cc
 redirect_from:
   - /2021080/docs/reference-information-shipment-method-entities-in-the-database
   - /2021080/docs/en/reference-information-shipment-method-entities-in-the-database
+  - /docs/reference-information-shipment-method-entities-in-the-database
+  - /docs/en/reference-information-shipment-method-entities-in-the-database
 ---
 
 The following schema shows how the sales order and shipment method entities are modeled in the database:

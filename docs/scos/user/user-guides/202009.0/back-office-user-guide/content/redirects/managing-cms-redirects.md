@@ -2,6 +2,7 @@
 title: Managing CMS redirects
 description: The guide provides procedures on how to update or delete URL redirects in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-cms-redirects
+originalArticleId: c0231481-4304-473b-9ee0-b6405b4c4fa5
 redirect_from:
   - /v6/docs/managing-cms-redirects
   - /v6/docs/en/managing-cms-redirects
@@ -22,7 +23,7 @@ To start managing CMS redirects, go to **Content Management** > **Redirects**.
 3. To keep the changes, click **Save**.
 
 {% info_block infoBox %}
-See [CMS Redirects: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/redirects/references/cms-redirects-references.html
+See [CMS Redirects: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/redirects/references/reference-information-cms-redirects.html
 {% endinfo_block %} to learn more information about the attributes you need to enter.)
 
 {% info_block warningBox %}
@@ -42,4 +43,4 @@ On the **Edit a CMS redirect** page, you can do the following:
 3. This will successfully delete the redirect and remove it from the list of redirects.
 ***
 **What's next?**
-To learn more about attributes you enter on the page, see [CMS Redirects: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/redirects/references/cms-redirects-references.html).
+To learn more about attributes you enter on the page, see [CMS Redirects: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/redirects/references/reference-information-cms-redirects.html).

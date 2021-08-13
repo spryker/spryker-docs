@@ -1,0 +1,13 @@
+---
+title: Manage Products in Spryker
+description: This video demonstrates how products are managed in Spryker.
+originalLink: https://documentation.spryker.com/v4/docs/product-management-video
+originalArticleId: 37ff8e44-cf38-4ae2-b493-2fad5f0bb8e5
+redirect_from:
+  - /v4/docs/product-management-video
+  - /v4/docs/en/product-management-video
+---
+
+This video demonstrates how [products](/docs/scos/dev/features/202001.0/product-information-management/product-information-management.html) are managed in Spryker. The video reviews product structure discussing concepts such as abstract and concrete products and their benefits. Then, we review product features such as: Product Options, Product Labels, Product Relations, Product Sets and Product Bundles.
+
+<iframe src="https://fast.wistia.net/embed/iframe/uc9vif0tx7" title="Product Management" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>

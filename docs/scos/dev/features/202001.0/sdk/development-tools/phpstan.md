@@ -2,6 +2,7 @@
 title: PHPStan
 description: Use the article to learn how to install and use PHPStan
 originalLink: https://documentation.spryker.com/v4/docs/phpstan
+originalArticleId: a4e8af5b-ecff-45c0-b349-9b65d41d6e57
 redirect_from:
   - /v4/docs/phpstan
   - /v4/docs/en/phpstan

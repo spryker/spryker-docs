@@ -1,9 +1,12 @@
 ---
 title: Using a Component
 originalLink: https://documentation.spryker.com/2021080/docs/t-use-component
+originalArticleId: cb6a7b9c-c64d-480f-a4e9-0d122e56594e
 redirect_from:
   - /2021080/docs/t-use-component
   - /2021080/docs/en/t-use-component
+  - /docs/t-use-component
+  - /docs/en/t-use-component
 ---
 
 To use a component, in Spryker Shop, you need to add it to a layout template (Twig file). Components can be added to other components (except atoms), views, page templates and widgets. There are two possible strategies for this purpose: **include** and **embed**. In the following document, we shall review both of them.
@@ -48,7 +51,7 @@ The most common attributes to include are:
 * `modifiers` (optional) - used to enable component modifiers.
 
 {% info_block infoBox %}
-For more details, see section _Twig_ in [Atomic Frontend](https://documentation.spryker.com/v4/docs/atomic-frontend#twig
+For more details, see section _Twig_ in [Atomic Frontend](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html#twig
 {% endinfo_block %}.)
 
 ## Include
@@ -70,7 +73,7 @@ The following block demonstrates how to include component `new-component-counter
 ```
 
 {% info_block infoBox %}
-See component implementation in [How To Create a Component](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html
+See component implementation in [How To Create a Component](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html
 {% endinfo_block %}.)
 
 Now, let us have a look at the embedded element on the page:
@@ -114,7 +117,7 @@ The resulting Twig will look as follows:
 ```
 
 {% info_block infoBox %}
-You can find the original Twig of the component in the _Create Component Template_ section of [HowTo - Create a Component](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html
+You can find the original Twig of the component in the _Create Component Template_ section of [HowTo - Create a Component](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html
 {% endinfo_block %}.)
 
 Now, let us check how it looks like on the page.

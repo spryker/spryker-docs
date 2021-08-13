@@ -2,9 +2,12 @@
 title: Klarna - Payment Workflow
 description: In this article, you will find part payment request flow with Klarna.
 originalLink: https://documentation.spryker.com/2021080/docs/klarna-payment-workflow
+originalArticleId: 3c541e8f-7983-4f74-acce-a34aebb26c36
 redirect_from:
   - /2021080/docs/klarna-payment-workflow
   - /2021080/docs/en/klarna-payment-workflow
+  - /docs/klarna-payment-workflow
+  - /docs/en/klarna-payment-workflow
 ---
 
 Both `Part Payment` and `Invoice` payment methods have the same request flow. It basically consists of the following steps:

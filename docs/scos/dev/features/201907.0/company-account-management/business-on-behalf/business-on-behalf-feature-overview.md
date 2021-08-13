@@ -2,12 +2,13 @@
 title: Business On Behalf Feature Overview
 description: The feature allows having multiple company users per customer account with a possibility to select one company user to be a default user.
 originalLink: https://documentation.spryker.com/v3/docs/business-on-behalf-feature-overview-201903
+originalArticleId: db5f7c50-6122-4f20-9e0c-07b313b8ca55
 redirect_from:
   - /v3/docs/business-on-behalf-feature-overview-201903
   - /v3/docs/en/business-on-behalf-feature-overview-201903
 ---
 
-Every [business unit](/docs/scos/dev/features/202001.0/company-account-management/business-unit-management/business-unit-management.html) includes some company users that have specific permissions within this business unit. Business on Behalf feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
+Every [business unit](/docs/scos/dev/features/201907.0/company-account-management/business-unit-management/business-unit-management.html) includes some company users that have specific permissions within this business unit. Business on Behalf feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
 
 You can assign a user to multiple business units in the Back Office. After that, a single user will be able to log in to several company accounts and manage all of them via a browser window.
 

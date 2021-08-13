@@ -2,6 +2,7 @@
 title: Company Account and General Organizational Structure
 description: In the context of permissions management, the top level of a B2B business model hierarchy is a Company. Each company has its organizational structure.
 originalLink: https://documentation.spryker.com/v2/docs/company-account-general-organizational-structure
+originalArticleId: 711e5a2a-40c9-4837-b635-01f63f82fb7e
 redirect_from:
   - /v2/docs/company-account-general-organizational-structure
   - /v2/docs/en/company-account-general-organizational-structure

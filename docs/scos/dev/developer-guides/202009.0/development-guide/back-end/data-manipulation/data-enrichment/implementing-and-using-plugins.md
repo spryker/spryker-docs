@@ -2,6 +2,7 @@
 title: Implementing and Using Plugins
 description: Plugins are small classes that are used to connect bundles in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.
 originalLink: https://documentation.spryker.com/v6/docs/plugin
+originalArticleId: 24b31aa4-de3e-4b55-b8e0-c135035fd784
 redirect_from:
   - /v6/docs/plugin
   - /v6/docs/en/plugin

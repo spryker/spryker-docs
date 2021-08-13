@@ -2,9 +2,12 @@
 title: Creating, using, and extending the transfer objects
 description: The article provides information on creation and usage of the Transfer objects.
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-transfer-objects
+originalArticleId: f3c1c5d9-348c-4d02-9d4b-f0cede048566
 redirect_from:
   - /2021080/docs/ht-use-transfer-objects
   - /2021080/docs/en/ht-use-transfer-objects
+  - /docs/ht-use-transfer-objects
+  - /docs/en/ht-use-transfer-objects
 ---
 
 Transfer objects are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
@@ -318,6 +321,6 @@ You can use the following definitions to generate the related code:
 
 * Add shared transfer schema.
 
-See the [Spryk](https://documentation.spryker.com/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/{{ page.version }}/development-tools/spryk-code-generator.html) documentation for details.
  
 

@@ -2,6 +2,7 @@
 title: The Back Office overview
 description: The article provides general information about the actions you can perform in Spryker Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/the-back-office-overview
+originalArticleId: 1d5bfb84-35dd-4a55-9e42-3804e8d06120
 redirect_from:
   - /v6/docs/the-back-office-overview
   - /v6/docs/en/the-back-office-overview

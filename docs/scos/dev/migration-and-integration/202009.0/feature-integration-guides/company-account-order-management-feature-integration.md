@@ -2,6 +2,7 @@
 title: Company account + order management feature integration
 description: This guide provides step-by-step instruction on integrating Company Account Management + Order Management feature into the Spryker-based project.
 originalLink: https://documentation.spryker.com/v6/docs/company-account-order-management-feature-integration
+originalArticleId: d1857d2b-9183-4224-a6be-05d4a4fa3438
 redirect_from:
   - /v6/docs/company-account-order-management-feature-integration
   - /v6/docs/en/company-account-order-management-feature-integration

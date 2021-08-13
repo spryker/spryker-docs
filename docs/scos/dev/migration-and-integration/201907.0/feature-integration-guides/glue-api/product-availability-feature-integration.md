@@ -2,6 +2,7 @@
 title: Product Availability Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Product Availability feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v3/docs/glue-api-product-availability-feature-integration
+originalArticleId: 4729ea4a-dec8-47a8-b003-661ad64c9f8e
 redirect_from:
   - /v3/docs/glue-api-product-availability-feature-integration
   - /v3/docs/en/glue-api-product-availability-feature-integration

@@ -2,6 +2,7 @@
 title: Extending the Database Schema
 description: Fields can be added to the existing database tables, but they cannot be removed (removing fields from the tables could break the functionalities implemented in Spryker Core).
 originalLink: https://documentation.spryker.com/v5/docs/t-extend-db-schema
+originalArticleId: 777c426f-961c-40e3-a577-6e1d8c51bf91
 redirect_from:
   - /v5/docs/t-extend-db-schema
   - /v5/docs/en/t-extend-db-schema

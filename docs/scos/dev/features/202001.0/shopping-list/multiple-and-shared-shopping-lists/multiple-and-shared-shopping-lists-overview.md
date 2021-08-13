@@ -2,6 +2,7 @@
 title: Multiple and Shared Shopping Lists Overview
 description: A general overview of the Multiple and shared shopping lists feature.
 originalLink: https://documentation.spryker.com/v4/docs/multiple-shared-shopping-lists-overview
+originalArticleId: 6f285ce8-0da1-43d1-91a1-886d2e364d06
 redirect_from:
   - /v4/docs/multiple-shared-shopping-lists-overview
   - /v4/docs/en/multiple-shared-shopping-lists-overview
@@ -13,7 +14,7 @@ A shopping list is always saved disregarding if a company user logs out and logs
 There are two ways to create a shopping list:
 
 * through a [shopping list widget](/docs/scos/dev/features/202001.0/shopping-list/shopping-list-widget/shopping-list-widget.html) in the header of the shop
-* from Shopping Lists page in My Account menu. See [Creating a shopping list](https://documentation.spryker.com/v4/docs/shopping-lists-shop-guide#create-shopping-list) for more detailed instruction.
+* from Shopping Lists page in My Account menu. See [Creating a shopping list](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-lists.html#create-shopping-list) for more detailed instruction.
 
 New items are added to shopping lists by clicking Add to Shopping List on the product details page.
 
@@ -104,7 +105,7 @@ Besides other products, user with *Full access* rights is allowed to see alterna
 It is possible to grant different access rights on shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* for the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.
 
 ## Search Widget for Shopping Lists
-Starting from v. 2019.03.0, it is possible to add a [search widget for concrete products](https://documentation.spryker.com/v4/docs/search-widget-for-concrete-producs-overview-201903) to a shopping list. The widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+Starting from v. 2019.03.0, it is possible to add a [search widget for concrete products](/docs/scos/dev/features/202001.0/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products-overview.html) to a shopping list. The widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 ![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png){height="" width=""}
 
 ## Subtotal for a Shopping List

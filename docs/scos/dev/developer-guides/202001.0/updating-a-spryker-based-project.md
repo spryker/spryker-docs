@@ -1,6 +1,7 @@
 ---
 title: Updating a Spryker-Based Project
 originalLink: https://documentation.spryker.com/v4/docs/updating-a-spryker-based-project
+originalArticleId: e04a6b67-2d4b-46ed-9e74-3ee2b1f77291
 redirect_from:
   - /v4/docs/updating-a-spryker-based-project
   - /v4/docs/en/updating-a-spryker-based-project
@@ -15,9 +16,9 @@ The smallest building block of the Spryker product is a **module**. Usually, a m
 
 The set of features make up a **product**. Spryker offers the following products:
 
-* [B2B Demo Shop](https://documentation.spryker.com/v4/docs/demoshops#b2b-demo-shop)
-* [B2C Demo Shop](https://documentation.spryker.com/v4/docs/demoshops#b2c-demo-shop)
-* [Master Suite](https://documentation.spryker.com/v4/docs/demoshops#master-suite)
+* [B2B Demo Shop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops)
+* [B2C Demo Shop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops)
+* [Master Suite](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops)
 
 Schematically, the Spryker product structure looks like this:
 
@@ -27,7 +28,7 @@ Schematically, the Spryker product structure looks like this:
 Now that you know about the Spryker structure, you need to decide at which level you want to do updates of your projects: at the **feature level** or at the **module level**. 
 {% info_block infoBox %}
 
-Spryker does big [Product Releases](https://documentation.spryker.com/v4/docs/spryker-release-process#product-releases) of **features** every several months. The **modules** fall under the [Code Release](https://documentation.spryker.com/v4/docs/spryker-release-process#atomic--code--releases) process, and therefore there can be up to several module updates per day.
+Spryker does big [Product Releases](/docs/scos/user/about-spryker/202001.0/spryker-release-process.html#product-releases) of **features** every several months. The **modules** fall under the [Code Release](/docs/scos/user/about-spryker/202001.0/spryker-release-process.html#atomic--code--releases) process, and therefore there can be up to several module updates per day.
 
 {% endinfo_block %}
 
@@ -143,7 +144,7 @@ For **major** module version updates or installation of **new packages**, follow
 ```Bash
 php -d memory_limit=-1 composer.phar require "spryker/sales:^8.0.0"
 ```
-If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](https://documentation.spryker.com/v4/docs/updating-a-spryker-based-project#troubleshooting) section at the end of the article, *In case when update is not possible* part.
+If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](/docs/scos/dev/developer-guides/202001.0/updating-a-spryker-based-project.html#troubleshooting) section at the end of the article, *In case when update is not possible* part.
 
 2. [Check the migration guide](http://documentation.spryker.com/module_migration_guides/about-migration.htm) for the respective major module version. See the [Sales](http://documentation.spryker.com/module_migration_guides/mg-sales.htm) migration guide for example. Find the section for your module version and complete all the steps it contains.
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
@@ -165,7 +166,7 @@ The goal of the automotive tests in case of updates is not to have a 100% code c
 ### 2. Run code analysis tools
 We find the following static code analysis tools the most helpful for running after the update and strongly recommend that you use them:
 
-* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules) and many more. See [PHPStan](https://documentation.spryker.com/v4/docs/phpstan-201903) for information on how to install, and use the tool.
+* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules) and many more. See [PHPStan](/docs/scos/dev/features/202001.0/sdk/development-tools/phpstan.html) for information on how to install, and use the tool.
 * [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the project code clean  and consistent after the update. See [Code Sniffer](/docs/scos/dev/features/202001.0/sdk/development-tools/code-sniffer.html) for information on how to use the tool.
 * [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](/docs/scos/dev/features/202001.0/sdk/development-tools/architecture-sniffer.html) for information on how to run the tool.
 
@@ -200,7 +201,7 @@ If you inherit a class from Spryker, there is one more way to "protect" yourself
 In Spryker we have the [Composer Constrainer](/docs/scos/dev/developer-guides/202001.0/architecture-guide/module-api/using-composer-constraint-for-customized-modules.html) tool that will try to lock modules for you automatically by searching for inherited classes in your project namsepace.
 
 ## Troubleshooting
-This section contains common issues with the updates and provides solutions on how to fix them. If your issue is not on the list and you need help, please [contact us](https://documentation.spryker.com/v4/docs/updating-a-spryker-based-project#let-us-know).
+This section contains common issues with the updates and provides solutions on how to fix them. If your issue is not on the list and you need help, please [contact us](/docs/scos/dev/developer-guides/202001.0/updating-a-spryker-based-project.html#let-us-know).
 
 ### You see Spryker Code Sniffer Updates
 In case you see Code Sniffer updates from Spryker, first check if the new code sniffer rules have been added. Investigate what are they doing and decide with the team if you need them.

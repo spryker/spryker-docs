@@ -1,14 +1,17 @@
 ---
 title: Release Notes 202001.0
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-2020010
+originalArticleId: 8e561ae0-5d15-45d1-934d-94a7c36d4be8
 redirect_from:
   - /2021080/docs/release-notes-2020010
   - /2021080/docs/en/release-notes-2020010
+  - /docs/release-notes-2020010
+  - /docs/en/release-notes-2020010
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in January of 2020.
 
-For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/202001.0/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{ page.version }}/developer-getting-started-guide.html).
 
 ## Spryker Commerce OS
 
@@ -25,7 +28,7 @@ A back-office user can also **split an order** into multiple shipments or modify
 * Sales-quantity module with the functionality of order quantity threshold
 
 #### Documentation
-[Split Delivery](/docs/scos/dev/features/202001.0/order-management/split-delivery/split-delivery.html)
+[Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
 
 ### Decimal Stock
 Spryker now supports product stock definition as **decimal** instead of integer. You can define a product stock as
@@ -36,7 +39,7 @@ Spryker now supports product stock definition as **decimal** instead of integer.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image3.png){height="" width=""}
 
 #### Documentation
-[Packaging Units](https://documentation.spryker.com/v4/docs/packaging-units) 
+[Packaging Units](https://documentation.spryker.com/2021080/docs/packaging-units) 
 
 ### Improved Packaging Unit
 You can set a **decimal amount** for your packages, which allows you to sell products in flexible quantities.
@@ -44,7 +47,7 @@ The requirement is to share your package stock with another concrete product. In
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image5.png){height="" width=""}
 
 #### Documentation
-[Packaging Units](/docs/scos/dev/features/202001.0/packaging-and-measurement-units/packaging-units/packaging-units.html) 
+[Packaging Units](https://documentation.spryker.com/2021080/docs/packaging-units-202001) 
 
 ### Improved Scheduled Prices
 The **Scheduled Price** feature allows you to define a price for your products that will take effect in the future. Create a scheduled price manually in the Back Office or import them in bulk via CSV files. Starting from this release, you can manage your previously imported **Scheduled Prices** directly in the Back Office.
@@ -54,9 +57,9 @@ The **Scheduled Price** feature allows you to define a price for your products t
 
 #### Documentation
 
-* [Scheduled Prices](https://documentation.spryker.com/v4/docs/scheduled-prices-201907)
-* [Creating Scheduled Prices in the Back Office](/docs/scos/user/user-guides/202001.0/back-office-user-guide/price/scheduled-prices/creating-scheduled-prices.html)
-* [Managing Scheduled Prices in the Back Office](/docs/scos/user/user-guides/202001.0/back-office-user-guide/price/scheduled-prices/managing-scheduled-prices.html)
+* [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
+* [Creating Scheduled Prices in the Back Office](https://documentation.spryker.com/2021080/docs/creating-scheduled-prices-201907)
+* [Managing Scheduled Prices in the Back Office](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html)
 
 ### Multi-store Improvements
 Spryker increases the number of features that you can manage per store.
@@ -77,11 +80,11 @@ Spryker increases the number of features that you can manage per store.
 
 #### Documentation
 
-* [Multiple Stores](/docs/scos/dev/features/202001.0/internationalization/multiple-stores.html)
-* [Inventory](/docs/scos/dev/features/202001.0/inventory-management/inventory.html)
-* [Warehouse Management](/docs/scos/dev/features/202001.0/inventory-management/warehouse-management.html)
-* [Managing Payment Methods in the Back Office](https://documentation.spryker.com/v4/docs/managing-payment-methods )
-* [Managing Delivery Methods in the Back Office](https://documentation.spryker.com/v4/docs/creating-and-managing-shipment-methods )
+* [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/howto-set-up-multiple-stores.html)
+* [Inventory](https://documentation.spryker.com/2021080/docs/inventory-management)
+* [Warehouse Management](https://documentation.spryker.com/2021080/docs/multiple-warehouse-stock)
+* [Managing Payment Methods in the Back Office](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html)
+* [Managing Delivery Methods in the Back Office](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html)
 
 ***
 ## CMS
@@ -96,7 +99,7 @@ Moreover, a project can mix both e-commerce content created in Spryker, and rich
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image11.png){height="" width=""}
 
 #### Documentation
-[Templates and Slots](/docs/scos/dev/features/202001.0/cms/templates-and-slots/templates-and-slots.html)
+[Templates and Slots](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/templates-and-slots-overview.html)
 ***
 ## B2B
 ### Adding Shipment Cost for the Approval Process
@@ -105,7 +108,7 @@ In the **Approval Process**, previously, it was not possible to add shipment cos
 
 
 #### Documentation 
-[Approval Process](https://documentation.spryker.com/v4/docs/approval-process-202001 )
+[Approval Process](https://documentation.spryker.com/2021080/docs/approval-process)
 
 ### Configurable Bundle
 Configurable Bundle provides a guiding tool to simplify the purchasing of complex product combinations and brings a smooth shopping experience. It allows companies to sell online complex combinations of products that would otherwise require a physical presence in the store.
@@ -113,7 +116,7 @@ Configurable bundles are compatible with both B2B & B2C stores but at this point
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+202001.0/image10.png){height="" width=""}
 
 #### Documentation
-[Configurable Bundle](/docs/scos/dev/features/202001.0/product-information-management/configurable-bundle/configurable-bundle.html) 
+[Configurable Bundle](https://documentation.spryker.com/2021080/docs/configurable-bundle) 
 ***
 ## Spryker Glue REST API
 In this release, we continue exposing the Storefront functionality for both B2C and B2B.
@@ -123,32 +126,32 @@ New endpoints and relevant improvements to the existing ones are now available.
 There are many scenarios where shop owners want to display labels on product items to increase customers’ engagement and conversion. Product labels were already exposed through the Abstract Product API, and now you can make use of them also with concrete products, cart items, both on guest and regular carts, wishlist items, related products, up-selling products, and alternative products.
 
 #### Documentation
-[Product Labels API](https://documentation.spryker.com/v4/docs/accessing-product-labels) 
+[Product Labels API](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-product-labels.html) 
 
 ### Product Discounts API
 Shop owners need to be able to offer their customers discounts according to different conditions related to their shopping cart and also to provide them with vouchers to save money on the purchase of specific products or related to their shopping volume. With this API, we enable you to let your customers redeem vouchers and manage them in their carts and checkout and to apply discount rules to their carts according to the predefined conditions. 
 
 #### Documentation
-[Discounts API](https://documentation.spryker.com/v4/docs/discounts-and-promotions) 
+[Discounts API](https://documentation.spryker.com/2021080/docs/retrieving-discounts) 
 
 #### Ratings and Reviews API
 Ratings and reviews are critical for the customer’s purchase decision. Shop owners want to display ratings and reviews related to products on the product page and rating averages on product previews.  With this API, you will be able to display the average rating of a product on the product page, to retrieve the existing ratings and reviews with their abstract and concrete products, to let your customers add a review to a product, to display the average rating and the number of reviews with related products, alternative products, up-selling products, wishlist items and on your catalog’s product reviews.
 
 #### Documentation
-[Ratings and Reviews API](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/retrieving-ratings-and-reviews.html)
+[Ratings and Reviews API](https://documentation.spryker.com/2021080/docs/retrieving-ratings-and-reviews)
 
 ### Product Options API
 With this API, you will be able to display a product with its different options each of them with its own price, product option group, and tax set, to display the item in the cart or guest cart with the selected option and to make use of those through the checkout process.
 
 #### Documentation
-[Product Options API](https://documentation.spryker.com/v4/docs/retrieving-and-applying-product-options)
+[Product Options API](https://documentation.spryker.com/2021080/docs/retrieving-product-options)
 
 ### Improved Navigation URLs
 
 Navigation vanity URLs are paramount for marketing purposes. To extend your navigation capabilities and make consistent use of them through all channels and touchpoints, resources such as abstract products and category-nodes now include their vanity URLs in their attributes. The vanity URLs are also included when they appear on search suggestions results. 
 
 #### Documentation
-[Search Engine Friendly URLs](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/using-search-engine-friendly-urls.html)
+[Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{ page.version }}/resolving-search-engine-friendly-urls.html)
 
 ### Additional API Functionality Provided in this Release:
 
@@ -158,9 +161,9 @@ Navigation vanity URLs are paramount for marketing purposes. To extend your navi
 
 #### Documentation
 
-* [Assigning Guest Cart to Registered Customer](https://documentation.spryker.com/v4/docs/managing-guest-carts#assigning-guest-cart-to-registered-customer)
-* [Getting the list of protected resources](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/getting-the-list-of-protected-resources.html)
-* [Managing Customer Access to API Resources](/docs/scos/dev/tutorials/202001.0/howtos/glue-api-howtos/managing-customer-access-to-api-resources.html)
+* [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#assigning-guest-cart-to-registered-customer)
+* [Getting the list of protected resources](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-protected-resources.html)
+* [Managing Customer Access to API Resources](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
 
 ***
 ## Docker-SDK
@@ -178,9 +181,9 @@ For production setups, now you can generate optimized docker images.
 
 #### Documentation
 
-* [Getting Started with Docker](https://documentation.spryker.com/v4/docs/getting-started-with-docker#running-production)
-* [Deploy File Reference](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html)
-* [Spryker in Docker Services](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/configuration/services.html)
+* [Getting Started with Docker](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installing-spryker-with-docker.html#running-production)
+* [Deploy File Reference](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/deploy-file-reference-1.0.html)
+* [Spryker in Docker Services](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/configuring-services.html)
 
 
 ***
@@ -192,7 +195,7 @@ With this release, Spryker enabled support for **Elasticsearch 6**, while leavin
 Even though Elasticsearch is one of the most powerful search engines available, sometimes its functionalities can not satisfy the most extreme requirements. That’s why from now on Search module supports pluggable search engines. This way, project integrations with Fact Finder, Sphinx, or any other search engine is available and supported by the Spryker infrastructure.
 
 #### Documentation: 
-[Search Migration Guides](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/search-migration-concept/search-migration-concept.html)
+[Search Migration Guides](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/search-migration-concept/search-migration-concept.html)
 
 ### By-pass KV-storage
 Separated Backend and Frontend in Spryker communicate over denormalized distributed datasets with underlying Publish & Synchronize mechanism. This powerful data distribution infrastructure emits data to Storage and Search and enables Frontends’ consumers to reach data without hitting relational DB with the increased performance. Though in some cases (typically B2B), amounts of data are large, and Storage (Redis by default) growth is not justified, especially when a number of customers and RPM is not high.
@@ -202,7 +205,7 @@ With this release Publish & Synchronize enables direct access to denormalized da
 To get most of this feature, we recommend to set up master-slave replication and point the Storage to the slave instance, avoiding additional load on the master instance.
 
 #### Documentation
-[HowTo - Disable Key-value Storage and use the Database Instead](/docs/scos/dev/tutorials/202001.0/howtos/howto-disable-key-value-storage-and-use-the-database-instead.html)
+[HowTo - Disable Key-value Storage and use the Database Instead](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/howto-replace-key-value-storage-with-database.html)
 
 ### Spryker Application
 In the previous release, our infrastructure provided **Spryker Application** Instead of deprecated Silex. Spryker Application is served with Application Plugins, which should be used instead of Silex Service Providers. This release completes the migration by providing last missing Application Plugins: security, router, validation, messenger, propel, event dispatcher.
@@ -210,19 +213,19 @@ In the previous release, our infrastructure provided **Spryker Application** Ins
 From now on, Silex components become optional, with a clear migration path. A project needs to remove deprecated Service Providers with relevant Application Plugins. Silex Service Providers are still supported until Q3 2020, just make sure your projects depend on a Spryker fork: `spryker/silexphp`, instead of archived `silex/silexphp`.
 
 #### Documentation:
-[Silex Migration Guides](https://documentation.spryker.com/v4/docs/silex-replacement-201903)
+[Silex Migration Guides](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html)
 
 ### Health Checks
 The Heartbeat functionality is replaced with health checks. There is a new set of endpoints you can use to run health checks for your application services. The endpoints are closed by default for security purposes.
 
 #### Documentation:
-[Health Checks](/docs/scos/dev/migration-and-integration/202001.0/technical-enhancements/health-checks.html)
+[Health Checks](/docs/scos/dev/migration-and-integration/{{ page.version }}/technical-enhancements/health-checks.html)
 
 ### Queue Manager Optimization
 The **Queue manager** functionality is extended with the command that makes queue worker exit right after processing a queue. If the queue is empty, the queue worker exits instead of waiting for the configured execution time to pass.
 
 #### Documentation:
-[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](https://documentation.spryker.com/v4/docs/t-handling-data-publish-and-sync-scos#7--queue)
+[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#7--queue)
 
 
 ### Search Initialization Improvement
@@ -231,12 +234,12 @@ To improve usability, the `vendor/bin/console setup:search` command which has be
     * `console search:setup:index-map`
 
 #### Documentation
-[Search Initialization Improvement](https://documentation.spryker.com/4/docs/search-initialization-improvement)
+[Search Initialization Improvement](/docs/scos/dev/migration-and-integration/{{ page.version }}/technical-enhancements/search-initialization-improvement.html)
 
 ### PHP Update
 PHP continuously develops and gets more exciting features. Also, old versions get deprecated, such as PHP7.1, which lost support by the end of 2019. From now on, Spryker modules will require **>=PHP7.2**. Please make sure your project doesn’t rely on deprecated technology and applies required infrastructural upgrades.
 While PHP7.2 is a minimum required version, we recommend looking at 7.3 and 7.4 as 7.2 is close to EOL. Such technology upgrades could require additional project refactoring, so please include them in your planning. For more information on the PHP versions see [here](https://www.php.net/supported-versions.php). 
 
-Check out [Documentation Updates](https://documentation.spryker.com/v4/docs/documentation-updates ) for all the updates to documentation made with this release.
+Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/{{ page.version }}/whats-new/documentation-updates.html) for all the updates to documentation made with this release.
 
 

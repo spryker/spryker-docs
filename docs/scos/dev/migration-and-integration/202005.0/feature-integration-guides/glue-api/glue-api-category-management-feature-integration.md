@@ -2,6 +2,7 @@
 title: Glue API- Category Management Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Category API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-category-management-feature-integration
+originalArticleId: d068451f-5a2a-4dbd-8625-fd38c807f308
 redirect_from:
   - /v5/docs/glue-api-category-management-feature-integration
   - /v5/docs/en/glue-api-category-management-feature-integration
@@ -13,7 +14,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 201907.0	 | 	[Glue Application Feature Integration](https://documentation.spryker.com/docs/en/glue-application-feature-integration-201907) |
+| Spryker Core | 201907.0	 | 	[Glue Application Feature Integration](https://documentation.spryker.com/v5/docs/en/glue-application-feature-integration-201907) |
 | Category Management | 201907.0 |  |
 
 ### 1) Install the Required Modules Using Composer

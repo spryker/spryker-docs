@@ -2,6 +2,7 @@
 title: About Migration and Integration Guides
 description: The section provides guides on how to update modules, install features in the project and enhance the Legacy Demoshop.
 originalLink: https://documentation.spryker.com/v4/docs/about-migration-integration
+originalArticleId: b2a8578d-173b-4c52-9c29-a1c1125d01e9
 redirect_from:
   - /v4/docs/about-migration-integration
   - /v4/docs/en/about-migration-integration
@@ -13,7 +14,7 @@ This section of the documentation is dedicated to content describing all the mig
 
 [Module migration guides](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/about-migration-guides.html) explain how to update a module that has structural changes, such as to the database.
 
-[Migration Concepts](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/about-migration-concepts.html) clarify the steps you need to take to migrate in case of extensive module migrations or deprecating some technical solution.
+[Migration Concepts](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/about-migration-guides.html-concepts) clarify the steps you need to take to migrate in case of extensive module migrations or deprecating some technical solution.
 
 The [Updating the Legacy Demoshop with SCOS](/docs/scos/dev/migration-and-integration/202001.0/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html) guides will help you enhance the Legacy Demoshop with specific components of SCOS or make the Legacy Demoshop compatible with them.
 

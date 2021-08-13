@@ -2,6 +2,7 @@
 title: Technology Partner Integration
 description: Integrate technology partner solutions to boost your Spryker project performance.
 originalLink: https://documentation.spryker.com/v1/docs/technology-partner-integration
+originalArticleId: 868a14a2-2ffe-4b2d-bfd8-490b41288a2e
 redirect_from:
   - /v1/docs/technology-partner-integration
   - /v1/docs/en/technology-partner-integration
@@ -61,14 +62,14 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
 ### Customer Retention & Loyalty
 
-* [Namogoo](https://documentation.spryker.com/v1/docs/namogoo ) 
+* [Namogoo](/docs/scos/dev/technology-partners/201811.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html) 
 * [Trustpilot](/docs/scos/dev/technology-partners/201811.0/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
 * [Zenloop](/docs/scos/dev/technology-partners/201811.0/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 
 ### Personalization & Cross-Selling
 
 <!--* [8Select](/docs/scos/dev/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
-<!--* [Contentserv](https://documentation.spryker.com/v1/docs/)-->
+<!--* [Contentserv](/docs/scos/dev/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
 * [Econda](/docs/scos/dev/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html)
 * [Nosto](/docs/scos/dev/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
 * [trbo](/docs/scos/dev/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
@@ -121,7 +122,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
 * [Akeneo](/docs/scos/dev/technology-partners/201811.0/product-information-pimerp/akeneo/akeneo.html)
 * [Xentral](/docs/scos/dev/technology-partners/201811.0/product-information-pimerp/xentral.html)
-<!--* [Censhare](https://documentation.spryker.com/v1/docs/)-->
+<!--* [Censhare](/docs/scos/dev/technology-partners/201811.0/content-management/censhare.html)-->
 <!--* [Contentserv](/docs/scos/dev/technology-partners/201811.0/product-information-pimerp/contentserv.html)-->
 <!--* [Tradebyte](/docs/scos/dev/technology-partners/201811.0/order-management-erpoms/tradebyte.html)-->
 

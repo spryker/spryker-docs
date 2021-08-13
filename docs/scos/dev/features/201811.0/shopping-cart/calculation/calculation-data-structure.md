@@ -2,6 +2,7 @@
 title: Calculation Data Structure
 description: The diagram in this topic covers the Calculation Data Structure, as well as the available transfer objects, fields and their descriptions.
 originalLink: https://documentation.spryker.com/v1/docs/calculation-data-structure
+originalArticleId: b240f9ee-18ad-4f31-992c-088f6d35cd8f
 redirect_from:
   - /v1/docs/calculation-data-structure
   - /v1/docs/en/calculation-data-structure
@@ -18,11 +19,11 @@ The entire data object is stored into the session and it consists of:
 
 | Field | Description |
 | --- | --- |
-| totals ([TotalsTransfer](https://documentation.spryker.com/v1/docs/calculation-data-structure#totals-transfer))|Order totals.|
-|items ([ItemTransfer](https://documentation.spryker.com/v1/docs/calculation-data-structure#item-transfer)[])|CartItem collection.|
-|voucherDiscounts ([DiscountTransfer](https://documentation.spryker.com/v1/docs/calculation-data-structure#discount-transfer)[])||
-|cartRuleDiscounts ([DiscountTransfer](https://documentation.spryker.com/v1/docs/calculation-data-structure#discount-transfer)[])||
-|expenses ([ExpenseTransfer](https://documentation.spryker.com/v1/docs/calculation-data-structure#expensetransfer))||
+| totals ([TotalsTransfer](/docs/scos/dev/features/201811.0/shopping-cart/calculation/calculation-data-structure.html#totals-transfer))|Order totals.|
+|items ([ItemTransfer](/docs/scos/dev/features/201811.0/shopping-cart/calculation/calculation-data-structure.html#item-transfer)[])|CartItem collection.|
+|voucherDiscounts ([DiscountTransfer](/docs/scos/dev/features/201811.0/shopping-cart/calculation/calculation-data-structure.html#discount-transfer)[])||
+|cartRuleDiscounts ([DiscountTransfer](/docs/scos/dev/features/201811.0/shopping-cart/calculation/calculation-data-structure.html#discount-transfer)[])||
+|expenses ([ExpenseTransfer](/docs/scos/dev/features/201811.0/shopping-cart/calculation/calculation-data-structure.html#expensetransfer))||
 |priceMode (int) | Quote object's price mode. |
 
 ### Totals Transfer
@@ -34,7 +35,7 @@ TotalsTransfer is a data object holding cart totals, subtotal, expenses (shippin
 | subtotal (int)|Calculated total amount before taxes and discounts. Is set by `SubtotalCalculatorPlugin`.|
 |expenseTotal (int)|Total expenses amount (shipping). It is set by `ExpenseTotalCalculatorPlugin`.|
 |discountTotal (int)|Total discount amount. It is set by `DiscountTotalCalculatorPlugin`.|
-|taxTotal ([TaxTotalsTransfer](https://documentation.spryker.com/v1/docs/calculation-data-structure#tax-total-transfer))|Tax totals for current cart. Is set by `TaxTotalCalculatorPlugin`.|
+|taxTotal ([TaxTotalsTransfer](/docs/scos/dev/features/201811.0/shopping-cart/calculation/calculation-data-structure.html#tax-total-transfer))|Tax totals for current cart. Is set by `TaxTotalCalculatorPlugin`.|
 |grandTotal (int)|The total amount the customer needs to pay after the discounts are applied. It is set by `GrandTotalCalculatorPlugin` calculator plugin.|
 |refundTotal (int)|Total refundable amount. It is set by `RefundTotalCalculatorPlugin` calculator plugin.|
 |canceledTotal (int)|Total canceled amount. It is set by `CanceledTotalCalculationPlugin` calculator plugin.|
@@ -65,7 +66,7 @@ TotalsTransfer is a data object holding cart totals, subtotal, expenses (shippin
 | refundableAmount (int) | Item available refundable amount (order only), set by `RefundableAmountCalculatorPlugin`. |
 | unitTaxAmount (int) | Tax amount for single item after discounts, set by `TaxAmountCalculatorPlugin`. |
 | sumTaxAmount (int) | Tax amount for sum of items (order only), set by `TaxAmountCalculatorPlugin`. |
-| [Calculated Discount Transfer](https://documentation.spryker.com/v1/docs/calculation-data-structure#calculated-discount-transfer) [] | Item calculated discount collection, set by `DiscountCalculatorPlugin`. |
+| [Calculated Discount Transfer](/docs/scos/dev/features/201811.0/shopping-cart/calculation/calculation-data-structure.html#calculated-discount-transfer) [] | Item calculated discount collection, set by `DiscountCalculatorPlugin`. |
 | canceledAmount (int) | Canceled amount for this item (order only), set by refund, when refund occurs. |
 | unitTaxAmountFullAggregation (int) | Total tax amount for given item with additions, set by `ItemTaxAmountFullAggregatorPlugin`. |
 | sumTaxAmountFullAggregation (int) | Total tax amount for given sum of items with additions, set by `ItemTaxAmountFullAggregatorPlugin`. |
@@ -104,7 +105,7 @@ ProductOptionTransfer, some items may have product option collection attached wh
 |sumNetPrice (int)|sum of items net price. It's set by `PriceCalculatorPlugin` (cart expander).|
 |unitPrice (int)|single item price without assuming is it new or gross, this value should be used everywhere where price is displayed, it allows switching tax mode without side effects. It's set by `PriceCalculatorPlugin` cart expander|
 |taxRate (int)|Tax rate in percentage. It’s set by `ProductOptionTaxRateCalculatorPlugin` (cart expander).|
-|calculatedDiscounts[] ([CalculatedDiscountTransfer](https://documentation.spryker.com/v1/docs/calculation-data-structure#calculated-discount-transfer))|Product Option calculated discount collection. It’s set by `DiscountCalculatorPlugin`.|
+|calculatedDiscounts[] ([CalculatedDiscountTransfer](/docs/scos/dev/features/201811.0/shopping-cart/calculation/calculation-data-structure.html#calculated-discount-transfer))|Product Option calculated discount collection. It’s set by `DiscountCalculatorPlugin`.|
 |refundableAmount (int)|Item available refundable amount (order only), set by `RefundableAmountCalculatorPlugin`.|
 |unitTaxAmount (int)|Tax amount for single product option (order only), set by `TaxAmountCalculatorPlugin`.|
 |sumTaxAmount (int)|Tax amount for sum of product options (order only), set by `TaxAmountCalculatorPlugin`.|
@@ -129,7 +130,7 @@ DiscountTransfer, is a collection of discounts used in all QuoteTransfer discoun
 | taxRate (int) | Tax in percents, set by `ShipmentTaxRateCalculatorPlugin`. |
 | unitPrice (int) | Single item price without assuming is it new or gross, this value should be used everywhere where price is displayed, it allows switching tax mode without side effects, set by `PriceCalculatorPlugin` (cart expander). |
 | sumPrice (int) | Sum of items price, set by `PriceCalculatorPlugin` (cart expander). |
-| [Calculated Discount Transfer](https://documentation.spryker.com/v1/docs/calculation-data-structure#calculated-discount-transfer) | List of applied discounts for this item.|
+| [Calculated Discount Transfer](/docs/scos/dev/features/201811.0/shopping-cart/calculation/calculation-data-structure.html#calculated-discount-transfer) | List of applied discounts for this item.|
 |quantity (int) | Number of items. |
 | refundableAmount (int) | Total refundable amount for this item (order only), set by `RefundableAmountCalculatorPlugin`. |
 | canceledAmount (int) | Total canceled amount for this item (order only), set by refund. |

@@ -2,6 +2,7 @@
 title: Cross-sell and Up-sell
 description: Drive your sales and reduce marketing spent with the cross-sell and upsell. Define specific product relations to present customers with recommendations
 originalLink: https://documentation.spryker.com/v2/docs/cross-sell-upsell
+originalArticleId: ed73311d-f5d3-4b6e-9458-f984b353c4f6
 redirect_from:
   - /v2/docs/cross-sell-upsell
   - /v2/docs/en/cross-sell-upsell

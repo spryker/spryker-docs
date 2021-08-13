@@ -1,6 +1,7 @@
 ---
 title: Configuring an Events Queue
 originalLink: https://documentation.spryker.com/v6/docs/event-configure-q
+originalArticleId: bfab76c7-638c-4e99-aa4e-678d916ed094
 redirect_from:
   - /v6/docs/event-configure-q
   - /v6/docs/en/event-configure-q

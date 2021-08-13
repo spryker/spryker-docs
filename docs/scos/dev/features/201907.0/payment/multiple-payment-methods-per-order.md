@@ -2,6 +2,7 @@
 title: Multiple Payment Methods Per Order
 description: Orders can be paid with none, one or multiple payment methods that can be selected during checkout. Offer multiple payment methods for a single order.
 originalLink: https://documentation.spryker.com/v3/docs/multiple-payment-methods-per-order
+originalArticleId: b3bfb2d1-767e-4e33-81ce-66e78ddb02cd
 redirect_from:
   - /v3/docs/multiple-payment-methods-per-order
   - /v3/docs/en/multiple-payment-methods-per-order
@@ -19,7 +20,7 @@ Spryker Commerce OS enables to have multiple payments per checkout. Payments are
 Each payment method must provide payment amount it shares from order grand total. This amount is stored in `PaymentTransfer::amount` field. When order is placed in last step all payments are persisted to `spy_sales_payment` table.
 
 ## Payment Hydration for Order
-The [Sales](/docs/scos/dev/features/202001.0/order-management/sales.html) module provides plugins to hydrate OrderTransfer which is called when `SalesFacade::getOrderByIdSalesOrder` invoked.
+The [Sales](/docs/scos/dev/features/201907.0/order-management/sales.html) module provides plugins to hydrate OrderTransfer which is called when `SalesFacade::getOrderByIdSalesOrder` invoked.
 
 One of those plugins are `\Spryker\Zed\Payment\Communication\Plugin\Sales\PaymentOrderHydratePlugin` which must be added to `\Pyz\Zed\Sales\SalesDependencyProvider::getOrderHydrationPlugins` plugin stack.
 

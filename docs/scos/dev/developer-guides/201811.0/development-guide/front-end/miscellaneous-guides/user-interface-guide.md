@@ -2,6 +2,7 @@
 title: User Interface Guide
 description: The user interface guide is aimed for Agencies and Designers. It sets out the basic design rules that will help you get started on designing and implementing the UI for both the front-end (Yves) and back-end (Zed) application when working with Spryker.
 originalLink: https://documentation.spryker.com/v1/docs/user-interface-guide
+originalArticleId: cb87583f-60ac-48e3-9891-23b77b099607
 redirect_from:
   - /v1/docs/user-interface-guide
   - /v1/docs/en/user-interface-guide

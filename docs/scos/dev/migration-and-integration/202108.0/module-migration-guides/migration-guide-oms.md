@@ -2,9 +2,12 @@
 title: Migration Guide - OMS
 description: Use the guide to upgrade the Oms module to the new version.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-oms
+originalArticleId: 1f2d5a9b-1907-4cb4-bf1f-1867cc835dcd
 redirect_from:
   - /2021080/docs/mg-oms
   - /2021080/docs/en/mg-oms
+  - /docs/mg-oms
+  - /docs/en/mg-oms
 ---
 
 ## Upgrading from Version 10.* to Version 11.0.0
@@ -12,7 +15,7 @@ redirect_from:
 In this new version of the **OMS** module, we have added support of decimal stock. You can find more details about the changes on the OMS module release page.
 
 {% info_block errorBox %}
-This release is a part of the Decimal Stock concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/decimal-stock-migration-concept.html
+This release is a part of the Decimal Stock concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/decimal-stock-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**
@@ -140,7 +143,7 @@ CREATE TABLE "spy_oms_product_reservation_last_exported_version"
 
 In version 7, OMS no longer uses `SalesAggregator` to calculate totals; it is now done via the **Calculator** module. Therefore, there is no more dependency with `SalesAggregator`.
 The `Spryker\Zed\Oms\Business\Mail\MailHandler` dependency to `SalesAggregatorFacade` was replaced with `SalesFacade`.
-To learn how to migrate to the new structure, see the [Upgrading from version 3.* to version 4.*](https://documentation.spryker.com/v4/docs/mg-calculation#upgrading-from-version-3---to-version-4--) section in *Migration Guide - Calculation*.
+To learn how to migrate to the new structure, see the [Upgrading from version 3.* to version 4.*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-calculation.html#upgrading-from-version-3---to-version-4--) section in *Migration Guide - Calculation*.
 
 ## Upgrading from Version 3.* to Version 4.*
 

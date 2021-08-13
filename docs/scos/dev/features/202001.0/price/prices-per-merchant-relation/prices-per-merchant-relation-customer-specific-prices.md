@@ -2,6 +2,7 @@
 title: Prices per Merchant Relation (Customer specific prices)
 description: With the Prices per Merchant Relation feature, the shop owners of B2B/B2C marketplace can provide different prices for merchants and their clients.
 originalLink: https://documentation.spryker.com/v4/docs/price-per-merchant-relation
+originalArticleId: 9f558935-4c0a-4b56-aa11-eb636a89a66c
 redirect_from:
   - /v4/docs/price-per-merchant-relation
   - /v4/docs/en/price-per-merchant-relation

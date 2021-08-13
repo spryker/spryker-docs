@@ -1,9 +1,12 @@
 ---
 title: File details- cms_page_store.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-page-storecsv
+originalArticleId: e8f80649-24da-450a-a696-c3b9f02a52eb
 redirect_from:
   - /2021080/docs/file-details-cms-page-storecsv
   - /2021080/docs/en/file-details-cms-page-storecsv
+  - /docs/file-details-cms-page-storecsv
+  - /docs/en/file-details-cms-page-storecsv
 ---
 
 This article contains content of the **cms_page_store.csv** file to configure CMS Page Store information on your Spryker Demo Shop.
@@ -20,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*     [cms_page.csv](https://documentation.spryker.com/docs/file-details-cms-pagecsv)
+*     [cms_page.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/content-management/file-details-cms-page.csv.html)
 *     *stores.php* configuration file of the demo shop PHP project
 
 ## Template File & Content Example

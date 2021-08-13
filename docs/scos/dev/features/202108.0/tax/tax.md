@@ -2,9 +2,12 @@
 title: Tax
 description: The tax feature allows you to define tax sets and tax rates for your project
 originalLink: https://documentation.spryker.com/2021080/docs/tax
+originalArticleId: b5f65c61-5238-4174-885a-32337c481672
 redirect_from:
   - /2021080/docs/tax
   - /2021080/docs/en/tax
+  - /docs/tax
+  - /docs/en/tax
 ---
 
 Align your business with international tax standards by defining tax rates and sets. With the *Tax* feature, you can:

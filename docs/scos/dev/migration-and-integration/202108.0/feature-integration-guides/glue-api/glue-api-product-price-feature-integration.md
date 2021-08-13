@@ -1,9 +1,12 @@
 ---
 title: Glue API- Product price feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-prices-api-feature-integration
+originalArticleId: 50d3f39f-3a3c-4fc2-a717-179a0205dee7
 redirect_from:
   - /2021080/docs/glue-api-prices-api-feature-integration
   - /2021080/docs/en/glue-api-prices-api-feature-integration
+  - /docs/glue-api-prices-api-feature-integration
+  - /docs/en/glue-api-prices-api-feature-integration
 ---
 
 This document describes how to install the Prices feature API.
@@ -15,9 +18,9 @@ To start feature integration, overview, and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | dev-master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/upcoming-release/docs/glue-api-spryker-core-feature-integration) |
-| Product | dev-master | [Glue API: Products feature integration - ongoing](https://documentation.spryker.com/upcoming-release/docs/glue-api-products-feature-integration) |
-| Price | dev-master | [Prices feature integration - ongoing](https://documentation.spryker.com/docs/prices-feature-integration)|
+| Spryker Core | dev-master | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Product | dev-master | [Glue API: Products feature integration - ongoing](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) |
+| Price | dev-master | [Prices feature integration - ongoing](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/prices-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 

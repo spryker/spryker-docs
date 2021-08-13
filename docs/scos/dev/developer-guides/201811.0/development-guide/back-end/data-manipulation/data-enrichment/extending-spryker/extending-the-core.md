@@ -2,6 +2,7 @@
 title: Extending the Core
 description: There are three ways to extend classes from the core- replacement class, inheritance object, composition. Each of them has its advantages and disadvantages.
 originalLink: https://documentation.spryker.com/v1/docs/core-extension
+originalArticleId: 77967dbe-d9e0-4970-a913-697145d9c0fb
 redirect_from:
   - /v1/docs/core-extension
   - /v1/docs/en/core-extension

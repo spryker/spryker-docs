@@ -1,9 +1,12 @@
 ---
 title: Special- Prepare for a busy season
 originalLink: https://documentation.spryker.com/2021080/docs/special-prepare-for-a-busy-season
+originalArticleId: 03eeeab9-d5fd-4b18-80f9-5a1dd3fcf33e
 redirect_from:
   - /2021080/docs/special-prepare-for-a-busy-season
   - /2021080/docs/en/special-prepare-for-a-busy-season
+  - /docs/special-prepare-for-a-busy-season
+  - /docs/en/special-prepare-for-a-busy-season
 ---
 
 We put together this article to help you prepare for a traditionally very busy season of the year: Black Friday, Cyber Monday and the Holiday Season but it will help you whenever you expect your Shop to receive record breaking traffic. In this article you find recommendations written for business decision makers, hosting providers, and Spryker Developers. So feel fry to forward our recommendations to your colleagues!

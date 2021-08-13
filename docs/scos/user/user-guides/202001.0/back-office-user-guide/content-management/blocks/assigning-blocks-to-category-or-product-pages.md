@@ -1,6 +1,7 @@
 ---
 title: Assigning Blocks to Category or Product Pages
 originalLink: https://documentation.spryker.com/v4/docs/assigning-blocks-to-category-or-product-pages
+originalArticleId: aedafc79-d255-4af5-ae19-e1fd263912a0
 redirect_from:
   - /v4/docs/assigning-blocks-to-category-or-product-pages
   - /v4/docs/en/assigning-blocks-to-category-or-product-pages

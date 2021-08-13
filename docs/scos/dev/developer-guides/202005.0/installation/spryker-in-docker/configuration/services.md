@@ -1,6 +1,7 @@
 ---
 title: Services
 originalLink: https://documentation.spryker.com/v5/docs/services
+originalArticleId: 0e4f58e4-8a89-44e9-96ff-864c483461a0
 redirect_from:
   - /v5/docs/services
   - /v5/docs/en/services
@@ -104,7 +105,7 @@ docker/sdk demo-data
 [Elasticsearch](https://www.elastic.co/elasticsearch/) is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. 
 
 See:
-* [Configuring Elasticsearch](https://documentation.spryker.com/docs/en/search-configure-elasticsearch) to learn more about Elastcisearch configuration in Spryker.
+* [Configuring Elasticsearch](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-interaction/search/configuring-elasticsearch.html) to learn more about Elastcisearch configuration in Spryker.
 * [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) for more information on Elasticsearch.
 
 ### Configuration

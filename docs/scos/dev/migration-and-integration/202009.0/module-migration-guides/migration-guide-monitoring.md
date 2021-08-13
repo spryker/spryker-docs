@@ -2,6 +2,7 @@
 title: Migration Guide - Monitoring
 description: Use the guide to migrate to a newer version of the Monitoring module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-monitoring
+originalArticleId: c19472bf-84be-44df-abf8-8b52aae84ea1
 redirect_from:
   - /v6/docs/mg-monitoring
   - /v6/docs/en/mg-monitoring
@@ -80,5 +81,5 @@ $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY]
 ];
 ```
 
-For more details, see [Performance Monitoring - New Relic](/docs/scos/dev/technology-partners/202001.0/operational-tools-monitoring-legal-etc/new-relic.html).
+For more details, see [Performance Monitoring - New Relic](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/new-relic.html).
 

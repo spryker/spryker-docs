@@ -2,6 +2,7 @@
 title: Retrieving image sets of abstract products
 description: Retrieve image sets of abstract products.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-image-sets-of-abstract-products
+originalArticleId: 30b6dda2-d7b6-40d2-8936-52c2351d3167
 redirect_from:
   - /v6/docs/retrieving-image-sets-of-abstract-products
   - /v6/docs/en/retrieving-image-sets-of-abstract-products
@@ -11,7 +12,7 @@ This endpoint allows to retrieve image sets of abstract products.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration).
+* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html).
 
 
 ## Retrieve image sets of an abstract product
@@ -84,4 +85,4 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/001/abstrac
 | 303 | Can't find abstract product image sets. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).

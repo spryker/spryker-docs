@@ -2,9 +2,12 @@
 title: PHPStan
 description: Use the article to learn how to install and use PHPStan
 originalLink: https://documentation.spryker.com/2021080/docs/phpstan
+originalArticleId: 91b7f7ec-2097-422c-9a63-4cc7076216e5
 redirect_from:
   - /2021080/docs/phpstan
   - /2021080/docs/en/phpstan
+  - /docs/phpstan
+  - /docs/en/phpstan
 ---
 
 [PHPStan](https://github.com/phpstan/phpstan) is a static code analyzer that introspects the code without running it and catches various classes of bugs prior to unit testing.

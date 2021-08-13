@@ -1,6 +1,7 @@
 ---
 title: Shopping Cart Widget Feature Overview
 originalLink: https://documentation.spryker.com/v2/docs/shopping-cart-widget-feature-overview
+originalArticleId: 25b1058c-6d1b-4fe6-a8aa-b2d4c8ca06bb
 redirect_from:
   - /v2/docs/shopping-cart-widget-feature-overview
   - /v2/docs/en/shopping-cart-widget-feature-overview

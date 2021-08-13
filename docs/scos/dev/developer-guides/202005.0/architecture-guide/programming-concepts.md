@@ -2,6 +2,7 @@
 title: Programming Concepts
 description: This article explains the main software and coding concepts used in Spryker.
 originalLink: https://documentation.spryker.com/v5/docs/programming-concepts
+originalArticleId: 56251b67-5700-4539-934f-51b197bfe10c
 redirect_from:
   - /v5/docs/programming-concepts
   - /v5/docs/en/programming-concepts
@@ -62,5 +63,5 @@ Directories
 
 ## Where to go from here?
 
-* To find out how data flows are separated in Spryker Commerce OS, refer to [Conceptual Overview](https://documentation.spryker.com/docs/en/concept-overview).
-* If you would like to know more about the application layers and how various functionality is encapsulated in modules, see [Modularity and Shop Suite](https://documentation.spryker.com/docs/en/modularity-and-shop-suite).
+* To find out how data flows are separated in Spryker Commerce OS, refer to [Conceptual Overview](/docs/scos/dev/developer-guides/202005.0/architecture-guide/conceptual-overview.html).
+* If you would like to know more about the application layers and how various functionality is encapsulated in modules, see [Modularity and Shop Suite](/docs/scos/dev/developer-guides/202005.0/architecture-guide/modularity-and-shop-suite.html).

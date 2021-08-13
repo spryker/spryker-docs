@@ -2,6 +2,7 @@
 title: Migration Guide - Security
 description: Use the guide to perform the Security part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-security
+originalArticleId: 9db7fb10-c141-4e63-89af-4d1891bd7cf3
 redirect_from:
   - /v5/docs/migration-guide-security
   - /v5/docs/en/migration-guide-security
@@ -9,7 +10,7 @@ redirect_from:
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/en/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/202005.0/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

@@ -1,6 +1,7 @@
 ---
 title: Retrieving Alternative Products
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-alternative-products-201903
+originalArticleId: ad1dcb2e-8774-4aba-897d-48fdbcb5ba25
 redirect_from:
   - /v2/docs/retrieving-alternative-products-201903
   - /v2/docs/en/retrieving-alternative-products-201903

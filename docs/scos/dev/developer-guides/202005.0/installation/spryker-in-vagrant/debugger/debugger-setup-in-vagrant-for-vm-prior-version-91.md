@@ -2,12 +2,13 @@
 title: Debugger Setup in Vagrant for VM Prior Version 91
 description: This article describes how to set up debugging in your development environment for VM prior version 91.
 originalLink: https://documentation.spryker.com/v5/docs/debugging-setup-prior-vm91
+originalArticleId: 9bd41e9c-c76b-415b-be51-b94a8cece9e6
 redirect_from:
   - /v5/docs/debugging-setup-prior-vm91
   - /v5/docs/en/debugging-setup-prior-vm91
 ---
 
-To configure debugging for the current VM, see [Debugging Setup](https://documentation.spryker.com/docs/en/debugging-setup).
+To configure debugging for the current VM, see [Debugging Setup](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-vagrant/debugger/debugger-setup-in-vagrant.html).
 
 This article describes how to setup debugging in your development environment for VM prior version 91.
 

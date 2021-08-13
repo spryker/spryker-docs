@@ -2,6 +2,7 @@
 title: Configuring the Search Query
 description: This  article explains how to configure search query.
 originalLink: https://documentation.spryker.com/v5/docs/configuring-search-query
+originalArticleId: 919ba9e8-7ce1-4dfe-b1f4-6ef3197129b3
 redirect_from:
   - /v5/docs/configuring-search-query
   - /v5/docs/en/configuring-search-query
@@ -152,7 +153,7 @@ To display only record which are active within given date range use `\Spryker\Cl
 #### Faceted Navigation and Filters
 The Faceted Navigation and Filtering feature adds the ability to re-filter search results by specific criteria. Commonly displayed on the left side of the catalog page.
 
-The responsibility of `\Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\FacetQueryExpanderPlugin` is to add the necessary aggregations to your query based on a predefined configuration (see: [Configure Search Features](https://documentation.spryker.com/docs/en/configure-search-features) ). You can use this plugin to get the necessary data for faceted navigation of your search results. If you use this plugin, also make sure to add the `\Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\FacetResultFormatterPlugin` to your result formatter collection, which takes care of processing the returned raw aggregation data.
+The responsibility of `\Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\FacetQueryExpanderPlugin` is to add the necessary aggregations to your query based on a predefined configuration (see: [Configure Search Features](/docs/scos/dev/features/202005.0/search-and-filter/search-widget-for-concrete-products/configure-search-features.html) ). You can use this plugin to get the necessary data for faceted navigation of your search results. If you use this plugin, also make sure to add the `\Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\FacetResultFormatterPlugin` to your result formatter collection, which takes care of processing the returned raw aggregation data.
 
 In order to optimize facet aggregations, Search module combines all fields in groups of simple faceted aggregations (e.g. string-facet). But in some cases you need more control on facet generation.
 

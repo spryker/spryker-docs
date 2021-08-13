@@ -2,6 +2,7 @@
 title: Generic Faceted Search
 description: Faceted search (sometimes also called faceted navigation) allows users to navigate through a web site by applying filters for categories, attributes, price ranges and so on.
 originalLink: https://documentation.spryker.com/v3/docs/generic-faceted-search
+originalArticleId: ab704c69-8cad-4bae-83b0-e846e23ae1bd
 redirect_from:
   - /v3/docs/generic-faceted-search
   - /v3/docs/en/generic-faceted-search

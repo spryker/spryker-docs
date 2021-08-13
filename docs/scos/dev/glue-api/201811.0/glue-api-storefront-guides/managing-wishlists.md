@@ -1,6 +1,7 @@
 ---
 title: Managing Wishlists
 originalLink: https://documentation.spryker.com/v1/docs/managing-wishlists
+originalArticleId: 8a6a206f-ce6e-4913-8d5c-60aa3ebc30ba
 redirect_from:
   - /v1/docs/managing-wishlists
   - /v1/docs/en/managing-wishlists
@@ -15,7 +16,7 @@ Since wishlists are available for registered users only, the endpoints provided 
 {% endinfo_block %}.)
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](https://documentation.spryker.com/v1/docs/wishlist-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](/docs/scos/dev/features/201811.0/wishlist/wishlist.html-api-feature-integration-201903).
 
 ## Creating a Wishlist
 To create a wishlist for a registered user, you need to send a POST request to the following endpoint:

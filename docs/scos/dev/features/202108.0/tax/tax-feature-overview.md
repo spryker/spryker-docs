@@ -2,25 +2,28 @@
 title: Tax feature overview
 description: With the Tax feature you can define taxes for the items you sell.
 originalLink: https://documentation.spryker.com/2021080/docs/tax-feature-overview
+originalArticleId: 2ca980d2-d08b-4511-b26c-4cafa8624283
 redirect_from:
   - /2021080/docs/tax-feature-overview
   - /2021080/docs/en/tax-feature-overview
+  - /docs/tax-feature-overview
+  - /docs/en/tax-feature-overview
 ---
 
 The *Tax* feature allows you to define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets. 
 
-The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. See [Managing tax rates](https://documentation.spryker.com/docs/managing-tax-rates-sets#managing-tax-rates) for details on how to create and manage tax rates for countries in the Back Office.
+The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. See [Managing tax rates](https://documentation.spryker.com/2021080/docs/managing-tax-rates-sets#managing-tax-rates) for details on how to create and manage tax rates for countries in the Back Office.
 
-The tax set is a set of tax rates. You can [define tax sets in the Back office](https://documentation.spryker.com/docs/managing-tax-rates-sets#managing-tax-sets) or[ import tax sets](https://documentation.spryker.com/docs/file-details-taxcsv) into your project.
+The tax set is a set of tax rates. You can [define tax sets in the Back office](https://documentation.spryker.com/2021080/docs/managing-tax-rates-sets#managing-tax-sets) or[ import tax sets](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-tax.csv.html) into your project.
 
 Tax sets can be applied to abstract product, product option and shipment:
 
 
 | ENTITY | INSTRUCTIONS ON DEFINING TAX SETS FOR THE ENTITY IN THE BACK OFFICE  | DETAILS ON THE IMPORT FILE TO IMPORT TAX SETS FOR THE ENTITY |
 | --- | --- | --- |
-| Abstract product | [Defining prices](https://documentation.spryker.com/docs/creating-abstract-products-and-product-bundles#defining-prices) | [File details: product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv#file-details--product_abstract-csv) |
-| Product option | [Creating a product option](https://documentation.spryker.com/docs/creating-a-product-option#creating-a-product-option) | [File details: product_option.csv](https://documentation.spryker.com/docs/file-details-product-optioncsv) |
-| Shipment | [Creating a delivery method](https://documentation.spryker.com/docs/creating-and-managing-shipment-methods#creating-a-delivery-method) | [File details: shipment.csv](https://documentation.spryker.com/docs/file-details-shipmentcsv) |
+| Abstract product | [Defining prices](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html#defining-prices) | [File details: product_abstract.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html#file-details--product_abstract-csv) |
+| Product option | [Creating a product option](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/product-options/creating-a-product-option.html#creating-a-product-option) | [File details: product_option.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) |
+| Shipment | [Creating a delivery method](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html#creating-a-delivery-method) | [File details: shipment.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
 
 ## Avalara system for automated tax compliance
 You can integrate the third-party system Avalara to automatically apply tax rates that depend on such factors as location, product type, and shipping rules. 
@@ -31,13 +34,13 @@ Avalara is mostly meant for the USA.
 
 {% endinfo_block %}
 
-To use Avalara, you need to [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](https://documentation.spryker.com/2021080/docs/avalara-tax-integration) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.   
+To use Avalara, you need to [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](/docs/scos/dev/technology-partners/{{ page.version }}/taxes/avalara-tax-integration.html) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.   
 
 You can set the Avalara tax codes for the following entities by importing the codes:
 
-* Abstract product: See [File details: product_abstract.csv](https://documentation.spryker.com/2021080/docs/file-details-product-abstractcsv) for details on import.
-* Product option: See [File details: product_option.csv](https://documentation.spryker.com/2021080/docs/file-details-product-optioncsv) for details on import.
-* Shipment: [See File details: shipment.csv](https://documentation.spryker.com/2021080/docs/file-details-shipmentcsv) for details on import. 
+* Abstract product: See [File details: product_abstract.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) for details on import.
+* Product option: See [File details: product_option.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) for details on import.
+* Shipment: [See File details: shipment.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html) for details on import. 
 
 {% info_block infoBox %}
 
@@ -47,7 +50,7 @@ Since shipment and products fall under different taxability categories, Avalara 
 
 The Avalara codes are not displayed on the Storefront or in the Back Office. They are processed in the background to define taxes for order items. Avalara calculates taxes during the checkout, and, by default, the taxes are shown at the final checkout step.
 
-When calculating taxes, Avalara takes the items' [warehouse addresses](https://documentation.spryker.com/2021080/docs/inventory-management-feature-overview#defining-a-warehouse-address) into account. Therefore, each order item you calculate a tax for with Avalara, should have a warehouse assigned. See [Warehouse assignment](https://documentation.spryker.com/2021080/docs/inventory-management-feature-overview#warehouse-assignment-to-order-items--with-avalara-integration-only-) to order items to learn how warehouses are assigned to order items by default.
+When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/scos/dev/features/{{ page.version }}/inventory-management/inventory-management-feature-overview.html#defining-a-warehouse-address) into account. Therefore, each order item you calculate a tax for with Avalara, should have a warehouse assigned. See [Warehouse assignment](/docs/scos/dev/features/{{ page.version }}/inventory-management/inventory-management-feature-overview.html#warehouse-assignment-to-order-items--with-avalara-integration-only-) to order items to learn how warehouses are assigned to order items by default.
 
 ## Tax feature on the Storefront
 

@@ -2,6 +2,7 @@
 title: Migration Guide - Store
 description: Use the guide to perform the Store part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-store
+originalArticleId: 76593e63-3c8b-4f3c-94f6-5a20ff78e670
 redirect_from:
   - /v4/docs/migration-guide-store
   - /v4/docs/en/migration-guide-store

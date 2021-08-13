@@ -2,6 +2,7 @@
 title: Configuration management
 description: There are several files that allow you to add the needed configuration for the exact use-case you want.
 originalLink: https://documentation.spryker.com/v6/docs/configuration-management
+originalArticleId: bf499bec-58d3-4677-b297-4b75b45af7ba
 redirect_from:
   - /v6/docs/configuration-management
   - /v6/docs/en/configuration-management
@@ -65,8 +66,8 @@ There are some other configuration files for specific purposes.
 
 |       Filename        |                           Purpose                            |
 | :-------------------: | :----------------------------------------------------------: |
-| `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing, you need to explicitly pass the environment to all [command line calls](https://documentation.spryker.com/docs/console-commands). |
-|   `default_store.php`   | This file returns the default store which is used for all [command line calls](https://documentation.spryker.com/docs/console-commands). |
+| `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing, you need to explicitly pass the environment to all [command line calls](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html). |
+|   `default_store.php`   | This file returns the default store which is used for all [command line calls](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html). |
 |      `stores.php`       | This file contains an array with all stores and their configuration like locale, date format, currency, etc. |
 
 ## How to Retrieve the Configuration
@@ -179,4 +180,4 @@ You might use the following definitions to generate related code:
 
 * `console spryk:run AddSharedConstantsInterface`
     * Adds a Shared Constants Interface
-See the [Spryk](https://documentation.spryker.com/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/202009.0/development-tools/spryk-code-generator.html) documentation for details.

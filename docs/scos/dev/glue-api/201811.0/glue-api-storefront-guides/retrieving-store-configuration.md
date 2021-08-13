@@ -1,6 +1,7 @@
 ---
 title: Retrieving Store Configuration
 originalLink: https://documentation.spryker.com/v1/docs/retrieving-store-configuration
+originalArticleId: 096e1d9d-54bd-45d7-a833-782db0484568
 redirect_from:
   - /v1/docs/retrieving-store-configuration
   - /v1/docs/en/retrieving-store-configuration

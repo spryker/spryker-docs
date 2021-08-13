@@ -2,6 +2,7 @@
 title: Implementing a Client
 description: This article describes how to implement the Client part of the Spryker Yves application layer.
 originalLink: https://documentation.spryker.com/v1/docs/implementing-a-client
+originalArticleId: 03e3399a-367f-4e22-9887-8b7cbfa18cfe
 redirect_from:
   - /v1/docs/implementing-a-client
   - /v1/docs/en/implementing-a-client

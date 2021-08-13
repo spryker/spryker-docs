@@ -2,6 +2,7 @@
 title: Managing Merchant Relations
 description: Use the procedures to create, edit, and delete merchant relations, or sort them by the company for which the merchant relation has been created.
 originalLink: https://documentation.spryker.com/v5/docs/managing-merchant-relations
+originalArticleId: f8f926ac-a51e-4144-8f5a-0c8e36428c7e
 redirect_from:
   - /v5/docs/managing-merchant-relations
   - /v5/docs/en/managing-merchant-relations
@@ -21,7 +22,7 @@ To create a merchant relation:
 4. Select the business unit owner based on the company you selected and assigned business unit(s) based on the business unit owner. 
 5. Once done, click **Save**.
 
-The merchant is created and can be used to create merchant specific prices (see [Creating an Abstract Product](https://documentation.spryker.com/docs/en/creating-an-abstract-product) and [Creating a Product Variant](https://documentation.spryker.com/docs/en/creating-a-product-variant) to know more). As well as they can be used to create merchant relationship thresholds (see [Managing Merchant Relationships Thresholds](https://documentation.spryker.com/docs/en/managing-merchant-relationships-thresholds) for more details).
+The merchant is created and can be used to create merchant specific prices (see [Creating an Abstract Product](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/abstract-products/creating-an-abstract-product.html) and [Creating a Product Variant](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html) to know more). As well as they can be used to create merchant relationship thresholds (see [Managing Merchant Relationships Thresholds](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/thresholds/merchant-relationships/managing-merchant-relationships-thresholds.html) for more details).
 
 ## Sorting the Merchant Relation Table
 You can sort the table of merchant relations based on the company for which the merchant relation has been created.

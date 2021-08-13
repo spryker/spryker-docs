@@ -2,6 +2,7 @@
 title: Tutorial - How the "define" Twig Tag is Working
 description: Use the guide to learn how to the define twig tag works in the template.
 originalLink: https://documentation.spryker.com/v5/docs/tutorial-how-define-twig-tag-is-working
+originalArticleId: 1aaf63c0-8828-4f55-938d-65ed35ebc553
 redirect_from:
   - /v5/docs/tutorial-how-define-twig-tag-is-working
   - /v5/docs/en/tutorial-how-define-twig-tag-is-working

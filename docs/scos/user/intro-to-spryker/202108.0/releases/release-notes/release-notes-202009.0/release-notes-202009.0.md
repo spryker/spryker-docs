@@ -1,13 +1,16 @@
 ---
 title: Release notes 202009.0
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-2020090
+originalArticleId: e6f148ef-1701-4f47-970e-4bfc9414e1d4
 redirect_from:
   - /2021080/docs/release-notes-2020090
   - /2021080/docs/en/release-notes-2020090
+  - /docs/release-notes-2020090
+  - /docs/en/release-notes-2020090
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements we are announcing in September 2020.
-For information about installing the Spryker Commerce OS see [Getting Started Guide](https://documentation.spryker.com/docs/dev-getting-started).
+For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{ page.version }}/developer-getting-started-guide.html).
 
 Check out our release notes video for the quick illustration of the new features and improvements:
 
@@ -29,7 +32,7 @@ When creating a return, a Customer can see all the relevant return information s
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image9.png){height="" width=""}
 
 #### Documentation
-[Return Management](https://documentation.spryker.com/v6/docs/en/return-management)
+[Return Management](https://documentation.spryker.com/2021080/docs/en/return-management)
 
 ### Custom Order Reference 
 **Custom Order Reference** is a small but powerful feature that allows Customers and Back Office Users to add an external reference to the orders. It can be a reference to a system that manages internal purchases or a ticket system. This reference can be saved and viewed both on the Storefront and in the Back Office.
@@ -37,7 +40,7 @@ When creating a return, a Customer can see all the relevant return information s
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image5.png){height="" width=""}
 
 #### Documentation
-[Custom Order Reference](https://documentation.spryker.com/v6/docs/custom-order-reference)
+[Custom Order Reference](https://documentation.spryker.com/2021080/docs/custom-order-reference)
 
 ### Filter and Search in Order Archive 
 
@@ -45,14 +48,14 @@ When creating a return, a Customer can see all the relevant return information s
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image14.png){height="" width=""}
 
 #### Documentation
-[Filter and Search in Order Archive](https://documentation.spryker.com/v6/docs/shop-guide-order-history#sorting-and-filtering-orders--b2b-shop-)
+[Filter and Search in Order Archive](https://documentation.spryker.com/2021080/docs/customer-account-feature-overview#customer-account-on-the-storefront)
 
 ### Adding shipment cost to RFQ 
 **Adding shipment cost for RFQ** is a new step in the Quotation Process at Spryker. Previously, it was not possible to create a quote with a shipment cost. Now, the quote contains the full cost of the purchase, including shipping. 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image6.png){height="" width=""}
 
 #### Documentation
-[Quotation Process & RFQ](https://documentation.spryker.com/v6/docs/quotation-process-rfq-201907)
+[Quotation Process & RFQ](/docs/scos/dev/features/{{ page.version }}/quotation-process/quotation-process.html)
 
 ### Product Relations per Store
 We have enhanced our multi-store feature with a new product management functionality.
@@ -60,21 +63,21 @@ Starting from this release, **Product Relations can be assigned to stores**. You
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image12.gif){height="" width=""}
 
 #### Documentation
-[Product Relations](https://documentation.spryker.com/v6/docs/en/product-relations)
+[Product Relations](/docs/scos/dev/features/{{ page.version }}/product-relations/product-relations.html)
 
 ### Product Labels per Store
 We have enhanced the Product Labels feature so that now you can define the stores a product label is displayed in.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image8.png){height="" width=""}
 
 #### Documentation
-[Product Labels](https://documentation.spryker.com/v6/docs/en/product-label) 
+[Product Labels](https://documentation.spryker.com/2021080/docs/en/product-label) 
 
 ### Ability to Change Image and Name in a Product Group
 We have improved our Front-end component **Product Abstract Card** to fully support the Product Group feature. Whenever you hover over the color selector on the card, the picture, title, and price of the product are updated to match your selection.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image16.gif){height="" width=""}
 
 #### Documentation
-[Product Group](https://documentation.spryker.com/v6/docs/product-group)
+[Product Group](https://documentation.spryker.com/2021080/docs/product-groups)
 
 ### Navigation as Content Item
 Our **Navigation** feature joins the Content Management capability. You can now define navigation as a content item and use it anywhere inside your Storefront. Simply add the navigation content item to a CMS Block or Page.
@@ -82,7 +85,7 @@ This also allows creating a different navigation for each store and locale.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image11.gif){height="" width=""}
 
 #### Documentation
-[Navigation](https://documentation.spryker.com/v6/docs/navigation-feature-summary) 
+[Navigation](https://documentation.spryker.com/2021080/docs/navigation) 
 
 ### Emails as CMS Blocks
 You can now manage emails you send to customers, using the Spryker CMS. Starting from this release, you can **define emails' content and layout** by editing CMS Blocks and applying email templates.
@@ -90,7 +93,7 @@ For each email template, there are HTML and text versions available by default. 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image1.png){height="" width=""}
 
 #### Documentation
-[Email as CMS Block](https://documentation.spryker.com/docs/email-as-a-cms-block)
+[Email as CMS Block](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/email-as-a-cms-block-overview.html)
 
 ### New Navigation for the Back Office
 We have reorganized our Back Office navigation to make it more clear and easier to use.
@@ -102,7 +105,7 @@ Products that have more than one variant do not have the Add to cart button on t
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image4.png){height="" width=""}
 
 #### Documentation
-[Quick Order from the Catalog Page](https://documentation.spryker.com/v6/docs/quick-order-from-the-catalog-page)
+[Quick Order from the Catalog Page](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
 
 ### Double opt-in for Customer Registration
 Spryker now supports a **double opt-in for Customer sign-ups**, that can happen either from the sign-up page or during the checkout process.
@@ -110,13 +113,13 @@ When a Customer signs up, an email with a confirmation link is sent to the provi
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image10.png){height="" width=""}
 
 #### Documentation
-[Customer Registration](https://documentation.spryker.com/v6/docs/customer-registration)
+[Customer Registration](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)
 
 ### Trigger Forgot Password Emails When Importing Customers 
 Spryker provides you with two new console commands to help migrate existing customers to a Spryker project. When importing new customers into your Spryker project, you can send the *forgot password* email to them so that they can set up the passwords for their accounts.
 
 #### Documentation
-[Password Management](https://documentation.spryker.com/docs/password-management)
+[Password Management](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management-feature-overview/password-management-overview.html)
 
 ## Order Management Enhancements 
 ### Display State of Order Item
@@ -124,25 +127,25 @@ On the order list and order details pages on the Storefront, we have added state
 Besides using the default OMS states to be displayed on the Storefront, you can also **define custom display names** for order states or a group of states. By displaying the appropriate state names in the Customer Account, you can make the order states understandable for Customers and avoid showing pure technical states.
 
 #### Documentation
-[HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html)
+[HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html)
 
 ### Order Cancelation
 Customer, Agent, and Back Office users can now **cancel orders** during the cancelation period. The cancellation period is 30 minutes by default, and you can customize it for your project. The Sales Order item states in which a product can be canceled are defined with a dedicated flag in the State Machine.
 
 #### Documentation
-[Order Cancellation](https://documentation.spryker.com/v6/docs/order-cancellation)
+[Order Cancellation](https://documentation.spryker.com/2021080/docs/order-cancellation)
 
 ### Invoice Generation
 Spryker now supports **invoice generation** inside the OMS processes. Starting from this release, the Back Office users can trigger the `invoice-generate` order state, which generates the order invoice and sends it to the Customer’s email address. 
 
 #### Documentation
-[Invoice Generation](https://documentation.spryker.com/v6/docs/en/invoice-generation)
+[Invoice Generation](https://documentation.spryker.com/2021080/docs/en/invoice-generation)
 
 ### Maximum Order Threshold
 The Order Thresholds feature, in addition to the minimum order threshold, now supports the maximum one. The **maximum order threshold** allows to define an order value that shouldn't be reached for the order to be placed.
 
 #### Documentation
-[Order Thresholds](https://documentation.spryker.com/v6/docs/en/order-thresholds)
+[Order Thresholds](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/order-thresholds.html)
 
 ## Data Exchange
 ### Data Import Documentation
@@ -150,7 +153,7 @@ We have improved data importers’ documentation, making it easier to understand
 You will have access to detailed information about CSV files format, dependencies, and mandatory information needed to run the data import operation.
 
 #### Documentation
-[About Demo Shop Data Import](https://documentation.spryker.com/v6/docs/about-demo-shop-data-import)
+[About Demo Shop Data Import](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/demo-shop-data-import/importing-demo-shop-data.html)
 
 ### Data Import: Configuration (YAML) File for Batch Data Import
 We have improved the data importers’ usability. 
@@ -159,7 +162,7 @@ You may now change names and locations of the CSV files to be imported, define a
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image2.png){height="" width=""}
 
 #### Documentation
-[Importing Data with a Configuration File](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/importing-data-with-a-configuration-file.html)
+[Importing Data with a Configuration File](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/importing-data-with-a-configuration-file.html)
 
 ### Data Import: Import Product Data with a Single File
 Generating and using different .csv files (*productabstract.csv, productconcrete.csv, productprice.csv, productstock.csv*, etc.) to import product data can be, for some users, time-consuming and difficult to manage. In this release, we have added an ability of **bulk product data import** **with a single .csv file**, which might be especially useful to:
@@ -176,7 +179,7 @@ To execute it, a single .csv file with the combined product data-sets to import 
 The combined product data-sets follow an identical format as the individual .csv files used by the modular data importers. The existing modular data importers managing individual product .csv files are not impacted (that is, *productabstract.csv, productconcrete.csv, product_price.csv*, etc. will continue to work as before).
 
 #### Documentation
-[Importing Product Data With a Single File](https://documentation.spryker.com/v6/docs/en/importing-product-data-with-a-single-file)
+[Importing Product Data With a Single File](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/importing-product-data-with-a-single-file.html)
 
 ### Data Export (Orders)
 The new **Data Export Sales Orders** feature allows you to export orders, order items, and order expenses data for one or multiple stores, giving the flexibility to define filter criteria to export only what is necessary. 
@@ -189,7 +192,7 @@ Each export execution generates at minimum three different .csv files: orders.cs
 A new console `data:export command` was implemented to be able to export these .csv order files.
 
 #### Documentation
-[Data Export](/docs/scos/dev/sdk/202009.0/data-export.html)
+[Data Export](/docs/scos/dev/sdk/{{ page.version }}/data-export.html)
 
 ## Spryker Glue API
 We continue to add support for new storefront APIs.
@@ -198,33 +201,33 @@ We continue to add support for new storefront APIs.
 Both in the B2B and B2C contexts, you’ll find many cases when you want to sell products not by unit but by different measures. For example, you can offer apples by “Kilogram” and cables by “Centimeter”, “Meter” or “Feet” instead of by “Item”. This API enables you to **use measurement units throughout the purchasing’s user journey in product detail pages, cart, checkout, and orders**.
 
 #### Documentation
-[Measurement Units API](/docs/scos/dev/glue-api-guides/202009.0/retrieving-measurement-units.html)
+[Measurement Units API](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-measurement-units.html)
 
 ### Shopping Lists API
 In the B2B context, shopping lists play a key role. Company users can create and manage shopping lists of frequently purchased products to help them complete recurrent purchases and to organize their shopping preferences with ease. With this API, you can **enable your customers’ company users to create and retrieve shopping lists, edit and delete them, add and remove items from a shopping list, etc**.
 
 #### Documentation
-[Shopping Lists API](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
+[Shopping Lists API](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
 
 ### Promotional Products API
 Equally important in B2B and B2C are product discounts and promotions. In our previous release, we already provided endpoints for cart rules and vouchers. Now you will also be able to make use of the API to **offer discounts consisting of promotional products**. With this API, you can apply promotional product discounts to allow adding a promotional product to cart, and highlight it among the cart items.
 
 #### Documentation
-[Promotions API](/docs/scos/dev/glue-api-guides/202009.0/retrieving-promotional-items.html)
+[Promotions API](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-promotional-items.html)
 
 ### Checkout API - Shipment and Payment Methods
 The checkout process is paramount for your business in any business model. With this API, you will be able to **integrate shipment and payment methods** seamlessly into your checkout process. You can get shipment and payment methods with one single request and also make use of only the information you need on each checkout step.
 
 #### Documentation
 
-* [Checking Out Purchases and Getting Checkout Data](https://documentation.spryker.com/v6/docs/checking-out-purchases-and-getting-checkout-data-201907)
-* [Retrieving Customer's Order History](https://documentation.spryker.com/v6/docs/retrieving-customers-order-history)
+* [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/checking-out-purchases.html)
+* [Retrieving Customer's Order History](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-orders.html)
 
 ### Refresh Token API 
 To enable the maximum level of security for your system, you must be able to invalidate (refresh) tokens in the presence of potential menaces. With this API, **refresh tokens are made persistent long-term, and you will be able to revoke them at any time for each user**. You can also configure the amount of time for persistence and clean the refresh tokens up from the database when necessary.
 
 #### Documentation
-[Token Revocation](https://documentation.spryker.com/v6/docs/authentication-and-authorization#token-revocation)
+[Token Revocation](/docs/scos/dev/glue-api-guides/{{ page.version }}/authentication-and-authorization.html#token-revocation)
 
 ### Gift Cards API
 Enabling your customers to **use and redeem gift cards** in your shop provides an important business value. We enable you to set this process also through the GLUE API. The cart codes endpoint provides your customers with the gift card’s redemption functionality. These endpoints can also be used for voucher redemption for a unified experience. 
@@ -233,14 +236,14 @@ The necessary logic has been added to the checkout endpoints to secure the purch
 
 #### Documentation
 
-* [Managing Gift Cards of Guest Users](https://documentation.spryker.com/v6/docs/en/managing-gift-cards-of-guest-users)
-* [Managing Gift Cards of Registered Users](https://documentation.spryker.com/v6/docs/en/managing-gift-cards-of-registered-users)
+* [Managing Gift Cards of Guest Users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html)
+* [Managing Gift Cards of Registered Users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
 
 ### Swagger Documentation Generator Contains “Includes” by Endpoint
 In order to make it easier for API consumers to understand the content of those endpoints following the compound documents section of the JSONAPI specification, in this release, we have introduced improvements that will allow you to have upfront information by endpoint about the primary resources that can be included in the response. This can be useful not only for a basic understanding of the endpoints but also for automation purposes.
 
 #### Documentation
-[Resource Relationships](https://documentation.spryker.com/v6/docs/documenting-glue-api-resources#resource-relationships)
+[Resource Relationships](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/introduction-tutorials/glue-api/documenting-glue-api-resources.html#resource-relationships)
 
 ## Technical Enhancements
 ### Raise Modules Code Quality to PHPStan Level 5+
@@ -267,12 +270,12 @@ Starting from this release, Yves, our backend-rendered frontend application, has
 The new recommended console entry endpoint for Yves is located in `vendor/bin/yves` and is based on [Symfony’s console component](https://symfony.com/doc/current/components/console.html). Therefore, you can add your own console command implementations by extending the corresponding classes. Within the implementation, you have multiple options to tailor your command to your needs, such as adding application plugins, event subscribers as well as pre- and post-run hooks.
 
 #### Documentation
-[CLI Entry Point for Yves](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/yves/cli-entry-point-for-yves.html)
+[CLI Entry Point for Yves](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/yves/cli-entry-point-for-yves.html)
 
 ### Custom OMS Timeout Processors
 The order management system (OMS) validates the state of order items in fixed time intervals. This can lead to a high number of unnecessary checks if orders have a fixed future date for shipment, delivery or pick up, etc. This can be the case if, for example, the orders contain perishables or are subject to other constraints.
 To avoid the unnecessary checks and load on the OMS, we have added custom Timeout Processors for the OMS, which allow you to specify custom checks for orders within the OMS state machine. Due to the Timeout processors, the checks are executed according to defined parameters in the state machine, such as timeout and frequency of the check. 
 
 #### Documentation
-[OMS Timeout Processor](https://documentation.spryker.com/v6/docs/order-process-modelling-state-machines#oms-timeout-processor)
+[OMS Timeout Processor](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)
 

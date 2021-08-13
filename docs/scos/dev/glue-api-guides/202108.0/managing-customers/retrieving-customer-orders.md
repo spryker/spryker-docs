@@ -2,16 +2,19 @@
 title: Retrieving customer orders
 description: This endpoint allows retrieving a customer's orders.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-orders
+originalArticleId: 4390b08b-349a-406e-8e41-983014e30ab5
 redirect_from:
   - /2021080/docs/retrieving-customer-orders
   - /2021080/docs/en/retrieving-customer-orders
+  - /docs/retrieving-customer-orders
+  - /docs/en/retrieving-customer-orders
 ---
 
 This endpoint allows retrieving a customer’s orders.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Order Management feature integration](https://documentation.spryker.com/docs/glue-api-order-management-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Order Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html).
 
 ## Retrieve a customer’s orders
 
@@ -23,13 +26,13 @@ To retrieve a customer’s orders, send the request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all orders made by a customer through the **/orders** endpoint. For details, see [Retrieving orders](https://documentation.spryker.com/docs/retrieving-orders#retrieve-all-orders).
+Alternatively, you can retrieve all orders made by a customer through the **/orders** endpoint. For details, see [Retrieving orders](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-orders.html#retrieve-all-orders).
 
 {% endinfo_block %}
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](https://documentation.spryker.com/docs/customers#retrieve-customers) or [create a customer](https://documentation.spryker.com/docs/customers#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html#create-a-customer). |
 
 ### Request
 
@@ -106,4 +109,4 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 | 402 | Customer with the specified ID was not found. |
 | 802 | Request is unauthorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

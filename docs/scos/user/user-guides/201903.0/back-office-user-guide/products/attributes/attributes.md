@@ -2,6 +2,7 @@
 title: Attributes
 description: Use the Attributes  section to add super attributes to product variants to highlight its specific peculiarities.
 originalLink: https://documentation.spryker.com/v2/docs/attributes
+originalArticleId: 678aaa96-3ec4-4143-8eee-e982082eeb0a
 redirect_from:
   - /v2/docs/attributes
   - /v2/docs/en/attributes

@@ -2,9 +2,12 @@
 title: Reference information- Return details
 description: This article provides reference information while working with returns in the Spryker Storefront.
 originalLink: https://documentation.spryker.com/2021080/docs/return-details-reference-information
+originalArticleId: 9ba3eb33-9ca4-47b5-94a5-00472bc8c4d8
 redirect_from:
   - /2021080/docs/return-details-reference-information
   - /2021080/docs/en/return-details-reference-information
+  - /docs/return-details-reference-information
+  - /docs/en/return-details-reference-information
 ---
 
 All the returns that you created, as well as the returns created for you by the Shop Owner, are displayed on the *My Account > Returns* page.

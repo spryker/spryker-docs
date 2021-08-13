@@ -2,9 +2,12 @@
 title: Managing product lists
 description: Use these procedures to edit, export, remove a product list or remove products from the product list in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-lists
+originalArticleId: 18628b05-d26f-469a-a201-d74c1a235cf8
 redirect_from:
   - /2021080/docs/managing-product-lists
   - /2021080/docs/en/managing-product-lists
+  - /docs/managing-product-lists
+  - /docs/en/managing-product-lists
 ---
 
 This article describes how to manage product lists.
@@ -29,7 +32,7 @@ The page refreshes with the success message displayed.
 
 {% info_block warningBox "Blacklist" %}
 
-If a product list is used by a [configurable bundle](https://documentation.spryker.com/docs/configurable-bundle-feature-overview) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](https://documentation.spryker.com/docs/configurable-bundle-feature-overview#configurable-bundle-slots) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}*  page, switch to the *Used by* tab.
+If a product list is used by a [configurable bundle](/docs/scos/dev/features/{{ page.version }}/configurable-bundle/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/scos/dev/features/{{ page.version }}/configurable-bundle/configurable-bundle-feature-overview.html#configurable-bundle-slots) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}*  page, switch to the *Used by* tab.
 
 {% endinfo_block %}
 
@@ -99,5 +102,5 @@ To remove a product list:
     The *Overview of Product lists* page opens with the success message displayed. 
 
 **What's next?**
-See the reference information of the [Creating a product list](https://documentation.spryker.com/docs/creating-a-product-list) guide to learn about the attributes you see, select, and enter while managing a product list.
+See the reference information of the [Creating a product list](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/product-lists/creating-a-product-list.html) guide to learn about the attributes you see, select, and enter while managing a product list.
 

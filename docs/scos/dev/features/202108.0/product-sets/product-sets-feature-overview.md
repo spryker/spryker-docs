@@ -2,9 +2,12 @@
 title: Product Sets feature overview
 description: Learn about the modules that build up the Product Set feature
 originalLink: https://documentation.spryker.com/2021080/docs/product-sets-feature-overview
+originalArticleId: 7bc42ccb-f76c-400f-9372-251104ce0b77
 redirect_from:
   - /2021080/docs/product-sets-feature-overview
   - /2021080/docs/en/product-sets-feature-overview
+  - /docs/product-sets-feature-overview
+  - /docs/en/product-sets-feature-overview
 ---
 
 The *Product Sets* feature allows you to create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room. 
@@ -22,7 +25,7 @@ A Back Office user can define the following:
 * Unique product set URL.
 
  
-A Back Office user can add a product sets to any page by [creating a product set content item](https://documentation.spryker.com/docs/creating-content-items) and [adding it to CMS pages and blocks](https://documentation.spryker.com/docs/adding-content-items-to-cms-pages-and-blocks).
+A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 
 
 For more details on product sets, check the video:

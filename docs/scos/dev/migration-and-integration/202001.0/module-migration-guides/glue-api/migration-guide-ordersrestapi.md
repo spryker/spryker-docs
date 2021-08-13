@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - OrdersRestApi
 originalLink: https://documentation.spryker.com/v4/docs/mg-ordersrestapi
+originalArticleId: 6af7e325-1ab0-4f63-b1ce-458af4b8ac41
 redirect_from:
   - /v4/docs/mg-ordersrestapi
   - /v4/docs/en/mg-ordersrestapi

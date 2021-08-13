@@ -2,6 +2,7 @@
 title: PayOne - Invoice Payment
 description: Integrate invoice payment through Payone into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v6/docs/payone-invoice
+originalArticleId: 77760ab3-b5f7-400e-89dc-0b9ab8eee646
 redirect_from:
   - /v6/docs/payone-invoice
   - /v6/docs/en/payone-invoice

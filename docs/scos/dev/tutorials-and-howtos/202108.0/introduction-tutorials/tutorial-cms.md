@@ -2,9 +2,12 @@
 title: Tutorial - CMS
 description: Use the tutorial to create a static Contact Us page with its own template and integrate it to Yves.
 originalLink: https://documentation.spryker.com/2021080/docs/t-cms
+originalArticleId: 010de313-e57b-49d1-9350-b31a6e2e1ed7
 redirect_from:
   - /2021080/docs/t-cms
   - /2021080/docs/en/t-cms
+  - /docs/t-cms
+  - /docs/en/t-cms
 ---
 
 <!--used to be: http://spryker.github.io/challenge/cms/-->
@@ -31,10 +34,10 @@ Go back to the [page](http://www.de.demoshop.local/de/contact) and have a look a
 
 | Documentation | Description |
 | --- | --- |
-| [CMS Manual](/docs/scos/dev/features/202001.0/cms/cms.html)  |
-|  [Implementing URL Routing in Yves](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/yves/implementing-url-routing-in-yves.html)| Steps to implement URL Routing in Yves |
-| [Glossary Creation](/docs/scos/dev/features/202001.0/internationalization/glossary-creation/glossary-creation.html) |Glossary module documentation  |
-| [Cronjob Scheduling](https://documentation.spryker.com/v4/docs/cronjob-scheduling-1) | Set up cron jobs in Jenkins |
+| [CMS Manual](/docs/scos/dev/features/{{ page.version }}/cms/cms.html)  |
+|  [Implementing URL Routing in Yves](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/yves/implementing-url-routing-in-yves.html)| Steps to implement URL Routing in Yves |
+| [Glossary Creation](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/glossary/managing-glossary.html) |Glossary module documentation  |
+| [Cronjob Scheduling](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/cronjob-scheduling.html) | Set up cron jobs in Jenkins |
 
 <!-- Last review date: Sep 11, 2017_
 

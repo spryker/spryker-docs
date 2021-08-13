@@ -2,6 +2,7 @@
 title: About Migration Concepts
 description: The section provides instructions on how to install features in your project- Split Delivery, Silex Replacement, CRUD Scheduled Prices,  and Decimal Stock.
 originalLink: https://documentation.spryker.com/v4/docs/about-migration-concepts
+originalArticleId: 25bdc252-87a1-45a3-8cf3-7b4031efc78f
 redirect_from:
   - /v4/docs/about-migration-concepts
   - /v4/docs/en/about-migration-concepts

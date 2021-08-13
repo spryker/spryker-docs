@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Customer Import
 originalLink: https://documentation.spryker.com/v2/docs/t-customer-import
+originalArticleId: 71b5f5c5-b30c-4224-9e3f-2fd20598f595
 redirect_from:
   - /v2/docs/t-customer-import
   - /v2/docs/en/t-customer-import

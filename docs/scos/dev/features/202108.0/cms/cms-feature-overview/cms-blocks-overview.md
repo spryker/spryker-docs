@@ -2,9 +2,12 @@
 title: CMS blocks overview
 description: With the CMS Block feature, you can easily add promotional banners and define validity date ranges to emphasize specific, time-limited content.
 originalLink: https://documentation.spryker.com/2021080/docs/cms-blocks-overview
+originalArticleId: 2b07c846-32ed-42b7-bf71-9c9ecc4f54ba
 redirect_from:
   - /2021080/docs/cms-blocks-overview
   - /2021080/docs/en/cms-blocks-overview
+  - /docs/cms-blocks-overview
+  - /docs/en/cms-blocks-overview
 ---
 
 A *CMS block* is a piece of reusable content which you can add to multipe CMS pages and templates. For example, with the help of a block, you can add banners to the top of a page or add SEO text to the bottom of a page. 
@@ -13,7 +16,7 @@ A *CMS block* is a piece of reusable content which you can add to multipe CMS pa
 
 A *CMS block template* is a Twig file that, when applied to a block, defines its design, layout, and functionality.
 
-You can create templates to effectively create similar content. However, as CMS block, is a multi-purpose  entity, you can create templates that allow you to manage the content of different functionalities in your shop. For example, you can [manage emails via CMS blocks](https://documentation.spryker.com/docs/email-as-a-cms-block-overview).
+You can create templates to effectively create similar content. However, as CMS block, is a multi-purpose  entity, you can create templates that allow you to manage the content of different functionalities in your shop. For example, you can [manage emails via CMS blocks](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/email-as-a-cms-block-overview.html).
 
 The CMS feature is shipped with several block templates by default. A developer can create more templates.
 
@@ -89,4 +92,4 @@ Product blocks are blocks that can be embedded in the product template, for whic
                 
 ## See next
 
-* [Templates and slots](https://documentation.spryker.com/docs/templates-and-slots)
+* [Templates and slots](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/templates-and-slots-overview.html)

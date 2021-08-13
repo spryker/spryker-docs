@@ -2,6 +2,7 @@
 title: Discount- Reference Information
 description: This guide provides additional information on the values you use when working with discounts in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/discount-reference-information
+originalArticleId: 1d78fedb-d83c-466f-8eaa-14f0be2467c5
 redirect_from:
   - /v3/docs/discount-reference-information
   - /v3/docs/en/discount-reference-information

@@ -2,6 +2,7 @@
 title: Business Unit Management
 description: With Business Units Management, company users can create a visualized business units hierarchy- add, edit and delete business units, and much more.
 originalLink: https://documentation.spryker.com/v3/docs/business-unit-management
+originalArticleId: 9d29331f-4409-4f98-b5c7-40c96708991c
 redirect_from:
   - /v3/docs/business-unit-management
   - /v3/docs/en/business-unit-management

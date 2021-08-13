@@ -2,6 +2,7 @@
 title: Price Functionality
 description: In the article, you can find the price definition, its types, how the price is inherited and calculated.
 originalLink: https://documentation.spryker.com/v5/docs/price-functionality
+originalArticleId: 4f6994ab-dad9-46da-9ed5-3d0b457f72f0
 redirect_from:
   - /v5/docs/price-functionality
   - /v5/docs/en/price-functionality
@@ -31,4 +32,4 @@ The concerns for the product price calculation are the following :
 * calculate amount of tax
 
 price for the options that were selected for the product (e.g.: frame, fabric, etc.)
-For more information, see [Checkout Calculation](https://documentation.spryker.com/docs/en/calculation-3-0).
+For more information, see [Checkout Calculation](/docs/scos/dev/features/202005.0/shopping-cart/calculation/calculation-3.0.html).

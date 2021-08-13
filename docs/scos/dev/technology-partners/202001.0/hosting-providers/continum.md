@@ -2,6 +2,7 @@
 title: Continum
 description: Integrate Continum hosting solution to host Spryker-based project.
 originalLink: https://documentation.spryker.com/v4/docs/continum
+originalArticleId: 1c1cce6e-da22-45aa-91cc-834844d9201b
 redirect_from:
   - /v4/docs/continum
   - /v4/docs/en/continum

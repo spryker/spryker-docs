@@ -1,6 +1,7 @@
 ---
 title: Integrating JQuery into Atomic Frontend
 originalLink: https://documentation.spryker.com/v3/docs/t-integrate-jquery
+originalArticleId: 7e7d692a-740d-4895-8230-7539b95d61e3
 redirect_from:
   - /v3/docs/t-integrate-jquery
   - /v3/docs/en/t-integrate-jquery

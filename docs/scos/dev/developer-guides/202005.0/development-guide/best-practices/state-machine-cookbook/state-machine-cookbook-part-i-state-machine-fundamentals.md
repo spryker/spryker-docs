@@ -2,6 +2,7 @@
 title: State Machine Cookbook - Part I - State Machine Fundamentals
 description: State machines are a model of computation used to automate processes. In Spryker you can use the OMS module to automate the management of orders or the StateMachine module to automate other processes you define in your shop.
 originalLink: https://documentation.spryker.com/v5/docs/state-machine-cookbook
+originalArticleId: 50027cf6-d833-465e-876a-ab00260912fd
 redirect_from:
   - /v5/docs/state-machine-cookbook
   - /v5/docs/en/state-machine-cookbook
@@ -545,4 +546,4 @@ As you can notice from the example, all changes that are BC breaking will result
 
  <!-- **See also:** article has not been moved yet
 
-* [Cron Jobs - State Machine](https://documentation.spryker.com/docs/en/state-machine-cronjob.htm) -->
+* [Cron Jobs - State Machine](https://documentation.spryker.com/v5/docs/en/state-machine-cronjob.htm) -->

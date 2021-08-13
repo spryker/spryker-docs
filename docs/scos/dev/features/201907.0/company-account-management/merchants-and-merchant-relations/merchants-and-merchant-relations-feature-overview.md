@@ -2,6 +2,7 @@
 title: Merchants and Merchant Relations Feature Overview
 description: In the context of Spryker B2B eCommerce platform, there can be three key figures- marketplace owner, merchant, and buyer.
 originalLink: https://documentation.spryker.com/v3/docs/merchants-and-merchant-relations-overview
+originalArticleId: b2d5197c-d3ad-4c72-bcb3-371d70452c51
 redirect_from:
   - /v3/docs/merchants-and-merchant-relations-overview
   - /v3/docs/en/merchants-and-merchant-relations-overview

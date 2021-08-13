@@ -2,6 +2,7 @@
 title: Managing Products
 description: Use this guide to view product details, activate or update product attributes in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/managing-products
+originalArticleId: 9f62304b-a74f-4f1c-976f-ed427be5e439
 redirect_from:
   - /v4/docs/managing-products
   - /v4/docs/en/managing-products

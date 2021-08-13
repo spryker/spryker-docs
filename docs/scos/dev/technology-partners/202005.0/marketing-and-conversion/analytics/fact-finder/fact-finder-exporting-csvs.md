@@ -2,6 +2,7 @@
 title: FACT-Finder - Exporting CSVs
 description: Export data to FACT-Finder CSV by applying the configuration.
 originalLink: https://documentation.spryker.com/v5/docs/search-factfinder-export-csv
+originalArticleId: 190b3f92-5533-4a41-9670-347151093c69
 redirect_from:
   - /v5/docs/search-factfinder-export-csv
   - /v5/docs/en/search-factfinder-export-csv
@@ -31,7 +32,7 @@ If you need to modify the CSV column mapping for any reason, you will have to ex
 
 ### Console
 
-To export the products and categories using the queries we made before, we must register the `FactFinderSdk` console command in [Console](https://documentation.spryker.com/docs/en/console).
+To export the products and categories using the queries we made before, we must register the `FactFinderSdk` console command in [Console](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/console-commands-in-spryker.html).
 
 The `FactFinderSdk` module already includes everything though you will need to add `FactFinderSdkExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like below:
 ```php

@@ -2,14 +2,17 @@
 title: Heidelpay - Easy Credit
 description: Integrate easy credit payment through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-easy-credit
+originalArticleId: 83746ef1-fe16-4a17-bd70-98519e4418fa
 redirect_from:
   - /2021080/docs/heidelpay-easy-credit
   - /2021080/docs/en/heidelpay-easy-credit
+  - /docs/heidelpay-easy-credit
+  - /docs/en/heidelpay-easy-credit
 ---
 
 ## Setup
 
-The following configuration should be implemented after Heidelpay has been [installed](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
+The following configuration should be implemented after Heidelpay has been [installed](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
 
 ## Configuration
 

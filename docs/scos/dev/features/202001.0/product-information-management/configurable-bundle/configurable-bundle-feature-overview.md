@@ -2,6 +2,7 @@
 title: Configurable Bundle Feature Overview
 description: A configurable bundle is a product bundle, that a customer can configure in the Storefront on the go by choosing the suggested concrete products.
 originalLink: https://documentation.spryker.com/v4/docs/configurable-bundle-feature-overview
+originalArticleId: 6428af77-a92a-421e-86b6-0c19f14f1169
 redirect_from:
   - /v4/docs/configurable-bundle-feature-overview
   - /v4/docs/en/configurable-bundle-feature-overview
@@ -70,7 +71,7 @@ A slot is an entity with a list of assigned products for the configurable bundle
 * Configurable Bundle Slot ID
 * Product List ID
 
-A Back Office User can [create an unlimited number of slots](https://documentation.spryker.com/v4/docs/managing-configurable-bundle-templates#creating-a-slot-for-a-configurable-bundle-template) for a template.
+A Back Office User can [create an unlimited number of slots](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-a-slot-for-a-configurable-bundle-template) for a template.
 {% info_block infoBox "Example" %}
 
 `Kitchen furniture set` configurable bundle contains eight slots:

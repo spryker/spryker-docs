@@ -1,6 +1,7 @@
 ---
 title: Retrieving Navigation Trees
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-navigation-trees-201903
+originalArticleId: 361e9429-003a-4a1c-b807-7e6440e2815e
 redirect_from:
   - /v2/docs/retrieving-navigation-trees-201903
   - /v2/docs/en/retrieving-navigation-trees-201903
@@ -21,7 +22,7 @@ For more details on managing navigation trees, see [Navigation](/docs/scos/dev/f
 {% endinfo_block %}.)
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](https://documentation.spryker.com/v2/docs/navigation-api-feature-integration-1).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/features/201903.0/navigation/navigation.html-api-feature-integration-1).
 
 ## Usage
 To retrieve a navigation tree with detailed information on each node, send a GET request to the following endpoint:

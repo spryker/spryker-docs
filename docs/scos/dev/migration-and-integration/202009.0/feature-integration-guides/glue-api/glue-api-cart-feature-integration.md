@@ -2,6 +2,7 @@
 title: Glue API- Cart feature integration
 description: Install the Cart API feature in your project.
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-cart-feature-integration
+originalArticleId: 01ae9079-f520-434c-84fd-53fec8ccf743
 redirect_from:
   - /v6/docs/glue-api-cart-feature-integration
   - /v6/docs/en/glue-api-cart-feature-integration
@@ -15,9 +16,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application Feature Integration](https://documentation.spryker.com/docs/en/glue-api-glue-application-feature-integration) |
-| Product | master | [Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration) |
-| Cart | master| [Cart Feature Integration](https://documentation.spryker.com/docs/cart-feature-integration) |
+| Spryker Core | master | [Glue Application Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html) |
+| Product | master | [Products Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) |
+| Cart | master| [Cart Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/cart-feature-integration.html) |
 | Login | master | Login API Feature Integration |
 
 ### 1) Install the Required Modules Using Composer

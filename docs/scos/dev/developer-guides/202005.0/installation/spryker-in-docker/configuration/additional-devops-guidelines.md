@@ -2,6 +2,7 @@
 title: Additional DevOPS Guidelines
 description: DevOPS guidelines for running Spryker in Docker.
 originalLink: https://documentation.spryker.com/v5/docs/additional-devops-guidelines
+originalArticleId: 0dd3014a-8cd9-46b6-b049-6aba95efd27d
 redirect_from:
   - /v5/docs/additional-devops-guidelines
   - /v5/docs/en/additional-devops-guidelines

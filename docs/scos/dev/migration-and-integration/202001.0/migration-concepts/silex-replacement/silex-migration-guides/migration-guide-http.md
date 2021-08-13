@@ -2,13 +2,14 @@
 title: Migration Guide - HTTP
 description: Use the guide to perform the HTTP part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-http
+originalArticleId: 409dfdc4-878f-4550-8acd-256340f0aea2
 redirect_from:
   - /v4/docs/migration-guide-http
   - /v4/docs/en/migration-guide-http
 ---
 
 :::(Error) 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/v4/docs/silex-replacement-201903).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/silex-replacement/silex-replacement.html).
 :::
 To upgrade the module, do the following:
 

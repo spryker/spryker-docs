@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Sales
 originalLink: https://documentation.spryker.com/v1/docs/mg-sales
+originalArticleId: 41b9cb05-abb2-493a-8f3f-77c91012a9c8
 redirect_from:
   - /v1/docs/mg-sales
   - /v1/docs/en/mg-sales

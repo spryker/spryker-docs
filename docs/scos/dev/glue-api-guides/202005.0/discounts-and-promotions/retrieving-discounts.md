@@ -1,6 +1,7 @@
 ---
 title: Retrieving Discounts
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-discounts
+originalArticleId: 1afa9ae5-e357-4616-bd9b-8667501ea502
 redirect_from:
   - /v5/docs/retrieving-discounts
   - /v5/docs/en/retrieving-discounts
@@ -8,8 +9,8 @@ redirect_from:
 
 The Discount API enables shop owners to add free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price. Discounts can be applied to a purchase in **2** ways:
 
-1. Discounts applied to carts based on certain conditions, called [cart rules](https://documentation.spryker.com/docs/en/creating-a-cart-rule-discount);
-2. Price reductions provided when redeeming a [discount voucher](https://documentation.spryker.com/docs/en/creating-a-discount-voucher).
+1. Discounts applied to carts based on certain conditions, called [cart rules](https://documentation.spryker.com/v5/docs/en/creating-a-cart-rule-discount);
+2. Price reductions provided when redeeming a [discount voucher](https://documentation.spryker.com/v5/docs/en/creating-a-discount-voucher).
 
 Discounts provided based on *cart rules* are calculated and taken into account automatically. *Vouchers*, on the other hand, need to be applied by customers explicitly. For this purpose, the *Discounts API* allows:
 
@@ -21,14 +22,14 @@ Discounts provided based on *cart rules* are calculated and taken into account a
 In your development, the API will help you to enable customers to apply voucher discounts to their purchases and check the correct order amount, discount included.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts Feature Integration](https://documentation.spryker.com/docs/en/glue-promotions-discounts-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
 
 ## Applying Discount Vouchers
 To apply a discount voucher, first, a customer needs to have a cart with some products in it.
 
 {% info_block infoBox "Info" %}
 
-For details on how to manage carts, see [Managing Carts](https://documentation.spryker.com/docs/en/managing-carts).
+For details on how to manage carts, see [Managing Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html).
 
 {% endinfo_block %}
 
@@ -39,7 +40,7 @@ To apply a discount voucher to a cart, you need to send it via a *POST* request 
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -47,7 +48,7 @@ Carts of registered users cannot be accessed anonymously. For this reason, you a
 
 {% info_block warningBox "Anonymous User ID" %}
 
-When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts).
+When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
 
 {% endinfo_block %}
 
@@ -184,7 +185,7 @@ if you want to retrieve discounts provided by **cart rules**, include the *cart-
     
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %}
     
@@ -194,7 +195,7 @@ Carts of registered users cannot be accessed anonymously. For this reason, you a
     
 {% info_block warningBox "Anonymous User ID" %}
 
-When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts).
+When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
 
 {% endinfo_block %}
     
@@ -334,7 +335,7 @@ To unapply a discount voucher, send a DELETE request to the following endpoints:
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -342,7 +343,7 @@ Carts of registered users cannot be accessed anonymously. For this reason, you a
 
 {% info_block warningBox "Anonymous User ID" %}
 
-When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts).
+When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html).
 
 {% endinfo_block %}
 

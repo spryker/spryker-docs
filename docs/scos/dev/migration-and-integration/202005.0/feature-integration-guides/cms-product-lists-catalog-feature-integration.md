@@ -1,6 +1,7 @@
 ---
 title: CMS + Product Lists + Catalog Feature Integration
 originalLink: https://documentation.spryker.com/v5/docs/cms-page-search-product-lists-catalog-feature-integration
+originalArticleId: b42e2c34-0a53-49ba-ac3a-a40c269d80cc
 redirect_from:
   - /v5/docs/cms-page-search-product-lists-catalog-feature-integration
   - /v5/docs/en/cms-page-search-product-lists-catalog-feature-integration

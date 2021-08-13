@@ -2,6 +2,7 @@
 title: Customer Relationship Management (CRM)
 description: The compact and powerful customer management tool allows you to easily manage customer accounts and effectively monitor their shopping habits.
 originalLink: https://documentation.spryker.com/v3/docs/crm
+originalArticleId: a42b1bc1-b8a6-43d7-ad9b-40fe2d428e6d
 redirect_from:
   - /v3/docs/crm
   - /v3/docs/en/crm

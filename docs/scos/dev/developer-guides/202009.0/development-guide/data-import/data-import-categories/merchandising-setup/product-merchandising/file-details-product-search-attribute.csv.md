@@ -1,6 +1,7 @@
 ---
 title: File details- product_search_attribute.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-search-attributecsv
+originalArticleId: 159341c0-8126-4f19-93ee-5e51777d12b0
 redirect_from:
   - /v6/docs/file-details-product-search-attributecsv
   - /v6/docs/en/file-details-product-search-attributecsv
@@ -23,7 +24,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [product_attribute_key.csv](https://documentation.spryker.com/docs/file-details-product-attribute-keycsv)
+*    [product_attribute_key.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
 
 ## Recommendations & other information
 The attribute key is previously loaded from *productattributekey.csv*, which can be translated in key.* fields.

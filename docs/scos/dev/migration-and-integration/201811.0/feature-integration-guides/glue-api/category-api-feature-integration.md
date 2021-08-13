@@ -2,6 +2,7 @@
 title: Category API Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Category API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v1/docs/category-api-feature-integration
+originalArticleId: 9c887081-9dd6-4bd1-8491-83b615c14f1a
 redirect_from:
   - /v1/docs/category-api-feature-integration
   - /v1/docs/en/category-api-feature-integration

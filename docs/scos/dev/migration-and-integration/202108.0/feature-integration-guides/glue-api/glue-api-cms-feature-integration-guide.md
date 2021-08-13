@@ -1,9 +1,12 @@
 ---
 title: Glue API- CMS feature integration guide
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cms-feature-integration-guide
+originalArticleId: e3dfeabf-efbe-407f-b1d7-5bcf31a423f8
 redirect_from:
   - /2021080/docs/glue-api-cms-feature-integration-guide
   - /2021080/docs/en/glue-api-cms-feature-integration-guide
+  - /docs/glue-api-cms-feature-integration-guide
+  - /docs/en/glue-api-cms-feature-integration-guide
 ---
 
 This document describes how to integrate the CMS feature API into a Spryker project.
@@ -14,8 +17,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME         | VERSION | REQUIRED SUB-FEATURE                                         |
 | :----------- | :------ | :----------------------------------------------------------- |
-| Spryker Core | master  | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
-| CMS          | master  | [CMS feature integration](https://documentation.spryker.com/docs/cms-feature-integration-guide) |
+| Spryker Core | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| CMS          | master  | [CMS feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/cms-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 

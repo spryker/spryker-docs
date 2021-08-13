@@ -2,6 +2,7 @@
 title: Publish and Synchronization testing
 description: Learn how you can test Publish and Synchronization
 originalLink: https://documentation.spryker.com/v6/docs/publish-and-synchronization-testing
+originalArticleId: 65f465cb-8bc3-403b-89b4-9f92914f9a79
 redirect_from:
   - /v6/docs/publish-and-synchronization-testing
   - /v6/docs/en/publish-and-synchronization-testing
@@ -19,11 +20,11 @@ For a better testing experience, Spryker provides some helpers that turn this as
 
 The main helpers involved in the P&S testing are:
 
-- [PublishAndSynchronizeHelper](https://documentation.spryker.com/docs/available-test-helpers#publishandsynchronizehelper)
-- [EventBehaviorHelper](https://documentation.spryker.com/docs/available-test-helpers#eventbehaviorhelper)
-- [QueueHelper](https://documentation.spryker.com/docs/available-test-helpers#queuehelper)
-- [StorageHelper](https://documentation.spryker.com/docs/available-test-helpers#storagehelper)
-- [SearchHelper](https://documentation.spryker.com/v6/docs/available-test-helpers#searchhelper)
+- [PublishAndSynchronizeHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#publishandsynchronizehelper)
+- [EventBehaviorHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#eventbehaviorhelper)
+- [QueueHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#queuehelper)
+- [StorageHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#storagehelper)
+- [SearchHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#searchhelper)
 
 ## P&S testing Storage
 Let's test that the relevant data of a saved entity is available in the Storage, for example, in Redis.
@@ -38,11 +39,11 @@ Since we work with the real database, we execute one test for:
 To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Storage` module.
-- Besides some other [helpers](https://documentation.spryker.com/docs/test-helpers), add the necessary P&S helpers:
-    - [PublishAndSynchronizeHelper](https://documentation.spryker.com/docs/available-test-helpers#publishandsynchronizehelper)
-    - [EventBehaviorHelper](https://documentation.spryker.com/docs/available-test-helpers#eventbehaviorhelper)
-    - [QueueHelper](https://documentation.spryker.com/docs/available-test-helpers#queuehelper)
-    - [StorageHelper](https://documentation.spryker.com/docs/available-test-helpers#storagehelper)
+- Besides some other [helpers](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/test-helpers.html), add the necessary P&S helpers:
+    - [PublishAndSynchronizeHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#publishandsynchronizehelper)
+    - [EventBehaviorHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#eventbehaviorhelper)
+    - [QueueHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#queuehelper)
+    - [StorageHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#storagehelper)
 - Add the `PublishAndSynchronizeTest` class
 
 This being done, you can start testing the entire process.
@@ -84,11 +85,11 @@ Since we work with the real database, we execute one test for:
 ### Preparation:
 To prepare for the test, do the following:
 - Create a `Persistence` test suite for your `*Search` module
-- Besides some other [helpers](https://documentation.spryker.com/docs/test-helpers), add the necessary P&S helpers:
-    - [PublishAndSynchronizeHelper](https://documentation.spryker.com/docs/available-test-helpers#publishandsynchronizehelper)
-    - [EventBehaviorHelper](https://documentation.spryker.com/docs/available-test-helpers#eventbehaviorhelper)
-    - [QueueHelper](https://documentation.spryker.com/docs/available-test-helpers#queuehelper)
-    - [SearchHelper](https://documentation.spryker.com/docs/available-test-helpers#searchhelper)
+- Besides some other [helpers](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/test-helpers.html), add the necessary P&S helpers:
+    - [PublishAndSynchronizeHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#publishandsynchronizehelper)
+    - [EventBehaviorHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#eventbehaviorhelper)
+    - [QueueHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#queuehelper)
+    - [SearchHelper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#searchhelper)
 - Add the `PublishAndSynchronizeTest` class
 
 This being done, you can start testing the entire process.

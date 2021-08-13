@@ -2,6 +2,7 @@
 title: Migration Guide - Price
 description: Use the guide to migrate to a newer version of the Price module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-price
+originalArticleId: aee4bbe4-47c9-4c8d-968d-0b0395bca494
 redirect_from:
   - /v6/docs/mg-price
   - /v6/docs/en/mg-price

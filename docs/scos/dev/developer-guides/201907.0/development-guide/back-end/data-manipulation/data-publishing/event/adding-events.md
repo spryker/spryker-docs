@@ -1,6 +1,7 @@
 ---
 title: Adding Events
 originalLink: https://documentation.spryker.com/v3/docs/event-adding
+originalArticleId: 1ed04c09-555e-46ca-921e-acea1f8c58de
 redirect_from:
   - /v3/docs/event-adding
   - /v3/docs/en/event-adding

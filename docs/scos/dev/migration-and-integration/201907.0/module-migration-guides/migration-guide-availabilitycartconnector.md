@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - AvailabilityCartConnector
 originalLink: https://documentation.spryker.com/v3/docs/mg-availability-cart-connector
+originalArticleId: 2cfae419-e124-48b6-bde6-dce6011b8585
 redirect_from:
   - /v3/docs/mg-availability-cart-connector
   - /v3/docs/en/mg-availability-cart-connector

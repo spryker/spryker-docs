@@ -2,6 +2,7 @@
 title: Retrieving banner content items
 description: Retrieve information about banner content items via Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-banner-content-items
+originalArticleId: 15bb2260-48d3-4535-a3e1-de38fc7dd7e8
 redirect_from:
   - /v6/docs/retrieving-banner-content-items
   - /v6/docs/en/retrieving-banner-content-items
@@ -11,7 +12,7 @@ This endpoint allows retrieving information about banner content items.
 
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](https://documentation.spryker.com/docs/content-items-api-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html).
 
 ## Retrieve a banner content item
 To retrieve information about a banner content item, send the request:
@@ -72,5 +73,5 @@ Response sample:
 |2202  | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 

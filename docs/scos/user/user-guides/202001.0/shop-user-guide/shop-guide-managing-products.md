@@ -2,6 +2,7 @@
 title: Shop Guide - Managing Products
 description: Use the guide to learn how to manage products in the online store, add products to the cart, shopping list and wishlist, as well as add reviews.
 originalLink: https://documentation.spryker.com/v4/docs/shop-guide-managing-products
+originalArticleId: fa74c604-1464-483a-a508-7ea4189f5972
 redirect_from:
   - /v4/docs/shop-guide-managing-products
   - /v4/docs/en/shop-guide-managing-products
@@ -46,7 +47,7 @@ On the product detail page, you can view some general product information that i
 | 4 | **Product price (default and original)** | *Default* price is the actual current price in the currency you’ve selected, while an *original* price (strikeout) is the price that has been applied before the default price is used due to some product promotion. |
 | 5 | **Ratings** | Product star rating. |
 | 6 | **Product group** | Set of products grouped by color. |
-| 7 | **Product options** | Additional items you can purchase along with the product. The examples can be gift wrapping, warranty, and insurance. See [Product Options Overview](https://documentation.spryker.com/v4/docs/product-options-overview#product-options-overview) for more information. |
+| 7 | **Product options** | Additional items you can purchase along with the product. The examples can be gift wrapping, warranty, and insurance. See [Product Options Overview](/docs/scos/dev/features/202001.0/product-information-management/product-options/product-options-overview.html#product-options-overview) for more information. |
 | 8 | **Add to Cart section** | Section you can use to add a product to a cart. See the Adding a Product to Cart section for more details. |
 | 9 | **Add to Shopping list section** | Section you can use to add a product to a shopping list. See the Adding a Product to Shopping List section for more details. |
 | 10 | **Add to Wishlist section** | Section you can use to add a product to a wishlist. See the Adding a Product to Wishlist section for more details. |
@@ -103,7 +104,7 @@ The shopping lists are available only for **B2B** shop users.
 
 {% endinfo_block %}
 
-You can order frequently bought products faster by adding the products to a [shopping list](https://documentation.spryker.com/v4/docs/multiple-shared-shopping-lists-overview-201907).
+You can order frequently bought products faster by adding the products to a [shopping list](https://documentation.spryker.com/v4/docs/multiple-and-shared-shopping-lists-overview).
 
 **To add a product to the shopping list:**
 
@@ -163,8 +164,8 @@ If you have several wishlists in your account, then first, select the wishlist t
 
 **What’s next?**
 
-After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](https://documentation.spryker.com/v4/docs/checkout-shop-guide-201911#shop-guide---checkout).
+After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html#shop-guide---checkout).
 
-To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](https://documentation.spryker.com/v4/docs/shopping-lists-shop-guide#shop-guide---shopping-lists).
+To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-lists.html#shop-guide---shopping-lists).
 
 To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-wishlists.html). 

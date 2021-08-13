@@ -1,6 +1,7 @@
 ---
 title: Documenting GLUE API Resources
 originalLink: https://documentation.spryker.com/v5/docs/documenting-glue-api-resources
+originalArticleId: 63abb51c-44f7-45e1-ab60-09f3750baa2e
 redirect_from:
   - /v5/docs/documenting-glue-api-resources
   - /v5/docs/en/documenting-glue-api-resources
@@ -11,7 +12,7 @@ To help developers understand and use the public API of your project, you need t
 The resulting document is a full description of your REST API following the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification) (formerly known as Swagger Document Format). It can be viewed, edited and consumed with the help of such tools as [Swagger Tools](https://swagger.io/), [Postman](https://www.getpostman.com/) etc.
 
 {% info_block warningBox %}
-REST API endpoints shipped by Spryker will be covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](https://documentation.spryker.com/docs/en/rest-api-reference
+REST API endpoints shipped by Spryker will be covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html
 {% endinfo_block %}.)
 
 ## Prerequisites
@@ -38,7 +39,7 @@ After installation, open the file `src/Pyz/Zed/DocumentationGeneratorRestApi/Doc
 | `APPLICATION_PROJECT_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **project** level. | `/Glue/%1$s/Controller/` |
 | `APPLICATION_CORE_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **vendor** level. | `/*/*/src/*/Glue/%1$s/Controller/` |
 
-For details on REST API controllers, see step [4. Create a Resource Controller](https://documentation.spryker.com/docs/en/implementing-rest-api-resource#4--create-a-resource-controller) in the **Implementing a REST API Resource** article.
+For details on REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials/202005.0/introduction/glue-api/implementing-a-rest-api-resource.html#4--create-a-resource-controller) in the **Implementing a REST API Resource** article.
 
 ## 2. Test Run
 To make sure that the documentation generator is working properly, run the following command in the console:
@@ -80,7 +81,7 @@ vendor/bin/console transfer:generate
 ```
 
 ### Resource Relationships
-Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](https://documentation.spryker.com/docs/en/glue-infrastructure#resource-relationships).
+Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/scos/dev/developer-guides/202005.0/development-guide/glue-api/glue-infrastructure.html#resource-relationships).
 
 The resource relationships that already exist, are added to the documentation automatically. However, some resources are only available through the relationships, which means, they do not have their own resource route. In these cases, to facilitate implementation of clients based on the Glue REST API of your project, you can describe such relationships in the generated documentation. To describe how two resources are related to each other, add an additional annotation to the `ResourceRelationshipPlugin` that links the resources together. For example, in the code sample below `ResourceRelationshipPlugin` allows including items while requesting a cart, is expanded with the specification of the relationship attributes type:
 
@@ -97,7 +98,7 @@ The resource relationships that already exist, are added to the documentation au
  
 {% info_block infoBox "Info" %}
 
-For more information on `ResourceRelationshipPlugins`, see [Relationship Plugin](https://documentation.spryker.com/docs/en/glue-infrastructure#resource-relationships). 
+For more information on `ResourceRelationshipPlugins`, see [Relationship Plugin](/docs/scos/dev/developer-guides/202005.0/development-guide/glue-api/glue-infrastructure.html#resource-relationships). 
 
 {% endinfo_block %}
 

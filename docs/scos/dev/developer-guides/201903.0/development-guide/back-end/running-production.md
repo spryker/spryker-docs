@@ -2,6 +2,7 @@
 title: Running Production
 description: Spryker OS is capable of providing simple and advanced production scenarios- single instance, many instances with all applications enabled, many instances with particular application layers executed.
 originalLink: https://documentation.spryker.com/v2/docs/running-production
+originalArticleId: 0e5cd416-d726-41ff-b362-cedfbb0c6f95
 redirect_from:
   - /v2/docs/running-production
   - /v2/docs/en/running-production

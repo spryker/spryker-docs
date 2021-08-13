@@ -1,6 +1,7 @@
 ---
 title: Customer Lists Schema
 originalLink: https://documentation.spryker.com/v1/docs/db-schema-customer-lists
+originalArticleId: 71b0196a-3a31-4c6d-b322-bbce1eeeef1c
 redirect_from:
   - /v1/docs/db-schema-customer-lists
   - /v1/docs/en/db-schema-customer-lists

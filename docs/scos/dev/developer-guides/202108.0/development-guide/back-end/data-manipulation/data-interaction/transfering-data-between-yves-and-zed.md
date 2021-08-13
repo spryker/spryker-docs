@@ -2,9 +2,12 @@
 title: Transfering data between Yves and Zed
 description: In this article, we’ll exemplify how you can set up the communication between Yves and Zed.
 originalLink: https://documentation.spryker.com/2021080/docs/t-transfer-data-yves-zed
+originalArticleId: 92fb4df1-548a-44eb-aa4a-8ee1d8e70376
 redirect_from:
   - /2021080/docs/t-transfer-data-yves-zed
   - /2021080/docs/en/t-transfer-data-yves-zed
+  - /docs/t-transfer-data-yves-zed
+  - /docs/en/t-transfer-data-yves-zed
 ---
 
 Yves gets most of its data from the client-side NoSQL data stores (data such as product details, product categories, prices, etc.). There are situations when Yves needs to communicate with Zed either to submit data (for example, the customer has submitted a new order or subscribed to a newsletter) or to retrieve data (for example, order history for the customer, customer account details).
@@ -13,14 +16,14 @@ In this article, we’ll exemplify how you can set up communication between Yves
 
 {% info_block warningBox "Prerequisites" %}
 
-You should have a module for which you set up communication between Yves and Zed. To add the module, see [Adding a new module](https://documentation.spryker.com/docs/t-add-new-bundle).
+You should have a module for which you set up communication between Yves and Zed. To add the module, see [Adding a new module](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html).
 
 {% endinfo_block %}
 
 To implement communication between Yves and Zed, follow the steps below.
 
 ## 1. Create a transfer object
-Communication between Yves and Zed is done using [transfer objects](https://documentation.spryker.com/docs/ht-use-transfer-objects-201903). So the first thing you have to do to establish communicaiton between Yves and Zed, is to create a transfer object as follows:
+Communication between Yves and Zed is done using [transfer objects](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html). So the first thing you have to do to establish communicaiton between Yves and Zed, is to create a transfer object as follows:
 
 1. Create a new transfer object and add it to the `src/Pyz/Shared/HelloWorld/Transfer/` folder. In our example, we've called the transfer object `helloworld.transfer.xml` and assigned one property to it:
 

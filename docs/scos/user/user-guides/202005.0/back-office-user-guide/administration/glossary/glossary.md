@@ -2,6 +2,7 @@
 title: Glossary
 description: The section is used to create translations for a new locale or update the existing ones in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/glossary
+originalArticleId: 1436e1c5-438c-4168-9e21-3f6f8c37ae2e
 redirect_from:
   - /v5/docs/glossary
   - /v5/docs/en/glossary
@@ -12,4 +13,4 @@ The Glossary section in the Back Office is mostly used by administrators when a 
 
 ***
 **What's next?**
-To know how the translations are managed, see [Managing Glossary](https://documentation.spryker.com/docs/en/managing-glossary).
+To know how the translations are managed, see [Managing Glossary](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/glossary/managing-glossary.html).

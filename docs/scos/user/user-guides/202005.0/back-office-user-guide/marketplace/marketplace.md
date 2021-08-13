@@ -2,6 +2,7 @@
 title: Marketplace
 description: The section can be used to set up merchant relations and create merchants based on the contract conditions in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/marketplace
+originalArticleId: 428a6445-3961-4857-b5fd-fac486682ff7
 redirect_from:
   - /v5/docs/marketplace
   - /v5/docs/en/marketplace
@@ -19,11 +20,11 @@ The **Merchants** section in the Back Office is designed to set up the contract 
 The **Merchant Relations** section is tight to the **Company Account > Companies** and **Company Units** sections as when you create the relation, you select the company and the respective business unit based on the contract.
 
 In order to have a correct set, you should:
-* Have a company setup done in the **Company Account** section. This company is the one with which the contract is signed. (See articles in the [Company Account](https://documentation.spryker.com/docs/en/company-account-2) section.)
+* Have a company setup done in the **Company Account** section. This company is the one with which the contract is signed. (See articles in the [Company Account](https://documentation.spryker.com/v5/docs/en/company-account-2) section.)
 * Create a merchant
 * Set up a merchant relation.
 ***
 **What's next?**
 
-* To know more about how the merchant record is managed, see [Managing Merchants](https://documentation.spryker.com/docs/en/managing-merchants).
-* To know more about merchant relations and their setup, see [Managing Merchant Relations](https://documentation.spryker.com/docs/en/managing-merchant-relations).
+* To know more about how the merchant record is managed, see [Managing Merchants](/docs/scos/user/user-guides/202005.0/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html).
+* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/user-guides/202005.0/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html).

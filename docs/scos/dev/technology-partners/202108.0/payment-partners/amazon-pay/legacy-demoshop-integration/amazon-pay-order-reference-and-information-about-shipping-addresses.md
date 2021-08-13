@@ -2,9 +2,12 @@
 title: Amazon Pay - Order Reference and Information about Shipping Addresses
 description: This article contains information about order reference and shipping address information in the Spryker Legacy Demoshop.
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-order-ref-info-demoshop
+originalArticleId: 7e4f2617-2b5c-4c80-b681-bf1cf66d5a1f
 redirect_from:
   - /2021080/docs/amazon-pay-order-ref-info-demoshop
   - /2021080/docs/en/amazon-pay-order-ref-info-demoshop
+  - /docs/amazon-pay-order-ref-info-demoshop
+  - /docs/en/amazon-pay-order-ref-info-demoshop
 ---
 
 After successful authorization, a buyer will be redirected to an order details page to enter all the information necessary for placing an order: address of shipment, payment method, delivery method and some calculations about taxes, possible discounts, delivery cost, etc.

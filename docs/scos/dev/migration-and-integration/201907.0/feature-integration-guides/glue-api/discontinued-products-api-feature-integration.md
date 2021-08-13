@@ -2,6 +2,7 @@
 title: Discontinued Products API Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Discontinued Products feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v3/docs/discontinued-products-api-feature-integration-201907
+originalArticleId: 3fb057a3-e104-4a3e-b64b-00557df8610a
 redirect_from:
   - /v3/docs/discontinued-products-api-feature-integration-201907
   - /v3/docs/en/discontinued-products-api-feature-integration-201907

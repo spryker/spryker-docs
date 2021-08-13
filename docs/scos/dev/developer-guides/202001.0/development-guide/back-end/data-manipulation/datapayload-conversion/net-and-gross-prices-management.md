@@ -2,6 +2,7 @@
 title: Net & Gross Prices Management
 description: The article describes the net & gross prices management
 originalLink: https://documentation.spryker.com/v4/docs/net-gross-prices-management
+originalArticleId: c4b844aa-556b-42f5-9c35-06b5c0f37ac4
 redirect_from:
   - /v4/docs/net-gross-prices-management
   - /v4/docs/en/net-gross-prices-management

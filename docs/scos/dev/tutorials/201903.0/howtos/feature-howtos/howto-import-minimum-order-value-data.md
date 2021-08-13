@@ -1,6 +1,7 @@
 ---
 title: HowTo - Import Minimum Order Value Data
 originalLink: https://documentation.spryker.com/v2/docs/ht-import-minimum-order-value-data-201903
+originalArticleId: 754bd726-c1e3-4ebc-9a2f-147e3713f21c
 redirect_from:
   - /v2/docs/ht-import-minimum-order-value-data-201903
   - /v2/docs/en/ht-import-minimum-order-value-data-201903

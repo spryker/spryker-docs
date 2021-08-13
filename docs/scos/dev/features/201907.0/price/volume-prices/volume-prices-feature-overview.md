@@ -2,6 +2,7 @@
 title: Volume Prices Feature Overview
 description: Volume pricing helps the merchants to gain the commitment of the customers. Providing volume discounts results in increasing the placement of large orders.
 originalLink: https://documentation.spryker.com/v3/docs/volume-prices-overview
+originalArticleId: 78f00340-505c-48cc-80a2-6edd2bd8efe3
 redirect_from:
   - /v3/docs/volume-prices-overview
   - /v3/docs/en/volume-prices-overview
@@ -114,6 +115,6 @@ Currently, the feature has the following functional constraints which are going 
 
 * as volume price does not support ORIGINAL price type, you cannot define a promotion for a volume price
 
-* volume prices cannot be applied to the [prices per merchant relation](/docs/scos/dev/features/202001.0/price/prices-per-merchant-relation/prices-per-merchant-relation-customer-specific-prices.html).
+* volume prices cannot be applied to the [prices per merchant relation](/docs/scos/dev/features/201907.0/price/prices-per-merchant-relation/prices-per-merchant-relation-customer-specific-prices.html).
 
 <!-- Last review date: Aug 5, 2019*  by Ahmed Sabaa, Anastasija Datsun -->

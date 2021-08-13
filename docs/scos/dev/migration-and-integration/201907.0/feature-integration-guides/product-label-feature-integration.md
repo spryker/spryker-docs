@@ -1,6 +1,7 @@
 ---
 title: Product Label Feature Integration
 originalLink: https://documentation.spryker.com/v3/docs/product-label-feature-integration
+originalArticleId: b3054c5d-d671-4c97-83da-25650582618f
 redirect_from:
   - /v3/docs/product-label-feature-integration
   - /v3/docs/en/product-label-feature-integration

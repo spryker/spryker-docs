@@ -2,6 +2,7 @@
 title: Tutorial - New Relic Monitoring
 description: Use the guide to learn how to configure a New Relic agent, including on Linux,  and then test it.
 originalLink: https://documentation.spryker.com/v4/docs/t-new-relic-monitoring
+originalArticleId: 89ec27e0-ebc5-4db9-b8c6-4ec2874191b0
 redirect_from:
   - /v4/docs/t-new-relic-monitoring
   - /v4/docs/en/t-new-relic-monitoring

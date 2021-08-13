@@ -2,6 +2,7 @@
 title: Approval Process feature overview
 description: This topic provides a detailed overview of the Approval Process feature.
 originalLink: https://documentation.spryker.com/v6/docs/approval-process-feature-overview
+originalArticleId: 33f712cc-7aee-4ef0-b126-c4bc9b293190
 redirect_from:
   - /v6/docs/approval-process-feature-overview
   - /v6/docs/en/approval-process-feature-overview
@@ -33,11 +34,11 @@ For the approval process, you can set specific permissions for the Approver and 
 It is mandatory for the Buyer role to set this permission, if you want to use the Approval Process feature in your project.
 
 {% endinfo_block %}
-To configure this permission, use [this step-by-step instruction](https://documentation.spryker.com/docs/approval-process-shop-guide#configuring-buy-up-to-grand-total-permission){target="_blank"}.
+To configure this permission, use [this step-by-step instruction](/docs/scos/dev/features/202009.0/approval-process/approval-process-feature-overview.html#approval-process-on-the-storefront){target="_blank"}.
 
 * The *Send cart for approval* permission that allows a buyer to send a cart for approval to their manager. Without this permission, a buyer cannot see the Request for Approval widget.
 
-* *Approve up to grand total* permission that allows an approver to approve the carts that do not hit the cart grand total limit specified there. See [Configuring the Approve up to grand total permission](https://documentation.spryker.com/docs/approval-process-shop-guide#configuring-approve-up-to-grand-total-permission) to learn how to set up the permission in the Storefront.
+* *Approve up to grand total* permission that allows an approver to approve the carts that do not hit the cart grand total limit specified there. See [Configuring the Approve up to grand total permission](/docs/scos/dev/features/202009.0/approval-process/approval-process-feature-overview.html#approval-process-on-the-storefront) to learn how to set up the permission in the Storefront.
 
 Every approval request, in turn, can have three statuses:
 
@@ -51,10 +52,10 @@ Approval Process as such introduces steps that company employees should follow t
 Here’s how approvals fit into the buying process:
 
 **1. Submitting the request for approval**
-The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. Check [Shop Guide - Submit a request for approval](https://documentation.spryker.com/docs/en/approval-process-shop-guide#submitting-a-request-for-approval) for details on how to submit a request for approval. After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
+The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. Check [Shop Guide - Submit a request for approval](/docs/scos/dev/features/202009.0/approval-process/approval-process-feature-overview.html#approval-process-on-the-storefront) for details on how to submit a request for approval. After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
 
 {% info_block warningBox "Note" %}
-There may be several approvers with different Approve up to grand total permissions created. By default, one Approver role is available after the feature has been [integrated](https://documentation.spryker.com/docs/en/approval-process-feature-integration
+There may be several approvers with different Approve up to grand total permissions created. By default, one Approver role is available after the feature has been [integrated](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/approval-process-feature-integration.html
 {% endinfo_block %}. )
 
 **2. Approval or rejection**

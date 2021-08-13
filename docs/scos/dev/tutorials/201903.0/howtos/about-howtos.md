@@ -1,6 +1,7 @@
 ---
 title: About HowTos
 originalLink: https://documentation.spryker.com/v2/docs/how-tos
+originalArticleId: ada23ff7-f217-4798-86ff-d8500cddff39
 redirect_from:
   - /v2/docs/how-tos
   - /v2/docs/en/how-tos
@@ -35,4 +36,4 @@ With these guides you will learn how to:
 * [Set up your store with multiple locals](/docs/scos/dev/tutorials/201903.0/howtos/howto-set-up-stores-with-multiple-locales.html)
 * [Personalize prices](/docs/scos/dev/tutorials/201903.0/howtos/howto-create-personalized-prices.html)
 * [Build your own DataImport](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/creating-a-data-importer.html)
-* [Install Spryker with MySQL database](https://documentation.spryker.com/v2/docs/ht-data-import/ht-setup-spryker-with-mysql)
+* [Install Spryker with MySQL database](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/creating-a-data-importer.html/ht-setup-spryker-with-mysql)

@@ -1,6 +1,7 @@
 ---
 title: HowTo - Clean or Duplicate a Cart after an Order
 originalLink: https://documentation.spryker.com/v5/docs/howto-clean-or-duplicate-a-cart-after-an-order
+originalArticleId: d1b9bcb4-8671-4cbb-981c-23cd4c9a4a8c
 redirect_from:
   - /v5/docs/howto-clean-or-duplicate-a-cart-after-an-order
   - /v5/docs/en/howto-clean-or-duplicate-a-cart-after-an-order

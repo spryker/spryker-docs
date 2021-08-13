@@ -2,6 +2,7 @@
 title: Creating Content Items
 description: The guide provides a procedure on how to create a content item such as banner, abstract product list, product set, and file list in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/creating-content-items
+originalArticleId: 76d8925e-ef79-415b-b310-a43b7f0aba9d
 redirect_from:
   - /v4/docs/creating-content-items
   - /v4/docs/en/creating-content-items
@@ -39,7 +40,7 @@ Follow the steps to create a Banner:
 
 ![Banner content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/banner-content-item-page.png){height="" width=""}
 
-See [Content Items: Reference Information](https://documentation.spryker.com/v4/docs/content-items-reference-information#create-and-edit-banner-content-item-page) to learn about the attributes on this page. 
+See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html#create-and-edit-banner-content-item-page) to learn about the attributes on this page. 
 
 3. If needed, repeat the previous step in one or more locale-specific tabs. 
 {% info_block infoBox "Multi-language setup" %}
@@ -86,7 +87,7 @@ Follow the steps to create an Abstract Product List:
 {% endinfo_block %}
     2.  In the table above the **Add more products** table, sort the added products by clicking **Move Down** or **Move Up**. 
 
-See [Content Items: Reference Information](https://documentation.spryker.com/v4/docs/content-items-reference-information#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
+See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}
@@ -134,7 +135,7 @@ Follow the steps to create a Product Set:
     
 {% endinfo_block %}
 
-See [Content Items: Reference Information](https://documentation.spryker.com/v4/docs/content-items-reference-information#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
+See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}
@@ -182,7 +183,7 @@ Follow the steps to create a File List:
 {% endinfo_block %}
     2.  In the **Selected Files** table, sort the added files by clicking **Move Down** or **Move Up**. 
 
-See [Content Items: Reference Information](https://documentation.spryker.com/v4/docs/content-items-reference-information#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
+See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}

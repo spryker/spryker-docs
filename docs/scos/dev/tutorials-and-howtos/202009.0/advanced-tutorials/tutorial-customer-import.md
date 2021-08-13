@@ -2,6 +2,7 @@
 title: Tutorial - Customer Import
 description: Use the guide to extend the Importer module and import customer data using a .CSV file
 originalLink: https://documentation.spryker.com/v6/docs/t-customer-import
+originalArticleId: 5d14816f-0231-4794-a8bc-d4c9e6de3b65
 redirect_from:
   - /v6/docs/t-customer-import
   - /v6/docs/en/t-customer-import

@@ -2,6 +2,7 @@
 title: live chat service
 description: Ensure that live chat helps their customers with new leads and
 originalLink: https://documentation.spryker.com/v3/docs/live-chat-service
+originalArticleId: 1ed07168-e61c-4953-a59b-d4de48e73c32
 redirect_from:
   - /v3/docs/live-chat-service
   - /v3/docs/en/live-chat-service

@@ -2,9 +2,12 @@
 title: Handling data with Publish and Synchronization
 description: Use the tutorial to understand how Publish and Synchronization work and how to export data using a particular example.
 originalLink: https://documentation.spryker.com/2021080/docs/handling-data-with-publish-and-synchronization
+originalArticleId: 67658ab1-da03-4cec-a059-2cd5d41c48df
 redirect_from:
   - /2021080/docs/handling-data-with-publish-and-synchronization
   - /2021080/docs/en/handling-data-with-publish-and-synchronization
+  - /docs/handling-data-with-publish-and-synchronization
+  - /docs/en/handling-data-with-publish-and-synchronization
 ---
 
 Publish and Synchronization (P&S) allows exporting data from Spryker back end (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the front end (Yves) or API (Glue). 
@@ -65,7 +68,7 @@ Follow the steps below to create the following:
 ## 2. Data Structure
 
 
-Usually, the data for Yves is stored differently from the data for Zed. It’s because the data model used in Redis and Elasticsearch is more optimized to be used by a front end. With P&S, data is always carried in the form of [**Transfer Objects**](https://documentation.spryker.com/docs/ht-use-transfer-objects-201903) between Zed and Yves.
+Usually, the data for Yves is stored differently from the data for Zed. It’s because the data model used in Redis and Elasticsearch is more optimized to be used by a front end. With P&S, data is always carried in the form of [**Transfer Objects**](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) between Zed and Yves.
 
 Follow the steps below to create a transfer object.
 

@@ -2,6 +2,7 @@
 title: Checkout workflow
 description: Checkout workflow of Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/checkout-workflow
+originalArticleId: bc0e66ec-ca5b-4f2e-8f7e-f1c2246aa6fe
 redirect_from:
   - /v6/docs/checkout-workflow
   - /v6/docs/en/checkout-workflow
@@ -14,4 +15,4 @@ A typical API Client workflow is as follows:
 
 ## Next steps
 
-* [Submitting checkout data](https://documentation.spryker.com/docs/submitting-checkout-data)
+* [Submitting checkout data](/docs/scos/dev/glue-api-guides/202009.0/checking-out/submitting-checkout-data.html)

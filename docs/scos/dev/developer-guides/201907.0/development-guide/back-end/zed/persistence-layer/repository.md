@@ -2,6 +2,7 @@
 title: Repository
 description: It's possible to use a Repository class in your persistence layer. The repository implements the repository pattern, which means you have a clear separation between business and persistence layers.
 originalLink: https://documentation.spryker.com/v3/docs/repository
+originalArticleId: bd926f76-0052-4222-8f3b-68d8ba1a31a2
 redirect_from:
   - /v3/docs/repository
   - /v3/docs/en/repository
@@ -138,4 +139,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterfaceMethod` - Add Zed Persistence Repository Interface Method
 * `vendor/bin/console spryk:run AddZedPersistenceRepositoryMethod` - Add Zed Persistence Repository Method
 
-See the [Spryk](https://documentation.spryker.com/v2/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/features/201907.0/sdk/spryk-code-generator.html) documentation for details.

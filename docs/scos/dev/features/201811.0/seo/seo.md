@@ -2,6 +2,7 @@
 title: SEO
 description: The powerful SEO features enable you to add customized meta information to all your content and create search engine friendly URLs.
 originalLink: https://documentation.spryker.com/v1/docs/seo
+originalArticleId: d693deab-9021-43f4-a95e-613930ec90b2
 redirect_from:
   - /v1/docs/seo
   - /v1/docs/en/seo

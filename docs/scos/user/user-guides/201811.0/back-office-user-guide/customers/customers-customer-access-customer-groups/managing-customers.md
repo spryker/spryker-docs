@@ -2,6 +2,7 @@
 title: Managing Customers
 description: This guide provides instructions on how shop owners can add and manage personal information, customer billing, and shipping addresses in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/managing-customers
+originalArticleId: 70806e28-c52d-4e23-b001-2d43ed86169e
 redirect_from:
   - /v1/docs/managing-customers
   - /v1/docs/en/managing-customers

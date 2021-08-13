@@ -2,9 +2,12 @@
 title: Tutorial - Managing glossary keys
 description: Glossary keys present two layers of persistence. This topic covers the usage of the functionality for managing the glossary keys.
 originalLink: https://documentation.spryker.com/2021080/docs/tutorial-managing-glossary-keys
+originalArticleId: 761b1f67-31a5-425e-b897-a622eb230a23
 redirect_from:
   - /2021080/docs/tutorial-managing-glossary-keys
   - /2021080/docs/en/tutorial-managing-glossary-keys
+  - /docs/tutorial-managing-glossary-keys
+  - /docs/en/tutorial-managing-glossary-keys
 ---
 
 Glossary keys present two layers of persistence:

@@ -2,6 +2,7 @@
 title: Refund Process Management
 description: The article describes the methods used to calculate the refund, as well as ways of using and extending the Refund module.
 originalLink: https://documentation.spryker.com/v5/docs/refund-process-management
+originalArticleId: 9e55ee76-9ea7-4ebd-9932-524368b41f80
 redirect_from:
   - /v5/docs/refund-process-management
   - /v5/docs/en/refund-process-management

@@ -2,6 +2,7 @@
 title: Creating Content Items
 description: The guide provides a procedure on how to create a content item such as banner, abstract product list, product set, and file list in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/creating-content-items
+originalArticleId: ee692349-f82c-4570-b390-faedacdde7c6
 redirect_from:
   - /v5/docs/creating-content-items
   - /v5/docs/en/creating-content-items
@@ -23,14 +24,14 @@ Follow the steps below to select a content item you want to create:
     * [Create a File List](#create-a-file-list-content-item)
     * [Create a Navigation](#create-a-navigation-content-item)
 
-See [Content Item Types: Module Relations](https://documentation.spryker.com/docs/en/content-item-types-module-relations) to learn about the content item types.
+See [Content Item Types: Module Relations](/docs/scos/dev/features/202005.0/cms/content-items/content-item-types-module-relations.html) to learn about the content item types.
 
-See [Content Items: Reference Information](https://documentation.spryker.com/docs/en/content-items-reference-information) to learn about the attributes on this page.
+See [Content Items: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-items-reference-information.html) to learn about the attributes on this page.
 
 ## Create a Banner Content Item
 {% info_block infoBox %}
 
-For the use cases and examples of the Banner content item, see [Banner Content Item Widget](https://documentation.spryker.com/docs/en/content-item-widgets-types-reference-information#banner-content-item-widget) and [Banner Content Item Widget Templates](https://documentation.spryker.com/docs/en/content-item-widgets-templates-reference-information#banner-content-item-widget-templates).
+For the use cases and examples of the Banner content item, see [Banner Content Item Widget](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-item-widgets-types-reference-information.html#banner-content-item-widget) and [Banner Content Item Widget Templates](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-item-widgets-templates-reference-information.html#banner-content-item-widget-templates).
 
 {% endinfo_block %}
 Follow the steps to create a Banner:
@@ -43,13 +44,13 @@ Follow the steps to create a Banner:
     * **Click URL**
     * **Alt-text**
 
-See [Content Items: Reference Information](https://documentation.spryker.com/docs/en/content-items-reference-information#create-and-edit-banner-content-item-page) to learn about the attributes on this page. 
+See [Content Items: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-items-reference-information.html#create-and-edit-banner-content-item-page) to learn about the attributes on this page. 
 
 3. If needed, repeat the previous step in one or more locale-specific tabs. 
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific values overwrite the default values when the Banner is rendered on a Storefront page with the [locale](https://documentation.spryker.com/docs/en/multi-language-setup) selected.
+* Locale-specific values overwrite the default values when the Banner is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
 
 
@@ -81,7 +82,7 @@ Make sure to click **Save** before clicking **Back to Content Items** or going t
 
 {% info_block infoBox %}
 
-For the use cases and examples of the Abstract Product List content item, see [Abstract Product List Content Item Widget](https://documentation.spryker.com/docs/en/content-item-widgets-types-reference-information#abstract-product-list-content-item-widget) and [Abstract Product List Content Item Widget Templates](https://documentation.spryker.com/docs/en/content-item-widgets-templates-reference-information#abstract-product-list-content-item-widget-templates).
+For the use cases and examples of the Abstract Product List content item, see [Abstract Product List Content Item Widget](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-item-widgets-types-reference-information.html#abstract-product-list-content-item-widget) and [Abstract Product List Content Item Widget Templates](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-item-widgets-templates-reference-information.html#abstract-product-list-content-item-widget-templates).
 
 {% endinfo_block %}
 
@@ -97,13 +98,13 @@ Follow the steps to create an Abstract Product List:
 {% endinfo_block %}
     2.  In the table above the **Add more products** table, sort the added products by clicking **Move Down** or **Move Up**. 
 
-See [Content Items: Reference Information](https://documentation.spryker.com/docs/en/content-items-reference-information#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
+See [Content Items: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-items-reference-information.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](https://documentation.spryker.com/docs/en/multi-language-setup) selected.
+* Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no products are selected for a locale, the default products are displayed on a Storefront page with the locale selected.
 
 
@@ -137,7 +138,7 @@ Make sure to click **Save** before clicking **Back to Content Items** or going t
 
 {% info_block infoBox %}
 
-For the use cases and examples of the Product Set content item, see [Product Set Content Item Widget](https://documentation.spryker.com/docs/en/content-item-widgets-types-reference-information#product-set-content-item-widget) and [Product Set Content Item Widget Templates](https://documentation.spryker.com/docs/en/content-item-widgets-templates-reference-information#product-set-content-item-widget-templates).
+For the use cases and examples of the Product Set content item, see [Product Set Content Item Widget](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-item-widgets-types-reference-information.html#product-set-content-item-widget) and [Product Set Content Item Widget Templates](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-item-widgets-templates-reference-information.html#product-set-content-item-widget-templates).
 
 {% endinfo_block %}
 
@@ -151,13 +152,13 @@ Follow the steps to create a Product Set:
     
 {% endinfo_block %}
 
-See [Content Items: Reference Information](https://documentation.spryker.com/docs/en/content-items-reference-information#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
+See [Content Items: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-items-reference-information.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* A locale-specific product set overwrites the default product set when the Product Set content item is rendered on a Storefront page with the [locale](https://documentation.spryker.com/docs/en/multi-language-setup) selected.
+* A locale-specific product set overwrites the default product set when the Product Set content item is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no product set is selected for a locale, the default product set is displayed on a Storefront page with the locale selected.
 
 
@@ -186,8 +187,8 @@ Make sure to click **Save** before clicking **Back to Content Items** or going t
 ## Create a File List Content Item
 {% info_block infoBox %}
 
-For the use cases and examples of the File List content item, see [File List Content Item Widget](https://documentation.spryker.com/docs/en/content-item-widgets-types-reference-information#product-set-content-item-widget) and 
-[File List](https://documentation.spryker.com/docs/en/content-item-widgets-templates-reference-information#file-list).
+For the use cases and examples of the File List content item, see [File List Content Item Widget](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-item-widgets-types-reference-information.html#product-set-content-item-widget) and 
+[File List](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-item-widgets-templates-reference-information.html#file-list).
 
 {% endinfo_block %}
 Follow the steps to create a File List:
@@ -202,13 +203,13 @@ Follow the steps to create a File List:
 {% endinfo_block %}
     2.  In the **Selected Files** table, sort the added files by clicking **Move Down** or **Move Up**. 
 
-See [Content Items: Reference Information](https://documentation.spryker.com/docs/en/content-items-reference-information#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
+See [Content Items: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/references/content-items-reference-information.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific files overwrite the default files when the File List is rendered on a Storefront page with the [locale](https://documentation.spryker.com/docs/en/multi-language-setup) selected.
+* Locale-specific files overwrite the default files when the File List is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no files are selected for a locale, the default files are displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}
@@ -243,14 +244,14 @@ To create a Navigation content item:
 
 1. On the *Create Content Item: Navigation* page, enter **Name** and **Description**.
 
-2. In the **Default** tab, select a **Navigation**. See [Creating Navigation Elements](https://documentation.spryker.com/docs/en/managing-navigation-elements#creating-a-navigation-element) to learn about creating navigation elements.
+2. In the **Default** tab, select a **Navigation**. See [Creating Navigation Elements](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn about creating navigation elements.
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific navigation element overwrites the default navigation element when rendered on a Storefront page with the [locale](https://documentation.spryker.com/docs/en/multi-language-setup) selected.
+* Locale-specific navigation element overwrites the default navigation element when rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no navigation element is selected for a locale, the default navigation element is displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}
@@ -263,5 +264,5 @@ This takes you to the *Overview of Content Items* page. You can see the message 
 **What's next?**
 The content item is created. Now, you can add it to a CMS block. 
 
-* To learn about adding content item to CMS blocks or a pages, see [Adding Content Items to CMS Pages and Blocks](https://documentation.spryker.com/docs/en/adding-content-items-to-cms-pages-and-blocks).
-* To learn about editing content items, see [Editing Content Items](https://documentation.spryker.com/docs/en/editing-content-items).
+* To learn about adding content item to CMS blocks or a pages, see [Adding Content Items to CMS Pages and Blocks](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+* To learn about editing content items, see [Editing Content Items](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/editing-content-items.html).

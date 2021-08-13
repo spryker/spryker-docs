@@ -1,9 +1,12 @@
 ---
 title: Migration Guide - ProductLabelStorage
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productlabelstorage
+originalArticleId: 2ef8ed0a-3efe-4244-9724-1addccd72226
 redirect_from:
   - /2021080/docs/migration-guide-productlabelstorage
   - /2021080/docs/en/migration-guide-productlabelstorage
+  - /docs/migration-guide-productlabelstorage
+  - /docs/en/migration-guide-productlabelstorage
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

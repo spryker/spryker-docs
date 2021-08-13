@@ -2,6 +2,7 @@
 title: Orders- Reference Information
 description: The guide provides reference information you see when creating, updating and viewing order details in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/orders-reference-information
+originalArticleId: 90586ad9-ce3f-43ba-92d2-2ac60d006090
 redirect_from:
   - /v4/docs/orders-reference-information
   - /v4/docs/en/orders-reference-information

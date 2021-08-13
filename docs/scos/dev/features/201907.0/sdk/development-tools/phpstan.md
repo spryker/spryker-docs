@@ -1,6 +1,7 @@
 ---
 title: PHPStan
 originalLink: https://documentation.spryker.com/v3/docs/phpstan
+originalArticleId: f5de1ecf-c6c2-4073-80a4-659c907975a4
 redirect_from:
   - /v3/docs/phpstan
   - /v3/docs/en/phpstan

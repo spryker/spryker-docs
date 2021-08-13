@@ -2,9 +2,12 @@
 title: Migration Guide - CategoryGui
 description: Learn how to upgrade the CategoryGui module.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-categorygui
+originalArticleId: 2c38692c-31e1-4d90-8a86-9b73487f02d5
 redirect_from:
   - /2021080/docs/migration-guide-categorygui
   - /2021080/docs/en/migration-guide-categorygui
+  - /docs/migration-guide-categorygui
+  - /docs/en/migration-guide-categorygui
 ---
 
 This document describes how to upgrade the `CategoryGui` module.  
@@ -22,7 +25,7 @@ In version 2.* of the `CategoryGui` module, we:
 
 Upgrade the `CategoryGui` module from version 1.* to 2.*:
 
-1.  To migrate the `Category` module to version 5.*, follow [Upgrading from version 4.* to 5.*](https://documentation.spryker.com/2021080/docs/migration-guide-category#upgrading-from-version-4---to-5--).
+1.  To migrate the `Category` module to version 5.*, follow [Upgrading from version 4.* to 5.*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-category.html#upgrading-from-version-4---to-5--).
     
 2.  Update the `CategoryGui` module to version 2.0.0:
 ```bash    

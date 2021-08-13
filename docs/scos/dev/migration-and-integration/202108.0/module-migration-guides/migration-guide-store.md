@@ -2,14 +2,17 @@
 title: Migration Guide - Store
 description: Use the guide to perform the Store part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-store
+originalArticleId: 966422fb-ce27-4afa-a754-f12d9fcec18b
 redirect_from:
   - /2021080/docs/migration-guide-store
   - /2021080/docs/en/migration-guide-store
+  - /docs/migration-guide-store
+  - /docs/en/migration-guide-store
 ---
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

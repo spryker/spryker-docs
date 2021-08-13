@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Customer
 originalLink: https://documentation.spryker.com/v2/docs/mg-customer
+originalArticleId: 201d4c81-0399-4dec-8f89-bb5d1581b98c
 redirect_from:
   - /v2/docs/mg-customer
   - /v2/docs/en/mg-customer

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - DiscountCalculatorConnector
 originalLink: https://documentation.spryker.com/v1/docs/mg-discount-calculator-connector
+originalArticleId: 03c4f4c7-8bf4-4964-965e-1c949751a45e
 redirect_from:
   - /v1/docs/mg-discount-calculator-connector
   - /v1/docs/en/mg-discount-calculator-connector
@@ -9,7 +10,7 @@ redirect_from:
 ## Upgrading from Version 4.* to Version 5.*
 This module no longer has any calculator plugins, except  `DiscountCalculatorPlugin`. All other plugins were moved to the separate repository in `spryker/calculation-migration`.
 
-To learn how to migrate to the new structure see, the [Upgrading from version 3.* to version 4.*](https://documentation.spryker.com/v1/docs/mg-calculation#upgrading-from-version-3---to-version-4--) section in *Migration Guide - Calculation*.
+To learn how to migrate to the new structure see, the [Upgrading from version 3.* to version 4.*](/docs/scos/dev/migration-and-integration/201811.0/module-migration-guides/migration-guide-calculation.html#upgrading-from-version-3---to-version-4--) section in *Migration Guide - Calculation*.
 
 ## Upgrading from Version 2.* to Version 3.*
 

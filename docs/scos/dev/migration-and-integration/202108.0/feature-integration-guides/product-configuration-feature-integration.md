@@ -2,9 +2,12 @@
 title: Product Configuration feature integration
 description: Learn how to integrate the Product Configuration feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-configuration-feature-integration
+originalArticleId: cb5de2c0-dc31-4e94-b347-e6aa55b49268
 redirect_from:
   - /2021080/docs/product-configuration-feature-integration
   - /2021080/docs/en/product-configuration-feature-integration
+  - /docs/product-configuration-feature-integration
+  - /docs/en/product-configuration-feature-integration
 ---
 
 {% info_block errorBox "Beta version" %}
@@ -13,7 +16,7 @@ This is the Beta version of the feature and is therefore subject to changes.
 
 {% endinfo_block %}
 
-This document describes how to integrate the [Product Configuration](https://documentation.spryker.com/upcoming-release/docs/configurable-product-feature-overview) feature into a Spryker project.
+This document describes how to integrate the [Product Configuration](/docs/scos/dev/features/{{ page.version }}/configurable-product/configurable-product-feature-overview.html) feature into a Spryker project.
 
 
 ## Install feature core

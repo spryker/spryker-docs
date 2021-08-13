@@ -2,6 +2,7 @@
 title: My Elasticsearch dies
 description: Learn how to fix the issue if Elasticsearch dies
 originalLink: https://documentation.spryker.com/v6/docs/my-elasticsearch-dies
+originalArticleId: 5ff8c7da-6188-497f-ab14-498b9183a1ce
 redirect_from:
   - /v6/docs/my-elasticsearch-dies
   - /v6/docs/en/my-elasticsearch-dies

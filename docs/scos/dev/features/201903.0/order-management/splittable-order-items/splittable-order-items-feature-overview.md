@@ -2,6 +2,7 @@
 title: Splittable Order Items Feature Overview
 description: Product concretes are splittable. Avoid the creation of numerous sales order items, make them non-splittable (no many sales orders, only one will be created).
 originalLink: https://documentation.spryker.com/v2/docs/splittable-order-items-feature-overview
+originalArticleId: ce39aa22-780c-499a-9432-2e5753deaf3b
 redirect_from:
   - /v2/docs/splittable-order-items-feature-overview
   - /v2/docs/en/splittable-order-items-feature-overview

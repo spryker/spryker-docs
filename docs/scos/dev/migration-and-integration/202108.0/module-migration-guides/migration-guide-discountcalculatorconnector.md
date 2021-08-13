@@ -2,19 +2,22 @@
 title: Migration Guide - DiscountCalculatorConnector
 description: Use the guide to migrate to a newer version of the DiscountCalculatorConnector module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-discount-calculator-connector
+originalArticleId: 10be2d18-ad61-401e-870a-66d03e85e636
 redirect_from:
   - /2021080/docs/mg-discount-calculator-connector
   - /2021080/docs/en/mg-discount-calculator-connector
+  - /docs/mg-discount-calculator-connector
+  - /docs/en/mg-discount-calculator-connector
 ---
 
 ## Upgrading from Version 4.* to Version 5.*
 This module no longer has any calculator plugins, except  `DiscountCalculatorPlugin`. All other plugins were moved to the separate repository in `spryker/calculation-migration`.
 
-To learn how to migrate to the new structure see, the [Upgrading from version 3.* to version 4.*](https://documentation.spryker.com/v4/docs/mg-calculation#upgrading-from-version-3---to-version-4--) section in *Migration Guide - Calculation*.
+To learn how to migrate to the new structure see, the [Upgrading from version 3.* to version 4.*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-calculation.html#upgrading-from-version-3---to-version-4--) section in *Migration Guide - Calculation*.
 
 ## Upgrading from Version 2.* to Version 3.*
 
-The tax plugins are using the version 3.* of the Tax module. See [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-tax.html) for more details. 
+The tax plugins are using the version 3.* of the Tax module. See [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-tax.html) for more details. 
 
 A new tax calculator must be registered in  `CalculationDependencyProvider::getCalculatorStack()`.
 

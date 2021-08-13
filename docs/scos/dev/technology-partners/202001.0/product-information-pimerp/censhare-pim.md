@@ -1,6 +1,7 @@
 ---
 title: Censhare PIM
 originalLink: https://documentation.spryker.com/v4/docs/censhare-pim
+originalArticleId: 7f205a35-7afe-4cd5-a622-efc78eccb4dc
 redirect_from:
   - /v4/docs/censhare-pim
   - /v4/docs/en/censhare-pim

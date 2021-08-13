@@ -2,6 +2,7 @@
 title: Propel Clean Command
 description: Learn how to integrate the Propel clean command into your project.
 originalLink: https://documentation.spryker.com/v6/docs/propel-clean-command
+originalArticleId: 56b29f27-0d7f-4d90-b05d-7138e8ca5adf
 redirect_from:
   - /v6/docs/propel-clean-command
   - /v6/docs/en/propel-clean-command
@@ -21,7 +22,7 @@ Ensure that the related features are installed:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Feature](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/spryker-core-feature-integration.html) |
+| Spryker Core | 201907.0 | [Feature](https://documentation.spryker.com/v6/docs/spryker-core-feature-integration-201907) |
 
 #### 1)Install the Required Modules Using Composer
 

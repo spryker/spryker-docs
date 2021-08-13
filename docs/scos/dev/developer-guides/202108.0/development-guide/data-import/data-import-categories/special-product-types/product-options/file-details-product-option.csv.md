@@ -1,12 +1,15 @@
 ---
 title: File details- product_option.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-optioncsv
+originalArticleId: baab3597-94b0-47b1-825c-65c0d369f529
 redirect_from:
   - /2021080/docs/file-details-product-optioncsv
   - /2021080/docs/en/file-details-product-optioncsv
+  - /docs/file-details-product-optioncsv
+  - /docs/en/file-details-product-optioncsv
 ---
 
-This article contains content of the **product_option.csv** file to configure [product option](https://documentation.spryker.com/docs/product-options-2) information on your Spryker Demo Shop.
+This article contains content of the **product_option.csv** file to configure [product option](/docs/scos/dev/features/{{ page.version }}/product-options/product-options.html) information on your Spryker Demo Shop.
 
 To import the file, run
 
@@ -27,13 +30,13 @@ The file should have the following parameters:
 | option_name_translation_key |  | String | | Translation key of the name of the option in different locales. |
 | option_name.{ANY_LOCALE_NAME}<br>Example value: *option_name.en_US |  | String || Name of the option in the specified locale (US for our example).  |
 | sku | | String | | SKU identifier of the product ption. |
-| avalara_tax_code |  | String | | [Avalara tax code](https://documentation.spryker.com/2021080/docs/tax-feature-overview#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/dev/features/{{ page.version }}/tax/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 ## Dependencies
 
 This file has the following dependencies:
-*     [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+*     [product_abstract.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Import template file and content example
 Find the template and an example of the file below:

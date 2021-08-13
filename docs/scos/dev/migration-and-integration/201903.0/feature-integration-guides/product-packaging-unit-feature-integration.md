@@ -2,6 +2,7 @@
 title: Product Packaging Unit Feature Integration
 description: The Product Packaging Unit Feature allows defining packaging units per abstract product. This guide describes how to integrate the feature into your project.
 originalLink: https://documentation.spryker.com/v2/docs/product-packaging-unit-feature-integration-201903
+originalArticleId: 5e1fb07d-7a30-461c-bc91-ec59e5fabf62
 redirect_from:
   - /v2/docs/product-packaging-unit-feature-integration-201903
   - /v2/docs/en/product-packaging-unit-feature-integration-201903

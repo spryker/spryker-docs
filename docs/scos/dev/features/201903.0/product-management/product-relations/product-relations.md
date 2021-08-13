@@ -2,6 +2,7 @@
 title: Product Relations
 description: Shop owners can help visitors to explore products that are related to the one they are currently looking at by upselling or displaying similar products.
 originalLink: https://documentation.spryker.com/v2/docs/product-relations
+originalArticleId: db92ee11-a3fa-4366-8044-22609e63e738
 redirect_from:
   - /v2/docs/product-relations
   - /v2/docs/en/product-relations

@@ -2,6 +2,7 @@
 title: Demoshop Guide
 description: This article provides information on the demoshop frontend installation.
 originalLink: https://documentation.spryker.com/v3/docs/demoshop-guide
+originalArticleId: b216bf82-9c40-4e61-942f-5b9f97da397e
 redirect_from:
   - /v3/docs/demoshop-guide
   - /v3/docs/en/demoshop-guide

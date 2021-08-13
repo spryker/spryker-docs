@@ -2,6 +2,7 @@
 title: Category
 description: The section is designed to manage products under the category according to a specific criterion, including search and filter them in the online store.
 originalLink: https://documentation.spryker.com/v5/docs/category
+originalArticleId: a30ba237-1363-4620-81cb-453d37333705
 redirect_from:
   - /v5/docs/category
   - /v5/docs/en/category
@@ -15,9 +16,9 @@ The primary uses of categories are to develop dynamic category pages and enhance
  ***
  **What's Next?**
  To know how the categories are created and managed, see the following articles:
-* [Creating Categories](https://documentation.spryker.com/docs/en/creating-categories)
-*  [Assigning Products to Categories](https://documentation.spryker.com/docs/en/assigning-products-to-categories)
-*  [Managing Categories](https://documentation.spryker.com/docs/en/managing-categories)
+* [Creating Categories](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/creating-categories.html)
+*  [Assigning Products to Categories](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/assigning-products-to-categories.html)
+*  [Managing Categories](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/managing-categories.html)
  
 To know more about the attributes you use to create and manage the categories, see the following article:
-* [Category: Reference Information](https://documentation.spryker.com/docs/en/category-reference-information)
+* [Category: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/references/category-reference-information.html)

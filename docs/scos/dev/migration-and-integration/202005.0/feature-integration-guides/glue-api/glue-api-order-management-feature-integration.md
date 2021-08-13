@@ -1,6 +1,7 @@
 ---
 title: Glue API- Order Management Feature Integration
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-order-management-feature-integration
+originalArticleId: 73691bbd-3fd7-4726-903f-231d2595c5c7
 redirect_from:
   - /v5/docs/glue-api-order-management-feature-integration
   - /v5/docs/en/glue-api-order-management-feature-integration
@@ -13,7 +14,7 @@ To start feature integration, overview and install all these necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application Feature Integration](https://documentation.spryker.com/docs/en/glue-application-feature-integration-201907) |
+| Spryker Core | 201907.0 | [Glue Application Feature Integration](https://documentation.spryker.com/v5/docs/en/glue-application-feature-integration-201907) |
 
 
 ## 1) Install the Required Modules Using Composer
@@ -75,7 +76,7 @@ Activate the following plugins:
 
 {% info_block infoBox "Info" %}
 
-`OrdersResourceRoutePlugin` *GET* verb is a protected resource, please reference the configure section of [Resource routing](https://documentation.spryker.com/docs/en/glue-infrastructure#resource-routing).
+`OrdersResourceRoutePlugin` *GET* verb is a protected resource, please reference the configure section of [Resource routing](/docs/scos/dev/developer-guides/202005.0/development-guide/glue-api/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

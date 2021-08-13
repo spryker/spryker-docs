@@ -2,6 +2,7 @@
 title: Implementing Invoice Payment
 description: In this set of articles, we will add a new module called PaymentMethods.
 originalLink: https://documentation.spryker.com/v4/docs/ht-implement-invoice-payment
+originalArticleId: 25dface5-54a5-4427-94d9-3daafbf3de0e
 redirect_from:
   - /v4/docs/ht-implement-invoice-payment
   - /v4/docs/en/ht-implement-invoice-payment
@@ -18,5 +19,5 @@ If this is you first time creating a new module, see [Tutorial - Adding a New Mo
 * [Implement Invoice Payment in Front-End](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html)
 * [Integrate Invoice Payment into Checkout](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html)
 * [Implement Invoice Payment in Back-End](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html)
-* [Implement Invoice Payment in Shared layer](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html)
+* [Implement Invoice Payment in Shared layer](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html-be-shared)
 * [Test the Invoice Payment Implementation](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html)

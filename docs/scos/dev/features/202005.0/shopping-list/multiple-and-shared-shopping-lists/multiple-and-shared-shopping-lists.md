@@ -2,6 +2,7 @@
 title: Multiple and Shared Shopping Lists
 description: Shopping lists enable your customers to fast and easy order frequently purchased items, which is important to retain existing customers and gain new ones.
 originalLink: https://documentation.spryker.com/v5/docs/multiple-shared-shopping-lists
+originalArticleId: f7d63607-7379-41eb-8c67-a0182d43c44c
 redirect_from:
   - /v5/docs/multiple-shared-shopping-lists
   - /v5/docs/en/multiple-shared-shopping-lists

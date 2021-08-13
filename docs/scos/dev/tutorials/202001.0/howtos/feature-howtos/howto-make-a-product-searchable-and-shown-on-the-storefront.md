@@ -2,6 +2,7 @@
 title: HowTo - Make a Product Searchable and Shown on the Storefront
 description: Use the guide to learn about conditions need to be performed to make a product searchable in the online store.
 originalLink: https://documentation.spryker.com/v4/docs/ht-make-product-shown-on-frontend-by-url
+originalArticleId: 95b195c1-8110-4e7a-8984-a6419c55a2e5
 redirect_from:
   - /v4/docs/ht-make-product-shown-on-frontend-by-url
   - /v4/docs/en/ht-make-product-shown-on-frontend-by-url
@@ -15,7 +16,7 @@ There are a number of conditions that should be fulfilled to make your product s
 
 * It is assigned to categories. See the [Category](/docs/scos/user/user-guides/202001.0/back-office-user-guide/category/assigning-products-to-categories.html) section for details on how to assign products to categories.
 * It is in stock in the warehouse for the current store. See the [Availability](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/availability/managing-products-availability.html) section to learn how to check products' availability.
-* The product's status is **Active**. See the [Products](https://documentation.spryker.com/v4/docs/managing-products#activating-a-product) section to learn how to manage products, including status change.
+* The product's status is **Active**. See the [Products](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/managing-products/managing-products.html#activating-a-product) section to learn how to manage products, including status change.
 * It has a price in the current locale. See the [Products](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/managing-products/managing-products.html) section for more details.
 * It has been marked as searchable in the Back Office. See the [Products](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/references/concrete-product-reference-information.html) section for more details
 * It has product variants - abstract product will not be displayed on Yves unless it has product variants. See [Products](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/concrete-products/creating-a-product-variant.html) to learn how to create product variants.

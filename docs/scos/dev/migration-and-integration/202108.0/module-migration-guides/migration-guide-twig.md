@@ -2,14 +2,17 @@
 title: Migration Guide - Twig
 description: Use the guide to perform the Twig part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-twig
+originalArticleId: ff41f259-4ade-40dd-9cf3-c1ba6dc6fbc1
 redirect_from:
   - /2021080/docs/migration-guide-twig
   - /2021080/docs/en/migration-guide-twig
+  - /docs/migration-guide-twig
+  - /docs/en/migration-guide-twig
 ---
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

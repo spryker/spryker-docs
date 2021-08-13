@@ -2,6 +2,7 @@
 title: Using a Facade
 description: This article describes the cases when the facade is used.
 originalLink: https://documentation.spryker.com/v1/docs/zed-facade-how-to-use
+originalArticleId: 49360875-b1b3-4f28-854d-ed273efc2efd
 redirect_from:
   - /v1/docs/zed-facade-how-to-use
   - /v1/docs/en/zed-facade-how-to-use

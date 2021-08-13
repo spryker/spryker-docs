@@ -2,6 +2,7 @@
 title: Docker Installation Prerequisites - Linux
 description: Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
 originalLink: https://documentation.spryker.com/v5/docs/docker-installation-prerequisites-linux
+originalArticleId: 90c29a20-8792-42d3-b37c-ba062090199f
 redirect_from:
   - /v5/docs/docker-installation-prerequisites-linux
   - /v5/docs/en/docker-installation-prerequisites-linux
@@ -50,10 +51,10 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 **What's next?**
-See [Modes Overview](https://documentation.spryker.com/docs/en/modes-overview) to learn about installation modes of Spryker in Docker.
+See [Modes Overview](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/modes-overview.html) to learn about installation modes of Spryker in Docker.
 If you've already selected an installation mode, follow one of the guides below:
-* [Installation Guide - Development Mode](https://documentation.spryker.com/docs/en/installation-guide-development-mode)
-* [Installation Guide- Demo Mode](https://documentation.spryker.com/docs/en/installation-guide-demo-mode)
-* [Integrating Docker into Existing Projects](https://documentation.spryker.com/docs/en/integrating-docker-into-existing-projects)
-* [Running Production](https://documentation.spryker.com/docs/en/running-production)
+* [Installation Guide - Development Mode](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/installation-guide-development-mode.html)
+* [Installation Guide- Demo Mode](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/installation-guide-demo-mode.html)
+* [Integrating Docker into Existing Projects](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/integrating-docker-into-existing-projects.html)
+* [Running Production](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/running-production.html)
 

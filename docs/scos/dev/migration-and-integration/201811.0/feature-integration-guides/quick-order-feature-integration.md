@@ -2,6 +2,7 @@
 title: Quick Order Feature Integration
 description: Quick Add to Cart allows customers to buy products in a few clicks. This guide will walk you through the process of integrating this feature into your project.
 originalLink: https://documentation.spryker.com/v1/docs/quick-order-feature-integration-201811
+originalArticleId: ea9ad960-c5c0-465b-847c-cdbe16dd4eb6
 redirect_from:
   - /v1/docs/quick-order-feature-integration-201811
   - /v1/docs/en/quick-order-feature-integration-201811

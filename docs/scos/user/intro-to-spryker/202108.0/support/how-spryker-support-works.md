@@ -1,9 +1,12 @@
 ---
 title: How Spryker Support works
 originalLink: https://documentation.spryker.com/2021080/docs/how-spryker-support-works-1
+originalArticleId: 2923122e-fde2-4893-98df-1375f8cc7742
 redirect_from:
   - /2021080/docs/how-spryker-support-works-1
   - /2021080/docs/en/how-spryker-support-works-1
+  - /docs/how-spryker-support-works-1
+  - /docs/en/how-spryker-support-works-1
 ---
 
 We believe that you can only deliver great support when you are on the same page as your customers. Being transparent about our performance metrics and processes is a necessary step towards that.

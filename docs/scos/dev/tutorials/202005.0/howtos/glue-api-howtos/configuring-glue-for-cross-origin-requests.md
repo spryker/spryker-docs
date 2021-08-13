@@ -1,6 +1,7 @@
 ---
 title: Configuring Glue for Cross-Origin Requests
 originalLink: https://documentation.spryker.com/v5/docs/ht-configuring-glue-for-cross-origin-requests-201903
+originalArticleId: fc492e34-1332-4af6-a876-ff80b1a8050c
 redirect_from:
   - /v5/docs/ht-configuring-glue-for-cross-origin-requests-201903
   - /v5/docs/en/ht-configuring-glue-for-cross-origin-requests-201903

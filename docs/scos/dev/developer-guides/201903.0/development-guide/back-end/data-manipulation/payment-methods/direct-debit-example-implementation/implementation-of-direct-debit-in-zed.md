@@ -2,6 +2,7 @@
 title: Implementation of Direct Debit in Zed
 description: This article provides the instructions on how to implement the Direct Debit payment method and integrate it into Checkout, State Machine, and OMS on the back-end side.
 originalLink: https://documentation.spryker.com/v2/docs/dd-be-implementation
+originalArticleId: 0fbf9132-5265-4798-aad5-e769605cbb94
 redirect_from:
   - /v2/docs/dd-be-implementation
   - /v2/docs/en/dd-be-implementation

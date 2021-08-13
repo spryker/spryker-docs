@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Twig extensions
 originalLink: https://documentation.spryker.com/v5/docs/t-twig-extensions
+originalArticleId: f194c2fe-9c00-436e-a3ab-250764a9aae6
 redirect_from:
   - /v5/docs/t-twig-extensions
   - /v5/docs/en/t-twig-extensions
@@ -136,7 +137,7 @@ class ExampleTwigExtensionPlugin extends AbstractTwigExtensionPlugin
 ```
 
 ## Register the Twig extension you created
-To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](https://documentation.spryker.com/docs/dependency-provider) for information on the dependency providers.
+To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html) for information on the dependency providers.
 
 First, add a reference to the Twig extension in `TwigDependencyProvider.php`:
 

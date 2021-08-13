@@ -2,6 +2,7 @@
 title: Modularity and Shop Suite
 description: Everything built in Spryker is modular. Every module in Spryker is a single functional unit that is responsible for only one thing.
 originalLink: https://documentation.spryker.com/v2/docs/modularity-and-shop-suite
+originalArticleId: 961a69f3-ef73-485c-a5ae-a04932e36b28
 redirect_from:
   - /v2/docs/modularity-and-shop-suite
   - /v2/docs/en/modularity-and-shop-suite

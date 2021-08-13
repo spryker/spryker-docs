@@ -2,6 +2,7 @@
 title: Company Account
 description: The section can be used to create a company record, set up company units and company unit addresses, create company user roles, etc in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/company-account-guide
+originalArticleId: cb6c5630-0254-44bc-a6aa-4f76e605fc29
 redirect_from:
   - /v5/docs/company-account-guide
   - /v5/docs/en/company-account-guide
@@ -32,10 +33,10 @@ Some setup that you do now (creating a company record
 
 So you need to know how the company infrastructure is being set up.
 See the following articles and follow the procedures described there to set up a company account:
-* [Managing Companies](https://documentation.spryker.com/docs/en/managing-companies)
-* [Managing Company Units](https://documentation.spryker.com/docs/en/managing-company-units)
-* [Managing Company Unit Addresses](https://documentation.spryker.com/docs/en/managing-company-unit-addresses)
-* [Managing Company Roles](https://documentation.spryker.com/docs/en/managing-company-roles)
-* [Managing Company Users](https://documentation.spryker.com/docs/en/managing-company-users)
+* [Managing Companies](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-companies.html)
+* [Managing Company Units](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-units.html)
+* [Managing Company Unit Addresses](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-unit-addresses.html)
+* [Managing Company Roles](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-roles.html)
+* [Managing Company Users](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-users.html)
 
-To know more about the attributes that you see, enter, and select while managing company accounts, see [Company Account: Reference Information](https://documentation.spryker.com/docs/en/company-account-reference-information).
+To know more about the attributes that you see, enter, and select while managing company accounts, see [Company Account: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/references/company-account-reference-information.html).

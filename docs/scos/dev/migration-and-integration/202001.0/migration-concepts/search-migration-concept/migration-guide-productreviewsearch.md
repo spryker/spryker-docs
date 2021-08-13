@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductReviewSearch
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-productreviewsearch
+originalArticleId: 40e41e2b-026d-49dc-96b4-3ad1ea1617ef
 redirect_from:
   - /v4/docs/migration-guide-productreviewsearch
   - /v4/docs/en/migration-guide-productreviewsearch

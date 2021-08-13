@@ -2,6 +2,7 @@
 title: Post-Installation Steps and Additional Info
 description: This article provides post-installation steps and additional info for the Spryker project.
 originalLink: https://documentation.spryker.com/v3/docs/post-installation-steps-and-additional-info
+originalArticleId: 2f4700c2-da8a-4e4c-bbbc-47ce58b4b7f5
 redirect_from:
   - /v3/docs/post-installation-steps-and-additional-info
   - /v3/docs/en/post-installation-steps-and-additional-info
@@ -140,7 +141,7 @@ echo "127.0.0.1 {endpointName}" | sudo tee -a /etc/hosts
 | PostgreSQL Server | 5432 | Username is development, password is mate20mg. |
 | Redis | 10009 | You can explore Redis with Redis Desktop Manager or a similar tool. |
 | Mailcatcher|1080|Catches all the mails that are sent during development in the Dev VM.|
-|Management UI|15672|See [Default Queue Engine](https://documentation.spryker.com/v3/docs/queue#default-queue-engine) for more information. |
+|Management UI|15672|See [Default Queue Engine](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-publishing/queue/queue.html#default-queue-engine) for more information. |
 
 ## Activating the Opcache Module
 To optimize the performance of the system, you can enable the Opcache. This is not recommend for development, because you may get strange results. To activate the Opcache, just put the following lines at the end of the `php.ini` and `restart.php`.

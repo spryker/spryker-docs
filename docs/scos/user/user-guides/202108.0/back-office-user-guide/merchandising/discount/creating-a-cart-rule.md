@@ -2,9 +2,12 @@
 title: Creating a cart rule
 description: Use the procedure to create a cart-based discount rule along with its conditions in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-cart-rule
+originalArticleId: 3cf6e07b-9b13-42df-8129-d1d423ddb348
 redirect_from:
   - /2021080/docs/creating-a-cart-rule
   - /2021080/docs/en/creating-a-cart-rule
+  - /docs/creating-a-cart-rule
+  - /docs/en/creating-a-cart-rule
 ---
 
 This topic describes how to create a Cart Rule.
@@ -25,11 +28,11 @@ To create a cart rule discount:
     2. From the **Discount Type** drop-down list, select a cart rule.
     3. In the **Name** field, specify the name for the discount.
     4. _Optional_: in the **Description** field, enter the description of the discount.
-    5. Specify if the discount is exclusive. For reference information, in the Creating a voucher guide, see the [Discount Overview page](https://documentation.spryker.com/docs/creating-a-voucher#discount-overview-page) section.
+    5. Specify if the discount is exclusive. For reference information, in the Creating a voucher guide, see the [Discount Overview page](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/discount/creating-a-voucher.html#discount-overview-page) section.
     6. Specify the validity interval (lifetime) of the discount.
 * Click **Next** or select the *Discount calculation* tab to proceed.
 * On the *Create Discount* page, in the *Discount calculation* tab, do the following:
-    1.  Select either Calculator percentage or Calculator fixed in the **Calculator type** drop-down. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](https://documentation.spryker.com/docs/creating-a-voucher#discount-calculation-tab) section.
+    1.  Select either Calculator percentage or Calculator fixed in the **Calculator type** drop-down. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/discount/creating-a-voucher.html#discount-calculation-tab) section.
     {% info_block warningBox "Note" %}
 
     The next step varies based on the selected calculator type:
@@ -37,14 +40,14 @@ To create a cart rule discount:
     b.  **Calculator percentage**: Enter the values (percentage) to be discounted.
     
 {% endinfo_block %}
-    2. Select the **Discount application type** and define what products the discount will be applied to. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](https://documentation.spryker.com/docs/creating-a-voucher#discount-calculation-tab) section.
+    2. Select the **Discount application type** and define what products the discount will be applied to. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/discount/creating-a-voucher.html#discount-calculation-tab) section.
  * Click **Next**, or select the **Conditions** tab to proceed.
  * On the *Create Discount* page, in the *Conditions* tab, do the following:
-    1. Select the **Apply when** conditions or click **Plain query** and enter the query manually. For reference information, in the Creating a voucher guide, see the [Conditions](https://documentation.spryker.com/docs/creating-a-voucher#conditions) section.
+    1. Select the **Apply when** conditions or click **Plain query** and enter the query manually. For reference information, in the Creating a voucher guide, see the [Conditions](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/discount/creating-a-voucher.html#conditions) section.
     2. Enter the value for **The discount can be applied if the query applies for at least X item(s).** field.
 * Click **Save** to create the new discount. 
 
 
 **What's next?**
-See [Managing discounts](https://documentation.spryker.com/docs/managing-discounts) to know more about the actions you can do once the discount is created.
+See [Managing discounts](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.
 

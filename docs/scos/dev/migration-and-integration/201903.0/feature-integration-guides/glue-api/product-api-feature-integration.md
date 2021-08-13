@@ -1,6 +1,7 @@
 ---
 title: Product API Feature Integration
 originalLink: https://documentation.spryker.com/v2/docs/product-api-feature-integration
+originalArticleId: 0567f702-1a31-4d35-9e67-e713e777f61d
 redirect_from:
   - /v2/docs/product-api-feature-integration
   - /v2/docs/en/product-api-feature-integration

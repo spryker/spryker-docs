@@ -1,6 +1,7 @@
 ---
 title: Search Migration Concept
 originalLink: https://documentation.spryker.com/v4/docs/search-migration-concept
+originalArticleId: f78ce438-acbb-4b72-9920-2a1e4e1e7418
 redirect_from:
   - /v4/docs/search-migration-concept
   - /v4/docs/en/search-migration-concept

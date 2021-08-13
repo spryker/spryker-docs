@@ -1,6 +1,7 @@
 ---
 title: Quick Order Feature Overview
 originalLink: https://documentation.spryker.com/v1/docs/quick-order-overview-201903
+originalArticleId: 080a6dc8-600f-44f5-b0c2-114684e8bf3b
 redirect_from:
   - /v1/docs/quick-order-overview-201903
   - /v1/docs/en/quick-order-overview-201903
@@ -27,7 +28,7 @@ The integration is possible only if the Measurement Units feature is enabled in 
 Moreover, after adding the Quick Order to cart, a shop owner can observe the default amount and default sales units for the product packaging unit in cart overview.
 ![Quick Order packaging units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-packaging-units.png){height="" width=""}
 
-When the customer has found the products they need, they can set the quantity of each product using a scroll-down box. By default, "1" is set in the Quantity field. If there are any quantity restrictions applied to the product, they are taken into account: the customer can choose only the value which meets the quantity restrictions. See [Quantity Restrictions for Quick Order](https://documentation.spryker.com/v1/docs/quick-order-overview-201903#quantity-restrictions-for-quick-order) to learn more about how the quantity limitations are applied to the Quick Order form.
+When the customer has found the products they need, they can set the quantity of each product using a scroll-down box. By default, "1" is set in the Quantity field. If there are any quantity restrictions applied to the product, they are taken into account: the customer can choose only the value which meets the quantity restrictions. See [Quantity Restrictions for Quick Order](/docs/scos/dev/features/201811.0/shopping-cart/quick-order/quick-order-feature-overview.html#quantity-restrictions-for-quick-order) to learn more about how the quantity limitations are applied to the Quick Order form.
 
 Once the products and their quantities have been selected, the order can be:
 
@@ -57,7 +58,7 @@ The module relations can be schematically represented in the following diagram:
 ## Quantity Restrictions for Quick Order
 Quick Order quantity rules fall under limitations set by [quantity restrictions](/docs/scos/dev/features/201811.0/product-management/product-quantity-restrictions/product-quantity-restrictions.html). Quantity restriction values define the number of items that customer can put into the cart.
 
-When manually filling an SKU/Name field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/dev/features/201811.0/product-management/product-quantity-restrictions/product-quantity-restrictions-feature-overview.html) set for that SKU. That means, for example, if a concrete product has the minimum quantity restriction for 4 units, the interval restriction to 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
+When manually filling an SKU/Name field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/dev/features/201811.0/product-management/product-quantity-restrictions/product-quantity-restrictions.html-overview) set for that SKU. That means, for example, if a concrete product has the minimum quantity restriction for 4 units, the interval restriction to 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
 
 The Quantity field in the Quick Order adheres to these quantities. Therefore, if the shopper enters an invalid number into Quantity field, for instance, 5, the number will automatically change to the next higher quantity set in quantity restrictions, that is 6.
 

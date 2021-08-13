@@ -2,12 +2,15 @@
 title: Managing tax rates
 description: Use these procedures to create, update, view and/or delete tax rates and tax sets in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-tax-rates
+originalArticleId: 7991b03c-1e31-442d-89fd-e85e4e387360
 redirect_from:
   - /2021080/docs/managing-tax-rates
   - /2021080/docs/en/managing-tax-rates
+  - /docs/managing-tax-rates
+  - /docs/en/managing-tax-rates
 ---
 
-This document describes how to create, edit, and delete [tax rates](https://documentation.spryker.com/docs/tax).
+This document describes how to create, edit, and delete [tax rates](/docs/scos/dev/features/{{ page.version }}/tax/tax.html).
 
 ## Prerequisites
 
@@ -74,7 +77,7 @@ To delete a tax rate:
 
 1. In the *List of tax rates > Actions* column, click **Delete** for a specific tax rate.
 2. On the *Delete Tax Rate* page, click **Delete Tax Rate** to confirm the action.
-The tax rate is deleted. Remember that it will also be deleted from the [tax set](https://documentation.spryker.com/docs/managing-tax-sets) to which it has been assigned. 
+The tax rate is deleted. Remember that it will also be deleted from the [tax set](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/tax-sets/managing-tax-sets.html) to which it has been assigned. 
 {% info_block warningBox "Note" %}
 Even if you delete the only tax rate assigned to a tax set, the tax set itself remains.
 {% endinfo_block %}
@@ -87,7 +90,7 @@ You can delete a tax rate while viewing it:
 ## What's next?
 
 You cannot use the tax rate itself for products, shipment, and threshold taxation. You use tax sets instead. 
-So you can proceed to the procedure of [creating a tax set and assigning it to the tax rate](https://documentation.spryker.com/docs/managing-tax-sets). 
+So you can proceed to the procedure of [creating a tax set and assigning it to the tax rate](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/tax-sets/managing-tax-sets.html). 
 
 
 

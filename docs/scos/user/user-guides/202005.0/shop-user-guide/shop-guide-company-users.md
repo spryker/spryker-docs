@@ -2,6 +2,7 @@
 title: Shop Guide - Company Users
 description: Use the procedures to create, edit, enable/disable or delete company users, and invite new users using a .CSV file on the Company Users page.
 originalLink: https://documentation.spryker.com/v5/docs/company-users-shop-guide
+originalArticleId: 7c0117f3-9ba0-47da-b8b1-749f526d6b9e
 redirect_from:
   - /v5/docs/company-users-shop-guide
   - /v5/docs/en/company-users-shop-guide
@@ -78,7 +79,7 @@ You can delete a company user by clicking ![Delete icon](https://spryker.s3.eu-c
 
 ![Delete a user](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Users/delete-user.png){height="" width=""}
 
-Don't forget to check out the video tutorial on setting up the [Company Users](https://documentation.spryker.com/docs/en/company-account-general-organizational-structure) in Spryker [B2B Demo Shop](https://documentation.spryker.com/docs/en/demoshops#b2b-demo-shop):
+Don't forget to check out the video tutorial on setting up the [Company Users](/docs/scos/dev/features/202005.0/company-account-management/company-account-overview/company-account-and-general-organizational-structure.html) in Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/202005.0/about-spryker.html#spryker-b2b-b2c-demo-shops):
 <iframe src="https://fast.wistia.net/embed/iframe/72qy3slwjo" title="How to set up Company Users and Roles in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="589" height="315"></iframe>
 
 <!-- Last review date: Mar 18, 2019 -->

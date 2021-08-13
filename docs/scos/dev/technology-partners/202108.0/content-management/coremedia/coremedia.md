@@ -2,9 +2,12 @@
 title: Coremedia
 description: Take content to the next level with the CoreMedia Content Cloud that can be integrated in the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/coremedia
+originalArticleId: 40e49203-d3e1-4589-b7d8-29325af22520
 redirect_from:
   - /2021080/docs/coremedia
   - /2021080/docs/en/coremedia
+  - /docs/coremedia
+  - /docs/en/coremedia
 ---
 
 ## Partner Information

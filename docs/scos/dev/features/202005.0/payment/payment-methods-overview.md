@@ -2,6 +2,7 @@
 title: Payment Methods Overview
 description: Orders can be paid with none, one or multiple payment methods that can be selected during checkout. Offer multiple payment methods for a single order.
 originalLink: https://documentation.spryker.com/v5/docs/multiple-payment-methods-per-order
+originalArticleId: 31180997-afc6-475d-9505-5e1b87067e36
 redirect_from:
   - /v5/docs/multiple-payment-methods-per-order
   - /v5/docs/en/multiple-payment-methods-per-order

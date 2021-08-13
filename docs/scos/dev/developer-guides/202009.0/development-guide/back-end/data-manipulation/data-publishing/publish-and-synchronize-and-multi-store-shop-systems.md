@@ -2,6 +2,7 @@
 title: Publish and Synchronize and Multi-Store Shop Systems
 description: This article describes a way to synchronize data between multiple stores.
 originalLink: https://documentation.spryker.com/v6/docs/p-s-and-multi-store-shop-systems
+originalArticleId: a40ef3a5-92d5-463d-99e1-20bf4f789a0c
 redirect_from:
   - /v6/docs/p-s-and-multi-store-shop-systems
   - /v6/docs/en/p-s-and-multi-store-shop-systems
@@ -9,7 +10,7 @@ redirect_from:
 
 ## Introduction
 
-As Spryker supports multi-store shop systems, there should be a way to synchronize data between all stores. P&S ([Publish and Synchronization](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html)) is a process of handling data transfer from back-end to front-end stores. This process can be configured to support multi-store shop systems.
+As Spryker supports multi-store shop systems, there should be a way to synchronize data between all stores. P&S ([Publish and Synchronization](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html)) is a process of handling data transfer from back-end to front-end stores. This process can be configured to support multi-store shop systems.
 
 ## Configuration
 
@@ -44,7 +45,7 @@ The following diagrams show:
 
 ## How it Works
 
-The first diagram shows how P&S works with a multi-store shop system with one database. When the event is triggered, Publisher checks if the entity has information about a store. Depending on the result, it sends a message to sync queue or the store. Since `spy_product_abstract_storage` has a store column which defines entity and store relation, ProductAbstract goes to two different store sync queues . URL doesn't have any store, so Publisher sends it only to the default store (the store which Zed is running). To be able to send URL to other stores, you need to define a **QueuePool**. The [Queue Pool](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/queue/queue-pool.html) is designed to allow messages to be sent to several queues. The synchronization process is using SynchronizationPool to get the list of the queues for sending the messages. In this example, URL will be sent to DE and AT as these queues are defined in the `SynchronizationPool` in `store.php`.
+The first diagram shows how P&S works with a multi-store shop system with one database. When the event is triggered, Publisher checks if the entity has information about a store. Depending on the result, it sends a message to sync queue or the store. Since `spy_product_abstract_storage` has a store column which defines entity and store relation, ProductAbstract goes to two different store sync queues . URL doesn't have any store, so Publisher sends it only to the default store (the store which Zed is running). To be able to send URL to other stores, you need to define a **QueuePool**. The [Queue Pool](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/queue/queue-pool.html) is designed to allow messages to be sent to several queues. The synchronization process is using SynchronizationPool to get the list of the queues for sending the messages. In this example, URL will be sent to DE and AT as these queues are defined in the `SynchronizationPool` in `store.php`.
 
 {% info_block errorBox %}
 An entity cannot have a store relation and SynchronizationPool defined for it simultaneously.

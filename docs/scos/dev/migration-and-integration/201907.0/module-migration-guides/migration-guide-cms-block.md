@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CMS Block
 originalLink: https://documentation.spryker.com/v3/docs/mg-cms-block
+originalArticleId: d5b6bd75-b8d2-4124-a350-60ef1da35b27
 redirect_from:
   - /v3/docs/mg-cms-block
   - /v3/docs/en/mg-cms-block
@@ -92,6 +93,6 @@ INSERT INTO spy_cms_block_store (fk_cms_block, fk_store)
 
 You can find more details for these changes on [CMS Block module release page](https://github.com/spryker/cms-block/releases).
 
-CMS Block is ready to be used in multi-store environment. Additionally you might want to update the `spryker/cms-block-gui` Administration Intervace to manage CMS Blocks and their store configuration. You can find further information about multi-store CMS Blocks here, and Zed Admin UI module migration guide in [Migration Guide - CMS Block GUI](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-cmsblockgui.html).
+CMS Block is ready to be used in multi-store environment. Additionally you might want to update the `spryker/cms-block-gui` Administration Intervace to manage CMS Blocks and their store configuration. You can find further information about multi-store CMS Blocks here, and Zed Admin UI module migration guide in [Migration Guide - CMS Block GUI](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-cms-block-gui.html).
 
 <!-- Last review date: Jan 31, 2018 by Karoly Gerner-->

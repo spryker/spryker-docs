@@ -2,6 +2,7 @@
 title: Performance Guidelines
 description: This guideline explains how to optimize the server-side execution time.
 originalLink: https://documentation.spryker.com/v5/docs/performance-guidelines
+originalArticleId: daba1c6f-cf44-4da3-a2f2-630b862c37b5
 redirect_from:
   - /v5/docs/performance-guidelines
   - /v5/docs/en/performance-guidelines
@@ -158,14 +159,14 @@ You need to remove the cache files for each project deployment.
 
 {% endinfo_block %}
 
-See [EventDispatcher module migration guide](https://documentation.spryker.com/docs/en/migration-guide-eventdispatcher) for information on how to upgrade to a newer version of EventDispatcher module.
+See [EventDispatcher module migration guide](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-eventdispatcher.html) for information on how to upgrade to a newer version of EventDispatcher module.
 
-See [Cache of Unresolved Entities for Zed ](https://documentation.spryker.com/docs/en/cache-of-unresolved-entities-for-zed)for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
+See [Cache of Unresolved Entities for Zed ](/docs/scos/dev/migration-and-integration/202005.0/technical-enhancements/cache-of-unresolved-entities-for-zed.html)for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
 
 
 ## Redis Mget Cache (Default: On)
 
-Yves performs a high number of `get()` calls to Redis. In case Redis is installed on the same machine, then the expected time per `get()` is below 0.1 ms. However, in case you run Spryker on a cloud environment, there is latency for each `get()` call to Redis. It can sum up to a few hundred milliseconds per request. To avoid this performance bottleneck, Spryker remembers all used `get()` calls per URL and performs a single `mget()` to retrieve all needed data in one call. This behavior works out of the box. In case you see a high number of `get()` calls in your monitoring, you should make sure that the `StorageCacheServiceProvider` is registered in `YvesBootstrap`. This provider is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Using Redis as a KV Storage](https://documentation.spryker.com/docs/en/redis-as-kv#using-redis-cache).
+Yves performs a high number of `get()` calls to Redis. In case Redis is installed on the same machine, then the expected time per `get()` is below 0.1 ms. However, in case you run Spryker on a cloud environment, there is latency for each `get()` call to Redis. It can sum up to a few hundred milliseconds per request. To avoid this performance bottleneck, Spryker remembers all used `get()` calls per URL and performs a single `mget()` to retrieve all needed data in one call. This behavior works out of the box. In case you see a high number of `get()` calls in your monitoring, you should make sure that the `StorageCacheServiceProvider` is registered in `YvesBootstrap`. This provider is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Using Redis as a KV Storage](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/client/using-and-configuring-redis-as-a-key-value-storage.html#using-redis-cache).
 
 ## ClassResolver Optimizations
 Spryker often uses the so-called class resolvers. Those resolvers are responsible for finding class names for certain overridable class names. Resolvables are for example `ModuleFactory`, `ModuleConfig`, `ModuleClient` etc. The process of resolving the right class name is done by building class name candidates. These candidates list contains a Store class name, e.g. `\Pyz\Application\ModuleSTORE\ModuleFactory`, a project class name e.g. `\Pyz\Application\Module\ModuleFactory` and a core class name e.g. `\Spryker\Application\Module\ModuleFactory`. Depending on the found class, the resolver returns the class instance which is then used.

@@ -1,13 +1,14 @@
 ---
 title: Release Notes - November - 1 2017
 originalLink: https://documentation.spryker.com/v6/docs/release-notes-november-1-2017
+originalArticleId: a2488ae6-c89e-49ff-98ab-385da9451eb7
 redirect_from:
   - /v6/docs/release-notes-november-1-2017
   - /v6/docs/en/release-notes-november-1-2017
 ---
 
 {% info_block infoBox %}
-This month we released some important [security updates](/docs/scos/dev/about-spryker/202001.0/whats-new/security-updates.html
+This month we released some important [security updates](/docs/scos/user/intro-to-spryker/202009.0/whats-new/security-updates.html
 {% endinfo_block %}.)
 
 ## Features
@@ -24,9 +25,9 @@ This release focuses on enabling multi-currency for shipments. It allows you to 
 
 **Documentation**
 For module documentation, see Shipment Module Guide<!--/module_guide/spryker/shipment.htm)-->.
-For detailed migration guides, see [Shipment Module Migration Guide from Version 5. to 6](https://documentation.spryker.com/v4/docs/mg-shipment#upgrading-from-version-5---to-version-6--).
+For detailed migration guides, see [Shipment Module Migration Guide from Version 5. to 6](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-shipment.html#upgrading-from-version-5---to-version-6--).
 For store administration guides, see Shipment Store Administration Guide<!--/administration_interface_guide/shipment.htm)-->
-For other related documentation, see [HowTo - Add New Shipment Method](/docs/scos/dev/tutorials/202001.0/howtos/howto-add-a-new-shipment-method-2.0.html)
+For other related documentation, see [HowTo - Add New Shipment Method](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/howto-add-a-new-shipment-method-2.0.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -53,7 +54,7 @@ This release provides the required infrastructure for Publish &amp; Synchronisat
 | <ul><li>[Event 2.0.0](https://github.com/spryker/Event/releases/tag/2.0.0)</li><li>[Queue 1.0.0](https://github.com/spryker/Queue/releases/tag/1.0.0)</li><li>[RabbitMq 1.0.0](https://github.com/spryker/rabbit-mq/releases/tag/1.0.0)</li></ul> | <ul><li>[Availability 5.2.0](https://github.com/spryker/Availability/releases/tag/5.2.0)</li><li>[Category 4.2.0](https://github.com/spryker/Category/releases/tag/4.2.0)</li><li>[Cms 6.3.0](https://github.com/spryker/Cms/releases/tag/6.3.0)</li><li>[CmsBlock 1.4.0](https://github.com/spryker/cms-block/releases/tag/1.4.0)</li><li>[Console 3.2.0](https://github.com/spryker/Console/releases/tag/3.2.0)</li><li>[EventBehavior 0.1.0](https://github.com/spryker/event-behavior/releases/tag/0.1.0)</li><li>[Glossary 3.2.0](https://github.com/spryker/Glossary/releases/tag/3.2.0)</li><li>[Kernel 3.12.0](https://github.com/spryker/Kernel/releases/tag/3.12.0)</li><li>[Navigation 2.1.0](https://github.com/spryker/Navigation/releases/tag/2.1.0)</li><li>[Price 4.3.0](https://github.com/spryker/Price/releases/tag/4.3.0)</li><li>[Product 5.3.0](https://github.com/spryker/Product/releases/tag/5.3.0)</li><li>[ProductCategory 4.4.0](https://github.com/spryker/product-category/releases/tag/4.4.0)</li><li>[ProductGroup 1.1.0](https://github.com/spryker/product-group/releases/tag/1.1.0)</li><li>[ProductImage 3.4.0](https://github.com/spryker/product-image/releases/tag/3.4.0)</li><li>[ProductLabel 2.2.0](https://github.com/spryker/product-label/releases/tag/2.2.0)</li><li>[ProductOption 5.4.0](https://github.com/spryker/product-option/releases/tag/5.4.0)</li><li>[ProductRelation 1.1.0](https://github.com/spryker/product-relation/releases/tag/1.1.0)</li><li>[ProductSearch 5.2.0](https://github.com/spryker/product-search/releases/tag/5.2.0)</li><li>[ProductSet 1.2.0](https://github.com/spryker/product-set/releases/tag/1.2.0)</li><li>[PropelOrm 1.3.0](https://github.com/spryker/propel-orm/releases/tag/1.3.0)</li><li>[Search 6.8.0](https://github.com/spryker/Search/releases/tag/6.8.0)</li><li>[Synchronization 0.1.0](https://github.com/spryker/Synchronization/releases/tag/0.1.0)</li><li>[SynchronizationBehavior 0.1.0](https://github.com/spryker/synchronization-behavior/releases/tag/0.1.0)</li><li>[Transfer 3.5.0](https://github.com/spryker/Transfer/releases/tag/3.5.0)</li><li>[Url 3.2.0](https://github.com/spryker/Url/releases/tag/3.2.0)</li><li>[UtilSanitize 2.1.0](https://github.com/spryker/util-sanitize/releases/tag/2.1.0)</li></ul> | n/a |
 
 **Documentation**
-For detailed migration guides, see [RabbitMQ Module Migration Guide from Version 0. to 1](https://documentation.spryker.com/v4/docs/mg-rabbitmq#upgrading-from-version-0---to-version-1--).
+For detailed migration guides, see [RabbitMQ Module Migration Guide from Version 0. to 1](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-rabbitmq.html#upgrading-from-version-0---to-version-1--).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -72,7 +73,7 @@ composer require spryker/rabbit-mq:"^1.0.0" spryker/event:"^2.0.0" spryker/event
 
 ## Improvements
 ### State Machine Sub-process Reuse
-A sub-processes in Spryker state machine allows you to simplify workflows. Each sub-process can represent a part of your business logic. Sometimes within the business logic you might need to have same or similar sub-processes multiple times (e.g. transactional email, refund). With this release, we allow you to copy state machine sub-processes as many times as you need in a project workflow. This will allow you to reuse existing parts of a state machine schema. For more details, see [Modelling - State Machine](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html).
+A sub-processes in Spryker state machine allows you to simplify workflows. Each sub-process can represent a part of your business logic. Sometimes within the business logic you might need to have same or similar sub-processes multiple times (e.g. transactional email, refund). With this release, we allow you to copy state machine sub-processes as many times as you need in a project workflow. This will allow you to reuse existing parts of a state machine schema. For more details, see [Modelling - State Machine](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html).
 
 **Affected Modules**
 
@@ -129,7 +130,7 @@ Previously, dependency violation finder ignored Service files during dependency 
 | n/a | n/a | <ul><li>[Development 3.3.3](https://github.com/spryker/Development/releases/tag/3.3.3)</li><li>[FileSystem 1.0.2](https://github.com/spryker/file-system/releases/tag/1.0.2)</li><li>[Flysystem 1.0.1](https://github.com/spryker/Flysystem/releases/tag/1.0.1)</li><li>[FlysystemAws3v3FileSystem 1.0.1](https://github.com/spryker/flysystem-aws3v3-file-system/releases/tag/1.0.1)</li><li>[FlysystemFtpFileSystem 1.0.1](https://github.com/spryker/flysystem-ftp-file-system/releases/tag/1.0.1)</li><li>[FlysystemLocalFileSystem 1.0.1](https://github.com/spryker/flysystem-local-file-system/releases/tag/1.0.1)</li><li>[UtilDataReader 1.2.1](https://github.com/spryker/util-data-reader/releases/tag/1.2.1)</li><li>[UtilDateTime 1.0.2](https://github.com/spryker/util-date-time/releases/tag/1.0.2)</li><li>[UtilEncoding 2.0.3](https://github.com/spryker/util-encoding/releases/tag/2.0.3)</li><li>[UtilNetwork 1.1.1](https://github.com/spryker/util-network/releases/tag/1.1.1)</li><li>[UtilSanitize 2.1.1](https://github.com/spryker/util-sanitize/releases/tag/2.1.1)</li><li>[UtilText 1.2.1](https://github.com/spryker/util-text/releases/tag/1.2.1)</li></ul> |
 
 ### Multi-currency Support for Promotional Products
-Since the [Multi-currency for Discounts](https://documentation.spryker.com/v4/docs/release-notes-october-2-2017#multi-currency-for-discounts) was released, we had in issue with promotional products in discounts. The price was moved from product to quoteTransfer but promotional products still read from the old `PRICE_MODE`. So when trying to read the price, there was no price found. This issue is fixed now, it's now price agnostic.
+Since the [Multi-currency for Discounts](/docs/scos/user/intro-to-spryker/202009.0/releases/archive/2017/release-notes-october-2-2017.html#multi-currency-for-discounts) was released, we had in issue with promotional products in discounts. The price was moved from product to quoteTransfer but promotional products still read from the old `PRICE_MODE`. So when trying to read the price, there was no price found. This issue is fixed now, it's now price agnostic.
 
 **Affected Modules**
 
@@ -158,8 +159,8 @@ Our recent Calculation 4.2.0 release introduced a BC breaking issue in Calculati
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Queue Integration - Loggly](/docs/scos/dev/technology-partners/202001.0/operational-tools-monitoring-legal-etc/loggly.html)
-* [Payolution — Configuration](/docs/scos/dev/technology-partners/202001.0/payment-partners/payolution/payolution-installation-and-configuration.html)
-* [Payolution — Workflow](/docs/scos/dev/technology-partners/202001.0/payment-partners/payolution/payolution-workflow.html)
+* [Queue Integration - Loggly](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/loggly.html)
+* [Payolution — Configuration](/docs/scos/dev/technology-partners/202009.0/payment-partners/payolution/payolution-installation-and-configuration.html)
+* [Payolution — Workflow](/docs/scos/dev/technology-partners/202009.0/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html)
 
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

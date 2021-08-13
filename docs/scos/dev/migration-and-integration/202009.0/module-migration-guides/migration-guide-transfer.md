@@ -2,6 +2,7 @@
 title: Migration Guide - Transfer
 description: Use the guide to learn how to update the Transfer module to a newer version.
 originalLink: https://documentation.spryker.com/v6/docs/mg-transfer
+originalArticleId: 9b149e0f-4d84-43cf-9b0e-e42ec6c19a4a
 redirect_from:
   - /v6/docs/mg-transfer
   - /v6/docs/en/mg-transfer

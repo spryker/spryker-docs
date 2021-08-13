@@ -2,9 +2,12 @@
 title: Order Process Modelling via State Machines
 description: State Machines help you define, execute and visualize predefined and automated processes.
 originalLink: https://documentation.spryker.com/2021080/docs/order-process-modelling-state-machines
+originalArticleId: 6beb29fc-d94c-4c76-8ad0-e0d71bbb21ff
 redirect_from:
   - /2021080/docs/order-process-modelling-state-machines
   - /2021080/docs/en/order-process-modelling-state-machines
+  - /docs/order-process-modelling-state-machines
+  - /docs/en/order-process-modelling-state-machines
 ---
 
 State machines help you define, execute and visualize predefined and automated processes. It can model events that involve performing a predetermined sequence of actions, for example, in the order process.
@@ -23,7 +26,7 @@ You can tailor the State Machine to your needs to trigger certain processes auto
 The `StateMachine` module provides a generic implementation for state machines (SM). This module provides functionality for drawing the SM graph, triggering events, initializing a new state machine, or for getting the state history for a processed item.
 
 {% info_block warningBox %}
-If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/dev/features/202001.0/order-management/oms-order-management-system-matrix.html
+If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/dev/features/{{ page.version }}/order-management/oms-order-management-system-matrix.html
 {% endinfo_block %}.)
 
 {% info_block infoBox %}
@@ -121,7 +124,7 @@ Here is an example of a timeout processor in an event definition:
 ```
 In this example, `OmsTimeout/Initiation` is the name of the plugin which is executed to set the starting point of the timeout.
 
-In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/order-management-feature-integration.html) plugin starts the timeout immediately, from the current time:
+In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/order-management-feature-integration.html) plugin starts the timeout immediately, from the current time:
 
 <details open>
 

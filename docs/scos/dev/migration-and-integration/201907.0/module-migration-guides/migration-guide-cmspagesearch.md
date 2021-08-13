@@ -1,13 +1,14 @@
 ---
 title: Migration Guide - CmsPageSearch
 originalLink: https://documentation.spryker.com/v3/docs/mg-cmspagesearch
+originalArticleId: c63eeace-aabe-4dfe-8039-0e7b5d0a3cbf
 redirect_from:
   - /v3/docs/mg-cmspagesearch
   - /v3/docs/en/mg-cmspagesearch
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
-Version 2.0.0 of the CmsPageSearch module introduces the [multi-store functionality](https://documentation.spryker.com/v2/docs/multi-store-cms-pages-201903). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 2.0.0 of the CmsPageSearch module introduces the [multi-store functionality](https://documentation.spryker.com/v3/docs/cms-pages-overview). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 To avoid the BC break, a synchronization behavior must be removed.
 

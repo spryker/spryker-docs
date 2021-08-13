@@ -2,6 +2,7 @@
 title: Newsletter Subscription
 description: Send updates on product related news, special offers or any other update you wish to share. The Spryker Commerce OS offers opt-in and opt-out options.
 originalLink: https://documentation.spryker.com/v5/docs/newsletter-subscription
+originalArticleId: b4e60412-67fa-4d4d-bc1c-afcecbafe8b0
 redirect_from:
   - /v5/docs/newsletter-subscription
   - /v5/docs/en/newsletter-subscription

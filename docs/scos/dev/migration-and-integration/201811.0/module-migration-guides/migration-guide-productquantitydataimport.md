@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductQuantityDataImport
 originalLink: https://documentation.spryker.com/v1/docs/mg-product-quantity-data-import
+originalArticleId: 8a027e10-711b-4abb-935a-5b6986a77894
 redirect_from:
   - /v1/docs/mg-product-quantity-data-import
   - /v1/docs/en/mg-product-quantity-data-import

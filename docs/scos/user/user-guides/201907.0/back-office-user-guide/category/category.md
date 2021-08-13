@@ -2,6 +2,7 @@
 title: Category
 description: The section is designed to manage products under the category according to a specific criterion, including search and filter them in the online store.
 originalLink: https://documentation.spryker.com/v3/docs/category
+originalArticleId: 2874388c-5d48-4092-b90e-f2b729ce824e
 redirect_from:
   - /v3/docs/category
   - /v3/docs/en/category
@@ -20,9 +21,9 @@ This is how a Product Catalog Manager can create a structure to display products
  ***
  **What's Next?**
  To know how the categories are created and managed, see the following articles:
-* [Creating Categories](/docs/scos/user/user-guides/202001.0/back-office-user-guide/category/creating-categories.html)
-*  [Assigning Products to Categories](/docs/scos/user/user-guides/202001.0/back-office-user-guide/category/assigning-products-to-categories.html)
-*  [Managing Categories](/docs/scos/user/user-guides/202001.0/back-office-user-guide/category/managing-categories.html)
+* [Creating Categories](/docs/scos/user/user-guides/201907.0/back-office-user-guide/category/creating-categories.html)
+*  [Assigning Products to Categories](/docs/scos/user/user-guides/201907.0/back-office-user-guide/category/assigning-products-to-categories.html)
+*  [Managing Categories](/docs/scos/user/user-guides/201907.0/back-office-user-guide/category/managing-categories.html)
  
 To know more about the attributes you use to create and manage the categories, see the following article:
-* [Category: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/category/references/category-reference-information.html)
+* [Category: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/category/references/category-reference-information.html)

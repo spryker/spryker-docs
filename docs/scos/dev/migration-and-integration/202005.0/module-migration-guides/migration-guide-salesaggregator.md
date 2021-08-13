@@ -2,6 +2,7 @@
 title: Migration Guide - SalesAggregator
 description: Use the guide to learn how to update the SalesAggregator module to a newer version.
 originalLink: https://documentation.spryker.com/v5/docs/mg-sales-aggregator
+originalArticleId: 26c521dc-2d4d-4c5c-b2b8-710b902377c3
 redirect_from:
   - /v5/docs/mg-sales-aggregator
   - /v5/docs/en/mg-sales-aggregator

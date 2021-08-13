@@ -2,6 +2,7 @@
 title: Alternative Products Feature Integration
 description: This guide walks you through the process of installing the Alternative Products feature into your project.
 originalLink: https://documentation.spryker.com/v4/docs/alternative-products-feature-integration
+originalArticleId: cfe7055d-d805-4977-8f09-6dd73925fd33
 redirect_from:
   - /v4/docs/alternative-products-feature-integration
   - /v4/docs/en/alternative-products-feature-integration

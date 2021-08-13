@@ -2,6 +2,7 @@
 title: Development
 description: Create a reliable base for your OS that ensures security and high performance.
 originalLink: https://documentation.spryker.com/v1/docs/development
+originalArticleId: 2fbee573-cf62-4fa6-ac5c-50f05f98a7af
 redirect_from:
   - /v1/docs/development
   - /v1/docs/en/development

@@ -1,6 +1,7 @@
 ---
 title: HowTo - Replace Spryker Module Dependencies
 originalLink: https://documentation.spryker.com/v5/docs/ht-replace-bundle-dependencies
+originalArticleId: f98d4e65-eb4c-4cac-827e-6ad3a904ebe7
 redirect_from:
   - /v5/docs/ht-replace-bundle-dependencies
   - /v5/docs/en/ht-replace-bundle-dependencies

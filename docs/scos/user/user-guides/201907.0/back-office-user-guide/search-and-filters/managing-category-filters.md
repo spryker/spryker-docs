@@ -2,6 +2,7 @@
 title: Managing Category Filters
 description: Use the procedure to arrange items into categories, manage category filters by adding, reordering, or removing them in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/managing-category-filters
+originalArticleId: de37650a-b4fd-42ff-8008-754915d385dd
 redirect_from:
   - /v3/docs/managing-category-filters
   - /v3/docs/en/managing-category-filters

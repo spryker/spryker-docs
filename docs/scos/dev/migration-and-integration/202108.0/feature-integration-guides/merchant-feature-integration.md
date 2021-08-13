@@ -2,9 +2,12 @@
 title: Merchant feature integration
 description: Learn how to integrate the Merchant feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-feature-integration
+originalArticleId: 7b98e6df-b4e5-4aa7-9471-9bbed2344433
 redirect_from:
   - /2021080/docs/merchant-feature-integration
   - /2021080/docs/en/merchant-feature-integration
+  - /docs/merchant-feature-integration
+  - /docs/en/merchant-feature-integration
 ---
 
 This document describes how to integrate the Merchant feature into a Spryker project.
@@ -19,7 +22,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/2021080/docs/spryker-core-feature-integration) |
+| Spryker Core | 202001.0 | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-ore-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 

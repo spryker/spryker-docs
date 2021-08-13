@@ -2,6 +2,7 @@
 title: Packaging Units
 description: Shop owners can offer products in different packaging units - items, bags, pallets. Shop owner can define a list of packaging units per abstract product.
 originalLink: https://documentation.spryker.com/v3/docs/packaging-units
+originalArticleId: 06ef441b-d364-4c43-96e0-ac2c89ebe4f2
 redirect_from:
   - /v3/docs/packaging-units
   - /v3/docs/en/packaging-units

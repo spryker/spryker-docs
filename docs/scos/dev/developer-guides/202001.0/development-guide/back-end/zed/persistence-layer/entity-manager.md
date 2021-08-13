@@ -2,6 +2,7 @@
 title: Entity Manager
 description: It is possible to create an entity manager class in your persistence layer. It will be responsible for saving, updating and deleting data. Using the class, you can separate data from persistence details (Propel).
 originalLink: https://documentation.spryker.com/v4/docs/entity-manager
+originalArticleId: 13f52ac1-fd5a-4ba1-b685-2a6cf79dba97
 redirect_from:
   - /v4/docs/entity-manager
   - /v4/docs/en/entity-manager
@@ -134,4 +135,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedPersistenceEntityManagerInterfaceMethod` - Add Zed Persistence Entity Manager Interface Method
 * `vendor/bin/console spryk:run AddZedPersistenceEntityManagerMethod` - Add Zed Persistence Entity Manager Method
 
-See the [Spryk](https://documentation.spryker.com/v4/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/features/202001.0/sdk/spryk-code-generator.html) documentation for details.

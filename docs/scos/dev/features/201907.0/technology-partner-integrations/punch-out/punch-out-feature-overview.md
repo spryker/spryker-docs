@@ -2,6 +2,7 @@
 title: Punch Out Feature Overview
 description: The Punch Out feature allows connecting a buyer's procurement software with a seller's e-commerce shop, Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v3/docs/punchout-feature-overview
+originalArticleId: 65cea27f-9ee4-4081-8786-3f5b8b2d87a1
 redirect_from:
   - /v3/docs/punchout-feature-overview
   - /v3/docs/en/punchout-feature-overview
@@ -26,7 +27,7 @@ From the B2B buyer perspective, the Punch Out process typically involves the fol
 2. The buyer gets immediately forwarded to the supplier's e-commerce store (Spryker web shop) within the buyer's e-procurement system. A Punch Out session is initiated.
 ![Supplier store](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/supplier-store.png){height="" width=""}
 
-3. Authentication is handled with the help of the [Customer login by token](https://documentation.spryker.com/v3/docs/customer-login-by-token-201907) feature. So, the buyer doesn't need to enter any login details to get to the customer account. The [Vault for Tokens](https://documentation.spryker.com/v3/docs/vault-for-tokens-201907) feature allows securely keeping the sensitive data (username and password) and retrieving it on request.
+3. Authentication is handled with the help of the [Customer login by token](https://documentation.spryker.com/v3/docs/customer-login-by-token-overview) feature. So, the buyer doesn't need to enter any login details to get to the customer account. The [Vault for Tokens](https://documentation.spryker.com/v3/docs/vault-for-tokens-overview) feature allows securely keeping the sensitive data (username and password) and retrieving it on request.
 4. The buyer browses the store and adds items to their shopping cart.
 ![Shopping cart supplier](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Technology+Partner+Integrations/Punch+Out/Punch+Out+Feature+Overview/shopping-cart-supplier.png){height="" width=""}
 

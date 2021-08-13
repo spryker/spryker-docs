@@ -2,6 +2,7 @@
 title: Reference information- return item states
 description: This guide provides reference information on  return item states.
 originalLink: https://documentation.spryker.com/v6/docs/return-item-states-reference-information
+originalArticleId: 8155623f-8fa8-4f3c-aa5d-a5e5ebbafbfd
 redirect_from:
   - /v6/docs/return-item-states-reference-information
   - /v6/docs/en/return-item-states-reference-information

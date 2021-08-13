@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - OrdersRestApi
 originalLink: https://documentation.spryker.com/v5/docs/mg-ordersrestapi
+originalArticleId: 74b03c31-a9f0-4046-a496-4067d3a6f032
 redirect_from:
   - /v5/docs/mg-ordersrestapi
   - /v5/docs/en/mg-ordersrestapi
@@ -11,7 +12,7 @@ redirect_from:
 In this new version of the **OrdersRestApi** module, we have added support of split delivery. You can find more details about the changes on the [OrdersRestApi module](https://github.com/spryker/orders-rest-api/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](https://documentation.spryker.com/docs/en/split-delivery-concept
+This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202005.0/migration-concepts/split-delivery-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

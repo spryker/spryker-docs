@@ -2,6 +2,7 @@
 title: Merchant Product Restrictions
 description: Th feature provides clients with access to the products and information without overwhelming them with non-essential data.
 originalLink: https://documentation.spryker.com/v6/docs/merchant-product-restrictions
+originalArticleId: 11dad26c-b974-451f-b93a-43d763c4c889
 redirect_from:
   - /v6/docs/merchant-product-restrictions
   - /v6/docs/en/merchant-product-restrictions

@@ -2,6 +2,7 @@
 title: Heidelpay
 description: Heidelpay is an internationally operating payment institution, authorized and regulated by the Federal Financial Supervisory Authority.
 originalLink: https://documentation.spryker.com/v5/docs/heidelpay
+originalArticleId: e600bc5f-1777-4d33-96d1-0c5877aea1d4
 redirect_from:
   - /v5/docs/heidelpay
   - /v5/docs/en/heidelpay
@@ -16,17 +17,17 @@ Heidelpay is an internationally operating payment institution, authorized and re
 
 To integrate Hidelpay in your project, follow these steps:
 
-1. [Install](https://documentation.spryker.com/docs/en/heidelpay-installation) Heidelpay
-2. [Integrate](https://documentation.spryker.com/docs/en/heidelpay-integration) Heidelpay into your Legacy Demoshop project or [integrate](https://documentation.spryker.com/docs/en/heidelpay-integration-scos)  Heidelpay into your Spryker Commerce OS project
+1. [Install](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-installation.html) Heidelpay
+2. [Integrate](https://documentation.spryker.com/v5/docs/en/heidelpay-integration) Heidelpay into your Legacy Demoshop project or [integrate](https://documentation.spryker.com/v5/docs/en/heidelpay-integration-scos)  Heidelpay into your Spryker Commerce OS project
 3. Configure selected payment methods:
 
-  - Paypal ([Paypal Authorize](https://documentation.spryker.com/docs/en/heidelpay-authorize),[Payal Debit](https://documentation.spryker.com/docs/en/heidelpay-paypal-debit))
-  - [Credit Card](https://documentation.spryker.com/docs/en/heidelpay-credit-card)
-  - [iDeal](https://documentation.spryker.com/docs/en/hedelpay-ideal)
-  - [Easy Credit](https://documentation.spryker.com/docs/en/heidelpay-easy-credit)
-  - [Sofort](https://documentation.spryker.com/docs/en/heidelay-sofort)
-  - [Direct Debit](https://documentation.spryker.com/docs/en/heidelpay-direct-debit)
-  - [Invoice Secured B2C](https://documentation.spryker.com/docs/en/heidelpay-invoice-secured-b2c)
+  - Paypal ([Paypal Authorize](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-paypal-authorize.html),[Payal Debit](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-paypal-debit-workflow.html))
+  - [Credit Card](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-credit-card-secure.html)
+  - [iDeal](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-ideal.html)
+  - [Easy Credit](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-easy-credit.html)
+  - [Sofort](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-sofort-online-transfer.html)
+  - [Direct Debit](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-direct-debit.html)
+  - [Invoice Secured B2C](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-invoice-secured-b2c.html)
 
 4. Build your own workflow (create a new OMS which will use Hidelpay). See the section below for more information.
 

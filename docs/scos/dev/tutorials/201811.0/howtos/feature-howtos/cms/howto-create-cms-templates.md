@@ -1,6 +1,7 @@
 ---
 title: HowTo - Create CMS Templates
 originalLink: https://documentation.spryker.com/v1/docs/ht-create-cms-templates
+originalArticleId: c7f332fa-52d2-4dbc-86f8-b7dee0751222
 redirect_from:
   - /v1/docs/ht-create-cms-templates
   - /v1/docs/en/ht-create-cms-templates

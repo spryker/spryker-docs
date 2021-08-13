@@ -1,6 +1,7 @@
 ---
 title: Catalog Search
 originalLink: https://documentation.spryker.com/v3/docs/catalog-search
+originalArticleId: 5480b135-7345-42d1-8c8f-78c0e636d931
 redirect_from:
   - /v3/docs/catalog-search
   - /v3/docs/en/catalog-search
@@ -14,7 +15,7 @@ In your development, this endpoint can help you to:
 * Retrieve a list of products to be displayed anywhere you want.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Catalog Search API Feature Integration](/docs/scos/dev/migration-and-integration/201903.0/feature-integration-guides/glue-api/catalog-search-api-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Catalog Search API Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/catalog-search-api-feature-integration.html).
 
 ## Searching for Products
 To search for products, send GET requests to the following endpoint:

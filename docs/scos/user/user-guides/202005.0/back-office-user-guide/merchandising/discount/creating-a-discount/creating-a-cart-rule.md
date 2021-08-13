@@ -2,6 +2,7 @@
 title: Creating a Cart Rule
 description: Use the procedure to create a cart-based discount rule along with its conditions in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/creating-a-cart-rule
+originalArticleId: 7be9fdee-9276-4831-b79a-9a42597440b5
 redirect_from:
   - /v5/docs/creating-a-cart-rule
   - /v5/docs/en/creating-a-cart-rule
@@ -20,11 +21,11 @@ To start working with discounts, go to the **Merchandising > Discounts** section
     2. In **Discount Type** drop-down, select **Cart Rule**.
     3. In the **Name** field, specify the name for the discount.
     4. _Optional_: Enter the description of the discount in the **Description** field.
-    5. Specify if the discount is exclusive. See [Discount: Reference Information](https://documentation.spryker.com/docs/en/discount-reference-information) for more details.
+    5. Specify if the discount is exclusive. See [Discount: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/references/discount-reference-information.html) for more details.
     6. Specify the validity interval (lifetime) of the discount.
 3. Click **Next** or select the **Discount calculation** tab to proceed.
 4. On the **Create Discount page >Discount calculation** tab, do the following:
-    1.  Select either Calculator percentage, or Calculator fixed in the **Calculator type** drop-down. See [Discount Calculation: Reference Information](https://documentation.spryker.com/docs/en/discount-calculation-reference-information) for more details.
+    1.  Select either Calculator percentage, or Calculator fixed in the **Calculator type** drop-down. See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/references/discount-calculation-reference-information.html) for more details.
     {% info_block warningBox "Note" %}
 
     The next step varies based on the selected calculator type:
@@ -32,13 +33,13 @@ To start working with discounts, go to the **Merchandising > Discounts** section
     b.  **Calculator percentage**: Enter the values (percentage) to be discounted.
     
 {% endinfo_block %}
-    2. Select the **Discount application type** and define what products the discount will be applied to. See [Discount Calculation: Reference Information](https://documentation.spryker.com/docs/en/discount-calculation-reference-information) for more information.
+    2. Select the **Discount application type** and define what products the discount will be applied to. See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/references/discount-calculation-reference-information.html) for more information.
  5. Click **Next**, or select the **Conditions** tab to proceed.
  6. On the **Create Discount page >Conditions** tab, do the following:
-    1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See [Discount Conditions: Reference Information](https://documentation.spryker.com/docs/en/discount-conditions-reference-information).
+    1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See [Discount Conditions: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/references/discount-conditions-reference-information.html).
     2. Enter the value for **The discount can be applied if the query applies for at least X item(s).** field.
 7. Click **Save** to create the new discount. 
 ***
 **What's next?**
-See [Managing Discount](https://documentation.spryker.com/docs/en/managing-discounts) to know more about the actions you can do once the discount is created.
+See [Managing Discount](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.
 

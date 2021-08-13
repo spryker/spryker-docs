@@ -2,6 +2,7 @@
 title: Content Items Feature Integration
 description: The guide walks you through the process of installing the Content Items feature in the project.
 originalLink: https://documentation.spryker.com/v4/docs/content-items-feature-integration
+originalArticleId: 1c2cd290-cf7b-47c7-a638-d8384d2b5713
 redirect_from:
   - /v4/docs/content-items-feature-integration
   - /v4/docs/en/content-items-feature-integration

@@ -1,9 +1,12 @@
 ---
 title: Separating different endpoint bootstraps
 originalLink: https://documentation.spryker.com/2021080/docs/separating-different-endpoint-bootstraps
+originalArticleId: 9f42f274-0278-4632-8a9f-0279c3ed4675
 redirect_from:
   - /2021080/docs/separating-different-endpoint-bootstraps
   - /2021080/docs/en/separating-different-endpoint-bootstraps
+  - /docs/separating-different-endpoint-bootstraps
+  - /docs/en/separating-different-endpoint-bootstraps
 ---
 
 Gateway and ZedRestApi requests require a different stack of plugins to be processed with. Separation of the application bootstrapping into individual endpoints reduces the number of wired plugins which improves the performance of request processing. 
@@ -566,4 +569,4 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 
 1. Update the Docker SDK to version `1.36.1` or higher. 
 
-2. [Development environment](https://documentation.spryker.com/docs/choosing-an-installation-mode#development-mode): Update the hosts file by running the `docker/sdk boot {deploy_file}` command and following the instructions in the output. 
+2. [Development environment](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Update the hosts file by running the `docker/sdk boot {deploy_file}` command and following the instructions in the output. 

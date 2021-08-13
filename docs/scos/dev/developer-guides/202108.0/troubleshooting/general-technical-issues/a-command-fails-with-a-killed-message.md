@@ -2,9 +2,12 @@
 title: A command fails with a `Killed` message
 description: Learn how to resolve the issue with a command returning a `killed` message.
 originalLink: https://documentation.spryker.com/2021080/docs/a-command-fails-with-a-killed-message
+originalArticleId: 09c3dd70-4e87-4604-b5d3-844e49e4c853
 redirect_from:
   - /2021080/docs/a-command-fails-with-a-killed-message
   - /2021080/docs/en/a-command-fails-with-a-killed-message
+  - /docs/a-command-fails-with-a-killed-message
+  - /docs/en/a-command-fails-with-a-killed-message
 ---
 
 Running a CLI command with a long execution time returns a `Killed` message.

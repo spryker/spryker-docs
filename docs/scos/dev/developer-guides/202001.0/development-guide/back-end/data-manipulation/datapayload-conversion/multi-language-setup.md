@@ -1,6 +1,7 @@
 ---
 title: Multi-Language Setup
 originalLink: https://documentation.spryker.com/v4/docs/multi-language-setup
+originalArticleId: ec84b8b8-d598-4574-8616-197036be0803
 redirect_from:
   - /v4/docs/multi-language-setup
   - /v4/docs/en/multi-language-setup

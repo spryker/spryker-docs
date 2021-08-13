@@ -2,9 +2,12 @@
 title: Migration Guide - ProductBundle
 description: Use the guide to migrate to a new version of the ProductBundle module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-bundle
+originalArticleId: a54d33c4-7fdf-4687-85b3-ae4378e5a76a
 redirect_from:
   - /2021080/docs/mg-product-bundle
   - /2021080/docs/en/mg-product-bundle
+  - /docs/mg-product-bundle
+  - /docs/en/mg-product-bundle
 ---
 
 ## Upgrading from Version 6.* to Version 7.0.0
@@ -12,7 +15,7 @@ redirect_from:
 In this new version of the **ProductBundle** module, we have added support of decimal stock. You can find more details about the changes on the [ProductBundle module](https://github.com/spryker/product-bundle/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/decimal-stock-migration-concept.html
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/decimal-stock-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**
@@ -45,7 +48,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 ## Upgrading from Version 3.* to Version 4.*
 
-In version 4 we have added support for multi-currency. First, make sure that you [migrated the Price module](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-price.html). If you extended `ProductBundleCartExpander`, then you have to adapt some code because we changed the way the price is selected for added bundle products, check the core changes and adapt accordingly. We have also added a new plugin to handle a cart reload event.
+In version 4 we have added support for multi-currency. First, make sure that you [migrated the Price module](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-price.html). If you extended `ProductBundleCartExpander`, then you have to adapt some code because we changed the way the price is selected for added bundle products, check the core changes and adapt accordingly. We have also added a new plugin to handle a cart reload event.
 
 You will also need to add the `\Spryker\Zed\ProductBundle\Communication\Plugin\Cart\CartBundleItemsPreReloadPlugin` plugin to `\Pyz\Zed\Cart\CartDependencyProvider::getPreReloadPlugins()`. This ensures that bundle items are correctly updated when the currency is changed and cart reload is invoked.
 

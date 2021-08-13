@@ -2,9 +2,12 @@
 title: Glue API installation and configuration
 description: This article describes the process of installing and enabling the GLUE API infrastructure and explains the details of integrating the REST API resources.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-installation-and-configuration
+originalArticleId: e3903160-d613-4e86-81c5-ac4f3aa3308a
 redirect_from:
   - /2021080/docs/glue-api-installation-and-configuration
   - /2021080/docs/en/glue-api-installation-and-configuration
+  - /docs/glue-api-installation-and-configuration
+  - /docs/en/glue-api-installation-and-configuration
 ---
 
 Functionally, Spryker API can be split into 2 parts: API infrastructure (GLUE) and feature modules. The infrastructure provides the general functionality of the API layer, while each feature module implements a specific resource or resource relation.

@@ -1,6 +1,7 @@
 ---
 title: Getting Suggestions for Auto-Completion and Search
 originalLink: https://documentation.spryker.com/v2/docs/getting-suggestions-for-autocompletion-and-search
+originalArticleId: 5c537a53-e39e-45df-9bb2-4efee2e0b66b
 redirect_from:
   - /v2/docs/getting-suggestions-for-autocompletion-and-search
   - /v2/docs/en/getting-suggestions-for-autocompletion-and-search

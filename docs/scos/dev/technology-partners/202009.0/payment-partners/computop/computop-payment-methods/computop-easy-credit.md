@@ -2,6 +2,7 @@
 title: Computop - Easy Credit
 description: Integrate Easy Credit payment through  Computop into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v6/docs/computop-easy-credit
+originalArticleId: 14cd1b7e-2087-4b57-9864-22561120b18c
 redirect_from:
   - /v6/docs/computop-easy-credit
   - /v6/docs/en/computop-easy-credit

@@ -2,6 +2,7 @@
 title: Creating Instances of Classes- Factory
 description: All modules are shipped with a dedicated factory for each layer. The responsibility of the factory is to create new instances of the classes from the same layer and module.
 originalLink: https://documentation.spryker.com/v5/docs/factory
+originalArticleId: c22e8f06-0831-4ae2-81c2-f11de6f59fe4
 redirect_from:
   - /v5/docs/factory
   - /v5/docs/en/factory
@@ -179,4 +180,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedBusinessFactoryMethod` - Add Zed Business Factory Method 
 * `vendor/bin/console spryk:run AddClientFactory` - Add Client Factory
 
-See the [Spryk](https://documentation.spryker.com/docs/en/development_tools/spryk-201903) documentation for details.
+See the [Spryk](https://documentation.spryker.com/v5/docs/en/development_tools/spryk) documentation for details.

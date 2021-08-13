@@ -2,9 +2,12 @@
 title: Multiple and Shared Shopping Lists overview
 description: A general overview of the Multiple and shared shopping lists feature.
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-and-shared-shopping-lists-overview
+originalArticleId: 6683a968-b4de-4e2b-aefc-2ab70fabe3b4
 redirect_from:
   - /2021080/docs/multiple-and-shared-shopping-lists-overview
   - /2021080/docs/en/multiple-and-shared-shopping-lists-overview
+  - /docs/multiple-and-shared-shopping-lists-overview
+  - /docs/en/multiple-and-shared-shopping-lists-overview
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists allow a buyer to have a quick overview of the products they are planning to buy and the sum of money they are going to spend.
@@ -12,8 +15,8 @@ A shopping list is a list of the items that shoppers buy or plan to buy frequent
 A shopping list is always saved, disregarding if a company user logs out and logs in again—the list is still available. The shopping list does not reserve products on stock, so adding an item to the shopping list does not affect item availability. However, a company user can easily convert any shopping list into a shopping cart to proceed with the Checkout.
 There are two ways to create a shopping list:
 
-* Through a [shopping list widget](https://documentation.spryker.com/docs/shopping-list-widget) in the header of the shop.
-* From the *Shopping Lists* page in the *My Account* menu. See [Creating a shopping list](https://documentation.spryker.com/docs/shopping-lists-shop-guide#create-shopping-list) for more detailed instruction.
+* Through a [shopping list widget](https://documentation.spryker.com/2021080/docs/shopping-list-widget) in the header of the shop.
+* From the *Shopping Lists* page in the *My Account* menu. See [Creating a shopping list](https://documentation.spryker.com/2021080/docs/multiple-shared-shopping-lists-overview#multiple-and-shared-shopping-lists-on-the-storefront) for more detailed instruction.
 
 New items are added to shopping lists by clicking **Add to Shopping List** on the product details page.
 
@@ -23,7 +26,7 @@ Company users can create not just one but multiple shopping lists to be used for
 For instance, these could be separate shopping lists for daily, weekly, and monthly purchases.
 {% endinfo_block %}
 
-The detailed information on managing shopping lists is covered in the [Shop User Guide](https://documentation.spryker.com/docs/shopping-lists-shop-guide).
+The detailed information on managing shopping lists is covered in the [Shop User Guide](https://documentation.spryker.com/2021080/docs/multiple-shared-shopping-lists-overview#multiple-and-shared-shopping-lists-on-the-storefront).
 
 ## Permissions management for shared shopping lists
 Users of companies with business units can **share** their shopping lists within the company business units. The shopping lists can either be shared with the entire business unit or its members. Company users can view shopping lists shared with them on the *My Account* -> *Shopping lists* page. The shopping lists can be shared by clicking **Share** on this page as well. The *Share [SHOPPING LIST NAME]* page consists of two sections: *Business Units* and *Users*. Here, the shopping list owner can select either the entire business unit or individual users to share the shopping list with.
@@ -48,7 +51,7 @@ Three types of shopping list access rights can be granted:
 * SKU
 * Product attribute
 * Product options
-* Product comments (see [Shopping List Notes](https://documentation.spryker.com/docs/shopping-list-notes) for more details)
+* Product comments (see [Shopping List Notes](https://documentation.spryker.com/2021080/docs/shopping-list-notes) for more details)
 * Quantity
 * Item price
 * Availability
@@ -74,7 +77,7 @@ Alternative products are not shown for discontinued products since they can not 
    * SKU
    * Product attribute
    * Product options 
-   * Product notes (see [Shopping List Notes](https://documentation.spryker.com/docs/shopping-list-notes) for more details)
+   * Product notes (see [Shopping List Notes](https://documentation.spryker.com/2021080/docs/shopping-list-notes) for more details)
    * Quantity
    * Item price
    * Availability
@@ -102,7 +105,7 @@ Besides other products, a user with *Full access* rights is allowed to see alter
 It is possible to grant different access rights on a shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* to the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.
 
 ## Search widget for shopping lists
-Starting from v. 2019.03.0, it is possible to integrate the [Search Widget for Concrete Products](https://documentation.spryker.com/docs/search-widget-for-concrete-producs-overview-201903) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+Starting from v. 2019.03.0, it is possible to integrate the [Search Widget for Concrete Products](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 :::(Warning)
 Without the Search widget, you will not be able to search for products. Therefore, make sure that the Search Widget for Concrete Products feature is integrated into your project.
 :::

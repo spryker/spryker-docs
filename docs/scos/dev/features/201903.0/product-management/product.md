@@ -2,6 +2,7 @@
 title: Product
 description: Product Management system allows gathering product characteristics and exported them to Spryker. Products can be managed in the Back Office and displayed in Yves
 originalLink: https://documentation.spryker.com/v2/docs/product
+originalArticleId: 8f9a65ed-47b6-4b7c-a3e4-c9b7b8bad94a
 redirect_from:
   - /v2/docs/product
   - /v2/docs/en/product

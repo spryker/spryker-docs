@@ -2,6 +2,7 @@
 title: Adding scheduled prices to abstract products
 description: Learn how to add scheduled prices to abstract products in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/adding-scheduled-prices-to-abstract-products
+originalArticleId: a1deae50-ab49-453c-a626-3fa7a7a63871
 redirect_from:
   - /v6/docs/adding-scheduled-prices-to-abstract-products
   - /v6/docs/en/adding-scheduled-prices-to-abstract-products
@@ -38,7 +39,7 @@ To add a scheduled price to an abstract product:
 | --- | --- |
 | Abstract SKU | Unique identifier of an abstract product. The field is disabled because you are adding a scheduled price to a particular abstract product. |
 | Concrete SKU | Unique identifier of a concrete product. The field is disabled because you are adding a scheduled price to a particular abstract product. |
-| Store | [Store](https://documentation.spryker.com/docs/multiple-stores) in which the scheduled price will be displayed. Unless you add the scheduled price to all the other stores, the regular price will be displayed in them.  |
+| Store | [Store](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/howto-set-up-multiple-stores.html) in which the scheduled price will be displayed. Unless you add the scheduled price to all the other stores, the regular price will be displayed in them.  |
 | Currency | Currency in which the scheduled price is defined. Unless you define the scheduled price for all the other currencies, the regular price will be displayed for them.  |
 | Net price | Net value of the product defined by the scheduled price. |
 | Gross price |Gross value of product defined by the scheduled price.  |
@@ -51,5 +52,5 @@ To add a scheduled price to an abstract product:
 
 You can add multiple scheduled prices for the same abstract product. Repeat the steps in [Add a scheduled price for an abstract product](#add-a-scheduled-price-for-an-abstract-product) until you add the desired number of scheduled prices. 
 
-If you want to add more than five scheduled prices, it might be quicker to [import the scheduled prices](https://documentation.spryker.com/docs/creating-scheduled-prices).
+If you want to add more than five scheduled prices, it might be quicker to [import the scheduled prices](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/scheduled-prices/creating-scheduled-prices.html).
 

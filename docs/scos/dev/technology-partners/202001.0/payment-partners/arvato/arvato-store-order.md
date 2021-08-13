@@ -2,6 +2,7 @@
 title: Arvato - Store Order
 description: In this article, you can get details about the  Store Order service in the Arvato module.
 originalLink: https://documentation.spryker.com/v4/docs/arvato-store-order-2-0
+originalArticleId: 098d2175-2ebd-4837-820c-bb2f4939c9c7
 redirect_from:
   - /v4/docs/arvato-store-order-2-0
   - /v4/docs/en/arvato-store-order-2-0

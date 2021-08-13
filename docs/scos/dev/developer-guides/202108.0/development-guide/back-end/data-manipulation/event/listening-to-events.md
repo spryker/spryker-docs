@@ -1,9 +1,12 @@
 ---
 title: Listening to Events
 originalLink: https://documentation.spryker.com/2021080/docs/event-listen
+originalArticleId: 484a93ea-5e3c-4079-b682-6d2c7196b4b7
 redirect_from:
   - /2021080/docs/event-listen
   - /2021080/docs/en/event-listen
+  - /docs/event-listen
+  - /docs/en/event-listen
 ---
 
 There are two ways to listen to events: using direct listeners or subscribers. The difference between these two is that a subscriber allows the module providing the subscriber to wire up the handlers in the module that owns it without touching the `EventDependencyProvider` exception’s initial subscriber initialization. It is best to use a subscriber from the beginning, as this simplifies future listener registration. When you need to listen to specific listener, use `\Pyz\Zed\Event\EventDependencyProvider::getEventListenerCollection`.

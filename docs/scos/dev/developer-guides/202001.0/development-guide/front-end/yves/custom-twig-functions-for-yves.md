@@ -2,6 +2,7 @@
 title: Custom Twig Functions for Yves
 description: The article describes twig functions, its method signatures, and examples of their usage.
 originalLink: https://documentation.spryker.com/v4/docs/custom-twig-functions-for-yves
+originalArticleId: 8d088665-f034-444b-bd92-20085dd84d48
 redirect_from:
   - /v4/docs/custom-twig-functions-for-yves
   - /v4/docs/en/custom-twig-functions-for-yves

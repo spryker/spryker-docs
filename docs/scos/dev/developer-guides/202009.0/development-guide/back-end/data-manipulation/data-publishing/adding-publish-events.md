@@ -2,12 +2,13 @@
 title: Adding publish events
 description: Learn how to add publish events for Publish and Synchronization.
 originalLink: https://documentation.spryker.com/v6/docs/adding-publish-events
+originalArticleId: 2d30db43-5465-46d5-b47c-2b8bb207c8be
 redirect_from:
   - /v6/docs/adding-publish-events
   - /v6/docs/en/adding-publish-events
 ---
 
-[Publish and Synchronize](https://documentation.spryker.com/docs/publish-and-synchronization) are event-driven. Data is published only after a registered event is triggered. Follow the steps below to register the events for them:
+[Publish and Synchronize](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html) are event-driven. Data is published only after a registered event is triggered. Follow the steps below to register the events for them:
 1. Prepare data structure and activate `Propel Event Behavior` for the `spy_glossary` database table:
 
 ```xml

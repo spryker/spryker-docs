@@ -2,6 +2,7 @@
 title: Asset Management Feature Overview
 description: Learn about the assets in Spryker and how you can manage them.
 originalLink: https://documentation.spryker.com/v4/docs/asset-management-feature-overview
+originalArticleId: 35e3b2f7-8fad-442b-a035-8ed18ee1703c
 redirect_from:
   - /v4/docs/asset-management-feature-overview
   - /v4/docs/en/asset-management-feature-overview

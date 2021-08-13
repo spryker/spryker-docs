@@ -2,6 +2,7 @@
 title: RatePay - Installment
 description: Integrate installment payment through Ratepay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v5/docs/ratepay-installment
+originalArticleId: 51b5e8c5-3b82-4733-9ce0-e9738436d95d
 redirect_from:
   - /v5/docs/ratepay-installment
   - /v5/docs/en/ratepay-installment
@@ -57,5 +58,5 @@ You can copy over configs to your config from the RatePAY module's `config.dist.
 
 ### Perform Requests
 
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](https://documentation.spryker.com/docs/en/ratepay-state-machine) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partners/202005.0/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.
 

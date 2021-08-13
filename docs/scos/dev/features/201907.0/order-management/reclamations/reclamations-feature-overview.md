@@ -2,12 +2,13 @@
 title: Reclamations Feature Overview
 description: With the reclamations in place, you can do three things- create a new connected order, return money paid for the order, or close the reclamation.
 originalLink: https://documentation.spryker.com/v3/docs/reclamations-feature-overview
+originalArticleId: 218275bc-2b77-4b0c-a747-570ea20a2957
 redirect_from:
   - /v3/docs/reclamations-feature-overview
   - /v3/docs/en/reclamations-feature-overview
 ---
 
-Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](https://documentation.spryker.com/v4/docs/managing-orders#claiming-orders) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).
+Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](/docs/scos/user/user-guides/201907.0/back-office-user-guide/sales/orders/managing-orders.html#claiming-orders) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).
 
 After the reclamation has been created, it appears on the **Reclamations** page under the **Sales** menu in the Back Office. Each reclamation is linked to a specific order by order ID, however, one and the same order can have more than one reclamation.
 

@@ -1,6 +1,7 @@
 ---
 title: Mindcurv
 originalLink: https://documentation.spryker.com/v3/docs/mindcurv
+originalArticleId: 6a0e64bf-c6e4-4f27-9fc2-cc9ab1ba4776
 redirect_from:
   - /v3/docs/mindcurv
   - /v3/docs/en/mindcurv

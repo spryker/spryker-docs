@@ -2,6 +2,7 @@
 title: File System
 description: The FileSystem Service provides an abstraction for file systems. It uses the same interface to access different types of file systems, regardless of their location or protocol.
 originalLink: https://documentation.spryker.com/v6/docs/filesystem
+originalArticleId: d0c8f889-ff50-4414-9713-1b46583ca255
 redirect_from:
   - /v6/docs/filesystem
   - /v6/docs/en/filesystem
@@ -9,7 +10,7 @@ redirect_from:
 
 The FileSystem Service provides an abstraction for file systems. It uses the same interface to access different types of file systems, regardless of their location or protocol.
 
-The Flysystem module provides plugins for [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package and implement FileSystem's plugin interfaces. For more details, see [Flysystem](https://documentation.spryker.com/docs/flysystem).
+The Flysystem module provides plugins for [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package and implement FileSystem's plugin interfaces. For more details, see [Flysystem](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/flysystem.html).
 
 ## FileSystem Module
 The FileSystem module uses the `FileSystemReaderPluginInterface` to execute read operations, the `FileSystemWriterPluginInterface` to execute write operations and the `FileSystemStreamPluginInterface` to handle big read or write operations.

@@ -2,6 +2,7 @@
 title: Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS
 description: Use the tutorial to understand how Publish and Synchronization work and how to export data using a particular example.
 originalLink: https://documentation.spryker.com/v4/docs/t-handling-data-publish-and-sync-scos
+originalArticleId: 211e5fc9-6679-4afd-a1c9-041c9b2fd2f1
 redirect_from:
   - /v4/docs/t-handling-data-publish-and-sync-scos
   - /v4/docs/en/t-handling-data-publish-and-sync-scos

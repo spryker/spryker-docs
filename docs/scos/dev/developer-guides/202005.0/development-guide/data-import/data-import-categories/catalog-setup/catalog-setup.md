@@ -1,6 +1,7 @@
 ---
 title: Catalog Setup
 originalLink: https://documentation.spryker.com/v5/docs/catalog-setup
+originalArticleId: 42991e95-5293-496c-a79b-ca5136f2f12a
 redirect_from:
   - /v5/docs/catalog-setup
   - /v5/docs/en/catalog-setup
@@ -10,32 +11,32 @@ redirect_from:
 
 {% info_block warningBox "Important" %}
 
-We recommend setting up the Catalog after having done the [Commerce Setup](https://documentation.spryker.com/docs/en/commerce-setup) (which provides the overall structure of the store).
+We recommend setting up the Catalog after having done the [Commerce Setup](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/commerce-setup/commerce-setup.html) (which provides the overall structure of the store).
 
 {% endinfo_block %}
 
 This section will help you import the necessary product-related data to be able to sell products/services in your online store. We have structured it into four main categories focusing on the following topics:
 
-*     [Categories](https://documentation.spryker.com/docs/en/categories)
-*     [Products](https://documentation.spryker.com/docs/en/products-category)
-*     [Pricing](https://documentation.spryker.com/docs/en/pricing)
-*     [Stocks](https://documentation.spryker.com/docs/en/stocks)
+*     [Categories](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/categories/categories.html)
+*     [Products](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/products/products.html)
+*     [Pricing](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/pricing/pricing.html)
+*     [Stocks](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/stocks/stocks.html)
 
-Within the [Categories](https://documentation.spryker.com/docs/en/categories) section, you will find all information about the data imports required to set up categories that can be used in your online store as well as whether they are active, searchable in the menu, etc.
+Within the [Categories](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/categories/categories.html) section, you will find all information about the data imports required to set up categories that can be used in your online store as well as whether they are active, searchable in the menu, etc.
 
-The  [Products](https://documentation.spryker.com/docs/en/products-category) section will help you import all data defining the products' properties such as the abstract products, the concrete products, product images, and any type of related attributes which describe the products' properties (e.g., their specifications, colors, sizes, etc.).
+The  [Products](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/products/products.html) section will help you import all data defining the products' properties such as the abstract products, the concrete products, product images, and any type of related attributes which describe the products' properties (e.g., their specifications, colors, sizes, etc.).
 
-In the [Pricing](https://documentation.spryker.com/docs/en/pricing) section, you will be able to import the data necessary to set up prices for all the products you would like to sell in your online store, including advanced pricing such as scheduled prices (e.g., for special sales campaigns like Black Friday).
+In the [Pricing](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/pricing/pricing.html) section, you will be able to import the data necessary to set up prices for all the products you would like to sell in your online store, including advanced pricing such as scheduled prices (e.g., for special sales campaigns like Black Friday).
 
-In the  [Stocks](https://documentation.spryker.com/docs/en/stocks) section, we describe the data import containing the number of product units stored in your warehouses as well as any type of products and services which are never out of stock (e.g., software downloads).
+In the  [Stocks](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/stocks/stocks.html) section, we describe the data import containing the number of product units stored in your warehouses as well as any type of products and services which are never out of stock (e.g., software downloads).
 
 
 {% info_block warningBox "Import order" %}
 
 By default, most of the product data is stored in a separate subfolder in `data/import/icecat_biz_data`. The order in which the files are imported is **very strict**:
 1. Any product-related entities such as categories, attributes, and tax sets must be imported before the actual products.
-2. [product_abstract.csv](https://documentation.spryker.com/docs/en/file-details-product-abstractcsv) and for multistore setups [product_abstract_store.csv](https://documentation.spryker.com/docs/en/file-details-product-abstract-storecsv).
-3. [product_concrete.csv](https://documentation.spryker.com/docs/en/file-details-product-concretecsv).
+2. [product_abstract.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) and for multistore setups [product_abstract_store.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html).
+3. [product_concrete.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html).
 4. Other product data such as images, product sets, etc. in any order.
 
 {% endinfo_block %}

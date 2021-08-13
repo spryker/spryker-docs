@@ -2,6 +2,7 @@
 title: Heidelpay - Paypal Debit Workflow
 description: Integrate Paypal debit workflow payment through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v1/docs/heidelpay-paypal-debit
+originalArticleId: c6a6c23c-fbe2-4d04-8df5-ef3e5e547cdb
 redirect_from:
   - /v1/docs/heidelpay-paypal-debit
   - /v1/docs/en/heidelpay-paypal-debit

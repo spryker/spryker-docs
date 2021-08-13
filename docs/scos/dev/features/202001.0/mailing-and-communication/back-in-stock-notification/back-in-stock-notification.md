@@ -2,6 +2,7 @@
 title: Back in Stock Notification
 description: This feature, shipped in a form of a newsletter, informs the customers who subscribed to it once the product is available again.
 originalLink: https://documentation.spryker.com/v4/docs/back-in-stock-notification
+originalArticleId: 42151492-db2e-4e33-ad94-c1d7a083cc0f
 redirect_from:
   - /v4/docs/back-in-stock-notification
   - /v4/docs/en/back-in-stock-notification

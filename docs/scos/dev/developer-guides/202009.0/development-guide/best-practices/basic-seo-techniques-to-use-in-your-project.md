@@ -2,6 +2,7 @@
 title: Basic SEO techniques to use in your project
 description: Learn how you can effectively use headings and mircodata to improve SEO for your project
 originalLink: https://documentation.spryker.com/v6/docs/basic-seo-techniques-to-use-in-your-project
+originalArticleId: 850c2ffa-3ad8-4b3c-9392-70cbaee506d0
 redirect_from:
   - /v6/docs/basic-seo-techniques-to-use-in-your-project
   - /v6/docs/en/basic-seo-techniques-to-use-in-your-project
@@ -83,6 +84,6 @@ The `itemscope` element in an HTML tag encloses information about the item. The 
  </details>
 
 ## Applying the basic SEO techniques in your project
-For details on how to apply the basic SEO techniques in your project, see [Basic SEO techniques integration guide](https://documentation.spryker.com/docs/basic-seo-techniques-integration-guide).
+For details on how to apply the basic SEO techniques in your project, see [Basic SEO techniques integration guide](/docs/scos/dev/migration-and-integration/202009.0/technical-enhancements/basic-seo-techniques-integration-guide.html).
 
 

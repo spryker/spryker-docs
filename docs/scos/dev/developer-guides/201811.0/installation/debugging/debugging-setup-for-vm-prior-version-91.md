@@ -2,6 +2,7 @@
 title: Debugging Setup for VM Prior Version 91
 description: This article describes how to set up debugging in your development environment for VM prior version 91.
 originalLink: https://documentation.spryker.com/v1/docs/debugging-setup-prior-vm91
+originalArticleId: 5dcb9081-233c-4d93-b68f-5bba18c7d794
 redirect_from:
   - /v1/docs/debugging-setup-prior-vm91
   - /v1/docs/en/debugging-setup-prior-vm91

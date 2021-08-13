@@ -2,9 +2,12 @@
 title: Data Builders
 description: Learn how to configure data builders for creating transfer objects for your tests.
 originalLink: https://documentation.spryker.com/2021080/docs/data-builders
+originalArticleId: 3737769e-2b8e-4756-857f-343009e09251
 redirect_from:
   - /2021080/docs/data-builders
   - /2021080/docs/en/data-builders
+  - /docs/data-builders
+  - /docs/en/data-builders
 ---
 
 Data builders help you create transfer objects for your tests. Instead of preparing transfers each time you need them, data builders do the work for you. Data builders use the [Faker library](https://github.com/fzaninotto/Faker).

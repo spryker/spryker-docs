@@ -2,6 +2,7 @@
 title: Hide Content from Logged out Users
 description: The Hide content from logged out users feature allows shop owners to avoid showing some product information (e.g. prices) to competitors or other entities
 originalLink: https://documentation.spryker.com/v2/docs/hide-content-from-logged-out-users
+originalArticleId: 5b16acb7-c9d4-4591-b34d-931c91080d4b
 redirect_from:
   - /v2/docs/hide-content-from-logged-out-users
   - /v2/docs/en/hide-content-from-logged-out-users

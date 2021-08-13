@@ -2,6 +2,7 @@
 title: Metaways
 description: Integrate Metaways hosting solution to host Spryker-based project.
 originalLink: https://documentation.spryker.com/v4/docs/metaways
+originalArticleId: c4227e45-6198-4975-a0f1-90e4a56d8e2a
 redirect_from:
   - /v4/docs/metaways
   - /v4/docs/en/metaways

@@ -2,6 +2,7 @@
 title: Shop Guide - Request for Quote- Reference Information
 description: The guide provides additional information on the UI elements you see on the Quote Requests pages.
 originalLink: https://documentation.spryker.com/v4/docs/rfq-reference-information-shop-guide
+originalArticleId: 66f6d7df-5467-4e1c-b72b-16a65f5c0591
 redirect_from:
   - /v4/docs/rfq-reference-information-shop-guide
   - /v4/docs/en/rfq-reference-information-shop-guide
@@ -22,7 +23,7 @@ On the **Quote Requests** page, you see the following:
 | 3 | Owner | The name of the company user for whom the RFQ has been created. |
 | 4 | Total | RFQ total amount. |
 | 5 | Date | The date when the RFQ has been created. |
-| 6 | Status | The status of the RFQ. See [RFQ Statuses](https://documentation.spryker.com/v4/docs/quotation-process-rfq-feature-overview-201907#rfq-statuses) for the details. |
+| 6 | Status | The status of the RFQ. See [RFQ Statuses](https://documentation.spryker.com/v4/docs/quotation-process-feature-overview#rfq-statuses) for the details. |
 | 7 | Actions | A set of actions you can do with the RFQ. |
 
 By default, the last created RFQ goes on top of the table.

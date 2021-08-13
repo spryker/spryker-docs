@@ -2,6 +2,7 @@
 title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
 description: This article contains information about order reference and shipping address in Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v3/docs/amazon-order-reference-information
+originalArticleId: aa5f3a79-cd77-43d6-a7a7-802927d2a9b9
 redirect_from:
   - /v3/docs/amazon-order-reference-information
   - /v3/docs/en/amazon-order-reference-information

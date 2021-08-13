@@ -2,9 +2,12 @@
 title: Microsoft Azure Active Directory
 description: Learn  how to integrate Microsoft Azure Active Directory into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/microsoft-azure-active-directory
+originalArticleId: 11224ada-6cfc-4217-94e9-085e64755ad6
 redirect_from:
   - /2021080/docs/microsoft-azure-active-directory
   - /2021080/docs/en/microsoft-azure-active-directory
+  - /docs/microsoft-azure-active-directory
+  - /docs/en/microsoft-azure-active-directory
 ---
 
 This page describes the Microsoft Azure Active Directory and how to integrate it into a Spryker project.
@@ -29,7 +32,7 @@ To start the feature integration:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core Back Office | master | [Spryker Core Back Office feature integration](https://documentation.spryker.com/upcoming-release/docs/spryker-core-back-office-feature-integration) |
+| Spryker Core Back Office | master | [Spryker Core Back Office feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-core-back-office-feature-integration.html) |
 
 
 2. [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Checkout
 originalLink: https://documentation.spryker.com/v1/docs/mg-checkout
+originalArticleId: d7cbd7fe-7c11-4624-8395-f1984a5cdc44
 redirect_from:
   - /v1/docs/mg-checkout
   - /v1/docs/en/mg-checkout

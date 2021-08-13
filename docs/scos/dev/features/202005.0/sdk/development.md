@@ -2,6 +2,7 @@
 title: Development
 description: Create a reliable base for your OS that ensures security and high performance.
 originalLink: https://documentation.spryker.com/v5/docs/development
+originalArticleId: a8ee4e20-9e16-4180-bc8d-b302be1a23a5
 redirect_from:
   - /v5/docs/development
   - /v5/docs/en/development
@@ -26,8 +27,8 @@ Create a reliable base for your OS that ensures security and high performance. P
 **Features:**
 
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/docs/v5/en/devvm">Development Virtual Machine</a>    
-<a class="feature-link" href="https://documentation.spryker.com/docs/v5/en/console">Console</a>
+<a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/devvm">Development Virtual Machine</a>    
+<a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/console">Console</a>
 <a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/cronjob-scheduling">Cronjob Scheduling</a>
 <a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/development-tools">Development Tools</a>
 <a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/importer">Importer</a>

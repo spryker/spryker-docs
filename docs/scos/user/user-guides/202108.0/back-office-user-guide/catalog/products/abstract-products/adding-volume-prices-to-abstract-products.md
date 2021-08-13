@@ -1,9 +1,12 @@
 ---
 title: Adding volume prices to abstract products
 originalLink: https://documentation.spryker.com/2021080/docs/adding-volume-prices-to-abstract-products
+originalArticleId: 5e6dac98-955a-4e8c-abad-ce2b0dd6bacf
 redirect_from:
   - /2021080/docs/adding-volume-prices-to-abstract-products
   - /2021080/docs/en/adding-volume-prices-to-abstract-products
+  - /docs/adding-volume-prices-to-abstract-products
+  - /docs/en/adding-volume-prices-to-abstract-products
 ---
 
 This document describes how to add volume prices to abstract products.
@@ -12,9 +15,9 @@ This document describes how to add volume prices to abstract products.
 
 To start working with abstract products, go to  **Catalog > Products**.
 
-Define default product prices for the stores you want to define volume prices for. To learn how to do that, see [Editing prices of an abstract product](https://documentation.spryker.com/docs/editing-abstract-products#editing-prices-of-an-abstract-product).
+Define default product prices for the stores you want to define volume prices for. To learn how to do that, see [Editing prices of an abstract product](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/editing-abstract-products.html#editing-prices-of-an-abstract-product).
 
-Review the [reference information](https://documentation.spryker.com/docs/adding-volume-prices-to-abstract-products#adding-volume-prices-for-an-abstract-product--reference-information) before you start, or just look up the necessary information as you go through the process. 
+Review the [reference information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html#adding-volume-prices-for-an-abstract-product--reference-information) before you start, or just look up the necessary information as you go through the process. 
 
 ## Adding volume prices to abstract products
 

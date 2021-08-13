@@ -1,6 +1,7 @@
 ---
 title: Product + Order Management Feature Integration
 originalLink: https://documentation.spryker.com/v5/docs/product-order-management-feature-integration
+originalArticleId: e7b6ddbc-5937-49c6-91b4-044294314ab5
 redirect_from:
   - /v5/docs/product-order-management-feature-integration
   - /v5/docs/en/product-order-management-feature-integration

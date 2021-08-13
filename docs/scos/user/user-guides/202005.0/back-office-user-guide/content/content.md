@@ -2,6 +2,7 @@
 title: Content
 description: The section is designed to create and manage the content of your shop in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/content
+originalArticleId: 80191d58-a5a2-4d82-ab75-913eb10d83ce
 redirect_from:
   - /v5/docs/content
   - /v5/docs/en/content
@@ -41,34 +42,34 @@ In the **Content** section, you can see the following:
 ***
 **What's Next?**
 
-To start working with content, learn how to [add content to the Storefront pages using templates and slots](https://documentation.spryker.com/docs/en/adding-content-to-storefront-pages-using-templates-slots).
+To start working with content, learn how to [add content to the Storefront pages using templates and slots](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/adding-content-to-storefront-pages-using-templates-and-slots.html).
 
 
 To start working with CMS pages, see:
 
-* [Creating a new page](https://documentation.spryker.com/docs/en/creating-a-cms-page) 
-* [Managing CMS page versioning](https://documentation.spryker.com/docs/en/cms-pages-versioning) 
-* [Managing CMS pages](https://documentation.spryker.com/docs/en/managing-cms-pages)
-* [Assigning Blocks to CMS, Category and Product pages](https://documentation.spryker.com/docs/en/assigning-blocks-to-category-and-product-pages)
+* [Creating a new page](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/creating-a-cms-page.html) 
+* [Managing CMS page versioning](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/cms-pages-versioning.html) 
+* [Managing CMS pages](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/managing-cms-pages.html)
+* [Assigning Blocks to CMS, Category and Product pages](https://documentation.spryker.com/v5/docs/en/assigning-blocks-to-category-or-product-pages)
 
 To start working with CMS blocks, see: 
 
-* [Creating a new CMS block](https://documentation.spryker.com/docs/en/creating-cms-block)
-* [Managing CMS block details](https://documentation.spryker.com/docs/en/managing-cms-blocks)
-* [Assigning blocks to product and category pages](https://documentation.spryker.com/docs/en/assigning-blocks-to-category-or-product-pages)
+* [Creating a new CMS block](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/creating-a-cms-block.html)
+* [Managing CMS block details](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/managing-cms-blocks.html)
+* [Assigning blocks to product and category pages](https://documentation.spryker.com/v5/docs/en/assigning-blocks-to-category-or-product-pages)
 
 To start working with content items , see:
 
-* [Creating content items](https://documentation.spryker.com/docs/en/creating-content-items)
-* [Editing content items details](https://documentation.spryker.com/docs/en/editing-content-items)
+* [Creating content items](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/creating-content-items.html)
+* [Editing content items details](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/editing-content-items.html)
 
 
 To start working with redirects , see:
 
-* [Creating a URL redirect](https://documentation.spryker.com/docs/en/creating-cms-redirects)
-* [Managing CMS Redirects](https://documentation.spryker.com/docs/en/editing-cms-redirects)
+* [Creating a URL redirect](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/redirects/creating-cms-redirects.html)
+* [Managing CMS Redirects](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/redirects/managing-cms-redirects.html)
 
 To start working with files, see:
-* [Managing File List](https://documentation.spryker.com/docs/en/managing-file-list) 
-* [Managing File Tree](https://documentation.spryker.com/docs/en/managing-file-tree) 
+* [Managing File List](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/file-manager/managing-file-list.html) 
+* [Managing File Tree](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/file-manager/managing-file-tree.html) 
 

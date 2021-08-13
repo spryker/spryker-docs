@@ -2,6 +2,7 @@
 title: Product Reviews
 description: The Product Reviews feature allows customers to add reviews and ratings to abstract products.
 originalLink: https://documentation.spryker.com/v3/docs/product-reviews
+originalArticleId: cf2e25ba-68c4-4fdf-b4a9-a5620202c092
 redirect_from:
   - /v3/docs/product-reviews
   - /v3/docs/en/product-reviews

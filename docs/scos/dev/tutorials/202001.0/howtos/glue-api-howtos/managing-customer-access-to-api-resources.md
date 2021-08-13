@@ -1,6 +1,7 @@
 ---
 title: Managing Customer Access to API Resources
 originalLink: https://documentation.spryker.com/v4/docs/managing-customer-access-to-api-resources
+originalArticleId: 078ababa-552a-421a-b0d3-2386ba157cdd
 redirect_from:
   - /v4/docs/managing-customer-access-to-api-resources
   - /v4/docs/en/managing-customer-access-to-api-resources

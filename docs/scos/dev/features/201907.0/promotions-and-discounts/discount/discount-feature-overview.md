@@ -2,6 +2,7 @@
 title: Discount Feature Overview
 description: The feature allows creating different types of discounts and applying multiple in-built discount settings suitable for any business requirements.
 originalLink: https://documentation.spryker.com/v3/docs/discount-feature-overview-201903
+originalArticleId: 1929341f-ca10-409b-949d-e30f1fdde36b
 redirect_from:
   - /v3/docs/discount-feature-overview-201903
   - /v3/docs/en/discount-feature-overview-201903
@@ -29,10 +30,10 @@ Once the customer clicks **Redeem code**, the page refreshes to show the discoun
 
 The **Clear all** action disables all the applied discounts while the **Remove** action disables a single discount.
 
-Voucher codes are generated in the Back Office > *Discount* section > *Edit discount* page > [Voucher codes](https://documentation.spryker.com/v4/docs/discount#voucher-codes-tab) tab. See [Creating a Discount Voucher](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/creating-a-discount/creating-a-cart-rule-discount.html) for more information.
+Voucher codes are generated in the Back Office > *Discount* section > *Edit discount* page > [Voucher codes](/docs/scos/dev/features/201907.0/promotions-and-discounts/discount/discount.html#voucher-codes-tab) tab. See [Creating a Discount Voucher](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/creating-a-discount/creating-a-cart-rule-discount.html) for more information.
 
 {% info_block warningBox %}
-This tab is available when the **Voucher** discount type is selected in the [General information](https://documentation.spryker.com/v4/docs/discount#creating-a-discount-voucher
+This tab is available when the **Voucher** discount type is selected in the [General information](/docs/scos/dev/features/201907.0/promotions-and-discounts/discount/discount.html#creating-a-discount-voucher
 {% endinfo_block %} tab.)
 
 
@@ -58,7 +59,7 @@ A discount can have the following decision rules.
 
 The discount can be redeemed only if both rules are satisfied: The cart contains at least 3 items and the purchase is made on Wednesday.
 
-Decision rules are specified using queries which can be built by using an in-built **Query Builder** or by entering **Plain queries** in the **Back Office > Discount section > Edit discount page** > [Conditions](https://documentation.spryker.com/v4/docs/discount#conditions-tab) tab.
+Decision rules are specified using queries which can be built by using an in-built **Query Builder** or by entering **Plain queries** in the **Back Office > Discount section > Edit discount page** > [Conditions](/docs/scos/dev/features/201907.0/promotions-and-discounts/discount/discount.html#conditions-tab) tab.
 
 Following the example above, you can specify that:
 {% info_block infoBox %}
@@ -132,7 +133,7 @@ See examples in the table below.
 | €50 | Percentage | 10|€5|€45|
 |€50|Fixed amount|10|€10|€40 |
 
-Calculation is specified in the Back Office > *Discount* section > *Edit discount* page > [Discount calculation](https://documentation.spryker.com/v4/docs/discount#discount-calculation-tab) tab.
+Calculation is specified in the Back Office > *Discount* section > *Edit discount* page > [Discount calculation](/docs/scos/dev/features/201907.0/promotions-and-discounts/discount/discount.html#discount-calculation-tab) tab.
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png){height="" width=""}
 
 ## Exclusiveness

@@ -2,6 +2,7 @@
 title: Static Security Checker
 description: The static Security Checker allows you to detect vulnerability issues in the composer.lock file
 originalLink: https://documentation.spryker.com/v6/docs/static-security-checker
+originalArticleId: cbb5ef2a-d81c-4546-8559-89907bdad57d
 redirect_from:
   - /v6/docs/static-security-checker
   - /v6/docs/en/static-security-checker

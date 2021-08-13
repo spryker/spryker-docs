@@ -2,6 +2,7 @@
 title: Troubleshooting
 description: Find solutions to the most common issues related to Spryker in Docker.
 originalLink: https://documentation.spryker.com/v5/docs/spryker-in-docker-troubleshooting
+originalArticleId: d08ec72a-4b81-4cd6-8ae3-fb0c57557c06
 redirect_from:
   - /v5/docs/spryker-in-docker-troubleshooting
   - /v5/docs/en/spryker-in-docker-troubleshooting

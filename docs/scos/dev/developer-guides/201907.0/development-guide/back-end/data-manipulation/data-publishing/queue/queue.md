@@ -1,6 +1,7 @@
 ---
 title: Queue
 originalLink: https://documentation.spryker.com/v3/docs/queue
+originalArticleId: 0f5a8409-7d3d-4446-b4bd-92113638f75b
 redirect_from:
   - /v3/docs/queue
   - /v3/docs/en/queue
@@ -133,7 +134,7 @@ $jobs[] = [
 ```
 
 {% info_block infoBox %}
-For more information and examples of how to get started with the Queue module, see [Tutorial - Set Up a "Hello World" Queue](/docs/scos/dev/tutorials/202001.0/introduction/tutorial-set-up-a-hello-world-queue-legacy-demoshop.html
+For more information and examples of how to get started with the Queue module, see [Tutorial - Set Up a "Hello World" Queue](/docs/scos/dev/tutorials/201907.0/introduction/tutorial-set-up-a-hello-world-queue-legacy-demoshop.html
 {% endinfo_block %}.)
 
 <!-- Last review date: Apr 9, 2019 by Ehsan Zanjani and Dmitry Beirak -->

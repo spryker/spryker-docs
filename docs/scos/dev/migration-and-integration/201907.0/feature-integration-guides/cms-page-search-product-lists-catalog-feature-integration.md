@@ -2,6 +2,7 @@
 title: CMS Page- Search + Product Lists + Catalog Feature Integration
 description: The CMS Page Search Product Lists feature allows seeing search results for CMS and product pages. The guide describes how to enable the feature in the project.
 originalLink: https://documentation.spryker.com/v3/docs/cms-page-search-product-lists-catalog-feature-integration
+originalArticleId: 648d365c-dbde-46d0-9357-c7f225778ec2
 redirect_from:
   - /v3/docs/cms-page-search-product-lists-catalog-feature-integration
   - /v3/docs/en/cms-page-search-product-lists-catalog-feature-integration

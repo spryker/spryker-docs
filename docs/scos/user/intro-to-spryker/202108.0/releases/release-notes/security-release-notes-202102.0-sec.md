@@ -1,9 +1,12 @@
 ---
 title: Security release notes- 202102.0 SEC
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-2021020-sec
+originalArticleId: d994a867-d0c8-4c47-b8a7-ed7cc14e8345
 redirect_from:
   - /2021080/docs/security-release-notes-2021020-sec
   - /2021080/docs/en/security-release-notes-2021020-sec
+  - /docs/security-release-notes-2021020-sec
+  - /docs/en/security-release-notes-2021020-sec
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.

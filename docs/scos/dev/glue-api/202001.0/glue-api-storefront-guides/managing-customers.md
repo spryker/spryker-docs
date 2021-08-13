@@ -2,6 +2,7 @@
 title: Managing Customers
 description: This article explains how to manage customer accounts and provides detailed information on which endpoints to use to create, anonymize, etc. a customer.
 originalLink: https://documentation.spryker.com/v4/docs/managing-customers-api
+originalArticleId: 2a542716-a03a-4c54-bd2f-54b5402ba3ab
 redirect_from:
   - /v4/docs/managing-customers-api
   - /v4/docs/en/managing-customers-api

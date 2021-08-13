@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductPageSearch
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-productpagesearch-silex
+originalArticleId: b9549ecd-b476-44dd-a704-b8a053d71933
 redirect_from:
   - /v4/docs/migration-guide-productpagesearch-silex
   - /v4/docs/en/migration-guide-productpagesearch-silex

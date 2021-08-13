@@ -2,6 +2,7 @@
 title: Managing Shopping Carts
 description: Use the procedures to update, duplicate, share, or delete a shopping cart, and convert shopping carts into a shopping list, and share shopping carts via links.
 originalLink: https://documentation.spryker.com/v3/docs/shop-guide-managing-shopping-carts
+originalArticleId: 163c2dbf-724d-41ac-81cd-eb43957fc1f3
 redirect_from:
   - /v3/docs/shop-guide-managing-shopping-carts
   - /v3/docs/en/shop-guide-managing-shopping-carts

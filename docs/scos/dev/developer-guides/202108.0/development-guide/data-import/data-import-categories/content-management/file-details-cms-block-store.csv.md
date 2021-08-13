@@ -1,9 +1,12 @@
 ---
 title: File details- cms_block_store.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-storecsv
+originalArticleId: eb3af5d2-ec2b-4452-8a11-d392431ab8d2
 redirect_from:
   - /2021080/docs/file-details-cms-block-storecsv
   - /2021080/docs/en/file-details-cms-block-storecsv
+  - /docs/file-details-cms-block-storecsv
+  - /docs/en/file-details-cms-block-storecsv
 ---
 
 This article contains content of the **cms_block_store.csv** file to configure CMS Block Store information on your Spryker Demo Shop.
@@ -20,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*    [cms_block.csv](https://documentation.spryker.com/docs/file-details-cms-blockcsv)
+*    [cms_block.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/content-management/file-details-cms-block.csv.html)
 *     *stores.php* configuration file of the demo shop PHP project
 
 ## Template File & Content Example

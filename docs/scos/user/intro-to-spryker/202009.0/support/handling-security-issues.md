@@ -2,6 +2,7 @@
 title: Handling security issues
 description: Use this article to learn how to report a security issue and to understand how we handle these reports.
 originalLink: https://documentation.spryker.com/v6/docs/handling-security-issues
+originalArticleId: 03d334a8-9bbb-42b1-a12b-afde718f6d93
 redirect_from:
   - /v6/docs/handling-security-issues
   - /v6/docs/en/handling-security-issues

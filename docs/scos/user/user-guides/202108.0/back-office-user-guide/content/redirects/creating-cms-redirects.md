@@ -2,9 +2,12 @@
 title: Creating CMS redirects
 description: The guide provides instructions for shop owners on how to create CMS redirects in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-cms-redirects
+originalArticleId: 296658bd-56e5-4408-b66b-ffaa2298ce9e
 redirect_from:
   - /2021080/docs/creating-cms-redirects
   - /2021080/docs/en/creating-cms-redirects
+  - /docs/creating-cms-redirects
+  - /docs/en/creating-cms-redirects
 ---
 
 This topic provides a list of steps to create a redirect in the Back Office.
@@ -49,4 +52,4 @@ On the *CMS Redirects* page, you can also:
 #### What's next?
 The redirect URL has been created. However, you can either edit it or delete.
 
-* To learn how to edit and/or delete a redirect, see [Managing CMS redirects](https://documentation.spryker.com/docs/managing-cms-redirects).
+* To learn how to edit and/or delete a redirect, see [Managing CMS redirects](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/redirects/managing-cms-redirects.html).

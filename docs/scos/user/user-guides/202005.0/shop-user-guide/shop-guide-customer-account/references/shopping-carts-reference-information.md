@@ -2,6 +2,7 @@
 title: Shopping Carts- Reference Information
 description: The guide provides additional information you see when managing shopping carts in the storefront.
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-shopping-carts-reference-information
+originalArticleId: 1c873945-2fc7-42de-8be3-434411ca2654
 redirect_from:
   - /v5/docs/shop-guide-shopping-carts-reference-information
   - /v5/docs/en/shop-guide-shopping-carts-reference-information
@@ -9,7 +10,7 @@ redirect_from:
 
 ## Shopping Carts
 
-Shopping Carts page is the page where you can access your shopping carts. Don't have a shopping cart? Start [creating](https://documentation.spryker.com/docs/en/creating-shopping-cart) it!
+Shopping Carts page is the page where you can access your shopping carts. Don't have a shopping cart? Start [creating](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html) it!
 
 There are two ways to open the Shopping Carts page:
 
@@ -26,12 +27,12 @@ On the Shopping Carts page, you see the following:
 | # | Element | Description |
 |---|---|---|
 | 1 | **Customer account menu** | A menu with navigation items to specific sections where you can manage your customer information. |
-| 2 | **Shopping Cart Name** | See [Editing Shopping Cart](https://documentation.spryker.com/docs/en/shop-guide-managing-shopping-carts#editing-a-shopping-cart) to change the name of the shopping cart. |
+| 2 | **Shopping Cart Name** | See [Editing Shopping Cart](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html#editing-a-shopping-cart) to change the name of the shopping cart. |
 | 3 | **Access** | There are three types of access to a shopping cart: Owner, Full Access, and Read-only. |
 | 4 | **No. of items** | A number of items placed in the cart. |
 | 5 | **Prices** | Displays the prices according to its type: Gross or Net. |
 | 6 | **Total** | Cart total amount. |
-| 7 | **Status** | Displays the status of the cart. See [Approval Process feature overview](https://documentation.spryker.com/docs/en/approval-process-overview-201903) for more information on statuses. Available only after the Approval Process feature has been integrated into your project. |
+| 7 | **Status** | Displays the status of the cart. See [Approval Process feature overview](https://documentation.spryker.com/v5/docs/en/approval-process-overview-201903) for more information on statuses. Available only after the Approval Process feature has been integrated into your project. |
 | 8 | **Actions** | A set of actions you can d with a shopping cart. |
 | 9 |  **+ Create Shopping Cart** | Creates a new shopping cart. |
 ***

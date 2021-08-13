@@ -1,16 +1,19 @@
 ---
 title: Migration Guide - ProductReviewSearch
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productreviewsearch
+originalArticleId: b8c887b4-96de-4269-b503-eb8b11980671
 redirect_from:
   - /2021080/docs/migration-guide-productreviewsearch
   - /2021080/docs/en/migration-guide-productreviewsearch
+  - /docs/migration-guide-productreviewsearch
+  - /docs/en/migration-guide-productreviewsearch
 ---
 
 ## Upgrading from Version 1.3.* to Version 1.4.*
 
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](https://documentation.spryker.com/docs/search-migration-concept). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](https://documentation.spryker.com/docs/mg-search#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
 
 {% endinfo_block %}
 To upgrade the module, do the following:

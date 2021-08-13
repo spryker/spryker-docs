@@ -2,6 +2,7 @@
 title: Implementing Prepayment
 description: This section describes how to add a prepayment payment method.
 originalLink: https://documentation.spryker.com/v5/docs/ht-implement-prepayment
+originalArticleId: 8af8dd2e-7088-4c97-8986-b72c46d33eb1
 redirect_from:
   - /v5/docs/ht-implement-prepayment
   - /v5/docs/en/ht-implement-prepayment
@@ -13,10 +14,10 @@ This article describes the steps that you need to consider when you need to impl
 
 In this HowTo section, we will add a new module called `PaymentMethods`.
 
-If this is your first time creating a new module, see [Tutorial - Adding a New Module](https://documentation.spryker.com/docs/en/t-add-new-bundle).
+If this is your first time creating a new module, see [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html).
 
-* [Implement Prepayment in Front-End](https://documentation.spryker.com/docs/en/ht-prepayment-fe)
-* [Integrate Prepayment into Checkout](https://documentation.spryker.com/docs/en/howto-integrate-prepayment-into-checkout){target="_blank"}
-* [Implement Prepayment in Back-End](https://documentation.spryker.com/docs/en/ht-prepayment-be){target="_blank"}
-* [Implement Prepayment in Shared layer](https://documentation.spryker.com/docs/en/ht-prepayment-shared){target="_blank"}
-* [Test Prepayment Implementation](https://documentation.spryker.com/docs/en/ht-prepayment-test){target="_blank"}
+* [Implement Prepayment in Front-End](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html)
+* [Integrate Prepayment into Checkout](https://documentation.spryker.com/v5/docs/en/howto-integrate-prepayment-into-checkout){target="_blank"}
+* [Implement Prepayment in Back-End](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html){target="_blank"}
+* [Implement Prepayment in Shared layer](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html){target="_blank"}
+* [Test Prepayment Implementation](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html){target="_blank"}

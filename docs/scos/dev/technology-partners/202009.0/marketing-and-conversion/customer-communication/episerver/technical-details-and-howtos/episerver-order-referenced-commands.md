@@ -2,6 +2,7 @@
 title: Episerver - Order referenced commands
 description: Learn about the order reference commands for Episerver in Spryker.
 originalLink: https://documentation.spryker.com/v6/docs/episerver-order-referenced-commands
+originalArticleId: 292db95d-7a1e-4544-b985-e44315f1f0c9
 redirect_from:
   - /v6/docs/episerver-order-referenced-commands
   - /v6/docs/en/episerver-order-referenced-commands

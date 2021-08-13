@@ -2,9 +2,12 @@
 title: Multiple carts + quick order feature integration
 description: The Quick Order Feature allows ordering products by entering SKU and quantity on one page. The guide describes how to integrate the feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-carts-quick-order-integration
+originalArticleId: 4e32040b-3ec9-458c-8122-29d29aa64e45
 redirect_from:
   - /2021080/docs/multiple-carts-quick-order-integration
   - /2021080/docs/en/multiple-carts-quick-order-integration
+  - /docs/multiple-carts-quick-order-integration
+  - /docs/en/multiple-carts-quick-order-integration
 ---
 
 ## Install Feature Core

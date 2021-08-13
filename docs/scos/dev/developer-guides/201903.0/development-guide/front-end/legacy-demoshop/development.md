@@ -2,6 +2,7 @@
 title: Development
 description: Development refers to writing your own assets, consuming external dependencies and linking resources to make them work together.
 originalLink: https://documentation.spryker.com/v2/docs/development-for-legacy-demoshop
+originalArticleId: e3e0227c-e55f-483b-82ff-0a1bff257b0f
 redirect_from:
   - /v2/docs/development-for-legacy-demoshop
   - /v2/docs/en/development-for-legacy-demoshop

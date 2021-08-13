@@ -2,6 +2,7 @@
 title: Shop Guide - Address Step
 description: Use the procedures to create a delivery address, and assign multiple delivery addresses to the order in the Storefront.
 originalLink: https://documentation.spryker.com/v2/docs/address-step-shop-guide-201911
+originalArticleId: 2a0b3bbe-880b-4684-ba14-dc935ce6329d
 redirect_from:
   - /v2/docs/address-step-shop-guide-201911
   - /v2/docs/en/address-step-shop-guide-201911

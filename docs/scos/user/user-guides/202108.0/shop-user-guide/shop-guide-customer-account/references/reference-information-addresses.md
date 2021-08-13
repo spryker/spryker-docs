@@ -2,9 +2,12 @@
 title: Reference information- Addresses
 description: This article provides reference details for Customer Addresses in the Spryker shop.
 originalLink: https://documentation.spryker.com/2021080/docs/addresses-reference-information
+originalArticleId: 3f6f2260-9b49-4bd9-973d-44f45fc82e09
 redirect_from:
   - /2021080/docs/addresses-reference-information
   - /2021080/docs/en/addresses-reference-information
+  - /docs/addresses-reference-information
+  - /docs/en/addresses-reference-information
 ---
 
 This topic contains the reference information you need to know when working with the Addresses page of the Customer Account.

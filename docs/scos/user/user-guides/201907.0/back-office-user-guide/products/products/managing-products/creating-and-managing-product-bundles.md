@@ -2,6 +2,7 @@
 title: Creating and Managing Product Bundles
 description: Use the guide to assign product variants to a bundle, set its price, add SEO data and images in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/creating-and-managing-product-bundles
+originalArticleId: 057fbf19-a8ff-457f-8735-39b3c65ac5f6
 redirect_from:
   - /v3/docs/creating-and-managing-product-bundles
   - /v3/docs/en/creating-and-managing-product-bundles
@@ -15,7 +16,7 @@ For example, if your product is a smartphone, you can set it up to be sold with 
 ***
 **To create a product bundle:**
 1. On the **Product** page, click **Create Bundle Product** in the top right corner.
-2. On the **Create a Product** page, do the procedure described in the [Creating an Abstract Product](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/abstract-products/creating-an-abstract-product.html) article:
+2. On the **Create a Product** page, do the procedure described in the [Creating an Abstract Product](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/abstract-products/creating-an-abstract-product.html) article:
 3. Populate the **General**, **Price & Tax**, **SEO**, and **Image** tabs.
 4. Click **Save**.
     The only difference is that you do not define the product variants for the bundle.
@@ -30,6 +31,6 @@ For example, if your product is a smartphone, you can set it up to be sold with 
 If you already have a product that you want to be sold in a bundle, you can update the **Assign bundled products** tab for a variant. The product will automatically be transformed into a bundle.
 ***
 **What's next?**
-Review the [Creating an Abstract Product](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/abstract-products/creating-an-abstract-product.html) and [Creating a Product Variant](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/concrete-products/creating-a-product-variant.html) articles to learn more about how the products are created. 
+Review the [Creating an Abstract Product](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/abstract-products/creating-an-abstract-product.html) and [Creating a Product Variant](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/concrete-products/creating-a-product-variant.html) articles to learn more about how the products are created. 
 
 The _References_ section contains the articles with the detailed information about the attributes you see on the product pages, and the examples of how the products are used.

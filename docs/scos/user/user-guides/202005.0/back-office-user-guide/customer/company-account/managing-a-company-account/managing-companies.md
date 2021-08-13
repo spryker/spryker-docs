@@ -2,6 +2,7 @@
 title: Managing Companies
 description: Use the procedures to create and edit companies, approve and activate/deactivate a company, and/or deny a company in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-companies
+originalArticleId: 84969c7e-55d6-41f5-ac0c-e38ffc256e40
 redirect_from:
   - /v5/docs/managing-companies
   - /v5/docs/en/managing-companies
@@ -18,7 +19,7 @@ To create a new company record, do the following:
 3. Click **Save**. 
     The new created company will appear in the _List of the Companies_ table on the **Companies** page.
 {% info_block errorBox "Important" %}
-Once the company is created, one business unit for it is created by default. This is considered to be headquarters and can be managed in the same ways as the other business units. See [Managing Company Units](https://documentation.spryker.com/docs/en/managing-company-units
+Once the company is created, one business unit for it is created by default. This is considered to be headquarters and can be managed in the same ways as the other business units. See [Managing Company Units](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-units.html
 {% endinfo_block %} for more details.)
 
 The companies can be managed by triggering certain actions in the _Actions_ column in the _List of Companies_ table on the **Companies** page. 
@@ -51,4 +52,4 @@ To deactivate a company, click **Deactivate**.
 To change the name of a company, click **Edit** in the _Actions_ column.
 ***
 **What's next?**
-The company record is added and now you can proceed with creating a company unit. See [Managing Company Units](https://documentation.spryker.com/docs/en/managing-company-units) for more details.
+The company record is added and now you can proceed with creating a company unit. See [Managing Company Units](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-units.html) for more details.

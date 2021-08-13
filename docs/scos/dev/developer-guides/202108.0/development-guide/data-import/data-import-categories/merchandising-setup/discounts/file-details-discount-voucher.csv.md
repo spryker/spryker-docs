@@ -1,9 +1,12 @@
 ---
 title: File details- discount_voucher.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-discount-vouchercsv
+originalArticleId: 741ea0dd-d3ad-40d0-98b3-6e16889b6794
 redirect_from:
   - /2021080/docs/file-details-discount-vouchercsv
   - /2021080/docs/en/file-details-discount-vouchercsv
+  - /docs/file-details-discount-vouchercsv
+  - /docs/en/file-details-discount-vouchercsv
 ---
 
 This article contains content of the **discount_voucher.csv** file to configure Discount Voucher information on your Spryker Demo Shop.
@@ -25,7 +28,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*   [ discount.csv ](https://documentation.spryker.com/docs/file-details-discountcsv)
+*   [ discount.csv ](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
 
 ## Recommendations & other information
 The generated voucher code consists of two parts: 

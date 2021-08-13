@@ -2,14 +2,17 @@
 title: Migration Guide - Locale
 description: Use the guide to perform the Locale part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-locale
+originalArticleId: 0566d4d5-bb4d-4079-a74f-f50e2f02ef32
 redirect_from:
   - /2021080/docs/migration-guide-locale
   - /2021080/docs/en/migration-guide-locale
+  - /docs/migration-guide-locale
+  - /docs/en/migration-guide-locale
 ---
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Frontend - Extend a Component
 originalLink: https://documentation.spryker.com/v1/docs/t-extend-component
+originalArticleId: 410c6b4c-c3ed-4988-98f0-c774050607f2
 redirect_from:
   - /v1/docs/t-extend-component
   - /v1/docs/en/t-extend-component

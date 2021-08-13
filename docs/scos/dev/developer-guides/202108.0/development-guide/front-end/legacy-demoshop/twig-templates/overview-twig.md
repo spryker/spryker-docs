@@ -2,9 +2,12 @@
 title: Overview - Twig
 description: Given that we are working on a web application, we need a proper way to generate HTML dynamically. The most common approach relies on templates and for this we decided to go with Twig Template Engine.
 originalLink: https://documentation.spryker.com/2021080/docs/twig-overview
+originalArticleId: 1a1c22b7-2b3b-45fe-a51b-638ff5614114
 redirect_from:
   - /2021080/docs/twig-overview
   - /2021080/docs/en/twig-overview
+  - /docs/twig-overview
+  - /docs/en/twig-overview
 ---
 
 Given that we are working on a web application, we need a proper way to generate HTML dynamically. The most common approach relies on templates and for this we decided to go with Twig Template Engine.
@@ -57,7 +60,7 @@ You can use other technology for the front-end of your application as well; this
 </html>
 ```
 
-For more information, see [Best Practices - Twig Templates](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/legacy-demoshop/twig-templates/best-practices-twig-templates.html). 
+For more information, see [Best Practices - Twig Templates](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/legacy-demoshop/twig-templates/best-practices-twig-templates.html). 
 
 ## Markup Tags
 

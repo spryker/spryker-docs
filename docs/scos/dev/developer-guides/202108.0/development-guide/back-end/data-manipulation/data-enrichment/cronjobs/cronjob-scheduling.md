@@ -2,9 +2,12 @@
 title: Cronjob Scheduling
 description: Spryker applications demand performing repetitive background operation - jobs. Such operations are necessary for synchronizing denormalized data into Search engine, key-value store, etc.
 originalLink: https://documentation.spryker.com/2021080/docs/cronjob-scheduling-guide
+originalArticleId: 2027e1e4-d579-4ec6-aa6e-aff40955d76c
 redirect_from:
   - /2021080/docs/cronjob-scheduling-guide
   - /2021080/docs/en/cronjob-scheduling-guide
+  - /docs/cronjob-scheduling-guide
+  - /docs/en/cronjob-scheduling-guide
 ---
 
 
@@ -18,7 +21,7 @@ While setting up and configuring a scheduler, a developer is to solve the follow
 2. Get jobs to run on remote servers. This is an environment-dependent task.
 3. Set up monitoring of job execution. This may as well be provided by a scheduler.
 {% info_block infoBox %}
-See [Creating a New Custom Scheduler](https://documentation.spryker.com/v3/docs/ht-create-a-new-custom-scheduler-201907
+See [Creating a New Custom Scheduler](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/creating-a-new-custom-scheduler.html
 {% endinfo_block %} to learn about scheduler creation.)
 Currently, Spryker B2B and B2C demo shops are shipped with Jenkins as a default scheduler. Jenkins manages running and monitoring jobs. Spryker provides a module to control Jenkins and propagate the jobs it manages.
 

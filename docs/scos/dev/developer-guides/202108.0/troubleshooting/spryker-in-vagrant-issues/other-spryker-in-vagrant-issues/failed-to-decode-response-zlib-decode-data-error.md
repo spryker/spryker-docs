@@ -2,9 +2,12 @@
 title: Failed to decode response- zlib_decode()- data error
 description: Learn how to fix the issue Failed to decode response- zlib_decode()- data error
 originalLink: https://documentation.spryker.com/2021080/docs/failed-to-decode-response-zlib-decode-data-error
+originalArticleId: 9d1d83ed-12e8-426f-a292-f6ec31574325
 redirect_from:
   - /2021080/docs/failed-to-decode-response-zlib-decode-data-error
   - /2021080/docs/en/failed-to-decode-response-zlib-decode-data-error
+  - /docs/failed-to-decode-response-zlib-decode-data-error
+  - /docs/en/failed-to-decode-response-zlib-decode-data-error
 ---
 
 ## Description

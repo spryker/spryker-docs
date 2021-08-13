@@ -2,6 +2,7 @@
 title: Back in Stock Notification Feature Overview
 description: The feature allows both registered and guest users to subscribe to the newsletter by specifying the email address they wish to receive the notifications to
 originalLink: https://documentation.spryker.com/v2/docs/back-in-stock-notification-feature-overview
+originalArticleId: 0a487199-c3aa-4c53-9855-5a65b6c1524d
 redirect_from:
   - /v2/docs/back-in-stock-notification-feature-overview
   - /v2/docs/en/back-in-stock-notification-feature-overview

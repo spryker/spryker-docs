@@ -2,12 +2,13 @@
 title: Discontinued Products
 description: Discontinued Products feature allows Shop Administrators to mark products as "discontinued" and show the customer that the product is no longer available.
 originalLink: https://documentation.spryker.com/v3/docs/discontinued-products
+originalArticleId: a2437b48-9e1a-4d06-99bf-fb38605fafd1
 redirect_from:
   - /v3/docs/discontinued-products
   - /v3/docs/en/discontinued-products
 ---
 
-Providing the best cost-performance services and products is the key mission of every B2B company. From time to time, a company may decide to discontinue a product. By discontinuing a product, the merchant stops producing and supporting a product. The [SCOS](/docs/scos/dev/about-spryker/202001.0/about-spryker.html) Discontinued Products feature, allows Back Office users to mark products as "discontinued" in the Back Office and show the customer that the product is no longer available. Also, shop owners can temporarily deactivate products for a set period of time
+Providing the best cost-performance services and products is the key mission of every B2B company. From time to time, a company may decide to discontinue a product. By discontinuing a product, the merchant stops producing and supporting a product. The [SCOS](/docs/scos/user/about-spryker/201907.0/about-spryker.html) Discontinued Products feature, allows Back Office users to mark products as "discontinued" in the Back Office and show the customer that the product is no longer available. Also, shop owners can temporarily deactivate products for a set period of time
 
 ## If you are:
 

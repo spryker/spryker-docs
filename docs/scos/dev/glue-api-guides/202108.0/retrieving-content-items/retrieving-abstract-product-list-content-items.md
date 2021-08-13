@@ -2,15 +2,18 @@
 title: Retrieving abstract product list content items
 description: Abstract Product List API provides resources to retrieve data on abstract products included in the Abstract Product List content item for all or specific locale
 originalLink: https://documentation.spryker.com/2021080/docs/retireving-abstract-product-list-content-items
+originalArticleId: 2fcfc554-7617-455e-bb22-ead08bb774b9
 redirect_from:
   - /2021080/docs/retireving-abstract-product-list-content-items
   - /2021080/docs/en/retireving-abstract-product-list-content-items
+  - /docs/retireving-abstract-product-list-content-items
+  - /docs/en/retireving-abstract-product-list-content-items
 ---
 
 This endpoint allows retrieving information about abstract product list content items.
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](https://documentation.spryker.com/docs/content-items-api-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html).
 
 <a name="product-list"></a>
 
@@ -357,4 +360,4 @@ Request sample: ` GET https://mysprykershop.com/content-product-abstract-lists/a
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

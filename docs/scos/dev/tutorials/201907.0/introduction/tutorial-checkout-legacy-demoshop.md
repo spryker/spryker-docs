@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Checkout - Legacy Demoshop
 originalLink: https://documentation.spryker.com/v3/docs/tutorial-checkout-legacy-demoshop
+originalArticleId: a219ed04-6f90-4d73-a6ea-5450c7b5b9d0
 redirect_from:
   - /v3/docs/tutorial-checkout-legacy-demoshop
   - /v3/docs/en/tutorial-checkout-legacy-demoshop
@@ -9,7 +10,7 @@ redirect_from:
 ## Challenge Description
 Integrate an additional step into the checkout process; a Voucher step where a customer enters a voucher code and gets a discount. Add the Voucher step after the Payment one.
 
-To explore further before starting, you can read about the [Checkout](/docs/scos/dev/features/201903.0/checkout/multi-step-checkout/checkout-steps.html) and the [StepEngine](/docs/scos/dev/features/202001.0/order-management/step-engine.html) modules.
+To explore further before starting, you can read about the [Checkout](/docs/scos/dev/features/201907.0/checkout/multi-step-checkout/checkout-steps.html) and the [StepEngine](/docs/scos/dev/features/201907.0/order-management/step-engine.html) modules.
 
 **Bonus challenge:**
 

@@ -2,6 +2,7 @@
 title: Heidelpay - Integration into SCOS
 description: This article contains information on integrating the Heidelpay module into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v4/docs/heidelpay-integration-scos
+originalArticleId: fedde02f-5860-4059-8bf5-2c5e0169609d
 redirect_from:
   - /v4/docs/heidelpay-integration-scos
   - /v4/docs/en/heidelpay-integration-scos

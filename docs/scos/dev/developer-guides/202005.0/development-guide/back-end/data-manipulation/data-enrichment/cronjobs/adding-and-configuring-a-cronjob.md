@@ -1,6 +1,7 @@
 ---
 title: Adding and Configuring a Cronjob
 originalLink: https://documentation.spryker.com/v5/docs/adding-and-configuring-cronjob
+originalArticleId: db6b8ad7-b9d7-49d7-a326-c27e923a8a9c
 redirect_from:
   - /v5/docs/adding-and-configuring-cronjob
   - /v5/docs/en/adding-and-configuring-cronjob
@@ -45,7 +46,7 @@ For each job you can define several configurations:
 | Key                   | Type   | Purpose                                                      | Mandatory |
 | --------------------- | ------ | ------------------------------------------------------------ | --------- |
 | name                  | string | Name of the job                                              | yes       |
-| command               | string | The [console command](https://documentation.spryker.com/docs/en/console-commands) that is executed. | yes       |
+| command               | string | The [console command](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html) that is executed. | yes       |
 | schedule              | string | Expression that defines the job schedule (how often the job is executed).The schedule string is compatible with cronjob schedule definition (eg. 0 * * * * means: run once each hour at 00 minute). If environment is development, return empty string - cronjobs are being executed on development environment only manually. | yes       |
 | enable                | bool   | Enable/Disable jobs                                          | yes       |
 | stores                | array  | An array of stores where the job is executed.                | yes       |

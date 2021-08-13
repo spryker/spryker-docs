@@ -2,6 +2,7 @@
 title: Price
 description: Easily manage gross and net prices per product, country and currency and specify if you wish to display the gross or net prices in your shop.
 originalLink: https://documentation.spryker.com/v5/docs/price
+originalArticleId: ebcc79bc-cfc7-402d-98bb-560acf70eb83
 redirect_from:
   - /v5/docs/price
   - /v5/docs/en/price

@@ -2,6 +2,7 @@
 title: Shop Guide - Company Account
 description: Use the procedures to create and manage a company from the company account in the storefront.
 originalLink: https://documentation.spryker.com/v5/docs/company-account-shop-guide
+originalArticleId: e4e88dbe-19af-4e2f-a3a4-de3f4420bdd1
 redirect_from:
   - /v5/docs/company-account-shop-guide
   - /v5/docs/en/company-account-shop-guide
@@ -36,14 +37,14 @@ To create a Company in the web-shop, go to `/company/register` and register a co
 
 Fill in the required (*) fields to complete the registration.
 
-After the company has been registered, it should be approved in the [Back Office](https://documentation.spryker.com/docs/en/managing-companies#approving-and-activating-a-company) to continue building the hierarchy.
+After the company has been registered, it should be approved in the [Back Office](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-companies.html#approving-and-activating-a-company) to continue building the hierarchy.
 
 Once the company is approved, a Company Administrator can go to `/company/overview` page and create (and then also edit and delete) users, addresses, roles and business roles.
 
 {% info_block infoBox %}
 A Company Administrator needs to log out and then log in to refresh the changes.
 {% endinfo_block %}
-Don't forget to check out the video tutorial on setting up [Company](https://documentation.spryker.com/docs/en/company-account-overview) Structure in Spryker [B2B Demo Shop](https://documentation.spryker.com/docs/en/demoshops#b2b-demo-shop):
+Don't forget to check out the video tutorial on setting up [Company](/docs/scos/dev/features/202005.0/company-account-management/company-account-overview/company-account-overview.html) Structure in Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/202005.0/about-spryker.html#spryker-b2b-b2c-demo-shops):
 
 <iframe src="https://fast.wistia.net/embed/iframe/qkdgkeannb" title="How to set up Company Structure in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="589" height="315"></iframe>
 <!-- Last review date: Mar 18, 2019 -->

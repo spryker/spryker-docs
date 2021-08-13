@@ -2,6 +2,7 @@
 title: Shop Guide - Quick Order
 description: Use the procedures to create a quick order, add products to the quick order in bulk, upload products, add the order to a shopping list or a shopping cart.
 originalLink: https://documentation.spryker.com/v5/docs/quick-order-shop-guide
+originalArticleId: 83272228-96a8-4c9c-a611-923ee33766d9
 redirect_from:
   - /v5/docs/quick-order-shop-guide
   - /v5/docs/en/quick-order-shop-guide
@@ -113,4 +114,4 @@ To add a quick order to a shopping cart, do the following:
 2. Click **Add to Shopping Cart**.
 ***
 **What's next?**
-* [Go to Checkout](https://documentation.spryker.com/docs/en/checkout-shop-guide-201911)
+* [Go to Checkout](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html)

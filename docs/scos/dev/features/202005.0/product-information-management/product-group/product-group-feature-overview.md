@@ -2,18 +2,19 @@
 title: Product Group Feature Overview
 description: Product Group feature allows product catalog managers to group products by attributes.
 originalLink: https://documentation.spryker.com/v5/docs/product-group-feature-overview
+originalArticleId: 6dc69027-5b7e-4c84-a3fa-d2566388e784
 redirect_from:
   - /v5/docs/product-group-feature-overview
   - /v5/docs/en/product-group-feature-overview
 ---
 
-The Product Group feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](https://documentation.spryker.com/docs/en/product-abstraction)). The feature changes the way shop users interact with products by improving accessibility and navigation. 
+The Product Group feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/dev/features/202005.0/product-information-management/product-abstraction.html)). The feature changes the way shop users interact with products by improving accessibility and navigation. 
 
 ## Product Group on the Storefront
 
 {% info_block warningBox "Examplary content" %}
 
-By default, there is no way to display product groups on Storefront. This section describes an examplary implementation which you can add to your project. See [HowTo - Display Product Groups by Color on Storefront](https://documentation.spryker.com/docs/en/howto-display-product-groups-by-color-on-the-storefront) for more details.
+By default, there is no way to display product groups on Storefront. This section describes an examplary implementation which you can add to your project. See [HowTo - Display Product Groups by Color on Storefront](/docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html) for more details.
 
 {% endinfo_block %}
 
@@ -40,9 +41,9 @@ Product abstract card:
  
 ## Product Group in the Back Office
 
-In the Back Office, a product catalog manager can view what product group an abstract product belongs to. See [Viewing a Product](https://documentation.spryker.com/docs/en/managing-products#viewing-a-product) to learn more.   
+In the Back Office, a product catalog manager can view what product group an abstract product belongs to. See [Viewing a Product](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/managing-products/managing-products.html#viewing-a-product) to learn more.   
 
-Also, they can insert product groups into CMS pages via content widgets in the [WYSIWYG editor](https://documentation.spryker.com/docs/en/wysiwyg-editor).
+Also, they can insert product groups into CMS pages via content widgets in the [WYSIWYG editor](/docs/scos/dev/features/202005.0/cms/wysiwyg-editor.html).
 
 ## Creating Product Groups 
 

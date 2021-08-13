@@ -1,9 +1,12 @@
 ---
 title: Tutorial - Using Translations
 originalLink: https://documentation.spryker.com/2021080/docs/t-using-translations
+originalArticleId: ff253743-a10f-4866-8047-a6c8357a88a7
 redirect_from:
   - /2021080/docs/t-using-translations
   - /2021080/docs/en/t-using-translations
+  - /docs/t-using-translations
+  - /docs/en/t-using-translations
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/yves/using-translations/-->

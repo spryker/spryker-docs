@@ -1,6 +1,7 @@
 ---
 title: Custom Twig Functions for Zed
 originalLink: https://documentation.spryker.com/v4/docs/custom-twig-functions-for-zed
+originalArticleId: 1feb51e7-dd47-4070-b394-856b2b7b9758
 redirect_from:
   - /v4/docs/custom-twig-functions-for-zed
   - /v4/docs/en/custom-twig-functions-for-zed

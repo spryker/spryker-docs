@@ -2,6 +2,7 @@
 title: Prioritizing Labels
 description: Use the procedure to set a specific order for product labels to display them in the storefront that fits your preferences.
 originalLink: https://documentation.spryker.com/v5/docs/prioritizing-labels
+originalArticleId: a596bc4e-620d-4e0b-b279-3be3fd9e7c88
 redirect_from:
   - /v5/docs/prioritizing-labels
   - /v5/docs/en/prioritizing-labels

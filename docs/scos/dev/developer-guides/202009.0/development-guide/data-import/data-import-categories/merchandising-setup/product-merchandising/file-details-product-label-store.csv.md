@@ -2,12 +2,13 @@
 title: File details- product_label_store.csv
 description: Description of the product_label_store.csv import file used to import store relations of product labels.
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-label-storecsv
+originalArticleId: 808fb4f7-a2ff-4568-a91b-1b5c51cae9f1
 redirect_from:
   - /v6/docs/file-details-product-label-storecsv
   - /v6/docs/en/file-details-product-label-storecsv
 ---
 
-This article contains content of the **product_label_store.csv** file to configure [Product Label](https://documentation.spryker.com/docs/product-label) information on your Spryker Demo Shop.
+This article contains content of the **product_label_store.csv** file to configure [Product Label](/docs/scos/dev/features/202009.0/product-labels/product-labels.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -22,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [product_label.csv](https://documentation.spryker.com/docs/file-details-product-labelcsv)
+*    [product_label.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_label_store.csv*  file can be downloaded here:

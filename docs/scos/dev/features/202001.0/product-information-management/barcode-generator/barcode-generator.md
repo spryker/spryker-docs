@@ -2,6 +2,7 @@
 title: Barcode Generator
 description: Barcode is both cost-effective and reliable solution. The ultimate result of a comprehensive barcoding system is a reduction in overhead.
 originalLink: https://documentation.spryker.com/v4/docs/barcode-generator
+originalArticleId: 1ba17509-c7ee-4128-9938-7bcb44413792
 redirect_from:
   - /v4/docs/barcode-generator
   - /v4/docs/en/barcode-generator

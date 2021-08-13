@@ -2,9 +2,12 @@
 title: Managing discounts
 description: Use these procedures to view and update discounts, activate/deactivate discounts, and add voucher codes in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-discounts
+originalArticleId: 6d463da9-6259-4ad5-8c28-46081f008600
 redirect_from:
   - /2021080/docs/managing-discounts
   - /2021080/docs/en/managing-discounts
+  - /docs/managing-discounts
+  - /docs/en/managing-discounts
 ---
 
 This topic describes how to manage discounts.
@@ -19,7 +22,7 @@ To edit a discount, do the following:
 1. On the **Overview of Discounts** page, click **Edit** in the _Actions_ column.
 2. Update the attributes and click **Save**.
 {% info_block infoBox %}
-To find out more information about the attributes that you see on the *Edit Discount* page, in the Creating a voucher guides, see the [Reference information: Creating a voucher](https://documentation.spryker.com/docs/creating-a-voucher#reference-information--creating-a-voucher
+To find out more information about the attributes that you see on the *Edit Discount* page, in the Creating a voucher guides, see the [Reference information: Creating a voucher](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/discount/creating-a-voucher.html#reference-information--creating-a-voucher
 {% endinfo_block %} section.
 
 ## Viewing a discount
@@ -35,7 +38,7 @@ You can add voucher codes while editing the discount entity.
 And you can also do the following:
 1. On the *Overview of Discounts* page, in the _Actions_ column, click **Add code**.
 You are redirected to the *Voucher codes* tab of the *Edit Discount* page.
-    Follow the steps described in [Creating a discount voucher](https://documentation.spryker.com/docs/creating-a-voucher).
+    Follow the steps described in [Creating a discount voucher](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/discount/creating-a-voucher.html).
 3. Click **Save**.
 
 ## Activating and deactivating discounts

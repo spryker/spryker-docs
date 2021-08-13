@@ -1,6 +1,7 @@
 ---
 title: Mailing & Notifications
 originalLink: https://documentation.spryker.com/v6/docs/mailing-notifications
+originalArticleId: 0cae0e05-2519-4d49-b741-12df6d79edc1
 redirect_from:
   - /v6/docs/mailing-notifications
   - /v6/docs/en/mailing-notifications

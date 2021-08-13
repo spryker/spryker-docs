@@ -2,9 +2,12 @@
 title: Step Engine Workflow Overview
 description: This article provides an overview of  the step engine feature.
 originalLink: https://documentation.spryker.com/2021080/docs/step-engine-workflow
+originalArticleId: 5709d2f5-13f8-4c94-bbc2-a24f998cfb9f
 redirect_from:
   - /2021080/docs/step-engine-workflow
   - /2021080/docs/en/step-engine-workflow
+  - /docs/step-engine-workflow
+  - /docs/en/step-engine-workflow
 ---
 
 When you need to define a multi-step process using the StepEngine feature, you need to implement the following interfaces:

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Publish and Synchronization
 originalLink: https://documentation.spryker.com/v1/docs/mg-pub-and-sync
+originalArticleId: aab204a9-6505-44f2-94cf-32f83065618b
 redirect_from:
   - /v1/docs/mg-pub-and-sync
   - /v1/docs/en/mg-pub-and-sync

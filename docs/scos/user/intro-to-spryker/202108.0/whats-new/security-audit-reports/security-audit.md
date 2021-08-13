@@ -2,16 +2,19 @@
 title: Security audit
 description: This page contains the report of the audit performed on Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/security-audit
+originalArticleId: 7da78594-14c0-4a77-9296-4ad39a2c085a
 redirect_from:
   - /2021080/docs/security-audit
   - /2021080/docs/en/security-audit
+  - /docs/security-audit
+  - /docs/en/security-audit
 ---
 
 Between Oktober 7th and November 22nd 2019 SektionEins performed a source code audit and penetration test of the two variants of the Spryker Framework, called Spryker B2B and Spryker B2C.
 
 [SektionEins](https://www.sektioneins.de/) conducted the audit.
 
-The evaluation of the Commerce OS was done without having prior knowledge of the source code, to protect it from attackers. Where it was the case, the found vulnerabilities were verified using the [B2B](https://documentation.spryker.com/docs/b2b-suite) and [B2C Demo Shops](https://documentation.spryker.com/docs/b2c-suite). 
+The evaluation of the Commerce OS was done without having prior knowledge of the source code, to protect it from attackers. Where it was the case, the found vulnerabilities were verified using the [B2B](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2b-suite.html) and [B2C Demo Shops](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2c-suite.html). 
 
 Here is the summary of the security audit report:
 @(Embed)(https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/Summary-Report-Spryker-B2B-B2C-201907.0.pdf){height="320" width="640"}
@@ -35,4 +38,4 @@ The safe use of functions and the lack of critical vulnerabilities such as SQL i
 
 For each of the security vulnerabilities, a detailed risk analysis has been performed that is documented throughout the report. For more information, please reach out for a more extended version of this report to [Spryker Systems](mailto:academy@spryker.com).
 
-See [Secure Coding Practices](https://documentation.spryker.com/docs/secure-coding-practices) for a list of secure coding recommendations.
+See [Secure Coding Practices](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/coding-guidelines/secure-coding-practices.html) for a list of secure coding recommendations.

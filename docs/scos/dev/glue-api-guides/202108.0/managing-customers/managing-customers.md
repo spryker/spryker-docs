@@ -2,9 +2,12 @@
 title: Managing customers
 description: Learn how to manage customers via Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers-via-glue-api
+originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
   - /2021080/docs/managing-customers-via-glue-api
   - /2021080/docs/en/managing-customers-via-glue-api
+  - /docs/managing-customers-via-glue-api
+  - /docs/en/managing-customers-via-glue-api
 ---
 
 The Customer API allows creating customers and manage their account data. This includes the possibility to maintain a set of customer addresses as separate resources. In the checkout process, you can retrieve and use these address resources to speed up the buying process. The API supports authentication via OAuth 2.0 and password restoration.
@@ -18,7 +21,7 @@ In your development, these resources can help you:
 * Enrich customer profiles with additional data such as addresses.
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Create a customer
 
@@ -390,15 +393,15 @@ There is an alternative way to retrieve existing subscriptions, for details see 
 | 405 | Customer reference is missing. |
 | 410 | Failed to save changes. |
 | 414 | Provided gender is invalid. |
-| 422 | Terms of service were not accepted. Note that if you have the [REST Request Format](https://documentation.spryker.com/docs/validating-rest-request-format) validation enabled, then you will recieve 901 instead of 422. |
+| 422 | Terms of service were not accepted. Note that if you have the [REST Request Format](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/introduction-tutorials/glue-api/validating-rest-request-format.html) validation enabled, then you will recieve 901 instead of 422. |
 | 4606 | Request is unauthorized.|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Authenticate as a customer](https://documentation.spryker.com/docs/customer-password)
-* [Manage customer passwords](https://documentation.spryker.com/docs/customer-password)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-passwords.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-passwords.html)
 
 
 

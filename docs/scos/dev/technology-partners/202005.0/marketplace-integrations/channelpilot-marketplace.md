@@ -2,6 +2,7 @@
 title: ChannelPilot Marketplace
 description: Provide merchants with the means to analyze, optimize and control performance, channels, and products based on actionable KPIs by integrating Channelpilot into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v5/docs/channelpilot
+originalArticleId: 35fd39cf-f19a-42ef-abc1-59a9a4f1ea03
 redirect_from:
   - /v5/docs/channelpilot
   - /v5/docs/en/channelpilot

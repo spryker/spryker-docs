@@ -2,6 +2,7 @@
 title: Creating a CMS block
 description: The guide provides instructions on how to create a CMS block in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/creating-cms-block
+originalArticleId: 59a590b2-fe13-4a95-b8a7-9783b9fd04c5
 redirect_from:
   - /v6/docs/creating-cms-block
   - /v6/docs/en/creating-cms-block
@@ -10,7 +11,7 @@ redirect_from:
 This topic describes how to create a CMS block.
 {% info_block infoBox "Info" %}
 
-If you want to create a CMS block for [email](https://documentation.spryker.com/docs/email-as-a-cms-block-feature-overview), see [Creating an email CMS block](https://documentation.spryker.com/docs/en/managing-content-of-emails-via-cms-blocks#creating-an-email-cms-block).
+If you want to create a CMS block for [email](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview), see [Creating an email CMS block](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block).
 
 {% endinfo_block %}
 
@@ -39,7 +40,7 @@ To create a CMS block:
 {% endinfo_block %}
 
 {% info_block infoBox %}
-Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Block template, contact them and refer to the [HowTo - Create CMS block templates](https://documentation.spryker.com/docs/ht-create-cms-templates#cms-block-template
+Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Block template, contact them and refer to the [HowTo - Create CMS block templates](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template
 {% endinfo_block %}.)
 
 3. To save the changes, click **Save**. This will successfully create a block and take you to the *Edit Block Glossary* page.
@@ -52,7 +53,7 @@ The following table describes the attributes on the *Overview of CMS Blocks* pag
 | ATTRIBUTE | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION:  EMAIL CMS BLOCK |
 | --- | --- | --- |
 | Block Id | Sequence number. | Sequence number. |
-| Name | Name of a CMS block. | Name of a CMS block. <br> This name is used by developers to assign the block to its [.twig email template](https://documentation.spryker.com/docs/email-as-a-cms-block-feature-overview#email-template).
+| Name | Name of a CMS block. | Name of a CMS block. <br> This name is used by developers to assign the block to its [.twig email template](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview#email-template).
 | Template | Defines a placeholder structure of the CMS block. | Defines the placeholder structure of the Email CMS block. |
 | Status | Block status that can be active (visible in the online store) or inactive (invisible in the online store). | Irrelevant. |
 | Stores | Locale(s) for which the block will be visible on the store website. | Irrelevant. |
@@ -83,5 +84,5 @@ The following table describes the attributes on the *Create CMS Block* page.
 
 After a new block has been created, you can add the content if needed.
 
-* To learn more about editing a CMS block, see the [Editing CMS blocks](https://documentation.spryker.com/docs/managing-cms-blocks#editing-blocks).
+* To learn more about editing a CMS block, see the [Editing CMS blocks](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-cms-blocks.html#editing-blocks).
 

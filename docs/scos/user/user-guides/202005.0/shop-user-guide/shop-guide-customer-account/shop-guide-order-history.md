@@ -2,6 +2,7 @@
 title: Shop Guide - Order History
 description: This guide provides instructions on managing Order History in your Customer Account in a Spryker-based shop.
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-order-history
+originalArticleId: 25acfa39-f693-469e-8839-e6260365fdc1
 redirect_from:
   - /v5/docs/shop-guide-order-history
   - /v5/docs/en/shop-guide-order-history
@@ -46,7 +47,7 @@ On the **Order Details** page, you can view the order details, add a comment, an
 * Payment details
 * Subtotal, shipment costs, and grand total
 
-**To add a comment**, in the **Comments to Cart** widget, add a comment, and click **Add**. For more information on how to manage comments, see [Shop Guide - Managing Comments](https://documentation.spryker.com/docs/en/managing-comments-shop-guide).
+**To add a comment**, in the **Comments to Cart** widget, add a comment, and click **Add**. For more information on how to manage comments, see [Shop Guide - Managing Comments](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html).
 ***
 ## Reordering the Orders
 You can reorder the whole order or the selected items from the order.
@@ -59,12 +60,12 @@ You can reorder the whole order or the selected items from the order.
     * Click **Reorder All** to reorder the whole order.
     * Select the items you want to reorder and then click **Reorder selected items**. 
 
-This will take you to the Cart page where you can proceed to the checkout. For information on how to place the order, see [Shop Guide - Checkout](https://documentation.spryker.com/docs/en/checkout-shop-guide-201911).
+This will take you to the Cart page where you can proceed to the checkout. For information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html).
 
 ## Sorting and Filtering Orders (B2B Shop)
 When there is a long list of orders in the Customer account, it is always a good idea to filter the orders using various parameters. To **filter the orders**:
 
-1. In the **Search** drop-down menu select one of the provided filter parameters. See [Orders: Reference Information](https://documentation.spryker.com/docs/en/orders-reference-information) to learn more about the filter parameters.
+1. In the **Search** drop-down menu select one of the provided filter parameters. See [Orders: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/references/orders-reference-information.html) to learn more about the filter parameters.
 
 2. Depending on the selection from step #1, enter the search query in the next to the **Search** drop-down field.
 
@@ -78,7 +79,7 @@ To narrow the filtered results and find a more specific order, you can proceed w
 
 3. [Optional] Select the date range in fields **From** and **To**.
 
-4. [Optional] In the **Business Unit** drop-down field, select the Business Unit the orders of which you would like to check. See [Company Roles: Reference Information](https://documentation.spryker.com/docs/en/company-roles-reference-information) for the permissions needed to be assigned for viewing the Business Unit orders.
+4. [Optional] In the **Business Unit** drop-down field, select the Business Unit the orders of which you would like to check. See [Company Roles: Reference Information](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-company-roles/references/company-roles-reference-information.html) for the permissions needed to be assigned for viewing the Business Unit orders.
 
 5. [Optional] Check **Show products in search results** checkmark if you wish to see the products matching your search parameters in the search results. Otherwise, only the order list appropriate to the search parameters will be displayed.
 
@@ -87,9 +88,9 @@ To narrow the filtered results and find a more specific order, you can proceed w
 
 **What’s next?**
 
-To learn more about how to place the order, see [Shop Guide - Checkout](https://documentation.spryker.com/docs/en/checkout-shop-guide-201911).
+To learn more about how to place the order, see [Shop Guide - Checkout](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html).
 
-To learn more about how to share the cart with external or internal users, see [Sharing a Shopping Cart via Link](https://documentation.spryker.com/docs/en/shop-guide-managing-shopping-carts#sharing-a-shopping-cart-via-link).
+To learn more about how to share the cart with external or internal users, see [Sharing a Shopping Cart via Link](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html#sharing-a-shopping-cart-via-link).
 
-To learn more about how to manage comments in the cart, see [Shop Guide - Managing Comments](https://documentation.spryker.com/docs/en/managing-comments-shop-guide).
+To learn more about how to manage comments in the cart, see [Shop Guide - Managing Comments](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html).
 

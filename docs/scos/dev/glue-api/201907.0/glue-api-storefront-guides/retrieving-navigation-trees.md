@@ -1,6 +1,7 @@
 ---
 title: Retrieving Navigation Trees
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-navigation-trees-201907
+originalArticleId: 3512d402-aabe-4816-8aa3-38264029a67c
 redirect_from:
   - /v3/docs/retrieving-navigation-trees-201907
   - /v3/docs/en/retrieving-navigation-trees-201907
@@ -17,7 +18,7 @@ The resources exposed by the API provide access to complete navigation trees onl
 In your development, these resources can help you to retrieve all kinds of navigations available in Spryker and build navigation menus to guide customers through.
 
 {% info_block infoBox "Info" %}
-For more details on managing navigation trees, see [Navigation](/docs/scos/dev/features/202001.0/navigation/navigation.html
+For more details on managing navigation trees, see [Navigation](/docs/scos/dev/features/201907.0/navigation/navigation.html
 {% endinfo_block %}.)
 
 ## Installation
@@ -26,7 +27,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Usage
 To retrieve a navigation tree with detailed information on each node, send a GET request to the following endpoint:
 
-[/navigations/{% raw %}{{{% endraw %}navigation_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/v4/docs/rest-api-reference#/navigations)
+[/navigations/{% raw %}{{{% endraw %}navigation_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api/201907.0/rest-api-reference.html#/navigations)
 
 Sample request: GET *http://glue.mysprykershop.com/navigations/**SOCIAL_LINKS***
 

@@ -2,9 +2,12 @@
 title: Creating Forms
 description: Spryker uses Symfony forms; this tutorial will help you get started on working with forms.
 originalLink: https://documentation.spryker.com/2021080/docs/t-working-forms
+originalArticleId: 8dba4520-ed55-4904-a84f-bc46c7ac3cfd
 redirect_from:
   - /2021080/docs/t-working-forms
   - /2021080/docs/en/t-working-forms
+  - /docs/t-working-forms
+  - /docs/en/t-working-forms
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/yves/working-with-forms/ -->
@@ -14,9 +17,9 @@ You will build a simple newsletter subscription form that contains a field for e
 
 Follow the steps described below to create the newsletter subscription form:
 
-* [Create the FormType](https://documentation.spryker.com/docs/t-working-forms#create-the-formtype)
-* [Render the Form](https://documentation.spryker.com/docs/t-working-forms#render-the-form)
-* [Post the Data](https://documentation.spryker.com/docs/t-working-forms#post-the-data)
+* [Create the FormType](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#create-the-formtype)
+* [Render the Form](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#render-the-form)
+* [Post the Data](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#post-the-data)
 
 ## Create the FormType
 The best practice is to create a `FormType` class for each form you need to handle. Here you will define the fields contained in the form and the rules of validation.

@@ -2,6 +2,7 @@
 title: Creating Scheduled Prices
 description: This user guide is about scheduling price changes by creating product price schedules. This functionality is shipped with the Scheduled prices feature.
 originalLink: https://documentation.spryker.com/v3/docs/creating-scheduled-prices-201907
+originalArticleId: 1f0ac0ef-f87c-4a83-97ca-45d1f03f1183
 redirect_from:
   - /v3/docs/creating-scheduled-prices-201907
   - /v3/docs/en/creating-scheduled-prices-201907
@@ -21,8 +22,8 @@ Instead of changing prices manually on the starting day of the promotion, you ca
 
 **To create a price schedule:**
 
-1.     Create a file with predefined product price schedules. See [Scheduled Prices: Reference information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/price/scheduled-prices/references/scheduled-prices-reference-information.html).
-2.     Enter and select the attributes for your price schedule. See [Scheduled Prices: Reference information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/price/scheduled-prices/references/scheduled-prices-reference-information.html).
+1.     Create a file with predefined product price schedules. See [Scheduled Prices: Reference information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/price/scheduled-prices/references/scheduled-prices-reference-information.html).
+2.     Enter and select the attributes for your price schedule. See [Scheduled Prices: Reference information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/price/scheduled-prices/references/scheduled-prices-reference-information.html).
 3.     Click **Browse** and select the file you've prepared in step 1.
 4.     Click **Import your CSV file**.
 5. After being redirected to the _Import dry run_ page, check whether there are incorrect entries in your file in the **Errors found inside your file** section.

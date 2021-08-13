@@ -2,6 +2,7 @@
 title: Multiple and Shared Shopping Lists Overview
 description: A general overview of the Multiple and shared shopping lists feature.
 originalLink: https://documentation.spryker.com/v5/docs/multiple-shared-shopping-lists-overview-201907
+originalArticleId: 14a7fa1b-699d-46ee-b0c8-2a8bf3b93fa2
 redirect_from:
   - /v5/docs/multiple-shared-shopping-lists-overview-201907
   - /v5/docs/en/multiple-shared-shopping-lists-overview-201907
@@ -12,8 +13,8 @@ A shopping list is a list of the items that shoppers buy or plan to buy frequent
 A shopping list is always saved disregarding if a company user logs out and logs in again – the list is still available. Shopping list does not reserve products on stock, so adding an item to the shopping list does not affect item availability. However, a company user can easily convert any shopping list into a shopping cart to proceed with the Checkout.
 There are two ways to create a shopping list:
 
-* through a [shopping list widget](https://documentation.spryker.com/docs/en/shopping-list-widget) in the header of the shop
-* from Shopping Lists page in My Account menu. See [Creating a shopping list](https://documentation.spryker.com/docs/en/shopping-lists-shop-guide#create-shopping-list) for more detailed instruction.
+* through a [shopping list widget](/docs/scos/dev/features/202005.0/shopping-list/shopping-list-widget/shopping-list-widget.html) in the header of the shop
+* from Shopping Lists page in My Account menu. See [Creating a shopping list](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-lists.html#create-shopping-list) for more detailed instruction.
 
 New items are added to shopping lists by clicking Add to Shopping List on the product details page.
 
@@ -23,7 +24,7 @@ Company users can create not just one, but multiple shopping lists to be used fo
 These could be, for instance, separate shopping lists for daily, weekly and monthly purchases.
 {% endinfo_block %}
 
-The detailed information on managing shopping lists is covered in the [Shop User Guide](https://documentation.spryker.com/docs/en/shopping-lists-shop-guide).
+The detailed information on managing shopping lists is covered in the [Shop User Guide](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-lists.html).
 
 ## Permissions Management for Shared Shopping Lists
 
@@ -49,7 +50,7 @@ Three types of shopping list access rights can be granted:
 * SKU
 * Product attribute
 * Product options
-* Product comments (see [Shopping List Notes](https://documentation.spryker.com/docs/en/shopping-list-notes) for more details)
+* Product comments (see [Shopping List Notes](/docs/scos/dev/features/202005.0/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
 * Quantity
 * Item price
 * Availability
@@ -62,7 +63,7 @@ Alternative products are not shown for discontinued products, since they can not
 
 2. **Changing quantity of items for adding to cart**: On the *Shopping List View* page, the user can change the item quantity to be added to cart
 
-3. **Printing shopping list**: See [Printing Shopping list](https://documentation.spryker.com/docs/en/printing-shopping-list) to learn how it works
+3. **Printing shopping list**: See [Printing Shopping list](/docs/scos/dev/features/202005.0/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html) to learn how it works
 
 4. **Adding shopping list items to cart**: The user can select the necessary which are available and add them to cart
 
@@ -76,7 +77,7 @@ Alternative products are not shown for discontinued products, since they can not
    * SKU
    * Product attribute
    * Product options 
-   * Product notes (see [Shopping List Notes](https://documentation.spryker.com/docs/en/shopping-list-notes) for more details)
+   * Product notes (see [Shopping List Notes](/docs/scos/dev/features/202005.0/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
    * Quantity
    * Item price
    * Availability
@@ -88,7 +89,7 @@ Besides other products, user with *Full access* rights is allowed to see alterna
 
 2. **Changing the number of items for adding to cart**: On the *Shopping List View* page, user can change the item quantity to be added to cart
 
-3. **Printing shopping list**: See [Printing a Shopping List](https://documentation.spryker.com/docs/en/printing-shopping-list) to learn how it works
+3. **Printing shopping list**: See [Printing a Shopping List](/docs/scos/dev/features/202005.0/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html) to learn how it works
 
 4. **Editing shopping list**: Having clicked **Edit**, the user is taken to *Edit Shopping list* page
 
@@ -104,7 +105,7 @@ Besides other products, user with *Full access* rights is allowed to see alterna
 It is possible to grant different access rights on shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* for the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.
 
 ## Search Widget for Shopping Lists
-Starting from v. 2019.03.0, it is possible to add a [search widget for concrete products](https://documentation.spryker.com/docs/en/search-widget-for-concrete-producs-overview-201903) to a shopping list. The widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+Starting from v. 2019.03.0, it is possible to add a [search widget for concrete products](/docs/scos/dev/features/202005.0/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products-overview.html) to a shopping list. The widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 ![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png){height="" width=""}
 
 ## Subtotal for a Shopping List

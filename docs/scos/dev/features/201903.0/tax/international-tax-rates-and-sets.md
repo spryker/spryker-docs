@@ -1,6 +1,7 @@
 ---
 title: International Tax Rates & Sets
 originalLink: https://documentation.spryker.com/v2/docs/international-tax-rates-sets-1
+originalArticleId: aead5432-2393-45be-8128-90a239ed73ea
 redirect_from:
   - /v2/docs/international-tax-rates-sets-1
   - /v2/docs/en/international-tax-rates-sets-1

@@ -2,9 +2,12 @@
 title: VM stuck at 'Configuring and enabling network interfaces'
 description: Learn how to fix the issue when VM gets stuck at 'Configuring and enabling network interfaces'
 originalLink: https://documentation.spryker.com/2021080/docs/vm-stuck-at-configuring-and-enabling-network-interfaces
+originalArticleId: 54f1f2c1-aab6-4111-98fa-c354bf5a476f
 redirect_from:
   - /2021080/docs/vm-stuck-at-configuring-and-enabling-network-interfaces
   - /2021080/docs/en/vm-stuck-at-configuring-and-enabling-network-interfaces
+  - /docs/vm-stuck-at-configuring-and-enabling-network-interfaces
+  - /docs/en/vm-stuck-at-configuring-and-enabling-network-interfaces
 ---
 
 If Spryker Virtual Machine gets stuck at the *Configuring and enabling network interfaces* message during start up, do the following:

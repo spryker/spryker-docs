@@ -2,6 +2,7 @@
 title: Managing Reclamations
 description: The guide provides instructions for shop owners to learn how to handle all order claims made by their customers and make refunds if needed in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/managing-reclamations
+originalArticleId: 89efbaf0-7417-427c-a614-110d9ef326a9
 redirect_from:
   - /v3/docs/managing-reclamations
   - /v3/docs/en/managing-reclamations
@@ -30,4 +31,4 @@ While viewing a reclamation, you can:
 
 ***
 **What's next?**
-To learn about additional details regarding the Reclamations page, see [Reclamations: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/sales/reclamations/references/reclamations-reference-information.html).
+To learn about additional details regarding the Reclamations page, see [Reclamations: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/sales/reclamations/references/reclamations-reference-information.html).

@@ -2,6 +2,7 @@
 title: Company Account
 description: The section can be used to create a company record, set up company units and company unit addresses, create company user roles, etc in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/company-account-guide
+originalArticleId: f0cf1f0f-e3c7-4074-8fbd-4ca8807aa889
 redirect_from:
   - /v1/docs/company-account-guide
   - /v1/docs/en/company-account-guide

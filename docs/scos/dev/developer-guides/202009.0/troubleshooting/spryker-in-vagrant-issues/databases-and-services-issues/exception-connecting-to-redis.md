@@ -2,6 +2,7 @@
 title: Exception connecting to Redis
 description: Learn how to fix the issue with exception connecting to Redis
 originalLink: https://documentation.spryker.com/v6/docs/exception-connecting-to-redis
+originalArticleId: ccb56c37-e850-4628-9fc7-ce9b3155447e
 redirect_from:
   - /v6/docs/exception-connecting-to-redis
   - /v6/docs/en/exception-connecting-to-redis

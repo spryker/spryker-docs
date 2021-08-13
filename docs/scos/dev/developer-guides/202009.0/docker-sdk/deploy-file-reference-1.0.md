@@ -2,6 +2,7 @@
 title: Deploy file reference - 1.0
 description: Use this reference to create a deploy file for building environment for Spryker in Docker.
 originalLink: https://documentation.spryker.com/v6/docs/deploy-file-reference-10
+originalArticleId: 05525f7f-87f8-4e2a-8adb-cf97dbb42916
 redirect_from:
   - /v6/docs/deploy-file-reference-10
   - /v6/docs/en/deploy-file-reference-10
@@ -40,7 +41,7 @@ This reference page describes version 1 of the Deploy file format. This is the n
 The topics below are organized alphabetically for top-level keys and sub-level keys to describe the hierarchy.
 
 You can use the extended YAML syntax according to [YAML™ Version 1.2](https://yaml.org/spec/1.2/spec.html).
-Find B2B and B2C deploy file examples for [development](https://documentation.spryker.com/docs/modes-overview#development-mode) and [demo](https://documentation.spryker.com/docs/modes-overview#demo-mode) environments in the table:
+Find B2B and B2C deploy file examples for [development](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) and [demo](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) environments in the table:
 
 | Development mode | Demo mode |
 | --- | --- |
@@ -381,7 +382,7 @@ Find common settings for all services below:
 
 * `engine:` - defines a third-party application supported by Spryker that does the job specific for the *Service*. For example, you can currently set `database:engine:` to `postgres` or `mysql`.
 * `endpoints:` - defines the list of *Endpoints* that point to the *Service* web interface or port.
-* `version:` - defines the version of the service to be installed. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See [Database](https://documentation.spryker.com/docs/services#database) for detailed configuration instructions.
+* `version:` - defines the version of the service to be installed. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See [Database](/docs/scos/dev/developer-guides/202009.0/docker-sdk/configuring-services.html#database) for detailed configuration instructions.
 This variable is optional. If not specified, the [default version](https://github.com/spryker/docker-sdk#supported-services) applies.
 
 ```yaml
@@ -480,7 +481,7 @@ docker:
 
 ### docker: newrelic:
 
-Defines the [New Relic](https://documentation.spryker.com/docs/services#new-relic) configuration.
+Defines the [New Relic](/docs/scos/dev/developer-guides/202009.0/docker-sdk/configuring-services.html#new-relic) configuration.
 
 * `docker: newrelic: license:` - defines a New Relic license. Aquire it from [New Relic](https://www.newrelic.com/).
 * `docker: newrelic: appname:` - defines a New Relic application name. This variable is optional and does not have a default value.
@@ -660,7 +661,7 @@ An SQL database management system *Service*.
 * Project-wide
 
   - `database: engine:` - possible values are `postgres`and `mysql`.
-  - `database: version:` - defines the version of the database engine. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See [Database](https://documentation.spryker.com/docs/services#database) for detailed configuration instructions.
+  - `database: version:` - defines the version of the database engine. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See [Database](/docs/scos/dev/developer-guides/202009.0/docker-sdk/configuring-services.html#database) for detailed configuration instructions.
   - `database: root: username:`, `database: root: password:` - defines the user with root privileges.
   - `database: endpoints:` - defines the service's port that can be accessed via given endpoints.
 

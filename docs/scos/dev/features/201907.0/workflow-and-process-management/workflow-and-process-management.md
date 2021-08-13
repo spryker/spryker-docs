@@ -2,6 +2,7 @@
 title: Workflow & Process Management
 description: Workflow process management tool allows B2B customers to optimize their internal processes and improve customers' shop experience and ordering process
 originalLink: https://documentation.spryker.com/v3/docs/workflow-process-management
+originalArticleId: 37706b6c-f16c-4a55-a3e2-6f2d96985787
 redirect_from:
   - /v3/docs/workflow-process-management
   - /v3/docs/en/workflow-process-management

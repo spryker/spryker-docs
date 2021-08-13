@@ -2,6 +2,7 @@
 title: ProcessTimedOutException after queue-task-start
 description: Learn how to fix the exception after running queue-task-start
 originalLink: https://documentation.spryker.com/v6/docs/processtimedoutexception-after-queuetaskstart
+originalArticleId: e437cbf9-323a-4453-9d15-d3574347a67e
 redirect_from:
   - /v6/docs/processtimedoutexception-after-queuetaskstart
   - /v6/docs/en/processtimedoutexception-after-queuetaskstart

@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Twig Extensions
 originalLink: https://documentation.spryker.com/v2/docs/t-twig-extensions
+originalArticleId: 5ae7af3b-73f3-46e7-b835-1d461c5f761e
 redirect_from:
   - /v2/docs/t-twig-extensions
   - /v2/docs/en/t-twig-extensions
@@ -9,10 +10,10 @@ redirect_from:
 <!--used to be: http://spryker.github.io/tutorials/yves/twig-extensions/-->
 As an example on how to implement a Twig extension, we’ll build a filter which can be used for displaying prices.
 
-* [Implement the filter](https://documentation.spryker.com/v2/docs/t-twig-extensions#implement-the-filter)
-* [Add the twig extension](https://documentation.spryker.com/v2/docs/t-twig-extensions#add-the-twig-extension)
-* [Register the new twig extension](https://documentation.spryker.com/v2/docs/t-twig-extensions#register-the-twig-extension-that-you-created)
-* [Test your twig extension](https://documentation.spryker.com/v2/docs/t-twig-extensions#test-the-twig-extension)
+* [Implement the filter](/docs/scos/dev/tutorials/201903.0/advanced/tutorial-twig-extensions.html#implement-the-filter)
+* [Add the twig extension](/docs/scos/dev/tutorials/201903.0/advanced/tutorial-twig-extensions.html#add-the-twig-extension)
+* [Register the new twig extension](/docs/scos/dev/tutorials/201903.0/advanced/tutorial-twig-extensions.html#register-the-twig-extension-that-you-created)
+* [Test your twig extension](/docs/scos/dev/tutorials/201903.0/advanced/tutorial-twig-extensions.html#test-the-twig-extension)
 
 ## Implement the Filter
 Add the logic to a dedicated class in the module you’re currently working on:

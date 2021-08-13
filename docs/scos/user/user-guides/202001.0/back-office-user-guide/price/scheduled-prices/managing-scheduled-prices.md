@@ -1,6 +1,7 @@
 ---
 title: Managing Scheduled Prices
 originalLink: https://documentation.spryker.com/v4/docs/managing-scheduled-prices
+originalArticleId: 6fcff7ff-2c91-4aa1-a6c4-954f531b085f
 redirect_from:
   - /v4/docs/managing-scheduled-prices
   - /v4/docs/en/managing-scheduled-prices

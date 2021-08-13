@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductAvailabilitiesRestApi
 originalLink: https://documentation.spryker.com/v3/docs/productavailabilitiesrestapi-migration-guide
+originalArticleId: e4905387-2151-474d-805f-956a1ab3c50f
 redirect_from:
   - /v3/docs/productavailabilitiesrestapi-migration-guide
   - /v3/docs/en/productavailabilitiesrestapi-migration-guide

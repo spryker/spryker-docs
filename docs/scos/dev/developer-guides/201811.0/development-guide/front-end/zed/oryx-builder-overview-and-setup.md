@@ -2,6 +2,7 @@
 title: Oryx Builder Overview and Setup
 description: Oryx is the Spryker projects frontend helper. The purpose of Oryx is to simplify the asset building process, giving developers the freedom to choose and configure the preprocessors for the frontend.
 originalLink: https://documentation.spryker.com/v1/docs/oryx
+originalArticleId: 6e829edb-07a8-448b-a6fa-721c26a710e2
 redirect_from:
   - /v1/docs/oryx
   - /v1/docs/en/oryx

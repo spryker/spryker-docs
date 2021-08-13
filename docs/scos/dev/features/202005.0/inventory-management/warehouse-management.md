@@ -2,6 +2,7 @@
 title: Warehouse Management
 description: Your product's availability is calculated on a per-store basis. You can manage stocks across all international entities from a single interface.
 originalLink: https://documentation.spryker.com/v5/docs/multiple-warehouse-stock
+originalArticleId: b23b3c1e-eaff-4207-af42-afe858526881
 redirect_from:
   - /v5/docs/multiple-warehouse-stock
   - /v5/docs/en/multiple-warehouse-stock
@@ -9,7 +10,7 @@ redirect_from:
 
 Your product's availability is calculated on a per-store basis, meaning you can manage stocks from a single interface and make warehouse management more efficient.
 
-If you have multiple warehouses, your products can have multiple stock quantities to reflect availability accurately. This all can be done in the Back office. See [Managing Warehouses](https://documentation.spryker.com/docs/en/managing-warehouses) for more details. Also, you can import warehouse information via a .csv file.
+If you have multiple warehouses, your products can have multiple stock quantities to reflect availability accurately. This all can be done in the Back office. See [Managing Warehouses](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/warehouses/managing-warehouses.html) for more details. Also, you can import warehouse information via a .csv file.
 
 You can easily manage stocks across all stores and warehouses as well as share warehouses between different stores from a single interface and make warehouse management more efficient and flexible.
 

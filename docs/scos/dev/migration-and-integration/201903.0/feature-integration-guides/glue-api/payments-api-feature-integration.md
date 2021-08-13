@@ -1,6 +1,7 @@
 ---
 title: Payments API Feature Integration
 originalLink: https://documentation.spryker.com/v2/docs/payments-api-feature-integration-201903
+originalArticleId: 785e21c3-4474-447c-bfbf-ca1942f9c80a
 redirect_from:
   - /v2/docs/payments-api-feature-integration-201903
   - /v2/docs/en/payments-api-feature-integration-201903

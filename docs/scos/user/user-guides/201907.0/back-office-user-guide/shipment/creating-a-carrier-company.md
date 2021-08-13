@@ -1,6 +1,7 @@
 ---
 title: Creating a Carrier Company
 originalLink: https://documentation.spryker.com/v3/docs/creating-a-carrier-company
+originalArticleId: 96607861-f44a-4083-acd3-4ea56b73aca3
 redirect_from:
   - /v3/docs/creating-a-carrier-company
   - /v3/docs/en/creating-a-carrier-company

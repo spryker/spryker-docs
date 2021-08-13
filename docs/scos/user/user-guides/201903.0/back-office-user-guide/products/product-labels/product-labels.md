@@ -2,6 +2,7 @@
 title: Product Labels
 description: Use the Product Labels section to highlight specific products in your online store by adding a prodcut label in the Back Office.
 originalLink: https://documentation.spryker.com/v2/docs/product-labels
+originalArticleId: 36d15236-2fbf-402b-8ec7-b0f1a44c0183
 redirect_from:
   - /v2/docs/product-labels
   - /v2/docs/en/product-labels

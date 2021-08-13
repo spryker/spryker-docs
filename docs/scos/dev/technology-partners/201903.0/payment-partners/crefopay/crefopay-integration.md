@@ -2,6 +2,7 @@
 title: CrefoPay - Integration
 description: This article provides instructions on integrating CrefoPay into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v2/docs/crefopay-integration
+originalArticleId: 4d3d995a-2ee6-4765-8bcb-6ff4ebe7a8bc
 redirect_from:
   - /v2/docs/crefopay-integration
   - /v2/docs/en/crefopay-integration

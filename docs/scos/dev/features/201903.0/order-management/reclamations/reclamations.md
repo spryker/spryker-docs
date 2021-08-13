@@ -2,6 +2,7 @@
 title: Reclamations
 description: The Reclamations feature is a simple, yet effective way for administrators to handle all the customer order claims from customers.
 originalLink: https://documentation.spryker.com/v2/docs/reclamations
+originalArticleId: 0e13962b-dcb4-4e0b-bf36-4a2d78e17ce0
 redirect_from:
   - /v2/docs/reclamations
   - /v2/docs/en/reclamations

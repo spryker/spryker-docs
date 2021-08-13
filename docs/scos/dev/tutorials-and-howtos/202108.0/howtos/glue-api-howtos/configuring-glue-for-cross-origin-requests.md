@@ -1,9 +1,12 @@
 ---
 title: Configuring Glue for cross-origin requests
 originalLink: https://documentation.spryker.com/2021080/docs/ht-configuring-glue-for-cross-origin-requests-201903
+originalArticleId: 340bd1d9-3055-488a-81e0-aad02e5c5220
 redirect_from:
   - /2021080/docs/ht-configuring-glue-for-cross-origin-requests-201903
   - /2021080/docs/en/ht-configuring-glue-for-cross-origin-requests-201903
+  - /docs/ht-configuring-glue-for-cross-origin-requests-201903
+  - /docs/en/ht-configuring-glue-for-cross-origin-requests-201903
 ---
 
 By default, Glue REST API is configured to run using the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy), which still remains the recommended default security level for web applications. However, taking into account that requests to Glue REST API can originate from touchpoints located across multiple domains, we made it possible to enable Cross-Origin Resource Sharing (CORS) in Glue. When CORS is enabled, Glue REST API can accept requests from a list of allowed origins or from any origin, depending on configuration.

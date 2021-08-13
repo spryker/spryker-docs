@@ -2,6 +2,7 @@
 title: Implementation of Direct Debit in Yves
 description: Usually, the first step of the Direct Debit payment method implementation is set-up on Yves. This article provides step-by-step instructions on how to do that.
 originalLink: https://documentation.spryker.com/v2/docs/dd-fe-implementation
+originalArticleId: d5baf9a7-6c64-47e7-94b5-6d26de7b1913
 redirect_from:
   - /v2/docs/dd-fe-implementation
   - /v2/docs/en/dd-fe-implementation

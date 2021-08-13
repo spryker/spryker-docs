@@ -1,6 +1,7 @@
 ---
 title: Retrieving Ratings and Reviews
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-ratings-and-reviews
+originalArticleId: 60b37718-78b9-40f9-a3cb-edad3c01af51
 redirect_from:
   - /v4/docs/retrieving-ratings-and-reviews
   - /v4/docs/en/retrieving-ratings-and-reviews
@@ -8,7 +9,7 @@ redirect_from:
 
 [Ratings and reviews](/docs/scos/dev/features/202001.0/rating-and-reviews/rating-and-reviews.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
 
-Glue REST API allows retrieving a list of ratings and reviews for each product, as well as its average rating. This can help frontend developers in building the product page, extending it with the ratings and reviews relevant to each product. Also, the average rating of each product, as well as the number of times it has been reviewed, will be available in all endpoints where abstract and concrete products can be included as a relationship, such as, for example, [/catalog-search](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/catalog-search.html), [/related-products](https://documentation.spryker.com/v4/docs/retrieving-related-products-201903#getting-related-items-for-an-abstract-product), [/up-selling-products](https://documentation.spryker.com/v4/docs/retrieving-related-products-201903#getting-up-selling-products-for-a-registered-user-s-cart), [/abstract-alternative-products](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-products/retrieving-alternative-products.html), etc.
+Glue REST API allows retrieving a list of ratings and reviews for each product, as well as its average rating. This can help frontend developers in building the product page, extending it with the ratings and reviews relevant to each product. Also, the average rating of each product, as well as the number of times it has been reviewed, will be available in all endpoints where abstract and concrete products can be included as a relationship, such as, for example, [/catalog-search](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/catalog-search.html), [/related-products](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-products/retrieving-related-products.html#getting-related-items-for-an-abstract-product), [/up-selling-products](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-products/retrieving-related-products.html#getting-up-selling-products-for-a-registered-user-s-cart), [/abstract-alternative-products](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-products/retrieving-alternative-products.html), etc.
 
 Apart from that, the API allows developers to add the possibility for customers to post ratings and reviews.
 
@@ -295,7 +296,7 @@ If the product hasn’t been reviewed yet, the `reviewCount` attribute is **null
 ```
 
 {% info_block infoBox "Info" %}
-For detailed information on the endpoints, response attributes, possible errors, etc., see [General Product Information](https://documentation.spryker.com/v4/docs/retrieving-product-information#general-product-information
+For detailed information on the endpoints, response attributes, possible errors, etc., see [General Product Information](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html#general-product-information
 {% endinfo_block %}.)
 
 ## Rating and Reviewing Products

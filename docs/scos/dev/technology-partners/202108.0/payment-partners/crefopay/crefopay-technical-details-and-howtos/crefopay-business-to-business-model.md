@@ -2,9 +2,12 @@
 title: CrefoPay - Business to Business Model
 description: CrefoPay module provides B2B strategy in payments.
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-business-to-business-model
+originalArticleId: 14cda40b-6339-44f2-971c-b4282dcf02c8
 redirect_from:
   - /2021080/docs/crefopay-business-to-business-model
   - /2021080/docs/en/crefopay-business-to-business-model
+  - /docs/crefopay-business-to-business-model
+  - /docs/en/crefopay-business-to-business-model
 ---
 
 CrefoPay module enables B2B strategy in payments.

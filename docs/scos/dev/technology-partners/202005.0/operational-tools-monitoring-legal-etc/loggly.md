@@ -2,6 +2,7 @@
 title: Loggly
 description: Read log messages from a queue and send the messages via https by integrating Loggly into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v5/docs/loggly-queue
+originalArticleId: b2651f11-77e4-47ab-8c13-ce3fd5bbc71d
 redirect_from:
   - /v5/docs/loggly-queue
   - /v5/docs/en/loggly-queue
@@ -9,7 +10,7 @@ redirect_from:
 
 The Loggly module provides a plugin to read log messages from a queue and send the messages via https to [Loggly](https://www.loggly.com/).
 
-To integrate this plugin you need to have the `QueueHandler` enabled in your Logger configuration. <!-- as described [here](https://documentation.spryker.com/docs/en/logger.htm).-->
+To integrate this plugin you need to have the `QueueHandler` enabled in your Logger configuration. <!-- as described [here](https://documentation.spryker.com/v5/docs/en/logger.htm).-->
 
 In addition you need to properly configure the queue setup for Loggly to work.
 

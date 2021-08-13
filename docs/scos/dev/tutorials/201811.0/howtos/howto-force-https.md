@@ -1,6 +1,7 @@
 ---
 title: HowTo - Force HTTPS
 originalLink: https://documentation.spryker.com/v1/docs/ht-force-https
+originalArticleId: bc2dd91d-04fe-434c-a1a5-ee5e17bf83ac
 redirect_from:
   - /v1/docs/ht-force-https
   - /v1/docs/en/ht-force-https

@@ -1,9 +1,12 @@
 ---
 title: Release Notes - November - 2 2017
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-november-2-2017
+originalArticleId: d2b19933-8cf8-4812-847d-f36c5d6253be
 redirect_from:
   - /2021080/docs/release-notes-november-2-2017
   - /2021080/docs/en/release-notes-november-2-2017
+  - /docs/release-notes-november-2-2017
+  - /docs/en/release-notes-november-2-2017
 ---
 
 ## Improvements
@@ -81,7 +84,7 @@ This change does not require database changes but it does require Propel model r
 
 **Documentation**
 For module documentation, see Customer Module Guide<!--/capabilities/crm/customer-module-overview.htm)-->.
-For detailed migration guides, see [Customer Module Migration Guide from Version 6. to 7](https://documentation.spryker.com/v4/docs/mg-customer#upgrading-from-version-6---to-version-7-0).
+For detailed migration guides, see [Customer Module Migration Guide from Version 6. to 7](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-customer.html#upgrading-from-version-6---to-version-7-0).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -143,8 +146,8 @@ Previously, breadcrumbs were missing for the product attribute translation manag
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Payment Integration - BS Payone - 1.1](/docs/scos/dev/technology-partners/202001.0/payment-partners/bs-payone/bs-payone.html) 
+* [Payment Integration - BS Payone - 1.1](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/bs-payone/bs-payone.html) 
 * Integration With Project - Payone
-* [PayPal Express Checkout Payment - Payone - 1.1](/docs/scos/dev/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-express-checkout-payment.html)
+* [PayPal Express Checkout Payment - Payone - 1.1](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html)
  
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey] [here](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

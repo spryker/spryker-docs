@@ -1,9 +1,12 @@
 ---
 title: Migration Guide - ProductLabelSearch
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productlabelsearch
+originalArticleId: 9fca0eb4-da0d-471a-a805-66f3fbd32879
 redirect_from:
   - /2021080/docs/migration-guide-productlabelsearch
   - /2021080/docs/en/migration-guide-productlabelsearch
+  - /docs/migration-guide-productlabelsearch
+  - /docs/en/migration-guide-productlabelsearch
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
@@ -67,7 +70,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](https://documentation.spryker.com/docs/search-migration-concept). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](https://documentation.spryker.com/docs/mg-search#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
 
 {% endinfo_block %}
 To upgrade the module, do the following:

@@ -2,9 +2,12 @@
 title: Managing file tree
 description: Use the procedures to create or delete a file directory, upload media files, change the order for file directories in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-file-tree
+originalArticleId: b9ec164d-4687-4d68-ab77-5e98b284dd1b
 redirect_from:
   - /2021080/docs/managing-file-tree
   - /2021080/docs/en/managing-file-tree
+  - /docs/managing-file-tree
+  - /docs/en/managing-file-tree
 ---
 
 This article describes how to manage the file tree.
@@ -13,7 +16,7 @@ The *File Tree* section is used to upload the files, create or delete the direct
 
 ## Prerequisites
 
-If there are no MIME types defined in the *MIME Type Settings* section, you will be able to download any type of file. If you have at least one MIME type defined as Is Allowed, you will be able to download only the files of that type unless you add more allowed types. See [Managing MIME Type Settings](https://documentation.spryker.com/2021080/docs/managing-mime-type-settings) for more details.
+If there are no MIME types defined in the *MIME Type Settings* section, you will be able to download any type of file. If you have at least one MIME type defined as Is Allowed, you will be able to download only the files of that type unless you add more allowed types. See [Managing MIME Type Settings](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/mime-type-settings/managing-mime-type-settings.html) for more details.
 
 To start working with file tree elements, navigate to **Content** > **File Tree** section.
 
@@ -62,7 +65,7 @@ The file is uploaded to the selected folder.
 ## Managing files
 
 Once the file is uploaded, you can manage it from two locations: 
-* File List (for more details, see [Managing File List](https://documentation.spryker.com/2021080/docs/managing-file-list))
+* File List (for more details, see [Managing File List](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/file-manager/managing-file-list.html))
 * File Tree
 
 **To manage a file:**

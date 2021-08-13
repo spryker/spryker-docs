@@ -2,9 +2,12 @@
 title: Managing customer access
 description: The guide provides a procedure on how a shop owner can define restrictions for actions for non-logged in users.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-access
+originalArticleId: c74c94ad-1095-4299-8675-7128bf96d855
 redirect_from:
   - /2021080/docs/managing-customer-access
   - /2021080/docs/en/managing-customer-access
+  - /docs/managing-customer-access
+  - /docs/en/managing-customer-access
 ---
 
 The *Customer Access* page allows you to define what information not logged-in to online store customers.

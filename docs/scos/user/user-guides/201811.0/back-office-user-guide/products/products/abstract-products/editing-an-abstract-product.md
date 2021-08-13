@@ -2,6 +2,7 @@
 title: Editing an Abstract Product
 description: The guide walks you through the procedure of updating an abstract product in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/editing-an-abstract-product
+originalArticleId: d895943d-a48c-419a-99cd-39eb94fc35a8
 redirect_from:
   - /v1/docs/editing-an-abstract-product
   - /v1/docs/en/editing-an-abstract-product

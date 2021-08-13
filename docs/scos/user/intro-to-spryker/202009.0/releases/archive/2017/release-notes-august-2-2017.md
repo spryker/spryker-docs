@@ -1,6 +1,7 @@
 ---
 title: Release Notes - August - 2 2017
 originalLink: https://documentation.spryker.com/v6/docs/release-notes-august-2-2017
+originalArticleId: 3bae2fed-aaa5-495e-b7db-fab4665c1967
 redirect_from:
   - /v6/docs/release-notes-august-2-2017
   - /v6/docs/en/release-notes-august-2-2017
@@ -33,7 +34,7 @@ new ProductOptionGroupIdHydratorPlugin(),
 | <ul><li>[Sales 7.0.0](https://github.com/spryker/Sales/releases/tag/7.0.0)</li><li>[SalesProductConnector 1.0.0](https://github.com/spryker/sales-product-connector/releases/tag/1.0.0)</li></ul> | <ul><li>[Customer 6.1.0](https://github.com/spryker/Customer/releases/tag/6.1.0)</li><li>[ProductBundle 3.2.0](https://github.com/spryker/product-bundle/releases/tag/3.2.0)</li><li>[ProductCartConnector 4.1.0](https://github.com/spryker/product-cart-connector/releases/tag/4.1.0)</li><li>[ProductOption 5.1.0](https://github.com/spryker/product-option/releases/tag/5.1.0)</li></ul> | <ul><li>[Braintree 0.5.4](https://github.com/spryker/Braintree/releases/tag/0.5.4)</li><li>[Discount 4.3.2](https://github.com/spryker/Discount/releases/tag/4.3.2)</li><li>[DummyPayment 2.0.4](https://github.com/spryker/dummy-payment/releases/tag/2.0.4)</li><li>[Nopayment 3.0.2](https://github.com/spryker/Nopayment/releases/tag/3.0.2)</li><li>[Oms 7.0.1](https://github.com/spryker/Oms/releases/tag/7.0.1)</li><li>[Payolution 4.0.4](https://github.com/spryker/Payolution/releases/tag/4.0.4)</li><li>[Payone 4.0.3](https://github.com/spryker/Payone/releases/tag/4.0.3)</li><li>[Ratepay 0.6.2](https://github.com/spryker/Ratepay/releases/tag/0.6.2)</li><li>[Refund 5.0.1](https://github.com/spryker/Refund/releases/tag/5.0.1)</li><li>[SalesSplit 3.0.2](https://github.com/spryker/sales-split/releases/tag/3.0.2)</li><li>[Shipment 5.0.1](https://github.com/spryker/Shipment/releases/tag/5.0.1)</li></ul> |
 
 **Documentation**
-For detailed migration guides, see [Sales Module Guide from Version 6.* to 7.*](https://documentation.spryker.com/v4/docs/mg-sales#upgrading-from-version-6---to-version-7--).
+For detailed migration guides, see [Sales Module Guide from Version 6.* to 7.*](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-sales.html#upgrading-from-version-6---to-version-7--).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -63,7 +64,7 @@ With this release, we enable the `isSearchable` checkbox in CMS page Zed Admin U
 ### Initial Grand Total Calculator
 The discount module provides a plugin to set up a discount condition to grand total. However, previously the `Calculation` module did not provide information about grand totals to make this kind of discount applicable. We have now extended the `Calculation` stack to provide all required information by discounts.
 
-To enable this change, please adjust `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack` according to [Calculation Migration Guide](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-calculation.html). Place `InitialGrandTotalCalculatorPlugin()` in the right sequence.
+To enable this change, please adjust `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack` according to [Calculation Migration Guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-calculation.html). Place `InitialGrandTotalCalculatorPlugin()` in the right sequence.
 
 **Affected Modules**
 
@@ -256,5 +257,5 @@ composer require --dev spryker/code-sniffer squizlabs/php_codesniffer
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Fact-Finder - Campaigns](/docs/scos/dev/technology-partners/202001.0/marketing-and-conversion/analytics/fact-finder/fact-finder-campaigns.html)
-* [Fact-Finder - Recommendation](/docs/scos/dev/technology-partners/202001.0/marketing-and-conversion/analytics/fact-finder/fact-finder-recommendation.html)
+* [Fact-Finder - Campaigns](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/analytics/fact-finder/fact-finder-campaigns.html)
+* [Fact-Finder - Recommendation](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/analytics/fact-finder/fact-finder-recommendation.html)

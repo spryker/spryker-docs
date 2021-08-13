@@ -2,6 +2,7 @@
 title: Paazl
 description: Connect e-commerce brands and retailers to a wide range of global, national and inner-city delivery carriers by integrating Paazl intot he Spryker-based shop.
 originalLink: https://documentation.spryker.com/v6/docs/paazl
+originalArticleId: e873b5d6-a20c-488f-b3c5-6df8781bfca4
 redirect_from:
   - /v6/docs/paazl
   - /v6/docs/en/paazl

@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Architectural Walkthrough - Legacy Demoshop
 originalLink: https://documentation.spryker.com/v1/docs/architectural-walkthrough-legacy-demoshop
+originalArticleId: d6838ef4-2c6a-460a-be3c-4bb48476a0df
 redirect_from:
   - /v1/docs/architectural-walkthrough-legacy-demoshop
   - /v1/docs/en/architectural-walkthrough-legacy-demoshop

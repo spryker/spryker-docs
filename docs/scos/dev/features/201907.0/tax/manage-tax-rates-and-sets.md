@@ -2,6 +2,7 @@
 title: Manage Tax Rates & Sets
 description: Align your business with international tax standards by defining tax rates and sets.
 originalLink: https://documentation.spryker.com/v3/docs/manage-tax-rates-sets
+originalArticleId: 1a6ba1dc-9d26-4c57-8194-19c1c79cb2ac
 redirect_from:
   - /v3/docs/manage-tax-rates-sets
   - /v3/docs/en/manage-tax-rates-sets

@@ -2,9 +2,12 @@
 title: Product Relations
 description: Shop owners can help visitors to explore products that are related to the one they are currently looking at by upselling or displaying similar products.
 originalLink: https://documentation.spryker.com/2021080/docs/product-relations
+originalArticleId: 5235b82b-b961-4c42-9dc6-283f43ef79f2
 redirect_from:
   - /2021080/docs/product-relations
   - /2021080/docs/en/product-relations
+  - /docs/product-relations
+  - /docs/en/product-relations
 ---
 
 One of the best e-commerce techniques to drive your sales and reduce marketing spendings is a cross-selling and upselling techniques. To use them in Spryker, you can define product relations to recommend the desired products to your customers. For example, when your customers buy a phone, you can display headphones or a phone case as additional items to encourage customers to buy more. Additionally, you can display product associations that let your customers see the products they might also be interested in. To up-sell items, you can build a set of suggestions to offer upscale product versions or additional fixtures to maximize the cart value. 

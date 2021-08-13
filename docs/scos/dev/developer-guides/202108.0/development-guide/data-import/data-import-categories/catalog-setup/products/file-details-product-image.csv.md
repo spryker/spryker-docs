@@ -1,12 +1,15 @@
 ---
 title: File details- product_image.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-imagecsv
+originalArticleId: 7c155fe3-3def-4963-89fa-bf3b98b61fbb
 redirect_from:
   - /2021080/docs/file-details-product-imagecsv
   - /2021080/docs/en/file-details-product-imagecsv
+  - /docs/file-details-product-imagecsv
+  - /docs/en/file-details-product-imagecsv
 ---
 
-This article contains content of the *product_image.csv* file to configure [Product Image](https://documentation.spryker.com/docs/product-image-management-201907) information on your Spryker Demo Shop.
+This article contains content of the *product_image.csv* file to configure [Product Image](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & mandatory fields 
 These are the header fields to be included in the .csv file:
@@ -28,8 +31,8 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-* [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
-* [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
+* [product_abstract.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_concrete.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Template file & content example
 A template and an example of the *product_image.csv*  file can be downloaded here:

@@ -1,12 +1,13 @@
 ---
 title: File details- product_label.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-labelcsv
+originalArticleId: 3485152a-e686-4553-b349-0d69de6d737a
 redirect_from:
   - /v6/docs/file-details-product-labelcsv
   - /v6/docs/en/file-details-product-labelcsv
 ---
 
-This article contains content of the **product_label.csv** file to configure [Product Label](https://documentation.spryker.com/docs/product-label) information on your Spryker Demo Shop.
+This article contains content of the **product_label.csv** file to configure [Product Label](/docs/scos/dev/features/202009.0/product-labels/product-labels.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -28,7 +29,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+*    [product_abstract.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_label.csv*  file can be downloaded here:

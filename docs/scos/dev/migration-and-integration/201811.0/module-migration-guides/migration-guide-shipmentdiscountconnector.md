@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ShipmentDiscountConnector
 originalLink: https://documentation.spryker.com/v1/docs/mg-shipment-discount-connector
+originalArticleId: fbb3ba66-aecc-4fb4-8f5f-215a6b1c33fa
 redirect_from:
   - /v1/docs/mg-shipment-discount-connector
   - /v1/docs/en/mg-shipment-discount-connector

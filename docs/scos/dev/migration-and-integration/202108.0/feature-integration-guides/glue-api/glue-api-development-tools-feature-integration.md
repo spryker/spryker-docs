@@ -2,9 +2,12 @@
 title: Glue API- Development Tools feature integration
 description: This guide explains how to integrate the Glue- Development Tools feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-development-tools-feature-integration
+originalArticleId: 116f0a62-f6dc-4707-a2d1-d2c89a7c4a53
 redirect_from:
   - /2021080/docs/glue-api-development-tools-feature-integration
   - /2021080/docs/en/glue-api-development-tools-feature-integration
+  - /docs/glue-api-development-tools-feature-integration
+  - /docs/en/glue-api-development-tools-feature-integration
 ---
 
 This document describes how to integrate the Glue: Development Tools feature into a Spryker project.

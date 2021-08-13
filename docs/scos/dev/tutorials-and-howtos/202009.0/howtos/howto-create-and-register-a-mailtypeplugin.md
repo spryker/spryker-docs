@@ -2,6 +2,7 @@
 title: HowTo - Create and Register a MailTypePlugin
 description: Use the guide to create and register the  MailTypePlugin in the Mail module.
 originalLink: https://documentation.spryker.com/v6/docs/ht-mail-create-mailtype-plugin
+originalArticleId: 87944683-567f-485f-b017-37a2d24fec4d
 redirect_from:
   - /v6/docs/ht-mail-create-mailtype-plugin
   - /v6/docs/en/ht-mail-create-mailtype-plugin

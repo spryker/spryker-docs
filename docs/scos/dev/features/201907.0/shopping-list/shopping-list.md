@@ -2,6 +2,7 @@
 title: Shopping List
 description: Everything you need to know about the Shopping List capability.
 originalLink: https://documentation.spryker.com/v3/docs/shopping-list
+originalArticleId: 944e4504-f034-4b94-8de2-f26a7676cb4f
 redirect_from:
   - /v3/docs/shopping-list
   - /v3/docs/en/shopping-list

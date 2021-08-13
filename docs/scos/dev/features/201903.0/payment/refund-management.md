@@ -2,6 +2,7 @@
 title: Refund Management
 description: Refunds can be handled automatically in the Admin Interface, once the order has been delivered. All refunds can be listed per order or as a full overview.
 originalLink: https://documentation.spryker.com/v2/docs/refund-management
+originalArticleId: 3b80c290-1aa7-418f-876b-f8e05041389b
 redirect_from:
   - /v2/docs/refund-management
   - /v2/docs/en/refund-management

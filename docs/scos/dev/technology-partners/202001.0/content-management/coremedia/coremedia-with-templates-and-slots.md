@@ -1,6 +1,7 @@
 ---
 title: Coremedia with Templates & Slots
 originalLink: https://documentation.spryker.com/v4/docs/coremedia-with-templates-slots
+originalArticleId: 70b1c4f4-fdc4-4823-be96-bcc09a1c50ec
 redirect_from:
   - /v4/docs/coremedia-with-templates-slots
   - /v4/docs/en/coremedia-with-templates-slots
@@ -8,10 +9,10 @@ redirect_from:
 
 ## General Information
 {% info_block infoBox %}
-This document describes how the Templates & Slots feature works with the CoreMedia technology partner. Make sure to check out the [Templates & Slots Feature Overview](https://documentation.spryker.com/v4/docs/templates-slots-feature-overview 
+This document describes how the Templates & Slots feature works with the CoreMedia technology partner. Make sure to check out the [Templates & Slots Feature Overview](/docs/scos/dev/features/202001.0/cms/templates-and-slots/templates-and-slots-feature-overview.html
 {% endinfo_block %} that provides basic information about the feature before you proceed.)
 
-The Templates & Slots feature enables content managers to embed the content created in the CoreMedia CMS editor into any Storefront page.  In the Back Office, a content manager can embed the content into any Storefront page. The embedded content is rendered by the [Slot Widget](https://documentation.spryker.com/v4/docs/templates-slots-feature-overview#slot-widget). 
+The Templates & Slots feature enables content managers to embed the content created in the CoreMedia CMS editor into any Storefront page.  In the Back Office, a content manager can embed the content into any Storefront page. The embedded content is rendered by the [Slot Widget](/docs/scos/dev/features/202001.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#slot-widget). 
 
 Slot is the space in a page into which the content created in the CoreMedia CMS editor will be placed. There is a number of slots shipped by default with the Templates & Slots feature. All of them are configured to fetch content from [CMS blocks](/docs/scos/dev/features/202001.0/cms/cms-block/cms-block.html). If you want to use them, re-import the slot list <!-- link to https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1010237647/WIP+Data+Importers+CMS-2467 --> specifying CoreMedia as their content provider. All the new slots that you import should have CoreMedia as it's content provider too.
 

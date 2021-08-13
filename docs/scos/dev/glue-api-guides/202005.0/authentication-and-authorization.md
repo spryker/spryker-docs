@@ -2,6 +2,7 @@
 title: Authentication and Authorization
 description: This article provides the list of private resources and describes how to install and use the means needed to work with the sensitive data.
 originalLink: https://documentation.spryker.com/v5/docs/authentication-and-authorization
+originalArticleId: a855d9d5-872a-4602-ac3b-4cb0c5ffd8fc
 redirect_from:
   - /v5/docs/authentication-and-authorization
   - /v5/docs/en/authentication-and-authorization
@@ -126,7 +127,7 @@ All protected resources can return the following generic errors:
 | 003 | Failed to log in the user |
 | 004 | Failed to refresh a token |
 
-Also, some resources can be protected by shop owners from unauthorized access explicitly. If a resource is protected, any unauthorized attempt to access it will result in a **403 Forbidden error**. To facilitate the development of custom storefronts with such resources and avoid extra calls to them, Glue REST API provides the possibility to retrieve a list of such resources. It is, therefore, the responsibility of the API client to retrieve the list as a pre-flight check. For more details, see [Getting the List of Protected Resources](https://documentation.spryker.com/docs/en/getting-the-list-of-protected-resources).
+Also, some resources can be protected by shop owners from unauthorized access explicitly. If a resource is protected, any unauthorized attempt to access it will result in a **403 Forbidden error**. To facilitate the development of custom storefronts with such resources and avoid extra calls to them, Glue REST API provides the possibility to retrieve a list of such resources. It is, therefore, the responsibility of the API client to retrieve the list as a pre-flight check. For more details, see [Getting the List of Protected Resources](/docs/scos/dev/glue-api-guides/202005.0/getting-the-list-of-protected-resources.html).
 
 ## Refreshing Tokens
 To refresh an access token, send a request to the following endpoint and pass the corresponding refresh token:
@@ -183,7 +184,7 @@ where `def50200e880ff70949d88a7ab15169c082970c450ce42b77` is the refresh token y
 
 {% info_block infoBox "Info" %}
 
-Users can invalidate their own refresh tokens only. To do so, they need to access the endpoints with a valid access token. For information on how to do so, see [Accessing Resources](https://documentation.spryker.com/docs/en/authentication-and-authorization#accessing-resources).
+Users can invalidate their own refresh tokens only. To do so, they need to access the endpoints with a valid access token. For information on how to do so, see [Accessing Resources](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html#accessing-resources).
 
 {% endinfo_block %}
 Upon completion of a request, the endpoint responds with the **204 No Content** status code.
@@ -194,7 +195,7 @@ For security considerations, the endpoint returns the **204** status code no mat
 
 {% endinfo_block %}
 
-The token(s) are marked as expired on the date and time of the request. After expiration, tokens can be deleted from the database. For this purpose, you need to set the lifetime for **expired** tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/docs/en/configuring-outdated-refresh-token-life-time). 
+The token(s) are marked as expired on the date and time of the request. After expiration, tokens can be deleted from the database. For this purpose, you need to set the lifetime for **expired** tokens. For details, see [Configuring Outdated Refresh Token Life Time](/docs/scos/dev/glue-api-guides/202005.0/configuring-outdated-refresh-token-life-time.html). 
 
 ## Possible Errors
 

@@ -2,6 +2,7 @@
 title: Migration Guide - ProductRelationStorage
 description: Use the guide to learn how to update the ProductRelationStorage module.
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-productrelationstorage
+originalArticleId: 85d5837f-7cc8-4a04-ad28-62cf2556e0e5
 redirect_from:
   - /v6/docs/migration-guide-productrelationstorage
   - /v6/docs/en/migration-guide-productrelationstorage

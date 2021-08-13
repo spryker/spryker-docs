@@ -2,6 +2,7 @@
 title: MacOS and Windows- file synchronization issues in Development mode
 description: Learn how to deal with file synchronization issues in Development mode on MacOS and Windows.
 originalLink: https://documentation.spryker.com/v6/docs/macos-and-windows-file-synchronization-issues-in-development-mode
+originalArticleId: 54d0474c-7e74-4048-b46c-c7acfa6f8646
 redirect_from:
   - /v6/docs/macos-and-windows-file-synchronization-issues-in-development-mode
   - /v6/docs/en/macos-and-windows-file-synchronization-issues-in-development-mode

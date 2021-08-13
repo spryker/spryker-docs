@@ -2,6 +2,7 @@
 title: Shopping lists + product options feature integration
 description: In this guide, we provide step-by-step instruction on how to install Shopping Lists + Product Options Feature  into Spryker-based project.
 originalLink: https://documentation.spryker.com/v6/docs/shopping-lists-product-options-feature-integration
+originalArticleId: 4b5bf350-bc75-4811-adeb-ad53610da37e
 redirect_from:
   - /v6/docs/shopping-lists-product-options-feature-integration
   - /v6/docs/en/shopping-lists-product-options-feature-integration

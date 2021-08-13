@@ -1,6 +1,7 @@
 ---
 title: Router
 originalLink: https://documentation.spryker.com/v3/docs/router
+originalArticleId: 1ded9da0-5d52-4e36-84a6-65fbc0bc9359
 redirect_from:
   - /v3/docs/router
   - /v3/docs/en/router

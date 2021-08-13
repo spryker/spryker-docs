@@ -2,6 +2,7 @@
 title: Measurement Units
 description: Measurement Units per Product enables support of alternate units of measure, so customers can buy in a measurement unit defined by shop administrators.
 originalLink: https://documentation.spryker.com/v1/docs/measurement-units
+originalArticleId: e0189287-dbed-4073-8249-b01660aabf46
 redirect_from:
   - /v1/docs/measurement-units
   - /v1/docs/en/measurement-units

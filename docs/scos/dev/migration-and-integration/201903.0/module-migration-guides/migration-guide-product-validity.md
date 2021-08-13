@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product Validity
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-validity
+originalArticleId: 21cd66fa-4678-4d1e-bc4a-63e357286b89
 redirect_from:
   - /v2/docs/mg-product-validity
   - /v2/docs/en/mg-product-validity

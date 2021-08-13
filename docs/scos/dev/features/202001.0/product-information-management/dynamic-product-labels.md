@@ -2,6 +2,7 @@
 title: Dynamic Product Labels
 description: You can assign Product Labels to highlight specific products in your shop. Customize the look and text of the Labels as they appear in the shop.
 originalLink: https://documentation.spryker.com/v4/docs/dynamic-product-labels
+originalArticleId: 763d6ef2-e7da-4d63-9e58-d2c727393a36
 redirect_from:
   - /v4/docs/dynamic-product-labels
   - /v4/docs/en/dynamic-product-labels

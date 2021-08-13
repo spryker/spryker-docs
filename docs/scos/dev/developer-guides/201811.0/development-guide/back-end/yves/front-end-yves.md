@@ -1,6 +1,7 @@
 ---
 title: Front-End Yves
 originalLink: https://documentation.spryker.com/v1/docs/yves
+originalArticleId: 3912fd0d-5ff9-4a9d-9d73-9cdfd6a7c7e8
 redirect_from:
   - /v1/docs/yves
   - /v1/docs/en/yves

@@ -2,6 +2,7 @@
 title: CMS Pages Versioning
 description: The guide provides instructions on how to view CMS page versions, roll back to a specific version or view SEO information in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/cms-pages-versioning
+originalArticleId: 898c8975-afad-4205-bb75-d74b53a96443
 redirect_from:
   - /v1/docs/cms-pages-versioning
   - /v1/docs/en/cms-pages-versioning

@@ -2,6 +2,7 @@
 title: Gift Card Purchase and Management
 description: Gift card is a prepaid certificate entitling its owner to use it for the purchase of products for the gift card’s value.
 originalLink: https://documentation.spryker.com/v4/docs/gift-card-purchase-management
+originalArticleId: 78936bd1-f354-4ea7-8598-b343f36f29d9
 redirect_from:
   - /v4/docs/gift-card-purchase-management
   - /v4/docs/en/gift-card-purchase-management

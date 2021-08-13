@@ -1,6 +1,7 @@
 ---
 title: Discounts Schema
 originalLink: https://documentation.spryker.com/v5/docs/db-schema-discounts
+originalArticleId: 28b305ae-7038-440e-9ca1-a18e0ff929fa
 redirect_from:
   - /v5/docs/db-schema-discounts
   - /v5/docs/en/db-schema-discounts

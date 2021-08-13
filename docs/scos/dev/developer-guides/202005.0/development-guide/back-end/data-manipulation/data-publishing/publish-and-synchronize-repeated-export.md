@@ -2,6 +2,7 @@
 title: Publish and Synchronize Repeated Export
 description: By following the steps from this article, you can re-generate published data and re-write data of database tables in Storage and Search modules with subsequent update of Redis and Elasticsearch records
 originalLink: https://documentation.spryker.com/v5/docs/publish-and-synchronize-repeated-export
+originalArticleId: 0859d0c5-f8d4-4f2d-91cb-424106ff6ac2
 redirect_from:
   - /v5/docs/publish-and-synchronize-repeated-export
   - /v5/docs/en/publish-and-synchronize-repeated-export

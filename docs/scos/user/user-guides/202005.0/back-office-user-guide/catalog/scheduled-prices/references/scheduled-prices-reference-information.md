@@ -2,6 +2,7 @@
 title: Scheduled Prices- Reference Information
 description: The guide provides additional information about the values you use when working with scheduled prices in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/scheduled-prices-reference-information
+originalArticleId: e22f405d-0fe3-4ea8-8a5f-e5cc5402c7da
 redirect_from:
   - /v5/docs/scheduled-prices-reference-information
   - /v5/docs/en/scheduled-prices-reference-information
@@ -34,7 +35,7 @@ In the **Scheduled prices imported** section you see the following:
 | Attribute | Description |
 | --- | --- |
 | **Schedule name** | The name of the list of price product schedules which will be saved in the database. |
-| **Select your CSV file** | Here, you can select the file with price product schedules which you want to import. See [HowTo - Import Scheduled Prices]( https://documentation.spryker.com/docs/en/ht-import-scheduled-prices-201907) to learn more about the file format. |
+| **Select your CSV file** | Here, you can select the file with price product schedules which you want to import. See [HowTo - Import Scheduled Prices]( /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/data-imports/howto-import-scheduled-prices.html) to learn more about the file format. |
 
 ## Scheduled Prices: Import Dry Run Page
 
@@ -61,7 +62,7 @@ The **Scheduled Prices: Import dry run** page is divided into four sections.
 | Attribute | Description |
 | --- | --- |
 | **Schedule name** |The name of the list of price product schedules which you have just imported.  |
-| **Select your CSV file** |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [HowTo - Import Scheduled Prices](https://documentation.spryker.com/docs/en/ht-import-scheduled-prices-201907).  |
+| **Select your CSV file** |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [HowTo - Import Scheduled Prices](/docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/data-imports/howto-import-scheduled-prices.html).  |
 | **Row n°** | A numeric identifier of a price schedule entry in the list of price schedules. |
 | **Error** |  Describes why a particular price schedule has not been imported.|
 | **ID** | A numeric identifier of price schedule. |

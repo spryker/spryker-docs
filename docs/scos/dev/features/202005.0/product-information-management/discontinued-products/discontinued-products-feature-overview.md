@@ -2,6 +2,7 @@
 title: Discontinued Products Feature Overview
 description: Discontinued products are shown during a certain period of time after the manufacturer or a distributor announces that the product is no longer produced.
 originalLink: https://documentation.spryker.com/v5/docs/discontinued-products-overview
+originalArticleId: 3633b954-e350-4c6e-a590-1043a2d9137d
 redirect_from:
   - /v5/docs/discontinued-products-overview
   - /v5/docs/en/discontinued-products-overview
@@ -18,7 +19,7 @@ Products are **discontinued** when the manufacturer or a current distributor has
 Discontinued products have a certain period of time when they will still be shown on the website (active_until). After this period ends - the products will become deactivated.
 
 {% info_block warningBox %}
-Only [concrete products](https://documentation.spryker.com/docs/en/product-abstraction#abstract-and-concrete-products--variants-
+Only [concrete products](/docs/scos/dev/features/202005.0/product-information-management/product-abstraction.html#abstract-and-concrete-products--variants-
 {% endinfo_block %} can become discontinued.)
 
 The schema below illustrates the relations between discontinued products, abstract and concrete products:

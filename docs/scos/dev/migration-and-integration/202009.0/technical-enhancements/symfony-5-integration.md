@@ -2,6 +2,7 @@
 title: Symfony 5 integration
 description: Learn about the main changes in the new Symfony version 5, and how you can make your project compatible with it
 originalLink: https://documentation.spryker.com/v6/docs/symfony-5-integration
+originalArticleId: 4e5eee8d-6974-4614-850b-a3211948dfbe
 redirect_from:
   - /v6/docs/symfony-5-integration
   - /v6/docs/en/symfony-5-integration

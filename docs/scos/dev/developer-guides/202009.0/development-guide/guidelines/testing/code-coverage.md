@@ -2,6 +2,7 @@
 title: Code Coverage
 description: Learn how to generate the code coverage report.
 originalLink: https://documentation.spryker.com/v6/docs/code-coverage
+originalArticleId: f734cddf-9b4e-466d-8982-01840044bce0
 redirect_from:
   - /v6/docs/code-coverage
   - /v6/docs/en/code-coverage

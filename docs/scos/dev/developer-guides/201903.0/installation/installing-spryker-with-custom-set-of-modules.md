@@ -1,6 +1,7 @@
 ---
 title: Installing Spryker with Custom Set of Modules
 originalLink: https://documentation.spryker.com/v2/docs/installation-guide-chose-modules
+originalArticleId: 5280aa0e-ed9e-4ec3-8f7f-cbba4c6bb101
 redirect_from:
   - /v2/docs/installation-guide-chose-modules
   - /v2/docs/en/installation-guide-chose-modules

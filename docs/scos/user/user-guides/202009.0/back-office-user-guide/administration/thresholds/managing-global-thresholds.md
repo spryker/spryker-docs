@@ -2,6 +2,7 @@
 title: Managing global thresholds
 description: Use the procedures to set up hard and soft thresholds when working with global thresholds in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-global-thresholds
+originalArticleId: 2b6b682f-8e53-4119-9793-717803c4213e
 redirect_from:
   - /v6/docs/managing-global-thresholds
   - /v6/docs/en/managing-global-thresholds
@@ -12,7 +13,7 @@ This topic describes how to manage global thresholds.
 To start working with global thresholds, go to **Administration** > **Global threshold**.
 ***
 ## Setting up a Hard Minimum Threshold
-To set up a [hard minimum threshold](https://documentation.spryker.com/docs/order-thresholds-feature-overview#hard-minimum-threshold):
+To set up a [hard minimum threshold](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/order-thresholds.html#hard-minimum-threshold):
 1. On the *Edit Global threshold* page, select the **Store and Currency** you want to configure the threshold for.
 2. In the *Minimum Hard Threshold* section, populate the **Enter threshold value** field.
 3. Enter a **Message** for all the locales.
@@ -20,11 +21,11 @@ To set up a [hard minimum threshold](https://documentation.spryker.com/docs/orde
 
 The page refreshes, and the message about successful threshold update is displayed.
 
-See [Threshold: Reference Information](https://documentation.spryker.com/docs/threshold-reference-information) to know more about the hard threshold.
+See [Threshold: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/thresholds/references/reference-information-threshold.html) to know more about the hard threshold.
 
 ## Setting up a Hard Maximum Threshold
 
-To set up a [hard maximum threshold](https://documentation.spryker.com/docs/order-thresholds-feature-overview#hard-maximum-threshold):
+To set up a [hard maximum threshold](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/order-thresholds.html#hard-maximum-threshold):
 
 1. On the *Edit Global threshold* page, select the **Store and Currency** you want to configure the threshold for.
 2. In the *Maximum Hard Threshold* section, populate the **Enter threshold value** field.
@@ -38,7 +39,7 @@ The page refreshes, and the message about successful threshold update is display
 
 
 ## Setting up a Soft Minimum Threshold
-To set up a [soft minimum threshold](https://documentation.spryker.com/docs/order-thresholds-feature-overview#soft-minimum-threshold):
+To set up a [soft minimum threshold](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/order-thresholds.html#soft-minimum-threshold):
 1. On the *Edit Global threshold* page, select the **Store and Currency** you want to configure the threshold for.
 2. In the *Soft Threshold* section, select a soft threshold type.
 3. Populate the **Enter threshold value** field.
@@ -51,7 +52,7 @@ To set up a [soft minimum threshold](https://documentation.spryker.com/docs/orde
 
 The page refreshes, and the message about successful threshold update is displayed.
 
-See [Threshold: Reference Information](https://documentation.spryker.com/docs/threshold-reference-information) to know more about the soft threshold and its types.
+See [Threshold: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/thresholds/references/reference-information-threshold.html) to know more about the soft threshold and its types.
 
 ## Setting up Several Thresholds
 To set up several threshold types:

@@ -1,6 +1,7 @@
 ---
 title: HowTo - Handle Case Sensitive File-System on Mac OS
 originalLink: https://documentation.spryker.com/v3/docs/ht-case-sensitive-file-system-mac
+originalArticleId: 7930f1c7-dd25-46d3-82ec-14af7df65c7a
 redirect_from:
   - /v3/docs/ht-case-sensitive-file-system-mac
   - /v3/docs/en/ht-case-sensitive-file-system-mac

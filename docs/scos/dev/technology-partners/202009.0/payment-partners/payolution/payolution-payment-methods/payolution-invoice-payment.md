@@ -2,6 +2,7 @@
 title: Payolution - Invoice Payment
 description: Integrate invoice payment through Payolution into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v6/docs/payolution-invoice
+originalArticleId: 284ceb30-1cad-4dd0-af1d-53f4d37eca4e
 redirect_from:
   - /v6/docs/payolution-invoice
   - /v6/docs/en/payolution-invoice
@@ -78,4 +79,4 @@ The configuration to integrate invoice payments using Payolution is:
 * `PAYOLUTION_BCC_EMAIL_ADDRESS`: Payolution email address to send copies of payment details to Payolution.
 
 ### Performing Requests
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/dev/technology-partners/202001.0/payment-partners/payolution/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/dev/technology-partners/202009.0/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.

@@ -2,12 +2,13 @@
 title: Executing Tests
 description: Lean what commands you can use to execute your tests.
 originalLink: https://documentation.spryker.com/v6/docs/executing-tests
+originalArticleId: 427037c7-2b6b-49e8-9b84-ef23d9db3f29
 redirect_from:
   - /v6/docs/executing-tests
   - /v6/docs/en/executing-tests
 ---
 
-There are many ways to execute the [tests](https://documentation.spryker.com/docs/test-framework). You can do a full run of all tests, or you can narrow it down to only execute a specific test method.
+There are many ways to execute the [tests](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/test-framework.html). You can do a full run of all tests, or you can narrow it down to only execute a specific test method.
 
 ## Executing all Tests
 To run all tests, use this command:

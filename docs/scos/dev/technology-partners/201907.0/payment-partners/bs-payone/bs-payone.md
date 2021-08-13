@@ -2,6 +2,7 @@
 title: BS Payone
 description: Provide full-service payment service and payment transaction services by integrating BS Payone into your Spryker-based shop.
 originalLink: https://documentation.spryker.com/v3/docs/payone-v1-1
+originalArticleId: 95d792d0-45af-4876-b5c3-33fb6ae3a917
 redirect_from:
   - /v3/docs/payone-v1-1
   - /v3/docs/en/payone-v1-1
@@ -29,14 +30,14 @@ We integrate with a wide range of payment methods that can be configured accordi
 
 Payone provides the following methods of payment:
 
-* [Credit Card](/docs/scos/dev/technology-partners/202001.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-credit-card-payment.html)
-* [Direct Debit](/docs/scos/dev/technology-partners/202001.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-direct-debit-payment.html)
-* [Online Transfer](/docs/scos/dev/technology-partners/202001.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-online-transfer-payment.html)
-* [Paypal](/docs/scos/dev/technology-partners/202001.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html)
-* [Prepayment](/docs/scos/dev/technology-partners/202001.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-prepayment.html)
-* [Invoice](/docs/scos/dev/technology-partners/202001.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-invoice-payment.html)
-* [Security Invoice](https://documentation.spryker.com/v4/docs/payone-integration-security-invoice)
-* [Paypal Express Checkout](/docs/scos/dev/technology-partners/202001.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-express-checkout-payment.html)
+* [Credit Card](/docs/scos/dev/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-credit-card-payment.html)
+* [Direct Debit](/docs/scos/dev/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-direct-debit-payment.html)
+* [Online Transfer](/docs/scos/dev/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-online-transfer-payment.html)
+* [Paypal](/docs/scos/dev/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html)
+* [Prepayment](/docs/scos/dev/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-prepayment.html)
+* [Invoice](/docs/scos/dev/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-invoice-payment.html)
+* [Security Invoice](/docs/scos/dev/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-security-invoice-payment.html)
+* [Paypal Express Checkout](/docs/scos/dev/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html-express-checkout)
 
 We use state machines for handling and managing orders and payments. To integrate Payone payments, a state machine for Payone should be created.
 

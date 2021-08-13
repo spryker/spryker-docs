@@ -2,6 +2,7 @@
 title: Creating a Product Relation
 description: Use this procedure to create a product relation and enter all the required values in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/creating-a-product-relation
+originalArticleId: 4bcf55a0-546d-430f-9707-fd1c29d57150
 redirect_from:
   - /v5/docs/creating-a-product-relation
   - /v5/docs/en/creating-a-product-relation
@@ -14,7 +15,7 @@ To start working with product relations, go to **Merchandising** > **Product Rel
 1. On the *Product Relations* page, click **Create Product Relation** in the top right corner. The *Create Product Relation* page opens.
 2. In  the **General** section of the **Settings** tab, do the following:
     * Enter a **Product Relation Key**.
-    * Select a **Relation type**. See [Product Relations: Reference Information](https://documentation.spryker.com/docs/en/product-relations-reference-information) to learn about the relation types and see usage examples.
+    * Select a **Relation type**. See [Product Relations: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html) to learn about the relation types and see usage examples.
     * Select **Update regularly** for the related products to be updated automatically on a regular basis according to the product relation's rules.
     * Select the **Is active** checkbox to activate the product relation (to make it visible on the Storefront).
 3. In the **Product owning the relation** section, click **Select** next to the products you want to create a product relation with.
@@ -23,7 +24,7 @@ To start working with product relations, go to **Merchandising** > **Product Rel
 
 5. Switch to the **Products** tab or click **Next**.
 
-6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. See  [Product Relations: Reference Information](https://documentation.spryker.com/docs/en/product-relations-reference-information) and [Related Product Rules](https://documentation.spryker.com/docs/en/product-relations-feature-overview#related-product-rules)  to learn more about rules and groups.
+6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. See  [Product Relations: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html) and [Related Product Rules](/docs/scos/dev/features/202005.0/product-information-management/product-relations/product-relations-feature-overview.html#related-product-rules)  to learn more about rules and groups.
 
 7. For the rule/group, select the operator:
     * **AND** - the selected products are displayed if all the specified conditions are fulfilled
@@ -49,7 +50,7 @@ Make sure to click **Save** before clicking **List of product relations** or goi
 ***
 **What's next?**
 
-* To learn more about how to edit, view, or delete a product relation, see [Managing Product Relations](https://documentation.spryker.com/docs/en/managing-product-relations).
+* To learn more about how to edit, view, or delete a product relation, see [Managing Product Relations](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/managing-product-relations.html).
 
-* To know more about the attributes you select and enter while creating a product relation, see [Product Relations: Reference Information](https://documentation.spryker.com/docs/en/product-relations-reference-information).
+* To know more about the attributes you select and enter while creating a product relation, see [Product Relations: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html).
 

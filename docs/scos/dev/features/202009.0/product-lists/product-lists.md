@@ -2,6 +2,7 @@
 title: Product Lists
 description: Product lists is a Spryker Commerce OS feature that allows creating product lists.
 originalLink: https://documentation.spryker.com/v6/docs/product-lists
+originalArticleId: 41636289-006e-47b3-acda-0533f457b950
 redirect_from:
   - /v6/docs/product-lists
   - /v6/docs/en/product-lists

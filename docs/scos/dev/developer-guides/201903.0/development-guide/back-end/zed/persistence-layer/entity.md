@@ -2,6 +2,7 @@
 title: Entity
 description: In Spryker, an entity represents one entry from a table in the database. Entities are an implementation of the Active record design pattern, so their usage is very simple.
 originalLink: https://documentation.spryker.com/v2/docs/entity
+originalArticleId: b8e6d83a-d571-4759-9ac7-d6dbd0e830c5
 redirect_from:
   - /v2/docs/entity
   - /v2/docs/en/entity
@@ -48,4 +49,4 @@ You might use the following definitions to generate the related code:
 
 * `vendor/bin/console spryk:run AddZedPersistencePropelAbstractEntity` - Add Zed Persistence Propel Abstract Entity
 
-See the [Spryk](https://documentation.spryker.com/v2/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/features/201903.0/sdk/spryk-code-generator.html) documentation for details.

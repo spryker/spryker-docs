@@ -2,6 +2,7 @@
 title: Getting the List of Protected Resources
 description: The article describes how to retrieve a list of resources protected from unauthorized access.
 originalLink: https://documentation.spryker.com/v4/docs/getting-the-list-of-protected-resources
+originalArticleId: 20a16f9a-a283-42a5-a990-917d06b7b123
 redirect_from:
   - /v4/docs/getting-the-list-of-protected-resources
   - /v4/docs/en/getting-the-list-of-protected-resources
@@ -18,12 +19,12 @@ An attempt to retrieve any of the resources protected by the API without authent
 In your development, the API will help you to protect certain resources from guest access, as well as perform pre-flight checks to avoid accessing endpoints that a guest user doesn't have sufficient permissions to view.
 
 ## Installation
-For detailed information on how to enable the functionality and related instructions, see [Glue API: Customer Access Feature Integration](https://documentation.spryker.com/v4/docs/glue-customer-access-feature-integration).
+For detailed information on how to enable the functionality and related instructions, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-customer-access-feature-integration.html).
 
 ## Usage
 To retrieve a list of protected resources, send a GET request to the following endpoint:
 
-**[/customer-access](https://documentation.spryker.com/v4/docs/rest-api-reference#/customer-access/get_customer_access)**
+**[/customer-access](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/customer-access/get_customer_access)**
 
 ### Request
 Sample request: `GET http://glue.mysprykershop.com/customer-access`

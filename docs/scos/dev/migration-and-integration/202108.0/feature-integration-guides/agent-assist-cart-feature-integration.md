@@ -1,9 +1,12 @@
 ---
 title: Agent Assist + Cart feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-cart-feature-integration
+originalArticleId: 98b85b04-aa2a-4eca-b968-413c6fb65726
 redirect_from:
   - /2021080/docs/agent-assist-cart-feature-integration
   - /2021080/docs/en/agent-assist-cart-feature-integration
+  - /docs/agent-assist-cart-feature-integration
+  - /docs/en/agent-assist-cart-feature-integration
 ---
 
 This document describes how to integrate the Agent Assist + Cart feature into a Spryker project. 
@@ -14,9 +17,9 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME         | VERSION | INTEGRATION GUIDE                                            |
 | ------------ | ------- | ------------------------------------------------------------ |
-| Spryker Core | master  | [Spryker Сore feature integration](https://documentation.spryker.com/2021080/docs/spryker-core-feature-integration) |
-| Agent Assist | master  | [Agent Assist feature integration](https://documentation.spryker.com/2021080/docs/agent-assist-feature-integration) |
-| Cart         | master  | [Glue API: Cart feature integration](https://documentation.spryker.com/2021080/docs/glue-api-cart-feature-integration) |
+| Spryker Core | master  | [Spryker Сore feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-ore-feature-integration.html) |
+| Agent Assist | master  | [Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/agent-assist-feature-integration.html) |
+| Cart         | master  | [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html) |
 
 ## 1) Set up behavior
 
@@ -63,6 +66,6 @@ Integrate the following related features:
 
 | FEATURE                              | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
 | ------------------------------------ | -------------------------------- | ------------------------------------------------------------ |
-| Agent Assist            | ✓                                | [Agent Assist feature integration](https://documentation.spryker.com/2021080/docs/agent-assist-feature-integration) |
-| Agent Assist + Shopping List |                                  | [Agent Assist + Shopping List feature integration](https://documentation.spryker.com/2021080/docs/agent-assist-shopping-list-feature-integration) |
+| Agent Assist            | ✓                                | [Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/agent-assist-feature-integration.html) |
+| Agent Assist + Shopping List |                                  | [Agent Assist + Shopping List feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/agent-assist-shopping-list-feature-integration.html) |
 

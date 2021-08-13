@@ -2,6 +2,7 @@
 title: Download and Structure
 description: Here you will find out how to download external dependencies and where to place them, together with your own asset files.
 originalLink: https://documentation.spryker.com/v4/docs/download-structure
+originalArticleId: 02a270fe-0b7a-4d0b-bf20-17be909ea7f0
 redirect_from:
   - /v4/docs/download-structure
   - /v4/docs/en/download-structure
@@ -34,7 +35,7 @@ npm install --save-dev sass-loader node-sass # add build dev dependencies
 Zed UI can be extended on a project level.
 
 ### Core Dependencies
-Each module that implements a UI may have external dependencies. They are declared in the corrisponding `@core/<module-name>/assets/Zed/pakage.json` manifest file. **Do not change this file** as it’s part of a core module. If you want to add a new dependency to Zed, see the [Download External Dependencies](https://documentation.spryker.com/v4/docs/download-structure#core-dependencies)  section.
+Each module that implements a UI may have external dependencies. They are declared in the corrisponding `@core/<module-name>/assets/Zed/pakage.json` manifest file. **Do not change this file** as it’s part of a core module. If you want to add a new dependency to Zed, see the [Download External Dependencies](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/legacy-demoshop/download-and-structure.html#core-dependencies)  section.
 
 To download the module dependencies, you can use the package manager that you prefer, but we strongly recommend to use `npm` or `yarn`.
 

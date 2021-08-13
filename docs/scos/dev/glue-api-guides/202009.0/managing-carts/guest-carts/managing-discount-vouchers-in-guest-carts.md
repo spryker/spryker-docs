@@ -2,6 +2,7 @@
 title: Managing discount vouchers in guest carts
 description: Learn how to manage discount vouchers in guest carts via Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/managing-discount-vouchers
+originalArticleId: 744d6c30-dc94-47fe-ab8e-52b0feb2f61d
 redirect_from:
   - /v6/docs/managing-discount-vouchers
   - /v6/docs/en/managing-discount-vouchers
@@ -10,7 +11,7 @@ redirect_from:
 This endpoint allows to manage discount vouchers in guest carts.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-promotions-discounts-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
 
 ## Apply a discount voucher to a guest cart
 
@@ -22,13 +23,13 @@ To apply a discount voucher to a guest cart, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to apply the discount voucher to. To get it, [Create a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart) or [Retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart).  |
+| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to apply the discount voucher to. To get it, [Create a guest cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart) or [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).  |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
 
 | Query parameter | Description | Possible values |
@@ -204,14 +205,14 @@ To remove a discount voucher, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to remove the discount voucher from. To get it, [Retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart).  |
-| ***{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}*** | Unique identifier of the voucher to remove. To get it, [Retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart) with the `vouchers` resource included.  |
+| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to remove the discount voucher from. To get it, [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).  |
+| ***{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}*** | Unique identifier of the voucher to remove. To get it, [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the `vouchers` resource included.  |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
 
 
@@ -231,6 +232,6 @@ If the voucher is deleted successfully, the endpoints returns the `204 No Data` 
 | 3301 | Voucher with the specified ID was not found. |
 | 3302 | Incorrect voucher code or the voucher could not be applied.| 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 

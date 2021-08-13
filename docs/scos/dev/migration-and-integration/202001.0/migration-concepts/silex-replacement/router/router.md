@@ -2,6 +2,7 @@
 title: Router
 description: The set of articles provides information on how to install and configure Router for Yves and Zed.
 originalLink: https://documentation.spryker.com/v4/docs/router
+originalArticleId: 342802e8-c3dd-47fb-91e3-047f0c25416f
 redirect_from:
   - /v4/docs/router
   - /v4/docs/en/router

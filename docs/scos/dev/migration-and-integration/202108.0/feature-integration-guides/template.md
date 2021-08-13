@@ -1,9 +1,12 @@
 ---
 title: Template
 originalLink: https://documentation.spryker.com/2021080/docs/template
+originalArticleId: 839e4f71-1204-450f-900e-241915c9a17b
 redirect_from:
   - /2021080/docs/template
   - /2021080/docs/en/template
+  - /docs/template
+  - /docs/en/template
 ---
 
 ## Install Feature Core

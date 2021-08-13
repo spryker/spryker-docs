@@ -1,6 +1,7 @@
 ---
 title: Yves Routes
 originalLink: https://documentation.spryker.com/v4/docs/t-yves-routes
+originalArticleId: b2216cbe-7c3c-4cb2-a1ac-300a66cb193d
 redirect_from:
   - /v4/docs/t-yves-routes
   - /v4/docs/en/t-yves-routes

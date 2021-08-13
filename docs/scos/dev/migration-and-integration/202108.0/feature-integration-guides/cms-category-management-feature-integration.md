@@ -1,9 +1,12 @@
 ---
 title: CMS + Category Management feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/cms-category-management-feature-integration
+originalArticleId: 7fda2277-78fa-4351-8b4e-547cf6803fd6
 redirect_from:
   - /2021080/docs/cms-category-management-feature-integration
   - /2021080/docs/en/cms-category-management-feature-integration
+  - /docs/cms-category-management-feature-integration
+  - /docs/en/cms-category-management-feature-integration
 ---
 
 This document describes how to integrate the CMS + Category Management feature into a Spryker project.

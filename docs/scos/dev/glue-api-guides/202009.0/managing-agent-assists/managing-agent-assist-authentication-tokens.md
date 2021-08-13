@@ -2,6 +2,7 @@
 title: Managing agent assist authentication tokens
 description: Refresh an agent assist token and revoke an agent assist refresh token.
 originalLink: https://documentation.spryker.com/v6/docs/managing-agent-assist-authentication-tokens
+originalArticleId: 437ed78f-b437-4fb5-8186-f7286e1207f1
 redirect_from:
   - /v6/docs/managing-agent-assist-authentication-tokens
   - /v6/docs/en/managing-agent-assist-authentication-tokens
@@ -16,11 +17,11 @@ This endpoint allows to refresh an agent assist access token or revoke a refresh
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-*   [Glue API: Agent Assist feature integration](https://documentation.spryker.com/docs/glue-api-agent-assist-feature-integration)
+*   [Glue API: Agent Assist feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-agent-assist-feature-integration.html)
     
-*   [Customer Account Management + Agent Assist feature integration](https://documentation.spryker.com/docs/customer-account-management-agent-assist-feature-integration)
+*   [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html)
     
-*   [Customer Account Management feature integration](https://documentation.spryker.com/docs/customer-account-management-feature-integration)
+*   [Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/customer-account-management-feature-integration.html)
     
 
 ## Refresh an agent assist authentication token
@@ -51,7 +52,7 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as an agent assist](https://documentation.spryker.com/docs/authenticating-as-an-agent-assist#authenticate-as-an-agent-assist) . |
+| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as an agent assist](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) . |
 
 
 
@@ -110,7 +111,7 @@ To revoke an agent assist refresh token, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| X-Agent-Authorization | string | &check; | Only required when revoking all the refresh token of an agent assist. String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](https://documentation.spryker.com/docs/authenticating-as-an-agent-assist#authenticate-as-an-agent-assist) to get the value.  |
+| X-Agent-Authorization | string | &check; | Only required when revoking all the refresh token of an agent assist. String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 
@@ -124,7 +125,7 @@ To revoke an agent assist refresh token, send the request:
 
 For security purposes, the endpoint always returns the `204 No Content` status code, regardless of any refresh tokens being revoked.
 
-The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/docs/configuring-outdated-refresh-token-life-time).
+The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/v6/docs/configuring-outdated-refresh-token-life-time).
 
 ## Possible errors
 
@@ -135,4 +136,4 @@ The tokens are marked as expired on the date and time of the request. You can co
 |004 |Failed to refresh token.  |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).

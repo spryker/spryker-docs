@@ -1,6 +1,7 @@
 ---
 title: Wishlist Items Management
 originalLink: https://documentation.spryker.com/v4/docs/wishlist-items-mgmt
+originalArticleId: 728ad033-33ca-490b-a2d6-c7d5ea01fdb2
 redirect_from:
   - /v4/docs/wishlist-items-mgmt
   - /v4/docs/en/wishlist-items-mgmt

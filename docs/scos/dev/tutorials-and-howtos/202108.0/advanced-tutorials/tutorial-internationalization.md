@@ -1,9 +1,12 @@
 ---
 title: Tutorial - Internationalization
 originalLink: https://documentation.spryker.com/2021080/docs/t-internationalization
+originalArticleId: ab5fb80c-57d6-44a7-a85f-41034cb5c3be
 redirect_from:
   - /2021080/docs/t-internationalization
   - /2021080/docs/en/t-internationalization
+  - /docs/t-internationalization
+  - /docs/en/t-internationalization
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/internationalization/-->

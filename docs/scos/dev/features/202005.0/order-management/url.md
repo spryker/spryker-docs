@@ -2,6 +2,7 @@
 title: URL
 description: The URL module handles dynamic URLs for entities that appear on the front-end (Yves)
 originalLink: https://documentation.spryker.com/v5/docs/url
+originalArticleId: 8af947ab-4639-4960-96fc-ce8272d24c53
 redirect_from:
   - /v5/docs/url
   - /v5/docs/en/url

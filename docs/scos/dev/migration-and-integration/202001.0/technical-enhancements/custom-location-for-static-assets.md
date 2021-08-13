@@ -1,6 +1,7 @@
 ---
 title: Custom Location for Static Assets
 originalLink: https://documentation.spryker.com/v4/docs/custom-location-for-static-assets
+originalArticleId: b610f193-0d1f-45ab-8987-964476416ce4
 redirect_from:
   - /v4/docs/custom-location-for-static-assets
   - /v4/docs/en/custom-location-for-static-assets

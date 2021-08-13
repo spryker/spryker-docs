@@ -1,9 +1,12 @@
 ---
 title: Catalog + Category Management feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-category-management-feature-integration
+originalArticleId: c0523c5a-4440-4d20-9a92-6d446b613a37
 redirect_from:
   - /2021080/docs/catalog-category-management-feature-integration
   - /2021080/docs/en/catalog-category-management-feature-integration
+  - /docs/catalog-category-management-feature-integration
+  - /docs/en/catalog-category-management-feature-integration
 ---
 
 This document describes how to integrate the Catalog + Category Management into a Spryker project. 
@@ -14,9 +17,9 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME                | VERSION | INTEGRATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core        | master  | [Spryker Сore feature integration](https://documentation.spryker.com/2021080/docs/spryker-core-feature-integration) |
+| Spryker Core        | master  | [Spryker Сore feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-ore-feature-integration.html) |
 | Catalog             | master  |  |
-| Category Management | master  | [Category Management feature integration](https://documentation.spryker.com/2021080/docs/category-management-feature-integration) |
+| Category Management | master  | [Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/category-management-feature-integration.html) |
 
 ## 1) Set up behavior
 
@@ -98,5 +101,5 @@ Integrate the following related features:
 | FEATURE             | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
 | ------------------- | -------------------------------- | ------------------------------------------------------------ |
 | Catalog             |                 ✓                 | |
-| Category Management |                    ✓              | [Category Management feature integration](https://documentation.spryker.com/2021080/docs/category-management-feature-integration) |
+| Category Management |                    ✓              | [Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/category-management-feature-integration.html) |
 

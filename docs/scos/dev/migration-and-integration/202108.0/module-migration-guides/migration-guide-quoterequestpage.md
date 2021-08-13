@@ -1,9 +1,12 @@
 ---
 title: Migration Guide - QuoteRequestPage
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestpage
+originalArticleId: 49398eed-5f0b-48db-a915-14f70ee81a82
 redirect_from:
   - /2021080/docs/mg-quoterequestpage
   - /2021080/docs/en/mg-quoterequestpage
+  - /docs/mg-quoterequestpage
+  - /docs/en/mg-quoterequestpage
 ---
 
 ## Upgrading from Version 2.x.x to Version 3.x.x
@@ -42,7 +45,7 @@ The only major change of the `QuoteRequestPage 2.x.x` is the dependency update f
 Also, transfer property `QuoteRequestTranser::isLatestVersionHidden` was replaced by `QuoteRequestTransfer:isLatestVersionVisible`.
 
 **To migrate do the following:**
-1. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-quoterequest.html).
+1. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-quoterequest.html).
 2. Update `spryker-shop/quote-request-page:^2.0.0`
 
 ```bash

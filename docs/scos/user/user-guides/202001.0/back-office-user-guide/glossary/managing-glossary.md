@@ -2,6 +2,7 @@
 title: Managing Glossary
 description: he guide provides instructions for shop owners to learn how to create and handle information in different languages in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/managing-glossary
+originalArticleId: c9e0341a-91b7-42d7-a33e-f33f0f6a0929
 redirect_from:
   - /v4/docs/managing-glossary
   - /v4/docs/en/managing-glossary

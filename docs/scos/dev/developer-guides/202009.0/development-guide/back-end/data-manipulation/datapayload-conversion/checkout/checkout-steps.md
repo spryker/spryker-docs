@@ -2,6 +2,7 @@
 title: Checkout Steps
 description: This topic provides information about all checkout steps available for the customers.
 originalLink: https://documentation.spryker.com/v6/docs/checkout-steps
+originalArticleId: f7084bf4-8f72-484f-a409-3d047070fc18
 redirect_from:
   - /v6/docs/checkout-steps
   - /v6/docs/en/checkout-steps

@@ -2,6 +2,7 @@
 title: Quick order + measurement units feature integration
 description: Quick Add to Cart + Measurement Units allow selling products by any unit of measure with a click. This guide describes how to integrate this feature into your project.
 originalLink: https://documentation.spryker.com/v6/docs/quick-order-measurement-units-feature-integration
+originalArticleId: 3387e920-24a4-4b69-8e85-d937ae5b7d44
 redirect_from:
   - /v6/docs/quick-order-measurement-units-feature-integration
   - /v6/docs/en/quick-order-measurement-units-feature-integration

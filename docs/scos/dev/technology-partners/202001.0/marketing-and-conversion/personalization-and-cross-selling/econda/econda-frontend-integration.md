@@ -2,13 +2,14 @@
 title: Econda - Frontend Integration
 description: Integrate frontend of the Econda module into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v4/docs/econda-frontend-integration
+originalArticleId: e69a53bc-b89a-481a-ae75-a0df177a2917
 redirect_from:
   - /v4/docs/econda-frontend-integration
   - /v4/docs/en/econda-frontend-integration
 ---
 
 {% info_block infoBox "Info" %}
-Check [this article](https://documentation.spryker.com/v4/docs/demoshops#spryker-commerce-os--scos-
+Check [this article](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops
 {% endinfo_block %} to learn about Spryker Commerce OS (SCOS).)
 
 ## Include Econda Libraries and Scripts for Tracking and Cross-sell

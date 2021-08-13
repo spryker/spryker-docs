@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Dynamic Content Page - Legacy Demoshop
 originalLink: https://documentation.spryker.com/v3/docs/dynamic-content-page
+originalArticleId: df8cf698-f60b-4930-a1d3-222b9448d923
 redirect_from:
   - /v3/docs/dynamic-content-page
   - /v3/docs/en/dynamic-content-page

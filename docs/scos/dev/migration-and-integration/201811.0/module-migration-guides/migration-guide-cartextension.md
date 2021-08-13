@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CartExtension
 originalLink: https://documentation.spryker.com/v1/docs/mg-cart-extension
+originalArticleId: ea014e90-ea4e-4606-b634-21298f97c2f3
 redirect_from:
   - /v1/docs/mg-cart-extension
   - /v1/docs/en/mg-cart-extension

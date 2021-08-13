@@ -2,14 +2,17 @@
 title: Migration Guide - EventDispatcher
 description: Use the guide to perform the EventDispatcher part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-eventdispatcher
+originalArticleId: 1e681073-e4f0-4f0b-bd57-f1469a76f36f
 redirect_from:
   - /2021080/docs/migration-guide-eventdispatcher
   - /2021080/docs/en/migration-guide-eventdispatcher
+  - /docs/migration-guide-eventdispatcher
+  - /docs/en/migration-guide-eventdispatcher
 ---
 
 ## Upgrading to Version 1.1.2
 
-Version 1.1.2 boosts the overall Zed and Glue performance by introducing a [cache of unresolved entities for Zed](https://documentation.spryker.com/docs/performance-guidelines#activate-class-resolver-cache).
+Version 1.1.2 boosts the overall Zed and Glue performance by introducing a [cache of unresolved entities for Zed](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/performance-guidelines.html#activate-class-resolver-cache).
 
 **To upgrade to the new version of the module, enable the following plugins:**
 
@@ -72,7 +75,7 @@ That's it! You've upgraded the EventDispatcher module to 1.1.2 version.
 ---
 
 :::(Error) 
-The following migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+The following migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html).
 :::
 To upgrade the module, do the following:
 

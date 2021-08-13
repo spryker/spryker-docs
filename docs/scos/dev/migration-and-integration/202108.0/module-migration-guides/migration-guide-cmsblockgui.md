@@ -2,16 +2,19 @@
 title: Migration Guide - CmsBlockGui
 description: Use the guide to update versions to the newer ones of the CMS Block GUI module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cms-block-gui
+originalArticleId: dd872c42-639a-4362-96bc-8b921a2b6ad6
 redirect_from:
   - /2021080/docs/mg-cms-block-gui
   - /2021080/docs/en/mg-cms-block-gui
+  - /docs/mg-cms-block-gui
+  - /docs/en/mg-cms-block-gui
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
 
 This version adds support to manage CMS Block-store relation through the dedicated CMS Block Administration Intrerface.
 
-1. Installl/update `spryker/cms-block` to at least Version 2.0.0. For more information, see [Migration Guide - CMS Block](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-cmsblock.html).
+1. Installl/update `spryker/cms-block` to at least Version 2.0.0. For more information, see [Migration Guide - CMS Block](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-cmsblock.html).
 
 2. Upgrade `spryker/cms-block-gui` to at least Version 2.0.0.
 

@@ -2,9 +2,12 @@
 title: Managing categories
 description: The guide provides instructions on how to set an order for products in categories, as well as view, update and delete categories.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-categories
+originalArticleId: 93beba2a-596a-46ca-8933-c88ad105d1c7
 redirect_from:
   - /2021080/docs/managing-categories
   - /2021080/docs/en/managing-categories
+  - /docs/managing-categories
+  - /docs/en/managing-categories
 ---
 
 This topic describes how to manage categories:
@@ -39,7 +42,7 @@ In case you have several products with the identical order number value, the ord
 
 The following table describes the attributes from the *Products in this category* tab.
 
-For the description of all other attributes on the Assign products to category page, see [Assigning products to categories](https://documentation.spryker.com/2021080/docs/assigning-products-to-categories).
+For the description of all other attributes on the Assign products to category page, see [Assigning products to categories](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/assigning-products-to-categories.html).
 
 | TAB | ATTRIBUTE | DESCRIPTION |
 |-|-|-|
@@ -134,10 +137,10 @@ Select the *Sub Category grid* template to create a multilevel category structur
 
 **A template with slots**
 :::(Info)
-To use a template with slots, make sure the [Templates and slots](https://documentation.spryker.com/docs/cms-feature-integration-guide) feature is integrated into your project.
+To use a template with slots, make sure the [Templates and slots](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/cms-feature-integration.html) feature is integrated into your project.
 :::
 
-Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](https://documentation.spryker.com/docs/templates-slots-feature-overview) for more details.
+Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/templates-and-slots-overview.html) for more details.
 
 ## Deleting a category
 

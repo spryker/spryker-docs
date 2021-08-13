@@ -2,6 +2,7 @@
 title: Taxes
 description: The guide provides a quick overview of the Taxes section that enables shop owners to define tax rates for different countries in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/taxes
+originalArticleId: 373197ad-cae5-4a26-b3cf-32323f84a9a2
 redirect_from:
   - /v4/docs/taxes
   - /v4/docs/en/taxes
@@ -29,7 +30,7 @@ In the Back Office, a Spryker Admin creates the tax rates first and then, sets u
 The tax sets are later applied to Products, Thresholds, or Shipment Methods. 
 ***
 **What's next?**
-To know how to manage tax sets and rates, see [Managing Tax Rates and Sets](https://documentation.spryker.com/v4/docs/managing-tax-rates-and-sets).
+To know how to manage tax sets and rates, see [Managing Tax Rates and Sets](/docs/scos/user/user-guides/202001.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/managing-tax-rates-and-sets.html).
 
 To know more about the attributes you use to manage tax rates and sets, see [Taxes: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html).
 

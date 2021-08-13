@@ -2,6 +2,7 @@
 title: Split Delivery
 description: The feature allows delivering an order to multiple addresses and dates and attracting more customers.
 originalLink: https://documentation.spryker.com/v5/docs/split-delivery
+originalArticleId: 40f188f2-116c-418f-b188-ec851148c1eb
 redirect_from:
   - /v5/docs/split-delivery
   - /v5/docs/en/split-delivery

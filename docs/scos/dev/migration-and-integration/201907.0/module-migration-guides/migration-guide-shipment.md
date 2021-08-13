@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Shipment
 originalLink: https://documentation.spryker.com/v3/docs/mg-shipment
+originalArticleId: 0994141f-1a15-475d-ade5-99486fe671f5
 redirect_from:
   - /v3/docs/mg-shipment
   - /v3/docs/en/mg-shipment
@@ -39,7 +40,7 @@ console transfer:generate
 In this new version of the **Shipment** module, we have added support of split delivery. You can find more details about the changes on the [Shipment module release page](https://github.com/spryker/shipment/releases).
     
 {% info_block errorBox %}
-This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/split-delivery-migration-concept.html
+This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](https://documentation.spryker.com/v3/docs/split-delivery-concept
 {% endinfo_block %}.)
     
 **To upgrade to the new version of the module, do the following:**

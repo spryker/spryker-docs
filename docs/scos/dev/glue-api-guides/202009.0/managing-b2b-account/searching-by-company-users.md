@@ -2,15 +2,16 @@
 title: Searching by company users
 description: Learn how to search by company users via Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/searching-by-company-users
+originalArticleId: 2bce3269-9c53-4eff-a2a9-d21e4f5eed46
 redirect_from:
   - /v6/docs/searching-by-company-users
   - /v6/docs/en/searching-by-company-users
 ---
 
-This endpoint allows [authenticated customers](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as. 
+This endpoint allows [authenticated customers](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as. 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/docs/glue-api-company-account-api-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve available company users
 
@@ -294,8 +295,8 @@ To retrieve company users of the current authenticated customer, send the reques
 | 001 | The access token is invalid. |
 | 002 | The access token is missing. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user)
+* [Authenticate as a company user](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/authenticating-as-a-company-user.html)

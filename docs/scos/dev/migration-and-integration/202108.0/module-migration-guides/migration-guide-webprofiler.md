@@ -2,14 +2,17 @@
 title: Migration Guide - WebProfiler
 description: Use the guide to perform the WebProfiler part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-webprofiler
+originalArticleId: 25075320-1856-4100-a480-401de8a88524
 redirect_from:
   - /2021080/docs/migration-guide-webprofiler
   - /2021080/docs/en/migration-guide-webprofiler
+  - /docs/migration-guide-webprofiler
+  - /docs/en/migration-guide-webprofiler
 ---
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement-201903).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

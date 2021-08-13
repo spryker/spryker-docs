@@ -1,6 +1,7 @@
 ---
 title: HowTo - Product Data from Import to Front-End View
 originalLink: https://documentation.spryker.com/v5/docs/ht-product-data-import-frontend
+originalArticleId: e2ff8974-59af-4d71-988f-d438c2afa929
 redirect_from:
   - /v5/docs/ht-product-data-import-frontend
   - /v5/docs/en/ht-product-data-import-frontend

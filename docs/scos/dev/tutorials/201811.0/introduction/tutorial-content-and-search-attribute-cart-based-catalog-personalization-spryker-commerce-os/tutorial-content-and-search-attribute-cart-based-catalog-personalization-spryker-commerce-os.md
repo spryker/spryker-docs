@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization - Spryker Commerce OS
 originalLink: https://documentation.spryker.com/v1/docs/t-content-search-attribute-cart-based-catalog-personalization
+originalArticleId: 4d8d5a7f-9686-4d6c-8c2d-91e28c06f55f
 redirect_from:
   - /v1/docs/t-content-search-attribute-cart-based-catalog-personalization
   - /v1/docs/en/t-content-search-attribute-cart-based-catalog-personalization

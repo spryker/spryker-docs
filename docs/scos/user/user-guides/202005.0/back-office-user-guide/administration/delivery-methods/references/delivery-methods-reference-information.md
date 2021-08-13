@@ -1,6 +1,7 @@
 ---
 title: Delivery Methods- Reference Information
 originalLink: https://documentation.spryker.com/v5/docs/delivery-methods-reference-information
+originalArticleId: 4ec93e76-d5a3-46fb-9354-355b94c85387
 redirect_from:
   - /v5/docs/delivery-methods-reference-information
   - /v5/docs/en/delivery-methods-reference-information

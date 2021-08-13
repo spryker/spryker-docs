@@ -2,9 +2,12 @@
 title: Promotions & Discounts feature integration
 description: This guides provides you with a set of steps needed to be performed in order to integrate the Discount Promotion feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/promotions-discounts-feature-integration
+originalArticleId: 7aa7d23c-7a28-415c-a4cd-a011c9e85a6c
 redirect_from:
   - /2021080/docs/promotions-discounts-feature-integration
   - /2021080/docs/en/promotions-discounts-feature-integration
+  - /docs/promotions-discounts-feature-integration
+  - /docs/en/promotions-discounts-feature-integration
 ---
 
 To start using the Discount Promotion feature, you have to do some configuration in your Zed application.

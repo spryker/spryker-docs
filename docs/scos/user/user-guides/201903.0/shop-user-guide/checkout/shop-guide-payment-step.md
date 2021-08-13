@@ -2,6 +2,7 @@
 title: Shop Guide - Payment Step
 description: The guide provides the procedure to select a payment method for the order in the Storefront.
 originalLink: https://documentation.spryker.com/v2/docs/payment-step-shop-guide-201911
+originalArticleId: 6231d154-b246-48d1-b448-1251086878ee
 redirect_from:
   - /v2/docs/payment-step-shop-guide-201911
   - /v2/docs/en/payment-step-shop-guide-201911

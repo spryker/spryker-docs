@@ -2,6 +2,7 @@
 title: Shop Guide - Company Roles
 description: The guide provides procedures to create, edit or view company roles in the storefront.
 originalLink: https://documentation.spryker.com/v3/docs/company-roles-shop-guide
+originalArticleId: 586cc2c1-52d1-4057-be52-98a315603fb6
 redirect_from:
   - /v3/docs/company-roles-shop-guide
   - /v3/docs/en/company-roles-shop-guide
@@ -60,9 +61,9 @@ A role includes a set of permissions that can be enabled/disabled according to y
   - **Remove item from cart** - allows deleting the products from the cart.
   - **Place Order** - allows placing the order. With this permission enabled, a user will have  error when trying to submit the order.
   - **Alter Cart Up to Amount** - allows changing the content of the cart (adding new products, changing the quantity of the existing products etc.) until it hits the limit specified in this permission. When the limit is reached, the buyer will not be able to change the contents of the cart and will get *This action is forbidden* error.
-  - **Buy up to grand total (Requires "Send cart for approval")** - sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with Send cart for approval permission. This permission is available after enabling the [Approval Process](https://documentation.spryker.com/v2/docs/approval-process-201903) feature.
-  - **Approve up to grand total** - with this permission enabled, a user can approve the the cart. See [Approval Feature Overview](https://documentation.spryker.com/v2/docs/approval-process-overview-201903) for more details.
-  - **Send cart for approval (Requires "Buy up to grand total")** - allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](https://documentation.spryker.com/v2/docs/approval-process-overview-201903) for more details.
+  - **Buy up to grand total (Requires "Send cart for approval")** - sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with Send cart for approval permission. This permission is available after enabling the [Approval Process](https://documentation.spryker.com/v3/docs/approval-process-201903) feature.
+  - **Approve up to grand total** - with this permission enabled, a user can approve the the cart. See [Approval Feature Overview](https://documentation.spryker.com/v3/docs/approval-process-overview-201903) for more details.
+  - **Send cart for approval (Requires "Buy up to grand total")** - allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](https://documentation.spryker.com/v3/docs/approval-process-overview-201903) for more details.
 3. Click **Submit**.
 
 ## Deleting a Company Role
@@ -71,7 +72,7 @@ You can delete a company user by clicking ![Delete icon](https://spryker.s3.eu-c
 
 ![Delete a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/delete-role.png){height="" width=""}
 
-Don't forget to check out the video tutorial on setting up the [Company Roles](/docs/scos/dev/features/202001.0/company-account-management/company-user-roles-and-permissions/company-user-roles-and-permissions-feature-overview.html) in Spryker [B2B Demo Shop](https://documentation.spryker.com/v4/docs/demoshops#b2b-demo-shop):
+Don't forget to check out the video tutorial on setting up the [Company Roles](/docs/scos/dev/features/201907.0/company-account-management/company-user-roles-and-permissions/company-user-roles-and-permissions-feature-overview.html) in Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/201907.0/demo-shops.html#b2b-demo-shop):
 <iframe src="https://fast.wistia.net/embed/iframe/72qy3slwjo" title="How to set up Company Users and Roles in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="589" height="315"></iframe>
 
 

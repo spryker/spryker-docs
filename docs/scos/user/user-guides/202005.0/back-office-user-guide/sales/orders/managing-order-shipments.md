@@ -2,6 +2,7 @@
 title: Managing Order Shipments
 description: The guide provides steps on how to view and update delivery address, shipment method and delivery dates for the shipment, create a shipment in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-order-shipments
+originalArticleId: a7f0e26d-5b66-4765-ab4d-fbd2172ced9c
 redirect_from:
   - /v5/docs/managing-order-shipments
   - /v5/docs/en/managing-order-shipments

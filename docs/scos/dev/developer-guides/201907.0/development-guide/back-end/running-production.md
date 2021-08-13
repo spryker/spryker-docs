@@ -2,6 +2,7 @@
 title: Running Production
 description: Spryker OS is capable of providing simple and advanced production scenarios- single instance, many instances with all applications enabled, many instances with particular application layers executed.
 originalLink: https://documentation.spryker.com/v3/docs/running-production
+originalArticleId: e78a6d15-51c6-46ea-99aa-0896374ffa35
 redirect_from:
   - /v3/docs/running-production
   - /v3/docs/en/running-production
@@ -16,7 +17,7 @@ Spryker OS provides the following applications:
 * Backoffice (Zed)
 * Storefront API (Glue)
 
-Applications can be run and scaled independently. For more information on the provided Applications and Application Layers see [Conceptual Overview](/docs/scos/dev/developer-guides/202001.0/architecture-guide/conceptual-overview.html).
+Applications can be run and scaled independently. For more information on the provided Applications and Application Layers see [Conceptual Overview](/docs/scos/dev/developer-guides/201907.0/architecture-guide/conceptual-overview.html).
 A typical use is scaling your Storefront API servers while running a native APP marketing campaign (while it's using Storefront API for data access). Same as independently scaling Storefront during Black Friday targeted at customer web-frontend.
 
 ## Backoffice Security

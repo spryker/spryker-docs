@@ -1,6 +1,7 @@
 ---
 title: File details- product_option_price.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-option-pricecsv
+originalArticleId: 80926a05-e57d-4e55-98d7-6ca487612b22
 redirect_from:
   - /v6/docs/file-details-product-option-pricecsv
   - /v6/docs/en/file-details-product-option-pricecsv
@@ -23,7 +24,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*     [product_option.csv](https://documentation.spryker.com/docs/file-details-product-optioncsv)
+*     [product_option.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_option_price.csv*  file can be downloaded here:

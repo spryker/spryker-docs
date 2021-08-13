@@ -2,6 +2,7 @@
 title: HowTo - Create CMS Templates
 description: Use the guide to create a template for a CMS page, CMS Block, Content Item Widget.
 originalLink: https://documentation.spryker.com/v5/docs/ht-create-cms-templates
+originalArticleId: 8328a9ac-386e-4300-bfc9-d83bb4925cce
 redirect_from:
   - /v5/docs/ht-create-cms-templates
   - /v5/docs/en/ht-create-cms-templates
@@ -62,25 +63,25 @@ To learn how the template is created, check the exemplary procedure below.
 
 The text in the defined placeholders will be replaced at runtime by the glossary keys assigned to them.
 
-A content manager can apply this template when [creating a CMS page](https://documentation.spryker.com/docs/en/creating-a-cms-page) in the Back Office.
+A content manager can apply this template when [creating a CMS page](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/creating-a-cms-page.html) in the Back Office.
 
 ## Template with Slots
 
-[Template with slots](https://documentation.spryker.com/docs/en/templates-slots-feature-overview) is a Twig file that defines the layout of slots across a Storefront page and has at least one slot assigned. 
+[Template with slots](/docs/scos/dev/features/202005.0/cms/templates-and-slots/templates-and-slots-feature-overview.html) is a Twig file that defines the layout of slots across a Storefront page and has at least one slot assigned. 
 
 ***
 **Create a template with slots:**
 
 1. Create a Twig template as described in [CMS Page Template](#cms-page-template). 
 
-2. For each slot that you want to have in the template, insert a [slot widget](https://documentation.spryker.com/docs/en/templates-slots-feature-overview#slot-widget). 
+2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/dev/features/202005.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#slot-widget). 
 
-3. [Import](https://documentation.spryker.com/docs/en/data-importers-review-implementation) template and slot lists. Learn about the lists in the [Correlation](https://documentation.spryker.com/docs/en/templates-slots-feature-overview#correlation) section of **Templates & Slots Feature Overview**.
+3. [Import](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/dev/features/202005.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#correlation) section of **Templates & Slots Feature Overview**.
 
 Templates with slots are universal. In the Back Office, a content manager can:
 
-*     apply this template when [creating a CMS page](https://documentation.spryker.com/docs/en/creating-a-cms-page).
-*     apply this template when [creating a category](https://documentation.spryker.com/docs/en/creating-categories).
+*     apply this template when [creating a CMS page](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/creating-a-cms-page.html).
+*     apply this template when [creating a category](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/creating-categories.html).
 
 {% info_block warningBox %}
 
@@ -90,7 +91,7 @@ You can assign the template with slots to other page types only on a code level.
 
 ## CMS Block Template
 
-CMS block template is a Twig file that, when applied to a [CMS block](https://documentation.spryker.com/docs/en/cms-block), defines its design and layout. 
+CMS block template is a Twig file that, when applied to a [CMS block](/docs/scos/dev/features/202005.0/cms/cms-block/cms-block.html), defines its design and layout. 
 
 Create the Twig template - `src/Pyz/Yves/CmsBlock/Theme/default/template/hello.twig`. 
 
@@ -102,11 +103,11 @@ Create the Twig template - `src/Pyz/Yves/CmsBlock/Theme/default/template/hello.t
 </div>	
 ```
  
-A content manager can apply this template when [creating a CMS block](https://documentation.spryker.com/docs/en/creating-cms-block) in the Back Office.
+A content manager can apply this template when [creating a CMS block](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/creating-a-cms-block.html) in the Back Office.
 
 ## Content Item Widget Template
 
-[Content item widget](https://documentation.spryker.com/docs/en/content-items-widgets-overview) template is a Twig file that defines the layout of the content item it renders on Storefront.
+[Content item widget](https://documentation.spryker.com/v5/docs/en/content-items-widgets-overview) template is a Twig file that defines the layout of the content item it renders on Storefront.
 
 By default, two content item widget templates are shipped per each content item: 
 

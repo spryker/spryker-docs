@@ -2,12 +2,13 @@
 title: Test Helpers
 description: Learn about the test helpers, how you can enable them, use, and create your own.
 originalLink: https://documentation.spryker.com/v6/docs/test-helpers
+originalArticleId: b5ffe99c-46db-41d8-bee2-769884a5c920
 redirect_from:
   - /v6/docs/test-helpers
   - /v6/docs/en/test-helpers
 ---
 
-[Codeception](https://codeception.com) provides so-called modules, which are *helpers* used for building your tests. These helpers allow you to hook into the lifecycle of tests and get handy methods available wherever the helper is enabled. Codeception and Spryker provide a lot of ready to use helpers. Checkout [Available Test Helpers](https://documentation.spryker.com/docs/available-test-helpers) for information on some of them.
+[Codeception](https://codeception.com) provides so-called modules, which are *helpers* used for building your tests. These helpers allow you to hook into the lifecycle of tests and get handy methods available wherever the helper is enabled. Codeception and Spryker provide a lot of ready to use helpers. Checkout [Available Test Helpers](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html) for information on some of them.
 
 Basically, almost every Spryker module provides one or more helpers. The helpers can be found in the `tests/Organization/Application/Module/_support/Helper/*` directory. For example, check out the [helper of the Router module](https://github.com/spryker/router/tree/master/tests/SprykerTest/Zed/Router/_support/Helper).
 
@@ -106,10 +107,10 @@ class YourHelper extends Module
 }
 ```
 ## Next Steps
-* [Set up an organization of your tests](https://documentation.spryker.com/docs/setting-up-tests).
-* Learn about the [available test helpers](https://documentation.spryker.com/docs/available-test-helpers).
-*  Learn about the [console commands you can use to execute your tests](https://documentation.spryker.com/docs/executing-tests).
-* [Configure data builders to create transfers your tests](https://documentation.spryker.com/docs/data-builders).
-* [Generate code coverage report for your tests](https://documentation.spryker.com/docs/code-coverage).
-* Learn about the [testing best practices](https://documentation.spryker.com/docs/testing-best-practices).
+* [Set up an organization of your tests](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/setting-up-tests.html).
+* Learn about the [available test helpers](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html).
+*  Learn about the [console commands you can use to execute your tests](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/executing-tests.html).
+* [Configure data builders to create transfers your tests](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/data-builders.html).
+* [Generate code coverage report for your tests](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/code-coverage.html).
+* Learn about the [testing best practices](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/testing-best-practices.html).
 

@@ -2,6 +2,7 @@
 title: SEO
 description: The powerful SEO features enable you to add customized meta information to all your content and create search engine friendly URLs.
 originalLink: https://documentation.spryker.com/v6/docs/seo
+originalArticleId: 3f0f4c46-0961-4f9e-8734-3d5e95b02f5b
 redirect_from:
   - /v6/docs/seo
   - /v6/docs/en/seo
@@ -21,10 +22,10 @@ redirect_from:
 
 Improve the search engine ranking of your store and let potential customers find your store quickly. The powerful SEO features enable you to add customized meta information to all your content and create search engine friendly URLs:
 
-* *Meta tags*: [Add textual meta information to CMS content](https://documentation.spryker.com/docs/creating-a-cms-page#creating-a-cms-page) such as titles, keywords and descriptions to boost SEO ranking. All meta information can be translated into your specified languages.
-* *Landing pages*: [Create landing pages](https://documentation.spryker.com/docs/creating-a-cms-page#creating-a-cms-page) for marketing campaigns, product promotions, categories or other purposes and add SEO relevant information to boost search ranking. Create individual and SEO friendly URLs per landing page to increase your online shop’s credibility and search engine ranking.
+* *Meta tags*: [Add textual meta information to CMS content](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/pages/creating-a-cms-page.html#creating-a-cms-page) such as titles, keywords and descriptions to boost SEO ranking. All meta information can be translated into your specified languages.
+* *Landing pages*: [Create landing pages](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/pages/creating-a-cms-page.html#creating-a-cms-page) for marketing campaigns, product promotions, categories or other purposes and add SEO relevant information to boost search ranking. Create individual and SEO friendly URLs per landing page to increase your online shop’s credibility and search engine ranking.
 * *Friendly URLs*: Create SEO friendly URLs per page to increase your online shop's credibility and search engine ranking.
-* *Basic SEO techniques*: [Use the basic SEO techniques](https://documentation.spryker.com/docs/basic-seo-techniques-to-use-in-your-project), such as headings and microdata.
+* *Basic SEO techniques*: [Use the basic SEO techniques](/docs/scos/dev/developer-guides/202009.0/development-guide/best-practices/basic-seo-techniques-to-use-in-your-project.html), such as headings and microdata.
 
 **Feature:**
 <div>

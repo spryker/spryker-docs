@@ -2,9 +2,12 @@
 title: Amazon Pay - State Machine
 description: This article describes the state machine for the Amazon Pay module in the Spryker Legacy Demoshop.
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-state-machine-demoshop
+originalArticleId: 7b685ca5-980d-4d75-9e38-1bd121369454
 redirect_from:
   - /2021080/docs/amazon-pay-state-machine-demoshop
   - /2021080/docs/en/amazon-pay-state-machine-demoshop
+  - /docs/amazon-pay-state-machine-demoshop
+  - /docs/en/amazon-pay-state-machine-demoshop
 ---
 
 The state machine is different for synchronous and asynchronous flow. Although from status "capture completed" it is the same and in the state machine, it's presented as a sub-process.

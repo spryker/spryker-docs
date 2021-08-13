@@ -2,6 +2,7 @@
 title: Editing Content Item Widgets
 description: The guide provides instructions for shop owners on how to update content item widgets in pages and blocks from the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/editing-content-item-widgets
+originalArticleId: d5c28ad9-10bd-47ac-8beb-44ea8aa91164
 redirect_from:
   - /v4/docs/editing-content-item-widgets
   - /v4/docs/en/editing-content-item-widgets

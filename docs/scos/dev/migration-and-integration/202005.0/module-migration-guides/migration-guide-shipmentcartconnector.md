@@ -2,6 +2,7 @@
 title: Migration Guide - ShipmentCartConnector
 description: Use the guide to learn how to update the ShipmentCartConnector module to a newer version.
 originalLink: https://documentation.spryker.com/v5/docs/mg-shipment-cart-connector
+originalArticleId: fe055d18-7755-4411-9ec3-26b407bf41c1
 redirect_from:
   - /v5/docs/mg-shipment-cart-connector
   - /v5/docs/en/mg-shipment-cart-connector
@@ -12,7 +13,7 @@ redirect_from:
 In this new version of the **ShipmentCartConnector** module, we have added support of split delivery. You can find more details about the changes on the [ShipmentCartConnector](https://github.com/spryker/shipment-cart-connector/releases) module release page.
 
 {% info_block errorBox %}
-This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](https://documentation.spryker.com/docs/en/split-delivery-concept
+This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202005.0/migration-concepts/split-delivery-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

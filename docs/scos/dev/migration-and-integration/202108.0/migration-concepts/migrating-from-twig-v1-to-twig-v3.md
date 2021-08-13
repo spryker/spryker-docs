@@ -2,9 +2,12 @@
 title: Migrating from Twig v1 to Twig v3
 description: The article describes how you can migrate from Twig v1 to Twig v3
 originalLink: https://documentation.spryker.com/2021080/docs/migrating-from-twig-v1-to-twig-v3
+originalArticleId: 00306b68-cf6d-4141-86a3-d4f1a33e9101
 redirect_from:
   - /2021080/docs/migrating-from-twig-v1-to-twig-v3
   - /2021080/docs/en/migrating-from-twig-v1-to-twig-v3
+  - /docs/migrating-from-twig-v1-to-twig-v3
+  - /docs/en/migrating-from-twig-v1-to-twig-v3
 ---
 
 Currently, Spryker supports only Twig v1 as a template engine. However, Twig v1 is quite an outdated solution, so we have added a possibility to update the Spryker-based projects to the latest version of Twig (v3).

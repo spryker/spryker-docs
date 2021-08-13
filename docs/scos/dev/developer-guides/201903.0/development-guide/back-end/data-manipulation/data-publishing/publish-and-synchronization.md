@@ -2,6 +2,7 @@
 title: Publish and Synchronization
 description: Publish and Synchronization process synchronizes all changes made on the backend need to be propagated to the client data stores.
 originalLink: https://documentation.spryker.com/v2/docs/publish-and-synchronization
+originalArticleId: 7cc6ae14-eb85-4b89-9193-590c0b72d477
 redirect_from:
   - /v2/docs/publish-and-synchronization
   - /v2/docs/en/publish-and-synchronization

@@ -2,6 +2,7 @@
 title: Managing Customer Groups
 description: The guide provides instructions on how to create, edit, and view customer groups in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-customer-groups
+originalArticleId: 3f4aba49-9b62-4d44-b28b-27ec538fa3ff
 redirect_from:
   - /v5/docs/managing-customer-groups
   - /v5/docs/en/managing-customer-groups
@@ -10,7 +11,7 @@ redirect_from:
 This article describes how to manage customer groups.
 To start working with customer groups, navigate to the **Customers** > **Customer Groups** section.
 
-Out-of-the-box, there are no connections between customer groups and any other Back Office feature, except for the Discounts. You can set up the discount conditions to be applied to a specific customer group. See  [Discount Conditions: Reference Information](https://documentation.spryker.com/docs/en/discount-conditions-reference-information) for more information on what the discount conditions are.
+Out-of-the-box, there are no connections between customer groups and any other Back Office feature, except for the Discounts. You can set up the discount conditions to be applied to a specific customer group. See  [Discount Conditions: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/references/discount-conditions-reference-information.html) for more information on what the discount conditions are.
 ***
 ## Adding a Customer Group
 To add a customer group:

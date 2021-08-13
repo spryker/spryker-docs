@@ -2,6 +2,7 @@
 title: Multiple Wishlists
 description: Help your customers track and save items for later purchase through multiple Wish Lists, which are connected to the users' accounts.
 originalLink: https://documentation.spryker.com/v3/docs/multiple-wishlists
+originalArticleId: 0a3515b9-2259-4249-8340-024a183da077
 redirect_from:
   - /v3/docs/multiple-wishlists
   - /v3/docs/en/multiple-wishlists
@@ -9,7 +10,7 @@ redirect_from:
 
 Help your customers track and save items for later purchase through multiple Wishlists, which are connected to the users' accounts.
 
-Customers can create one or multiple wishlists with [different names](/docs/scos/dev/features/202001.0/wishlist/named-wishlists.html), add products to them and [transfer wishlists to carts](/docs/scos/dev/features/202001.0/wishlist/convert-wishlist-to-cart.html) (either the entire list, or a specific item from the list)
+Customers can create one or multiple wishlists with [different names](/docs/scos/dev/features/201907.0/wishlist/named-wishlists.html), add products to them and [transfer wishlists to carts](/docs/scos/dev/features/201907.0/wishlist/convert-wishlist-to-cart.html) (either the entire list, or a specific item from the list)
 
 Customers can manage their wishlists in the **Wishlist** section of the customer account.
 

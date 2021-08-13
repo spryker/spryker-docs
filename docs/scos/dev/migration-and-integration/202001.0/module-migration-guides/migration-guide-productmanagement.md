@@ -2,6 +2,7 @@
 title: Migration Guide - ProductManagement
 description: Use the guide to learn how to update the ProductManagement module to a newer version.
 originalLink: https://documentation.spryker.com/v4/docs/mg-product-management
+originalArticleId: da56fd37-a594-4d71-baed-ab882240b460
 redirect_from:
   - /v4/docs/mg-product-management
   - /v4/docs/en/mg-product-management

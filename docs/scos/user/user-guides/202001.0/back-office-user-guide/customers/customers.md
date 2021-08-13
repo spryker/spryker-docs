@@ -2,6 +2,7 @@
 title: Customers
 description: The Customers section is designed for managing customer's data such as personal information, billing, and shipping addresses.
 originalLink: https://documentation.spryker.com/v4/docs/customers
+originalArticleId: 349f683b-d660-4ec2-a092-3f251ac4913a
 redirect_from:
   - /v4/docs/customers
   - /v4/docs/en/customers

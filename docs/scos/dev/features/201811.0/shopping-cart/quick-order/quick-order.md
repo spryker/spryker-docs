@@ -1,6 +1,7 @@
 ---
 title: Quick Order
 originalLink: https://documentation.spryker.com/v1/docs/quick-order-201903
+originalArticleId: 4aabdfdf-a8f9-4a1d-b1bc-a40598518371
 redirect_from:
   - /v1/docs/quick-order-201903
   - /v1/docs/en/quick-order-201903

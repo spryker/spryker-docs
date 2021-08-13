@@ -2,6 +2,7 @@
 title: Unique URL per Cart for Easy Sharing
 description: The feature allows you to generate a link to your cart and share it within your business unit with various access permissions
 originalLink: https://documentation.spryker.com/v4/docs/unique-url-per-cart-for-easy-sharing
+originalArticleId: fa886db6-e492-4142-83fd-e548bf2a72e3
 redirect_from:
   - /v4/docs/unique-url-per-cart-for-easy-sharing
   - /v4/docs/en/unique-url-per-cart-for-easy-sharing

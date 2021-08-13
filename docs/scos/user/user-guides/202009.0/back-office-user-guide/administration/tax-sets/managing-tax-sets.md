@@ -1,15 +1,16 @@
 ---
 title: Managing tax sets
 originalLink: https://documentation.spryker.com/v6/docs/managing-tax-sets
+originalArticleId: 4ee82610-73b3-41c8-a3b8-6d360813b064
 redirect_from:
   - /v6/docs/managing-tax-sets
   - /v6/docs/en/managing-tax-sets
 ---
 
-This document describes how to create, edit, and delete [tax sets](https://documentation.spryker.com/docs/tax).
+This document describes how to create, edit, and delete [tax sets](/docs/scos/dev/features/202009.0/tax/tax.html).
 
 ## Prerequisites
-Before you can create tax sets, make sure you have [tax rates](https://documentation.spryker.com/docs/managing-tax-rates).  
+Before you can create tax sets, make sure you have [tax rates](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/tax-rates/managing-tax-rates.html).  
 
 To start working with tax sets, go to **Administration > Tax Sets**.
 

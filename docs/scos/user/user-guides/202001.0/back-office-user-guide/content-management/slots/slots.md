@@ -2,12 +2,13 @@
 title: Slots
 description: The article provides some general information about slots and actions you can perform on them in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/slots
+originalArticleId: c0aa47d1-c269-4cf1-a6c9-d0f43181a43e
 redirect_from:
   - /v4/docs/slots
   - /v4/docs/en/slots
 ---
 
-Slots are used to embed content into pages to which [templates with slots](https://documentation.spryker.com/v4/docs/templates-slots-feature-overview ) are applied.
+Slots are used to embed content into pages to which [templates with slots](/docs/scos/dev/features/202001.0/cms/templates-and-slots/templates-and-slots-feature-overview.html) are applied.
 
 In the Slots page, you can:
 

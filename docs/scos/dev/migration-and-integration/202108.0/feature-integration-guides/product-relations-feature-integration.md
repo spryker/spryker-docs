@@ -2,9 +2,12 @@
 title: Product relations feature integration
 description: Integrate the Product Relations feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-relations-feature-integration
+originalArticleId: d8e059d5-4ccd-4c03-beb6-d186fae349f3
 redirect_from:
   - /2021080/docs/product-relations-feature-integration
   - /2021080/docs/en/product-relations-feature-integration
+  - /docs/product-relations-feature-integration
+  - /docs/en/product-relations-feature-integration
 ---
 
 ## Install Feature Core

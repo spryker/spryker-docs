@@ -2,6 +2,7 @@
 title: Implementation of Direct Debit in the Shared Layer
 description: This article provides step-by-step instructions on how to identify the new payment type using some unique constants.
 originalLink: https://documentation.spryker.com/v5/docs/dd-shared-implementation
+originalArticleId: 3a9a5992-eccc-4057-9b9e-bd14ca33fda0
 redirect_from:
   - /v5/docs/dd-shared-implementation
   - /v5/docs/en/dd-shared-implementation
@@ -58,4 +59,4 @@ vendor/bin/console transfer:generate
 ***
 **What's next?**
 
-After you've completed the front end, back end and shared implementation of the Direct Debit payment method, you can test it. See [Testing your Direct Debit Implementation](https://documentation.spryker.com/docs/en/dd-test-implementation) for information on how to do that.
+After you've completed the front end, back end and shared implementation of the Direct Debit payment method, you can test it. See [Testing your Direct Debit Implementation](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html) for information on how to do that.

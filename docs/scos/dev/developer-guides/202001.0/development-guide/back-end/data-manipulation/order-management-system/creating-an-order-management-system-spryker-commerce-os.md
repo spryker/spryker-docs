@@ -2,6 +2,7 @@
 title: Creating an Order Management System - Spryker Commerce OS
 description: In this task,  you will create a full order management process (OMS) using the Spryker state machine and then use it in your shop.
 originalLink: https://documentation.spryker.com/v4/docs/t-oms-and-state-machines-spryker-commerce-os
+originalArticleId: 946f68c0-5667-45b8-916c-bb23b2097946
 redirect_from:
   - /v4/docs/t-oms-and-state-machines-spryker-commerce-os
   - /v4/docs/en/t-oms-and-state-machines-spryker-commerce-os

@@ -2,6 +2,7 @@
 title: Company Account- Reference Information
 description: The guide provides additional information on the values you use when working with company roles, company unit addresses, company units, and company users.
 originalLink: https://documentation.spryker.com/v5/docs/company-account-reference-information
+originalArticleId: dc26fc5c-b8c9-48d5-94d8-fa420b9c0668
 redirect_from:
   - /v5/docs/company-account-reference-information
   - /v5/docs/en/company-account-reference-information

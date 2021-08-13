@@ -2,6 +2,7 @@
 title: Shop Guide - Shipment Step
 description: Use the procedure to select the shipment method and delivery date for the order in the Storefront.
 originalLink: https://documentation.spryker.com/v5/docs/shipment-step-shop-guide-201911
+originalArticleId: 7990faed-410f-44cc-8720-e91682d81f83
 redirect_from:
   - /v5/docs/shipment-step-shop-guide-201911
   - /v5/docs/en/shipment-step-shop-guide-201911
@@ -32,6 +33,6 @@ To select a shipment method:
 
 The delivery addresses are added and shipment methods along with the delivery dates are selected. Now, you can go to the next step to select a payment method.
 
-To learn more on how to proceed with the payment, see [Shop Guide - Payment Step](https://documentation.spryker.com/docs/en/payment-step-shop-guide-201911)
+To learn more on how to proceed with the payment, see [Shop Guide - Payment Step](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-payment-step.html)
 
 <!-- Last review date: Sep 24, 2019 -->

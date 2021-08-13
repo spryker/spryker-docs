@@ -1,9 +1,12 @@
 ---
 title: File details- discount_store.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-discount-storecsv
+originalArticleId: 446bff7a-da3b-4dee-86aa-c245f3529bf1
 redirect_from:
   - /2021080/docs/file-details-discount-storecsv
   - /2021080/docs/en/file-details-discount-storecsv
+  - /docs/file-details-discount-storecsv
+  - /docs/en/file-details-discount-storecsv
 ---
 
 This article contains content of the **discount_store.csv** file to configure Discount Store information on your Spryker Demo Shop.
@@ -20,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*     [discount.csv](https://documentation.spryker.com/docs/file-details-discountcsv)
+*     [discount.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
 *     *stores.php* configuration file of the demo shop PHP project
 
 ## Template File & Content Example

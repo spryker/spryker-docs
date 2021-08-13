@@ -2,6 +2,7 @@
 title: Managing CMS Blocks
 description: The guide provides procedures on how to view, update, activate and deactivate CMS blocks in the editor from the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/managing-cms-blocks
+originalArticleId: 8a6a8a71-d850-4dbd-9dab-93350164dced
 redirect_from:
   - /v3/docs/managing-cms-blocks
   - /v3/docs/en/managing-cms-blocks
@@ -42,7 +43,7 @@ On the **View CMS Block: Block ID** page, you can do the following:
 ## Editing Placeholders
 To edit a placeholder:
 1. On the **Overview of CMS Blocks** page in the _Actions_ column, click **Edit Placeholder** next to the block you want to update. 
-2. On the **Edit Block Glossary: Block ID** page that opens, you can update a title or content of the CMS block, as well as insert a content item widget. See [Adding Content Item Widgets to a Block](https://documentation.spryker.com/v4/docs/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-blocks) for more details.
+2. On the **Edit Block Glossary: Block ID** page that opens, you can update a title or content of the CMS block, as well as insert a content item widget. See [Adding Content Item Widgets to a Block](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-blocks) for more details.
 3. To save the updates, click **Save**. The updated block will be displayed on the grid of List of CMS Blocks.
 ***
 **Tips & Tricks**

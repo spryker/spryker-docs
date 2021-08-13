@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CMS Block Collector
 originalLink: https://documentation.spryker.com/v2/docs/mg-cms-block-collector
+originalArticleId: 03f7513b-e9fa-44f2-963e-47d4bb72e9b4
 redirect_from:
   - /v2/docs/mg-cms-block-collector
   - /v2/docs/en/mg-cms-block-collector

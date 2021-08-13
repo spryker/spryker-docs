@@ -2,6 +2,7 @@
 title: About the Query Container
 description: A query container holds all the database queries of the current module.
 originalLink: https://documentation.spryker.com/v1/docs/query-container
+originalArticleId: e547e611-9029-4652-9685-797ca6c7b7fd
 redirect_from:
   - /v1/docs/query-container
   - /v1/docs/en/query-container
@@ -41,7 +42,7 @@ You might use the following definitions to generate the related code:
 
 * `vendor/bin/console spryk:run AddZedPersistencePropelAbstractQuery` - Add Zed Persistence Propel Abstract Query
 
-See the [Spryk](https://documentation.spryker.com/v1/docs/spryk-201903) documentation for details.
+See the [Spryk](https://documentation.spryker.com/v1/docs/spryk) documentation for details.
 
 ## What's next?
 

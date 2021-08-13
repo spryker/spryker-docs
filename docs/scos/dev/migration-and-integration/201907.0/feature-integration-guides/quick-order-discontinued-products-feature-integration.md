@@ -2,6 +2,7 @@
 title: Quick Order- Discontinued Products Feature Integration
 description: Quick Add to Cart + Discontinued Products allow showing products in cart as "discontinued". This guide describes how to integrate the feature into the project.
 originalLink: https://documentation.spryker.com/v3/docs/quick-order-discontinued-products-feature-integration
+originalArticleId: d76d79f0-d0f8-448a-8c3a-1e7b58d10541
 redirect_from:
   - /v3/docs/quick-order-discontinued-products-feature-integration
   - /v3/docs/en/quick-order-discontinued-products-feature-integration

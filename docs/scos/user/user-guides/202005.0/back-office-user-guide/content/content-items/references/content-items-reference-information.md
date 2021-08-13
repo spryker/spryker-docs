@@ -2,6 +2,7 @@
 title: Content Items- Reference Information
 description: The guide provides reference information you work with when creating, updating and viewing content items in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/content-items-reference-information
+originalArticleId: 3b4e1dff-22df-4960-968b-0c4c7f357711
 redirect_from:
   - /v5/docs/content-items-reference-information
   - /v5/docs/en/content-items-reference-information
@@ -113,7 +114,7 @@ The following table describes the attributes on the *Create Content Item: Naviga
 | --- | --- |
 | Name | Name of the content item. |
 | Description | Description of the content item. |
-| Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](https://documentation.spryker.com/docs/en/managing-navigation#creating-a-navigation-element) to learn how to create it. |
+| Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](https://documentation.spryker.com/v5/docs/en/managing-navigation#creating-a-navigation-element) to learn how to create it. |
 
 
 

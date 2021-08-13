@@ -2,9 +2,12 @@
 title: Creating scheduled prices
 description: This user guide is about scheduling price changes by creating product price schedules. This functionality is shipped with the Scheduled prices feature.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-scheduled-prices
+originalArticleId: 4428f373-b26a-4dcf-bd40-b9fbad5f5704
 redirect_from:
   - /2021080/docs/creating-scheduled-prices
   - /2021080/docs/en/creating-scheduled-prices
+  - /docs/creating-scheduled-prices
+  - /docs/en/creating-scheduled-prices
 ---
 
 This topic describes how to create scheduled prices.
@@ -34,7 +37,7 @@ To create a price schedule:
 5. Once redirected to the _Import dry run_ page, check whether there are incorrect entries in your file in the *Errors found inside your file* section.
 
      {% info_block infoBox %}
-If needed, you can [edit the imported scheduled prices](https://documentation.spryker.com/docs/managing-scheduled-prices
+If needed, you can [edit the imported scheduled prices](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html
 {% endinfo_block %}.)
     
 6. Check if the successfully imported price schedules are correct in the *Row processed with success* section.

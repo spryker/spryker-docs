@@ -2,6 +2,7 @@
 title: Retrieving Company Information
 description: The article describes how to leverage endpoints provided by Spryker Glue API to retrieve company information.
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-company-information-201907
+originalArticleId: 8659a8a5-fc20-4d4f-838f-e9ea919e7387
 redirect_from:
   - /v4/docs/retrieving-company-information-201907
   - /v4/docs/en/retrieving-company-information-201907
@@ -16,13 +17,13 @@ The endpoints provided by this API cannot be accessed anonymously. To access the
 In your development, the API can help you to provide information on the company that the authenticated user belongs to.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/v4/docs/company-account-api-feature-integration-201907#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
 
 ## Retrieving Company Information
 ### Information on the User's Company
 To retrieve information on the company a user belongs to, send a GET request to the following endpoint:
 
-[/companies/mine](https://documentation.spryker.com/v4/docs/rest-api-reference#/companies)
+[/companies/mine](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/companies)
 
 Sample request: *GET http://glue.mysprykershop.com/companies/mine*
 
@@ -70,7 +71,7 @@ The endpoint responds with a collection of **RestCompanyResponse** consisting of
 ### Information on a Specific Company
 To retrieve information on a specific company, send a GET request to the following endpoint:
 
-[/companies/{% raw %}{{{% endraw %}company_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/v4/docs/rest-api-reference#/companies)
+[/companies/{% raw %}{{{% endraw %}company_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/companies)
 
 Sample request: *GET http://glue.mysprykershop.com/companies/**59b6c025-cc00-54ca-b101-191391adf2af***
 where **59b6c025-cc00-54ca-b101-191391adf2af** is the ID of the company you need.

@@ -2,12 +2,13 @@
 title: Injecting Dependencies within Factories- Container Globals
 description: The ContainerGlobals is a way to inject dependencies which are available inside your Factories.
 originalLink: https://documentation.spryker.com/v5/docs/container-globals
+originalArticleId: 4f7a0b41-c12e-42df-bb3d-5336d2772030
 redirect_from:
   - /v5/docs/container-globals
   - /v5/docs/en/container-globals
 ---
 
-The `ContainerGlobals` is a way to inject dependencies which are available inside your [Factories](https://documentation.spryker.com/docs/en/factory). Every dependency added to the `ContainerGlobals` is available by using `getProvidedDependency()` in your factory.
+The `ContainerGlobals` is a way to inject dependencies which are available inside your [Factories](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/factory/creating-instances-of-classes-factory.html). Every dependency added to the `ContainerGlobals` is available by using `getProvidedDependency()` in your factory.
 
 To add something globally you need to create a service provider and add it to the bootstrap of your application.
 
@@ -39,4 +40,4 @@ class YourServiceProvider implements ServiceProviderInterface
 }
 ```
 
-To access this global dependency, call `$this->getProvidedDependency(KEY_FOR_GLOBAL_DEPENDENCY)` inside your factory. `FormFactoryServiceProvider` gives you a full example on how to add a `FormFactory` that’s available to all of your [factories](https://documentation.spryker.com/docs/en/factory) With this approach you can define such dependencies once, instead of defining them each time for each module that uses them.
+To access this global dependency, call `$this->getProvidedDependency(KEY_FOR_GLOBAL_DEPENDENCY)` inside your factory. `FormFactoryServiceProvider` gives you a full example on how to add a `FormFactory` that’s available to all of your [factories](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/factory/creating-instances-of-classes-factory.html) With this approach you can define such dependencies once, instead of defining them each time for each module that uses them.

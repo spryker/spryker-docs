@@ -2,6 +2,7 @@
 title: Glue API- Products feature integration
 description: This guide will navigate you through the process of installing and configuring the Product API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-products-feature-integration
+originalArticleId: 9ae3a42d-b06d-4563-bff1-a471b356b0b1
 redirect_from:
   - /v6/docs/glue-api-products-feature-integration
   - /v6/docs/en/glue-api-products-feature-integration
@@ -14,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | Master | [Feature API](https://documentation.spryker.com/docs/glue-spryker-core-feature-integration) |
+| Spryker Core | Master | [Feature API](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Product |master |  |
 | Price | master |  |
 

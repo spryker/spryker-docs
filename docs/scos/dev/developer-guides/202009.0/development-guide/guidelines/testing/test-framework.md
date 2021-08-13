@@ -2,6 +2,7 @@
 title: Test Framework
 description: Spryker uses Codeception framework for running tests. Learn how to configure and use it in your project.
 originalLink: https://documentation.spryker.com/v6/docs/test-framework
+originalArticleId: 3f7e85c6-659f-4880-a257-47444206e395
 redirect_from:
   - /v6/docs/test-framework
   - /v6/docs/en/test-framework
@@ -16,7 +17,7 @@ We strongly recommend reading the documentation of both frameworks to get the be
 
 Codeception offers many handy things to write better and cleaner tests. Many solutions this framework has are built on top of PHPUnit. In the next articles, we will only reference Codeception even if these features are available in PHPUnit as well.
 
-On top of Codeception, we have built the [Testify](https://github.com/spryker/testify/) module, which provides many handy helpers. See [Testify Helpers](https://documentation.spryker.com/docs/available-test-helpers#testify-helpers) for details on the existing helpers.
+On top of Codeception, we have built the [Testify](https://github.com/spryker/testify/) module, which provides many handy helpers. See [Testify Helpers](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html#testify-helpers) for details on the existing helpers.
 
 ## Configuration
 `codeception.yml` in the root of your project is the main entry point for your tests. In this file, the basic configuration for your test suite is defined.
@@ -44,7 +45,7 @@ There are many console commands provided from Codeception, but the most used one
 
 For information on other Codeception console commands, run `vendor/bin/codecept list`.
 
-See [Executing Tests](https://documentation.spryker.com/docs/executing-tests) for details on some commands. 
+See [Executing Tests](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/executing-tests.html) for details on some commands. 
 
 ## Testing with Spryker
 On top of Codeception, we have added a basic infrastructure for tests. We have divided our tests by the applications, and for the layer we test. Thus, the organization of tests in most cases looks like this:
@@ -55,23 +56,23 @@ On top of Codeception, we have added a basic infrastructure for tests. We have d
 
 The **Communication** suite can contain unit and functional tests. The controller tests can be used to test like a user that interacts with the browser but without the overhead of the GUI rendering. This suite should be used for all tests that do not need JavaScript.
 
-The **Business** suite can contain unit and functional tests. The facade test is one kind of an API test approach. For more information, see [Test API](https://documentation.spryker.com/docs/en/testing-best-practices#test-api).
+The **Business** suite can contain unit and functional tests. The facade test is one kind of an API test approach. For more information, see [Test API](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/testing-best-practices.html#test-api).
 
 The **Presentation** suite contains functional tests that can be used to interact with a headless browser. These tests should be used when you have JavaScript on the page under test. 
 
-All test classes follow the exact same path as the class under test, except that tests live in the `tests` directory, and the organization part of the namespace is suffixed with `Test`. For example, `tests/PyzTest/*`. For details on the `tests` directory structure, see [Directory Structure](https://documentation.spryker.com/docs/en/setting-up-tests#directory-structure).
+All test classes follow the exact same path as the class under test, except that tests live in the `tests` directory, and the organization part of the namespace is suffixed with `Test`. For example, `tests/PyzTest/*`. For details on the `tests` directory structure, see [Directory Structure](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/setting-up-tests.html#directory-structure).
 
-Each test suite contains a `codeception.yml`configuration file. This file includes, for example, [helpers](https://documentation.spryker.com/docs/test-helpers) that are enabled for the current suite.
+Each test suite contains a `codeception.yml`configuration file. This file includes, for example, [helpers](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/test-helpers.html) that are enabled for the current suite.
 
 For example, check the organization in the [Application](https://github.com/spryker-shop/suite/tree/master/tests/PyzTest/Yves/Application) module of Spryker Master Suite.
 
 ## Next Steps
 
-* [Set up an organization of your tests](https://documentation.spryker.com/docs/setting-up-tests).
-* Learn about the [available test helpers](https://documentation.spryker.com/docs/available-test-helpers).
-* [Create or enable a test helper](https://documentation.spryker.com/docs/test-helpers).
-*  Learn about the [console commands you can use to execute your tests](https://documentation.spryker.com/docs/executing-tests).
-* [Configure data builders to create transfers your tests](https://documentation.spryker.com/docs/data-builders).
-* [Generate code coverage report for your tests](https://documentation.spryker.com/docs/code-coverage).
-* Learn about the [testing best practices](https://documentation.spryker.com/docs/testing-best-practices).
+* [Set up an organization of your tests](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/setting-up-tests.html).
+* Learn about the [available test helpers](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/available-test-helpers.html).
+* [Create or enable a test helper](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/test-helpers.html).
+*  Learn about the [console commands you can use to execute your tests](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/executing-tests.html).
+* [Configure data builders to create transfers your tests](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/data-builders.html).
+* [Generate code coverage report for your tests](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/code-coverage.html).
+* Learn about the [testing best practices](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/testing-best-practices.html).
 

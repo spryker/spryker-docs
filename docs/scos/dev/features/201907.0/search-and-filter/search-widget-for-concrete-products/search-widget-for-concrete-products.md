@@ -2,6 +2,7 @@
 title: Search Widget for Concrete Products
 description: Search Widget for Concrete Products feature provides a full-text search widget that allows shop visitors to look for concrete products and quickly order them
 originalLink: https://documentation.spryker.com/v3/docs/search-widget-for-concrete-products
+originalArticleId: 56a449be-2c70-4649-a9b5-fcd78c35c376
 redirect_from:
   - /v3/docs/search-widget-for-concrete-products
   - /v3/docs/en/search-widget-for-concrete-products

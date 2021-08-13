@@ -2,9 +2,12 @@
 title: RatePay - Direct Debit
 description: Integrate direct debit payment through Ratepay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-direct-debit
+originalArticleId: 5b1a8407-02f1-418e-9f69-98643224753c
 redirect_from:
   - /2021080/docs/ratepay-direct-debit
   - /2021080/docs/en/ratepay-direct-debit
+  - /docs/ratepay-direct-debit
+  - /docs/en/ratepay-direct-debit
 ---
 
 ## Workflow Scenarios
@@ -46,4 +49,4 @@ The configuration to integrate Direct Debit payments using RatePAY is:
 
 ## Performing Requests
 
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partners/202001.0/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.

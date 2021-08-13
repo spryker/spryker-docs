@@ -1,6 +1,7 @@
 ---
 title: Security and Authentication
 originalLink: https://documentation.spryker.com/v2/docs/security-and-authentication
+originalArticleId: ffb58d0f-6b48-4617-9de3-ed3efbd2823b
 redirect_from:
   - /v2/docs/security-and-authentication
   - /v2/docs/en/security-and-authentication
@@ -49,7 +50,7 @@ class MyResourceHandler implements MyResourceInterface
 In addition to user scopes, each endpoint can be secured individually. For this purpose, you need to configure the routing of your Resource Feature Module. The Route Plugins of each module define which verbs are supported by the corresponding endpoint. This is done via the config function of the plugin class. The verbs are passed to it as a set of functions that should be called when the corresponding verb is passed.
 
 {% info_block infoBox %}
-For details, see [Resource Routing](https://documentation.spryker.com/v2/docs/glue-infrastructure#resource-routing
+For details, see [Resource Routing](/docs/scos/dev/glue-api/201903.0/glue-api-developer-guides/glue-infrastructure.html#resource-routing
 {% endinfo_block %}.)
 
 For each function in the set, the second parameter determines, whether the corresponding verb requires authentication to use (the parameter value is **true**) or not (the value is **false**). If the parameter is not passed, the verb requires authentication.

@@ -2,9 +2,12 @@
 title: Braintree - Performing Requests
 description: This article contains information on the state machine commands and conditions for the Braintree module in the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/braintree-performing-requests
+originalArticleId: 866b7c18-891a-45db-bc3d-8ac04b89ee80
 redirect_from:
   - /2021080/docs/braintree-performing-requests
   - /2021080/docs/en/braintree-performing-requests
+  - /docs/braintree-performing-requests
+  - /docs/en/braintree-performing-requests
 ---
 
 In order to perform the necessary requests in the project based on Spryker Commerce OS or SCOS, you can easily use the implemented state machine commands and conditions. The next section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.

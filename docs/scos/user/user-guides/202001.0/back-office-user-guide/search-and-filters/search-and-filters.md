@@ -2,6 +2,7 @@
 title: Search and Filters
 description: The article introduces an overview of Search and Filter that enables shop owners to handle and customize search and filtering preferences in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/search-and-filters
+originalArticleId: 90690f30-77fc-4634-a117-30578bf6a99c
 redirect_from:
   - /v4/docs/search-and-filters
   - /v4/docs/en/search-and-filters

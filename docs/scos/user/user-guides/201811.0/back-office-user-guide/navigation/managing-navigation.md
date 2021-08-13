@@ -2,6 +2,7 @@
 title: Managing Navigation
 description: Use these procedures to create, edit, activate or deactivate a child node, view and manage a navigation tree and create the new navigation in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/managing-navigation
+originalArticleId: 9e8203a1-3383-45e8-b115-33320686bd0f
 redirect_from:
   - /v1/docs/managing-navigation
   - /v1/docs/en/managing-navigation

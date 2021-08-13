@@ -2,6 +2,7 @@
 title: Templates & Slots Feature Overview
 description: The article describes the Templates & Slots feature that allows content managers to interact with content using a template with slots.
 originalLink: https://documentation.spryker.com/v4/docs/templates-slots-feature-overview
+originalArticleId: 9695e3a5-ee25-405d-9dc9-1d5229332af4
 redirect_from:
   - /v4/docs/templates-slots-feature-overview
   - /v4/docs/en/templates-slots-feature-overview
@@ -12,9 +13,9 @@ The Templates & Slots Feature enables content managers to effectively and cohere
 {% info_block infoBox %}
 
 Templates & Slots is a complex feature which works in conjunction with other features. To use it effectively, make sure you get familiar with the features in the order they are presented:
-* [CMS Page](https://documentation.spryker.com/v4/docs/en/cms-page)
-* [CMS Block](https://documentation.spryker.com/v4/docs/en/cms-block)
-* [Content Items](https://documentation.spryker.com/v4/docs/content-items-201907) 
+* [CMS Page](/docs/scos/dev/features/202001.0/cms/cms-page/cms-page.html)
+* [CMS Block](/docs/scos/dev/features/202001.0/cms/cms-block/cms-block.html)
+* [Content Items](/docs/scos/dev/features/202001.0/cms/content-items/content-items.html) 
 * [WYSIWYG Editor](/docs/scos/dev/features/202001.0/cms/wysiwyg-editor.html)
 
 {% endinfo_block %}
@@ -119,7 +120,7 @@ A content manager can [manage CMS blocks](/docs/scos/user/user-guides/202001.0/b
 </details>
 
 
-CMS Block is a separate feature with a dedicated section in the Back Office. See [CMS Block](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/blocks/cms-block.html) to learn what a content manager can do with CMS blocks in the Back Office > **Content Management** > **Blocks** section.
+CMS Block is a separate feature with a dedicated section in the Back Office. See [CMS Block](/docs/scos/dev/features/202001.0/cms/cms-block/cms-block.html-guide) to learn what a content manager can do with CMS blocks in the Back Office > **Content Management** > **Blocks** section.
 
 
 ## Content Item
@@ -193,7 +194,7 @@ When the feature is integrated into your project, the following applies:
 
 * Spryker CMS Blocks is the content provider for all the slots.
 * Slots embed content from [CMS Blocks](/docs/scos/dev/features/202001.0/cms/cms-block/cms-block.html).
-* Content for CMS blocks is created in the [WYSIWYG Editor](https://documentation.spryker.com/v4/docs/wysiwyg-editor#wysiwyg-editor).
+* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/dev/features/202001.0/cms/wysiwyg-editor.html#wysiwyg-editor).
 * Templates with slots are managed in the Back Office > **Slots** section.
 
 The schema below shows how content is managed with the help of templates with slots:
@@ -222,7 +223,7 @@ To meet your project requirements, you can extend the visibility conditions func
 
 
 
-A content manager can define visibility conditions by [selecting pages](https://documentation.spryker.com/v4/docs/managing-slots#selecting-pages) in the Back Office > **Content Management > Slots** section.
+A content manager can define visibility conditions by [selecting pages](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/slots/managing-slots.html#selecting-pages) in the Back Office > **Content Management > Slots** section.
 
 A developer can [import visibility conditions](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html). 
 
@@ -300,7 +301,7 @@ This section describes how Slot Widget works with the Spryker CMS Blocks content
 {% info_block infoBox %}
 
 
-* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](https://documentation.spryker.com/v4/docs/mg-cms-block#upgrading-from-version-2---to-version-3--) the `CMSBlock` module in your project for CMS Blocks to have keys.
+* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--) the `CMSBlock` module in your project for CMS Blocks to have keys.
 
 
 {% endinfo_block %}

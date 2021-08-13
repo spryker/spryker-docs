@@ -2,16 +2,19 @@
 title: Cart feature integration
 description: This guide provides step-by-step instruction for integrating Add product to cart from the Catalog page feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/cart-feature-integration
+originalArticleId: 77563ea2-8a5a-46c2-97e5-5e1f20267689
 redirect_from:
   - /2021080/docs/cart-feature-integration
   - /2021080/docs/en/cart-feature-integration
+  - /docs/cart-feature-integration
+  - /docs/en/cart-feature-integration
 ---
 
 {% info_block errorBox %}
 
 The following Feature Integration guide expects the basic feature to be in place.
 
-The current Feature Integration guide only adds the [Add product to cart from the Catalog page](https://documentation.spryker.com/docs/quick-order-from-the-catalog-page) functionality.
+The current Feature Integration guide only adds the [Add product to cart from the Catalog page](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) functionality.
 
 {% endinfo_block %}
 

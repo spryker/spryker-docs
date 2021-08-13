@@ -1,12 +1,15 @@
 ---
 title: File details- comment.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-commentcsv
+originalArticleId: 2748359a-d71e-4878-a3d9-ae305f124192
 redirect_from:
   - /2021080/docs/file-details-commentcsv
   - /2021080/docs/en/file-details-commentcsv
+  - /docs/file-details-commentcsv
+  - /docs/en/file-details-commentcsv
 ---
 
-This article contains content of the **comment.csv** file to configure [Comment](https://documentation.spryker.com/docs/comments-201907)  information on your Spryker Demo Shop.
+This article contains content of the **comment.csv** file to configure [Comment](https://documentation.spryker.com/2021080/docs/comments)  information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -23,7 +26,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*     [customer.csv](https://documentation.spryker.com/docs/file-details-customercsv)
+*     [customer.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-customer.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *comment.csv*  file can be downloaded here:

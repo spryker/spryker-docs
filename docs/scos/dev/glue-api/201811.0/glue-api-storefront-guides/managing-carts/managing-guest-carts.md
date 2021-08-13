@@ -1,6 +1,7 @@
 ---
 title: Managing Guest Carts
 originalLink: https://documentation.spryker.com/v1/docs/managing-guest-carts
+originalArticleId: b3124f03-6fde-4c70-b22c-1fbae12008db
 redirect_from:
   - /v1/docs/managing-guest-carts
   - /v1/docs/en/managing-guest-carts

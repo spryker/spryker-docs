@@ -1,6 +1,7 @@
 ---
 title: Navigation Schema
 originalLink: https://documentation.spryker.com/v1/docs/db-schema-navigation
+originalArticleId: 77452220-03e9-46a0-8ac9-c587a4465ad5
 redirect_from:
   - /v1/docs/db-schema-navigation
   - /v1/docs/en/db-schema-navigation

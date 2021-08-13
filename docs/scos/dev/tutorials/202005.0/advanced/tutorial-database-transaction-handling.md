@@ -2,6 +2,7 @@
 title: Tutorial - Database Transaction Handling
 description: Use the guide to understand how to handle database transactions.
 originalLink: https://documentation.spryker.com/v5/docs/t-database-transactions
+originalArticleId: 6f69799d-ef38-4c75-a8e5-2ddfb7fb3fec
 redirect_from:
   - /v5/docs/t-database-transactions
   - /v5/docs/en/t-database-transactions

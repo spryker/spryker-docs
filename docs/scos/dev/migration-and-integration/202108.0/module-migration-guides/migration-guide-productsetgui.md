@@ -2,9 +2,12 @@
 title: Migration Guide - ProductSetGui
 description: Use the guide to learn how to update the ProductSetGui module to a newer version.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-set-gui
+originalArticleId: c83c362a-22f0-4805-9a54-a28393dd55b9
 redirect_from:
   - /2021080/docs/mg-product-set-gui
   - /2021080/docs/en/mg-product-set-gui
+  - /docs/mg-product-set-gui
+  - /docs/en/mg-product-set-gui
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

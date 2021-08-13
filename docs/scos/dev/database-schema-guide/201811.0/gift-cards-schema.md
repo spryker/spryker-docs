@@ -1,6 +1,7 @@
 ---
 title: Gift Cards Schema
 originalLink: https://documentation.spryker.com/v1/docs/db-schema-gift-cards
+originalArticleId: 21a41222-1b88-443f-9363-dc5fd80df54d
 redirect_from:
   - /v1/docs/db-schema-gift-cards
   - /v1/docs/en/db-schema-gift-cards

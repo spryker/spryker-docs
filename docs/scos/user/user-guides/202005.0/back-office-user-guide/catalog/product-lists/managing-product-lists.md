@@ -2,6 +2,7 @@
 title: Managing Product Lists
 description: Use these procedures to edit, export, remove a product list or remove products from the product list in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-product-lists
+originalArticleId: 563c3b35-fc7e-480b-8e1b-11290577c9af
 redirect_from:
   - /v5/docs/managing-product-lists
   - /v5/docs/en/managing-product-lists
@@ -63,5 +64,5 @@ While editing the existing product list, click **Remove List** in the top right 
 **What's next?**
 Now you know how to manage the products lists that already exist in the shop.
 
-Review [Product Lists: Reference Information](https://documentation.spryker.com/docs/en/product-lists-reference-information) to learn about the attributes you see, select, and enter while managing a product list.
+Review [Product Lists: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-lists/references/product-lists-reference-information.html) to learn about the attributes you see, select, and enter while managing a product list.
 

@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Checkout and Step Engine - Spryker Commerce OS
 originalLink: https://documentation.spryker.com/v3/docs/t-checkout-and-step-engine-spryker-commerce-os
+originalArticleId: 23c3cde0-1efc-4946-84fd-1fbb0505cc01
 redirect_from:
   - /v3/docs/t-checkout-and-step-engine-spryker-commerce-os
   - /v3/docs/en/t-checkout-and-step-engine-spryker-commerce-os

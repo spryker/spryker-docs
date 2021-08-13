@@ -2,6 +2,7 @@
 title: Alternative Products API Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Alternative Products API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v1/docs/alternative-products-api-feature-integration
+originalArticleId: 180d8b0d-1c47-4617-8ee7-6491710d04ec
 redirect_from:
   - /v1/docs/alternative-products-api-feature-integration
   - /v1/docs/en/alternative-products-api-feature-integration
@@ -72,7 +73,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </div></section>
 
 **See also:**
-[Retrieving Alternative Products](https://documentation.spryker.com/v1/docs/retrieving-alternative-products-201903)
+[Retrieving Alternative Products](https://documentation.spryker.com/v1/docs/retrieving-alternative-products)
  
 _Last review date: Mar 14, 2019_
 

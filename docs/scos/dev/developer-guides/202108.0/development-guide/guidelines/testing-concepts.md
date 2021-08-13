@@ -2,9 +2,12 @@
 title: Testing Concepts
 description: Testing your project is one of the best ways to ensure that your software functions as it is supposed to. The role of testing is to find bugs during the early stages of development to minimize risks.
 originalLink: https://documentation.spryker.com/2021080/docs/testing-concepts
+originalArticleId: 4690680b-9b8f-4a7f-805c-1c8da2755279
 redirect_from:
   - /2021080/docs/testing-concepts
   - /2021080/docs/en/testing-concepts
+  - /docs/testing-concepts
+  - /docs/en/testing-concepts
 ---
 
 Testing your project is one of the best ways to ensure that your software functions as it is supposed to. The role of testing is to find bugs during the early stages of development to minimize risks. QA is the process of assuring quality, not just verifying you will not get an error on some page.

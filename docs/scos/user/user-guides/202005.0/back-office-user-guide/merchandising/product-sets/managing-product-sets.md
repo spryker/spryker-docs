@@ -2,6 +2,7 @@
 title: Managing Product Sets
 description: Use these procedures to view, update or change the order of product sets, as well as activate/deactivate and/or delete them in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-product-sets
+originalArticleId: 5cd422ba-931b-4165-bbcd-89db03a488cc
 redirect_from:
   - /v5/docs/managing-product-sets
   - /v5/docs/en/managing-product-sets
@@ -20,7 +21,7 @@ To edit a product set:
 ![Editing a product set](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/editing-product-set.png){height="" width=""}
 
     {% info_block infoBox "Info" %}
-The attributes you see are described in [Product Sets: Reference Information](https://documentation.spryker.com/docs/en/product-sets-reference-information
+The attributes you see are described in [Product Sets: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-sets/references/product-sets-reference-information.html
 {% endinfo_block %}.)
 3. Once done, click **Submit**.
 

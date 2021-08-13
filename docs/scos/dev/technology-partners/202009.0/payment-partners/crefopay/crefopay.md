@@ -1,6 +1,7 @@
 ---
 title: CrefoPay
 originalLink: https://documentation.spryker.com/v6/docs/crefopay
+originalArticleId: acbbb412-a21f-4e15-b648-7ee7bcf3122c
 redirect_from:
   - /v6/docs/crefopay
   - /v6/docs/en/crefopay
@@ -25,20 +26,20 @@ The `SprykerEco.CrefoPay` module includes integration with:
 
 The `SprykerEco.CrefoPay` module provides the following payment methods:
 
-* [Bill](https://documentation.spryker.com/v4/docs/crefopay-provided-payment-methods#bill)
-* [Cash on Delivery](https://documentation.spryker.com/v4/docs/crefopay-provided-payment-methods#cash-on-delivery)
-* [Credit Card](https://documentation.spryker.com/v4/docs/crefopay-provided-payment-methods#credit-card)
-* [Card with 3D secure](https://documentation.spryker.com/v4/docs/crefopay-provided-payment-methods#credit-card-with-3d-secure)
-* [Direct Debit](https://documentation.spryker.com/v4/docs/crefopay-provided-payment-methods#direct-debit)
-* [PayPal](https://documentation.spryker.com/v4/docs/crefopay-provided-payment-methods#paypal)
-* [Cash in advance](https://documentation.spryker.com/v4/docs/crefopay-provided-payment-methods#cash-in-advance)
-* [SofortÜberweisung](https://documentation.spryker.com/v4/docs/crefopay-provided-payment-methods#sofort-berweisung)
+* [Bill](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-provided-payment-methods.html#bill)
+* [Cash on Delivery](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-provided-payment-methods.html#cash-on-delivery)
+* [Credit Card](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-provided-payment-methods.html#credit-card)
+* [Card with 3D secure](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-provided-payment-methods.html#credit-card-with-3d-secure)
+* [Direct Debit](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-provided-payment-methods.html#direct-debit)
+* [PayPal](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-provided-payment-methods.html#paypal)
+* [Cash in advance](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-provided-payment-methods.html#cash-in-advance)
+* [SofortÜberweisung](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-provided-payment-methods.html#sofort-berweisung)
 
 ## What's next?
 To integrate CrefoPay into your system the see following articles:
 
-* [CrefoPay - Installation and Configuration](https://documentation.spryker.com/docs/crefopay-configuration)
-* [CrefoPay - Integration](https://documentation.spryker.com/docs/crefopay-integration)
+* [CrefoPay - Installation and Configuration](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-installation-and-configuration.html)
+* [CrefoPay - Integration](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-integration-into-a-project.html)
 
 To learn more about the payment methods provided by CrefoPay, see CrefoPay - Provided Payment Methods
 

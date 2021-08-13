@@ -2,6 +2,7 @@
 title: Managing Users
 description: The procedures help create, edit, activate/deactivate or delete Back Office users, set a language to the Back Office user account, and make a user be an agent.
 originalLink: https://documentation.spryker.com/v5/docs/managing-users
+originalArticleId: aa0a96e2-b0b4-4df0-a419-b5c122c67d97
 redirect_from:
   - /v5/docs/managing-users
   - /v5/docs/en/managing-users
@@ -32,7 +33,7 @@ You have already done the primary setup (you have created a role and group), so 
     * Agent
     * Interface language.
     {% info_block infoBox %}
-See [User: Reference Information](https://documentation.spryker.com/docs/en/user-reference-information
+See [User: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/users/roles-groups-and-users/references/user-reference-information.html
 {% endinfo_block %} to know more about these attributes.)
 3. Click **Create**.
     
@@ -42,7 +43,7 @@ There is a way to initiate a create-new-user flow while editing a user record. T
 
 
 ## Assigning Customers to Users
-The Assign Customers option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](https://documentation.spryker.com/docs/en/managing-cms-pages#previewing-cms-pages) set of topics).
+The Assign Customers option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/managing-cms-pages.html#previewing-cms-pages) set of topics).
  
 **To assign a customer**:
 1. Navigate to the **Users** page.
@@ -59,7 +60,7 @@ To de-assign a customer:
 
 ## Editing a User
 **To edit a user:**
-1. In **Users List > Action** column, click **Edit**  if you want to change user's details. See [User: Reference Information](https://documentation.spryker.com/docs/en/user-reference-information) for  more details.
+1. In **Users List > Action** column, click **Edit**  if you want to change user's details. See [User: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/users/roles-groups-and-users/references/user-reference-information.html) for  more details.
 2. When the updates are done, click **Update**.
 
 ## Activating and Deactivating a User

@@ -2,6 +2,7 @@
 title: Stores
 description: The guide provides additional information you use when working with stores in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/stores-reference-information-201911
+originalArticleId: dc93b4c3-d9c0-4a90-af1b-da5624cef112
 redirect_from:
   - /v5/docs/stores-reference-information-201911
   - /v5/docs/en/stores-reference-information-201911

@@ -1,9 +1,12 @@
 ---
 title: How to get the most out of Spryker Support
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-get-the-most-out-of-spryker-support
+originalArticleId: 3ab286da-5f06-4035-bc52-0b0237ed410f
 redirect_from:
   - /2021080/docs/how-to-get-the-most-out-of-spryker-support
   - /2021080/docs/en/how-to-get-the-most-out-of-spryker-support
+  - /docs/how-to-get-the-most-out-of-spryker-support
+  - /docs/en/how-to-get-the-most-out-of-spryker-support
 ---
 
 We are very proud to have outstanding First Response Times (currently they average at around 35 Minutes in busy weeks), however, a First Response does seldom immediately include the solution to your problem. So how can we shorten Case Resolution Time?

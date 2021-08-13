@@ -2,6 +2,7 @@
 title: Performance guidelines
 description: This guideline explains how to optimize the server-side execution time.
 originalLink: https://documentation.spryker.com/v6/docs/performance-guidelines
+originalArticleId: 7cfbf82f-3958-4cbe-a2da-e8895a80b045
 redirect_from:
   - /v6/docs/performance-guidelines
   - /v6/docs/en/performance-guidelines
@@ -120,7 +121,7 @@ $CURRENT_STORE
 
 ## General Twig optimizations
 
-Twig, together with [Atomic Frontend](https://documentation.spryker.com/docs/atomic-front-end-general-overview), is an extremely flexible approach but at the same time not the fastest one. Check if you can reduce or optimize things there. 
+Twig, together with [Atomic Frontend](/docs/scos/dev/developer-guides/202009.0/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html), is an extremely flexible approach but at the same time not the fastest one. Check if you can reduce or optimize things there. 
 For example, `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} data.foo.bar.lastName {% raw %}}}{% endraw %}` trigger many calls to the `Template::getAttribute()` method which is very slow. Making calculations on the PHP side can help here a lot, as well as using `{% raw %}{{{% endraw %} set customer = data.foo.bar {% raw %}}}{% endraw %}` + `{% raw %}{{{% endraw %} customer.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} customer.lastName {% raw %}}}{% endraw %}`. 
 
 ## Activate Zed navigation cache
@@ -166,16 +167,16 @@ You need to remove the cache files for each project deployment.
 
 {% endinfo_block %}
 
-See [EventDispatcher module migration guide](https://documentation.spryker.com/docs/migration-guide-eventdispatcher) for information on how to upgrade to a newer version of the EventDispatcher module.
+See [EventDispatcher module migration guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-eventdispatcher.html) for information on how to upgrade to a newer version of the EventDispatcher module.
 
-See [Cache of Unresolved Entities for Zed ](https://documentation.spryker.com/docs/cache-of-unresolved-entities-for-zed) for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
+See [Cache of Unresolved Entities for Zed ](/docs/scos/dev/migration-and-integration/202009.0/technical-enhancements/cache-of-unresolved-entities-for-zed.html) for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
 
 
 ## Redis Mget cache
 
 Yves performs a high number of `get()` calls to Redis. If Redis is installed on the same machine, the expected time per `get()` is below 0.1 ms. However, in case you run Spryker in a cloud environment, there is latency for each `get()` call to Redis. It can sum up to a few hundred milliseconds per request. To avoid this performance bottleneck, Spryker remembers all used `get()` calls per URL and performs a single `mget()` to retrieve all needed data in one call. This behavior is enabled by default. 
 
-In case you see a high number of `get()` calls in your monitoring, make sure that `StorageCacheServiceProvider` is registered in `YvesBootstrap`. This provider is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Using Redis as a KV Storage](https://documentation.spryker.com/v4/docs/redis-as-kv#using-redis-cache).
+In case you see a high number of `get()` calls in your monitoring, make sure that `StorageCacheServiceProvider` is registered in `YvesBootstrap`. This provider is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Using Redis as a KV Storage](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/client/using-and-configuring-redis-as-a-key-value-storage.html#using-redis-cache).
 
 ## ClassResolver optimizations
 Spryker often uses the so-called class resolvers. Those resolvers are responsible for finding class names for certain overridable class names. Resolvables are for example `ModuleFactory`, `ModuleConfig`, `ModuleClient` etc. 

@@ -2,6 +2,7 @@
 title: Product Management
 description: Ensure a smooth shopping experience with the powerful product management features that allow you to create a neat and fully customized product catalog.
 originalLink: https://documentation.spryker.com/v3/docs/product-management
+originalArticleId: b101f4b7-be47-4f31-86ec-9e1b08d87a37
 redirect_from:
   - /v3/docs/product-management
   - /v3/docs/en/product-management

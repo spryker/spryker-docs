@@ -2,6 +2,7 @@
 title: Akeneo - Installation and Configuration
 description: This article provides installation and configuration details for the Akeneo module in the Spryker-based project.
 originalLink: https://documentation.spryker.com/v1/docs/akeneo-installation-configuration
+originalArticleId: 26ad93ae-58cf-484c-800c-b99ee756ef0b
 redirect_from:
   - /v1/docs/akeneo-installation-configuration
   - /v1/docs/en/akeneo-installation-configuration

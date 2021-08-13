@@ -2,6 +2,7 @@
 title: Catalog Search
 description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
 originalLink: https://documentation.spryker.com/v5/docs/catalog-search
+originalArticleId: 231d202e-1af4-4faa-bb41-143cee62e1fc
 redirect_from:
   - /v5/docs/catalog-search
   - /v5/docs/en/catalog-search

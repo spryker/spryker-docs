@@ -2,6 +2,7 @@
 title: Spryker Middleware
 description: Spryker Middleware is a constructor that allows you to set up a linear data processing flow, also referred to as pipeline, for import/export of data from some system to shop, or from shop to some system.
 originalLink: https://documentation.spryker.com/v6/docs/spryker-middleware
+originalArticleId: 0448b423-4363-4c1b-b980-c0082413e272
 redirect_from:
   - /v6/docs/spryker-middleware
   - /v6/docs/en/spryker-middleware

@@ -2,9 +2,12 @@
 title: Managing company roles
 description: Use the procedures to create, update, delete, and assign company roles in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-roles
+originalArticleId: 3297455f-e357-4d29-94ae-0797c45f25a3
 redirect_from:
   - /2021080/docs/managing-company-roles
   - /2021080/docs/en/managing-company-roles
+  - /docs/managing-company-roles
+  - /docs/en/managing-company-roles
 ---
 
 This topic describes the procedures of creating and managing company roles. This is one of the steps in the Company Account setup.
@@ -15,7 +18,7 @@ To start managing company roles, navigate to  **Company Account** > **Company Ro
 
 {% info_block warningBox "Note" %}
 
-Make sure to [create a company](https://documentation.spryker.com/docs/managing-companies#creating-a-company) before you create a company role.
+Make sure to [create a company](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-companies.html#creating-a-company) before you create a company role.
 
 {% endinfo_block %}
 
@@ -50,4 +53,4 @@ If you delete a default role, the following message is displayed: "*You cannot d
 
 **What's next?**
 Once the role is created, you can proceed with creating a company user and assign the created role to it.
-See [Managing company users](https://documentation.spryker.com/docs/managing-company-users) to know how the company users are created and managed.
+See [Managing company users](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-users.html) to know how the company users are created and managed.

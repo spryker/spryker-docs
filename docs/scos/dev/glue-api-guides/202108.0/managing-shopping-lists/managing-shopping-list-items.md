@@ -2,17 +2,20 @@
 title: Managing shopping list items
 description: Learn how to manage shopping list items via Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shopping-list-items
+originalArticleId: 9800fd79-ab57-4778-a68e-50b23236a3cc
 redirect_from:
   - /2021080/docs/managing-shopping-list-items
   - /2021080/docs/en/managing-shopping-list-items
+  - /docs/managing-shopping-list-items
+  - /docs/en/managing-shopping-list-items
 ---
 
 This endpoint allows managing shopping list items
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see: 
-* [Glue API: Shopping Lists feature integration](https://documentation.spryker.com/docs/glue-api-shopping-lists-feature-integration)
-* [Glue API: Products feature integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration)
+* [Glue API: Shopping Lists feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-shopping-lists-feature-integration.html)
+* [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)
 
 ## Add items to a shopping list
 To add items to a shopping list, send the request:
@@ -30,7 +33,7 @@ To add items to a shopping list, send the request:
 
 | Header key | Type | Required | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -56,7 +59,7 @@ To add items to a shopping list, send the request:
 | Attribute | Type | Required | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Ingeger | ✓ | Quantity of the product to add. |
-| sku | String | ✓ | SKU of the product to add. Only [concrete products](https://documentation.spryker.com/docs/product-abstraction) are allowed. |
+| sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html) are allowed. |
 
 
 
@@ -162,7 +165,7 @@ To add items to a shopping list, send the request:
 | quantity | Integer | Quantity of the product. |
 | sku | String | Product SKU. |
 
-For the attributes of included resources, see [Retrieve a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes).
+For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
 
 ## Change item quantity in a shopping list
 
@@ -175,13 +178,13 @@ To change item quantity in a shopping list, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list to update item quantity in. |
-| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to change the quantity of. To get it, [Retrieve shopping lists](https://documentation.spryker.com/docs/managing-shopping-lists#retrieve-shopping-lists), or [Retrieve a shopping list](https://documentation.spryker.com/docs/managing-shopping-lists#retrieve-a-shopping-list) with the `shopping-list-items` included. |
+| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to change the quantity of. To get it, [Retrieve shopping lists](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-shopping-lists/managing-shopping-lists.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-shopping-lists/managing-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
 
 ### Request
 
 | Header key | Type | Required | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 | QUERY PARAMETER | DESCRIPTION | EXAMPLARY VALUES |
 | --- | --- | --- |
@@ -207,7 +210,7 @@ To change item quantity in a shopping list, send the request:
 
 | Attribute | Type | Required | DESCRIPTION|
 | --- | --- | --- |--- |
-| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](https://documentation.spryker.com/docs/product-abstraction) are allowed. |
+| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html) are allowed. |
 | quantity | Integer | ✓ | New quantity of the product. |
 
 ### Response
@@ -301,7 +304,7 @@ To change item quantity in a shopping list, send the request:
 </details>   
 
 For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).
-For the attributes of included resources, see [Retrieve a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes).
+For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
 
 ## Remove an item from a shopping list
 To remove an item from a shopping list, send the request: 
@@ -313,12 +316,12 @@ To remove an item from a shopping list, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list to delete an item from. |
-| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to remove. To get it, [Retrieve shopping lists](https://documentation.spryker.com/docs/managing-shopping-lists#retrieve-shopping-lists), or [Retrieve a shopping list](https://documentation.spryker.com/docs/managing-shopping-lists#retrieve-a-shopping-list) with the `shopping-list-items` included. |
+| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to remove. To get it, [Retrieve shopping lists](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-shopping-lists/managing-shopping-lists.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-shopping-lists/managing-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
 
 ### Request
 | Header key | Type | Required | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 
 Request sample: 
@@ -334,7 +337,7 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | --- | --- |
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
-| 400 | Provided access token is not an [access token of a сompany user](https://documentation.spryker.com/docs/authenticating-as-a-company-user). |
+| 400 | Provided access token is not an [access token of a сompany user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 901 | Shop list name or item name is not specified or too long.</br>**OR** </br> Item quantity is not specified or too large.|
 | 1501 | Shopping list ID or item is not specified. |
 | 1503 |  Specified shopping list is not found. |
@@ -343,4 +346,4 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

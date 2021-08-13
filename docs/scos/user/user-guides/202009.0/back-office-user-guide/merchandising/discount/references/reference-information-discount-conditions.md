@@ -2,6 +2,7 @@
 title: Reference information- discount conditions
 description: The guide provides additional information you use when working with discount calculations in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/discount-conditions-reference-information
+originalArticleId: aef47323-baf2-4a53-9808-4663ccebe5e1
 redirect_from:
   - /v6/docs/discount-conditions-reference-information
   - /v6/docs/en/discount-conditions-reference-information
@@ -14,7 +15,7 @@ Conditions are also called decision rules.
 * A cart rule can have one or more conditions linked to it. The cart rule is redeemed only if every condition linked to it is satisfied. 
 * Vouchers can be linked to one or more conditions. Vouchers are only redeemed if all linked conditions are satisfied.
 
-The conditions are created in the form of a query and may be entered as a plain query or via the query builder. (See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/discount-calculation-reference-information.html) for more details.)
+The conditions are created in the form of a query and may be entered as a plain query or via the query builder. (See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/discount/references/reference-information-discount-calculation.html) for more details.)
 
 {% info_block infoBox "Info" %}
 If you do not need to add a condition, you can leave the query builder empty.

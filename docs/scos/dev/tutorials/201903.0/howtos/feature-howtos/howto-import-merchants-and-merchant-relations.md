@@ -1,6 +1,7 @@
 ---
 title: HowTo - Import Merchants and Merchant Relations
 originalLink: https://documentation.spryker.com/v2/docs/howto-import-merchants-and-merchant-relations
+originalArticleId: daa7ff41-32d8-4681-9119-4fe4527f8d02
 redirect_from:
   - /v2/docs/howto-import-merchants-and-merchant-relations
   - /v2/docs/en/howto-import-merchants-and-merchant-relations

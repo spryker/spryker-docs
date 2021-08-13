@@ -1,6 +1,7 @@
 ---
 title: Multiple Carts per User Feature Overview
 originalLink: https://documentation.spryker.com/v3/docs/multiple-carts-per-user-feature-overview
+originalArticleId: 700577cb-1715-4c38-8967-1ffbcbdafc44
 redirect_from:
   - /v3/docs/multiple-carts-per-user-feature-overview
   - /v3/docs/en/multiple-carts-per-user-feature-overview

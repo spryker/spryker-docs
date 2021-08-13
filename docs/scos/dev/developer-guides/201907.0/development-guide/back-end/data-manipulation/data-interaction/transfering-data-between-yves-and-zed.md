@@ -2,6 +2,7 @@
 title: Transfering Data Between Yves and Zed
 description: In this tutorial, we’ll exemplify how you can set up the communication between Yves and Zed.
 originalLink: https://documentation.spryker.com/v3/docs/t-transfer-data-yves-zed
+originalArticleId: 567fbd98-71a6-4d0f-8595-8e8f5ad91228
 redirect_from:
   - /v3/docs/t-transfer-data-yves-zed
   - /v3/docs/en/t-transfer-data-yves-zed
@@ -12,15 +13,15 @@ Yves gets most of its data from the client-side NoSQL data stores (data such as 
 
 In this tutorial, we’ll exemplify how you can set up the communication between Yves and Zed.
 
-We’ll display a random salutation message that is retrieved from Zed. Follow the steps in [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html) to have the backend implementation ready.
+We’ll display a random salutation message that is retrieved from Zed. Follow the steps in [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html) to have the backend implementation ready.
 
 To implement this functionality, you need to follow the steps described below:
 
-* [Create the Transfer Object](https://documentation.spryker.com/v4/docs/t-transfer-data-yves-zed#create-the-transfer-object)
-* [Create the Gateway Controller](https://documentation.spryker.com/v4/docs/t-transfer-data-yves-zed#create-the-gateway-controller)
-* [Implement the Stub](https://documentation.spryker.com/v4/docs/t-transfer-data-yves-zed#implement-the-stub)
-* [Implement the Client](https://documentation.spryker.com/v4/docs/t-transfer-data-yves-zed#implement-the-client)
-* [Create the Controller and View in Yves](https://documentation.spryker.com/v4/docs/t-transfer-data-yves-zed#create-controller-and-view-in-yves)
+* [Create the Transfer Object](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html#create-the-transfer-object)
+* [Create the Gateway Controller](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html#create-the-gateway-controller)
+* [Implement the Stub](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html#implement-the-stub)
+* [Implement the Client](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html#implement-the-client)
+* [Create the Controller and View in Yves](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html#create-controller-and-view-in-yves)
 
 ## Create the Transfer Object
 {% info_block infoBox "Transfer Objects" %}
@@ -61,7 +62,7 @@ public function getSalutationMessage()
 }
 ```
 
-More information about transfer objects and how to define them in Spryker can be read in [Creating, Using and Extending the Transfer Objects](https://documentation.spryker.com/v3/docs/ht-use-transfer-objects-201903).
+More information about transfer objects and how to define them in Spryker can be read in [Creating, Using and Extending the Transfer Objects](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
 
 ## Create the Gateway Controller
 Create the `GatewayController` in Zed under `Pyz\Zed\HelloWorld\Communication\Controller`. The `GatewayController` is dedicated for communication with Yves. It must extend the `AbstractGatewayController` class.

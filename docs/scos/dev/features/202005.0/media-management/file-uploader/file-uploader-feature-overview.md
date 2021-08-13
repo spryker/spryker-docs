@@ -2,6 +2,7 @@
 title: File Uploader Feature Overview
 description: The File Uploader feature is helpful when a Store Administrator needs to add instructions or additional documentation to the product as an attachment.
 originalLink: https://documentation.spryker.com/v5/docs/file-uploader-feature-overview
+originalArticleId: 636403ac-586c-46e3-b988-90acf1a6f61c
 redirect_from:
   - /v5/docs/file-uploader-feature-overview
   - /v5/docs/en/file-uploader-feature-overview

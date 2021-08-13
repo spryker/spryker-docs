@@ -2,6 +2,7 @@
 title: Business Units Management Feature Overview
 description: Once a company administrator has created a company, and it has been activated and approved, they can start building the organizational structure.
 originalLink: https://documentation.spryker.com/v5/docs/business-unit-management-feature-overview
+originalArticleId: 759de4eb-60c4-45cf-bcb5-0c95ddd56670
 redirect_from:
   - /v5/docs/business-unit-management-feature-overview
   - /v5/docs/en/business-unit-management-feature-overview

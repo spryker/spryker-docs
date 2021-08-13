@@ -2,6 +2,7 @@
 title: Migration Guide - Product
 description: Use the guide to update the Product module to a newer version.
 originalLink: https://documentation.spryker.com/v4/docs/mg-product
+originalArticleId: 1c819a63-3799-48b8-860c-ffb9f03fa0d6
 redirect_from:
   - /v4/docs/mg-product
   - /v4/docs/en/mg-product

@@ -2,6 +2,7 @@
 title: Braintree - Performing Requests for the Legacy Demoshop
 description: This article contains information on the state machine commands and conditions for the Braintree module in the Spryker Legacy Demoshop.
 originalLink: https://documentation.spryker.com/v3/docs/braintree-requests-legacy-demoshop
+originalArticleId: b29e0b7c-d8bd-4b4a-b95b-6d1ba86d8527
 redirect_from:
   - /v3/docs/braintree-requests-legacy-demoshop
   - /v3/docs/en/braintree-requests-legacy-demoshop

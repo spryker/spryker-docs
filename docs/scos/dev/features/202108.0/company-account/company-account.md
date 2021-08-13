@@ -2,9 +2,12 @@
 title: Company Account
 description: The Company Account page gives a clear overview of business’ structure, hierarchy, shipping, billing addresses, and other users in the Business Unit.
 originalLink: https://documentation.spryker.com/2021080/docs/company-account
+originalArticleId: 8009f001-a9dd-426b-916a-b3b8a5e4acc7
 redirect_from:
   - /2021080/docs/company-account
   - /2021080/docs/en/company-account
+  - /docs/company-account
+  - /docs/en/company-account
 ---
 
 A B2B business model implies bilateral commercial relations between businesses, so a company is the top figure of every B2B marketplace. Each company has a specific organizational structure with its divisions (units) and employee roles. At some point or another, a B2B business owner would need separate accounts for employees to constrain or extend rights in regards to products, orders, confidential information, etc.

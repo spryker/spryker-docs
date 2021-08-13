@@ -2,6 +2,7 @@
 title: Migration Guide - Session
 description: Use the guide to perform the Session part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-session
+originalArticleId: f4f2c191-7c09-45b1-b230-d7ed141c4e71
 redirect_from:
   - /v6/docs/migration-guide-session
   - /v6/docs/en/migration-guide-session
@@ -9,7 +10,7 @@ redirect_from:
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

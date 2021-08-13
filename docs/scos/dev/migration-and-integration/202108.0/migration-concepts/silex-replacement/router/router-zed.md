@@ -2,9 +2,12 @@
 title: Router Zed
 description: The article provides instructions on how to install and configure Router in Zed.
 originalLink: https://documentation.spryker.com/2021080/docs/router-zed
+originalArticleId: b38df44e-6ee0-446c-8fbc-fc4616ac85d5
 redirect_from:
   - /2021080/docs/router-zed
   - /2021080/docs/en/router-zed
+  - /docs/router-zed
+  - /docs/en/router-zed
 ---
 
 The Router is responsible for matching a request to a route and generating URLs based on a route name. The Spryker's Route module is based on the Symfony's Routing component; for more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html).
@@ -18,7 +21,7 @@ You can find the list of all the modules related to the service below:
 
 ### Installation
 
-For information on the installtion, see [Migration Guide - Router](https://documentation.spryker.com/docs/migration-guide-router). 
+For information on the installtion, see [Migration Guide - Router](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-router.html). 
 
 Additionally, you need to add the following plugins to the `\Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider`:
 

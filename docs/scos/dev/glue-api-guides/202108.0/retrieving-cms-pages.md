@@ -2,12 +2,15 @@
 title: Retrieving CMS pages
 description: Retrieve details on CMS pages via the API.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-cms-pages
+originalArticleId: 790ea5b1-23b6-4db1-8878-1de75bc438dd
 redirect_from:
   - /2021080/docs/retrieving-cms-pages
   - /2021080/docs/en/retrieving-cms-pages
+  - /docs/retrieving-cms-pages
+  - /docs/en/retrieving-cms-pages
 ---
 
-[CMS pages](https://documentation.spryker.com/docs/cms-page) are meant for creating customized content for your online shop. The CMS Pages API allows you to retrieve details on CMS pages, including information on Abstract Product List and Banner content items available for each of them.
+[CMS pages](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-pages-overview.html) are meant for creating customized content for your online shop. The CMS Pages API allows you to retrieve details on CMS pages, including information on Abstract Product List and Banner content items available for each of them.
 
 ## Installation
 
@@ -26,7 +29,7 @@ To retrieve all active CMS pages, send the request:
 ***
 {% info_block infoBox %}
 
-This endpoint returns [activated](https://documentation.spryker.com/docs/managing-cms-pages#activating-and-deactivating-pages) CMS pages only. Also, if there are more than 12 active CMS pages, the endpoint returns the number of pages multiple of 12. See the Request section below for details.
+This endpoint returns [activated](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/pages/managing-cms-pages.html#activating-and-deactivating-pages) CMS pages only. Also, if there are more than 12 active CMS pages, the endpoint returns the number of pages multiple of 12. See the Request section below for details.
 
 {% endinfo_block %}
 
@@ -53,9 +56,9 @@ You set the `offset` value, which equals the difference by which the actual numb
 | `GET https://glue.mysprykershop.com/cms-pages` | Retrieve all active CMS pages. |
 | `GET https://glue.mysprykershop.com/cms-pages?page[limit]=24&page[offset]=0` | Return maximum 24 CMS pages. |
 | `GET https://glue.mysprykershop.com/cms-pages?page[limit]=12&page[offset]=12` | Return CMS pages 13 and further, maximum 12 pages. |
-| `GET https://glue.mysprykershop.com/cms-pages?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](https://documentation.spryker.com/docs/content-item-widgets-types-reference-information#abstract-product-list-content-item-widget) content item for CMS pages. |
+| `GET https://glue.mysprykershop.com/cms-pages?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#abstract-product-list-content-item-widget) content item for CMS pages. |
 | `GET https://glue.mysprykershop.com/cms-pages?include=content-product-abstract-list,abstract-products` | Retrieve information about Abstract Product List content item with its abstract products. |
-| `GET https://glue.mysprykershop.com/cms-pages?include=content-banners` | Retrieve information about [Banner](https://documentation.spryker.com/docs/content-item-widgets-types-reference-information#banner-content-item-widget) content item for CMS pages. |
+| `GET https://glue.mysprykershop.com/cms-pages?include=content-banners` | Retrieve information about [Banner](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) content item for CMS pages. |
 
 ### Response
 <details open>
@@ -571,7 +574,7 @@ When paging is enabled, the links section of the response contains links for the
 | isSearchable | Boolean | Indicates if the page can be searched for on the web. |
 | url | String | URL address of the CMS page. |
 
-For the attributes of the included resource, see [Retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products#response).
+For the attributes of the included resource, see [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html#response).
 
 ## Retrieve a CMS page
 To retrieve a specific CMS page, send the request:
@@ -594,9 +597,9 @@ To retrieve a specific CMS page, send the request:
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c` | Retrieve the specific CMS page. |
-| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](https://documentation.spryker.com/docs/content-item-widgets-types-reference-information#abstract-product-list-content-item-widget) content item for the CMS page. |
+| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-product-abstract-lists` | Retrieve information about [Abstract Product List](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#abstract-product-list-content-item-widget) content item for the CMS page. |
 | `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-product-abstract-list,abstract-products` | Retrieve information about Abstract Product List content item with its abstract products. |
-| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-banners` | Retrieve information about [Banner](https://documentation.spryker.com/docs/content-item-widgets-types-reference-information#banner-content-item-widget) content item for the CMS page. |
+| `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-banners` | Retrieve information about [Banner](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) content item for the CMS page. |
 
 <details open>
 <summary>Response sample: A specific CMS page</summary>

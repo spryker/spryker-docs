@@ -2,6 +2,7 @@
 title: B2C Demo Shop Installation Guide
 description: This article provides step-by-step instructions on the B2C Demo Shop installation.
 originalLink: https://documentation.spryker.com/v3/docs/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+originalArticleId: deb60a02-a1fc-4acc-81bb-7499631a759c
 redirect_from:
   - /v3/docs/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
   - /v3/docs/en/b2c-demo-shop-installation-mac-os-or-linux-with-devvm

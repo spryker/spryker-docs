@@ -2,6 +2,7 @@
 title: Product Reviews
 description: The section is used to define the customers who can add reviews and ratings to products, as well as
 originalLink: https://documentation.spryker.com/v1/docs/product-reviews-management
+originalArticleId: 4f6c7561-a5fb-4c3c-bb43-78087d6ad667
 redirect_from:
   - /v1/docs/product-reviews-management
   - /v1/docs/en/product-reviews-management

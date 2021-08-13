@@ -2,6 +2,7 @@
 title: Econda - Tracking
 description: Add the Econda tracking code into Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v5/docs/econda-tracking
+originalArticleId: 4cd418d8-66ff-4214-a2c0-c0b008a1f1d8
 redirect_from:
   - /v5/docs/econda-tracking
   - /v5/docs/en/econda-tracking
@@ -11,7 +12,7 @@ Now that we have integrated Econda to the website we can start adding the tracki
 
 ## Prerequisites
 
-To add tracking, you should also be familiar with [Twig.](https://documentation.spryker.com/docs/en/twig-overview)
+To add tracking, you should also be familiar with [Twig.](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/legacy-demoshop/twig-templates/overview-twig.html)
 
 To enable Econda tracking for your application, you need to add `econda_tracker.twig` to the proper page template, for example:
 ```php
@@ -27,8 +28,8 @@ To enable Econda tracking for your application, you need to download a personali
 
 These instructions assume  you are using Antelope <!-- link to (http://documentation.spryker.com/front-end_developer_guide/demoshop/antelope_global_tool/overview) -->for your Yves assets management. If your project uses other frontend automation you can still use the instructions as guidelines.
 
-Before getting started we recomend that you read the following topics: [asset management](https://documentation.spryker.com/docs/en/frontend-overview#asset-management)
-and [Twig](https://documentation.spryker.com/docs/en/twig-overview)
+Before getting started we recomend that you read the following topics: [asset management](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/legacy-demoshop/frontend-overview.html#asset-management)
+and [Twig](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/legacy-demoshop/twig-templates/overview-twig.html)
 
 ## Installing Assets
 
@@ -246,7 +247,7 @@ List of the accepted template variables:
 {% info_block infoBox "Tip" %}
 Remember to build your frontend  by running antelope build yves from your project root folder
 {% endinfo_block %}
-In your project you will probably want to customize the tracking to fit the business requirements either by writing your own partial template or by overriding and extending the existing one, see [Best Practices - Twig Templates](https://documentation.spryker.com/docs/en/twig-best-practices).
+In your project you will probably want to customize the tracking to fit the business requirements either by writing your own partial template or by overriding and extending the existing one, see [Best Practices - Twig Templates](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/legacy-demoshop/twig-templates/best-practices-twig-templates.html).
 
 ### Checking Your Setup
 

@@ -2,6 +2,7 @@
 title: Composer
 description: Spryker Commerce OS uses Composer as a dependency manager.
 originalLink: https://documentation.spryker.com/v3/docs/composer
+originalArticleId: fd5fba6e-851d-49ef-9a91-40b36c31535b
 redirect_from:
   - /v3/docs/composer
   - /v3/docs/en/composer
@@ -122,7 +123,7 @@ Execute `composer update` command at least weekly to assert you have the latest 
 
 ## Replace Spryker Module Dependencies
 
-Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/implementing-and-using-plugins.html) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a 3rd party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
+Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/implementing-and-using-plugins.html) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a 3rd party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
 
 The following process describes adding a replace command into a new module to indicate that it replaces a core module.
 

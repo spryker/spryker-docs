@@ -2,6 +2,7 @@
 title: Unique URL per Cart for Easy Sharing feature overview
 description: With the feature, company users can generate the URL to share the cart with different levels of access.
 originalLink: https://documentation.spryker.com/v6/docs/unique-url-per-cart-for-easy-sharing-overview
+originalArticleId: 0d94f578-31db-4854-9e2d-f9060bbeae6c
 redirect_from:
   - /v6/docs/unique-url-per-cart-for-easy-sharing-overview
   - /v6/docs/en/unique-url-per-cart-for-easy-sharing-overview
@@ -28,8 +29,8 @@ The user can view and print the information from the Preview link.
 {% info_block warningBox "Note" %}
 Preview link is the only available option for the B2C environment. B2C users will not be able to share the cart with Read-only and Full access permissions.
 {% endinfo_block %}
-* **Read-Only**. For details on the Read only permissions, refer to the [Permissions Management for Shared Shopping Lists](https://documentation.spryker.com/docs/multiple-shared-shopping-lists-overview-201907#read-only) section in *Multiple and Shared Shopping Lists Overview*.
-* **Full Access**. For details on the Full Access permission, check [Permissions Management for Shared Shopping Lists](https://documentation.spryker.com/docs/multiple-shared-shopping-lists-overview-201907#full-access) section in *Multiple and Shared Shopping Lists Overview*.
+* **Read-Only**. For details on the Read only permissions, refer to the [Permissions Management for Shared Shopping Lists](https://documentation.spryker.com/v6/docs/multiple-and-shared-shopping-lists-overview#read-only) section in *Multiple and Shared Shopping Lists Overview*.
+* **Full Access**. For details on the Full Access permission, check [Permissions Management for Shared Shopping Lists](https://documentation.spryker.com/v6/docs/multiple-and-shared-shopping-lists-overview#full-access) section in *Multiple and Shared Shopping Lists Overview*.
 
 {% info_block warningBox "Note" %}
 Sharing cart with Read-Only or Full Access permissions is available only for internal users (the users within the same business unit

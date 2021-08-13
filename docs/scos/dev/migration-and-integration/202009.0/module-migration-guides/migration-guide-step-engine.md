@@ -2,6 +2,7 @@
 title: Migration Guide - Step Engine
 description: Use the guide to learn how to update the Step Engine module to a newer version.
 originalLink: https://documentation.spryker.com/v6/docs/mg-step-engine
+originalArticleId: 38f0b774-cab0-4132-a1d6-0b81ac633f23
 redirect_from:
   - /v6/docs/mg-step-engine
   - /v6/docs/en/mg-step-engine

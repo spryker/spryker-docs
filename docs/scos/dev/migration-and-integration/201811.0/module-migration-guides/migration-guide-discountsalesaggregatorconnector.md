@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - DiscountSalesAggregatorConnector
 originalLink: https://documentation.spryker.com/v1/docs/mg-discount-sales-aggregator-connector
+originalArticleId: bb0c2378-5859-4f1f-9f07-5d40288044ee
 redirect_from:
   - /v1/docs/mg-discount-sales-aggregator-connector
   - /v1/docs/en/mg-discount-sales-aggregator-connector

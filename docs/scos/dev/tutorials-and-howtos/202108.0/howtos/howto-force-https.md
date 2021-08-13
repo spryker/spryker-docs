@@ -2,9 +2,12 @@
 title: HowTo - Force HTTPS
 description: Use the guide to configure HTTPs and HTTP for your pages.
 originalLink: https://documentation.spryker.com/2021080/docs/ht-force-https
+originalArticleId: ba400e70-5a29-4899-996a-08f3f9bdd793
 redirect_from:
   - /2021080/docs/ht-force-https
   - /2021080/docs/en/ht-force-https
+  - /docs/ht-force-https
+  - /docs/en/ht-force-https
 ---
 
 The following article describes how you can force to use HTTPS in your pages.

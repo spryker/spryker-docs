@@ -2,6 +2,7 @@
 title: Agent Assist Feature Integration
 description: Agent Assist enables agent users to log in to shop to perform actions on customers’ behalf. This guide describes how to install Agent Assist in your project
 originalLink: https://documentation.spryker.com/v3/docs/agent-assist-feature-integration
+originalArticleId: 13e85dae-44ae-4696-b27f-9f435de8d858
 redirect_from:
   - /v3/docs/agent-assist-feature-integration
   - /v3/docs/en/agent-assist-feature-integration

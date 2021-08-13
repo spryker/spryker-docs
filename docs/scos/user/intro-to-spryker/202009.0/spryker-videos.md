@@ -2,6 +2,7 @@
 title: Spryker videos
 description: This page provides video presentations for Spryker features.
 originalLink: https://documentation.spryker.com/v6/docs/spryker-videos
+originalArticleId: b6e0971d-4cd8-471a-8d48-d823f003a806
 redirect_from:
   - /v6/docs/spryker-videos
   - /v6/docs/en/spryker-videos

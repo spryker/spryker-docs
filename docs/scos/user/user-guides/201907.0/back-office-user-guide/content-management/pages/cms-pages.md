@@ -2,6 +2,7 @@
 title: CMS Pages
 description: The CMS Pages section is designed to create, view, update, publish CMS pages, compare its versions, and activate/deactivate in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/cms-pages
+originalArticleId: 4a35b1de-7101-4849-a450-86a5981cd582
 redirect_from:
   - /v3/docs/cms-pages
   - /v3/docs/en/cms-pages
@@ -13,10 +14,10 @@ You can create, view, publish and edit CMS pages in the **Pages** section. It is
 ***
 **What's next?**
 
-* To know more about how to create a CMS page, see [Creating a CMS Page](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/creating-a-cms-page.html).
+* To know more about how to create a CMS page, see [Creating a CMS Page](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/creating-a-cms-page.html).
 
-* To know more about how to publish, view, edit and activate or deactivate CMS pages, see [Managing CMS Pages](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).
+* To know more about how to publish, view, edit and activate or deactivate CMS pages, see [Managing CMS Pages](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).
 
-* To know more about how to view the version history of CMS pages and compare versions, see [CMS Versioning](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/cms-pages-versioning.html).
+* To know more about how to view the version history of CMS pages and compare versions, see [CMS Versioning](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/cms-pages-versioning.html).
 
-* To learn more about attributes you use to create and edit CMS pages, see articles in the [CMS Pages: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/references/cms-pages-reference-information.html) section.
+* To learn more about attributes you use to create and edit CMS pages, see articles in the [CMS Pages: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/references/cms-pages-reference-information.html) section.

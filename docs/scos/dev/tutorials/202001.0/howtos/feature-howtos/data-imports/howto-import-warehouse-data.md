@@ -1,6 +1,7 @@
 ---
 title: HowTo - Import Warehouse Data
 originalLink: https://documentation.spryker.com/v4/docs/ht-import-warehouse-data
+originalArticleId: 58d1accb-45e0-45d4-bed0-397a5b3a906e
 redirect_from:
   - /v4/docs/ht-import-warehouse-data
   - /v4/docs/en/ht-import-warehouse-data

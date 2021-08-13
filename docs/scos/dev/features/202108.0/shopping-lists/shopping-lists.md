@@ -2,9 +2,12 @@
 title: Shopping Lists
 description: Everything you need to know about the Shopping List capability.
 originalLink: https://documentation.spryker.com/2021080/docs/shopping-lists
+originalArticleId: 60091ddd-d25d-44d5-bd56-701190b60d47
 redirect_from:
   - /2021080/docs/shopping-lists
   - /2021080/docs/en/shopping-lists
+  - /docs/shopping-lists
+  - /docs/en/shopping-lists
 ---
 
 Enable your Business customers to save the products they wish to purchase through the Shopping List feature. Different roles and permissions systems ensure a smooth sharing and contribution management amongst a company’s users.
@@ -15,7 +18,7 @@ With the Spryker Shopping Lists feature, you can manage multiple shopping lists 
 
 In a Spryker shop, a shopping list widget is located in the header. With the shopping list widget, customers can easily create new shopping lists as well as view details about the existing ones.
 
-Shopping list notes enable customers to attach notes to shopping list items. For example, they might add a note saying that prior to purchase it is necessary to make sure a product is not available in their stock, or check if even more of it should be bought. When a customer transfers shopping list items to cart, the notes are taken over, appearing as [cart notes](https://documentation.spryker.com/docs/cart-notes) there.
+Shopping list notes enable customers to attach notes to shopping list items. For example, they might add a note saying that prior to purchase it is necessary to make sure a product is not available in their stock, or check if even more of it should be bought. When a customer transfers shopping list items to cart, the notes are taken over, appearing as [cart notes](https://documentation.spryker.com/2021080/docs/cart-notes) there.
 
 Check out this video tutorial on how to use shopping lists.
 <iframe src="https://fast.wistia.net/embed/iframe/zk32pr3lgt" title="How to use Shopping Lists in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>

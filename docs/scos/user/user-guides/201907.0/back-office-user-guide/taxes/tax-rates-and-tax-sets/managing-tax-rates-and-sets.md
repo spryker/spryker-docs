@@ -2,6 +2,7 @@
 title: Managing Tax Rates and Sets
 description: Use these procedures to create, update, view and/or delete tax rates and tax sets in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/managing-tax-rates-sets
+originalArticleId: 78f382b2-5ba1-4b97-8839-ee3c9c01da98
 redirect_from:
   - /v3/docs/managing-tax-rates-sets
   - /v3/docs/en/managing-tax-rates-sets
@@ -17,7 +18,7 @@ To define a rate under which the product, shipment, or a threshold are going to 
 ***
 **To create a tax rate:**
 1. On the **Overview of Tax Rates** page, click **Create Tax Rate** in the top right corner.
-2. On the **Create Tax Rate** page, enter and select the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
+2. On the **Create Tax Rate** page, enter and select the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
 3. Click **Save**.
 ***
 ### Editing a Tax Rate
@@ -25,7 +26,7 @@ In the ever-changing business world, there is a chance that the taxation policie
 
 **To update the tax rate**: 
 1. In the **List of tax rates > Actions** column, click **Edit** for a specific tax rate.
-2. On the **Edit Tax Rate** page, change the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
+2. On the **Edit Tax Rate** page, change the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
 3. Click **Save**.
 ***
 **Tips & Tricks**
@@ -76,13 +77,13 @@ Remember how you created the tax rate? To be able to use this taxation rule for 
 ***
 **To create a tax set:**
 1. On the **Overview of Tax Sets** page, click **Create Tax Set** in the top right corner of the page.
-2. On the **Create Tax Set** page, enter the tax set name and select one or several tax rates to assign. See [Taxes: Reference information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
+2. On the **Create Tax Set** page, enter the tax set name and select one or several tax rates to assign. See [Taxes: Reference information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
 3. Click **Save**.
 ***
 ### Editing a Tax Set
 In case you need to change the tax set: 
 1. In the **List of tax sets > Actions** column, click **Edit** for a specific tax set.
-2. On the **Edit Tax Set** page, change the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
+2. On the **Edit Tax Set** page, change the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
 3. Click **Save**.
 
 ***

@@ -2,9 +2,12 @@
 title: Company account- module relations
 description: Explore the module relations of the Company Account features
 originalLink: https://documentation.spryker.com/2021080/docs/company-account-module-relations
+originalArticleId: c01aaea9-5602-4cb9-9d99-04d42aa2aa8a
 redirect_from:
   - /2021080/docs/company-account-module-relations
   - /2021080/docs/en/company-account-module-relations
+  - /docs/company-account-module-relations
+  - /docs/en/company-account-module-relations
 ---
 
 The schema below illustrates relations between company, business unit, company unit address and company user (customer).

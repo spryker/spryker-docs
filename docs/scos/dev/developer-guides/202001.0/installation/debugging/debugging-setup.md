@@ -2,6 +2,7 @@
 title: Debugging Setup
 description: This article describes how to setup debugging in your development environment.
 originalLink: https://documentation.spryker.com/v4/docs/debugging-setup
+originalArticleId: 7c3df641-25f5-4237-a89f-98ef0236f38c
 redirect_from:
   - /v4/docs/debugging-setup
   - /v4/docs/en/debugging-setup
@@ -10,7 +11,7 @@ redirect_from:
 This article describes how to setup debugging in your development environment.
 
 {% info_block warningBox %}
-To configure debugging for old version of the VM prior 91, see [Debugging Setup for VM Prior Version 91](https://documentation.spryker.com/v4/debugging-setup-prior-vm91
+To configure debugging for old version of the VM prior 91, see [Debugging Setup for VM Prior Version 91](https://documentation.spryker.com/v4/configuring-debugging-in-vagrant-with-vm-below-version-91
 {% endinfo_block %}.)
 
 ## Installing the Xdebug Module

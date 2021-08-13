@@ -1,12 +1,13 @@
 ---
 title: Managing Shopping Lists
 originalLink: https://documentation.spryker.com/v5/docs/managing-shopping-lists
+originalArticleId: 46eec688-6802-433f-998d-c6187356f25b
 redirect_from:
   - /v5/docs/managing-shopping-lists
   - /v5/docs/en/managing-shopping-lists
 ---
 
-With the help of the [Shopping Lists](https://documentation.spryker.com/v5/docs/en/shopping-list) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](https://documentation.spryker.com/v5/docs/en/wishlist), Shopping Lists contain not only a list of items to be purchased but also the quantity of each item.
+With the help of the [Shopping Lists](/docs/scos/dev/features/202005.0/shopping-list/shopping-list.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/dev/features/202005.0/wishlist/wishlist.html), Shopping Lists contain not only a list of items to be purchased but also the quantity of each item.
 
 The endpoints provided by the **Shopping List API** provide full *Shopping List management* functionality via REST requests.
 {% info_block infoBox %}
@@ -18,7 +19,7 @@ Shopping lists are available in B2B scenarios only. This means that access to th
 In your development, the resources can help you to enable the shopping list functionality in your application.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Shopping Lists Feature Integration](https://documentation.spryker.com/v5/docs/en/glue-api-shopping-lists-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Shopping Lists Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-shopping-lists-feature-integration.html).
 
 ## Creating a Shopping List
 To create a shopping list for a registered user, send the request:
@@ -111,7 +112,7 @@ Request sample:
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | quantity | Ingeger | yes | Quantity of the product to add. |
-| sku | String | yes | SKU of the product to add. Only [concrete products](https://documentation.spryker.com/v5/docs/en/product-abstraction) are allowed. |
+| sku | String | yes | SKU of the product to add. Only [concrete products](/docs/scos/dev/features/202005.0/product-information-management/product-abstraction.html) are allowed. |
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
@@ -995,7 +996,7 @@ The `concrete-products` resource can be included only together with the `shoppin
 ```
 | Attribute | Type | Required | Description|
 | --- | --- | --- |--- |
-| sku | String | yes |SKU of the product the quantity of which you want to change. Only [concrete products](https://documentation.spryker.com/v5/docs/en/product-abstraction) are allowed. |
+| sku | String | yes |SKU of the product the quantity of which you want to change. Only [concrete products](/docs/scos/dev/features/202005.0/product-information-management/product-abstraction.html) are allowed. |
 | quantity | Integer | yes |New quantity of the product. |
 
 ### Response

@@ -1,9 +1,12 @@
 ---
 title: HowTo - Notify About Unsupported Browsers
 originalLink: https://documentation.spryker.com/2021080/docs/howto-notify-about-unsupported-browsers
+originalArticleId: 96206081-8c2e-4086-80d6-94c8e5877ef4
 redirect_from:
   - /2021080/docs/howto-notify-about-unsupported-browsers
   - /2021080/docs/en/howto-notify-about-unsupported-browsers
+  - /docs/howto-notify-about-unsupported-browsers
+  - /docs/en/howto-notify-about-unsupported-browsers
 ---
 
 To notify your users about an unsupported browser, you can use our `unsupported-browser-popup` component. The component is not provided out of the box, download it:

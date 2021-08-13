@@ -1,6 +1,7 @@
 ---
 title: Release Notes - August - 1 2017
 originalLink: https://documentation.spryker.com/v6/docs/release-notes-august-1-2017
+originalArticleId: 1c10a387-eb24-475c-8ea3-82e05b0ffe2b
 redirect_from:
   - /v6/docs/release-notes-august-1-2017
   - /v6/docs/en/release-notes-august-1-2017
@@ -34,7 +35,7 @@ You can now create discount calculation rules like the one in the example below.
 | [ShipmentDiscountConnector 1.0.0](https://github.com/spryker/shipment-discount-connector/releases/tag/1.0.0) | [Shipment 5.1.0](https://github.com/spryker/Shipment/releases/tag/5.1.0) | n/a |
 
 **Documentation**
-For module documentation, see [Shipment Module Guide](https://documentation.spryker.com/v4/docs/shipment-module-overview).
+For module documentation, see [Shipment Module Guide](https://documentation.spryker.com/v6/docs/shipment-module-overview).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -125,7 +126,7 @@ Please note that the sniff commands now are as follows:
 
 **Tip**: You can use `console c:s:s` and `console c:s:a` as shortcuts.
 
-For guidelines and documentation, see [Code Architecture Guide](/docs/scos/dev/developer-guides/202001.0/development-guide/guidelines/coding-guidelines/code-architecture-guide.html).
+For guidelines and documentation, see [Code Architecture Guide](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/coding-guidelines/code-architecture-guide.html).
 
 **Affected Modules**
 
@@ -245,5 +246,5 @@ We have added `"strict" => true` for HTTP client calls to ZED, so that when redi
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Authorization and Preauthorization-Capture Flows](/docs/scos/dev/technology-partners/202001.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html)
-* [PayPal Express Checkout Payment - Payone](/docs/scos/dev/technology-partners/202001.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-express-checkout-payment.html)
+* [Authorization and Preauthorization-Capture Flows](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html)
+* [PayPal Express Checkout Payment - Payone](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html)

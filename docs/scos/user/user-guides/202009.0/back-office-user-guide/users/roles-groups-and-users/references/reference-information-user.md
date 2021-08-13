@@ -2,6 +2,7 @@
 title: Reference information- User
 description: The guide provides additional information about the values you enter when managing users in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/user-reference-information
+originalArticleId: e4154df7-627c-45e8-b0d6-e9c7eba8be5e
 redirect_from:
   - /v6/docs/user-reference-information
   - /v6/docs/en/user-reference-information

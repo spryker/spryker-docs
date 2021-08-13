@@ -1,6 +1,7 @@
 ---
 title: About Migration Guides
 originalLink: https://documentation.spryker.com/v1/docs/about-migration
+originalArticleId: 6dac30c6-1172-40dc-b29f-2ec26e80311e
 redirect_from:
   - /v1/docs/about-migration
   - /v1/docs/en/about-migration

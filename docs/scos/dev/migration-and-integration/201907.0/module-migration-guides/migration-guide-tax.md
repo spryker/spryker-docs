@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Tax
 originalLink: https://documentation.spryker.com/v3/docs/mg-tax
+originalArticleId: 8558dd55-d3ac-44d7-b3cd-6cbbc3acab72
 redirect_from:
   - /v3/docs/mg-tax
   - /v3/docs/en/mg-tax

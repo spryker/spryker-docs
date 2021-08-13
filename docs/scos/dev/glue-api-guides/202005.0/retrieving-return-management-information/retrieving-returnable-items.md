@@ -2,6 +2,7 @@
 title: Retrieving Returnable Items
 description: In this article, you will find details on retrieving returnable items via the Spryker Glue API.
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-returnable-items
+originalArticleId: 2ede8cf4-3a79-43ab-8da1-f5b75655a463
 redirect_from:
   - /v5/docs/retrieving-returnable-items
   - /v5/docs/en/retrieving-returnable-items
@@ -151,7 +152,7 @@ To get returnable items of a specific sales order item by the order ID, send the
 
 | Path parameter | Description |
 | --- | --- |
-| {% raw %}{{{% endraw %}OrderID{% raw %}}}{% endraw %} | A unique identifier of an order. [Retrieve all orders](https://documentation.spryker.com/docs/en/retrieving-customers-order-history#retrieving-all-orders) to get it. |
+| {% raw %}{{{% endraw %}OrderID{% raw %}}}{% endraw %} | A unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/202005.0/retrieving-customers-order-history.html#retrieving-all-orders) to get it. |
 
 ### Request
 Sample request: `GET https://glue.mysprykershop.com/returnable-items/14d86bb2-ea23-57ed-904c-eecc63ef10ac`

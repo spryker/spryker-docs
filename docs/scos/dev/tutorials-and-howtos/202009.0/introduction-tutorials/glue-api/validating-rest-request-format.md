@@ -2,6 +2,7 @@
 title: Validating REST request format
 description: Learn about REST request validation format and how to validate requests in Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/validating-rest-request-format
+originalArticleId: 93da3b76-e45f-4429-8931-1e7b9be82070
 redirect_from:
   - /v6/docs/validating-rest-request-format
   - /v6/docs/en/validating-rest-request-format
@@ -10,7 +11,7 @@ redirect_from:
 Glue API allows you to validate requests sent to REST endpoints. It allows you to check if all required fields are present, and if the type and format of the fields is correct.
 
 ## Installation
-To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-rest-schema-validation-feature-integration.html). 
+To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation Feature Integration](https://documentation.spryker.com/v6/docs/glue-api-rest-schema-validation-feature-integration). 
 
 ## Default validation schema
 Spryker Glue API comes with a default validation schema. The schema provides default validation rules for the REST APIs shipped with Spryker. You can find it in `vendor/spryker/spryker/Bundles/RestRequestValidator/config/validation.dist.yaml`. Use the schema as a sample and a  reference for your own validation implementations.
@@ -122,7 +123,7 @@ vendor/bin/console rest-api:build-request-validation-cache
 ```
 {% info_block infoBox %}
 
-Alternatively, use a [Spryk](https://documentation.spryker.com/docs/glue-spryks) for validation. Run the following command: 
+Alternatively, use a [Spryk](/docs/scos/dev/developer-guides/202009.0/development-guide/glue-api/glue-spryks.html) for validation. Run the following command: 
 ```Bash
 cconsole spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
 ```

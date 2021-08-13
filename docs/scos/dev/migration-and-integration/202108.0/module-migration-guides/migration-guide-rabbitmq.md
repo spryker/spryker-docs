@@ -2,9 +2,12 @@
 title: Migration Guide - RabbitMQ
 description: Use the guide to learn how to update the RabbirMQ module to a newer version.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-rabbitmq
+originalArticleId: 64e0e319-4ae8-4886-a66e-6c7a0b2041ce
 redirect_from:
   - /2021080/docs/mg-rabbitmq
   - /2021080/docs/en/mg-rabbitmq
+  - /docs/mg-rabbitmq
+  - /docs/en/mg-rabbitmq
 ---
 
 ## Upgrading from Version 0.* to Version 1.*

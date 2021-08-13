@@ -2,9 +2,12 @@
 title: Releases archive
 description: In this section, you can check the archived release notes-
 originalLink: https://documentation.spryker.com/2021080/docs/releases-archive
+originalArticleId: 880badcb-197a-4057-a23b-9a0be9a1ac3c
 redirect_from:
   - /2021080/docs/releases-archive
   - /2021080/docs/en/releases-archive
+  - /docs/releases-archive
+  - /docs/en/releases-archive
 ---
 
 In this section, you can check the archived release notes:

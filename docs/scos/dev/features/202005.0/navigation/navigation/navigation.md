@@ -2,6 +2,7 @@
 title: Navigation
 description: Spryker Navigation allows you to create coherent navigation and manage it effectively.
 originalLink: https://documentation.spryker.com/v5/docs/navigation-feature-summary
+originalArticleId: d5408bdd-c501-4cf9-aa92-ffe32284c79f
 redirect_from:
   - /v5/docs/navigation-feature-summary
   - /v5/docs/en/navigation-feature-summary

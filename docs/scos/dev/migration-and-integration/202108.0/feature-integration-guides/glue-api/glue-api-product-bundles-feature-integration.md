@@ -2,9 +2,12 @@
 title: Glue API- Product Bundles feature integration
 description: Learn how to integrate the Glue API- Product Bundles feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-bundles-feature-integration
+originalArticleId: 7512d512-55f0-4d75-a206-993fe4b3617b
 redirect_from:
   - /2021080/docs/glue-api-product-bundles-feature-integration
   - /2021080/docs/en/glue-api-product-bundles-feature-integration
+  - /docs/glue-api-product-bundles-feature-integration
+  - /docs/en/glue-api-product-bundles-feature-integration
 ---
 
 Follow the steps below to integrate the Glue API: Product Bundles feature.
@@ -16,9 +19,9 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
-| Product Bundles| master| [Product Bundles feature integration](https://documentation.spryker.com/upcoming-release/docs/product-bundles-feature-integration)|
-| Order Management| master| [Glue API: Order Management feature integration](https://documentation.spryker.com/docs/glue-api-order-management-feature-integration)|
+| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Product Bundles| master| [Product Bundles feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-bundles-feature-integration.html)|
+| Order Management| master| [Glue API: Order Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 
@@ -185,7 +188,7 @@ Integrate the following related features:
 
 | Feature | Required for the current feature | Integration guide |
 | --- | --- | --- |
-| Products  | ✓ | [Glue API: Products feature integration - ongoing](https://documentation.spryker.com/upcoming-release/docs/glue-api-products-feature-integration) |
+| Products  | ✓ | [Glue API: Products feature integration - ongoing](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) |
 
 
 

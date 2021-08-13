@@ -2,9 +2,12 @@
 title: CMS Pages overview
 description: Summary of the CMS page functionality.
 originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-overview
+originalArticleId: 8b0f95c3-e1b8-42e9-8d5c-d05ea8a84e4d
 redirect_from:
   - /2021080/docs/cms-pages-overview
   - /2021080/docs/en/cms-pages-overview
+  - /docs/cms-pages-overview
+  - /docs/en/cms-pages-overview
 ---
 
 A CMS page is an HTML page you can create and edit in the Back Office using the WYSIWYG editor. The *About Us*, *Impressum*, *Terms*, *Contacts*, and *Conditions* pages are the examples of CMS pages that you can create.
@@ -88,5 +91,5 @@ With the CMS Pages feature, you can:
     
 ## See next
 
-* [CMS block](https://documentation.spryker.com/docs/cms-block)
+* [CMS block](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-blocks-overview.html)
 

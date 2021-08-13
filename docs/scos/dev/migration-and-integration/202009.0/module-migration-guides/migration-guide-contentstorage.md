@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ContentStorage
 originalLink: https://documentation.spryker.com/v6/docs/mg-contentstorage-201907
+originalArticleId: 60e93f80-36f8-42dc-94d9-74c626adb8fb
 redirect_from:
   - /v6/docs/mg-contentstorage-201907
   - /v6/docs/en/mg-contentstorage-201907
@@ -19,7 +20,7 @@ Version 2.0.0 of the ContentStorage module  introduces the following changes:
 * Increased the version of `spryker/content` in composer.json.
 
 **To upgrade to the new version of the module, do the following:**
-1. Upgrade the `Content` module to version 2.0.0. See [Migration Guide - Content](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-content.html) for more details.
+1. Upgrade the `Content` module to version 2.0.0. See [Migration Guide - Content](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-content.html) for more details.
 2. Upgrade the `ContentStorage` module to version 2.0.0:
 
 ```bash

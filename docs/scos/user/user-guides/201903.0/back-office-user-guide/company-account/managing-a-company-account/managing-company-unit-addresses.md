@@ -2,6 +2,7 @@
 title: Managing Company Unit Addresses
 description: Use the procedures to create and update company unit addresses after company units have been created in the Back Office.
 originalLink: https://documentation.spryker.com/v2/docs/managing-company-unit-addresses
+originalArticleId: 5c98242e-5c87-4838-82df-d8a08d13ae69
 redirect_from:
   - /v2/docs/managing-company-unit-addresses
   - /v2/docs/en/managing-company-unit-addresses

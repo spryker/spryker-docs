@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Wishlist
 originalLink: https://documentation.spryker.com/v2/docs/mg-wishlist
+originalArticleId: 8cbd7993-6902-4d7b-807c-fe0a6d01b0c4
 redirect_from:
   - /v2/docs/mg-wishlist
   - /v2/docs/en/mg-wishlist

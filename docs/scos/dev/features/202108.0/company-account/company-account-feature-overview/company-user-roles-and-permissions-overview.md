@@ -2,9 +2,12 @@
 title: Company user roles and permissions overview
 description: Usually employees within a company have different roles (purchasing, administration, supervision, etc.). These roles are referred to as Company Roles.
 originalLink: https://documentation.spryker.com/2021080/docs/company-user-roles-and-permissions-overview
+originalArticleId: 444e741d-bc54-4eb6-9483-16c4a94b765d
 redirect_from:
   - /2021080/docs/company-user-roles-and-permissions-overview
   - /2021080/docs/en/company-user-roles-and-permissions-overview
+  - /docs/company-user-roles-and-permissions-overview
+  - /docs/en/company-user-roles-and-permissions-overview
 ---
 
 
@@ -115,12 +118,12 @@ Every company role includes a set of permissions that can be enabled/disabled ac
   - **Add item to cart** - allows adding products to cart. Without this permission, the user will get This action is forbidden error when trying to add the product in the cart.
   - **Change item in cart** - allows changing products in the cart (changing the quantity, adding notes etc).
   - **Remove item from cart** - allows deleting the products from the cart.
-  - **Place Order** - allows placing the order. Without this permission enabled, a user will have error when trying to submit the order. If the [Approval Process](https://documentation.spryker.com/docs/approval-process-feature-overview) feature is integrated into your project, then **Buy up to grand total** permission is also required in order to be able to place an order.
-  - **Buy up to grand total (Requires "Send cart for approval")** - sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](https://documentation.spryker.com/docs/approval-process-feature-overview) feature.
-  - **Approve up to grand total** - with this permission enabled, a user can approve the the cart. See [Approval Feature Overview](https://documentation.spryker.com/docs/approval-process-feature-overview) for more details.
+  - **Place Order** - allows placing the order. Without this permission enabled, a user will have error when trying to submit the order. If the [Approval Process](/docs/scos/dev/features/{{ page.version }}/approval-process/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required in order to be able to place an order.
+  - **Buy up to grand total (Requires "Send cart for approval")** - sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/scos/dev/features/{{ page.version }}/approval-process/approval-process-feature-overview.html) feature.
+  - **Approve up to grand total** - with this permission enabled, a user can approve the the cart. See [Approval Feature Overview](/docs/scos/dev/features/{{ page.version }}/approval-process/approval-process-feature-overview.html) for more details.
   - **View Business Unit orders** - with this permission enabled, a user can see not only their own orders, but also the orders of their business unit.
   - **View Company orders** - with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their comapny.
-  - **Send cart for approval (Requires "Buy up to grand total")** - allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](https://documentation.spryker.com/docs/approval-process-feature-overview) for more details.
+  - **Send cart for approval (Requires "Buy up to grand total")** - allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/scos/dev/features/{{ page.version }}/approval-process/approval-process-feature-overview.html) for more details.
 
 ## If you are:
 
@@ -153,4 +156,4 @@ Every company role includes a set of permissions that can be enabled/disabled ac
 
 ## See next
 
-[Business on Behalf overview](https://documentation.spryker.com/docs/business-on-behalf-overview)
+[Business on Behalf overview](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/business-on-behalf-overview.html)

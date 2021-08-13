@@ -2,18 +2,19 @@
 title: Query Objects- Creation and Usage
 description: Query objects provide an object-oriented API for writing database queries which are used in query containers.
 originalLink: https://documentation.spryker.com/v6/docs/query-objects
+originalArticleId: 7ec778be-62e1-4d90-ba53-3b50e25a77f5
 redirect_from:
   - /v6/docs/query-objects
   - /v6/docs/en/query-objects
 ---
 
-Query objects provide an object-oriented API for writing database queries which are used in [query containers](https://documentation.spryker.com/docs/query-container).
+Query objects provide an object-oriented API for writing database queries which are used in [query containers](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/zed/persistence-layer/query-container/about-the-query-container.html).
 
 Please check the official [Propel Query Reference](http://propelorm.org/documentation/reference/model-criteria.html) for a complete documentation.
 
 ## Creating a New Query Object
 
-Query objects are created by Propel during the `build model` step. See the [schema definition](https://documentation.spryker.com/docs/database-schema-definition) for details how to describe them in XML.
+Query objects are created by Propel during the `build model` step. See the [schema definition](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/zed/persistence-layer/database-schema-definition.html) for details how to describe them in XML.
 
 As you can see `src/Orm/Zed/` the query object which belongs to the Spryker core extend base classes placed in the vendordirectory. This way you can easily adopt the classes for your needs but we can still add methods in the core.
 

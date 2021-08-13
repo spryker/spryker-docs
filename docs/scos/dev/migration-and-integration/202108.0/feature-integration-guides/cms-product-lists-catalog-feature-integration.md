@@ -1,9 +1,12 @@
 ---
 title: CMS + product lists + catalog feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/cms-page-search-product-lists-catalog-feature-integration
+originalArticleId: c395ad85-27ce-44f2-a18f-69fce0d46ba6
 redirect_from:
   - /2021080/docs/cms-page-search-product-lists-catalog-feature-integration
   - /2021080/docs/en/cms-page-search-product-lists-catalog-feature-integration
+  - /docs/cms-page-search-product-lists-catalog-feature-integration
+  - /docs/en/cms-page-search-product-lists-catalog-feature-integration
 ---
 
 ## Install Feature Core

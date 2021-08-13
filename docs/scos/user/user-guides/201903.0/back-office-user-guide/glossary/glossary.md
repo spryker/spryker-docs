@@ -2,6 +2,7 @@
 title: Glossary
 description: The section is used to create translations for a new locale or update the existing ones in the Back Office.
 originalLink: https://documentation.spryker.com/v2/docs/glossary
+originalArticleId: d6886194-5db7-4f3d-b6af-f834ecfdbbe3
 redirect_from:
   - /v2/docs/glossary
   - /v2/docs/en/glossary

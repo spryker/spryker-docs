@@ -2,6 +2,7 @@
 title: HowTo - Create CMS Templates
 description: Use the guide to create a template for a CMS page, CMS Block, Content Item Widget.
 originalLink: https://documentation.spryker.com/v4/docs/ht-create-cms-templates
+originalArticleId: c5183f2d-97cf-4a9b-a702-2dd03aa5fcc7
 redirect_from:
   - /v4/docs/ht-create-cms-templates
   - /v4/docs/en/ht-create-cms-templates
@@ -73,9 +74,9 @@ A content manager can apply this template when [creating a CMS page](/docs/scos/
 
 1. Create a Twig template as described in [CMS Page Template](#cms-page-template). 
 
-2. For each slot that you want to have in the template, insert a [slot widget](https://documentation.spryker.com/v4/docs/templates-slots-feature-overview#slot-widget). 
+2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/dev/features/202001.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#slot-widget). 
 
-3. [Import](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](https://documentation.spryker.com/v4/docs/templates-slots-feature-overview#correlation) section of **Templates & Slots Feature Overview**.
+3. [Import](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/dev/features/202001.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#correlation) section of **Templates & Slots Feature Overview**.
 
 Templates with slots are universal. In the Back Office, a content manager can:
 
@@ -106,7 +107,7 @@ A content manager can apply this template when [creating a CMS block](/docs/scos
 
 ## Content Item Widget Template
 
-[Content item widget](https://documentation.spryker.com/v4/docs/content-items-feature-overview#content-item-widget) template is a Twig file that defines the layout of the content item it renders on Storefront.
+[Content item widget](/docs/scos/dev/features/202001.0/cms/content-items/content-items-feature-overview.html#content-item-widget) template is a Twig file that defines the layout of the content item it renders on Storefront.
 
 By default, two content item widget templates are shipped per each content item: 
 

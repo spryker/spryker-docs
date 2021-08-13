@@ -2,6 +2,7 @@
 title: Definition of Module API
 description: This article defines internal APIs according to which the version type is defined.
 originalLink: https://documentation.spryker.com/v1/docs/definition-api
+originalArticleId: 11f8b989-af65-42ad-8168-bd0034e56420
 redirect_from:
   - /v1/docs/definition-api
   - /v1/docs/en/definition-api
@@ -23,18 +24,18 @@ And the interfaces which are implemented everywhere are also part of the API:
 
 In addition to these obvious cases, there are some other classes which are part of the API and can cause a BC break:
 
-* [module Config (Client/Yves/Zed/Shared/Service)](https://documentation.spryker.com/v1/docs/configuration-management#how-to-retrieve-the-configuration)
+* [module Config (Client/Yves/Zed/Shared/Service)](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/data-manipulation/configuration-management.html#how-to-retrieve-the-configuration)
 * Controllers
 * Twig functions
 * [CLI commands](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html)
-* Public constants especially in [Constant Interfaces](https://documentation.spryker.com/v1/docs/configuration-management#constant-interfaces)
+* Public constants especially in [Constant Interfaces](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/data-manipulation/configuration-management.html#constant-interfaces)
 
 And every change in a schema can cause a BC break:
 
 * [Database](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/zed/persistence-layer/database-schema-definition.html)
 * Search
 * [Storage](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/yves/client/using-and-configuring-redis-as-a-key-value-storage.html)
-* Changes in [transfer objects](https://documentation.spryker.com/v1/docs/ht-use-transfer-objects-201903) can also cause BC breaks e.g. when an existing field is renamed.
+* Changes in [transfer objects](https://documentation.spryker.com/v1/docs/ht-use-transfer-objects) can also cause BC breaks e.g. when an existing field is renamed.
 
 There are several other ways to cause a BC break:
 

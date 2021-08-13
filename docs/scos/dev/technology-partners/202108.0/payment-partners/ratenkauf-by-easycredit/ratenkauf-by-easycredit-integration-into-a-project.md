@@ -2,9 +2,12 @@
 title: Ratenkauf by Easycredit - Integration into a project
 description: This article provides step-by-step instruction on how to integrate Ratenkauf by Easycredit payment into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/ratenkauf-integration-into-project
+originalArticleId: 8fa76fed-cfb3-4524-a570-79fa5d1e4859
 redirect_from:
   - /2021080/docs/ratenkauf-integration-into-project
   - /2021080/docs/en/ratenkauf-integration-into-project
+  - /docs/ratenkauf-integration-into-project
+  - /docs/en/ratenkauf-integration-into-project
 ---
 
 {% info_block errorBox %}

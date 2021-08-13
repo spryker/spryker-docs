@@ -2,15 +2,18 @@
 title: Authenticating as a company user
 description: Learn how to authenticate as a company user via Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-company-user
+originalArticleId: 90ca8812-0b3c-473d-bcd7-b12805da2070
 redirect_from:
   - /2021080/docs/authenticating-as-a-company-user
   - /2021080/docs/en/authenticating-as-a-company-user
+  - /docs/authenticating-as-a-company-user
+  - /docs/en/authenticating-as-a-company-user
 ---
 
 This endpoint allows authenticating as a company user.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/docs/glue-api-company-account-api-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
 
 
 
@@ -45,7 +48,7 @@ Request sample:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| idCompanyUser | String | Unique identifier of a company user to authenticate as. To get it, [Retrieve available company users](https://documentation.spryker.com/docs/searching-by-company-users#retrieve-available-company-users).  |
+| idCompanyUser | String | Unique identifier of a company user to authenticate as. To get it, [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).  |
     
 
 
@@ -80,7 +83,7 @@ Request sample:
 | tokenType | String | Token type. The default value is `Bearer`. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for the company user. |
 | expiresIn | Integer | Time in seconds in which the token expires. The default value is `28800`. |
-| refreshToken | String | Token used to [refresh](https://documentation.spryker.com/docs/managing-company-user-authentication-tokens#refresh-a-company-user-authentication-token) the `accessToken`. |
+| refreshToken | String | Token used to [refresh](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/managing-company-user-authentication-tokens.html#refresh-a-company-user-authentication-token) the `accessToken`. |
 
 
 
@@ -93,14 +96,14 @@ Request sample:
 | 002 | Authentication token is missing in the request. |
 | 901 | Company user Id format is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 
  
 ##  Next steps
 
-* [Retrieve company users](https://documentation.spryker.com/docs/retrieving-company-users)
-* [Retrieve companies](https://documentation.spryker.com/docs/retrieving-companies)
-* [Retrieve business units](https://documentation.spryker.com/docs/retrieving-business-units)
-* [Retrieve company company roles](https://documentation.spryker.com/docs/retrieving-company-roles)
-* [Retrieve business unit addresses](https://documentation.spryker.com/docs/retrieving-business-unit-addresses)
-* [Manage company user authentication tokens](https://documentation.spryker.com/docs/managing-company-user-authentication-tokens)
+* [Retrieve company users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/retrieving-company-users.html)
+* [Retrieve companies](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/retrieving-companies.html)
+* [Retrieve business units](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/retrieving-business-units.html)
+* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/retrieving-business-unit-addresses.html)
+* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/managing-company-user-authentication-tokens.html)

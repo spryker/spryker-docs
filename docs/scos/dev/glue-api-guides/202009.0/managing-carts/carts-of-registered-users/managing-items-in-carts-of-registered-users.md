@@ -2,6 +2,7 @@
 title: Managing items in carts of registered users
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource.
 originalLink: https://documentation.spryker.com/v6/docs/managing-items-in-carts-of-registered-users
+originalArticleId: 8dd95f4b-c91f-422e-954a-289f06d4826e
 redirect_from:
   - /v6/docs/managing-items-in-carts-of-registered-users
   - /v6/docs/en/managing-items-in-carts-of-registered-users
@@ -12,10 +13,10 @@ This endpoint allows managing items in carts of registered users by adding, chan
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration)
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
-* [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
+* [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Product Options feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 
 
@@ -192,7 +193,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](https://documentation.spryker.com/docs/measurement-units-feature-overview) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/scos/dev/features/202009.0/measurement-units/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -1245,9 +1246,9 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 For the attributes of the included resources, see:
-* [Retrieving Measurement Units](https://documentation.spryker.com/docs/retrieving-measurement-units)
-* [Create a cart](https://documentation.spryker.com/docs/managing-carts-of-registered-users#create-a-cart)
-* [Retrieve a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes)
+* [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/202009.0/retrieving-measurement-units.html)
+* [Create a cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
 ## Change item quantity
 
@@ -1420,7 +1421,7 @@ Request sample:
 ```    
 </details>
 
-For the attributes of the included resources, see [Retrieving Concrete Products](https://documentation.spryker.com/docs/retrieving-product-information#retrieve-concrete-products).
+For the attributes of the included resources, see [Retrieving Concrete Products](https://documentation.spryker.com/v6/docs/retrieving-product-information#retrieve-concrete-products).
 
 ## Remove items from a registered user's cart
 
@@ -1471,4 +1472,4 @@ If the item is deleted successfully, the endpoint returns the `204 No Content`�
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).

@@ -2,6 +2,7 @@
 title: Packaging Units Feature Overview
 description: Unit of measure that is used as packaging for a product is referred to as packaging unit and a shop can sell the same product in different packaging units.
 originalLink: https://documentation.spryker.com/v2/docs/packaging-units-overview
+originalArticleId: f6187c8a-5eb7-452e-b5f6-5da977054949
 redirect_from:
   - /v2/docs/packaging-units-overview
   - /v2/docs/en/packaging-units-overview
@@ -17,7 +18,7 @@ Each packaging unit is defined on an abstract product level and is represented b
 | Apple | "Bag of apples" | Bag |
 | Apple | "Pallet of apples" | Palett |
 
-Each packaging unit has a certain amount of products inside it by default ([default amount](https://documentation.spryker.com/v2/docs/packaging-units-overview#product-packaging-unit-amount)). The shop owner can choose whether the packaging unit, for example a bag, has a separate stock or shares stock with the contained item. In our example, the different product variants have their own SKU and price, but they represent the same physical product in the warehouse. To share the information about availability among these variants, we use the concept of a **leading product**.
+Each packaging unit has a certain amount of products inside it by default ([default amount](/docs/scos/dev/features/201903.0/packaging-and-measurement-units/packaging-units/packaging-units-feature-overview.html#product-packaging-unit-amount)). The shop owner can choose whether the packaging unit, for example a bag, has a separate stock or shares stock with the contained item. In our example, the different product variants have their own SKU and price, but they represent the same physical product in the warehouse. To share the information about availability among these variants, we use the concept of a **leading product**.
 
 The **leading product** represents relation between abstract and concrete product and holds the availability. A group of products in a packaging unit, that has a leading product holding the availability, is called a **product packaging unit group**.
 
@@ -174,7 +175,7 @@ In the current implementation each packaging unit and lead product has to define
 - We strive to shift all business logic to our backend, however, with Packaging Units, calculations are performed on Yves.
 - On the shopping cart as well as the shopping list page, products do not have a dropdown to change the packaging units. You can select a packaging unit on the product details page only.
 - A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They should be added manually on the product details page. 
-- In the [Quick Order](https://documentation.spryker.com/v2/docs/quick-order-201903) form and [search widget](https://documentation.spryker.com/v2/docs/search-widget-for-concrete-products-201903), the products use the default packaging units that cannot be changed. Flexible packaging units are not supported on the Quick Order page. 
+- In the [Quick Order](https://documentation.spryker.com/v2/docs/quick-add-to-cart) form and [search widget](/docs/scos/dev/features/201903.0/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products.html), the products use the default packaging units that cannot be changed. Flexible packaging units are not supported on the Quick Order page. 
 
 {% info_block infoBox "Example" %}
 You have a product in your shop - a pen. And there exists a packaging unit for a pen - a box with a minimum amount of 5 items in it up to the maximum amount of 50 pens available. Every shopper can define the necessary amount of pens that will be included in the box and order several such boxes. But on the Quick Order page, if the customer adds a pen with the packaging unit 'box', the box consisting of minimum 5 items will be added by default.

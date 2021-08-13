@@ -1,9 +1,12 @@
 ---
 title: Sales Schema
 originalLink: https://documentation.spryker.com/2021080/docs/db-schema-sales
+originalArticleId: 704a1584-b580-4875-8306-11385484444a
 redirect_from:
   - /2021080/docs/db-schema-sales
   - /2021080/docs/en/db-schema-sales
+  - /docs/db-schema-sales
+  - /docs/en/db-schema-sales
 ---
 
 
@@ -56,7 +59,7 @@ The Sales Order contains a copy of the Customer data so that it is not affected 
 
 ### Sales Bundles and Options
 
-See description of the [Product Bundle](https://documentation.spryker.com/v4/docs/db-schema-catalog#product-bundles) and [Product Option](https://documentation.spryker.com/v4/docs/db-schema-catalog#product-options) schemas for more details.
+See description of the [Product Bundle](/docs/scos/dev/database-schema-guide/{{ page.version }}/catalog-schema.html#product-bundles) and [Product Option](/docs/scos/dev/database-schema-guide/{{ page.version }}/catalog-schema.html#product-options) schemas for more details.
 ![Sales and bundles options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/sales-bundles-options.png){height="" width=""}
 
 **Structure**:

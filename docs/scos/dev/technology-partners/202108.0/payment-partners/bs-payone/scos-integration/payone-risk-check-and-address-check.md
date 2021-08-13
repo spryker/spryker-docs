@@ -2,9 +2,12 @@
 title: PayOne - Risk Check and Address Check
 description: In this article, you will get information on the Payone risk check and address check services.
 originalLink: https://documentation.spryker.com/2021080/docs/payone-risk-check-address-check-scos
+originalArticleId: 38b985f4-811e-4e38-8f43-c7863cb5add2
 redirect_from:
   - /2021080/docs/payone-risk-check-address-check-scos
   - /2021080/docs/en/payone-risk-check-address-check-scos
+  - /docs/payone-risk-check-address-check-scos
+  - /docs/en/payone-risk-check-address-check-scos
 ---
 
 On the project level, you should override execute and postCondition methods of `SprykerShop\Yves\CheckoutPage\Process\Steps\AddressStep`.

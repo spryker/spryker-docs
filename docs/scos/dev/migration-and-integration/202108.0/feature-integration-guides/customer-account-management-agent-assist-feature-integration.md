@@ -2,9 +2,12 @@
 title: Customer Account Management + Agent Assist feature integration
 description: Integrate the Customer Account Management + Agent Assist feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management-agent-assist-feature-integration
+originalArticleId: ac6402fe-4140-479f-a08a-76c03b263afa
 redirect_from:
   - /2021080/docs/customer-account-management-agent-assist-feature-integration
   - /2021080/docs/en/customer-account-management-agent-assist-feature-integration
+  - /docs/customer-account-management-agent-assist-feature-integration
+  - /docs/en/customer-account-management-agent-assist-feature-integration
 ---
 
 
@@ -19,8 +22,8 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Customer Account Managemen | master | [Customer Account Management feature integration](https://documentation.spryker.com/docs/customer-account-management-feature-integration) |
-| Agent Assist | master | [Agent Assist feature integration](https://documentation.spryker.com/docs/agent-assist-feature-integration-201903) |
+| Customer Account Managemen | master | [Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/customer-account-management-feature-integration.html) |
+| Agent Assist | master | [Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/agent-assist-feature-integration.html) |
 
 
 
@@ -236,8 +239,8 @@ Install the following related features:
 
 | Feature | Integration Guide |
 | --- | --- |
-| Customer Account Management | [Customer Acount Management feature integration](https://documentation.spryker.com/docs/customer-account-management-feature-integration) |
-| Agent Assist | [Agent Assist feature integration](https://documentation.spryker.com/docs/agent-assist-feature-integration-201903) |
-| Agent Assist API | [Glue API: Agent Assist feature integration](https://documentation.spryker.com/docs/glue-api-agent-assist-feature-integration) |
+| Customer Account Management | [Customer Acount Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/customer-account-management-feature-integration.html) |
+| Agent Assist | [Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/agent-assist-feature-integration.html) |
+| Agent Assist API | [Glue API: Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-agent-assist-feature-integration.html) |
 
 

@@ -1,12 +1,13 @@
 ---
 title: Supported Browsers
 originalLink: https://documentation.spryker.com/v4/docs/supported-browsers
+originalArticleId: 37155872-acab-407d-859c-42ee091e77ff
 redirect_from:
   - /v4/docs/supported-browsers
   - /v4/docs/en/supported-browsers
 ---
 
-The Spryker Commerce OS supports the following browsers for all frontend-related projects/products ([B2B Demo Shop](https://documentation.spryker.com/v4/docs/demoshops#b2b-demo-shop), [B2C Demo Shop](https://documentation.spryker.com/v4/docs/demoshops#b2c-demo-shop), [Master Suite](https://documentation.spryker.com/v4/docs/demoshops#master-suite)):
+The Spryker Commerce OS supports the following browsers for all frontend-related projects/products ([B2B Demo Shop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops), [B2C Demo Shop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops), [Master Suite](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops)):
 
 | Desktop (Yves and Zed) | Mobile (Yves only) | Tablet (Yves only) |
 | --- | --- | --- |

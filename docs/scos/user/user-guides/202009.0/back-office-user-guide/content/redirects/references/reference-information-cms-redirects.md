@@ -2,6 +2,7 @@
 title: Reference Information- CMS redirects
 description: The guide provides reference information you see when creating and updating URL redirects in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/cms-redirects-references
+originalArticleId: affd9e75-5edf-45f2-bb61-44ebef0bd15c
 redirect_from:
   - /v6/docs/cms-redirects-references
   - /v6/docs/en/cms-redirects-references

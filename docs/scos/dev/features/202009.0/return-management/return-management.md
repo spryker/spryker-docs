@@ -2,6 +2,7 @@
 title: Return management
 description: The Return Management featur allows you to create and manage returns based on your return policy
 originalLink: https://documentation.spryker.com/v6/docs/return-management
+originalArticleId: e35b8704-3785-4d63-9245-23d40b61c035
 redirect_from:
   - /v6/docs/return-management
   - /v6/docs/en/return-management

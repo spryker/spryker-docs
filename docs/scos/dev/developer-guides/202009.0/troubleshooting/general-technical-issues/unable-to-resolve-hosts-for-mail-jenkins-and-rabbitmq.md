@@ -2,6 +2,7 @@
 title: Unable to resolve hosts for Mail, Jenkins, and RabbitMQ
 description: Learn how to fix the issue with unresolved hosts for Mail, Jenkins, and RabbitMQ on Windows
 originalLink: https://documentation.spryker.com/v6/docs/unable-to-resolve-hosts-for-mail-jenkins-and-rabbitmq
+originalArticleId: 0971a16d-5186-4c8e-86cb-ec0b623cbd3f
 redirect_from:
   - /v6/docs/unable-to-resolve-hosts-for-mail-jenkins-and-rabbitmq
   - /v6/docs/en/unable-to-resolve-hosts-for-mail-jenkins-and-rabbitmq

@@ -2,6 +2,7 @@
 title: Amazon Pay - Configuration for the Legacy Demoshop
 description: Configure and integrate Amazon Pay into the Spryker Legacy Demoshop by following the instructions from this article.
 originalLink: https://documentation.spryker.com/v2/docs/amazon-pay-configuration-demoshop
+originalArticleId: 324b65ff-46a4-41ff-b0a4-e00978451cfa
 redirect_from:
   - /v2/docs/amazon-pay-configuration-demoshop
   - /v2/docs/en/amazon-pay-configuration-demoshop

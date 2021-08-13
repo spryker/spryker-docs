@@ -2,6 +2,7 @@
 title: Product Relations
 description: This section can be used to define and manage product relations, set types of relations and assign related products in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/product-relations-management
+originalArticleId: 9da618fc-fa6b-4165-8546-a95e9415ba9b
 redirect_from:
   - /v3/docs/product-relations-management
   - /v3/docs/en/product-relations-management
@@ -20,6 +21,6 @@ To summarize, you can:
 ***
 **What's next?**
 
-* To know how you create the product relation, see [Creating a Product Relation](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-relations/creating-a-product-relation.html).
-* To know the product relations are managed, see [Managing Product Relations](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-relations/managing-product-relations.html).
-* To know more about the attributes that you select and enter while creating or managing a product relation and see some examples of how the product relations look in the online store, see [Product Relations: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-relations/references/product-relations-reference-information.html).
+* To know how you create the product relation, see [Creating a Product Relation](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-relations/creating-a-product-relation.html).
+* To know the product relations are managed, see [Managing Product Relations](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-relations/managing-product-relations.html).
+* To know more about the attributes that you select and enter while creating or managing a product relation and see some examples of how the product relations look in the online store, see [Product Relations: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-relations/references/product-relations-reference-information.html).

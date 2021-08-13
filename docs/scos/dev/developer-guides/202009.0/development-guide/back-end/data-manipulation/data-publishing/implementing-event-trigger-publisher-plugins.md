@@ -2,6 +2,7 @@
 title: Implementing event trigger publisher plugins
 description: Learn how to implement event trigger publisher plugins.
 originalLink: https://documentation.spryker.com/v6/docs/howto-implement-event-trigger-publisher-plugins
+originalArticleId: a4fd5a5f-fb3f-4a98-9c79-1718201aa135
 redirect_from:
   - /v6/docs/howto-implement-event-trigger-publisher-plugins
   - /v6/docs/en/howto-implement-event-trigger-publisher-plugins

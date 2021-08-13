@@ -2,9 +2,12 @@
 title: Asset management
 description: Learn about the assets in Spryker and how you can manage them.
 originalLink: https://documentation.spryker.com/2021080/docs/asset-management
+originalArticleId: c1432b06-7f49-411d-9730-d4f52c4875d3
 redirect_from:
   - /2021080/docs/asset-management
   - /2021080/docs/en/asset-management
+  - /docs/asset-management
+  - /docs/en/asset-management
 ---
 
 There are 2 types of assets in the Spryker Commerce OS: dynamic and static. 
@@ -35,4 +38,4 @@ The following environment variables are used for that:
 *   `SPRYKER_ZED_ASSETS_BASE_URL`
 *   `SPRYKER_YVES_ASSETS_URL_PATTERN`
 
-Check [Custom Location for Static Assets](https://documentation.spryker.com/docs/custom-location-for-static-assets) for more details.
+Check [Custom Location for Static Assets](/docs/scos/dev/migration-and-integration/{{ page.version }}/technical-enhancements/custom-location-for-static-assets.html) for more details.

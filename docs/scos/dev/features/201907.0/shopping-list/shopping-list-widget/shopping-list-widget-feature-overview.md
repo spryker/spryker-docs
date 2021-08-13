@@ -2,6 +2,7 @@
 title: Shopping List Widget Feature Overview
 description: For convenience and ease of use, when customer puts a cursor on the shopping list icon, a drop-down list with all their shopping lists is displayed.
 originalLink: https://documentation.spryker.com/v3/docs/shopping-list-widget-overview
+originalArticleId: 1c84df0c-a219-4383-aec7-fa2c69d615e9
 redirect_from:
   - /v3/docs/shopping-list-widget-overview
   - /v3/docs/en/shopping-list-widget-overview
@@ -13,7 +14,7 @@ For customers' convenience and ease of use, the shopping list widget is placed i
 
 * Shopping list name.
 * First and last name of the person who created the shopping list.
-* Level of access for shopping list: full access (green) or read only (grey). See [Multiple and Shared Shopping Lists Overview](https://documentation.spryker.com/v3/docs/multiple-shared-shopping-lists-overview-201907) to learn more about shopping lists sharing and access levels.
+* Level of access for shopping list: full access (green) or read only (grey). See [Multiple and Shared Shopping Lists Overview](https://documentation.spryker.com/v3/docs/multiple-and-shared-shopping-lists-overview) to learn more about shopping lists sharing and access levels.
 * Number of items in the shopping list.
 * *Create New List* button which adds a new list in *Shopping list* section.
 * *All Shopping Lists* button which leads to *Shopping Lists* page with all the shopping lists available for the customer.

@@ -2,9 +2,12 @@
 title: Multiple currencies per store configuration
 description: The article describes the configuration of multiple currencies per store.
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-currencies-per-store-configuration
+originalArticleId: cc037cf2-9504-4eac-a288-0a73691d0f2f
 redirect_from:
   - /2021080/docs/multiple-currencies-per-store-configuration
   - /2021080/docs/en/multiple-currencies-per-store-configuration
+  - /docs/multiple-currencies-per-store-configuration
+  - /docs/en/multiple-currencies-per-store-configuration
 ---
 
 In a Spryker-based shop, you can define multiple currencies per store for product, product option, and shipping method. A product can, for example, cost 5 EUR in Germany, 6 EUR in France and 5 CHF in Switzerland. Your customers may easily choose between these different currencies.
@@ -44,7 +47,7 @@ In addition, `CurrencyTransfer` contains information that specifies if it is the
 From currency version 3, we have introduced currency table where currencies are persisted. Also, currency facade provides API to read this data. 
 {% info_block infoBox "Info" %}
 
-Check the [Curency migration guide](https://documentation.spryker.com/docs/mg-currency) to migrate to the latest  module version.
+Check the [Curency migration guide](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-currency.html) to migrate to the latest  module version.
 
 {% endinfo_block %}
  We have also introduced a currency switcher to Yves. To use it, do the following: 

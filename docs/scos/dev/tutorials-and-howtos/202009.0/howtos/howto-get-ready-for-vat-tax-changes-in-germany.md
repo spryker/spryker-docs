@@ -1,6 +1,7 @@
 ---
 title: HowTo - Get Ready for VAT (tax) Changes in Germany
 originalLink: https://documentation.spryker.com/v6/docs/howto-get-ready-for-vat-tax-changes-in-germany
+originalArticleId: 771eb0ab-cf86-4e09-8b24-cb975b76db44
 redirect_from:
   - /v6/docs/howto-get-ready-for-vat-tax-changes-in-germany
   - /v6/docs/en/howto-get-ready-for-vat-tax-changes-in-germany
@@ -12,7 +13,7 @@ In the Spryker system, the tax rate values are:
 - Persisted in the placed orders, history of request for quotes, and changing the rate in the DB will neither affect these entities nor the display of the orders in Customer Account, Back Office, etc.
 - Not persisted in the products, carts, wishlists, shopping lists. Actual Spryker's code always uses the tax rate value from the DB to perform actual calculations.
 
-To adjust the tax rates for your project, you can simply [edit tax rates in the Back Office](https://documentation.spryker.com/docs/managing-tax-rates-sets) as and when you need to. However, you can also automate the process by scheduling the tax rates update. The section below describes how to do that.
+To adjust the tax rates for your project, you can simply [edit tax rates in the Back Office](https://documentation.spryker.com/v6/docs/managing-tax-rates-sets) as and when you need to. However, you can also automate the process by scheduling the tax rates update. The section below describes how to do that.
 
 
 {% info_block warningBox "Project tax customizations" %}

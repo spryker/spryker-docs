@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductSearchWidget
 originalLink: https://documentation.spryker.com/v1/docs/mg-product-search-widget
+originalArticleId: 0a991f06-a7db-40f5-b7e3-ab29d341c212
 redirect_from:
   - /v1/docs/mg-product-search-widget
   - /v1/docs/en/mg-product-search-widget

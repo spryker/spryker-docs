@@ -1,6 +1,7 @@
 ---
 title: HowTo - Use Blocks
 originalLink: https://documentation.spryker.com/v4/docs/ht-use-cms-blocks
+originalArticleId: faef375e-6eda-4909-84fc-e1bbe96119b6
 redirect_from:
   - /v4/docs/ht-use-cms-blocks
   - /v4/docs/en/ht-use-cms-blocks

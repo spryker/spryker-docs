@@ -2,6 +2,7 @@
 title: Migration Guide - PriceProductScheduleGui
 description: Use the guide to update the PriceProductScheduleGui module to a newer version.
 originalLink: https://documentation.spryker.com/v4/docs/mg-price-product-schedule-gui
+originalArticleId: 89679f55-772f-467b-8a61-cca93101d224
 redirect_from:
   - /v4/docs/mg-price-product-schedule-gui
   - /v4/docs/en/mg-price-product-schedule-gui

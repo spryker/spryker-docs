@@ -2,6 +2,7 @@
 title: Managing Wishlists
 description: Using the PATCH, GET, DELETE, and POST request sent to the endpoints provided in the Wishlists API, you can create, access, modify, delete, and to get wishlists.
 originalLink: https://documentation.spryker.com/v4/docs/managing-wishlists
+originalArticleId: 8fec86b6-1038-4437-ab5b-7c94bed2ed98
 redirect_from:
   - /v4/docs/managing-wishlists
   - /v4/docs/en/managing-wishlists

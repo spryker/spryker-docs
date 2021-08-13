@@ -1,6 +1,7 @@
 ---
 title: Minimum Order Value Feature Overview
 originalLink: https://documentation.spryker.com/v2/docs/minimum-order-value-feature-overview
+originalArticleId: 50cbdddb-ca70-460f-b51b-85b2435aff29
 redirect_from:
   - /v2/docs/minimum-order-value-feature-overview
   - /v2/docs/en/minimum-order-value-feature-overview

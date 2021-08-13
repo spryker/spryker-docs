@@ -2,6 +2,7 @@
 title: Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization - Spryker Commerce OS
 description: The tutorial describes how you can personalize your catalog by creating an attribute-based catalog in Yves.
 originalLink: https://documentation.spryker.com/v5/docs/t-content-search-attribute-cart-based-catalog-personalization
+originalArticleId: 63073c4f-b3c6-411f-94b2-8acb61b9a533
 redirect_from:
   - /v5/docs/t-content-search-attribute-cart-based-catalog-personalization
   - /v5/docs/en/t-content-search-attribute-cart-based-catalog-personalization

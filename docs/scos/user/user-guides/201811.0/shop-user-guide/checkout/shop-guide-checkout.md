@@ -2,6 +2,7 @@
 title: Shop Guide - Checkout
 description: The section can be used to buy products added to the cart by setting a delivery address, shipment details, a payment method and placing an order.
 originalLink: https://documentation.spryker.com/v1/docs/checkout-shop-guide-201911
+originalArticleId: 8f04b4b4-1522-4c7f-82a8-b2aeea953e23
 redirect_from:
   - /v1/docs/checkout-shop-guide-201911
   - /v1/docs/en/checkout-shop-guide-201911
@@ -10,7 +11,7 @@ redirect_from:
 Checkout allows purchasing the items added to the cart.
 
 {% info_block infoBox %}
-If you have several shopping carts in your account, choose the right one and proceed with the checkout. See [Shop Guide - Shopping Carts](https://documentation.spryker.com/v1/docs/shop-guide-shopping-carts
+If you have several shopping carts in your account, choose the right one and proceed with the checkout. See [Shop Guide - Shopping Carts](/docs/scos/dev/features/201811.0/shopping-cart/multiple-carts-per-user/multiple-carts-per-user-feature-overview.html#multiple-carts-per-user-on-the-storefront
 {% endinfo_block %} for more information.)
 
 A typical checkout process includes the following steps:

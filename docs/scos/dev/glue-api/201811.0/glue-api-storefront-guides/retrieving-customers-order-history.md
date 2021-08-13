@@ -1,6 +1,7 @@
 ---
 title: Retrieving Customer's Order History
 originalLink: https://documentation.spryker.com/v1/docs/retrieving-order-history
+originalArticleId: 16d6503d-10ad-4a6a-8076-de730d45d124
 redirect_from:
   - /v1/docs/retrieving-order-history
   - /v1/docs/en/retrieving-order-history

@@ -2,6 +2,7 @@
 title: Back Office Translations Feature Overview
 description: Back Office Translations feature allows a user with administrative rights to translate the Back Office into different languages in a per-user manner.
 originalLink: https://documentation.spryker.com/v4/docs/back-office-translations-overview
+originalArticleId: 3323a118-bfb5-41d8-8c6d-6a4e40945878
 redirect_from:
   - /v4/docs/back-office-translations-overview
   - /v4/docs/en/back-office-translations-overview

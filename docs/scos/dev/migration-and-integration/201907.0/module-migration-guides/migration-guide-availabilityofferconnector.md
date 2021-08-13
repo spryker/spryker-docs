@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - AvailabilityOfferConnector
 originalLink: https://documentation.spryker.com/v3/docs/mg-availability-offer-connector
+originalArticleId: 7a22fc12-524b-4c38-acea-6c9f4423f85f
 redirect_from:
   - /v3/docs/mg-availability-offer-connector
   - /v3/docs/en/mg-availability-offer-connector

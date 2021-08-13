@@ -2,12 +2,13 @@
 title: Accessing Product Labels
 description: The article explores how to retrieve a product label by the label ID or product provided in the Product Labels API.
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-product-labels
+originalArticleId: c5dc18d6-5967-43ba-88a4-6df66ea431ac
 redirect_from:
   - /v5/docs/retrieving-product-labels
   - /v5/docs/en/retrieving-product-labels
 ---
 
-[Product labels](https://documentation.spryker.com/docs/en/dynamic-product-labels) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
+[Product labels](/docs/scos/dev/features/202005.0/product-information-management/dynamic-product-labels.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
 
 {% info_block warningBox "Note" %}
 Product labels are available only for abstract products.
@@ -141,19 +142,19 @@ The endpoint responds with information on the requested product, and the labels 
 ```
 
 ### Possible errors
-For information on the possible error responses, see [Retrieving Product Information](https://documentation.spryker.com/docs/en/retrieving-product-information){target="_blank"}.
+For information on the possible error responses, see [Retrieving Product Information](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html){target="_blank"}.
 
 ## Get Product Labels for Cart Items
 To retrieve labels for all products in a cart, send a GET request to the following endpoints and include **product-labels** as a relationship:
 
 | Cart Type | Endpoints* | Sample Request | Description | Notes |
 | --- | --- | --- | --- | --- |
-| **Guest Cart** | */guest-carts/?include=guest-cart-items,concrete-products,product-labels* | `GET /guest-carts?include=guest-cart-items,concrete-products,product-labels` | Gets labels for all products in all guest carts of a guest user. | To fetch carts of a guest user, the user's unique identifier must be passed in the **X-Anonymous-Customer-Unique-Id** header of the request. The header value is managed by the API client. For details, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts). |
-| **Guest Cart** | */guest-carts/**{% raw %}{{{% endraw %}cart_ID{% raw %}}}{% endraw %}**?include=guest-cart-items,concrete-products,product-labels* | `GET /guest-carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27?include=guest-cart-items,concrete-products,product-labels` | Gets labels for all products in a specific guest cart. | To fetch carts of a guest user, the user's unique identifier must be passed in the **X-Anonymous-Customer-Unique-Id** header of the request. The header value is managed by the API client. For details, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts). |
-| **Guest Cart** | */guest-carts/**{% raw %}{{{% endraw %}cart_ID{% raw %}}}{% endraw %}/up-selling-products**?include=guest-cart-items,concrete-products,product-labels* | `GET /guest-carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=guest-cart-items,concrete-products,product-labels` | Gets product labels for all **up-selling products** of a specific guest cart. | To fetch carts of a guest user, the user's unique identifier must be passed in the **X-Anonymous-Customer-Unique-Id** header of the request. The header value is managed by the API client. For details, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts). |
-| **Registered Customer Cart** | */carts/?include=items,concrete-products,product-labels* | `GET /carts?include=items,concrete-products,product-labels` | Gets labels for all products in all carts of a customer. | To fetch carts of registered customers, you need to authenticate the customers and pass the authentication token as part of your request. For details, see [Managing Carts of Registered Users](https://documentation.spryker.com/docs/en/managing-carts). |
-| **Registered Customer Cart** | */carts/**{% raw %}{{{% endraw %}cart_ID{% raw %}}}{% endraw %}**?include=items,concrete-products,product-labels* | `GET /carts/369541fa2e-02c2-5d47-b397-8ac1f5c58ff9?include=items,concrete-products,product-labels` | Gets labels for all products in a specific cart. | To fetch carts of registered customers, you need to authenticate the customers and pass the authentication token as part of your request. For details, see [Managing Carts of Registered Users](https://documentation.spryker.com/docs/en/managing-carts). |
-| **Registered Customer Cart** | */carts/**{% raw %}{{{% endraw %}cart_ID{% raw %}}}{% endraw %}/up-selling-products**?include=items,concrete-products,product-labels* | `GET /carts/369541fa2e-02c2-5d47-b397-8ac1f5c58ff9/up-selling-products?include=items,concrete-products,product-labels` | Gets product labels for all **up-selling products** of a specific cart. | To fetch carts of registered customers, you need to authenticate the customers and pass the authentication token as part of your request. For details, see [Managing Carts of Registered Users](https://documentation.spryker.com/docs/en/managing-carts). |
+| **Guest Cart** | */guest-carts/?include=guest-cart-items,concrete-products,product-labels* | `GET /guest-carts?include=guest-cart-items,concrete-products,product-labels` | Gets labels for all products in all guest carts of a guest user. | To fetch carts of a guest user, the user's unique identifier must be passed in the **X-Anonymous-Customer-Unique-Id** header of the request. The header value is managed by the API client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html). |
+| **Guest Cart** | */guest-carts/**{% raw %}{{{% endraw %}cart_ID{% raw %}}}{% endraw %}**?include=guest-cart-items,concrete-products,product-labels* | `GET /guest-carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27?include=guest-cart-items,concrete-products,product-labels` | Gets labels for all products in a specific guest cart. | To fetch carts of a guest user, the user's unique identifier must be passed in the **X-Anonymous-Customer-Unique-Id** header of the request. The header value is managed by the API client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html). |
+| **Guest Cart** | */guest-carts/**{% raw %}{{{% endraw %}cart_ID{% raw %}}}{% endraw %}/up-selling-products**?include=guest-cart-items,concrete-products,product-labels* | `GET /guest-carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=guest-cart-items,concrete-products,product-labels` | Gets product labels for all **up-selling products** of a specific guest cart. | To fetch carts of a guest user, the user's unique identifier must be passed in the **X-Anonymous-Customer-Unique-Id** header of the request. The header value is managed by the API client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html). |
+| **Registered Customer Cart** | */carts/?include=items,concrete-products,product-labels* | `GET /carts?include=items,concrete-products,product-labels` | Gets labels for all products in all carts of a customer. | To fetch carts of registered customers, you need to authenticate the customers and pass the authentication token as part of your request. For details, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html). |
+| **Registered Customer Cart** | */carts/**{% raw %}{{{% endraw %}cart_ID{% raw %}}}{% endraw %}**?include=items,concrete-products,product-labels* | `GET /carts/369541fa2e-02c2-5d47-b397-8ac1f5c58ff9?include=items,concrete-products,product-labels` | Gets labels for all products in a specific cart. | To fetch carts of registered customers, you need to authenticate the customers and pass the authentication token as part of your request. For details, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html). |
+| **Registered Customer Cart** | */carts/**{% raw %}{{{% endraw %}cart_ID{% raw %}}}{% endraw %}/up-selling-products**?include=items,concrete-products,product-labels* | `GET /carts/369541fa2e-02c2-5d47-b397-8ac1f5c58ff9/up-selling-products?include=items,concrete-products,product-labels` | Gets product labels for all **up-selling products** of a specific cart. | To fetch carts of registered customers, you need to authenticate the customers and pass the authentication token as part of your request. For details, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html). |
 
 * **cart_ID** is the unique cart identifier assigned to it upon creation.
 
@@ -263,7 +264,7 @@ The endpoint responds with information on the requested cart, including the prod
 ```
 
 ### Possible Errors
-For information on the possible error responses, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts) and [Managing Carts of Registered Users](https://documentation.spryker.com/docs/en/managing-carts-of-registered-users-201907).
+For information on the possible error responses, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html) and [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html-of-registered-users-201907).
 
 ## Get Product Labels for Wishlist Items
 To retrieve labels for all products in a wishlist, send a GET request to the following endpoints and include **product-labels** as a relationship:
@@ -370,4 +371,4 @@ The endpoint responds with information on the requested wishlist, including the 
 ```
 
 ### Possible Errors
-For information on the possible error responses, see [Managing Wishlists](https://documentation.spryker.com/docs/en/managing-wishlists).
+For information on the possible error responses, see [Managing Wishlists](/docs/scos/dev/glue-api-guides/202005.0/managing-wishlists.html).

@@ -2,9 +2,12 @@
 title: Glue Infrastructure
 description: The guide will walk you through the process of handling API requests at the Glue layer, including GlueApplication, Resource, and Relationship Modules.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-infrastructure
+originalArticleId: dd27e960-56f8-4be6-bc6b-b479c71c5e02
 redirect_from:
   - /2021080/docs/glue-infrastructure
   - /2021080/docs/en/glue-infrastructure
+  - /docs/glue-infrastructure
+  - /docs/en/glue-infrastructure
 ---
 
 Spryker API infrastructure is implemented as a separate layer of Spryker Commerce OS, called Glue. It is responsible for providing API endpoints, processing requests, as well as for communication with other layers of the OS in order to retrieve the necessary information. The layer is implemented as a separate Spryker application, the same as Yves or Zed. It has its own bootstrapping and a separate virtual host on the Spryker web server (Nginx by default). In addition to that, Glue has a separate programming namespace within Spryker Commerce OS, also called Glue.
@@ -61,9 +64,9 @@ Each route plugin implements `ResourceRoutePluginInterface`, which provides a se
 | `getResourceType` | 	Gets the resource type. | string | _carts_ |
 | `configure` | Configures a mapping of the HTTP verbs supported by the resource to the corresponding controller methods responsible for handling them. Also, it defines which of the verbs require authentication to use. | `ResourceRouteCollectionInterface` |  |
 | `getController` | Gets the name of the resource controller responsible for handling requests to the resource. The name must be provided in _kebab-case_, hyphen-separated | string | If the controller name is _CartsResourceController.php_, this function should return _carts-resource_. |
-| `getResourceAttributesClassName` | Gets the FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. | string | See details in [5. Describe Fields for Post and Patch Calls](https://documentation.spryker.com/v4/docs/implementing-rest-api-resource#5--describe-fields-for-post-and-patch-calls). |
+| `getResourceAttributesClassName` | Gets the FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. | string | See details in [5. Describe Fields for Post and Patch Calls](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#5--describe-fields-for-post-and-patch-calls). |
 
-For more details on how to implement a route plugin, see [6. Route Requests to Your Controller](https://documentation.spryker.com/v4/docs/implementing-rest-api-resource#6--route-requests-to-your-controller).
+For more details on how to implement a route plugin, see [6. Route Requests to Your Controller](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#6--route-requests-to-your-controller).
 
 All route plugins need to be added to `GlueApplicationDependencyProvider` implemented in the `GlueApplication` Module on the Project Level:
 
@@ -86,7 +89,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 ### Resource Modules
-A _Resource Module_ is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of _Request Objects_ and providing responses in the form of _Response Objects_. For this purpose, the module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/yves/client/client.html). It can also communicate with the Spryker Commerce OS (Zed), however, it is recommended to avoid round trips to the database as much as possible as that can reduce API performance considerably.
+A _Resource Module_ is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of _Request Objects_ and providing responses in the form of _Response Objects_. For this purpose, the module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/client/client.html). It can also communicate with the Spryker Commerce OS (Zed), however, it is recommended to avoid round trips to the database as much as possible as that can reduce API performance considerably.
 
 Resource Modules must implement all logic related to processing a request. It is not recommended having any of the Business Logic, or a part of it, in the _GlueApplication Module_. In case you need to extend any of the built-in Glue functionality, it is always safer to extend the relevant _Resource Module_ than infrastructure.
 
@@ -190,7 +193,7 @@ If you are implementing a resource that has a parent, you need to create a plugi
 The interface provides only 1 method: `getParentResourceType`. The method must return the type of the immediate parent resource within the context of which the child resource is implemented.
 
 ### Resource Relationships
-Often, to query certain data, one needs to use endpoints from different APIs to get the necessary information. For example, to present products in a customer's wishlist, one would need to use endpoints of the [Wishlists API](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-wishlists.html) to get a list of items in the wishlist, and then query endpoints of the [Products API](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html) in order to get descriptions, images and other information on each product. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
+Often, to query certain data, one needs to use endpoints from different APIs to get the necessary information. For example, to present products in a customer's wishlist, one would need to use endpoints of the [Wishlists API](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-wishlists/managing-wishlists.html) to get a list of items in the wishlist, and then query endpoints of the [Products API](https://documentation.spryker.com/2021080/docs/retrieving-product-information) in order to get descriptions, images and other information on each product. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
 
 Let us consider the following REST Response example. It contains information on a wishlist item without any resource relationships.
 

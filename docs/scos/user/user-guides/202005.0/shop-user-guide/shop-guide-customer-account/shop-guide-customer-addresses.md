@@ -2,6 +2,7 @@
 title: Shop Guide - Customer Addresses
 description: This guide provides instructions on managing Customer Addresses in the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-customer-addresses
+originalArticleId: e6d211cd-e665-4c47-a652-0914a4d407e2
 redirect_from:
   - /v5/docs/shop-guide-customer-addresses
   - /v5/docs/en/shop-guide-customer-addresses
@@ -34,7 +35,7 @@ To start working with the addresses, navigate to the **Customer Account > Addres
 **To create a new Address**:
 
 1. On the **Addresses** page in the Customer Account, click **Add New Address**.
-2. On the **Add Address** page populate the required fields. See [Addresses: Reference Information](https://documentation.spryker.com/docs/en/addresses-reference-information) to learn what fields are required. 
+2. On the **Add Address** page populate the required fields. See [Addresses: Reference Information](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/references/addresses-reference-information.html) to learn what fields are required. 
     :::(Info) (Info)
     `Is default shipping address` checkmark defines that this address will be used as the default shipping address for your Customer Account.
     `Is default billing address` checkmark defines that this address will be used as the default billing address for your Customer Account.
@@ -53,7 +54,7 @@ If the existing address is not relevant anymore, you can delete it. To do this, 
 ***
 **What's next?**
 
-To learn more about how to place the order, see [Shop Guide - Checkout](https://documentation.spryker.com/docs/en/checkout-shop-guide-201911).
+To learn more about how to place the order, see [Shop Guide - Checkout](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html).
 
-To learn more about how to manage your orders, see [Shop Guide - Order History](https://documentation.spryker.com/docs/en/shop-guide-order-history).
+To learn more about how to manage your orders, see [Shop Guide - Order History](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-order-history.html).
 

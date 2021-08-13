@@ -2,6 +2,7 @@
 title: Product Group
 description: You can group together multiple abstract products for various reasons. Grouped products can be displayed on the catalog and product detail pages.
 originalLink: https://documentation.spryker.com/v3/docs/product-group
+originalArticleId: ad41266e-7cc6-455c-934e-4d8b8f01f84e
 redirect_from:
   - /v3/docs/product-group
   - /v3/docs/en/product-group

@@ -2,9 +2,12 @@
 title: Product labels feature integration
 description: This guide provides step-by-step instruction on integrating
 originalLink: https://documentation.spryker.com/2021080/docs/product-labels-feature-integration
+originalArticleId: ccfbad69-0d8f-4f79-b10d-5e1c930fc9be
 redirect_from:
   - /2021080/docs/product-labels-feature-integration
   - /2021080/docs/en/product-labels-feature-integration
+  - /docs/product-labels-feature-integration
+  - /docs/en/product-labels-feature-integration
 ---
 
 ## Install Feature Core

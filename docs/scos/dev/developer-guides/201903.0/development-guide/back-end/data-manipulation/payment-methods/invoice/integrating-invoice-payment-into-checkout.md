@@ -2,6 +2,7 @@
 title: Integrating Invoice Payment into Checkout
 description: This article provides information on how to integrate the invoice payment into the checkout.
 originalLink: https://documentation.spryker.com/v2/docs/ht-invoice-payment-checkout
+originalArticleId: 3bcdeafd-6426-49d7-a49a-0ee9e44b61f1
 redirect_from:
   - /v2/docs/ht-invoice-payment-checkout
   - /v2/docs/en/ht-invoice-payment-checkout

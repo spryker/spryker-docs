@@ -2,6 +2,7 @@
 title: A command fails with a `Killed` message
 description: Learn how to resolve the issue with a command returning a `killed` message.
 originalLink: https://documentation.spryker.com/v6/docs/a-command-fails-with-a-killed-message
+originalArticleId: 91b483dd-0aaf-4567-b0aa-b64d3f3bf347
 redirect_from:
   - /v6/docs/a-command-fails-with-a-killed-message
   - /v6/docs/en/a-command-fails-with-a-killed-message

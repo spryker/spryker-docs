@@ -2,9 +2,12 @@
 title: SCSS linter integration guide
 description: Learn how to integrate the SCSS linter into your project
 originalLink: https://documentation.spryker.com/2021080/docs/scss-linter-integration-guide
+originalArticleId: 45333d65-56d9-4b44-855a-e26ce42a1e4a
 redirect_from:
   - /2021080/docs/scss-linter-integration-guide
   - /2021080/docs/en/scss-linter-integration-guide
+  - /docs/scss-linter-integration-guide
+  - /docs/en/scss-linter-integration-guide
 ---
 
 Follow the steps below to integrate the [SCSS linter ](/docs/scss-linter)into your project.

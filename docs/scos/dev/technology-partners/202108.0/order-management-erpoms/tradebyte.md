@@ -2,9 +2,12 @@
 title: Tradebyte
 description: Offer SaaS solutions for the electronic exchange of data amongst manufacturers, brands, retailers, and marketplaces by integrating Tradebyte into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/tradebyte
+originalArticleId: 46d787fb-900d-43ab-b73d-bd2fd49a3479
 redirect_from:
   - /2021080/docs/tradebyte
   - /2021080/docs/en/tradebyte
+  - /docs/tradebyte
+  - /docs/en/tradebyte
 ---
 
 ## Partner Information

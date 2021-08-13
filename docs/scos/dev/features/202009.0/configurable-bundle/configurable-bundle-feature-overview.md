@@ -2,18 +2,19 @@
 title: Configurable Bundle feature overview
 description: A configurable bundle is a product bundle, that a customer can configure in the Storefront on the go by choosing the suggested concrete products.
 originalLink: https://documentation.spryker.com/v6/docs/configurable-bundle-feature-overview
+originalArticleId: 5e2968d9-e284-4575-85f4-7b76fdba5014
 redirect_from:
   - /v6/docs/configurable-bundle-feature-overview
   - /v6/docs/en/configurable-bundle-feature-overview
 ---
 
-A *configurable bundle*  is a [product bundle](https://documentation.spryker.com/docs/product-bundle) for which a Storefront User selectes products on the Storefront. 
+A *configurable bundle*  is a [product bundle](/docs/scos/dev/features/202009.0/product-bundles/product-bundles.html) for which a Storefront User selectes products on the Storefront. 
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.
 
 ## Configurable bundle template
 Every configurable bundle is created per a template. A *configurable bundle template* is a model with configuration details for a bundle, like a number of [slots](#configurable-bundle-slot) or product lists assigned to a slot. There can be multiple templates in a shop, like a sport suit, a car, or a kitchen set.
 
-A Back Office User creates the templates in the Back Office. See [Сreating configurable bundle templates](https://documentation.spryker.com/docs/managing-configurable-bundle-templates) to learn how they do it.
+A Back Office User creates the templates in the Back Office. See [Сreating configurable bundle templates](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html) to learn how they do it.
 
 ![Configurable Bundle Template in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+back+office.png)
 
@@ -61,7 +62,7 @@ For example, a *Kitchen furniture set* configurable bundle template can have the
 
 ![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png)
 
-When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](https://documentation.spryker.com/docs/product-lists) is automatically assigned to each of them. They can edit the product list in **Catalog Management** > **Product Lists** section or by editing the slot in the configurable bundle template.
+When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/scos/dev/features/202009.0/product-lists/product-lists.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management** > **Product Lists** section or by editing the slot in the configurable bundle template.
 
 {% info_block warningBox "Slots" %}
 
@@ -71,8 +72,8 @@ When a Back Office user creates a configurable bundle template, they create the 
 
 {% endinfo_block %}
 
-To learn how a Back Office User edits product lists, see [Managing product lists](https://documentation.spryker.com/docs/managing-product-lists).
-To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](https://documentation.spryker.com/docs/managing-configurable-bundle-templates#creating-slots-in-configurable-bundle-templates).
+To learn how a Back Office User edits product lists, see [Managing product lists](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/product-lists/managing-product-lists.html).
+To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-slots-in-configurable-bundle-templates).
 
 When a Storefront user configures a bundle, for each slot, they select a product from the provided product list. 
 ![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png)
@@ -153,7 +154,7 @@ Product availability is taken into account when calculating the total.
 A Storefront User can reorder items from a configurable bundle as separate order items.
 
 ## Configurable bundle and quotation process
-A Storefront User can include a configurable bundle into the [quotation process](https://documentation.spryker.com/docs/quotation-process-rfq-feature-overview) and change the price of one or more items in a bundle. The price of the configurable bundle is re-calculated based on the new prices.
+A Storefront User can include a configurable bundle into the [quotation process](/docs/scos/dev/features/202009.0/quotation-process/quotation-process-feature-overview.html) and change the price of one or more items in a bundle. The price of the configurable bundle is re-calculated based on the new prices.
 
 ## Configurable bundle and splittable order items
 A Storefront User can add splittable and non-splittable products to a configurable bundle.
@@ -210,7 +211,7 @@ The order looks as follows:
 
 {% info_block errorBox "packaging units are not supported" %}
 
-The product splitting logic does not support [packaging units](https://documentation.spryker.com/docs/packaging-units-overview) with configurable bundle products.
+The product splitting logic does not support [packaging units](/docs/scos/dev/features/202009.0/packaging-units/packaging-units-feature-overview.html) with configurable bundle products.
 
 {% endinfo_block %}
 
@@ -225,16 +226,16 @@ The Configurable Bundle feature looks as follows on the Storefront:
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
 
 
-* On the Configurator page, you cannot add the configured bundle to a [shopping list](https://documentation.spryker.com/docs/multiple-shared-shopping-lists-overview) or [wishlist](https://documentation.spryker.com/docs/multiple-wishlists).
+* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/scos/dev/features/202009.0/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html) or [wishlist](/docs/scos/dev/features/202009.0/wishlist/wishlist-feature-overview.html).
 * A Storefront User cannot return to the *Configurator* page from the *Cart*, *Reorder*, or *Shopping list* pages.
 * The following products cannot be displayed in the configurator:
-    - Products with [measurement](https://documentation.spryker.com/docs/measurement-units-feature-overview) or [packaging units](https://documentation.spryker.com/docs/packaging-units-overview)
-    - [Product bundles](https://documentation.spryker.com/docs/product-bundles)
-    - [Gift cards](https://documentation.spryker.com/docs/gift-card-feature-overview)
+    - Products with [measurement](/docs/scos/dev/features/202009.0/measurement-units/measurement-units-feature-overview.html) or [packaging units](/docs/scos/dev/features/202009.0/packaging-units/packaging-units-feature-overview.html)
+    - [Product bundles](/docs/scos/dev/features/202009.0/product-bundles/product-bundles.htmls)
+    - [Gift cards](/docs/scos/dev/features/202009.0/gift-cards/gift-cards-feature-overview.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
-    * [Product options](https://documentation.spryker.com/docs/product-options-overview)
-    * [Product labels](https://documentation.spryker.com/docs/product-label-feature-overview) 
-    * [Product quantity restrictions](https://documentation.spryker.com/docs/product-quantity-restrictions-overview)
+    * [Product options](/docs/scos/dev/features/202009.0/product-options/product-options-feature-overview.html)
+    * [Product labels](https://documentation.spryker.com/v6/docs/product-label-feature-overview) 
+    * [Product quantity restrictions](/docs/scos/dev/features/202009.0/non-splittable-products/non-splittable-products-feature-overview.html)
 * The *Slot* page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 

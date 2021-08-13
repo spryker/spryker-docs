@@ -2,6 +2,7 @@
 title: Managing Groups
 description: Use the procedures to create, edit a group and assign a role to this group in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/managing-groups
+originalArticleId: d28a6800-6428-408f-8039-9baee6749ecd
 redirect_from:
   - /v4/docs/managing-groups
   - /v4/docs/en/managing-groups

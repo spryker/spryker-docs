@@ -2,6 +2,7 @@
 title: Configuration Management
 description: There are several files that allow you to add the needed configuration for the exact use-case you want.
 originalLink: https://documentation.spryker.com/v2/docs/configuration-management
+originalArticleId: 4be8f668-d737-46b4-85b2-2416d97fbe1c
 redirect_from:
   - /v2/docs/configuration-management
   - /v2/docs/en/configuration-management
@@ -172,4 +173,4 @@ You might use the following definitions to generate related code:
 
 * `console spryk:run AddSharedConstantsInterface`
     * Adds a Shared Constants Interface
-See the [Spryk](https://documentation.spryker.com/v2/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/features/201903.0/sdk/spryk-code-generator.html) documentation for details.

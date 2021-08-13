@@ -2,6 +2,7 @@
 title: Logging In as Company User
 description: The article provides information on how to access private B2B resources using Spryker Glue API.
 originalLink: https://documentation.spryker.com/v4/docs/logging-in-as-company-user-201907
+originalArticleId: 08173a2d-b5a4-4a7b-a261-902ff1d7194b
 redirect_from:
   - /v4/docs/logging-in-as-company-user-201907
   - /v4/docs/en/logging-in-as-company-user-201907
@@ -35,12 +36,12 @@ In your development, the endpoint can help you to:
 * Allow users to benefit from prices specific to their company.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/v4/docs/company-account-api-feature-integration-201907#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
 
 ## Retrieving Available Company Users
 To retrieve a list of all the Company Users available to the currently logged in user, send a GET request to the following endpoint:
 
-[/company-users/mine](https://documentation.spryker.com/v4/docs/rest-api-reference#/company-users)
+[/company-users/mine](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/company-users)
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
 
@@ -315,7 +316,7 @@ In this case, the following additional attributes will be added to the response:
 ## Impersonating as a Company User
 To impersonate a user as a Company Account and receive a B2B access token, send a POST request to the following endpoint:
 
-[/company-user-access-tokens](https://documentation.spryker.com/v4/docs/rest-api-reference#/company-user-access-tokens)
+[/company-user-access-tokens](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/company-user-access-tokens)
 
 Sample request: *POST http://glue.mysprykershop.com/company-user-access-tokens*
 
@@ -385,8 +386,8 @@ If the request was successful, the endpoint responds with a **RestCompanyUserAc
 | 422 | The Company User Id format is incorrect. |
  
 ##  Accessing B2B Resources
-After impersonating as a Company User, you can access the resources provided to B2B customers using the access token received via the **/company-user-access-tokens** endpoint. When accessing the resources, you need to pass the token in the Authorization header. For details, see [Accessing Resources](https://documentation.spryker.com/v4/docs/authentication-and-authorization#accessing-resources).
+After impersonating as a Company User, you can access the resources provided to B2B customers using the access token received via the **/company-user-access-tokens** endpoint. When accessing the resources, you need to pass the token in the Authorization header. For details, see [Accessing Resources](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html#accessing-resources).
 
 ## Refreshing the Access Token
-You can refresh an access token issued for a Company User the same as any other access token issued by Glue API. For details, see [Refreshing Tokens](https://documentation.spryker.com/v4/docs/authentication-and-authorization#refreshing-tokens).
+You can refresh an access token issued for a Company User the same as any other access token issued by Glue API. For details, see [Refreshing Tokens](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html#refreshing-tokens).
 

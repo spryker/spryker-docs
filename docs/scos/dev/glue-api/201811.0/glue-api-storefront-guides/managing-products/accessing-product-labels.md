@@ -1,6 +1,7 @@
 ---
 title: Accessing Product Labels
 originalLink: https://documentation.spryker.com/v1/docs/retrieving-product-labels
+originalArticleId: dd9de9a8-47ee-4912-82ce-9cfaabacd8cd
 redirect_from:
   - /v1/docs/retrieving-product-labels
   - /v1/docs/en/retrieving-product-labels

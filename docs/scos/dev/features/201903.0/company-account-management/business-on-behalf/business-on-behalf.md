@@ -1,6 +1,7 @@
 ---
 title: Business on Behalf
 originalLink: https://documentation.spryker.com/v2/docs/business-on-behalf
+originalArticleId: 68c1e350-c668-4cbc-8476-b85e4d6c8e29
 redirect_from:
   - /v2/docs/business-on-behalf
   - /v2/docs/en/business-on-behalf

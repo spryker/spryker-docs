@@ -1,9 +1,12 @@
 ---
 title: File details- product_abstract_store.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-abstract-storecsv
+originalArticleId: 289b16ad-bb98-40cb-80c6-cfdef692687f
 redirect_from:
   - /2021080/docs/file-details-product-abstract-storecsv
   - /2021080/docs/en/file-details-product-abstract-storecsv
+  - /docs/file-details-product-abstract-storecsv
+  - /docs/en/file-details-product-abstract-storecsv
 ---
 
 This article contains content of the **product_abstract_store.csv** file to configure Product Abstract Store information on your Spryker Demo Shop.
@@ -20,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*    [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+*    [product_abstract.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 *     *stores.php* configuration file of the demo shop PHP project
 
 ## Template File & Content Example

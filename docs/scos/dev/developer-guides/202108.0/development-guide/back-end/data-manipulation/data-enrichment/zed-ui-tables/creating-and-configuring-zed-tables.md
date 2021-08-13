@@ -2,9 +2,12 @@
 title: Creating and configuring Zed tables
 description: This article helps you to get started on working with tables.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
+originalArticleId: e8fc8c5a-88fa-41f8-8d2b-de028e7c4165
 redirect_from:
   - /2021080/docs/creating-and-configuring-zed-tables
   - /2021080/docs/en/creating-and-configuring-zed-tables
+  - /docs/creating-and-configuring-zed-tables
+  - /docs/en/creating-and-configuring-zed-tables
 ---
 
 Spryker has a dedicated component to help you build tables for the Zed UI.

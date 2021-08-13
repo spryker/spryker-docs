@@ -1,6 +1,7 @@
 ---
 title: Special- Prepare for a busy season
 originalLink: https://documentation.spryker.com/v6/docs/special-prepare-for-a-busy-season
+originalArticleId: 75c77a8b-5367-468c-9cce-b035f3f1e9cd
 redirect_from:
   - /v6/docs/special-prepare-for-a-busy-season
   - /v6/docs/en/special-prepare-for-a-busy-season

@@ -2,14 +2,17 @@
 title: Category filters overview
 description: You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.
 originalLink: https://documentation.spryker.com/2021080/docs/category-filters-overview
+originalArticleId: 086380e2-881f-48f1-b23a-88c4380b66c8
 redirect_from:
   - /2021080/docs/category-filters-overview
   - /2021080/docs/en/category-filters-overview
+  - /docs/category-filters-overview
+  - /docs/en/category-filters-overview
 ---
 
 To help your customers locate items in your shop more easily you can add customizable Category Filters to the catalog pages or simply fall back to the standard Category Filters. You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.
 
-See [Managing category filters](https://documentation.spryker.com/docs/managing-category-filters) for details on how you can manage Category filters in the Back Office.
+See [Managing category filters](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html) for details on how you can manage Category filters in the Back Office.
 
 ## Current Constraints
 
@@ -26,7 +29,7 @@ Currently, the feature has the following functional constraints which are going 
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-               <li><a href="https://documentation.spryker.com/docs/managing-category-filters" class="mr-link">Manage category filters</a></li>           
+               <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html" class="mr-link">Manage category filters</a></li>           
             </ul>
         </div>
     </div>

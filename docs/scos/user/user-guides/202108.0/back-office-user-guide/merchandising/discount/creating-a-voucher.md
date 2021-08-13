@@ -2,9 +2,12 @@
 title: Creating a voucher
 description: Use the procedure to create discount vouchers your customer can redeem during checkout.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-voucher
+originalArticleId: 5d9e5e07-5260-4f0a-8118-aaa324af6fbc
 redirect_from:
   - /2021080/docs/creating-a-voucher
   - /2021080/docs/en/creating-a-voucher
+  - /docs/creating-a-voucher
+  - /docs/en/creating-a-voucher
 ---
 
 This guide describes how to create a voucher.
@@ -310,5 +313,5 @@ This section contains a set of tables that describe fields, value types, and ope
 |Greater or equal|>=|Number|Checks if the value is greater than or equal to the value of the right operand|
 
 **What's next?**
-See [Managing Discounts](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/managing-discounts.html) to know more about the actions you can do once the discount is created. 
+See [Managing Discounts](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created. 
 

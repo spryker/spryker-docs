@@ -1,9 +1,12 @@
 ---
 title: Understanding Project and Core Level Fixes
 originalLink: https://documentation.spryker.com/2021080/docs/understanding-project-and-core-level-fixes
+originalArticleId: cbc63cb1-4eb5-4d96-903a-b0eade141458
 redirect_from:
   - /2021080/docs/understanding-project-and-core-level-fixes
   - /2021080/docs/en/understanding-project-and-core-level-fixes
+  - /docs/understanding-project-and-core-level-fixes
+  - /docs/en/understanding-project-and-core-level-fixes
 ---
 
 This short article will explain the differences between project and core level fixes to problems and bugs.

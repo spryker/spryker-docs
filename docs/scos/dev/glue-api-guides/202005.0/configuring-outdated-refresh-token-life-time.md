@@ -1,12 +1,13 @@
 ---
 title: Configuring Outdated Refresh Token Life Time
 originalLink: https://documentation.spryker.com/v5/docs/configuring-outdated-refresh-token-life-time
+originalArticleId: b695d109-b38a-430f-b0c4-b9fc86284bf8
 redirect_from:
   - /v5/docs/configuring-outdated-refresh-token-life-time
   - /v5/docs/en/configuring-outdated-refresh-token-life-time
 ---
 
-Refresh tokens generated when accessing Glue REST API expire after a certain period of time. In addition to that, they can be [forcibly revoked](https://documentation.spryker.com/docs/en/authentication-and-authorization#token-revocation) at any time. No matter how a token becomes invalidated, it is set to expire but remains in the Storage.
+Refresh tokens generated when accessing Glue REST API expire after a certain period of time. In addition to that, they can be [forcibly revoked](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html#token-revocation) at any time. No matter how a token becomes invalidated, it is set to expire but remains in the Storage.
 
 For security reasons and to reduce the database storage space, it is recommended to delete outdated refresh tokens once they are expired. There are **two** ways how tokens can be removed from the Storage:
 
@@ -15,10 +16,10 @@ For security reasons and to reduce the database storage space, it is recommended
 
 To configure the time during which an outdated refresh token is stored:
 
-1. [Extend](https://documentation.spryker.com/docs/en/t-extend-spryker) the `Spryker\Shared\Oauth\OauthConfig` class on your project level.
+1. [Extend](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-the-spryker-core-functionality.html) the `Spryker\Shared\Oauth\OauthConfig` class on your project level.
 2. Configure the time interval for the job via the `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` method.
 
-After configuring the token lifetime, invalidated tokens will be deleted automatically by a [Cron job](https://documentation.spryker.com/docs/en/cronjob-scheduling) once their storage time expires.
+After configuring the token lifetime, invalidated tokens will be deleted automatically by a [Cron job](/docs/scos/dev/features/202005.0/sdk/cronjob-scheduling.html) once their storage time expires.
 
 {% info_block infoBox "Note" %}
 

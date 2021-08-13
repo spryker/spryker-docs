@@ -2,6 +2,7 @@
 title: About the Architecture Guide
 description: Spryker architecture is based on strict modularity and separation.
 originalLink: https://documentation.spryker.com/v6/docs/about-the-architecture-guide
+originalArticleId: 5790c8b3-4ab2-4933-b128-dd46375af41e
 redirect_from:
   - /v6/docs/about-the-architecture-guide
   - /v6/docs/en/about-the-architecture-guide

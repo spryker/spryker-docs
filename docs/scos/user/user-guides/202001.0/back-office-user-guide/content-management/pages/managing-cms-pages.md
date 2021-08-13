@@ -2,6 +2,7 @@
 title: Managing CMS Pages
 description: The guide provides instructions on how to preview, publish, update and activate or deactivate CMS pages in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/managing-cms-pages
+originalArticleId: 9732253c-0364-4d48-ba0d-f06e18e7a1f4
 redirect_from:
   - /v4/docs/managing-cms-pages
   - /v4/docs/en/managing-cms-pages
@@ -39,7 +40,7 @@ You can use the Preview mode from either the **Overview of CMS Pages** page or t
 1.On the **Overview of CMS Pages** page, click **View** and select **Preview** from the drop-down list next to the page whose draft you want to view.
 2. The page in the Preview mode will be opened in a new tab of your browser.
 
-**To preview a draft of your CMS page from the Edit Placeholders editor**, see the [Editing Placeholders](https://documentation.spryker.com/v4/docs/editing-cms-pages#selecting-the-edit---placeholders-option) section.
+**To preview a draft of your CMS page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/editing-cms-pages.html#selecting-the-edit---placeholders-option) section.
 ***
 
 ## Publishing a Page
@@ -51,7 +52,7 @@ You can publish your page either from the **Overview of CMS Pages** page or from
 1. On the **Overview of CMS Pages** page, click **Publish** in the _Actions_ column.
 2. The page will be successfully published.
 
-**To publish a page from the Edit Placeholders editor**, see the [Editing Placeholders](https://documentation.spryker.com/v4/docs/editing-cms-pages#selecting-the-edit---placeholders-option) section.
+**To publish a page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/editing-cms-pages.html#selecting-the-edit---placeholders-option) section.
 ***
 ## Viewing a Page
 To view a page:

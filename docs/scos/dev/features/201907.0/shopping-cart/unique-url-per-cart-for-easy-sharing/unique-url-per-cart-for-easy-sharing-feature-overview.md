@@ -2,6 +2,7 @@
 title: Unique URL per Cart for Easy Sharing Feature Overview
 description: With the feature, company users can generate the URL to share the cart with different levels of access.
 originalLink: https://documentation.spryker.com/v3/docs/unique-url-per-cart-for-easy-sharing-overview
+originalArticleId: be619db1-7c51-4ce4-b04e-d485d3963d8f
 redirect_from:
   - /v3/docs/unique-url-per-cart-for-easy-sharing-overview
   - /v3/docs/en/unique-url-per-cart-for-easy-sharing-overview
@@ -29,8 +30,8 @@ The user can view and print the information from the Preview link.
 {% info_block warningBox "Note" %}
 Preview link is the only available option for the B2C environment. B2C users will not be able to share the cart with Read-only and Full access permissions.
 {% endinfo_block %}
-* **Read-Only**. For details on the Read only permissions, refer to [Shared Cart Feature Overview](https://documentation.spryker.com/v3/docs/shared-cart-overview#read-only).
-* **Full Access**. For details on the Full Access permission, check [Shared Cart Feature Overview](https://documentation.spryker.com/v3/docs/shared-cart-overview#full-access).
+* **Read-Only**. For details on the Read only permissions, refer to [Shared Cart Feature Overview](/docs/scos/dev/features/201907.0/shopping-cart/shared-cart/shared-cart-feature-overview.html#read-only).
+* **Full Access**. For details on the Full Access permission, check [Shared Cart Feature Overview](/docs/scos/dev/features/201907.0/shopping-cart/shared-cart/shared-cart-feature-overview.html#full-access).
 
 {% info_block warningBox "Note" %}
 Sharing cart with Read-Only or Full Access permissions is available only for internal users (the users within the same business unit

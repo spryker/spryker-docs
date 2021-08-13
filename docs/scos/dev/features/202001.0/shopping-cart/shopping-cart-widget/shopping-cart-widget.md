@@ -2,6 +2,7 @@
 title: Shopping Cart Widget
 description: With the Shopping Cart Widget, customers can easily create new shopping carts, view details about the existing ones. It can simplify the ordering process.
 originalLink: https://documentation.spryker.com/v4/docs/cart-widget
+originalArticleId: 422419d5-ab2b-4a07-9a89-fcdc5bb8a543
 redirect_from:
   - /v4/docs/cart-widget
   - /v4/docs/en/cart-widget

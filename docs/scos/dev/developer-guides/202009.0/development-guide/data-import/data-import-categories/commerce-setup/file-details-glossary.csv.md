@@ -1,12 +1,13 @@
 ---
 title: File details- glossary.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-glossarycsv
+originalArticleId: 66c62d8f-021e-4b64-a12a-2960a2b76152
 redirect_from:
   - /v6/docs/file-details-glossarycsv
   - /v6/docs/en/file-details-glossarycsv
 ---
 
-This article contains content of the **glossary.csv** file to configure [Customer](https://documentation.spryker.com/docs/glossary) information on your Spryker Demo Shop.
+This article contains content of the **glossary.csv** file to configure [Customer](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/glossary/managing-glossary.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:

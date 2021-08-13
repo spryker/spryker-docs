@@ -1,6 +1,7 @@
 ---
 title: Zed API (BETA)
 originalLink: https://documentation.spryker.com/v1/docs/zed-api
+originalArticleId: 8554c9b8-b4e8-4efb-8415-3c5acd03c670
 redirect_from:
   - /v1/docs/zed-api
   - /v1/docs/en/zed-api

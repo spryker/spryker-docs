@@ -2,6 +2,7 @@
 title: Payments feature integration
 description: Use the guide to install the Payment per store feature in your project.
 originalLink: https://documentation.spryker.com/v6/docs/payments-feature-integration
+originalArticleId: ef7404bd-93e6-4c2a-be59-66b4d59ca1cb
 redirect_from:
   - /v6/docs/payments-feature-integration
   - /v6/docs/en/payments-feature-integration

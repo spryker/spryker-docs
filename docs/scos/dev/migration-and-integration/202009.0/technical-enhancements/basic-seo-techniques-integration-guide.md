@@ -2,12 +2,13 @@
 title: Basic SEO techniques integration guide
 description: Learn how you can apply the basic SEO techniques such as improved headings structure and use of microddata
 originalLink: https://documentation.spryker.com/v6/docs/basic-seo-techniques-integration-guide
+originalArticleId: 57d507bb-f716-46f8-9bc4-e03ac73e2f6a
 redirect_from:
   - /v6/docs/basic-seo-techniques-integration-guide
   - /v6/docs/en/basic-seo-techniques-integration-guide
 ---
 
-To improve the visibility of your Spryker-based shop for the search engines, you should optimize your project for them. The very first step towards the SEO of your project pages' content is the proper usage of headings on the pages and microdata usage. For details, see [Basic SEO techniques to use in your project](https://documentation.spryker.com/docs/basic-seo-techniques-to-use-in-your-project).
+To improve the visibility of your Spryker-based shop for the search engines, you should optimize your project for them. The very first step towards the SEO of your project pages' content is the proper usage of headings on the pages and microdata usage. For details, see [Basic SEO techniques to use in your project](/docs/scos/dev/developer-guides/202009.0/development-guide/best-practices/basic-seo-techniques-to-use-in-your-project.html).
 
 To apply the basic SEO techniques such as improved headings structure and use of microdata in your project, follow the steps below.
 
@@ -15,7 +16,7 @@ To apply the basic SEO techniques such as improved headings structure and use of
 To start the integration, overview and install the necessary features:
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core | 202009.0 | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/spryker-core-feature-integration.html) |
 
 ## 1) Update the required SprykerShop modules using Composer
 Run the following command to update the required modules:

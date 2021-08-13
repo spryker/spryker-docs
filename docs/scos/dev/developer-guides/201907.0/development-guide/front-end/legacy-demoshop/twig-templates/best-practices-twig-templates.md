@@ -2,6 +2,7 @@
 title: Best Practices - Twig Templates
 description: In this article, you get an overview of the best practices used in twig templates.
 originalLink: https://documentation.spryker.com/v3/docs/twig-best-practices
+originalArticleId: 1be2a377-fd24-4cc5-b505-221422ec1800
 redirect_from:
   - /v3/docs/twig-best-practices
   - /v3/docs/en/twig-best-practices

@@ -2,6 +2,7 @@
 title: RatePay
 description: Offer intelligent payment solutions for handling most popular paylater models like invoice and installments on the internet for the DACH region by integrating RatePay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v1/docs/ratepay
+originalArticleId: 27243cb3-7264-41b1-89d9-c26626183a33
 redirect_from:
   - /v1/docs/ratepay
   - /v1/docs/en/ratepay

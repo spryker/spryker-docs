@@ -2,9 +2,12 @@
 title: Calculation 3.0
 description: The Calculation module is used to calculate the cart totals displayed in the cart/checkout or when the order is placed. The article describes its workflow.
 originalLink: https://documentation.spryker.com/2021080/docs/calculation-3-0
+originalArticleId: 2e7b6f98-4956-453d-abf3-3c7a1f6c1f2a
 redirect_from:
   - /2021080/docs/calculation-3-0
   - /2021080/docs/en/calculation-3-0
+  - /docs/calculation-3-0
+  - /docs/en/calculation-3-0
 ---
 
 Spryker uses the Calculation module to calculate the cart totals that are displayed in the cart/checkout or when the order is placed.
@@ -20,9 +23,9 @@ The quote transfer object is used to store data and plugins that calculate the a
 There is already a list of plugins which populate quote transfer with corresponding data. Calculations are executed every time the content of the cart is updated.
 
 {% info_block infoBox %}
-For more details, check [Cart Data Flow](https://documentation.spryker.com/docs/cart-functionality#cart-data-flow
+For more details, check [Cart Data Flow](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/cart-module-reference-information.html#cart-data-flow
 {% endinfo_block %} in the *Cart Functionality* section.)
-If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](https://documentation.spryker.com/docs/calculation-data-structure#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes, etc.). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
+If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-data-structure.html#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes, etc.). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
 
 {% info_block infoBox "Calculated amounts" %}
 Each amount is being calculated and stored in cents.
@@ -74,7 +77,7 @@ ItemTransfer::sumGrossPriceWithProductOptions = sum(ProductOptionTransfer::sumGr
 * **DiscountCalculatorPlugin** - Applies discounts to current `QuoteTransfer` each discountable item with property `calculatedDiscounts`, gets discounts filled. Also, `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
 
 {% info_block infoBox "Discount Calculation" %}
-Discount calculation is a separate topic and is explained in the [Discount](https://documentation.spryker.com/docs/discount
+Discount calculation is a separate topic and is explained in the [Discount](/docs/scos/dev/features/{{ page.version }}/promotions-and-discounts/promotions-and-discounts.html
 {% endinfo_block %} article.)
 
 
@@ -111,11 +114,11 @@ QuoteTransfer is the main data transfer object used in Cart, Calculation, Checko
 {% endinfo_block %}
 | Field | Description |
 | --- | --- |
-| totals ([TotalsTransfer](https://documentation.spryker.com/docs/calculation-3-0#totals-transfer))|Order totals.|
-|items ([ItemTransfer](https://documentation.spryker.com/docs/calculation-3-0#item-transfer)[])|CartItem collection.|
-|voucherDiscounts ([DiscountTransfer](https://documentation.spryker.com/docs/calculation-3-0#discount-transfer)[])||
-|cartRuleDiscounts ([DiscountTransfer](https://documentation.spryker.com/docs/calculation-3-0#discount-transfer)[])||
-expenses ([ExpenseTransfer](https://documentation.spryker.com/docs/calculation-3-0#expensetransfer))||
+| totals ([TotalsTransfer](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-3.0.html#totals-transfer))|Order totals.|
+|items ([ItemTransfer](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-3.0.html#item-transfer)[])|CartItem collection.|
+|voucherDiscounts ([DiscountTransfer](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-3.0.html#discount-transfer)[])||
+|cartRuleDiscounts ([DiscountTransfer](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-3.0.html#discount-transfer)[])||
+expenses ([ExpenseTransfer](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-3.0.html#expensetransfer))||
 |billingAddress (AddressTransfer)|Current checkout customer billing address.|
 |shippingAddress (AddressTransfer)|Current checkout customer shipment address.|
 |customer (CustomerTransfer)|Current checkout customer details.|
@@ -131,7 +134,7 @@ TotalsTransfer is a data object holding cart totals, subtotal, expenses (shippin
 | subtotal (int)|Calculated total amount before taxes and discounts. Is set by `SubtotalTotalsCalculatorPlugin`.|
 |expenseTotal  (int)|Total expenses amount (shipping). It is set by `ExpenseTotalsCalculatorPlugin`.|
 |discountTotal (int)|Total discount amount. It is set by `DiscountTotalsCalculatorPlugin`.|
-|taxTotal ([TaxTotalsTransfer](https://documentation.spryker.com/docs/calculation-3-0#tax-total-transfer))|Tax totals for current cart. Is set by `TaxTotalsCalculatorPlugin`.|
+|taxTotal ([TaxTotalsTransfer](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-3.0.html#tax-total-transfer))|Tax totals for current cart. Is set by `TaxTotalsCalculatorPlugin`.|
 |grandTotal (int)|The total amount the customer needs to pay after the discounts are applied. It is set by `GrandTotalWithDiscountsCalculatorPlugin` calculator plugin.|
 |hash (string)|Hash from total values to identify amount changes. It is set by `GrandTotalCalculatorPlugin`. |
 
@@ -174,9 +177,9 @@ ItemTransfer is a cart item transfer, holds single product information.
 |refundableAmount (int)|item available refundable amount (order only)|
 |unitTaxAmount (int)|tax amount for single item (order only)|
 |sumTaxAmount (int)|tax amount for sum of items (order only)|
-|calculatedDiscounts[] ([CalculatedDiscountTransfer](https://documentation.spryker.com/docs/calculation-3-0#calculated-discount-transfer))|item calculated discount collection. It’s set by `DiscountCalculatorPlugin`.|
+|calculatedDiscounts[] ([CalculatedDiscountTransfer](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-3.0.html#calculated-discount-transfer))|item calculated discount collection. It’s set by `DiscountCalculatorPlugin`.|
 |canceledAmount (int)|canceled amount for this item (order only)|
-|productOptions ([ProductOptionTransfer](https://documentation.spryker.com/docs/calculation-3-0#product-option-transfer)[])|assigned product options. It’s set by `CartItemProductOptionPlugin` cart expander plugin. |
+|productOptions ([ProductOptionTransfer](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-3.0.html#product-option-transfer)[])|assigned product options. It’s set by `CartItemProductOptionPlugin` cart expander plugin. |
 
 ### Calculated Discount Transfer
 
@@ -203,7 +206,7 @@ Each item which can have discounts applied have `calculatedDiscounts` property a
 |unitGrossPrice (int|single item gross price. It’s set by `CartItemProductOptionPlugin` cart expander plugin.|
 |sumGrossPrice (int|sum of items gross price. It’s set by `ProductOptionGrossSumCalculatorPlugin` cart expander plugin.|
 |taxRate (int|tax rate in percentage. It’s set by `CartItemProductOptionPlugin` cart expander plugin.|
-|calculatedDiscounts[] ([CalculatedDiscountTransfer](https://documentation.spryker.com/docs/calculation-3-0#calculated-discount-transfer))|product Option calculated discount collection. It’s set by `DiscountCalculatorPlugin`. |
+|calculatedDiscounts[] ([CalculatedDiscountTransfer](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-3.0.html#calculated-discount-transfer))|product Option calculated discount collection. It’s set by `DiscountCalculatorPlugin`. |
 | refundableAmount (int) | item available refundable amount (order only) |
 | unitTaxAmount (int) | 	
 tax amount for single product option (order only) |

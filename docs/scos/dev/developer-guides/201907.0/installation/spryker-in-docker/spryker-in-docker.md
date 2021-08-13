@@ -2,6 +2,7 @@
 title: Spryker in Docker
 description: Spryker provides an easy way to bootstrap applications and prepare development and production environments for running Spryker OS in Docker.
 originalLink: https://documentation.spryker.com/v3/docs/spryker-in-docker-201907
+originalArticleId: 39523cb7-bf79-4322-b955-a194a2e585a5
 redirect_from:
   - /v3/docs/spryker-in-docker-201907
   - /v3/docs/en/spryker-in-docker-201907
@@ -28,7 +29,7 @@ Spryker containers  follow the rules:
 ## Where to go from here?
 
 * [Overview and install the prerequisites](/docs/scos/dev/developer-guides/201907.0/installation/spryker-in-docker/docker-install-prerequisites/docker-install-prerequisites.html)
-* [Getting Started with Docker](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/getting-started-with-docker.html)
+* [Getting Started with Docker](https://documentation.spryker.com/v3/docs/installing-spryker-with-docker)
 * [Integrate Docker into an existing Spryker project](/docs/scos/dev/developer-guides/201907.0/installation/spryker-in-docker/integrating-docker-into-an-existing-project.html)
 * [Spryker in Docker HowTos](https://documentation.spryker.com/v3/docs/about-spryker-in-docker-howtos.htm)
 

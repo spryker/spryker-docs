@@ -1,12 +1,13 @@
 ---
 title: Running Production
 originalLink: https://documentation.spryker.com/v5/docs/running-production-mode
+originalArticleId: 919beb8f-9c2e-43e9-8f60-696a61dea10a
 redirect_from:
   - /v5/docs/running-production-mode
   - /v5/docs/en/running-production-mode
 ---
 
-This document describes the procedure of generating images and assets suitable for a [production environment](https://documentation.spryker.com/docs/en/installation-modes#running-production). After going through all the steps, it's up to you how to proceed further.
+This document describes the procedure of generating images and assets suitable for a [production environment](https://documentation.spryker.com/v5/docs/en/installation-modes#running-production). After going through all the steps, it's up to you how to proceed further.
 
 {% info_block infoBox %}
 This functionality is available in Docker SDK starting from version 1.7.2.

@@ -1,9 +1,12 @@
 ---
 title: Overriding a Component
 originalLink: https://documentation.spryker.com/2021080/docs/t-override-component
+originalArticleId: 9a8dbfcd-e0ef-4ff2-b435-5a66f638a503
 redirect_from:
   - /2021080/docs/t-override-component
   - /2021080/docs/en/t-override-component
+  - /docs/t-override-component
+  - /docs/en/t-override-component
 ---
 
 If the implementation of any of the components shipped with Spryker frontend does not suite your needs, you can override it with a component of your own. The following article shows how to override a molecule called **simple-carousel**. By default, the component is used, for example, to display product suggestions at the bottom of the page.

@@ -2,6 +2,7 @@
 title: Alternative Products feature overview
 description: Product alternatives is a great way to ease the user’s product finding process. It lets the user jump over product pages until they find a relevant item.
 originalLink: https://documentation.spryker.com/v6/docs/alternative-products-overview
+originalArticleId: 15c35c98-1143-498e-b120-0933cfca03ce
 redirect_from:
   - /v6/docs/alternative-products-overview
   - /v6/docs/en/alternative-products-overview
@@ -19,7 +20,7 @@ The schema below illustrates relations between the alternative products:
 All the available alternative products will be shown on the abstract product details page, if one of the following occurs:
 
 * All concrete products of an abstract one are in status "out of stock"
-* [Discontinued Products](https://documentation.spryker.com/docs/discontinued-products) feature is enabled
+* [Discontinued Products](https://documentation.spryker.com/v6/docs/discontinued-products) feature is enabled
 
 {% info_block infoBox %}
 Alternative products can be attached to any product, but will be displayed only if the product becomes "out of stock" or "Discontinued".

@@ -2,6 +2,7 @@
 title: Prices feature integration
 description: The guide walks you through the process of installing the Volume Prices feature in your project.
 originalLink: https://documentation.spryker.com/v6/docs/prices-feature-integration
+originalArticleId: 9a246d97-7d15-4006-9123-79203eec1b7a
 redirect_from:
   - /v6/docs/prices-feature-integration
   - /v6/docs/en/prices-feature-integration
@@ -308,6 +309,6 @@ Make sure that the following widgets were registered:
 | Module | Test |
 | --- | --- |
 | `ProductPriceVolumeWidget` | Go to the product detail page for a product with Volume Prices set, and observe the table in the detail area that contains the Volume Prices data. |
-| `PriceProductWidget` | Could be checked on a slot configurator page of a [Configurable Bundle](https://documentation.spryker.com/docs/configurable-bundle) feature. |
+| `PriceProductWidget` | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/scos/dev/features/202009.0/configurable-bundle/configurable-bundle.html) feature. |
 
 {% endinfo_block %}

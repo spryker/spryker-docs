@@ -2,9 +2,12 @@
 title: Migration Guide - Stock
 description: Use the guide to migrate to a new version of the Stock module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-stock
+originalArticleId: db69c706-8e18-404e-b86c-4f45f642ea17
 redirect_from:
   - /2021080/docs/mg-stock
   - /2021080/docs/en/mg-stock
+  - /docs/mg-stock
+  - /docs/en/mg-stock
 ---
 
 ## Upgrading from Version 7.* to Version 8.0.0
@@ -12,7 +15,7 @@ redirect_from:
 In this new version of the **Stock** module, we have added support of decimal stock. You can find more details about the changes on the Stock module release page.
 
 {% info_block errorBox %}
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/decimal-stock-migration-concept.html
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/decimal-stock-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

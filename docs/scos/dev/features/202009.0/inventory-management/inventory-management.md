@@ -2,6 +2,7 @@
 title: Inventory Management
 description: Inventory is the number of products you offer to your customers. These products are cataloged and divided into items that are in stock and reserved.
 originalLink: https://documentation.spryker.com/v6/docs/inventory-management
+originalArticleId: 57cede78-c062-4182-9ebc-bfe9f352d281
 redirect_from:
   - /v6/docs/inventory-management
   - /v6/docs/en/inventory-management

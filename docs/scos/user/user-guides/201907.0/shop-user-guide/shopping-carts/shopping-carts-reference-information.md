@@ -2,6 +2,7 @@
 title: Shopping Carts- Reference Information
 description: The guide provides additional information you see when managing shopping carts in the storefront.
 originalLink: https://documentation.spryker.com/v3/docs/shop-guide-shopping-carts-reference-information
+originalArticleId: cf3c4445-b339-4548-bc87-2e388bbb5eb8
 redirect_from:
   - /v3/docs/shop-guide-shopping-carts-reference-information
   - /v3/docs/en/shop-guide-shopping-carts-reference-information
@@ -26,12 +27,12 @@ On the Shopping Carts page, you see the following:
 | # | Element | Description |
 |---|---|---|
 | 1 | **Customer account menu** | A menu with navigation items to specific sections where you can manage your customer information. |
-| 2 | **Shopping Cart Name** | See [Editing Shopping Cart](https://documentation.spryker.com/v4/docs/shop-guide-managing-shopping-carts#editing-a-shopping-cart) to change the name of the shopping cart. |
+| 2 | **Shopping Cart Name** | See [Editing Shopping Cart](/docs/scos/user/user-guides/201907.0/shop-user-guide/shopping-carts/managing-shopping-carts.html#editing-a-shopping-cart) to change the name of the shopping cart. |
 | 3 | **Access** | There are three types of access to a shopping cart: Owner, Full Access, and Read-only. |
 | 4 | **No. of items** | A number of items placed in the cart. |
 | 5 | **Prices** | Displays the prices according to its type: Gross or Net. |
 | 6 | **Total** | Cart total amount. |
-| 7 | **Status** | Displays the status of the cart. See [Approval Process feature overview](https://documentation.spryker.com/v2/docs/approval-process-overview-201903) for more information on statuses. Available only after the Approval Process feature has been integrated into your project. |
+| 7 | **Status** | Displays the status of the cart. See [Approval Process feature overview](https://documentation.spryker.com/v3/docs/approval-process-overview-201903) for more information on statuses. Available only after the Approval Process feature has been integrated into your project. |
 | 8 | **Actions** | A set of actions you can d with a shopping cart. |
 | 9 |  **+ Create Shopping Cart** | Creates a new shopping cart. |
 ***

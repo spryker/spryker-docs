@@ -2,6 +2,7 @@
 title: Spryker Core Feature Integration
 description: The procedure to integrate Spryker Core feature into your project.
 originalLink: https://documentation.spryker.com/v5/docs/spryker-core-feature-integration
+originalArticleId: 3a66f143-a090-40a2-a238-3f4584b5ebd7
 redirect_from:
   - /v5/docs/spryker-core-feature-integration
   - /v5/docs/en/spryker-core-feature-integration
@@ -726,4 +727,4 @@ Find the list of related feature integration guides below:
 
 | Feature | Link |
 | --- | --- |
-| Spryker Core API | [Glue API: Spryker Core Feature Integration](https://documentation.spryker.com/docs/en/glue-spryker-core-feature-integration) |
+| Spryker Core API | [Glue API: Spryker Core Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |

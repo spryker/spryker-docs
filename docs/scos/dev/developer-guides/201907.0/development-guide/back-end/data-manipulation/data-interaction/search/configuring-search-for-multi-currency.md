@@ -2,12 +2,13 @@
 title: Configuring Search for Multi-Currency
 description: This article describes how to configure search for multi-currency.
 originalLink: https://documentation.spryker.com/v3/docs/search-multi-currency
+originalArticleId: fa6d7989-cb01-483d-957a-783134783724
 redirect_from:
   - /v3/docs/search-multi-currency
   - /v3/docs/en/search-multi-currency
 ---
 
-If you don't have the multi-currency feature in you current project yet and want to migrate, you have to follow certain steps to migrate your system. First [migrate Price](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-price.html) and [modules related to multi-currency](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.
+If you don't have the multi-currency feature in you current project yet and want to migrate, you have to follow certain steps to migrate your system. First [migrate Price](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-price.html) and [modules related to multi-currency](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.
 
 In the current multi-currency feature we store prices grouped by price mode and currency, so prices are as follows now:
 ```

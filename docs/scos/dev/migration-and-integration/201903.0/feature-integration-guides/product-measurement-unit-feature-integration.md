@@ -2,6 +2,7 @@
 title: Product Measurement Unit Feature Integration
 description: The Measurement Units feature allows defining specific units of measure for products. The guide describes how to integrate the feature into your project.
 originalLink: https://documentation.spryker.com/v2/docs/product-measurement-units-feature-integration-201903
+originalArticleId: 5bde34e0-2f26-4995-bd0a-aaa070b73316
 redirect_from:
   - /v2/docs/product-measurement-units-feature-integration-201903
   - /v2/docs/en/product-measurement-units-feature-integration-201903

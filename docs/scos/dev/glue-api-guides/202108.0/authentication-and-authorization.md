@@ -2,9 +2,12 @@
 title: Authentication and authorization
 description: Information about Glue API authentication and authorization.
 originalLink: https://documentation.spryker.com/2021080/docs/authentication-and-authorization
+originalArticleId: fb5a9256-1188-427e-a4d1-2c2d8c60a5e3
 redirect_from:
   - /2021080/docs/authentication-and-authorization
   - /2021080/docs/en/authentication-and-authorization
+  - /docs/authentication-and-authorization
+  - /docs/en/authentication-and-authorization
 ---
 
 [Protected resources](#protected-resources) in Spryker Glue API require user authentication. For the authentication, Spryker implements the [OAuth 2.0 mechanism](https://tools.ietf.org/html/rfc6749). On the REST API level, it is represented by the Login API.
@@ -21,11 +24,11 @@ The default lifetime of the access tokens is 8 hours (28800 seconds) and 1 month
 
 For security purposes, when you finish sending requests as a user, or if a token gets compromised, we recommend revoking the refresh token. Revoked tokens are marked as expired on the date and time of the request and can no longer be exchanged for access tokens. 
 
-Expired tokens are stored in the database, and you can configure them to be deleted. For details, see [Deleting expired refresh tokens](https://documentation.spryker.com/docs/configuring-outdated-refresh-token-life-time). 
+Expired tokens are stored in the database, and you can configure them to be deleted. For details, see [Deleting expired refresh tokens](https://documentation.spryker.com/2021080/docs/configuring-outdated-refresh-token-life-time). 
 
 ## Protected resources
 
-Below, you can find a list of the default protected resources. As Glue API is highly customizable, a shop is likely to have its own list of protected resources. To avoid extra calls, we recommend [retrieving protected resources](https://documentation.spryker.com/docs/getting-the-list-of-protected-resources) of the shop before you start working with the API or setting up a flow. 
+Below, you can find a list of the default protected resources. As Glue API is highly customizable, a shop is likely to have its own list of protected resources. To avoid extra calls, we recommend [retrieving protected resources](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-protected-resources.html) of the shop before you start working with the API or setting up a flow. 
 
 | Action | Method | Endpoints |
 | --- | --- | --- |
@@ -117,13 +120,13 @@ Response sample with an error:
 ## User types
 
 Different endpoints require the client to be authenticated as different users. By default, you can:
-* [Authenticate as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer)
-* [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user)
-* [Authenticate as an agent assist](https://documentation.spryker.com/docs/authenticating-as-an-agent-assist)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html)
+* [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html)
+* [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-agent-assists/authenticating-as-an-agent-assist.html)
 
 ## Next steps
 
-* [Retrieve protected resources](https://documentation.spryker.com/docs/getting-the-list-of-protected-resources)
+* [Retrieve protected resources](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-protected-resources.html)
 
 
 

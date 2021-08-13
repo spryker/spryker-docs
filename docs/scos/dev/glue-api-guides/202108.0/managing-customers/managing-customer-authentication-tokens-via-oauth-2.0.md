@@ -2,15 +2,18 @@
 title: Managing customer authentication tokens via OAuth 2.0
 description: This endpoint allows authenticating as a customer and refreshing customer authentication tokens via OAuth 2.0.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens-via-oauth-20
+originalArticleId: 4fe6c88f-3879-4f9f-bb91-c6a867d120fa
 redirect_from:
   - /2021080/docs/managing-customer-authentication-tokens-via-oauth-20
   - /2021080/docs/en/managing-customer-authentication-tokens-via-oauth-20
+  - /docs/managing-customer-authentication-tokens-via-oauth-20
+  - /docs/en/managing-customer-authentication-tokens-via-oauth-20
 ---
 
 This endpoint allows authenticating as a customer and refreshing customer authentication tokens via OAuth 2.0.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Customer Account Management feature integration](https://documentation.spryker.com/2021080/docs/glue-api-customer-account-management-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Authenticate as a customer
 To authenticate as a customer, send the request:
@@ -39,8 +42,8 @@ To authenticate as a customer, send the request:
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
 | grant_type | password | &check; | Method through which the application can gain Access Tokens and by which you grant limited access to the resources to another entity without exposing credentials. |
-| username | String | &check; | Customer's username. You define it when [creating a customer](https://documentation.spryker.com/docs/managing-customers-via-glue-api#create-a-customer). |
-| password | String | &check; | Customer's password. You define it when [creating a customer](https://documentation.spryker.com/docs/managing-customers-via-glue-api#create-a-customer). |
+| username | String | &check; | Customer's username. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html#create-a-customer). |
+| password | String | &check; | Customer's password. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html#create-a-customer). |
 
 ### Response
 
@@ -123,5 +126,5 @@ To refresh an authentication token, send the request:
 | invalid_request | The refresh token is invalid. |
 | invalid_grant | The provided authorization grant or refresh token is invalid, expired, or. revoked. The provided authorization grant or refresh token does not match the redirection URI used in the authorization request, or was issued to another client. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 

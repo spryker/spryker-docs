@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Set Up a "Hello World" Queue - Legacy Demoshop
 originalLink: https://documentation.spryker.com/v1/docs/setup-hello-world-queue
+originalArticleId: 70307015-e500-4900-ae4e-070958cebe56
 redirect_from:
   - /v1/docs/setup-hello-world-queue
   - /v1/docs/en/setup-hello-world-queue

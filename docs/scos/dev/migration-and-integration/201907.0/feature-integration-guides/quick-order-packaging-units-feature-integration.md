@@ -2,6 +2,7 @@
 title: Quick Order- Packaging Units Feature Integration
 description: Quick Add to Cart + Packaging Units allow buying products in different packaging units. This guide describes how to integrate this feature into your project.
 originalLink: https://documentation.spryker.com/v3/docs/quick-order-packaging-units-feature-integration
+originalArticleId: e7cc8799-3885-459e-aebd-4c7b00000c5c
 redirect_from:
   - /v3/docs/quick-order-packaging-units-feature-integration
   - /v3/docs/en/quick-order-packaging-units-feature-integration

@@ -2,6 +2,7 @@
 title: Implementing a new Console Command
 description: This article describes how you can implement a new console command.
 originalLink: https://documentation.spryker.com/v4/docs/console-commands
+originalArticleId: 8aff82c2-5e4f-47d6-bb7f-7915fd403fa2
 redirect_from:
   - /v4/docs/console-commands
   - /v4/docs/en/console-commands

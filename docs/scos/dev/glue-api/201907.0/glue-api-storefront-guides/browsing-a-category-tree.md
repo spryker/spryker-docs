@@ -1,6 +1,7 @@
 ---
 title: Browsing a Category Tree
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-category-trees
+originalArticleId: 674be3f7-9956-4eb5-ba94-93cc789d9e66
 redirect_from:
   - /v3/docs/retrieving-category-trees
   - /v3/docs/en/retrieving-category-trees

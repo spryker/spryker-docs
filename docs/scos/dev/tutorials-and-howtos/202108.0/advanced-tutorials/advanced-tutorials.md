@@ -1,9 +1,12 @@
 ---
 title: Advanced Tutorials
 originalLink: https://documentation.spryker.com/2021080/docs/advanced-tutorials
+originalArticleId: 4465ffa9-2d19-4a26-b418-75670e602604
 redirect_from:
   - /2021080/docs/advanced-tutorials
   - /2021080/docs/en/advanced-tutorials
+  - /docs/advanced-tutorials
+  - /docs/en/advanced-tutorials
 ---
 
 Advanced tutorials describe advanced Spryker OS activities.

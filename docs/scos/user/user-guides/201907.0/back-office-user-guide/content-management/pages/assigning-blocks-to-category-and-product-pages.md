@@ -2,6 +2,7 @@
 title: Assigning Blocks to Category and Product Pages
 description: The guide provides instructions on how to assign blocks to category and product detail pages, and add CMS blocks to a CMS page in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/assigning-blocks-to-category-and-product-pages
+originalArticleId: 777e5102-a37c-4cba-94df-335a09ea6049
 redirect_from:
   - /v3/docs/assigning-blocks-to-category-and-product-pages
   - /v3/docs/en/assigning-blocks-to-category-and-product-pages
@@ -37,6 +38,6 @@ If you want to create different versions of the page per locale, add the general
 **What's next?**
 The block has been added to the page. So, you can preview the page draft to see how it will look like on the store website or publish the page.
 
-* To learn how to preview the page draft, see the [Previewing a Page](https://documentation.spryker.com/v4/docs/managing-cms-pages#previewing-cms-pages) section in [Managing CMS Pages](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).
+* To learn how to preview the page draft, see the [Previewing a Page](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/managing-cms-pages.html#previewing-cms-pages) section in [Managing CMS Pages](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).
 
-* To learn how to publish the page, see the [Publishing a Page](https://documentation.spryker.com/v4/docs/managing-cms-pages#publishing-a-page) section in [Managing CMS Pages](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).
+* To learn how to publish the page, see the [Publishing a Page](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/managing-cms-pages.html#publishing-a-page) section in [Managing CMS Pages](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).

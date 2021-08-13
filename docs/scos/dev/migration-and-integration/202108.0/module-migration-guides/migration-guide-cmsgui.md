@@ -1,14 +1,17 @@
 ---
 title: Migration Guide - CmsGui
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-cmsgui
+originalArticleId: f9f22223-ddf8-42d5-b483-3b1dc18788d6
 redirect_from:
   - /2021080/docs/migration-guide-cmsgui
   - /2021080/docs/en/migration-guide-cmsgui
+  - /docs/migration-guide-cmsgui
+  - /docs/en/migration-guide-cmsgui
 ---
 
 ## Upgrading from Version 4.* to Version 5.*
 
-Version 5 of the CMSGui module introduces the [multi-store functionality](https://documentation.spryker.com/v2/docs/multi-store-cms-pages-201903). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 5 of the CMSGui module introduces the [multi-store functionality](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 {% info_block errorBox %}
 To enable the feature, make sure you have the store relation type plugin. See below for details.

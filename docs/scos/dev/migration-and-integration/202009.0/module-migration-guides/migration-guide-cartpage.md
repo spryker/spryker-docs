@@ -2,6 +2,7 @@
 title: Migration Guide - CartPage
 description: Use the guide to update versions to the newer ones of the CartPage module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-cart-page
+originalArticleId: 7b949d0a-cb79-4f6a-a923-2f23d9d8f3af
 redirect_from:
   - /v6/docs/mg-cart-page
   - /v6/docs/en/mg-cart-page

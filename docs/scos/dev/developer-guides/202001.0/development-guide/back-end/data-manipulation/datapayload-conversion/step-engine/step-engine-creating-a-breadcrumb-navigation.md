@@ -2,6 +2,7 @@
 title: Step Engine - Creating a Breadcrumb Navigation
 description: To set up breadcrumb navigation for a step collection, first you’ll need to mark which steps you would like to have in your breadcrumb.
 originalLink: https://documentation.spryker.com/v4/docs/step-engine-breadcrumb
+originalArticleId: 84163a1a-1b21-4724-b502-147c73568b81
 redirect_from:
   - /v4/docs/step-engine-breadcrumb
   - /v4/docs/en/step-engine-breadcrumb

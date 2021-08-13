@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Database Transaction Handling
 originalLink: https://documentation.spryker.com/v2/docs/t-database-transactions
+originalArticleId: e2678a48-77ee-4721-85b9-1795f041881d
 redirect_from:
   - /v2/docs/t-database-transactions
   - /v2/docs/en/t-database-transactions

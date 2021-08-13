@@ -2,9 +2,12 @@
 title: CMS + catalog feature integration
 description: The CMS Page Search Catalog feature allows viewing search results for subcategory pages. The guide describes how to enable the feature in the project.
 originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-in-search-results-integration
+originalArticleId: 517fc527-ef1f-4d52-91b8-23976ed8d283
 redirect_from:
   - /2021080/docs/cms-pages-in-search-results-integration
   - /2021080/docs/en/cms-pages-in-search-results-integration
+  - /docs/cms-pages-in-search-results-integration
+  - /docs/en/cms-pages-in-search-results-integration
 ---
 
 ## Install Feature Core

@@ -2,6 +2,7 @@
 title: Payolution
 description: Provide invoice, installment, monthly invoice, and direct debit solutions by integrating Payolution into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v3/docs/payolution
+originalArticleId: 8fa8be92-4d92-4ee7-b3a7-1742eb060fb7
 redirect_from:
   - /v3/docs/payolution
   - /v3/docs/en/payolution
@@ -14,8 +15,8 @@ Payolution offers white label solutions for the payment options — invoice, ins
 
 Payolution provides two methods of payment:
 
-* [Invoice](/docs/scos/dev/technology-partners/202001.0/payment-partners/payolution/payolution-provided-payment-methods/payolution-invoice-payment.html)
-* [Installment](/docs/scos/dev/technology-partners/202001.0/payment-partners/payolution/payolution-provided-payment-methods/payolution-installment-payment.html)
+* [Invoice](/docs/scos/dev/technology-partners/201907.0/payment-partners/payolution/payolution-invoice-payment.html)
+* [Installment](/docs/scos/dev/technology-partners/201907.0/payment-partners/payolution/payolution-installment-payment.html)
 
 In order to integrate Payolution payments, a Payolution merchant account should be created and configuration data then could be obtained from Payolution. There are two types of accounts for the integration: test and live. Both accounts share the same configuration with different values. Payolution uses the idea of having channels for handling different requests. Each channel is specified by a channel ID which will be given by Payolution.
 

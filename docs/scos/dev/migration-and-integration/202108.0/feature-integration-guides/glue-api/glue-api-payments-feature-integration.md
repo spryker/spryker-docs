@@ -1,9 +1,12 @@
 ---
 title: Glue API- Payments feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-payments-feature-integration
+originalArticleId: 37aaeca3-9205-4ca3-8332-6a1ab7b31c80
 redirect_from:
   - /2021080/docs/glue-api-payments-feature-integration
   - /2021080/docs/en/glue-api-payments-feature-integration
+  - /docs/glue-api-payments-feature-integration
+  - /docs/en/glue-api-payments-feature-integration
 ---
 
 <section contenteditable="false" class="errorBox"><div class="content">
@@ -19,7 +22,7 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-application-feature-integration.html)  |
+| Spryker Core | master | [Glue Application Feature Integration](https://documentation.spryker.com/2021080/docs/glue-application-feature-integration-201907)  |
 | Payments | master |  |
 
 ## 1)  Install the Required Modules Using Composer
@@ -276,4 +279,4 @@ To verify that SelectedPaymentMethodCheckoutDataResponseMapperPlugin is activate
 
 | Feature | Link |
 | --- | --- |
-| Checkout API | [Glue API: Checkout Feature Integration](https://documentation.spryker.com/docs/checkout-feature-integration-201907) |
+| Checkout API | [Glue API: Checkout Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |

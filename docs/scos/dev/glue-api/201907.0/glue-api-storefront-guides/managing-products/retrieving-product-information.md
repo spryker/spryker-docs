@@ -1,12 +1,13 @@
 ---
 title: Retrieving Product Information
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-product-information
+originalArticleId: e84ed7b7-684e-4ae8-93a3-1e006d6b289e
 redirect_from:
   - /v3/docs/retrieving-product-information
   - /v3/docs/en/retrieving-product-information
 ---
 
-Different Product resources allow you to retrieve all the product information available in your storage. These resources follow the same hierarchical structure that [exists as a basis in the Spryker Commerce OS](/docs/scos/dev/features/202001.0/product-information-management/product-abstraction.html). Products can come with multiple Variants (Concrete products) and have Availability, Prices, Tax Sets, as well as Image Sets. Furthermore, you can see what category your product belongs to or what product label is available.
+Different Product resources allow you to retrieve all the product information available in your storage. These resources follow the same hierarchical structure that [exists as a basis in the Spryker Commerce OS](/docs/scos/dev/features/201907.0/product-management/product-abstraction.html). Products can come with multiple Variants (Concrete products) and have Availability, Prices, Tax Sets, as well as Image Sets. Furthermore, you can see what category your product belongs to or what product label is available.
 
 In your development, these resources can help you to retrieve relevant information for your product listing and detail pages, for search, shopping cart, checkout, order history, wishlist and many more.
 

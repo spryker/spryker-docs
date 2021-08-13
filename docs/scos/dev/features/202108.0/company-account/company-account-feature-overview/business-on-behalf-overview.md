@@ -2,12 +2,15 @@
 title: Business on Behalf overview
 description: Business on behalf allows having multiple company users per customer account with a possibility to select one company user to be a default user.
 originalLink: https://documentation.spryker.com/2021080/docs/business-on-behalf-overview
+originalArticleId: 1963b84f-b12b-4148-97e4-d10d7366905e
 redirect_from:
   - /2021080/docs/business-on-behalf-overview
   - /2021080/docs/en/business-on-behalf-overview
+  - /docs/business-on-behalf-overview
+  - /docs/en/business-on-behalf-overview
 ---
 
-Every [business unit](https://documentation.spryker.com/docs/business-unit-management) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
+Every [business unit](https://documentation.spryker.com/2021080/docs/business-unit-management) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
 
 For example, as a shop owner, you might have a financial manager in your company, who, for audit purposes, should be able to access company business units' accounts to check their order histories, shopping lists, etc.
 
@@ -72,5 +75,5 @@ Company users can assign and unassign a company business unit to their accounts 
 
 
 ## See next
-[Customer Login by Token overview](https://documentation.spryker.com/docs/customer-login-by-token-overview)
+[Customer Login by Token overview](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/customer-login-by-token-overview.html)
 

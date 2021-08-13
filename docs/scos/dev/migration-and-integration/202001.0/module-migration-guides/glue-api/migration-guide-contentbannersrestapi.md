@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ContentBannersRestApi
 originalLink: https://documentation.spryker.com/v4/docs/mg-contentbannersrestapi-201907
+originalArticleId: 0e7ff55a-655b-43b1-afc3-4d06ab9f54ea
 redirect_from:
   - /v4/docs/mg-contentbannersrestapi-201907
   - /v4/docs/en/mg-contentbannersrestapi-201907

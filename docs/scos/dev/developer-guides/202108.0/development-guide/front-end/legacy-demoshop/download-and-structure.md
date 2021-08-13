@@ -2,16 +2,19 @@
 title: Download and Structure
 description: Here you will find out how to download external dependencies and where to place them, together with your own asset files.
 originalLink: https://documentation.spryker.com/2021080/docs/download-structure
+originalArticleId: d3f609fa-66c9-4727-bbaa-5c532e6fd356
 redirect_from:
   - /2021080/docs/download-structure
   - /2021080/docs/en/download-structure
+  - /docs/download-structure
+  - /docs/en/download-structure
 ---
 
 Here you will find out how to download external dependencies and where to place them, together with your own asset files.
 
 {% info_block warningBox %}
 This page contains references to the following tools: [Webpack](https://webpack.js.org/
-{% endinfo_block %}, [Oryx](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/zed/oryx-builder-overview-and-setup.html) (Our frontend helper tool)and Oryx for Zed (Zed's frontend full automation tool). Make sure you are familiar with these tools before continuing.)
+{% endinfo_block %}, [Oryx](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/zed/oryx-builder-overview-and-setup.html) (Our frontend helper tool)and Oryx for Zed (Zed's frontend full automation tool). Make sure you are familiar with these tools before continuing.)
 
 ## Yves
 Yves UI must be implemented on project level.
@@ -34,7 +37,7 @@ npm install --save-dev sass-loader node-sass # add build dev dependencies
 Zed UI can be extended on a project level.
 
 ### Core Dependencies
-Each module that implements a UI may have external dependencies. They are declared in the corrisponding `@core/<module-name>/assets/Zed/pakage.json` manifest file. **Do not change this file** as it’s part of a core module. If you want to add a new dependency to Zed, see the [Download External Dependencies](https://documentation.spryker.com/v4/docs/download-structure#core-dependencies)  section.
+Each module that implements a UI may have external dependencies. They are declared in the corrisponding `@core/<module-name>/assets/Zed/pakage.json` manifest file. **Do not change this file** as it’s part of a core module. If you want to add a new dependency to Zed, see the [Download External Dependencies](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/legacy-demoshop/download-and-structure.html#core-dependencies)  section.
 
 To download the module dependencies, you can use the package manager that you prefer, but we strongly recommend to use `npm` or `yarn`.
 

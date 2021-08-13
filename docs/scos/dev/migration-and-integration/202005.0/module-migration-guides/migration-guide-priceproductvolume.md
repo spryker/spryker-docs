@@ -2,6 +2,7 @@
 title: Migration Guide - PriceProductVolume
 description: Use the guide to update the PriceProductVolume module to a newer version.
 originalLink: https://documentation.spryker.com/v5/docs/mg-price-product-volume
+originalArticleId: 3119b4b5-3587-447f-8171-37551c71262e
 redirect_from:
   - /v5/docs/mg-price-product-volume
   - /v5/docs/en/mg-price-product-volume

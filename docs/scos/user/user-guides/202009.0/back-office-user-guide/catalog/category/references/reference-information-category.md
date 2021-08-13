@@ -2,6 +2,7 @@
 title: Reference information- category
 description: The guide provides reference information you see when working with categories in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/category-reference-information
+originalArticleId: ef3422c3-09c0-4c1d-a677-39588856cd2e
 redirect_from:
   - /v6/docs/category-reference-information
   - /v6/docs/en/category-reference-information
@@ -50,9 +51,9 @@ Instead of navigating you to the catalog view, once such a category is selected 
 
 **A template with slots**
 
-To use such a template, the Templates & Slots feature should be [integrated](https://documentation.spryker.com/docs/cms-feature-integration-guide) into your project.
+To use such a template, the Templates & Slots feature should be [integrated](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/cms-feature-integration.html) into your project.
 
-Select such a template if you want this category page to have slots. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates & Slots Feature Overview](https://documentation.spryker.com/docs/templates-slots-feature-overview)  for more details.
+Select such a template if you want this category page to have slots. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates & Slots Feature Overview](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/templates-and-slots/templates-and-slots-feature-overview.html)  for more details.
 
 
 ## Create and edit category page attributes

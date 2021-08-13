@@ -2,9 +2,12 @@
 title: Computop - Direct Debit
 description: Integrate direct debit payment through Computop into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/2021080/docs/computop-direct-debit
+originalArticleId: 4fc82f9b-f9fb-4608-9f1c-59f42cf54619
 redirect_from:
   - /2021080/docs/computop-direct-debit
   - /2021080/docs/en/computop-direct-debit
+  - /docs/computop-direct-debit
+  - /docs/en/computop-direct-debit
 ---
 
  Example State Machine:

@@ -1,6 +1,7 @@
 ---
 title: About HowTos
 originalLink: https://documentation.spryker.com/v1/docs/how-tos
+originalArticleId: 1fea5a28-799b-48a2-9182-98b4d2463637
 redirect_from:
   - /v1/docs/how-tos
   - /v1/docs/en/how-tos
@@ -15,7 +16,7 @@ HowTos are simple step-by-step instructions to guide you through the process of 
 * [HowTo - Create CMS Templates](/docs/scos/dev/tutorials/201811.0/howtos/feature-howtos/cms/howto-create-cms-templates.html)
 * [HowTo - Import Minimum Order Value Data](https://documentation.spryker.com/v1/docs/ht-import-minimum-order-value-data-201903)
 * [HowTo - Make a Product Searchable and Shown on Yves by URL](/docs/scos/dev/tutorials/201811.0/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-yves-by-url.html) 
-* [HowTo - Manage a Big Number of Categories](https://documentation.spryker.com/v1/docs/ht-manage-a-big-number-of-categories-201903)
+* [HowTo - Manage a Big Number of Categories](https://documentation.spryker.com/v1/docs/ht-manage-a-big-number-of-categories)
 * [HowTo - Disable Accounts Switch for Business on Behalf](https://documentation.spryker.com/v1/docs/ht-disable-accounts-switch-for-bob-201907)
 * [HowTo - Enable CMS Content Widgets Button in the WYSIWYG Editor](https://documentation.spryker.com/v1/docs/ht-enable-cms-content-widgets-button-201907)
 * [HowTo - Generate a Token for Login](%28https://documentation.spryker.com/v1/docs/ht-generating-token-for-login)
@@ -35,4 +36,4 @@ With these guides you will learn how to:
 * [Set up your store with multiple locals](/docs/scos/dev/tutorials/201811.0/howtos/howto-set-up-stores-with-multiple-locales.html)
 * [Personalize prices](/docs/scos/dev/tutorials/201811.0/howtos/howto-create-personalized-prices.html)
 * [Build your own DataImport](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/creating-a-data-importer.html)
-* [Install Spryker with MySQL database](https://documentation.spryker.com/v1/docs/ht-data-import/ht-setup-spryker-with-mysql)
+* [Install Spryker with MySQL database](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/creating-a-data-importer.html/ht-setup-spryker-with-mysql)

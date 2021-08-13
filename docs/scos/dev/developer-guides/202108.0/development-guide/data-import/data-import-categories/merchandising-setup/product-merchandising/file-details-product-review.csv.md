@@ -1,12 +1,15 @@
 ---
 title: File details- product_review.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-reviewcsv
+originalArticleId: f404c07b-fa94-4e85-97e1-7aac3f282de8
 redirect_from:
   - /2021080/docs/file-details-product-reviewcsv
   - /2021080/docs/en/file-details-product-reviewcsv
+  - /docs/file-details-product-reviewcsv
+  - /docs/en/file-details-product-reviewcsv
 ---
 
-This article contains content of the **product_review.csv** file to configure [Product Review](https://documentation.spryker.com/docs/product-reviews) information on your Spryker Demo Shop.
+This article contains content of the **product_review.csv** file to configure [Product Review](https://documentation.spryker.com/2021080/docs/product-reviews) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -26,7 +29,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+*    [product_abstract.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_review.csv*  file can be downloaded here:

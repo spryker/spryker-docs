@@ -2,9 +2,12 @@
 title: HowTo - Integrate and Use Precise Decimal Numbers
 description: Use the guide to install and work with precise decimal numbers in arithmetic, casting, rounding, comparing operations. Learn how they work with transfer objects
 originalLink: https://documentation.spryker.com/2021080/docs/ht-integrate-and-use-precise-decimal-numbers
+originalArticleId: 05e89c8e-a944-46ff-b202-760c7c4d5f87
 redirect_from:
   - /2021080/docs/ht-integrate-and-use-precise-decimal-numbers
   - /2021080/docs/en/ht-integrate-and-use-precise-decimal-numbers
+  - /docs/ht-integrate-and-use-precise-decimal-numbers
+  - /docs/en/ht-integrate-and-use-precise-decimal-numbers
 ---
 
 The article provides information on how to install and work with precise decimal objects.
@@ -32,7 +35,7 @@ You can specify Decimal as a type of your Data Transfer Object’s property. To 
 </transfer>
 ```
 
-For more information about how to work with Data Transfer Objects, see [Creating, Using and Extending the Transfer Objects](https://documentation.spryker.com/docs/ht-use-transfer-objects-201903).
+For more information about how to work with Data Transfer Objects, see [Creating, Using and Extending the Transfer Objects](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
 
 ## Creating a Decimal Value Object
 Decimal objects can be created using one of the following types: int, numeric string (including numbers in exponential representation), float, objects that have the `__toString()` method defined and returning a numeric string, for example:

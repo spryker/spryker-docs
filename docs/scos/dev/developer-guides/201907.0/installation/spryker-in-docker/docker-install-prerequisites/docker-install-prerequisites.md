@@ -2,6 +2,7 @@
 title: Docker Install Prerequisites
 description: This section describes the steps which are to be performed before you can start working with Spryker in Docker.
 originalLink: https://documentation.spryker.com/v3/docs/docker-install-prerequisites-201907
+originalArticleId: 627cb636-d908-438a-8c37-dc49d56c3d68
 redirect_from:
   - /v3/docs/docker-install-prerequisites-201907
   - /v3/docs/en/docker-install-prerequisites-201907

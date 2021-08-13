@@ -1,6 +1,7 @@
 ---
 title: Session Management
 originalLink: https://documentation.spryker.com/v5/docs/session-management-201903
+originalArticleId: 22abd1d7-c227-4a00-93e3-d28cf997edb8
 redirect_from:
   - /v5/docs/session-management-201903
   - /v5/docs/en/session-management-201903

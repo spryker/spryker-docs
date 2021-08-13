@@ -2,6 +2,7 @@
 title: Navigation
 description: The section can be used to create navigation elements with CMS pages, categories, and other relevant links, and build a nested structure with nodes.
 originalLink: https://documentation.spryker.com/v3/docs/navigation-guide
+originalArticleId: 89e0f766-53bb-465f-b424-aeee34cc971a
 redirect_from:
   - /v3/docs/navigation-guide
   - /v3/docs/en/navigation-guide
@@ -20,6 +21,6 @@ You can use navigation elements to build your store's main navigation, footer li
 ***
 **What's next?**
 
-* To know how the navigation elements are managed, see [Managing Navigation](/docs/scos/user/user-guides/202001.0/back-office-user-guide/navigation/managing-navigation.html).
-* To know more about the Navigation node types, see [Navigation Node Types](/docs/scos/user/user-guides/202001.0/back-office-user-guide/navigation/references/navigation-node-types.html) in the References section.
+* To know how the navigation elements are managed, see [Managing Navigation](/docs/scos/user/user-guides/201907.0/back-office-user-guide/navigation/managing-navigation.html).
+* To know more about the Navigation node types, see [Navigation Node Types](/docs/scos/user/user-guides/201907.0/back-office-user-guide/navigation/references/navigation-node-types.html) in the References section.
 

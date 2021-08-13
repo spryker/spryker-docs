@@ -1,6 +1,7 @@
 ---
 title: Checking Out Purchases and Getting Checkout Data
 originalLink: https://documentation.spryker.com/v1/docs/checking-out-purchases-and-getting-checkout-data
+originalArticleId: ec24dbd9-e3b2-4db0-9f09-50594801b162
 redirect_from:
   - /v1/docs/checking-out-purchases-and-getting-checkout-data
   - /v1/docs/en/checking-out-purchases-and-getting-checkout-data
@@ -13,7 +14,7 @@ In order to create a checkout experience, we offer an endpoint that provides you
 Apart from that, the API also provides an endpoint that allows placing an order.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API](https://documentation.spryker.com/v1/docs/checkout-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API](https://documentation.spryker.com/v1/docs/glue-api-checkout-feature-integration).
 
 ## Place Order
 To place an order, send a POST request to the following endpoint:

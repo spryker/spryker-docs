@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - QuickOrderPage
 originalLink: https://documentation.spryker.com/v3/docs/mg-quick-order-page
+originalArticleId: 555723e9-3682-42f0-9b54-33194858caec
 redirect_from:
   - /v3/docs/mg-quick-order-page
   - /v3/docs/en/mg-quick-order-page

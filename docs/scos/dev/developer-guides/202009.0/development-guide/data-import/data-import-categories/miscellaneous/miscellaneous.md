@@ -1,6 +1,7 @@
 ---
 title: Miscellaneous
 originalLink: https://documentation.spryker.com/v6/docs/miscellaneous
+originalArticleId: df2dcac7-7a8d-4142-b31d-4ccc516e2f92
 redirect_from:
   - /v6/docs/miscellaneous
   - /v6/docs/en/miscellaneous
@@ -12,6 +13,6 @@ The table below provides details on Miscellaneous data importers, their purpose,
 
 | Data Importer | Purpose | Console Command| File(s) | Dependencies |
 | --- | --- | --- | --- |--- |
-| **Comment**   | Imports information relative to customer comments. | |[comment.csv](https://documentation.spryker.com/docs/file-details-commentcsv)|[customer.csv ](https://documentation.spryker.com/docs/file-details-customercsv)|
-| **Mime Type**   | Imports information relative to existing MIME types allowed in the platform.|`data:import mime-type` | [mime_type.csv](https://documentation.spryker.com/docs/file-details-mime-typecsv)| None|
+| **Comment**   | Imports information relative to customer comments. | |[comment.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/miscellaneous/file-details-comment.csv.html)|[customer.csv ](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-customer.csv.html)|
+| **Mime Type**   | Imports information relative to existing MIME types allowed in the platform.|`data:import mime-type` | [mime_type.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/miscellaneous/file-details-mime-type.csv.html)| None|
 

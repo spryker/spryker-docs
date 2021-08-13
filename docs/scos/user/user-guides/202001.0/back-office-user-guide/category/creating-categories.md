@@ -2,6 +2,7 @@
 title: Creating Categories
 description: The guide describes procedures on how to create a category, add images and products, select a template in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/creating-categories
+originalArticleId: b793b6b2-ff12-4932-b033-58dbfd0fb1a5
 redirect_from:
   - /v4/docs/creating-categories
   - /v4/docs/en/creating-categories

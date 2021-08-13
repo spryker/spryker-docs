@@ -1,6 +1,7 @@
 ---
 title: About Yves
 originalLink: https://documentation.spryker.com/v4/docs/about-yves
+originalArticleId: ce6fb3cd-7722-4352-88d3-b8cf2d6a5a80
 redirect_from:
   - /v4/docs/about-yves
   - /v4/docs/en/about-yves
@@ -15,9 +16,9 @@ See [Conceptual Overview](/docs/scos/dev/developer-guides/202001.0/architecture-
 Yves is divided into two parts:
 
 * The part with controllers, forms, templates etc. covered in the following articles:
-    * [Controllers and actions](https://documentation.spryker.com/v4/docs/yves-controllers-actions )
+    * [Controllers and actions](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/yves/controllers-and-actions.html)
     * [Modular Frontend](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/yves/modular-frontend.html)
-    * [Atomic Frontend](https://documentation.spryker.com/v4/docs/atomic-frontend)
+    * [Atomic Frontend](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/atomic-frontend-general-overview.html)
  * Client part which provides access to the search and storage engine and the Zed application. See the following articles for more information on the Client:
-     * [Client](https://documentation.spryker.com/v4/docs/client )
-     * [Implementing a Client](https://documentation.spryker.com/v4/docs/implementing-a-client )
+     * [Client](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/yves/client/client.html)
+     * [Implementing a Client](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/yves/client/implementing-a-client.html)

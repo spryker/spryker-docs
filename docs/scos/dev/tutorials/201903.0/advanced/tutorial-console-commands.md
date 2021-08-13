@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Console Commands
 originalLink: https://documentation.spryker.com/v2/docs/t-console-commands
+originalArticleId: f2dd1e18-74d9-4b99-88ce-749daff15130
 redirect_from:
   - /v2/docs/t-console-commands
   - /v2/docs/en/t-console-commands

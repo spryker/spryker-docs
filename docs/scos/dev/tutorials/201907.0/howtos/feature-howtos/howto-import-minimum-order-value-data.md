@@ -1,12 +1,13 @@
 ---
 title: HowTo - Import Minimum Order Value Data
 originalLink: https://documentation.spryker.com/v3/docs/ht-import-minimum-order-value-data-201903
+originalArticleId: 95b27401-a720-4504-8e31-f0742a7081a8
 redirect_from:
   - /v3/docs/ht-import-minimum-order-value-data-201903
   - /v3/docs/en/ht-import-minimum-order-value-data-201903
 ---
 
-Besides setting [global and merchant relation thresholds](/docs/scos/user/user-guides/201903.0/back-office-user-guide/thresholds/threshold.html)  for minimum order values manually in the Back Office, they can also be imported in bulk from a .csv file.
+Besides setting [global and merchant relation thresholds](/docs/scos/user/user-guides/201907.0/back-office-user-guide/thresholds/threshold.html)  for minimum order values manually in the Back Office, they can also be imported in bulk from a .csv file.
 
 You can import minimum order value data from a .csv file having the following fields:
 

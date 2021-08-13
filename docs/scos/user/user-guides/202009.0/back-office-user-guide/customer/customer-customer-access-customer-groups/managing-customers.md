@@ -2,6 +2,7 @@
 title: Managing customers
 description: This guide provides instructions on how shop owners can add and manage personal information, customer billing, and shipping addresses in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-customers
+originalArticleId: 0de3203c-e76a-4174-8a14-b9cb1ce953f8
 redirect_from:
   - /v6/docs/managing-customers
   - /v6/docs/en/managing-customers
@@ -24,7 +25,7 @@ This creates the new customer with the *Unverified* status in the *Customers* ta
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customer%2C+Customer+Access%2C+Customer+Groups/Managing+Customers/BO-unverfied-customer.png){height="" width=""}
 
 
-To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](https://documentation.spryker.com/docs/customers-reference-information). 
+To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/references/reference-information-customers.html). 
 
 ## Editing Customers 
 **To edit a customer:**
@@ -44,7 +45,7 @@ The **View customer details** page is designed to serve more purposes than just 
 
 On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the **Notes** section. 
 
-To know how the customer addresses are managed, see  [Managing Customer Addresses](https://documentation.spryker.com/docs/customers-reference-information).
+To know how the customer addresses are managed, see  [Managing Customer Addresses](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/references/reference-information-customers.html).
 
 ### Viewing customer details
 **To view customer details:**

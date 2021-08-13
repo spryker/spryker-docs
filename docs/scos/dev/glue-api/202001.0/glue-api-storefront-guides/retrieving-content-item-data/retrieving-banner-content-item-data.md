@@ -2,6 +2,7 @@
 title: Retrieving Banner Content Item Data
 description: Banner API implements REST API endpoint that can retrieve banner content item data available in the storage for all or a specific locale
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-banner-content-item-data-201907
+originalArticleId: a00c3421-8611-4832-9d46-0e722305d7f5
 redirect_from:
   - /v4/docs/retrieving-banner-content-item-data-201907
   - /v4/docs/en/retrieving-banner-content-item-data-201907
@@ -16,7 +17,7 @@ For more information on creating and managing content items in CMS, see [Content
 {% endinfo_block %}.)
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](https://documentation.spryker.com/v4/docs/content-items-api-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html).
 
 ## Retrieving Banner Content Item Data
 To retrieve the Banner content item data, send a GET request to the following endpoint:

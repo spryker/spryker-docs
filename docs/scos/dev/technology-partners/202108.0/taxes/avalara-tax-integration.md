@@ -2,9 +2,12 @@
 title: Avalara Tax integration
 description: Integrate Avalara to automatically calculate taxes.
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-integration
+originalArticleId: 3531e0eb-65ae-4c97-8703-78ceaae45c2a
 redirect_from:
   - /2021080/docs/avalara-tax-integration
   - /2021080/docs/en/avalara-tax-integration
+  - /docs/avalara-tax-integration
+  - /docs/en/avalara-tax-integration
 ---
 
 *Avalara* is a software that calculates sales order taxes during checkout in the US market. It provides real-time tax calculation and an automatic filing of returns. 
@@ -23,12 +26,12 @@ Follow the steps below to install the feature core.
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) | 
-|Cart | master | [Cart feature integration](https://documentation.spryker.com/docs/cart-feature-integration) |
-|Product  | master | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) | 
+| Spryker Core | master | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-ore-feature-integration.html) | 
+|Cart | master | [Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/cart-feature-integration.html) |
+|Product  | master | [Product feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-feature-integration.html) | 
 |Tax  | master | |
-| Inventory Management | master | [Inventory Management feature integration](https://documentation.spryker.com/docs/inventory-management-feature-integration) |
-|Glue API: Checkout  | master | [Glue API: Checkout feature integration](https://documentation.spryker.com/docs/glue-api-checkout-feature-integration)|
+| Inventory Management | master | [Inventory Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/inventory-management-feature-integration.html) |
+|Glue API: Checkout  | master | [Glue API: Checkout feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html)|
 
 2. To register an application with the Avalara platform and get configuration options, follow [Set up AvaTax](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update).
 
@@ -484,6 +487,6 @@ Open `spy_product_abstract`, and `spy_product` and make sure that all data has b
 
 | FEATURE |REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | ---  |---  |---  |
-|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](https://documentation.spryker.com/docs/avalara-tax-product-options-feature-integration) |
-|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](https://documentation.spryker.com/docs/avalara-tax-shipment-feature-integration) |
+|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/scos/dev/technology-partners/{{ page.version }}/taxes/avalara-tax-product-options-feature-integration.html) |
+|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/scos/dev/technology-partners/{{ page.version }}/taxes/avalara-tax-shipment-feature-integration.html) |
 

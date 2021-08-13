@@ -2,6 +2,7 @@
 title: Payment Integration - Adyen
 description: Integrate Adyen into the Spryker Commerce OS to accept e-commerce, mobile, and point-of-sale payments.
 originalLink: https://documentation.spryker.com/v1/docs/adyen
+originalArticleId: b95776d7-0906-4299-bdaf-7fab25b0ddde
 redirect_from:
   - /v1/docs/adyen
   - /v1/docs/en/adyen
@@ -23,15 +24,15 @@ The `SprykerEco.Adyen` module includes integration with:
 
 The `SprykerEco.Adyen` module provides the following payment methods:
 
-* [Credit Card](https://documentation.spryker.com/v1/docs/adyen-provided-payment-methods##credit-card)
-* [Direct Debit](https://documentation.spryker.com/v1/docs/adyen-provided-payment-methods#direct-debit--sepa-direct-debit-)
-* [Klarna Invoice](https://documentation.spryker.com/v1/docs/adyen-provided-payment-methods#klarna-invoice)
-* [Prepayment](https://documentation.spryker.com/v1/docs/adyen-provided-payment-methods#prepayment--bank-transfer-iban-)
-* [Sofort](https://documentation.spryker.com/v1/docs/adyen-provided-payment-methods#sofort)
-* [PayPal](https://documentation.spryker.com/v1/docs/adyen-provided-payment-methods#paypal)
-* [iDeal](https://documentation.spryker.com/v1/docs/adyen-provided-payment-methods#ideal)
-* [AliPay](https://documentation.spryker.com/v1/docs/adyen-provided-payment-methods#alipay)
-* [WeChatPay](https://documentation.spryker.com/v1/docs/adyen-provided-payment-methods#wechatpay)
+* [Credit Card](/docs/scos/dev/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html#credit-card)
+* [Direct Debit](/docs/scos/dev/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html#direct-debit--sepa-direct-debit-)
+* [Klarna Invoice](/docs/scos/dev/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html#klarna-invoice)
+* [Prepayment](/docs/scos/dev/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html#prepayment--bank-transfer-iban-)
+* [Sofort](/docs/scos/dev/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html#sofort)
+* [PayPal](/docs/scos/dev/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html#paypal)
+* [iDeal](/docs/scos/dev/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html#ideal)
+* [AliPay](/docs/scos/dev/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html#alipay)
+* [WeChatPay](/docs/scos/dev/technology-partners/201811.0/payment-partners/adyen/adyen-provided-payment-methods.html#wechatpay)
 
 ## Installation
 

@@ -2,6 +2,7 @@
 title: Registering a new Service
 description: Service is a Spryker application layer shared by the Client application layer, the Zed application layer, and Yves application layer.
 originalLink: https://documentation.spryker.com/v6/docs/service
+originalArticleId: 10026fb6-6925-4e84-b91c-fbb94a17fb8f
 redirect_from:
   - /v6/docs/service
   - /v6/docs/en/service

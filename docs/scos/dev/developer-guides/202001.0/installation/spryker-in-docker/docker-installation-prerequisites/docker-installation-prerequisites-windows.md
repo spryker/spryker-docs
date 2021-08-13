@@ -2,6 +2,7 @@
 title: Docker Installation Prerequisites - Windows
 description: This page describes the steps that are to be performed before you can start working with Spryker in Docker on Windows.
 originalLink: https://documentation.spryker.com/v4/docs/docker-installation-prerequisites-windows
+originalArticleId: 73e1b764-573d-485a-bbdd-4509c68b8bb8
 redirect_from:
   - /v4/docs/docker-installation-prerequisites-windows
   - /v4/docs/en/docker-installation-prerequisites-windows

@@ -2,6 +2,7 @@
 title: Migration Guide - Navigation
 description: Use the guide to migrate to a newer version of the Navigation module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-navigation
+originalArticleId: 75e680bf-0d3d-4622-8566-95e8f3d7327e
 redirect_from:
   - /v6/docs/mg-navigation
   - /v6/docs/en/mg-navigation

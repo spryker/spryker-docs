@@ -2,9 +2,12 @@
 title: Quotation Process feature overview
 description: The article describes the Quotation Process feature, its statuses, and workflow (by a customer, sales representative, agent account and interaction with approval process.
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-feature-overview
+originalArticleId: 2fc8c00f-628b-485d-b00b-61bbb0b32973
 redirect_from:
   - /2021080/docs/quotation-process-feature-overview
   - /2021080/docs/en/quotation-process-feature-overview
+  - /docs/quotation-process-feature-overview
+  - /docs/en/quotation-process-feature-overview
 ---
 
 | Definition | Description |
@@ -32,8 +35,8 @@ The RFQ can have the following statuses:
 ## RFQ workflows
 The process of requesting the quote includes two workflows depending on the role the user has. A workflow is defined as the sequence of steps the user can go through to complete the process successfully. These are:
 
-* [Buyer workflow](https://documentation.spryker.com/docs/quotation-process-rfq-feature-overview-201907#buyer-workflow)
-* [Sales representative workflow](https://documentation.spryker.com/docs/quotation-process-rfq-feature-overview-201907#sales-representative-workflow)
+* [Buyer workflow](/docs/scos/dev/features/{{ page.version }}/quotation-process/quotation-process-feature-overview.html#buyer-workflow)
+* [Sales representative workflow](/docs/scos/dev/features/{{ page.version }}/quotation-process/quotation-process-feature-overview.html#sales-representative-workflow)
 
 ### Buyer workflow
 A buyer can create a quote request the product prices from a shopping cart.
@@ -61,7 +64,7 @@ Schematically, the workflow is shown below:
 
 ### Sales representative workflow
 A sales representative can create an RFQ using two working procedures:
-* Via an [agent](https://documentation.spryker.com/docs/agent-assist) account.
+* Via an [agent](https://documentation.spryker.com/2021080/docs/agent-assist) account.
 * On behalf of a company user.
 
 #### Via an agent account
@@ -117,7 +120,7 @@ The buyers can utilize the blocked cart irrespective of the RFQ updates by unblo
 ![Locked cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/locked-cart.png){height="" width=""}
 
 ## Interaction of the RFQ with the approval process
-Mixing several workflows adds complexity to the process and increases the steps a buyer should perform to submit the order. This can be true for projects where the [Approval Process](https://documentation.spryker.com/docs/en/approval-process-feature-overview-202001) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
+Mixing several workflows adds complexity to the process and increases the steps a buyer should perform to submit the order. This can be true for projects where the [Approval Process](/docs/scos/dev/features/{{ page.version }}/approval-process/approval-process-feature-overview.html) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
 
 {% info_block infoBox "Example" %}
 Example: In the project, the cart needs approval when the cart total exceeds €1000. A buyer adds the products to cart with the card total of €1500 and converts the shopping cart into the RFQ. The sales representative reviews the cart and updates the prices for products so that the cart total makes up €1300 and sends the RFQ back to the buyer. The buyer cannot proceed to checkout as the cart total still exceeds the limit, so the buyer has to send the RFQ to their approver. If the approver approves the cart, then the buyer will finally be able to create the order and pay for it.

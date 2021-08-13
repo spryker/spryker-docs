@@ -2,6 +2,7 @@
 title: Installing Docker prerequisites on Linux
 description: Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
 originalLink: https://documentation.spryker.com/v6/docs/installing-docker-prerequisites-on-linux
+originalArticleId: 3c8697da-a605-4108-b8b1-7bb7f77b90b5
 redirect_from:
   - /v6/docs/installing-docker-prerequisites-on-linux
   - /v6/docs/en/installing-docker-prerequisites-on-linux
@@ -56,10 +57,10 @@ You've installed and configured the required software.
 
 ## Next steps
 
-See [Choosing an installation mode](https://documentation.spryker.com/docs/choosing-an-installation-mode) to choose an installation mode.
+See [Choosing an installation mode](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to choose an installation mode.
 If you've already selected an installation mode, follow one of the guides below:
-* [Installing in Development mode on MacOS and Linux](https://documentation.spryker.com/docs/installing-in-development-mode-on-macos-and-linux)
-* [Installing in Demo mode on MacOS and Linux](https://documentation.spryker.com/docs/installing-in-demo-mode-on-macos-and-linux)
-* [Integrating Docker into existing projects](https://documentation.spryker.com/docs/integrating-docker-into-existing-projects)
-* [Running production](https://documentation.spryker.com/docs/running-production)
+* [Installing in Development mode on MacOS and Linux](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
+* [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
+* [Integrating Docker into existing projects](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
+* [Running production](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/running-production.html)
 

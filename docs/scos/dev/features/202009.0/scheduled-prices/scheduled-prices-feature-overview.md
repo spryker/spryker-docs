@@ -2,6 +2,7 @@
 title: Scheduled prices feature overview
 description: The article describes the Scheduled Prices feature, price types, time zones, and the way scheduled prices can be created.
 originalLink: https://documentation.spryker.com/v6/docs/scheduled-prices-feature-overview
+originalArticleId: 7a0b02b3-6e2b-4b8e-8b2a-3eeab5111c3d
 redirect_from:
   - /v6/docs/scheduled-prices-feature-overview
   - /v6/docs/en/scheduled-prices-feature-overview
@@ -33,14 +34,14 @@ Even though it is possible to use any time zone for defining a price schedule, i
 
 ## Defining Product Price Schedules
 You can define price schedules as follows:
-Import a csv file with a list of prices. This option is for bulk operations. You can import the file via [Back Office](https://documentation.spryker.com/docs/en/creating-scheduled-prices) or [manually](https://documentation.spryker.com/docs/ht-import-scheduled-prices-201907).
-Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. See [Editing an Abstract Product](https://documentation.spryker.com/docs/editing-an-abstract-product).
+Import a csv file with a list of prices. This option is for bulk operations. You can import the file via [Back Office](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/scheduled-prices/creating-scheduled-prices.html) or [manually](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/data-imports/howto-import-scheduled-prices.html).
+Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. See [Editing an Abstract Product](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/products/abstract-products/editing-abstract-products.html).
 
 ## Cron Job
 
-Once [imported](https://documentation.spryker.com/docs/creating-scheduled-prices), prices do not get updated right away. In order to automate price application, there is a cron job shipped with the feature. The cron job checks if there are any imported scheduled prices that need to be applied or reverted. If there is a price schedule that passed its starting or ending date, the cron job applies the changes.
+Once [imported](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/scheduled-prices/creating-scheduled-prices.html), prices do not get updated right away. In order to automate price application, there is a cron job shipped with the feature. The cron job checks if there are any imported scheduled prices that need to be applied or reverted. If there is a price schedule that passed its starting or ending date, the cron job applies the changes.
 
-By default, the cron job runs every day at 00:06:00-00:00. In some cases, it might be necessary to change this behavior. For example, if you schedule a price to be updated at 00:01:00-00:00, the price will be updated at 00:06:00-00:00 since that's when the cron job runs. 00:01:00-00:00. In this case, you can [schedule the cron job](https://documentation.spryker.com/docs/ht-schedule-cron-job-for-scheduled-prices-201907) to be run at 00:01:00-00:00. When you add, edit or delete a price schedule while editing a product, the cron job runs automatically for this single product. 
+By default, the cron job runs every day at 00:06:00-00:00. In some cases, it might be necessary to change this behavior. For example, if you schedule a price to be updated at 00:01:00-00:00, the price will be updated at 00:06:00-00:00 since that's when the cron job runs. 00:01:00-00:00. In this case, you can [schedule the cron job](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html) to be run at 00:01:00-00:00. When you add, edit or delete a price schedule while editing a product, the cron job runs automatically for this single product. 
 
 {% info_block infoBox %}
 The default number of prices which the cron job can process at a time is 1000. If you have more prices to be updated, the cron job will only update the first 1000 prices. You can change the number in `\Pyz\Zed\PriceProductSchedule\PriceProductScheduleConfig`.
@@ -76,5 +77,5 @@ In this case:
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
 
 * The default number of prices which the cron job can process at a time is 1000.
-* The feature does not work with merchant prices ([relations](https://documentation.spryker.com/docs/merchants-and-merchant-relations)) and [volume prices](https://documentation.spryker.com/docs/volume-prices).
+* The feature does not work with merchant prices ([relations](https://documentation.spryker.com/v6/docs/merchants-and-merchant-relations)) and [volume prices](/docs/scos/dev/features/202009.0/prices/prices-feature-overview/volume-prices.html).
 

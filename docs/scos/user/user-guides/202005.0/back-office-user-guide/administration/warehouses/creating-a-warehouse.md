@@ -2,6 +2,7 @@
 title: Creating a Warehouse
 description: Use the procedure to create warehouses and define warehouses per specific stores in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/creating-a-warehouse
+originalArticleId: 113f7a9d-02fc-4cab-af5b-51984f51bd33
 redirect_from:
   - /v5/docs/creating-a-warehouse
   - /v5/docs/en/creating-a-warehouse
@@ -14,7 +15,7 @@ To start working with warehouses, go to **Administration** > **Warehouses** sect
 To create a warehouse:
 
 1. On the **Warehouses** page, click **Create Warehouse** in the top right corner.
-The **Create warehouse** page with two tabs opens - **Configuration** and **Store relation**. See [Warehouses: Reference information](https://documentation.spryker.com/docs/en/warehouses-reference-information) for more details.
+The **Create warehouse** page with two tabs opens - **Configuration** and **Store relation**. See [Warehouses: Reference information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/warehouses/references/warehouses-reference-information.html) for more details.
 2. In the **Configuration** tab, do the following:
     * **Name**: Enter the name of the warehouse you want to create. 
     * **Is this warehouse available?**: Select *Yes* if you want to make your warehouse available (active) or *No* if you want to make your warehouse unavailable (inactive).
@@ -30,10 +31,10 @@ Keep in mind that if you clear all checkboxes for stores assigned to a specific 
 ***
 **What's next?**
 
-The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a Product Variant](https://documentation.spryker.com/docs/en/creating-a-product-variant). 
+The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a Product Variant](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html). 
 
-Additionally, you can edit any warehouse if needed. For more details, see the [Editing Warehouse Details](https://documentation.spryker.com/docs/en/managing-warehouses#editing-warehouse-details) section in *Managing Warehouses*.
+Additionally, you can edit any warehouse if needed. For more details, see the [Editing Warehouse Details](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/warehouses/managing-warehouses.html#editing-warehouse-details) section in *Managing Warehouses*.
 
-To learn more about the attributes you view or edit while creating or managing the warehouses, see [Warehouses: Reference Information](https://documentation.spryker.com/docs/en/warehouses-reference-information).
+To learn more about the attributes you view or edit while creating or managing the warehouses, see [Warehouses: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/warehouses/references/warehouses-reference-information.html).
 
-To learn how to manage stock per specific warehouse, see [Managing Product Availability](https://documentation.spryker.com//v4/docs/managing-products-availability).
+To learn how to manage stock per specific warehouse, see [Managing Product Availability](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/availability/managing-products-availability.html).

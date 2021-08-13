@@ -2,6 +2,7 @@
 title: Creating a Product Variant
 description: Use the guide to configure a product variant, set a price and validity period, make it searchable on the website, and more
 originalLink: https://documentation.spryker.com/v1/docs/creating-a-product-variant
+originalArticleId: 5f4db30b-2c63-4929-9cce-acb280e95423
 redirect_from:
   - /v1/docs/creating-a-product-variant
   - /v1/docs/en/creating-a-product-variant

@@ -2,19 +2,22 @@
 title: HowTo - Display Product Groups by Color on the Storefront
 description: Procedure to display a product group on Storefront.
 originalLink: https://documentation.spryker.com/2021080/docs/howto-display-product-groups-by-color-on-the-storefront
+originalArticleId: e963b2f2-a4bf-4c04-8ffc-ecb3610032e0
 redirect_from:
   - /2021080/docs/howto-display-product-groups-by-color-on-the-storefront
   - /2021080/docs/en/howto-display-product-groups-by-color-on-the-storefront
+  - /docs/howto-display-product-groups-by-color-on-the-storefront
+  - /docs/en/howto-display-product-groups-by-color-on-the-storefront
 ---
 
  
 
-To enhance the visual shopping experience of your customers, you can use [product groups](https://documentation.spryker.com/docs/en/product-group). A product group is a group of products logically united by an attribute. You can create product groups, but there is no way to display them on the Storefront by default. This guide shows how to display a product group on the Storefront using the color attribute as an example. The behavior to be configured is described in [Product Groups Feature Overview](https://documentation.spryker.com/docs/en/product-group-feature-overview).
+To enhance the visual shopping experience of your customers, you can use [product groups](https://documentation.spryker.com/2021080/docs/en/product-groups). A product group is a group of products logically united by an attribute. You can create product groups, but there is no way to display them on the Storefront by default. This guide shows how to display a product group on the Storefront using the color attribute as an example. The behavior to be configured is described in [Product Groups Feature Overview](https://documentation.spryker.com/2021080/docs/en/product-groups-feature-overview).
 
  
 ## Prerequisites
 
-Before you start configuration, make sure that the [Product Groups feature is integrated](https://documentation.spryker.com/docs/product-group-feature-integration) into your project.
+Before you start configuration, make sure that the [Product Groups feature is integrated](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-groups-feature-integration.html) into your project.
 
 ## Schema Extension
 

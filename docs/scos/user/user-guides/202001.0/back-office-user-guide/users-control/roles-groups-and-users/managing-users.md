@@ -2,6 +2,7 @@
 title: Managing Users
 description: The procedures help create, edit, activate/deactivate or delete Back Office users, set a language to the Back Office user account, and make a user be an agent.
 originalLink: https://documentation.spryker.com/v4/docs/managing-users
+originalArticleId: 6cd8b2a9-c486-482a-84db-31c8743991b5
 redirect_from:
   - /v4/docs/managing-users
   - /v4/docs/en/managing-users
@@ -40,7 +41,7 @@ There is a way to initiate a create-new-user flow while editing a user record. T
 ***
 
 ## Assigning Customers to Users
-The Assign Customers option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](https://documentation.spryker.com/v4/docs/managing-cms-pages#previewing-cms-pages) set of topics).
+The Assign Customers option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/managing-cms-pages.html#previewing-cms-pages) set of topics).
 *** 
 **To assign a customer**:
 1. Navigate to the **Users** page.

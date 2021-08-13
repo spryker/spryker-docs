@@ -2,6 +2,7 @@
 title: Managing Orders
 description: The guide provides instructions on how to manage orders including setting statuses for the order, claiming and commenting on orders in the Back Office.
 originalLink: https://documentation.spryker.com/v2/docs/managing-orders
+originalArticleId: c810b2f5-af43-4c86-ba26-95ae3e5adb95
 redirect_from:
   - /v2/docs/managing-orders
   - /v2/docs/en/managing-orders

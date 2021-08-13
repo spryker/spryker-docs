@@ -2,6 +2,7 @@
 title: About the Query Container
 description: A query container holds all the database queries of the current module.
 originalLink: https://documentation.spryker.com/v5/docs/query-container
+originalArticleId: e5b479da-1c9f-4854-839c-7e9d8f8d774e
 redirect_from:
   - /v5/docs/query-container
   - /v5/docs/en/query-container
@@ -9,11 +10,11 @@ redirect_from:
 
 A query container holds all the database queries of the current module.
 
-Each module has exactly one query container, which also acts as an entry point to the persistence layer. Internally, it uses [query objects](https://documentation.spryker.com/docs/en/query-objects) and returns unterminated queries.
+Each module has exactly one query container, which also acts as an entry point to the persistence layer. Internally, it uses [query objects](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/zed/persistence-layer/query-objects-creation-and-usage.html) and returns unterminated queries.
 
-As you can see in the example below, the query container consists of `query-methods` which gets [query objects](https://documentation.spryker.com/docs/en/query-objects) from the [factory](https://documentation.spryker.com/docs/en/factory), adds some filters or joins and returns the unterminated query object.
+As you can see in the example below, the query container consists of `query-methods` which gets [query objects](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/zed/persistence-layer/query-objects-creation-and-usage.html) from the [factory](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/factory/creating-instances-of-classes-factory.html), adds some filters or joins and returns the unterminated query object.
 
-Unterminated queries should be avoided in the Application Layers above Persistence. Consider using the [Repository](https://documentation.spryker.com/docs/en/repository) and [Entity Manager](https://documentation.spryker.com/docs/en/entity-manager) patterns to decouple persistence and ORM implementation details.
+Unterminated queries should be avoided in the Application Layers above Persistence. Consider using the [Repository](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/zed/persistence-layer/entity-manager.html) patterns to decouple persistence and ORM implementation details.
 
 Unterminated means you don’t execute the query with `find()`, `findOne()` or `count()`.
 
@@ -41,9 +42,9 @@ You might use the following definitions to generate the related code:
 
 * `vendor/bin/console spryk:run AddZedPersistencePropelAbstractQuery` - Add Zed Persistence Propel Abstract Query
 
-See the [Spryk](https://documentation.spryker.com/docs/en/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/features/202005.0/sdk/spryk-code-generator.html) documentation for details.
 
 ## What's next?
 
-* See [Using a Query Container](https://documentation.spryker.com/docs/en/using-a-query-container) for information on how to use the Query Containers.
-* If you need to implement your own Query Container, see [Implementing a Query Container](https://documentation.spryker.com/docs/en/implementing-a-query-container).
+* See [Using a Query Container](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/zed/persistence-layer/query-container/using-a-query-container.html) for information on how to use the Query Containers.
+* If you need to implement your own Query Container, see [Implementing a Query Container](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/zed/persistence-layer/query-container/implementing-a-query-container.html).

@@ -1,12 +1,13 @@
 ---
 title: File details- shipment_method_store.csv
 originalLink: https://documentation.spryker.com/v5/docs/file-details-shipment-method-storecsv
+originalArticleId: e8ad47a1-4e94-4211-9564-dda73b7b0e4c
 redirect_from:
   - /v5/docs/file-details-shipment-method-storecsv
   - /v5/docs/en/file-details-shipment-method-storecsv
 ---
 
-This article contains information about the [Shipment Method](https://documentation.spryker.com/docs/en/shipment-carriers-methods) and Store relation to be added to your Spryker Demo Shop.
+This article contains information about the [Shipment Method](/docs/scos/dev/features/202005.0/shipment/shipment/shipment.html) and Store relation to be added to your Spryker Demo Shop.
 
 The *shipment_method_store.csv* file contains the links between each shipment method used by each existing store.
 
@@ -15,13 +16,13 @@ These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
 | --- | --- | --- | --- | --- |
-| **shipment_method_key** | Yes | String | Can be imported from the content that was loaded using the [shipment.csv](https://documentation.spryker.com/docs/en/file-details-shipmentcsv) file.| Identifier of the shipment method. |
+| **shipment_method_key** | Yes | String | Can be imported from the content that was loaded using the [shipment.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
 | **store** | Yes | String |Must be one of the existing store names. The store names are initially already defined in* stores.php* configuration file. | Name of the store. |
 
 ## Dependencies
 This file has the following dependencies:
 
-*     [shipment.csv](https://documentation.spryker.com/docs/en/file-details-shipmentcsv)
+*     [shipment.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html)
 *     *stores.php* configuration file of demo shop PHP project
 
 ## Template File & Content Example

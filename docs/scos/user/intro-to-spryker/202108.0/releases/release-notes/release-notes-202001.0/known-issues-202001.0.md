@@ -1,12 +1,15 @@
 ---
 title: Known Issues 202001.0
 originalLink: https://documentation.spryker.com/2021080/docs/known-issues-2020010
+originalArticleId: c8ec2dc3-e0b7-4066-9afb-a6049f4093ef
 redirect_from:
   - /2021080/docs/known-issues-2020010
   - /2021080/docs/en/known-issues-2020010
+  - /docs/known-issues-2020010
+  - /docs/en/known-issues-2020010
 ---
 
-During the [202001.0 product release](/docs/scos/dev/about-spryker/202001.0/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html), we have found some issues that will be fixed in the nearest future.
+During the [202001.0 product release](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html), we have found some issues that will be fixed in the nearest future.
 This page contains the list of features and their issues. 
 
 ## Reorder the Previous Order 

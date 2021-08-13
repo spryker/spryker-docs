@@ -2,6 +2,7 @@
 title: Glossary Creation
 description: In the Glossary, you can easily store basic text information in different languages so your customers can switch to their preferred one.
 originalLink: https://documentation.spryker.com/v1/docs/glossary-creation
+originalArticleId: bfc80a7b-b2c4-46c1-ad60-1bef4aff1337
 redirect_from:
   - /v1/docs/glossary-creation
   - /v1/docs/en/glossary-creation

@@ -2,15 +2,18 @@
 title: Migration Guide - Refund
 description: Use the guide to learn how to update the Refund module to a newer version.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-refund
+originalArticleId: 30c8c793-2247-4074-8e0e-9418ee1b0ba5
 redirect_from:
   - /2021080/docs/mg-refund
   - /2021080/docs/en/mg-refund
+  - /docs/mg-refund
+  - /docs/en/mg-refund
 ---
 
 ## Upgrading from Version 4.* to Version 5.*
 Version 4 of the Refund module no longer uses `SalesAggregatorFacade` , it was replaced with `SalesFacade`.
 The `RefundCalculator` business class must now replace `RefundToSalesAggregatorInterface` with the `RefundToSalesInterface` bridge.
-To learn more see [Migration Guide - Calculation](https://documentation.spryker.com/docs/mg-calculation). 
+To learn more see [Migration Guide - Calculation](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-calculation.html). 
 
 ## Upgrading from Version 2.* to Version 3.*
 To migrate the Refund module from version 2 to version 3, follow these steps:

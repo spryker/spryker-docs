@@ -2,6 +2,7 @@
 title: Security release notes- 202009.0
 description: The following information pertains to security-related issues that were discovered and resolved during the 202009.0 release.
 originalLink: https://documentation.spryker.com/v6/docs/security-release-notes-2020090
+originalArticleId: 02f82e11-1644-4ddc-ac66-d637f2e0deef
 redirect_from:
   - /v6/docs/security-release-notes-2020090
   - /v6/docs/en/security-release-notes-2020090

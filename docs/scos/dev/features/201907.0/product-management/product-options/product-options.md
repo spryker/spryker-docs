@@ -2,6 +2,7 @@
 title: Product Options
 description: Product options can be used to create product additions that can be sold with the actual product.
 originalLink: https://documentation.spryker.com/v3/docs/product-options
+originalArticleId: 8ecff538-238a-47b7-ba2a-cfa82ab12316
 redirect_from:
   - /v3/docs/product-options
   - /v3/docs/en/product-options

@@ -2,6 +2,7 @@
 title: Product Lists- Reference Information
 description: This guide provides reference information you use when creating, updating, and managing product list in the Back Office.
 originalLink: https://documentation.spryker.com/v2/docs/product-lists-reference-information
+originalArticleId: 05aed122-028a-49d2-8146-73f38f4aefe1
 redirect_from:
   - /v2/docs/product-lists-reference-information
   - /v2/docs/en/product-lists-reference-information

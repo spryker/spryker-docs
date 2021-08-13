@@ -2,6 +2,7 @@
 title: Glue API- Product Options Feature Integration
 description: This guide provides step-by-step instruction on integrating Product Options API Feature into the Spryker based project.
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-product-options-feature-integration
+originalArticleId: be53f842-61cf-41d3-ba79-a2ca6e3f1618
 redirect_from:
   - /v5/docs/glue-api-product-options-feature-integration
   - /v5/docs/en/glue-api-product-options-feature-integration
@@ -15,7 +16,7 @@ To start feature integration, overview, and install the necessary features:
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
 | Product Options | 202001.0 | Feature |
-| Spryker Core | 202001.0 | [Feature API](https://documentation.spryker.com/docs/en/glue-spryker-core-feature-integration) |
+| Spryker Core | 202001.0 | [Feature API](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
 
 ### 1) Install the Required Modules Using Composer
 Run the following command(s) to install the required modules:

@@ -2,6 +2,7 @@
 title: Implementing Invoice Payment in Back End
 description: This article describes how to implement invoice payment in the back end.
 originalLink: https://documentation.spryker.com/v3/docs/ht-invoice-payment-be
+originalArticleId: b7a7e58e-1c15-4f87-affb-0fc84564b333
 redirect_from:
   - /v3/docs/ht-invoice-payment-be
   - /v3/docs/en/ht-invoice-payment-be

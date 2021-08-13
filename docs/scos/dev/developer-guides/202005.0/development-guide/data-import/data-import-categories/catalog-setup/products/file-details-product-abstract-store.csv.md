@@ -1,6 +1,7 @@
 ---
 title: File details- product_abstract_store.csv
 originalLink: https://documentation.spryker.com/v5/docs/file-details-product-abstract-storecsv
+originalArticleId: c6b0072d-cda5-407f-a5e2-e81a49fe1252
 redirect_from:
   - /v5/docs/file-details-product-abstract-storecsv
   - /v5/docs/en/file-details-product-abstract-storecsv
@@ -20,7 +21,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*    [product_abstract.csv](https://documentation.spryker.com/docs/en/file-details-product-abstractcsv)
+*    [product_abstract.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 *     *stores.php* configuration file of the demo shop PHP project
 
 ## Template File & Content Example

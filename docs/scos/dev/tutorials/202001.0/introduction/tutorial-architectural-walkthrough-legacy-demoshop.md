@@ -2,6 +2,7 @@
 title: Tutorial - Architectural Walkthrough - Legacy Demoshop
 description: Use the tutorial to understand Spryker architecture and how its component works together on the example in Legacy Demoshop.
 originalLink: https://documentation.spryker.com/v4/docs/architectural-walkthrough-legacy-demoshop
+originalArticleId: 50723896-62f3-4e2a-829b-a4354d8ea313
 redirect_from:
   - /v4/docs/architectural-walkthrough-legacy-demoshop
   - /v4/docs/en/architectural-walkthrough-legacy-demoshop

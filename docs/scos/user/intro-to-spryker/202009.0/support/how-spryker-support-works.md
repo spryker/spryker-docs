@@ -1,6 +1,7 @@
 ---
 title: How Spryker Support works
 originalLink: https://documentation.spryker.com/v6/docs/how-spryker-support-works-1
+originalArticleId: f2997151-4828-4975-aed6-720f29589091
 redirect_from:
   - /v6/docs/how-spryker-support-works-1
   - /v6/docs/en/how-spryker-support-works-1

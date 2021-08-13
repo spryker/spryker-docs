@@ -2,6 +2,7 @@
 title: Getting Suggestions for Auto-Completion and Search
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields.
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-suggestions-for-auto-completion-and-search
+originalArticleId: aafe0de5-a866-40dd-834b-9f7eeb26f723
 redirect_from:
   - /v4/docs/retrieving-suggestions-for-auto-completion-and-search
   - /v4/docs/en/retrieving-suggestions-for-auto-completion-and-search
@@ -13,7 +14,7 @@ In your development, this resource can help you to enhance the customer experien
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Catalog Feature Integration](https://documentation.spryker.com/v4/docs/catalog-api-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Catalog Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-catalog-feature-integration.html).
 
 ## Usage
 

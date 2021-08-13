@@ -2,6 +2,7 @@
 title: Amazon Pay - State Machine
 description: This article describes the state machine for the Amazon Pay module in Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v4/docs/amazon-pay-state-machine
+originalArticleId: fccf4312-7893-4322-b273-f9aac88d70ca
 redirect_from:
   - /v4/docs/amazon-pay-state-machine
   - /v4/docs/en/amazon-pay-state-machine

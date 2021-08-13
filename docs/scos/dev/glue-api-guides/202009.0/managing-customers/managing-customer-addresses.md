@@ -2,6 +2,7 @@
 title: Managing customer addresses
 description: Create, retrieve and delete customer addresses via Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/managing-customer-addresses-via-glue-api
+originalArticleId: 0747a7a2-d10d-4f17-a0c3-4e2598282631
 redirect_from:
   - /v6/docs/managing-customer-addresses-via-glue-api
   - /v6/docs/en/managing-customer-addresses-via-glue-api
@@ -10,7 +11,7 @@ redirect_from:
 This endpoints allows to retrieve and edit customer addresses. 
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 
 
@@ -26,7 +27,7 @@ To add an address to a customer, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](https://documentation.spryker.com/docs/customers#retrieve-customers) or [Create a customer](https://documentation.spryker.com/docs/customers#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#retrieve-customers) or [Create a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#create-a-customer). |
 
 
 ### Request
@@ -64,7 +65,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| customer_reference | String | &check; | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](https://documentation.spryker.com/docs/customers#retrieve-customers) or [Create a customer](https://documentation.spryker.com/docs/customers#create-a-customer) |
+| customer_reference | String | &check; | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#retrieve-customers) or [Create a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#create-a-customer) |
 | salutation | String | &check; | Salutation to use when addressing the customer. |
 | firstName | String | &check; | Customer's first name. |
 | lastName | String | &check; | Customer's last name. |
@@ -151,7 +152,7 @@ To edit an address, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to edit the address of. [Create a customer](https://documentation.spryker.com/docs/customers#create-a-customer) to get it. |
+| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to edit the address of. [Create a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to edit. [Add an address](#add-an-address) to get it.  |
 
 ### Request
@@ -230,7 +231,7 @@ To retrieve a list of customer's addresses, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the list of. [Create a customer](https://documentation.spryker.com/docs/customers#create-a-customer) to get this id. |
+| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the list of. [Create a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#create-a-customer) to get this id. |
 
 ### Request
 
@@ -329,7 +330,7 @@ To retrieve an address, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the address of. [Create a customer](https://documentation.spryker.com/docs/customers#create-a-customer) to get it. |
+| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to retrieve the address of. [Create a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to retrieve. [Add an address](#add-an-address) to get it.  |
 
 
@@ -379,7 +380,7 @@ To delete an address, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to delete the address of. [Create a customer](https://documentation.spryker.com/docs/customers#create-a-customer) to get it. |
+| ***{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}*** | Unique identifier of the customer to delete the address of. [Create a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#create-a-customer) to get it. |
 | ***{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}*** | Unique identifier of the address to delete. [Add an address](#add-an-address) to get it.  |
 
 
@@ -401,15 +402,15 @@ If the address is deleted successfully, the endpoint returns the `204 No Content
 | 411 | Unauthorized request. |
 | 412 | No address ID provided. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Manage carts](https://documentation.spryker.com/docs/managing-carts-of-registered-users)
-* [Manage cart items](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users)
-* [Manage gift cards](https://documentation.spryker.com/docs/managing-gift-cards-of-registered-users)
-* [Manage wishlists](https://documentation.spryker.com/docs/managing-wishlists)
-* [Manage orders](https://documentation.spryker.com/docs/retrieving-customers-order-history)
-* [Manage customer authentication tokens](https://documentation.spryker.com/docs/managing-customer-access-tokens)
-* [Manage customer passwords](https://documentation.spryker.com/docs/customer-password)
+* [Manage carts](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
+* [Manage cart items](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
+* [Manage gift cards](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
+* [Manage wishlists](/docs/scos/dev/glue-api-guides/202009.0/managing-wishlists/managing-wishlists.html)
+* [Manage orders](/docs/scos/dev/glue-api-guides/202009.0/retrieving-orders.html)
+* [Manage customer authentication tokens](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customer-authentication-tokens.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html)
 

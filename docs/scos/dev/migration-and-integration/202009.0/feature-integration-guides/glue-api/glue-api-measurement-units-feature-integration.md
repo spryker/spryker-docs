@@ -2,6 +2,7 @@
 title: Glue API- Measurement units feature integration
 description: The procedure of integrating Measurement Units Feature API into a Spryker project.
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-measurement-units-feature-integration
+originalArticleId: 96b22627-954c-4c4f-851a-b0767d305afb
 redirect_from:
   - /v6/docs/glue-api-measurement-units-feature-integration
   - /v6/docs/en/glue-api-measurement-units-feature-integration
@@ -14,8 +15,8 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version |Link |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Glue API: Spryker Core Feature Integration](https://documentation.spryker.com/docs/glue-spryker-core-feature-integration)  |
-| Product Measurement Units | 202009.0 | [Product Measurement Units Feature Integration](https://documentation.spryker.com/v5/docs/product-measurement-unit-feature-integration ) |
+| Spryker Core | 202009.0 | [Glue API: Spryker Core Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html)  |
+| Product Measurement Units | 202009.0 | [Product Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/product-measurement-unit-feature-integration.html) |
 
 ## 1)  Install the Required Modules Using Composer
 Run the following command to install the required modules:

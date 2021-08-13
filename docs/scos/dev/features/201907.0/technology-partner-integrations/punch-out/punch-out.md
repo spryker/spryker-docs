@@ -2,6 +2,7 @@
 title: Punch Out
 description: The Punch Out feature allows buyers to configure access from their e-procurement software to Spryker web store, thus, avoiding logins to many e-commerce websites
 originalLink: https://documentation.spryker.com/v3/docs/punchout
+originalArticleId: 8e8a0dbb-c676-4aed-9f52-70a8da7f7e9e
 redirect_from:
   - /v3/docs/punchout
   - /v3/docs/en/punchout

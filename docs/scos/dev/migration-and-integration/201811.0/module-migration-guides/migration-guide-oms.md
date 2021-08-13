@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - OMS
 originalLink: https://documentation.spryker.com/v1/docs/mg-oms
+originalArticleId: 4dfe9ffe-9a14-4997-a039-ae712adfa872
 redirect_from:
   - /v1/docs/mg-oms
   - /v1/docs/en/mg-oms
@@ -108,7 +109,7 @@ CREATE TABLE "spy_oms_product_reservation_last_exported_version"
 
 In version 7, OMS no longer uses `SalesAggregator` to calculate totals, it is now done via the Calculator module. Therefore, there is no more dependency with `SalesAggregator`.
 The `Spryker\Zed\Oms\Business\Mail\MailHandler` dependency to `SalesAggregatorFacade` was replaced with `SalesFacade`.
-To learn how to migrate to the new structure, see the [Upgrading from version 3.* to version 4.*](https://documentation.spryker.com/v1/docs/mg-calculation#upgrading-from-version-3---to-version-4--) section in *Migration Guide - Calculation*.
+To learn how to migrate to the new structure, see the [Upgrading from version 3.* to version 4.*](/docs/scos/dev/migration-and-integration/201811.0/module-migration-guides/migration-guide-calculation.html#upgrading-from-version-3---to-version-4--) section in *Migration Guide - Calculation*.
 
 ## Upgrading from Version 3.* to Version 4.*
 

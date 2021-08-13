@@ -2,6 +2,7 @@
 title: Printing a Shopping List
 description: Print Shopping List makes it possible for customers to print the list of products with barcodes they added to the shopping list in the web shop.
 originalLink: https://documentation.spryker.com/v1/docs/printing-shopping-list
+originalArticleId: 55e4b987-9319-412f-bd04-6e20abff7b28
 redirect_from:
   - /v1/docs/printing-shopping-list
   - /v1/docs/en/printing-shopping-list

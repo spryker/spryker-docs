@@ -2,6 +2,7 @@
 title: Modules and layers
 description: Learn about the layers in the Spryker Commerce OS and how they are related with each other.
 originalLink: https://documentation.spryker.com/v6/docs/modules-and-layers
+originalArticleId: 807b0c1c-c8cb-4b27-a01c-a66f9ce36995
 redirect_from:
   - /v6/docs/modules-and-layers
   - /v6/docs/en/modules-and-layers
@@ -38,9 +39,9 @@ On the Presentation layer, the view related content is implemented. To get the n
 
 ## Next steps
 
-<!---* To learn how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and frontend apps](https://documentation.spryker.com/docs/commerce-os-and-frontend-apps).-->
-* To learn about the building blocks of Spryker, see [Programming concepts](https://documentation.spryker.com/docs/programming-concepts).
-* To learn about Application layers, see [Concept overview](https://documentation.spryker.com/docs/concept-overview).
+<!---* To learn how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and frontend apps](https://documentation.spryker.com/v6/docs/commerce-os-and-frontend-apps).-->
+* To learn about the building blocks of Spryker, see [Programming concepts](/docs/scos/dev/developer-guides/202009.0/architecture-guide/programming-concepts.html).
+* To learn about Application layers, see [Concept overview](/docs/scos/dev/developer-guides/202009.0/architecture-guide/conceptual-overview.html).
 * To learn about modular programming, see [Modular programming](https://en.wikipedia.org/wiki/Modular_programming).
 * To learn about the layered architecture pattern, see [Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
 * To learn about packaging principles, see [Packaging principles](http://principles-wiki.net/collections:robert_c._martin_s_principle_collection).

@@ -2,6 +2,7 @@
 title: Supported versions of PHP
 description: This article provides information about the PHP versions Spryker supports.
 originalLink: https://documentation.spryker.com/v6/docs/supported-versions-of-php
+originalArticleId: 1f45ae8e-61e2-415f-8172-1f46b515c8a5
 redirect_from:
   - /v6/docs/supported-versions-of-php
   - /v6/docs/en/supported-versions-of-php

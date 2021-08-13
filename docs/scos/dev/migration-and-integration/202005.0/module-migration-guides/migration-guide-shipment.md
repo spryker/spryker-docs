@@ -2,6 +2,7 @@
 title: Migration Guide - Shipment
 description: Use the guide to learn how to update the Shipment module to a newer version.
 originalLink: https://documentation.spryker.com/v5/docs/mg-shipment
+originalArticleId: 1849bd46-ce62-4705-ad37-83b1ab2ab69f
 redirect_from:
   - /v5/docs/mg-shipment
   - /v5/docs/en/mg-shipment
@@ -40,7 +41,7 @@ console transfer:generate
 In this new version of the **Shipment** module, we have added support of split delivery. You can find more details about the changes on the [Shipment module release page](https://github.com/spryker/shipment/releases).
     
 {% info_block errorBox %}
-This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](https://documentation.spryker.com/docs/en/split-delivery-concept
+This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202005.0/migration-concepts/split-delivery-migration-concept.html
 {% endinfo_block %}.)
     
 **To upgrade to the new version of the module, do the following:**
@@ -485,8 +486,8 @@ In version 5, shipment lost the direct foreign key `sales.fk_shipment_method` to
 
 A new `SalesOrderHydration` plugin was added to populate `OrderTransfer` with shipment information `ShipmentOrderHydratePlugin`.
 
-The new shipment table structure requires manual data migration, we have provided migration script, you can read how to migrate shipment data in [Migration Guide Sales](https://documentation.spryker.com/docs/en/mg-sales).
+The new shipment table structure requires manual data migration, we have provided migration script, you can read how to migrate shipment data in [Migration Guide Sales](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-sales.html).
 ***
 ## Upgrading from Version 2.* to Version 3.*
 
-The tax plugins are using the version 3.* of the Tax module. You need to upgrade the [Tax](https://documentation.spryker.com/docs/en/mg-tax) module.
+The tax plugins are using the version 3.* of the Tax module. You need to upgrade the [Tax](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-tax.html) module.

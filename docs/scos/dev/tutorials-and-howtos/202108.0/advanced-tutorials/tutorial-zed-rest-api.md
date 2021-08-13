@@ -1,9 +1,12 @@
 ---
 title: Tutorial - Zed Rest API
 originalLink: https://documentation.spryker.com/2021080/docs/t-zed-rest-api
+originalArticleId: 26d10b63-ffce-4945-9aa0-cd15ecddb4d7
 redirect_from:
   - /2021080/docs/t-zed-rest-api
   - /2021080/docs/en/t-zed-rest-api
+  - /docs/t-zed-rest-api
+  - /docs/en/t-zed-rest-api
 ---
 
 <!--used to be: http://spryker.github.io/challenge/zed-restapi/-->
@@ -31,7 +34,7 @@ It is advised to recap the following topics before starting the challenge:
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
 * Facades
 * Transfer objects
-* [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html)
+* [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html)
 * Controllers in Zed
 
 ### Plan of solving the challenge
@@ -444,6 +447,6 @@ In this challenge we implemented self-documenting API based on a public API of m
 |[PHP Reflection](http://php.net/manual/en/book.reflection.php)  |  Reflection in PHP|
 | Facades | Facades in Spryker |
 | Transfer objects | Transfer Objects in Spryker |
-|  [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html)| Creating a new Module |
+|  [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html)| Creating a new Module |
 | Controllers in Zed | 	Developing controllers in ZED |
 |  Twig syntax reference| Twig syntax reference |

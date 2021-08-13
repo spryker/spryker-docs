@@ -2,6 +2,7 @@
 title: Configuring the database server
 description: This article describes how you can change your database server (MySQL or PostgreSQL).
 originalLink: https://documentation.spryker.com/v6/docs/configure-database-server
+originalArticleId: a6835505-62a4-41c7-9c95-a06ebfb4315d
 redirect_from:
   - /v6/docs/configure-database-server
   - /v6/docs/en/configure-database-server

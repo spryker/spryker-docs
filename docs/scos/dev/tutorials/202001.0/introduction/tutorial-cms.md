@@ -2,6 +2,7 @@
 title: Tutorial - CMS
 description: Use the tutorial to create a static Contact Us page with its own template and integrate it to Yves.
 originalLink: https://documentation.spryker.com/v4/docs/t-cms
+originalArticleId: 0c4ee7ca-6559-4e4a-91a9-2b1035a6ce84
 redirect_from:
   - /v4/docs/t-cms
   - /v4/docs/en/t-cms
@@ -34,7 +35,7 @@ Go back to the [page](http://www.de.demoshop.local/de/contact) and have a look a
 | [CMS Manual](/docs/scos/dev/features/202001.0/cms/cms.html)  |
 |  [Implementing URL Routing in Yves](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/yves/implementing-url-routing-in-yves.html)| Steps to implement URL Routing in Yves |
 | [Glossary Creation](/docs/scos/dev/features/202001.0/internationalization/glossary-creation/glossary-creation.html) |Glossary module documentation  |
-| [Cronjob Scheduling](https://documentation.spryker.com/v4/docs/cronjob-scheduling-1) | Set up cron jobs in Jenkins |
+| [Cronjob Scheduling](https://documentation.spryker.com/v4/docs/cronjob-scheduling-guide) | Set up cron jobs in Jenkins |
 
 <!-- Last review date: Sep 11, 2017_
 

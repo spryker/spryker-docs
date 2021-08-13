@@ -1,6 +1,7 @@
 ---
 title: Prices
 originalLink: https://documentation.spryker.com/v6/docs/prices
+originalArticleId: 74526b38-8a8e-44ec-a9de-f4bfea58fd68
 redirect_from:
   - /v6/docs/prices
   - /v6/docs/en/prices

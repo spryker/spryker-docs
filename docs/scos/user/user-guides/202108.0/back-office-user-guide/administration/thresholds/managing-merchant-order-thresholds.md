@@ -2,22 +2,25 @@
 title: Managing merchant order thresholds
 description: Use the procedures to edit soft and hard thresholds per specific merchant relationship in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-merchant-order-thresholds
+originalArticleId: ae8c2d52-29d3-4315-b8c7-0cdffdb7ba2a
 redirect_from:
   - /2021080/docs/managing-merchant-order-thresholds
   - /2021080/docs/en/managing-merchant-order-thresholds
+  - /docs/managing-merchant-order-thresholds
+  - /docs/en/managing-merchant-order-thresholds
 ---
 
-This topic describes how to manage [merchant order thresholds](https://documentation.spryker.com/docs/order-thresholds-feature-overview#merchant-order-thresholds).
+This topic describes how to manage [merchant order thresholds](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/order-thresholds.html#merchant-order-thresholds).
 
 To start working with merchant order thresholds, go to **Administration** > **Merchant Relationships Threshold**.
 
 ## Prerequisites
 
-The list of the merchant relations for which you can define thresholds is based on the merchant relations created in **Merchant** > **Merchant Relations**. See [Creating a Merchant](https://documentation.spryker.com/docs/managing-merchants#creating-a-merchant) to learn more. 
+The list of the merchant relations for which you can define thresholds is based on the merchant relations created in **Merchant** > **Merchant Relations**. See [Creating a Merchant](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html#creating-a-merchant) to learn more. 
 
 ## Setting up Minimum Hard  Threshold
 
-To set up a [hard minimum threshold](https://documentation.spryker.com/docs/order-thresholds-feature-overview#hard-minimum-threshold) for a merchant relation:
+To set up a [hard minimum threshold](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/order-thresholds.html#hard-minimum-threshold) for a merchant relation:
 1. On the *Merchant relationships* page, select **Edit** next to the merchant relationship you want to set up the threshold for.
 2. On the *Edit Merchant Relationship Threshold:{merchant relationship name}* page, select the **Store and Currency** you want to configure the threshold for.
 3. In the *Hard Threshold* section, populate the **Enter threshold value** field.
@@ -26,12 +29,12 @@ To set up a [hard minimum threshold](https://documentation.spryker.com/docs/orde
 
 The page refreshes, and the message about successful threshold update is displayed.
 
-See [Reference information](https://documentation.spryker.com/docs/managing-global-thresholds#reference-information) to know more about the attributes of Hard Minimum Threshold.
+See [Reference information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/thresholds/managing-global-thresholds.html#reference-information) to know more about the attributes of Hard Minimum Threshold.
 
 
 ## Setting up Maximum Hard  Threshold
 
-To set up a [hard maximum threshold](https://documentation.spryker.com/docs/order-thresholds-feature-overview#hard-maximum-threshold) for a merchant relation:
+To set up a [hard maximum threshold](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/order-thresholds.html#hard-maximum-threshold) for a merchant relation:
 
 1. On the *Merchant relationships* page, select **Edit** next to the merchant relationship you want to set up the threshold for.
 2. On the *Edit Merchant Relationship Threshold:{merchant relationship name}* page, select the **Store and Currency** you want to configure the threshold for.
@@ -41,11 +44,11 @@ To set up a [hard maximum threshold](https://documentation.spryker.com/docs/orde
 
 The page refreshes, and the message about successful threshold update is displayed.
 
-See [Reference information](https://documentation.spryker.com/docs/managing-global-thresholds#reference-information) to know more about the attributes of Hard Maximum Threshold.
+See [Reference information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/thresholds/managing-global-thresholds.html#reference-information) to know more about the attributes of Hard Maximum Threshold.
 
 ## Setting up a soft minimum threshold
 
-To set up a [soft minimum threshold](https://documentation.spryker.com/docs/order-thresholds-feature-overview#soft-minimum-threshold) for a merchant relation:
+To set up a [soft minimum threshold](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/order-thresholds.html#soft-minimum-threshold) for a merchant relation:
 1. On the *Merchant relationships* page, select **Edit** next to the merchant relationship you want to set up the threshold for.
 2.  On the *Edit Merchant Relationship Threshold:{merchant relationship name}* page, select the **Store and Currency** you want to configure the threshold for.
 3. In the *Soft Threshold* section, select a soft threshold type.
@@ -58,7 +61,7 @@ To set up a [soft minimum threshold](https://documentation.spryker.com/docs/orde
 
 The page refreshes, and the message about successful threshold update is displayed.
 
-See [Reference information](https://documentation.spryker.com/docs/managing-global-thresholds#reference-information) to know more about the soft threshold and its types.
+See [Reference information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/thresholds/managing-global-thresholds.html#reference-information) to know more about the soft threshold and its types.
 
 ## Setting up several thresholds
 

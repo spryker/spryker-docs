@@ -2,6 +2,7 @@
 title: About Installation
 description: In the Installation Guides, you will find all the information you need to install the Spryker Commerce OS according to your needs.
 originalLink: https://documentation.spryker.com/v1/docs/about-installation
+originalArticleId: ba72f4a0-e398-432d-a852-b8b3ef9e96c3
 redirect_from:
   - /v1/docs/about-installation
   - /v1/docs/en/about-installation
@@ -28,4 +29,4 @@ For additional information and resources see:
 * [Configuring the Database Server](/docs/scos/dev/developer-guides/201811.0/installation/configuring-the-database-server.html) – if you want to switch a database
 * [Troubleshooting](/docs/scos/dev/developer-guides/201811.0/installation/troubleshooting.html) - for frequently encountered issues
 * [Debugging Setup](/docs/scos/dev/developer-guides/201811.0/installation/debugging/debugging-setup.html) – how to install and use the Xdebug module
-* For a list of our available GitHub Repositories, see [Demo Shops](/docs/scos/dev/about-spryker/201811.0/demo-shops.html).
+* For a list of our available GitHub Repositories, see [Demo Shops](/docs/scos/user/about-spryker/201811.0/demo-shops.html).

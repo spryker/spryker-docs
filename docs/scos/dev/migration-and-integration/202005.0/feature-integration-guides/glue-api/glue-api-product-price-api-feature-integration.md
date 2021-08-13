@@ -1,6 +1,7 @@
 ---
 title: Glue API- Product Price API Feature Integration
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-product-price-api-feature-integration
+originalArticleId: 85d16fa0-d908-4e2b-863d-6a3e5060e103
 redirect_from:
   - /v5/docs/glue-api-product-price-api-feature-integration
   - /v5/docs/en/glue-api-product-price-api-feature-integration

@@ -2,9 +2,12 @@
 title: Catalog
 description: Catalogs are used to clearly build and organize your products to meet you and your customer's demands.
 originalLink: https://documentation.spryker.com/2021080/docs/catalog
+originalArticleId: c9c0a388-619c-464f-ac15-ee3c4bb13b36
 redirect_from:
   - /2021080/docs/catalog
   - /2021080/docs/en/catalog
+  - /docs/catalog
+  - /docs/en/catalog
 ---
 
 Catalogs are used to clearly build and organize your products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.

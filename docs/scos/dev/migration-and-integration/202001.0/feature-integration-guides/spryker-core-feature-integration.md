@@ -1,6 +1,7 @@
 ---
 title: Spryker Core Feature Integration
 originalLink: https://documentation.spryker.com/v4/docs/spryker-core-feature-integration-201907
+originalArticleId: 8f3eb51a-a817-4951-b58d-c3125f59aa7f
 redirect_from:
   - /v4/docs/spryker-core-feature-integration-201907
   - /v4/docs/en/spryker-core-feature-integration-201907

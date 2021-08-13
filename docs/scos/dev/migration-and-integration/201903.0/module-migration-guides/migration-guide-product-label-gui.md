@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product Label GUI
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-label-gui
+originalArticleId: eec0d769-770d-4253-b6a0-e3ecd1279f01
 redirect_from:
   - /v2/docs/mg-product-label-gui
   - /v2/docs/en/mg-product-label-gui

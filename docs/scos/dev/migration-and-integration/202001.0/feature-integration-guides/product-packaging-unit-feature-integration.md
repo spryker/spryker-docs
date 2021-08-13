@@ -1,6 +1,7 @@
 ---
 title: Product Packaging Unit Feature Integration
 originalLink: https://documentation.spryker.com/v4/docs/product-packaging-unit-feature-integration
+originalArticleId: dcd0a7a6-9ef3-4a67-8fd8-4bfb978fcee0
 redirect_from:
   - /v4/docs/product-packaging-unit-feature-integration
   - /v4/docs/en/product-packaging-unit-feature-integration

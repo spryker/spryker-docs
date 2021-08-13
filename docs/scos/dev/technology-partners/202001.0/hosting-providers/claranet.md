@@ -2,6 +2,7 @@
 title: Claranet
 description: Integrate Claranet hosting solution to host Spryker-based project.
 originalLink: https://documentation.spryker.com/v4/docs/claranet
+originalArticleId: ac4d18d2-5da3-4565-a3d7-08ef06bf67b1
 redirect_from:
   - /v4/docs/claranet
   - /v4/docs/en/claranet

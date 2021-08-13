@@ -1,12 +1,13 @@
 ---
 title: File details- product_set.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-setcsv
+originalArticleId: fb5b9383-eb32-4af5-984a-8d9fbc4b93d6
 redirect_from:
   - /v6/docs/file-details-product-setcsv
   - /v6/docs/en/file-details-product-setcsv
 ---
 
-This article contains content of the **product_set.csv** file to configure [Product Set](https://documentation.spryker.com/docs/product-set) information on your Spryker Demo Shop.
+This article contains content of the **product_set.csv** file to configure [Product Set](/docs/scos/dev/features/202009.0/product-sets/product-sets.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -33,7 +34,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+*    [product_abstract.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_set.csv*  file can be downloaded here:

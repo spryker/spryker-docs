@@ -2,12 +2,15 @@
 title: CMS pages in search results overview
 description: The CMS Pages in Search Results feature allows searching not only for products but for CMS pages content as well.
 originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-in-search-results-overview
+originalArticleId: 0509e00d-9839-4136-81dd-10ff197cda0d
 redirect_from:
   - /2021080/docs/cms-pages-in-search-results-overview
   - /2021080/docs/en/cms-pages-in-search-results-overview
+  - /docs/cms-pages-in-search-results-overview
+  - /docs/en/cms-pages-in-search-results-overview
 ---
 
-Most often shop visitors search for products, however, they also might need other information, like terms and conditions, legal information, or contacts, which is contained on [CMS pages](https://documentation.spryker.com/docs/cms-page).
+Most often shop visitors search for products, however, they also might need other information, like terms and conditions, legal information, or contacts, which is contained on [CMS pages](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-pages-overview.html).
 
 The CMS pages in search results functionality allows searching not only for products but for the content of CMS pages too. At the same time, the search results related to products and CMS pages do not intervene with each other. The search results page is split into two tabs: for product pages and CMS pages. The latter tab displays CMS pages as a grid or as a list.
 ![CMS pages in search results](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/CMS+Pages+in+Search+Results/cms-pages-in-search-results.png)
@@ -25,8 +28,8 @@ Page sorting and pagination on the search results page helps shop visitors to fi
                 <li class="mr-title">Developer</li>
                 <li>Enable CMS pages in search results:</li>
                 <li><a href="https://documentation.spryker.com/docs/cms-feature-integration" class="mr-link">Integrate the CMS feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/cms-page-search-product-lists-catalog-feature-integration" class="mr-link">Integrate the CMS + Product Lists + Catalog feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/cms-pages-in-search-results-integration" class="mr-link">Integrate CMS + Catalog feature</a></li>
+                <li><a href="/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-pages-overview.html-search-product-lists-catalog-feature-integration" class="mr-link">Integrate the CMS + Product Lists + Catalog feature</a></li>
+                <li><a href="/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-pages-overview.htmls-in-search-results-integration" class="mr-link">Integrate CMS + Catalog feature</a></li>
             </ul>
         </div>
     </div>

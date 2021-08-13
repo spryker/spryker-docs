@@ -2,6 +2,7 @@
 title: Catalog Management
 description: Catalogs are used to clearly build and organize your products to meet you and your customer's demands.
 originalLink: https://documentation.spryker.com/v5/docs/catalog-management
+originalArticleId: 75116043-3fa7-40c8-8f08-5dc2e83e2522
 redirect_from:
   - /v5/docs/catalog-management
   - /v5/docs/en/catalog-management

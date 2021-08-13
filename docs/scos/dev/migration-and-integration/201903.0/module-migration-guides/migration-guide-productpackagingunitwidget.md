@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductPackagingUnitWidget
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-packaging-unit-widget
+originalArticleId: 637aff5f-32e2-4aa8-bd36-49f360660ba9
 redirect_from:
   - /v2/docs/mg-product-packaging-unit-widget
   - /v2/docs/en/mg-product-packaging-unit-widget

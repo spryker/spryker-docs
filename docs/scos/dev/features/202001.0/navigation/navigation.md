@@ -2,6 +2,7 @@
 title: Navigation
 description: The Back Office allows adding navigational elements such as CMS and category pages, internal links or external backlinks to partners or social media.
 originalLink: https://documentation.spryker.com/v4/docs/navigation
+originalArticleId: 0b87c88a-e701-4e82-a7ed-2c73425fb671
 redirect_from:
   - /v4/docs/navigation
   - /v4/docs/en/navigation

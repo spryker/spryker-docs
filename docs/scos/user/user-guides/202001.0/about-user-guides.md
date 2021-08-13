@@ -2,6 +2,7 @@
 title: About User Guides
 description: The section provides information on UI interface and guidelines a user can perform in the Back Office and Storefront.
 originalLink: https://documentation.spryker.com/v4/docs/about-user-guides
+originalArticleId: 66309486-7b39-4472-9272-68439fdafb46
 redirect_from:
   - /v4/docs/about-user-guides
   - /v4/docs/en/about-user-guides

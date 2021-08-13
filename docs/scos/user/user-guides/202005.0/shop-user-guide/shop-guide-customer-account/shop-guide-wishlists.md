@@ -2,6 +2,7 @@
 title: Shop Guide - Wishlists
 description: Use the guide to learn how to create, view, edit or remove wishlists in a Spryker-based shop.
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-wishlists
+originalArticleId: c2bb243c-bdd6-48dd-96df-15e2bf91779d
 redirect_from:
   - /v5/docs/shop-guide-wishlists
   - /v5/docs/en/shop-guide-wishlists
@@ -9,7 +10,7 @@ redirect_from:
 
 This article describes how you, as a Buyer, can create and manage wishlists in the Storefront.
 ***
-You can create [multiple wishlists](https://documentation.spryker.com/docs/en/multiple-wishlists) and save products to them for future purchases. This may be useful when, for example, you do not intend to purchase products at the moment but want to do this later once you return to the online store. Also, you can add to these lists the products you are interested in.
+You can create [multiple wishlists](/docs/scos/dev/features/202005.0/wishlist/multiple-wishlists.html) and save products to them for future purchases. This may be useful when, for example, you do not intend to purchase products at the moment but want to do this later once you return to the online store. Also, you can add to these lists the products you are interested in.
 
 In the **Wishlists** section of your customer account, you can perform the following actions:
 
@@ -63,4 +64,4 @@ You can also create a wishlist from the product detail page when adding a produc
 ***
 **What’s next?**
 
-If you have added the products to the cart, you can proceed to the checkout. For more information on how to place the order, see [Shop Guide - Checkout](https://documentation.spryker.com/docs/en/checkout-shop-guide-201911#shop-guide---checkout).
+If you have added the products to the cart, you can proceed to the checkout. For more information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html#shop-guide---checkout).

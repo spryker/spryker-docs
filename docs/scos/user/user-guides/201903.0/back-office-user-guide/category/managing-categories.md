@@ -2,6 +2,7 @@
 title: Managing Categories
 description: The guide provides instructions on how to set an order for products in categories, as well as view, update and delete categories.
 originalLink: https://documentation.spryker.com/v2/docs/managing-categories
+originalArticleId: 172d78da-6d3a-4dfa-a6c9-923a6f1d4666
 redirect_from:
   - /v2/docs/managing-categories
   - /v2/docs/en/managing-categories

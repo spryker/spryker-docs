@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductQuantity
 originalLink: https://documentation.spryker.com/v1/docs/mg-product-quantity
+originalArticleId: 9f96fba5-ffeb-48d2-9cb8-ef75c383de62
 redirect_from:
   - /v1/docs/mg-product-quantity
   - /v1/docs/en/mg-product-quantity

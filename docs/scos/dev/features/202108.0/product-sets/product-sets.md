@@ -2,9 +2,12 @@
 title: Product Sets
 description: Let your customers shop for special product sets that can be manually curated based on any characteristic of the products you wish.
 originalLink: https://documentation.spryker.com/2021080/docs/product-set
+originalArticleId: a5c78910-501e-482f-ae69-441e662323a8
 redirect_from:
   - /2021080/docs/product-set
   - /2021080/docs/en/product-set
+  - /docs/product-set
+  - /docs/en/product-set
 ---
 
 Let your customers shop for special product sets that can be manually curated based on any characteristic of the products you wish. The "Shop-the-Look" function is a prominent example of a Product Set, where you can build a collection of items based on relations or recommendations. This feature allows you to build a collection of items based on a curated collection like a stationary set for your customers’ workspace, set of clothing or accessories, or furniture for a specific room. Product Sets come with their own standalone catalog and detail pages for the shop. You can freely define an order of appearance of products within a set and on the catalog page. Also, Product Sets can be placed in CMS placeholders to place them throughout your shop. Your customers can select variants per product, add an individual product from a set and or all products from the set to the cart with one click.

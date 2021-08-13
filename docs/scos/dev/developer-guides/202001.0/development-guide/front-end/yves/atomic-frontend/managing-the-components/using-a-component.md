@@ -1,6 +1,7 @@
 ---
 title: Using a Component
 originalLink: https://documentation.spryker.com/v4/docs/t-use-component
+originalArticleId: 3e924d11-054a-45b1-9840-7f06606cc920
 redirect_from:
   - /v4/docs/t-use-component
   - /v4/docs/en/t-use-component
@@ -48,7 +49,7 @@ The most common attributes to include are:
 * `modifiers` (optional) - used to enable component modifiers.
 
 {% info_block infoBox %}
-For more details, see section _Twig_ in [Atomic Frontend](https://documentation.spryker.com/v4/docs/atomic-frontend#twig
+For more details, see section _Twig_ in [Atomic Frontend](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/atomic-frontend-general-overview.html#twig
 {% endinfo_block %}.)
 
 ## Include

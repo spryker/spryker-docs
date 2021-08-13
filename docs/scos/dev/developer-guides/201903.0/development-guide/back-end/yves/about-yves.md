@@ -1,6 +1,7 @@
 ---
 title: About Yves
 originalLink: https://documentation.spryker.com/v2/docs/about-yves
+originalArticleId: e2130b8a-bac2-4a4c-b833-93659244acc8
 redirect_from:
   - /v2/docs/about-yves
   - /v2/docs/en/about-yves
@@ -18,5 +19,5 @@ Yves is divided into two parts:
     * [Modular Frontend](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/yves/modular-frontend.html)
     * [Atomic Frontend](/docs/scos/dev/developer-guides/201903.0/development-guide/front-end/yves/atomic-frontend/atomic-frontend-general-overview.html)
  * Client part which provides access to the search and storage engine and the Zed application. See the following articles for more information on the Client:
-     * [Client](https://documentation.spryker.com/v2/docs/client )
-     * [Implementing a Client](https://documentation.spryker.com/v2/docs/implementing-a-client )
+     * [Client](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/yves/client/client.html)
+     * [Implementing a Client](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/yves/client/implementing-a-client.html)

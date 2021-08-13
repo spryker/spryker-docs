@@ -2,9 +2,12 @@
 title: Enabling the product CMS block
 description: The guide describes the process of installing the Product CMS Block into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-product-cms-block
+originalArticleId: 2fd5636b-9196-4a11-8191-4a97dc7a4406
 redirect_from:
   - /2021080/docs/enabling-the-product-cms-block
   - /2021080/docs/en/enabling-the-product-cms-block
+  - /docs/enabling-the-product-cms-block
+  - /docs/en/enabling-the-product-cms-block
 ---
 
 Product blocks are blocks that can be embedded in the product template, for which we can specify on which specific product we want them to be rendered.

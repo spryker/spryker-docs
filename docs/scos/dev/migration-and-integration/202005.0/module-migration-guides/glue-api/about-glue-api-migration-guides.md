@@ -1,6 +1,7 @@
 ---
 title: About Glue API Migration Guides
 originalLink: https://documentation.spryker.com/v5/docs/about-glue-api-migration
+originalArticleId: 649b6a77-bb9c-4470-a71e-0f1bfd76b1b9
 redirect_from:
   - /v5/docs/about-glue-api-migration
   - /v5/docs/en/about-glue-api-migration

@@ -2,6 +2,7 @@
 title: Timed Product Availability Feature Overview
 description: Timed product availability, or product TTL (Time to Live) allows you to define when your products are available online and when they are not.
 originalLink: https://documentation.spryker.com/v1/docs/product-ttl-feature-overview
+originalArticleId: 7600976c-105b-426f-85c2-25bbb7c19565
 redirect_from:
   - /v1/docs/product-ttl-feature-overview
   - /v1/docs/en/product-ttl-feature-overview

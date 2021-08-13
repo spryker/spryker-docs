@@ -2,6 +2,7 @@
 title: Search widget for concrete products overview
 description: Search widget adds allows users to easily search and add concrete products directly from shopping cart/list pages.
 originalLink: https://documentation.spryker.com/v6/docs/search-widget-for-concrete-products-overview
+originalArticleId: 1a697148-6387-484d-8f39-4fed2c7598f4
 redirect_from:
   - /v6/docs/search-widget-for-concrete-products-overview
   - /v6/docs/en/search-widget-for-concrete-products-overview
@@ -9,7 +10,7 @@ redirect_from:
 
 With the search widget, the customer doesn't need to go to the product details page to add items. Search widget adds a search box to a Shopping cart, Shopping List, and Quick Order Page allowing the users to easily search and add concrete products directly from shopping cart/list pages. The widget includes the search field for concrete products and the quantity field. A shopper can search for products by SKU or concrete Product name. What the customers only have to do is to start typing the Name or the product SKU and the appropriate suggestions will appear in the drop-down. The suggested options enable shoppers to complete the search quickly.
 
-Using the search widget, online shoppers are able to find products assigned specifically to the stores the users are in. Also, only products corresponding to user's [currency](https://documentation.spryker.com/docs/multiple-currencies-per-store) and [price mode](https://documentation.spryker.com/docs/net-gross-price) settings are searched for.
+Using the search widget, online shoppers are able to find products assigned specifically to the stores the users are in. Also, only products corresponding to user's [currency](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html) and [price mode](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html) settings are searched for.
 
 Here's an example of what the search widget looks like on:
 
@@ -23,10 +24,10 @@ All the products that are being added to cart are added as separate items to sup
 A picture with 2 products of the same SKU added
 ![Guest shopping cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/guest-shopping-cart.png){height="" width=""}
 
-With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](https://documentation.spryker.com/docs/product-restrictions-from-merchant-to-buyer-201903) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
+With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](/docs/scos/dev/features/202009.0/merchant-product-restrictions/merchant-product-restrictions.html) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
 
 {% info_block infoBox %}
-You can find more examples of product restriction use cases on the [Restricted Products Behavior](https://documentation.spryker.com/docs/restricted-products-behavior
+You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/features/202009.0/merchant-product-restrictions/restricted-products-behavior.html
 {% endinfo_block %} page.)
 
 ## Shopping List Page
@@ -39,9 +40,9 @@ In the empty shopping list, the customer can still add products with the help of
 {% endinfo_block %}
 ![Search widget demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/search-widget-demo.png){height="" width=""}
 
-In comparison with Shopping Cart, for Shopping lists, the quantity that is being added via a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](https://documentation.spryker.com/docs/product-quantity-restrictions) the products may have.
+In comparison with Shopping Cart, for Shopping lists, the quantity that is being added via a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](https://documentation.spryker.com/v6/docs/product-quantity-restrictions) the products may have.
 
-The same works for the [product restriction](https://documentation.spryker.com/docs/product-restrictions-from-merchant-to-buyer-201903) rules: it is impossible to add blacklisted products to a shopping list, the shopper will get "No search results" message in the widget field, and only whitelisted products will be suggested in the search results in case of a whitelist.
+The same works for the [product restriction](/docs/scos/dev/features/202009.0/merchant-product-restrictions/merchant-product-restrictions.html) rules: it is impossible to add blacklisted products to a shopping list, the shopper will get "No search results" message in the widget field, and only whitelisted products will be suggested in the search results in case of a whitelist.
 
 ## Quick Order Page
 The widget allows searching the products on the quick order page too:

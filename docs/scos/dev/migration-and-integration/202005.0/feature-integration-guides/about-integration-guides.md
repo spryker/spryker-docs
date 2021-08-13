@@ -1,6 +1,7 @@
 ---
 title: About Integration Guides
 originalLink: https://documentation.spryker.com/v5/docs/about-integration
+originalArticleId: 7a93fc10-9b8f-4b08-b604-ff356184ce56
 redirect_from:
   - /v5/docs/about-integration
   - /v5/docs/en/about-integration

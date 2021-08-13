@@ -2,6 +2,7 @@
 title: Order Matrix- Reference Information
 description: The guide provides reference information you see when working with the ordered items in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/order-matrix-reference-information
+originalArticleId: 2701b0d3-c39a-4ed0-be38-c104110a5192
 redirect_from:
   - /v4/docs/order-matrix-reference-information
   - /v4/docs/en/order-matrix-reference-information

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - PriceProductVolume
 originalLink: https://documentation.spryker.com/v3/docs/mg-price-product-volume
+originalArticleId: 56ef6c44-7ec6-4363-8bb2-d941c3b5c6ba
 redirect_from:
   - /v3/docs/mg-price-product-volume
   - /v3/docs/en/mg-price-product-volume

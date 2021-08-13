@@ -2,6 +2,7 @@
 title: Shop Guide - Summary Step
 description: Use the procedures to view and update shipment details, a payment method or billing address, and place the order in the Storefront.
 originalLink: https://documentation.spryker.com/v3/docs/summary-step-shop-guide-201911
+originalArticleId: 15fe5a00-6bdf-4c70-af6b-4c2271a0c6fd
 redirect_from:
   - /v3/docs/summary-step-shop-guide-201911
   - /v3/docs/en/summary-step-shop-guide-201911
@@ -44,7 +45,7 @@ In this section, you can do the following:
 * Add a tag to the comment so that in future you can filter comments by tags
 
 {% info_block infoBox %}
-See [Shop Guide - Managing Comments](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html
+See [Shop Guide - Managing Comments](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html
 {% endinfo_block %} for more information on how to work with comments in cart.)
 ***
 ## Placing Order

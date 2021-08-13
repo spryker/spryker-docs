@@ -1,6 +1,7 @@
 ---
 title: Spryker release process
 originalLink: https://documentation.spryker.com/v6/docs/spryker-release-process
+originalArticleId: 55d24c49-f5bc-4cfd-a840-e2bac6a0f6db
 redirect_from:
   - /v6/docs/spryker-release-process
   - /v6/docs/en/spryker-release-process
@@ -24,7 +25,7 @@ We are making sure to provide draft documentation for the new functionality, as 
 Also, Code Releases are not incorporated into the Demo Shops and can contain beta versions on modules.
 
 ## Product Releases
-Product Release is done every several months. The Product Release has its own version and is accompanied by the [Release Notes](https://documentation.spryker.com/docs/release-notes).  The Product Release code is stored in our [B2B Demo Shop repository](https://github.com/spryker-shop/b2b-demo-shop) and [B2C Demo Shop repository](https://github.com/spryker-shop/b2c-demo-shop) and includes a specific feature set that we believe is best suitable for each vertical.
+Product Release is done every several months. The Product Release has its own version and is accompanied by the [Release Notes](/docs/scos/user/intro-to-spryker/202009.0/releases/release-notes/release-notes.html).  The Product Release code is stored in our [B2B Demo Shop repository](https://github.com/spryker-shop/b2b-demo-shop) and [B2C Demo Shop repository](https://github.com/spryker-shop/b2c-demo-shop) and includes a specific feature set that we believe is best suitable for each vertical.
 
 A Product Release does not include beta modules. All of its features are integrated and tested in the Demo Shops, as well as fully documented.
 

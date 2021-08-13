@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Calculator Plugin
 originalLink: https://documentation.spryker.com/v1/docs/t-calculator-plugin
+originalArticleId: c73881cc-40de-4d93-96ad-965403cb81e7
 redirect_from:
   - /v1/docs/t-calculator-plugin
   - /v1/docs/en/t-calculator-plugin

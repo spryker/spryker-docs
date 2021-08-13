@@ -2,6 +2,7 @@
 title: Creating Categories
 description: The guide describes procedures on how to create a category, add images and products, select a template in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/creating-categories
+originalArticleId: a0f47343-3fb5-46af-946f-0cd12a0b8a76
 redirect_from:
   - /v5/docs/creating-categories
   - /v5/docs/en/creating-categories
@@ -21,8 +22,8 @@ The Create page is split into two tabs: **General** and **Image**:
 * The **Image** tab is used to provide visual support (mostly used with the **Sub Category grid** template.)
 ***
 **To create a product category:**
-1. In the **General** tab, enter and select the attributes for your category. See [Category: Reference Information](https://documentation.spryker.com/docs/en/category-reference-information).
-2. Enter the attributes of your image set. See [Category: Reference Information](https://documentation.spryker.com/docs/en/category-reference-information).
+1. In the **General** tab, enter and select the attributes for your category. See [Category: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/references/category-reference-information.html).
+2. Enter the attributes of your image set. See [Category: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/references/category-reference-information.html).
 {% info_block infoBox %}
 Small images will be used when subcategories on the parent category page are displayed as a list, while the large images will be used when subcategories are displayed as a grid.
 {% endinfo_block %}
@@ -36,7 +37,7 @@ Even though you can add several image sets and several images to an image set, o
 3. Click **Next** at the bottom of the page, or select the **Image** tab next to **General**.
 4. In the **Image** tab, add an image to the category:
     1. Click **Add image set**.
-    2. Enter the attributes of your image set. See [Category: Reference Information](https://documentation.spryker.com/docs/en/category-reference-information).  
+    2. Enter the attributes of your image set. See [Category: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/category/references/category-reference-information.html).  
     {% info_block infoBox %}
 Keep in mind that small images will be used when subcategories on the parent category page are displayed as a list, while the large images will be used when subcategories are displayed as a grid.
 {% endinfo_block %}

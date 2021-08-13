@@ -2,6 +2,7 @@
 title: Migration Guide - ProductPackagingUnitDataImport
 description: Use the guide to migrate to a new version of the ProductPackagingUnitDataImport module.
 originalLink: https://documentation.spryker.com/v5/docs/mg-product-packaging-unit-data-import
+originalArticleId: d2f9c4a6-fdad-441b-8d71-a9b5a949f698
 redirect_from:
   - /v5/docs/mg-product-packaging-unit-data-import
   - /v5/docs/en/mg-product-packaging-unit-data-import
@@ -11,7 +12,7 @@ redirect_from:
 In this new version of the **ProductPackagingUnitDataImport** module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnitDataImport module](https://github.com/spryker/product-packaging-unit-data-import/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](https://documentation.spryker.com/docs/en/decimal-stock-concept
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202005.0/migration-concepts/decimal-stock-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

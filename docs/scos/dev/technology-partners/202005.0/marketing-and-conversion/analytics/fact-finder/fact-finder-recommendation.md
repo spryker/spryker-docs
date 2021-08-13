@@ -2,6 +2,7 @@
 title: FACT-Finder - Recommendation
 description: The FACT-Finder recommendation engine analyzes product and category relationships. The results are rendered in recommendations widget, which can be displayed on product details pages, homepage or in the shopping cart.
 originalLink: https://documentation.spryker.com/v5/docs/search-factfinder-recommendation
+originalArticleId: af34dba1-2862-4f46-bedb-457b14855489
 redirect_from:
   - /v5/docs/search-factfinder-recommendation
   - /v5/docs/en/search-factfinder-recommendation

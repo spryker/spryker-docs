@@ -2,6 +2,7 @@
 title: Testing Your Direct Debit Implementation
 description: This article describes how to test the direct debit payment implementation.
 originalLink: https://documentation.spryker.com/v4/docs/dd-test-implementation
+originalArticleId: 197e14cd-dfb1-4d92-a62d-15ca0e4b51e7
 redirect_from:
   - /v4/docs/dd-test-implementation
   - /v4/docs/en/dd-test-implementation

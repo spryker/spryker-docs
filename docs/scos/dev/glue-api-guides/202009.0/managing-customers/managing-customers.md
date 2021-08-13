@@ -2,6 +2,7 @@
 title: Managing customers
 description: Learn how to manage customers via Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/managing-customers-via-glue-api
+originalArticleId: dc80d08b-f25f-44b7-b71f-298fcba9e28c
 redirect_from:
   - /v6/docs/managing-customers-via-glue-api
   - /v6/docs/en/managing-customers-via-glue-api
@@ -17,7 +18,7 @@ In your development, these resources can help you to:
 * Enrich customer profiles with additional data such as addresses
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Create a customer
 
@@ -105,7 +106,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers`
 
 
 
-After creating a customer, they receive a verfication email. They click the verification link to confirm registration. After that, you can [authenticate as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer) to perform requests to the protected resources available to them.
+After creating a customer, they receive a verfication email. They click the verification link to confirm registration. After that, you can [authenticate as a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/authenticating-as-a-customer.html) to perform requests to the protected resources available to them.
 
 ## Retrieve customers
 
@@ -330,14 +331,14 @@ If the customer is anonymized successfully, the endpoint returns the `204 No Con
 | 405 | Customer reference is missing. |
 | 410 | Failed to save changes. |
 | 414 | Provided gender is invalid. |
-| 422 | Terms of service were not accepted. Note that if you have the [REST Request Format](https://documentation.spryker.com/docs/validating-rest-request-format) validation enabled, then you will recieve 901 instead of 422. |
+| 422 | Terms of service were not accepted. Note that if you have the [REST Request Format](/docs/scos/dev/tutorials-and-howtos/202009.0/introduction-tutorials/glue-api/validating-rest-request-format.html) validation enabled, then you will recieve 901 instead of 422. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Authenticate as a customer](https://documentation.spryker.com/docs/customer-password)
-* [Manage customer passwords](https://documentation.spryker.com/docs/customer-password)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/customer-password.html)
 
 
 

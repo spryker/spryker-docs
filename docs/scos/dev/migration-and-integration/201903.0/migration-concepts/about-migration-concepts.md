@@ -2,6 +2,7 @@
 title: About Migration Concepts
 description: The section provides migration guides for the Split Delivery and Silex Replacement concepts.
 originalLink: https://documentation.spryker.com/v2/docs/about-migration-concepts
+originalArticleId: 537e405a-e826-4481-b3ad-275d019b75cf
 redirect_from:
   - /v2/docs/about-migration-concepts
   - /v2/docs/en/about-migration-concepts

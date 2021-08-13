@@ -2,15 +2,18 @@
 title: Retrieving customer carts
 description: Retrieve customer's carts via Glue API
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-carts
+originalArticleId: a09a087b-5fca-483c-a2c2-f8441681b43e
 redirect_from:
   - /2021080/docs/retrieving-customer-carts
   - /2021080/docs/en/retrieving-customer-carts
+  - /docs/retrieving-customer-carts
+  - /docs/en/retrieving-customer-carts
 ---
 
 This endpoint allows retrieving a customer’s carts.
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html).
 
 ## Retrieve a customer’s carts
 To retrieve a customer’s carts, send the following request:
@@ -19,14 +22,14 @@ To retrieve a customer’s carts, send the following request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all carts belonging to a customer through the **/carts** endpoint. For details, see [Managing carts of registered users](https://documentation.spryker.com/docs/managing-carts-of-registered-users#retrieve-a-registered-user-s-carts).
+Alternatively, you can retrieve all carts belonging to a customer through the **/carts** endpoint. For details, see [Managing carts of registered users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-user-s-carts).
 
 {% endinfo_block %}
 
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](https://documentation.spryker.com/docs/customers#retrieve-customers) or [create a customer](https://documentation.spryker.com/docs/customers#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html#create-a-customer). |
 
 ### Request
 
@@ -1616,20 +1619,20 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 | vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| shared-carts | idCompanyUser | String | Unique identifier of the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) with whom the cart is shared. |
+| shared-carts | idCompanyUser | String | Unique identifier of the [company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html) with whom the cart is shared. |
 | shared-carts | idCartPermissionGroup | Integer | Unique identifier of the cart permission group that describes the permissions granted to the user with whom the cart is shared. |
 | cart-permission-groups | name | String | Permission group name. |
 | cart-permission-groups | isDefault | Boolean | Defines if the permission group is applied to shared carts by default. |
-| company-users | id | String | Unique identifier of the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) with whom the cart is shared. |
-| company-users | isActive | Boolean | Defines if the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user)is active. |
-| company-users | isDefault | Boolean | Defines if the [company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user) is default for the [customer](https://documentation.spryker.com/docs/authenticating-as-a-customer). |
+| company-users | id | String | Unique identifier of the [company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html) with whom the cart is shared. |
+| company-users | isActive | Boolean | Defines if the [company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html)is active. |
+| company-users | isDefault | Boolean | Defines if the [company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html) is default for the [customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html). |
 
 For the attributes of the included resources, see:
 
-* [Retrieve a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes)
-* [Add an item to a registered user's cart](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users#add-an-item-to-a-registered-users-cart-response-attributes)
-* [Managing Gift Cards of Registered Users](https://documentation.spryker.com/docs/gift-cards-of-registered-users)
-* [Retrieving product labels](https://documentation.spryker.com/docs/en/retrieving-product-labels#product-labels-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
+* [Managing Gift Cards of Registered Users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
+* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Possible errors
 
@@ -1640,5 +1643,5 @@ For the attributes of the included resources, see:
 | 402 | Customer with the specified ID was not found. |
 | 802 | Request is unauthorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 

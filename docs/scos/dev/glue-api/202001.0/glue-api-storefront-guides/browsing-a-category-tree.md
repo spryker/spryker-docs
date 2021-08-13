@@ -2,6 +2,7 @@
 title: Browsing a Category Tree
 description: The article helps you get the full category tree, including information on a category node, as well as retrieve categories by product easily and quickly.
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-category-trees
+originalArticleId: 4b1fcd08-55b7-4c74-9907-6dbe2bd63247
 redirect_from:
   - /v4/docs/retrieving-category-trees
   - /v4/docs/en/retrieving-category-trees
@@ -414,7 +415,7 @@ To retrieve a specific node by ID, send the request:
 |Path parameter| Description |
 |---|---|
 | node_id | * ID of a node to get information for. |
-*To identify the node ID of a category,  [get full category tree](https://documentation.spryker.com/v4/docs/browsing-category-tree#get-full-category-tree). The ID is located in the `nodeId` field.
+*To identify the node ID of a category,  [get full category tree](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/browsing-a-category-tree.html#get-full-category-tree). The ID is located in the `nodeId` field.
 
 ### Request
 Request sample : `GET http://mysprykershop.com/category-nodes/5`

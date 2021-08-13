@@ -2,6 +2,7 @@
 title: Multiple Currencies for Shipments
 description: Each shipment method has a dedicated price and tax set in the various currencies you define.
 originalLink: https://documentation.spryker.com/v1/docs/multiple-currency-shipment
+originalArticleId: 4a48e9d6-9363-4e27-8b57-8fcbccc9a2c0
 redirect_from:
   - /v1/docs/multiple-currency-shipment
   - /v1/docs/en/multiple-currency-shipment

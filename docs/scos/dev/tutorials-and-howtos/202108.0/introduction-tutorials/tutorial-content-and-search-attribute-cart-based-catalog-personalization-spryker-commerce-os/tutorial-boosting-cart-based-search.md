@@ -2,9 +2,12 @@
 title: Tutorial - Boosting Cart Based Search
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute.
 originalLink: https://documentation.spryker.com/2021080/docs/boosting-cart-based-search
+originalArticleId: 7f335803-4f1b-4711-97b7-d32c7bcd57bb
 redirect_from:
   - /2021080/docs/boosting-cart-based-search
   - /2021080/docs/en/boosting-cart-based-search
+  - /docs/boosting-cart-based-search
+  - /docs/en/boosting-cart-based-search
 ---
 
 This tutorial describes how you can boost the cart-based search in your project.
@@ -18,7 +21,7 @@ To solve the challenge, follow the instructions below.
 ### Preparation
 Fulltext search engines like Elasticsearch provide a possibility to influence the sorting of products by tweaking the scoring function. The scoring function assigns weights to each result based on a formula, which in its turn is usually based on text similarity or synonyms, but we can change it to boost specific products higher than others. In this challenge, we will try to affect the scoring function based on the products that are already in the cart.
 
-The second idea leverages the fact that Spryker implementation of [search](https://documentation.spryker.com/docs/en/search-filter) is very flexible and allows configuring additional plugins that are used to build search queries.
+The second idea leverages the fact that Spryker implementation of [search](https://documentation.spryker.com/2021080/docs/en/search-filter) is very flexible and allows configuring additional plugins that are used to build search queries.
 
 To solve this task, we will be working in the client layer of the Catalog module located at `src/Pyz/Client/Catalog/`.
 

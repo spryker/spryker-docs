@@ -2,6 +2,7 @@
 title: Configuring access to private repositories
 description: Configure your local environment to access private repositories.
 originalLink: https://documentation.spryker.com/v6/docs/configuring-access-to-private-repositories
+originalArticleId: f97e0487-3391-47f8-881a-60c68f1c3f61
 redirect_from:
   - /v6/docs/configuring-access-to-private-repositories
   - /v6/docs/en/configuring-access-to-private-repositories

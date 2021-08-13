@@ -1,17 +1,18 @@
 ---
 title: Installation Guide - Development Mode
 originalLink: https://documentation.spryker.com/v5/docs/installation-guide-development-mode
+originalArticleId: 23658ca6-fd00-42e9-bf64-87d147fa233c
 redirect_from:
   - /v5/docs/installation-guide-development-mode
   - /v5/docs/en/installation-guide-development-mode
 ---
 
-This document describes the procedure of installing Spryker in [Development Mode](https://documentation.spryker.com/docs/en/modes-overview#development-mode).
+This document describes the procedure of installing Spryker in [Development Mode](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/modes-overview.html#development-mode).
 
 
 {% info_block warningBox %}
 
-Before you start, make sure to fulfill the [prerequisites](https://documentation.spryker.com/docs/en/docker-installation-prerequisites).
+Before you start, make sure to fulfill the [prerequisites](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites.html).
 
 {% endinfo_block %}
 ## Installation
@@ -19,10 +20,10 @@ Follow the steps to install Spryker in Development mode:
 
 1. Open a terminal.
 {% info_block infoBox %}
-In case you are going to run the script on Windows, open Ubuntu (For more details, see the *Install Docker Desktop* section in [Docker Install Prerequisites - Windows](https://documentation.spryker.com/docs/en/docker-installation-prerequisites-windows
+In case you are going to run the script on Windows, open Ubuntu (For more details, see the *Install Docker Desktop* section in [Docker Install Prerequisites - Windows](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites.html-windows
 {% endinfo_block %}.))
 2. Create a new folder and navigate into this folder.
-3. Depending on the desired [Demo Shop](https://documentation.spryker.com/docs/en/about-spryker#spryker-b2b-b2c-demo-shops):
+3. Depending on the desired [Demo Shop](/docs/scos/user/about-spryker/202005.0/about-spryker.html#spryker-b2b-b2c-demo-shops):
    
     a. Clone the B2C repository:
 
@@ -135,11 +136,11 @@ Use "spryker" as a username and "secret" as a password. These credentials are de
 Run the `docker/sdk help` command to get the full and up-to-date list of commands.
 
 **What's next?**
-* [Troubleshooting](https://documentation.spryker.com/docs/en/troubleshooting)
-* [Debugging Setup in Docker](https://documentation.spryker.com/docs/en/debugging-setup-in-docker)
-* [Deploy File Reference - 1.0](https://documentation.spryker.com/docs/en/deploy-file-reference-10) 
-* [Services](https://documentation.spryker.com/docs/en/services)
-* [Self-signed SSL Certificate Setup](https://documentation.spryker.com/docs/en/self-signed-ssl-certificate-setup) 
-* [Additional DevOPS Guidelines](https://documentation.spryker.com/docs/en/additional-devops-guidelines)
+* [Troubleshooting](https://documentation.spryker.com/v5/docs/en/peer-authentication-failed-for-user-postgres)
+* [Debugging Setup in Docker](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/debugger-setup-in-docker.html)
+* [Deploy File Reference - 1.0](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html) 
+* [Services](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/configuration/services.html)
+* [Self-signed SSL Certificate Setup](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/configuration/self-signed-ssl-certificate-setup.html) 
+* [Additional DevOPS Guidelines](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/configuration/additional-devops-guidelines.html)
 
 

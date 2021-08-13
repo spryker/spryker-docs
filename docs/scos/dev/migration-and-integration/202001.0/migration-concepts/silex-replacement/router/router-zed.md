@@ -2,6 +2,7 @@
 title: Router Zed
 description: The article provides instructions on how to install and configure Router in Zed.
 originalLink: https://documentation.spryker.com/v4/docs/router-zed
+originalArticleId: 2d0697f4-9c0c-4a03-92e5-bedfd0f581db
 redirect_from:
   - /v4/docs/router-zed
   - /v4/docs/en/router-zed

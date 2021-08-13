@@ -2,9 +2,12 @@
 title: Migration Guide - Setup
 description: Use the guide to learn how to update the Setup module to a newer version.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-setup
+originalArticleId: 8504425c-2afa-47cc-b6ff-fe5013f95de9
 redirect_from:
   - /2021080/docs/mg-setup
   - /2021080/docs/en/mg-setup
+  - /docs/mg-setup
+  - /docs/en/mg-setup
 ---
 
 ## Upgrading from Version 3.* to Version 4.*

@@ -2,6 +2,7 @@
 title: Migration Guide - Payment
 description: Use the guide to migrate to a newer version of the Payment module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-payment
+originalArticleId: d088a6d2-2970-43f7-b552-ff263d642073
 redirect_from:
   - /v6/docs/mg-payment
   - /v6/docs/en/mg-payment

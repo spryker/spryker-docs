@@ -1,6 +1,7 @@
 ---
 title: File details- cms_block_store.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-cms-block-storecsv
+originalArticleId: 544711dd-533d-449e-903d-a0af13b2a39e
 redirect_from:
   - /v6/docs/file-details-cms-block-storecsv
   - /v6/docs/en/file-details-cms-block-storecsv
@@ -20,7 +21,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*    [cms_block.csv](https://documentation.spryker.com/docs/file-details-cms-blockcsv)
+*    [cms_block.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/content-management/file-details-cms-block.csv.html)
 *     *stores.php* configuration file of the demo shop PHP project
 
 ## Template File & Content Example

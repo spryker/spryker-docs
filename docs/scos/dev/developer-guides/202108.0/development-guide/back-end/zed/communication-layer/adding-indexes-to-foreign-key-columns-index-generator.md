@@ -2,9 +2,12 @@
 title: Adding indexes to foreign key columns- index generator
 description: The index generator module adds the missing indexes for foreign key columns in Postgres.
 originalLink: https://documentation.spryker.com/2021080/docs/postgres-index-generator
+originalArticleId: 1eab644c-12b6-40c1-a69e-57614c314b52
 redirect_from:
   - /2021080/docs/postgres-index-generator
   - /2021080/docs/en/postgres-index-generator
+  - /docs/postgres-index-generator
+  - /docs/en/postgres-index-generator
 ---
 
 Postgres doesn't automatically add indexes to foreign key columns. This can lead to performance issues with the database. In MySQL and MariaDB, you get the indexes for foreign key columns without automatically. Most likely, with Postgres, no one adds indexes for the foreign key columns manually.

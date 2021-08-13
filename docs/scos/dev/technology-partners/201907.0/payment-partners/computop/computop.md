@@ -2,6 +2,7 @@
 title: Computop
 description: Enable merchants and white label customers to process global multichannel payments by integrating Computop into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v3/docs/computop
+originalArticleId: feee90bc-5c43-4ac4-a543-f7a83b17610c
 redirect_from:
   - /v3/docs/computop
   - /v3/docs/en/computop
@@ -30,14 +31,14 @@ The `SprykerEco.Computop` module includes integration with:
 
 The `SprykerEco.Computop` module provides the following payment methods:
 
-* [Credit Card](/docs/scos/dev/technology-partners/202001.0/payment-partners/computop/computop-credit-card.html)
-* [Direct Debit](/docs/scos/dev/technology-partners/202001.0/payment-partners/computop/computop-direct-debit.html)
-* [EasyCredit](/docs/scos/dev/technology-partners/202001.0/payment-partners/computop/computop-easy-credit.html)
-* [iDeal](/docs/scos/dev/technology-partners/202001.0/payment-partners/computop/computop-ideal.html)
-* [Paydirekt](/docs/scos/dev/technology-partners/202001.0/payment-partners/computop/computop-paydirekt.html)
-* [PayNow](/docs/scos/dev/technology-partners/202001.0/payment-partners/computop/computop-paynow.html)
-* [PayPal](/docs/scos/dev/technology-partners/202001.0/payment-partners/computop/computop-paypal.html)
-* [SofortÜberweisung](/docs/scos/dev/technology-partners/202001.0/payment-partners/computop/computop-sofort.html)
+* [Credit Card](/docs/scos/dev/technology-partners/201907.0/payment-partners/computop/computop-credit-card.html)
+* [Direct Debit](/docs/scos/dev/technology-partners/201907.0/payment-partners/computop/computop-direct-debit.html)
+* [EasyCredit](/docs/scos/dev/technology-partners/201907.0/payment-partners/computop/computop-easy-credit.html)
+* [iDeal](/docs/scos/dev/technology-partners/201907.0/payment-partners/computop/computop-ideal.html)
+* [Paydirekt](/docs/scos/dev/technology-partners/201907.0/payment-partners/computop/computop-paydirekt.html)
+* [PayNow](/docs/scos/dev/technology-partners/201907.0/payment-partners/computop/computop-paynow.html)
+* [PayPal](/docs/scos/dev/technology-partners/201907.0/payment-partners/computop/computop-paypal.html)
+* [SofortÜberweisung](/docs/scos/dev/technology-partners/201907.0/payment-partners/computop/computop-sofort.html)
 
 To install the payment provider, run:
 ```

@@ -2,6 +2,7 @@
 title: CrefoPay - Installation and Configuration
 description: This article provides instructions on the installation and configuration of the CrefoPay module for the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v3/docs/crefopay-configuration
+originalArticleId: ebe3c82c-b276-405b-8ef2-880802914813
 redirect_from:
   - /v3/docs/crefopay-configuration
   - /v3/docs/en/crefopay-configuration
@@ -79,4 +80,4 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 See [CrefoPay - Provided Payment Methods](https://docs.demo-spryker.com/v4/docs/crefopay-provided-payment-methods) for more information on the payment methods provided by CrefoPay.
 
 ## What's next?
-Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/dev/technology-partners/202001.0/payment-partners/crefopay/crefopay-integration.html).
+Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/dev/technology-partners/201907.0/payment-partners/crefopay/crefopay-integration.html).

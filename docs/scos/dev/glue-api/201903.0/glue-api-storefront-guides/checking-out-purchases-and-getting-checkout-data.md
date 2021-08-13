@@ -1,6 +1,7 @@
 ---
 title: Checking Out Purchases and Getting Checkout Data
 originalLink: https://documentation.spryker.com/v2/docs/checking-out-purchases-and-getting-checkout-data
+originalArticleId: 3ad1ce2d-bc09-4eb5-8a1a-7382e450847d
 redirect_from:
   - /v2/docs/checking-out-purchases-and-getting-checkout-data
   - /v2/docs/en/checking-out-purchases-and-getting-checkout-data
@@ -13,7 +14,7 @@ In order to create a checkout experience, we offer an endpoint that provides you
 Apart from that, the API also provides an endpoint that allows placing an order.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API](https://documentation.spryker.com/v2/docs/checkout-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API](https://documentation.spryker.com/v2/docs/glue-api-checkout-feature-integration).
 
 ## Place Order
 To place an order, send a POST request to the following endpoint:
@@ -35,7 +36,7 @@ A request should contain:
 | idCart | RestAddressesRequestData | ✓ | ID of the customer's cart<br>For details, see [Managing Carts of Registered Users](https://documentation.spryker.com/v2/docs/managing-carts-of-registered-users-201907). |
 | billingAddress | RestAddressesRequestData |  ✓| Customer's billing address<br>For details, see [Managing Customers](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/managing-customers.html). |
 | shippingAddress | RestAddressesRequestData |  ✓| Customer's shipping address<br>For details, see [Managing Customers](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/managing-customers.html). |
-| payments | RestPayment | ✓| Payment options, such as the payment system, method of payment, etc<br>For details, see [Payment Step](https://documentation.spryker.com/v2/docs/checkout-steps-201903#payment-step). |
+| payments | RestPayment | ✓| Payment options, such as the payment system, method of payment, etc<br>For details, see [Payment Step](/docs/scos/dev/features/201903.0/checkout/multi-step-checkout/checkout-steps.html#payment-step). |
 
 **Sample Request Body**
 ```js

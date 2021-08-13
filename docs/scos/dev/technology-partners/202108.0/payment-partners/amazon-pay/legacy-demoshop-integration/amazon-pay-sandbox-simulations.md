@@ -2,9 +2,12 @@
 title: Amazon Pay - Sandbox Simulations
 description: In this article, you can get information about sandbox simulations for the Amazon Pay module in Spryker Legacy Demoshop.
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-simulations-demoshop
+originalArticleId: ab5dadb3-318e-43cf-bb32-c7f1572203c8
 redirect_from:
   - /2021080/docs/amazon-pay-simulations-demoshop
   - /2021080/docs/en/amazon-pay-simulations-demoshop
+  - /docs/amazon-pay-simulations-demoshop
+  - /docs/en/amazon-pay-simulations-demoshop
 ---
 
 In order to reproduce some edge cases like declined payment or pending capture, Amazon provides two solutions. The first is special methods marked with a red star on payment widget.

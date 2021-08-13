@@ -2,9 +2,12 @@
 title: Modules and layers
 description: Learn about the layers in the Spryker Commerce OS and how they are related with each other.
 originalLink: https://documentation.spryker.com/2021080/docs/modules-and-layers
+originalArticleId: 2c4ec7d1-3056-4dc2-bc82-8865dfbc49de
 redirect_from:
   - /2021080/docs/modules-and-layers
   - /2021080/docs/en/modules-and-layers
+  - /docs/modules-and-layers
+  - /docs/en/modules-and-layers
 ---
 
 In Spryker, we use modular programming and packaging principles for organizing functionalities into independent software packages — modules. 
@@ -38,9 +41,9 @@ On the Presentation layer, the view related content is implemented. To get the n
 
 ## Next steps
 
-<!---* To learn how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and frontend apps](https://documentation.spryker.com/docs/commerce-os-and-frontend-apps).-->
-* To learn about the building blocks of Spryker, see [Programming concepts](https://documentation.spryker.com/docs/programming-concepts).
-* To learn about Application layers, see [Concept overview](https://documentation.spryker.com/docs/concept-overview).
+<!---* To learn how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and frontend apps](https://documentation.spryker.com/2021080/docs/commerce-os-and-frontend-apps).-->
+* To learn about the building blocks of Spryker, see [Programming concepts](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/programming-concepts.html).
+* To learn about Application layers, see [Concept overview](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/conceptual-overview.html).
 * To learn about modular programming, see [Modular programming](https://en.wikipedia.org/wiki/Modular_programming).
 * To learn about the layered architecture pattern, see [Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
 * To learn about packaging principles, see [Packaging principles](http://principles-wiki.net/collections:robert_c._martin_s_principle_collection).

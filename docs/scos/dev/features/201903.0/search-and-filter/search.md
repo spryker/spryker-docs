@@ -1,6 +1,7 @@
 ---
 title: Search
 originalLink: https://documentation.spryker.com/v2/docs/search
+originalArticleId: d8219ef9-b862-4ff0-a9ec-eb803d027ab0
 redirect_from:
   - /v2/docs/search
   - /v2/docs/en/search

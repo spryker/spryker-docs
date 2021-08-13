@@ -1,6 +1,7 @@
 ---
 title: Modes Overview
 originalLink: https://documentation.spryker.com/v5/docs/modes-overview
+originalArticleId: fb08e2a3-1589-41a7-8ad3-966744fe0360
 redirect_from:
   - /v5/docs/modes-overview
   - /v5/docs/en/modes-overview
@@ -16,12 +17,12 @@ In this section, you can find installation guides for Spryker in Docker. Spryker
 ### Configuration
 You can switch between Demo ( `DEMO`) and Development ( `DEV`) modes, but, usually, only one mode is used.
 
-The mode is defined in one of the [Deploy files](https://documentation.spryker.com/docs/en/deploy-file-reference-10): 
+The mode is defined in one of the [Deploy files](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html): 
 * `deploy.yml` for the `DEMO` mode
 *  `deploy.dev.yml` for `DEV` mode
 
 ## Development Mode 
-Development mode is a configuration in which Spryker is built and running with development tools and file synchronization. Learn about Development mode below or follow [Installation Guide - Development mode](https://documentation.spryker.com/docs/en/installation-guide-development-mode) to Install Spryker in this mode.
+Development mode is a configuration in which Spryker is built and running with development tools and file synchronization. Learn about Development mode below or follow [Installation Guide - Development mode](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/installation-guide-development-mode.html) to Install Spryker in this mode.
 
 ### Use Cases
 Develpment mode is used in the following cases:
@@ -54,7 +55,7 @@ In Development mode, you can access your PostgreSQL database using the credentia
 * `user` - `spryker`
 * `pw` - `secret`
 
-The credentials can be changed in the [Deploy file](https://documentation.spryker.com/docs/en/deploy-file-reference-10).
+The credentials can be changed in the [Deploy file](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html).
 
 ### Debugging
 In Development mode, you can use [Xdebug](https://xdebug.org) for debugging.
@@ -63,37 +64,37 @@ Run the command, to enable it:
 docker/sdk {run|start|up} -x
 ``` 
 
-Find more more information on debugging with Xdebug in [Debugging Setup in Docker](https://documentation.spryker.com/docs/en/debugging-setup-in-docker).
+Find more more information on debugging with Xdebug in [Debugging Setup in Docker](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/debugger-setup-in-docker.html).
 
 
 ## Demo Mode 
-Demo mode is a configuration in which Spryker is built and running without development tools, like file synchronization. As a result, Docker images in this mode are smaller. Learn about Demo mode below or follow [Installation Guide - Demo mode](https://documentation.spryker.com/docs/en/installation-guide-demo-mode) to Install Spryker in this mode.
+Demo mode is a configuration in which Spryker is built and running without development tools, like file synchronization. As a result, Docker images in this mode are smaller. Learn about Demo mode below or follow [Installation Guide - Demo mode](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/installation-guide-demo-mode.html) to Install Spryker in this mode.
 
 In Demo mode, the following functionalities are missing or disabled:
-1. [Swagger UI service](https://documentation.spryker.com/docs/en/services#swagger-ui) - this image is not built, and the container is not running.
+1. [Swagger UI service](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/configuration/services.html#swagger-ui) - this image is not built, and the container is not running.
 2. [Debugging functionality](#debugging) is disabled.
 3. [File synchronization](#file-synchronization) is disabled.
 
 ### Use Cases
 Demo mode is used in the following cases:
-* To check or show the functionalities of [B2B/B2C demo shops](https://documentation.spryker.com/docs/en/demoshops).
+* To check or show the functionalities of [B2B/B2C demo shops](/docs/scos/user/about-spryker/202005.0/about-spryker.html#spryker-b2b-b2c-demo-shops).
 * To check a custom build or a new feature.
 * To test or deploy an application using Continuous Integration and Continuous Delivery tools.
 
 ## Integrating Docker Existing Projects
 
 If you are already running a Spryker project based on Development Virtual Machine or any other solution, you can convert it into a Docker based project. 
-Learn how to convert a project into a Docker based instance in [Integrating Docker Existing Projects](https://documentation.spryker.com/docs/en/integrating-docker-into-existing-projects).
+Learn how to convert a project into a Docker based instance in [Integrating Docker Existing Projects](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/integrating-docker-into-existing-projects.html).
 
 ## Running Production 
 
 Currently, there is no installation guide for deploying Spryker in Docker in a production environment. But you can generate the images suitable for a production environment and the archives with assets for each application - Yves, Zed and Glue. 
 
-Learn how to generate Docker images and assets for a production environment in [Running Production](https://documentation.spryker.com/docs/en/running-production).
+Learn how to generate Docker images and assets for a production environment in [Running Production](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/running-production.html).
 
 **What's next?**
 Once you've selected and installation mode, follow one of the guides below:
-* [Installation Guide - Development Mode](https://documentation.spryker.com/docs/en/installation-guide-development-mode)
-* [Installation Guide- Demo Mode](https://documentation.spryker.com/docs/en/installation-guide-demo-mode)
-* [Integrating Docker into Existing Projects](https://documentation.spryker.com/docs/en/integrating-docker-into-existing-projects)
-* [Running Production](https://documentation.spryker.com/docs/en/running-production)
+* [Installation Guide - Development Mode](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/installation-guide-development-mode.html)
+* [Installation Guide- Demo Mode](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/installation-guide-demo-mode.html)
+* [Integrating Docker into Existing Projects](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/integrating-docker-into-existing-projects.html)
+* [Running Production](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/running-production.html)

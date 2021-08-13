@@ -2,6 +2,7 @@
 title: Quick Order + Shopping Lists Feature Integration
 description: Quick Add to Cart + Shopping Lists allow creating a shopping list to buy products. This guide describes how to integrate this feature into your project.
 originalLink: https://documentation.spryker.com/v5/docs/quick-order-shopping-lists-feature-integration
+originalArticleId: f7049250-e07b-486b-95ce-76ff246d0ff4
 redirect_from:
   - /v5/docs/quick-order-shopping-lists-feature-integration
   - /v5/docs/en/quick-order-shopping-lists-feature-integration

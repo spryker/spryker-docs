@@ -2,12 +2,13 @@
 title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
 description: Use the guide to learn how to install the ShopUICompatibility module for the Atomic Frontend in the Legacy Demoshop.
 originalLink: https://documentation.spryker.com/v6/docs/setting-up-shopuicompatibility
+originalArticleId: f6d3249c-0d19-440c-9230-313043541be0
 redirect_from:
   - /v6/docs/setting-up-shopuicompatibility
   - /v6/docs/en/setting-up-shopuicompatibility
 ---
 
-The `ShopUiCompatibility` module is the main module necessary for the [Atomic Frontend](https://documentation.spryker.com/v4/docs/atomic-frontend). This module is provided in SCOS by default.
+The `ShopUiCompatibility` module is the main module necessary for the [Atomic Frontend](/docs/scos/dev/developer-guides/202009.0/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html). This module is provided in SCOS by default.
 The following guide describes how to set up the ShopUICompatibility in the Legacy Demoshop.
 
 To install `ShopUiCompatibility` module in the Legacy Demoshop, follow the instructions below:

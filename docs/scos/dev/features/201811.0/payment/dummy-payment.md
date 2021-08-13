@@ -2,6 +2,7 @@
 title: Dummy Payment
 description: In the article, you can find the aims of using DummyPayment, how it is integrated into the system, and the use of state machine in the module.
 originalLink: https://documentation.spryker.com/v1/docs/dummy-payment
+originalArticleId: 0643bdde-85c7-4383-b10d-6e34fc0fb386
 redirect_from:
   - /v1/docs/dummy-payment
   - /v1/docs/en/dummy-payment

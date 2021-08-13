@@ -1,6 +1,7 @@
 ---
 title: Atomic Front End- general overview
 originalLink: https://documentation.spryker.com/v6/docs/atomic-front-end-general-overview
+originalArticleId: 946dd23f-ca56-4217-b719-c05d50775678
 redirect_from:
   - /v6/docs/atomic-front-end-general-overview
   - /v6/docs/en/atomic-front-end-general-overview
@@ -500,10 +501,10 @@ See [Modules to Components Mapping](https://cdn.document360.io/9fafa0d5-d76f-40c
 **What's next?**
 The following topics will help you in developing Spryker Atomic Frontend step-by-step:
 
-[Tutorial - Customize Spryker Frontend](https://documentation.spryker.com/v4/docs/t-customize-spryker-frontend)
-[Tutorial - Frontend - Create a Component](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html)
-[Tutorial - Frontend - Override a Component](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
-[Tutorial - Frontend - Extend a Component](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/extending-a-component.html)
-[Tutorial - Frontend - Integrate JQuery into Atomic Frontend](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
-[Tutorial - Frontend - Use a Component](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/using-a-component.html)
+[Tutorial - Customize Spryker Frontend](/docs/scos/dev/developer-guides/202009.0/development-guide/front-end/yves/atomic-frontend/customizing-spryker-front-end.html)
+[Tutorial - Frontend - Create a Component](/docs/scos/dev/developer-guides/202009.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html)
+[Tutorial - Frontend - Override a Component](/docs/scos/dev/developer-guides/202009.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
+[Tutorial - Frontend - Extend a Component](/docs/scos/dev/developer-guides/202009.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/extending-a-component.html)
+[Tutorial - Frontend - Integrate JQuery into Atomic Frontend](/docs/scos/dev/developer-guides/202009.0/development-guide/front-end/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
+[Tutorial - Frontend - Use a Component](/docs/scos/dev/developer-guides/202009.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/using-a-component.html)
 

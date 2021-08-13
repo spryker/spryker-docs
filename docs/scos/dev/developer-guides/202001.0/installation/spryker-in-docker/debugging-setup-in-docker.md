@@ -2,6 +2,7 @@
 title: Debugging Setup in Docker
 description: Learn about debugging a Spryker setup in docker.
 originalLink: https://documentation.spryker.com/v4/docs/debugging-setup-in-docker
+originalArticleId: 604dfef8-d365-4dd0-8e27-ac20a1b2ff6b
 redirect_from:
   - /v4/docs/debugging-setup-in-docker
   - /v4/docs/en/debugging-setup-in-docker

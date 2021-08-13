@@ -2,6 +2,7 @@
 title: Internationalization
 description: The Spryker Commerce OS enables you to seize opportunities across the globe and seamlessly expand across international markets.
 originalLink: https://documentation.spryker.com/v3/docs/internationalization
+originalArticleId: 9a16f002-e528-4e16-850f-1cf0b8815fa1
 redirect_from:
   - /v3/docs/internationalization
   - /v3/docs/en/internationalization

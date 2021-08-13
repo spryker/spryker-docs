@@ -1,6 +1,7 @@
 ---
 title: HowTo - Create Personalized Prices
 originalLink: https://documentation.spryker.com/v5/docs/ht-create-personalized-prices
+originalArticleId: a83a7713-9b48-4b04-ba7a-2482fd9e8e18
 redirect_from:
   - /v5/docs/ht-create-personalized-prices
   - /v5/docs/en/ht-create-personalized-prices

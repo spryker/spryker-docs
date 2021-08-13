@@ -1,9 +1,12 @@
 ---
 title: File details- discount_amount.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-discount-amountcsv
+originalArticleId: a9cdd839-b5fc-45ae-8177-625bd94789df
 redirect_from:
   - /2021080/docs/file-details-discount-amountcsv
   - /2021080/docs/en/file-details-discount-amountcsv
+  - /docs/file-details-discount-amountcsv
+  - /docs/en/file-details-discount-amountcsv
 ---
 
 This article contains content of the **discount_amount.csv** file to configure Discount Amount information on your Spryker Demo Shop.
@@ -23,8 +26,8 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*    [discount.csv](https://documentation.spryker.com/docs/file-details-discountcsv)
-*     [discount_store.csv](https://documentation.spryker.com/docs/file-details-discount-storecsv)
+*    [discount.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
+*     [discount_store.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *discount_amount.csv*  file can be downloaded here:

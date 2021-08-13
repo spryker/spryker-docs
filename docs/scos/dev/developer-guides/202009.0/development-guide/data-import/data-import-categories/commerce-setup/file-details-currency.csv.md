@@ -1,12 +1,13 @@
 ---
 title: File details- currency.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-currencycsv
+originalArticleId: 202d8f4c-d408-42b0-b572-9e9fed08b97c
 redirect_from:
   - /v6/docs/file-details-currencycsv
   - /v6/docs/en/file-details-currencycsv
 ---
 
-This article contains content of the **currency.csv** file to configure [Currency](https://documentation.spryker.com/docs/multiple-currencies-per-store) information on your Spryker Demo Shop.
+This article contains content of the **currency.csv** file to configure [Currency](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:

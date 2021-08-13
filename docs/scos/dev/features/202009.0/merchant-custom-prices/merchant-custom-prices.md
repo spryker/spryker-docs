@@ -2,6 +2,7 @@
 title: Merchant Custom Prices
 description: With the Merchant Custom Prices feature, the shop owners of B2B/B2C marketplace can provide different prices for merchants and their clients.
 originalLink: https://documentation.spryker.com/v6/docs/merchant-custom-prices
+originalArticleId: 7647d325-8fc6-456e-8722-74785aebfc9c
 redirect_from:
   - /v6/docs/merchant-custom-prices
   - /v6/docs/en/merchant-custom-prices

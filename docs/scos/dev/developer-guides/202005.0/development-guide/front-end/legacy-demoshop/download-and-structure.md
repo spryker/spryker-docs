@@ -2,6 +2,7 @@
 title: Download and Structure
 description: Here you will find out how to download external dependencies and where to place them, together with your own asset files.
 originalLink: https://documentation.spryker.com/v5/docs/download-structure
+originalArticleId: 0d11389c-2abf-47a9-bec3-83caeb901532
 redirect_from:
   - /v5/docs/download-structure
   - /v5/docs/en/download-structure
@@ -11,7 +12,7 @@ Here you will find out how to download external dependencies and where to place 
 
 {% info_block warningBox %}
 This page contains references to the following tools: [Webpack](https://webpack.js.org/
-{% endinfo_block %}, [Oryx](https://documentation.spryker.com/docs/en/oryx) (Our frontend helper tool)and Oryx for Zed (Zed's frontend full automation tool). Make sure you are familiar with these tools before continuing.)
+{% endinfo_block %}, [Oryx](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/zed/oryx-builder-overview-and-setup.html) (Our frontend helper tool)and Oryx for Zed (Zed's frontend full automation tool). Make sure you are familiar with these tools before continuing.)
 
 ## Yves
 Yves UI must be implemented on project level.
@@ -34,7 +35,7 @@ npm install --save-dev sass-loader node-sass # add build dev dependencies
 Zed UI can be extended on a project level.
 
 ### Core Dependencies
-Each module that implements a UI may have external dependencies. They are declared in the corrisponding `@core/<module-name>/assets/Zed/pakage.json` manifest file. **Do not change this file** as it’s part of a core module. If you want to add a new dependency to Zed, see the [Download External Dependencies](https://documentation.spryker.com/docs/en/download-structure#core-dependencies)  section.
+Each module that implements a UI may have external dependencies. They are declared in the corrisponding `@core/<module-name>/assets/Zed/pakage.json` manifest file. **Do not change this file** as it’s part of a core module. If you want to add a new dependency to Zed, see the [Download External Dependencies](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/legacy-demoshop/download-and-structure.html#core-dependencies)  section.
 
 To download the module dependencies, you can use the package manager that you prefer, but we strongly recommend to use `npm` or `yarn`.
 

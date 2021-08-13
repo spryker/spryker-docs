@@ -1,14 +1,17 @@
 ---
 title: Migration Guide - CmsStorage
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cmsstorage
+originalArticleId: abc4e5f2-4f3c-488d-a713-aa722bea4358
 redirect_from:
   - /2021080/docs/mg-cmsstorage
   - /2021080/docs/en/mg-cmsstorage
+  - /docs/mg-cmsstorage
+  - /docs/en/mg-cmsstorage
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
 
-Version 2.0.0 of the CmsStorage module introduces the [multi-store functionality](https://documentation.spryker.com/v2/docs/multi-store-cms-pages-201903). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 2.0.0 of the CmsStorage module introduces the [multi-store functionality](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 **The main BC breaking changes are:**
 

@@ -2,6 +2,7 @@
 title: Payolution - Performing Requests
 description: This article includes the state machine commands and conditions provided by Payolution.
 originalLink: https://documentation.spryker.com/v4/docs/payolution-requests
+originalArticleId: 8d487eba-318c-4122-8146-6964a486e25b
 redirect_from:
   - /v4/docs/payolution-requests
   - /v4/docs/en/payolution-requests

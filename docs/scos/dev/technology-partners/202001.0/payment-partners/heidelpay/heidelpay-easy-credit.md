@@ -2,6 +2,7 @@
 title: Heidelpay - Easy Credit
 description: Integrate easy credit payment through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v4/docs/heidelpay-easy-credit
+originalArticleId: 68cbf28d-86a9-495b-8e23-3617983d5171
 redirect_from:
   - /v4/docs/heidelpay-easy-credit
   - /v4/docs/en/heidelpay-easy-credit

@@ -1,9 +1,12 @@
 ---
 title: Glue API- Checkout feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-checkout-feature-integration
+originalArticleId: f44bd963-7af3-4ce8-8b7a-3c1477880728
 redirect_from:
   - /2021080/docs/glue-api-checkout-feature-integration
   - /2021080/docs/en/glue-api-checkout-feature-integration
+  - /docs/glue-api-checkout-feature-integration
+  - /docs/en/glue-api-checkout-feature-integration
 ---
 
 Follow the steps below to install Checkout feature API.
@@ -14,11 +17,11 @@ To start feature integration, overview and install the necessary features:
 
 | FEATURE                               | VERSION | INTEGRATION GUIDE                                            |
 | :------------------------------------ | :------ | :----------------------------------------------------------- |
-| Glue API: Spryker Core                | master  | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
-| Glue API: Cart                        | master  | [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration) |
-| Glue API: Customer Account Management | master  | [Glue API: Customer Account Management feature integration](https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration) |
-| Glue API: Payments                    | master  | [Glue API: Payments feature integration](https://documentation.spryker.com/docs/glue-api-payments-feature-integration) |
-| Glue API: Shipment                   | master  | [Glue API: Shipment feature integration](https://documentation.spryker.com/docs/glue-api-shipment-feature-integration) |
+| Glue API: Spryker Core                | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Glue API: Cart                        | master  | [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html) |
+| Glue API: Customer Account Management | master  | [Glue API: Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| Glue API: Payments                    | master  | [Glue API: Payments feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html) |
+| Glue API: Shipment                   | master  | [Glue API: Shipment feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -461,7 +464,7 @@ To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you 
 
 {% endinfo_block %}
 
-For more details, see [Implementing Checkout Steps for Glue API](https://documentation.spryker.com/docs/t-interacting-with-third-party-payment-providers-via-glue-api).
+For more details, see [Implementing Checkout Steps for Glue API](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html).
 
 ### Configure mapping
 
@@ -590,7 +593,7 @@ Integrate the following related features.
 
 | FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
 | :----------- | :------------------------------- | :----------------------------------------------------------- |
-| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](https://documentation.spryker.com/docs/glue-api-shipment-feature-integration)  |
-| Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](https://documentation.spryker.com/docs/glue-api-payments-feature-integration) |
+| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html)  |
+| Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html) |
 
 

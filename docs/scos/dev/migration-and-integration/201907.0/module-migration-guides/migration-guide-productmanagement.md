@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductManagement
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-management
+originalArticleId: ad41d772-1e85-4d54-a645-653a273bcb81
 redirect_from:
   - /v3/docs/mg-product-management
   - /v3/docs/en/mg-product-management
@@ -15,7 +16,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 The new version provides support to manage "abstract product-store" relations per store.
 
-1. Update / install `spryker/product` to at least 6.0.0 version. See [Migration Guide - Product](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-product.html) for more details.
+1. Update / install `spryker/product` to at least 6.0.0 version. See [Migration Guide - Product](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-product.html) for more details.
 2. Update `/ install spryker/productmanagement` to at least 0.10.0 version.
 3. Run `vendor/bin/console transfer:generate` to generate the transfer object changes.
 4. The Product Information Management (PIM) Back Office expects the "abstract product-store" relation handling partial form to be defined in the dependency provider using the `Spryker\Zed\Kernel\Communication\Form\FormTypeInterface`. You can use the single store and multi-store compatible default implementation `Spryker\Zed\Store\Communication\Form\Type\StoreRelationToggleType` wrapped in `Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin`.
@@ -47,7 +48,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 </br>
 </details>
 
-You should be able now to see the "abstract product-store" relations in the Product Information Management (PIM) Back Office, however you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/multi-store-products-feature-integration.html). 
+You should be able now to see the "abstract product-store" relations in the Product Information Management (PIM) Back Office, however you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/multi-store-products-feature-integration.html). 
 
 ## Upgrading from Version 0.8.* to Version 0.9.*
 

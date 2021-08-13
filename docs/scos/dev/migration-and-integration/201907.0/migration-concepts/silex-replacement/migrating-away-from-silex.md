@@ -1,6 +1,7 @@
 ---
 title: Migrating Away From Silex
 originalLink: https://documentation.spryker.com/v3/docs/migrating-away-from-silex
+originalArticleId: 0cd25a62-9bcd-4e87-a7b4-76b4960724a7
 redirect_from:
   - /v3/docs/migrating-away-from-silex
   - /v3/docs/en/migrating-away-from-silex

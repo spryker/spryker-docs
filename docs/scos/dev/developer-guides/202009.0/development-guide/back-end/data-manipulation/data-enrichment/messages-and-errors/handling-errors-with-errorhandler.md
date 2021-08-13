@@ -2,6 +2,7 @@
 title: Handling Errors with ErrorHandler
 description: The Spryker Commerce OS uses a dedicated error handling mechanism to collect detailed error related information. The ErrorHandler handles notices, warnings and other types of minor issues usually not thrown as exceptions as strict as more serious errors.
 originalLink: https://documentation.spryker.com/v6/docs/error-handler
+originalArticleId: 7ae013a0-532e-4943-a3ce-10bf28c61afa
 redirect_from:
   - /v6/docs/error-handler
   - /v6/docs/en/error-handler

@@ -2,6 +2,7 @@
 title: HowTo - Display Product Groups by Color on the Storefront
 description: Procedure to display a product group on Storefront.
 originalLink: https://documentation.spryker.com/v5/docs/howto-display-product-groups-by-color-on-the-storefront
+originalArticleId: de0155f8-9276-4133-8cc3-8963e7aee501
 redirect_from:
   - /v5/docs/howto-display-product-groups-by-color-on-the-storefront
   - /v5/docs/en/howto-display-product-groups-by-color-on-the-storefront
@@ -9,12 +10,12 @@ redirect_from:
 
  
 
-To enhance the visual shopping experience of your customers, you can use [product groups](https://documentation.spryker.com/docs/en/product-gropus). A product group is a group of products logically united by an attribute. You can create product groups, but there is no way to display them on the Storefront by default. This guide shows how to display a product group on the Storefront using the color attribute as an example. The behavior to be configured is described in [Product Groups Feature Overview](https://documentation.spryker.com/docs/en/product-groups-feature-overview).
+To enhance the visual shopping experience of your customers, you can use [product groups](https://documentation.spryker.com/v5/docs/en/product-gropus). A product group is a group of products logically united by an attribute. You can create product groups, but there is no way to display them on the Storefront by default. This guide shows how to display a product group on the Storefront using the color attribute as an example. The behavior to be configured is described in [Product Groups Feature Overview](https://documentation.spryker.com/v5/docs/en/product-groups-feature-overview).
 
  
 ## Prerequisites
 
-Before you start configuration, make sure that the [Product Groups feature is integrated](https://documentation.spryker.com/docs/en/product-group-feature-integration) into your project.
+Before you start configuration, make sure that the [Product Groups feature is integrated](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/product-group-feature-integration.html) into your project.
 
 ## Schema Extension
 

@@ -2,6 +2,7 @@
 title: FACT-Finder - Tracking
 description: Tracking information lets the FACT-Finder Search tool automatically learn from the user behavior.
 originalLink: https://documentation.spryker.com/v4/docs/search-factfinder-tracking
+originalArticleId: 9f685679-e68d-4922-8089-50c94cb568b8
 redirect_from:
   - /v4/docs/search-factfinder-tracking
   - /v4/docs/en/search-factfinder-tracking

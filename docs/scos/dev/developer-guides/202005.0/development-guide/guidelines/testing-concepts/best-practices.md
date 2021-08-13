@@ -1,6 +1,7 @@
 ---
 title: Best practices
 originalLink: https://documentation.spryker.com/v5/docs/best-practices
+originalArticleId: 24c61fe8-947d-4bb3-b557-745c3c3b72ae
 redirect_from:
   - /v5/docs/best-practices
   - /v5/docs/en/best-practices

@@ -2,6 +2,7 @@
 title: Product Lists
 description: The section is used to define product restrictions for product sets by adding them to an appropriate product list in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/product-lists
+originalArticleId: 688debe5-7a94-41d2-a42e-20c7cb48903c
 redirect_from:
   - /v5/docs/product-lists
   - /v5/docs/en/product-lists
@@ -26,6 +27,6 @@ If a specific product (or a list of products) is whitelisted, the shopper is abl
 ***
 **What's next?**
 
-* To learn how product lists are created, see [Creating a Product List](https://documentation.spryker.com/docs/en/creating-a-product-list).
-* To learn how the product lists are managed, see [Managing Product Lists](https://documentation.spryker.com/docs/en/managing-product-lists).
-* To learn more about the attributes you select and enter when creating or managing product lists, see [Product Lists: Reference Information](https://documentation.spryker.com/docs/en/product-lists-reference-information).
+* To learn how product lists are created, see [Creating a Product List](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-lists/creating-a-product-list.html).
+* To learn how the product lists are managed, see [Managing Product Lists](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-lists/managing-product-lists.html).
+* To learn more about the attributes you select and enter when creating or managing product lists, see [Product Lists: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-lists/references/product-lists-reference-information.html).

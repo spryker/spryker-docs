@@ -1,6 +1,7 @@
 ---
 title: Glue API- Checkout Feature Integration
 originalLink: https://documentation.spryker.com/v4/docs/checkout-feature-integration-201907
+originalArticleId: d91dd4ce-1029-4f1f-82e4-0ec95d3bd4ab
 redirect_from:
   - /v4/docs/checkout-feature-integration-201907
   - /v4/docs/en/checkout-feature-integration-201907
@@ -156,7 +157,7 @@ Make sure that the following endpoint is available: `http://glue.mysprykershop.c
 }
 ```
 
-For more details, see [Updating Payment Data](https://documentation.spryker.com/v4/docs/checking-out-purchases-and-getting-checkout-data-201907#updating-payment-data).
+For more details, see [Updating Payment Data](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/checking-out-purchases-and-getting-checkout-data.html#updating-payment-data).
 
 #### Configure mapping
 Mappers should be configured on the project level in order to map the data from the request to `QuoteTransfer`:

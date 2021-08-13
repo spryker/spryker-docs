@@ -2,6 +2,7 @@
 title: CRUD Functionality - Zed API
 description: Use the guide to learn how to configure filtering, pagination, sorting actions and adding or udpating resource items.
 originalLink: https://documentation.spryker.com/v5/docs/zed-api-crud-functionality
+originalArticleId: 539982e7-6cc7-4876-95c4-be988f158b83
 redirect_from:
   - /v5/docs/zed-api-crud-functionality
   - /v5/docs/en/zed-api-crud-functionality

@@ -2,6 +2,7 @@
 title: Shop Guide - Company Account
 description: Use the procedures to create and manage a company from the company account in the storefront.
 originalLink: https://documentation.spryker.com/v1/docs/company-account-shop-guide
+originalArticleId: 584b51ca-bbae-456d-91ee-118e5a7e3d9c
 redirect_from:
   - /v1/docs/company-account-shop-guide
   - /v1/docs/en/company-account-shop-guide
@@ -36,14 +37,14 @@ To create a Company in the web-shop, go to `/company/register` and register a co
 
 Fill in the required (*) fields to complete the registration.
 
-After the company has been registered, it should be approved in the [Back Office](https://documentation.spryker.com/v1/docs/managing-companies#approving-and-activating-a-company) to continue building the hierarchy.
+After the company has been registered, it should be approved in the [Back Office](/docs/scos/user/user-guides/201811.0/back-office-user-guide/company-account/managing-a-company-account/managing-companies.html#approving-and-activating-a-company) to continue building the hierarchy.
 
 Once the company is approved, a Company Administrator can go to `/company/overview` page and create (and then also edit and delete) users, addresses, roles and business roles.
 
 {% info_block infoBox %}
 A Company Administrator needs to log out and then log in to refresh the changes.
 {% endinfo_block %}
-Don't forget to check out the video tutorial on setting up [Company](/docs/scos/dev/features/201811.0/company-account-management/company-account-overview/company-account-overview.html) Structure in Spryker [B2B Demo Shop](https://documentation.spryker.com/v1/docs/demoshops#b2b-demo-shop):
+Don't forget to check out the video tutorial on setting up [Company](/docs/scos/dev/features/201811.0/company-account-management/company-account-overview/company-account-overview.html) Structure in Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/201811.0/demo-shops.html#b2b-demo-shop):
 
 <iframe src="https://fast.wistia.net/embed/iframe/qkdgkeannb" title="How to set up Company Structure in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="589" height="315"></iframe>
 <!-- Last review date: Mar 18, 2019 -->

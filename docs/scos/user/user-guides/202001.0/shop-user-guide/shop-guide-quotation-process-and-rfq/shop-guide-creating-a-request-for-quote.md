@@ -2,6 +2,7 @@
 title: Shop Guide - Creating a Request for Quote
 description: The guide provides the procedure to create a Request for Quote in the cart.
 originalLink: https://documentation.spryker.com/v4/docs/creating-rfq-shop-guide
+originalArticleId: 9b5f13ab-57bd-48f9-b78d-43c4a2fba7ff
 redirect_from:
   - /v4/docs/creating-rfq-shop-guide
   - /v4/docs/en/creating-rfq-shop-guide
@@ -24,10 +25,10 @@ To create a new RFQ:
 4. On the **Create Quote Request** page click **Submit Request**. This will create a Request for Quote in Draft status in your Customer Account.
 
 {% info_block infoBox %}
-See [Buyer Workflow](https://documentation.spryker.com/v4/docs/v4/quotation-process-rfq-feature-overview-201907#buyer-workflow
+See [Buyer Workflow](https://documentation.spryker.com/v4/docs/quotation-process-feature-overview#buyer-workflow
 {% endinfo_block %} for more information on the request statuses and the workflow.)
 {% info_block infoBox %}
-See [Reference Information](https://documentation.spryker.com/v4/docs/v4/rfq-reference-information-shop-guide
+See [Reference Information](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote-reference-information.html
 {% endinfo_block %} for details on UI elements in the **Quote Requests** page in the Customer Account.)
 ***
 **What's next?**

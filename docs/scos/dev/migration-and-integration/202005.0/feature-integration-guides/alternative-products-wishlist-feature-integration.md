@@ -2,6 +2,7 @@
 title: Alternative Products- Wishlist Feature Integration
 description: The guide walks you through the process of installing the Alternative products and Wishlist features into the project.
 originalLink: https://documentation.spryker.com/v5/docs/alternative-products-wishlist-feature-integration
+originalArticleId: ed4a5eb0-212f-4064-90f3-a734d7d885f1
 redirect_from:
   - /v5/docs/alternative-products-wishlist-feature-integration
   - /v5/docs/en/alternative-products-wishlist-feature-integration

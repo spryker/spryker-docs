@@ -2,6 +2,7 @@
 title: NPM error during installation
 description: Learn how to fix the NPM error during installation
 originalLink: https://documentation.spryker.com/v6/docs/npm-error-during-installation
+originalArticleId: 7a29cdd4-dd4e-4544-8960-11fbfca70ea4
 redirect_from:
   - /v6/docs/npm-error-during-installation
   - /v6/docs/en/npm-error-during-installation

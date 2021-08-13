@@ -2,6 +2,7 @@
 title: Deploy File Reference - 1.0
 description: Use this reference to create a deploy file for building environment for Spryker in Docker.
 originalLink: https://documentation.spryker.com/v4/docs/deploy-file-reference-10
+originalArticleId: 759044a2-1e3c-4c1c-8aa9-42854822f11a
 redirect_from:
   - /v4/docs/deploy-file-reference-10
   - /v4/docs/en/deploy-file-reference-10
@@ -44,7 +45,7 @@ This reference page describes version 1 of the Deploy file format. This is the n
 The topics below are organized alphabetically for top-level keys and sub-level keys to describe the hierarchy.
 
 You can use the extended YAML syntax according to [YAML™ Version 1.2](https://yaml.org/spec/1.2/spec.html).
-Find B2B/B2C deploy file examples for [development](https://documentation.spryker.com/v4/docs/modes-overview#development-mode) and [demo](https://documentation.spryker.com/v4/docs/modes-overview#demo-mode) environments in the table:
+Find B2B/B2C deploy file examples for [development](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/installation-guides/modes-overview.html#development-mode) and [demo](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/installation-guides/modes-overview.html#demo-mode) environments in the table:
 
 | Development mode | Demo mode |
 | --- | --- |

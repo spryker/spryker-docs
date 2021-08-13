@@ -2,6 +2,7 @@
 title: Creating a Product Option
 description: Use this procedure to create a product option along with its values in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/creating-a-product-option
+originalArticleId: 9d330e5c-aae8-4a45-96b2-f29de65bc2f1
 redirect_from:
   - /v5/docs/creating-a-product-option
   - /v5/docs/en/creating-a-product-option
@@ -65,6 +66,6 @@ If you know the name or the SKU of the product to which an option should be assi
 Each product abstract can have multiple product option groups assigned.
 ***
 **What's next?**
-Once the option is created, you may want to know how those options are managed. See [Managing Product Options](https://documentation.spryker.com/docs/en/managing-product-options) for more details. 
+Once the option is created, you may want to know how those options are managed. See [Managing Product Options](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-options/managing-product-options.html) for more details. 
 
-To learn more about the attributes that you see, enter and select while creating a product option, as well as if you are interested to see some examples of how the product options are used, see [Product Options: Reference Information](https://documentation.spryker.com/docs/en/product-options-reference-information).
+To learn more about the attributes that you see, enter and select while creating a product option, as well as if you are interested to see some examples of how the product options are used, see [Product Options: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/product-options/references/product-options-reference-information.html).

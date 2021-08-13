@@ -1,6 +1,7 @@
 ---
 title: Glue API- Company Account Feature Integration
 originalLink: https://documentation.spryker.com/v4/docs/glue-api-company-account-api-feature-integration
+originalArticleId: bc3d1e6d-c991-49a3-b1a5-c93c67409c48
 redirect_from:
   - /v4/docs/glue-api-company-account-api-feature-integration
   - /v4/docs/en/glue-api-company-account-api-feature-integration
@@ -17,7 +18,7 @@ To start the feature integration, overview and install the necessary features:
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
 | Spryker Core | 201907.0 | [Glue Application Feature Integration](https://documentation.spryker.com/v4/docs/glue-application-feature-integration-201907) |
-| Company account | 201907.0 | [Company Account](https://documentation.spryker.com/v4/docs/company-account-integration-201907) |
+| Company account | 201907.0 | [Company Account](https://documentation.spryker.com/v4/docs/company-account-feature-integration) |
 | Customer Account Management | 201907.0 | [Customer API](https://documentation.spryker.com/v4/docs/customer-account-management-feature-integration-glue-201907) |
 | Uuid generation console | 201907.0 | UUID Generation Console |
 

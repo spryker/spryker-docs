@@ -2,9 +2,12 @@
 title: Migration Guide - Cart
 description: Use the guide to update versions to the newer ones of the Cart module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cart
+originalArticleId: be41d310-b875-4753-b5f5-a01b8ae6b3f8
 redirect_from:
   - /2021080/docs/mg-cart
   - /2021080/docs/en/mg-cart
+  - /docs/mg-cart
+  - /docs/en/mg-cart
 ---
 
 ## Upgrading from Version 5.* to Version 7.0.0

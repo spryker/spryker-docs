@@ -2,6 +2,7 @@
 title: State Machine Cookbook - Part 2 - Building a State Machine
 description: This chapter will help you model a state machine using Spryker to manage your sale orders.
 originalLink: https://documentation.spryker.com/v3/docs/state-machine-cookbook-2
+originalArticleId: f045d39f-2555-46d9-82c3-209e6a9c9bfa
 redirect_from:
   - /v3/docs/state-machine-cookbook-2
   - /v3/docs/en/state-machine-cookbook-2

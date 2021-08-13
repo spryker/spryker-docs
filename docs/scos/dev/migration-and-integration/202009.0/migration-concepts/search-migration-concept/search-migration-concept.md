@@ -1,6 +1,7 @@
 ---
 title: Search migration concept
 originalLink: https://documentation.spryker.com/v6/docs/search-migration-concept
+originalArticleId: 25e4fc3f-653b-445c-b756-a3553356d0b0
 redirect_from:
   - /v6/docs/search-migration-concept
   - /v6/docs/en/search-migration-concept
@@ -172,15 +173,15 @@ That being done, the migration to Elasticsearch 7 from Elasticsearch 5 is comple
 ## Modules to upgrade
 The Search migration effort implies an upgrade of the following modules:
 
-* [Search](https://documentation.spryker.com/docs/mg-search#upgrading-from-version-8-9---to-version-8-10--)
-* [Console](https://documentation.spryker.com/docs/mg-console)
-* [CmsPageSearch](https://documentation.spryker.com/docs/mg-cmspagesearch#upgrading-from-version-2-1---to-version-2-2--)
-* [Catalog](https://documentation.spryker.com/docs/mg-catalog#upgrading-from-version-5-5--to-version-5-6-)
-* [ProductPageSearch](https://documentation.spryker.com/docs/migration-guide-productpagesearch#upgrading-from-version-3-11---to-version-3-12--)
-* [ProductReviewSearch](https://documentation.spryker.com/docs/migration-guide-productreviewsearch#upgrading-from-version-1-3---to-version-1-4--)
-* [ProductLabelSearch](https://documentation.spryker.com/docs/migration-guide-productlabelsearch#upgrading-from-version-1-2---to-version-1-3--)
-* [ProductSetPageSearch](https://documentation.spryker.com/docs/migration-guide-productsetpagesearch#upgrading-from-version-1-3---to-version-1-4--)
-* [CategoryPageSearch](https://documentation.spryker.com/docs/migration-guide-categorypagesearch#upgrading-from-version-1-4---to-version-1-5--)
-* [ProductNew](https://documentation.spryker.com/docs/migration-guide-productnew#upgarding-from-version-1-1--to-version-1-2-)
+* [Search](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--)
+* [Console](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-console.html)
+* [CmsPageSearch](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-cmspagesearch.html#upgrading-from-version-2-1---to-version-2-2--)
+* [Catalog](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-catalog.html#upgrading-from-version-5-5--to-version-5-6-)
+* [ProductPageSearch](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-productpagesearch.html#upgrading-from-version-3-11---to-version-3-12--)
+* [ProductReviewSearch](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-productreviewsearch.html#upgrading-from-version-1-3---to-version-1-4--)
+* [ProductLabelSearch](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-productlabelsearch.html#upgrading-from-version-1-2---to-version-1-3--)
+* [ProductSetPageSearch](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-productsetpagesearch.html#upgrading-from-version-1-3---to-version-1-4--)
+* [CategoryPageSearch](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-categorypagesearch.html#upgrading-from-version-1-4---to-version-1-5--)
+* [ProductNew](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-productnew.html#upgarding-from-version-1-1--to-version-1-2-)
 
 

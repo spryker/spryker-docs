@@ -1,9 +1,12 @@
 ---
 title: Contentserv
 originalLink: https://documentation.spryker.com/2021080/docs/contentserv
+originalArticleId: e9b4492b-7760-4f80-a314-64a41684c5dc
 redirect_from:
   - /2021080/docs/contentserv
   - /2021080/docs/en/contentserv
+  - /docs/contentserv
+  - /docs/en/contentserv
 ---
 
 ## Partner Information

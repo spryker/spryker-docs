@@ -1,12 +1,13 @@
 ---
 title: File details- product_stock.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-stockcsv
+originalArticleId: 81b6e4b9-5f36-46f2-85ec-c65f184b3e5d
 redirect_from:
   - /v6/docs/file-details-product-stockcsv
   - /v6/docs/en/file-details-product-stockcsv
 ---
 
-This article contains content of the **product_stock.csv** file to configure [Product Stock](https://documentation.spryker.com/docs/multiple-warehouse-stock) information on your Spryker Demo Shop.
+This article contains content of the **product_stock.csv** file to configure [Product Stock](https://documentation.spryker.com/v6/docs/multiple-warehouse-stock) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -24,8 +25,8 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-* [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
-* [warehouse.csv](https://documentation.spryker.com/docs/file-details-warehousecsv)
+* [product_concrete.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [warehouse.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
 
 ## Recommendation & Other Information
 

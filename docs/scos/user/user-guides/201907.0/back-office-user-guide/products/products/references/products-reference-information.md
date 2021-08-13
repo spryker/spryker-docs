@@ -2,6 +2,7 @@
 title: Products- Reference Information
 description: Use this section to learn more about attributes you use when working with products in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/products-reference-information
+originalArticleId: ac82aae5-0136-4184-b39c-4f476e02e1d8
 redirect_from:
   - /v3/docs/products-reference-information
   - /v3/docs/en/products-reference-information

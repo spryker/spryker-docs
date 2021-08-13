@@ -2,6 +2,7 @@
 title: Migration Guide - Security
 description: Use the guide to perform the Security part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-security
+originalArticleId: 6e9fbddb-18ea-43af-b6a7-80aeae5670c3
 redirect_from:
   - /v4/docs/migration-guide-security
   - /v4/docs/en/migration-guide-security

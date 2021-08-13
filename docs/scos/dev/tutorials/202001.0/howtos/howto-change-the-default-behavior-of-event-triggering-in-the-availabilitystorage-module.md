@@ -2,6 +2,7 @@
 title: HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage Module
 description: Learn how to change the default behavior of the event being triggered in the AvailabilityStorage module when the amount of product is changed.
 originalLink: https://documentation.spryker.com/v4/docs/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
+originalArticleId: 1c46f6e7-1a16-4e70-b6d2-923fefe33da6
 redirect_from:
   - /v4/docs/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
   - /v4/docs/en/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module

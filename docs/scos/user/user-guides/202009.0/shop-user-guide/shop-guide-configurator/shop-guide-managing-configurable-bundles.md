@@ -2,6 +2,7 @@
 title: Shop guide - Managing configurable bundles
 description: In this article, you can find instructions on managing the Configurable Bundle in the Spryker Storefront.
 originalLink: https://documentation.spryker.com/v6/docs/shop-guide-managing-configurable-bundles
+originalArticleId: a1382ba9-6b3d-4bb5-8530-027ec6a0e2c7
 redirect_from:
   - /v6/docs/shop-guide-managing-configurable-bundles
   - /v6/docs/en/shop-guide-managing-configurable-bundles
@@ -35,6 +36,6 @@ Once the slot is filled, it is indicated in the UI:
 
  {% info_block warningBox "Note" %}
 
-You must be logged in to a company account to be able to add the configured bundle to cart. The corresponding [company role permissions](https://documentation.spryker.com/docs/company-roles-shop-guide) (Add item to cart) should also be applied to your user.
+You must be logged in to a company account to be able to add the configured bundle to cart. The corresponding [company role permissions](https://documentation.spryker.com/v6/docs/company-user-roles-and-permissions-overview) (Add item to cart) should also be applied to your user.
 
 {% endinfo_block %}

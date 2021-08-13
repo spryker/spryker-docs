@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Boosting Cart Based Search
 originalLink: https://documentation.spryker.com/v3/docs/boosting-cart-based-search
+originalArticleId: 25fe5b75-7da4-4b18-a00b-b72d89a7cce6
 redirect_from:
   - /v3/docs/boosting-cart-based-search
   - /v3/docs/en/boosting-cart-based-search

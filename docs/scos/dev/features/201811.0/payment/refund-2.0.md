@@ -2,6 +2,7 @@
 title: Refund 2.0
 description: The article describes the methods used to calculate the refund, as well as ways of using and extending the Refund module.
 originalLink: https://documentation.spryker.com/v1/docs/refund-2-0
+originalArticleId: 1c6e9cef-6fc1-4555-aec9-db57dd1ec452
 redirect_from:
   - /v1/docs/refund-2-0
   - /v1/docs/en/refund-2-0

@@ -1,9 +1,12 @@
 ---
 title: Release Notes - January - 2018
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-january-2018
+originalArticleId: 9e3cd388-4fc6-4b2a-921e-3bd6d7cf1144
 redirect_from:
   - /2021080/docs/release-notes-january-2018
   - /2021080/docs/en/release-notes-january-2018
+  - /docs/release-notes-january-2018
+  - /docs/en/release-notes-january-2018
 ---
 
 {% info_block warningBox %}
@@ -222,6 +225,6 @@ After Log minor 3.4.0, a project could get unexpected behavior if methods were e
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Coding Best Practices](/docs/scos/dev/developer-guides/202001.0/development-guide/best-practices/coding-best-practices.html)
+* [Coding Best Practices](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/best-practices/coding-best-practices.html)
 
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

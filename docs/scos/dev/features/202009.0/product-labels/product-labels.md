@@ -2,6 +2,7 @@
 title: Product Labels
 description: With the feature, you can draw your customers' attention to specific products in your shop.
 originalLink: https://documentation.spryker.com/v6/docs/product-label
+originalArticleId: b2d7d9cd-15c4-4cb1-a782-e1ad4d913f45
 redirect_from:
   - /v6/docs/product-label
   - /v6/docs/en/product-label

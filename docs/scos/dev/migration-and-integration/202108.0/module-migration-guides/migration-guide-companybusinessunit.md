@@ -1,9 +1,12 @@
 ---
 title: Migration Guide - CompanyBusinessUnit
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-companybusinessunit
+originalArticleId: 1b4bea05-ed20-43e9-92fc-321857feb66d
 redirect_from:
   - /2021080/docs/migration-guide-companybusinessunit
   - /2021080/docs/en/migration-guide-companybusinessunit
+  - /docs/migration-guide-companybusinessunit
+  - /docs/en/migration-guide-companybusinessunit
 ---
 
 ## Upgrading from Version 1* to Version 2*

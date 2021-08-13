@@ -2,6 +2,7 @@
 title: Tutorial - Console Commands
 description: Use the guide to create and use a new console command.
 originalLink: https://documentation.spryker.com/v6/docs/t-console-commands
+originalArticleId: bf1721e1-907b-4f36-8c9c-41a651ae99e5
 redirect_from:
   - /v6/docs/t-console-commands
   - /v6/docs/en/t-console-commands

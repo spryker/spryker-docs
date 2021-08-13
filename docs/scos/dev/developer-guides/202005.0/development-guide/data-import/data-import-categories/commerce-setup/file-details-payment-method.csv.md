@@ -1,12 +1,13 @@
 ---
 title: File details- payment_method.csv
 originalLink: https://documentation.spryker.com/v5/docs/file-details-payment-methodcsv
+originalArticleId: fc831614-7a67-49fe-b005-d54f5f3b0975
 redirect_from:
   - /v5/docs/file-details-payment-methodcsv
   - /v5/docs/en/file-details-payment-methodcsv
 ---
 
-This article contains content of the **payment_method.csv** file to configure [Payment Method](https://documentation.spryker.com/docs/en/payment) information on your Spryker Demo Shop.
+This article contains content of the **payment_method.csv** file to configure [Payment Method](/docs/scos/dev/features/202005.0/payment/payment.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

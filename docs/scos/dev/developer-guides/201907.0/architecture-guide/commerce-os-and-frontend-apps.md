@@ -2,6 +2,7 @@
 title: Commerce OS and Frontend Apps
 description: This article describes the two applications in Spryker- front end and back end.
 originalLink: https://documentation.spryker.com/v3/docs/commerce-os-and-frontend-apps
+originalArticleId: fc54d424-0ebb-449c-9689-fbebf8a4fc48
 redirect_from:
   - /v3/docs/commerce-os-and-frontend-apps
   - /v3/docs/en/commerce-os-and-frontend-apps
@@ -47,7 +48,7 @@ However, there are some projects where Elasticsearch is used not only as a searc
 
 With data separation comes the question: how to sync data between both applications and make sure that the Storage is always up-to-date? Spryker Commerce OS comes with a very fast solution that solves this challenge internally and out-of-the-box. It is called Publish & Sync. Publish & Sync watches the data models and objects in the database and then triggers an update once the data object is modified, added to, or deleted from the database. This triggers an update to the Storage and Search directly and almost instantly, and ensures data is synced between the database, the Storage and Search all the time.
 
-For more details on how Publish & Sync works, see [Publish and Synchronization ](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html).
+For more details on how Publish & Sync works, see [Publish and Synchronization ](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 ## Connecting Front-end with Commerce OS: the Client
 
@@ -77,5 +78,5 @@ Several operations in the Spryker Commerce OS need schedules, e.g. syncing data 
 
 ## Where to go from here?
 
-* If you would like to know more about the application layers and how various functionality is encapsulated in modules, see [Modularity and Shop Suite](/docs/scos/dev/developer-guides/202001.0/architecture-guide/modularity-and-shop-suite.html).
-* If you want to know more about the building blocks of Spryker, see [Programming Concepts](/docs/scos/dev/developer-guides/202001.0/architecture-guide/programming-concepts.html).
+* If you would like to know more about the application layers and how various functionality is encapsulated in modules, see [Modularity and Shop Suite](/docs/scos/dev/developer-guides/201907.0/architecture-guide/modularity-and-shop-suite.html).
+* If you want to know more about the building blocks of Spryker, see [Programming Concepts](/docs/scos/dev/developer-guides/201907.0/architecture-guide/programming-concepts.html).

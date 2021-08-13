@@ -2,6 +2,7 @@
 title: Spryker in Docker HowTos
 description: Spryker in Docker HowTos section provides tutorials related to running Spryker in Docker.
 originalLink: https://documentation.spryker.com/v3/docs/about-spryker-in-docker-howtos
+originalArticleId: bb599b6b-11b7-42f1-84b2-de53cf2b4392
 redirect_from:
   - /v3/docs/about-spryker-in-docker-howtos
   - /v3/docs/en/about-spryker-in-docker-howtos

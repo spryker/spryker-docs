@@ -1,6 +1,7 @@
 ---
 title: Managing Wishlists
 originalLink: https://documentation.spryker.com/v2/docs/managing-wishlists
+originalArticleId: 1045e309-59a4-4ab6-bca5-9a06c75925f1
 redirect_from:
   - /v2/docs/managing-wishlists
   - /v2/docs/en/managing-wishlists
@@ -15,7 +16,7 @@ Since wishlists are available for registered users only, the endpoints provided 
 {% endinfo_block %}.)
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](/docs/scos/dev/migration-and-integration/201903.0/feature-integration-guides/glue-api/wishlist-api-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](/docs/scos/dev/features/201903.0/wishlist/wishlist.html-api-feature-integration-201903).
 
 ## Creating a Wishlist
 To create a wishlist for a registered user, you need to send a POST request to the following endpoint:

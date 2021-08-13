@@ -2,6 +2,7 @@
 title: Product bundles + return management feature integration
 description: This guide provides step-by-step instructions on integrating Product Bundles + Return Management feature into your project.
 originalLink: https://documentation.spryker.com/v6/docs/product-bundles-return-management-feature-integration
+originalArticleId: 167e86ef-ad60-4fbb-8401-ba567f272293
 redirect_from:
   - /v6/docs/product-bundles-return-management-feature-integration
   - /v6/docs/en/product-bundles-return-management-feature-integration

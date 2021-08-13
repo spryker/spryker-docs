@@ -2,6 +2,7 @@
 title: Product Labels
 description: Use the Product Labels section to highlight specific products in your online store by adding a prodcut label in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/product-labels
+originalArticleId: 131ff09e-ce1b-4fff-bd6d-a38f032ec850
 redirect_from:
   - /v5/docs/product-labels
   - /v5/docs/en/product-labels
@@ -15,8 +16,8 @@ Labels are mapped to products to highlight them in the shop. Customers can also 
 ***
 **What's next?**
 Learn how the product labels are created and managed in the following articles:
-* [Creating a Product Label](https://documentation.spryker.com/docs/en/creating-a-product-label)
-* [Managing Product Labels](https://documentation.spryker.com/docs/en/managing-product-labels)
-* [Prioritizing Labels](https://documentation.spryker.com/docs/en/prioritizing-labels)
+* [Creating a Product Label](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-labels/creating-a-product-label.html)
+* [Managing Product Labels](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-labels/managing-product-labels.html)
+* [Prioritizing Labels](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-labels/prioritizing-labels.html)
 
-To learn more about the attributes you select and enter while creating or managing product labels, see [Product Labels: Reference Information](https://documentation.spryker.com/docs/en/product-labels-reference-information).
+To learn more about the attributes you select and enter while creating or managing product labels, see [Product Labels: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-labels/references/product-labels-reference-information.html).

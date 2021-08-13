@@ -2,6 +2,7 @@
 title: Creating and Configuring Zed Tables
 description: This article helps you to get started on working with tables.
 originalLink: https://documentation.spryker.com/v6/docs/t-working-tables
+originalArticleId: b649565f-7312-4687-84ff-09a51194ef2c
 redirect_from:
   - /v6/docs/t-working-tables
   - /v6/docs/en/t-working-tables
@@ -11,11 +12,11 @@ Spryker has a dedicated component to help you build tables for the Zed UI.
 
 This article will help you get started on working with tables:
 
-* [Creating a New Table](https://documentation.spryker.com/docs/t-working-tables#creating-a-new-table)
-* [Configure the Table](https://documentation.spryker.com/docs/t-working-tables#configure-the-table)
-* [Prepare the Data](https://documentation.spryker.com/docs/t-working-tables#prepare-the-data)
-* [Render the Table](https://documentation.spryker.com/docs/t-working-tables#render-the-table)
-* [Download the Table as CSV](https://documentation.spryker.com/docs/t-working-tables#dwonload-the-table-as-csv)
+* [Creating a New Table](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/zed-ui-tables/creating-and-configuring-zed-tables.html#creating-a-new-table)
+* [Configure the Table](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/zed-ui-tables/creating-and-configuring-zed-tables.html#configure-the-table)
+* [Prepare the Data](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/zed-ui-tables/creating-and-configuring-zed-tables.html#prepare-the-data)
+* [Render the Table](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/zed-ui-tables/creating-and-configuring-zed-tables.html#render-the-table)
+* [Download the Table as CSV](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/zed-ui-tables/creating-and-configuring-zed-tables.html#dwonload-the-table-as-csv)
 
 ## Creating a New Table
 To get started defining the new table, create a new class in your module, under the `/Communication/Table/` folder that extends the `AbstractTable` class.

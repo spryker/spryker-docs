@@ -2,6 +2,7 @@
 title: Implementing Invoice Payment in Front End
 description: This article describes implementing invoice payment in front end.
 originalLink: https://documentation.spryker.com/v4/docs/ht-invoice-payment-fe
+originalArticleId: bbb272bb-f742-414d-8d96-d985c1e766c9
 redirect_from:
   - /v4/docs/ht-invoice-payment-fe
   - /v4/docs/en/ht-invoice-payment-fe

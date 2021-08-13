@@ -2,6 +2,7 @@
 title: Testing Concepts
 description: Testing your project is one of the best ways to ensure that your software functions as it is supposed to. The role of testing is to find bugs during the early stages of development to minimize risks.
 originalLink: https://documentation.spryker.com/v2/docs/testing-concepts
+originalArticleId: 34136a69-580d-4eed-ac46-921b8afba1d1
 redirect_from:
   - /v2/docs/testing-concepts
   - /v2/docs/en/testing-concepts

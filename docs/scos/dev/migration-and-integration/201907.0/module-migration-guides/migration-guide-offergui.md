@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - OfferGui
 originalLink: https://documentation.spryker.com/v3/docs/mg-offer-gui
+originalArticleId: a5ccf505-5188-4aed-9d64-e1c5ab3d7eb9
 redirect_from:
   - /v3/docs/mg-offer-gui
   - /v3/docs/en/mg-offer-gui

@@ -2,6 +2,7 @@
 title: B2C API React Example
 description: B2C API React Example is a single-page web application that demonstrates the use of Spryker Glue REST API in B2C scenarios.
 originalLink: https://documentation.spryker.com/v5/docs/b2c-api-react-example
+originalArticleId: 3dc8f8fa-aa4c-435b-8a2b-f5e5d2c572a0
 redirect_from:
   - /v5/docs/b2c-api-react-example
   - /v5/docs/en/b2c-api-react-example
@@ -34,7 +35,7 @@ The Demo shop has been built using and demonstrates the use of the endpoints and
 | Product Tax Sets API | [Retrieving Product Information](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html) |
 | Product Image Sets API | [Retrieving Product Information](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html) |
 | Product Labels API | [Accessing Product Labels](/docs/scos/dev/glue-api-guides/202005.0/managing-products/accessing-product-labels.html) |
-| Login API | [Authentication and Authorization](https://documentation.spryker.com/docs/authentication-and-authorization) |
+| Login API | [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html) |
 | Customer API | [Managing Customers](/docs/scos/dev/glue-api-guides/202005.0/managing-customers.html) |
 | Cart API | [Managing Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts.html) |
 | Checkout API | [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/202005.0/checking-out-purchases-and-getting-checkout-data.html) |

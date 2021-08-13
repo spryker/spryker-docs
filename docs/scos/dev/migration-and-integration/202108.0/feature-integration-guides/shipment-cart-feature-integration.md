@@ -2,9 +2,12 @@
 title: Shipment + cart feature integration
 description: This guide provides step-by-step instruction on integrating Shipment + Cart feature into the Spryker-based project.
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-cart-feature-integration
+originalArticleId: a5618db0-4ee1-462e-8165-aedc13881e07
 redirect_from:
   - /2021080/docs/shipment-cart-feature-integration
   - /2021080/docs/en/shipment-cart-feature-integration
+  - /docs/shipment-cart-feature-integration
+  - /docs/en/shipment-cart-feature-integration
 ---
 
 ## Install Feature Core

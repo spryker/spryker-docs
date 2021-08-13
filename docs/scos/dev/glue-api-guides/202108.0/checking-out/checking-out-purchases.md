@@ -2,24 +2,27 @@
 title: Checking out purchases
 description: Learn how to check out purchases via Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/checking-out-purchases
+originalArticleId: 6da60ad5-47a7-4554-a7e7-d662af2295dd
 redirect_from:
   - /2021080/docs/checking-out-purchases
   - /2021080/docs/en/checking-out-purchases
+  - /docs/checking-out-purchases
+  - /docs/en/checking-out-purchases
 ---
 
 This endpoint allows finalizing the checkout process by placing an order. 
 
-After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Thus, use the endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](https://documentation.spryker.com/docs/submitting-checkout-data).  
+After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Thus, use the endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/submitting-checkout-data.html).  
 
 The endpoint also provides information on whether it is necessary to redirect the user to a third-party page to complete the payment.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Checkout feature integration](https://documentation.spryker.com/docs/glue-api-checkout-feature-integration)
-* [Glue API: Shipment feature integration](https://documentation.spryker.com/docs/glue-api-shipment-feature-integration)
-* [Glue API: Configurable Bundle feature integration](https://documentation.spryker.com/docs/glue-api-configurable-bundle-feature-integration)
-* [Glue API: Configurable Bundle + Cart feature integration](https://documentation.spryker.com/docs/glue-api-configurable-bundle-cart-feature-integration)
-* [Glue API: Configurable Bundle + Product feature integration](https://documentation.spryker.com/docs/glue-api-configurable-bundle-product-feature-integration)
+* [Glue API: Checkout feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html)
+* [Glue API: Shipment feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html)
+* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html)
+* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
+* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 
 
@@ -41,8 +44,8 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](https://documentation.spryker.com/docs/managing-guest-carts). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when checking out a [cart of registered user](https://documentation.spryker.com/docs/managing-carts-of-registered-users). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
 
 
@@ -332,14 +335,14 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 | Attribute                                                    | Type   | Required | Description                                                  |
 | :----------------------------------------------------------- | :----- | :------- | :----------------------------------------------------------- |
-| customer                                                     | Object | ✓        | A list of attributes describing the [customer](https://documentation.spryker.com/docs/en/customers) to submit checkout data of. |
+| customer                                                     | Object | ✓        | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html) to submit checkout data of. |
 | customer.salutation                                          | String | ✓        | Salutation to use when addressing the customer.              |
 | customer.email                                               | String | ✓        | Customer's email address.                                    |
 | customer.firstName                                           | String | ✓        | Customer's first name.                                       |
 | customer.lastName                                            | String | ✓        | Customer's last name.                                        |
-| idCart                                                       | String | ✓        | Unique identifier of the customer's [cart](https://documentation.spryker.com/docs/en/managing-carts-of-registered-users) to check out. |
-| billingAddress                                               | Object | ✓        | Customer's billing [address](https://documentation.spryker.com/docs/customer-addresses). |
-| billingAddress.id                                            | String |          | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](https://documentation.spryker.com/docs/customer-addresses#retrieve-a-customer-s-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| idCart                                                       | String | ✓        | Unique identifier of the customer's [cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) to check out. |
+| billingAddress                                               | Object | ✓        | Customer's billing [address](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-addresses.html). |
+| billingAddress.id                                            | String |          | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-addresses.html#retrieve-a-customer-s-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | billingAddress.salutation                                    | String | ✓        | Salutation to use when addressing the customer.              |
 | billingAddress.email                                         | String | ✓        | Customer's email address.                                    |
 | billingAddress.firstName                                     | String | ✓        | Customer's first name.                                       |
@@ -357,9 +360,9 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 | payments.paymentProviderName                                 | String | ✓        | Name of the payment provider for this order.                 |
 | shipment                                                     | Object | ✓        | A list of attributes describing the shipping method selected for this order. |
 | shipment.items                                               | object | ✓        | A list of items that are to be delivered to the shipping address defined in this shipment. |
-| shipment.shippingAddress                                     | Object | ✓        | Customer's shipping [address](https://documentation.spryker.com/docs/customer-addresses) for this shipment. |
-| shipment.shippingAddress.id | String |          | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](https://documentation.spryker.com/docs/customer-addresses#retrieve-a-customer-s-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| shipment.shippingAddress.idCompanyBusinessUnitAddress        | String |          | A hyphenated alphanumeric value of an existing company business unit address. To get it, [retrieve a company business unit](https://documentation.spryker.com/docs/retrieving-business-units#retrieve-a-company-business-unit) with the `company-business-unit-addresses` resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| shipment.shippingAddress                                     | Object | ✓        | Customer's shipping [address](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-addresses.html) for this shipment. |
+| shipment.shippingAddress.id | String |          | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-addresses.html#retrieve-a-customer-s-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| shipment.shippingAddress.idCompanyBusinessUnitAddress        | String |          | A hyphenated alphanumeric value of an existing company business unit address. To get it, [retrieve a company business unit](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/retrieving-business-units.html#retrieve-a-company-business-unit) with the `company-business-unit-addresses` resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | shipment.shippingAddress.salutation                          | String | ✓        | Salutation to use when addressing the customer.              |
 | shipment.shippingAddress.email                               | String | ✓        | Customer's email address.                                    |
 | shipment.shippingAddress.firstName                           | String | ✓        | Customer's first name.                                       |
@@ -1246,7 +1249,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | Attribute | Type | Description |
 | --- | --- | --- |
 | orderReference | String | Unique identifier of the order. |
-| redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](https://documentation.spryker.com/docs/updating-payment-data#update-payment-data). If the value is `null` or empty, no additional verification is reuiqred. |
+| redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/updating-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is reuiqred. |
 | isExternalRedirect | Boolean | Defines if the customer is redirected to an external URL. |
 
 | Included resource | Attribute         | Type | Description                                 |
@@ -1275,7 +1278,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | order-shipments       | country               | String   | Specifies the country.                          |
 | order-shipments       | iso2Code              | String   | ISO 2-Letter Country Code to use.               |
 
-For the attributes of other included resources, see [Retrieve an order](https://documentation.spryker.com/docs/retrieving-orders#retrieve-an-order)
+For the attributes of other included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-orders.html#retrieve-an-order)
 
 
 
@@ -1295,5 +1298,5 @@ For the attributes of other included resources, see [Retrieve an order](https://
 
 ## Next steps
 
-* [Updating payment data](https://documentation.spryker.com/docs/updating-payment-data)
+* [Updating payment data](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/updating-payment-data.html)
 

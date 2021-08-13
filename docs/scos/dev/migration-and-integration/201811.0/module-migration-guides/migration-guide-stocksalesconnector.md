@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - StockSalesConnector
 originalLink: https://documentation.spryker.com/v1/docs/mg-stock-sales-connector
+originalArticleId: 2d994093-8fa3-4268-8bba-4c277d411237
 redirect_from:
   - /v1/docs/mg-stock-sales-connector
   - /v1/docs/en/mg-stock-sales-connector

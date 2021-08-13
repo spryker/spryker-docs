@@ -1,9 +1,12 @@
 ---
 title: Making Your Spryker Shop Secure
 originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure
+originalArticleId: 892e11f7-ef46-47ed-aba2-7efc2ea83c60
 redirect_from:
   - /2021080/docs/making-your-spryker-shop-secure
   - /2021080/docs/en/making-your-spryker-shop-secure
+  - /docs/making-your-spryker-shop-secure
+  - /docs/en/making-your-spryker-shop-secure
 ---
 
 Digital security is critical in our modern digital world, especially for successful businesses. Therefore, Spryker is advising to go through the following security actions to ensure the safety of your customers’ and partners’ data.

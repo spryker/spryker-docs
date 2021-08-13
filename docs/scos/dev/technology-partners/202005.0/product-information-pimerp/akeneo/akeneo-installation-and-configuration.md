@@ -2,6 +2,7 @@
 title: Akeneo - Installation and Configuration
 description: This article provides installation and configuration details for the Akeneo module in the Spryker-based project.
 originalLink: https://documentation.spryker.com/v5/docs/akeneo-installation-configuration
+originalArticleId: 12ad7c8f-cfd1-4cb5-9120-60d4bccf5657
 redirect_from:
   - /v5/docs/akeneo-installation-configuration
   - /v5/docs/en/akeneo-installation-configuration
@@ -356,7 +357,7 @@ class ProductAbstractStep extends ProductAbstractHydratorStep
 }
 ```
 
-You can change default data mappers and translators for overriding keys or values. By default, Akeneo has a list of predefined mappers, translators and validators for each  import type, but it can be adjusted to meet your requirements. Check the [middleware documentation](https://documentation.spryker.com/docs/en/spryker-middleware) for more details.
+You can change default data mappers and translators for overriding keys or values. By default, Akeneo has a list of predefined mappers, translators and validators for each  import type, but it can be adjusted to meet your requirements. Check the [middleware documentation](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-ingestion/spryker-middleware.html) for more details.
 
 You also need to take care of that data that is to be written to the database. Two approaches can be used for that.
 

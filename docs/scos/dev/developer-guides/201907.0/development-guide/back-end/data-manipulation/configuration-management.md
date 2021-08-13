@@ -2,6 +2,7 @@
 title: Configuration Management
 description: There are several files that allow you to add the needed configuration for the exact use-case you want.
 originalLink: https://documentation.spryker.com/v3/docs/configuration-management
+originalArticleId: 32749db9-bf1a-4abe-8460-8e6cda30240d
 redirect_from:
   - /v3/docs/configuration-management
   - /v3/docs/en/configuration-management
@@ -58,8 +59,8 @@ There are some other configuration files for specific purposes.
 
 |       Filename        |                           Purpose                            |
 | :-------------------: | :----------------------------------------------------------: |
-| `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing you need to explicitly pass the environment to all [command line calls](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html). |
-|   `default_store.php`   | This file returns the default store which is used for all [command line calls](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html). |
+| `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing you need to explicitly pass the environment to all [command line calls](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html). |
+|   `default_store.php`   | This file returns the default store which is used for all [command line calls](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html). |
 |      `stores.php`       | This file contains an array with all stores and their configuration like locale, date format, currency, etc. |
 
 ## How to Retrieve the Configuration
@@ -172,4 +173,4 @@ You might use the following definitions to generate related code:
 
 * `console spryk:run AddSharedConstantsInterface`
     * Adds a Shared Constants Interface
-See the [Spryk](https://documentation.spryker.com/v2/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/features/201907.0/sdk/spryk-code-generator.html) documentation for details.

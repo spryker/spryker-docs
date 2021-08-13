@@ -2,6 +2,7 @@
 title: Cart Notes
 description: Cart Notes allows customers to leave additional information regarding their purchase for a Store Administrator once an item is put in the cart.
 originalLink: https://documentation.spryker.com/v3/docs/cart-notes
+originalArticleId: d9e60b67-53d6-45ca-98bb-906b431edb18
 redirect_from:
   - /v3/docs/cart-notes
   - /v3/docs/en/cart-notes

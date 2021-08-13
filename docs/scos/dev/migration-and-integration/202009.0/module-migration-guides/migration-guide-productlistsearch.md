@@ -2,6 +2,7 @@
 title: Migration Guide - ProductListSearch
 description: Use the guide to learn how to update the ProductListSearch module to a newer version.
 originalLink: https://documentation.spryker.com/v6/docs/mg-product-list-search
+originalArticleId: be66445d-b336-442a-9969-1fea71fe5f58
 redirect_from:
   - /v6/docs/mg-product-list-search
   - /v6/docs/en/mg-product-list-search

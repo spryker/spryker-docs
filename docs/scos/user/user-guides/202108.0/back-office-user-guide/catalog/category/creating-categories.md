@@ -2,9 +2,12 @@
 title: Creating categories
 description: The guide describes procedures on how to create a category, add images and products, select a template in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-categories
+originalArticleId: b0f46c55-2786-4ab2-acee-594502fff3e1
 redirect_from:
   - /2021080/docs/creating-categories
   - /2021080/docs/en/creating-categories
+  - /docs/creating-categories
+  - /docs/en/creating-categories
 ---
 
 This topic describes how to create categories.
@@ -125,10 +128,10 @@ Select the *Sub Category grid* template to create a multilevel category structur
 
 
 :::(Info)
-To use a template with slots, make sure the [Templates and slots](https://documentation.spryker.com/docs/cms-feature-integration-guide) feature is integrated into your project.
+To use a template with slots, make sure the [Templates and slots](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/cms-feature-integration.html) feature is integrated into your project.
 :::
 
-Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](https://documentation.spryker.com/docs/templates-slots-feature-overview) for more details.
+Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/templates-and-slots-overview.html) for more details.
 
 **Tips & tricks**
 
@@ -138,4 +141,4 @@ The same products can be assigned to multiple categories.
 
 ## Next іteps
 
-[Assign product to categories](https://documentation.spryker.com/2021080/docs/assigning-products-to-categories)
+[Assign product to categories](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/assigning-products-to-categories.html)

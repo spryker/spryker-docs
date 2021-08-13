@@ -2,6 +2,7 @@
 title: Search Widget for Concrete Products Feature Integration
 description: The guide walks you through the process of installing the Search Widget for Concrete Products feature in your project.
 originalLink: https://documentation.spryker.com/v3/docs/search-widget-for-concrete-products-integration
+originalArticleId: ec39fc88-3424-4871-9861-b66203aa0cce
 redirect_from:
   - /v3/docs/search-widget-for-concrete-products-integration
   - /v3/docs/en/search-widget-for-concrete-products-integration

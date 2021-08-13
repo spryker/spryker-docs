@@ -2,6 +2,7 @@
 title: Making the Legacy Demoshop Compatible with the Atomic Frontend
 description: This guide provides step-by-step instructions on how to make the Legacy Demoshop compatible with the Atomic Frontend
 originalLink: https://documentation.spryker.com/v6/docs/demoshop-with-atomic-frontend
+originalArticleId: 820c0f4e-6678-4d99-b70d-baf98e41fdce
 redirect_from:
   - /v6/docs/demoshop-with-atomic-frontend
   - /v6/docs/en/demoshop-with-atomic-frontend

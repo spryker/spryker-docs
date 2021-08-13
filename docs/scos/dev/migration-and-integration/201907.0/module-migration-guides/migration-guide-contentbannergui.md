@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ContentBannerGui
 originalLink: https://documentation.spryker.com/v3/docs/mg-contentbannergui-201907
+originalArticleId: 3dcd34c4-c205-44ce-bb6d-87128b98cd66
 redirect_from:
   - /v3/docs/mg-contentbannergui-201907
   - /v3/docs/en/mg-contentbannergui-201907

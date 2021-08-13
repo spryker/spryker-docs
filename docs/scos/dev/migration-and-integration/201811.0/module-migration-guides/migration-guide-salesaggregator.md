@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - SalesAggregator
 originalLink: https://documentation.spryker.com/v1/docs/mg-sales-aggregator
+originalArticleId: 5d80bacb-26db-4c15-a0c2-7765a776630f
 redirect_from:
   - /v1/docs/mg-sales-aggregator
   - /v1/docs/en/mg-sales-aggregator

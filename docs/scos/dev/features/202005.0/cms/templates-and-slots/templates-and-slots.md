@@ -2,12 +2,13 @@
 title: Templates & Slots
 description: Templates with slots is a powerful way to manage the content of your shop.
 originalLink: https://documentation.spryker.com/v5/docs/templates-slots
+originalArticleId: 7d14ab25-279a-45f8-87dc-b254f1ff7ed0
 redirect_from:
   - /v5/docs/templates-slots
   - /v5/docs/en/templates-slots
 ---
 
-Incorporate a coherent and flexible way of managing content with the help of templates with slots. Create templates with slots and apply them to any page to break it down into slots. Slots are used to embed content from different sources with the help of [Slot Widget](https://documentation.spryker.com/v5/docs/en/templates-slots-feature-overview#slot-widget). Embed [CMS blocks](https://documentation.spryker.comv5//docs/en/cms-block) by creating content in the native [WYSIWYG Editor](https://documentation.spryker.com/v5/docs/en/wysiwyg-editor) or select a third-party solution from a number of available content management platforms.
+Incorporate a coherent and flexible way of managing content with the help of templates with slots. Create templates with slots and apply them to any page to break it down into slots. Slots are used to embed content from different sources with the help of [Slot Widget](/docs/scos/dev/features/202005.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#slot-widget). Embed [CMS blocks](https://documentation.spryker.comv5//docs/en/cms-block) by creating content in the native [WYSIWYG Editor](/docs/scos/dev/features/202005.0/cms/wysiwyg-editor.html) or select a third-party solution from a number of available content management platforms.
 
 With the functionality the feature provides, you can benefit from using a third-party CMS editor that suits your needs best and make the process of creation and implementation of content easier.
 

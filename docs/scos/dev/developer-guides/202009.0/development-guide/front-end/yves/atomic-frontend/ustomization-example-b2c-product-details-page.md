@@ -2,12 +2,13 @@
 title: Сustomization example - B2C Product Details page
 description: Customize any front–end element in Spryker by adjusting a respective SCSS file.
 originalLink: https://documentation.spryker.com/v6/docs/сustomization-example-b2c-product-details-page
+originalArticleId: 04cdc424-b4eb-489d-b60b-5bd64c09017e
 redirect_from:
   - /v6/docs/сustomization-example-b2c-product-details-page
   - /v6/docs/en/сustomization-example-b2c-product-details-page
 ---
 
-In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [B2C Demo Shop](https://documentation.spryker.com/docs/b2c-suite#b2c-demo-shop) into separate elements with their respective style files. To customize a particular element, you adjust the code in the respective style file. 
+In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [B2C Demo Shop](/docs/scos/user/intro-to-spryker/202009.0/b2c-suite.html#b2c-demo-shop) into separate elements with their respective style files. To customize a particular element, you adjust the code in the respective style file. 
 
 You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/en/acer-aspire-s7-134) in our B2C Demo Shop.
 

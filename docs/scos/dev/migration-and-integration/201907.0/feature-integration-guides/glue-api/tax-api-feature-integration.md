@@ -2,6 +2,7 @@
 title: Tax API Feature Integration
 description: This guide walks you through the process of installing and configuring the Product Tax Sets API feature in your project.
 originalLink: https://documentation.spryker.com/v3/docs/tax-api-feature-integration-201907
+originalArticleId: 48705764-af9f-4d16-be2f-6ba995e10ee1
 redirect_from:
   - /v3/docs/tax-api-feature-integration-201907
   - /v3/docs/en/tax-api-feature-integration-201907
@@ -136,7 +137,7 @@ Make sure that the following endpoint is available:</br>`http://mysprykershop.co
 
 **See also:**
 
-* [Tax Management](/docs/scos/dev/features/202001.0/tax/tax.html)
+* [Tax Management](/docs/scos/dev/features/201907.0/tax/tax.html)
 
  
 *Last review date: Mar 21, 2019*

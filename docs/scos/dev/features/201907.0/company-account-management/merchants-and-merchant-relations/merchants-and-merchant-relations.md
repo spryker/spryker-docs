@@ -2,6 +2,7 @@
 title: Merchants and Merchant Relations
 description: In B2B partnership, which is usually based on contracts, the selling company is referred to as merchant and the buyer is represented by a business unit
 originalLink: https://documentation.spryker.com/v3/docs/merchants-and-merchant-relations
+originalArticleId: 71dcf986-65ab-489f-804b-a3b553b4a3b3
 redirect_from:
   - /v3/docs/merchants-and-merchant-relations
   - /v3/docs/en/merchants-and-merchant-relations

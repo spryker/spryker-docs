@@ -1,6 +1,7 @@
 ---
 title: HowTo - Hydrate Payment Methods for an Order
 originalLink: https://documentation.spryker.com/v6/docs/ht-hydrate-payment-methods-for-order
+originalArticleId: 11393c45-b1f7-43b4-ba21-4e8334b88bab
 redirect_from:
   - /v6/docs/ht-hydrate-payment-methods-for-order
   - /v6/docs/en/ht-hydrate-payment-methods-for-order
@@ -12,7 +13,7 @@ Spryker Commerce OS enables to have multiple payments per checkout. Payments are
 Each payment method must provide payment amount it shares from order grand total. This amount is stored in `PaymentTransfer::amount` field. When order is placed in last step all payments are persisted to `spy_sales_payment` table.
 
 ## Payment Hydration for Order
-The [Sales](/docs/scos/dev/features/202001.0/order-management/sales.html) module provides plugins to hydrate OrderTransfer which is called when `SalesFacade::getOrderByIdSalesOrder` invoked.
+The [Sales](/docs/scos/dev/features/202009.0/order-management/order-management-feature-overview/sales-module-reference-information.html) module provides plugins to hydrate OrderTransfer which is called when `SalesFacade::getOrderByIdSalesOrder` invoked.
 
 One of those plugins are `\Spryker\Zed\Payment\Communication\Plugin\Sales\PaymentOrderHydratePlugin` which must be added to `\Pyz\Zed\Sales\SalesDependencyProvider::getOrderHydrationPlugins` plugin stack.
 

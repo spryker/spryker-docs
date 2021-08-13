@@ -2,12 +2,13 @@
 title: Integrating Docker into Existing Projects
 description: The included instructions describe how to convert an existing non-docker based project into a docker based one.
 originalLink: https://documentation.spryker.com/v4/docs/integrating-docker-into-existing-projects
+originalArticleId: 4ab9d544-adb0-4c36-9aaf-48a5c06f68f0
 redirect_from:
   - /v4/docs/integrating-docker-into-existing-projects
   - /v4/docs/en/integrating-docker-into-existing-projects
 ---
 
-This page describes how you can convert a non-Docker based project into a Docker based one. If you want to install Spryker in Docker from scratch, start with [Development Mode](https://documentation.spryker.com/v4/docs/modes-overview#development-mode) or [Demo Mode](https://documentation.spryker.com/v4/docs/modes-overview#demo-mode).
+This page describes how you can convert a non-Docker based project into a Docker based one. If you want to install Spryker in Docker from scratch, start with [Development Mode](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/installation-guides/modes-overview.html#development-mode) or [Demo Mode](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/installation-guides/modes-overview.html#demo-mode).
 
 ## Prerequisites
 
@@ -124,7 +125,7 @@ Use "spryker" as a username and "secret" as a password. These credentials are de
 Run the `docker/sdk help` command to get the full and up-to-date list of commands.
 
 **What's next?**
-* [Troubleshooting](https://documentation.spryker.com/v4/docs/troubleshooting)
+* [Troubleshooting](https://documentation.spryker.com/v4/docs/peer-authentication-failed-for-user-postgres)
 * [Debugging Setup in Docker](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/debugging-setup-in-docker.html)
 * [Deploy File Reference - 1.0](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html) 
 * [Services](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/configuration/services.html)

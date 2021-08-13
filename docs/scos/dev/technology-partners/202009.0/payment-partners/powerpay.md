@@ -2,6 +2,7 @@
 title: Powerpay
 description: Deliver results for your merchants by integrating Powerpay into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v6/docs/powerpay
+originalArticleId: 0ec4b6e2-b0de-4170-a8a4-7dbbf7214ad1
 redirect_from:
   - /v6/docs/powerpay
   - /v6/docs/en/powerpay

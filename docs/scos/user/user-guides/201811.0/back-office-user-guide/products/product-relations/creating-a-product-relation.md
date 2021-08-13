@@ -2,6 +2,7 @@
 title: Creating a Product Relation
 description: Use this procedure to create a product relation and enter all the required values in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/creating-a-product-relation
+originalArticleId: 4f80a197-1cd7-438a-95a2-4470f03f9be5
 redirect_from:
   - /v1/docs/creating-a-product-relation
   - /v1/docs/en/creating-a-product-relation

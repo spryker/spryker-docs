@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CheckoutPage
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-checkoutpage
+originalArticleId: 9f0e4086-2bc4-4966-950b-bfc06bcc2b12
 redirect_from:
   - /v6/docs/migration-guide-checkoutpage
   - /v6/docs/en/migration-guide-checkoutpage
@@ -9,7 +10,7 @@ redirect_from:
 ## Upgrading from Version 2.* to Version 3.*
 In this new version of the CheckoutPage module, we have added support of split delivery. You can find more details about the changes on the[CheckoutPage module release page](https://github.com/spryker-shop/checkout-page/releases).
 {% info_block infoBox %}
-This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](https://documentation.spryker.com/docs/split-delivery-concept
+This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/split-delivery-migration-concept.html
 {% endinfo_block %}.)
 
 To upgrade to the new version of the module, do the following:

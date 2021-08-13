@@ -2,6 +2,7 @@
 title: Migration Guide - Multi-Currency
 description: Use the guide to migrate to a newer version of the MultiCurrency module.
 originalLink: https://documentation.spryker.com/v4/docs/mg-multi-currency
+originalArticleId: dfabd367-3a7e-48d8-80f4-6a9160af02f5
 redirect_from:
   - /v4/docs/mg-multi-currency
   - /v4/docs/en/mg-multi-currency
@@ -39,13 +40,13 @@ First run `composer update spryker/*` to update your all modules to the latest m
  **CatalogPriceProductConnector** - we have added new currency aware formatter plugins for formatting prices when reading results from Elasticsearch. See Integration guide for more details.
 **Price >= 5.*** - see [Migration Guide - Price](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-price.html).
 **PriceProduct** - new module handling price product prices. Migration is a part of [Migration Guide - Price](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-price.html).
-**PriceCartConnector >= 4.*** -  [Migration Guide - PriceCartConnector](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-pricecartconnector.html) uses the new PriceProduct module.
+**PriceCartConnector >= 4.*** -  [Migration Guide - PriceCartConnector](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-price.html-cart-connector) uses the new PriceProduct module.
 **PriceDataFeed >= 0.2.*** - uses the new `PriceProduct` module.
 **ProductBundle >= 4.*** - [Migration Guide - ProductBundle](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
 **ProductLabelGui >= 2.*** - see [Migration Guide - ProductLabelGui](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productlabelgui.html).
 **ProductManagement >= 0.9.*** - see [Migration Guide - ProductManagement](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productmanagement.html). New forms and views have been added.
 **ProductRelation >= 2.*** - see [Migration Guide - ProductRelation](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productrelation.html).
-**ProductRelationCollector >= 2.*** - see [Migration Guide - ProductRelationCollector](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productrelationcollector.html).
+**ProductRelationCollector >= 2.*** - see [Migration Guide - ProductRelationCollector](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productrelation.html-collector).
 **ProductSetGui >= 2.*** - see [Migration Guide - ProductSetGui](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productsetgui.html).
 **Wishlist >= 2.*** - see [Migration Guide - Wishlist](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-wishlist.html).
 **Search >= 7.0** - see [Migration Guide - Search](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-search.html).

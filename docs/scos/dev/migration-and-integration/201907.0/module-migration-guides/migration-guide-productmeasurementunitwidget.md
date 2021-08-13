@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductMeasurementUnitWidget
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-measurement-unit-widget
+originalArticleId: b90319f7-492b-4ce5-94de-f51756366e94
 redirect_from:
   - /v3/docs/mg-product-measurement-unit-widget
   - /v3/docs/en/mg-product-measurement-unit-widget

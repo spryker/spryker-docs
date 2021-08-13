@@ -2,6 +2,7 @@
 title: Computop
 description: Enable merchants and white label customers to process global multichannel payments by integrating Computop into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v5/docs/computop
+originalArticleId: 2d487d1d-e84f-4e7c-abc2-253d475f02a4
 redirect_from:
   - /v5/docs/computop
   - /v5/docs/en/computop
@@ -30,14 +31,14 @@ The `SprykerEco.Computop` module includes integration with:
 
 The `SprykerEco.Computop` module provides the following payment methods:
 
-* [Credit Card](https://documentation.spryker.com/docs/en/computop-credit-card)
-* [Direct Debit](https://documentation.spryker.com/docs/en/computop-direct-debit)
-* [EasyCredit](https://documentation.spryker.com/docs/en/computop-easy-credit)
-* [iDeal](https://documentation.spryker.com/docs/en/computop-ideal)
-* [Paydirekt](https://documentation.spryker.com/docs/en/computop-paydirekt)
-* [PayNow](https://documentation.spryker.com/docs/en/computop-paynow)
-* [PayPal](https://documentation.spryker.com/docs/en/computop-paypal)
-* [SofortÜberweisung](https://documentation.spryker.com/docs/en/computop-sofort)
+* [Credit Card](/docs/scos/dev/technology-partners/202005.0/payment-partners/computop/computop-credit-card.html)
+* [Direct Debit](/docs/scos/dev/technology-partners/202005.0/payment-partners/computop/computop-direct-debit.html)
+* [EasyCredit](/docs/scos/dev/technology-partners/202005.0/payment-partners/computop/computop-easy-credit.html)
+* [iDeal](/docs/scos/dev/technology-partners/202005.0/payment-partners/computop/computop-ideal.html)
+* [Paydirekt](/docs/scos/dev/technology-partners/202005.0/payment-partners/computop/computop-paydirekt.html)
+* [PayNow](/docs/scos/dev/technology-partners/202005.0/payment-partners/computop/computop-paynow.html)
+* [PayPal](/docs/scos/dev/technology-partners/202005.0/payment-partners/computop/computop-paypal.html)
+* [SofortÜberweisung](/docs/scos/dev/technology-partners/202005.0/payment-partners/computop/computop-sofort.html)
 
 To install the payment provider, run:
 ```

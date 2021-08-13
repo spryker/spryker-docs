@@ -2,6 +2,7 @@
 title: Migration Guide - CmsBlockWidget
 description: Learn how to upgrade the CmsBlockWidget module to a certain version.
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-cmsblockwidget
+originalArticleId: 7b255539-bc8f-4f94-8860-98fa8e206465
 redirect_from:
   - /v6/docs/migration-guide-cmsblockwidget
   - /v6/docs/en/migration-guide-cmsblockwidget
@@ -22,8 +23,8 @@ In the CmsBlockWidget module version 2.0.0, we have:
 ***
 **Upgrade to the new version of the module:**
 
-1. Upgrade the `CmsBlock` module to version 3.0.0. See  [Migration Guide - CmsBlock](https://documentation.spryker.com/v4/docs/mg-cms-block#upgrading-from-version-2---to-version-3--).
-2. Upgrade the `CmsBlockStorage` module to version 2.0.0. See [Migration Guide - CmsBlockStorage](https://documentation.spryker.com/v4/docs/migration-guide-cmsblockstorage#upgrading-from-version-1---to-version-2--).
+1. Upgrade the `CmsBlock` module to version 3.0.0. See  [Migration Guide - CmsBlock](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--).
+2. Upgrade the `CmsBlockStorage` module to version 2.0.0. See [Migration Guide - CmsBlockStorage](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-cmsblockstorage.html#upgrading-from-version-1---to-version-2--).
 3. Upgrade the `CmsBlockWidget` module to version 2.0.0:
 ```bash
 composer require spryker-shop/cms-block-widget:"^2.0.0" --update-with-dependencies

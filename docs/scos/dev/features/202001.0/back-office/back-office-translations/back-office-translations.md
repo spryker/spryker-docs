@@ -2,6 +2,7 @@
 title: Back Office Translations
 description: Back office translations feature allows changing Zed interface language to languages that are shipped by default. Any other languages can be also added.
 originalLink: https://documentation.spryker.com/v4/docs/back-office-translations
+originalArticleId: 1a906881-5142-4e47-8219-23d94aa5896f
 redirect_from:
   - /v4/docs/back-office-translations
   - /v4/docs/en/back-office-translations

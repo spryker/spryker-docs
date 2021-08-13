@@ -2,9 +2,12 @@
 title: The spy_oms_transition_log table takes up too much space
 description: Configure transition logs to be removed automatically.
 originalLink: https://documentation.spryker.com/2021080/docs/the-spy-oms-transition-log-table-takes-up-too-much-space
+originalArticleId: 5c025e16-bfc2-4dcf-ba35-137044daa486
 redirect_from:
   - /2021080/docs/the-spy-oms-transition-log-table-takes-up-too-much-space
   - /2021080/docs/en/the-spy-oms-transition-log-table-takes-up-too-much-space
+  - /docs/the-spy-oms-transition-log-table-takes-up-too-much-space
+  - /docs/en/the-spy-oms-transition-log-table-takes-up-too-much-space
 ---
 
 The `spy_oms_transition_log` table stores the history of order management system transitions. The logs are kept for debugging reasons. If you don't need them or you have backed them up, you can remove them.

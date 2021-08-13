@@ -2,6 +2,7 @@
 title: Environment Configuration Enhancement
 description: Learn how to replace the environment name settings with explicit configuration.
 originalLink: https://documentation.spryker.com/v4/docs/environment-configuration-enhancement
+originalArticleId: 80e387c7-d860-4791-8be3-e2c3a2dbb9e7
 redirect_from:
   - /v4/docs/environment-configuration-enhancement
   - /v4/docs/en/environment-configuration-enhancement

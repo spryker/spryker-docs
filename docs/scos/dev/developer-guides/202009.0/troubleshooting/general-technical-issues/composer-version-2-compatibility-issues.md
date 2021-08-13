@@ -2,6 +2,7 @@
 title: Composer version 2 compatibility issues
 description: Learn how to solve Composer version 2 compatibility issues.
 originalLink: https://documentation.spryker.com/v6/docs/composer-version-2-compatibility-issues
+originalArticleId: 2e7265af-0905-4964-8186-24364db18386
 redirect_from:
   - /v6/docs/composer-version-2-compatibility-issues
   - /v6/docs/en/composer-version-2-compatibility-issues

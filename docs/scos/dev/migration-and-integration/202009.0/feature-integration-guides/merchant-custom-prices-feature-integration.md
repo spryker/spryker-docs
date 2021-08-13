@@ -2,6 +2,7 @@
 title: Merchant custom prices feature integration
 description: The Merchant Custom Price Feature allows setting specific prices for merchants. The guide describes the process of integrating the feature into your project.
 originalLink: https://documentation.spryker.com/v6/docs/merchant-custom-prices-feature-integration
+originalArticleId: 473c72ea-dbd2-442d-b6c6-155c967ed86f
 redirect_from:
   - /v6/docs/merchant-custom-prices-feature-integration
   - /v6/docs/en/merchant-custom-prices-feature-integration

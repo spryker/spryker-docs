@@ -2,6 +2,7 @@
 title: Data Importer Speed Optimization
 description: This article defines the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize.
 originalLink: https://documentation.spryker.com/v6/docs/dataimporter-speed-optimization
+originalArticleId: 11fa1a21-94da-4842-b886-54a31c57005c
 redirect_from:
   - /v6/docs/dataimporter-speed-optimization
   - /v6/docs/en/dataimporter-speed-optimization
@@ -100,7 +101,7 @@ The solution is:
 Let's say you already started to work with the batch operation, one of the challenges would be to keep the memory as low as possible. Sometimes you create variables and try to remember them always, but you may need them only until the end of the batch operation, so it's better to release them as soon as possible.
 
 ### Database vendor approach 
-Spryker supports PostgreSQL, MySQL, and MariaDB. When working with databases, it's good to know their related features. For example, one of the great features we like is [CTE](https://www.postgresql.org/docs/9.1/queries-with.html). If you are inserting or updating big amounts of data, like millions of millions, use CTE as a replaceable for multiple inserts and updates. You can find examples of implementations in our [Demo Shops](https://documentation.spryker.com/docs#spryker-b2bb2c-demo-shops).
+Spryker supports PostgreSQL, MySQL, and MariaDB. When working with databases, it's good to know their related features. For example, one of the great features we like is [CTE](https://www.postgresql.org/docs/9.1/queries-with.html). If you are inserting or updating big amounts of data, like millions of millions, use CTE as a replaceable for multiple inserts and updates. You can find examples of implementations in our [Demo Shops](/docs/scos/user/intro-to-spryker/202009.0/about-spryker.html#spryker-b2b-b2c-demo-shops).
 
 ## Rules for Publish and Synchronize
 P&S is a concept for transferring data from Zed database to Yves databases like Redis and ES, This operation is separated into two isolated processes which call ** Publish** and **Synchronize**. Publishing is a process to aggregating data and writing it to Database and Queue. Synchronization is a process to read an aggregated message from a queue and write it to external endpoints. The performance issues mostly come from **Publishing** part. Again we need to follow the best practices to increase the performance. Here you will find some of them:

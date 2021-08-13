@@ -2,6 +2,7 @@
 title: Shop Guide - Address Step
 description: Use the procedures to create a delivery address, and assign multiple delivery addresses to the order in the Storefront.
 originalLink: https://documentation.spryker.com/v5/docs/address-step-shop-guide-201911
+originalArticleId: 65a152a5-e32f-4ff9-a430-e11694225bd0
 redirect_from:
   - /v5/docs/address-step-shop-guide-201911
   - /v5/docs/en/address-step-shop-guide-201911
@@ -87,6 +88,6 @@ If there are no saved addresses, the **Define new address** option will be displ
 
 The delivery addresses are added to your items. Now, you need to select shipment methods for each delivery address.
 
-To learn more on how to select a shipment method, see [Shop Guide - Shipment Step](https://documentation.spryker.com/docs/en/shipment-step-shop-guide-201911).
+To learn more on how to select a shipment method, see [Shop Guide - Shipment Step](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-shipment-step.html).
 
 <!-- Last review date: Sep 24, 2019 -->

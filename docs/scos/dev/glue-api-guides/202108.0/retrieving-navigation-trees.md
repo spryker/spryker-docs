@@ -2,9 +2,12 @@
 title: Retrieving navigation trees
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-navigation-trees
+originalArticleId: 6dba4315-b7d0-485e-880e-b7d4ff125a3a
 redirect_from:
   - /2021080/docs/retrieving-navigation-trees
   - /2021080/docs/en/retrieving-navigation-trees
+  - /docs/retrieving-navigation-trees
+  - /docs/en/retrieving-navigation-trees
 ---
 
 The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigtaion elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links. 
@@ -12,7 +15,7 @@ The Navigation <!-- add link to feature overview later --> feature enables back-
 A navigation element with its child nodes forms a navigation tree. You can only retrieve the entire navigation tree but not a navigation element.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](https://documentation.spryker.com/docs/glue-api-navigation-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-navigation-feature-integration.html).
 
 ## Retrieving a navigation tree
 To retrieve a navigation tree, send the request:
@@ -1129,4 +1132,4 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | 1601 | Navigation not found. |
 | 1602 | Navigation ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

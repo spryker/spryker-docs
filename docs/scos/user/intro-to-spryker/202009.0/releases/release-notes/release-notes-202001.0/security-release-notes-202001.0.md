@@ -1,6 +1,7 @@
 ---
 title: Security Release Notes 202001.0
 originalLink: https://documentation.spryker.com/v6/docs/security-release-notes-202001
+originalArticleId: 47a873e9-593a-4390-b131-54a5d18143ed
 redirect_from:
   - /v6/docs/security-release-notes-202001
   - /v6/docs/en/security-release-notes-202001

@@ -1,6 +1,7 @@
 ---
 title: Processor Stack - Zed API
 originalLink: https://documentation.spryker.com/v2/docs/zed-api-processor-stack
+originalArticleId: 497b96b6-78d3-482a-9027-1924375f51c9
 redirect_from:
   - /v2/docs/zed-api-processor-stack
   - /v2/docs/en/zed-api-processor-stack

@@ -2,6 +2,7 @@
 title: Company account feature integration
 description: The guide walks you through the process of installing Business on Behalf, Company Account Storage, and Company Account OAuth functionality into your project.
 originalLink: https://documentation.spryker.com/v6/docs/company-account-integration
+originalArticleId: df049b10-e8e5-4bce-b207-a1b35f254e44
 redirect_from:
   - /v6/docs/company-account-integration
   - /v6/docs/en/company-account-integration
@@ -474,7 +475,7 @@ Log in with a customer who has multiple Company Users and a default one. Check i
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-generate-a-token-for-login.html
+Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](https://documentation.spryker.com/v6/docs/ht-generating-token-for-login-201907
 {% endinfo_block %}.)
 
 {% info_block warningBox "Verification" %}

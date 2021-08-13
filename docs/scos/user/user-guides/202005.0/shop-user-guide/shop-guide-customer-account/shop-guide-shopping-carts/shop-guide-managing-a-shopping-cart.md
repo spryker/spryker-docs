@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Managing a Shopping Cart
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-managing-a-shopping-cart
+originalArticleId: 964ec032-2a62-446f-93d4-ee77247d597f
 redirect_from:
   - /v5/docs/shop-guide-managing-a-shopping-cart
   - /v5/docs/en/shop-guide-managing-a-shopping-cart
@@ -37,22 +38,22 @@ To update the cart name:
 If you want to discard the changes, click **Back**.
 ***
 ## Managing Order Items Details
-In the *Items* section, you can change items quantity, remove the items or [add a comment](https://documentation.spryker.com/docs/en/comments-feature-overview-201907) per item.
+In the *Items* section, you can change items quantity, remove the items or [add a comment](/docs/scos/dev/features/202005.0/mailing-and-communication/comments/comments-feature-overview.html) per item.
 
 **To change the items quantity**, use the plus or minus icons.
 
 **To remove the items**, click **Delete** (1) for each item or click **Delete all** (2) if you want to remove all the items from the cart.
 
-**To add a comment**, in the **Add a comment** field, add a message and click **Save**. For more information on how to manage comments in the cart, see [Shop Guide - Managing Comments](https://documentation.spryker.com/docs/en/managing-comments-shop-guide#shop-guide---managing-comments).
+**To add a comment**, in the **Add a comment** field, add a message and click **Save**. For more information on how to manage comments in the cart, see [Shop Guide - Managing Comments](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html#shop-guide---managing-comments).
 ***
 ## Adding a Note to Cart
-If you want to leave some information or comments for the cart, you can use the [Cart Notes](https://documentation.spryker.com/docs/en/cart-notes-overview) section.
+If you want to leave some information or comments for the cart, you can use the [Cart Notes](/docs/scos/dev/features/202005.0/shopping-cart/cart-notes/cart-notes-feature-overview.html) section.
 
 To add a note to the cart, in the **Add a note for the cart** widget, enter your comment and click **Save**.
 ***
 
 ## Adding a Cart to the Shopping List
-You can add the products from the cart to the [shopping list](https://documentation.spryker.com/docs/en/multiple-shared-shopping-lists-overview-201907) to purchase them later.
+You can add the products from the cart to the [shopping list](/docs/scos/dev/features/202005.0/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html) to purchase them later.
 
 To add a cart to the shopping list:
 
@@ -95,11 +96,11 @@ Internal users are the users that belong to your company account. You can share 
 * Read-only permissions: users can view the shopping cart details and edit only the comments to the cart or a custom order reference.
 * Full-access permissions: users can edit the cart details. 
 
-For more information about the actions internal users can perform on the cart, see [Shared Cart Feature Overview](https://documentation.spryker.com/docs/en/shared-cart-overview#shared-cart-feature-overview).
+For more information about the actions internal users can perform on the cart, see [Shared Cart Feature Overview](/docs/scos/dev/features/202005.0/shopping-cart/shared-cart/shared-cart-feature-overview.html#shared-cart-feature-overview).
 ***
 
 ## Adding a Custom Order Reference to the Cart
-If you want to link your order to the invoice in your external system, you can use a [custom order reference](https://documentation.spryker.com/docs/en/custom-order-reference-feature-overview).
+If you want to link your order to the invoice in your external system, you can use a [custom order reference](/docs/scos/dev/features/202005.0/order-management/custom-order-reference/custom-order-reference-feature-overview.html).
 
 {% info_block infoBox "Info" %}
 
@@ -110,13 +111,13 @@ T**o add a custom order reference**, in the **Custom Order Reference** field, en
 ***
 
 ## Adding Comments to the Cart
-If you want to add some information to the order, you can [leave a comment](https://documentation.spryker.com/docs/en/comments-feature-overview-201907) to your cart.
+If you want to add some information to the order, you can [leave a comment](/docs/scos/dev/features/202005.0/mailing-and-communication/comments/comments-feature-overview.html) to your cart.
 
 **To add a comment to the cart**, in the **Comments to Cart** widget, write a message and click **Send**.
 ***
 **What’s next?**
 
-If you added products to the cart, you can proceed with the checkout. For more information on how to place the order, see [Shop Guide - Checkout](https://documentation.spryker.com/docs/en/checkout-shop-guide-201911).
+If you added products to the cart, you can proceed with the checkout. For more information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html).
 
-If you want to negotiate the price, you can request a quote. For more information on how to create a request for quote, see [Shop Guide - Creating an RFQ](https://documentation.spryker.com/docs/en/creating-rfq-shop-guide).
+If you want to negotiate the price, you can request a quote. For more information on how to create a request for quote, see [Shop Guide - Creating an RFQ](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-creating-a-request-for-quote.html).
 

@@ -2,6 +2,7 @@
 title: Implementing Prepayment in Shared Layer
 description: This procedure will help us to identify the new payment type through some unique constants.
 originalLink: https://documentation.spryker.com/v3/docs/ht-prepayment-shared
+originalArticleId: 23a43b30-13df-49a2-a83b-349eb40cae53
 redirect_from:
   - /v3/docs/ht-prepayment-shared
   - /v3/docs/en/ht-prepayment-shared

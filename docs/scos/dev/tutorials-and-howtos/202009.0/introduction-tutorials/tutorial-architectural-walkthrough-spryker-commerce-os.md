@@ -2,6 +2,7 @@
 title: Tutorial - Architectural Walkthrough - Spryker Commerce OS
 description: The tutorial describes Spryker architecture and explains on the example of how its components work together to provide the result in the shop application.
 originalLink: https://documentation.spryker.com/v6/docs/tutorial-architecture-walkthrough-scos
+originalArticleId: a367eff0-b16a-48f0-9811-17f64aed69df
 redirect_from:
   - /v6/docs/tutorial-architecture-walkthrough-scos
   - /v6/docs/en/tutorial-architecture-walkthrough-scos

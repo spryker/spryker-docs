@@ -2,9 +2,12 @@
 title: HowTo - Import Packaging Units
 description: Use this guide to learn how to import packaging unit information and its types using a .CSV file.
 originalLink: https://documentation.spryker.com/2021080/docs/howto-import-packaging-units
+originalArticleId: 8e89de6b-7170-414c-b0ad-3e44a9c8a169
 redirect_from:
   - /2021080/docs/howto-import-packaging-units
   - /2021080/docs/en/howto-import-packaging-units
+  - /docs/howto-import-packaging-units
+  - /docs/en/howto-import-packaging-units
 ---
 
 This HowTo provides the steps on how to extend the list of the packaging unit types available by default (box, bag, palette etc.) by importing packaging unit information and types using a .CSV file. 

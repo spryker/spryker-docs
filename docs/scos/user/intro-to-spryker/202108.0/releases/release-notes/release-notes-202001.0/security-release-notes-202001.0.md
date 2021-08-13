@@ -1,9 +1,12 @@
 ---
 title: Security Release Notes 202001.0
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-202001
+originalArticleId: aafbb7d4-5b71-41c2-a68c-1124d38c2d8e
 redirect_from:
   - /2021080/docs/security-release-notes-202001
   - /2021080/docs/en/security-release-notes-202001
+  - /docs/security-release-notes-202001
+  - /docs/en/security-release-notes-202001
 ---
 
 The following information pertains to security-related issues that have been recently resolved. Issues are listed by description and affected modules.

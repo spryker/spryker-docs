@@ -2,6 +2,7 @@
 title: HowTo - Add a New Shipment Method 2.0
 description: Use the guide to add a new shipment method with the currency and price specified without integrating the method with shipment providers.
 originalLink: https://documentation.spryker.com/v5/docs/ht-add-new-shipment-method-2
+originalArticleId: d70e703f-347f-4bc9-a9e0-e8b0f756d28c
 redirect_from:
   - /v5/docs/ht-add-new-shipment-method-2
   - /v5/docs/en/ht-add-new-shipment-method-2

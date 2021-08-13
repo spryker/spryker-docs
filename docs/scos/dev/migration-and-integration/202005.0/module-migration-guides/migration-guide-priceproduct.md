@@ -2,6 +2,7 @@
 title: Migration Guide - PriceProduct
 description: Use the guide to migrate to a newer version of the PriceProduct module.
 originalLink: https://documentation.spryker.com/v5/docs/mg-priceproduct
+originalArticleId: 297fdf39-945f-4f9a-8c35-37d690a117aa
 redirect_from:
   - /v5/docs/mg-priceproduct
   - /v5/docs/en/mg-priceproduct
@@ -19,7 +20,7 @@ There are new functionalities and changes that were added in this new module rel
 In the previous version of the `PriceProduct` module, a product had only one price per store (and multi-currency) with gross and net amounts.
 By adding this concept to the new release, you can set specific prices for each customer separately. Having logged in, user with these specific prices will see another prices in Catalog and will be able to buy products for own price.
 
-To save BC, we have implemented Default Price Dimension inside the new `PriceProduct` module, so all prices imported by new `PriceProductDataImport` will be in the Default Price Dimension. See [Prices per Merchant Relation](https://documentation.spryker.com/docs/en/price-per-merchant-relation-feature-overview) to learn more about the price dimension.
+To save BC, we have implemented Default Price Dimension inside the new `PriceProduct` module, so all prices imported by new `PriceProductDataImport` will be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/dev/features/202005.0/price/prices-per-merchant-relation/prices-per-merchant-relation-feature-overview.html) to learn more about the price dimension.
 Prices from price dimensions could be stored not only in DB, but also in Storage, therefore the update of the `PriceProductStorage` module was necessary. The new version 2.0.0 of the `PriceProduct` module already supports price dimensions and has Default Price Dimension implemented.
 
 To migrate the changes to the module, do the following:

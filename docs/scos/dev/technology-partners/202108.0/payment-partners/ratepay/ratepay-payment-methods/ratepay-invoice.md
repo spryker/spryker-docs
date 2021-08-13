@@ -2,9 +2,12 @@
 title: RatePay - Invoice
 description: Integrate invoice payment through Ratepay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-invoice
+originalArticleId: a9b40611-e42e-4529-918d-3fab9774f420
 redirect_from:
   - /2021080/docs/ratepay-invoice
   - /2021080/docs/en/ratepay-invoice
+  - /docs/ratepay-invoice
+  - /docs/en/ratepay-invoice
 ---
 
 ## Workflow Scenarios
@@ -50,4 +53,4 @@ The configuration to integrate invoice payments using RatePAY is:
   * `API_LIVE_URL`: live mode API url.
 
 ## Perform Requests
-To perform the needed requests,  use the [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partners/202001.0/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html) . You can also use the `facademethods`directly which, however, are invoked by the state machine.
+To perform the needed requests,  use the [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) . You can also use the `facademethods`directly which, however, are invoked by the state machine.

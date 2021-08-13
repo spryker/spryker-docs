@@ -2,6 +2,7 @@
 title: Quotation Process Feature Integration
 description: Install the Quotation Process feature in your project.
 originalLink: https://documentation.spryker.com/v4/docs/quotation-process-feature-integration
+originalArticleId: 43ced1c4-0882-4f55-aa99-e6ec2b623661
 redirect_from:
   - /v4/docs/quotation-process-feature-integration
   - /v4/docs/en/quotation-process-feature-integration

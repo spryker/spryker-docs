@@ -1,19 +1,22 @@
 ---
 title: Managing customer authentication tokens
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens
+originalArticleId: a0374f0f-170f-446e-aadd-32dbe7c1526a
 redirect_from:
   - /2021080/docs/managing-customer-authentication-tokens
   - /2021080/docs/en/managing-customer-authentication-tokens
+  - /docs/managing-customer-authentication-tokens
+  - /docs/en/managing-customer-authentication-tokens
 ---
 
 This endpoint allows refreshing customer authentication tokens and revoking customer refresh tokens. You may want to refresh an authentication token when it expires. Revocation is useful when an authentication token is compromised.
 
 :::(Warning)
-This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Manging customer authentication tokens via OAuth 2.0](https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens-via-oauth-20).
+This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Manging customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
 :::
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Refresh an authentication token
 
@@ -114,7 +117,7 @@ To revoke a refresh token, send the request:
 
 For security purposes, the endpoint always returns the `204 No Content` status code, regardless of any refresh tokens being revoked. 
 
-The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/docs/configuring-outdated-refresh-token-life-time). 
+The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/2021080/docs/configuring-outdated-refresh-token-life-time). 
 
 
 ## Possible errors
@@ -122,12 +125,12 @@ The tokens are marked as expired on the date and time of the request. You can co
 | CODE  | REASON |
 | --- | --- |
 | 004 | Failed to refresh the token. |
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Authenticate as a customer](https://documentation.spryker.com/docs/customer-password)
-* [Manage customer passwords](https://documentation.spryker.com/docs/customer-password)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-passwords.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-passwords.html)
 
 
 

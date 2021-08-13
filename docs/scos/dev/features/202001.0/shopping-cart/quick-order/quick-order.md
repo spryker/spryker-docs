@@ -2,6 +2,7 @@
 title: Quick Order
 description: The Quick Order feature enables customers to buy their commonly ordered products in just a few clicks, encouraging them to come back and buy more.
 originalLink: https://documentation.spryker.com/v4/docs/quick-order
+originalArticleId: 359d97c1-b490-4c8a-8d8c-2a4749c26fbb
 redirect_from:
   - /v4/docs/quick-order
   - /v4/docs/en/quick-order

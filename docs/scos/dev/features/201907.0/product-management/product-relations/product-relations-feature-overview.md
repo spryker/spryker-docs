@@ -2,6 +2,7 @@
 title: Product Relations Feature Overview
 description: Product relations helps shop owners to promote the related goods as well as to point the customers' attention on the goods that they may also want to see.
 originalLink: https://documentation.spryker.com/v3/docs/product-relations-feature-overview
+originalArticleId: a094828b-2cff-40e6-8734-965feb87e8c8
 redirect_from:
   - /v3/docs/product-relations-feature-overview
   - /v3/docs/en/product-relations-feature-overview
@@ -9,7 +10,7 @@ redirect_from:
 
 Product relations help shop owners to promote the related goods as well as to point the customers' attention to the goods that they may also want to see.
 
-Product relations are built on the abstract product and not the concrete products. One abstract product can have from one to many product relations. Once you define a product to which a relation is added, you need to also set a specific set of rules, or even a group, under which the relation is going to be built. Keep in mind that this is a one-way relation, meaning that only the product that you have defined will have the Similar Products section on its PDP (product details page) or in the cart, depending on the relation type. But the related product(s) that you assign to it will not get the same view, unless you perform the same procedure for each individual item [to tie it to any other in the Back Office](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-relations/creating-a-product-relation.html).
+Product relations are built on the abstract product and not the concrete products. One abstract product can have from one to many product relations. Once you define a product to which a relation is added, you need to also set a specific set of rules, or even a group, under which the relation is going to be built. Keep in mind that this is a one-way relation, meaning that only the product that you have defined will have the Similar Products section on its PDP (product details page) or in the cart, depending on the relation type. But the related product(s) that you assign to it will not get the same view, unless you perform the same procedure for each individual item [to tie it to any other in the Back Office](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-relations/creating-a-product-relation.html).
 
 ![One-way connection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/One-Way+Connection.gif){height="" width=""}
 

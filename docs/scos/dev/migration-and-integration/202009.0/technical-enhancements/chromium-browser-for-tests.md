@@ -2,6 +2,7 @@
 title: Chromium browser for tests
 description: Integrate Chromium with ChromeDriver into your project for acceptance and functional test.
 originalLink: https://documentation.spryker.com/v6/docs/chromium-browser-for-tests
+originalArticleId: 3d89e68c-6afd-48e4-b62e-6a214b9dacc8
 redirect_from:
   - /v6/docs/chromium-browser-for-tests
   - /v6/docs/en/chromium-browser-for-tests
@@ -11,7 +12,7 @@ redirect_from:
 
 ## Integration into Docker-based projects
 
-For Docker-based integration instructions, see [ChromeDriver](https://documentation.spryker.com/docs/services#chromedriver).
+For Docker-based integration instructions, see [ChromeDriver](/docs/scos/dev/developer-guides/202009.0/docker-sdk/configuring-services.html#chromedriver).
   
 ## Integration into DevVM-based projects
 To integrate Chromium into a DevVM-based project:

@@ -1,6 +1,7 @@
 ---
 title: Cronjob Scheduling
 originalLink: https://documentation.spryker.com/v1/docs/cronjob-scheduling
+originalArticleId: 0c34ac7b-9721-4b5e-ad16-534b901743ab
 redirect_from:
   - /v1/docs/cronjob-scheduling
   - /v1/docs/en/cronjob-scheduling

@@ -2,6 +2,7 @@
 title: Getting an Overview of the Used Plugins
 description: Plugin Overview gives you several ways of displaying plugin usages.
 originalLink: https://documentation.spryker.com/v6/docs/plugin-overview
+originalArticleId: 60ec49fd-091a-4323-b393-5771a6f37deb
 redirect_from:
   - /v6/docs/plugin-overview
   - /v6/docs/en/plugin-overview
@@ -9,7 +10,7 @@ redirect_from:
 
 To be able to use a new feature projects most likely need to add some plugins to their `*DependencyProvider`. Currently, it is not easy for projects to integrate a new feature due to the difficulties in identifying to which *DependencyProvider plugin A* of *module B* can be added to bring *functionality X*.
 
-To see which [Plugin](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/implementing-and-using-plugins.html) can be used in which `DependencyProvider` we added a feature called **Plugin Overview**. This feature gives you several ways of displaying our plugin usages. The feature brings a console command (`vendor/bin/console dev:plugin-usage:dump`) and a [GUI in Zed](http://zed.de.suite-nonsplit.local/development/dependency-provider-plugin-usage).
+To see which [Plugin](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/implementing-and-using-plugins.html) can be used in which `DependencyProvider` we added a feature called **Plugin Overview**. This feature gives you several ways of displaying our plugin usages. The feature brings a console command (`vendor/bin/console dev:plugin-usage:dump`) and a [GUI in Zed](http://zed.de.suite-nonsplit.local/development/dependency-provider-plugin-usage).
 
 You can even download a .CSV file with all used plugins.
 

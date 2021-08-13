@@ -2,6 +2,7 @@
 title: Router Yves
 description: The article provides instructions on how to install the extension module along with the router and integrate it then in Yves.
 originalLink: https://documentation.spryker.com/v4/docs/router-yves
+originalArticleId: 3b396398-a2b2-4076-83ba-4db20a564034
 redirect_from:
   - /v4/docs/router-yves
   - /v4/docs/en/router-yves

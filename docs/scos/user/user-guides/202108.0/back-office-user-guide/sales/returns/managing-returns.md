@@ -2,12 +2,15 @@
 title: Managing returns
 description: In this article, you will know how to manage returns in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-returns
+originalArticleId: 52e17a39-524b-49a9-8add-40103a721653
 redirect_from:
   - /2021080/docs/managing-returns
   - /2021080/docs/en/managing-returns
+  - /docs/managing-returns
+  - /docs/en/managing-returns
 ---
 
-After a [return](https://documentation.spryker.com/2021080/docs/return-management-feature-overview) has been [created by a Back Office User](https://documentation.spryker.com/2021080/docs/managing-orders#creating-a-return) or by a [Shop User](https://documentation.spryker.com/2021080/docs/shop-guide-creating-a-return), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:
+After a [return](/docs/scos/dev/features/{{ page.version }}/return-management/return-management-feature-overview.html) has been [created by a Back Office User](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return) or by a [Shop User](/docs/scos/dev/features/{{ page.version }}/return-management/return-management-feature-overview.html#return-management-on-the-storefront), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:
 
 * View the return details
 * Set the return statuses
@@ -23,7 +26,7 @@ To start managing returns, navigate to **Sales** > **Returns**.
 
 {% info_block infoBox "Info" %}
 
-Returns of the registered and guest users have different return references. See [the Returns section](https://documentation.spryker.com/2021080/docs/managing-orders#returns-section) for details on the return references.
+Returns of the registered and guest users have different return references. See [the Returns section](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/orders/managing-orders.html#returns-section) for details on the return references.
 
 {% endinfo_block %}
 To view details on a return, in the *Actions* column of the return, click **View**. This takes you to the *Return Overview [Return Reference]* page, where you can view the return details, set the return statuses and print the return slip as described below.
@@ -108,7 +111,7 @@ To trigger the return states:
  
 {% info_block infoBox "Info" %}
 
-The triggered return states are reflected in the [customer account on the Storefront](https://documentation.spryker.com/2021080/docs/shop-guide-creating-a-return), informing customers about the statuses of their returns.<!--- You can rename the default statuses that display on the Storefront so they would make more sense for the Storefront users. See *Display Custom Names for Order Item States on the Storefront* for details on how to do that.-->
+The triggered return states are reflected in the [customer account on the Storefront](/docs/scos/dev/features/{{ page.version }}/return-management/return-management-feature-overview.html#return-management-on-the-storefront), informing customers about the statuses of their returns.<!--- You can rename the default statuses that display on the Storefront so they would make more sense for the Storefront users. See *Display Custom Names for Order Item States on the Storefront* for details on how to do that.-->
 
 {% endinfo_block %}
 
@@ -130,7 +133,7 @@ Once a return has been created, it acquires the *Waiting for return* state. You 
 | close | You can trigger this state after the *Delivered* state. Select this state to close the return. The return status is changed to *Closed*. |
 
 ## Printing a return slip
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](https://documentation.spryker.com/2021080/docs/return-management-feature-overview#return-slip). 
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/scos/dev/features/{{ page.version }}/return-management/return-management-feature-overview.html#return-slip). 
 
 To print the return slip:
 

@@ -2,6 +2,7 @@
 title: Migration Guide - CustomerReorderWidget
 description: Use the guide to migrate to a newer version of the CustomerReorderWidget module.
 originalLink: https://documentation.spryker.com/v4/docs/mg-customer-reorder-widget
+originalArticleId: 8a299ba0-d579-44ee-acab-754e7873ec16
 redirect_from:
   - /v4/docs/mg-customer-reorder-widget
   - /v4/docs/en/mg-customer-reorder-widget

@@ -2,6 +2,7 @@
 title: Inventory Management
 description: The BAck Office allows you to easily keep an overview of your stock levels to display accurate availabilities on your store site.
 originalLink: https://documentation.spryker.com/v2/docs/inventory-management
+originalArticleId: d4ec57f9-90cf-4210-b660-9bf60ba171f4
 redirect_from:
   - /v2/docs/inventory-management
   - /v2/docs/en/inventory-management

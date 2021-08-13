@@ -2,27 +2,28 @@
 title: Retrieving Company Role Information
 description: The article describes how to use Spryker Glue API to retrieve company roles.
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-company-role-information-201907
+originalArticleId: 722b3bc5-1ec4-4b5a-aa11-9b26373bdfa0
 redirect_from:
   - /v5/docs/retrieving-company-role-information-201907
   - /v5/docs/en/retrieving-company-role-information-201907
 ---
 
-In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](https://documentation.spryker.com/docs/en/company-roles-permissions-overview) in order to distribute scopes and permissions among [Company Users](https://documentation.spryker.com/docs/en/company-account-overview). To identify which roles company users are assigned to, you can use the endpoints provided by the **Company Role API**.
+In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](https://documentation.spryker.com/v5/docs/en/company-roles-permissions-overview) in order to distribute scopes and permissions among [Company Users](/docs/scos/dev/features/202005.0/company-account-management/company-account-overview/company-account-overview.html). To identify which roles company users are assigned to, you can use the endpoints provided by the **Company Role API**.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as **Company Accounts** and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/docs/en/logging-in-as-company-user-201907
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as **Company Accounts** and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/202005.0/b2b-account-management/logging-in-as-company-user.html
 {% endinfo_block %}.)
 
 In your development, the endpoint can help you to identify the roles existing in the company of the currently logged in user.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/docs/en/company-account-api-feature-integration-201907#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
 
 ## Retrieving Company Role Information
 ### Roles Performed by the Current User
 To retrieve information on the Company Roles assigned to the currently logged in Company User, send a GET request to the following endpoint:
 
-[/company-roles/mine](https://documentation.spryker.com/docs/en/rest-api-reference#//company-roles)
+[/company-roles/mine](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#//company-roles)
 
 Sample request: *GET http://glue.mysprykershop.com/company-roles/mine*
 
@@ -68,7 +69,7 @@ The endpoint responds with a collection of **RestCompanyRoleResponse**, each con
 ### Specific Role
 To retrieve information on a specific Company Role, send a GET request to the following endpoint:
 
-[/company-roles/{% raw %}{{{% endraw %}role_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/docs/en/rest-api-reference#//company-roles){target="_blank"}
+[/company-roles/{% raw %}{{{% endraw %}role_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#//company-roles){target="_blank"}
 Sample request: *GET http://glue.mysprykershop.com/company-roles/**2f0a9d3e-9e69-53eb-8518-284a0db04376***
 
 where **2f0a9d3e-9e69-53eb-8518-284a0db04376** is the ID of the Company Role you need.
@@ -168,5 +169,5 @@ The response will include the following additional attributes:
 | Code | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/docs/en/logging-in-as-company-user-201907). |
+| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/202005.0/b2b-account-management/logging-in-as-company-user.html). |
 | 404 | The specified role was not found or the user does not have access to it. |

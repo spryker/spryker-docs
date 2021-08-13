@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ShoppingListWidget
 originalLink: https://documentation.spryker.com/v2/docs/mg-shopping-list-widget
+originalArticleId: 21b6caed-f02b-4e21-bb24-b2752a59a08a
 redirect_from:
   - /v2/docs/mg-shopping-list-widget
   - /v2/docs/en/mg-shopping-list-widget

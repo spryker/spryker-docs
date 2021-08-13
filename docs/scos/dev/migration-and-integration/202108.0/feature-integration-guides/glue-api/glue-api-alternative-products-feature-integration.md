@@ -2,9 +2,12 @@
 title: Glue API- Alternative products feature integration
 description: This guide will navigate you through the process of installing and configuring the Alternative Products API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-alternative-products-feature-integration
+originalArticleId: 0cac6f60-0429-4b7e-8ff4-9236b8cc51d0
 redirect_from:
   - /2021080/docs/glue-api-alternative-products-feature-integration
   - /2021080/docs/en/glue-api-alternative-products-feature-integration
+  - /docs/glue-api-alternative-products-feature-integration
+  - /docs/en/glue-api-alternative-products-feature-integration
 ---
 
 ## Install Feature API
@@ -13,9 +16,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required Sub-Feature |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-application-feature-integration.html) |
+| Spryker Core | 201907.0 | [Glue Application Feature Integration](https://documentation.spryker.com/2021080/docs/glue-application-feature-integration-201907) |
 | Alternative Products | 201907.0 | |
-| Products | 201907.0 | [Product API Feature Integration](https://documentation.spryker.com/v3/docs/products-feature-integration-201907) |
+| Products | 201907.0 | [Product API Feature Integration](https://documentation.spryker.com/2021080/docs/products-feature-integration-201907) |
 
 ## 1) Install the Required Modules Using Composer
 

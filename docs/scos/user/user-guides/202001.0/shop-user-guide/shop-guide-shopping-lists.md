@@ -2,6 +2,7 @@
 title: Shop Guide - Shopping Lists
 description: Use the procedures to create, update, share, and print shopping lists, dismiss shared shopping lists, and add items to a shopping list.
 originalLink: https://documentation.spryker.com/v4/docs/shopping-lists-shop-guide
+originalArticleId: 595c0b2a-c9d6-4179-9a00-92ecd9424828
 redirect_from:
   - /v4/docs/shopping-lists-shop-guide
   - /v4/docs/en/shopping-lists-shop-guide
@@ -72,7 +73,7 @@ The _Edit shopping list_ page opens where you can:
 ![Quick add to a shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/quick-add-to-shopping-list-window.png){height="" width=""}
 
 {% info_block warningBox %}
-To be able to search for products, make sure that [Search Widget for Concrete Products](https://documentation.spryker.com/v4/docs/search-widget-for-concrete-products-overview-201903
+To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/dev/features/202001.0/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products-overview.html
 {% endinfo_block %} feature is [integrated](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/search-widget-for-concrete-products-feature-integration.html) into your Project.)
 
 * View the shopping list owner and access rights.

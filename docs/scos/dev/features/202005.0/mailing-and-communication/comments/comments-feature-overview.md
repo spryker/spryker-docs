@@ -2,6 +2,7 @@
 title: Comments Feature Overview
 description: Comments feature provides the ability for online owners to add Comments Widget that  allows the customers to leave comments or special requests.
 originalLink: https://documentation.spryker.com/v5/docs/comments-feature-overview
+originalArticleId: 7c077738-136f-485b-b48c-79bf9b0a035c
 redirect_from:
   - /v5/docs/comments-feature-overview
   - /v5/docs/en/comments-feature-overview
@@ -23,11 +24,11 @@ Within the Comments feature, we have created the Comments Widget. The widget can
 
 Company users can perform the following actions using the Comment Widget:
 
-* [Add a comment](https://documentation.spryker.com/docs/en/managing-comments-shop-guide#adding-a-comment-to-the-cart)
-* [Edit a comment](https://documentation.spryker.com/docs/en/managing-comments-shop-guide#editing-a-comment-in-the-cart)
-* [\(Un\)Tag a comment](https://documentation.spryker.com/docs/en/managing-comments-shop-guide#-un-tagging-a-comment-in-the-cart)
-* [\(Un\)Filter comments per tag](https://documentation.spryker.com/docs/en/managing-comments-shop-guide#-un-filtering-a-comment-in-the-cart)
-* [Remove the comment](https://documentation.spryker.com/docs/en/managing-comments-shop-guide#removing-a-comment)
+* [Add a comment](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html#adding-a-comment-to-the-cart)
+* [Edit a comment](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html#editing-a-comment-in-the-cart)
+* [\(Un\)Tag a comment](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html#-un-tagging-a-comment-in-the-cart)
+* [\(Un\)Filter comments per tag](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html#-un-filtering-a-comment-in-the-cart)
+* [Remove the comment](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-comments/shop-guide-managing-comments.html#removing-a-comment)
 
 The comment contains the following information:
 
@@ -53,7 +54,7 @@ Every comment may be tagged.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filter-tags.png){height="" width=""}
 
 {% info_block warningBox "Note" %}
-To create a new tag, see [HowTo - Add a New Tag for Comment](https://documentation.spryker.com/docs/en/ht-adding-new-tag-for-comment
+To create a new tag, see [HowTo - Add a New Tag for Comment](https://documentation.spryker.com/v5/docs/en/ht-adding-new-tag-for-comment
 {% endinfo_block %}.)
 
 ### Module Relations in the Comments Feature

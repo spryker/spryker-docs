@@ -2,6 +2,7 @@
 title: FACT-Finder
 description: Integrate FACT-Finder for on-site search, navigation, merchandising, personalization and product recommendations in Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v1/docs/factfinder
+originalArticleId: 0505d9f6-f0f9-4deb-ab6a-427a6eb87016
 redirect_from:
   - /v1/docs/factfinder
   - /v1/docs/en/factfinder

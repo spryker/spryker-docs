@@ -2,15 +2,18 @@
 title: Migration Guide - Search
 description: Use the guide to learn how to update the Search module to a newer version.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-search
+originalArticleId: 2af7d4ac-4e84-42ff-aba5-95dae82c6856
 redirect_from:
   - /2021080/docs/mg-search
   - /2021080/docs/en/mg-search
+  - /docs/mg-search
+  - /docs/en/mg-search
 ---
 
 ## Upgrading from Version 8.9.* to Version 8.10.*
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](https://documentation.spryker.com/docs/search-migration-concept). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/search-migration-concept/search-migration-concept.html). 
 
 {% endinfo_block %}
 
@@ -24,7 +27,7 @@ composer require spryker/search-elasticsearch
 ```Bash
 console transfer:generate
 ```
-3. Adjust all project-level implementations of `Spryker\Client\Search\Dependency\Plugin\QueryInterface`. First, change `Spryker\Client\Search\Dependency\Plugin\QueryInterface` to `Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`. This does not require changing any implementation details. After that implement `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface` as described in the [Search Migration Concept](https://documentation.spryker.com/v4/docs/search-migration-concept#searching-for-data). 
+3. Adjust all project-level implementations of `Spryker\Client\Search\Dependency\Plugin\QueryInterface`. First, change `Spryker\Client\Search\Dependency\Plugin\QueryInterface` to `Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`. This does not require changing any implementation details. After that implement `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface` as described in the [Search Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/search-migration-concept/search-migration-concept.html#searching-for-data). 
 4. Remove `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigBuilderPlugin()`.
 5. Remove `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigExpanderPlugins()`.
 6. Enable `ElasticsearchSearchAdapterPlugin` and `ElasticsearchSearchContextExpanderPlugin` in `Pyz\Client\Search\SearchDependencyProvider`:
@@ -125,7 +128,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 ## Upgrading from Version 7.* to Version 8.*
 With this version of the Search module we have migrated to Elasticsearch 5.6. Please read the [Elasticsearch Breaking Changes in 5.0](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/breaking-changes-5.0.html) official documentation to adjust your custom implementation accordingly.
                 
-Your development environment needs to be updated with Elasticsearch 5.6.x. In case you are using the Spryker DevVM, you can download the latest release that provides the necessary services. Follow our [Installation Guide](/docs/scos/dev/developer-guides/202001.0/developer-getting-started-guide.html) for detailed instructions about installing the Spryker DevVM.
+Your development environment needs to be updated with Elasticsearch 5.6.x. In case you are using the Spryker DevVM, you can download the latest release that provides the necessary services. Follow our [Installation Guide](/docs/scos/dev/developer-guides/{{ page.version }}/developer-getting-started-guide.html) for detailed instructions about installing the Spryker DevVM.
 
 **Elasticsearch 5 Related BC Breaking Change Highlights**
 
@@ -247,5 +250,5 @@ With the version 4 of the Search module, the logic and configuration of how the 
 
 The new version now works with one parameter only (e.g. `/?sort=price_asc`). To migrate to the new version, you’ll need to change your configurations in your classes that implement `\Spryker\Client\Search\Dependency\Plugin\SearchConfigBuilderInterface`. Instead of providing one `SortConfigTransfer` per sorted attribute, now you need to provide two if you wish to sort by both ascending and descending order. To do this, use the `SortConfigTransfer::setIsDescending()` method, and make sure that the values in `SortConfigTransfer::setParameterName()` are unique.
 
-<!-- See the Search documentation for a detailed [example](/docs/scos/dev/features/202001.0/search-and-filter/search-widget-for-concrete-products/configure-search-features.html).-->
+<!-- See the Search documentation for a detailed [example](https://documentation.spryker.com/2021080/docs/configure-search-features).-->
 

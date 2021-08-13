@@ -1,6 +1,7 @@
 ---
 title: informa solutions
 originalLink: https://documentation.spryker.com/v6/docs/informa-solutions
+originalArticleId: 7cd3d8d2-d9b7-47bf-99ce-5c9f5f9a8974
 redirect_from:
   - /v6/docs/informa-solutions
   - /v6/docs/en/informa-solutions

@@ -1,6 +1,7 @@
 ---
 title: Quotation Process + Multiple Carts Feature Integration
 originalLink: https://documentation.spryker.com/v4/docs/quotation-process-multiple-carts-feature-integration
+originalArticleId: 7fd11d9b-1abf-4e7b-a53f-0a77a67d564f
 redirect_from:
   - /v4/docs/quotation-process-multiple-carts-feature-integration
   - /v4/docs/en/quotation-process-multiple-carts-feature-integration

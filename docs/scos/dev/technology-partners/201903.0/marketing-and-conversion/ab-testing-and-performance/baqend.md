@@ -1,6 +1,7 @@
 ---
 title: Baqend
 originalLink: https://documentation.spryker.com/v2/docs/baqend
+originalArticleId: 2c8ddb1b-901a-4f74-9b6f-f5babd887548
 redirect_from:
   - /v2/docs/baqend
   - /v2/docs/en/baqend

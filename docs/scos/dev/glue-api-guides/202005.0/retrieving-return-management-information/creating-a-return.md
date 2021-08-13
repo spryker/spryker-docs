@@ -2,6 +2,7 @@
 title: Creating a Return
 description: In this article, you will find information on creating a return via the Spryker Glue API
 originalLink: https://documentation.spryker.com/v5/docs/creating-a-return
+originalArticleId: a8b3f4ad-1427-4497-ad15-a78fc1b11b15
 redirect_from:
   - /v5/docs/creating-a-return
   - /v5/docs/en/creating-a-return
@@ -208,7 +209,7 @@ Sample request: `POST https://glue.mysprykershop.com/returns`
 
 {% info_block infoBox "Info" %}
 
-If you want to adjust results number per page, use the limit parameter, that returns the number of results for a single page, and the offset parameter, that returns results starting from a particular page. See [Paging Through Orders](https://documentation.spryker.com/docs/en/retrieving-order-history#paging-through-orders) for more details.
+If you want to adjust results number per page, use the limit parameter, that returns the number of results for a single page, and the offset parameter, that returns results starting from a particular page. See [Paging Through Orders](https://documentation.spryker.com/v5/docs/en/retrieving-order-history#paging-through-orders) for more details.
 
 {% endinfo_block %}
 

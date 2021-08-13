@@ -1,6 +1,7 @@
 ---
 title: Release Notes - July - 2 2017
 originalLink: https://documentation.spryker.com/v6/docs/release-notes-july-2-2017
+originalArticleId: e53e1687-7049-447d-87f6-23d1acff8308
 redirect_from:
   - /v6/docs/release-notes-july-2-2017
   - /v6/docs/en/release-notes-july-2-2017
@@ -18,8 +19,8 @@ We've changed product label touch logic in order to be able to export label IDs 
 |[ProductLabel 2.0.0](https://github.com/spryker/product-label/releases/tag/2.0.0)  | n/a | n/a |
 
 **Documentation**
-For module documentation, see [Product Label Module Guide](/docs/scos/dev/features/202001.0/product-information-management/product-label.html)
-For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productlabel.html).
+For module documentation, see [Product Label Module Guide](/docs/scos/dev/features/202009.0/product-labels/product-labels.html)
+For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-productlabel.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -46,7 +47,7 @@ With this release, we are introducing a new `DataImport` module. This module is 
 | [DataImport 1.0.0](https://github.com/spryker/data-import/releases/tag/1.0.0) | [ErrorHandler 2.1.0](https://github.com/spryker/error-handler/releases/tag/2.1.0) | <ul><li>[Category 3.2.1](https://github.com/spryker/Category/releases/tag/3.2.1)</li><li>[CategoryExporter 3.0.1](https://github.com/spryker/category-exporter/releases/tag/3.0.1)</li><li>[Glossary 3.1.3](https://github.com/spryker/Glossary/releases/tag/3.1.3)</li><li>[Stock 4.0.2](https://github.com/spryker/Stock/releases/tag/4.0.2)</li><li>[Testify 3.2.6](https://github.com/spryker/Testify/releases/tag/3.2.6)</li></ul> |
 
 **Documentation**
-For module documentation, see [HowTo - Import Data](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/creating-a-data-importer.html).
+For module documentation, see [HowTo - Import Data](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/creating-a-data-importer.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -73,7 +74,7 @@ We've added support for dynamic product labels. Labels now can be assigned to pr
 | [ProductNew 1.0.0](https://github.com/spryker/product-new/releases/tag/1.0.0) | <ul><li>[ProductLabel 2.1.0](https://github.com/spryker/product-label/releases/tag/2.1.0)</li><li>[ProductLabelCollector 1.1.0](https://github.com/spryker/product-label-collector/releases/tag/1.1.0)</li><li>[ProductLabelGui 1.1.0](https://github.com/spryker/product-label-gui/releases/tag/1.1.0)</li><li>[Search 6.4.0](https://github.com/spryker/Search/releases/tag/6.4.0)</li></ul> | [ProductManagement 0.7.5](https://github.com/spryker/product-management/releases/tag/0.7.5) |
 
 **Documentation**
-For module documentation and integration guides, see [ProductNew Module Guide](https://documentation.spryker.com/v4/docs/product-new)
+For module documentation and integration guides, see [ProductNew Module Guide](https://documentation.spryker.com/v6/docs/new-products)
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -114,10 +115,10 @@ For module documentation, see:
 
 For migration guides, see: 
 
-* [Category Migration Guide](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-category.html) 
-* [CMS Block Category Connector Migration Guide](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-cms-block-category-connector.html)
+* [Category Migration Guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-category.html) 
+* [CMS Block Category Connector Migration Guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-cms-block-category-connector.html)
 * Category Template Migration Console <!-- add a link -->
-* [CMS Block Category Connector Migration Console](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html)
+* [CMS Block Category Connector Migration Console](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-cms-block-category-connector.html-console)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

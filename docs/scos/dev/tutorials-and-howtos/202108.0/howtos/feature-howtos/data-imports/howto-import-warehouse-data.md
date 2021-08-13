@@ -1,9 +1,12 @@
 ---
 title: HowTo - Import Warehouse Data
 originalLink: https://documentation.spryker.com/2021080/docs/ht-import-warehouse-data
+originalArticleId: 3adb5dc2-398b-4d48-adad-5ee97de1df9d
 redirect_from:
   - /2021080/docs/ht-import-warehouse-data
   - /2021080/docs/en/ht-import-warehouse-data
+  - /docs/ht-import-warehouse-data
+  - /docs/en/ht-import-warehouse-data
 ---
 
 This HowTo provides the steps on how to import warehouse data using a .CSV file, including:
@@ -34,7 +37,7 @@ Keep in mind that if you don't set the status value, the warehouse will be unava
 console data:import stock
 ```
 
-The imported data should be imported to the `spy_stock` database table and appear on the **Warehouses** page in the Back Office. For more details on how to manage the warehouses, see [Managing Warehouses](/docs/scos/user/user-guides/202001.0/back-office-user-guide/administration/warehouses/managing-warehouses.html). 
+The imported data should be imported to the `spy_stock` database table and appear on the **Warehouses** page in the Back Office. For more details on how to manage the warehouses, see [Managing Warehouses](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/warehouses/managing-warehouses.html). 
 
 ## Importing a Warehouse with the Stores Assigned
 To import warehouses with the stores assigned:
@@ -54,7 +57,7 @@ To import warehouses with the stores assigned:
 console data:import stock-store
 ```
 
-The imported data should be added to the `spy_stock_store` database table and appear on the list of warehouses in the Back Office. For more details on how to manage the warehouses, see [Managing Warehouses](/docs/scos/user/user-guides/202001.0/back-office-user-guide/administration/warehouses/managing-warehouses.html). 
+The imported data should be added to the `spy_stock_store` database table and appear on the list of warehouses in the Back Office. For more details on how to manage the warehouses, see [Managing Warehouses](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/warehouses/managing-warehouses.html). 
 
 ## Importing Warehouses with Store Relation in Bulk
 You can also import warehouses with the stores assigned in bulk. To do this, perform the steps 2-4 from the previous sections - *Importing Warehouses* and *Importing a Warehouse with the Stores Assigned*. Then, run the following console command:
@@ -63,4 +66,4 @@ You can also import warehouses with the stores assigned in bulk. To do this, per
 console data:import
 ```
 
-The imported data should appear on the **Warehouses** page in the Back Office. For more details on how to manage the warehouses, see [Managing Warehouses](/docs/scos/user/user-guides/202001.0/back-office-user-guide/administration/warehouses/managing-warehouses.html). 
+The imported data should appear on the **Warehouses** page in the Back Office. For more details on how to manage the warehouses, see [Managing Warehouses](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/warehouses/managing-warehouses.html). 

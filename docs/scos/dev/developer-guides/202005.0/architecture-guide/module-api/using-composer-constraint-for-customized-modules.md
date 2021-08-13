@@ -2,12 +2,13 @@
 title: Using ~ Composer Constraint for Customized Modules
 description: To avoid BC breaking changes and keep project updates safe and predictable, a project should use ~ (tilde) composer constraint instead of ^ (caret) for the customized modules.
 originalLink: https://documentation.spryker.com/v5/docs/using-composer-constraint
+originalArticleId: 390f4d39-b33a-4b27-b979-6629873cc3ad
 redirect_from:
   - /v5/docs/using-composer-constraint
   - /v5/docs/en/using-composer-constraint
 ---
 
-Spryker OS is modular and follows the rules of semantic versioning. Every BC-breaking change of module [API](https://documentation.spryker.com/docs/en/definition-api) is considered a major release. But what happens to non-API? Spryker leverages the ability to change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.
+Spryker OS is modular and follows the rules of semantic versioning. Every BC-breaking change of module [API](/docs/scos/dev/developer-guides/202005.0/architecture-guide/module-api/definition-of-module-api.html) is considered a major release. But what happens to non-API? Spryker leverages the ability to change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.
 
 When you customize Spryker modules by changing their behavior on project level, even minor changes could potentially cause migration efforts. To avoid such cases and keep project updates safe and predictable, a project should use `~` (tilde) composer constraint instead of `^` (caret) for the customized modules.
 

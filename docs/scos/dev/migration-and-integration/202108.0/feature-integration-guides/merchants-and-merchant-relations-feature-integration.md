@@ -1,9 +1,12 @@
 ---
 title: Merchants and Merchant Relations Feature Integration
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-merchant-relations-feature-integration
+originalArticleId: d39fb2d4-f0fd-45c2-9d11-b7ad693f0f03
 redirect_from:
   - /2021080/docs/merchant-merchant-relations-feature-integration
   - /2021080/docs/en/merchant-merchant-relations-feature-integration
+  - /docs/merchant-merchant-relations-feature-integration
+  - /docs/en/merchant-merchant-relations-feature-integration
 ---
 
 The Merchants and Merchant Relations feature is shipped with following modules:

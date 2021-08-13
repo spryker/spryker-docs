@@ -2,6 +2,7 @@
 title: Dashboard
 description: The dashboard provides an overview of basic order-related statistics. This page presents you with a summary of order counts, order statuses, top products.
 originalLink: https://documentation.spryker.com/v4/docs/dashboard
+originalArticleId: 26b041b1-91ea-4c64-b3b3-0c6b0fcc9768
 redirect_from:
   - /v4/docs/dashboard
   - /v4/docs/en/dashboard

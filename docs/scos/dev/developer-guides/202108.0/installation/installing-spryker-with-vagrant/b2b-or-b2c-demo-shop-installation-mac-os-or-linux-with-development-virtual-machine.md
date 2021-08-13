@@ -2,12 +2,15 @@
 title: B2B or B2C Demo Shop installation- Mac OS or Linux, with Development Virtual Machine
 description: This article provides step-by-step instructions on the B2B or B2C Demo Shop installation on Mac OS or Linux with Development Virtual Machine.
 originalLink: https://documentation.spryker.com/2021080/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+originalArticleId: 1d644ef6-acab-4d55-afa8-24628043bae7
 redirect_from:
   - /2021080/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
   - /2021080/docs/en/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /docs/en/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
 ---
 
-To install the Demo Shop for [B2B](https://documentation.spryker.com/docs/b2b-suite) or [B2C](https://documentation.spryker.com/docs/b2c-suite) implementations on Mac OS or Linux with Development Virtual Machine, follow the steps below.
+To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2c-suite.html) implementations on Mac OS or Linux with Development Virtual Machine, follow the steps below.
 
 ### 1. Install prerequisites
 
@@ -107,5 +110,5 @@ When the installation process is complete, Spryker Commerce OS is ready to use. 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
 
 ## Next steps:
-* [Troubleshooting installation issues](https://documentation.spryker.com/docs/peer-authentication-failed-for-user-postgres)
+* [Troubleshooting installation issues](/docs/scos/dev/developer-guides/{{ page.version }}/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html)
 

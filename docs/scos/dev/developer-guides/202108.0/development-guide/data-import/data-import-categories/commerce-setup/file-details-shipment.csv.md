@@ -1,12 +1,15 @@
 ---
 title: File details- shipment.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-shipmentcsv
+originalArticleId: 213aeaa8-3dd8-43da-870a-5f1174b640e2
 redirect_from:
   - /2021080/docs/file-details-shipmentcsv
   - /2021080/docs/en/file-details-shipmentcsv
+  - /docs/file-details-shipmentcsv
+  - /docs/en/file-details-shipmentcsv
 ---
 
-This article contains content of the **shipment.csv** file to configure [shipment](https://documentation.spryker.com/docs/shipment) information in your Spryker Demo Shop.
+This article contains content of the **shipment.csv** file to configure [shipment](https://documentation.spryker.com/2021080/docs/shipment) information in your Spryker Demo Shop.
 
 To import the file, run
 
@@ -23,7 +26,7 @@ The file should have the following parameters:
 | name|  &check; | String | | Name of the shipment method. |
 | carrier |  &check; | String |  | Name of the shipment carrier. |
 | taxSetName |  &check; | String | | 	Name of the tax set. |
-| avalara_tax_code |  | String | | [Avalara tax code](https://documentation.spryker.com/2021080/docs/tax-feature-overview#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/dev/features/{{ page.version }}/tax/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 ## Dependencies
 This file has no dependencies.

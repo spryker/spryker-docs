@@ -2,12 +2,13 @@
 title: Product
 description: Product Management system allows gathering product characteristics and exported them to Spryker. Products can be managed in the Back Office and displayed in Yves
 originalLink: https://documentation.spryker.com/v5/docs/product
+originalArticleId: dd1b3764-45ea-4e35-9ab7-87ef60447d57
 redirect_from:
   - /v5/docs/product
   - /v5/docs/en/product
 ---
 
-Product is the central entity of a shop. Establishing the product data allows you to build and maintain a catalog representing your commercial offerings. The products are created and managed in the [ Back Office](https://documentation.spryker.com/docs/en/general-back-office-overview). 
+Product is the central entity of a shop. Establishing the product data allows you to build and maintain a catalog representing your commercial offerings. The products are created and managed in the [ Back Office](/docs/scos/user/user-guides/202005.0/back-office-user-guide/general-back-office-overview.html). 
 The product information you specify in the Back office, serves various purposes:
 
 * Contains characteristics that describe the product.
@@ -20,7 +21,7 @@ Besides the Spryker Back Office, product information can be maintained in an ext
 
 The Spryker Commerce OS supports integration of the following PIM systems:
 
-* [Akeneo](https://documentation.spryker.com/docs/en/core-extension)
-* [Censhare PIM](https://documentation.spryker.com/docs/en/censhare-pim)
-* [Xentral](https://documentation.spryker.com/docs/en/xentral)
+* [Akeneo](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-the-core.html)
+* [Censhare PIM](/docs/scos/dev/technology-partners/202005.0/product-information-pimerp/censhare-pim.html)
+* [Xentral](/docs/scos/dev/technology-partners/202005.0/product-information-pimerp/xentral.html)
 

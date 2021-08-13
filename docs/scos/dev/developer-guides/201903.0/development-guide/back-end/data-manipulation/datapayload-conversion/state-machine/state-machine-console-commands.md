@@ -2,6 +2,7 @@
 title: State Machine Console Commands
 description: This article provides the console commands for state machine.
 originalLink: https://documentation.spryker.com/v2/docs/state-machine-cronjob
+originalArticleId: e4190087-3a42-49e6-a02f-5e2445f5672c
 redirect_from:
   - /v2/docs/state-machine-cronjob
   - /v2/docs/en/state-machine-cronjob

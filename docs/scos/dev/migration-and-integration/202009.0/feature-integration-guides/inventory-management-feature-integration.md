@@ -2,14 +2,15 @@
 title: Inventory management feature integration
 description: The guide guides you through the process of installing the Warehouse Management functionality into your project.
 originalLink: https://documentation.spryker.com/v6/docs/inventory-management-feature-integration
+originalArticleId: aaf5958d-e696-444e-bf82-4892edc35ea9
 redirect_from:
   - /v6/docs/inventory-management-feature-integration
   - /v6/docs/en/inventory-management-feature-integration
 ---
 
 {% info_block errorBox %}
-The following Feature Integration guide expects the basic feature to be in place.</br>The current Feature Integration guide only adds the **[Warehouse Management](https://documentation.spryker.com/docs/multiple-warehouse-stock
-{% endinfo_block %}** and **[Add to cart from catalog page](https://documentation.spryker.com/docs/quick-order-from-the-catalog-page)** functionalities.)
+The following Feature Integration guide expects the basic feature to be in place.</br>The current Feature Integration guide only adds the **[Warehouse Management](https://documentation.spryker.com/v6/docs/multiple-warehouse-stock
+{% endinfo_block %}** and **[Add to cart from catalog page](/docs/scos/dev/features/202009.0/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)** functionalities.)
 
 ## Install Feature Core
 ### Prerequisites

@@ -1,6 +1,7 @@
 ---
 title: Extending a REST API Resource
 originalLink: https://documentation.spryker.com/v4/docs/extending-a-rest-request-resource
+originalArticleId: e472d466-7211-4c69-90ae-725c7ef72451
 redirect_from:
   - /v4/docs/extending-a-rest-request-resource
   - /v4/docs/en/extending-a-rest-request-resource
@@ -9,7 +10,7 @@ redirect_from:
 Spryker Glue REST API comes with a set of predefined APIs out of the box. You have the possibility to extend and customize them to your own project needs. For this purpose, you need to extend the Glue API modules that provide the relevant functionality on your project level.
 
 {% info_block infoBox "Before You Begin" %}
-The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](https://documentation.spryker.com/v4/docs/glue-infrastructure#resource-modules
+The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](/docs/scos/dev/glue-api/202001.0/glue-api-developer-guides/glue-infrastructure.html#resource-modules
 {% endinfo_block %} section in **Glue Infrastructure**.)
 
 ## Prerequisites:
@@ -20,13 +21,13 @@ To complete this tutorial, you need to comply with the following prerequisites:
 * [Integrate Products API](https://documentation.spryker.com/v4/docs/product-api-feature-integration).
 
 {% info_block infoBox %}
-If you have a development virtual machine with the [B2C Demo Shop](https://documentation.spryker.com/v4/docs/demoshops
+If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops
 {% endinfo_block %} installed, all the required components will be available out of the box.)
 
 Also, let us assume that you modified the product storage data to match your product requirements. For example, let's assume that you added the `manufacturerCountry` field to the product data not as an attribute, but as another field in the database.
 
 {% info_block warningBox %}
-For more details, see [Product Attributes](https://documentation.spryker.com/v4/docs/db-schema-catalog#product-attributes
+For more details, see [Product Attributes](/docs/scos/dev/database-schema-guide/202001.0/catalog-schema.html#product-attributes
 {% endinfo_block %} and [Extending the Database Schema](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).)
 
 Now, let us add this field to responses of the _Products API_ endpoints:

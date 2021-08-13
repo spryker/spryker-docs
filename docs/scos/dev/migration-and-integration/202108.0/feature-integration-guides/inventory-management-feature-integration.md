@@ -2,12 +2,15 @@
 title: Inventory management feature integration
 description: The guide guides you through the process of installing the Warehouse Management functionality into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/inventory-management-feature-integration
+originalArticleId: cb79eb0c-0a3a-49c5-a911-ef6f992f1118
 redirect_from:
   - /2021080/docs/inventory-management-feature-integration
   - /2021080/docs/en/inventory-management-feature-integration
+  - /docs/inventory-management-feature-integration
+  - /docs/en/inventory-management-feature-integration
 ---
 
-This document describes how to ingrate the [Inventory Management](https://documentation.spryker.com/docs/inventory) feature into a Spryker project. 
+This document describes how to ingrate the [Inventory Management](https://documentation.spryker.com/2021080/docs/inventory-management) feature into a Spryker project. 
 
 {% info_block errorBox %}
 
@@ -15,9 +18,9 @@ The following Feature Integration guide expects the basic feature to be in place
 
 The current feature integration guide adds the following functionality:
 
-* [Warehouse Management](https://documentation.spryker.com/docs/multiple-warehouse-stock)
-* [Add to cart from catalog page](https://documentation.spryker.com/docs/quick-order-from-the-catalog-page)
-* [Warehouse address](https://documentation.spryker.com/2021080/docs/inventory-management-feature-overview#defining-a-warehouse-address)
+* [Warehouse Management](https://documentation.spryker.com/2021080/docs/multiple-warehouse-stock)
+* [Add to cart from catalog page](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
+* [Warehouse address](/docs/scos/dev/features/{{ page.version }}/inventory-management/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
 
@@ -549,7 +552,7 @@ Make sure that the warehouse address management works:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
 |--- | --- | --- | 
-| Inventory Management API | | [Glue API: Inventory Management feature integration](https://documentation.spryker.com/docs/glue-api-inventory-management-feature-integration) |
-| Alternative Products | | [Alternative Products + Inventory Management Feature Integration - ongoing](https://documentation.spryker.com/docs/alternative-products-inventory-management-feature-integration)|
+| Inventory Management API | | [Glue API: Inventory Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html) |
+| Alternative Products | | [Alternative Products + Inventory Management Feature Integration - ongoing](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/alternative-products-inventory-management-feature-integration.html)|
 
 

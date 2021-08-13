@@ -1,6 +1,7 @@
 ---
 title: Managing Guest Carts
 originalLink: https://documentation.spryker.com/v3/docs/managing-guest-carts
+originalArticleId: 716feabe-b263-4010-a4bc-4a637b9568ad
 redirect_from:
   - /v3/docs/managing-guest-carts
   - /v3/docs/en/managing-guest-carts
@@ -13,7 +14,7 @@ Guest carts come with an expiration date, which means that unregistered users ca
 Only one cart can be created for each guest customer.
 
 {% info_block infoBox %}
-If you want to know how to process carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-carts-of-registered-users.html
+If you want to know how to process carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/managing-carts/managing-carts-of-registered-users.html
 {% endinfo_block %}.)
 
 

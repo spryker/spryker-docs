@@ -2,6 +2,7 @@
 title: Heidelpay - Split-payment Marketplace
 description: Integrate Split payment Marketplace through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v1/docs/heidelpay-split-payment-marketplace
+originalArticleId: f54601d8-ab6f-49c0-a36b-36c99494b36b
 redirect_from:
   - /v1/docs/heidelpay-split-payment-marketplace
   - /v1/docs/en/heidelpay-split-payment-marketplace
@@ -21,7 +22,7 @@ $config[HeidelpayConstants::CONFIG_IS_SPLIT_PAYMENT_ENABLED_KEY] = true;
 
 ## Project Implementation
 
-A project level should set quote items and expenses information the field Heidelpay Item Channel Id. It could be done [using cart expander plugin](https://documentation.spryker.com/v4/docscart-functionality#cart-expanders).
+A project level should set quote items and expenses information the field Heidelpay Item Channel Id. It could be done [using cart expander plugin](https://documentation.spryker.com/v1/docscart-functionality#cart-expanders).
 
 Example:
 ```php

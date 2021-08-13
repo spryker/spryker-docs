@@ -2,6 +2,7 @@
 title: Approval Process Feature Overview
 description: This topic provides a detailed overview of the Approval Process feature.
 originalLink: https://documentation.spryker.com/v3/docs/approval-process-feature-overview
+originalArticleId: 969eb058-d95d-4de7-87ed-07072c25cce1
 redirect_from:
   - /v3/docs/approval-process-feature-overview
   - /v3/docs/en/approval-process-feature-overview
@@ -45,7 +46,7 @@ Here’s how approvals fit into the buying process:
 
 1. **Submitting the Cart for Approval**
 
-   The approval process workflow is initiated when a Buyer places an order through the company user account in the Shop Application. Instead of proceeding to the checkout, a Buyer should request approval from the appropriate Approver through the Approver Widget. Check [Shop Guide - Approval Process](https://documentation.spryker.com/v3/docs/approval-process-shop-guide#submitting-a-request-for-approval) for details on how to submit a cart for approval. After the Buyer has requested the approval, the cart gets **Waiting** status and cannot be edited.
+   The approval process workflow is initiated when a Buyer places an order through the company user account in the Shop Application. Instead of proceeding to the checkout, a Buyer should request approval from the appropriate Approver through the Approver Widget. Check [Shop Guide - Approval Process](/docs/scos/user/user-guides/201907.0/shop-user-guide/shop-guide-approval-process.html#submitting-a-request-for-approval) for details on how to submit a cart for approval. After the Buyer has requested the approval, the cart gets **Waiting** status and cannot be edited.
 
 {% info_block warningBox %}
 There may be several Approvers with different Approver limit permissions created. By default, one Approver role is available after the feature has been integrated.

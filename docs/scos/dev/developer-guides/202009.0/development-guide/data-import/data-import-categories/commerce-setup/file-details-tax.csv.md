@@ -1,12 +1,13 @@
 ---
 title: File details- tax.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-taxcsv
+originalArticleId: ce146a7e-31cd-491b-b6b4-2358bbb30b9f
 redirect_from:
   - /v6/docs/file-details-taxcsv
   - /v6/docs/en/file-details-taxcsv
 ---
 
-This article contains content of the **tax.csv** file to configure [Tax](https://documentation.spryker.com/docs/tax) information on your Spryker Demo Shop.
+This article contains content of the **tax.csv** file to configure [Tax](/docs/scos/dev/features/202009.0/tax/tax.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:

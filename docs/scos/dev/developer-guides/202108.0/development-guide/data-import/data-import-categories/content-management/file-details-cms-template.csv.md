@@ -1,12 +1,15 @@
 ---
 title: File details- cms_template.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-templatecsv
+originalArticleId: 6221a424-5513-496b-bbc6-56a59471a264
 redirect_from:
   - /2021080/docs/file-details-cms-templatecsv
   - /2021080/docs/en/file-details-cms-templatecsv
+  - /docs/file-details-cms-templatecsv
+  - /docs/en/file-details-cms-templatecsv
 ---
 
-This article contains content of the **cms_template.csv** file to configure [CMS Template](https://documentation.spryker.com/docs/ht-create-cms-templates#cms-page-template) information on your Spryker Demo Shop.
+This article contains content of the **cms_template.csv** file to configure [CMS Template](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-page-template) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

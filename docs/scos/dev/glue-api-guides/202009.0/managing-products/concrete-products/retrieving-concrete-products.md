@@ -2,6 +2,7 @@
 title: Retrieving concrete products
 description: Retrieve general information about concrete products.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-concrete-products
+originalArticleId: e9d1f7fe-5e4e-47b6-a273-ae4bde21da95
 redirect_from:
   - /v6/docs/retrieving-concrete-products
   - /v6/docs/en/retrieving-concrete-products
@@ -11,10 +12,10 @@ This endpoint allows to retrieve general information about concrete products.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration)
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
-* [Glue API: Product Options Feature Integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
+* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Product Options Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html)
 
 
 ## Retrieve a concrete product 
@@ -725,13 +726,13 @@ To retrieve general information about a concrete product, send the request:
 For other attributes of the included resources, see:
 
 
-*     [Retrieve sales units of a concrete product](https://documentation.spryker.com/docs/retrieving-sales-units#sales-units-response-attributes)
-*     [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units#measurement-units-response-attributes)
-*     [Retrieve image sets of a concrete product](https://documentation.spryker.com/docs/retrieving-image-sets-of-concrete-products#concrete-image-sets-response-attributes)
-*     [Retrieve availability of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-availability#concrete-product-availability-response-attributes)
-*     [Retrieve prices of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-prices#concrete-product-prices-response-attributes)
-*     [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
-*     [Retrieve product ratings and reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
+*     [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-sales-units.html#sales-units-response-attributes)
+*     [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/202009.0/retrieving-measurement-units.html#measurement-units-response-attributes)
+*     [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
+*     [Retrieve availability of a concrete product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes)
+*     [Retrieve prices of a concrete product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-concrete-product-prices.html#concrete-product-prices-response-attributes)
+*     [Retrieve a product label](/docs/scos/dev/glue-api-guides/202009.0/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+*     [Retrieve product ratings and reviews](/docs/scos/dev/glue-api-guides/202009.0/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
 
 
 ## Possible errors
@@ -740,4 +741,4 @@ For other attributes of the included resources, see:
 | --- | --- |
 | 302 | Concrete product is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).

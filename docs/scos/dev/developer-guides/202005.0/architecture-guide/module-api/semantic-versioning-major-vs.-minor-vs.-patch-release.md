@@ -2,6 +2,7 @@
 title: Semantic Versioning- Major vs. Minor vs. Patch Release
 description: Spryker releases update as major, minor, patch release or a bugfix. Learn more about them in this article.
 originalLink: https://documentation.spryker.com/v5/docs/major-minor-patch-release
+originalArticleId: 8bc04c7d-4c69-45aa-85f2-2c1bd2867783
 redirect_from:
   - /v5/docs/major-minor-patch-release
   - /v5/docs/en/major-minor-patch-release
@@ -15,7 +16,7 @@ A Pull Request can ship a new Feature, Bugfixes, and Improvements to existing fe
 
 ## What is a "Major Release"?
 
-A release is a **major** when we make a change in the [external API of a module](https://documentation.spryker.com/docs/en/definition-api). This includes changes to the internal contract. E.g., even when there is no change of a facade-method, there can be a change in the behavior so that the contract (~ expected behavior) changed. Please obey the constraints for major releases.
+A release is a **major** when we make a change in the [external API of a module](/docs/scos/dev/developer-guides/202005.0/architecture-guide/module-api/definition-of-module-api.html). This includes changes to the internal contract. E.g., even when there is no change of a facade-method, there can be a change in the behavior so that the contract (~ expected behavior) changed. Please obey the constraints for major releases.
 
 Our customers need to change their `composer.json` file to get major versions of modules.
 
@@ -28,7 +29,7 @@ We have two types of Major Releases:
 
 A release is **minor** when the internal API was changed. For instance, when the signature of internal models or constructors is changed, classes are renamed, etc. Actually, anything that can break extensions via inheritance or composition on a project level.
 
-Our customers will get all new minor releases automatically during composer update if they use the ^ symbol in `composer.json` (e.g. `"spryker/category": "^4.1.2"`). We recommend to use the `~` symbol (e.g. `"spryker/category": "~4.1.0"`) for all modules that have been extended at the project level to make sure that nothing breaks after a release. See [Using ~ Composer Constraint for Customized Modules](https://documentation.spryker.com/docs/en/using-composer-constraint) on how you can easily detect `^` in the extended modules and update them with `~`.
+Our customers will get all new minor releases automatically during composer update if they use the ^ symbol in `composer.json` (e.g. `"spryker/category": "^4.1.2"`). We recommend to use the `~` symbol (e.g. `"spryker/category": "~4.1.0"`) for all modules that have been extended at the project level to make sure that nothing breaks after a release. See [Using ~ Composer Constraint for Customized Modules](/docs/scos/dev/developer-guides/202005.0/architecture-guide/module-api/using-composer-constraint-for-customized-modules.html) on how you can easily detect `^` in the extended modules and update them with `~`.
 
 ## What is a "Patch Release"?
 

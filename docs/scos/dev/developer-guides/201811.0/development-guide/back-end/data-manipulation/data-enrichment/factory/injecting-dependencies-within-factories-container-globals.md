@@ -2,6 +2,7 @@
 title: Injecting Dependencies within Factories- Container Globals
 description: The ContainerGlobals is a way to inject dependencies which are available inside your Factories.
 originalLink: https://documentation.spryker.com/v1/docs/container-globals
+originalArticleId: a019ed33-6a35-4996-9cbc-950d9100e5c4
 redirect_from:
   - /v1/docs/container-globals
   - /v1/docs/en/container-globals

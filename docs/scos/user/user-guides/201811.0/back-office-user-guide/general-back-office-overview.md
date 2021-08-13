@@ -1,6 +1,7 @@
 ---
 title: General Back Office Overview
 originalLink: https://documentation.spryker.com/v1/docs/general-back-office-overview
+originalArticleId: aee0da60-3f48-4849-b336-44ab6f248bd4
 redirect_from:
   - /v1/docs/general-back-office-overview
   - /v1/docs/en/general-back-office-overview

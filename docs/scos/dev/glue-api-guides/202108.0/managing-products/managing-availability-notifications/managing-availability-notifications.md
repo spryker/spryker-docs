@@ -2,9 +2,12 @@
 title: Managing availability notifications
 description: Manage product availability notifications for registered users
 originalLink: https://documentation.spryker.com/2021080/docs/managing-availability-notifications
+originalArticleId: 664b1f47-879b-43c4-8538-5f74397d6816
 redirect_from:
   - /2021080/docs/managing-availability-notifications
   - /2021080/docs/en/managing-availability-notifications
+  - /docs/managing-availability-notifications
+  - /docs/en/managing-availability-notifications
 ---
 
 *Availability Notification* allows registered and guest customers to subscribe to availability notifications for an unavailable product so that when the product is back in stock, they could receive a notification.
@@ -12,7 +15,7 @@ redirect_from:
 This endpoint allows managing availability notifications of registered and guest customers.
 
 ## Installation 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue: Availability Notification feature integration](https://documentation.spryker.com/2021080/docs/glue-api-availability-notification-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue: Availability Notification feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-availability-notification-feature-integration.html).
 
 ## Subscribe to availability notifications
 To subscribe to availability notifications for an out-of-stock product, send the request:
@@ -100,4 +103,4 @@ If a customer’s subscription is deleted successfully, the endpoint returns the
 | 4603 | Subscription doesn’t exist. |
 | 4606 | Request is not authorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

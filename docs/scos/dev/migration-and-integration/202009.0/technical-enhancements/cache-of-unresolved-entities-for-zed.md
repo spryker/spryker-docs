@@ -2,12 +2,13 @@
 title: Cache of Unresolved Entities for Zed
 description: The article provides general description and integration instructions of the Cache of Unresolved Entities for Zed feature
 originalLink: https://documentation.spryker.com/v6/docs/cache-of-unresolved-entities-for-zed
+originalArticleId: 49c6737c-c035-4195-9946-008114e5a423
 redirect_from:
   - /v6/docs/cache-of-unresolved-entities-for-zed
   - /v6/docs/en/cache-of-unresolved-entities-for-zed
 ---
 
-Spryker allows extending certain classes (such as facades, clients, etc.) in projects and in multiple stores. Therefore each class can exist on the core, project, and store level. In addition to that, Spryker supports multiple namespaces for each level. Because of this, there exist multiple possible locations to look up such classes. To avoid unnecessary usages of the expensive `class_exists()` function that does the job, Spryker provides a caching mechanism that writes all non-existing classes into a cache file for Zed. For more details, see[ Activate Class Resolver Cache](https://documentation.spryker.com/docs/performance-guidelines#activate-class-resolver-cache) in Performance Guidelines.
+Spryker allows extending certain classes (such as facades, clients, etc.) in projects and in multiple stores. Therefore each class can exist on the core, project, and store level. In addition to that, Spryker supports multiple namespaces for each level. Because of this, there exist multiple possible locations to look up such classes. To avoid unnecessary usages of the expensive `class_exists()` function that does the job, Spryker provides a caching mechanism that writes all non-existing classes into a cache file for Zed. For more details, see[ Activate Class Resolver Cache](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/performance-guidelines.html#activate-class-resolver-cache) in Performance Guidelines.
 
 ## Integration
 Follow the steps below to integrate Cache of Unresolved Entities for Zed into your project to improve performance.

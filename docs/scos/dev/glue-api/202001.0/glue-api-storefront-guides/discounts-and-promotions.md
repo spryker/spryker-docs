@@ -1,6 +1,7 @@
 ---
 title: Discounts and Promotions
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-discounts
+originalArticleId: 1527ed38-1a7f-47cb-bd0f-007a9b7367fb
 redirect_from:
   - /v4/docs/retrieving-discounts
   - /v4/docs/en/retrieving-discounts

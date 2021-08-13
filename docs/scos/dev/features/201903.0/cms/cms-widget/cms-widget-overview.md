@@ -2,6 +2,7 @@
 title: CMS Widget Overview
 description: With the feature, you can enrich your CMS, category or product pages with the content in the Back Office
 originalLink: https://documentation.spryker.com/v2/docs/cms-widget-overview-201903
+originalArticleId: 9c5d1a2d-2273-459b-9dc4-cabb349e3e4a
 redirect_from:
   - /v2/docs/cms-widget-overview-201903
   - /v2/docs/en/cms-widget-overview-201903

@@ -2,6 +2,7 @@
 title: Migration Guide - ProductLabelGUI
 description: Use the guide to learn how to update the ProductLabelGui module to a newer version.
 originalLink: https://documentation.spryker.com/v6/docs/mg-product-label-gui
+originalArticleId: 7f8fd672-704e-49d7-a2bf-d44a8bb58e1a
 redirect_from:
   - /v6/docs/mg-product-label-gui
   - /v6/docs/en/mg-product-label-gui
@@ -43,6 +44,6 @@ class ProductLabelGuiDependencyProvider extends SprykerProductLabelGuiDependency
 ```
 
 ## Upgrading from version 1.* to version 2.*
-In version 2 we have added multi-currency support. First of all make sure you [migrated the Price module](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-price.html). We have changed ZED tables to use `PriceProductFacade` instead of the database join to get price, because that requires additional business logic processing before deciding which price to display. If you changed `AbstractRelatedProductTable` or `RelatedProductTableQueryBuilder`, check core implementation and update accordingly.
+In version 2 we have added multi-currency support. First of all make sure you [migrated the Price module](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-price.html). We have changed ZED tables to use `PriceProductFacade` instead of the database join to get price, because that requires additional business logic processing before deciding which price to display. If you changed `AbstractRelatedProductTable` or `RelatedProductTableQueryBuilder`, check core implementation and update accordingly.
 
 <!--Last review date: Nov 23, 2017 by Aurimas Ličkus  -->

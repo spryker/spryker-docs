@@ -2,6 +2,7 @@
 title: Running tests with the Docker SDK
 description: Learn how to run tests with the Docker SDK.
 originalLink: https://documentation.spryker.com/v6/docs/running-tests-with-the-docker-sdk
+originalArticleId: fb454c8b-0825-456a-b2f7-c46c61181598
 redirect_from:
   - /v6/docs/running-tests-with-the-docker-sdk
   - /v6/docs/en/running-tests-with-the-docker-sdk
@@ -102,7 +103,7 @@ services:
         engine: chromedriver
 ```        
 
-See [webdriver:](https://documentation.spryker.com/docs/deploy-file-reference-10#webdriver) to learn more about webdriver configuration in the deploy file.
+See [webdriver:](/docs/scos/dev/developer-guides/202009.0/docker-sdk/deploy-file-reference-1.0.html#webdriver) to learn more about webdriver configuration in the deploy file.
 
 ## Configure Codeception
 

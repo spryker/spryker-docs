@@ -2,6 +2,7 @@
 title: Shop Guide - Creating a New Company Role
 description: In this guide, you will get a step-by-step- instruction on how to create a new company role in Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-creating-a-new-company-role
+originalArticleId: d717777d-b2cc-48a0-82f4-ee8a66ab2b9b
 redirect_from:
   - /v5/docs/shop-guide-creating-a-new-company-role
   - /v5/docs/en/shop-guide-creating-a-new-company-role
@@ -23,4 +24,4 @@ Selecting the **Is Default** check-box means that the new users will be created 
 ***
 **What’s next?**
 
-To learn more about how to manage company roles, see [Shop Guide - Managing Company Roles](https://documentation.spryker.com/docs/en/company-roles-shop-guide).
+To learn more about how to manage company roles, see [Shop Guide - Managing Company Roles](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-company-roles/shop-guide-managing-company-roles.html).

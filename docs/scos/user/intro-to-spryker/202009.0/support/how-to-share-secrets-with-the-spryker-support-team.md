@@ -2,6 +2,7 @@
 title: How to share secrets with the Spryker Support Team
 description: Learn how to share secrets with the Spryker Support Team
 originalLink: https://documentation.spryker.com/v6/docs/how-to-share-secrets-with-the-spryker-support-team
+originalArticleId: 125ab27e-9352-49e0-bfe9-136c45e1f943
 redirect_from:
   - /v6/docs/how-to-share-secrets-with-the-spryker-support-team
   - /v6/docs/en/how-to-share-secrets-with-the-spryker-support-team

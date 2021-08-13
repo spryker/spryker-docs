@@ -1,9 +1,12 @@
 ---
 title: Glue API- Shopping lists feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shopping-lists-feature-integration
+originalArticleId: 36dac1bc-e05e-4a7e-85fa-af59e77fa7ee
 redirect_from:
   - /2021080/docs/glue-api-shopping-lists-feature-integration
   - /2021080/docs/en/glue-api-shopping-lists-feature-integration
+  - /docs/glue-api-shopping-lists-feature-integration
+  - /docs/en/glue-api-shopping-lists-feature-integration
 ---
 
 {% info_block infoBox "Included features" %}
@@ -21,8 +24,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature|
 | --- | --- |--- |
-| Spryker Core	 | 202009.0 |[Glue API: Spryker Core Feature Integration](https://documentation.spryker.com/docs/glue-spryker-core-feature-integration) |
-| Shopping Lists	 | 202009.0 |[Shopping Lists Feature Integration](https://documentation.spryker.com/docs/shopping-lists-feature-integration-201907) |
+| Spryker Core	 | 202009.0 |[Glue API: Spryker Core Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Shopping Lists	 | 202009.0 |[Shopping Lists Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/shopping-lists-feature-integration.html) |
 
 ## 1) Install the Required Modules Using Composer
 Run the following command to install the required modules:
@@ -110,7 +113,7 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 ### Enable resources
 {% info_block infoBox %}
 
-ShoppingListsResourcePlugin GET, POST, PATCH and DELETE, ShoppingListItemsResourcePlugin POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](https://documentation.spryker.com/docs/glue-infrastructure#resource-routing).
+ShoppingListsResourcePlugin GET, POST, PATCH and DELETE, ShoppingListItemsResourcePlugin POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/glue-api/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

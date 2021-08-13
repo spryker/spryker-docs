@@ -2,15 +2,16 @@
 title: PriceProduct module details- reference information
 description: Learn the technical details of the PriceProduct module and price dimensions
 originalLink: https://documentation.spryker.com/v6/docs/priceproduct-module-details-reference-information
+originalArticleId: e39c6eb9-5ae1-490f-8149-65989285c496
 redirect_from:
   - /v6/docs/priceproduct-module-details-reference-information
   - /v6/docs/en/priceproduct-module-details-reference-information
 ---
 
-This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](https://documentation.spryker.com/docs/mg-priceproduct#upgrading-from-version-1---to-version-2--) of the module. 
+This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-priceproduct.html#upgrading-from-version-1---to-version-2--) of the module. 
 
 ## Price dimension
-Starting from vesion 2.0.0 of the PriceProduct module, to save BC, we have implemented *Default Price Dimension* inside the  PriceProduct, so all prices imported by new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](https://documentation.spryker.com/docs/price-per-merchant-relation-feature-overview) to learn more about the price dimension.
+Starting from vesion 2.0.0 of the PriceProduct module, to save BC, we have implemented *Default Price Dimension* inside the  PriceProduct, so all prices imported by new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/dev/features/202009.0/merchant-custom-prices/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
 
 ## PriceProductService
 Starting from version 2.0.0 of the PriceProduct module, we have added the Service layer with `PriceProductService`. Its purpose is to choose only one price from the list of prices available for the current customer, taking into account the provided filter, which could contain selected Store, Currency, Price mode (gross or net), and Quote (with customer information inside).

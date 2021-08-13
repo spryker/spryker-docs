@@ -1,9 +1,12 @@
 ---
 title: Migration Guide - QuoteRequest
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequest
+originalArticleId: 389e2366-30ea-4673-905d-5c1904d26cee
 redirect_from:
   - /2021080/docs/mg-quoterequest
   - /2021080/docs/en/mg-quoterequest
+  - /docs/mg-quoterequest
+  - /docs/en/mg-quoterequest
 ---
 
 ## Upgrading from Version 1.x.x to Version 2.x.x

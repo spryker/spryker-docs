@@ -1,6 +1,7 @@
 ---
 title: CMS Schema
 originalLink: https://documentation.spryker.com/v4/docs/db-schema-cms
+originalArticleId: 51c76358-220a-4af5-b2a0-eb38f328b761
 redirect_from:
   - /v4/docs/db-schema-cms
   - /v4/docs/en/db-schema-cms

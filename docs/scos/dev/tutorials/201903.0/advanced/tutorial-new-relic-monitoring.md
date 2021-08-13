@@ -1,6 +1,7 @@
 ---
 title: Tutorial - New Relic Monitoring
 originalLink: https://documentation.spryker.com/v2/docs/t-new-relic-monitoring
+originalArticleId: 9482165b-6603-43fe-b898-3e359f086cba
 redirect_from:
   - /v2/docs/t-new-relic-monitoring
   - /v2/docs/en/t-new-relic-monitoring

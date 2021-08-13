@@ -2,6 +2,7 @@
 title: File Manager
 description: Reduce your bounce rate and create an enhanced shopping experience by providing impactful visuals while simultaneously maintaining fast response times.
 originalLink: https://documentation.spryker.com/v6/docs/media-management
+originalArticleId: 0b42b89b-3f27-45ba-a217-81e270eafbc0
 redirect_from:
   - /v6/docs/media-management
   - /v6/docs/en/media-management

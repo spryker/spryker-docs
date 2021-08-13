@@ -2,6 +2,7 @@
 title: Ratenkauf by Easycredit - Installation and Configuration
 description: This article contains installation and configuration information for the Ratenkauf by Easycredit module into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v3/docs/ratenkauf-by-easycredit-installation-and-configuration
+originalArticleId: 7d3c7f84-e7a0-4d04-9b8c-5bdf6256c069
 redirect_from:
   - /v3/docs/ratenkauf-by-easycredit-installation-and-configuration
   - /v3/docs/en/ratenkauf-by-easycredit-installation-and-configuration
@@ -52,7 +53,7 @@ To use FE functionality (js / css) with old demoshop, `shop-ui-compatibility` mo
 composer require spryker-eco/shop-ui-compatibility
 ```
 
-After installing `shop-ui-compatibility` use procedures described in this migration guide - [Setting up ShopUICompatibility Module in the Legacy Demoshop](/docs/scos/dev/migration-and-integration/202001.0/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html).
+After installing `shop-ui-compatibility` use procedures described in this migration guide - [Setting up ShopUICompatibility Module in the Legacy Demoshop](/docs/scos/dev/migration-and-integration/201907.0/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html).
 
 ## Configuration
 Perform the initial configuration of Easycredit:

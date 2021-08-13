@@ -1,6 +1,7 @@
 ---
 title: Glue API Tutorials
 originalLink: https://documentation.spryker.com/v2/docs/glue-api-tutorials
+originalArticleId: 4b05988f-b5ed-4e39-bf41-b9e8113bc336
 redirect_from:
   - /v2/docs/glue-api-tutorials
   - /v2/docs/en/glue-api-tutorials

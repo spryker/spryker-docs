@@ -2,9 +2,12 @@
 title: Cart module- Reference information
 description: The extensive Cart allows your customers to add products to their Cart by simply selecting the desired quantity.
 originalLink: https://documentation.spryker.com/2021080/docs/cart-module-reference-information
+originalArticleId: 708970d7-2284-457b-bc4d-8b19ceb66caf
 redirect_from:
   - /2021080/docs/cart-module-reference-information
   - /2021080/docs/en/cart-module-reference-information
+  - /docs/cart-module-reference-information
+  - /docs/en/cart-module-reference-information
 ---
 
 Our Cart consists of a few components in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.

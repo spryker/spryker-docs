@@ -2,9 +2,12 @@
 title: Managing users
 description: The procedures help create, edit, activate/deactivate or delete Back Office users, set a language to the Back Office user account, and make a user be an agent.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-users
+originalArticleId: 835c1e16-904a-4ed9-82c8-50244c7b0ff2
 redirect_from:
   - /2021080/docs/managing-users
   - /2021080/docs/en/managing-users
+  - /docs/managing-users
+  - /docs/en/managing-users
 ---
 
 This topic describes how to manage users.
@@ -20,7 +23,7 @@ You can do the following:
 
 ## Creating users
 
-You have already done the primary setup (you have created a [role](https://documentation.spryker.com/docs/managing-roles) and [group](https://documentation.spryker.com/docs/managing-groups)), so now it is time to add an actual user record to the system.
+You have already done the primary setup (you have created a [role](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-roles.html) and [group](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-groups.html)), so now it is time to add an actual user record to the system.
 
 To create a user record:
 1. In the top right corner of the *User* page, click **Add New User**.
@@ -89,7 +92,7 @@ The following table describes the attributes used when creating or updating a us
 
 ## Assigning customers to users
 
-The *Assign Customers* option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](https://documentation.spryker.com/docs/managing-cms-pages#previewing-cms-pages) set of topics).
+The *Assign Customers* option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/pages/managing-cms-pages.html#previewing-cms-pages) set of topics).
  
 To assign a customer:
 1. Navigate to the *Users* page.

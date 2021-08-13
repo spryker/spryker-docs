@@ -1,9 +1,12 @@
 ---
 title: Zed API resources
 originalLink: https://documentation.spryker.com/2021080/docs/zed-api-resources
+originalArticleId: 2d34ac39-d197-46bd-8a14-d212715573b1
 redirect_from:
   - /2021080/docs/zed-api-resources
   - /2021080/docs/en/zed-api-resources
+  - /docs/zed-api-resources
+  - /docs/en/zed-api-resources
 ---
 
 Each module can have a “{module}Api” module(e.g. CustomerApi for Customer). Such an API module exposes CRUD facade methods (find, get, add, update, remove) that can be mapped to a URL via REST `resource/action` resolution.

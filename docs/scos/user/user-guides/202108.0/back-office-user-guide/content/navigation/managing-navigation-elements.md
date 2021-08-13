@@ -2,12 +2,15 @@
 title: Managing navigation elements
 description: Use these procedures to create, edit, activate or deactivate a child node, view and manage a navigation tree and create the new navigation in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-navigation-elements
+originalArticleId: c580f175-685f-47d3-a899-2716f450152b
 redirect_from:
   - /2021080/docs/managing-navigation-elements
   - /2021080/docs/en/managing-navigation-elements
+  - /docs/managing-navigation-elements
+  - /docs/en/managing-navigation-elements
 ---
 
-This topic describes how to manage [navigation elements](https://documentation.spryker.com/2021080/docs/navigation-feature-overview#navigation-element).
+This topic describes how to manage [navigation elements](/docs/scos/dev/features/{{ page.version }}/navigation/navigation-feature-overview.html#navigation-element).
 
 ## Prerequisites
 

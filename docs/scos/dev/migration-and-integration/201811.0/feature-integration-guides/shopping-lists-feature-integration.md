@@ -2,6 +2,7 @@
 title: Shopping Lists Feature Integration
 description: This guide walks you through the process of installing the Shopping lists feature into your project.
 originalLink: https://documentation.spryker.com/v1/docs/shopping-lists-feature-integration-201811
+originalArticleId: d8898b5e-8b5e-42ac-b44e-b644f3878d42
 redirect_from:
   - /v1/docs/shopping-lists-feature-integration-201811
   - /v1/docs/en/shopping-lists-feature-integration-201811

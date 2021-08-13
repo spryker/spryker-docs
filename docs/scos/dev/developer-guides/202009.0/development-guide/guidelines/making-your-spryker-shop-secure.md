@@ -1,6 +1,7 @@
 ---
 title: Making Your Spryker Shop Secure
 originalLink: https://documentation.spryker.com/v6/docs/making-your-spryker-shop-secure
+originalArticleId: 448ba770-f9c3-4fc2-a5de-d2314500b2ca
 redirect_from:
   - /v6/docs/making-your-spryker-shop-secure
   - /v6/docs/en/making-your-spryker-shop-secure

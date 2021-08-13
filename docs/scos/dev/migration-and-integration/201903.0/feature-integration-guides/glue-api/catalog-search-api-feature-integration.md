@@ -2,6 +2,7 @@
 title: Catalog Search API Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Search API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v2/docs/catalog-search-api-feature-integration-201903
+originalArticleId: 7eb76f14-eb9e-4ea4-80e7-4cc958047c90
 redirect_from:
   - /v2/docs/catalog-search-api-feature-integration-201903
   - /v2/docs/en/catalog-search-api-feature-integration-201903

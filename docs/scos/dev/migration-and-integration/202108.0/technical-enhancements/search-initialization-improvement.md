@@ -2,9 +2,12 @@
 title: Search Initialization Improvement
 description: Search initialization improvement introduces two separate commands for the build and data initialization processes.
 originalLink: https://documentation.spryker.com/2021080/docs/search-initialization-improvement
+originalArticleId: 2b3938fa-d016-429f-b317-2951e909eca4
 redirect_from:
   - /2021080/docs/search-initialization-improvement
   - /2021080/docs/en/search-initialization-improvement
+  - /docs/search-initialization-improvement
+  - /docs/en/search-initialization-improvement
 ---
 
 ## General Information

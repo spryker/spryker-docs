@@ -2,6 +2,7 @@
 title: FACT-Finder - NG
 description: Fact Finder NG API integration is used for search, tracking, and importing endpoints.
 originalLink: https://documentation.spryker.com/v1/docs/fact-finder-ng
+originalArticleId: 3769f5d6-4097-4002-bdf8-a2bf8bab0d47
 redirect_from:
   - /v1/docs/fact-finder-ng
   - /v1/docs/en/fact-finder-ng

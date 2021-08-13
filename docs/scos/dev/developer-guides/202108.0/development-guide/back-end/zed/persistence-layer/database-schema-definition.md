@@ -2,9 +2,12 @@
 title: Database schema definition
 description: With Propel, a database schema is defined in an XML-file. Each module carries it’s own part of the big schema that is collected and merged.
 originalLink: https://documentation.spryker.com/2021080/docs/database-schema-definition
+originalArticleId: 49d1d709-2b32-486f-888f-484f0ad72319
 redirect_from:
   - /2021080/docs/database-schema-definition
   - /2021080/docs/en/database-schema-definition
+  - /docs/database-schema-definition
+  - /docs/en/database-schema-definition
 ---
 
 With Propel, a [database schema](http://propelorm.org/documentation/reference/schema.html) is defined in an XML file. Each module has its own part of the big schema that is collected and merged.
@@ -153,4 +156,4 @@ You can use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedPersistencePropelSchema` - Add Zed Persistence Propel Schema
 * `vendor/bin/console spryk:run AddZedPersistencePropelSchemaTable` - Add Zed Persistence Propel Schema Table
 
-See the [Spryk](https://documentation.spryker.com/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/{{ page.version }}/development-tools/spryk-code-generator.html) documentation for details.

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Quote
 originalLink: https://documentation.spryker.com/v1/docs/mg-quote
+originalArticleId: a071bce7-5799-4b91-999c-d0df68f23d42
 redirect_from:
   - /v1/docs/mg-quote
   - /v1/docs/en/mg-quote

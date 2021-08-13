@@ -1,9 +1,12 @@
 ---
 title: Adding Events
 originalLink: https://documentation.spryker.com/2021080/docs/event-adding
+originalArticleId: 9136cc31-4264-4a7e-b7d8-2f1c966afa51
 redirect_from:
   - /2021080/docs/event-adding
   - /2021080/docs/en/event-adding
+  - /docs/event-adding
+  - /docs/en/event-adding
 ---
 
 When adding an event, make sure you first decide what kind of events you want to trigger in your code. Events are stored in a class for later use, by adding its literal string value (ModuleName.subject.action). This value uniquely identifies an event in the event module, and all listeners attached to it will be triggered when a corresponding module invokes an event.

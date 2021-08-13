@@ -1,6 +1,7 @@
 ---
 title: Gift Card Purchase and Management
 originalLink: https://documentation.spryker.com/v1/docs/gift-card-purchase-management
+originalArticleId: dc1725a8-a4bf-4ba7-97a9-d4145926b9ab
 redirect_from:
   - /v1/docs/gift-card-purchase-management
   - /v1/docs/en/gift-card-purchase-management

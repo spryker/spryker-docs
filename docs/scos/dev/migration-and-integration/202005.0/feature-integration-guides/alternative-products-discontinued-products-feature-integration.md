@@ -2,6 +2,7 @@
 title: Alternative Products- Discontinued Products Feature Integration
 description: This guide describes all the steps needed to be performed in order to integrate the Alternative Products + Discontinued Products features into your project.
 originalLink: https://documentation.spryker.com/v5/docs/alternative-products-discontinued-products-feature-integration
+originalArticleId: 0218d00c-f8a9-4bb4-abb3-510e46ac5628
 redirect_from:
   - /v5/docs/alternative-products-discontinued-products-feature-integration
   - /v5/docs/en/alternative-products-discontinued-products-feature-integration

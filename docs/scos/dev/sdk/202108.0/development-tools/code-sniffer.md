@@ -2,9 +2,12 @@
 title: Code sniffer
 description: With the tool, you can keep your code clean, find issues and fix them automatically.
 originalLink: https://documentation.spryker.com/2021080/docs/code-sniffer
+originalArticleId: 5fd3244a-f387-4188-a8d0-076eb8afe1f1
 redirect_from:
   - /2021080/docs/code-sniffer
   - /2021080/docs/en/code-sniffer
+  - /docs/code-sniffer
+  - /docs/en/code-sniffer
 ---
 
 To correspond to [PSR-2 standards](http://www.php-fig.org/psr/psr-2/), we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).

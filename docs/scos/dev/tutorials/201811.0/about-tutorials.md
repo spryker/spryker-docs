@@ -1,6 +1,7 @@
 ---
 title: About Tutorials
 originalLink: https://documentation.spryker.com/v1/docs/about-tutorials
+originalArticleId: f458fe15-b30c-48b8-b7c2-892053a40861
 redirect_from:
   - /v1/docs/about-tutorials
   - /v1/docs/en/about-tutorials

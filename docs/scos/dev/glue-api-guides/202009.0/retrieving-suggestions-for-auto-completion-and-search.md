@@ -2,18 +2,19 @@
 title: Retrieving suggestions for auto-completion and search
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-suggestions-for-auto-completion-and-search
+originalArticleId: 021ac183-3654-4d6f-8ecb-bdaa0459b4fc
 redirect_from:
   - /v6/docs/retrieving-suggestions-for-auto-completion-and-search
   - /v6/docs/en/retrieving-suggestions-for-auto-completion-and-search
 ---
 
-In addition to [catalog search](https://documentation.spryker.com/docs/catalog-search), Spryker search engine also provides auto-completion terms and suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
+In addition to [catalog search](/docs/scos/dev/glue-api-guides/202009.0/catalog-search.html), Spryker search engine also provides auto-completion terms and suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Catalog Feature Integration](https://documentation.spryker.com/docs/catalog-api-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Catalog Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-catalog-feature-integration.html).
 
 ## Retrieve a suggestion
 
@@ -245,7 +246,7 @@ To retrieve a search suggestion, send the request:
 | **price** | Integer | Specifies the product price. |
 | **images** | Object | Provides URLs of the product images. </br>The object consists of **2** items:<ul><li>**externalUrlSmall**—specifies the URL of the product preview image;</li><li> **externalUrlLarge**—specifies the URL of the large product image.</li></ul> |
 
-The `url` attribute of categories and abstract products exposes a Search Engine Friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Using Search Engine Friendly URLs](https://documentation.spryker.com/docs/using-search-engine-friendly-urls).
+The `url` attribute of categories and abstract products exposes a Search Engine Friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Using Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/202009.0/resolving-search-engine-friendly-urls.html).
 
 {% info_block warningBox %}
 
@@ -253,6 +254,6 @@ Although CMS pages also expose the `url` parameter, resolving of CMS page SEF UR
 
 {% endinfo_block %}
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 

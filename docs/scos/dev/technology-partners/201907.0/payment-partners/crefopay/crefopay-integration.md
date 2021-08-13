@@ -2,6 +2,7 @@
 title: CrefoPay - Integration
 description: This article provides instructions on integrating CrefoPay into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v3/docs/crefopay-integration
+originalArticleId: 1f14a2fb-983f-456a-8134-c50c3b05f51c
 redirect_from:
   - /v3/docs/crefopay-integration
   - /v3/docs/en/crefopay-integration
@@ -10,7 +11,7 @@ redirect_from:
 This article provides step-by-step instructions on integrating the CrefoPay system into your project.
 
 ## Prerequisites
-Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/dev/technology-partners/202001.0/payment-partners/crefopay/crefopay-installation-and-configuration.html).
+Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/dev/technology-partners/201907.0/payment-partners/crefopay/crefopay-installation-and-configuration.html).
 
 ## Integrating CrefoPay into Your Project
 To integrate CrefoPay, do the following:

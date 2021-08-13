@@ -2,6 +2,7 @@
 title: Facet Filter Overview and Configuration
 description: Facets provide aggregated data based on a search query.
 originalLink: https://documentation.spryker.com/v4/docs/t-working-filter-facets
+originalArticleId: fe51226c-4599-41f6-8369-48cbbe9e361f
 redirect_from:
   - /v4/docs/t-working-filter-facets
   - /v4/docs/en/t-working-filter-facets

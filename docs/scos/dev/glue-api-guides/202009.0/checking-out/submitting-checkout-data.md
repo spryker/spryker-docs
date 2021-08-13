@@ -2,6 +2,7 @@
 title: Submitting checkout data
 description: Submit checkout data and retrieve information needed for completing checkout.
 originalLink: https://documentation.spryker.com/v6/docs/submitting-checkout-data
+originalArticleId: 6191b28b-1c88-4fcf-8944-26c43a631495
 redirect_from:
   - /v6/docs/submitting-checkout-data
   - /v6/docs/en/submitting-checkout-data
@@ -12,7 +13,7 @@ This endpoint allows submitting checkout data as many times as you need. Using t
 To help customers select payment and shipment methods, the endpoint allows retrieving all the available methods so that you can display them to the customers. To simplify navigation through all the available methods, you can sort them by any attribute. 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](https://documentation.spryker.com/docs/glue-api-checkout-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html).
 
 
 ## Submit checkout data
@@ -28,8 +29,8 @@ To submit checkout data without order confirmation, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | String | Required when submitting data of a [guest cart](https://documentation.spryker.com/docs/managing-guest-carts). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when submitting data of a [registered user's cart](https://documentation.spryker.com/docs/managing-carts-of-registered-users). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| X-Anonymous-Customer-Unique-Id | String | Required when submitting data of a [guest cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| Authorization | String | Required when submitting data of a [registered user's cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
 
 
@@ -120,14 +121,14 @@ To submit checkout data without order confirmation, send the request:
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| customer | Object | v | A list of attributes describing the [customer](https://documentation.spryker.com/docs/en/customers) to submit checkout data of. |
+| customer | Object | v | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html) to submit checkout data of. |
 | email | String | v | Customer's email address. |
 | firstName | String | v | Customer's first name. |
 | lastName | String | v | Customer's last name. |
-| idCart | String | v | The ID of the customer's [cart](https://documentation.spryker.com/docs/en/managing-carts-of-registered-users). |
-| billingAddress | Object |  | Customer's billing [address](https://documentation.spryker.com/docs/customer-addresses).  |
-| shippingAddress | Object |  | Customer's shipping [address](https://documentation.spryker.com/docs/customer-addresses). |
-| id | String |. | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource into your request or [retrieve a customer's addresses](https://documentation.spryker.com/docs/customer-addresses#retrieve-a-customer-s-addresses). If you pass this value for a billing or shipping address, you can fill the rest of the address fields with placeholder values. They are replaced automatically with the values of the respective address. |
+| idCart | String | v | The ID of the customer's [cart](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). |
+| billingAddress | Object |  | Customer's billing [address](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customer-addresses.html).  |
+| shippingAddress | Object |  | Customer's shipping [address](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customer-addresses.html). |
+| id | String |. | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource into your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customer-addresses.html#retrieve-a-customer-s-addresses). If you pass this value for a billing or shipping address, you can fill the rest of the address fields with placeholder values. They are replaced automatically with the values of the respective address. |
 | salutation | String | v | Salutation to use when addressing the customer. |
 | email | String | v | Customer's email address. |
 | firstName | String | v | Customer's first name. |
@@ -142,8 +143,8 @@ To submit checkout data without order confirmation, send the request:
 | phone | String |  | Customer's phone number. |
 | isDefaultShipping | Boolean |  | Specifies if it is the default shipping address of the customer. If the parameter is not set, the default value is `true`. |
 | isDefaultBilling | Boolean |  | Specifies if it is the default billing address of the customer. If the parameter is not set, the default value is `true`.|
-| payments | Array |  | Payment options, such as the payment system, method of payment, etc.</br>For details, see [Payment Step](https://documentation.spryker.com/docs/en/payment-step-shop-guide-201911). |
-| shipment | Object |  | Shipment details.</br>For details, see [Shipment Step](https://documentation.spryker.com/docs/en/shipment-step-shop-guide-201911). |
+| payments | Array |  | Payment options, such as the payment system, method of payment, etc.</br>For details, see [Payment Step](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/multi-step-checkout.html). |
+| shipment | Object |  | Shipment details.</br>For details, see [Shipment Step](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/multi-step-checkout.html). |
 
 
 
@@ -675,5 +676,5 @@ In case of a successful update, the endpoint responds with information that can 
 
 ## Next steps
 
-* [Checking out purchases](https://documentation.spryker.com/docs/checking-out-purchases)
+* [Checking out purchases](/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html)
 

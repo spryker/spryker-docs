@@ -1,12 +1,13 @@
 ---
 title: File details- product_relation.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-relationcsv
+originalArticleId: 1e721d8c-1b3d-4043-8469-2d0300b803e5
 redirect_from:
   - /v6/docs/file-details-product-relationcsv
   - /v6/docs/en/file-details-product-relationcsv
 ---
 
-This article contains content of the **product_relation.csv** file to configure [Product Relation](https://documentation.spryker.com/docs/product-relations) information on your Spryker Demo Shop.
+This article contains content of the **product_relation.csv** file to configure [Product Relation](/docs/scos/dev/features/202009.0/product-relations/product-relations.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -24,7 +25,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+*    [product_abstract.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_relation.csv*  file can be downloaded here:

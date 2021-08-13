@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Payment
 originalLink: https://documentation.spryker.com/v3/docs/mg-payment
+originalArticleId: c74e3f61-6084-4db8-b9c4-847be06fcc92
 redirect_from:
   - /v3/docs/mg-payment
   - /v3/docs/en/mg-payment

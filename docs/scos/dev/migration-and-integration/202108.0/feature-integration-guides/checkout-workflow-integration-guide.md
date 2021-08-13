@@ -1,9 +1,12 @@
 ---
 title: Checkout Workflow Integration Guide
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-workflow-integration
+originalArticleId: 6908a9df-3ef3-454a-b135-9c72a350b641
 redirect_from:
   - /2021080/docs/checkout-workflow-integration
   - /2021080/docs/en/checkout-workflow-integration
+  - /docs/checkout-workflow-integration
+  - /docs/en/checkout-workflow-integration
 ---
 
 For example let's create alternative checkout workflow which would only save order in database without any additional checks or calculations.

@@ -2,6 +2,7 @@
 title: Semantic Versioning- Major vs. Minor vs. Patch Release
 description: Spryker releases update as major, minor, patch release or a bugfix. Learn more about them in this article.
 originalLink: https://documentation.spryker.com/v4/docs/major-minor-patch-release
+originalArticleId: 61b375cd-be76-4a1d-b2c0-d3bf5c79ac3f
 redirect_from:
   - /v4/docs/major-minor-patch-release
   - /v4/docs/en/major-minor-patch-release

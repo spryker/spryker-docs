@@ -2,17 +2,20 @@
 title: Retrieving company roles
 description: Learn how to retrieve company roles via Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-roles
+originalArticleId: 91e7d4fb-7088-4249-bb24-c146c3a63ea4
 redirect_from:
   - /2021080/docs/retrieving-company-roles
   - /2021080/docs/en/retrieving-company-roles
+  - /docs/retrieving-company-roles
+  - /docs/en/retrieving-company-roles
 ---
 
-In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](https://documentation.spryker.com/docs/company-user-roles-and-permissions-overview) to distribute scopes and permissions among [Company Users](https://documentation.spryker.com/docs/company-account-overview). This endpoint allows retrieving information about the company roles.
+In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html) to distribute scopes and permissions among [Company Users](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/company-accounts-overview.html). This endpoint allows retrieving information about the company roles.
 
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/docs/glue-api-company-account-api-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve a company role
 
@@ -30,7 +33,7 @@ To retrieve a company role, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user) to get the value. |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value. |
 
 | Query parameter | Description | Possible values |
 | --- | --- | --- |
@@ -158,11 +161,11 @@ To retrieve a company role, send the request:
 | 2103 | Current company user is not set. You need to select the current company user with /company-user-access-tokens in order to access the resource collection.
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 
 
 ##  Next steps
 
 
-* [Retrieve business unit addresses](https://documentation.spryker.com/docs/retrieving-business-unit-addresses)
-* [Manage company user authentication tokens](https://documentation.spryker.com/docs/managing-company-user-authentication-tokens)
+* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/retrieving-business-unit-addresses.html)
+* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/managing-company-user-authentication-tokens.html)

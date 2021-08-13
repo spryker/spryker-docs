@@ -1,6 +1,7 @@
 ---
 title: 8Select
 originalLink: https://documentation.spryker.com/v3/docs/8select
+originalArticleId: 83788267-638d-4eea-9c36-a0a523f049fd
 redirect_from:
   - /v3/docs/8select
   - /v3/docs/en/8select

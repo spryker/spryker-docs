@@ -2,6 +2,7 @@
 title: Klarna - Part Payment Flexible
 description: In this article, you will find part payment flexible scenarios for the payment process with Klarna.
 originalLink: https://documentation.spryker.com/v3/docs/klarna-part-payment-flexible
+originalArticleId: a8ccaafe-7a1e-42d7-a249-10ce08a158b1
 redirect_from:
   - /v3/docs/klarna-part-payment-flexible
   - /v3/docs/en/klarna-part-payment-flexible
@@ -38,4 +39,4 @@ The configuration to integrate `Part Payment` using Klarna is:
 You can copy over configuration to your config file from the Klarna bundles `config.dist.php` file.
 
 ## Perform Requests
-In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](https://documentation.spryker.com/v4/docs/klarna-state-machine). The next section gives you a summary of them.
+In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](https://documentation.spryker.com/v3/docs/klarna-state-machine). The next section gives you a summary of them.

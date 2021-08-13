@@ -2,6 +2,7 @@
 title: Tutorial - Sending a Mail
 description: The tutorial provides code samples on how to process customer registration information in Zed to register the customer and send a confirmation email.
 originalLink: https://documentation.spryker.com/v5/docs/mail-how-to-send
+originalArticleId: b5c287c0-eec0-425a-8647-986f97744d7b
 redirect_from:
   - /v5/docs/mail-how-to-send
   - /v5/docs/en/mail-how-to-send
@@ -107,7 +108,7 @@ protected function sendRegistrationToken()
 ```
 ## 2. Creating a MailTypePlugin
 
-Now, create the `MailType` plugin for this example. See [HowTo - Create and Register a MailTypePlugin](https://documentation.spryker.com/docs/en/ht-mail-create-mailtype-plugin) for more information on creating a MailTypePlugin:
+Now, create the `MailType` plugin for this example. See [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials/202005.0/howtos/howto-create-and-register-a-mailtypeplugin.html) for more information on creating a MailTypePlugin:
 
 **Code sample:**
     

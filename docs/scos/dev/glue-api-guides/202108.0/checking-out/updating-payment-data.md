@@ -2,18 +2,21 @@
 title: Updating payment data
 description: Learn how to update payment data with the payload from a third-party payment provider via Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/updating-payment-data
+originalArticleId: d2870fab-7811-4b18-9bfa-dafd43791d00
 redirect_from:
   - /2021080/docs/updating-payment-data
   - /2021080/docs/en/updating-payment-data
+  - /docs/updating-payment-data
+  - /docs/en/updating-payment-data
 ---
 
 This endpoint allows completing payment with payment verification of a third-party resource.
 
-When [checking out purchases](https://documentation.spryker.com/docs/checking-out-purchases), a payment method may require verification with a third-party resource. The checkout endpoint retruns the URL of the resource in the `redirectURL` attribute. If the value is `null` or empty, no additional steps are required. After completing the verification, use the endpoint in this document to complete the checkout with verification data.
+When [checking out purchases](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/checking-out-purchases.html), a payment method may require verification with a third-party resource. The checkout endpoint retruns the URL of the resource in the `redirectURL` attribute. If the value is `null` or empty, no additional steps are required. After completing the verification, use the endpoint in this document to complete the checkout with verification data.
 
 It is the responsibility of the API Client to redirect the customer to the page and capture the response. For information on how to process it, see the payment service provider's API reference.
 
-The formats of the payloads used in the request and response to the third-party page are defined by the Eco layer module that implements the interaction with the payment provider. See [3. Implement Payload Processor Plugin](https://documentation.spryker.com/docs/t-interacting-with-third-party-payment-providers-via-glue-api#3-implement-payload-processor-plugin) to learn more.
+The formats of the payloads used in the request and response to the third-party page are defined by the Eco layer module that implements the interaction with the payment provider. See [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3-implement-payload-processor-plugin) to learn more.
 
 
 **Interaction Diagram**
@@ -22,7 +25,7 @@ The formats of the payloads used in the request and response to the third-party 
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](https://documentation.spryker.com/docs/glue-api-checkout-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html).
 
 ## Update payment data
 To update payment with a payload from a third-party payment provider, send the request:
@@ -37,8 +40,8 @@ To update payment with a payload from a third-party payment provider, send the r
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](https://documentation.spryker.com/docs/managing-guest-carts). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when checking out a [cart of registered user](https://documentation.spryker.com/docs/managing-carts-of-registered-users). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
 
 <details open>
     <summary>Request sample</summary>
@@ -71,7 +74,7 @@ To update payment with a payload from a third-party payment provider, send the r
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| paymentIdentifier | String |  | Unique payment identifier. To get it, [place. an order](https://documentation.spryker.com/docs/checking-out-purchases#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](https://documentation.spryker.com/docs/t-interacting-with-third-party-payment-providers-via-glue-api#3-implement-payload-processor-plugin). |
+| paymentIdentifier | String |  | Unique payment identifier. To get it, [place. an order](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/checking-out-purchases.html#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3-implement-payload-processor-plugin). |
 | dataPayload | Array | v | Payload from the payment service provider. The attributes of the payload depend on the selected payment service provider. |
 			
 	

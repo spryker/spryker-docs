@@ -1,6 +1,7 @@
 ---
 title: B2C API React Example
 originalLink: https://documentation.spryker.com/v1/docs/b2c-api-react-example
+originalArticleId: 5018b24e-d2e4-4c3b-bb94-683b45f8a249
 redirect_from:
   - /v1/docs/b2c-api-react-example
   - /v1/docs/en/b2c-api-react-example
@@ -25,7 +26,7 @@ The Demo shop has been built using and demonstrates the use of the endpoints and
 
 | API | Reference Documents |
 | --- | --- |
-| Search API | [Catalog Search](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/catalog-search.html)<br>[Getting Suggestions for Auto-Completion and Search](https://documentation.spryker.com/v1/docs/retrieving-suggestions-for-auto-completion-and-search) |
+| Search API | [Catalog Search](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/catalog-search.html)<br>[Getting Suggestions for Auto-Completion and Search](https://documentation.spryker.com/v1/docs/retrieving-autocomplete-and-search-suggestions) |
 | Category API | [Browsing a Category Tree](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/browsing-a-category-tree.html) |
 | Product API | [Retrieving Product Information](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html) |
 | Product Availability API | [Retrieving Product Information](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html) |
@@ -36,7 +37,7 @@ The Demo shop has been built using and demonstrates the use of the endpoints and
 | Login API | [Authentication and Authorization](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/authentication-and-authorization.html) |
 | Customer API | [Managing Customers](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/managing-customers.html) |
 | Cart API | [Managing Carts](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/managing-carts/managing-carts.html) |
-| Checkout API | [Checking Out Purchases and Getting Checkout Data](https://documentation.spryker.com/v1/docs/checking-out-purchases-and-getting-checkout-data-201907) |
+| Checkout API | [Checking Out Purchases and Getting Checkout Data](https://documentation.spryker.com/v1/docs/checking-out-purchases) |
 | Order History API | [Retrieving Customer's Order History](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/retrieving-customers-order-history.html) |
 | Wishlist API | [Managing Wishlists](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/managing-wishlists.html) |
 | Store API | [Retrieving Store Configuration](/docs/scos/dev/glue-api/201811.0/glue-api-storefront-guides/retrieving-store-configuration.html) |

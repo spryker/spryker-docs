@@ -2,6 +2,7 @@
 title: Cart widget overview
 description: Many B2B customers use multiple shopping carts. Shopping cart widget allows them to access shopping carts from any place in the online shop in one click.
 originalLink: https://documentation.spryker.com/v6/docs/cart-widget-overview
+originalArticleId: 6cad97cd-b1e5-453b-9a27-d79ca380f2cd
 redirect_from:
   - /v6/docs/cart-widget-overview
   - /v6/docs/en/cart-widget-overview
@@ -15,7 +16,7 @@ For each shopping cart, the following details are provided:
 
 * Shopping cart name
 * Number of items added to cart
-* Access level to a shopping cart (see [Shared Cart Feature Overview](https://documentation.spryker.com/docs/shared-cart-overview) for more details)
+* Access level to a shopping cart (see [Shared Cart Feature Overview](/docs/scos/dev/features/202009.0/shared-carts/shared-carts-feature-overview.html) for more details)
 * Price mode
 * Cart Total
 * View all carts which opens Shopping cart menu in the customer account

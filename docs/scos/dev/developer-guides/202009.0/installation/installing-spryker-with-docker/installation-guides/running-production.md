@@ -1,6 +1,7 @@
 ---
 title: Running production
 originalLink: https://documentation.spryker.com/v6/docs/running-production-mode
+originalArticleId: 743b5d38-014c-407d-9d9e-d14ab1ad9983
 redirect_from:
   - /v6/docs/running-production-mode
   - /v6/docs/en/running-production-mode

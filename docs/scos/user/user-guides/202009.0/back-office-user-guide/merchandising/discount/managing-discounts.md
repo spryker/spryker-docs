@@ -2,6 +2,7 @@
 title: Managing discounts
 description: Use these procedures to view and update discounts, activate/deactivate discounts, and add voucher codes in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-discounts
+originalArticleId: cd355e06-f149-4fb1-a411-e61b6f08cbc3
 redirect_from:
   - /v6/docs/managing-discounts
   - /v6/docs/en/managing-discounts
@@ -15,7 +16,7 @@ To edit a discount, do the following:
 1. On the **Overview of Discounts** page, click **Edit** in the _Actions_ column.
 2. Update the attributes and click **Save**.
 {% info_block infoBox %}
-To find out more information about the attributes that you see on the **Edit Discount** page, see [Discount: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/discount-reference-information.html
+To find out more information about the attributes that you see on the **Edit Discount** page, see [Discount: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/discount/references/reference-information-discount.html
 {% endinfo_block %}.)
 
 ## Viewing a Discount
@@ -30,7 +31,7 @@ You can add voucher codes while editing the discount entity.
 And you can also do the following:
 1. On the **Overview of Discounts** page, click **Add code** in the _Actions_ column.
     You are redirected to the **Voucher codes** tab of the **Edit Discount** page.
-    Follow the steps described in [Creating a Discount Voucher](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/creating-a-discount/creating-a-discount-voucher.html).
+    Follow the steps described in [Creating a Discount Voucher](https://documentation.spryker.com/v6/docs/creating-a-discount-voucher).
 3. Once the codes are generated, click **Save**.
 
 ## Activating and Deactivating Discounts

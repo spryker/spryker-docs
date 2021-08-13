@@ -2,6 +2,7 @@
 title: Threshold
 description: The section can be used to set up merchant relationships and global thresholds in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/threshold
+originalArticleId: d094f194-9769-45fe-b800-d5f173735acb
 redirect_from:
   - /v5/docs/threshold
   - /v5/docs/en/threshold
@@ -19,10 +20,10 @@ Thresholds can be hard and soft, based on merchant relationships, applied global
 ***
 **What's next?**
 To know what thresholds you can set up and how you do that, see the following articles:
-* [Merchant Relationships](https://documentation.spryker.com/docs/en/managing-merchant-relationships-thresholds)
-* [Global Threshold](https://documentation.spryker.com/docs/en/managing-global-threshold)
-* [Threshold Settings](https://documentation.spryker.com/docs/en/managing-threshold-settings)
+* [Merchant Relationships](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/thresholds/merchant-relationships/managing-merchant-relationships-thresholds.html)
+* [Global Threshold](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/thresholds/global-threshold/managing-global-threshold.html)
+* [Threshold Settings](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/thresholds/threshold-settings/managing-threshold-settings.html)
 
 To know more about the attributes you use to manage the thresholds, see the following article:
-* [Threshold: Reference Information](https://documentation.spryker.com/docs/en/threshold-reference-information)
+* [Threshold: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/thresholds/references/threshold-reference-information.html)
 

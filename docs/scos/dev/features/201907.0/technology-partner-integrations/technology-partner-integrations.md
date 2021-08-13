@@ -2,6 +2,7 @@
 title: Technology Partner Integrations
 description: Streamline your operations by connecting your Spryker Commerce OS with a large selection of third-party applications and integrations.
 originalLink: https://documentation.spryker.com/v3/docs/technology-partner-integrations
+originalArticleId: f7239fef-49dc-4c38-8fd4-bb18602c1be0
 redirect_from:
   - /v3/docs/technology-partner-integrations
   - /v3/docs/en/technology-partner-integrations

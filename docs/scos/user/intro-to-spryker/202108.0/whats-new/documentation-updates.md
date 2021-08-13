@@ -2,32 +2,35 @@
 title: Documentation updates
 description: This page lists all the updates to the documentation made for each release.
 originalLink: https://documentation.spryker.com/2021080/docs/documentation-updates
+originalArticleId: 724de822-4f8b-466a-8c97-67acb59b878d
 redirect_from:
   - /2021080/docs/documentation-updates
   - /2021080/docs/en/documentation-updates
+  - /docs/documentation-updates
+  - /docs/en/documentation-updates
 ---
 
 This page lists all the updates to the documentation made for each release.
-Check out our [release notes](/docs/scos/dev/about-spryker/202001.0/releases/release-notes/release-notes.html) to learn more about the releases.
+Check out our [release notes](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/release-notes/release-notes.html) to learn more about the releases.
 
 ## Release 202001.0
-Below you will find the list of the new/updated documentation released as part of the [202001.0 Spryker product release](/docs/scos/dev/about-spryker/202001.0/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html):
+Below you will find the list of the new/updated documentation released as part of the [202001.0 Spryker product release](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/release-notes/release-notes.html-2020010):
 
 ### Features:
 
-* [Split Delivery](https://documentation.spryker.com/docs/split-delivery)
+* [Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
 
 <details open>
 <summary>Feature overview</summary>
     
-[Split Delivery Overview](https://documentation.spryker.com/docs/split-delivery-overview)
+[Split Delivery Overview](https://documentation.spryker.com/2021080/docs/split-delivery-overview)
     
 </details>
 
 <details open>
 <summary>Migration guide</summary>
     
-[Split Delivery Migration Concept](https://documentation.spryker.com/docs/split-delivery-concept) 
+[Split Delivery Migration Concept](https://documentation.spryker.com/2021080/docs/split-delivery-concept) 
     
     
 </details>
@@ -35,7 +38,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>HowTo</summary>
     
 
-[HowTo - Disable Split Delivery in Yves Interface](https://documentation.spryker.com/docs/ht-disable-split-delivery-in-yves-interface) 
+[HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html) 
 
       
 </details>
@@ -44,99 +47,99 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Back Office user guides</summary>
     
 
-* [Creating a New Shipment for Order](https://documentation.spryker.com/docs/managing-order-shipments#creating-a-new-shipment-for-order) 
-* [Editing Shipment Details](https://documentation.spryker.com/docs/managing-order-shipments#editing-shipment-details) 
+* [Creating a New Shipment for Order](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order) 
+* [Editing Shipment Details](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/orders/managing-order-shipments.html#editing-shipment-details) 
       
 </details>
 <details open>
 <summary>Shop user guide</summary>
   
 
-[Assigning Multiple Delivery Addresses to Order](https://documentation.spryker.com/docs/managing-order-shipments#creating-a-new-shipment-for-order) 
+[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-order) 
 
     
 </details>
 
-* [Packaging Units with Decimal Stock](https://documentation.spryker.com/docs/packaging-units-202001) 
+* [Packaging Units with Decimal Stock](https://documentation.spryker.com/2021080/docs/packaging-units) 
 
 <details open>
 <summary>Feature overview</summary>
     
-[Packaging Units Feature Overview](https://documentation.spryker.com/docs/packaging-units-overview) 
+[Packaging Units Feature Overview](/docs/scos/dev/features/{{ page.version }}/packaging-units-feature-overview.html) 
     
 </details>
 
 <details open>
 <summary>Integration guide</summary>
     
-[Packaging Units Feature Integration](https://documentation.spryker.com/docs/product-packaging-unit-feature-integration) 
+[Packaging Units Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-packaging-unit-feature-integration.html) 
     
 </details>
 
 <details open>
 <summary>Migration  guide</summary>
     
-[Decimal Stock Migration Concept](https://documentation.spryker.com/docs/decimal-stock-concept) 
+[Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/decimal-stock-migration-concept.html) 
     
  </details>
  
  <details open>
 <summary>HowTo</summary>
     
-[HowTo - Import Packaging Units](https://documentation.spryker.com/docs/howto-import-packaging-units) 
+[HowTo - Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/data-imports/howto-import-packaging-units.html) 
     
  </details>
 
 
-* [Scheduled Prices](https://documentation.spryker.com/docs/scheduled-prices-201907) 
+* [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices) 
 <details open>
 <summary>Feature overview</summary>
     
-[Scheduled Prices Feature Overview](https://documentation.spryker.com/docs/scheduled-prices-feature-overview-201907) 
+[Scheduled Prices Feature Overview](/docs/scos/dev/features/{{ page.version }}/scheduled-prices-feature-overview.html) 
     
 </details>
 <details open>
 <summary>Integration guide</summary>
     
-[Scheduled Prices Feature Integration](https://documentation.spryker.com/docs/scheduled-prices-feature-integration-202001) 
+[Scheduled Prices Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/scheduled-prices-feature-integration.html) 
     
 </details>
 <details open>
 <summary>Migration guides</summary>
     
-* [PriceProductSchedule migration from v. 1.* to v. 2.*](https://documentation.spryker.com/docs/mg-price-product-schedule)
-* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](https://documentation.spryker.com/docs/mg-price-product-schedule-gui)
+* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-priceproductschedule.html)
+* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-priceproductschedule.html-gui)
     
 </details>
 <details open>
 <summary>HowTo</summary>
     
-[Schedule Cron Job for Scheduled Prices](/docs/scos/dev/tutorials/202001.0/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
+[Schedule Cron Job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
     
 </details>
 
 <details open>
 <summary>Back Office user guides</summary>
     
-* [Creating Scheduled Prices](https://documentation.spryker.com/docs/en/creating-scheduled-prices)
-* [Managing Scheduled Prices](https://documentation.spryker.com/docs/managing-scheduled-prices)
-* [Scheduled Prices: Reference Information](https://documentation.spryker.com/docs/scheduled-prices-reference-information)   
+* [Creating Scheduled Prices](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/scheduled-prices/creating-scheduled-prices.html)
+* [Managing Scheduled Prices](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html)
+* [Scheduled Prices: Reference Information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/scheduled-prices/references/reference-information-scheduled-prices.html)   
     
 </details>
 
-* [CMS Templates & Slots](/docs/scos/dev/features/202001.0/cms/templates-and-slots/templates-and-slots.html)
+* [CMS Templates & Slots](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/templates-and-slots-overview.html)
 
 <details open>
 <summary>Feature overview</summary>
     
-[CMS Templates & Slots Feature Overview](https://documentation.spryker.com/v4/docs/templates-slots-feature-overview )
+[CMS Templates & Slots Feature Overview](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/templates-and-slots-overview.html-feature-overview )
     
 </details>
 
 <details open>
 <summary>Integration guide</summary>
     
-[CMS Feature Integration](https://documentation.spryker.com/v4/docs/cms-feature-integration-guide )
+[CMS Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/cms-feature-integration.html)
     
 </details>
 
@@ -144,9 +147,9 @@ Below you will find the list of the new/updated documentation released as part o
 <summary>Migration guides</summary>
     
 
-* [CmsBlock - migration from v. 2.* to v. 3.*](https://documentation.spryker.com/docs/mg-cms-block#upgrading-from-version-2---to-version-3--)
-* [CmsBlockStorage - migration from v. 1.* to v. 2.*](https://documentation.spryker.com/v4/docs/migration-guide-cmsblockstorage )
-* [CmsBlockWidget - migration from v. 1.* to v. 2.*](https://documentation.spryker.com/v4/docs/migration-guide-cmsblockwidget )
+* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2---to-version-3--)
+* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-cmsblockstorage.html)
+* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-cmsblockwidget.html)
 
    
 </details>
@@ -154,64 +157,64 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Back Office user guides</summary>
     
-* [Slots](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/slots/slots.html) 
-* [Managing Slots](https://documentation.spryker.com/docs/managing-slots)
-* [Slots: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/slots/references/slots-reference-information.html)
+* [Slots](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/slots/managing-slots.html) 
+* [Managing Slots](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/slots/managing-slots.html)
+* [Slots: Reference Information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/slots/managing-slots.html-reference-information)
          
 </details>
 
 <details open>
 <summary>Technology Partners guides</summary>
     
-[Coremedia with Templates & Slots](https://documentation.spryker.com/docs/coremedia-with-templates-slots)
+[Coremedia with Templates & Slots](/docs/scos/dev/technology-partners/{{ page.version }}/content-management/coremedia/coremedia.html)
 
          
 </details>
 
-* [Approval Process](https://documentation.spryker.com/v4/docs/approval-process-202001 )
+* [Approval Process](https://documentation.spryker.com/2021080/docs/approval-process)
 
 <details open>
 <summary>Feature overview</summary>
     
-[Approval Process Feature Overview](https://documentation.spryker.com/docs/approval-process) 
+[Approval Process Feature Overview](https://documentation.spryker.com/2021080/docs/approval-process) 
     
 </details>
 
 <details open>
 <summary>Integration guides</summary>
     
-* [Approval Process Feature Integration](https://documentation.spryker.com/docs/approval-process-feature-integration)
-* [Shipment + Approval Process Feature Integration](https://documentation.spryker.com/docs/shipment-approval-process-feature-integration)
-* [Shipment Feature Integration](https://documentation.spryker.com/docs/shipment-feature-integration)
+* [Approval Process Feature Integration](https://documentation.spryker.com/2021080/docs/approval-process-feature-integration)
+* [Shipment + Approval Process Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/shipment-approval-process-feature-integration.html)
+* [Shipment Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/shipment-feature-integration.html)
 
 </details>
 
 <details open>
 <summary>Shop User guide</summary>
     
-[Shop Guide - Approval Process](https://documentation.spryker.com/docs/approval-process-shop-guide)
+[Shop Guide - Approval Process](https://documentation.spryker.com/2021080/docs/approval-process-shop-guide)
 
     
 </details>
 
-* [Configurable Bundle](https://documentation.spryker.com/docs/configurable-bundle)
+* [Configurable Bundle](https://documentation.spryker.com/2021080/docs/configurable-bundle)
 
 <details open>
 <summary>Feature overview</summary>
     
-[Configurable Bundle Feature Overview](https://documentation.spryker.com/docs/configurable-bundle-feature-overview)
+[Configurable Bundle Feature Overview](https://documentation.spryker.com/2021080/docs/configurable-bundle-feature-overview)
     
 </details>
 
 <details open>
 <summary>Integration guides</summary>
     
-* [Configurable Bundle Feature Integration](https://documentation.spryker.com/docs/configurable-bundle-feature-integration)
-* [Product Images + Configurable Bundle](https://documentation.spryker.com/docs/product-images-configurable-bundle-feature-integration)
-* [Merchant Product Restrictions](https://documentation.spryker.com/docs/merchant-product-restrictions-feature-integration) 
-* [Product Lists + Catalog](https://documentation.spryker.com/docs/product-lists-catalog-feature-integration)
-* [Prices](https://documentation.spryker.com/docs/prices-feature-integration-201907)
-* [Product](https://documentation.spryker.com/docs/product-feature-integration-201903)
+* [Configurable Bundle Feature Integration](https://documentation.spryker.com/2021080/docs/configurable-bundle-feature-integration)
+* [Product Images + Configurable Bundle](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-images-configurable-bundle-feature-integration.html)
+* [Merchant Product Restrictions](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/merchant-product-restrictions-feature-integration.html) 
+* [Product Lists + Catalog](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-lists-catalog-feature-integration.html)
+* [Prices](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/prices-feature-integration.html)
+* [Product](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-feature-integration.html)
     
     
 </details>
@@ -219,36 +222,36 @@ Below you will find the list of the new/updated documentation released as part o
 <details open>
 <summary>Migration guides</summary>
     
-* [ConfigurableBundle migration from v. 1* to v. 2*](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-configurablebundle.html)
-* [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-configurablebundlestorage.html)
-* [MerchantRelationshipProductListGui migration from v. 1* to v. 2*](https://documentation.spryker.com/docs/migration-guide-merchantrelationshipproductlistgui)
-* [ProductListGui migration from v. 1* to v. 2*](https://documentation.spryker.com/docs/migration-guide-product-list-gui)
+* [ConfigurableBundle migration from v. 1* to v. 2*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-configurablebundle.html)
+* [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-configurablebundle.htmlstorage)
+* [MerchantRelationshipProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html)
+* [ProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-productlistgui.html)
     
 </details>
 <details open>
 <summary>HowTo</summary>
     
-[Rendering Configurable Bundle Templates in the Storefront](https://documentation.spryker.com/docs/howto-rendering-configurable-bundles-in-the-storefront)
+[Rendering Configurable Bundle Templates in the Storefront](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)
     
 </details>
 
 ### Glue API Documentation:
 
-* [Product Labels API](https://documentation.spryker.com/docs/accessing-product-labels)
+* [Product Labels API](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-product-labels.html)
 
 <details open>
 <summary>Integration guide</summary>
     
-[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
     
 </details>
 
-* [Product Discounts API](https://documentation.spryker.com/docs/discounts-and-promotions)
+* [Product Discounts API](https://documentation.spryker.com/2021080/docs/retrieving-discounts)
 
 <details open>
 <summary>Integration guide</summary>
     
-[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
     
 </details>
 
@@ -256,49 +259,49 @@ Below you will find the list of the new/updated documentation released as part o
    
 </details>
 
-* [Ratings and Reviews API](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/retrieving-ratings-and-reviews.html)
+* [Ratings and Reviews API](https://documentation.spryker.com/2021080/docs/retrieving-ratings-and-reviews)
 
 <details open>
 <summary>Integration guide</summary>
     
-[Glue API: Product Rating & Reviews Feature Integration](https://documentation.spryker.com/docs/glue-api-product-rating-reviews-feature-integration)
+[Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
     
 </details>
 
 
 * Product Options API
-[Retrieving prodiuct options for abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)
-[Retrieving prodiuct options for concrete products](https://documentation.spryker.com/docs/retrieving-concrete-products)
+[Retrieving prodiuct options for abstract products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html)
+[Retrieving prodiuct options for concrete products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html)
 
 <details open>
 <summary>Integration guide</summary>
     
-[Glue API: Product Options Feature Integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
+[Glue API: Product Options Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
 
 </details>
 
-* [Search Engine Friendly URLs](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/using-search-engine-friendly-urls.html)
-* [Assigning Guest Cart to Registered Customer](https://documentation.spryker.com/docs/managing-guest-carts#assigning-guest-cart-to-registered-customer)
-* [Managing Customer Access to API Resources](https://documentation.spryker.com/docs/managing-customer-access-to-api-resources)
-* [Getting the List of Protected Resources](https://documentation.spryker.com/docs/getting-the-list-of-protected-resources)
+* [Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{ page.version }}/resolving-search-engine-friendly-urls.html)
+* [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#assigning-guest-cart-to-registered-customer)
+* [Managing Customer Access to API Resources](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
+* [Getting the List of Protected Resources](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-protected-resources.html)
 
 
 ### Spryker in Docker
-* [Queue Worker](https://documentation.spryker.com/docs/t-handling-data-publish-and-sync-scos#7--queue)
-* [Deploy File Reference](https://documentation.spryker.com/v3/docs/deploy-file-reference-version-1-201907#deploy-file-reference---1-0)
-* [Health checks](https://documentation.spryker.com/docs/health-checks)
-* [Asset Management](https://documentation.spryker.com/docs/asset-management)
+* [Queue Worker](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#7--queue)
+* [Deploy File Reference](https://documentation.spryker.com/2021080/docs/deploy-file-reference-version-1-201907#deploy-file-reference---1-0)
+* [Health checks](/docs/scos/dev/migration-and-integration/{{ page.version }}/technical-enhancements/health-checks.html)
+* [Asset Management](/docs/scos/dev/features/{{ page.version }}/file-manager/file-manager-feature-overview/asset-management.html)
 <details open>
 <summary>Feature overview</summary>
     
-[Asset Management Feature Overview](/docs/scos/dev/features/202001.0/media-management/asset-management/asset-management-feature-overview.html)
+[Asset Management Feature Overview](/docs/scos/dev/features/{{ page.version }}/file-manager/file-manager-feature-overview/asset-management.html)
 
 </details>
 
 <details open>
 <summary>Integration guide</summary>
     
-[Custom Location for Static Assets](/docs/scos/dev/migration-and-integration/202001.0/technical-enhancements/custom-location-for-static-assets.html)
+[Custom Location for Static Assets](/docs/scos/dev/migration-and-integration/{{ page.version }}/technical-enhancements/custom-location-for-static-assets.html)
 
 </details>
 
@@ -308,29 +311,29 @@ Below you will find the list of the new/updated documentation released as part o
 #### Back Office user guides:
 
 * Payment Management
-    * [Managing Payment Methods](https://documentation.spryker.com/docs/managing-payment-methods)
-    * [Payment Methods: Reference Information](https://documentation.spryker.com/docs/payment-methods-reference-information)
-* [Shipment](https://documentation.spryker.com/docs/en/managing-order-shipments)
+    * [Managing Payment Methods](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html)
+    * [Payment Methods: Reference Information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html#reference-information--editing-payment-method-pages)
+* [Shipment](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/orders/managing-order-shipments.html)
 
-    * [Creating a Carrier Company](https://documentation.spryker.com/docs/creating-a-carrier-company)
-    * [Creating and Managing Delivery Methods](https://documentation.spryker.com/docs/creating-and-managing-shipment-methods)
-    * [Delivery Methods: Reference Information](https://documentation.spryker.com/v4/docs/delivery-methods-reference-information )
+    * [Creating a Carrier Company](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/delivery-methods/creating-a-carrier-company.html)
+    * [Creating and Managing Delivery Methods](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html)
+    * [Delivery Methods: Reference Information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html#reference-information--creating-delivery-methods)
  * Warehouses
-    * [Creating a Warehouse](https://documentation.spryker.com/docs/creating-a-warehouse)
-    * [Managing Warehouses](https://documentation.spryker.com/docs/managing-warehouses)
-    * [Warehouses: Reference Information](https://documentation.spryker.com/docs/warehouses-reference-information)
- * [Stores](https://documentation.spryker.com/docs/stores-reference-information-201911)
+    * [Creating a Warehouse](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/warehouses/creating-a-warehouse.html)
+    * [Managing Warehouses](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/warehouses/managing-warehouses.html)
+    * [Warehouses: Reference Information](https://documentation.spryker.com/2021080/docs/warehouses-reference-information)
+ * [Stores](https://documentation.spryker.com/2021080/docs/stores-reference-information-201911)
 
 #### HowTos:
 
-* [HowTo - Import Warehouse Data](https://documentation.spryker.com/v4/docs/ht-import-warehouse-data )
-* [HowTo - Import Delivery Methods Linked to Store](https://documentation.spryker.com/v4/docs/ht-import-delivery-methods-linked-to-store )
-* [HowTo - Notify About Unsupported Browsers](https://documentation.spryker.com/docs/howto-notify-about-unsupported-browsers)
+* [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
+* [HowTo - Import Delivery Methods Linked to Store](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html)
+* [HowTo - Notify About Unsupported Browsers](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/howto-notify-about-unsupported-browsers.html)
 
 #### Other documentation:
-* [Multiple Stores](https://documentation.spryker.com/docs/multiple-stores)
-* [Inventory](https://documentation.spryker.com/docs/about-inventory)
-* [Custom Twig Functions for Yves](https://documentation.spryker.com/docs/custom-twig-functions-for-yves)
-* [Custom Twig Functions for Zed](https://documentation.spryker.com/v4/docs/custom-twig-functions-for-zed )
+* [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/howto-set-up-multiple-stores.html)
+* [Inventory](https://documentation.spryker.com/2021080/docs/inventory-management)
+* [Custom Twig Functions for Yves](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/yves/custom-twig-functions-for-yves.html)
+* [Custom Twig Functions for Zed](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/zed/custom-twig-functions-for-zed.html)
 
 

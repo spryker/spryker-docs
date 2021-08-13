@@ -2,16 +2,17 @@
 title: Tutorial - Replacing a default data importer with the queue data importer
 description: This tutorial is a quick step-by-step guide on how to replace a default data importer with a queue data importer.
 originalLink: https://documentation.spryker.com/v6/docs/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
+originalArticleId: 07974559-e22b-437f-8763-1119873fd0f5
 redirect_from:
   - /v6/docs/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
   - /v6/docs/en/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
 ---
 
-This tutorial is a quick step-by-step guide on how to replace a default data importer with a [queue data importer](https://documentation.spryker.com/docs/importing-data-with-queue-data-importer). 
+This tutorial is a quick step-by-step guide on how to replace a default data importer with a [queue data importer](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/importing-data-with-the-queue-data-importer.html). 
 Specifically, the `ProductAbstract` data importer is replaced here.
 
 ## Prerequisites
-You should have data in the `PRODUCT_ABSTRACT_QUEUE`. See [Importing data with the queue data importer](https://documentation.spryker.com/docs/importing-data-with-queue-data-importer#exporing-data-from-csv-to-queue) for details on how to import data into the queue.
+You should have data in the `PRODUCT_ABSTRACT_QUEUE`. See [Importing data with the queue data importer](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/importing-data-with-the-queue-data-importer.html#exporing-data-from-csv-to-queue) for details on how to import data into the queue.
 
 ## Step 1. Configuration
 Configure `DataImportConfig` and add a constant to it. You can add a new constant and a public method to  `Pyz\Zed\DataImport\DataImportConfig`. 

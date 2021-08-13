@@ -2,6 +2,7 @@
 title: Managing Product Relations
 description: Use these procedures to view, update, activate or deactivate, and/or delete a product relation in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/managing-product-relations
+originalArticleId: d58c9274-a369-459b-9397-ae12c4097a3e
 redirect_from:
   - /v3/docs/managing-product-relations
   - /v3/docs/en/managing-product-relations
@@ -51,4 +52,4 @@ When you select the **View in Shop** option, keep the following in mind:
 * The relation you want to view in the online store must be active. If inactive, you will be redirected to the PDP, but there will be no **Similar products** section for the abstract product. The same applies to upselling.
 ***
 **What's next?**
-To learn about the attributes that you select and enter while managing product relations, see [Product Relations: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-relations/references/product-relations-reference-information.html).
+To learn about the attributes that you select and enter while managing product relations, see [Product Relations: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-relations/references/product-relations-reference-information.html).

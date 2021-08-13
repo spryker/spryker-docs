@@ -2,6 +2,7 @@
 title: Code Architecture Guide
 description: We use our Architecture Sniffer Tool to assert a certain quality of Spryker architecture for both core and project.
 originalLink: https://documentation.spryker.com/v5/docs/code-architecture-guide
+originalArticleId: 7cc84ab2-eb0c-4944-a600-80b6d7845e72
 redirect_from:
   - /v5/docs/code-architecture-guide
   - /v5/docs/en/code-architecture-guide

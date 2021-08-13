@@ -2,6 +2,7 @@
 title: Migration Guide - Propel
 description: Use the guide to perform the Propel part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-propel
+originalArticleId: d917017c-b0d9-45f9-92e1-95f26ff1012c
 redirect_from:
   - /v6/docs/migration-guide-propel
   - /v6/docs/en/migration-guide-propel
@@ -9,7 +10,7 @@ redirect_from:
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

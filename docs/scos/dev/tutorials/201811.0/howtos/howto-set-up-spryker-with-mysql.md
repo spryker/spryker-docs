@@ -1,6 +1,7 @@
 ---
 title: HowTo - Set up Spryker with MySQL
 originalLink: https://documentation.spryker.com/v1/docs/ht-setup-spryker-with-mysql
+originalArticleId: c5b9fa7d-b93d-47ab-81b6-c1e4d3a4d5b6
 redirect_from:
   - /v1/docs/ht-setup-spryker-with-mysql
   - /v1/docs/en/ht-setup-spryker-with-mysql

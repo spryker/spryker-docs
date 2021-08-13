@@ -2,6 +2,7 @@
 title: Product is Available Again Feature Integration
 description: The guide walks you through the process of installing the Product is Available Again feature into the project.
 originalLink: https://documentation.spryker.com/v3/docs/product-is-available-again-feature-integration-201903
+originalArticleId: aebfd430-3114-4491-ab30-64ea7dabfd3e
 redirect_from:
   - /v3/docs/product-is-available-again-feature-integration-201903
   - /v3/docs/en/product-is-available-again-feature-integration-201903

@@ -1,6 +1,7 @@
 ---
 title: Release Notes - June - 1 2017
 originalLink: https://documentation.spryker.com/v6/docs/release-notes-june-1-2017
+originalArticleId: 33111063-56eb-43b8-af51-a09e3a705bfa
 redirect_from:
   - /v6/docs/release-notes-june-1-2017
   - /v6/docs/en/release-notes-june-1-2017

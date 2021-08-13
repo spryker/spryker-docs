@@ -2,6 +2,7 @@
 title: Migration Guide - ConfigurableBundle
 description: This guide contains module migration steps for the ConfigurableBundle module to the newer major version.
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-configurablebundle
+originalArticleId: cd3e598a-54e6-41f6-bd95-6ce2231409dd
 redirect_from:
   - /v6/docs/migration-guide-configurablebundle
   - /v6/docs/en/migration-guide-configurablebundle

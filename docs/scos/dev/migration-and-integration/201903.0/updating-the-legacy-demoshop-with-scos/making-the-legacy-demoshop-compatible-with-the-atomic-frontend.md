@@ -1,6 +1,7 @@
 ---
 title: Making the Legacy Demoshop Compatible with the Atomic Frontend
 originalLink: https://documentation.spryker.com/v2/docs/demoshop-with-atomic-frontend
+originalArticleId: 3d973798-68b8-4f34-928f-38b644526194
 redirect_from:
   - /v2/docs/demoshop-with-atomic-frontend
   - /v2/docs/en/demoshop-with-atomic-frontend

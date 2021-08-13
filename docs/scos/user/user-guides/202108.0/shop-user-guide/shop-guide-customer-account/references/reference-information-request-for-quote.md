@@ -2,15 +2,18 @@
 title: Reference information- request for quote
 description: The guide provides additional information on the UI elements you see on the Quote Requests pages.
 originalLink: https://documentation.spryker.com/2021080/docs/rfq-reference-information-shop-guide
+originalArticleId: 1ef73ed4-6751-4d5f-8f71-dd43f23d881d
 redirect_from:
   - /2021080/docs/rfq-reference-information-shop-guide
   - /2021080/docs/en/rfq-reference-information-shop-guide
+  - /docs/rfq-reference-information-shop-guide
+  - /docs/en/rfq-reference-information-shop-guide
 ---
 
-This page contains the information on the UI elements and pages that refer to the [Quotation Process & RFQ](https://documentation.spryker.com/docs/quotation-process-rfq-201907).
+This page contains the information on the UI elements and pages that refer to the [Quotation Process & RFQ](/docs/scos/dev/features/{{ page.version }}/quotation-process/quotation-process.html).
 ***
 ## Quote requests
-*Quote Requests* is the page where you can access all your RFQs. Don't have an RFQ? Start [creating](https://documentation.spryker.com/docs/creating-rfq-shop-guide) it.
+*Quote Requests* is the page where you can access all your RFQs. Don't have an RFQ? Start [creating](https://documentation.spryker.com/2021080/docs/quotation-process-rfq-feature-overview#quotation-process---rfq-on-the-storefront) it.
 
 On the **Quote Requests** page, you see the following:
 

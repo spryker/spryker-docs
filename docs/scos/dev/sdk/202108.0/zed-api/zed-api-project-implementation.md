@@ -2,9 +2,12 @@
 title: Zed API project implementation
 description: The article describes the implementation process of activating API and API bundles.
 originalLink: https://documentation.spryker.com/2021080/docs/zed-api-project-implementation
+originalArticleId: a710e2b6-ccec-4a08-8cc3-4284ebc4cf53
 redirect_from:
   - /2021080/docs/zed-api-project-implementation
   - /2021080/docs/en/zed-api-project-implementation
+  - /docs/zed-api-project-implementation
+  - /docs/en/zed-api-project-implementation
 ---
 
 For the API and the API bundles to get activated we need to configure our own service provider stack in the Zed `ApplicationDependencyProvider` class:

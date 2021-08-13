@@ -2,6 +2,7 @@
 title: Multiple Carts feature overview
 description: Shopping Cart is where the record of the items a buyer has ‘picked up’ from the online store is kept. Select products, review them and add more with ease.
 originalLink: https://documentation.spryker.com/v6/docs/multiple-carts-feature-overview
+originalArticleId: 0d388bba-c5e9-4c16-a3e9-e1b926bd283c
 redirect_from:
   - /v6/docs/multiple-carts-feature-overview
   - /v6/docs/en/multiple-carts-feature-overview
@@ -32,7 +33,7 @@ The table with shopping carts shows details for each of the carts, including:
 * Number of products added to cart
 * Price mode (Net or Gross)
 * Cart Total
-* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/dev/features/202001.0/shopping-cart/shared-cart/shared-cart-feature-overview.html), dismiss, delete, switch cart to shopping list (see the *Actions* table for details)
+* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/dev/features/202009.0/shared-carts/shared-carts-feature-overview.html), dismiss, delete, switch cart to shopping list (see the *Actions* table for details)
 
 ![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-cart-list.png){height="" width=""}
 
@@ -49,7 +50,7 @@ The table bellow provides detailed information on the possible actions to manage
 To view how to create, edit, duplicate, and delete a cart and how to dissmiss shared carts, see the [Multiple Carts on the storefront](#multiple-carts-per-user-on-the-storefront) section.
 :::
 
-To learn more about sharing the shopping cart, check out [Shared Cart documentation](https://documentation.spryker.com/docs/shared-cart-overview).
+To learn more about sharing the shopping cart, check out [Shared Cart documentation](/docs/scos/dev/features/202009.0/shared-carts/shared-carts-feature-overview.html).
 
 Active shopping cart is highlighted in bold.
 
@@ -102,8 +103,8 @@ On the storefront, company users can perform the following actions using the Mul
 ![Dismiss and duplicate a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/dismiss-and-duplicate-a-shopping-cart.gif){height="" width=""}
 </details>
 
-* To share a cart with external and internal users via a link, see [Unique URL per Cart for Easy Sharing feature overview](https://documentation.spryker.com/docs/unique-url-per-cart-for-easy-sharing-overview).
-* To share a cart with users within one business unit, see [Shared Cart feature overview](https://documentation.spryker.com/docs/shared-cart-overview#shared-cart-on-the-storefront).
-* To add a custom order reference to a cart, see [Custom Order Reference feature overview](https://documentation.spryker.com/docs/custom-order-reference-feature-overview).
-* To add comments to a cart, see [Comments feature overview](https://documentation.spryker.com/docs/comments-feature-overview#comments-on-the-storefront).
-* To add a customer order reference to an order, see [Custom Order Reference feature overview](https://documentation.spryker.com/docs/custom-order-reference-feature-overview).
+* To share a cart with external and internal users via a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/scos/dev/features/202009.0/resource-sharing/unique-url-per-cart-for-easy-sharing/unique-url-per-cart-for-easy-sharing-feature-overview.html).
+* To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/scos/dev/features/202009.0/shared-carts/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
+* To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/scos/dev/features/202009.0/order-management/order-management-feature-overview/custom-order-reference-overview.html).
+* To add comments to a cart, see [Comments feature overview](/docs/scos/dev/features/202009.0/comments/comments-feature-overview.html#comments-on-the-storefront).
+* To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/scos/dev/features/202009.0/order-management/order-management-feature-overview/custom-order-reference-overview.html).

@@ -2,6 +2,7 @@
 title: Technology partner integration
 description: Integrate technology partner solutions to boost your Spryker project performance.
 originalLink: https://documentation.spryker.com/v6/docs/technology-partner-integration
+originalArticleId: 30127fa7-875a-47f3-ab00-9b48dc1d29a5
 redirect_from:
   - /v6/docs/technology-partner-integration
   - /v6/docs/en/technology-partner-integration
@@ -13,122 +14,122 @@ In this section you will find information about our Technology Partner Integrati
 
 ##  Hosting Providers
 
-* [Claranet](https://documentation.spryker.com/docs/claranet)
-* [Continum](https://documentation.spryker.com/docs/continum)
-* [Metaways](https://documentation.spryker.com/docs/metaways)
-* [root360](https://documentation.spryker.com/docs/root360)
+* [Claranet](/docs/scos/dev/technology-partners/202009.0/hosting-providers/claranet.html)
+* [Continum](/docs/scos/dev/technology-partners/202009.0/hosting-providers/continum.html)
+* [Metaways](/docs/scos/dev/technology-partners/202009.0/hosting-providers/metaways.html)
+* [root360](/docs/scos/dev/technology-partners/202009.0/hosting-providers/root-360.html)
 
 
 ## Content Management
 
-* [Censhare](https://documentation.spryker.com/docs/censhare)
-* [Coremedia](https://documentation.spryker.com/docs/coremedia)
-* [E-Spirit](https://documentation.spryker.com/docs/e-spirit)
-* [Magnolia](https://documentation.spryker.com/docs/magnolia-cms)
-* [Styla](https://documentation.spryker.com/docs/styla)
+* [Censhare](/docs/scos/dev/technology-partners/202009.0/content-management/censhare.html)
+* [Coremedia](/docs/scos/dev/technology-partners/202009.0/content-management/coremedia/coremedia.html)
+* [E-Spirit](/docs/scos/dev/technology-partners/202009.0/content-management/e-spirit.html)
+* [Magnolia](/docs/scos/dev/technology-partners/202009.0/content-management/magnolia.html)
+* [Styla](/docs/scos/dev/technology-partners/202009.0/content-management/styla.html)
 
 ## Customer Service
 
-* [Dixa](https://documentation.spryker.com/docs/dixa)
-* [iAdvize](https://documentation.spryker.com/docs/iadvize)
-* [Optimise it](https://documentation.spryker.com/docs/optimise-it)
-* [Live chat service](https://documentation.spryker.com/docs/live-chat-service)
+* [Dixa](/docs/scos/dev/technology-partners/202009.0/customer-service/dixa.html)
+* [iAdvize](/docs/scos/dev/technology-partners/202009.0/customer-service/iadvize.html)
+* [Optimise it](/docs/scos/dev/technology-partners/202009.0/customer-service/optimise-it.html)
+* [Live chat service](/docs/scos/dev/technology-partners/202009.0/customer-service/live-chat-service.html)
 
 ## Finance & Accounting
 
-* [CollectAI](https://documentation.spryker.com/docs/collect-ai)
-* [Nitrobox](https://documentation.spryker.com/docs/nitrobox)
+* [CollectAI](/docs/scos/dev/technology-partners/202009.0/finance-and-accounting/collectai.html)
+* [Nitrobox](/docs/scos/dev/technology-partners/202009.0/finance-and-accounting/nitrobox.html)
 
 ## Marketing & Conversion
 ### A/B Testing & Performance
 
-* [AB Tasty](https://documentation.spryker.com/docs/ab-tasty)
-<!--* [Baqend](https://documentation.spryker.com/docs/baqend)-->
+* [AB Tasty](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html)
+<!--* [Baqend](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/ab-testing-and-performance/baqend.html)-->
 
 ### Analytics
 
-* [ChannelPilot Analytics](https://documentation.spryker.com/docs/channelpilot-analytics)
-* [FactFinder](https://documentation.spryker.com/docs/factfinder)
-* [Haensel AMS](https://documentation.spryker.com/docs/haensel-ams)
-* [Mindlab](https://documentation.spryker.com/docs/mindlab)
-* [Minubo](https://documentation.spryker.com/docs/minubo)
+* [ChannelPilot Analytics](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/analytics/channelpilot-analytics.html)
+* [FactFinder](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/analytics/fact-finder/fact-finder.html)
+* [Haensel AMS](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/analytics/haensel-ams.html)
+* [Mindlab](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/analytics/mindlab.html)
+* [Minubo](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/analytics/minubo.html)
 
 ### Customer Communication
 
-* [Dotdigital](https://documentation.spryker.com/docs/dotdigital)
-* [Episerver](https://documentation.spryker.com/docs/episerver)
-* [Inxmail](https://documentation.spryker.com/docs/inxmail)
+* [Dotdigital](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/customer-communication/dotdigital.html)
+* [Episerver](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/episerver.html)
+* [Inxmail](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/customer-communication/inxmail.html)
 
 ### Customer Retention & Loyalty
 
-* [Namogoo](https://documentation.spryker.com/docs/namogoo ) 
-* [Trustpilot](https://documentation.spryker.com/docs/trustpilot)
-* [Zenloop](https://documentation.spryker.com/docs/zenloop)
+* [Namogoo](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html) 
+* [Trustpilot](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
+* [Zenloop](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 
 ### Personalization & Cross-Selling
 
-<!--* [8Select](https://documentation.spryker.com/docs/8select)-->
-<!--* [Contentserv](https://documentation.spryker.com/docs/)-->
-* [Econda](https://documentation.spryker.com/docs/econda)
-* [Nosto](https://documentation.spryker.com/docs/nosto)
-* [trbo](https://documentation.spryker.com/docs/trbo)
+<!--* [8Select](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
+<!--* [Contentserv](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
+* [Econda](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html)
+* [Nosto](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
+* [trbo](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
 
 ## Marketplace Integrations
 
-* [ChannelPilot Marketplace](https://documentation.spryker.com/docs/channelpilot)
+* [ChannelPilot Marketplace](/docs/scos/dev/technology-partners/202009.0/marketplace-integrations/channelpilot-marketplace.html)
 
 ## Order Management (ERP/OMS)
 
-* [Tradebyte](https://documentation.spryker.com/docs/tradebyte)
-* [Punchout Catalogs](https://documentation.spryker.com/docs/punchout-catalogs)
+* [Tradebyte](/docs/scos/dev/technology-partners/202009.0/order-management-erpoms/tradebyte.html)
+* [Punchout Catalogs](/docs/scos/dev/technology-partners/202009.0/order-management-erpoms/punchout-catalogs/punchout-catalogs.html)
 
 ## Operational Tools
 
-<!--* [Common Solutions](https://documentation.spryker.com/docs/common-solutions)-->
-* [Data Virtuality](https://documentation.spryker.com/docs/datavirtuality)
-* [Loggly](https://documentation.spryker.com/docs/loggly-queue)
-* [New Relic](https://documentation.spryker.com/docs/new-relic)
-* [Proclane](https://documentation.spryker.com/docs/proclane)
-* [PlusServer](https://documentation.spryker.com/docs/plusserver)
-* [Tideways](https://documentation.spryker.com/docs/tideways)
-* [Usercentrics](https://documentation.spryker.com/docs/usercentrics)
-* [VSHN](https://documentation.spryker.com/docs/vshn)
-<!--* [Mindcurv](https://documentation.spryker.com/docs/mindcurv)-->
-<!--* [Shopmacher](https://documentation.spryker.com/docs/shopmacher)-->
+<!--* [Common Solutions](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/common-solutions.html)-->
+* [Data Virtuality](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/data-virtuality.html)
+* [Loggly](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/loggly.html)
+* [New Relic](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/new-relic.html)
+* [Proclane](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/proclane.html)
+* [PlusServer](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/plusserver.html)
+* [Tideways](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/tideways.html)
+* [Usercentrics](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/usercentrics.html)
+* [VSHN](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/vshn.html)
+<!--* [Mindcurv](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/mindcurv.html)-->
+<!--* [Shopmacher](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/shopmacher.html)-->
 
 
 ## Payment Partners
 
-* [Adyen](https://documentation.spryker.com/docs/adyen)
-* [Amazon Pay](https://documentation.spryker.com/docs/amazon-pay)
-* [AfterPay](https://documentation.spryker.com/docs/afterpay)
-* [Arvato](https://documentation.spryker.com/docs/arvato)
-* [Billie](https://documentation.spryker.com/docs/billie)
-* [Billpay](https://documentation.spryker.com/docs/billpay) 
-* [Braintree](https://documentation.spryker.com/docs/braintree)
-* [BS Payone](https://documentation.spryker.com/docs/payone-v1-1)
-* [Computop](https://documentation.spryker.com/docs/computop)
-* [CrefoPay](https://documentation.spryker.com/docs/crefopay-configuration)
-* [Heidelpay](https://documentation.spryker.com/docs/heidelpay)
-<!--* [Informa Solutions](https://documentation.spryker.com/docs/informa-solutions)-->
-* [Klarna](https://documentation.spryker.com/docs/klarna)
-* [Payolution](https://documentation.spryker.com/docs/payolution)
-* [Powerpay](https://documentation.spryker.com/docs/powerpay)
-* [Ratenkauf by Easycredit](https://documentation.spryker.com/docs/ratenkauf-by-easycredit)
-* [RatePAY](https://documentation.spryker.com/docs/ratepay)
+* [Adyen](/docs/scos/dev/technology-partners/202009.0/payment-partners/adyen/adyen.html)
+* [Amazon Pay](/docs/scos/dev/technology-partners/202009.0/payment-partners/amazon-pay/amazon-pay.html)
+* [AfterPay](/docs/scos/dev/technology-partners/202009.0/payment-partners/afterpay/afterpay.html)
+* [Arvato](/docs/scos/dev/technology-partners/202009.0/payment-partners/arvato/arvato.html)
+* [Billie](/docs/scos/dev/technology-partners/202009.0/payment-partners/billie.html)
+* [Billpay](/docs/scos/dev/technology-partners/202009.0/payment-partners/billpay/billpay.html) 
+* [Braintree](/docs/scos/dev/technology-partners/202009.0/payment-partners/braintree/braintree.html)
+* [BS Payone](/docs/scos/dev/technology-partners/202009.0/payment-partners/bs-payone/bs-payone.html)
+* [Computop](/docs/scos/dev/technology-partners/202009.0/payment-partners/computop/computop.html)
+* [CrefoPay](/docs/scos/dev/technology-partners/202009.0/payment-partners/crefopay/crefopay-installation-and-configuration.html)
+* [Heidelpay](/docs/scos/dev/technology-partners/202009.0/payment-partners/heidelpay/heidelpay.html)
+<!--* [Informa Solutions](/docs/scos/dev/technology-partners/202009.0/payment-partners/informa-solutions.html)-->
+* [Klarna](/docs/scos/dev/technology-partners/202009.0/payment-partners/klarna/klarna.html)
+* [Payolution](/docs/scos/dev/technology-partners/202009.0/payment-partners/payolution/payolution.html)
+* [Powerpay](/docs/scos/dev/technology-partners/202009.0/payment-partners/powerpay.html)
+* [Ratenkauf by Easycredit](/docs/scos/dev/technology-partners/202009.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
+* [RatePAY](/docs/scos/dev/technology-partners/202009.0/payment-partners/ratepay/ratepay.html)
 
  ## Product Information (PIM/ERP)
 
-* [Akeneo](https://documentation.spryker.com/docs/akeneo)
-* [Xentral](https://documentation.spryker.com/docs/xentral)
-<!--* [Censhare](https://documentation.spryker.com/docs/)-->
-<!--* [Contentserv](https://documentation.spryker.com/docs/contentserv)-->
-<!--* [Tradebyte](https://documentation.spryker.com/docs/tradebyte)-->
+* [Akeneo](/docs/scos/dev/technology-partners/202009.0/product-information-pimerp/akeneo/akeneo.html)
+* [Xentral](/docs/scos/dev/technology-partners/202009.0/product-information-pimerp/xentral.html)
+<!--* [Censhare](/docs/scos/dev/technology-partners/202009.0/content-management/censhare.html)-->
+<!--* [Contentserv](/docs/scos/dev/technology-partners/202009.0/product-information-pimerp/contentserv.html)-->
+<!--* [Tradebyte](/docs/scos/dev/technology-partners/202009.0/order-management-erpoms/tradebyte.html)-->
 
  ## Shipment
 
-* [Paazl](https://documentation.spryker.com/docs/paazl) 
-* [Paqato](https://documentation.spryker.com/docs/paqato)
-* [Seven Senders](https://documentation.spryker.com/docs/sevensenders)
+* [Paazl](/docs/scos/dev/technology-partners/202009.0/shipment/paazl.html) 
+* [Paqato](/docs/scos/dev/technology-partners/202009.0/shipment/paqato.html)
+* [Seven Senders](/docs/scos/dev/technology-partners/202009.0/shipment/seven-senders.html)
 
 Become a partner now!

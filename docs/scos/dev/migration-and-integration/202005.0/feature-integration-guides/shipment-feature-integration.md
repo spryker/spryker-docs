@@ -2,6 +2,7 @@
 title: Shipment Feature Integration
 description: Use the guide to install the Shipment Back Office UI, Delivery method per store and Shipment data import functionalities in your project.
 originalLink: https://documentation.spryker.com/v5/docs/shipment-feature-integration
+originalArticleId: e21825a0-ac6a-47cb-80f7-02b2eaf8582f
 redirect_from:
   - /v5/docs/shipment-feature-integration
   - /v5/docs/en/shipment-feature-integration

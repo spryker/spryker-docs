@@ -2,6 +2,7 @@
 title: Creating and Managing Delivery Methods
 description: Use the procedures to create a delivery method, activate it, set a price and tax set, and define a delivery method per store in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/creating-and-managing-shipment-methods
+originalArticleId: 611f30cf-44b0-4aae-b72f-7c53344dd605
 redirect_from:
   - /v5/docs/creating-and-managing-shipment-methods
   - /v5/docs/en/creating-and-managing-shipment-methods
@@ -13,7 +14,7 @@ To start working with the delivery methods, go to **Administration** > **Shipmen
 ***
 
 ## Prerequisites
-Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a Carrier Company](https://documentation.spryker.com/docs/en/creating-a-carrier-company). You also need to make sure that you have an appropriate tax set in the **Taxes > Tax Sets** section, see [Taxes](https://documentation.spryker.com/docs/en/taxes).
+Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a Carrier Company](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/delivery-methods/creating-a-carrier-company.html). You also need to make sure that you have an appropriate tax set in the **Taxes > Tax Sets** section, see [Taxes](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/taxes/taxes.html).
 
 ## Creating a Delivery Method
 A delivery method is described by :
@@ -47,7 +48,7 @@ The fields marked with * are required.
 3. To activate the delivery method, select the **Is active** checkbox.
 4. In the **Price & Tax** tab, do the following:
     * Define the price for the delivery method per specific locale;
-    * Select the tax set from the drop-down list. The values are taken from the **Taxes > Tax Sets** section. For more information, see [Managing Tax Rates and Sets](https://documentation.spryker.com/docs/en/managing-tax-rates-sets).
+    * Select the tax set from the drop-down list. The values are taken from the **Taxes > Tax Sets** section. For more information, see [Managing Tax Rates and Sets](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/managing-tax-rates-and-sets.html).
 
 5. In the **Store Relation** tab, select the stores in which the delivery method will be available.
 ![Store relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/store-relation-delivery-method.png){height="" width=""}
@@ -69,7 +70,7 @@ This is how the Back Office setup looks in the online store:
 ![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png){height="" width=""}
 
 ## Viewing Delivery Methods
-To view the delivery method details, click **View**  in the *Actions* column for the delivery method you want to view. On the **View Delivery Method: [Delivery Method name]** page, you'll see three sections containing delivery method details: **Configuration**, **Store relation**, and **Price & Tax**. See [Delivery Methods: Reference Information](https://documentation.spryker.com/docs/en/delivery-methods-reference-information) for more details on the attributes you see on the page.
+To view the delivery method details, click **View**  in the *Actions* column for the delivery method you want to view. On the **View Delivery Method: [Delivery Method name]** page, you'll see three sections containing delivery method details: **Configuration**, **Store relation**, and **Price & Tax**. See [Delivery Methods: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/delivery-methods/references/delivery-methods-reference-information.html) for more details on the attributes you see on the page.
 
 ## Deleting a Delivery Method
 {% info_block warningBox "Note" %}

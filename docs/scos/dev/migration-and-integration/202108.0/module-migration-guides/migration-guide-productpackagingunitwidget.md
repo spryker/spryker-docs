@@ -2,9 +2,12 @@
 title: Migration Guide - ProductPackagingUnitWidget
 description: Use the guide to migrate to a new version of the
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-packaging-unit-widget
+originalArticleId: c8ccd097-331d-462d-bae3-aca3c8541817
 redirect_from:
   - /2021080/docs/mg-product-packaging-unit-widget
   - /2021080/docs/en/mg-product-packaging-unit-widget
+  - /docs/mg-product-packaging-unit-widget
+  - /docs/en/mg-product-packaging-unit-widget
 ---
 
 ## Upgrading from Version 0.4.* to Version 0.5.0
@@ -12,7 +15,7 @@ redirect_from:
 In this new version of the **ProductPackagingUnitWidget** module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnitWidget module](https://github.com/spryker-shop/product-packaging-unit-widget/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/decimal-stock-migration-concept.html
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/decimal-stock-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

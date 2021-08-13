@@ -2,6 +2,7 @@
 title: Implement Prepayment in Front End
 description: This article describes how to implement prepayment method in front end.
 originalLink: https://documentation.spryker.com/v5/docs/ht-prepayment-fe
+originalArticleId: 56bb243a-9677-46ab-8ec1-9a199452d70e
 redirect_from:
   - /v5/docs/ht-prepayment-fe
   - /v5/docs/en/ht-prepayment-fe

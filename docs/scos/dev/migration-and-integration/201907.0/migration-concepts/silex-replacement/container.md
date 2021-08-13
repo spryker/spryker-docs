@@ -1,6 +1,7 @@
 ---
 title: Container
 originalLink: https://documentation.spryker.com/v3/docs/container-201903
+originalArticleId: 17a3d34e-7b41-4849-a89f-b5ae97b3842a
 redirect_from:
   - /v3/docs/container-201903
   - /v3/docs/en/container-201903

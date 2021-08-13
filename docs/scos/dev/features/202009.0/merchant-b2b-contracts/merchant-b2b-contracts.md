@@ -2,6 +2,7 @@
 title: Merchant B2B Contracts
 description: In B2B partnership, which is usually based on contracts, the selling company is referred to as merchant and the buyer is represented by a business unit
 originalLink: https://documentation.spryker.com/v6/docs/merchants-b2b-contracts
+originalArticleId: 2dbebb86-8acd-40a7-ba5e-aaff3e59b9a5
 redirect_from:
   - /v6/docs/merchants-b2b-contracts
   - /v6/docs/en/merchants-b2b-contracts

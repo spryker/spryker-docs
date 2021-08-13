@@ -2,6 +2,7 @@
 title: Migration Guide - ProductListGui
 description: This migration guide contains steps on migrating  ProductListGui to the major release versions.
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-product-list-gui
+originalArticleId: cbed2a46-9e23-4306-978d-7948af50a3d3
 redirect_from:
   - /v6/docs/migration-guide-product-list-gui
   - /v6/docs/en/migration-guide-product-list-gui

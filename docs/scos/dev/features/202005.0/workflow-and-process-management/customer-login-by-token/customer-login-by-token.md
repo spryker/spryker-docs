@@ -2,6 +2,7 @@
 title: Customer Login by Token
 description: The Customer Login by Token allows customers to log in by token that is secure and contains all information required for authentication.
 originalLink: https://documentation.spryker.com/v5/docs/customer-login-by-token
+originalArticleId: 5acf7603-6b5f-4924-a823-1dab12087a55
 redirect_from:
   - /v5/docs/customer-login-by-token
   - /v5/docs/en/customer-login-by-token

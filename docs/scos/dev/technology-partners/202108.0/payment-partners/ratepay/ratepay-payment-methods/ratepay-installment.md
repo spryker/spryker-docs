@@ -2,9 +2,12 @@
 title: RatePay - Installment
 description: Integrate installment payment through Ratepay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-installment
+originalArticleId: 3fe65872-d5b3-4c95-8757-6ae7ee0b2d87
 redirect_from:
   - /2021080/docs/ratepay-installment
   - /2021080/docs/en/ratepay-installment
+  - /docs/ratepay-installment
+  - /docs/en/ratepay-installment
 ---
 
 The shop must implement the Calculation Request operation to calculate an example installment plan and show it to the customer. Some input parameters for the calculation are passed from the shop (e.g. the shopping basket total), others are stored in the merchant's RatePAY profile held by the Gateway (e.g. the allowed interest rate range). The merchant's profile parameters can be retrieved by the Configuration Request operation.
@@ -57,5 +60,5 @@ You can copy over configs to your config from the RatePAY module's `config.dist.
 
 ### Perform Requests
 
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partners/202001.0/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.
 

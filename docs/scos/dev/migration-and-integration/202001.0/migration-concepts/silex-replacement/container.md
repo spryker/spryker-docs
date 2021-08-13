@@ -2,6 +2,7 @@
 title: Container
 description: The article contains information on how to use Container, to check if services are added, removed or extended. Troubleshooting information is included too
 originalLink: https://documentation.spryker.com/v4/docs/container-201903
+originalArticleId: 2e77b3b1-631f-4cab-8811-b38815ee81d1
 redirect_from:
   - /v4/docs/container-201903
   - /v4/docs/en/container-201903

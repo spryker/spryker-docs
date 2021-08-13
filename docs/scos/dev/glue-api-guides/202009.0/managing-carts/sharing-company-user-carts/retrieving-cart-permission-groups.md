@@ -2,6 +2,7 @@
 title: Retrieving cart permission groups
 description: Learn how to retrieve cart permission groups via Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-cart-permission-groups
+originalArticleId: f862b845-5d3d-4a75-84fe-348349594b15
 redirect_from:
   - /v6/docs/retrieving-cart-permission-groups
   - /v6/docs/en/retrieving-cart-permission-groups
@@ -10,7 +11,7 @@ redirect_from:
 Company users can share their carts with others so that multiple representatives of the same company can work together on the same order. In addition to that, users can choose what type of access they want to grant to different users. This endoint allows retrieving cart permission groups of a company. 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](https://documentation.spryker.com/docs/shared-carts-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/shared-carts-feature-integration.html).
 
 ## Retrieve cart permission groups
 
@@ -24,7 +25,7 @@ To retrieve cart permission groups, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
 
@@ -91,7 +92,7 @@ To retrieve a cart permission group, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 
@@ -139,4 +140,4 @@ Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 ## Next steps
 
 
-* [Sharing company user carts](https://documentation.spryker.com/docs/sharing-company-user-carts)
+* [Sharing company user carts](/docs/scos/dev/glue-api-guides/202009.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html)

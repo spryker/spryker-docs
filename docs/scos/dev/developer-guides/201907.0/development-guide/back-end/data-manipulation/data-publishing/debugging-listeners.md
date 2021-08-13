@@ -1,6 +1,7 @@
 ---
 title: Debugging Listeners
 originalLink: https://documentation.spryker.com/v3/docs/ht-debug-listeners
+originalArticleId: f6cc9650-d65d-4e2a-bb56-2a3cbe3ae855
 redirect_from:
   - /v3/docs/ht-debug-listeners
   - /v3/docs/en/ht-debug-listeners

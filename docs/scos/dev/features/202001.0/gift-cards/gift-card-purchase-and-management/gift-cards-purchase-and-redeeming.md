@@ -2,6 +2,7 @@
 title: Gift Cards Purchase and Redeeming
 description: This article describes general concepts of gift cards, gift card’s purchase and redeeming process, as well as the various use case scenarios.
 originalLink: https://documentation.spryker.com/v4/docs/gift-cards-purchase-redeeming
+originalArticleId: 0e4e0ddc-48ba-480f-96e6-ece2c7ec1e31
 redirect_from:
   - /v4/docs/gift-cards-purchase-redeeming
   - /v4/docs/en/gift-cards-purchase-redeeming

@@ -1,6 +1,7 @@
 ---
 title: REST API Reference
 originalLink: https://documentation.spryker.com/v1/docs/rest-api-reference
+originalArticleId: 1f00587c-3357-4157-9184-a78d06bc385b
 redirect_from:
   - /v1/docs/rest-api-reference
   - /v1/docs/en/rest-api-reference

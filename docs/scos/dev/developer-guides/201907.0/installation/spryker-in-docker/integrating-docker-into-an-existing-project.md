@@ -2,6 +2,7 @@
 title: Integrating Docker into an Existing Project
 description: The included instructions describe how to convert an existing non-docker based project into a docker based one.
 originalLink: https://documentation.spryker.com/v3/docs/integrating-docker-into-an-existing-project-201907
+originalArticleId: 64b8ed4c-540b-4196-9275-c21719ca02a1
 redirect_from:
   - /v3/docs/integrating-docker-into-an-existing-project-201907
   - /v3/docs/en/integrating-docker-into-an-existing-project-201907

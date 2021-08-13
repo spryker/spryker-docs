@@ -2,27 +2,28 @@
 title: Retrieving Business Unit Information
 description: The article describes how to use Spryker Glue API to retrieve business unit information.
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-business-unit-information-201907
+originalArticleId: 1325e7e7-044d-4272-9587-fafc8a9cb928
 redirect_from:
   - /v5/docs/retrieving-business-unit-information-201907
   - /v5/docs/en/retrieving-business-unit-information-201907
 ---
 
-In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](https://documentation.spryker.com/docs/en/company-account-overview), are organized in Business Units depending on their job role and the scope of their activity. The endpoints provided by the **Business Unit** and **Business Unit Address** APIs allow retrieving Business Unit information.
+In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/scos/dev/features/202005.0/company-account-management/company-account-overview/company-account-overview.html), are organized in Business Units depending on their job role and the scope of their activity. The endpoints provided by the **Business Unit** and **Business Unit Address** APIs allow retrieving Business Unit information.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/docs/en/logging-in-as-company-user-201907
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/202005.0/b2b-account-management/logging-in-as-company-user.html
 {% endinfo_block %}.)
 
 In your development, the endpoint can help you to provide information on the Business Units available in the company of the currently logged in user.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/docs/en/company-account-api-feature-integration-201907#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
 
 ## Retrieving General Business Unit Information
 ### Information on the Business Unit of the User
 To retrieve information on the business unit a user belongs to, send a GET request to the following endpoint:
 
-[/company-business-units/mine](https://documentation.spryker.com/docs/en/rest-api-reference#/company-business-units)
+[/company-business-units/mine](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/company-business-units)
 
 Sample request: *GET http://glue.mysprykershop.com/company-business-units/mine*
 
@@ -79,7 +80,7 @@ The endpoint responds with a collection of **RestCompanyBusinessUnitResponse**, 
 ### Information on Specific Business Unit
 To retrieve information on a specific Business Unit, send a GET request to the following endpoint:
 
-[/company-business-units/{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/docs/en/rest-api-reference#/company-business-units)
+[/company-business-units/{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/company-business-units)
 
 Sample request: *GET http://glue.mysprykershop.com/company-business-units/**b8a06475-73f5-575a-b1e9-1954de7a49ef***
 where **b8a06475-73f5-575a-b1e9-1954de7a49ef** is the ID of the Business Unit you need.
@@ -248,13 +249,13 @@ The response will include the following additional attributes:
 | Status | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/docs/en/logging-in-as-company-user-201907).|
+| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/202005.0/b2b-account-management/logging-in-as-company-user.html).|
 | 404 | The specified Business Unit was not found or the user does not have access to it. |
 
 ## Retrieving Business Unit Addresses
 To retrieve a Business Unit address, send a GET request to the following endpoint:
 
-[/company-business-unit-addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/docs/en/rest-api-reference#/company-business-unit-addresses)
+[/company-business-unit-addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/company-business-unit-addresses)
 
 Sample request: *GET http://glue.mysprykershop.com/company-business-unit-addresses/**eec036ee-b999-5753-a7dd-8d0710a2312f***
 where **eec036ee-b999-5753-a7dd-8d0710a2312f** is the ID of the Business Unit Address you need.
@@ -310,5 +311,5 @@ The endpoint responds with a **RestCompanyBusinessUnitAddressResponse** that con
 | Status | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/docs/en/logging-in-as-company-user-201907).|
+| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/202005.0/b2b-account-management/logging-in-as-company-user.html).|
 | 404 | The specified Business Unit was not found or the user does not have access to it. |

@@ -2,6 +2,7 @@
 title: Token Description Tables
 description: This guide provides reference information in tables about fields and value types, operators you enter when creating a plain query.
 originalLink: https://documentation.spryker.com/v1/docs/token-description-tables
+originalArticleId: d2a8b44c-2c19-4b5d-ac2e-1bdbab371735
 redirect_from:
   - /v1/docs/token-description-tables
   - /v1/docs/en/token-description-tables

@@ -2,6 +2,7 @@
 title: Product Lists
 description: The section is used to define product restrictions for product sets by adding them to an appropriate product list in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/product-lists
+originalArticleId: 31cf4998-3d09-4ea4-a423-2b5bd956914b
 redirect_from:
   - /v3/docs/product-lists
   - /v3/docs/en/product-lists
@@ -20,6 +21,6 @@ If a specific product (or a list of products) is whitelisted, the merchant relat
 ***
 **What's next?**
 
-* To learn how product lists are created, see [Creating a Product List](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-lists/creating-a-product-list.html).
-* To learn how the product lists are managed, see [Managing Product Lists](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-lists/managing-product-lists.html).
-* To learn more about the attributes you select and enter when creating or managing product lists, see [Product Lists: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-lists/references/product-lists-reference-information.html).
+* To learn how product lists are created, see [Creating a Product List](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-lists/creating-a-product-list.html).
+* To learn how the product lists are managed, see [Managing Product Lists](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-lists/managing-product-lists.html).
+* To learn more about the attributes you select and enter when creating or managing product lists, see [Product Lists: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-lists/references/product-lists-reference-information.html).

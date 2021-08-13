@@ -2,6 +2,7 @@
 title: Discount
 description: This section can be used to create discounts and specify their types, vouchers, and cart rules, as well as to define what and when to apply the discount to.
 originalLink: https://documentation.spryker.com/v3/docs/discount-1
+originalArticleId: 65497b4c-6d91-495b-a706-ab21951ddb20
 redirect_from:
   - /v3/docs/discount-1
   - /v3/docs/en/discount-1
@@ -22,13 +23,13 @@ In terms of the way a discount is calculated, there are two types of discounts: 
 * * *
 **What's next?**
 To know how the discounts are created and managed, see the following articles:
-* [Creating a Discount Voucher](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/creating-a-discount/creating-a-discount-voucher.html)
-* [Creating a Cart Rule Discount](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/creating-a-discount/creating-a-cart-rule-discount.html)
-* [Managing Discounts](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/managing-discounts.html)
+* [Creating a Discount Voucher](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/creating-a-discount/creating-a-discount-voucher.html)
+* [Creating a Cart Rule Discount](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/creating-a-discount/creating-a-cart-rule-discount.html)
+* [Managing Discounts](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/managing-discounts.html)
 
 To know more about the attributes you use to create and manage the discounts, see the following articles:
-* [Discount: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/discount-reference-information.html)
-* [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/discount-calculation-reference-information.html)
-* [Discount Conditions: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/discount-conditions-reference-information.html)
-* [Voucher Codes: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/voucher-codes-reference-information.html)
-* [Token Description Tables](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/token-description-tables.html)
+* [Discount: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/references/discount-reference-information.html)
+* [Discount Calculation: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/references/discount-calculation-reference-information.html)
+* [Discount Conditions: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/references/discount-conditions-reference-information.html)
+* [Voucher Codes: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/references/voucher-codes-reference-information.html)
+* [Token Description Tables](/docs/scos/user/user-guides/201907.0/back-office-user-guide/discount/references/token-description-tables.html)

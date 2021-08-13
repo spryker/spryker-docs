@@ -2,6 +2,7 @@
 title: Getting Started with Docker
 description: Spryker provides an easy way to bootstrap applications and prepare development and production environments for running Spryker OS in Docker.
 originalLink: https://documentation.spryker.com/v4/docs/getting-started-with-docker
+originalArticleId: 146f099b-87a7-455f-92aa-6995eb90d2ba
 redirect_from:
   - /v4/docs/getting-started-with-docker
   - /v4/docs/en/getting-started-with-docker

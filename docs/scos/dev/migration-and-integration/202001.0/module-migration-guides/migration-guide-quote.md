@@ -2,6 +2,7 @@
 title: Migration Guide - Quote
 description: Use the guide to learn how to update the Quote module to a newer version.
 originalLink: https://documentation.spryker.com/v4/docs/mg-quote
+originalArticleId: e42d09e8-72a0-4efa-8d62-e1de6d224d00
 redirect_from:
   - /v4/docs/mg-quote
   - /v4/docs/en/mg-quote

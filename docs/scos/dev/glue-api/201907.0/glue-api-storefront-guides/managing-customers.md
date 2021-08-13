@@ -1,6 +1,7 @@
 ---
 title: Managing Customers
 originalLink: https://documentation.spryker.com/v3/docs/managing-customers-api
+originalArticleId: a1e7c9d9-29c1-4cf0-a734-847cf626955a
 redirect_from:
   - /v3/docs/managing-customers-api
   - /v3/docs/en/managing-customers-api
@@ -16,7 +17,7 @@ In your development, these resources can help you to:
 * Enrich customer profiles with additional data such as addresses
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Customer API Feature Integration](/docs/scos/dev/migration-and-integration/201903.0/feature-integration-guides/glue-api/customer-api-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Customer API Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/customer-api-feature-integration.html).
 
 ## Creating a Customer
 To create a new customer user, send a POST request to the following endpoint:
@@ -103,7 +104,7 @@ Sample request: `GET http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to retrieve.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
+To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/authentication-and-authorization.html
 {% endinfo_block %}.)
 
 If a customer with the specified ID was found, the endpoint will respond with a **RestCustomersRequest**.
@@ -155,14 +156,14 @@ To modify an existing customer account, send a _PATCH_ request to the following 
 `/customers/{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}`
 
 {% info_block infoBox "Modifying Customer Addresses " %}
-You need to use specialized endpoints to retrieve and manage addresses registered for a customer. For details, see [Managing the List of Customer Addresses](https://documentation.spryker.com/v4/docs/managing-customers-api#managing-the-list-of-customer-addresses
+You need to use specialized endpoints to retrieve and manage addresses registered for a customer. For details, see [Managing the List of Customer Addresses](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/managing-customers.html#managing-the-list-of-customer-addresses
 {% endinfo_block %}.)
 
 Sample request: `PATCH http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to modify.
 
 {% info_block warningBox "Authentication " %}
-To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
+To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/authentication-and-authorization.html
 {% endinfo_block %}.)
 
 To modify a customer, the client must send a **RestCustomersRequest**.
@@ -227,7 +228,7 @@ If a customer is modified successfully, the endpoint will respond with a **RestC
 Customers can provide a set of addresses used for billing, goods delivery, and other purposes. The **Customer API** provides a set of endpoints to manage addresses of a registered customer.
 
 {% info_block warningBox "Authentication " %}
-Only authenticated users can manage customer addresses. For details on how to authenticate a customer, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
+Only authenticated users can manage customer addresses. For details on how to authenticate a customer, see [Authentication and Authorization](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/authentication-and-authorization.html
 {% endinfo_block %}.)
 
 ## Adding an Address
@@ -504,7 +505,7 @@ To change a password for a customer, use PATCH method and the following endpoint
 Sample request: `PATCH http://mysprykershop.com/customer-password`
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
+To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/authentication-and-authorization.html
 {% endinfo_block %}.)
 
 **Attributes:**

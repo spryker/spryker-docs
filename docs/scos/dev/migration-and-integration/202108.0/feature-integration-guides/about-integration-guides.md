@@ -1,9 +1,12 @@
 ---
 title: About integration guides
 originalLink: https://documentation.spryker.com/2021080/docs/about-integration
+originalArticleId: 3c8973bd-80d2-451c-bd19-abfdd7eef96a
 redirect_from:
   - /2021080/docs/about-integration
   - /2021080/docs/en/about-integration
+  - /docs/about-integration
+  - /docs/en/about-integration
 ---
 
 The integration guides provide step-by-step instructions on how to enable individual Spryker features for your project.

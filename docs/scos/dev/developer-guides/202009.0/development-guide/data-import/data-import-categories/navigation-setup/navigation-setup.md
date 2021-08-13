@@ -1,6 +1,7 @@
 ---
 title: Navigation Setup
 originalLink: https://documentation.spryker.com/v6/docs/navigation-setup
+originalArticleId: 7842616b-b106-46cd-9af6-9aca23388601
 redirect_from:
   - /v6/docs/navigation-setup
   - /v6/docs/en/navigation-setup
@@ -13,5 +14,5 @@ The table below provides details on Navigation Setup data importers, their purpo
 
 | Data Importer | Purpose | Console Command| File(s) | Dependencies |
 | --- | --- | --- | --- |--- |
-| **Navigation**   |Imports information about the navigation entities.  |`data:import:navigation` | [navigation.csv](https://documentation.spryker.com/docs/file-details-navigationcsv) |None |
-| **Navigation Node**   | Imports information about the navigation nodes. |`data:import:navigation-node` |[ navigation_node.csv](https://documentation.spryker.com/docs/file-details-navigation-nodecsv) | <ul><li>[navigation.csv](https://documentation.spryker.com/docs/file-details-navigationcsv)</li><li>[glossary.csv](https://documentation.spryker.com/docs/file-details-glossarycsv)</li></ul>|
+| **Navigation**   |Imports information about the navigation entities.  |`data:import:navigation` | [navigation.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html) |None |
+| **Navigation Node**   | Imports information about the navigation nodes. |`data:import:navigation-node` |[ navigation_node.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation-node.csv.html) | <ul><li>[navigation.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html)</li><li>[glossary.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html)</li></ul>|

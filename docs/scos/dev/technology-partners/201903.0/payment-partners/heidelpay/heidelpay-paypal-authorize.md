@@ -2,6 +2,7 @@
 title: Heidelpay - Paypal Authorize
 description: Integrate Paypal Authorize payment through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v2/docs/heidelpay-authorize
+originalArticleId: d9941656-954e-4c7c-8514-075d94e83040
 redirect_from:
   - /v2/docs/heidelpay-authorize
   - /v2/docs/en/heidelpay-authorize

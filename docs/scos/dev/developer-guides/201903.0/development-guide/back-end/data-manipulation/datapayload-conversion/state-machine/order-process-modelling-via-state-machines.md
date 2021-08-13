@@ -2,6 +2,7 @@
 title: Order Process Modelling via State Machines
 description: State Machines help you define, execute and visualize predefined and automated processes.
 originalLink: https://documentation.spryker.com/v2/docs/order-process-modelling-state-machines
+originalArticleId: 346b8fbc-dea6-4e1a-8075-c940ac7a41a7
 redirect_from:
   - /v2/docs/order-process-modelling-state-machines
   - /v2/docs/en/order-process-modelling-state-machines

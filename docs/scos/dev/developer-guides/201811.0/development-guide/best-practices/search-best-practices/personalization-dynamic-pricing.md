@@ -2,6 +2,7 @@
 title: Personalization- Dynamic Pricing
 description: This article describes how to personalize pricing.
 originalLink: https://documentation.spryker.com/v1/docs/personalization-dymanic-pricing
+originalArticleId: 43a2f40e-b7a0-4e90-99ef-9c86a25f60a8
 redirect_from:
   - /v1/docs/personalization-dymanic-pricing
   - /v1/docs/en/personalization-dymanic-pricing

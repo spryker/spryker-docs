@@ -1,6 +1,7 @@
 ---
 title: Company Account Management
 originalLink: https://documentation.spryker.com/v1/docs/company-account-management
+originalArticleId: 651daa19-81f1-4754-8483-97311e931720
 redirect_from:
   - /v1/docs/company-account-management
   - /v1/docs/en/company-account-management
@@ -25,7 +26,7 @@ Companies can contain many business units, which are made up of one or more comp
 <a class="feature-link" href="https://documentation.spryker.com/v1/docs/business-unit-management">Business Unit Management</a>
 <a class="feature-link" href="https://documentation.spryker.com/v1/docs/company-user-roles-and-permissions-overview">Company User Permissions</a>
 <a class="feature-link" href="https://documentation.spryker.com/v1/docs/merchants-and-merchant-relations">Merchants and Merchant Relations</a>
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/agent-assist">Agent Assist</a>
+<a class="feature-link" href="https://documentation.spryker.com/v1/docs/how-to-setup-agent-assist-b2b">Agent Assist</a>
 <a class="feature-link" href="https://documentation.spryker.com/v1/docs/hide-content-from-logged-out-users">Hide Content from Logged out Users</a>
 <a class="feature-link" href="https://documentation.spryker.com/v1/docs/product-restrictions-from-merchant-to-buyer">Product Restrictions from Merchant to Buyer</a>
 <a class="feature-link" href="https://documentation.spryker.com/v1/docs/business-on-behalf">Business On Behalf</a>

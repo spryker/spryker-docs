@@ -2,6 +2,7 @@
 title: Adding Navigation in the Back Office
 description: This article describes how to make your new controller action accessible in the navigation bar.
 originalLink: https://documentation.spryker.com/v6/docs/adding-navigation-in-the-back-office
+originalArticleId: 14ee7bff-b4ce-465f-ad46-f8473f6ad221
 redirect_from:
   - /v6/docs/adding-navigation-in-the-back-office
   - /v6/docs/en/adding-navigation-in-the-back-office

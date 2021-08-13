@@ -2,9 +2,12 @@
 title: HowTo - Set up custom response headers on project level
 description: In this HowTo, you will learn how to set up custom response headers to play the full-screen video.
 originalLink: https://documentation.spryker.com/2021080/docs/howto-set-up-custom-response-headers-on-project-level
+originalArticleId: afaca4e2-bbaa-4766-b786-dc0490233c69
 redirect_from:
   - /2021080/docs/howto-set-up-custom-response-headers-on-project-level
   - /2021080/docs/en/howto-set-up-custom-response-headers-on-project-level
+  - /docs/howto-set-up-custom-response-headers-on-project-level
+  - /docs/en/howto-set-up-custom-response-headers-on-project-level
 ---
 
 This HowTo will teach you how to create customer response headers in your Spryker project. We use a header that allows playing full-screen videos in Chrome is used as an example.

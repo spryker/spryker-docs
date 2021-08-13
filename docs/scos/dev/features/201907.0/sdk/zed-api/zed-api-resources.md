@@ -1,6 +1,7 @@
 ---
 title: Zed API Resources
 originalLink: https://documentation.spryker.com/v3/docs/zed-api-resources
+originalArticleId: af9af244-8bca-4d5d-a65a-d51a81208a16
 redirect_from:
   - /v3/docs/zed-api-resources
   - /v3/docs/en/zed-api-resources

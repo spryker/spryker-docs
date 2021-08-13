@@ -1,6 +1,7 @@
 ---
 title: Censhare
 originalLink: https://documentation.spryker.com/v6/docs/censhare
+originalArticleId: 96e1c298-1426-4f7f-a076-c25b49648fd1
 redirect_from:
   - /v6/docs/censhare
   - /v6/docs/en/censhare

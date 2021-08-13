@@ -1,9 +1,12 @@
 ---
 title: File details- mime_type.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-mime-typecsv
+originalArticleId: cec9c3b6-fb1c-4d60-829c-cf37d9d54404
 redirect_from:
   - /2021080/docs/file-details-mime-typecsv
   - /2021080/docs/en/file-details-mime-typecsv
+  - /docs/file-details-mime-typecsv
+  - /docs/en/file-details-mime-typecsv
 ---
 
 This article contains content of the **mime_type.csv** file to configure Mime Type information on your Spryker Demo Shop.

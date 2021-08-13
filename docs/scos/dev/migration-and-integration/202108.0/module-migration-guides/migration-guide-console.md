@@ -2,14 +2,17 @@
 title: Migration Guide - Console
 description: Use the guide to update versions to the newer ones of the Console module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-console
+originalArticleId: 212964c4-49d0-49c3-9750-e5821f0ed974
 redirect_from:
   - /2021080/docs/mg-console
   - /2021080/docs/en/mg-console
+  - /docs/mg-console
+  - /docs/en/mg-console
 ---
 
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](https://documentation.spryker.com/docs/search-migration-concept). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](https://documentation.spryker.com/docs/mg-search#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
 
 {% endinfo_block %}
 To upgrade the module, do the following:

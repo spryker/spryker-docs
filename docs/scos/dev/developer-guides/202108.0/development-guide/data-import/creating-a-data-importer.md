@@ -2,9 +2,12 @@
 title: Creating a Data Importer
 description: The following article describes how to build your own DataImport for a specific type. All steps in this article are built on real life example for importing product images.
 originalLink: https://documentation.spryker.com/2021080/docs/ht-data-import
+originalArticleId: e149b582-49ef-4816-beb7-c29fa41581cf
 redirect_from:
   - /2021080/docs/ht-data-import
   - /2021080/docs/en/ht-data-import
+  - /docs/ht-data-import
+  - /docs/en/ht-data-import
 ---
 
 The following article describes how to build your data importer for a specific type. All steps in this article are built on the real-life example for importing product images.
@@ -39,7 +42,7 @@ We will use the same technique for the `fk_product` and `fk_product_abstract` fi
 
 {% info_block infoBox "Info" %}
 
-To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](https://documentation.spryker.com/docs/about-data-import-categories). 
+To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/about-data-import-categories.html). 
 
 {% endinfo_block %}
 
@@ -73,7 +76,7 @@ Every import type needs its own `DataImporterConfiguration`. To add it, open the
 The constant is used to identify an import type. More information about it will follow later in this article. In our case we will use const `IMPORT_TYPE_PRODUCT_IMAGE = 'product-image';`.
 {% endinfo_block %}
 
-You also need to define the new data importer in the [configuration .yml file](https://documentation.spryker.com/docs/importing-data). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
+You also need to define the new data importer in the [configuration .yml file](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
     
 ```
 actions:

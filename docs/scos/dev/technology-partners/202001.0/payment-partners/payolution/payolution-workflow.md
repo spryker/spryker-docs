@@ -2,6 +2,7 @@
 title: Payolution - Workflow
 description: This article describes the request flow for Payolution.
 originalLink: https://documentation.spryker.com/v4/docs/payolution-workflow
+originalArticleId: a3db2fee-770d-4a79-bb28-f21ed66d1500
 redirect_from:
   - /v4/docs/payolution-workflow
   - /v4/docs/en/payolution-workflow

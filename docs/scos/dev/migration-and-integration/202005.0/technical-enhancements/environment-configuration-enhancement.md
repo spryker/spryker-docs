@@ -2,6 +2,7 @@
 title: Environment Configuration Enhancement
 description: Learn how to replace the environment name settings with explicit configuration.
 originalLink: https://documentation.spryker.com/v5/docs/environment-configuration-enhancement
+originalArticleId: 00999bdf-f6e2-442b-baec-53ec18a0a830
 redirect_from:
   - /v5/docs/environment-configuration-enhancement
   - /v5/docs/en/environment-configuration-enhancement
@@ -25,7 +26,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 202001.0 | [Feature](https://documentation.spryker.com/docs/en/spryker-core-feature-integration-201907) |
+| Spryker Core | 202001.0 | [Feature](https://documentation.spryker.com/v5/docs/en/spryker-core-feature-integration-201907) |
 
 ### 1) Install the Required Modules Using Composer
 

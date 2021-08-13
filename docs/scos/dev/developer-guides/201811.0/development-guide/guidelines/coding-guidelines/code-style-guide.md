@@ -2,6 +2,7 @@
 title: Code Style Guide
 description: We follow the PSR-2 standards. To achieve a styled codebase, we integrated the well known PHP-CS Fixer and PHPCodeSniffer.
 originalLink: https://documentation.spryker.com/v1/docs/code-style-guide
+originalArticleId: 638bcd8b-2726-4d2b-b3fd-63fa4165f510
 redirect_from:
   - /v1/docs/code-style-guide
   - /v1/docs/en/code-style-guide

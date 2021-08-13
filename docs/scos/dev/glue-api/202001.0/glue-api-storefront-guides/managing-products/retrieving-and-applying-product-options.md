@@ -1,12 +1,13 @@
 ---
 title: Retrieving and Applying Product Options
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-product-options
+originalArticleId: 1cef2085-b70d-4354-906c-1703d3c5a333
 redirect_from:
   - /v4/docs/retrieving-product-options
   - /v4/docs/en/retrieving-product-options
 ---
 
-The [Product Options](https://documentation.spryker.com/v4/docs/product-options-2) Feature enables shop owners to suggest various additions to the main product. Such extras enhance the customer experience and ensure their loyalty to the shop. These typically include gift wrapping, warranty services, insurance, app installation, etc.
+The [Product Options](/docs/scos/dev/features/202001.0/product-information-management/product-options/product-options.html) Feature enables shop owners to suggest various additions to the main product. Such extras enhance the customer experience and ensure their loyalty to the shop. These typically include gift wrapping, warranty services, insurance, app installation, etc.
 
 Options come with their own prices and tax sets. Also, different options can apply to different products. All product options available in a shop are organized in groups.
 
@@ -19,7 +20,7 @@ With the help of the data provided by the API resources, you will be able to per
 * display the selected options during checkout and in the order history.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Product Options Feature Integration](https://documentation.spryker.com/v4/docs/glue-product-options-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Product Options Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html).
 
 ## Retrieving Product Options for Products
 To retrieve the product options available for a specific product, send a *GET* request to retrieve the product information and include **product-options** as a relationship.
@@ -535,7 +536,7 @@ Sample Request:
 
 {% info_block infoBox "Info" %}
 
-For more details on managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-carts-of-registered-users.html).
+For more details on managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-carts.html-of-registered-users-201907).
 
 {% endinfo_block %}
 
@@ -624,7 +625,7 @@ No matter which type of cart is created or modified, the following attributes sh
 You can specify a certain product several times with different options. In this case, the product will be added as multiple cart items.
 
 ### Response
-The endpoints respond with information on the cart or item that is being created or modified. For detailed information and the possible error codes, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-carts-of-registered-users.html) and [Managing Guest Carts](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html).
+The endpoints respond with information on the cart or item that is being created or modified. For detailed information and the possible error codes, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-carts.html-of-registered-users-201907) and [Managing Guest Carts](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html).
 
 ## Retrieving Product Options for Orders
 To retrieve the product options applied to order items, send a *GET* request to retrieve the order information.

@@ -2,9 +2,12 @@
 title: Agent Assist feature overview
 description: An agent helps customers to perform activities in the online store and provides support by carrying out actions on customer's behalf in the web-shop
 originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-overview
+originalArticleId: b5a82fe5-ecba-45ef-aa6b-1a7487fdf94c
 redirect_from:
   - /2021080/docs/agent-assist-overview
   - /2021080/docs/en/agent-assist-overview
+  - /docs/agent-assist-overview
+  - /docs/en/agent-assist-overview
 ---
 
 An *agent* is a person with unrivaled product knowledge who can help customers perform different activities in the Storefront. For example, a customer might call an agent and ask them to help choose the right product or assist with the buying process or even perform some actions in the Storefront on their behalf. Say, a customer wants to add items to a shopping list or create a company but cannot do it for some reason. This is when the agent steps in and provides practical support acting on the customer's behalf.
@@ -17,7 +20,7 @@ Every agent user is a Back Office user. When creating or editing a Back Office u
 
 A Back Office user can create an agent user in **Users** > **Users**.
 
-To learn more about managing agent users in Back Office, see [https://documentation.spryker.com/docs/managing-users](https://documentation.spryker.com/docs/managing-users) 
+To learn more about managing agent users in Back Office, see [/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html) 
 
 ![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/zed-agent-assist.png)
 
@@ -65,7 +68,7 @@ Check out this video tutorial on setting up an Agent user in a B2B company accou
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-users#creating-users" class="mr-link">Create an agent user</a></li>
+                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#creating-users" class="mr-link">Create an agent user</a></li>
                </ul>
         </div>
         </div>

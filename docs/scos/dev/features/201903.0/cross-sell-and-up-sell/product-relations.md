@@ -2,6 +2,7 @@
 title: Product Relations
 description: Product Relations let you define a list of items that will be displayed as comparable or additional products.
 originalLink: https://documentation.spryker.com/v2/docs/product-relations-sales
+originalArticleId: e5029b9c-85ce-4c76-9a82-36e18495600a
 redirect_from:
   - /v2/docs/product-relations-sales
   - /v2/docs/en/product-relations-sales

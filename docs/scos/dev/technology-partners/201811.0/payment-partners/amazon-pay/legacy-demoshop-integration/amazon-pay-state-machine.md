@@ -2,6 +2,7 @@
 title: Amazon Pay - State Machine
 description: This article describes the state machine for the Amazon Pay module in the Spryker Legacy Demoshop.
 originalLink: https://documentation.spryker.com/v1/docs/amazon-pay-state-machine-demoshop
+originalArticleId: af1d9e4d-9f5a-4898-84cd-244ebc9c669d
 redirect_from:
   - /v1/docs/amazon-pay-state-machine-demoshop
   - /v1/docs/en/amazon-pay-state-machine-demoshop

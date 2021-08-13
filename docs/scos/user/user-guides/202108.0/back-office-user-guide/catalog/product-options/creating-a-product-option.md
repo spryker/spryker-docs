@@ -2,9 +2,12 @@
 title: Creating a product option
 description: Use this procedure to create a product option along with its values in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-option
+originalArticleId: 64e7486e-5904-4cc8-b336-c57dd13f9e14
 redirect_from:
   - /2021080/docs/creating-a-product-option
   - /2021080/docs/en/creating-a-product-option
+  - /docs/creating-a-product-option
+  - /docs/en/creating-a-product-option
 ---
 
 This article describes how to create a product option.
@@ -100,4 +103,4 @@ And the values available in the drop-down lists are the product options:
 ![Select an option](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Product+Options%3A+Reference+Information/select-option-drop-down.png)
 
 **What's next?**
-Once the option is created, you may want to know how those options are managed. See [Managing product options](https://documentation.spryker.com/docs/managing-product-options) for more details. 
+Once the option is created, you may want to know how those options are managed. See [Managing product options](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/product-options/managing-product-options.html) for more details. 

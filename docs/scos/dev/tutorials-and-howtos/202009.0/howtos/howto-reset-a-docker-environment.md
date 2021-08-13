@@ -2,6 +2,7 @@
 title: HowTo - Reset a Docker environment
 description: Learn how to restart your Spryker in Docker from scratch.
 originalLink: https://documentation.spryker.com/v6/docs/howto-reset-a-docker-environment
+originalArticleId: 9ebd7c8a-d735-4bb3-8533-4c48b7ddba5d
 redirect_from:
   - /v6/docs/howto-reset-a-docker-environment
   - /v6/docs/en/howto-reset-a-docker-environment

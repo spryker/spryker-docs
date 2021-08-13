@@ -2,9 +2,12 @@
 title: Security and Authentication
 description: This article describes the authorization mechanism used in Spryker, the modules that provide it, as well as user scopes, database tables, and extension points.
 originalLink: https://documentation.spryker.com/2021080/docs/security-and-authentication
+originalArticleId: f37cbced-75fa-4ea4-aad6-7afdeea109a4
 redirect_from:
   - /2021080/docs/security-and-authentication
   - /2021080/docs/en/security-and-authentication
+  - /docs/security-and-authentication
+  - /docs/en/security-and-authentication
 ---
 
 When exposing information via Spryker Glue API and integrating with third-party applications, it is essential to protect API endpoints from unauthorized access. For this purpose, Spryker provides an authorization mechanism, using which you can request users to authenticate themselves before accessing a resource. For this purpose, Spryker Glue is shipped with an implementation of the OAuth 2.0 protocol. It allows users to authenticate themselves with their username and password and receive an access token. The token can then be used to access protected resources.
@@ -86,7 +89,7 @@ B2B functionality is available in Spryker Glue API since version 201907.0.
 In addition to user scopes, each endpoint can be secured individually. For this purpose, you need to configure the routing of your Resource Feature Module. The Route Plugins of each module define which verbs are supported by the corresponding endpoint. This is done via the config function of the plugin class. The verbs are passed to it as a set of functions that should be called when the corresponding verb is passed.
 
 {% info_block infoBox %}
-For details, see [Resource Routing](https://documentation.spryker.com/v4/docs/glue-infrastructure#resource-routing
+For details, see [Resource Routing](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/glue-api/glue-infrastructure.html#resource-routing
 {% endinfo_block %}{target="_blank"}.)
 
 

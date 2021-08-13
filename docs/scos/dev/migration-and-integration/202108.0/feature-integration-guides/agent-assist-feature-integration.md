@@ -2,9 +2,12 @@
 title: Agent Assist feature integration
 description: Agent Assist enables agent users to log in to shop to perform actions on customers’ behalf. This guide describes how to install Agent Assist in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-feature-integration
+originalArticleId: 7d476b07-db05-404a-b612-0e52ce701b5d
 redirect_from:
   - /2021080/docs/agent-assist-feature-integration
   - /2021080/docs/en/agent-assist-feature-integration
+  - /docs/agent-assist-feature-integration
+  - /docs/en/agent-assist-feature-integration
 ---
 
 This document describes how to integrate the [Agent Assist](/upcoming-release/docs/agent-assist-feature-integration) feature into a Spryker project.
@@ -16,9 +19,9 @@ Follow the steps below to install the feature core.
 To start feature integration, overview and install the necessary features:
 | Name | Version | Integration guide|
 | --- | --- | --- |
-| Spryker Core | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integrationn) |
-| Product | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker Core Back Office feature integration](https://documentation.spryker.com/docs/back-office-feature-integration) |
-| Cart | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %}| [Customer Account Management](https://documentation.spryker.com/docs/customer-account-management-feature-integration) |
+| Spryker Core | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker core feature integration](https://documentation.spryker.com/2021080/docs/spryker-core-feature-integrationn) |
+| Product | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker Core Back Office feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-core-back-office-feature-integration.html) |
+| Cart | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %}| [Customer Account Management](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/customer-account-management-feature-integration.html) |
 
 ### 1) Install the required modules using composer
 

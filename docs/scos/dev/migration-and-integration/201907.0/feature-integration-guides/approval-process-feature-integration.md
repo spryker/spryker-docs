@@ -2,6 +2,7 @@
 title: Approval Process Feature Integration
 description: This guide describes all steps needed to be performed in order to integrate the Approval Process feature into your project.
 originalLink: https://documentation.spryker.com/v3/docs/approval-process-feature-integration-201907
+originalArticleId: cfdf9d18-66ff-41b0-8b63-5dddcb129947
 redirect_from:
   - /v3/docs/approval-process-feature-integration-201907
   - /v3/docs/en/approval-process-feature-integration-201907

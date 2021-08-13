@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Monitoring
 originalLink: https://documentation.spryker.com/v3/docs/mg-monitoring
+originalArticleId: cf15ba1e-aa20-4af9-bab8-1345ee9e2fa4
 redirect_from:
   - /v3/docs/mg-monitoring
   - /v3/docs/en/mg-monitoring
@@ -79,5 +80,5 @@ $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY]
 ];
 ```
 
-For more details, see [Performance Monitoring - New Relic](/docs/scos/dev/technology-partners/202001.0/operational-tools-monitoring-legal-etc/new-relic.html).
+For more details, see [Performance Monitoring - New Relic](/docs/scos/dev/technology-partners/201907.0/operational-tools-monitoring-legal-etc/new-relic.html).
 

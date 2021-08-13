@@ -2,9 +2,12 @@
 title: Setup MySQL Workbench to avoid port clashing with the host system
 description: Learn how to set up MySQL Workbench to avoid port clashing with the host system
 originalLink: https://documentation.spryker.com/2021080/docs/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system
+originalArticleId: 800cac27-89a1-463b-a7e0-3e863717c363
 redirect_from:
   - /2021080/docs/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system
   - /2021080/docs/en/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system
+  - /docs/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system
+  - /docs/en/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system
 ---
 
 We recommend setting up TCP/IP over SSH for MySQL to avoid port clashing with the host system. For current connection values have a look at `config/Shared/config_default-development_DE.php`. Use `$HOME/.vagrant.d/insecure_private_key` as SSH Key File.

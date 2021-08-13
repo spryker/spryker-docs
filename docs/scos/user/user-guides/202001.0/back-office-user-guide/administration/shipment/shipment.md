@@ -2,6 +2,7 @@
 title: Shipment
 description: The section can be used to create multiple shipping carriers and add shipment services and methods in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/shipment-management
+originalArticleId: b6dce765-56f8-4bf6-a41c-8354f278c2b2
 redirect_from:
   - /v4/docs/shipment-management
   - /v4/docs/en/shipment-management

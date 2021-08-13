@@ -1,6 +1,7 @@
 ---
 title: Security Release Notes- Code Releases May, 2020
 originalLink: https://documentation.spryker.com/v6/docs/security-release-notes-code-releases-may-2020
+originalArticleId: 37678b32-fc9e-4273-8c13-d4033e451ec9
 redirect_from:
   - /v6/docs/security-release-notes-code-releases-may-2020
   - /v6/docs/en/security-release-notes-code-releases-may-2020

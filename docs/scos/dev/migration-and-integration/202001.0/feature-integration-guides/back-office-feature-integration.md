@@ -2,6 +2,7 @@
 title: Back Office Feature Integration
 description: Learn how to add the Translation functionality to the basic Back Office feature. This guide provides step-by-step instructions for the integration process.
 originalLink: https://documentation.spryker.com/v4/docs/back-office-feature-integration
+originalArticleId: 72869be4-4bb6-4939-890c-dd9a2b377557
 redirect_from:
   - /v4/docs/back-office-feature-integration
   - /v4/docs/en/back-office-feature-integration

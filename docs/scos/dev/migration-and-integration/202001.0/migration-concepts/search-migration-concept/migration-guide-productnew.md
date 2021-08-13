@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductNew
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-productnew
+originalArticleId: c645ac19-d8d4-4d83-958a-1b7dd67a86f3
 redirect_from:
   - /v4/docs/migration-guide-productnew
   - /v4/docs/en/migration-guide-productnew

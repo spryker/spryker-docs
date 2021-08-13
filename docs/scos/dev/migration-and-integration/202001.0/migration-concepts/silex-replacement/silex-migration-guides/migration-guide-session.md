@@ -2,6 +2,7 @@
 title: Migration Guide - Session
 description: Use the guide to perform the Session part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-session
+originalArticleId: 0ffb513a-2d3f-4ebc-8a20-42c8a77fcc66
 redirect_from:
   - /v4/docs/migration-guide-session
   - /v4/docs/en/migration-guide-session

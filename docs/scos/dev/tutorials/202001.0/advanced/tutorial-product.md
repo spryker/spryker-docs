@@ -1,6 +1,7 @@
 ---
 title: Tutorial- Product
 originalLink: https://documentation.spryker.com/v4/docs/t-product-challenge
+originalArticleId: d882ff03-640b-440c-831d-80a6dab02485
 redirect_from:
   - /v4/docs/t-product-challenge
   - /v4/docs/en/t-product-challenge

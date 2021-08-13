@@ -1,6 +1,7 @@
 ---
 title: Silex Replacement
 originalLink: https://documentation.spryker.com/v3/docs/silex-replacement
+originalArticleId: 92de42e9-6dbf-4c99-acc3-d11f22a8abd6
 redirect_from:
   - /v3/docs/silex-replacement
   - /v3/docs/en/silex-replacement

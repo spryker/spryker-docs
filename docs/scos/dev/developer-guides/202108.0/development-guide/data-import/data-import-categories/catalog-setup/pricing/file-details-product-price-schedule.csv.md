@@ -1,12 +1,15 @@
 ---
 title: File details- product_price_schedule.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-price-schedulecsv
+originalArticleId: 0662559b-6487-4d88-855e-3b605fc326c1
 redirect_from:
   - /2021080/docs/file-details-product-price-schedulecsv
   - /2021080/docs/en/file-details-product-price-schedulecsv
+  - /docs/file-details-product-price-schedulecsv
+  - /docs/en/file-details-product-price-schedulecsv
 ---
 
-This article contains content of the **product_price_schedule.csv** file to configure[ Product Price Schedule](https://documentation.spryker.com/docs/scheduled-prices-201907) information on your Spryker Demo Shop.
+This article contains content of the **product_price_schedule.csv** file to configure[ Product Price Schedule](https://documentation.spryker.com/2021080/docs/scheduled-prices) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -27,8 +30,8 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-* [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
-* [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
+* [product_abstract.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_concrete.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 *     *stores.php* configuration file of the Demo Shop PHP project
 
 ## Template File & Content Example

@@ -1,12 +1,13 @@
 ---
 title: File details- category.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-categorycsv
+originalArticleId: 9f4d2a3d-bc0c-4491-84e8-277a38b223a9
 redirect_from:
   - /v6/docs/file-details-categorycsv
   - /v6/docs/en/file-details-categorycsv
 ---
 
-This article contains content of the **category.csv** file to configure [Category](https://documentation.spryker.com/docs/category-management-201903) information on your Spryker Demo Shop.
+This article contains content of the **category.csv** file to configure [Category](/docs/scos/dev/features/202009.0/category-management/category-management.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 
@@ -41,7 +42,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [category_template.csv](https://documentation.spryker.com/docs/file-details-category-templatecsv)
+*    [category_template.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *category.csv*  file can be downloaded here:

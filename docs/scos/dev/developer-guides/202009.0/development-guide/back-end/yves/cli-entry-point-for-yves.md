@@ -2,6 +2,7 @@
 title: CLI Entry Point for Yves
 description: Spryker provides CLI entry points to run console commands for specific use cases.
 originalLink: https://documentation.spryker.com/v6/docs/cli-entry-point-for-yves
+originalArticleId: bed9b80d-a12d-4dac-83ce-e633c9167499
 redirect_from:
   - /v6/docs/cli-entry-point-for-yves
   - /v6/docs/en/cli-entry-point-for-yves

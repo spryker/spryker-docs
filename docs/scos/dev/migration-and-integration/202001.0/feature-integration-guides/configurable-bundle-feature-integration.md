@@ -2,6 +2,7 @@
 title: Configurable Bundle Feature Integration
 description: This guide provides step-by-step instruction on installing the basic functionality for the Configurable Bundle feature in Spryker.
 originalLink: https://documentation.spryker.com/v4/docs/configurable-bundle-feature-integration
+originalArticleId: e9aa3c14-c5c3-47f1-823b-1d8e7566c1d0
 redirect_from:
   - /v4/docs/configurable-bundle-feature-integration
   - /v4/docs/en/configurable-bundle-feature-integration

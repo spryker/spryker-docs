@@ -2,6 +2,7 @@
 title: PayOne - Paypal Payment
 description: Integrate Paypal payment through Payone into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v2/docs/payone-paypal
+originalArticleId: 90b887a8-c11c-422a-b26d-b874a29d5d24
 redirect_from:
   - /v2/docs/payone-paypal
   - /v2/docs/en/payone-paypal

@@ -2,6 +2,7 @@
 title: Braintree - Integration into a project
 description: This guide provides steps to integrate Braintree in the Spryker frontend.
 originalLink: https://documentation.spryker.com/v6/docs/braintree-integration
+originalArticleId: dda0c500-044d-41d2-966d-50947be45522
 redirect_from:
   - /v6/docs/braintree-integration
   - /v6/docs/en/braintree-integration
@@ -15,7 +16,7 @@ There is currently an issue when using giftcards with Braintree. Our team is dev
 
 ## Prerequisites
 
-Before proceeding with the integration, make sure you have [installed and configured](https://documentation.spryker.com/docs/braintree-configuration) the Braintree module.
+Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/dev/technology-partners/202009.0/payment-partners/braintree/braintree-installation-and-configuration.html) the Braintree module.
 
 ## Frontend integration
 

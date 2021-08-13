@@ -2,9 +2,12 @@
 title: Managing slots
 description: Learn about slot management in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-slots
+originalArticleId: 06d8bf64-4aee-4959-abae-f3fb849ccaa0
 redirect_from:
   - /2021080/docs/managing-slots
   - /2021080/docs/en/managing-slots
+  - /docs/managing-slots
+  - /docs/en/managing-slots
 ---
 
 This topic describes how to manage slots.
@@ -45,7 +48,7 @@ In the *List of Slots for [name] Template* section, you see the following:
 
 ## Assigning CMS blocks to slots
 
-You can assign CMS blocks to a slot selected in *List of Slots for [Name] Template*. The content of assigned CMS blocks is displayed on the corresponding Storefront page(s). If there are no CMS blocks with content that you can assign, see [Creating a CMS block](https://documentation.spryker.com/2021080/docs/creating-cms-block).
+You can assign CMS blocks to a slot selected in *List of Slots for [Name] Template*. The content of assigned CMS blocks is displayed on the corresponding Storefront page(s). If there are no CMS blocks with content that you can assign, see [Creating a CMS block](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/blocks/creating-a-cms-block.html).
 
 To assign a CMS block to a slot:
 
@@ -119,7 +122,7 @@ In the *List of Blocks for [Name] Slot* section, you see the following:
 
 {% info_block infoBox "Info" %}
 
-Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content** > **Blocks**. To learn about them, see reference information on the [Creating a CMS block](https://documentation.spryker.com/2021080/docs/creating-cms-block) page.
+Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content** > **Blocks**. To learn about them, see reference information on the [Creating a CMS block](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/blocks/creating-a-cms-block.html) page.
 
 {% endinfo_block %}
 
@@ -158,7 +161,7 @@ If there is only one CMS block assigned to a slot, Move Up and Move Down actions
 ## Viewing CMS blocks
 To view a CMS block, click **View Block** in the *Actions* column in the *List of Blocks for [Name] Slot* section.
 
-To learn about attributes on this page, see [Creating a CMS block](https://documentation.spryker.com/2021080/docs/creating-cms-block).
+To learn about attributes on this page, see [Creating a CMS block](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/blocks/creating-a-cms-block.html).
 
 ## Deleting CMS block assignments
 You can delete the assignment of a CMS block to a slot removing its content from the corresponding Storefront page.

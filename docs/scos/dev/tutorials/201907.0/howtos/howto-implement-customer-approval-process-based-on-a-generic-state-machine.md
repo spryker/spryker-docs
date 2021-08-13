@@ -1,6 +1,7 @@
 ---
 title: HowTo - Implement Customer Approval Process Based on a Generic State Machine
 originalLink: https://documentation.spryker.com/v3/docs/t-implement-customer-approval-process-on-state-machine
+originalArticleId: a145d47d-33d9-4b43-93dd-65b91e3fb1b5
 redirect_from:
   - /v3/docs/t-implement-customer-approval-process-on-state-machine
   - /v3/docs/en/t-implement-customer-approval-process-on-state-machine

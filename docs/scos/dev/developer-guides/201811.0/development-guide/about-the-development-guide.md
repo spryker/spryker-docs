@@ -2,6 +2,7 @@
 title: About the Development Guide
 description: The Development Guide is intended to get developers up-and-running with the Spryker back-end and front-end development for their project. It covers technical details of the Spryker Commerce OS to improve your understanding of the system and contains step-by-step instructions that will help you customize Spryker for your needs.
 originalLink: https://documentation.spryker.com/v1/docs/about-the-development-guide
+originalArticleId: 5e0ce476-9217-4010-9583-5e359980d8b7
 redirect_from:
   - /v1/docs/about-the-development-guide
   - /v1/docs/en/about-the-development-guide

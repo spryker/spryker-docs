@@ -2,6 +2,7 @@
 title: Product Reviews Feature Integration
 description: The guide walks you through the process of installing the Product Reviews feature in your project.
 originalLink: https://documentation.spryker.com/v5/docs/product-review-feature-integration
+originalArticleId: c6b03393-12a3-48c7-9dbd-f296fee1d88e
 redirect_from:
   - /v5/docs/product-review-feature-integration
   - /v5/docs/en/product-review-feature-integration

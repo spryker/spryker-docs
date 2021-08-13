@@ -2,6 +2,7 @@
 title: FAQ
 description: Use the article to get answers to the most popular questions about Spryker.
 originalLink: https://documentation.spryker.com/v6/docs/faq
+originalArticleId: 9b5bc1ee-550a-4c96-8921-ff676173dc2d
 redirect_from:
   - /v6/docs/faq
   - /v6/docs/en/faq

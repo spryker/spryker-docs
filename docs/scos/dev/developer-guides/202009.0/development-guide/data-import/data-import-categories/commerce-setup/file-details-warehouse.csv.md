@@ -1,12 +1,13 @@
 ---
 title: File details- warehouse.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-warehousecsv
+originalArticleId: ba97c5c0-5fd4-4ea9-9bf0-afa24d198ab4
 redirect_from:
   - /v6/docs/file-details-warehousecsv
   - /v6/docs/en/file-details-warehousecsv
 ---
 
-This article contains content of the **warehouse.csv** file to configure [Warehouse](https://documentation.spryker.com/docs/inventory-management) information on your Spryker Demo Shop.
+This article contains content of the **warehouse.csv** file to configure [Warehouse](/docs/scos/dev/features/202009.0/inventory-management/inventory-management.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -21,7 +22,7 @@ These are the header fields to be included in the .csv file:
 This file has no dependencies.
 
 ## Recommendations & Other Information
-Check the [HowTo - Import Warehouse Data](https://documentation.spryker.com/docs/ht-import-warehouse-data).
+Check the [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).
 {% info_block infoBox "Note" %}
 
 The *warehouse.csv* file replaces *stock.csv* previously used. 

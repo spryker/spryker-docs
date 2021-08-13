@@ -2,6 +2,7 @@
 title: Integrate Direct Debit into Checkout
 description: This article provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
 originalLink: https://documentation.spryker.com/v2/docs/dd-checkout-implementation
+originalArticleId: a6e8a01d-7a50-418d-a02b-514ccb0149c2
 redirect_from:
   - /v2/docs/dd-checkout-implementation
   - /v2/docs/en/dd-checkout-implementation

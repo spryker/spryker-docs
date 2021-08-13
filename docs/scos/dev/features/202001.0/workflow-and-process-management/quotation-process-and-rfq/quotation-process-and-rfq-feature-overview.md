@@ -2,6 +2,7 @@
 title: Quotation Process & RFQ Feature Overview
 description: The article describes the Request for Quote feature, its statuses and workflow (by a customer, sales representative, agent account and interaction with approval process.
 originalLink: https://documentation.spryker.com/v4/docs/quotation-process-rfq-feature-overview
+originalArticleId: 0a100da4-84c1-45d2-b59c-993afab9e2ce
 redirect_from:
   - /v4/docs/quotation-process-rfq-feature-overview
   - /v4/docs/en/quotation-process-rfq-feature-overview
@@ -37,8 +38,8 @@ The RFQ can have the following statuses:
 ## RFQ Workflows
 The process of requesting the quote includes two workflows depending on the role the user has. A workflow is defined as the sequence of steps the user can go through to complete the process successfully. These are:
 
-* [buyer workflow](https://documentation.spryker.com/v4/docs/quotation-process-rfq-feature-overview-201907#buyer-workflow)
-* [sales representative workflow](https://documentation.spryker.com/v4/docs/quotation-process-rfq-feature-overview-201907#sales-representative-workflow)
+* [buyer workflow](https://documentation.spryker.com/v4/docs/quotation-process-feature-overview#buyer-workflow)
+* [sales representative workflow](https://documentation.spryker.com/v4/docs/quotation-process-feature-overview#sales-representative-workflow)
 
 ### Buyer Workflow
 A Buyer can create a Quote Request the product prices from a Shopping Cart:
@@ -64,7 +65,7 @@ Upon revising the RFQ, a new RFQ version is created. When the Sales Representati
 #### On Behalf of a Company User
 A Sales Representative can create an RFQ on behalf of any company user. This option is especially convenient when, for example, a company user is busy or doesn't have access to an account and a Sales Representative is able to create an RFQ for a certain user, process it and fully complete the checkout.
 
-To create an RFQ on behalf of a user, see the [Creating an RFQ for a Customer](https://documentation.spryker.com/v4/docs/managing-rfqs-sales-rep-shop-guide#creating-an-rfq-for-a-customer) section in *Shop Guide - Managing Requests for Quote for a Sales Representative*.
+To create an RFQ on behalf of a user, see the [Creating an RFQ for a Customer](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html#creating-an-rfq-for-a-customer) section in *Shop Guide - Managing Requests for Quote for a Sales Representative*.
 
 The workflow with statuses for a Sales Representative is presented in the schema below:
 ![Workflow for Sales Reps](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/sales-rep-workflow.png){height="" width=""}

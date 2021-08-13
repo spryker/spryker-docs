@@ -1,6 +1,7 @@
 ---
 title: Zed API Configuration
 originalLink: https://documentation.spryker.com/v2/docs/zed-api-config
+originalArticleId: 72509742-9667-42d3-ba9a-bd35418d8a7d
 redirect_from:
   - /v2/docs/zed-api-config
   - /v2/docs/en/zed-api-config

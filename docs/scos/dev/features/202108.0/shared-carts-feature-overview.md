@@ -2,9 +2,12 @@
 title: Shared Carts feature overview
 description: In B2B world shopping carts can be created and used by different individuals. A shopping cart can be shared with the users of the current business unit.
 originalLink: https://documentation.spryker.com/2021080/docs/shared-carts-feature-overview
+originalArticleId: 85a7c630-a6ef-465f-80fd-176d1c5e0937
 redirect_from:
   - /2021080/docs/shared-carts-feature-overview
   - /2021080/docs/en/shared-carts-feature-overview
+  - /docs/shared-carts-feature-overview
+  - /docs/en/shared-carts-feature-overview
 ---
 
 *Shopping Cart* is a part of the online shop where the record of the items a buyer has ‘picked up’ from the online store is kept. The shopping cart enables consumers to select products, review what they selected, make modifications or add extra items if needed, and purchase the products.
@@ -117,7 +120,7 @@ If the shared cart has been dismissed individually by the user, this user will n
 {% endinfo_block %}
 
 ## Current constraints
-With the current functionality, the shopping cart cannot be shared outside of a [business unit](https://documentation.spryker.com/docs/business-unit-management-feature-overview) where the owner belongs.
+With the current functionality, the shopping cart cannot be shared outside of a [business unit](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/business-units-overview.html) where the owner belongs.
 
 ## Shared Cart on the Storefront
 <a id=shared-cart-on-the-storefront></a>

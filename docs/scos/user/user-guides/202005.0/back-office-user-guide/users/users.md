@@ -2,6 +2,7 @@
 title: Users
 description: The section can be used to create, update, and Back Office users, user groups and roles in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/users
+originalArticleId: 88c1dd5f-0588-43c1-bf05-ec84d4d39ccc
 redirect_from:
   - /v5/docs/users
   - /v5/docs/en/users
@@ -26,10 +27,10 @@ Thus, first of all, a Spryker Admin identifies the list of roles that each user 
 ***
 **What's next?**
 To know how to manage roles, groups and users, see the following articles:
-* [Managing Roles](https://documentation.spryker.com/docs/en/managing-roles)
-* [Managing Groups](https://documentation.spryker.com/docs/en/managing-groups)
-* [Managing Users](https://documentation.spryker.com/docs/en/managing-users)
+* [Managing Roles](/docs/scos/user/user-guides/202005.0/back-office-user-guide/users/roles-groups-and-users/managing-roles.html)
+* [Managing Groups](/docs/scos/user/user-guides/202005.0/back-office-user-guide/users/roles-groups-and-users/managing-groups.html)
+* [Managing Users](/docs/scos/user/user-guides/202005.0/back-office-user-guide/users/roles-groups-and-users/managing-users.html)
 
 To know more about the attributes you use to manage roles, groups, and users, see the following articles:
-* [Roles: Reference Information](https://documentation.spryker.com/docs/en/roles-reference-information)
-* [User: Reference Information](https://documentation.spryker.com/docs/en/user-reference-information)
+* [Roles: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/users/roles-groups-and-users/references/roles-reference-information.html)
+* [User: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/users/roles-groups-and-users/references/user-reference-information.html)

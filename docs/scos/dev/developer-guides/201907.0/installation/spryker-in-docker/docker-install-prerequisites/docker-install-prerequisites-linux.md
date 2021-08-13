@@ -2,6 +2,7 @@
 title: Docker Install Prerequisites - Linux
 description: Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
 originalLink: https://documentation.spryker.com/v3/docs/docker-install-prerequisites-linux-201907
+originalArticleId: aeaabcb2-25a6-4da4-a256-6bc9da3efb59
 redirect_from:
   - /v3/docs/docker-install-prerequisites-linux-201907
   - /v3/docs/en/docker-install-prerequisites-linux-201907

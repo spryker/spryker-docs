@@ -1,6 +1,7 @@
 ---
 title: Spryker Core
 originalLink: https://documentation.spryker.com/v6/docs/spryker-core
+originalArticleId: 7f92101c-a2c2-4d59-b608-f5002080a174
 redirect_from:
   - /v6/docs/spryker-core
   - /v6/docs/en/spryker-core

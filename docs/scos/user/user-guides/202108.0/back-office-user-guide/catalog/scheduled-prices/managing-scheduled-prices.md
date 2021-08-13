@@ -1,9 +1,12 @@
 ---
 title: Managing scheduled prices
 originalLink: https://documentation.spryker.com/2021080/docs/managing-scheduled-prices
+originalArticleId: 27e7b867-18f5-4872-9e28-a6da730af458
 redirect_from:
   - /2021080/docs/managing-scheduled-prices
   - /2021080/docs/en/managing-scheduled-prices
+  - /docs/managing-scheduled-prices
+  - /docs/en/managing-scheduled-prices
 ---
 
 This topic describes how to manage scheduled prices.

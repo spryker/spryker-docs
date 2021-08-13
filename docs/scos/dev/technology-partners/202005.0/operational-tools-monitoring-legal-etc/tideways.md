@@ -2,6 +2,7 @@
 title: Tideways
 description: Track and analyze errors and background processed by integrating Tideways intot he Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v5/docs/tideways
+originalArticleId: fee7504e-6ff8-4466-9e1f-3ae314e6772c
 redirect_from:
   - /v5/docs/tideways
   - /v5/docs/en/tideways

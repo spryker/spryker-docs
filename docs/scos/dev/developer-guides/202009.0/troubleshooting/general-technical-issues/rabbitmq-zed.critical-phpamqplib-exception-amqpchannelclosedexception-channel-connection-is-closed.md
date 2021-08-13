@@ -2,6 +2,7 @@
 title: RabbitMQ- Zed.CRITICAL- PhpAmqpLib\Exception\AMQPChannelClosedException - Channel connection is closed
 description: Learn how to fix the issue when events are not consumed or are consumed slowly.
 originalLink: https://documentation.spryker.com/v6/docs/rabbitmq-zedcritical-phpamqplibexceptionamqpchannelclosedexception-channel-connection-is-closed
+originalArticleId: 57fcf623-9754-451d-8752-a483b095953c
 redirect_from:
   - /v6/docs/rabbitmq-zedcritical-phpamqplibexceptionamqpchannelclosedexception-channel-connection-is-closed
   - /v6/docs/en/rabbitmq-zedcritical-phpamqplibexceptionamqpchannelclosedexception-channel-connection-is-closed

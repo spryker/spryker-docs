@@ -2,6 +2,7 @@
 title: Shop Guide - Managing Requests for Quotes for a Sales Representative
 description: The guide provides the procedures on how a sales representative can view, edit, suggest another price, and create an RFQ for a customer in the storefront.
 originalLink: https://documentation.spryker.com/v5/docs/managing-rfqs-sales-rep-shop-guide
+originalArticleId: 8adce809-98b4-44e8-bdda-6201a3940942
 redirect_from:
   - /v5/docs/managing-rfqs-sales-rep-shop-guide
   - /v5/docs/en/managing-rfqs-sales-rep-shop-guide
@@ -41,8 +42,8 @@ To create an RFQ for a Buyer:
 5. To add items to the RFQ, click **Edit Items**, and then use one of the following options:
     * In the **Quick add to Cart** widget, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**.
     * From the catalog, select the product, choose the options and quantity, and click **Add to Cart**.
-    * On the **Quick Order** page, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Quick Order](https://documentation.spryker.com/docs/en/quick-order-shop-guide).
-    * On the **Shopping list** page, click the shopping list, select the checkboxes for the items you want to add from the shopping list, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Shopping Lists](https://documentation.spryker.com/docs/en/shopping-lists-shop-guide).
+    * On the **Quick Order** page, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Quick Order](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-quick-order.html).
+    * On the **Shopping list** page, click the shopping list, select the checkboxes for the items you want to add from the shopping list, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Shopping Lists](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-lists.html).
 6. In the **Quote Request** widget on top of the page, do the following:
     * click **Save** to keep the changes.
     * click **Save and Back to Edit** to keep the changes and return to the **Edit Quote Request** page.
@@ -87,7 +88,7 @@ To add the delivery address and shipment method:
 2. On the **Address** page, select a delivery address using one of the following options from the **Select a delivery address** drop-down and populate the fields:
     * **Define new address** to add the delivery address for the whole RFQ. This will open the form to populate the fields with the necessary information.
     * Select one of the existing addresses
-    * **Deliver to multiple addresses** to assign a delivery addresses per RFQ item. See [Shop Guide - Address Step](https://documentation.spryker.com/docs/en/address-step-shop-guide-201911) for more information on delivery address options.
+    * **Deliver to multiple addresses** to assign a delivery addresses per RFQ item. See [Shop Guide - Address Step](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html) for more information on delivery address options.
 
 3. In the *Billing Address* section, select the necessary address or add a new one. 
     {% info_block infoBox "Info" %}
@@ -136,7 +137,7 @@ If you change the shipment method, the previously entered shipment price will be
 ## Revising the RFQs and Sending to Buyers
 {% info_block infoBox "Info" %}
 
-RFQ version number changes upon each revision. Check [RFQ Versioning](https://documentation.spryker.com/docs/en/quotation-process-rfq-feature-overview-201907#rfq-versioning) to learn about the version change process.
+RFQ version number changes upon each revision. Check [RFQ Versioning](https://documentation.spryker.com/v5/docs/en/quotation-process-feature-overview#rfq-versioning) to learn about the version change process.
 
 {% endinfo_block %}
 To respond to Buyers' Quote Requests and suggest them special prices, you need to revise the Quote Requests and send them to customers. You can revise the Quote Requests only in the *Draft*, *Waiting*, *In Progress*, and *Ready* statuses.

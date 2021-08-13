@@ -1,6 +1,7 @@
 ---
 title: Tax Schema
 originalLink: https://documentation.spryker.com/v3/docs/db-schema-tax
+originalArticleId: 2c00bb3f-7a61-46cb-81b8-2f8358bd40e1
 redirect_from:
   - /v3/docs/db-schema-tax
   - /v3/docs/en/db-schema-tax

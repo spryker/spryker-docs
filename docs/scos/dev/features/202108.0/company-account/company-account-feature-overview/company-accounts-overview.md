@@ -2,9 +2,12 @@
 title: Company Accounts overview
 description: In the context of permissions management, the top level of a B2B business model hierarchy is a Company. Each company has its organizational structure.
 originalLink: https://documentation.spryker.com/2021080/docs/company-accounts-overview
+originalArticleId: 843043bb-7eeb-4023-8296-1c564b95f682
 redirect_from:
   - /2021080/docs/company-accounts-overview
   - /2021080/docs/en/company-accounts-overview
+  - /docs/company-accounts-overview
+  - /docs/en/company-accounts-overview
 ---
 
 Company accoounts allow to build an organizational structure of your B2B business.
@@ -121,4 +124,4 @@ Company users can perform the following actions on the Storefront:
 </div>
 
 ## See next 
-[Business Units overview](https://documentation.spryker.com/docs/business-units-overview)
+[Business Units overview](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/business-units-overview.html)

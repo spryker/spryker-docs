@@ -2,6 +2,7 @@
 title: Return Management feature overview
 description: This article provides a description for the feature Return Management in the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v6/docs/return-management-feature-overview
+originalArticleId: 21653fb1-7ad6-4167-ad28-fdbc69434252
 redirect_from:
   - /v6/docs/return-management-feature-overview
   - /v6/docs/en/return-management-feature-overview
@@ -9,11 +10,11 @@ redirect_from:
 
 The *Return Management* feature allows you to create and manage returns for a sales order. 
 
-Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. See [Managing orders](https://documentation.spryker.com/docs/managing-orders) for details on how they can do that.
+Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. See [Managing orders](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/managing-orders.html) for details on how they can do that.
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns via Glue API. For details, see [Manging the returns](https://documentation.spryker.com/docs/retrieving-return-management-information).
+You can also create and manage returns via Glue API. For details, see [Manging the returns](/docs/scos/dev/glue-api-guides/202009.0/managing-returns/managing-the-returns.html).
 
 {% endinfo_block %}
 
@@ -27,7 +28,7 @@ The *Return Policy* is a set of rules that defines what items can be returned: i
 
 {% info_block infoBox "Info" %}
 
-For now, you can set the Return Policy period in code only. There is no UI for that. See [HowTo - Set the number of days for a return policy](https://documentation.spryker.com/docs/howto-set-number-of-days-for-a-return-policy) for details.
+For now, you can set the Return Policy period in code only. There is no UI for that. See [HowTo - Set the number of days for a return policy](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html) for details.
 
 {% endinfo_block %}
 
@@ -60,12 +61,12 @@ The **guest users** can not initiate returns of their orders, as the return mana
 
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](https://documentation.spryker.com/docs/configurable-bundle), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](https://documentation.spryker.com/docs/product-bundle), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+For a [Configurable Bundle](/docs/scos/dev/features/202009.0/configurable-bundle/configurable-bundle.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+The [Product Bundles](/docs/scos/dev/features/202009.0/product-bundles/product-bundles.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](https://documentation.spryker.com/docs/managing-orders#creating-a-return). See [Return items states](https://documentation.spryker.com/docs/return-item-states-reference-information) for details on the return states.
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return). See [Return items states](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/returns/references/reference-information-return-item-states.html) for details on the return states.
 
 {% info_block infoBox "Info" %}
 
@@ -73,16 +74,16 @@ Next to each sales order item, there is the date till which the item can be retu
 
 {% endinfo_block %}
 
-All the returns created by the buyer or by the Back Office user for the buyer are listed on the *Returns* page in the *Customer Account*. From here, the Buyer can [view the return details](https://documentation.spryker.com/docs/return-details-reference-information) and print the return slip.
+All the returns created by the buyer or by the Back Office user for the buyer are listed on the *Returns* page in the *Customer Account*. From here, the Buyer can [view the return details](/docs/scos/user/user-guides/202009.0/shop-user-guide/shop-guide-customer-account/references/reference-information-return-details.html) and print the return slip.
 The following figure shows how to create a return, view its details and print a slip:
 ![create and print a return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-and-print-a-return.gif){height="" width=""}
 
 ## Return Management in the Back Office
-A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. See [Back Office user guide - Managing orders](https://documentation.spryker.com/docs/managing-orders) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office user guide - Manging returns](https://documentation.spryker.com/docs/managing-returns)  for instructions on how to manage the returns in the Back Office.
+A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. See [Back Office user guide - Managing orders](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/managing-orders.html) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office user guide - Manging returns](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/returns/managing-returns.html)  for instructions on how to manage the returns in the Back Office.
 
 {% info_block infoBox "Return management process" %}
 
-To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](https://documentation.spryker.com/docs/en/building-a-return-management-process-best-practices). 
+To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/scos/dev/features/202009.0/return-management/building-a-return-management-process-best-practices.html). 
 
 {% endinfo_block %}
 

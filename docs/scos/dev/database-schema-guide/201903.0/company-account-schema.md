@@ -1,6 +1,7 @@
 ---
 title: Company Account Schema
 originalLink: https://documentation.spryker.com/v2/docs/db-schema-company-account
+originalArticleId: a3a97e8c-b5a0-4481-91c0-cab0c1ed5136
 redirect_from:
   - /v2/docs/db-schema-company-account
   - /v2/docs/en/db-schema-company-account

@@ -1,6 +1,7 @@
 ---
 title: Docker Environment Infrustructure
 originalLink: https://documentation.spryker.com/v4/docs/docker-environment-infrastructure
+originalArticleId: 9c03a1a5-d8b8-4466-8009-840c5d6fe404
 redirect_from:
   - /v4/docs/docker-environment-infrastructure
   - /v4/docs/en/docker-environment-infrastructure

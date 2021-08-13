@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CMS Block
 originalLink: https://documentation.spryker.com/v2/docs/mg-cms-block
+originalArticleId: ea300268-b89a-4552-ad72-c3446002707f
 redirect_from:
   - /v2/docs/mg-cms-block
   - /v2/docs/en/mg-cms-block

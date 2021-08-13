@@ -2,6 +2,7 @@
 title: HowTo - Disable Split Delivery in Yves Interface
 description: Use the guide to learn how to disable Split Delivery during checkout in your project.
 originalLink: https://documentation.spryker.com/v5/docs/ht-disable-split-delivery-in-yves-interface
+originalArticleId: d93b8180-7ab5-4ca3-88e2-402f52f06daa
 redirect_from:
   - /v5/docs/ht-disable-split-delivery-in-yves-interface
   - /v5/docs/en/ht-disable-split-delivery-in-yves-interface

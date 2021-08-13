@@ -1,6 +1,7 @@
 ---
 title: Release Notes - December - 2017
 originalLink: https://documentation.spryker.com/v6/docs/release-notes-december-2017
+originalArticleId: 855ea8b5-8655-460a-af93-0d609c6625d7
 redirect_from:
   - /v6/docs/release-notes-december-2017
   - /v6/docs/en/release-notes-december-2017
@@ -17,7 +18,7 @@ From now on, we support integration with Heidelpay payment service provider. Hei
 | [heidelpay 1.0.0](https://github.com/spryker-eco/heidelpay/releases/tag/1.0.0) | n/a | n/a |
 
 **Documentation**
-For more information on Heidelpay integration, see [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay.html).
+For more information on Heidelpay integration, see [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/202009.0/payment-partners/heidelpay/heidelpay.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -46,7 +47,7 @@ As a part of this release, we have also made some improvements. Earlier only bil
 | [ArvatoRss 2.0.0](https://github.com/spryker-eco/arvato-rss/releases/tag/2.0.0) | n/a | n/a |
 
 **Documentation**
-For more information,  see the [Risk Solution Services Integration - Arvato](/docs/scos/dev/technology-partners/202001.0/payment-partners/arvato/arvato.html) documentation.
+For more information,  see the [Risk Solution Services Integration - Arvato](/docs/scos/dev/technology-partners/202009.0/payment-partners/arvato/arvato.html) documentation.
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -263,17 +264,17 @@ To use a new infrastructure, please make sure you moved your `Pyz` test into `Py
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay.html)
-* [Risk Solution Services Integration - Arvato 2.0](/docs/scos/dev/technology-partners/202001.0/payment-partners/arvato/arvato-risk-solution-services-integration.html)
-* [Performance Guidelines](/docs/scos/dev/developer-guides/202001.0/development-guide/guidelines/performance-guidelines.html)
-* [Performing Core Updates Smoothly](https://documentation.spryker.com/v4/docs/composer#core-updates)
-* [CMS Blocks](/docs/scos/dev/features/202001.0/cms/cms-block/cms-block.html)
-* [CMS Pages](/docs/scos/dev/features/202001.0/cms/cms-page/cms-page.html)
-* [Demo Shop](/docs/scos/dev/about-spryker/202001.0/videos-and-webinars/legacy-demoshop.html)
-* [Navigation](/docs/scos/dev/features/202001.0/navigation/navigation.html)
-* [Product Groups](/docs/scos/dev/about-spryker/202001.0/videos-and-webinars/configure-product-groups-in-spryker.html)
-* [Product Management](https://documentation.spryker.com/v4/docs/product-management)
-* [Product Sets](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-sets/product-sets.html)
-* [Wishlists](/docs/scos/dev/features/201907.0/wishlist/wishlist.html)
+* [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/202009.0/payment-partners/heidelpay/heidelpay.html)
+* [Risk Solution Services Integration - Arvato 2.0](/docs/scos/dev/technology-partners/202009.0/payment-partners/arvato/arvato.html-2-0)
+* [Performance Guidelines](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/performance-guidelines.html)
+* [Performing Core Updates Smoothly](/docs/scos/dev/developer-guides/202009.0/installation/composer.html#core-updates)
+* [CMS Blocks](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-block.html)
+* [CMS Pages](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-page.html)
+* [Demo Shop](https://documentation.spryker.com/v6/docs/legacy-demoshop)
+* [Navigation](/docs/scos/dev/features/202009.0/navigation/navigation.html)
+* [Product Groups](/docs/scos/dev/features/202009.0/product-groups/product-groups.html)
+* [Product Management](/docs/scos/dev/features/202009.0/product-information-management/product-information-management.html)
+* [Product Sets](https://documentation.spryker.com/v6/docs/product-sets)
+* [Wishlists](/docs/scos/dev/features/202009.0/wishlist/wishlist.html)
  
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short survey [here](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

@@ -2,6 +2,7 @@
 title: System Requirements
 description: This article provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
 originalLink: https://documentation.spryker.com/v3/docs/system-requirements
+originalArticleId: 708e14eb-0d0e-4fce-a9d6-9e9af82d19eb
 redirect_from:
   - /v3/docs/system-requirements
   - /v3/docs/en/system-requirements

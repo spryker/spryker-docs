@@ -2,9 +2,12 @@
 title: Managing company user authentication tokens
 description: Learn how to manage company user authentication tokens via Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-user-authentication-tokens
+originalArticleId: 93de3785-709e-48d2-a1f5-d5edf0e4bc93
 redirect_from:
   - /2021080/docs/managing-company-user-authentication-tokens
   - /2021080/docs/en/managing-company-user-authentication-tokens
+  - /docs/managing-company-user-authentication-tokens
+  - /docs/en/managing-company-user-authentication-tokens
 ---
 
 This endpoint allows refreshing a company user access token or revoking a refresh token.
@@ -12,7 +15,7 @@ This endpoint allows refreshing a company user access token or revoking a refres
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company account feature integration](https://documentation.spryker.com/docs/glue-api-company-account-api-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company account feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
 
 
 
@@ -45,7 +48,7 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user). |
+| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user). |
 
 
 
@@ -103,7 +106,7 @@ To revoke a company user refresh token, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | Only required when revoking all the refresh token of a company user.  | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | Only required when revoking all the refresh token of a company user.  | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 
 
@@ -117,7 +120,7 @@ To revoke a company user refresh token, send the request:
 
 For security purposes, the endpoint always returns the `204 No Content` status code, regardless of any refresh tokens being revoked.
 
-The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/docs/configuring-outdated-refresh-token-life-time).
+The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/2021080/docs/configuring-outdated-refresh-token-life-time).
 
 ## Possible errors
 
@@ -127,5 +130,5 @@ The tokens are marked as expired on the date and time of the request. You can co
 |004 |Failed to refresh the token.  | 
 |901 |Refresh token is missing.  | 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 

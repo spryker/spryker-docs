@@ -2,9 +2,12 @@
 title: Configuring services
 description: Learn how to configure services.
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
+originalArticleId: 5b51acd3-1f5c-477d-995a-d821e88fd5f8
 redirect_from:
   - /2021080/docs/configuring-services
   - /2021080/docs/en/configuring-services
+  - /docs/configuring-services
+  - /docs/en/configuring-services
 ---
 
 
@@ -143,7 +146,7 @@ docker/sdk up --build --data
 [Elasticsearch](https://www.elastic.co/elasticsearch/) is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. 
 
 See:
-* [Configuring Elasticsearch](https://documentation.spryker.com/docs/search-configure-elasticsearch) to learn more about Elastcisearch configuration in Spryker.
+* [Configuring Elasticsearch](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-elasticsearch.html) to learn more about Elastcisearch configuration in Spryker.
 * [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) for more information on Elasticsearch.
 
 ### Configuration

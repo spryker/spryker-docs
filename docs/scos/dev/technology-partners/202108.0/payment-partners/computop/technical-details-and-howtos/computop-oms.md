@@ -2,9 +2,12 @@
 title: Computop - OMS
 description: This article contains information on the state machine commands and conditions for the Computop module in the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/computop-oms-details
+originalArticleId: 24fc01dc-bae5-4689-a6bb-c93a26e07dba
 redirect_from:
   - /2021080/docs/computop-oms-details
   - /2021080/docs/en/computop-oms-details
+  - /docs/computop-oms-details
+  - /docs/en/computop-oms-details
 ---
 
 The following plugins are used for performing calls to Paygate during OMS operation.

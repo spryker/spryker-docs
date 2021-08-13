@@ -2,9 +2,12 @@
 title: Shipment + approval process feature integration
 description: This integration guide provides step-by-step instructions on integrating Shipment and Approval Process connector in Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-approval-process-feature-integration
+originalArticleId: ac858362-21ea-4a7a-8369-b82cee1cc226
 redirect_from:
   - /2021080/docs/shipment-approval-process-feature-integration
   - /2021080/docs/en/shipment-approval-process-feature-integration
+  - /docs/shipment-approval-process-feature-integration
+  - /docs/en/shipment-approval-process-feature-integration
 ---
 
 ## Install Feature Core

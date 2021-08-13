@@ -1,6 +1,7 @@
 ---
 title: CompanyUserAuthRestApi Migration Guide
 originalLink: https://documentation.spryker.com/v4/docs/companyuserauthrestapi-migration-guide
+originalArticleId: 86bbf878-abb4-4992-9225-0a254ba5c5c7
 redirect_from:
   - /v4/docs/companyuserauthrestapi-migration-guide
   - /v4/docs/en/companyuserauthrestapi-migration-guide

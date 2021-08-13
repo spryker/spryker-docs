@@ -1,6 +1,7 @@
 ---
 title: Back-End Zed
 originalLink: https://documentation.spryker.com/v1/docs/zed
+originalArticleId: 6354c683-249c-47db-9f23-4b95166c8585
 redirect_from:
   - /v1/docs/zed
   - /v1/docs/en/zed
@@ -24,7 +25,7 @@ In this section you will find the following content:
 
 [Persistence Layer](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/zed/persistence-layer/about-the-persistence-layer.html)
 
-[Entity Manager](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/zed/persistence-layer/entity-manager.html)
+[Entity Manager](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/zed/persistence-layer/entity.html-manager)
 
 [Repository](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/zed/persistence-layer/repository.html)
 

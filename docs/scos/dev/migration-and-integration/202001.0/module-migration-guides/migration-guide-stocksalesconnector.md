@@ -2,6 +2,7 @@
 title: Migration Guide - StockSalesConnector
 description: Use the guide to learn how to update the StockSalesConnector module.
 originalLink: https://documentation.spryker.com/v4/docs/mg-stock-sales-connector
+originalArticleId: 4134f5e2-2985-429f-b6bf-5758bf1bcbc6
 redirect_from:
   - /v4/docs/mg-stock-sales-connector
   - /v4/docs/en/mg-stock-sales-connector

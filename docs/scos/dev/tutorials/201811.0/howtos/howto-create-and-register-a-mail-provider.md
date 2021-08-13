@@ -1,6 +1,7 @@
 ---
 title: HowTo - Create and Register a Mail Provider
 originalLink: https://documentation.spryker.com/v1/docs/ht-create-register-provider-plugin
+originalArticleId: f609e40a-8565-4f26-9bce-895c7374f323
 redirect_from:
   - /v1/docs/ht-create-register-provider-plugin
   - /v1/docs/en/ht-create-register-provider-plugin

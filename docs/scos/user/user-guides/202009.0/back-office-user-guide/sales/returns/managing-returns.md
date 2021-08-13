@@ -2,12 +2,13 @@
 title: Managing returns
 description: In this article, you will know how to manage returns in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-returns
+originalArticleId: 40f00c1c-437d-4f30-b1ac-451589ecbde4
 redirect_from:
   - /v6/docs/managing-returns
   - /v6/docs/en/managing-returns
 ---
 
-After a [return](https://documentation.spryker.com/docs/return-management-feature-overview) has been [created by a Back Office User](https://documentation.spryker.com/docs/managing-orders#creating-a-return) or by a [Shop User](https://documentation.spryker.com/docs/shop-guide-creating-a-return), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:
+After a [return](/docs/scos/dev/features/202009.0/return-management/return-management-feature-overview.html) has been [created by a Back Office User](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return) or by a [Shop User](/docs/scos/dev/features/202009.0/return-management/return-management-feature-overview.html#return-management-on-the-storefront), it appears on the *Orders > Returns* page. On this page, you can manage the returns as follows:
 
 * View the return details
 * Set the return statuses
@@ -19,7 +20,7 @@ To start managing returns, navigate to the *Sales >Returns* section.
 
 {% info_block infoBox "Info" %}
 
-Returns of the registered and guest users have different return references. See [Returns Section](https://documentation.spryker.com/docs/orders-reference-information#returns-section) for details on the return references.
+Returns of the registered and guest users have different return references. See [Returns Section](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/references/reference-information-orders.html#returns-section) for details on the return references.
 
 {% endinfo_block %}
 To view details on a return, in the *Actions* column of the return, click **View**. 
@@ -35,12 +36,12 @@ To trigger the return states:
 
 1. On the *Returns* page, click **View** in the *Actions* column. This takes you to the *Return Overview [Return reference]*.
 
-2. *Trigger all matching state* section of the *Return Overview [Return reference]* page, click the necessary state. The return state changes and the new states that you can trigger, appear. See [Return Item States: Reference Information](https://documentation.spryker.com/docs/return-item-states-reference-information) for information on the return items states and the flow.
+2. *Trigger all matching state* section of the *Return Overview [Return reference]* page, click the necessary state. The return state changes and the new states that you can trigger, appear. See [Return Item States: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/returns/references/reference-information-return-item-states.html) for information on the return items states and the flow.
 ![Trigger states](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Returns/trigger-status.png){height="" width=""}
  
 {% info_block infoBox "Info" %}
 
-The triggered return states are reflected in [Customer Account on the Storefront](https://documentation.spryker.com/docs/shop-guide-creating-a-return) informing Customers about the statuses of their returns.<!--- You can rename the default statuses that display on the Storefront so they would make more sense for the Storefront users. See *Display Custom Names for Order Item States on the Storefront* for details on how to do that.-->
+The triggered return states are reflected in [Customer Account on the Storefront](/docs/scos/dev/features/202009.0/return-management/return-management-feature-overview.html#return-management-on-the-storefront) informing Customers about the statuses of their returns.<!--- You can rename the default statuses that display on the Storefront so they would make more sense for the Storefront users. See *Display Custom Names for Order Item States on the Storefront* for details on how to do that.-->
 
 {% endinfo_block %}
 ***
@@ -50,7 +51,7 @@ To trigger the return states for all the items in the return, click the states a
 ***
 
 ## Printing a Return Slip
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](https://documentation.spryker.com/docs/return-management-feature-overview#return-slip). 
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/scos/dev/features/202009.0/return-management/return-management-feature-overview.html#return-slip). 
 
 To print the return slip:
 
@@ -61,5 +62,5 @@ This takes you to the page with the print version of the return slip.
 
 **What's next?**
 
-* To learn about the attributes you enter and select while managing returns, see [Returns: Reference Information](https://documentation.spryker.com/docs/returns-reference-information).
-* To learn about the return item states, see [Return Item States: Reference Information](https://documentation.spryker.com/docs/return-item-states-reference-information). 
+* To learn about the attributes you enter and select while managing returns, see [Returns: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/returns/references/reference-information-returns.html).
+* To learn about the return item states, see [Return Item States: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/returns/references/reference-information-return-item-states.html). 

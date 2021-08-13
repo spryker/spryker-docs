@@ -2,6 +2,7 @@
 title: Migration Guide - Locale
 description: Use the guide to perform the Locale part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-locale
+originalArticleId: c910e1a3-b0aa-4813-ae61-9c89d10559f4
 redirect_from:
   - /v4/docs/migration-guide-locale
   - /v4/docs/en/migration-guide-locale

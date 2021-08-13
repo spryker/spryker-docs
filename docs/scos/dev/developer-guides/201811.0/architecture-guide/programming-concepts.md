@@ -2,6 +2,7 @@
 title: Programming Concepts
 description: This article explains the main software and coding concepts used in Spryker.
 originalLink: https://documentation.spryker.com/v1/docs/programming-concepts
+originalArticleId: 6b2ff11a-df7a-4934-8238-7b8afb463cf1
 redirect_from:
   - /v1/docs/programming-concepts
   - /v1/docs/en/programming-concepts

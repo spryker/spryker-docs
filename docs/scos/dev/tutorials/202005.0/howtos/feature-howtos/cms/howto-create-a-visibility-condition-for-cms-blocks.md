@@ -2,18 +2,19 @@
 title: HowTo - Create a Visibility Condition for CMS Blocks
 description: Visibility condition is a tool used to define particular pages in which the content of CMS block is displayed.
 originalLink: https://documentation.spryker.com/v5/docs/howto-create-a-visibility-condition-for-cms-blocks
+originalArticleId: 541f4f6d-0dd5-41ac-920f-fd043e184e75
 redirect_from:
   - /v5/docs/howto-create-a-visibility-condition-for-cms-blocks
   - /v5/docs/en/howto-create-a-visibility-condition-for-cms-blocks
 ---
 
-Visibility Condition is a [Templates & Slots](https://documentation.spryker.com/docs/en/templates-slots-feature-overview) feature functionality that allows you to define in which cases a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](https://documentation.spryker.com/docs/en/templates-slots-feature-overview#spryker-cms-blocks) for slots has the following [visibility conditions](https://documentation.spryker.com/docs/en/templates-slots-feature-overview#visibility-conditions) by default:
+Visibility Condition is a [Templates & Slots](/docs/scos/dev/features/202005.0/cms/templates-and-slots/templates-and-slots-feature-overview.html) feature functionality that allows you to define in which cases a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](/docs/scos/dev/features/202005.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#spryker-cms-blocks) for slots has the following [visibility conditions](/docs/scos/dev/features/202005.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#visibility-conditions) by default:
 
 * Category condition for Category page.
 * Product and category conditions for Product details page.
 * CMS page condition for CMS page.
 
-Each page type has a dedicated template with several [slot widgets](https://documentation.spryker.com/docs/en/templates-slots-feature-overview#slot-widget). The visibility conditions of each template are defined in module configuration. 
+Each page type has a dedicated template with several [slot widgets](/docs/scos/dev/features/202005.0/cms/templates-and-slots/templates-and-slots-feature-overview.html#slot-widget). The visibility conditions of each template are defined in module configuration. 
 
 ```php
 namespace Pyz\Zed\CmsSlotBlock;
@@ -151,7 +152,7 @@ class CustomerSlotBlockConditionFormPlugin extends AbstractPlugin implements Cms
 3. Create `CustomerSlotBlockConditionForm`. It is a regular Symfony Form class which implements `\Symfony\Component\Form\FormBuilderInterface`, See:
 
 * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
-* [Creating Forms](https://documentation.spryker.com/docs/en/t-working-forms#creating-forms) to learn about form creation procedure in Spryker.
+* [Creating Forms](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#creating-forms) to learn about form creation procedure in Spryker.
 * a form example in `\Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Form\ProductCategorySlotBlockConditionForm`.
 
 {% info_block errorBox %}

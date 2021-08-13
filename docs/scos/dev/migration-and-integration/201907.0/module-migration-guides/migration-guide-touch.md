@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Touch
 originalLink: https://documentation.spryker.com/v3/docs/mg-touch
+originalArticleId: 6dd38f55-899d-49fb-a958-8355d034b7cc
 redirect_from:
   - /v3/docs/mg-touch
   - /v3/docs/en/mg-touch

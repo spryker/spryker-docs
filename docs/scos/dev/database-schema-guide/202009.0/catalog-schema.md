@@ -1,6 +1,7 @@
 ---
 title: Catalog Schema
 originalLink: https://documentation.spryker.com/v6/docs/db-schema-catalog
+originalArticleId: 68f095dd-0bf3-4172-98f5-57e6a84c9626
 redirect_from:
   - /v6/docs/db-schema-catalog
   - /v6/docs/en/db-schema-catalog

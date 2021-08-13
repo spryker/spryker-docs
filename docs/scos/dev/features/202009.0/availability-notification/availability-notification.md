@@ -2,6 +2,7 @@
 title: Availability Notification
 description: This feature, shipped in a form of a newsletter, informs the customers who subscribed to it once the product is available again.
 originalLink: https://documentation.spryker.com/v6/docs/availability-notification
+originalArticleId: 32b05d98-e6a2-4aa0-b829-6d3c55450e2f
 redirect_from:
   - /v6/docs/availability-notification
   - /v6/docs/en/availability-notification

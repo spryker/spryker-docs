@@ -2,12 +2,15 @@
 title: TS linter integration guide
 description: Learn how to integrate the SCSS linter into your project
 originalLink: https://documentation.spryker.com/2021080/docs/ts-linter-integration-guide
+originalArticleId: 7e603658-384c-4d2f-b143-c02e7fd7fc47
 redirect_from:
   - /2021080/docs/ts-linter-integration-guide
   - /2021080/docs/en/ts-linter-integration-guide
+  - /docs/ts-linter-integration-guide
+  - /docs/en/ts-linter-integration-guide
 ---
 
-Follow the steps below to integrate [TS linter](https://documentation.spryker.com/docs/ts-linter) into your project. 
+Follow the steps below to integrate [TS linter](/docs/scos/dev/sdk/{{ page.version }}/development-tools/ts-linter.html) into your project. 
 
 ## 1. Install the dependencies
 

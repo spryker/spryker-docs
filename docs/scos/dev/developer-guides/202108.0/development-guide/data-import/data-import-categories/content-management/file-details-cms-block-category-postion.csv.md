@@ -1,9 +1,12 @@
 ---
 title: File details- cms_block_category_postion.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-category-postioncsv
+originalArticleId: 22c4245e-5056-4bb9-9d77-e932a74c63b9
 redirect_from:
   - /2021080/docs/file-details-cms-block-category-postioncsv
   - /2021080/docs/en/file-details-cms-block-category-postioncsv
+  - /docs/file-details-cms-block-category-postioncsv
+  - /docs/en/file-details-cms-block-category-postioncsv
 ---
 
 This article contains content of the **cms_block_category_postion.csv** file to configure CMS Block Category Position information on your Spryker Demo Shop.

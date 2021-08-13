@@ -2,6 +2,7 @@
 title: Calculator Plugins
 description: The information in this topic covers the available calculator plugins along with their examples.
 originalLink: https://documentation.spryker.com/v4/docs/calculator-plugins
+originalArticleId: 418ea9d6-b06f-45c1-83de-db2225925a79
 redirect_from:
   - /v4/docs/calculator-plugins
   - /v4/docs/en/calculator-plugins

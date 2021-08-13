@@ -2,9 +2,12 @@
 title: Migration Guide - StockGui
 description: Use the guide to learn how to update the StockGui module to a newer version.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-stockgui
+originalArticleId: 93d3a88f-8414-4eb6-9f88-2dbfd46a3dd0
 redirect_from:
   - /2021080/docs/mg-stockgui
   - /2021080/docs/en/mg-stockgui
+  - /docs/mg-stockgui
+  - /docs/en/mg-stockgui
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0
@@ -13,7 +16,7 @@ In this new version of the **StockGui** module, we have added support of the war
 
 **To upgrade to the new version of the module, do the following:**
 
-1. Follow the steps in the individual migration guide for the **Stock** module. For more information, see [Migration Guide - Stock](https://documentation.spryker.com/v4/docs/mg-stock#upgrading-from-version-7---to-version-8-0-0). 
+1. Follow the steps in the individual migration guide for the **Stock** module. For more information, see [Migration Guide - Stock](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-stock.html#upgrading-from-version-7---to-version-8-0-0). 
 2. Upgrade the **StockGui** module to the new version:
 
 ```bash

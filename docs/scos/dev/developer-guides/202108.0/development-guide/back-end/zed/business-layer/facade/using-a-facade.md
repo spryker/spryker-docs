@@ -2,9 +2,12 @@
 title: Using a Facade
 description: This article describes the cases when the facade is used.
 originalLink: https://documentation.spryker.com/2021080/docs/using-facade
+originalArticleId: 1a113ccd-7bdf-467b-84e0-d47b9a03d0cd
 redirect_from:
   - /2021080/docs/using-facade
   - /2021080/docs/en/using-facade
+  - /docs/using-facade
+  - /docs/en/using-facade
 ---
 
 ## Using the Facade from a Controller or a Plugin

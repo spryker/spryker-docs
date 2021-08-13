@@ -2,6 +2,7 @@
 title: Migration Guide - ShipmentCartConnector
 description: Use the guide to learn how to update the ShipmentCartConnector module to a newer version.
 originalLink: https://documentation.spryker.com/v4/docs/mg-shipment-cart-connector
+originalArticleId: da92cc02-f6d3-4f9c-9cc9-345ed9d37702
 redirect_from:
   - /v4/docs/mg-shipment-cart-connector
   - /v4/docs/en/mg-shipment-cart-connector

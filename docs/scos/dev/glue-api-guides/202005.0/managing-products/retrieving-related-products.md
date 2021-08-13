@@ -2,6 +2,7 @@
 title: Retrieving Related Products
 description: The article demonstrates how to find alternatives for discontinued products with the help of Glue API endpoints.
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-related-products
+originalArticleId: e46eed39-3641-4e35-9014-89c27fe73b4c
 redirect_from:
   - /v5/docs/retrieving-related-products
   - /v5/docs/en/retrieving-related-products
@@ -10,8 +11,8 @@ redirect_from:
 Using the **Product Relations** feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called Related Products, in search and in the cart together with the products selected by customers. This can help boosting the cross- and up-selling performance of the outlet.
 
 {% info_block infoBox %}
-Only [abstract](https://documentation.spryker.com/docs/en/product-abstraction
-{% endinfo_block %} products support Product Relations. For more details, see [Product Relations](https://documentation.spryker.com/docs/en/product-relations).)
+Only [abstract](/docs/scos/dev/features/202005.0/product-information-management/product-abstraction.html
+{% endinfo_block %} products support Product Relations. For more details, see [Product Relations](/docs/scos/dev/features/202005.0/product-information-management/product-relations/product-relations.html).)
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 
@@ -24,7 +25,7 @@ In your development, the endpoints can help you to:
 * Provide additional products items in a customer's cart to offer upscale variations, accessories and other additional items for products in the cart. This will help you in boosting the cart value.
 
 {% info_block infoBox %}
-To be able to use **Product Relations API**, first, you need to have the Product Relations feature integrated with your project. For details, see [Product Relation Integration](https://documentation.spryker.com/docs/en/glue-api-product-relations-feature-integration
+To be able to use **Product Relations API**, first, you need to have the Product Relations feature integrated with your project. For details, see [Product Relation Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
 {% endinfo_block %}.)
 
 {% info_block infoBox %}
@@ -32,7 +33,7 @@ Different types of relations, as well as their logic, are defined on the project
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE API: Product Relations Feature Integration](https://documentation.spryker.com/docs/en/glue-api-product-relations-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE API: Product Relations Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html).
 
 ## Retrieving Related Items of an Abstract Product
 To get related items of an abstract product, send the request:
@@ -637,7 +638,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](https://documentation.spryker.com/docs/en/managing-carts-of-registered-users#retrieve-all-carts) to get it. | 
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. | 
 
 ### Request
 Request sample : `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products`
@@ -916,7 +917,7 @@ To get up-selling items for products in a guest cart, send the request:
 ### Request
 | Header key | Header value example | Required | Description | 
 |---|---|---|---|
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | ✓ | A hyphenated alphanumeric value that is the user's unique identifier. This value is passed as a header when [creating a guest cart](https://documentation.spryker.com/docs/en/managing-guest-carts#creating-a-guest-cart). | 
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | ✓ | A hyphenated alphanumeric value that is the user's unique identifier. This value is passed as a header when [creating a guest cart](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html#creating-a-guest-cart). | 
 
 Request sample : `GET http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products`.
 

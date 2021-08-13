@@ -2,6 +2,7 @@
 title: Reference information- Punchout
 description: The article provides information about attributes you add, view, and edit when creating and updating a connection.
 originalLink: https://documentation.spryker.com/v6/docs/punch-out-reference-information
+originalArticleId: b6314be9-6666-482a-9c18-d39f3c5a556b
 redirect_from:
   - /v6/docs/punch-out-reference-information
   - /v6/docs/en/punch-out-reference-information

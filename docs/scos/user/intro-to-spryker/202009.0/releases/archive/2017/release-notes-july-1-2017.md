@@ -1,6 +1,7 @@
 ---
 title: Release Notes - July - 1 2017
 originalLink: https://documentation.spryker.com/v6/docs/release-notes-july-1-2017
+originalArticleId: e72239eb-cbf8-452d-ae28-bcd13190c512
 redirect_from:
   - /v6/docs/release-notes-july-1-2017
   - /v6/docs/en/release-notes-july-1-2017
@@ -19,7 +20,7 @@ With this release we are bringing the variant selection functionality to the car
 | <ul><li>[CartVariant 1.0.0](https://github.com/spryker/cart-variant/releases/tag/1.0.0)</li><li>[ProductImageCartConnector 1.0.0](https://github.com/spryker/product-image-cart-connector/releases/tag/1.0.0)</li></ul> | n/a | n/a |
 
 **Documentation**
-For integration guides, see [Cart Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/cart-integration.html). 
+For integration guides, see [Cart Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/cart-integration.html). 
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -59,9 +60,9 @@ In addition, we are introducing a set of new features for CMS blocks:
 | <ul><li>[Cms 6.0.0](https://github.com/spryker/Cms/releases/tag/6.0.0)</li><li>[CmsBlock 1.0.0](https://github.com/spryker/cms-block/releases/tag/1.0.0)</li><li>[CmsBlockCategoryConnector 1.0.0](https://github.com/spryker/cms-block-category-connector/releases/tag/1.0.0)</li><li>[CmsBlockCollector 1.0.0](https://github.com/spryker/cms-block-collector/releases/tag/1.0.0)</li><li>[CmsBlockGui 1.0.0](https://github.com/spryker/CmsBlockGui/releases/tag/1.0.0)</li><li>[CmsBlockProductConnector 1.0.0](https://github.com/spryker/cms-block-product-connector/releases/tag/1.0.0)</li><li>[CmsGui 4.0.0](https://github.com/spryker/cms-gui/releases/tag/4.0.0)</li></ul> | <ul><li>[Product 5.2.0](https://github.com/spryker/Product/releases/tag/5.2.0)</li><li>[ProductManagement 0.7.0](https://github.com/spryker/product-management/releases/tag/0.7.0)</li><li>[Twig 3.2.0](https://github.com/spryker/Twig/releases/tag/3.2.0)</li></ul> | <ul><li>[CmsCollector 1.0.1](https://github.com/spryker/cms-collector/releases/tag/1.0.1)</li><li>[CmsUserConnector 1.0.1](https://github.com/spryker/cms-user-connector/releases/tag/1.0.1)</li><li>[Glossary 3.1.4](https://github.com/spryker/Glossary/releases/tag/3.1.4)</li><li>[NavigationGui 1.0.3](https://github.com/spryker/navigation-gui/releases/tag/1.0.3)</li><li>[ProductRelationCollector 1.1.1](https://github.com/spryker/product-relation-collector/releases/tag/1.1.1)</li></ul> |
 
 **Documentation**
-For relevant documentation, see [CMS Block](/docs/scos/dev/features/202001.0/cms/cms-block/cms-block.html).
+For relevant documentation, see [CMS Block](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-block.html).
 
-For detailed migration guides, see [CMS Migration Guide](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-cms.html), [CMS Block Migration Console](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html)
+For detailed migration guides, see [CMS Migration Guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-cms.html), [CMS Block Migration Console](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-cms.html-block-category-connector-console)
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -128,7 +129,7 @@ With this release, we are now introducing a new connector module to handle disco
 | [ProductLabelDiscountConnector 1.0.0](https://github.com/spryker/product-label-discount-connector/releases/tag/1.0.0) | <ul><li>[Discount 4.2.0](https://github.com/spryker/Discount/releases/tag/4.2.0)</li><li>[ProductLabel 1.1.0](https://github.com/spryker/product-label/releases/tag/1.1.0)</li></ul> | [Discount 4.2.1](https://github.com/spryker/Discount/releases/tag/4.2.1) |
 
 **Documentation**
-For relevant documentation, see [Product Label Module Guide](/docs/scos/dev/features/202001.0/product-information-management/product-label.html), [Discount Module Guide](/docs/scos/dev/features/202001.0/promotions-and-discounts/discount/discount.html)
+For relevant documentation, see [Product Label Module Guide](/docs/scos/dev/features/202009.0/product-labels/product-labels.html), [Discount Module Guide](/docs/scos/dev/features/202009.0/promotions-and-discounts/promotions-and-discounts.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -154,8 +155,8 @@ Previously, our schema allowed only one payment per sales-order. However, there 
 | [Payment 4.0.0](https://github.com/spryker/Payment/releases/tag/4.0.0) | n/a | <ul><li>[Braintree 0.5.3](https://github.com/spryker/Braintree/releases/tag/0.5.3)</li><li>[DummyPayment 2.0.3](https://github.com/spryker/dummy-payment/releases/tag/2.0.3)</li><li>[Payolution 4.0.3](https://github.com/spryker/Payolution/releases/tag/4.0.3)</li><li>[Ratepay 0.6.1](https://github.com/spryker/Ratepay/releases/tag/0.6.1)</li><li>[Transfer 3.3.2](https://github.com/spryker/Transfer/releases/tag/3.3.2)</li></ul> |
 
 **Documentation**
-For module documentation, see [Payment Module Guide](/docs/scos/dev/features/202001.0/payment/payment.html)
-For detailed migration guides, see [Payment Migration Guide](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-payment.html)
+For module documentation, see [Payment Module Guide](/docs/scos/dev/features/202009.0/payments/payments.html)
+For detailed migration guides, see [Payment Migration Guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-payment.html)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

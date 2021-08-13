@@ -2,6 +2,7 @@
 title: Glossary
 description: The section is used to create translations for a new locale or update the existing ones in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/glossary
+originalArticleId: dc90e287-5e66-4d62-b1c7-44b04674cfc5
 redirect_from:
   - /v3/docs/glossary
   - /v3/docs/en/glossary
@@ -23,4 +24,4 @@ A glossary consists of
 You can manage the translations, however, when creating or updating a glossary key, the changes are persisted in the back-end database. The changes are available in the online store after the client data storage is updated (either by manually running the update storage command or after the cronjob that does this update was executed. That is why interaction with the Development Team is needed.
 ***
 **What's next?**
-To know how the translations are managed, see the [Managing Glossary](/docs/scos/user/user-guides/202001.0/back-office-user-guide/glossary/managing-glossary.html) article.
+To know how the translations are managed, see the [Managing Glossary](/docs/scos/user/user-guides/201907.0/back-office-user-guide/glossary/managing-glossary.html) article.

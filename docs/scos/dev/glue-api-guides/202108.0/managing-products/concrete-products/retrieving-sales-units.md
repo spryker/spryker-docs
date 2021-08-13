@@ -2,17 +2,20 @@
 title: Retrieving sales units
 description: Retrieve sales units of concrete products.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-sales-units
+originalArticleId: 4150363f-4c47-4e7c-b7e6-d1430ce864ba
 redirect_from:
   - /2021080/docs/retrieving-sales-units
   - /2021080/docs/en/retrieving-sales-units
+  - /docs/retrieving-sales-units
+  - /docs/en/retrieving-sales-units
 ---
 
 This endpoint allows to retrieve sales units of concrete products.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration).
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration).
+* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html).
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html).
 
 
 
@@ -90,7 +93,7 @@ Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1
 | measurementUnitCode | string | Code of the measurement unit. | 
 
 
-See [Retrieving Measurement Units](https://documentation.spryker.com/docs/retrieving-measurement-units) for more information on managing the sales units.
+See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-measurement-units.html) for more information on managing the sales units.
 
 ## Possible errors
 
@@ -98,5 +101,5 @@ See [Retrieving Measurement Units](https://documentation.spryker.com/docs/retrie
 | --- | --- |
 |302| Concrete product is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 

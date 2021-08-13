@@ -1,6 +1,7 @@
 ---
 title: Understanding ticket status
 originalLink: https://documentation.spryker.com/v6/docs/understanding-ticket-status
+originalArticleId: 00b345b0-0fe8-41de-a641-8624660ef4b3
 redirect_from:
   - /v6/docs/understanding-ticket-status
   - /v6/docs/en/understanding-ticket-status

@@ -2,6 +2,7 @@
 title: Developer Getting Started Guide
 description: This is a step-by-step checklist that you can follow  through all the stages of working with Spryker.
 originalLink: https://documentation.spryker.com/v4/docs/dev-getting-started
+originalArticleId: 284307e9-06ae-4388-a452-15ad1f85b622
 redirect_from:
   - /v4/docs/dev-getting-started
   - /v4/docs/en/dev-getting-started
@@ -13,13 +14,13 @@ We structured this page to be a step-by-step checklist that you will be able to 
 
 ## Step 1: Install Spryker
 
-Typical Spryker installation process includes installing a proper starting point for your project. The best option to start projects is to use either a [B2B Demo Shop](https://documentation.spryker.com/v4/docs/b2b-suite#b2b-demo-shop) or a [B2C Demo Shop](https://documentation.spryker.com/v4/docs/b2c-suite#b2c-demo-shop). Thr Demo Shop is a set of Spryker Commerce OS components selected for a specific type of business and project. They are fully functional and can be used both for demonstration purposes and as a boilerplate for your project. Even if a shop does not provide all the capabilities you need, you can install the necessary components later.
+Typical Spryker installation process includes installing a proper starting point for your project. The best option to start projects is to use either a [B2B Demo Shop](/docs/scos/user/about-spryker/202001.0/b2b-suite.html#b2b-demo-shop) or a [B2C Demo Shop](/docs/scos/user/about-spryker/202001.0/b2c-suite.html#b2c-demo-shop). Thr Demo Shop is a set of Spryker Commerce OS components selected for a specific type of business and project. They are fully functional and can be used both for demonstration purposes and as a boilerplate for your project. Even if a shop does not provide all the capabilities you need, you can install the necessary components later.
 
 You can choose from the following options:
 
-* [B2B Demo Shop](https://documentation.spryker.com/v4/docs/b2b-suite#b2b-demo-shop) - a boilerplate for B2B commerce projects;
-* [B2C Demo Shop](https://documentation.spryker.com/v4/docs/b2c-suite#b2c-demo-shop) - a starting point for B2C implementations;
-* Separate [Features](https://documentation.spryker.com/v4/docs/features) and [Modules](https://documentation.spryker.com/v20/docs) - you can also add separate features and modules to the both Demo Shops to expand their functionality.
+* [B2B Demo Shop](/docs/scos/user/about-spryker/202001.0/b2b-suite.html#b2b-demo-shop) - a boilerplate for B2B commerce projects;
+* [B2C Demo Shop](/docs/scos/user/about-spryker/202001.0/b2c-suite.html#b2c-demo-shop) - a starting point for B2C implementations;
+* Separate [Features](/docs/scos/dev/features/202001.0/overview-of-the-feature-guides.html) and [Modules](https://documentation.spryker.com/v20/docs) - you can also add separate features and modules to the both Demo Shops to expand their functionality.
 
 ### Spryker in Docker
 We recommend starting with a docker-sdk environment. This option includes Docker and related tools to build images and run containers that match your requirements. 
@@ -36,7 +37,7 @@ Choose an Installation Guide that suits your needs best:
 
 |          Operating system               | B2B Shop                                                     | B2C Shop                                                     
 | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ 
-| DevVM on Linux / Mac OS | [B2B Demo Shop Installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/developer-guides/202001.0/installation/b2b-demo-shop-installation-guides/b2b-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html) | [B2C Demo Shop Installation: Mac OS or Linux, with Development Virtual Machine](https://documentation.spryker.com/v4/docs/installation-guide-b2c) 
+| DevVM on Linux / Mac OS | [B2B Demo Shop Installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/developer-guides/202001.0/installation/b2b-demo-shop-installation-guides/b2b-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html) | [B2C Demo Shop Installation: Mac OS or Linux, with Development Virtual Machine](https://documentation.spryker.com/v4/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm) 
 | DevVM on Windows        | [B2B Demo Shop Installation: Windows, with Development Virtual Machine](/docs/scos/dev/developer-guides/202001.0/installation/b2b-demo-shop-installation-guides/b2b-demo-shop-installation-windows-with-development-virtual-machine.html) | [B2C Demo Shop Installation: Windows, with Development Virtual Machine](/docs/scos/dev/developer-guides/202001.0/installation/b2c-demo-shop-installation-guides/b2c-demo-shop-installation-windows-with-development-virtual-machine.html) 
 
 ### Independent Installation, Without the Development Virtual Machine
@@ -56,7 +57,7 @@ After installing, make sure to have a look at [Post-Installation Steps and Addit
 Once you have completed the installation, you can start managing the modules. A module is a single functional unit, that has well-defined dependencies, and can be used and updated independently. 
 {% info_block infoBox %}
 
-See [Spryker Release Process](/docs/scos/dev/about-spryker/202001.0/spryker-release-process.html) to learn about our module and feature release process, and to define your strategy as to taking the Spryker updates. 
+See [Spryker Release Process](/docs/scos/user/about-spryker/202001.0/spryker-release-process.html) to learn about our module and feature release process, and to define your strategy as to taking the Spryker updates. 
 
 {% endinfo_block %}
 
@@ -83,10 +84,10 @@ Your next step will be the configuration of the Spryker Commerce OS installation
 1. Define how to manage and configure the settings in the configuration files. See [Configuration Management](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/configuration-management.html) for details on how to do that.
 2. Configure your environment: 
     *   [Database](/docs/scos/dev/developer-guides/202001.0/installation/configuring-the-database-server.html)
-    *   [Redis](https://documentation.spryker.com/v4/docs/redis-configruation-201903)
+    *   [Redis](/docs/scos/dev/developer-guides/202001.0/installation/redis-configuration.html)
     *   [ElasticSearch](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-interaction/search/configuring-elasticsearch.html)
     *   [Queue](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/queue/queue.html)
-3. [Congiure stores](https://documentation.spryker.com/v4/docs/multiple-stores#configure-stores) to have one or multiple stores in your online shop.
+3. [Congiure stores](/docs/scos/dev/features/202001.0/internationalization/multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
 4. [Schedule tasks](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/cronjob-scheduling.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
@@ -126,12 +127,12 @@ Get to know the parts of the Spryker Development Virtual Machine with which we s
 
 Select one of the topics below depending on what you want to do next:
 
-* [About Spryker](https://documentation.spryker.com/v4/docs/demoshops): general information about Spryker, news, and release notes.
-* [Features](https://documentation.spryker.com/v4/docs/features): general information about the Spryker features.
+* [About Spryker](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops): general information about Spryker, news, and release notes.
+* [Features](/docs/scos/dev/features/202001.0/overview-of-the-feature-guides.html): general information about the Spryker features.
 * [Glue REST API](/docs/scos/dev/glue-api/202001.0/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
 * [User Guides](/docs/scos/user/user-guides/202001.0/about-user-guides.html): step-by-step Backoffice and Storefront user guides.
 * [Developer Guides](/docs/scos/dev/developer-guides/202001.0/about-the-developer-guides.html): technical information and guides for developers. 
-* [Technology Partners](https://documentation.spryker.com/v4/docs/partner-integration): Spryker technology partners information and integration guides.
+* [Technology Partners](/docs/scos/dev/technology-partners/202001.0/technology-partner-integration.html): Spryker technology partners information and integration guides.
 * [Migration and Integration Guides](/docs/scos/dev/migration-and-integration/202001.0/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules or features.
 * [Tutorials](/docs/scos/dev/tutorials/202001.0/about-tutorials.html): tutorials and HowTos.
 

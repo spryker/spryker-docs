@@ -1,9 +1,12 @@
 ---
 title: Cart
 originalLink: https://documentation.spryker.com/2021080/docs/cart
+originalArticleId: eb211809-3be4-4b8a-bf28-a2c79140b11c
 redirect_from:
   - /2021080/docs/cart
   - /2021080/docs/en/cart
+  - /docs/cart
+  - /docs/en/cart
 ---
 
 The *Cart* feature allows your customers to add products to their cart by selecting the desired quantity of a product. Inside the cart, customers can change the quantity of items, switch between different variants of the product, add notes, apply vouchers and remove items. 
@@ -12,9 +15,9 @@ Any changes the customer makes within the cart trigger an automatic sum-recalcul
 
 The persistent cart functionality lets authenticated customers store their cart throughout multiple sessions. The Cart feature also ensures that your business rules, such as discounts, taxes, or shipping, are applied, based on the customers' final choice of items. 
 
-Your customers can place orders faster by adding simple products to cart from the *Category* page. They can add products with one [product variant](https://documentation.spryker.com/docs/product-abstraction) to cart with one click. 
+Your customers can place orders faster by adding simple products to cart from the *Category* page. They can add products with one [product variant](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html) to cart with one click. 
 
-The feature supports [product groups](https://documentation.spryker.com/docs/product-group). If simple products are grouped, you can browse and add these products to cart from the *Category* page.
+The feature supports [product groups](https://documentation.spryker.com/2021080/docs/product-groups). If simple products are grouped, you can browse and add these products to cart from the *Category* page.
 
 In a Spryker shop, the shopping cart widget is displayed in the header. With the widget, customers can easily create new shopping carts and view the existing ones by hovering over the cart icon.
 

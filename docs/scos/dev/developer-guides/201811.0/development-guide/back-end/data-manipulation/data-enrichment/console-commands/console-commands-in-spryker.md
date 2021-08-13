@@ -2,6 +2,7 @@
 title: Console Commands in Spryker
 description: The list of console commands contains the command names together with a short description of what the command does.
 originalLink: https://documentation.spryker.com/v1/docs/console
+originalArticleId: 522da5a1-6b93-41f0-af11-d8f4ae05da07
 redirect_from:
   - /v1/docs/console
   - /v1/docs/en/console

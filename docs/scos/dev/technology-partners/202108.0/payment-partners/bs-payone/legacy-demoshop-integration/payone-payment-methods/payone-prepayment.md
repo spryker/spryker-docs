@@ -2,9 +2,12 @@
 title: PayOne - Prepayment
 description: Integrate prepayment through Payone into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/2021080/docs/payone-prepayment
+originalArticleId: f5e8ebb9-0fd4-4048-88e2-2d8a45bb4c06
 redirect_from:
   - /2021080/docs/payone-prepayment
   - /2021080/docs/en/payone-prepayment
+  - /docs/payone-prepayment
+  - /docs/en/payone-prepayment
 ---
 
 Prepayment method is a safe alternative to payments involving credit cards or debit cards (such as online banking transfer). Usually bank transfer would require manual processing to mark transaction as cancelled or completed, but the process is fully automated through the integration with the Payone platform.

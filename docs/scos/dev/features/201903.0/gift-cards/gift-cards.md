@@ -2,6 +2,7 @@
 title: Gift Cards
 description: Effectively up your sales by allowing your customers to purchase and redeem gift cards
 originalLink: https://documentation.spryker.com/v2/docs/gift-cards
+originalArticleId: a0211065-6f52-4407-b0a6-fc00543f3fb6
 redirect_from:
   - /v2/docs/gift-cards
   - /v2/docs/en/gift-cards

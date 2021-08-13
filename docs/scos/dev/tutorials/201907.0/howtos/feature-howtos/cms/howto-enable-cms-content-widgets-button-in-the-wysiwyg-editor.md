@@ -1,6 +1,7 @@
 ---
 title: HowTo - Enable CMS Content Widgets Button in the WYSIWYG Editor
 originalLink: https://documentation.spryker.com/v3/docs/ht-enable-cms-content-widgets-button-201907
+originalArticleId: c120e8d6-07f9-4da6-a3e0-9b17fc7c5bf2
 redirect_from:
   - /v3/docs/ht-enable-cms-content-widgets-button-201907
   - /v3/docs/en/ht-enable-cms-content-widgets-button-201907

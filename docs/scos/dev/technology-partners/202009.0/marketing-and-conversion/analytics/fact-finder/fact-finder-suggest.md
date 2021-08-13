@@ -2,6 +2,7 @@
 title: FACT-Finder - Suggest
 description: The FACT-Finder Suggest module enables you to provide customers with suggested search terms while they are entering a search term.
 originalLink: https://documentation.spryker.com/v6/docs/search-factfinder-suggest
+originalArticleId: 05640775-8f5c-410f-bec0-eec1328beafb
 redirect_from:
   - /v6/docs/search-factfinder-suggest
   - /v6/docs/en/search-factfinder-suggest
@@ -13,7 +14,7 @@ The FACT-Finder Suggest module enables you to provide customers with suggested s
 
 ## Usage
 
-To check example implementation, please see  [Fact Finder - Search Integration](/docs/scos/dev/technology-partners/202001.0/marketing-and-conversion/analytics/fact-finder/fact-finder-search.html). Typing in a search box triggers an API suggest request. By default , use `/fact-finder/suggestions` to get suggestions. Or you can use the `FactFinderSdk` module to make a suggest request.
+To check example implementation, please see  [Fact Finder - Search Integration](/docs/scos/dev/technology-partners/202009.0/marketing-and-conversion/analytics/fact-finder/fact-finder-search.html). Typing in a search box triggers an API suggest request. By default , use `/fact-finder/suggestions` to get suggestions. Or you can use the `FactFinderSdk` module to make a suggest request.
 
 It will return a `FactFinderSdkSuggestResponseTransfer` object that contains an array of suggestions.
 

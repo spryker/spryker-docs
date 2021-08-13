@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Checkout - Legacy Demoshop
 originalLink: https://documentation.spryker.com/v1/docs/tutorial-checkout-legacy-demoshop
+originalArticleId: fe818978-f240-4d5e-bdde-70c33f38e4ef
 redirect_from:
   - /v1/docs/tutorial-checkout-legacy-demoshop
   - /v1/docs/en/tutorial-checkout-legacy-demoshop

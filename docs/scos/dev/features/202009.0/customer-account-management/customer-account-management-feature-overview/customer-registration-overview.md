@@ -1,6 +1,7 @@
 ---
 title: Customer Registration overview
 originalLink: https://documentation.spryker.com/v6/docs/customer-registration-overview
+originalArticleId: 2e6aaeee-ae30-4325-88d8-aac38dbdbd08
 redirect_from:
   - /v6/docs/customer-registration-overview
   - /v6/docs/en/customer-registration-overview
@@ -10,7 +11,7 @@ For the new customers registration in a Spryker shop, double opt-in is used. The
 
 {% info_block infoBox "Info" %}
 
-Customers must always verify their email addresses, irrespective of the fact how they got registered: [by themselves on the Storefront](https://documentation.spryker.com/docs/shop-guide-creating-an-account), [by a Back Office user in the Back Office](https://documentation.spryker.com/docs/en/managing-customers#creating-a-customer), or [via the Glue API](https://documentation.spryker.com/docs/en/customers#create-a-customer).
+Customers must always verify their email addresses, irrespective of the fact how they got registered: [by themselves on the Storefront](/docs/scos/dev/features/202009.0/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html), [by a Back Office user in the Back Office](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer), or [via the Glue API](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customers.html#create-a-customer).
 
 {% endinfo_block %}
 
@@ -28,7 +29,7 @@ The *regular customer registration* implies registration triggered from the regi
 
 2. The customer clicks on the verification link in the email and turns out on a login page with the message saying that the account is verified.
 
-*Checkout customer registration* implies that customer registers during the checkout. This means that the customer puts products to cart as a guest user, and at the [Login step of the checkout](https://documentation.spryker.com/docs/shop-guide-login-step), chooses to sign up. The registration flow is then the same as for the regular registration. 
+*Checkout customer registration* implies that customer registers during the checkout. This means that the customer puts products to cart as a guest user, and at the [Login step of the checkout](/docs/scos/dev/features/202009.0/checkout/checkout-feature-overview/multi-step-checkout.html), chooses to sign up. The registration flow is then the same as for the regular registration. 
 
 {% info_block infoBox "Info" %}
 
@@ -38,11 +39,11 @@ When registering during the checkout, the cart, that the customer created as the
 
 A customer can also be *registered by a Back Office User*. In this case, the customer also receives the double opt-in email for verification. Until the customer verifies their account via the link in the email, their status is *Unverified* in the Back Office. Once the customer clicked the verification link, the status changes to *Verified*.
 
-See [Creating a Customer](https://documentation.spryker.com/docs/en/managing-customers#creating-a-customer) for details on how a Back Office user can create a customer.
+See [Creating a Customer](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer) for details on how a Back Office user can create a customer.
 
-Likewise, if a customer gets *registered via an API*, they also receive the double opt-in email with the verification link. They must verify their account by clicking the link in the email, before you can [authenticate them via API](https://documentation.spryker.com/docs/authentication-and-authorization#user-authentication).
+Likewise, if a customer gets *registered via an API*, they also receive the double opt-in email with the verification link. They must verify their account by clicking the link in the email, before you can [authenticate them via API](/docs/scos/dev/glue-api-guides/202009.0/authentication-and-authorization.html#user-authentication).
 
-See [Authentication and Authorization](https://documentation.spryker.com/docs/authentication-and-authorization#authentication-and-authorization) for details on registration via API.
+See [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202009.0/authentication-and-authorization.html#authentication-and-authorization) for details on registration via API.
 
 
 ## If you are: 

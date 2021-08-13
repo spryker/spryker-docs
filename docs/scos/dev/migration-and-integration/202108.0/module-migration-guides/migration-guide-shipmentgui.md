@@ -2,9 +2,12 @@
 title: Migration Guide - ShipmentGui
 description: Use the guide to migrate to a new version of the ShipmentGui module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment-gui
+originalArticleId: 2225c9ac-ef76-456b-b6f3-a425521eb4ea
 redirect_from:
   - /2021080/docs/mg-shipment-gui
   - /2021080/docs/en/mg-shipment-gui
+  - /docs/mg-shipment-gui
+  - /docs/en/mg-shipment-gui
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0

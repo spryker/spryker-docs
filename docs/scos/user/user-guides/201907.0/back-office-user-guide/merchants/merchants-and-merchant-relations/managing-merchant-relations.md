@@ -2,6 +2,7 @@
 title: Managing Merchant Relations
 description: Use the procedures to create, edit, and delete merchant relations, or sort them by the company for which the merchant relation has been created.
 originalLink: https://documentation.spryker.com/v3/docs/managing-merchant-relations
+originalArticleId: 0f5119a7-f2cf-4cba-8a61-020b7f49a33c
 redirect_from:
   - /v3/docs/managing-merchant-relations
   - /v3/docs/en/managing-merchant-relations
@@ -22,7 +23,7 @@ To create a merchant relation:
 4. Select the business unit owner based on the company you selected and assigned business unit(s) based on the business unit owner. 
 5. Once done, click **Save**.
 
-The merchant is created and can be used to create merchant specific prices (see [Creating an Abstract Product](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/abstract-products/creating-an-abstract-product.html) and [Creating a Product Variant](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/concrete-products/creating-a-product-variant.html) to know more). As well as they can be used to create merchant relationship thresholds (see [Managing Merchant Relationships Thresholds](/docs/scos/user/user-guides/202001.0/back-office-user-guide/thresholds/merchant-relationships/managing-merchant-relationships-thresholds.html) for more details).
+The merchant is created and can be used to create merchant specific prices (see [Creating an Abstract Product](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/abstract-products/creating-an-abstract-product.html) and [Creating a Product Variant](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/concrete-products/creating-a-product-variant.html) to know more). As well as they can be used to create merchant relationship thresholds (see [Managing Merchant Relationships Thresholds](/docs/scos/user/user-guides/201907.0/back-office-user-guide/thresholds/merchant-relationships/managing-merchant-relationships-thresholds.html) for more details).
 ***
 ## Sorting the Merchant Relation Table
 You can sort the table of merchant relations based on the company for which the merchant relation has been created.

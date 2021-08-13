@@ -2,6 +2,7 @@
 title: Code buckets
 description: Code buckets enable projects to define, implement, and execute different business logics based on different HTTP or console requests.
 originalLink: https://documentation.spryker.com/v6/docs/code-buckets
+originalArticleId: 747475de-ef8a-4f33-ac69-cd823c5e5edb
 redirect_from:
   - /v6/docs/code-buckets
   - /v6/docs/en/code-buckets
@@ -59,7 +60,7 @@ The inheritance starts on the top level and, if a resolvable PHP class is not fo
 
 {% info_block infoBox %}
 
-If you customize the core code in your project by extending a resolvable class from the core, and your project namespaces are configured properly, because of the namespace precedence and the class resolving system, the project code is automatically wired and executed when necessary. Learn more about extending the core in [Core extension](https://documentation.spryker.com/docs/core-extension).
+If you customize the core code in your project by extending a resolvable class from the core, and your project namespaces are configured properly, because of the namespace precedence and the class resolving system, the project code is automatically wired and executed when necessary. Learn more about extending the core in [Core extension](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-the-core.html).
 
 {% endinfo_block %}
 
@@ -146,7 +147,7 @@ Another way to customize an application for different code buckets is to configu
 Check out the configuration loading sequence in the diagram below to learn how to set up your project configuration for different environments.
 {% info_block infoBox %}
 
-To learn more about configuration management, see [Configuration management](https://documentation.spryker.com/docs/configuration-management ).
+To learn more about configuration management, see [Configuration management](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/configuration-management.html).
 
 {% endinfo_block %}
 

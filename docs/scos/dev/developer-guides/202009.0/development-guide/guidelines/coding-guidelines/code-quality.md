@@ -2,6 +2,7 @@
 title: Code Quality
 description: Spryker Commerce OS’s code base receives very high scores in terms of quality measures, indicating significantly higher code quality than many other ecommerce solutions.
 originalLink: https://documentation.spryker.com/v6/docs/code-quality
+originalArticleId: 0eed008d-e16b-4688-8d21-5b8bca24526f
 redirect_from:
   - /v6/docs/code-quality
   - /v6/docs/en/code-quality

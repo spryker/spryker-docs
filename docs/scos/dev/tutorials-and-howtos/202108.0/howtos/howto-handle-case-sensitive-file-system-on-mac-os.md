@@ -2,9 +2,12 @@
 title: HowTo - Handle Case Sensitive File-System on Mac OS
 description: Use the guide to change the case-sensitive file system on Mac OS.
 originalLink: https://documentation.spryker.com/2021080/docs/ht-case-sensitive-file-system-mac
+originalArticleId: e2843984-3d25-4bef-b0d3-d7eb764591bd
 redirect_from:
   - /2021080/docs/ht-case-sensitive-file-system-mac
   - /2021080/docs/en/ht-case-sensitive-file-system-mac
+  - /docs/ht-case-sensitive-file-system-mac
+  - /docs/en/ht-case-sensitive-file-system-mac
 ---
 
 By default Mac OS uses a case-insensitive file system to support compatibility to applications (e.g. Photoshop) provided for the operating system. The file-system itself is capable of working in a case-sensitive mode. There are a number of options on how to change case sensitivity:

@@ -1,6 +1,7 @@
 ---
 title: Custom order Reference Feature Overview
 originalLink: https://documentation.spryker.com/v5/docs/custom-order-reference-feature-overview
+originalArticleId: dda7fe3d-8ebc-4586-80c8-dc9d93250d6d
 redirect_from:
   - /v5/docs/custom-order-reference-feature-overview
   - /v5/docs/en/custom-order-reference-feature-overview
@@ -46,11 +47,11 @@ When working with the order in the Back Office, you, as a Back Office user, can 
 ![zed-custom-order-ref-new](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/zed-custom-order-ref-new.gif){height="" width=""}
 
 ## Interaction of the Custom Order Reference with the RFQ, Approval Process, and Share Cart via Link
-If you submit a [quote request](https://documentation.spryker.com/docs/en/quotation-process-rfq-feature-overview-201907) and then convert it to the shopping cart, the cart gets locked. However, adding and updating the customer order reference for the locked cart is still possible. 
+If you submit a [quote request](https://documentation.spryker.com/v5/docs/en/quotation-process-feature-overview) and then convert it to the shopping cart, the cart gets locked. However, adding and updating the customer order reference for the locked cart is still possible. 
 
-In the [Approval Process](https://documentation.spryker.com/docs/en/approval-process) scenarios, both approver and buyer can add or edit the custom order reference during the checkout.
+In the [Approval Process](/docs/scos/dev/features/202005.0/workflow-and-process-management/approval-process/approval-process.html) scenarios, both approver and buyer can add or edit the custom order reference during the checkout.
 
-When [sharing a cart via a link with external users](https://documentation.spryker.com/docs/en/unique-url-per-cart-for-easy-sharing-overview-201907), they can only view a custom order reference. However, when [sharing a cart via a link with internal users](https://documentation.spryker.com/docs/en/unique-url-per-cart-for-easy-sharing-overview-201907), they can update a custom order reference for the shopping cart with the read-only and full-access permissions. 
+When [sharing a cart via a link with external users](https://documentation.spryker.com/v5/docs/en/persistent-cart-sharing-feature-overview), they can only view a custom order reference. However, when [sharing a cart via a link with internal users](https://documentation.spryker.com/v5/docs/en/persistent-cart-sharing-feature-overview), they can update a custom order reference for the shopping cart with the read-only and full-access permissions. 
 
 
 ## Current Constraints

@@ -2,6 +2,7 @@
 title: Installing the Product CMS Block
 description: The guide describes the process of installing the Product CMS Block into your project.
 originalLink: https://documentation.spryker.com/v3/docs/product-block
+originalArticleId: caf9c694-3afb-497f-96b8-32f269c443a3
 redirect_from:
   - /v3/docs/product-block
   - /v3/docs/en/product-block

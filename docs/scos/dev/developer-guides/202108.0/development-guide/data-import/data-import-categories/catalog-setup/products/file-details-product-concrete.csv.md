@@ -1,12 +1,15 @@
 ---
 title: File details- product_concrete.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-concretecsv
+originalArticleId: bff2c63c-1239-4c76-9c74-40fa3c9eb19d
 redirect_from:
   - /2021080/docs/file-details-product-concretecsv
   - /2021080/docs/en/file-details-product-concretecsv
+  - /docs/file-details-product-concretecsv
+  - /docs/en/file-details-product-concretecsv
 ---
 
-This article contains content of the **product_concrete.csv** file to configure [Concrete Product](https://documentation.spryker.com/docs/product-abstraction) information on your Spryker Demo Shop.
+This article contains content of the **product_concrete.csv** file to configure [Concrete Product](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -35,7 +38,7 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-*[ product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+*[ product_abstract.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Recommendations & Other Information
 Every concrete product is linked to an abstract one via the `abstract_sku` field.

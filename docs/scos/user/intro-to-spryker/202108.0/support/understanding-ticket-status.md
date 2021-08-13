@@ -1,9 +1,12 @@
 ---
 title: Understanding ticket status
 originalLink: https://documentation.spryker.com/2021080/docs/understanding-ticket-status
+originalArticleId: ca538168-f995-48b4-8caf-d295647d2701
 redirect_from:
   - /2021080/docs/understanding-ticket-status
   - /2021080/docs/en/understanding-ticket-status
+  - /docs/understanding-ticket-status
+  - /docs/en/understanding-ticket-status
 ---
 
 When you report an issue and we discover an underlying problem with Spryker, we create a Jira Bug Ticket. This ticket will then be handed over to our development department. Our colleagues will then evaluate how to best address the problem and resolve it. After the issue is resolved it is then released in our repositories.

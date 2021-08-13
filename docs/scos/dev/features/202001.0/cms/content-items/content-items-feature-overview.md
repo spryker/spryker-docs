@@ -2,6 +2,7 @@
 title: Content Items Feature Overview
 description: Content item is a preserved content piece that can be used in multiple pages.
 originalLink: https://documentation.spryker.com/v4/docs/content-items-feature-overview
+originalArticleId: 76dc6e17-882e-4237-b312-19f902739bc3
 redirect_from:
   - /v4/docs/content-items-feature-overview
   - /v4/docs/en/content-items-feature-overview
@@ -94,7 +95,7 @@ You can select a template when inserting a content item widget into a CMS block.
 
 </details>
 
-A developer can create and customize templates. See [Adding a Template for a Content Item Widget](https://documentation.spryker.com/v4/docs/ht-create-cms-templates#adding-a-template-for-a-content-item-widget) for more details.
+A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials/202001.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget) for more details.
 
 
 

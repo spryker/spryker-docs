@@ -2,6 +2,7 @@
 title: Retrieving sales units
 description: Retrieve sales units of concrete products.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-sales-units
+originalArticleId: f42aee00-c114-496f-a098-c2eb0461da06
 redirect_from:
   - /v6/docs/retrieving-sales-units
   - /v6/docs/en/retrieving-sales-units
@@ -11,8 +12,8 @@ This endpoint allows to retrieve sales units of concrete products.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration).
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration).
+* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html).
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html).
 
 
 
@@ -90,7 +91,7 @@ Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1
 | measurementUnitCode | string | Code of the measurement unit. | 
 
 
-See [Retrieving Measurement Units](https://documentation.spryker.com/docs/retrieving-measurement-units) for more information on managing the sales units.
+See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/202009.0/retrieving-measurement-units.html) for more information on managing the sales units.
 
 ## Possible errors
 
@@ -98,5 +99,5 @@ See [Retrieving Measurement Units](https://documentation.spryker.com/docs/retrie
 | --- | --- |
 |302| Concrete product is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 

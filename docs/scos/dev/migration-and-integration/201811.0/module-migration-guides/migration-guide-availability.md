@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Availability
 originalLink: https://documentation.spryker.com/v1/docs/mg-availability
+originalArticleId: 76805acb-790a-427d-b0b5-b82584325214
 redirect_from:
   - /v1/docs/mg-availability
   - /v1/docs/en/mg-availability

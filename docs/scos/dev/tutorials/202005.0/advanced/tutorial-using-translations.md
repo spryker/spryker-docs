@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Using Translations
 originalLink: https://documentation.spryker.com/v5/docs/t-using-translations
+originalArticleId: 00c23b4c-82b8-4d81-a6d5-f279dfe1619e
 redirect_from:
   - /v5/docs/t-using-translations
   - /v5/docs/en/t-using-translations

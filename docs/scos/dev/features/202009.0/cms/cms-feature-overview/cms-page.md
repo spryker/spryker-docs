@@ -2,6 +2,7 @@
 title: CMS page
 description: Summary of the CMS page functionality.
 originalLink: https://documentation.spryker.com/v6/docs/cms-page
+originalArticleId: 06a6ddcb-d70d-4c16-a341-db0c9cbcae81
 redirect_from:
   - /v6/docs/cms-page
   - /v6/docs/en/cms-page
@@ -80,5 +81,5 @@ With the CMS Pages feature, you can:
     
 ## See next
 
-* [CMS block](https://documentation.spryker.com/docs/cms-block)
+* [CMS block](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-block.html)
 

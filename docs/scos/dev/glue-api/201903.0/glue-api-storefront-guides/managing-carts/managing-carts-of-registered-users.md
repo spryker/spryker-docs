@@ -1,6 +1,7 @@
 ---
 title: Managing Carts of Registered Users
 originalLink: https://documentation.spryker.com/v2/docs/managing-carts-of-registered-users
+originalArticleId: 3ec29311-b6e8-432d-a65c-5ce49b67a713
 redirect_from:
   - /v2/docs/managing-carts-of-registered-users
   - /v2/docs/en/managing-carts-of-registered-users

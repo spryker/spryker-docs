@@ -2,9 +2,12 @@
 title: Econda - Cross Sell
 description: Cross Sell takes the online behavior of your visitors, along with current product and website interactions and comes up with intelligent, dynamic, relevant recommendations for your visitors.
 originalLink: https://documentation.spryker.com/2021080/docs/econda-cross-sell
+originalArticleId: 66c188de-e8fa-4643-872c-98dc97d37c27
 redirect_from:
   - /2021080/docs/econda-cross-sell
   - /2021080/docs/en/econda-cross-sell
+  - /docs/econda-cross-sell
+  - /docs/en/econda-cross-sell
 ---
 
 Cross sell is highly customizable and it depends on your setup. Please refer to [Econda offical documentation](https://support.econda.de/display/CSDE/Control+Panel).
@@ -24,7 +27,7 @@ An Econda ID can be found in your account details (see image below).
 
 These instructions assume  you are using Antelope<!-- add link https://documentation.spryker.com/front-end_developer_guide/demoshop/antelope_global_tool/overview--> for your Yves assets management. If your project uses other frontend automation you can still use the instructions as guidelines.
 
-Before getting started we recommend that you read the following topics: [asset management](https://documentation.spryker.com/v4/docs/frontend-overview#asset-management)
+Before getting started we recommend that you read the following topics: [asset management](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/legacy-demoshop/frontend-overview.html#asset-management)
 and [Twig.](https://documentation.spryker.com/front-end_developer_guide/demoshop/twig_templates/twig-overview.htm)
 
 ## Installing assets

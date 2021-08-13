@@ -2,6 +2,7 @@
 title: Managing Payment Methods
 description: Use the guide to view, update, activate, and assign to stores payment methods in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/managing-payment-methods
+originalArticleId: c38e80af-d839-4196-ab29-9d93696a6279
 redirect_from:
   - /v4/docs/managing-payment-methods
   - /v4/docs/en/managing-payment-methods

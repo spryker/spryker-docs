@@ -1,9 +1,12 @@
 ---
 title: File details- category_template.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-category-templatecsv
+originalArticleId: fac13464-5ddc-4b2a-8dff-f257e196e222
 redirect_from:
   - /2021080/docs/file-details-category-templatecsv
   - /2021080/docs/en/file-details-category-templatecsv
+  - /docs/file-details-category-templatecsv
+  - /docs/en/file-details-category-templatecsv
 ---
 
 This article contains content of the **category_template.csv** file to configure Category Template information on your Spryker Demo Shop.

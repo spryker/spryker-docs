@@ -2,6 +2,7 @@
 title: Migration Guide - ShoppingListPage
 description: Use the guide to learn how to update the ShoppingListPage module to a newer version.
 originalLink: https://documentation.spryker.com/v5/docs/mg-shopping-list-page
+originalArticleId: 4c58b494-ff07-411f-ac08-c6759f7e9c74
 redirect_from:
   - /v5/docs/mg-shopping-list-page
   - /v5/docs/en/mg-shopping-list-page
@@ -16,7 +17,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 From version 2 we have removed the disabled users from the shared list. The ability to enable/disable users was added to the `CompanyUser` module version 2.0.0.
 
 **To upgrade to the new version of the module, do the following:**
-1. Upgrade the CompanyUser module to version 2.0.0. See [Migration Guide - CompanyUser](https://documentation.spryker.com/docs/en/mg-companyuser#upgrading-from-version-1-0-0-to-version-2-0-0)  for more details:
+1. Upgrade the CompanyUser module to version 2.0.0. See [Migration Guide - CompanyUser](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-companyuser.html#upgrading-from-version-1-0-0-to-version-2-0-0)  for more details:
 
 ```yaml
 composer require spryker/company-user: “^2.0.0”

@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Interacting with Third Party Payment Providers via Glue API
 originalLink: https://documentation.spryker.com/v3/docs/t-interacting-with-third-party-payment-providers-via-glue-api
+originalArticleId: cc2f382a-8333-4b32-bd18-eedc9944d8b6
 redirect_from:
   - /v3/docs/t-interacting-with-third-party-payment-providers-via-glue-api
   - /v3/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
@@ -92,7 +93,7 @@ The plugin must extend the `OrderPaymentUpdaterPluginInterface` and implement th
 To help you understand which payments need to be processed, you can use the optional paymentIdentifier field in POST requests to the `/order-payments` endpoint. To make sure it is always present in a request, you may require the API client to set the field to a specific value to invoke your payment plugin. The value of the field can be retrieved using the `getPaymentIdentifier` helper function.
 
 {% info_block infoBox %}
-For details, see [Updating Payment Data](https://documentation.spryker.com/v3/docs/checking-out-purchases-and-getting-checkout-data-201907#updating-payment-data
+For details, see [Updating Payment Data](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/checking-out-purchases-and-getting-checkout-data.html#updating-payment-data
 {% endinfo_block %}.)
 
 <details open>

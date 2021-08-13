@@ -2,6 +2,7 @@
 title: Conceptual overview
 description: Spryker is a Commerce Operating System composed of the following applications- Storefront (Yves), Backoffice (Zed), Storefront API (Glue).
 originalLink: https://documentation.spryker.com/v6/docs/conceptual-overview
+originalArticleId: ed99bf4d-7db7-4ec3-abd6-40a5a5255a1a
 redirect_from:
   - /v6/docs/conceptual-overview
   - /v6/docs/en/conceptual-overview
@@ -18,10 +19,10 @@ The following diagram shows the conceptual parts of the application and their co
 
 The Spryker OS provides the following Application Layers:
 
-* [Yves](https://documentation.spryker.com/docs/about-yves) - provides frontend functionality with the light-weight data access.
-* [Zed](https://documentation.spryker.com/docs/about-zed) - provides backoffice/backend functionality with heavy calculations.
-* [Glue](https://documentation.spryker.com/docs/glue-infrastructure) - provides infrastructure for API with the mixed data access.
-* [Client](https://documentation.spryker.com/docs/client) - provides data access infrastructure.
+* [Yves](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/yves/yves-overview.html) - provides frontend functionality with the light-weight data access.
+* [Zed](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/zed/zed-overview.html) - provides backoffice/backend functionality with heavy calculations.
+* [Glue](/docs/scos/dev/developer-guides/202009.0/development-guide/glue-api/glue-infrastructure.html) - provides infrastructure for API with the mixed data access.
+* [Client](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/client/client.html) - provides data access infrastructure.
 * Shared - provides shared code abstractions to be used in other Application Layers of the same module.
 * Service - provides infrastructure for the stateless operations, usually utils.
 
@@ -29,7 +30,7 @@ Application Layers structure supports you in a better conceptual decoupling and 
 
 {% info_block infoBox %}
 
-See [Programming Concepts](https://documentation.spryker.com/docs/programming-concepts) to learn about the Spryker building blocks contained in each of the Application Layers.
+See [Programming Concepts](/docs/scos/dev/developer-guides/202009.0/architecture-guide/programming-concepts.html) to learn about the Spryker building blocks contained in each of the Application Layers.
 
 {% endinfo_block %}
 
@@ -71,10 +72,10 @@ With data separation comes the question: how to sync data between both applicati
 
 The idea behind this concept is that the necessary data (stored in the relational database) is being watched for changes (create, update, delete). When a change occurs, the relevant data gets published to the relevant place (Search and/or Storage). It is an eventually consistent method of providing data for the front-end.
 
-For more details on how Publish & Sync works, see [Publish and Synchronization ](https://documentation.spryker.com/docs/publish-and-synchronization).
+For more details on how Publish & Sync works, see [Publish and Synchronization ](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 ## Where to go from here?
 
-* If you would like to know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](https://documentation.spryker.com/docs/modules-and-layers).
-* If you want to know more about the building blocks of Spryker, see [Programming Concepts](https://documentation.spryker.com/docs/programming-concepts).
+* If you would like to know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/scos/dev/developer-guides/202009.0/architecture-guide/modules-and-layers.html).
+* If you want to know more about the building blocks of Spryker, see [Programming Concepts](/docs/scos/dev/developer-guides/202009.0/architecture-guide/programming-concepts.html).
 

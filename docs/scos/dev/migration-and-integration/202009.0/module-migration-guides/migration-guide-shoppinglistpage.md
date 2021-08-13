@@ -2,6 +2,7 @@
 title: Migration Guide - ShoppingListPage
 description: Use the guide to learn how to update the ShoppingListPage module to a newer version.
 originalLink: https://documentation.spryker.com/v6/docs/mg-shopping-list-page
+originalArticleId: 148dd2d5-8730-444e-a90c-b8fd241e3328
 redirect_from:
   - /v6/docs/mg-shopping-list-page
   - /v6/docs/en/mg-shopping-list-page

@@ -2,6 +2,7 @@
 title: Retrieving abstract products
 description: Retrieve general information about abstract products and related resources.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-abstract-products
+originalArticleId: 0c7b28da-e935-4c00-a7c4-bd403ce8b5a7
 redirect_from:
   - /v6/docs/retrieving-abstract-products
   - /v6/docs/en/retrieving-abstract-products
@@ -12,9 +13,9 @@ This endpoint allows to retrieve general information about abstract products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration)
-* [Glue API: Product Options Feature Integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
+* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)
+* [Glue API: Product Options Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html)
 
 
 
@@ -1206,16 +1207,16 @@ To retrieve general information about an abstract product, send the request:
 
 For the attributes of other included resources, see:
 
-* [Retrieve image sets of an abstract product](https://documentation.spryker.com/docs/retrieving-image-sets-of-abstract-products#abstract-product-sets-response-attributes)
-* [Retrieve availability of an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-product-availability#abstract-product-availability-response-attributes)
+* [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
+* [Retrieve availability of an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-abstract-product-availability.html#abstract-product-availability-response-attributes)
 
-* [Retrieve prices of an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-product-prices#prices-response-attributes)
-* [Retrieve a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes)
-* [Retrieve a category node](https://documentation.spryker.com/docs/retrieving-category-nodes#category-nodes-response-attributes)
-* [Retrieve tax sets](https://documentation.spryker.com/docs/retrieving-tax-sets#tax-sets-response-attributes)
-* [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
-* [Retrieve product reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
-*  [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units)
+* [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-abstract-product-prices.html#prices-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/202009.0/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a category node](/docs/scos/dev/glue-api-guides/202009.0/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
+* [Retrieve tax sets](/docs/scos/dev/glue-api-guides/202009.0/managing-products/abstract-products/retrieving-tax-sets.html#tax-sets-response-attributes)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/202009.0/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve product reviews](/docs/scos/dev/glue-api-guides/202009.0/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
+*  [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/202009.0/retrieving-measurement-units.html)
 
 
 ## Possible errors
@@ -1225,4 +1226,4 @@ For the attributes of other included resources, see:
 | 301 |  Abstract product is not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).

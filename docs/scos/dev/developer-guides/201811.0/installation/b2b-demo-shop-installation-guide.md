@@ -2,6 +2,7 @@
 title: B2B Demo Shop Installation Guide
 description: This article provides step-by-step instructions on the B2B Demo Shop installation.
 originalLink: https://documentation.spryker.com/v1/docs/installation-guide-b2b
+originalArticleId: 94788bc3-a6c1-4efc-a145-11817093ea16
 redirect_from:
   - /v1/docs/installation-guide-b2b
   - /v1/docs/en/installation-guide-b2b

@@ -2,9 +2,12 @@
 title: Tutorial - Checkout and Step Engine - Spryker Commerce OS
 description: Use the tutorial to understand how to work with Checkout and Step Engine and to extend Spryker core by adding a voucher step and a voucher form.
 originalLink: https://documentation.spryker.com/2021080/docs/t-checkout-and-step-engine-spryker-commerce-os
+originalArticleId: 27252ff0-474b-47cf-9f0c-02b1ccdf2ad5
 redirect_from:
   - /2021080/docs/t-checkout-and-step-engine-spryker-commerce-os
   - /2021080/docs/en/t-checkout-and-step-engine-spryker-commerce-os
+  - /docs/t-checkout-and-step-engine-spryker-commerce-os
+  - /docs/en/t-checkout-and-step-engine-spryker-commerce-os
 ---
 
 {% info_block infoBox %}

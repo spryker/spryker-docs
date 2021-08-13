@@ -1,6 +1,7 @@
 ---
 title: HowTo - Display Custom Names for Order Item States on the Storefront
 originalLink: https://documentation.spryker.com/v6/docs/howto-display-custom-names-for-order-item-states-on-the-storefront
+originalArticleId: 63e04655-0dc7-47b2-b53f-764bd4ce246d
 redirect_from:
   - /v6/docs/howto-display-custom-names-for-order-item-states-on-the-storefront
   - /v6/docs/en/howto-display-custom-names-for-order-item-states-on-the-storefront

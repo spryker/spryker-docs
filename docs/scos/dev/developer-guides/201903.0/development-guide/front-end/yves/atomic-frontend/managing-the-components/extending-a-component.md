@@ -1,6 +1,7 @@
 ---
 title: Extending a Component
 originalLink: https://documentation.spryker.com/v2/docs/t-extend-component
+originalArticleId: 8f9a6bd6-20c7-4e60-82bc-954ec854d960
 redirect_from:
   - /v2/docs/t-extend-component
   - /v2/docs/en/t-extend-component

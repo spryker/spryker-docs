@@ -2,6 +2,7 @@
 title: Tutorial - Checkout - Legacy Demoshop
 description: Use the tutorial to add a voucher step to the checkout process that allows applying a voucher code to get a discount.
 originalLink: https://documentation.spryker.com/v4/docs/tutorial-checkout-legacy-demoshop
+originalArticleId: ff3e3236-ac50-44c2-b5a1-086898a25ec7
 redirect_from:
   - /v4/docs/tutorial-checkout-legacy-demoshop
   - /v4/docs/en/tutorial-checkout-legacy-demoshop

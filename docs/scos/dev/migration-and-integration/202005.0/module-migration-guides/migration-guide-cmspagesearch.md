@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CmsPageSearch
 originalLink: https://documentation.spryker.com/v5/docs/mg-cmspagesearch
+originalArticleId: d74fd7dc-0587-4e46-be56-9bf500764ce2
 redirect_from:
   - /v5/docs/mg-cmspagesearch
   - /v5/docs/en/mg-cmspagesearch
@@ -9,7 +10,7 @@ redirect_from:
 ## Upgrading from Version 2.1.* to Version 2.2.*
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](https://documentation.spryker.com/docs/en/search-migration-concept). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](https://documentation.spryker.com/docs/en/mg-search#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/202005.0/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
 
 {% endinfo_block %}
 To upgrade the module, do the following:
@@ -78,7 +79,7 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
 Spryker\Zed\CmsPageSearch\Communication\Plugin\Search\CmsDataPageMapBuilder
 ```
 ## Upgrading from Version 1.* to Version 2.*
-Version 2.0.0 of the CmsPageSearch module introduces the [multi-store functionality](https://documentation.spryker.com/docs/en/multi-store-cms-pages-201903). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 2.0.0 of the CmsPageSearch module introduces the [multi-store functionality](https://documentation.spryker.com/v5/docs/en/cms-pages-overview). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 To avoid the BC break, a synchronization behavior must be removed.
 

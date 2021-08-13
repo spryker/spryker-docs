@@ -2,9 +2,12 @@
 title: Reference information- Order history
 description: This article provides reference details for Order History in the Spryker shop.
 originalLink: https://documentation.spryker.com/2021080/docs/order-history-reference-information
+originalArticleId: 76315fca-618e-428e-bb63-797921a71915
 redirect_from:
   - /2021080/docs/order-history-reference-information
   - /2021080/docs/en/order-history-reference-information
+  - /docs/order-history-reference-information
+  - /docs/en/order-history-reference-information
 ---
 
 ## Order History Page

@@ -1,15 +1,18 @@
 ---
 title: Migration Guide - OauthCompanyUser
 originalLink: https://documentation.spryker.com/2021080/docs/mg-oauthcompanyuser
+originalArticleId: 6744cb78-6677-4c30-bc0f-87c2931c71ba
 redirect_from:
   - /2021080/docs/mg-oauthcompanyuser
   - /2021080/docs/en/mg-oauthcompanyuser
+  - /docs/mg-oauthcompanyuser
+  - /docs/en/mg-oauthcompanyuser
 ---
 
 ## Upgrading from Version 1.x.x to 2.x.x
 `OauthCompanyUser` module version 2.0.0 brings two major changes:
 
-* GLUE layer has been moved from Glue `OauthCompanyUser` to `CompanyUserAuthRestApi` (see [Migration Guide - CompanyUserAuthRestApi](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html) for more details).
+* GLUE layer has been moved from Glue `OauthCompanyUser` to `CompanyUserAuthRestApi` (see [Migration Guide - CompanyUserAuthRestApi](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html) for more details).
 * `OauthCompanyUserConfig::OAUTH_CLIENT_IDENTIFIER`, `OauthCompanyUserConfig::OAUTH_CLIENT_SECRET` constants have been removed.
 
 BC Breaking changes:

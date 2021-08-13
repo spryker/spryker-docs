@@ -2,6 +2,7 @@
 title: Econda - Tracking
 description: Add the Econda tracking code into Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v1/docs/econda-tracking
+originalArticleId: ce0503f0-2a20-4823-88de-9f480839f63b
 redirect_from:
   - /v1/docs/econda-tracking
   - /v1/docs/en/econda-tracking
@@ -27,7 +28,7 @@ To enable Econda tracking for your application, you need to download a personali
 
 These instructions assume  you are using Antelope <!-- link to (http://documentation.spryker.com/front-end_developer_guide/demoshop/antelope_global_tool/overview) -->for your Yves assets management. If your project uses other frontend automation you can still use the instructions as guidelines.
 
-Before getting started we recomend that you read the following topics: [asset management](https://documentation.spryker.com/v1/docs/frontend-overview#asset-management)
+Before getting started we recomend that you read the following topics: [asset management](/docs/scos/dev/developer-guides/201811.0/development-guide/front-end/legacy-demoshop/frontend-overview.html#asset-management)
 and [Twig](/docs/scos/dev/developer-guides/201811.0/development-guide/front-end/legacy-demoshop/twig-templates/overview-twig.html)
 
 ## Installing Assets

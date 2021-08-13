@@ -1,9 +1,12 @@
 ---
 title: Security release notes 202108.0
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-2021080
+originalArticleId: 02a20e34-b404-4d2f-a0c4-29a154d2c389
 redirect_from:
   - /2021080/docs/security-release-notes-2021080
   - /2021080/docs/en/security-release-notes-2021080
+  - /docs/security-release-notes-2021080
+  - /docs/en/security-release-notes-2021080
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.

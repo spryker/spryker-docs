@@ -2,6 +2,7 @@
 title: Multi-store CMS Block
 description: The feature allows managing CMS blocks display per store in the Back Office.
 originalLink: https://documentation.spryker.com/v2/docs/multi-store-cms-block
+originalArticleId: 8d10143b-5018-4f4f-bef3-442769f9b2cb
 redirect_from:
   - /v2/docs/multi-store-cms-block
   - /v2/docs/en/multi-store-cms-block

@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Content and Search - Personalized Catalog Pages - Spryker Commerce OS
 originalLink: https://documentation.spryker.com/v3/docs/t-content-search-personalized-catalog-page
+originalArticleId: eaf98f27-c446-4a78-bff1-52086e53798c
 redirect_from:
   - /v3/docs/t-content-search-personalized-catalog-page
   - /v3/docs/en/t-content-search-personalized-catalog-page

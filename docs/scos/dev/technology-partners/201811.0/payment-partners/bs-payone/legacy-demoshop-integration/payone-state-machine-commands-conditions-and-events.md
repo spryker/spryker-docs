@@ -2,6 +2,7 @@
 title: PayOne - State Machine Commands, Conditions and Events
 description: This article includes the state machine commands and conditions provided by Payone.
 originalLink: https://documentation.spryker.com/v1/docs/payone-state-machine-cmd-cond-evnt
+originalArticleId: 4e466e3d-34bd-46e7-9216-23a740a28141
 redirect_from:
   - /v1/docs/payone-state-machine-cmd-cond-evnt
   - /v1/docs/en/payone-state-machine-cmd-cond-evnt

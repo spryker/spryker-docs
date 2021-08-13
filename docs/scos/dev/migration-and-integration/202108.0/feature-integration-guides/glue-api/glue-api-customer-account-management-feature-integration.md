@@ -1,9 +1,12 @@
 ---
 title: Glue API- Customer Account Management feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-customer-account-management-feature-integration
+originalArticleId: fa53308d-8078-477d-9297-7597d51afbcf
 redirect_from:
   - /2021080/docs/glue-api-customer-account-management-feature-integration
   - /2021080/docs/en/glue-api-customer-account-management-feature-integration
+  - /docs/glue-api-customer-account-management-feature-integration
+  - /docs/en/glue-api-customer-account-management-feature-integration
 ---
 
 
@@ -24,11 +27,11 @@ To start feature integration, integrate the required features:
 
 | FEATURE  | VERSION    | INTEGRATION GUIDE                                            |
 | --------------------------- | ---------- | ------------------------------------------------------------ |
-| Glue API: Spryker Core                | dev-master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
-| Glue API: Glue Application            | dev-master | [Glue API: Glue Application feature integration](https://documentation.spryker.com/docs/glue-api-glue-application-feature-integration) |
-| Glue API: Shipment              | dev-master | [Glue API: Shipment feature integration](https://documentation.spryker.com/docs/glue-api-shipment-feature-integration) |
-| Glue API: Checkout              | dev-master | [Glue API: Checkout feature integration](https://documentation.spryker.com/docs/glue-api-checkout-feature-integration) |
-| Customer Account Management | dev-master | [Customer Account Management feature integration](https://documentation.spryker.com/docs/customer-account-management-feature-integration) |
+| Glue API: Spryker Core                | dev-master | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Glue API: Glue Application            | dev-master | [Glue API: Glue Application feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html) |
+| Glue API: Shipment              | dev-master | [Glue API: Shipment feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html) |
+| Glue API: Checkout              | dev-master | [Glue API: Checkout feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |
+| Customer Account Management | dev-master | [Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/customer-account-management-feature-integration.html) |
 
 
 
@@ -307,7 +310,7 @@ $jobs[] = [
 ### Enable resources and relationships
 {% info_block infoBox %}
 
-For information on how to protect resources, see [Security and authentication](https://documentation.spryker.com/docs/security-and-authentication).
+For information on how to protect resources, see [Security and authentication](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/glue-api/security-and-authentication.html).
 
 {% endinfo_block %}
 
@@ -759,7 +762,7 @@ Ensure that the following endpoints are available:
 
 Ensure that the addresses resource relationship is registered correctly:
 
-1. [Add a customer address](https://documentation.spryker.com/docs/customer-addresses#add-an-address).
+1. [Add a customer address](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-addresses.html#add-an-address).
 
 2. Send the request: `GET http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses`.
 

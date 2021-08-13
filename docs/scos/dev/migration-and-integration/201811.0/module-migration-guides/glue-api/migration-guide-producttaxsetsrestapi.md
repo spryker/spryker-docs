@@ -1,6 +1,7 @@
 ---
 title: Migration guide - ProductTaxSetsRestApi
 originalLink: https://documentation.spryker.com/v1/docs/producttaxsetsrestapi-migration-guide
+originalArticleId: 0f85efd7-1383-4b27-9218-afe073886bc9
 redirect_from:
   - /v1/docs/producttaxsetsrestapi-migration-guide
   - /v1/docs/en/producttaxsetsrestapi-migration-guide

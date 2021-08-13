@@ -2,6 +2,7 @@
 title: Configurable Bundle
 description: A configurable bundle helps shoppers to purchase complex products that have complicated configuration and require expert knowledge for purchase.
 originalLink: https://documentation.spryker.com/v6/docs/configurable-bundle
+originalArticleId: 931d1264-30cf-45b7-b251-9913aa958877
 redirect_from:
   - /v6/docs/configurable-bundle
   - /v6/docs/en/configurable-bundle

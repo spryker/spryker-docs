@@ -1,6 +1,7 @@
 ---
 title: Validating REST Request Format
 originalLink: https://documentation.spryker.com/v5/docs/validating-rest-request-format
+originalArticleId: bcb2134a-05a0-4779-b18d-340109cdbfc7
 redirect_from:
   - /v5/docs/validating-rest-request-format
   - /v5/docs/en/validating-rest-request-format
@@ -9,7 +10,7 @@ redirect_from:
 Glue API allows you to validate requests sent to REST endpoints. It allows you to check whether all required fields are present, the type and the correct format of the fields.
 
 ## 1. Installation
-To be able to validate REST requests, first, you need to install the `RestRequestValidation` Module that provides the functionality. For details, see [Request Validation Integration](https://documentation.spryker.com/docs/en/rest-schema-validation-feature-integration-201903). 
+To be able to validate REST requests, first, you need to install the `RestRequestValidation` Module that provides the functionality. For details, see [Request Validation Integration](https://documentation.spryker.com/v5/docs/en/rest-schema-validation-feature-integration-201903). 
 
 ## 2. Default Validation Schema
 Spryker Glue API comes with a default validation schema. The schema provides default validation rules for REST APIs shipped with Spryker. You can find it in the following file: `vendor/spryker/spryker/Bundles/RestRequestValidator/config/validation.dist.yaml`. The schema can be used as a sample and reference for your own validation implementations.
@@ -23,7 +24,7 @@ To apply validation rules in any of APIs, be that your own APIs or APIs shipped 
 ss
 2. Rename the file to the name of the API you are providing validation for.  For the `StoresRestAPI`, the name will be `STORES.validation.yaml`.
 
-3. Provide validation for the endpoints provided by the API. For details, see [Validation Rule Format](https://documentation.spryker.com/docs/en/validating-rest-request-format#4--validation-rule-format).
+3. Provide validation for the endpoints provided by the API. For details, see [Validation Rule Format](/docs/scos/dev/tutorials/202005.0/introduction/glue-api/validating-rest-request-format.html#4--validation-rule-format).
 
 4. Run `vendor/bin/console glue:rest:build-request-validation-cache`.
 
@@ -100,7 +101,7 @@ vendor/bin/console glue:rest:build-request-validation-cache
 ```
 {% info_block infoBox %}
 
-You can also use a [Spryk](https://documentation.spryker.com/docs/en/glue-spryks) for the validation. Run the following command: 
+You can also use a [Spryk](/docs/scos/dev/developer-guides/202005.0/development-guide/glue-api/glue-spryks.html) for the validation. Run the following command: 
 ```Bash
 cconsole spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
 ```

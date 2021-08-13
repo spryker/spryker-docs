@@ -2,6 +2,7 @@
 title: Migration Guide - Catalog
 description: Use the guide to migrate to a newer version of the Catalog module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-catalog
+originalArticleId: 2a66b291-71c3-4edb-928a-d3a578c82599
 redirect_from:
   - /v6/docs/mg-catalog
   - /v6/docs/en/mg-catalog
@@ -10,7 +11,7 @@ redirect_from:
 ## Upgrading from Version 5.5* to  Version 5.6*
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](https://documentation.spryker.com/docs/search-migration-concept). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](https://documentation.spryker.com/docs/mg-search#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
 
 {% endinfo_block %}
 To upgrade the module, do the following:

@@ -1,9 +1,12 @@
 ---
 title: Glue API- Order Management feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-order-management-feature-integration
+originalArticleId: ad1c861b-392a-48e1-858e-f22b0adf7851
 redirect_from:
   - /2021080/docs/glue-api-order-management-feature-integration
   - /2021080/docs/en/glue-api-order-management-feature-integration
+  - /docs/glue-api-order-management-feature-integration
+  - /docs/en/glue-api-order-management-feature-integration
 ---
 
 Follow the steps below to install the Glue API: Order Management feature.
@@ -16,8 +19,8 @@ To start feature integration, overview and install the following features and Gl
 
 | NAME                   | VERSION  | INTEGRATION GUIDE                                            |
 | :--------------------- | :------- | :----------------------------------------------------------- |
-| Glue API: Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
-| Order Management       | 202009.0 | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
+| Glue API: Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Order Management       | 202009.0 | [Order Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/order-management-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -85,7 +88,7 @@ Activate the following plugins:
 
 {% info_block infoBox %}
 
-`OrdersResourceRoutePlugin` GET verb is a protected resource. For more details, see the `configure` function [Resource routing](https://documentation.spryker.com/docs/glue-infrastructure#resource-routing).
+`OrdersResourceRoutePlugin` GET verb is a protected resource. For more details, see the `configure` function [Resource routing](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/glue-api/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

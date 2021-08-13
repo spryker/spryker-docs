@@ -2,6 +2,7 @@
 title: Merchant B2B Contracts feature integration
 description: The guide walks you through the process of installing the Merchant Contracts feature into the project.
 originalLink: https://documentation.spryker.com/v6/docs/merchant-b2b-contracts-feature-integration
+originalArticleId: ec2566fa-840a-4319-b0b3-2c2018462218
 redirect_from:
   - /v6/docs/merchant-b2b-contracts-feature-integration
   - /v6/docs/en/merchant-b2b-contracts-feature-integration

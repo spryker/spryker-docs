@@ -1,12 +1,13 @@
 ---
 title: Extending a Component
 originalLink: https://documentation.spryker.com/v4/docs/t-extend-component
+originalArticleId: 8743c889-877d-44a0-9607-047843866a77
 redirect_from:
   - /v4/docs/t-extend-component
   - /v4/docs/en/t-extend-component
 ---
 
-With the idea of [atomic design](https://documentation.spryker.com/v4/docs/atomic-frontend) implemented in Spryker frontend, you have the possibility to develop each functional element of user interface in a self-contained, isolated container called a component. The frontend design allows you not only to [create components](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html) on your own, but also [replace](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/extending-a-component.html) any of them with a component that suits your needs better. But what if you do not want to replace a component? You can create a new component on the basis of an existing one. In this case, you will be able to use both the new component and the source one at the same time.
+With the idea of [atomic design](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/atomic-frontend-general-overview.html) implemented in Spryker frontend, you have the possibility to develop each functional element of user interface in a self-contained, isolated container called a component. The frontend design allows you not only to [create components](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html) on your own, but also [replace](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/extending-a-component.html) any of them with a component that suits your needs better. But what if you do not want to replace a component? You can create a new component on the basis of an existing one. In this case, you will be able to use both the new component and the source one at the same time.
 
 Let us review the process of extending a component on the example of **side-drawer**. This component appears in Spryker Shop only on mobile screens. You can access it by clicking the menu button.
 

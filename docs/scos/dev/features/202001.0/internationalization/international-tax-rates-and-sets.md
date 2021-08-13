@@ -2,6 +2,7 @@
 title: International Tax Rates and Sets
 description: Align your business with international tax standards by defining tax rates and sets. Determine country-based tax rates for products, options and shipments
 originalLink: https://documentation.spryker.com/v4/docs/international-tax-rates-sets
+originalArticleId: 27c6bd58-0d51-4d4b-9d2f-55a869b184f6
 redirect_from:
   - /v4/docs/international-tax-rates-sets
   - /v4/docs/en/international-tax-rates-sets

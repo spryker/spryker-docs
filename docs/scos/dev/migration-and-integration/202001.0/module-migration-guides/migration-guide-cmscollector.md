@@ -2,6 +2,7 @@
 title: Migration Guide - CmsCollector
 description: Use the guide to update versions to the newer ones of the CMS Collector module.
 originalLink: https://documentation.spryker.com/v4/docs/mg-cms-collector
+originalArticleId: 68bb5d02-0a0a-4d5f-8c7a-62270f5b11b0
 redirect_from:
   - /v4/docs/mg-cms-collector
   - /v4/docs/en/mg-cms-collector

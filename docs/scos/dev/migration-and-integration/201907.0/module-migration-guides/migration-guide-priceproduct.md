@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - PriceProduct
 originalLink: https://documentation.spryker.com/v3/docs/mg-priceproduct
+originalArticleId: 9f351920-1c3e-4fbe-baa0-eb276d589281
 redirect_from:
   - /v3/docs/mg-priceproduct
   - /v3/docs/en/mg-priceproduct

@@ -2,9 +2,12 @@
 title: Environment Configuration Enhancement
 description: Learn how to replace the environment name settings with explicit configuration.
 originalLink: https://documentation.spryker.com/2021080/docs/environment-configuration-enhancement
+originalArticleId: af8fcee2-4a53-4e77-9749-0e171bf899f3
 redirect_from:
   - /2021080/docs/environment-configuration-enhancement
   - /2021080/docs/en/environment-configuration-enhancement
+  - /docs/environment-configuration-enhancement
+  - /docs/en/environment-configuration-enhancement
 ---
 
 Previously, the behavior of Spryker applications depended on the environment name and there was no other way to manage that.  This limited the number of possible names you could use to the four hardcoded ones:
@@ -25,7 +28,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 202001.0 | [Feature](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/spryker-core-feature-integration.html) |
+| Spryker Core | 202001.0 | [Feature](https://documentation.spryker.com/2021080/docs/spryker-core-feature-integration-201907) |
 
 ### 1) Install the Required Modules Using Composer
 

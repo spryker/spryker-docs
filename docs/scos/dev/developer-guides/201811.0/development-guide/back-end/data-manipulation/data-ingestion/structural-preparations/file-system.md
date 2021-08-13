@@ -2,6 +2,7 @@
 title: File System
 description: The FileSystem Service provides an abstraction for file systems. It uses the same interface to access different types of file systems, regardless of their location or protocol.
 originalLink: https://documentation.spryker.com/v1/docs/filesystem
+originalArticleId: 5bcd7e04-a921-463d-85cc-4285211bccc3
 redirect_from:
   - /v1/docs/filesystem
   - /v1/docs/en/filesystem

@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Architectural Walkthrough - Spryker Commerce OS
 originalLink: https://documentation.spryker.com/v1/docs/tutorial-architecture-walkthrough-scos
+originalArticleId: e4fdaca1-bf08-47d8-9c61-8dc290b382bd
 redirect_from:
   - /v1/docs/tutorial-architecture-walkthrough-scos
   - /v1/docs/en/tutorial-architecture-walkthrough-scos

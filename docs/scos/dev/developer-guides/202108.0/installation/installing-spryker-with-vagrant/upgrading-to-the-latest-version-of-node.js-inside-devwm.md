@@ -2,12 +2,15 @@
 title: Upgrading to the latest version of Node.js inside devwm
 description: Learn how to upgrade to the latest version of Node.js if your devvm vesion is lower than 3.1.0
 originalLink: https://documentation.spryker.com/2021080/docs/upgrading-to-the-latest-version-of-nodejs-inside-devwm
+originalArticleId: 576e8f43-51b9-4cfc-aa89-4b39e37c118e
 redirect_from:
   - /2021080/docs/upgrading-to-the-latest-version-of-nodejs-inside-devwm
   - /2021080/docs/en/upgrading-to-the-latest-version-of-nodejs-inside-devwm
+  - /docs/upgrading-to-the-latest-version-of-nodejs-inside-devwm
+  - /docs/en/upgrading-to-the-latest-version-of-nodejs-inside-devwm
 ---
 
-As per [Spryker system requirements](https://documentation.spryker.com/docs/system-requirements), we recommend using 12.x version of Node.js. In the [devvm version 3.1.0](https://github.com/spryker/devvm/releases/tag/v3.1.0), we have added support of Node.js 12.x. Earlier devvm versions require a manual upgrade of Node.js.
+As per [Spryker system requirements](/docs/scos/dev/developer-guides/{{ page.version }}/installation/system-requirements.html), we recommend using 12.x version of Node.js. In the [devvm version 3.1.0](https://github.com/spryker/devvm/releases/tag/v3.1.0), we have added support of Node.js 12.x. Earlier devvm versions require a manual upgrade of Node.js.
 
 So if you are:
 

@@ -1,6 +1,7 @@
 ---
 title: Executing tests
 originalLink: https://documentation.spryker.com/v5/docs/executing-tests
+originalArticleId: 01f4bace-5b21-4349-9dd1-29a1d6078a81
 redirect_from:
   - /v5/docs/executing-tests
   - /v5/docs/en/executing-tests

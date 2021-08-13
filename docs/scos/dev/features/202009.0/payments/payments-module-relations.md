@@ -2,6 +2,7 @@
 title: Payments- module relations
 description: Explore the module relations in the the Payment feature
 originalLink: https://documentation.spryker.com/v6/docs/payments-module-relations
+originalArticleId: 15ed4d97-48ab-46aa-a75a-4049b01cf823
 redirect_from:
   - /v6/docs/payments-module-relations
   - /v6/docs/en/payments-module-relations

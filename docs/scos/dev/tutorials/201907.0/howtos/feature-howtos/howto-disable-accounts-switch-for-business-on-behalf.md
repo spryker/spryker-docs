@@ -1,6 +1,7 @@
 ---
 title: HowTo - Disable Accounts Switch for Business on Behalf
 originalLink: https://documentation.spryker.com/v3/docs/ht-disable-accounts-switch-for-bob-201907
+originalArticleId: 00b4a173-5124-4286-ac28-2bbc8204d610
 redirect_from:
   - /v3/docs/ht-disable-accounts-switch-for-bob-201907
   - /v3/docs/en/ht-disable-accounts-switch-for-bob-201907

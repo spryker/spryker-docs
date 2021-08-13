@@ -2,9 +2,12 @@
 title: Tooling config file
 description: The article provides information about a tooling config file that contains settings for supported tools and directives.
 originalLink: https://documentation.spryker.com/2021080/docs/tooling-config-file
+originalArticleId: 535d6b07-76d8-47f1-a4d1-5b404439109e
 redirect_from:
   - /2021080/docs/tooling-config-file
   - /2021080/docs/en/tooling-config-file
+  - /docs/tooling-config-file
+  - /docs/en/tooling-config-file
 ---
 
 In order to make the tool configuring more convenient, we introduce the `.tooling.yml` file. It contains settings for different tools (the Architecture and the Code sniffers are supported at the moment) in one place, helping you to keep the number of files on the root level as small as possible. The `.tooling.yml` file should also be in `.gitattributes` to be ignored for tagging:

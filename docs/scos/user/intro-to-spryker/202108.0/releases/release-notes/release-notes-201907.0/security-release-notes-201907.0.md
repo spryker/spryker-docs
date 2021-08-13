@@ -2,9 +2,12 @@
 title: Security Release Notes 201907.0
 description: The following information pertains to security-related issues that were discovered and resolved during the 201907.0 release.
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-201907-0
+originalArticleId: 216cfc42-96f5-4a5c-b62b-df2d8e49398b
 redirect_from:
   - /2021080/docs/security-release-notes-201907-0
   - /2021080/docs/en/security-release-notes-201907-0
+  - /docs/security-release-notes-201907-0
+  - /docs/en/security-release-notes-201907-0
 ---
 
 The following information pertains to security-related issues that were discovered and resolved.

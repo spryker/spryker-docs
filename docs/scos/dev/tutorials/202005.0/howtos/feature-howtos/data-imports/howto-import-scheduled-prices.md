@@ -1,6 +1,7 @@
 ---
 title: HowTo - Import Scheduled Prices
 originalLink: https://documentation.spryker.com/v5/docs/ht-import-scheduled-prices-201907
+originalArticleId: 35ec28e5-0196-4a6e-886f-d35fdf544135
 redirect_from:
   - /v5/docs/ht-import-scheduled-prices-201907
   - /v5/docs/en/ht-import-scheduled-prices-201907
@@ -37,4 +38,4 @@ You can include multiple entries into the file.
 
 Once uploaded, run `console data:import:product-price-schedule` command to import the price schedules from the file.
 
-The imported prices are applied by running a cron job. By default, it runs every day at 00:06:00-00:00. If you want to apply the imported prices right away, you can either run `price-product-schedule:apply` command to apply them manually or change the behavior of the cron job. For more information, see [HowTo - Schedule Cron Job for Scheduled Prices](https://documentation.spryker.com/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907).
+The imported prices are applied by running a cron job. By default, it runs every day at 00:06:00-00:00. If you want to apply the imported prices right away, you can either run `price-product-schedule:apply` command to apply them manually or change the behavior of the cron job. For more information, see [HowTo - Schedule Cron Job for Scheduled Prices](/docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html).

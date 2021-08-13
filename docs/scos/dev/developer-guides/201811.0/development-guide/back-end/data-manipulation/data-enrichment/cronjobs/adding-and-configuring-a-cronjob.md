@@ -2,6 +2,7 @@
 title: Adding and Configuring a Cronjob
 description: We use Jenkins for cronjob scheduling.
 originalLink: https://documentation.spryker.com/v1/docs/cronjob-scheduling-guide
+originalArticleId: a40bbef5-78cb-4800-a69b-65a556137540
 redirect_from:
   - /v1/docs/cronjob-scheduling-guide
   - /v1/docs/en/cronjob-scheduling-guide

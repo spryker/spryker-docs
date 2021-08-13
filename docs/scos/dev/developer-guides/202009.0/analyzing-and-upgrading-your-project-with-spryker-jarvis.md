@@ -2,6 +2,7 @@
 title: Analyzing and upgrading your project with Spryker Jarvis
 description: Learn how to install and use the Spryker Jarvis tool for upgrade and analysis of your project.
 originalLink: https://documentation.spryker.com/v6/docs/analyzing-and-upgrading-your-project-with-spryker-jarvis
+originalArticleId: 6f2d00cd-e307-4fb1-ab4e-ff912cfdc1fe
 redirect_from:
   - /v6/docs/analyzing-and-upgrading-your-project-with-spryker-jarvis
   - /v6/docs/en/analyzing-and-upgrading-your-project-with-spryker-jarvis
@@ -23,7 +24,7 @@ This article will teach you how to install and use the Spryker Jarvis tool for a
 ## Prerequisites
 Before you can install Spryker Jarvis, make sure that you have:
 
-* [Spryker project installed locally.](https://documentation.spryker.com/docs/dev-getting-started#step-1--install-spryker)
+* [Spryker project installed locally.](/docs/scos/dev/developer-guides/202009.0/developer-getting-started-guide.html#step-1--install-spryker)
 * [NodeJS installed.](https://nodejs.org/en/download)  
 
 ## Installation
@@ -60,7 +61,7 @@ To migrate to a newer product release, use the Jarvis *basic* view. This view li
 This view is especially useful when: 
 
 * You have a Spryker-based product and finished the main development part of it.
-* Your project uses feature repositories, or the project is based on the Spyker[ B2B Demo Shop](https://documentation.spryker.com/docs/b2b-suite) or the [B2C Demo Shop](https://documentation.spryker.com/docs/b2c-suite). 
+* Your project uses feature repositories, or the project is based on the Spyker[ B2B Demo Shop](/docs/scos/user/intro-to-spryker/202009.0/b2b-suite.html) or the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/202009.0/b2c-suite.html). 
 
 Use this view if you want to stay up-to-date with Spryker and get new features every Spryker product release.
 
@@ -102,7 +103,7 @@ To see details on a module, such as, what changes have been made in the later ve
   <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screen+Recording+2020-08-06+at+10.04.06.mov">
 </video>
 
-The detailed view of modules allows you to analyze the changes, and if needed, upgrade the modules. To upgrade to the latest minor module versions, run the module [composer update](https://documentation.spryker.com/docs/composer#composer-update) command. To upgrade to a major version, follow the [migration guide](https://documentation.spryker.com/docs/about-migration) of the respective module.
+The detailed view of modules allows you to analyze the changes, and if needed, upgrade the modules. To upgrade to the latest minor module versions, run the module [composer update](/docs/scos/dev/developer-guides/202009.0/installation/composer.html#composer-update) command. To upgrade to a major version, follow the [migration guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/about-migration-guides.html) of the respective module.
 
 ### Missing-features view: Upgrading your project with the compatible Spryker features
 To upgrade your project with the compatible Spryker features, use the *missing-features* view.
@@ -111,7 +112,7 @@ This view shows you what features you could use based on the modules you already
 
 The *missing-features* view is especially useful when your project uses just Spryker modules and does not use the Spryker features, but you want to use them. If you want to start keeping your project up-to-date with the Spryker product release, but you do not know which Spryker features of which versions are compatible with your project, this the right view. 
 
-To see this view, run `node jarvis.js <path to your spryker project folder> --missing-features` in the terminal. This shows you which modules of which features you have installed and what modules you still need to install to be able to use those features. This page tells you which highest versions of the features you can replace the modules with and what [integration guide](https://documentation.spryker.com/docs/about-integration) you should follow to enable the respective features:
+To see this view, run `node jarvis.js <path to your spryker project folder> --missing-features` in the terminal. This shows you which modules of which features you have installed and what modules you still need to install to be able to use those features. This page tells you which highest versions of the features you can replace the modules with and what [integration guide](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/about-integration-guides.html) you should follow to enable the respective features:
 
 <video width="720" height="480" controls>
   <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screen+Recording+2020-08-06+at+10.50.47.mov">

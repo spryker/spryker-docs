@@ -2,12 +2,15 @@
 title: Formatter integration guide
 description: Learn how to integrate Formatter into your project
 originalLink: https://documentation.spryker.com/2021080/docs/formatter-integration-guide
+originalArticleId: 4afd703c-3ce1-4924-901f-19c43b588cb0
 redirect_from:
   - /2021080/docs/formatter-integration-guide
   - /2021080/docs/en/formatter-integration-guide
+  - /docs/formatter-integration-guide
+  - /docs/en/formatter-integration-guide
 ---
 
-Follow the steps below to integrate [Formatter](https://documentation.spryker.com/docs/formatter) intor your project. 
+Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/{{ page.version }}/development-tools/formatter.html) intor your project. 
 
 ## 1. Install the dependencies
 

@@ -2,9 +2,12 @@
 title: Cronjob scheduling
 description: With the feature, jobs can be scheduled, versioned, queued, or changed by developers.
 originalLink: https://documentation.spryker.com/2021080/docs/cronjob-scheduling
+originalArticleId: 2d7a260a-89e1-4754-b33c-74048e6184d8
 redirect_from:
   - /2021080/docs/cronjob-scheduling
   - /2021080/docs/en/cronjob-scheduling
+  - /docs/cronjob-scheduling
+  - /docs/en/cronjob-scheduling
 ---
 
 To enable your system to process all requests effortlessly, the Spryker Commerce OS is equipped with a Cronjob Scheduling feature. All jobs can be scheduled and executed automatically or manually. Jobs are versioned and can easily be changed by your own developers.

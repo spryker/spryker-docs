@@ -2,12 +2,13 @@
 title: Product Group
 description: Enhance shopping experience by visual  grouping products by attributes.
 originalLink: https://documentation.spryker.com/v5/docs/product-group
+originalArticleId: 226e1263-fafc-4452-aba3-37d59c0adc1a
 redirect_from:
   - /v5/docs/product-group
   - /v5/docs/en/product-group
 ---
 
-Enhance the visual shopping experience for your customers and boost your sales with the Product Group feature that allows you to place different products into groups by any attribute. For customers' convenience, you can link variants of the [abstract products](https://documentation.spryker.com/docs/en/product-abstraction) together by, for example, different colors that will allow customers to quickly find a product they are looking for. Additionally, for promotional reasons, different seasonal products can be assigned to a product group that will best serve the needs of your business.
+Enhance the visual shopping experience for your customers and boost your sales with the Product Group feature that allows you to place different products into groups by any attribute. For customers' convenience, you can link variants of the [abstract products](/docs/scos/dev/features/202005.0/product-information-management/product-abstraction.html) together by, for example, different colors that will allow customers to quickly find a product they are looking for. Additionally, for promotional reasons, different seasonal products can be assigned to a product group that will best serve the needs of your business.
 
 Once products are grouped, they can be displayed on store pages as a product abstract card. That means that each product in the group will have references to other products which are in the same group you create.
 

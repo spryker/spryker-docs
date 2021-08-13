@@ -1,6 +1,7 @@
 ---
 title: Payolution - Integration into a project
 originalLink: https://documentation.spryker.com/v6/docs/payolution-integration-into-project
+originalArticleId: afc5f082-b6fe-4031-a01b-f50de89fd889
 redirect_from:
   - /v6/docs/payolution-integration-into-project
   - /v6/docs/en/payolution-integration-into-project
@@ -13,7 +14,7 @@ There is currently an issue when using giftcards with Payolution. Our team is de
 {% endinfo_block %}
 
 ## Prerequisites
-Before proceeding with the integration, make sure you have [installed and configured](https://documentation.spryker.com/docs/payolution-configuration) the Payolution module.
+Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/dev/technology-partners/202009.0/payment-partners/payolution/payolution-installation-and-configuration.html) the Payolution module.
 
 ## Frontend Integration
 To show Payolution on Frontend, extend the payment view:

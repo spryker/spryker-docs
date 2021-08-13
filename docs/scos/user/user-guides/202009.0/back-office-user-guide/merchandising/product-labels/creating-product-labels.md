@@ -2,6 +2,7 @@
 title: Creating product labels
 description: Back Office guide for creating product labels.
 originalLink: https://documentation.spryker.com/v6/docs/creating-product-labels
+originalArticleId: ddbd7e1f-fe5e-4319-8af3-37182c5e8e40
 redirect_from:
   - /v6/docs/creating-product-labels
   - /v6/docs/en/creating-product-labels
@@ -31,7 +32,7 @@ Even if there is only one store in your shop, you still need to select it for th
 {% endinfo_block %}
 
 5. In the *Translations* section, enter **Name** for all the locales.
-See [Product Label: References](https://documentation.spryker.com/docs/product-labels-reference-information) to learn about the attributes on this page.
+See [Product Label: References](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-labels/references/reference-information-product-labels.html) to learn about the attributes on this page.
 6. Switch to the *Products* tab.
 7. In the *Select* column, select one or more products to assign the label to. 
 
@@ -52,8 +53,8 @@ The page refreshes to display the success message about product label creation.
 
 **What's next?**
 
-* To learn how to edit product labels, see [Editing Product Labels](https://documentation.spryker.com/docs/en/managing-product-labels#editing-product-labels).
-* To learn how you can manage product labels, see [Managing Product Labels](https://documentation.spryker.com/docs/managing-product-labels).
-* To learn more about the attributes you select and enter while creating and managing labels, see [Product Labels: Reference Information](https://documentation.spryker.com/docs/product-labels-reference-information).
+* To learn how to edit product labels, see [Editing Product Labels](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-labels/managing-product-labels.html#editing-product-labels).
+* To learn how you can manage product labels, see [Managing Product Labels](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-labels/managing-product-labels.html).
+* To learn more about the attributes you select and enter while creating and managing labels, see [Product Labels: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-labels/references/reference-information-product-labels.html).
 
 

@@ -2,6 +2,7 @@
 title: Company accounts
 description: In the context of permissions management, the top level of a B2B business model hierarchy is a Company. Each company has its organizational structure.
 originalLink: https://documentation.spryker.com/v6/docs/company-accounts
+originalArticleId: fd615737-2c0e-48f2-962e-984c2addad74
 redirect_from:
   - /v6/docs/company-accounts
   - /v6/docs/en/company-accounts

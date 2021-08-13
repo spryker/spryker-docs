@@ -1,6 +1,7 @@
 ---
 title: Customer Account overview
 originalLink: https://documentation.spryker.com/v6/docs/customer-account-overview
+originalArticleId: 6e3b40dd-e760-4e88-9db8-d5ced7f74753
 redirect_from:
   - /v6/docs/customer-account-overview
   - /v6/docs/en/customer-account-overview
@@ -26,7 +27,7 @@ There are slight differences in customer accounts' information for the B2B and B
 | Shopping Carts | ✓ |  |
 | Wishlist |  | ✓ |
 
-See [Customer Registration overview](https://documentation.spryker.com/docs/customer-registration-overview) for details on how customer accounts can be created.
+See [Customer Registration overview](/docs/scos/dev/features/202009.0/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html) for details on how customer accounts can be created.
 
 
 Customers manage their accounts directly on the Storefront. If a customer updates an account, the data is synchronized, and the Back Office user sees the updated information in the Back Office > **Customers** > **Customers** section. The exceptions are newsletter subscriptions and password changes: this information is not stored in the Back Office.
@@ -50,7 +51,7 @@ A Back Office user can do the following:
 * Send a password token via email.
 * Check last orders of a customer in the shop.
 
-See [Managing customers](https://documentation.spryker.com/docs/managing-customers) for details.
+See [Managing customers](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
 
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:

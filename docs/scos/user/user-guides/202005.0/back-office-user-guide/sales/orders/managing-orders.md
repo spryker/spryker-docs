@@ -2,6 +2,7 @@
 title: Managing Orders
 description: The guide provides instructions on how to manage orders including setting statuses for the order, claiming and commenting on orders in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-orders
+originalArticleId: 221c24a6-1875-4132-bb46-1dd78305c374
 redirect_from:
   - /v5/docs/managing-orders
   - /v5/docs/en/managing-orders
@@ -50,10 +51,10 @@ The page refreshes to show the message about successful status change. In the _T
 **Tips & Tricks**
 To change the status of all the items inside a shipment at once, click **pay** in the **Trigger all matching states of order inside this shipment** section of the corresponding shipment. 
 
-To learn more about order statuses, see [Orders: Reference Information](https://documentation.spryker.com/docs/en/orders-reference-information).
+To learn more about order statuses, see [Orders: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/references/orders-reference-information.html).
 
 ## Creating a Return
-If a sales order item is[ returnable](https://documentation.spryker.com/docs/en/return-management-feature-overview), you can create a return for it.
+If a sales order item is[ returnable](/docs/scos/dev/features/202005.0/order-management/return-management/return-management-feature-overview.html), you can create a return for it.
 
 To create a return:
 
@@ -61,12 +62,12 @@ To create a return:
 2. On the *Create Return* page, select the items you want to return and optionally the return reason for the items.
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](https://documentation.spryker.com/docs/en/configurable-bundle-feature-overview), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](https://documentation.spryker.com/docs/en/product-bundle), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+For a [Configurable Bundle](/docs/scos/dev/features/202005.0/product-information-management/configurable-bundle/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+The [Product Bundles](/docs/scos/dev/features/202005.0/product-information-management/product-bundles.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
-3. Click **Create return**. This creates the return and takes you to the *Overview of Return* *[Return reference]* page, where you can change the return states. See [Return Item States: Reference Information](https://documentation.spryker.com/docs/en/return-item-states-reference-information) for details on the return states you can trigger.
+3. Click **Create return**. This creates the return and takes you to the *Overview of Return* *[Return reference]* page, where you can change the return states. See [Return Item States: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/references/return-item-states-reference-information.html) for details on the return states you can trigger.
 
 {% info_block infoBox "Info" %}
 
@@ -77,7 +78,7 @@ You can create returns for the items that are in *Exported* or *Delivered* state
 ## Viewing the Returns for Orders
 If returns have been created for an order, they are displayed on the *View Order: [Order ID]* page in the Returns section. 
 
-To view details on a return, click **View** in the Actions column of the *Returns* table. This takes you to the *Overview of Return: [Return ID]* page. See [Managing Returns](https://documentation.spryker.com/docs/en/managing-returns) for information on how you can manage the returns on this page.
+To view details on a return, click **View** in the Actions column of the *Returns* table. This takes you to the *Overview of Return: [Return ID]* page. See [Managing Returns](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/managing-returns.html) for information on how you can manage the returns on this page.
 
 
 ## Editing a Custom Order Reference
@@ -94,7 +95,7 @@ To remove the custom order reference, clear the **Custom Order Reference** field
 
 ## Claiming Orders
 
-To [claim an order](https://documentation.spryker.com/docs/en/reclamations-feature-overview-201903):
+To [claim an order](/docs/scos/dev/features/202005.0/order-management/reclamations/reclamations-feature-overview.html):
 1. On the *Overview of Orders* page, click **Claim** next to the order you want to create a reclamation for.
 2. On the *Create reclamation* page, select one or more products you want to create the reclamation for.
 3. Click **Create Reclamation**.
@@ -105,7 +106,7 @@ Claiming an order does not change the status of the order or the items inside th
 
 ## Commenting Orders
 
-To [comment](https://documentation.spryker.com/docs/en/comments-feature-overview-201907) an order:
+To [comment](/docs/scos/dev/features/202005.0/mailing-and-communication/comments/comments-feature-overview.html) an order:
 1. Click **View** next to the order you want to comment.
 2. On the *View Order: [Order ID]* page, scroll down to the **Comments** section.
 3. Enter the comment in the **Message** field.
@@ -132,6 +133,6 @@ To edit a billing address:
 ***
 **Next Steps**
 
-* To learn how you can manage the created returns, see [Managing Returns](https://documentation.spryker.com/docs/en/managing-returns). 
-* See [Orders: Reference Information](https://documentation.spryker.com/docs/en/orders-reference-information) to learn about the attributes used to manage orders.
+* To learn how you can manage the created returns, see [Managing Returns](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/managing-returns.html). 
+* See [Orders: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/references/orders-reference-information.html) to learn about the attributes used to manage orders.
 

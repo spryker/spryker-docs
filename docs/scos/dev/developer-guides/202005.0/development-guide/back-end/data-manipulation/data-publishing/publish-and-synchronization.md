@@ -2,12 +2,13 @@
 title: Publish and Synchronization
 description: Publish and Synchronization process synchronizes all changes made on the backend need to be propagated to the client data stores.
 originalLink: https://documentation.spryker.com/v5/docs/publish-and-synchronization
+originalArticleId: 9039711f-916d-4f94-9cb8-44eb510e85f2
 redirect_from:
   - /v5/docs/publish-and-synchronization
   - /v5/docs/en/publish-and-synchronization
 ---
 
-For faster access to data, the client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. It does not have direct access to the [SQL database](https://documentation.spryker.com/docs/en/persistence-layer) used by the backend. To have the client data sources always up to date, all changes made on the backend need to be propagated to the client data stores. For this purpose, Spryker implements a two-step process, called **Publish and Synchronize**. First, the data is *published*. This means generating an event that describes a change, collecting the related data and publishing it in a form suitable for the client. Then, the data is **synchronized** to *Redis* and *Elasticsearch*.
+For faster access to data, the client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. It does not have direct access to the [SQL database](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/zed/persistence-layer/about-the-persistence-layer.html) used by the backend. To have the client data sources always up to date, all changes made on the backend need to be propagated to the client data stores. For this purpose, Spryker implements a two-step process, called **Publish and Synchronize**. First, the data is *published*. This means generating an event that describes a change, collecting the related data and publishing it in a form suitable for the client. Then, the data is **synchronized** to *Redis* and *Elasticsearch*.
 
 The advantages of the approach are:
 
@@ -21,7 +22,7 @@ The advantages of the approach are:
 
 Both *Publish and Synchronize* implement the queue pattern.
 
-For detailed information on queue implementation, see [Spryker Queue Module](https://documentation.spryker.com/docs/en/queue).
+For detailed information on queue implementation, see [Spryker Queue Module](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/queue/queue.html).
 
 Also, the process relies heavily on Propel Behaviors. Behaviors are used to trigger actions automatically upon updating the database. This eliminates the need to trigger any step of the process manually in your code.
 
@@ -31,7 +32,7 @@ For details, see [Boostrapping a Behavior](http://propelorm.org/documentation/co
 
 There are 2 ways to start the *Publish* process:
 
-* Trigger the **publish** event manually using the [Event Facade](https://documentation.spryker.com/docs/en/event-adding):
+* Trigger the **publish** event manually using the [Event Facade](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/event/adding-events.html):
 
   ```php
   $this->eventFacade->trigger(CmsEvents::CMS_VERSION_PUBLISH, (new EventEntityTransfer())->setId($id));
@@ -82,7 +83,7 @@ Upon triggering the publish process, an event or events will be posted to a queu
 }
 ```
 
-Each event is consumed by an [event listener](https://documentation.spryker.com/docs/en/event-listen) mapped for it. The number of events depends on how many listeners are configured for a specific update. For instance, selling an item of certain product may require updating it's availability status (i.e. *available* or *not available*). In addition to that, it might be necessary to update the availability of a product bundle it belongs to. For this reason, there will be two listeners configured, one for product availability and one more for bundle availability, resulting in two events in the queue.
+Each event is consumed by an [event listener](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/event/listening-to-events.html) mapped for it. The number of events depends on how many listeners are configured for a specific update. For instance, selling an item of certain product may require updating it's availability status (i.e. *available* or *not available*). In addition to that, it might be necessary to update the availability of a product bundle it belongs to. For this reason, there will be two listeners configured, one for product availability and one more for bundle availability, resulting in two events in the queue.
 
 To consume an event, the queue adapter will call the listener specified in the *listenerClassName* field of the event message. A listener is a plugin class implemented in one of the modules. Its task is to query the data affected by an event and transform it into a format suitable for the frontend data storage (*Redis* or *Elasticsearch*).
 

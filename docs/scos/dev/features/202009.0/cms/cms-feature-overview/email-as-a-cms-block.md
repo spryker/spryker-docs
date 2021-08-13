@@ -1,12 +1,13 @@
 ---
 title: Email as a CMS block
 originalLink: https://documentation.spryker.com/v6/docs/email-as-a-cms-block
+originalArticleId: a93a6291-5a46-4cec-984b-84e12cf41ae1
 redirect_from:
   - /v6/docs/email-as-a-cms-block
   - /v6/docs/en/email-as-a-cms-block
 ---
 
-Back Office Users can manage the content of emails sent to customers through [CMS Blocks](https://documentation.spryker.com/docs/cms-block) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.
+Back Office Users can manage the content of emails sent to customers through [CMS Blocks](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-block.html) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.
 
 
 ## Types of Email Templates
@@ -14,14 +15,14 @@ There are two types of emails used to manage CMS Blocks as emails: CMS Block ema
 
 
 ## CMS Block Email Template
-*CMS Block email template* is a [Twig](https://documentation.spryker.com/docs/twig-and-twig-extension) file that defines the design and layout of CMS Block in a way suitable for using it as an email.
+*CMS Block email template* is a [Twig](/docs/scos/dev/sdk/202009.0/twig-and-twigextension.html) file that defines the design and layout of CMS Block in a way suitable for using it as an email.
 The following CMS Block email templates are available by default:
 
 * *HTML email template with header and footer*
 * *Text email template with header and footer*
 * *Empty email template*
 
-See [Creating an Email CMS Block](https://documentation.spryker.com/v6/docs/managing-content-of-emails-via-cms-blocks#creating-an-email-cms-block) to learn how a Back Office User applies a CMS Block email template.
+See [Creating an Email CMS Block](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block) to learn how a Back Office User applies a CMS Block email template.
 
 A Developer can create more CMS Block email templates.
 
@@ -39,7 +40,7 @@ When a developer creates an email template, inside the file, they enter the name
 
 
 #### Email Format 
-There are two email formats by default: HTML and pure text. The format of the [default email templates](https://documentation.spryker.com/docs/email-as-a-cms-block-feature-overview#default-email-templates) is identified by one of the respective tales in the name of an Email CMS Block: *--html* or *--text*. For example, Email CMS Blocks with the following names are assigned to the customer registration email template:
+There are two email formats by default: HTML and pure text. The format of the [default email templates](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview#default-email-templates) is identified by one of the respective tales in the name of an Email CMS Block: *--html* or *--text*. For example, Email CMS Blocks with the following names are assigned to the customer registration email template:
 
 * customer-registration--html
 * customer-registration--text
@@ -48,7 +49,7 @@ The email format itself is defined on the code level, the tales serving as ident
 
 
 ### Default Email Templates
-There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](https://documentation.spryker.com/docs/en/about-spryker#spryker-b2b-b2c-demo-shops). 
+There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/202009.0/about-spryker.html#spryker-b2b-b2c-demo-shops). 
 
 The table below contains the list of the default email templates, their Email CMS Blocks, and purpose.
 
@@ -92,21 +93,21 @@ The table below contains the list of the default email templates, their Email CM
 
 </details>
     
-See [Managing Content of Emails via CMS Blocks](https://documentation.spryker.com/docs/managing-content-of-emails-via-cms-blocks) to learn how a Back Office User manages the content of email templates by editing Email CMS Blocks.
+See [Managing Content of Emails via CMS Blocks](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html) to learn how a Back Office User manages the content of email templates by editing Email CMS Blocks.
 
-After creating email templates, a developer can [import](https://documentation.spryker.com/docs/file-details-cms-blockcsv#file-details--cms_block-csv) their assigned Email CMS Blocks. See [example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
+After creating email templates, a developer can [import](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/content-management/file-details-cms-block.csv.html#file-details--cms_block-csv) their assigned Email CMS Blocks. See [example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
 
 ## Email Content
 
-When [editing an email template via Email CMS Block](https://documentation.spryker.com/docs/managing-content-of-emails-via-cms-blocks#editing-email-cms-blocks), you work in the [WYSIWYG editor](https://documentation.spryker.com/docs/wysiwyg-editor). Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
+When [editing an email template via Email CMS Block](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/managing-content-of-emails-via-cms-blocks.html#editing-email-cms-blocks), you work in the [WYSIWYG editor](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/wysiwyg-editor.html). Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
 
 You can use the functionalities described in this section, regardless of the email format. 
 
 ### Glossary Keys in Email Templates
 
-You can add [glossary keys](https://documentation.spryker.com/docs/en/glossary-creation) directly to email templates, and the respective translations are fetched automatically. When an email with a glossary key is sent, the key is replaced with the translation you defined for the locale selected by the customer. For example, you add the *cart.price.grand.total* glossary key to an email template. When the email is sent to the customer with de_DE locale, the key is replaced with Summe. 
+You can add [glossary keys](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/glossary/managing-glossary.html) directly to email templates, and the respective translations are fetched automatically. When an email with a glossary key is sent, the key is replaced with the translation you defined for the locale selected by the customer. For example, you add the *cart.price.grand.total* glossary key to an email template. When the email is sent to the customer with de_DE locale, the key is replaced with Summe. 
 
-See [Managing Glossary](https://documentation.spryker.com/docs/managing-glossary#managing-glossary) to learn how a Back Office User creates translations.
+See [Managing Glossary](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/glossary/managing-glossary.html#managing-glossary) to learn how a Back Office User creates translations.
 
 ### Variables in Email Templates
 
@@ -116,7 +117,7 @@ A developer can provide a full list of variables and create new ones.
 
 ### Content Items in Email Templates
 
-The CMS capability in Spryker allows you to add [content items](https://documentation.spryker.com/docs/content-items-feature-overview) into CMS Blocks. Unlike the regular CMS Blocks, the Email CMS Blocks do not support content items. If you insert one, its content is not rendered when the email is sent. 
+The CMS capability in Spryker allows you to add [content items](/docs/scos/dev/features/202009.0/content-items/content-items-feature-overview.html) into CMS Blocks. Unlike the regular CMS Blocks, the Email CMS Blocks do not support content items. If you insert one, its content is not rendered when the email is sent. 
 
 
 ## If you are:

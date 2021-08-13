@@ -2,9 +2,12 @@
 title: Business Units overview
 description: Once a company administrator has created a company, and it has been activated and approved, they can start building the organizational structure.
 originalLink: https://documentation.spryker.com/2021080/docs/business-units-overview
+originalArticleId: 7b1313e3-9240-4a26-a9ef-b00a8eb20fad
 redirect_from:
   - /2021080/docs/business-units-overview
   - /2021080/docs/en/business-units-overview
+  - /docs/business-units-overview
+  - /docs/en/business-units-overview
 ---
 
 Once a company administrator has created a company which has been activated and approved in the Back Office, they can start building the organizational structure of their company in _My Company_ section of the web-shop.
@@ -98,5 +101,5 @@ This will move the address to Unassigned addresses section.
 
 ## See next 
 
-[Company user rules and permissions overview](https://documentation.spryker.com/docs/company-user-roles-and-permissions-overview)
+[Company user rules and permissions overview](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
 

@@ -2,6 +2,7 @@
 title: VSHN
 description: Run your applications agile and 24/7 on any infrastructure by integrating VSHN into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v3/docs/vshn
+originalArticleId: 0a59f5ad-8a0f-4df7-b83c-c93f95d8954d
 redirect_from:
   - /v3/docs/vshn
   - /v3/docs/en/vshn

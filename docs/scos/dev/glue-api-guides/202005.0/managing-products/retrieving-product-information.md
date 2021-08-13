@@ -2,6 +2,7 @@
 title: Retrieving Product Information
 description: This article explains how to get various information and resources of an abstract or concrete product, such as availability, price, taxes, and image sets.
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-product-information
+originalArticleId: b3b5a044-f7aa-40d4-8006-2c8460e86e29
 redirect_from:
   - /v5/docs/retrieving-product-information
   - /v5/docs/en/retrieving-product-information
@@ -13,8 +14,8 @@ In your development, these resources can help you to retrieve relevant informati
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/en/glue-api-products-feature-integration).
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/en/glue-api-measurement-units-feature-integration).
+* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html).
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html).
 
 ## Abstract and Concrete Products
 As Spryker Commerce OS implements product data in a hierarchical structure, this concept is also implemented in the Product API. The API provides separate endpoints for abstract and concrete products. Their names contain the abstract and concrete words, respectively.
@@ -1168,7 +1169,7 @@ Response sample:
 | measurementUnitCode | string | Code of the measurement unit. | 
 
 
-See [Retrieving Measurement Units](https://documentation.spryker.com/docs/en/retrieving-measurement-units) for more information on managing the sales units.
+See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/202005.0/retrieving-measurement-units.html) for more information on managing the sales units.
 
 
 ## Possible errors

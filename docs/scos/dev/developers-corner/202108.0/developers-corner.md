@@ -1,9 +1,12 @@
 ---
 title: Developer's Corner
 originalLink: https://documentation.spryker.com/2021080/docs/developers-corner
+originalArticleId: 4a9c8fdd-0200-498c-a81d-0213ae0374bf
 redirect_from:
   - /2021080/docs/developers-corner
   - /2021080/docs/en/developers-corner
+  - /docs/developers-corner
+  - /docs/en/developers-corner
 ---
 
 You can get Gatling <!---link to Gatling overview--> up and running for load testing by either integrating it directly into your project or by installing it as a standalone package. This article provides step-by-step instructions on both options.

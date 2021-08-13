@@ -2,9 +2,12 @@
 title: Handling new feature requests
 description: In this article, we describe how we handle requests for the new features and improvements from our customers.
 originalLink: https://documentation.spryker.com/2021080/docs/handling-new-feature-requests
+originalArticleId: 9ddd4988-0e91-4825-9ac0-89a6d230dc61
 redirect_from:
   - /2021080/docs/handling-new-feature-requests
   - /2021080/docs/en/handling-new-feature-requests
+  - /docs/handling-new-feature-requests
+  - /docs/en/handling-new-feature-requests
 ---
 
 At Spryker, we strive to deliver the software that suits our customers. That's why we appreciate it when you contribute with your ideas, suggestions, and new features to the upcoming releases of the Spryker product. Please share your idea with others by posting it on the [Spryker idea portal](https://spryker.ideas.aha.io/ideas){target="_blank"}. Ensure that you clearly described your desired change and explained why this change is useful.

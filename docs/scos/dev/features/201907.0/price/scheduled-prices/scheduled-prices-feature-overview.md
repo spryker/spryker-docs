@@ -1,6 +1,7 @@
 ---
 title: Scheduled Prices Feature Overview
 originalLink: https://documentation.spryker.com/v3/docs/scheduled-prices-feature-overview
+originalArticleId: bb3f3936-2772-4aa6-bd1e-f37133b967cf
 redirect_from:
   - /v3/docs/scheduled-prices-feature-overview
   - /v3/docs/en/scheduled-prices-feature-overview
@@ -63,6 +64,6 @@ In this case:
 
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
 
-The feature does not work with merchant prices ([relations](/docs/scos/dev/features/202001.0/company-account-management/merchants-and-merchant-relations/merchants-and-merchant-relations.html)) and [volume prices](/docs/scos/dev/features/202001.0/price/volume-prices/volume-prices.html).
+The feature does not work with merchant prices ([relations](/docs/scos/dev/features/201907.0/company-account-management/merchants-and-merchant-relations/merchants-and-merchant-relations.html)) and [volume prices](/docs/scos/dev/features/201907.0/price/volume-prices/volume-prices.html).
 
 <!-- Last review date: Jun 13, 2019by Jeremy Foruna, Andrii Tserkovnyi -->

@@ -1,6 +1,7 @@
 ---
 title: Router Yves
 originalLink: https://documentation.spryker.com/v3/docs/router-yves-201907
+originalArticleId: b2a120f2-8cea-4492-a39f-f53cce8c31c9
 redirect_from:
   - /v3/docs/router-yves-201907
   - /v3/docs/en/router-yves-201907

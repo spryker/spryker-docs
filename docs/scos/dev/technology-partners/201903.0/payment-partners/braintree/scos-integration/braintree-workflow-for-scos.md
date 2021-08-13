@@ -2,6 +2,7 @@
 title: Braintree - Workflow for SCOS
 description: This article describes the request flow for the Braintree module in the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v2/docs/braintree-workflow
+originalArticleId: d63997b1-72a7-44d0-9b45-ad5401c78b5a
 redirect_from:
   - /v2/docs/braintree-workflow
   - /v2/docs/en/braintree-workflow

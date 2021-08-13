@@ -1,9 +1,12 @@
 ---
 title: Product packaging unit feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/product-packaging-unit-feature-integration
+originalArticleId: 2603fbfb-bc14-462a-b412-1d715c57e779
 redirect_from:
   - /2021080/docs/product-packaging-unit-feature-integration
   - /2021080/docs/en/product-packaging-unit-feature-integration
+  - /docs/product-packaging-unit-feature-integration
+  - /docs/en/product-packaging-unit-feature-integration
 ---
 
 ## Install Feature Core

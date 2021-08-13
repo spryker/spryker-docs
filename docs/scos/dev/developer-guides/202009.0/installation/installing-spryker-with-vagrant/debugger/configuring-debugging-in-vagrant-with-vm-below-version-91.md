@@ -2,6 +2,7 @@
 title: Configuring debugging in Vagrant with VM below version 91
 description: This article describes how to set up debugging in your development environment for VM prior version 91.
 originalLink: https://documentation.spryker.com/v6/docs/configuring-debugging-in-vagrant-with-vm-below-version-91
+originalArticleId: 88307579-dec7-4349-b5fb-b3e5557df82c
 redirect_from:
   - /v6/docs/configuring-debugging-in-vagrant-with-vm-below-version-91
   - /v6/docs/en/configuring-debugging-in-vagrant-with-vm-below-version-91

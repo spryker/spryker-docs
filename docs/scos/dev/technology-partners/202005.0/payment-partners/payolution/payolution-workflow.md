@@ -2,12 +2,13 @@
 title: Payolution - Workflow
 description: This article describes the request flow for Payolution.
 originalLink: https://documentation.spryker.com/v5/docs/payolution-workflow
+originalArticleId: f2860a87-e64e-4786-890f-8ea480c78fe8
 redirect_from:
   - /v5/docs/payolution-workflow
   - /v5/docs/en/payolution-workflow
 ---
 
-Both [invoice](https://documentation.spryker.com/docs/en/payolution-invoice) and [installment](https://documentation.spryker.com/docs/en/payolution-installment) payemnt methods utilize the same request flow. It basically consists of the following requests:
+Both [invoice](/docs/scos/dev/technology-partners/202005.0/payment-partners/payolution/payolution-provided-payment-methods/payolution-invoice-payment.html) and [installment](/docs/scos/dev/technology-partners/202005.0/payment-partners/payolution/payolution-provided-payment-methods/payolution-installment-payment.html) payemnt methods utilize the same request flow. It basically consists of the following requests:
 
 * Calculation (for installment only): to calculate the installment amounts, dues, and durations.
 * Pre-check (optional): to check the user information in order to make sure that all the needed information is correct before doing the actual pre-authorization.
@@ -19,4 +20,4 @@ Both [invoice](https://documentation.spryker.com/docs/en/payolution-invoice) and
 
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-workflow.png){height="" width=""} 
 
-See Payolution - [Performing Requests](https://documentation.spryker.com/docs/en/payolution-requests) for detailed information on the requests.
+See Payolution - [Performing Requests](/docs/scos/dev/technology-partners/202005.0/payment-partners/payolution/payolution-performing-requests.html) for detailed information on the requests.

@@ -2,6 +2,7 @@
 title: Time Restricted Content Page Publishing
 description: Specify exact validity dates to make CMS Pages publicly available within a defined time period.
 originalLink: https://documentation.spryker.com/v5/docs/time-restricted-page-publishing
+originalArticleId: ef0733d4-ff3a-46f2-ac05-4637e860c58d
 redirect_from:
   - /v5/docs/time-restricted-page-publishing
   - /v5/docs/en/time-restricted-page-publishing

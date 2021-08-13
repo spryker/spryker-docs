@@ -2,6 +2,7 @@
 title: Implementing Publish and Synchronization
 description: To implement Publish and Synchronize in your code, you need to perform the following steps
 originalLink: https://documentation.spryker.com/v3/docs/publish-and-synchronization-reference
+originalArticleId: 7fba5ada-8084-4013-84e5-0e2c4f7f7c4e
 redirect_from:
   - /v3/docs/publish-and-synchronization-reference
   - /v3/docs/en/publish-and-synchronization-reference
@@ -10,7 +11,7 @@ redirect_from:
 To implement *Publish and Synchronize* in your code, you need to perform the following steps:
 
 ## 1. Add Publish Events
-*Publish* and *Synchronize* are event-driven. To start publishing data to the frontend, an event must be triggered. For this purpose, you need to add events for all changes you want to synchronize. For information on how to add events to your module, see [Adding Events](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/event/adding-events.html).
+*Publish* and *Synchronize* are event-driven. To start publishing data to the frontend, an event must be triggered. For this purpose, you need to add events for all changes you want to synchronize. For information on how to add events to your module, see [Adding Events](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-publishing/event/adding-events.html).
 
 For example, the following code creates an event once an entity is created, updated or deleted in the spy_product_abstract table (see `data/shop/development/current/vendor/spryker/product/src/Spryker/Zed/Product/Dependency/ProductEvents.php`):
 
@@ -43,7 +44,7 @@ const ENTITY_SPY_PRODUCT_ABSTRACT_DELETE = "Entity.spy_product_abstract.delete";
 The events will be posted to queue **event** in RabbitMq.
 
 ## 2. Create Publication Queue
-Now, you need to create a publication queue. It will be used to synchronize published data to the frontend. It is recommended to have a separate queue for each *Redis* or *Elasticsearch* entity. For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/tutorials/202001.0/introduction/tutorial-set-up-a-hello-world-queue-legacy-demoshop.html), section **Creating a Simple Queue**.
+Now, you need to create a publication queue. It will be used to synchronize published data to the frontend. It is recommended to have a separate queue for each *Redis* or *Elasticsearch* entity. For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/tutorials/201907.0/introduction/tutorial-set-up-a-hello-world-queue-legacy-demoshop.html), section **Creating a Simple Queue**.
 
 {% info_block infoBox %}
 As a naming convention, names of queues that synchronize data to Redis start with **sync.storage**, and names of queues that synchronize data to Elasticsearch start with **sync.search**.
@@ -71,7 +72,7 @@ protected function getQueueOptions()
 ```
 
 ## 3. Create Publication Table
-The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
+The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
 
 {% info_block infoBox %}
 As a naming convention, it is recommended to append `_storage` to the end of the table name, if it is synchronized with Redis, and `_search`, if it is synchronized with Elasticsearch.
@@ -182,7 +183,7 @@ For performance considerations, events are passed to the listener in bulk. Even 
 {% endinfo_block %}
 
 
-Implementing a listener is detailed in [Listening to Events](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/event/listening-to-events.html). Follow the guide to create your listener classes.
+Implementing a listener is detailed in [Listening to Events](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-publishing/event/listening-to-events.html). Follow the guide to create your listener classes.
 
 Also, you need to map listeners to the events. For this purpose, you need to add a plugin class that extends the **AbstractPlugin** and implements the **EventSubscriberInterface** interfaces. For example, this is how the *ProductStorage* module maps changes in abstract products to the respective listeners (see full code in data/shop/development/current/vendor/spryker/product-storage/src/Spryker/Zed/ProductStorage/Communication/Plugin/Event/Subscriber/ProductStorageEventSubscriber.php):
 
@@ -358,7 +359,7 @@ To see all listeners mapped for a certain event, Ctrl+Click it in PhpStorm. The 
 ### Debug Publish and Synchronize
 To debug Publish and Synchronize:
 
-1. Turn off [Jenkins](/docs/scos/dev/features/202001.0/sdk/cronjob-scheduling.html) to stop processing all queues. This can be done using the following command:
+1. Turn off [Jenkins](/docs/scos/dev/features/201907.0/sdk/cronjob-scheduling.html) to stop processing all queues. This can be done using the following command:
 
    ```bash
    console setup:jenkins:disable

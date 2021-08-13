@@ -2,6 +2,7 @@
 title: Content Management System
 description: The section is designed to create and manage the content of your shop in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/cms-guide
+originalArticleId: 9808ae5a-6f3a-4200-8cad-3c14cfee64b6
 redirect_from:
   - /v3/docs/cms-guide
   - /v3/docs/en/cms-guide
@@ -38,28 +39,28 @@ In the **Content Management** section, you can see the following:
 
 To learn more about how to create, manage, view, and publish CMS pages, see the following articles:
 
-* [Creating a new page](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/creating-a-cms-page.html) 
-* [Managing CMS page versioning](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/cms-pages-versioning.html) 
-* [Managing CMS pages](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/managing-cms-pages.html)
-* [Assigning Blocks to CMS, Category and Product pages](https://documentation.spryker.com/v4/docs/assigning-blocks-to-category-and-product-pages)
+* [Creating a new page](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/creating-a-cms-page.html) 
+* [Managing CMS page versioning](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/cms-pages-versioning.html) 
+* [Managing CMS pages](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/managing-cms-pages.html)
+* [Assigning Blocks to CMS, Category and Product pages](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/assigning-blocks-to-category-and-product-pages.html)
 
 To know about how to create and manage CMS blocks, see the following articles:
 
-* [Creating a new CMS block](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/blocks/creating-a-cms-block.html)
-* [Managing CMS block details](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/blocks/managing-cms-blocks.html)
-* [Assigning blocks to product and category pages](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/blocks/assigning-blocks-to-category-or-product-pages.html)
+* [Creating a new CMS block](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/blocks/creating-a-cms-block.html)
+* [Managing CMS block details](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/blocks/managing-cms-blocks.html)
+* [Assigning blocks to product and category pages](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/blocks/assigning-blocks-to-category-or-product-pages.html)
 
 To learn more about how to create and edit Content Items, see the following articles:
 
-* [Creating content items](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/creating-content-items.html)
-* [Editing content items details](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/editing-content-items.html)
+* [Creating content items](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/creating-content-items.html)
+* [Editing content items details](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/editing-content-items.html)
 
 To learn more about how to add content items widgets to a block or a page and how to manage them, see the following articles:
 
-* [Inserting a content item widget in a block](https://documentation.spryker.com/v4/docs/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-blocks)
-* [Adding a content item widget to a page](https://documentation.spryker.com/v4/docs/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-pages)
+* [Inserting a content item widget in a block](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-blocks)
+* [Adding a content item widget to a page](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-pages)
 
 To learn more about how to configure URL redirects, see the following article:
 
-* [Creating a URL redirect](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/redirects/creating-cms-redirects.html)
+* [Creating a URL redirect](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/redirects/creating-cms-redirects.html)
 * [Managing CMS Redirects](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/redirects/managing-cms-redirects.html)

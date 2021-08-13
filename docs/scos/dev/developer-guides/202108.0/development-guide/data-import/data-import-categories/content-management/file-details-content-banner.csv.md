@@ -1,12 +1,15 @@
 ---
 title: File details- content_banner.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-content-bannercsv
+originalArticleId: 4420043c-15fe-4485-8a7d-00d326d27d0f
 redirect_from:
   - /2021080/docs/file-details-content-bannercsv
   - /2021080/docs/en/file-details-content-bannercsv
+  - /docs/file-details-content-bannercsv
+  - /docs/en/file-details-content-bannercsv
 ---
 
-This article contains content of the **content_banner.csv** file to configure [Content Banner](https://documentation.spryker.com/docs/content-items-feature-overview#content-item) information on your Spryker Demo Shop.
+This article contains content of the **content_banner.csv** file to configure [Content Banner](/docs/scos/dev/features/{{ page.version }}/content-items/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -32,7 +35,7 @@ Default subtitle of the content. |
 ## Dependencies
 
 This file has the following dependencies:
-*    [glossary.csv](https://documentation.spryker.com/docs/file-details-glossarycsv) 
+*    [glossary.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html) 
 
 ## Template File & Content Example
 A template and an example of the *content_banner.csv*  file can be downloaded here:

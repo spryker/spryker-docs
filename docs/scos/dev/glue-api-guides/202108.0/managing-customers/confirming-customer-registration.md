@@ -2,15 +2,18 @@
 title: Confirming customer registration
 description: Confirm customer registration via API
 originalLink: https://documentation.spryker.com/2021080/docs/confirming-customer-registration
+originalArticleId: ce75d090-7be3-4d28-98a2-4ea49eb0d00c
 redirect_from:
   - /2021080/docs/confirming-customer-registration
   - /2021080/docs/en/confirming-customer-registration
+  - /docs/confirming-customer-registration
+  - /docs/en/confirming-customer-registration
 ---
 
-After a customer has been created (to create a customer, see [Customers](https://documentation.spryker.com/docs/customers)), the registration must be confirmed. This endpoint allows you to do that by sending a confirmation code received by email.
+After a customer has been created (to create a customer, see [Customers](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html)), the registration must be confirmed. This endpoint allows you to do that by sending a confirmation code received by email.
 
 ## Installation 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Customer Account Management feature integration](https://documentation.spryker.com/2021080/docs/customer-account-management-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/customer-account-management-feature-integration.html).
 
 ## Confirm customer registration
 To confirm customer registration, send the request:
@@ -46,8 +49,8 @@ If the customer email is confirmed successfully, the endpoint returns the `204 N
 | --- | --- |
 | 423 | Confirmation code is invalid or has been already used. |
 | 901 | Confirmation code is empty. |
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 
 ## Next Steps
-* [Authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer)
+* [Authenticating as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html)
 

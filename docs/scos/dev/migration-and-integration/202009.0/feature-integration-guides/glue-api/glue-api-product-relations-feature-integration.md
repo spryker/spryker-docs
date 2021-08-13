@@ -2,6 +2,7 @@
 title: Glue API- Product relations feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Relations feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-product-relations-feature-integration
+originalArticleId: 6b3b0451-a9cf-4362-9685-fca2429a025e
 redirect_from:
   - /v6/docs/glue-api-product-relations-feature-integration
   - /v6/docs/en/glue-api-product-relations-feature-integration
@@ -15,10 +16,10 @@ To start feature integration, overview and install the necessary features:
 
 |Name|Version|Required Sub-Feature|
 |---|---|---|
-|Spryker Core| master |[Glue Application](https://documentation.spryker.com/docs/en/glue-api-glue-application-feature-integration)|
+|Spryker Core| master |[Glue Application](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html)|
 |Product Relation|master||
-|Cart|master| [Cart API](https://documentation.spryker.com/docs/glue-api-cart-feature-integration) ||
-Product|master|[Products API](https://documentation.spryker.com/docs/en/glue-api-products-feature-integration)|
+|Cart|master| [Cart API](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html) ||
+Product|master|[Products API](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)|
 
 ### 1) Install the Required Modules Using Composer
 Run the following command to install the required modules:

@@ -2,6 +2,7 @@
 title: Tax Module
 description: The Tax module is responsible for handling tax rates that can apply for products, product options or shipment.
 originalLink: https://documentation.spryker.com/v4/docs/tax-module
+originalArticleId: 2f0a7456-26a9-4645-9737-9a5e570bf3d3
 redirect_from:
   - /v4/docs/tax-module
   - /v4/docs/en/tax-module

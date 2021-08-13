@@ -2,6 +2,7 @@
 title: Catalog Search API Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Search API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v3/docs/catalog-search-api-feature-integration-201903
+originalArticleId: be58cbc9-8ade-4300-93d7-07da2bf4d8b9
 redirect_from:
   - /v3/docs/catalog-search-api-feature-integration-201903
   - /v3/docs/en/catalog-search-api-feature-integration-201903
@@ -12,10 +13,10 @@ redirect_from:
 To start feature integration, overview and install the necessary features:
 |Name|Version|Required sub-feature|
 |---|---|---|
-|Spryker Core|201903.0|[Glue Application Feature Integration](https://documentation.spryker.com/v4/docs/glue-application-feature-integration) <!-- Replace by v201903 once available-->|
+|Spryker Core|201903.0|[Glue Application Feature Integration](https://documentation.spryker.com/v3/docs/glue-application-feature-integration) <!-- Replace by v201903 once available-->|
 |Search|201903.0||
 |Catalog2|01903.0||
-|Product|201903.0|[Product API Feature Integration](https://documentation.spryker.com/v4/docs/product-api-feature-integration) <!-- Replace by v201903 once available-->|
+|Product|201903.0|[Product API Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/product-api-feature-integration.html) <!-- Replace by v201903 once available-->|
 |Catalog + Price|201903.0||
 
 ### 1) Install the Required Modules Using Composer

@@ -1,6 +1,7 @@
 ---
 title: Search
 originalLink: https://documentation.spryker.com/v6/docs/search
+originalArticleId: ac2bd955-b455-4a52-81d6-a1987f0f4e8b
 redirect_from:
   - /v6/docs/search
   - /v6/docs/en/search
@@ -25,7 +26,7 @@ If you set up a multi-language store, the search function automatically checks a
 ## Textual search
 By default, all content on CMS and Product Pages, such as product name, description text, or allocated attributes, is searchable. Additionally, Product Attributes and can be boosted in the search results. You can easily define which products or content should be included into or excluded from the full-text search.
 
-See [Managing search preferences](https://documentation.spryker.com/docs/managing-search-preferences) for details on how you can manage the search preferences.
+See [Managing search preferences](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/search-and-filters/managing-search-preferences.html) for details on how you can manage the search preferences.
 
 ## Current constraints
 

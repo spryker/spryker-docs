@@ -1,6 +1,7 @@
 ---
 title: Merchants and Merchant Relations Feature Integration
 originalLink: https://documentation.spryker.com/v4/docs/merchant-merchant-relations-feature-integration
+originalArticleId: 9a8a2344-0a34-4bb4-9b71-507becca0a9c
 redirect_from:
   - /v4/docs/merchant-merchant-relations-feature-integration
   - /v4/docs/en/merchant-merchant-relations-feature-integration

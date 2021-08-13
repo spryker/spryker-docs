@@ -2,6 +2,7 @@
 title: Creating a CMS Page
 description: The guide provides a procedure to create a CMS page, make it searchable per store in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/creating-a-cms-page
+originalArticleId: 4526f95f-0538-4618-887d-818b2c0e5695
 redirect_from:
   - /v1/docs/creating-a-cms-page
   - /v1/docs/en/creating-a-cms-page
@@ -23,7 +24,7 @@ To create a page:
     * **Optional**: Select **Is searchable** if you want your page to be searched for on the web.
     * Select a page template that will determine a page layout. This is a **mandatory** step.
     {% info_block infoBox %}
-Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Page template, contact them and refer to the [HowTo - Create a CMS Page template](https://documentation.spryker.com/v1/docs/ht-create-cms-templates#adding-a-template-for-a-cms-page
+Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Page template, contact them and refer to the [HowTo - Create a CMS Page template](/docs/scos/dev/tutorials/201811.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-cms-page
 {% endinfo_block %}.)
     * **Optional**: Enter **Valid from** and **Valid to** if you want to define the validity period during which your page will be available in the shop.
     * Enter **Name** and **URL** of the page per locale. This is a **mandatory** step.

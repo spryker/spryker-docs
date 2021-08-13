@@ -1,12 +1,13 @@
 ---
 title: File details- shipment.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-shipmentcsv
+originalArticleId: b5a2c219-7b52-46f5-8711-1ca32770578c
 redirect_from:
   - /v6/docs/file-details-shipmentcsv
   - /v6/docs/en/file-details-shipmentcsv
 ---
 
-This article contains content of the **shipment.csv** file to configure [Shipment](https://documentation.spryker.com/docs/shipment) information on your Spryker Demo Shop.
+This article contains content of the **shipment.csv** file to configure [Shipment](/docs/scos/dev/features/202009.0/shipment/shipment.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

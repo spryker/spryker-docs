@@ -1,6 +1,7 @@
 ---
 title: Documenting GLUE API Resources
 originalLink: https://documentation.spryker.com/v4/docs/documenting-glue-api-resources
+originalArticleId: 274a4c74-d37c-4dd2-ac60-ca64007cf581
 redirect_from:
   - /v4/docs/documenting-glue-api-resources
   - /v4/docs/en/documenting-glue-api-resources
@@ -38,7 +39,7 @@ After installation, open the file `src/Pyz/Zed/DocumentationGeneratorRestApi/Doc
 | `APPLICATION_PROJECT_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **project** level. | `/Glue/%1$s/Controller/` |
 | `APPLICATION_CORE_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **vendor** level. | `/*/*/src/*/Glue/%1$s/Controller/` |
 
-For details on REST API controllers, see step [4. Create a Resource Controller](https://documentation.spryker.com/v4/docs/implementing-rest-api-resource#4--create-a-resource-controller) in the **Implementing a REST API Resource** article.
+For details on REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials/202001.0/introduction/glue-api/implementing-a-rest-api-resource.html#4--create-a-resource-controller) in the **Implementing a REST API Resource** article.
 
 ## 2. Test Run
 To make sure that the documentation generator is working properly, run the following command in the console:

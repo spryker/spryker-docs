@@ -2,16 +2,19 @@
 title: Retrieving category nodes
 description: Retrieve information about category nodes.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-category-nodes
+originalArticleId: 1e544fa3-90d1-449f-8d32-54a18f9b2631
 redirect_from:
   - /2021080/docs/retrieving-category-nodes
   - /2021080/docs/en/retrieving-category-nodes
+  - /docs/retrieving-category-nodes
+  - /docs/en/retrieving-category-nodes
 ---
 
 This endpoint allows retrieving category nodes.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](https://documentation.spryker.com/docs/category-management-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](https://documentation.spryker.com/2021080/docs/category-management-feature-integration-201907).
 
 
 ## Retrieve a category node
@@ -25,7 +28,7 @@ To retrieve a category node, send the request:
 
 |Path parameter| Description |
 |---|---|
-| ***node_id*** | ID of a node to get information for. [Retrieve a category tree](https://documentation.spryker.com/docs/retrieving-category-trees#retrieve-a-category-tree) to get a full list of node IDs. |
+| ***node_id*** | ID of a node to get information for. [Retrieve a category tree](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree) to get a full list of node IDs. |
 
 
 ### Request
@@ -131,4 +134,4 @@ Request sample : `GET http://glue.mysprykershop.com/category-nodes/5`
 | 701 | Node ID not specified or invalid. |
 | 703 | Node with the specified ID was not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

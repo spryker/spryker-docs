@@ -1,6 +1,7 @@
 ---
 title: HowTo - Set up Stores with Multiple Locales
 originalLink: https://documentation.spryker.com/v1/docs/ht-setup-stores-with-multiple-locales
+originalArticleId: 07242e08-e82d-4f62-9c19-87924c2c05f4
 redirect_from:
   - /v1/docs/ht-setup-stores-with-multiple-locales
   - /v1/docs/en/ht-setup-stores-with-multiple-locales

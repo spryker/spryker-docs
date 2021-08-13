@@ -2,6 +2,7 @@
 title: Product Options Overview
 description: The article describes the creation process of product options and how it is managed in the Back Office
 originalLink: https://documentation.spryker.com/v1/docs/product-options-overview
+originalArticleId: d25fc6cd-4f40-43b9-8b04-82af6a953888
 redirect_from:
   - /v1/docs/product-options-overview
   - /v1/docs/en/product-options-overview
@@ -23,7 +24,7 @@ The product option group name is a glossary key which translation is stored in t
 See [Activating or Deactivating a Product Option Group in the Back Office](/docs/scos/user/user-guides/201811.0/back-office-user-guide/products/product-options/creating-a-product-option.html
 {% endinfo_block %} for more details.)
 
-Also, each product option group has a [tax set](https://documentation.spryker.com/v1/docs/tax-1-0) assigned which affects the final price calculation.
+Also, each product option group has a [tax set](https://documentation.spryker.com/v1/docs/reference-information-tax-module) assigned which affects the final price calculation.
 
 ## Option Value
 

@@ -1,6 +1,7 @@
 ---
 title: Shopping Lists Feature Integration
 originalLink: https://documentation.spryker.com/v5/docs/shopping-lists-feature-integration
+originalArticleId: 81dae2d5-c8e8-46fc-8d80-71b96e0aa723
 redirect_from:
   - /v5/docs/shopping-lists-feature-integration
   - /v5/docs/en/shopping-lists-feature-integration

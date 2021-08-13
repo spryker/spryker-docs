@@ -2,6 +2,7 @@
 title: Tutorial - New Relic Monitoring
 description: Use the guide to learn how to configure a New Relic agent, including on Linux,  and then test it.
 originalLink: https://documentation.spryker.com/v6/docs/t-new-relic-monitoring
+originalArticleId: b7779fb8-3db8-4a73-9924-292ecd9ce7d9
 redirect_from:
   - /v6/docs/t-new-relic-monitoring
   - /v6/docs/en/t-new-relic-monitoring
@@ -81,5 +82,5 @@ $ sudo /etc/init.d/newrelic-daemon status
 
 To enable or migrate New Relic packages, check the following tutorial:
 
-* [Migration Guide - Monitoring](https://documentation.spryker.com/docs/mg-monitoring)
-* [New Relic](https://documentation.spryker.com/docs/new-relic)
+* [Migration Guide - Monitoring](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-monitoring.html)
+* [New Relic](/docs/scos/dev/technology-partners/202009.0/operational-tools-monitoring-legal-etc/new-relic.html)

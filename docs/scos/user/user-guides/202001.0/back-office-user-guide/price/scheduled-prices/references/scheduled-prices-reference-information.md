@@ -2,6 +2,7 @@
 title: Scheduled Prices- Reference Information
 description: The guide provides additional information about the values you use when working with scheduled prices in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/scheduled-prices-reference-information
+originalArticleId: 7f4a77c2-0bfa-4014-9a79-754b3243733b
 redirect_from:
   - /v4/docs/scheduled-prices-reference-information
   - /v4/docs/en/scheduled-prices-reference-information
@@ -34,7 +35,7 @@ In the **Scheduled prices imported** section you see the following:
 | Attribute | Description |
 | --- | --- |
 | **Schedule name** | The name of the list of price product schedules which will be saved in the database. |
-| **Select your CSV file** | Here, you can select the file with price product schedules which you want to import. See [HowTo - Import Scheduled Prices]( https://documentation.spryker.com/v4/docs/ht-import-scheduled-prices-201907) to learn more about the file format. |
+| **Select your CSV file** | Here, you can select the file with price product schedules which you want to import. See [HowTo - Import Scheduled Prices]( /docs/scos/dev/tutorials/202001.0/howtos/feature-howtos/data-imports/howto-import-scheduled-prices.html) to learn more about the file format. |
 
 ## Scheduled Prices: Import Dry Run Page
 

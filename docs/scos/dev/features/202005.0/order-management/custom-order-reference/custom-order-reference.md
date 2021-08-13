@@ -1,6 +1,7 @@
 ---
 title: Custom Order Reference
 originalLink: https://documentation.spryker.com/v5/docs/custom-order-reference
+originalArticleId: 96289c37-5312-4929-b9e9-5b3847cb8591
 redirect_from:
   - /v5/docs/custom-order-reference
   - /v5/docs/en/custom-order-reference

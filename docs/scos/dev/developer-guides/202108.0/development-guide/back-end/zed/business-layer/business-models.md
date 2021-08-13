@@ -2,9 +2,12 @@
 title: Business Models
 description: Business models are classes where you program the business logic of your system.
 originalLink: https://documentation.spryker.com/2021080/docs/business-models
+originalArticleId: 951be56f-357e-46ac-895c-5171bbc5dc63
 redirect_from:
   - /2021080/docs/business-models
   - /2021080/docs/en/business-models
+  - /docs/business-models
+  - /docs/en/business-models
 ---
 
 Business models are classes where you program the business logic of your system. With business logic we mean all kinds of algorithms (for example, cart calculation), storage procedures (for example, checkout save workflow) and interactions with external providers (for example, payment).
@@ -76,4 +79,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedBusinessModelInterfaceMethod` - Add Zed Business Model Interface Method
 * `vendor/bin/console spryk:run AddZedBusinessModelMethod` - Add Zed Business Model Method
 
-See the [Spryk](https://documentation.spryker.com/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/{{ page.version }}/development-tools/spryk-code-generator.html) documentation for details.

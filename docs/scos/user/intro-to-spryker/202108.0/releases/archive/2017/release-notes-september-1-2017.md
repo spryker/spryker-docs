@@ -1,9 +1,12 @@
 ---
 title: Release Notes - September - 1 2017
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-september-1-2017
+originalArticleId: 299e4410-34ba-46cf-bbd2-6de8175488a8
 redirect_from:
   - /2021080/docs/release-notes-september-1-2017
   - /2021080/docs/en/release-notes-september-1-2017
+  - /docs/release-notes-september-1-2017
+  - /docs/en/release-notes-september-1-2017
 ---
 
 ## Features
@@ -20,7 +23,7 @@ Now stores with more than 100k of product attributes, have a convenient and easy
 | <ul><li>[ProductAttribute 1.0.0](https://github.com/spryker/product-attribute/releases/tag/1.0.0)</li><li>[ProductAttributeGui 1.0.0](https://github.com/spryker/product-attribute-gui/releases/tag/1.0.0)</li></ul> |[ProductManagement 0.8.0](https://github.com/spryker/product-management/releases/tag/0.8.0)  | n/a |
 
 **Documentation**
-For detailed migration guides, see [ProductManagement Module Migration Guide from Version 0.7. to 0.8.](https://documentation.spryker.com/v4/docs/mg-product-management#upgrading-from-version-0-7---to-version-0-8--)
+For detailed migration guides, see [ProductManagement Module Migration Guide from Version 0.7. to 0.8.](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-productmanagement.html#upgrading-from-version-0-7---to-version-0-8--)
 
 **Migration Guides**
 To upgrade, follow the steps described below:

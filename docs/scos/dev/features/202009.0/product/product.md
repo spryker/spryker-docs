@@ -2,6 +2,7 @@
 title: Product
 description: Summary of the Product feature.
 originalLink: https://documentation.spryker.com/v6/docs/product
+originalArticleId: ce14bd75-df29-4f28-9eb3-cfd701d7d0f5
 redirect_from:
   - /v6/docs/product
   - /v6/docs/en/product

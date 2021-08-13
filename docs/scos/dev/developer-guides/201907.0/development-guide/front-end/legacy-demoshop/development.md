@@ -2,6 +2,7 @@
 title: Development
 description: Development refers to writing your own assets, consuming external dependencies and linking resources to make them work together.
 originalLink: https://documentation.spryker.com/v3/docs/development-for-legacy-demoshop
+originalArticleId: e16eeede-ed03-4b9e-a9c9-f33bb060663d
 redirect_from:
   - /v3/docs/development-for-legacy-demoshop
   - /v3/docs/en/development-for-legacy-demoshop
@@ -47,4 +48,4 @@ With this approach, you can directly include every module (external/local) that 
 
 As far as this approach has been designed to use javascript on server side (node.js), commands like `require`, `module` or `export` are reserved words not naturally available in browsers’ vanilla javascript. To use them, you need to add a library or a pre-compiling tool capable of interpreting them.
 
-For this reason, we rely on [Oryx](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/zed/oryx-builder-overview-and-setup.html).
+For this reason, we rely on [Oryx](/docs/scos/dev/developer-guides/201907.0/development-guide/front-end/zed/oryx-builder-overview-and-setup.html).

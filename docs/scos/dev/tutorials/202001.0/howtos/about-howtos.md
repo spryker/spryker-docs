@@ -2,6 +2,7 @@
 title: About HowTos
 description: Use this section to perform tasks related to Spryker Glue Rest API and Spryker features
 originalLink: https://documentation.spryker.com/v4/docs/how-tos
+originalArticleId: 897131a1-fe60-43c8-b577-79fd099c0622
 redirect_from:
   - /v4/docs/how-tos
   - /v4/docs/en/how-tos
@@ -34,4 +35,4 @@ With these guides you will learn how to:
 * [Start using an HTTPS protocol](/docs/scos/dev/tutorials/202001.0/howtos/howto-force-https.html)
 * [Set up your store with multiple locals](/docs/scos/dev/tutorials/202001.0/howtos/howto-set-up-stores-with-multiple-locales.html)
 * [Build your own DataImport](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/creating-a-data-importer.html)
-* [Install Spryker with MySQL database](https://documentation.spryker.com/v4/docs/ht-data-import/ht-setup-spryker-with-mysql)
+* [Install Spryker with MySQL database](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/creating-a-data-importer.html/ht-setup-spryker-with-mysql)

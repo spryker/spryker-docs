@@ -2,33 +2,34 @@
 title: Retrieving Company User Information
 description: The article provides information on how to retrieve information on company user accounts via endpoints provided by Spryker Glue API.
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-company-user-information-201907
+originalArticleId: 61c611c1-0c3c-4604-a905-70722247492f
 redirect_from:
   - /v3/docs/retrieving-company-user-information-201907
   - /v3/docs/en/retrieving-company-user-information-201907
 ---
 
-The [Company Account](/docs/scos/dev/features/202001.0/company-account-management/company-account-overview/company-account-overview.html) feature provided by Spryker Commerce OS allows corporate customers to create [Company User Accounts](/docs/scos/dev/features/202001.0/company-account-management/company-account-overview/company-account-and-general-organizational-structure.html) for their employees. This capability enables customers to organize purchasing activities in their companies. Company Accounts are typically organized in Business Units depending on the job roles they perform. Any user can impersonate as multiple Company Accounts they have access to, which provides them the freedom to organize their work when performing different roles in a company.
+The [Company Account](/docs/scos/dev/features/201907.0/company-account-management/company-account-overview/company-account-overview.html) feature provided by Spryker Commerce OS allows corporate customers to create [Company User Accounts](/docs/scos/dev/features/201907.0/company-account-management/company-account-overview/company-account-and-general-organizational-structure.html) for their employees. This capability enables customers to organize purchasing activities in their companies. Company Accounts are typically organized in Business Units depending on the job roles they perform. Any user can impersonate as multiple Company Accounts they have access to, which provides them the freedom to organize their work when performing different roles in a company.
 
 The **Company Accounts API** provides REST access to retrieving Company User information.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/b2b-account-management/logging-in-as-company-user.html
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907
 {% endinfo_block %}.)
 
 In your development, the API can help you to provide information on *Company User Accounts* within the company that the authenticated user belongs to.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Company Account Feature Integration](https://documentation.spryker.com/v3/docs/company-account-api-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieving All Company Users
 To retrieve a list of all the Company Users that belong to the company of the logged in user, send a GET request to the following endpoint:
 
-[/company-users](https://documentation.spryker.com/v4/docs/rest-api-reference#/company-users)
+[/company-users](/docs/scos/dev/glue-api/201907.0/rest-api-reference.html#/company-users)
 
 Sample request: *GET http://glue.mysprykershop.com/company-users*
 
 {% info_block warningBox "Authentication Required" %}
-To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
+To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/authentication-and-authorization.html
 {% endinfo_block %}.)
 
 ### Response
@@ -106,12 +107,12 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
 ## Retrieving Available Company Users
 To retrieve a list of the Company Users that the currently logged in user can impersonate as, send a GET request to the following endpoint:
 
-[/company-users/mine](https://documentation.spryker.com/v4/docs/rest-api-reference#company-users)
+[/company-users/mine](/docs/scos/dev/glue-api/201907.0/rest-api-reference.html#company-users)
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
 
 {% info_block warningBox "Authentication Required" %}
-To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
+To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/authentication-and-authorization.html
 {% endinfo_block %}.)
 
 ### Response
@@ -132,7 +133,7 @@ If the currently logged in user does not have access to any Company User account
 *The attributes mentioned are all attributes in the response. Type is not mentioned.
 
 {% info_block warningBox "Note" %}
-The company user identifier contained in the id member can be used to access the Company User in the future as well as impersonate as that account. For details, see [Logging In as Company User](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/b2b-account-management/logging-in-as-company-user.html
+The company user identifier contained in the id member can be used to access the Company User in the future as well as impersonate as that account. For details, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907
 {% endinfo_block %}.)
 
 <details open>
@@ -192,7 +193,7 @@ To retrieve information on a specific Company User, send a GET request to the fo
 Sample request: *GET http://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5*
 
 {% info_block warningBox "Authentication Required" %}
-To get information on a Company User, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
+To get information on a Company User, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/authentication-and-authorization.html
 {% endinfo_block %}.)
 
 ### Response
@@ -434,7 +435,7 @@ In this case, the following additional attributes will be added to the response:
 | Status | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/b2b-account-management/logging-in-as-company-user.html). |
+| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907). |
 | 404 | The specified Company User was not found or the user does not have permissions to view the account. |
 
 <!-- add to related articles:

@@ -1,6 +1,7 @@
 ---
 title: Product attribute overview
 originalLink: https://documentation.spryker.com/v6/docs/product-attribute-overview
+originalArticleId: 52aece1b-241d-4827-8d6e-785fac788dd1
 redirect_from:
   - /v6/docs/product-attribute-overview
   - /v6/docs/en/product-attribute-overview
@@ -11,9 +12,9 @@ A *product attribute* is a characteristic of a product that consists of a name a
 You can create characteristic attributes for products, like brand or special features. You can define specific values to help you and your customers distinguish between products. You can assign multiple attributes to products to simplify the filter and category functions. 
 
 
-A Back Office user can [create product attributes](https://documentation.spryker.com/docs/creating-a-product-attribute).
+A Back Office user can [create product attributes](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/attributes/creating-product-attributes.html).
 
-A developer can import [product attributes](https://documentation.spryker.com/docs/file-details-product-management-attributecsv) and [super attributes](https://documentation.spryker.com/docs/file-details-product-attribute-keycsv). 
+A developer can import [product attributes](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) and [super attributes](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html). 
 
 
 ## Product attribute inheritance 
@@ -22,7 +23,7 @@ A Back Office user can add product attributes to abstract and concrete products.
 
 
 ## Declared attributes
-A declared attribute is an attribute that was [created](https://documentation.spryker.com/docs/creating-a-product-attribute) or [imported](https://documentation.spryker.com/docs/file-details-product-management-attributecsv).
+A declared attribute is an attribute that was [created](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/attributes/creating-product-attributes.html) or [imported](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
 
 After declaring an attribute, Back Office users can add it to products, and developers can import products with it. 
 
@@ -59,7 +60,7 @@ Product variants of the same abstract product can differ by different super attr
 ## Predefined product attribute values
 A *predefined product attribute value* is a product attribute value that a Back Office user defines when managing product attributes. 
 
-A Back Office user can configure configure a product attribute to accept only predefined values. In this case, when [defining the attribute value during product management](https://documentation.spryker.com/docs/managing-products#managing-product-attributes), they choose from the predefined values. Otherwise, they can enter any value for the attribute. 
+A Back Office user can configure configure a product attribute to accept only predefined values. In this case, when [defining the attribute value during product management](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/products/managing-products/managing-products.html#managing-product-attributes), they choose from the predefined values. Otherwise, they can enter any value for the attribute. 
 
 ## Product attribute translations
 A Back Office user can localize product attributes. They can add translations for attribute names and values. For example, in the attribute `Color = White`, both `Color` and `White` can be localized. 

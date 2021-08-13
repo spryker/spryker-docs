@@ -2,6 +2,7 @@
 title: Public Folder
 description: To publish means to place the built assets in a place where they can be accessed and loaded by the browser. In the whole project, the only place with such access rights is the @project/public folder.
 originalLink: https://documentation.spryker.com/v1/docs/public-folder
+originalArticleId: 97544945-2820-4624-b394-727fe7187c09
 redirect_from:
   - /v1/docs/public-folder
   - /v1/docs/en/public-folder

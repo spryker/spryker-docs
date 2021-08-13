@@ -1,9 +1,12 @@
 ---
 title: Migration Guide - SharedCartPage
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shared-cart-page
+originalArticleId: 6ca4c748-ee67-474b-a2fb-dc41722c85b7
 redirect_from:
   - /2021080/docs/mg-shared-cart-page
   - /2021080/docs/en/mg-shared-cart-page
+  - /docs/mg-shared-cart-page
+  - /docs/en/mg-shared-cart-page
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

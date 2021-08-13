@@ -1,12 +1,13 @@
 ---
 title: File details- product_discontinued.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-discontinuedcsv
+originalArticleId: 4581b584-6b0b-4af8-9ce5-15e8aad50df8
 redirect_from:
   - /v6/docs/file-details-product-discontinuedcsv
   - /v6/docs/en/file-details-product-discontinuedcsv
 ---
 
-This article contains content of the **product_discontinued.csv** file to configure [Discontinued Product](https://documentation.spryker.com/docs/discontinued-products) information on your Spryker Demo Shop.
+This article contains content of the **product_discontinued.csv** file to configure [Discontinued Product](https://documentation.spryker.com/v6/docs/discontinued-products) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -21,7 +22,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*     [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
+*     [product_concrete.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_discontinued.csv*  file can be downloaded here:

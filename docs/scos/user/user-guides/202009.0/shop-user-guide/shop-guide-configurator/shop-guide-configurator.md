@@ -1,6 +1,7 @@
 ---
 title: Shop guide - Configurator
 originalLink: https://documentation.spryker.com/v6/docs/shop-guide-configurator
+originalArticleId: 858ca386-cbd6-4005-8234-6e6331e20022
 redirect_from:
   - /v6/docs/shop-guide-configurator
   - /v6/docs/en/shop-guide-configurator

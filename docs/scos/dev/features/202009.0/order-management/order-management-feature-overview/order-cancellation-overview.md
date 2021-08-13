@@ -2,6 +2,7 @@
 title: Order Cancellation overview
 description: Allow your customer to cancel orders or cancel orders on their behalf.
 originalLink: https://documentation.spryker.com/v6/docs/order-cancellation-overview
+originalArticleId: 01cd58cf-74d1-445e-baba-8b236bd85342
 redirect_from:
   - /v6/docs/order-cancellation-overview
   - /v6/docs/en/order-cancellation-overview
@@ -33,7 +34,7 @@ A customer can cancel orders on the *Order History* and *Order Details* pages.
 
 See [Order cancellation on the Storefront](#storefront) to learn how B2B and B2C shoppers can cancel orders on the Storefront.
 
-See [Changing Order Statuses](https://documentation.spryker.com/docs/managing-orders#changing-order-statuses) to learn how a Back Office user can cancel orders.
+See [Changing Order Statuses](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/managing-orders.html#changing-order-statuses) to learn how a Back Office user can cancel orders.
 
 ## Time frames and statuses
 
@@ -41,7 +42,7 @@ A customer can cancel an order only within a defined time period. By default, th
 
 Also, they can cancel an order only if all the included items are in the states that are defined as cancellable. By default, the *payment pending* and *confirmed* states are cancellable. If at least one of the items in an order is in a different state, the buttons to cancel the order are not available. 
 
-In the [state machine](https://documentation.spryker.com/docs/order-process-modelling-state-machines#order-process-modelling-via-state-machines), a developer can configure different order states to be cancellable and change the cancellation time period.
+In the [state machine](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#order-process-modelling-via-state-machines), a developer can configure different order states to be cancellable and change the cancellation time period.
 
 {% info_block warningBox "State machine" %}
 
@@ -49,7 +50,7 @@ Ensure that, in your state machine, the *refunded* state always goes before the 
 
 {% endinfo_block %}
 
-See [Managing Orders](https://documentation.spryker.com/docs/managing-orders#managing-orders) to learn how a Back Office user can skip timeout or cancel an order by changing order statuses.
+See [Managing Orders](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/managing-orders.html#managing-orders) to learn how a Back Office user can skip timeout or cancel an order by changing order statuses.
 
 <a name="storefront"></a>
 

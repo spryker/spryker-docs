@@ -2,6 +2,7 @@
 title: Managing Company Unit Addresses
 description: Use the procedures to create and update company unit addresses after company units have been created in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-company-unit-addresses
+originalArticleId: fe7459f9-7023-4828-be58-49e319036819
 redirect_from:
   - /v5/docs/managing-company-unit-addresses
   - /v5/docs/en/managing-company-unit-addresses
@@ -17,7 +18,7 @@ To create a company business unit:
 1. On the **Overview of Business Unit Addresses** page, click **Create Company Unit Address** in the top right corner.
 2. On the **Create Company Unit Address** page:
     * Select _company_ and _country_ from the respective drop-down lists (the company values are taken from the **Company Account > Companies** section).
-    * Enter the City, Zip Code, and Street values to complete the address. Number, Addition to address, Comment, and Labels fields are optional. See [Company Account: Reference Information](https://documentation.spryker.com/docs/en/company-account-reference-information) to know more about the attributes you select and enter.
+    * Enter the City, Zip Code, and Street values to complete the address. Number, Addition to address, Comment, and Labels fields are optional. See [Company Account: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/references/company-account-reference-information.html) to know more about the attributes you select and enter.
 3. Once done, click **Save**. 
 
 ## Editing Company Unit Address
@@ -34,5 +35,5 @@ Once the address is created, you can assign it to the business unit.
 
 ***
 **What's next?**
-To know more about the attributes you select and enter on the **Create** and **Edit Company Unit Address** pages, see [Company Account: Reference Information](https://documentation.spryker.com/docs/en/company-account-reference-information).
-The next step in the company account setup is to created company roles and users. See the [Managing Company Roles](https://documentation.spryker.com/docs/en/managing-company-roles) and [Managing Company Users](https://documentation.spryker.com/docs/en/managing-company-users) articles.
+To know more about the attributes you select and enter on the **Create** and **Edit Company Unit Address** pages, see [Company Account: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/references/company-account-reference-information.html).
+The next step in the company account setup is to created company roles and users. See the [Managing Company Roles](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-roles.html) and [Managing Company Users](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-users.html) articles.

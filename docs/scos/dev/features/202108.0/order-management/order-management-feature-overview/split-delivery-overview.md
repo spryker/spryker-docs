@@ -2,9 +2,12 @@
 title: Split Delivery overview
 description: The feature allows delivering order items to different shipping addresses and on different days, with different shipment methods.
 originalLink: https://documentation.spryker.com/2021080/docs/split-delivery-overview
+originalArticleId: 0d0d041f-19c0-44e7-968e-30fd35ae62dd
 redirect_from:
   - /2021080/docs/split-delivery-overview
   - /2021080/docs/en/split-delivery-overview
+  - /docs/split-delivery-overview
+  - /docs/en/split-delivery-overview
 ---
 
 *Split Delivery* enables the same order as *shipments* to multiple delivery addresses and/or on different dates, and/or with different shipment methods. A *shipment* is a set of two or more products combined by the same delivery address.
@@ -34,7 +37,7 @@ Then, in the *Shipment* checkout step, you can see the products grouped by the s
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png)
 
-See [Shop Guide - Address](https://documentation.spryker.com/docs/address-step-shop-guide-201911) for more details on how to add multiple delivery addresses to order items in the Storefront.
+See [Shop Guide - Address](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/multi-step-checkout.html) for more details on how to add multiple delivery addresses to order items in the Storefront.
 
 ## Split Delivery in the Back Office
 In the Back Office, the shipments are displayed in the *Order Items* section on the **View Order: [Order ID]** page.
@@ -48,14 +51,14 @@ Here you can perform the following actions on shipments:
 * Move items between shipments
 * Change the state of each item or all items per shipment
 
-See [Orders](https://documentation.spryker.com/docs/managing-orders) for more details on how to create and manage shipments in the Back Office.
+See [Orders](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/orders/managing-orders.html) for more details on how to create and manage shipments in the Back Office.
 
 ## Constraints
 ### Gift Card compatibility
 Currently, the Split Delivery is not compatible with the Gift Cards feature. If you want to buy a Gift card, only *one* delivery address can be selected for the whole order. 
 
 ### Limitation for payment service providers
-Most of payment service providers (PSP) support a single delivery address for a given order, while Split Delivery enables your customers to add multiple shipments to the same order. In this case, you need to modify the configuration of the online store to allow your customers to deliver order items to different addresses. See [HowTo - Disable Split Delivery in Yves Interface](https://documentation.spryker.com/docs/ht-disable-split-delivery-in-yves-interface) for information on how to do that.
+Most of payment service providers (PSP) support a single delivery address for a given order, while Split Delivery enables your customers to add multiple shipments to the same order. In this case, you need to modify the configuration of the online store to allow your customers to deliver order items to different addresses. See [HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html) for information on how to do that.
 
 <!--
 ### Product Bundles
@@ -71,7 +74,7 @@ With Split Delivery, Product Bundles items can be shipped to different delivery 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
- <li><a href="https://documentation.spryker.com/docs/ht-disable-split-delivery-in-yves-interface" class="mr-link">Disable Split Delivery on the Storefront</a></li>                
+ <li><a href="/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html" class="mr-link">Disable Split Delivery on the Storefront</a></li>                
                 <li><a href="https://documentation.spryker.com/docs/split-delivery-concept" class="mr-link">Enable Split Delivery</a></li>
                 <li>Enable the Split Delivery Glue API:</a></li>
                 <li><a href="https://documentation.spryker.com/docs/glue-api-checkout-feature-integration" class="mr-link">Integrate the Checkout Glue API</a></li>

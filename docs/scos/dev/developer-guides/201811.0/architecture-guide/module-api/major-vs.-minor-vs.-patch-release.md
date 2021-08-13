@@ -2,6 +2,7 @@
 title: Major vs. Minor vs. Patch Release
 description: Spryker releases update as major, minor, patch release or a bugfix. Learn more about them in this article.
 originalLink: https://documentation.spryker.com/v1/docs/major-minor-patch-release
+originalArticleId: 05561717-3ba5-4d7f-9de5-3d797b5a55f5
 redirect_from:
   - /v1/docs/major-minor-patch-release
   - /v1/docs/en/major-minor-patch-release

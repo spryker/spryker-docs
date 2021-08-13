@@ -2,6 +2,7 @@
 title: Multiple Carts Per User
 description: Shopping cart is one of the most important components of an online shop. Multiple Shopping Carts provide customers with a convenient shopping experience.
 originalLink: https://documentation.spryker.com/v3/docs/multiple-cart-per-user
+originalArticleId: c63b7a20-ea24-4814-9f9f-0e49137c7197
 redirect_from:
   - /v3/docs/multiple-cart-per-user
   - /v3/docs/en/multiple-cart-per-user
@@ -43,5 +44,5 @@ Multiple Shopping Carts provide your customers with a convenient and intuitive s
     </div>
 </div>
 
-In this video we explain how to use [Shopping Carts](/docs/scos/dev/features/202001.0/shopping-cart/multiple-carts-per-user/multiple-carts-per-user.html) in the Spryker [B2B Demo Shop](https://documentation.spryker.com/v4/docs/demoshops#b2b-demo-shop).
+In this video we explain how to use [Shopping Carts](/docs/scos/dev/features/201907.0/shopping-cart/multiple-carts-per-user/multiple-carts-per-user.html) in the Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/201907.0/demo-shops.html#b2b-demo-shop).
 <iframe src="https://fast.wistia.net/embed/iframe/s776wlo9ds" title="How to use Shopping Carts in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="640" height="480"></iframe>

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - NavigationGui
 originalLink: https://documentation.spryker.com/v1/docs/mg-navigation-gui
+originalArticleId: 0ac76fd2-dc11-4cc3-b6b5-e3ca1f9faaf5
 redirect_from:
   - /v1/docs/mg-navigation-gui
   - /v1/docs/en/mg-navigation-gui

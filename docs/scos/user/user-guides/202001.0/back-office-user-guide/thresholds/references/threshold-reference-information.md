@@ -2,6 +2,7 @@
 title: Threshold- Reference Information
 description: The guide provides additional information on thresholds and types of soft thresholds when working with thresholds in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/threshold-reference-information
+originalArticleId: 50de738b-cc79-40cf-b8cc-d3a36ff718a1
 redirect_from:
   - /v4/docs/threshold-reference-information
   - /v4/docs/en/threshold-reference-information

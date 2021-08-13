@@ -2,6 +2,7 @@
 title: URL Redirects
 description: With URL Redirects you can create content redirects and increase your store's search engine visibility.
 originalLink: https://documentation.spryker.com/v1/docs/url-redirects
+originalArticleId: 11763133-b035-4cf8-ae59-7225951a0d78
 redirect_from:
   - /v1/docs/url-redirects
   - /v1/docs/en/url-redirects

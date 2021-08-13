@@ -1,6 +1,7 @@
 ---
 title: Additional DevOPS Information
 originalLink: https://documentation.spryker.com/v3/docs/additional-devops-information-201907
+originalArticleId: dd031592-f8b4-4e3e-b328-d5cf1a1f9214
 redirect_from:
   - /v3/docs/additional-devops-information-201907
   - /v3/docs/en/additional-devops-information-201907

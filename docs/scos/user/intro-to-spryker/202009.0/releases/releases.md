@@ -2,12 +2,13 @@
 title: Releases
 description: This section contains the notes for each release made by Spryker.
 originalLink: https://documentation.spryker.com/v6/docs/releases
+originalArticleId: 80f8eace-95ce-458a-86b5-baf4964f9eac
 redirect_from:
   - /v6/docs/releases
   - /v6/docs/en/releases
 ---
 
-This section contains the notes for each [Product release](https://documentation.spryker.com/docs/spryker-release-process#product-releases) made by Spryker. Make sure that you check this section from time-to-time to stay up to date with the improvements, bug fixes and new features that are delivered by our team.
+This section contains the notes for each [Product release](/docs/scos/user/intro-to-spryker/202009.0/spryker-release-process.html#product-releases) made by Spryker. Make sure that you check this section from time-to-time to stay up to date with the improvements, bug fixes and new features that are delivered by our team.
 
 ## Mailing lists
 We recommend that you subscribe to our release newsletter and security updates mailing lists so that we can let you know about new features and be immediately informed of any security updates that you need to know about. 
@@ -20,6 +21,6 @@ To receive the security updates, please request the subsription at [support@spry
 
 **What's next:**
 
-* [Checking for newer versions](https://documentation.spryker.com/docs/composer)
-* [Release notes](https://documentation.spryker.com/docs/release-notes)
-* [Migration guides](https://documentation.spryker.com/docs/about-migration)
+* [Checking for newer versions](/docs/scos/dev/developer-guides/202009.0/installation/composer.html)
+* [Release notes](/docs/scos/user/intro-to-spryker/202009.0/releases/release-notes/release-notes.html)
+* [Migration guides](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/about-migration-guides.html)

@@ -2,14 +2,17 @@
 title: Approval Process feature overview
 description: This topic provides a detailed overview of the Approval Process feature.
 originalLink: https://documentation.spryker.com/2021080/docs/approval-process-feature-overview
+originalArticleId: 6a13ff93-6cd0-4461-afe9-6c6101991d5e
 redirect_from:
   - /2021080/docs/approval-process-feature-overview
   - /2021080/docs/en/approval-process-feature-overview
+  - /docs/approval-process-feature-overview
+  - /docs/en/approval-process-feature-overview
 ---
 
 The *Approval Process* feature enables B2B customers to have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout. 
 
-Permissions related to the approval process are configured based on the restrictions applied to a [company role](https://documentation.spryker.com/docs/company-user-roles-and-permissions-overview). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
+Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
 
 When a company user requests approval for their cart, the cart gets locked, and the users are not able to edit it.
 
@@ -40,11 +43,11 @@ For the approval process, you can set specific permissions for the Approver and 
 It is mandatory for the Buyer role to set this permission, if you want to use the Approval Process feature in your project.
 
 {% endinfo_block %}
-To configure this permission, use [this step-by-step instruction](https://documentation.spryker.com/docs/approval-process-shop-guide#configuring-buy-up-to-grand-total-permission){target="_blank"}.
+To configure this permission, use [this step-by-step instruction](/docs/scos/dev/features/{{ page.version }}/approval-process/approval-process-feature-overview.html#approval-process-on-the-storefront){target="_blank"}.
 
 * The *Send cart for approval* permission that allows a buyer to send a cart for approval to their manager. Without this permission, a buyer cannot see the Request for Approval widget.
 
-* *Approve up to grand total* permission that allows an approver to approve the carts that do not hit the cart grand total limit specified there. See [Configuring the Approve up to grand total permission](https://documentation.spryker.com/docs/approval-process-shop-guide#configuring-approve-up-to-grand-total-permission) to learn how to set up the permission in the Storefront.
+* *Approve up to grand total* permission that allows an approver to approve the carts that do not hit the cart grand total limit specified there. See [Configuring the Approve up to grand total permission](/docs/scos/dev/features/{{ page.version }}/approval-process/approval-process-feature-overview.html#approval-process-on-the-storefront) to learn how to set up the permission in the Storefront.
 
 Every approval request, in turn, can have three statuses:
 
@@ -58,10 +61,10 @@ Approval Process as such introduces steps that company employees should follow t
 Here’s how approvals fit into the buying process:
 
 **1. Submitting the request for approval**
-The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. Check [Shop Guide - Submit a request for approval](https://documentation.spryker.com/docs/en/approval-process-shop-guide#submitting-a-request-for-approval) for details on how to submit a request for approval. After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
+The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. Check [Shop Guide - Submit a request for approval](/docs/scos/dev/features/{{ page.version }}/approval-process/approval-process-feature-overview.html#approval-process-on-the-storefront) for details on how to submit a request for approval. After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
 
 {% info_block warningBox "Note" %}
-There may be several approvers with different Approve up to grand total permissions created. By default, one Approver role is available after the feature has been [integrated](https://documentation.spryker.com/docs/en/approval-process-feature-integration
+There may be several approvers with different Approve up to grand total permissions created. By default, one Approver role is available after the feature has been [integrated](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/approval-process-feature-integration.html
 {% endinfo_block %}. )
 
 **2. Approval or rejection**

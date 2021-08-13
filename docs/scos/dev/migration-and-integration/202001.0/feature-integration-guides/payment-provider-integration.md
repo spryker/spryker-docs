@@ -1,6 +1,7 @@
 ---
 title: Payment Provider Integration
 originalLink: https://documentation.spryker.com/v4/docs/payment-provider-integration-guide
+originalArticleId: b04aaae2-fc6d-4839-a34b-0f8966a336c0
 redirect_from:
   - /v4/docs/payment-provider-integration-guide
   - /v4/docs/en/payment-provider-integration-guide

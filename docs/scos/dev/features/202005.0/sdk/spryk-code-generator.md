@@ -2,6 +2,7 @@
 title: Spryk Code Generator
 description: This article describes how to install and use Spryker new code generation tool that enables you to avoid tedious work by writing boilerplate code for you
 originalLink: https://documentation.spryker.com/v5/docs/spryk
+originalArticleId: 449d5c16-0752-46a3-9783-9410f70bb740
 redirect_from:
   - /v5/docs/spryk
   - /v5/docs/en/spryk

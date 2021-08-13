@@ -1,12 +1,13 @@
 ---
 title: File details- cms_slot_block.csv
 originalLink: https://documentation.spryker.com/v5/docs/file-details-cms-slot-blockcsv
+originalArticleId: fedd9a70-a76c-41b8-80d5-95211b03d786
 redirect_from:
   - /v5/docs/file-details-cms-slot-blockcsv
   - /v5/docs/en/file-details-cms-slot-blockcsv
 ---
 
-This article contains content of the **cms_slot_block.csv** file to configure [CMS Slot Block](https://documentation.spryker.com/docs/en/templates-slots) information on your Spryker Demo Shop.
+This article contains content of the **cms_slot_block.csv** file to configure [CMS Slot Block](/docs/scos/dev/features/202005.0/cms/templates-and-slots/templates-and-slots.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -29,8 +30,8 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*   [cms_slot.csv](https://documentation.spryker.com/docs/en/file-details-cms-slotcsv)
-*   [cms_block.csv](https://documentation.spryker.com/docs/en/file-details-cms-blockcsv)
+*   [cms_slot.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/content-management/file-details-cms-slot.csv.html)
+*   [cms_block.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/content-management/file-details-cms-block.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *cms_slot_block.csv*  file can be downloaded here:

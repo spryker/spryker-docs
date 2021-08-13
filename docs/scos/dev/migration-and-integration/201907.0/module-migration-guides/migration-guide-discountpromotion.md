@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - DiscountPromotion
 originalLink: https://documentation.spryker.com/v3/docs/mg-discount-promotion
+originalArticleId: 9815e879-2741-4c88-bfa4-05ed0dd5729a
 redirect_from:
   - /v3/docs/mg-discount-promotion
   - /v3/docs/en/mg-discount-promotion

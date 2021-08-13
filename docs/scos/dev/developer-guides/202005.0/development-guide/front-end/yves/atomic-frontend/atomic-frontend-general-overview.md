@@ -1,6 +1,7 @@
 ---
 title: Atomic Frontend- General Overview
 originalLink: https://documentation.spryker.com/v5/docs/atomic-frontend
+originalArticleId: 9a4c6a68-8f01-49e2-a1d2-25f1929c3df8
 redirect_from:
   - /v5/docs/atomic-frontend
   - /v5/docs/en/atomic-frontend
@@ -500,9 +501,9 @@ See [Modules to Components Mapping](https://cdn.document360.io/9fafa0d5-d76f-40c
 **What's next?**
 The following topics will help you in developing Spryker Atomic Frontend step-by-step:
 
-[Tutorial - Customize Spryker Frontend](https://documentation.spryker.com/docs/en/t-customize-spryker-frontend)
-[Tutorial - Frontend - Create a Component](https://documentation.spryker.com/docs/en/t-create-component)
-[Tutorial - Frontend - Override a Component](https://documentation.spryker.com/docs/en/t-override-component)
-[Tutorial - Frontend - Extend a Component](https://documentation.spryker.com/docs/en/t-extend-component)
-[Tutorial - Frontend - Integrate JQuery into Atomic Frontend](https://documentation.spryker.com/docs/en/t-integrate-jquery)
-[Tutorial - Frontend - Use a Component](https://documentation.spryker.com/docs/en/t-use-component)
+[Tutorial - Customize Spryker Frontend](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/tutorial-customize-spryker-frontend.html)
+[Tutorial - Frontend - Create a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html)
+[Tutorial - Frontend - Override a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
+[Tutorial - Frontend - Extend a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/extending-a-component.html)
+[Tutorial - Frontend - Integrate JQuery into Atomic Frontend](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
+[Tutorial - Frontend - Use a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/using-a-component.html)

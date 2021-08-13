@@ -2,6 +2,7 @@
 title: Oryx Builder Overview and Setup
 description: Oryx is the Spryker projects frontend helper. The purpose of Oryx is to simplify the asset building process, giving developers the freedom to choose and configure the preprocessors for the frontend.
 originalLink: https://documentation.spryker.com/v3/docs/oryx
+originalArticleId: f963e9c2-5939-473b-81ec-0cb8a674614c
 redirect_from:
   - /v3/docs/oryx
   - /v3/docs/en/oryx
@@ -12,7 +13,7 @@ Oryx is the Spryker projects frontend helper. The purpose of Oryx is to simplify
 Oryx relies on webpack 2.
 
 {% info_block warningBox "Oryx for Zed" %}
-If you're looking for Oryx Zed dedicated solution, see [Oryx for Zed](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/zed/oryx-for-zed.html
+If you're looking for Oryx Zed dedicated solution, see [Oryx for Zed](/docs/scos/dev/developer-guides/201907.0/development-guide/front-end/zed/oryx-for-zed.html
 {% endinfo_block %}.)
 
 ### Requirements

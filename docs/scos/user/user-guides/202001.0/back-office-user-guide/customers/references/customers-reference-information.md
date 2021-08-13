@@ -2,6 +2,7 @@
 title: Customers- Reference Information
 description: The guide provides reference information you view when creating and updating customers in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/customers-reference-information
+originalArticleId: 28f6b447-8df2-49e8-9247-bc75f74618bd
 redirect_from:
   - /v4/docs/customers-reference-information
   - /v4/docs/en/customers-reference-information

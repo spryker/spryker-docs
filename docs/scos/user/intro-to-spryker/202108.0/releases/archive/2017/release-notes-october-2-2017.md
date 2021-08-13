@@ -1,9 +1,12 @@
 ---
 title: Release Notes - October - 2 2017
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-october-2-2017
+originalArticleId: dccf512e-816f-4c27-b100-56a3adb16b14
 redirect_from:
   - /2021080/docs/release-notes-october-2-2017
   - /2021080/docs/en/release-notes-october-2-2017
+  - /docs/release-notes-october-2-2017
+  - /docs/en/release-notes-october-2-2017
 ---
 
 ## Features
@@ -20,7 +23,7 @@ This release focuses on enabling multi-currency for discounts. It allows you to 
 
 **Documentation**
 For module documentation, see Module Guide - Discount<!--/module_guide/spryker/discount.htm)-->, Module Guide - Currency<!--/module_guide/spryker/currency.htm)-->, Module Guide - Money<!--/module_guide/spryker/money.htm)-->.
-For detailed migration guides, see [Discount Module Migration Guide from Version 4. to 5](https://documentation.spryker.com/v4/docs/mg-discount#upgrading-from-version-4---to-version-5--), Migration Guide - Discount Amounts Migration Console Command.
+For detailed migration guides, see [Discount Module Migration Guide from Version 4. to 5](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-discount.html#upgrading-from-version-4---to-version-5--), Migration Guide - Discount Amounts Migration Console Command.
 
 **Migration Guides**
 To upgrade, follow the steps described below:

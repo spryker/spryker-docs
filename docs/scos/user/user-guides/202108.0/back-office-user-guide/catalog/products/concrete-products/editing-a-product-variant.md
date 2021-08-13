@@ -2,9 +2,12 @@
 title: Editing a product variant
 description: The guide describes how to update the product variant in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/editing-a-product-variant
+originalArticleId: b9119173-d733-4ffa-b93d-1f19d88a364c
 redirect_from:
   - /2021080/docs/editing-a-product-variant
   - /2021080/docs/en/editing-a-product-variant
+  - /docs/editing-a-product-variant
+  - /docs/en/editing-a-product-variant
 ---
 
 This article describes how to update the product variant added during the abstract product setup.
@@ -14,7 +17,7 @@ The described procedure is also valid for an existing product variant.
 
 To start working with product variants, go to **Catalog** > **Products**.
 
-The procedure you are going to perform is very similar to the procedure described in the Creating a product variant article. For details, see  [Creating a product variant](https://documentation.spryker.com/docs/creating-a-product-variant). 
+The procedure you are going to perform is very similar to the procedure described in the Creating a product variant article. For details, see  [Creating a product variant](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html). 
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -32,9 +35,9 @@ To update a product variant:
 The prices for the variant are inherited from the abstract product so you will see the same values as you have entered while creating the abstract product. **B2B:** The merchant relation prices are inherited by Product Variants as well. 
 {% endinfo_block %}
     3. *Image* tab: define the image(s), image set(s), and the image order for you product variant.
-    4. *Assign bundled products* tab: this tab is used in case you need to create a product bundle. See [Creating Product Bundles](https://documentation.spryker.com/docs/creating-abstract-products-and-product-bundles) for details.
-    5. *Discontinue* tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](https://documentation.spryker.com/docs/discontinuing-a-product) to know more.
-    6. *Product Alternatives* tab: This tab is used to define the product alternatives for the product. See [Adding Product Alternatives](https://documentation.spryker.com/docs/adding-product-alternatives) to know more.
+    4. *Assign bundled products* tab: this tab is used in case you need to create a product bundle. See [Creating Product Bundles](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) for details.
+    5. *Discontinue* tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/managing-products/discontinuing-products.html) to know more.
+    6. *Product Alternatives* tab: This tab is used to define the product alternatives for the product. See [Adding Product Alternatives](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to know more.
     7. *Scheduled Prices* tab: here you can only review scheduled prices imported via a CSV file if any. The actual import is done in **Prices** > **Scheduled Prices**.
 3. Click **Save**.
 
@@ -98,5 +101,5 @@ On this tab, you see a table with the scheduled prices imported via a CSV file. 
 
 **What's next?**
 Following the same steps, you will update all variants that you have added to your abstract product.
-You may also want to add more product variants. Learn how you do that by navigating to [Creating a product variant](https://documentation.spryker.com/docs/creating-a-product-variant). 
+You may also want to add more product variants. Learn how you do that by navigating to [Creating a product variant](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html). 
 

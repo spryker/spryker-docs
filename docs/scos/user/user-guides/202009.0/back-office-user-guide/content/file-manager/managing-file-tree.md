@@ -2,6 +2,7 @@
 title: Managing file tree
 description: Use the procedures to create or delete a file directory, upload media files, change the order for file directories in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-file-tree
+originalArticleId: c2569404-5ec0-4a80-8c11-08a33a49a195
 redirect_from:
   - /v6/docs/managing-file-tree
   - /v6/docs/en/managing-file-tree
@@ -15,7 +16,7 @@ To start working with file tree elements, navigate to **File Manager** > **File 
 ***
 
 ## Prerequisites
-If there are no MIME types defined in the MIME Type Settings section, you will be able to download any type of file. If you have at least one MIME type defined as Is Allowed, you will be able to download only the files of that type, unless you add more allowed types. See [Managing MIME Type Settings](/docs/scos/user/user-guides/202001.0/back-office-user-guide/file-manager/managing-mime-type-settings.html) for more details.
+If there are no MIME types defined in the MIME Type Settings section, you will be able to download any type of file. If you have at least one MIME type defined as Is Allowed, you will be able to download only the files of that type, unless you add more allowed types. See [Managing MIME Type Settings](/docs/scos/user/user-guides/202009.0/back-office-user-guide/administration/mime-type-settings/managing-mime-type-settings.html) for more details.
 
 ## Creating a File Directory
 To preserve a logical structure of the files that are going to be uploaded to the system and used for the marketing campaigns, you should define the structure according to which your files are going to be stored. Structured marketing campaign materials will also help the other Marketing Team members to work with the File Manager section.
@@ -59,7 +60,7 @@ The file is uploaded to the selected folder.
 
 ## Managing Files
 Once the file is uploaded, you can manage it from two locations: 
-* File List (see [Managing File List](/docs/scos/user/user-guides/202001.0/back-office-user-guide/file-manager/managing-file-list.html) for more details)
+* File List (see [Managing File List](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/file-manager/managing-file-list.html) for more details)
 * File Tree
 
 **To manage a file:**

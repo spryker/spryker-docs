@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ShoppingList
 originalLink: https://documentation.spryker.com/v2/docs/mg-shopping-list
+originalArticleId: 1b852466-f711-4e79-9525-abde39338a5a
 redirect_from:
   - /v2/docs/mg-shopping-list
   - /v2/docs/en/mg-shopping-list

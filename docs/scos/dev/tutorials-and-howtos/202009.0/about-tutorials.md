@@ -2,6 +2,7 @@
 title: About Tutorials
 description: The section provides instructions you can use to perform all tasks with Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v6/docs/about-tutorials
+originalArticleId: 9304f93b-e82b-483a-afb0-bc6afb531326
 redirect_from:
   - /v6/docs/about-tutorials
   - /v6/docs/en/about-tutorials

@@ -2,6 +2,7 @@
 title: Maintenance
 description: The section provides information in the Back Office that ensures the system works as expected.
 originalLink: https://documentation.spryker.com/v2/docs/maintenance
+originalArticleId: aa558a23-142a-4d40-ae33-96adfaa064b3
 redirect_from:
   - /v2/docs/maintenance
   - /v2/docs/en/maintenance

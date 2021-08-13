@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CMS Collector
 originalLink: https://documentation.spryker.com/v2/docs/mg-cms-collector
+originalArticleId: 887781e5-0156-4f3f-ad3a-24d4d75b2098
 redirect_from:
   - /v2/docs/mg-cms-collector
   - /v2/docs/en/mg-cms-collector

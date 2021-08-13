@@ -2,6 +2,7 @@
 title: Asset Management Feature Overview
 description: Learn about the assets in Spryker and how you can manage them.
 originalLink: https://documentation.spryker.com/v5/docs/asset-management-feature-overview
+originalArticleId: 2cb8c93c-e7f9-4288-b413-7de12d6252b2
 redirect_from:
   - /v5/docs/asset-management-feature-overview
   - /v5/docs/en/asset-management-feature-overview
@@ -35,4 +36,4 @@ The following environment variables are used for that:
 *   `SPRYKER_ZED_ASSETS_BASE_URL`
 *   `SPRYKER_YVES_ASSETS_URL_PATTERN`
 
-Check [Custom Location for Static Assets](https://documentation.spryker.com/docs/en/custom-location-for-static-assets) for more details.
+Check [Custom Location for Static Assets](/docs/scos/dev/migration-and-integration/202005.0/technical-enhancements/custom-location-for-static-assets.html) for more details.

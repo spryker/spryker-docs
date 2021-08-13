@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Customize Spryker Frontend
 originalLink: https://documentation.spryker.com/v5/docs/t-customize-spryker-frontend
+originalArticleId: d8d103c9-3037-4741-923b-d14ae2002972
 redirect_from:
   - /v5/docs/t-customize-spryker-frontend
   - /v5/docs/en/t-customize-spryker-frontend
@@ -196,7 +197,7 @@ Let us also review how to extend the Twig template of a molecule. By default, th
 
 3. Now, let us open the start page of Spryker Shop. It will look like this:
 
-In addition to extending templates of existing components, you can as well create components on your own. When creating a component, you can also define how it looks like, and this is also done in Twig. For detailed information, see the _Create Component Template_ section in [Tutorial - Frontend - Create a Component](https://documentation.spryker.com/docs/en/t-create-component).
+In addition to extending templates of existing components, you can as well create components on your own. When creating a component, you can also define how it looks like, and this is also done in Twig. For detailed information, see the _Create Component Template_ section in [Tutorial - Frontend - Create a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html).
 
 ## Styles
 Another important aspect you can override are styles. The global styles are defined in the following folder: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles`. The same as Twig, you can extend the global styles on your local project level or even replace them. For this purpose, you need to create your own style files in the following folder `src/Pyz/Yves/ShopUi/Theme/default/styles`. You can use the following files for your project styles:
@@ -206,7 +207,7 @@ Another important aspect you can override are styles. The global styles are defi
 * `util.scss` - can be used for utility stles, like reset, align or is-hidden implementations.
 
 {% info_block infoBox %}
-For detailed information on global styles, see the _SASS Layer_ section in [Atomic Frontend](https://documentation.spryker.com/docs/en/atomic-frontend#sass-layer
+For detailed information on global styles, see the _SASS Layer_ section in [Atomic Frontend](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/atomic-frontend-general-overview.html#sass-layer
 {% endinfo_block %}.)
 
 Typical implementations on the project level look as follows:
@@ -239,7 +240,7 @@ Typical implementations on the project level look as follows:
 @include util-visibility
 ```
 
-In addition to global styles, each component can have it own styles. For information on how to define styles for a component, see [Tutorial - Frontend - Create a Component](https://documentation.spryker.com/docs/en/t-create-component) and [Tutorial - Frontend - Override a Component](https://documentation.spryker.com/docs/en/t-override-component).
+In addition to global styles, each component can have it own styles. For information on how to define styles for a component, see [Tutorial - Frontend - Create a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html) and [Tutorial - Frontend - Override a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/overriding-a-component.html).
 
 ## Behavior
 The behavior of different components is defined by Javascript. For stricter typing and better code quality, we recommend using a strong-typed subset of Javascript called _Typescript_. It is enforced by default. However, you can always switch to regular ES6-ES7 Javascript by modifying the tsconfig.json file located in the root folder of your local Spryker code installation. You need to add the `allowJs` option to the `compilerOptions` section and set it to `true`:
@@ -304,7 +305,7 @@ bootstrap();
 
 Additional information on bootstrap implementation can be found in the application folder here: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/app`.
 
-Apart from Webpack bootstrap, each component can have its own logic defined in the dedicated component Javascript or Typescript. For information on how to define component behavior, see [Tutorial - Frontend - Create a Component](https://documentation.spryker.com/docs/en/t-create-component), [Tutorial - Frontend - Extend a Component](https://documentation.spryker.com/docs/en/t-extend-component) and [Tutorial - Frontend - Override a Component](https://documentation.spryker.com/docs/en/t-override-component).
+Apart from Webpack bootstrap, each component can have its own logic defined in the dedicated component Javascript or Typescript. For information on how to define component behavior, see [Tutorial - Frontend - Create a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html), [Tutorial - Frontend - Extend a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/extending-a-component.html) and [Tutorial - Frontend - Override a Component](/docs/scos/dev/developer-guides/202005.0/development-guide/front-end/yves/atomic-frontend/managing-the-components/overriding-a-component.html).
 
 ## Installing Dependencies
 Spryker Shop Application comes with a set of dependencies required to run the application. The dependency list can be found in the `package.json` file. You can add dependencies on your own. For example, you can add _recat_, _foundation_, _jquery_ or customize Webpack with _file-loader_ etc. For this purpose, create an SSH session to your virtual machine with `vagrant ssh` and execute the following commands:

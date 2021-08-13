@@ -2,6 +2,7 @@
 title: Installing Docker prerequisites on Windows
 description: This page describes the steps that are to be performed before you can start working with Spryker in Docker on Windows.
 originalLink: https://documentation.spryker.com/v6/docs/installing-docker-prerequisites-on-windows
+originalArticleId: b2181caa-264e-4d76-9a0a-a607333c0e47
 redirect_from:
   - /v6/docs/installing-docker-prerequisites-on-windows
   - /v6/docs/en/installing-docker-prerequisites-on-windows
@@ -30,7 +31,7 @@ Review the minimum system requirements in the table:
 
 {% info_block infoBox "WSL1 and WSL2" %}
 
-If you cannot use WSL2, you can [install and configure the required software with WSL1](https://documentation.spryker.com/v5/docs/docker-installation-prerequisites-windows#install-and-configure-the-required-software-with-wsl1). Since WSL1 is outdated, you may get multiple issues with its configuration. We recommend using WSL2 if possible.
+If you cannot use WSL2, you can [install and configure the required software with WSL1](https://documentation.spryker.com/v6/docs/docker-installation-prerequisites-windows#install-and-configure-the-required-software-with-wsl1). Since WSL1 is outdated, you may get multiple issues with its configuration. We recommend using WSL2 if possible.
 
 {% endinfo_block %}
 
@@ -58,10 +59,10 @@ You've installed and configured the required software.
 
 ## Next steps
 
-See [Chossing an installation mode](https://documentation.spryker.com/docs/choosing-an-installation-mode) to choose an installation mode.
+See [Chossing an installation mode](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to choose an installation mode.
 If you've already selected an installation mode, follow one of the guides below:
-* [Installing in Development mode on Windows](https://documentation.spryker.com/docs/installing-in-development-mode-on-windows)
-* [Installing in Demo mode on Windows](https://documentation.spryker.com/docs/installing-in-demo-mode-on-windows)
-* [Integrating Docker into existing projects](https://documentation.spryker.com/docs/integrating-docker-into-existing-projects)
-* [Running production](https://documentation.spryker.com/docs/running-production)
+* [Installing in Development mode on Windows](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
+* [Installing in Demo mode on Windows](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
+* [Integrating Docker into existing projects](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
+* [Running production](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/running-production.html)
 

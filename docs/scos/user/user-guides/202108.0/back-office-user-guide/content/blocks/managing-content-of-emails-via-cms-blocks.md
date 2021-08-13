@@ -2,14 +2,17 @@
 title: Managing content of emails via CMS blocks
 description: You can manage the content of emails you send to customers by editing email templates via CMS Blocks.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-content-of-emails-via-cms-blocks
+originalArticleId: 082e03b7-4dce-4b06-b839-06e2e26a557b
 redirect_from:
   - /2021080/docs/managing-content-of-emails-via-cms-blocks
   - /2021080/docs/en/managing-content-of-emails-via-cms-blocks
+  - /docs/managing-content-of-emails-via-cms-blocks
+  - /docs/en/managing-content-of-emails-via-cms-blocks
 ---
 
-You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](https://documentation.spryker.com/2021080/docs/email-as-a-cms-block-feature-overview). 
+You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/email-as-a-cms-block-overview.html). 
 
-There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](https://documentation.spryker.com/2021080/docs/email-as-a-cms-block-feature-overview#default-email-templates) 
+There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/email-as-a-cms-block-overview.html#default-email-templates) 
 
 ## Prerequisites
 
@@ -24,7 +27,7 @@ If your development team has introduced a new email for your project, you have t
 
 {% info_block infoBox "Info" %}
 
-You don’t need to create new email CMS Blocks for the [default email templates](https://documentation.spryker.com/2021080/docs/email-as-a-cms-block-feature-overview#default-email-templates). Instead, you edit the available email CMS Blocks to adjust them to your needs.
+You don’t need to create new email CMS Blocks for the [default email templates](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/email-as-a-cms-block-overview.html#default-email-templates). Instead, you edit the available email CMS Blocks to adjust them to your needs.
 
 {% endinfo_block %}
 
@@ -72,7 +75,7 @@ You don’t need to activate the email CMS block, as the deactivated status of t
 | Products | A block or blocks that will be assigned to a product details page. | Irrelevant. |
 
 ## Viewing email CMS blocks
-You can view an email CMS block like a regular CMS block. See [Viewing CMS blocks](https://documentation.spryker.com/2021080/docs/managing-cms-blocks#viewing-cms-blocks) for details.
+You can view an email CMS block like a regular CMS block. See [Viewing CMS blocks](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/blocks/managing-cms-blocks.html#viewing-cms-blocks) for details.
 
 ## Editing email CMS blocks
 
@@ -84,7 +87,7 @@ To edit an email CMS block:
 
 {% info_block warningBox "Note" %}
 
-If you updated the **name**, pass it to your development team to update the name of the respective [.twig email template](https://documentation.spryker.com/2021080/docs/en/email-as-a-cms-block-feature-overview#cms-block-email-template). 
+If you updated the **name**, pass it to your development team to update the name of the respective [.twig email template](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/email-as-a-cms-block-overview.html#cms-block-email-template). 
 
 {% endinfo_block %}
 
@@ -126,6 +129,6 @@ The page refreshed displaying the message about the successful update.
 
 **Tips & tricks**
 
-* Add a [glossary key](https://documentation.spryker.com/2021080/docs/en/glossary-creation) to the email CMS block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. To learn how to add translations, see [Managing glossary](https://documentation.spryker.com/2021080/docs/managing-glossary#managing-glossary)
+* Add a [glossary key](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/glossary/managing-glossary.html) to the email CMS block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. To learn how to add translations, see [Managing glossary](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/glossary/managing-glossary.html#managing-glossary)
 
 * Add variables to the email CMS block to replace them with customer and order specific details. When the email is sent, the variables are replaced with the actual details. For example, add *firstName*, and it is replaced with the name of the customer the email is sent to. A developer can provide a full list of variables and create new ones.

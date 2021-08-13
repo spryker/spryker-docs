@@ -2,6 +2,7 @@
 title: Payment Provider Integration
 description: The Spryker Commerce OS offers integrations with several payment providers that can be used in the checkout and order management.
 originalLink: https://documentation.spryker.com/v4/docs/payment-provider-integration
+originalArticleId: ca83756c-36db-407f-b276-b9b19adff826
 redirect_from:
   - /v4/docs/payment-provider-integration
   - /v4/docs/en/payment-provider-integration

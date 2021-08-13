@@ -2,6 +2,7 @@
 title: Managing company units
 description: Use the procedures to create, edit, and delete company units in the Back Office after a company has been created.
 originalLink: https://documentation.spryker.com/v6/docs/managing-company-units
+originalArticleId: 45940ac4-2840-46c3-918f-13a40dc5da94
 redirect_from:
   - /v6/docs/managing-company-units
   - /v6/docs/en/managing-company-units
@@ -21,7 +22,7 @@ To create a company business unit:
 3. Click **Save**. 
     The new created business unit will appear in the _Company Business Units_ table on the **Company Units** page.
 
-The fields that you enter and select are described in [Company Account: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/references/company-account-reference-information.html).
+The fields that you enter and select are described in [Company Account: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/company-account/references/reference-information-company-account.html).
 
 The business units can be managed by triggering certain actions in the _Actions_ column in the **Company Business Units** table. Specifically, business units can be **Edited** and **Deleted**.
 
@@ -29,7 +30,7 @@ The business units can be managed by triggering certain actions in the _Actions_
 To edit a business unit:
 1. Click **Edit** in the _Actions_ column if you want to change the details for a business unit such as Parent BU, Name, IBAN, and BIC.
     {% info_block infoBox "Info" %}
-Once the company business unit address is created, you can attach it to a business unit on the **Edit Company Business Unit** page. See [Managing Company Unit Addresses](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-unit-addresses.html
+Once the company business unit address is created, you can attach it to a business unit on the **Edit Company Business Unit** page. See [Managing Company Unit Addresses](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/company-account/managing-company-unit-addresses.html
 {% endinfo_block %} for more details.)
 2. Once done, click **Save**.
 
@@ -37,6 +38,6 @@ Once the company business unit address is created, you can attach it to a busine
 If you want to delete an existing business unit, click **Delete** in the _Actions_ column.
 ***
 **What's next?**
-You need to create a company unit address so that you can attach it to your business unit. See [Managing Company Unit Addresses](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/managing-a-company-account/managing-company-unit-addresses.html) for more details.
+You need to create a company unit address so that you can attach it to your business unit. See [Managing Company Unit Addresses](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/company-account/managing-company-unit-addresses.html) for more details.
 
-See [Company Account: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/company-account/references/company-account-reference-information.html) to know about the attributes you see, select and enter while working with company units.
+See [Company Account: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/company-account/references/reference-information-company-account.html) to know about the attributes you see, select and enter while working with company units.

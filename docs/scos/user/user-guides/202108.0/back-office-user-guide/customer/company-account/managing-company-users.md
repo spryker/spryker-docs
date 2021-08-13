@@ -2,9 +2,12 @@
 title: Managing company users
 description: Use the procedures to create, edit, enable/disable, delete, and attach company users to business units in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-users
+originalArticleId: ff15efb5-30c1-4b0e-b56d-596d90d40123
 redirect_from:
   - /2021080/docs/managing-company-users
   - /2021080/docs/en/managing-company-users
+  - /docs/managing-company-users
+  - /docs/en/managing-company-users
 ---
 
 This topic describes how to manage company users.
@@ -14,7 +17,7 @@ This topic describes how to manage company users.
 To start working with company users, go to the **Customers** > **Company Users** section.
 {% info_block warningBox "Note" %}
 
-Make sure you have a [company role](https://documentation.spryker.com/docs/managing-company-roles), [company](https://documentation.spryker.com/docs/managing-companies), and [business unit](https://documentation.spryker.com/docs/managing-company-units) created.
+Make sure you have a [company role](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-roles.html), [company](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-companies.html), and [business unit](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-units.html) created.
 
 {% endinfo_block %}
 
@@ -30,7 +33,7 @@ To add a new company user:
     3. Enter the date of birth and phone values.
     4. Select company and business units from the respective drop-down lists.
     5. Enter the phone number of the user (optional).
-    6. Check the checkbox for the roles you want to assign to the user. The values available for selection are limited by those assigned to a company. See [Managing company roles](https://documentation.spryker.com/docs/managing-company-roles) to learn how the company roles are created.
+    6. Check the checkbox for the roles you want to assign to the user. The values available for selection are limited by those assigned to a company. See [Managing company roles](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-roles.html) to learn how the company roles are created.
 3. Click **Save**.
 
 ## Editing a company user

@@ -2,6 +2,7 @@
 title: Dev VM takes a lot of disk space (40+ GB)
 description: Learn how to fix the issue when Dev VM takes a lot of disk space (40+ GB)
 originalLink: https://documentation.spryker.com/v6/docs/dev-vm-takes-a-lot-of-disk-space-40-gb
+originalArticleId: bcc5b063-a692-43ef-87c0-775246b24f3d
 redirect_from:
   - /v6/docs/dev-vm-takes-a-lot-of-disk-space-40-gb
   - /v6/docs/en/dev-vm-takes-a-lot-of-disk-space-40-gb

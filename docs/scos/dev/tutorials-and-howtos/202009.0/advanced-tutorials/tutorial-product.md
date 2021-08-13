@@ -1,6 +1,7 @@
 ---
 title: Tutorial- Product
 originalLink: https://documentation.spryker.com/v6/docs/t-product-challenge
+originalArticleId: e92397db-25af-4a30-99ea-3e47645caebc
 redirect_from:
   - /v6/docs/t-product-challenge
   - /v6/docs/en/t-product-challenge
@@ -51,4 +52,4 @@ Update the Twig template that shows the product details (`src/Pyz/Yves/Product/T
 | Database Schema Definition | Defining the database Schema using Propel |
 | Persistence Layer | Persistence layer overview |
 | Product | Product module documentation |
-| [Using Translations](/docs/scos/dev/tutorials/202001.0/advanced/tutorial-using-translations.html) |Using translations in Yves  |
+| [Using Translations](/docs/scos/dev/tutorials-and-howtos/202009.0/advanced-tutorials/tutorial-using-translations.html) |Using translations in Yves  |

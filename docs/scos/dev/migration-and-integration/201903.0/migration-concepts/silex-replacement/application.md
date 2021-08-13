@@ -1,6 +1,7 @@
 ---
 title: Application
 originalLink: https://documentation.spryker.com/v2/docs/application
+originalArticleId: 1b784400-bfd0-4383-9403-6ebb1fca4316
 redirect_from:
   - /v2/docs/application
   - /v2/docs/en/application

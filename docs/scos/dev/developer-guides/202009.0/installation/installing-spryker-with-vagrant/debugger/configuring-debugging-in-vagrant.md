@@ -2,6 +2,7 @@
 title: Configuring debugging in Vagrant
 description: This article describes how to setup debugging in your development environment.
 originalLink: https://documentation.spryker.com/v6/docs/configuring-debugging-in-vagrant
+originalArticleId: 2c27db3a-ce31-4323-81ef-54c1c4cc868c
 redirect_from:
   - /v6/docs/configuring-debugging-in-vagrant
   - /v6/docs/en/configuring-debugging-in-vagrant
@@ -10,7 +11,7 @@ redirect_from:
 This article describes how to configure debugging in your development environment.
 
 {% info_block warningBox %}
-To configure debugging for the VM below version 91, see [Configuring debugging in Vagrant with VM below version 91](https://documentation.spryker.com/debugging-setup-prior-vm91
+To configure debugging for the VM below version 91, see [Configuring debugging in Vagrant with VM below version 91](https://documentation.spryker.com/configuring-debugging-in-vagrant-with-vm-below-version-91
 {% endinfo_block %}.)
 
 ## Installing the Xdebug module

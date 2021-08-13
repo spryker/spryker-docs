@@ -2,6 +2,7 @@
 title: Router Yves
 description: The article provides instructions on how to install the extension module along with the router and integrate it then in Yves.
 originalLink: https://documentation.spryker.com/v6/docs/router-yves
+originalArticleId: 6055a071-d3e0-448e-b2d2-128d1ff1ec04
 redirect_from:
   - /v6/docs/router-yves
   - /v6/docs/en/router-yves
@@ -18,7 +19,7 @@ You can find the list of all the modules related to the service below:
 
 ### Installation
 
-For information on the installation, see [Migration Guide - Router](https://documentation.spryker.com/docs/migration-guide-router). 
+For information on the installation, see [Migration Guide - Router](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-router.html). 
 
 ### RouterDependencyProvider
 #### RouterPlugins

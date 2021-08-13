@@ -2,9 +2,12 @@
 title: Controllers and Actions
 description: Zed's communication layer is the entry point to the system. Here are executed all of the external requests from users, the Yves-application and all command-line calls. The purpose of this layer is to retrieve the data, delegate to the business layer and to handover it to the presentation layer.
 originalLink: https://documentation.spryker.com/2021080/docs/zed-controllers-actions
+originalArticleId: 32268e14-8a03-4576-a7fc-5290bb073767
 redirect_from:
   - /2021080/docs/zed-controllers-actions
   - /2021080/docs/en/zed-controllers-actions
+  - /docs/zed-controllers-actions
+  - /docs/en/zed-controllers-actions
 ---
 
 Zed's communication layer is the entry point to the system. Here are executed all of the external requests from users, the Yves-application and all command-line calls. The purpose of this layer is to retrieve the data, delegate to the business layer and to hand over it to the presentation layer.
@@ -113,4 +116,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedCommunicationController` - Add Zed Communication Controller
 * `vendor/bin/console spryk:run AddZedCommunicationControllerAction` - Add Zed Communication Controller Method
 
-See the [Spryk](https://documentation.spryker.com/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/{{ page.version }}/development-tools/spryk-code-generator.html) documentation for details.

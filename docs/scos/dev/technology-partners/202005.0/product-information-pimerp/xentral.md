@@ -2,6 +2,7 @@
 title: Xentral
 description: Provide customers with ERP / CRM software that is configured according to individual requirements by integrating Xentral to the Spryker-based project.
 originalLink: https://documentation.spryker.com/v5/docs/xentral
+originalArticleId: 3ed1d537-597b-4e96-a410-99fddd0f7835
 redirect_from:
   - /v5/docs/xentral
   - /v5/docs/en/xentral

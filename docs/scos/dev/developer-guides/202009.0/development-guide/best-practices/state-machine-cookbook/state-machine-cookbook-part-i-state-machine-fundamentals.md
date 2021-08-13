@@ -2,6 +2,7 @@
 title: State machine cookbook - part I - state machine fundamentals
 description: State machines are a model of computation used to automate processes. In Spryker you can use the OMS module to automate the management of orders or the StateMachine module to automate other processes you define in your shop.
 originalLink: https://documentation.spryker.com/v6/docs/state-machine-cookbook
+originalArticleId: 1f03f526-88af-4ffd-ab5f-0a909f94dfde
 redirect_from:
   - /v6/docs/state-machine-cookbook
   - /v6/docs/en/state-machine-cookbook
@@ -220,7 +221,7 @@ Let’s assume we are trying to define the prepayment process, in which if after
 ...
 </events>
 ```
-You can also set the date and time from when the timeout should be started. See [OMS Timeout Processor](https://documentation.spryker.com/docs/order-process-modelling-state-machines#oms-timeout-processor) for details.
+You can also set the date and time from when the timeout should be started. See [OMS Timeout Processor](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor) for details.
 
 #### Invoking an event
 
@@ -548,4 +549,4 @@ As you can notice from the example, all changes that are BC breaking will result
 
  <!-- **See also:** article has not been moved yet
 
-* [Cron Jobs - State Machine](https://documentation.spryker.com/v4/docs/state-machine-cronjob.htm) -->
+* [Cron Jobs - State Machine](https://documentation.spryker.com/v6/docs/state-machine-cronjob.htm) -->

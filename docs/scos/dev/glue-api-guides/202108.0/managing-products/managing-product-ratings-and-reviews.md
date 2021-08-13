@@ -2,12 +2,15 @@
 title: Managing product ratings and reviews
 description: Learn how to manage product ratings and reviews via Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-ratings-and-reviews
+originalArticleId: e712d25f-b084-4fac-ac5f-cbb46e0947cb
 redirect_from:
   - /2021080/docs/managing-product-ratings-and-reviews
   - /2021080/docs/en/managing-product-ratings-and-reviews
+  - /docs/managing-product-ratings-and-reviews
+  - /docs/en/managing-product-ratings-and-reviews
 ---
 
-[Ratings and reviews](https://documentation.spryker.com/docs/rating-reviews) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
+[Ratings and reviews](https://documentation.spryker.com/2021080/docs/rating-reviews) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
 
 Products and ratings API helps you to:
 
@@ -16,7 +19,7 @@ Products and ratings API helps you to:
 * Allow customers to review and rate products.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product rating & reviews feature integration](https://documentation.spryker.com/docs/glue-api-product-rating-reviews-feature-integration)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product rating & reviews feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
 
 ## Retrieve product ratings and reviews
 
@@ -118,7 +121,7 @@ To provide a rating and a review of a products, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/docs/authenticating-as-a-customer#authenticate-as-a-customer) or [authenticating as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
 Sample request: `POST http://glue.mysprykershop.com/abstract-products/139/product-reviews`
 
@@ -182,8 +185,8 @@ Response sample:
 ## Other management options
 
 You can retrieve the average rating of a product by:
-* [Retrieving an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-products#retrieve-an-abstract-product)
-* [Retrieving a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#retrieve-a-concrete-product)
+* [Retrieving an abstract product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieving a concrete product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 
 Also, all the endpoints that accept `abstract-products` and `concrete-products` resources as included resources in requests, return the average product rating. 
 
@@ -197,4 +200,4 @@ Also, all the endpoints that accept `abstract-products` and `concrete-products` 
 | 311 | Abstract product ID is not specified. |
 | 901 | One or more of the following reasons:<ul><li>The `nickname` attribute is empty or not specified.</li><li>The `rating` attribute is empty or not specified.</li><li>The `summary` attribute is empty or not specified.</li></ul> |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

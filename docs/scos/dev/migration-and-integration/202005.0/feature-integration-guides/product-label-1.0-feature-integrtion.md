@@ -2,6 +2,7 @@
 title: Product Label 1.0 Feature Integrtion
 description: The Product Label feature allows highlighting specific products in your online shop. The guide describes how to integrate the feature in the project.
 originalLink: https://documentation.spryker.com/v5/docs/product-label-feature-integration-1-0
+originalArticleId: 756469c4-13b0-4eba-b258-59976bd3999f
 redirect_from:
   - /v5/docs/product-label-feature-integration-1-0
   - /v5/docs/en/product-label-feature-integration-1-0

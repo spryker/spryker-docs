@@ -2,6 +2,7 @@
 title: Managing Guest Carts
 description: This article describes the endpoints that provide access to shopping carts management functionality for the guest carts.
 originalLink: https://documentation.spryker.com/v4/docs/managing-guest-carts
+originalArticleId: a2cc1bc6-c3ec-4c20-abc1-9ec8b2ace98d
 redirect_from:
   - /v4/docs/managing-guest-carts
   - /v4/docs/en/managing-guest-carts
@@ -776,7 +777,7 @@ Initially, guest carts are anonymous. In other words, they are not related to an
 To assign a guest cart to a customer, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 {% info_block infoBox "Info" %}
-The the *X-Anonymous-Customer-Unique-Id* header is passed every time the API client creates or updates a guest cart. The header is managed by the client exclusively. For details, see section [Resources for Accessing Guest Carts](https://documentation.spryker.com/v4/docs/managing-guest-carts#resources-for-accessing-guest-carts
+The the *X-Anonymous-Customer-Unique-Id* header is passed every time the API client creates or updates a guest cart. The header is managed by the client exclusively. For details, see section [Resources for Accessing Guest Carts](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html#resources-for-accessing-guest-carts
 {% endinfo_block %}.)
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/dev/features/202001.0/shopping-cart/multiple-carts-per-user/multiple-carts-per-user.html) environment:

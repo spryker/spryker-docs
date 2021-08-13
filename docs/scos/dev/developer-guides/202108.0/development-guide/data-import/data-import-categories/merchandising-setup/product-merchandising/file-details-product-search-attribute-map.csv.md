@@ -1,9 +1,12 @@
 ---
 title: File details- product_search_attribute_map.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-search-attribute-mapcsv
+originalArticleId: 4f555e2a-157b-414e-89e5-07499e88c090
 redirect_from:
   - /2021080/docs/file-details-product-search-attribute-mapcsv
   - /2021080/docs/en/file-details-product-search-attribute-mapcsv
+  - /docs/file-details-product-search-attribute-mapcsv
+  - /docs/en/file-details-product-search-attribute-mapcsv
 ---
 
 This article contains content of the **product_search_attribute_map.csv** file to configure Product Search Attribute Map information on your Spryker Demo Shop.
@@ -20,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [product_attribute_key.csv](https://documentation.spryker.com/docs/file-details-product-attribute-keycsv)
+*    [product_attribute_key.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
 
 Recommendations & other information
 This file maps the product attributes that are imported in the *product_attribute_key.csv* file with Elasticsearch-specific properties.

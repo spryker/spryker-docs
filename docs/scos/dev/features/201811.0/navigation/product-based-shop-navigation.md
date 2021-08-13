@@ -2,6 +2,7 @@
 title: Product-Based Shop Navigation
 description: The Product Based Navigation can easily reflect any grouping of products you need.
 originalLink: https://documentation.spryker.com/v1/docs/product-based-shop-navigation
+originalArticleId: b7041092-32dd-4a39-bd11-ebbd99d85ce4
 redirect_from:
   - /v1/docs/product-based-shop-navigation
   - /v1/docs/en/product-based-shop-navigation

@@ -1,9 +1,12 @@
 ---
 title: HowTo - Configure the Product Reviews
 originalLink: https://documentation.spryker.com/2021080/docs/ht-product-review-feature-configuration
+originalArticleId: ea370505-baab-48a6-8dc1-879739dd816a
 redirect_from:
   - /2021080/docs/ht-product-review-feature-configuration
   - /2021080/docs/en/ht-product-review-feature-configuration
+  - /docs/ht-product-review-feature-configuration
+  - /docs/en/ht-product-review-feature-configuration
 ---
 
 ## Configuring the Maximum Rating

@@ -1,12 +1,13 @@
 ---
 title: File details- cms_page.csv
 originalLink: https://documentation.spryker.com/v5/docs/file-details-cms-pagecsv
+originalArticleId: 798b81f0-2dcb-4b97-92dd-76563d13c8fe
 redirect_from:
   - /v5/docs/file-details-cms-pagecsv
   - /v5/docs/en/file-details-cms-pagecsv
 ---
 
-This article contains content of the **cms_page.csv** file to configure [CMS Page](https://documentation.spryker.com/docs/en/cms-page) information on your Spryker Demo Shop.
+This article contains content of the **cms_page.csv** file to configure [CMS Page](/docs/scos/dev/features/202005.0/cms/cms-page/cms-page.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -31,7 +32,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*     [cms_template.csv](https://documentation.spryker.com/docs/en/file-details-cms-templatecsv)
+*     [cms_template.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/content-management/file-details-cms-template.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *cms_page.csv*  file can be downloaded here:

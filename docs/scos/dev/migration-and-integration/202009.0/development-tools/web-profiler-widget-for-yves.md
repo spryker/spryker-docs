@@ -2,6 +2,7 @@
 title: Web Profiler Widget for Yves
 description: This guide describes how to integrate and use the Web Profiler Widget available in Yves for development purposes.
 originalLink: https://documentation.spryker.com/v6/docs/web-profiler-widget
+originalArticleId: 03e9f1af-80b7-4814-8893-1e57a0b8d387
 redirect_from:
   - /v6/docs/web-profiler-widget
   - /v6/docs/en/web-profiler-widget

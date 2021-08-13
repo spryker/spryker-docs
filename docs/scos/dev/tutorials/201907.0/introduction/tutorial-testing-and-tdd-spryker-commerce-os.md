@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Testing and TDD - Spryker Commerce OS
 originalLink: https://documentation.spryker.com/v3/docs/t-testing-tdd-scos
+originalArticleId: 7c2ec6a8-0a4b-4276-b663-5f9e850af7ea
 redirect_from:
   - /v3/docs/t-testing-tdd-scos
   - /v3/docs/en/t-testing-tdd-scos

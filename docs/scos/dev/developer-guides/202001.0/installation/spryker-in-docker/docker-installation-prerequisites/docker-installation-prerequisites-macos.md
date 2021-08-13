@@ -2,6 +2,7 @@
 title: Docker Installation Prerequisites - MacOS
 description: Perform the steps described in the guide before you can start working with Spryker in Docker on MacOS.
 originalLink: https://documentation.spryker.com/v4/docs/docker-installation-prerequisites-macos
+originalArticleId: c626b426-96ff-48c6-87dc-d4aff05f2c61
 redirect_from:
   - /v4/docs/docker-installation-prerequisites-macos
   - /v4/docs/en/docker-installation-prerequisites-macos
@@ -51,7 +52,7 @@ You can set lower **Memory:** and **Swap:** limit values. However, the default l
 sudo gem install docker-sync
 ```
 {% info_block infoBox %}
-This step is required if you want to run Spryker in [Development mode](https://documentation.spryker.com/v4/docs/modes-overview#development-mode
+This step is required if you want to run Spryker in [Development mode](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/installation-guides/modes-overview.html#development-mode
 {% endinfo_block %}.)
 
 **What's next?**

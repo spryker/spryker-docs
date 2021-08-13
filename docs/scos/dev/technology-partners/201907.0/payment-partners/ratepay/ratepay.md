@@ -2,6 +2,7 @@
 title: RatePay
 description: Offer intelligent payment solutions for handling most popular paylater models like invoice and installments on the internet for the DACH region by integrating RatePay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v3/docs/ratepay
+originalArticleId: 5dc5d1db-b27a-4f80-8bbe-8dcdbacf559a
 redirect_from:
   - /v3/docs/ratepay
   - /v3/docs/en/ratepay
@@ -29,10 +30,10 @@ RatePAY bears the full risk and takes over the complete processing.
 
 <b>RatePAY provides four methods of payment</b>:
 
-* [Invoice](/docs/scos/dev/technology-partners/202001.0/payment-partners/ratepay/ratepay-invoice.html)
-* [Prepayment](/docs/scos/dev/technology-partners/202001.0/payment-partners/ratepay/ratepay-prepayment.html)
-* [Direct Debit (ELV)](/docs/scos/dev/technology-partners/202001.0/payment-partners/ratepay/ratepay-direct-debit.html)
-* [Installment](/docs/scos/dev/technology-partners/202001.0/payment-partners/ratepay/ratepay-installment.html)
+* [Invoice](/docs/scos/dev/technology-partners/201907.0/payment-partners/ratepay/ratepay-invoice.html)
+* [Prepayment](/docs/scos/dev/technology-partners/201907.0/payment-partners/ratepay/ratepay-prepayment.html)
+* [Direct Debit (ELV)](/docs/scos/dev/technology-partners/201907.0/payment-partners/ratepay/ratepay-direct-debit.html)
+* [Installment](/docs/scos/dev/technology-partners/201907.0/payment-partners/ratepay/ratepay-installment.html)
 
 We use state machines for handling and managing orders and payments. To integrate RatePAY payments, a state machine for RatePAY should be created.
 

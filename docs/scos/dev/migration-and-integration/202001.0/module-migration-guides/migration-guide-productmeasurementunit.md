@@ -2,6 +2,7 @@
 title: Migration Guide - ProductMeasurementUnit
 description: Use the guide to migrate to a new version of the ProductMeasurementUnit module.
 originalLink: https://documentation.spryker.com/v4/docs/mg-product-measurement-unit
+originalArticleId: a63c2fbc-a3ea-49e0-b6f8-6637d1373a1c
 redirect_from:
   - /v4/docs/mg-product-measurement-unit
   - /v4/docs/en/mg-product-measurement-unit

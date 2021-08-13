@@ -2,6 +2,7 @@
 title: Fact Finder Web Components
 description: Integrate Fact Finder Web Components into Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v3/docs/fact-finder-web-components
+originalArticleId: 4d022a90-652d-478d-b18c-0e283fa74e68
 redirect_from:
   - /v3/docs/fact-finder-web-components
   - /v3/docs/en/fact-finder-web-components

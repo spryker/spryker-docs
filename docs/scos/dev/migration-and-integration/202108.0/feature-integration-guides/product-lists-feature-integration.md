@@ -2,9 +2,12 @@
 title: Product Lists feature integration
 description: The Product Lists feature allows defining access to particular items. The guide walks you through the process of integrating this feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-lists-feature-integration
+originalArticleId: a351c7ab-e1cc-4764-bd7f-3ac60695dac4
 redirect_from:
   - /2021080/docs/product-lists-feature-integration
   - /2021080/docs/en/product-lists-feature-integration
+  - /docs/product-lists-feature-integration
+  - /docs/en/product-lists-feature-integration
 ---
 
 This document describes how to integrate the Product Lists feature into a Spryker project. 
@@ -794,5 +797,5 @@ Make sure that no restricted products can be added to a cart and if they were al
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}
-After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user who browses the catalog gets product lists assigned, and this can be fulfilled by providing owners for product lists.</br>Check out our [Merchant Relationship Product Restrictions integration guide](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/merchant-product-restrictions-feature-integration.html
+After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user who browses the catalog gets product lists assigned, and this can be fulfilled by providing owners for product lists.</br>Check out our [Merchant Relationship Product Restrictions integration guide](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/merchant-product-restrictions-feature-integration.html
 {% endinfo_block %} that adds this functionality for merchant relationships.)

@@ -2,6 +2,7 @@
 title: Module Configuration Convention
 description: This article contains conventions on the module configuration.
 originalLink: https://documentation.spryker.com/v2/docs/module-configuration-convention
+originalArticleId: ff3e1cf9-b43f-4ed8-b42a-aae573e2b939
 redirect_from:
   - /v2/docs/module-configuration-convention
   - /v2/docs/en/module-configuration-convention

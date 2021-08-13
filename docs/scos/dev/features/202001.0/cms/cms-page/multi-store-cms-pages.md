@@ -2,6 +2,7 @@
 title: Multi-store CMS Pages
 description: The multi-store CMS pages feature enables a shop administrator to manage a specific store view by making CMS pages visible or hidden for the customers
 originalLink: https://documentation.spryker.com/v4/docs/multi-store-cms-pages
+originalArticleId: 89a3b4b9-8768-4c7c-a5ca-8043fb56912c
 redirect_from:
   - /v4/docs/multi-store-cms-pages
   - /v4/docs/en/multi-store-cms-pages

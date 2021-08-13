@@ -2,6 +2,7 @@
 title: Adding translations for Yves
 description: Textual translations are handled by the Glossary-module. You can use the GlossaryFacade in Zed to add entries to Glossary (or you can use the Zed UI).
 originalLink: https://documentation.spryker.com/v6/docs/frontend-translations
+originalArticleId: 102013f3-4ea9-438b-a15a-f9aa0171e686
 redirect_from:
   - /v6/docs/frontend-translations
   - /v6/docs/en/frontend-translations

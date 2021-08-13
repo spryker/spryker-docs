@@ -2,9 +2,12 @@
 title: Reference information- content Item widgets templates
 description: The guide provides reference information about content item widgets templates used in Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/content-item-widgets-templates-reference-information
+originalArticleId: d155b7b4-e4bc-4ec9-9bbd-0af7558dac90
 redirect_from:
   - /2021080/docs/content-item-widgets-templates-reference-information
   - /2021080/docs/en/content-item-widgets-templates-reference-information
+  - /docs/content-item-widgets-templates-reference-information
+  - /docs/en/content-item-widgets-templates-reference-information
 ---
 
 This topic contains the reference information you need to know when selecting a template for a content item widget in the **Pages** > **Edit Placeholders** and **Blocks** > **Edit Placeholder** sections.

@@ -2,6 +2,7 @@
 title: About the Business Layer
 description: Zed’s business layer is responsible for the entire business logic.
 originalLink: https://documentation.spryker.com/v6/docs/business-layer
+originalArticleId: 8abd230c-513f-470d-bdd8-06607bcbc210
 redirect_from:
   - /v6/docs/business-layer
   - /v6/docs/en/business-layer

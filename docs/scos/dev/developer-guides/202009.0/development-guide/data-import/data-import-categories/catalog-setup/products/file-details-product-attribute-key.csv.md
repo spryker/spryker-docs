@@ -1,12 +1,13 @@
 ---
 title: File details- product_attribute_key.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-attribute-keycsv
+originalArticleId: 1ada953d-4879-4d6e-ad3c-e6e6b1d91114
 redirect_from:
   - /v6/docs/file-details-product-attribute-keycsv
   - /v6/docs/en/file-details-product-attribute-keycsv
 ---
 
-This article contains content of the **product_attribute_key.csv** file to configure [Product Attribute](https://documentation.spryker.com/docs/product-attributes) information on your Spryker Demo Shop.
+This article contains content of the **product_attribute_key.csv** file to configure [Product Attribute](https://documentation.spryker.com/v6/docs/products-overview) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

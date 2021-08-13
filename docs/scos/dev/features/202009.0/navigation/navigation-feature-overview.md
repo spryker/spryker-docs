@@ -2,6 +2,7 @@
 title: Navigation feature overview
 description: Build and manage an intuitive navigation for your Spryker shop.
 originalLink: https://documentation.spryker.com/v6/docs/navigation-feature-overview
+originalArticleId: a0fa206a-2502-4f19-b32a-f5ecd197a7f4
 redirect_from:
   - /v6/docs/navigation-feature-overview
   - /v6/docs/en/navigation-feature-overview
@@ -14,12 +15,12 @@ A *navigation element* is a page section that contains links to shop resources, 
 
 ![navigation-element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation+element.png){height="" width=""}
 
-See [Creating a Navigation Element](https://documentation.spryker.com/docs/managing-navigation-elements#creating-a-navigation-element) to learn how a Back Office user can create a navigation element.
+See [Creating a Navigation Element](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn how a Back Office user can create a navigation element.
 
 
 ### Navigation Element Duplication
 If you have a configured navigation element in a shop and you want to use it as a basis for another navigation element, you can duplicate it. This is especially useful in a multi-shop scenario. 
-See [Duplicating a Navigation Element](https://documentation.spryker.com/docs/managing-navigation-elements#duplicating-a-navigation-element) to learn how a Back Office user can do that. 
+See [Duplicating a Navigation Element](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/navigation/managing-navigation-elements.html#duplicating-a-navigation-element) to learn how a Back Office user can do that. 
 
 
 ## Navigation Tree 
@@ -62,7 +63,7 @@ A navigation node can be both of the parent type and the child type. For example
 
 
 
-See [Creating a Navigation Node](https://documentation.spryker.com/docs/managing-navigation-elements#creating-a-navigation-node) to learn how a Back Office user can create navigation nodes. 
+See [Creating a Navigation Node](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a Back Office user can create navigation nodes. 
 
 
 ### Navigation Node Design
@@ -74,22 +75,22 @@ The only class you can use by default is *label*. This class capitalizes the nav
 
 A front-end developer can create more classes for navigation nodes.
 
-See [Creating a Navigation Node](https://documentation.spryker.com/docs/managing-navigation-elements#creating-a-navigation-node) to learn how a Back office user can define a navigation node design. 
+See [Creating a Navigation Node](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a Back office user can define a navigation node design. 
 
 ## Navigation Node Validity Period
 You can define the time period a navigation node is valid for:
 * When the validity period ends, the navigation node with its child stops being displayed on the Storefront. 
 * When the validity period starts, the navigation node with its child starts being displayed on the Storefront. 
-See [Creating a Navigation Node](https://documentation.spryker.com/docs/managing-navigation-elements#creating-a-navigation-node) to learn how a product catalog manager can define a navigation node validity period. 
+See [Creating a Navigation Node](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a product catalog manager can define a navigation node validity period. 
 
 ## Navigation as Content Item
-To publish a navigation element on the Storefront, you can add it to [CMS Blocks](https://documentation.spryker.com/docs/cms-block) and [CMS Pages](https://documentation.spryker.com/docs/cms-page) as a [content item](https://documentation.spryker.com/docs/content-items-feature-overview). 
+To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-block.html) and [CMS Pages](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/cms-page.html) as a [content item](/docs/scos/dev/features/202009.0/content-items/content-items-feature-overview.html). 
 The schema shows how the Navigation feature affects content management in a Spryker shop:
 
 ![navigation-as-content-item-schema](https://confluence-connect.gliffy.net/embed/image/a086fe4e-1d09-49ae-a181-ebd8b0f8c051.png?utm_medium=live&utm_source=custom){height="" width=""}
 
-See [Create a Navigation Content Item](https://documentation.spryker.com/docs/creating-content-items#create-a-navigation-content-item) to learn how a Back Office user can create a Navigation content item. 
-See [Adding Content to Storefront Pages Using Templates & Slots](https://documentation.spryker.com/docs/adding-content-to-storefront-pages-using-templates-slots#adding-content-to-storefront-pages-using-templates---slots) to learn how a marketing content manager can add content to the Storefront. 
+See [Create a Navigation Content Item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#create-a-navigation-content-item) to learn how a Back Office user can create a Navigation content item. 
+See [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html#adding-content-to-storefront-pages-using-templates---slots) to learn how a marketing content manager can add content to the Storefront. 
 
 ### Navigation Content Item Templates
 A content item template defines how a content item is displayed on the Storefront. The following templates are shipped for the Navigation content item by default:

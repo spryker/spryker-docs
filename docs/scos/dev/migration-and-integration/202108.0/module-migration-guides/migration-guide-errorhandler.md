@@ -2,13 +2,16 @@
 title: Migration Guide - ErrorHandler
 description: Use the guide to perform the ErrorHandler part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-errorhandler
+originalArticleId: 2f18956f-5d59-4c50-b225-4634052c02c3
 redirect_from:
   - /2021080/docs/migration-guide-errorhandler
   - /2021080/docs/en/migration-guide-errorhandler
+  - /docs/migration-guide-errorhandler
+  - /docs/en/migration-guide-errorhandler
 ---
 
 :::(Error) 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html).
 :::
 To upgrade the module, do the following:
 

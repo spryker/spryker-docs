@@ -2,6 +2,7 @@
 title: Product Group + Product Labels Feature Integration
 description: Instructions to integrate Product group + Product labels feature into a Spryker project.
 originalLink: https://documentation.spryker.com/v5/docs/product-group-product-labels-feature-integration
+originalArticleId: 30aad86f-b489-4d64-b6bc-0fab68277361
 redirect_from:
   - /v5/docs/product-group-product-labels-feature-integration
   - /v5/docs/en/product-group-product-labels-feature-integration

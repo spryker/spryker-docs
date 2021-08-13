@@ -2,6 +2,7 @@
 title: Silex Replacement
 description: The article contains information on the Silex replacement, backward compatibility, steps to be taken, changes in the old procedure and the new procedure.
 originalLink: https://documentation.spryker.com/v4/docs/silex-replacement
+originalArticleId: c8e5a183-3ecf-4588-8d7d-48e5335e2129
 redirect_from:
   - /v4/docs/silex-replacement
   - /v4/docs/en/silex-replacement

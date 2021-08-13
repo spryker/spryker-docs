@@ -2,6 +2,7 @@
 title: GLUE- Promotions & Discounts Feature Integration
 description: The guide walks you through the process of installing Promotions&Discounts feature into the project
 originalLink: https://documentation.spryker.com/v3/docs/promotions-and-discounts-feature-integration-201907
+originalArticleId: b85fcb26-9181-4f62-90e2-b2d91f63936c
 redirect_from:
   - /v3/docs/promotions-and-discounts-feature-integration-201907
   - /v3/docs/en/promotions-and-discounts-feature-integration-201907

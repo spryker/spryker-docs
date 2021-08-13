@@ -2,12 +2,13 @@
 title: Modular Frontend
 description: This article provides information on Pages and Widgets, the Pages module and how the Pages module can be extended. Real-life examples included into the article will help you to understand the concept better.
 originalLink: https://documentation.spryker.com/v5/docs/modular-frontend
+originalArticleId: aa6fc9f2-bc2f-4b54-8caa-edff5b27b206
 redirect_from:
   - /v5/docs/modular-frontend
   - /v5/docs/en/modular-frontend
 ---
 
-This article provides information on [Pages](https://documentation.spryker.com/docs/en/modular-frontend#pages) and [Widgets](https://documentation.spryker.com/docs/en/modular-frontend#widgets), the Pages module and how the Pages module can be extended. Real-life examples included into the article will help you to understand the concept better.
+This article provides information on [Pages](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/yves/modular-frontend.html#pages) and [Widgets](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/yves/modular-frontend.html#widgets), the Pages module and how the Pages module can be extended. Real-life examples included into the article will help you to understand the concept better.
 
 ## General Information 
 ### Pages
@@ -38,7 +39,7 @@ The *Pages* and *Widgets* concept offers a solution to tailor projects to their 
 When you get the general understanding of the Pages/Widgets concept, its time to investigate how the *Pages* module looks like, why and how the module can be extended.
 
 ### Page Module Appearance and Pages Extension
-A Page module typically contains a `RouteProviderPlugin` plugin for routing (see [URL Routing](https://documentation.spryker.com/docs/en/yves-url-routing)) and some Controllers with their twig templates (see [Controllers and Actions](https://documentation.spryker.com/docs/en/yves-controllers-actions)). The implementation scope of a *Page* module should be decided individually, depending on its need of re-usability. 
+A Page module typically contains a `RouteProviderPlugin` plugin for routing (see [URL Routing](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/yves/implementing-url-routing-in-yves.html)) and some Controllers with their twig templates (see [Controllers and Actions](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/yves/controllers-and-actions.html)). The implementation scope of a *Page* module should be decided individually, depending on its need of re-usability. 
 
 {% info_block infoBox %}
 The more generic a Page module is the more it can be reused, but also it needs more extension points this way.
@@ -107,7 +108,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-For more informaiton on how to implement a Widget, see the [How to Implement a Widget Plugin](https://documentation.spryker.com/docs/en/t-widgets-widget-plugins#how-to-implement-a-widget-) section in *Tutorial - Widgets and Widget Plugins*.  
+For more informaiton on how to implement a Widget, see the [How to Implement a Widget Plugin](/docs/scos/dev/tutorials/202005.0/advanced/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-) section in *Tutorial - Widgets and Widget Plugins*.  
 
 ### Widget Twig Tag Reference
 
@@ -181,5 +182,5 @@ class YvesBootstrap extends SprykerYvesBootstrap
 }
 ```
 
-For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial - Widgets and Widget Plugins](https://documentation.spryker.com/docs/en/t-widgets-widget-plugins#how-to-implement-a-widget-plugin-).  
+For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial - Widgets and Widget Plugins](/docs/scos/dev/tutorials/202005.0/advanced/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-plugin-).  
 

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Calculation
 originalLink: https://documentation.spryker.com/v1/docs/mg-calculation
+originalArticleId: 2cc7011e-8d03-47fe-82a2-b6ac14fbc751
 redirect_from:
   - /v1/docs/mg-calculation
   - /v1/docs/en/mg-calculation

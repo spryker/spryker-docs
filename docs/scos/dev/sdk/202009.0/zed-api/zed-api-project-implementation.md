@@ -2,6 +2,7 @@
 title: Zed API project implementation
 description: The article describes the implementation process of activating API and API bundles.
 originalLink: https://documentation.spryker.com/v6/docs/zed-api-project-implementation
+originalArticleId: ed1797c7-baa6-4bd2-8525-5caf7f5b9ac8
 redirect_from:
   - /v6/docs/zed-api-project-implementation
   - /v6/docs/en/zed-api-project-implementation

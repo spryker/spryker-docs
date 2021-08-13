@@ -1,6 +1,7 @@
 ---
 title: Event
 originalLink: https://documentation.spryker.com/v3/docs/event
+originalArticleId: f8ea487f-f881-4d0d-a6b8-c14081e287fb
 redirect_from:
   - /v3/docs/event
   - /v3/docs/en/event

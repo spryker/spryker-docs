@@ -1,6 +1,7 @@
 ---
 title: Glue API- Customer Account Management Feature Integration
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-customer-account-management-feature-integration
+originalArticleId: efe80690-3ca2-405d-9f57-3f8954d10033
 redirect_from:
   - /v5/docs/glue-api-customer-account-management-feature-integration
   - /v5/docs/en/glue-api-customer-account-management-feature-integration
@@ -17,7 +18,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application Feature Integration](https://documentation.spryker.com/docs/en/glue-application-feature-integration-201907) |
+| Spryker Core | master | [Glue Application Feature Integration](https://documentation.spryker.com/v5/docs/en/glue-application-feature-integration-201907) |
 | Customer Account Management |master |  |
 
 ## 1)Install the Required Modules Using Composer
@@ -211,7 +212,7 @@ $jobs[] = [
 
 {% info_block infoBox "Note" %}
 
-For information on how to protect resources, refer to [Security and Authentication](https://documentation.spryker.com/docs/en/system-requirements).
+For information on how to protect resources, refer to [Security and Authentication](/docs/scos/dev/developer-guides/202005.0/installation/system-requirements.html).
 
 {% endinfo_block %}
 

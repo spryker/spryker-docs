@@ -2,6 +2,7 @@
 title: Returns- Reference Information
 description: The guide provides reference information you see when working with returns in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/returns-reference-information
+originalArticleId: 984cf6f9-27d0-46ea-a1f6-48265bdbe57b
 redirect_from:
   - /v5/docs/returns-reference-information
   - /v5/docs/en/returns-reference-information

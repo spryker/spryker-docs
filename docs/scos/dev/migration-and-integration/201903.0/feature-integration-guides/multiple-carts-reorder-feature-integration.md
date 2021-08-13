@@ -2,6 +2,7 @@
 title: Multiple Carts- Reorder Feature Integration
 description: The Reorder Feature allows reordering previous orders. This guide will walk you through the process of integrating the feature into your project.
 originalLink: https://documentation.spryker.com/v2/docs/multiple-carts-reorder-feature-integration
+originalArticleId: feebb882-d82b-49c0-b833-487ee7c9505f
 redirect_from:
   - /v2/docs/multiple-carts-reorder-feature-integration
   - /v2/docs/en/multiple-carts-reorder-feature-integration

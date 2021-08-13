@@ -2,9 +2,12 @@
 title: B2C API React Example
 description: B2C API React Example is a single-page web application that demonstrates the use of Spryker Glue REST API in B2C scenarios.
 originalLink: https://documentation.spryker.com/2021080/docs/b2c-api-react-example
+originalArticleId: 094f9906-b82e-49aa-9af5-27199c5d2c01
 redirect_from:
   - /2021080/docs/b2c-api-react-example
   - /2021080/docs/en/b2c-api-react-example
+  - /docs/b2c-api-react-example
+  - /docs/en/b2c-api-react-example
 ---
 
 As a part of documentation related to Spryker Glue REST API, we have also developed a B2C API React Example. It is a [React](https://reactjs.org/) single page application based on a [webpack](https://webpack.js.org/) devserver, Typescript, [Redux](https://redux.js.org/), and Material UI.
@@ -26,26 +29,26 @@ The Demo shop has been built using and demonstrates the use of the endpoints and
 
 | API | Reference Documents |
 | --- | --- |
-| Search API | [Catalog search](https://documentation.spryker.com/docs/catalog-search)<br>[Getting suggestions for auto-completion and search](https://documentation.spryker.com/docs/retrieving-suggestions-for-auto-completion-and-search) |
-| Category API | [Retrieving category trees](https://documentation.spryker.com/docs/retrieving-category-trees) |
-| Product API | [Retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products)<br>[Retrieving concrete products](https://documentation.spryker.com/docs/retrieving-concrete-products) |
-| Product Availability API | [Retrieving abstract product availability](https://documentation.spryker.com/docs/retrieving-abstract-product-availability)<br>[Retrieving concrete product availability](https://documentation.spryker.com/docs/retrieving-concrete-product-availability) |
-| Product Price API | [Retrieving abstract product prices](https://documentation.spryker.com/docs/retrieving-abstract-product-prices)<br>[Retrieving concrete product prices](https://documentation.spryker.com/docs/retrieving-concrete-product-prices) |
-| Product Tax Sets API | [Retrieving product tax sets](https://documentation.spryker.com/docs/retrieving-tax-sets) |
-| Product Image Sets API | [Retrieving image sets of abstract products](https://documentation.spryker.com/docs/retrieving-image-sets-of-abstract-products)<br>[Retrieving image sets of concrete products](https://documentation.spryker.com/docs/retrieving-image-sets-of-concrete-products) |
-| Product Labels API | [Retrieving product labels](https://documentation.spryker.com/docs/retrieving-product-labels) |
-| Login API | [Authentication and authorization](https://documentation.spryker.com/docs/authentication-and-authorization) |
-| Customer API | [Managing customers](https://documentation.spryker.com/docs/customers) |
-| Cart API | [Guest carts](https://documentation.spryker.com/docs/managing-guest-carts)<br>[Carts of registered users](https://documentation.spryker.com/docs/managing-carts-of-registered-users) |
-| Checkout API | [Checking out purchases and getting checkout data](https://documentation.spryker.com/docs/checking-out-purchases-and-getting-checkout-data-201907) |
-| Order History API | [Retrieving customer's order history](https://documentation.spryker.com/docs/retrieving-customers-order-history) |
-| Wishlist API | [Managing wishlists](https://documentation.spryker.com/docs/managing-wishlists) |
-| Store API | [Retrieving store configuration](https://documentation.spryker.com/docs/retrieving-store-configuration) |
+| Search API | [Catalog search](/docs/scos/dev/glue-api-guides/{{ page.version }}/searching-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-autocomplete-and-search-suggestions.html) |
+| Category API | [Retrieving category trees](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-categories/retrieving-category-trees.html) |
+| Product API | [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html)<br>[Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html) |
+| Product Availability API | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-product-availability.html)<br>[Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-product-availability.html) |
+| Product Price API | [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-product-prices.html)<br>[Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-product-prices.html) |
+| Product Tax Sets API | [Retrieving product tax sets](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-tax-sets.html) |
+| Product Image Sets API | [Retrieving image sets of abstract products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html)<br>[Retrieving image sets of concrete products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html) |
+| Product Labels API | [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-product-labels.html) |
+| Login API | [Authentication and authorization](/docs/scos/dev/glue-api-guides/{{ page.version }}/authentication-and-authorization.html) |
+| Customer API | [Managing customers](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html) |
+| Cart API | [Guest carts](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html)<br>[Carts of registered users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) |
+| Checkout API | [Checking out purchases and getting checkout data](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/checking-out-purchases.html) |
+| Order History API | [Retrieving customer's order history](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-orders.html) |
+| Wishlist API | [Managing wishlists](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-wishlists/managing-wishlists.html) |
+| Store API | [Retrieving store configuration](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-store-configuration.html) |
 
 ## Running the Example Application
-The app source code can be found in the following GitHub repository: [https://github.com/spryker-shop/b2c-api-react-example](https://github.com/spryker-shop/b2c-api-react-example). You can install it inside [Spryker Development Virtual Machine](https://documentation.spryker.com/docs/devvm) or on a dedicated web server.
+The app source code can be found in the following GitHub repository: [https://github.com/spryker-shop/b2c-api-react-example](https://github.com/spryker-shop/b2c-api-react-example). You can install it inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/{{ page.version }}/development-virtual-machine-docker-containers-and-console.html) or on a dedicated web server.
 
-For detailed installation steps, see [B2C API React Example Installation](https://documentation.spryker.com/docs/b2c-api-react-example-installation).
+For detailed installation steps, see [B2C API React Example Installation](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example-installation.html).
 
 ## Peeking Requests
 After installing and running the example app, you can try its functionality. Depending on how you installed it, the shop will be available at:

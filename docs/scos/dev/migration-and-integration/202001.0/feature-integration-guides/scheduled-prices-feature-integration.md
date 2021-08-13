@@ -2,6 +2,7 @@
 title: Scheduled Prices Feature Integration
 description: Use the guide to install the Scheduled Prices feature into your project.
 originalLink: https://documentation.spryker.com/v4/docs/scheduled-prices-feature-integration
+originalArticleId: 9410b5be-031f-4fbc-8202-1a9ce82aee23
 redirect_from:
   - /v4/docs/scheduled-prices-feature-integration
   - /v4/docs/en/scheduled-prices-feature-integration

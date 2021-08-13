@@ -1,12 +1,13 @@
 ---
 title: B2B Demo Shop Installation- Without Development Virtual Machine
 originalLink: https://documentation.spryker.com/v4/docs/b2b-demo-shop-installation-without-development-virtual-machine
+originalArticleId: 8fbc6462-b29c-4eec-bcde-16c116503a78
 redirect_from:
   - /v4/docs/b2b-demo-shop-installation-without-development-virtual-machine
   - /v4/docs/en/b2b-demo-shop-installation-without-development-virtual-machine
 ---
 
-To install the [Demo Shop for B2B implementations](/docs/scos/dev/about-spryker/202001.0/b2b-suite.html) without Development Virtual Machine, follow the steps below.
+To install the [Demo Shop for B2B implementations](/docs/scos/user/about-spryker/202001.0/b2b-suite.html) without Development Virtual Machine, follow the steps below.
 
 ### Minimum requirements
 

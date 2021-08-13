@@ -1,6 +1,7 @@
 ---
 title: Template
 originalLink: https://documentation.spryker.com/v1/docs/template
+originalArticleId: 64b24cd7-4169-4c97-8179-ebb4f9b6bc07
 redirect_from:
   - /v1/docs/template
   - /v1/docs/en/template

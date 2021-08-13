@@ -2,6 +2,7 @@
 title: Redis Configuration
 description: In Spryker, Redis is used as the key-value storage and the session data storage.
 originalLink: https://documentation.spryker.com/v2/docs/redis-configruation
+originalArticleId: 035a8a36-32c1-4511-bba7-9355ffcea39b
 redirect_from:
   - /v2/docs/redis-configruation
   - /v2/docs/en/redis-configruation

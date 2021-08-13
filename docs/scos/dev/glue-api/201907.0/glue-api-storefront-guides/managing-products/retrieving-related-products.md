@@ -1,6 +1,7 @@
 ---
 title: Retrieving Related Products
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-related-products-201903
+originalArticleId: d3e3e10a-0d5b-4969-b43b-9dcd8e87f447
 redirect_from:
   - /v3/docs/retrieving-related-products-201903
   - /v3/docs/en/retrieving-related-products-201903
@@ -9,7 +10,7 @@ redirect_from:
 Using the **Product Relations** feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called Related Products, in search and in the cart together with the products selected by customers. This can help boosting the cross- and up-selling performance of the outlet.
 
 {% info_block infoBox %}
-Only [abstract](https://documentation.spryker.com/v3/docs/product-abstraction#differentiate-between-abstract-and-concrete-products
+Only [abstract](/docs/scos/dev/features/201907.0/product-management/product-abstraction.html#differentiate-between-abstract-and-concrete-products
 {% endinfo_block %} products support Product Relations. For more details, see [Product Relations](/docs/scos/dev/features/201907.0/product-management/product-relations/product-relations.html).)
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
@@ -23,7 +24,7 @@ In your development, the endpoints can help you to:
 * Provide additional products items in a customer's cart to offer upscale variations, accessories and other additional items for products in the cart. This will help you in boosting the cart value.
 
 {% info_block infoBox %}
-To be able to use **Product Relations API**, first, you need to have the Product Relations feature integrated with your project. For details, see [Product Relation Integration](https://documentation.spryker.com/v4/docs/product-relation-integration
+To be able to use **Product Relations API**, first, you need to have the Product Relations feature integrated with your project. For details, see [Product Relation Integration](/docs/scos/dev/migration-and-integration/201907.0/feature-integration-guides/product-relation-integration.html
 {% endinfo_block %}.)
 
 {% info_block infoBox %}
@@ -31,7 +32,7 @@ Different types of relations, as well as their logic, are defined on the project
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Relations API Feature Integration](/docs/scos/dev/migration-and-integration/201903.0/feature-integration-guides/glue-api/product-relations-api-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Relations API Feature Integration](https://documentation.spryker.com/v3/docs/product-relations-api-feature-integration-201903).
 
 ## Getting Related Items for an Abstract Product
 To get related items for an abstract product, send a GET request to the following endpoint:
@@ -44,7 +45,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 
 #### Response Fields
 
-For a detailed list of the fields included in the response for each product, see [General Product Information](https://documentation.spryker.com/v4/docs/retrieving-product-information#general-product-information).
+For a detailed list of the fields included in the response for each product, see [General Product Information](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html#general-product-information).
 
 <details open>
 <summary>Sample Response </summary>
@@ -299,7 +300,7 @@ Sample request: `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493
 where `1ce91011-8d60-59ef-9fe0-4493ef3628b2` is the ID of the cart you need items for.
 
 {% info_block infoBox %}
-For details on peculiarities of managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-carts-of-registered-users.html
+For details on peculiarities of managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/managing-carts/managing-carts-of-registered-users.html
 {% endinfo_block %}.)
 
 ### Response
@@ -307,7 +308,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 
 #### Response Fields
 
-For a detailed list of the fields included in the response for each product, see [General Product Information](https://documentation.spryker.com/v4/docs/retrieving-product-information#general-product-information).
+For a detailed list of the fields included in the response for each product, see [General Product Information](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html#general-product-information).
 
 <details open>
 <summary> Sample Response</summary>
@@ -1389,7 +1390,7 @@ where `1ce91011-8d60-59ef-9fe0-4493ef3628b2` is the ID of the guest cart you nee
 Your request must specify a unique identifier of the **guest user** in the **X-Anonymous-Customer-Unique-Id** header.
 
 {% info_block infoBox %}
-For details on how to retrieve and manage the identifier, see [Managing Guest Carts](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html
+For details on how to retrieve and manage the identifier, see [Managing Guest Carts](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html
 {% endinfo_block %}.)
 
 ### Response
@@ -1397,7 +1398,7 @@ If the request was successful, the resource responds with an array of **RestAbst
 
 #### Response Fields
 
-For a detailed list of the fields included in the response for each product, see [General Product Information](https://documentation.spryker.com/v4/docs/retrieving-product-information#general-product-information).
+For a detailed list of the fields included in the response for each product, see [General Product Information](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html#general-product-information).
 
 <details open>
 <summary>Sample Response </summary>

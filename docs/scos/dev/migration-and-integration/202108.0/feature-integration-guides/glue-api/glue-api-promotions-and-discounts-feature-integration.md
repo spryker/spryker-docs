@@ -2,9 +2,12 @@
 title: Glue API- Promotions & discounts feature integration
 description: Use the guide to install the Promotions and Discounts feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-promotions-discounts-feature-integration
+originalArticleId: e39ff236-644f-41fe-9aee-796304a59df2
 redirect_from:
   - /2021080/docs/glue-api-promotions-discounts-feature-integration
   - /2021080/docs/en/glue-api-promotions-discounts-feature-integration
+  - /docs/glue-api-promotions-discounts-feature-integration
+  - /docs/en/glue-api-promotions-discounts-feature-integration
 ---
 
 Follow the steps below to install Promotions & Discounts feature API.
@@ -14,8 +17,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Glue API: Spryker Core Feature Integration](https://documentation.spryker.com/docs/glue-spryker-core-feature-integration) |
-| Product | 202009.0 | [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration) |
+| Spryker Core | 202009.0 | [Glue API: Spryker Core Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Product | 202009.0 | [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) |
 | Promotions & Discounts | 202009.0 |  |
 
 ## 1) Install the Required Modules Using Composer
@@ -707,7 +710,7 @@ Verify that the `PromotionItemByQuoteTransferResourceRelationshipPlugin` and `Pr
 
 Prerequisites:
 
-* Have a discount rule for a product. Discount application type should be chosen Promotional Product (see [Creating a Cart Rule Discount](https://documentation.spryker.com/docs/creating-a-cart-rule-discount)).
+* Have a discount rule for a product. Discount application type should be chosen Promotional Product (see [Creating a Cart Rule Discount](https://documentation.spryker.com/2021080/docs/creating-a-cart-rule-discount)).
 * Create a cart.
 
 Add items to the cart to satisfy the conditions of the discount rule:
@@ -882,7 +885,7 @@ Verify the `DiscountPromotionCartItemExpanderPlugin` and `DiscountPromotionCartI
 
 Prerequisites:
 
-* Have a discount rule for a product. Discount application type should be Promotional product (see [Creating a Cart Rule Discount](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/discount/creating-a-discount/creating-a-cart-rule.html)).
+* Have a discount rule for a product. Discount application type should be Promotional product (see [Creating a Cart Rule Discount](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/discount/creating-a-cart-rule.html)).
 * Create a cart with items that satisfy the conditions of the discount rule.
 * Get a concrete promotional product SKU.
 

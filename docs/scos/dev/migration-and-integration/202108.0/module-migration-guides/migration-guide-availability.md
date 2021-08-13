@@ -2,9 +2,12 @@
 title: Migration Guide - Availability
 description: Use the guide to migrate to the new version of the Availability module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-availability
+originalArticleId: 53009fca-6f6b-4583-8946-eb521e6f8235
 redirect_from:
   - /2021080/docs/mg-availability
   - /2021080/docs/en/mg-availability
+  - /docs/mg-availability
+  - /docs/en/mg-availability
 ---
 
 ## Upgrading from Version 8.* to Version 9.0.0
@@ -12,7 +15,7 @@ redirect_from:
 In this new version of the **Availability** module, we have added support of decimal stock. You can find more details about the changes on the [Availability release](https://github.com/spryker/availability/releases) page.
 
 {% info_block errorBox %}
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/decimal-stock-migration-concept.html
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/decimal-stock-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**
@@ -168,7 +171,7 @@ ALTER TABLE "spy_availability" ADD CONSTRAINT "spy_availability-fk_spy_availabil
 
 As this involves more than the Availability module, to start using it some configuration needed per module basis.
 
-**Oms version >= 4** is required. See the [Migration Guide - OMS](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-oms.html) to version 4 step by step guide how to migrate OMS to have the new Availability module integrated.
+**Oms version >= 4** is required. See the [Migration Guide - OMS](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-oms.html) to version 4 step by step guide how to migrate OMS to have the new Availability module integrated.
 
 **Cart > 2.1** and **AvailabilityCartConnector > 2.0**. To have cart availability per check, add a new plugin `Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` to the Cart project dependency provider. `Pyz\Zed\Cart\CartDependencyProvider::getCartPreCheckPlugins()` which is a core implementation of the cart availability check.
 A new availability collector is required. Take it from demoshop, `Pyz\Zed\Collector\Business\Storage\AvailabilityCollector`, this has to be added to the `Pyz\Zed\Collector\CollectorDependencyProvider` storage plugin stack.

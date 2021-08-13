@@ -2,6 +2,7 @@
 title: CMS Pages- Reference Information
 description: The guide provides reference information you see when creating, viewing and editing CMS pages in the Back Office.
 originalLink: https://documentation.spryker.com/v4/docs/cms-pages-reference-information
+originalArticleId: fdaf1c0e-78f1-42eb-93f3-6dd9f158baa1
 redirect_from:
   - /v4/docs/cms-pages-reference-information
   - /v4/docs/en/cms-pages-reference-information

@@ -2,6 +2,7 @@
 title: Net & Gross Prices
 description: You can easily manage gross and net prices per product, country, currency or anything else and define which price you want to display in the shop.
 originalLink: https://documentation.spryker.com/v3/docs/net-gross-price
+originalArticleId: 91adc7f0-6c1f-4799-b513-48ab164a2aa3
 redirect_from:
   - /v3/docs/net-gross-price
   - /v3/docs/en/net-gross-price
@@ -135,7 +136,7 @@ To use it, do the following:
 
    The switch can happen only if quote have to items.
 
-   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-price.html).
+   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-price.html).
    
    
  {% info_block infoBox "Switching shop to Net prices:" %}

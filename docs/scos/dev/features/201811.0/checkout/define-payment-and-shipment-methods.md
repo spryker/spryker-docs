@@ -1,6 +1,7 @@
 ---
 title: Define Payment & Shipment Methods
 originalLink: https://documentation.spryker.com/v1/docs/define-payment-shipment-methods
+originalArticleId: f1086b20-6bed-4f65-bff7-79b928fdfdfb
 redirect_from:
   - /v1/docs/define-payment-shipment-methods
   - /v1/docs/en/define-payment-shipment-methods

@@ -2,6 +2,7 @@
 title: Migration Guide - Checkout
 description: Use the guide to update versions to the newer ones of the Checkout module.
 originalLink: https://documentation.spryker.com/v6/docs/mg-checkout
+originalArticleId: 0ca5f92d-8ed9-4eca-ba19-e4e68dd050ce
 redirect_from:
   - /v6/docs/mg-checkout
   - /v6/docs/en/mg-checkout

@@ -2,9 +2,12 @@
 title: Migration Guide - ShipmentCheckoutConnector
 description: Use the guide to learn how to update the ShipmentCheckoutConnector module to a newer version.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment-checkout-connector
+originalArticleId: dfb849a9-6f08-4091-ab6d-87f097eb7811
 redirect_from:
   - /2021080/docs/mg-shipment-checkout-connector
   - /2021080/docs/en/mg-shipment-checkout-connector
+  - /docs/mg-shipment-checkout-connector
+  - /docs/en/mg-shipment-checkout-connector
 ---
 
 ## Upgrading from Version 1.0.* to Version 2.0.0
@@ -12,7 +15,7 @@ redirect_from:
 In this new version of the **ShipmentCheckoutConnector** module, we have added support of split delivery. You can find more details about the changes on the ShipmentCheckoutConnector module release page.
 
 {% info_block errorBox %}
-This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/split-delivery-migration-concept.html
+This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/split-delivery-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

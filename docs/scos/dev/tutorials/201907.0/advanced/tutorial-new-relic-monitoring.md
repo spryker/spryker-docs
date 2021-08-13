@@ -1,6 +1,7 @@
 ---
 title: Tutorial - New Relic Monitoring
 originalLink: https://documentation.spryker.com/v3/docs/t-new-relic-monitoring
+originalArticleId: fbdd0b0d-50ee-41b6-9809-82ddb9b6bf8e
 redirect_from:
   - /v3/docs/t-new-relic-monitoring
   - /v3/docs/en/t-new-relic-monitoring
@@ -96,7 +97,7 @@ $ sudo /etc/init.d/newrelic-daemon status
 
 To enable or migrate New Relic packages, check the following tutorial:
 
-* [Migration Guide - Monitoring](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-monitoring.html)
-* [New Relic](/docs/scos/dev/technology-partners/202001.0/operational-tools-monitoring-legal-etc/new-relic.html)
+* [Migration Guide - Monitoring](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-monitoring.html)
+* [New Relic](/docs/scos/dev/technology-partners/201907.0/operational-tools-monitoring-legal-etc/new-relic.html)
 
 <!-- Last review date: Jun 20, 2019 -by Fabrizio Ciacchi, Yuliia Boiko-->

@@ -1,9 +1,12 @@
 ---
 title: Shopping lists feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/shopping-lists-feature-integration
+originalArticleId: 58263f9f-e8b2-48f1-9564-caad27602169
 redirect_from:
   - /2021080/docs/shopping-lists-feature-integration
   - /2021080/docs/en/shopping-lists-feature-integration
+  - /docs/shopping-lists-feature-integration
+  - /docs/en/shopping-lists-feature-integration
 ---
 
 ## Install Feature Core

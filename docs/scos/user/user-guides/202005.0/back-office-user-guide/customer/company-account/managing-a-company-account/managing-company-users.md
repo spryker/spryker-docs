@@ -2,6 +2,7 @@
 title: Managing Company Users
 description: Use the procedures to create, edit, enable/disable, delete, and attach company users to business units in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-company-users
+originalArticleId: 2bb5e4ba-50ef-4963-937e-1d5c16a61d2d
 redirect_from:
   - /v5/docs/managing-company-users
   - /v5/docs/en/managing-company-users
@@ -23,7 +24,7 @@ To add a new company user:
     2. If you want the email with change password details be sent to the customer, select the **Send password token through email** checkbox.
     3. Enter the date of birth and phone values.
     4. Select company and business units from the respective drop-down lists.
-    5. Check the checkbox for Roles you want to assign to the user. The values available for selection are limited by those assigned to a company. See [Managing Company Roles](https://documentation.spryker.com/docs/en/managing-company-roles) to learn how the company roles are created.
+    5. Check the checkbox for Roles you want to assign to the user. The values available for selection are limited by those assigned to a company. See [Managing Company Roles](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/company-account/managing-a-company-account/managing-company-roles.html) to learn how the company roles are created.
 3. Once done, click **Save**.
 
 ## Attaching a Company User to a Business Unit

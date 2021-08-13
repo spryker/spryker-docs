@@ -1,9 +1,12 @@
 ---
 title: Billpay - Integration
 originalLink: https://documentation.spryker.com/2021080/docs/billpay-integration
+originalArticleId: 3d4bf922-652c-45c7-b130-951015ff3b65
 redirect_from:
   - /2021080/docs/billpay-integration
   - /2021080/docs/en/billpay-integration
+  - /docs/billpay-integration
+  - /docs/en/billpay-integration
 ---
 
 Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/business-clients/merchant-request)e  for details.

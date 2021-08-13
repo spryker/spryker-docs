@@ -1,6 +1,7 @@
 ---
 title: HowTo - Dump Queue Messages
 originalLink: https://documentation.spryker.com/v2/docs/ht-dump-queue-messages-201903
+originalArticleId: 30b8e906-e86c-436d-8f47-5a5cc5954f3c
 redirect_from:
   - /v2/docs/ht-dump-queue-messages-201903
   - /v2/docs/en/ht-dump-queue-messages-201903

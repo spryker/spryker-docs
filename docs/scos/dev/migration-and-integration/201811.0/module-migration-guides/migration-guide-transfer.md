@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Transfer
 originalLink: https://documentation.spryker.com/v1/docs/mg-transfer
+originalArticleId: ec9f70ff-6dfd-4694-9a25-792050f55303
 redirect_from:
   - /v1/docs/mg-transfer
   - /v1/docs/en/mg-transfer

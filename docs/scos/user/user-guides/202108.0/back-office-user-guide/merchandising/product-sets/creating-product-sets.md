@@ -2,9 +2,12 @@
 title: Creating product sets
 description: Learn how to create product sets in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-sets
+originalArticleId: 20263bb8-2952-4db2-bde6-1a17a8e76017
 redirect_from:
   - /2021080/docs/creating-product-sets
   - /2021080/docs/en/creating-product-sets
+  - /docs/creating-product-sets
+  - /docs/en/creating-product-sets
 ---
 
 This article describes how to create a product set.
@@ -114,6 +117,6 @@ The Back Office set up for this product set looks the following way:
 
 **What's next?**
 
-To know how the product sets are managed, see [Managing product sets](https://documentation.spryker.com/docs/managing-product-sets).
+To know how the product sets are managed, see [Managing product sets](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-sets/managing-product-sets.html).
 
 

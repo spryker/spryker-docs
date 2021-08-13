@@ -2,9 +2,12 @@
 title: What's new
 description: This article contains information about what’s new and changed in the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/whats-new
+originalArticleId: 630e2d18-944a-4623-95ac-761984d1eedb
 redirect_from:
   - /2021080/docs/whats-new
   - /2021080/docs/en/whats-new
+  - /docs/whats-new
+  - /docs/en/whats-new
 ---
 
 <!--
@@ -20,11 +23,11 @@ The following page is a report of what’s new and changed in the Spryker Commer
 
 To subscribe to our release notes and security updates, see the following articles:
 
-* [Releases](https://documentation.spryker.com/docs/releases)
-* [Release notes](https://documentation.spryker.com/docs/en/release-notes)
-* [Security Updates](https://documentation.spryker.com/docs/security-updates)
+* [Releases](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/releases.html)
+* [Release notes](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/release-notes/release-notes.html)
+* [Security Updates](/docs/scos/user/intro-to-spryker/{{ page.version }}/whats-new/security-updates.html)
 
-To check our previous release notes, go to the [Releases Archive](https://documentation.spryker.com/docs/en/releases-archive) section.
+To check our previous release notes, go to the [Releases Archive](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/releases-archive.html) section.
 
 <!--
 <details open>

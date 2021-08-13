@@ -2,6 +2,7 @@
 title: Customer Login by Token Feature Overview
 description: With the feature in place, B2B customers can log in to Spryker shop using a token.  In the article, you can find a description of the token structure.
 originalLink: https://documentation.spryker.com/v5/docs/customer-login-by-token-feature-overview
+originalArticleId: 49faa2ab-0284-4dcf-9887-d41e8b4f5c02
 redirect_from:
   - /v5/docs/customer-login-by-token-feature-overview
   - /v5/docs/en/customer-login-by-token-feature-overview
@@ -77,9 +78,9 @@ http://mysprykershop.com/access-token/eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aS
 
 ```
 
-In Spryker Commerce OS, token generation is performed using a facade method, that is why no GUI is present. To generate a token, see [HowTo - Generate a Token for Login](https://documentation.spryker.com/docs/en/ht-generating-token-for-login-201907).
+In Spryker Commerce OS, token generation is performed using a facade method, that is why no GUI is present. To generate a token, see [HowTo - Generate a Token for Login](https://documentation.spryker.com/v5/docs/en/ht-generating-token-for-login-201907).
 
-Token-based authentication works closely with the [Punch Out](https://documentation.spryker.com/docs/en/punchout-201907) feature. It allows B2B buyers to log in from their ERP system to a Spryker company user account using a token without entering the username and password and buy the products from Spryker e-commerce shop.
+Token-based authentication works closely with the [Punch Out](https://documentation.spryker.com/v5/docs/en/punchout-201907) feature. It allows B2B buyers to log in from their ERP system to a Spryker company user account using a token without entering the username and password and buy the products from Spryker e-commerce shop.
 
 To make the feature more flexible, we have implemented the functionality that allows you to disable switching between the Business-on Behalf accounts. E.g., if the user logs in to the pre-defined company account that has Business-on-Behalf feature integrated, the shop owner can disable the ability to switch between the accounts. In case the Business-on-Behalf is disabled, the company user will log in to the default account and will not be able to switch between the company users within their company account.
 

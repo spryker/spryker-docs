@@ -2,6 +2,7 @@
 title: User and Rights Management
 description: Users can be assigned to different groups while groups can have different roles that have resources assigned to them which identify what rights users have
 originalLink: https://documentation.spryker.com/v4/docs/user-and-rights-management
+originalArticleId: 93f13755-af64-44d4-af61-1c3bb2875cc4
 redirect_from:
   - /v4/docs/user-and-rights-management
   - /v4/docs/en/user-and-rights-management

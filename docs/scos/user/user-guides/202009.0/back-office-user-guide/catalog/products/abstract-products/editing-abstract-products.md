@@ -2,6 +2,7 @@
 title: Editing abstract products
 description: Learn how to edit abstract products in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/editing-abstract-products
+originalArticleId: f620f883-97fd-4a7d-9d49-04e1f1dcc0ba
 redirect_from:
   - /v6/docs/editing-abstract-products
   - /v6/docs/en/editing-abstract-products
@@ -30,11 +31,11 @@ To edit general settings of an abstract product:
 
 | ATTRIBUTE | DESCRIPTION | 
 | --- | --- | --- | --- |
-| Store relation  | Defines the [stores](https://documentation.spryker.com/docs/multiple-stores) the product is available in.</br>You can select multiple values. |
+| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/howto-set-up-multiple-stores.html) the product is available in.</br>You can select multiple values. |
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. |
 | Name | The name that's displayed for the product on the Storefront. |
 | Description | The description that's displayed for the product on the Storefront. |
-| New from</br>New to  | Defines the period of time for which: </br><ul><li>A [dynamic product label](https://documentation.spryker.com/docs/product-labels-feature-overview) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](https://documentation.spryker.com/docs/category-management-feature-overview0</li></ul></br> You can either select no dates or both. |
+| New from</br>New to  | Defines the period of time for which: </br><ul><li>A [dynamic product label](/docs/scos/dev/features/202009.0/product-labels/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/scos/dev/features/202009.0/category-management/category-management-feature-overview.html)</li></ul></br> You can either select no dates or both. |
 
 ## Editing prices of an abstract product
 To edit prices of an abstract product:    
@@ -50,8 +51,8 @@ To edit prices of an abstract product:
     
 | Attribute |Description | 
 | --- | --- | --- | --- |
-|Merchant Price Dimension| B2B only</br>Defines the [merchant](https://documentation.spryker.com/docs/price-per-merchant-relation-feature-overview) the prices apply to.</br>If **Default prices** is selected, the prices apply to all customers.</br>To [manage merchant relations](https://documentation.spryker.com/docs/managing-merchant-relations) go to **Marketplace** > **Merchant Relations**. |
-| Gross price</br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.</br>If a product variant of the abstract product does not have a price, it [inherits](https://documentation.spryker.com/docs/product-feature-overview#product-information-inheritance) the price you enter here. |
+|Merchant Price Dimension| B2B only</br>Defines the [merchant](/docs/scos/dev/features/202009.0/merchant-custom-prices/merchant-custom-prices-feature-overview.html) the prices apply to.</br>If **Default prices** is selected, the prices apply to all customers.</br>To [manage merchant relations](/docs/scos/user/user-guides/202009.0/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace** > **Merchant Relations**. |
+| Gross price</br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.</br>If a product variant of the abstract product does not have a price, it [inherits](https://documentation.spryker.com/v6/docs/products-overview#product-information-inheritance) the price you enter here. |
 |Default</br>Original| A default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
 |Add Product Volume Price</br>Edit Product Volume Price| This option allows you to define the prices that are based on the quantity of products that a customer selects. Works only with the default prices.</br>Add Product Volume Price appears only when the price for a currency was set up and saved.</br>Edit Product Volume Price appears only what the volume price was already set up for a currency.||✓|
 |Tax Set|The conditions under which a product is going to be taxed.</br>The values available for selection derive from Taxes > Tax Sets</br>Only one value can be selected.|
@@ -79,8 +80,8 @@ To edit volume prices of an abstract product:
 
 ## Editing product variants of an abstract product
 
-To edit a product variant, follow [Editing product variants](https://documentation.spryker.com/docs/editing-a-product-variant). 
-To create a product variant, follow [Creating product variants](https://documentation.spryker.com/docs/editing-a-product-variant)
+To edit a product variant, follow [Editing product variants](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/products/concrete-products/editing-a-product-variant.html). 
+To create a product variant, follow [Creating product variants](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/products/concrete-products/editing-a-product-variant.html)
 
 ## Editing meta information of an abstract product
 
@@ -146,7 +147,7 @@ To edit a scheduled price:
 | --- | --- |
 | Abstract SKU | Unique identifier of an abstract product. The field is disabled because you are editing a scheduled price of a particular abstract product. |
 | Concrete SKU | Unique identifier of a concrete product. The field is disabled because you are editing a scheduled price of a particular abstract product. |
-| Store | [Store](https://documentation.spryker.com/docs/multiple-stores) in which the scheduled price is displayed. Unless you add the scheduled price to all the other stores, the regular price is displayed in them.  |
+| Store | [Store](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/howto-set-up-multiple-stores.html) in which the scheduled price is displayed. Unless you add the scheduled price to all the other stores, the regular price is displayed in them.  |
 | Currency | Currency in which the scheduled price is defined. Unless you define the scheduled price for all the other currencies, the regular prices is displayed for them.  |
 | Net price | Net value of the product defined by the scheduled price. |
 | Gross price |Gross value of product defined by the scheduled price.  |

@@ -2,6 +2,7 @@
 title: Merchants
 description: The section can be used to set up merchant relations and create merchants based on the contract conditions in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/merchants
+originalArticleId: e463b5eb-4d98-4d14-8c37-acbd30c124dc
 redirect_from:
   - /v3/docs/merchants
   - /v3/docs/en/merchants
@@ -25,11 +26,11 @@ The **Merchants** section in the Back Office is designed to set up the contract 
 The **Merchant Relations** section is tight to the **Company Account > Companies** and **Company Units** sections as when you create the relation, you select the company and the respective business unit based on the contract.
 
 In order to have a correct set, you should:
-* Have a company setup done in the **Company Account** section. This company is the one with which the contract is signed. (See articles in the [Company Account](https://documentation.spryker.com/v4/docs/company-account-2) section.)
+* Have a company setup done in the **Company Account** section. This company is the one with which the contract is signed. (See articles in the [Company Account](https://documentation.spryker.com/v3/docs/company-account-2) section.)
 * Create a merchant
 * Set up a merchant relation.
 ***
 **What's next?**
 
-* To know more about how the merchant record is managed, see [Managing Merchants](/docs/scos/user/user-guides/202001.0/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchants.html).
-* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/user-guides/202001.0/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchant-relations.html).
+* To know more about how the merchant record is managed, see [Managing Merchants](/docs/scos/user/user-guides/201907.0/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchants.html).
+* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/user-guides/201907.0/back-office-user-guide/merchants/merchants-and-merchant-relations/managing-merchant-relations.html).

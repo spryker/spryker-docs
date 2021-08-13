@@ -2,6 +2,7 @@
 title: Step Engine Workflow Overview
 description: This article provides an overview of  the step engine feature.
 originalLink: https://documentation.spryker.com/v4/docs/step-engine-workflow
+originalArticleId: 2593ae68-decf-492d-bd4e-54176def240d
 redirect_from:
   - /v4/docs/step-engine-workflow
   - /v4/docs/en/step-engine-workflow

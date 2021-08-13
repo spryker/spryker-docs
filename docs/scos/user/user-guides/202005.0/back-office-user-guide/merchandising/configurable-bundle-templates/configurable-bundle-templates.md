@@ -2,6 +2,7 @@
 title: Configurable Bundle Templates
 description: This guide contains details on working with the Configurable Bundle Templates in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/configurable-bundle-templates
+originalArticleId: e48dc7fa-5fed-4542-a612-348de5010d72
 redirect_from:
   - /v5/docs/configurable-bundle-templates
   - /v5/docs/en/configurable-bundle-templates
@@ -14,6 +15,6 @@ Since not all products are compatible with each other, a Spryker Administrator c
 
 **What's next?**
 
-* To learn how to create configurable bundle templates, see [Creating Configurable Bundle Templates](https://documentation.spryker.com/docs/en/creating-configurable-bundle-templates).
-* To learn how to manage configurable bundle templates, see [Managing Configurable Bundle Templates](https://documentation.spryker.com/docs/en/managing-configurable-bundle-templates).
-* To learn about the attributes you use to manage configurable bundle templates, see [Configurable Bundle Templates: Reference Information](https://documentation.spryker.com/docs/en/configurable-bundle-templates-reference-information).
+* To learn how to create configurable bundle templates, see [Creating Configurable Bundle Templates](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html).
+* To learn how to manage configurable bundle templates, see [Managing Configurable Bundle Templates](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html).
+* To learn about the attributes you use to manage configurable bundle templates, see [Configurable Bundle Templates: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html).

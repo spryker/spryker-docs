@@ -2,6 +2,7 @@
 title: Quotation Process & RFQ
 description: The Quotation Process & RFQ feature allows customers to request suppliers for a better price for products
 originalLink: https://documentation.spryker.com/v3/docs/quotation-process-rfq
+originalArticleId: d03661f4-37b6-4496-b6b1-3a81921af511
 redirect_from:
   - /v3/docs/quotation-process-rfq
   - /v3/docs/en/quotation-process-rfq

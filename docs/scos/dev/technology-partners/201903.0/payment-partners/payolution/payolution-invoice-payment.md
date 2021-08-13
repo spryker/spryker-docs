@@ -2,6 +2,7 @@
 title: Payolution - Invoice Payment
 description: Integrate invoice payment through Payolution into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v2/docs/payolution-invoice
+originalArticleId: 85348981-d082-4381-b42a-5380eeed7fd2
 redirect_from:
   - /v2/docs/payolution-invoice
   - /v2/docs/en/payolution-invoice

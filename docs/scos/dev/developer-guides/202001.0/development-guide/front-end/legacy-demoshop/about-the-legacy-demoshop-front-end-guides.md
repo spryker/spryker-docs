@@ -2,12 +2,13 @@
 title: About the Legacy Demoshop Front-end Guides
 description: The Legacy Demoshop Front-end guides provide information of how the front-end was built in the Legacy Demoshop.
 originalLink: https://documentation.spryker.com/v4/docs/about-legacy-demoshop-guides
+originalArticleId: 98e46325-07e5-474b-b4f6-f2cfc731e432
 redirect_from:
   - /v4/docs/about-legacy-demoshop-guides
   - /v4/docs/en/about-legacy-demoshop-guides
 ---
 
-The Legacy Demoshop Front-end guides provide information of how the front-end was built in the [Legacy Demoshop](https://documentation.spryker.com/v4/docs/about-spryker#what-is-the--legacy-demoshop--). Here you will find the following information:
+The Legacy Demoshop Front-end guides provide information of how the front-end was built in the [Legacy Demoshop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#what-is-the--legacy-demoshop--). Here you will find the following information:
 
 * [Overview of the Twig Template Engine](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/legacy-demoshop/twig-templates/overview-twig.html) used for building the front-end;
 * [Twig Templates best practices](/docs/scos/dev/developer-guides/202001.0/development-guide/front-end/legacy-demoshop/twig-templates/best-practices-twig-templates.html) providing in-depth information on how to extend Twig templates: create pages in Zed, add multiple widgets to pages, add forms etc.

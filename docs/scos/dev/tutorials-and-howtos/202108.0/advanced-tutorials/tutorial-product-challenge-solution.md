@@ -1,9 +1,12 @@
 ---
 title: Tutorial- Product Challenge Solution
 originalLink: https://documentation.spryker.com/2021080/docs/t-product-challenge-solution
+originalArticleId: c41461a3-c784-43f0-ba0e-d38ed2cfa5e1
 redirect_from:
   - /2021080/docs/t-product-challenge-solution
   - /2021080/docs/en/t-product-challenge-solution
+  - /docs/t-product-challenge-solution
+  - /docs/en/t-product-challenge-solution
 ---
 
 <!-- used to be: http://spryker.github.io/onboarding/product-solution/ -->

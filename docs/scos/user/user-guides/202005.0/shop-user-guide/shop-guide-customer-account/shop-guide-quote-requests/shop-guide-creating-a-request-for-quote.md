@@ -2,6 +2,7 @@
 title: Shop Guide - Creating a Request for Quote
 description: The guide provides the procedure to create a Request for Quote in the cart.
 originalLink: https://documentation.spryker.com/v5/docs/creating-rfq-shop-guide
+originalArticleId: c8d0fdd6-1640-41c7-b618-c7918434497a
 redirect_from:
   - /v5/docs/creating-rfq-shop-guide
   - /v5/docs/en/creating-rfq-shop-guide
@@ -25,8 +26,8 @@ To create a new RFQ:
 
 4. On the **Create Quote Request** page, click **Submit Request**. This will create a Request for Quote in the Draft status in the **Customer Account > Quote Request** section.
 
-* See [Buyer Workflow](https://documentation.spryker.com/docs/en/quotation-process-rfq-feature-overview-201907#buyer-workflow) for more information on the request statuses and the workflow.
-* See [Reference Information](https://documentation.spryker.com/docs/en/rfq-reference-information-shop-guide) for details on UI elements in the **Quote Requests** page in the Customer Account.
+* See [Buyer Workflow](https://documentation.spryker.com/v5/docs/en/quotation-process-feature-overview#buyer-workflow) for more information on the request statuses and the workflow.
+* See [Reference Information](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/references/request-for-quote-reference-information.html) for details on UI elements in the **Quote Requests** page in the Customer Account.
 ![Create Quote Request](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Creating+a+Request+for+Quote/create-quote-request.png){height="" width=""}
 
 ***
@@ -38,4 +39,4 @@ The Quote Request is created in your Customer Account. Next, you can do the foll
 2. Send the quote to the Sales Representative to negotiate the price.
 3. Cancel the Quote Request, if you created it by mistake or don't need it anymore etc.
 
-See [Managing RFQs](https://documentation.spryker.com/docs/en/managing-rfqs-for-buyer-shop-guide) to learn how you can perform these actions.
+See [Managing RFQs](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html) to learn how you can perform these actions.

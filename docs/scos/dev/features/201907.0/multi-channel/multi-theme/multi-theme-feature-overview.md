@@ -1,12 +1,13 @@
 ---
 title: Multi-Theme Feature Overview
 originalLink: https://documentation.spryker.com/v3/docs/multi-theme-feature-overview
+originalArticleId: 4db9d065-7938-4980-8e26-3763b2d0d34b
 redirect_from:
   - /v3/docs/multi-theme-feature-overview
   - /v3/docs/en/multi-theme-feature-overview
 ---
 
-Spryker Frontend consists of two main parts: [Atomic Frontend](https://documentation.spryker.com/v4/docs/atomic-frontend) (JS/CSS/Twg) and [Modular Frontend](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/yves/modular-frontend.html) (Widgets and Pages). Both support theming and the same inheritance strategy: Current Theme > Default Theme.
+Spryker Frontend consists of two main parts: [Atomic Frontend](/docs/scos/dev/developer-guides/201907.0/development-guide/front-end/yves/atomic-frontend/atomic-frontend-general-overview.html) (JS/CSS/Twg) and [Modular Frontend](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/yves/modular-frontend.html) (Widgets and Pages). Both support theming and the same inheritance strategy: Current Theme > Default Theme.
 
 A theme is a combination of twig, CSS and JS files that make your user interface unique. 
 
@@ -42,6 +43,6 @@ From now on, besides the default theme, you, as a shop owner, can create and use
 ```
 Every namespace has a list of all available themes that you need to build and a default theme that is configured as a fallback (in case, the theme you are using now is broken).
 
-To learn how the frontend is being built, use this [Frontend Builder for Yves](https://documentation.spryker.com/v4/docs/frontend-builder-for-yves).
+To learn how the frontend is being built, use this [Frontend Builder for Yves](/docs/scos/dev/developer-guides/201907.0/development-guide/front-end/frontend-builder-for-yves.html).
 
 <!-- Last review date: Aug 06, 2019 by Oksana Karasyova -->

@@ -2,6 +2,7 @@
 title: Migration Guide - Availability
 description: Use the guide to migrate to the new version of the Availability module.
 originalLink: https://documentation.spryker.com/v4/docs/mg-availability
+originalArticleId: 484c510a-d9b0-4747-a888-e984705a29d8
 redirect_from:
   - /v4/docs/mg-availability
   - /v4/docs/en/mg-availability

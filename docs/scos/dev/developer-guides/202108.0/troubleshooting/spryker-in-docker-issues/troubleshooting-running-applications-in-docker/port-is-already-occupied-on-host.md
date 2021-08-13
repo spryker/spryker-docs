@@ -2,9 +2,12 @@
 title: Port is already occupied on host
 description: Learn how to fix the issue when port is already occupied on host
 originalLink: https://documentation.spryker.com/2021080/docs/port-is-already-occupied-on-host
+originalArticleId: cf038694-8d04-43cf-adc7-005de29058e2
 redirect_from:
   - /2021080/docs/port-is-already-occupied-on-host
   - /2021080/docs/en/port-is-already-occupied-on-host
+  - /docs/port-is-already-occupied-on-host
+  - /docs/en/port-is-already-occupied-on-host
 ---
 
 ## Description

@@ -1,6 +1,7 @@
 ---
 title: HowTo - Disable Key-value Storage and use the Database Instead
 originalLink: https://documentation.spryker.com/v5/docs/howto-disable-key-value-storage-and-use-the-database-instead
+originalArticleId: 481a8ce3-b24f-48c1-a0f7-6189c208870d
 redirect_from:
   - /v5/docs/howto-disable-key-value-storage-and-use-the-database-instead
   - /v5/docs/en/howto-disable-key-value-storage-and-use-the-database-instead

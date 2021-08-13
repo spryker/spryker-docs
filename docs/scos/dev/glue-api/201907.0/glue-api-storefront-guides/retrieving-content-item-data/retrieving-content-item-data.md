@@ -1,6 +1,7 @@
 ---
 title: Retrieving Content Item Data
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-content-item-data-201907
+originalArticleId: e18e84c9-3d4f-4636-a2ee-7d1a315e45c3
 redirect_from:
   - /v3/docs/retrieving-content-item-data-201907
   - /v3/docs/en/retrieving-content-item-data-201907

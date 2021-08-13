@@ -2,6 +2,7 @@
 title: Getting Abstract Product List Content Item Data
 description: Abstract Product List API provides resources to retrieve data on abstract products included in the Abstract Product List content item for all or specific locale
 originalLink: https://documentation.spryker.com/v4/docs/getting-abstract-product-list-content-item-data-201907
+originalArticleId: 3c51eb57-d799-444d-bead-9798c6511c90
 redirect_from:
   - /v4/docs/getting-abstract-product-list-content-item-data-201907
   - /v4/docs/en/getting-abstract-product-list-content-item-data-201907
@@ -25,7 +26,7 @@ See [Content Items](https://documentation.spryker.com/v4/docs/content-items-guid
 {% endinfo_block %} to learn how to create and manage content items in CMS.)
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](https://documentation.spryker.com/v4/docs/content-items-api-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html).
 
 ## Retrieving Abstract Product List Content Item Data
 To retrieve the full information on the abstract product list by the content item key, send a GET request to the following endpoint:

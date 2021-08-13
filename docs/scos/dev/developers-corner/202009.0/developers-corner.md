@@ -1,6 +1,7 @@
 ---
 title: Developer's Corner
 originalLink: https://documentation.spryker.com/v6/docs/developers-corner
+originalArticleId: a96c4eaa-2309-4977-a8ed-d4d317bc96bc
 redirect_from:
   - /v6/docs/developers-corner
   - /v6/docs/en/developers-corner

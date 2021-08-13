@@ -2,6 +2,7 @@
 title: Creating a Data Importer
 description: The following article describes how to build your own DataImport for a specific type. All steps in this article are built on real life example for importing product images.
 originalLink: https://documentation.spryker.com/v6/docs/ht-data-import
+originalArticleId: c15a14e0-aa3b-40d2-ab93-d108746137c3
 redirect_from:
   - /v6/docs/ht-data-import
   - /v6/docs/en/ht-data-import
@@ -39,7 +40,7 @@ We will use the same technique for the `fk_product` and `fk_product_abstract` fi
 
 {% info_block infoBox "Info" %}
 
-To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](https://documentation.spryker.com/docs/about-data-import-categories). 
+To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/about-data-import-categories.html). 
 
 {% endinfo_block %}
 
@@ -73,7 +74,7 @@ Every import type needs its own `DataImporterConfiguration`. To add it, open the
 The constant is used to identify an import type. More information about it will follow later in this article. In our case we will use const `IMPORT_TYPE_PRODUCT_IMAGE = 'product-image';`.
 {% endinfo_block %}
 
-You also need to define the new data importer in the [configuration .yml file](https://documentation.spryker.com/docs/importing-data). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
+You also need to define the new data importer in the [configuration .yml file](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
     
 ```
 actions:

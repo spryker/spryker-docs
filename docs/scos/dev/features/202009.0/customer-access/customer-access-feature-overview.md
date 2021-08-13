@@ -2,6 +2,7 @@
 title: Customer Access feature overview
 description: The Customer Access feature allows deciding whether certain information is visible to logged out users or not
 originalLink: https://documentation.spryker.com/v6/docs/customer-access-feature-overview
+originalArticleId: c97c0a85-afe4-4d47-a64d-fdcf1e9bc5bc
 redirect_from:
   - /v6/docs/customer-access-feature-overview
   - /v6/docs/en/customer-access-feature-overview

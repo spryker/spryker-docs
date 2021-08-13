@@ -1,12 +1,13 @@
 ---
 title: File details- product_abstract.csv
 originalLink: https://documentation.spryker.com/v5/docs/file-details-product-abstractcsv
+originalArticleId: 3c2ff3b4-c66d-4fad-abb1-4adec332d7e1
 redirect_from:
   - /v5/docs/file-details-product-abstractcsv
   - /v5/docs/en/file-details-product-abstractcsv
 ---
 
-This article contains content of the **product_abstract.csv** file to configure [Abstract Product](https://documentation.spryker.com/docs/en/product-abstraction) information on your Spryker Demo Shop.
+This article contains content of the **product_abstract.csv** file to configure [Abstract Product](/docs/scos/dev/features/202005.0/product-information-management/product-abstraction.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -41,9 +42,9 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-* [ category.csv](https://documentation.spryker.com/docs/en/file-details-categorycsv)
-* [glossary.csv](https://documentation.spryker.com/docs/en/file-details-glossarycsv)
-* [tax.csv](https://documentation.spryker.com/docs/en/file-details-taxcsv)
+* [ category.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html)
+* [glossary.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [tax.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-tax.csv.html)
 
 ## Recommendations & Other Information
 For each attribute, where N is a number starting in 1, it is mandatory to have both fields:

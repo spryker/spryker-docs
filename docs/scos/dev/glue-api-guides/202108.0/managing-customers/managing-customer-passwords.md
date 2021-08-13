@@ -2,15 +2,18 @@
 title: Managing customer passwords
 description: Change and reset customer password via Glue API
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-passwords
+originalArticleId: 51bec82b-e9f6-4c92-a87d-4f609d8176e8
 redirect_from:
   - /2021080/docs/managing-customer-passwords
   - /2021080/docs/en/managing-customer-passwords
+  - /docs/managing-customer-passwords
+  - /docs/en/managing-customer-passwords
 ---
 
 The endpoints in this document allows you to manage customer passwords. You can change or reset a password. 
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 
 ## Change a customer's password
@@ -153,9 +156,9 @@ If the password reset is successful, the endpoint returns the `204 No Content` s
 | 411 | Unauthorized request. |
 | 415 | Password Reset Key is invalid. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-[Authenticate as a customer](https://documentation.spryker.com/docs/customer-password)
+[Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-passwords.html)
 

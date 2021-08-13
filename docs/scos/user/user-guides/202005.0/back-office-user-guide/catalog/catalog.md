@@ -2,6 +2,7 @@
 title: Catalog
 description: This section is designed to manage products from product creation to stock and product reviews, options, labels, relations, lists, etc in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/catalog
+originalArticleId: 3404db73-d840-49ca-8ba7-13b8a028c3eb
 redirect_from:
   - /v5/docs/catalog
   - /v5/docs/en/catalog
@@ -16,5 +17,5 @@ It is used by:
 
 ***
 **What's next?**
-* To start working with your catalog, see [Abstract and Concrete Products](https://documentation.spryker.com/docs/en/abstract-and-concrete-products).
+* To start working with your catalog, see [Abstract and Concrete Products](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/products/abstract-and-concrete-products.html).
 

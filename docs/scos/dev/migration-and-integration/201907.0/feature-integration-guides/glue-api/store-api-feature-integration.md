@@ -1,6 +1,7 @@
 ---
 title: Store API Feature Integration
 originalLink: https://documentation.spryker.com/v3/docs/store-api-feature-integration
+originalArticleId: 77bd87b1-8f70-4a1b-b580-60d9eecc56ad
 redirect_from:
   - /v3/docs/store-api-feature-integration
   - /v3/docs/en/store-api-feature-integration

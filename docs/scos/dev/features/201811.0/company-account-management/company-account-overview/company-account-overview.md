@@ -2,6 +2,7 @@
 title: Company Account Overview
 description: The Company Account page gives a clear overview of business’ structure, hierarchy, shipping, billing addresses, and other users in the Business Unit.
 originalLink: https://documentation.spryker.com/v1/docs/company-account-overview
+originalArticleId: 4c8c9a63-9aed-43d4-bb62-3ee9f177fead
 redirect_from:
   - /v1/docs/company-account-overview
   - /v1/docs/en/company-account-overview

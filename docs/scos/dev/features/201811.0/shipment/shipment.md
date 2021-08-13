@@ -2,6 +2,7 @@
 title: Shipment
 description: The feature allows your customers to choose from multiple shipping carriers and methods that you can easily integrate.
 originalLink: https://documentation.spryker.com/v1/docs/shipment
+originalArticleId: aaca13b7-fe82-4897-8492-d6b55d3cb6de
 redirect_from:
   - /v1/docs/shipment
   - /v1/docs/en/shipment

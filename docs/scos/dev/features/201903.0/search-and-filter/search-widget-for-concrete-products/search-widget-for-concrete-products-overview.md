@@ -2,6 +2,7 @@
 title: Search Widget for Concrete Products Overview
 description: Search widget adds allows users to easily search and add concrete products directly from shopping cart/list pages.
 originalLink: https://documentation.spryker.com/v2/docs/search-widget-for-concrete-products-overview
+originalArticleId: 06d9c69b-1db4-4ef9-8189-cd56831154a3
 redirect_from:
   - /v2/docs/search-widget-for-concrete-products-overview
   - /v2/docs/en/search-widget-for-concrete-products-overview
@@ -23,7 +24,7 @@ All the products that are being added to cart are added as separate items to sup
 A picture with 2 products of the same SKU added
 ![Guest shopping cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/guest-shopping-cart.png){height="" width=""}
 
-With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](https://documentation.spryker.com/v2/docs/product-restrictions-from-merchant-to-buyer-201903) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
+With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](https://documentation.spryker.com/v2/docs/merchant-product-restrictions) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
 
 {% info_block infoBox %}
 You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/features/201903.0/company-account-management/product-restrictions-from-merchant-to-buyer/restricted-products-behavior.html
@@ -41,7 +42,7 @@ In the empty shopping list, the customer can still add products with the help of
 
 In comparison with Shopping Cart, for Shopping lists, the quantity that is being added via a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/scos/dev/features/201903.0/product-management/product-quantity-restrictions/product-quantity-restrictions.html) the products may have.
 
-The same works for the [product restriction](https://documentation.spryker.com/v2/docs/product-restrictions-from-merchant-to-buyer-201903) rules: it is impossible to add blacklisted products to a shopping list, the shopper will get "No search results" message in the widget field, and only whitelisted products will be suggested in the search results in case of a whitelist.
+The same works for the [product restriction](https://documentation.spryker.com/v2/docs/merchant-product-restrictions) rules: it is impossible to add blacklisted products to a shopping list, the shopper will get "No search results" message in the widget field, and only whitelisted products will be suggested in the search results in case of a whitelist.
 
 ## Quick Order Page
 The widget allows searching the products on the quick order page too:

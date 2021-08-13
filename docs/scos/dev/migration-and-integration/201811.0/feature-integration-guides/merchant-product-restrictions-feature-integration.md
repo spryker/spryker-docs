@@ -2,6 +2,7 @@
 title: Merchant Product Restrictions Feature Integration
 description: Merchant Product Restrictions allows setting access to particular products. This guide describes the process of integrating the feature into a project.
 originalLink: https://documentation.spryker.com/v1/docs/merchant-product-restrictions-feature-integration-201811
+originalArticleId: 750664b9-7a32-42b7-8c19-084f8044cc32
 redirect_from:
   - /v1/docs/merchant-product-restrictions-feature-integration-201811
   - /v1/docs/en/merchant-product-restrictions-feature-integration-201811

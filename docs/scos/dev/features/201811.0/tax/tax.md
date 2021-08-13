@@ -2,6 +2,7 @@
 title: Tax
 description: Everything you need to know about the Tax capability.
 originalLink: https://documentation.spryker.com/v1/docs/tax
+originalArticleId: 94a18182-6de2-4d54-88b9-53d57b5100b3
 redirect_from:
   - /v1/docs/tax
   - /v1/docs/en/tax

@@ -2,6 +2,7 @@
 title: Creating an Abstract Product
 description: Use the procedure to create an abstract product, set a price and validity period, define superattributes, images, and a store the product is available in.
 originalLink: https://documentation.spryker.com/v1/docs/creating-an-abstract-product
+originalArticleId: 17bb02c1-708a-4c08-945e-e908642152a9
 redirect_from:
   - /v1/docs/creating-an-abstract-product
   - /v1/docs/en/creating-an-abstract-product

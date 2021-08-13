@@ -2,6 +2,7 @@
 title: Architecture Sniffer
 description: Use Architecture Sniffer to assert a certain quality of Spryker architecture for both core and project
 originalLink: https://documentation.spryker.com/v5/docs/architecture-sniffer
+originalArticleId: 7888aa52-c651-4ce5-b6a3-79d19cf7d8ed
 redirect_from:
   - /v5/docs/architecture-sniffer
   - /v5/docs/en/architecture-sniffer

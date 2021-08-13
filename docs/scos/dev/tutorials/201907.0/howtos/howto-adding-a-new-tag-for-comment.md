@@ -1,12 +1,13 @@
 ---
 title: HowTo - Adding a New Tag for Comment
 originalLink: https://documentation.spryker.com/v3/docs/ht-adding-new-tag-for-comment
+originalArticleId: 900469ec-5be1-49ea-ac4b-cc67525eec6b
 redirect_from:
   - /v3/docs/ht-adding-new-tag-for-comment
   - /v3/docs/en/ht-adding-new-tag-for-comment
 ---
 
-Tags are keywords associated with the comments. With their help, you can quickly find the necessary information discussed in the cart [comments](https://documentation.spryker.com/v3/docs/comments-201907). 
+Tags are keywords associated with the comments. With their help, you can quickly find the necessary information discussed in the cart [comments](/docs/scos/dev/features/201907.0/mailing-and-communication/comments/comments.html). 
 To add the available tags for comments:
 
 * Introduce the config file - `CommentConfig`:

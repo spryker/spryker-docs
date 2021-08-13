@@ -2,9 +2,12 @@
 title: Migration Guide - ShipmentDiscountConnector
 description: Use the guide to learn how to update the ShipmentDiscountConnector module to a newer version.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment-discount-connector
+originalArticleId: 6f3f796a-c580-4935-ba29-0b9076b09027
 redirect_from:
   - /2021080/docs/mg-shipment-discount-connector
   - /2021080/docs/en/mg-shipment-discount-connector
+  - /docs/mg-shipment-discount-connector
+  - /docs/en/mg-shipment-discount-connector
 ---
 
 ## Upgrading from Version 3.0.* Version to 4.0.0
@@ -12,7 +15,7 @@ redirect_from:
 In this new version of the **ShipmentDiscountConnector** module, we have added support of split delivery. You can find more details about the changes on the [ShipmentDiscountConnector module release page](https://github.com/spryker/shipment-discount-connector/releases).
     
 {% info_block errorBox %}
-This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/split-delivery-migration-concept.html
+This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/split-delivery-migration-concept.html
 {% endinfo_block %}.)
     
 **To upgrade to the new version of the module, do the following:**

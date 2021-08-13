@@ -2,6 +2,7 @@
 title: HowTo - Handle graceful shutdown
 description: Implement a graceful shutdown for your project to make sure the uncompleted processes are not stopped by signals like SIGTERM
 originalLink: https://documentation.spryker.com/v6/docs/howto-handle-graceful-shutdown
+originalArticleId: f6b450da-1cd9-4e53-9a91-ee806cadce49
 redirect_from:
   - /v6/docs/howto-handle-graceful-shutdown
   - /v6/docs/en/howto-handle-graceful-shutdown

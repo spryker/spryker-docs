@@ -2,6 +2,7 @@
 title: Retrieving Customer's Order History
 description: The guide instantiates a step-by-step procedure on how to retrieve a list of orders or a specific order for the customer.
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-customers-order-history
+originalArticleId: 3989ca5d-b1c1-4929-bfff-cf7a3540b1dc
 redirect_from:
   - /v5/docs/retrieving-customers-order-history
   - /v5/docs/en/retrieving-customers-order-history
@@ -17,13 +18,13 @@ In your development, this resource can help you to:
 The **Order History API** allows you to retrieve all orders made by a registered customer.
 
 {% info_block warningBox "Authentication" %}
-Since order history is available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](https://documentation.spryker.com/v5/docs/en/authentication-and-authorization
+Since order history is available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
 {% endinfo_block %}.)
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Order Management Feature Integration](https://documentation.spryker.com/v5/docs/en/glue-api-order-management-feature-integration)
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/v5/docs/en/glue-api-measurement-units-feature-integration)
+* [Glue API: Order Management Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
 
 ## Retrieving all Orders
 To retrieve a list of all orders made by a registered customer, send the request:

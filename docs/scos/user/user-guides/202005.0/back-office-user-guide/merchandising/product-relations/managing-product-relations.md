@@ -2,6 +2,7 @@
 title: Managing Product Relations
 description: Use these procedures to view, update, activate or deactivate, and/or delete a product relation in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-product-relations
+originalArticleId: 59d23285-22c6-4441-9f64-78035e3932a3
 redirect_from:
   - /v5/docs/managing-product-relations
   - /v5/docs/en/managing-product-relations
@@ -37,7 +38,7 @@ In the upper right corner of the page, click:
 
 3. To keep the changes, click **Save**.
 
-See [Product Relations: Reference Information](https://documentation.spryker.com/docs/en/product-relations-reference-information) to learn about the attributes used while editing a product relation.
+See [Product Relations: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html) to learn about the attributes used while editing a product relation.
 
 **Tips & Tricks**
 In the upper right corner of the page, click **List of product relations** to return to the list of product relations.
@@ -61,5 +62,5 @@ Make sure to click **Save** before clicking **List of product relations** or goi
 ***
 
 **What's next?**
-To learn about the attributes that you select and enter while managing product relations, see [Product Relations: Reference Information](https://documentation.spryker.com/docs/en/product-relations-reference-information).
+To learn about the attributes that you select and enter while managing product relations, see [Product Relations: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/merchandising/product-relations/references/product-relations-reference-information.html).
 

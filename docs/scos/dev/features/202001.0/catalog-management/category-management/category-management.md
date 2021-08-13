@@ -2,6 +2,7 @@
 title: Category Management
 description: Manage your product catalog with customized categories, category pages, and filters to easily handle and sort your items.
 originalLink: https://documentation.spryker.com/v4/docs/category-management
+originalArticleId: ab0d45f6-5986-4739-a523-8126c37afae9
 redirect_from:
   - /v4/docs/category-management
   - /v4/docs/en/category-management

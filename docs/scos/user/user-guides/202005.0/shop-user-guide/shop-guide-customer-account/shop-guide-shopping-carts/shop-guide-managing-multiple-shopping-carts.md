@@ -2,6 +2,7 @@
 title: Shop Guide - Managing Multiple Shopping Carts
 description: Use the procedures to update, duplicate, share, or delete a shopping cart, and convert shopping carts into a shopping list, and share shopping carts via links.
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-managing-shopping-carts
+originalArticleId: efa68d41-79a9-4274-88ab-4f360342bb3e
 redirect_from:
   - /v5/docs/shop-guide-managing-shopping-carts
   - /v5/docs/en/shop-guide-managing-shopping-carts
@@ -46,7 +47,7 @@ You can share a shopping cart with the company users within your business unit, 
 
 1. Navigate to the **Shopping Carts** page.
 2. Click **Share** in the **Shopping Carts List > Action** column.
-3. On the **Share my cart** page from the drop-down list next to the users you would like to share the cart with, select the sharing access rights: **No access, Read-only, Full Access**. See [Shared Cart Feature Overview](https://documentation.spryker.com/docs/en/shared-cart-overview) for more details on the access rights. 
+3. On the **Share my cart** page from the drop-down list next to the users you would like to share the cart with, select the sharing access rights: **No access, Read-only, Full Access**. See [Shared Cart Feature Overview](/docs/scos/dev/features/202005.0/shopping-cart/shared-cart/shared-cart-feature-overview.html) for more details on the access rights. 
 ![Share a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/share-cart-users.png){height="" width=""}
 4. Click **Save**.
 ***
@@ -99,6 +100,6 @@ Internal users are the users that belong to your company account. You can share 
 3. Depending on the level of access you would like to share the cart with, click **Copy** to copy the link. 
 ![Internal users](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/internal-uers-share-link.png){height="" width=""}
 
-To learn more about the differences in the access levels, check the [Shared Carts Feature Overview](https://documentation.spryker.com/docs/en/shared-cart-overview).
+To learn more about the differences in the access levels, check the [Shared Carts Feature Overview](/docs/scos/dev/features/202005.0/shopping-cart/shared-cart/shared-cart-feature-overview.html).
 
 <!-- Last review date: Aug 01, 2019 by Oksana Karasyova  -->

@@ -2,6 +2,7 @@
 title: CMS Pages
 description: The CMS Pages section is designed to create, view, update, publish CMS pages, compare its versions, and activate/deactivate in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/cms-pages
+originalArticleId: d3166f59-7658-4b58-9145-f3958946622d
 redirect_from:
   - /v5/docs/cms-pages
   - /v5/docs/en/cms-pages
@@ -13,10 +14,10 @@ You can create, view, publish and edit CMS pages in the **Pages** section. It is
 ***
 **What's next?**
 
-* To know more about how to create a CMS page, see [Creating a CMS Page](https://documentation.spryker.com/docs/en/creating-a-cms-page).
+* To know more about how to create a CMS page, see [Creating a CMS Page](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/creating-a-cms-page.html).
 
-* To know more about how to publish, view, edit and activate or deactivate CMS pages, see [Managing CMS Pages](https://documentation.spryker.com/docs/en/managing-cms-pages).
+* To know more about how to publish, view, edit and activate or deactivate CMS pages, see [Managing CMS Pages](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/managing-cms-pages.html).
 
-* To know more about how to view the version history of CMS pages and compare versions, see [CMS Versioning](https://documentation.spryker.com/docs/en/cms-pages-versioning).
+* To know more about how to view the version history of CMS pages and compare versions, see [CMS Versioning](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/cms-pages-versioning.html).
 
-* To learn more about attributes you use to create and edit CMS pages, see articles in the [CMS Pages: Reference Information](https://documentation.spryker.com/docs/en/cms-pages-reference-information) section.
+* To learn more about attributes you use to create and edit CMS pages, see articles in the [CMS Pages: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/pages/references/cms-pages-reference-information.html) section.

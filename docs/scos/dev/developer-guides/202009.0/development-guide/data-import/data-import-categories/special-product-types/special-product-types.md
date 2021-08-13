@@ -1,6 +1,7 @@
 ---
 title: Special Product Types
 originalLink: https://documentation.spryker.com/v6/docs/special-product-types
+originalArticleId: 2c159207-7a4f-4653-8003-9903ada88ee0
 redirect_from:
   - /v6/docs/special-product-types
   - /v6/docs/en/special-product-types
@@ -8,18 +9,18 @@ redirect_from:
 
 **Special Product Types** contains data related the special product types information in the online store.
 
-Within the [Product Options](/docs/scos/dev/features/202005.0/product-information-management/product-options/product-options.html) section, you will find all information about the data imports required to to manage product options in your online store.
+Within the [Product Options](/docs/scos/dev/features/202009.0/product-options/product-options.html) section, you will find all information about the data imports required to to manage product options in your online store.
 
-In the [Gift Cards](https://documentation.spryker.com/docs/gift-cards-import) section, you will be able to import the data necessary to manage gift cards information in your online store.
+In the [Gift Cards](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/special-product-types/gift-cards/gift-cards.html) section, you will be able to import the data necessary to manage gift cards information in your online store.
 
 {% info_block warningBox "Import order" %}
 
 The order in which the files are imported is **very strict**. For this reason, the data importers should be executed in the following order:
 
-1. [Product Option](https://documentation.spryker.com/docs/file-details-product-optioncsv)
-2. [Product Option Price](https://documentation.spryker.com/docs/file-details-product-option-pricecsv)
-3. [Gift Card Abstract Configuration](https://documentation.spryker.com/docs/file-details-gift-card-abstract-configurationcsv)
-4. [Gift Card Concrete Configuration](https://documentation.spryker.com/docs/file-details-gift-card-concrete-configurationcsv)
+1. [Product Option](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html)
+2. [Product Option Price](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html)
+3. [Gift Card Abstract Configuration](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html)
+4. [Gift Card Concrete Configuration](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html)
 
 
 {% endinfo_block %}

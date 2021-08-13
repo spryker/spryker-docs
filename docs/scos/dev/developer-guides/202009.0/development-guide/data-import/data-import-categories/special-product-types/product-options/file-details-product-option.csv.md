@@ -1,12 +1,13 @@
 ---
 title: File details- product_option.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-optioncsv
+originalArticleId: c76bd6fe-f031-4b02-ae83-d478cc009c7c
 redirect_from:
   - /v6/docs/file-details-product-optioncsv
   - /v6/docs/en/file-details-product-optioncsv
 ---
 
-This article contains content of the **product_option.csv** file to configure [Product Option](https://documentation.spryker.com/docs/product-options-2) information on your Spryker Demo Shop.
+This article contains content of the **product_option.csv** file to configure [Product Option](/docs/scos/dev/features/202009.0/product-options/product-options.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -27,7 +28,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*     [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+*     [product_abstract.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_option.csv*  file can be downloaded here:

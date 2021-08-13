@@ -2,9 +2,12 @@
 title: Retrieving abstract products
 description: Retrieve general information about abstract products and related resources.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-products
+originalArticleId: 6ba1a21c-bbbe-4442-b7ce-81e921924b26
 redirect_from:
   - /2021080/docs/retrieving-abstract-products
   - /2021080/docs/en/retrieving-abstract-products
+  - /docs/retrieving-abstract-products
+  - /docs/en/retrieving-abstract-products
 ---
 
 This endpoint allows to retrieve general information about abstract products.
@@ -12,11 +15,11 @@ This endpoint allows to retrieve general information about abstract products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration)
-* [Glue API: Product Options Feature Integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
-* [Glue API: Product Bundles feature integration](https://documentation.spryker.com/2021080/docs/glue-api-product-bundles-feature-integration)
-* [Glue API: Prices feature integration](https://documentation.spryker.com/docs/glue-api-prices-feature-integration)
+* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)
+* [Glue API: Product Options Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html)
+* [Glue API: Product Bundles feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-bundles-feature-integration.html)
+* [Glue API: Prices feature integration](https://documentation.spryker.com/2021080/docs/glue-api-prices-feature-integration)
 
 
 
@@ -61,8 +64,8 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 | `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its [default prices](https://documentation.spryker.com/v4/docs/products-reference-information#default-and-original-prices). |
-| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](https://documentation.spryker.com/docs/volume-prices)). |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its [default prices](https://documentation.spryker.com/2021080/docs/products-reference-information#default-and-original-prices). |
+| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](/docs/scos/dev/features/{{ page.version }}/prices/prices-feature-overview/volume-prices-overview.html)). |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
 | `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product lables. |
@@ -1954,15 +1957,15 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 | product-options | currencyIsoCode | String | Specifies the ISO 4217 code of the currency in which the product option price is specified. |
 
 For the attributes of other included resources, see:
-* [Retrieve image sets of an abstract product](https://documentation.spryker.com/docs/retrieving-image-sets-of-abstract-products#abstract-product-sets-response-attributes)
-* [Retrieve availability of an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-product-availability#abstract-product-availability-response-attributes)
-* [Retrieve prices of an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-product-prices#prices-response-attributes)
-* [Retrieve a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes)
-* [Retrieve a category node](https://documentation.spryker.com/docs/retrieving-category-nodes#category-nodes-response-attributes)
-* [Retrieve tax sets](https://documentation.spryker.com/docs/retrieving-tax-sets#tax-sets-response-attributes)
-* [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
-* [Retrieve product reviews](https://documentation.spryker.com/docs/managing-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
-* [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units)
+* [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
+* [Retrieve availability of an abstract product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-product-availability.html#abstract-product-availability-response-attributes)
+* [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-product-prices.html#prices-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
+* [Retrieve tax sets](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-tax-sets.html#tax-sets-response-attributes)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve product reviews](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
+* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-measurement-units.html)
 
 ## Possible errors
 

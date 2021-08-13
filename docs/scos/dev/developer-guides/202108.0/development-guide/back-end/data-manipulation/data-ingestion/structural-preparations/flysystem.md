@@ -2,9 +2,12 @@
 title: Flysystem
 description: The Flysystem module integrates Spryker with the thephpleague flysystem vendor package
 originalLink: https://documentation.spryker.com/2021080/docs/flysystem
+originalArticleId: b68c1798-4db1-4a2b-87bf-b54d4052a741
 redirect_from:
   - /2021080/docs/flysystem
   - /2021080/docs/en/flysystem
+  - /docs/flysystem
+  - /docs/en/flysystem
 ---
 
 The Flysystem module integrates Spryker with the [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package.
@@ -35,7 +38,7 @@ Flysystem's Service API is almost exactly like [Flysystem's API](http://flysyste
 
 it takes an additional mandatory parameter containing a pre-configured filesystem name.
 
-See [Plugin Configuration](https://documentation.spryker.com/docs/filesystem) for details.
+See [Plugin Configuration](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/file-system.html) for details.
 
 For example, to extract an image's metadata information stored under `foo/bar.jpg`, use the `getMetadata()` method with the media store's name.
 
@@ -136,7 +139,7 @@ The `build()` method is expected to return a class implementing the `\League\Fly
 
 The `acceptType()` method is expected to return true if the filesystem type can be handled by the implementation.
 
-Mapping between Filesystem and the type it can handle is done via configuration, see [Plugin Configuration](https://documentation.spryker.com/docs/filesystem) for details.
+Mapping between Filesystem and the type it can handle is done via configuration, see [Plugin Configuration](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/file-system.html) for details.
 
 ```php
 <?php

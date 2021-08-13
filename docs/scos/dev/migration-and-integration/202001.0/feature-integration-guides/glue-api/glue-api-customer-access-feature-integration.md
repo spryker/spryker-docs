@@ -2,6 +2,7 @@
 title: Glue API- Customer Access Feature Integration
 description: Use the guide to install the Customer Access API feature in your project.
 originalLink: https://documentation.spryker.com/v4/docs/glue-api-customer-access-feature-integration
+originalArticleId: a2a5d787-e23a-43c4-aee3-ca875ab76280
 redirect_from:
   - /v4/docs/glue-api-customer-access-feature-integration
   - /v4/docs/en/glue-api-customer-access-feature-integration
@@ -21,7 +22,7 @@ To start the feature integration, overview and install the necessary features:
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
 | Spryker Core | 202001.0 | [Feature API](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html) | 
-| Customer Access | 202001.0 | [Feature](https://documentation.spryker.com/v4/docs/customer-access-feature-integration-201903) |
+| Customer Access | 202001.0 | [Feature](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/customer-access-feature-integration.html) |
 
 ### 1) Install the Required Modules Using Composer
 Run the following command to install the required modules:

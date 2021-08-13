@@ -2,6 +2,7 @@
 title: Back Office translations overview
 description: Back Office Translations feature allows a user with administrative rights to translate the Back Office into different languages in a per-user manner.
 originalLink: https://documentation.spryker.com/v6/docs/back-office-translations-overview
+originalArticleId: 526f3da4-95c2-4dcf-b552-54ac358eab12
 redirect_from:
   - /v6/docs/back-office-translations-overview
   - /v6/docs/en/back-office-translations-overview
@@ -42,7 +43,7 @@ If a translation is missing, the corresponding key is displayed instead.
 
 Unlike _Glossary_ section of Zed which is used for managing Front-end(Yves) translations, there is no interface for managing Zed translations currently. All the translations are managed by updating corresponding .csv files directly. Similarly to uploading translation files, you need to regenerate translation cache to reflect the changes after updating them. Use the commands to do that.
 
-Newly created and all the existing modules are shipped with German translation by default. If you want to add a different language, you can follow the instructions from the [Back Office translations feature integration guide](https://documentation.spryker.com/docs/back-office-feature-integration).
+Newly created and all the existing modules are shipped with German translation by default. If you want to add a different language, you can follow the instructions from the [Back Office translations feature integration guide](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/spryker-core-back-office-feature-integration.html).
 
 The scheme below illustrates relations between Translator, UserExtension, User, UserLocale and UserLocaleGui modules:
 

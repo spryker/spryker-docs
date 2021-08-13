@@ -2,6 +2,7 @@
 title: Billpay
 description: Billpay is the provider for the preferred, local payment methods Invoice, Direct Debit and Installments.
 originalLink: https://documentation.spryker.com/v3/docs/billpay
+originalArticleId: c01dc5a1-1028-4c02-b48c-be0eef82996a
 redirect_from:
   - /v3/docs/billpay
   - /v3/docs/en/billpay

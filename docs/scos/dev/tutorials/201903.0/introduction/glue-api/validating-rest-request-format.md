@@ -1,6 +1,7 @@
 ---
 title: Validating REST Request Format
 originalLink: https://documentation.spryker.com/v2/docs/validating-rest-request-format
+originalArticleId: 2f395a07-f192-4b6a-9a9f-8897c6cb1f43
 redirect_from:
   - /v2/docs/validating-rest-request-format
   - /v2/docs/en/validating-rest-request-format
@@ -23,7 +24,7 @@ To apply validation rules in any of APIs, be that your own APIs or APIs shipped 
 ss
 2. Rename the file to the name of the API you are providing validation for.  For the `StoresRestAPI`, the name will be `STORES.validation.yaml`.
 
-3. Provide validation for the endpoints provided by the API. For details, see [Validation Rule Format](https://documentation.spryker.com/v2/docs/validating-rest-request-format#4--validation-rule-format).
+3. Provide validation for the endpoints provided by the API. For details, see [Validation Rule Format](/docs/scos/dev/tutorials/201903.0/introduction/glue-api/validating-rest-request-format.html#4--validation-rule-format).
 
 4. Run `vendor/bin/console glue:rest:build-request-validation-cache`.
 

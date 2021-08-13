@@ -1,6 +1,7 @@
 ---
 title: Tooling config file
 originalLink: https://documentation.spryker.com/v2/docs/tooling-config-file
+originalArticleId: bb7c6781-1bdb-437b-94db-fc00df35d565
 redirect_from:
   - /v2/docs/tooling-config-file
   - /v2/docs/en/tooling-config-file

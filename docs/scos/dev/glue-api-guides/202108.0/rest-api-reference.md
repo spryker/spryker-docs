@@ -2,16 +2,19 @@
 title: REST API reference
 description: This page provides an exhaustive reference for the REST API endpoints present in Spryker by default with the corresponding parameters and data formats.
 originalLink: https://documentation.spryker.com/2021080/docs/rest-api-reference
+originalArticleId: 4f1c673e-8917-40ed-a88e-8710a00aec8a
 redirect_from:
   - /2021080/docs/rest-api-reference
   - /2021080/docs/en/rest-api-reference
+  - /docs/rest-api-reference
+  - /docs/en/rest-api-reference
 ---
 
 This document provides an overview of REST API endpoints provided by Spryker by default. For each endpoint, you will find its URL relative to the server, REST request parameters, as well as the appropriate request and response data formats.
 
 {% info_block warningBox %}
 
-This REST API reference is valid for [Master Suite](https://documentation.spryker.com/docs/master-suite) only. Not all the endpoints are available or are the same for B2B and B2C Demo Shops.
+This REST API reference is valid for [Master Suite](/docs/scos/user/intro-to-spryker/{{ page.version }}/master-suite.html) only. Not all the endpoints are available or are the same for B2B and B2C Demo Shops.
 
 {% endinfo_block %}
 

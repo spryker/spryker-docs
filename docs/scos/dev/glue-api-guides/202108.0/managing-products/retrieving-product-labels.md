@@ -2,15 +2,18 @@
 title: Retrieving product labels
 description: Learn how to retrieve product labels via Glue API.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-labels
+originalArticleId: 70d36a7a-e701-427d-ae2a-e78ebde56ebe
 redirect_from:
   - /2021080/docs/retrieving-product-labels
   - /2021080/docs/en/retrieving-product-labels
+  - /docs/retrieving-product-labels
+  - /docs/en/retrieving-product-labels
 ---
 
-[Product labels](https://documentation.spryker.com/docs/product-label-feature-overview#product-label) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
+[Product labels](https://documentation.spryker.com/2021080/docs/product-label-feature-overview#product-label) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration). 
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Labels feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html). 
 
 ## Retrieve a product label
 
@@ -68,13 +71,13 @@ Request sample: `GET http://glue.mysprykershop.com/product-labels/3`
 ## Other management options
 
 Apart from using this dedicated endpoint, you can retrieve product lables as an included resource as follows:
-* [Retrieve an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-products#retrieve-an-abstract-product)
-* [Retrieve a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#retrieve-a-concrete-product)
-* [Retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart)
-* [Retreive a registered user's carts](https://documentation.spryker.com/docs/managing-carts-of-registered-users#retrieve-a-registered-user-s-carts)
-* [Retrieve a registered user's cart](https://documentation.spryker.com/docs/managing-carts-of-registered-users#retrieve-a-registered-users-cart)
-* [Retrieve wishlists](https://documentation.spryker.com/docs/managing-wishlists#retrieve-wishlists)
-* [Retrieve a wishlist](https://documentation.spryker.com/docs/managing-wishlists#retrieve-a-wishlist)
+* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart)
+* [Retreive a registered user's carts](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-user-s-carts)
+* [Retrieve a registered user's cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart)
+* [Retrieve wishlists](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-wishlists/managing-wishlists.html#retrieve-wishlists)
+* [Retrieve a wishlist](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-wishlists/managing-wishlists.html#retrieve-a-wishlist)
 
 
 ## Possible errors
@@ -84,6 +87,6 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 | 1202 | Product label ID is not specified. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 
 

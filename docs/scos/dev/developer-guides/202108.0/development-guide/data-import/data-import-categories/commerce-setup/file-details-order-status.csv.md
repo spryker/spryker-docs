@@ -2,9 +2,12 @@
 title: File details- order-status.csv
 description: Import the data to to configure the update of the regular order status information
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-order-statuscsv
+originalArticleId: 9dcde9fc-7757-4a62-997c-a53def8250d1
 redirect_from:
   - /2021080/docs/file-details-order-statuscsv
   - /2021080/docs/en/file-details-order-statuscsv
+  - /docs/file-details-order-statuscsv
+  - /docs/en/file-details-order-statuscsv
 ---
 
 This document describes the `order-status.csv` file to configure the update of the regular order status information in your Spryker shop.
@@ -22,7 +25,7 @@ The file should have the following parameters:
 |-|-|-|-|-|-|
 | Order_reference |   |   |   | Unique | Identifier of the order in the system. |
 | order_item_reference | &check; | String |   | Unique | Identifier of the  item in the order. |
-| order_item_event_oms | &check; | String |   | OMS events depend on the  [state machine](https://documentation.spryker.com/docs/order-process-modelling-state-machines) configured. | Desired order item state. Only this parameter is updated in the database |
+| order_item_event_oms | &check; | String |   | OMS events depend on the  [state machine](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html) configured. | Desired order item state. Only this parameter is updated in the database |
 
 ## Import file dependencies
 The file has no dependencies.

@@ -2,6 +2,7 @@
 title: Named Wishlists
 description: Users can easily keep track of their Wish Lists by naming each one individually.
 originalLink: https://documentation.spryker.com/v5/docs/named-wishlists
+originalArticleId: 21fd2fe2-12f7-4675-a47d-a7f0047a8a4d
 redirect_from:
   - /v5/docs/named-wishlists
   - /v5/docs/en/named-wishlists
@@ -14,6 +15,6 @@ When the customer selects **Add to Wishlist** for the first time and there are n
 The wishlist name can be later changed in the **Wishlist** section. As well as new wishlists can be added in the **Wishlist** section of the customer account.
 ![Named wishlists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Named+Wishlist/named_wishlist.gif){height="" width=""}
 
-For more information about multiple wishlists, see [Multiple Wishlists](https://documentation.spryker.com/docs/en/multiple-wishlists).
+For more information about multiple wishlists, see [Multiple Wishlists](/docs/scos/dev/features/202005.0/wishlist/multiple-wishlists.html).
 
 Only logged in customers can use the Wishlist functionality.

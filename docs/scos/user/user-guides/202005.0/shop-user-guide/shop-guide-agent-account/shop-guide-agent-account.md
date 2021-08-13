@@ -2,6 +2,7 @@
 title: Shop Guide - Agent Account
 description: The guide provides information you need to work in the Agent account.
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-agent-account
+originalArticleId: 22f2d0ca-b0aa-42e4-b27e-d9659a8606b0
 redirect_from:
   - /v5/docs/shop-guide-agent-account
   - /v5/docs/en/shop-guide-agent-account

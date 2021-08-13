@@ -2,6 +2,7 @@
 title: Episerver - Installation and Configuration
 description: Install and  configure  Episerver into Spryker Commerce OS
 originalLink: https://documentation.spryker.com/v4/docs/episerver-installation-and-configuration
+originalArticleId: ecd5541d-5ba5-437d-ae26-b02c30751560
 redirect_from:
   - /v4/docs/episerver-installation-and-configuration
   - /v4/docs/en/episerver-installation-and-configuration

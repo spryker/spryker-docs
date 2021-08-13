@@ -1,9 +1,12 @@
 ---
 title: Order management feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/order-management-feature-integration
+originalArticleId: 848449f8-ca6e-4e63-ba21-1c66f248afba
 redirect_from:
   - /2021080/docs/order-management-feature-integration
   - /2021080/docs/en/order-management-feature-integration
+  - /docs/order-management-feature-integration
+  - /docs/en/order-management-feature-integration
 ---
 
 {% info_block warningBox "Included features" %}

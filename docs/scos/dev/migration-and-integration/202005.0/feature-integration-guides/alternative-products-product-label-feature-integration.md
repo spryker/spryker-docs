@@ -2,6 +2,7 @@
 title: Alternative Products- Product Label Feature Integration
 description: The guide describes the procedure that you need to perform in order to integrate the Alternative Products + Product Label feature into your project.
 originalLink: https://documentation.spryker.com/v5/docs/alternative-products-product-labels-feature-integration
+originalArticleId: b069a6e2-6483-4496-9f37-84a4d2e041ef
 redirect_from:
   - /v5/docs/alternative-products-product-labels-feature-integration
   - /v5/docs/en/alternative-products-product-labels-feature-integration

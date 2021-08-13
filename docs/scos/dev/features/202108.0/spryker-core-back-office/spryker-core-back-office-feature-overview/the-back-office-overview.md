@@ -2,9 +2,12 @@
 title: The Back Office overview
 description: The article provides general information about the actions you can perform in Spryker Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/the-back-office-overview
+originalArticleId: 33ffb1b7-d9b5-457a-90a1-170e36479d5b
 redirect_from:
   - /2021080/docs/the-back-office-overview
   - /2021080/docs/en/the-back-office-overview
+  - /docs/the-back-office-overview
+  - /docs/en/the-back-office-overview
 ---
 
 A Spryker-based shop ships with a comprehensive, intuitive administration area comprised of numerous features that give you a strong hold over the customization of your store. Here you can tailor features to your specific needs, manage orders, products, customers, modify look & feel of your store by, for example, designing the eye-catching marketing campaigns and promotions, and much more.

@@ -1,6 +1,7 @@
 ---
 title: Adding and Configuring a Cronjob
 originalLink: https://documentation.spryker.com/v4/docs/adding-and-configuring-cronjob
+originalArticleId: e37a3a28-033c-48d0-a3dd-db2824138c71
 redirect_from:
   - /v4/docs/adding-and-configuring-cronjob
   - /v4/docs/en/adding-and-configuring-cronjob

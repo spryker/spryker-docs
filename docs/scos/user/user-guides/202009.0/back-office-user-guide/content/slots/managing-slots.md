@@ -2,6 +2,7 @@
 title: Managing slots
 description: Learn about slot management in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-slots
+originalArticleId: 62c811e0-6b2d-44bb-8e78-ad885609c638
 redirect_from:
   - /v6/docs/managing-slots
   - /v6/docs/en/managing-slots
@@ -26,7 +27,7 @@ To activate a slot, click **Activate** in the *Actions* column in the **List of 
 To deactivate a slot, click **Deactivate** in the *Actions* column in the **List of Slots for [name] Template** section. This will change the status to **Inactive**. The content of this slot will be removed from the corresponding Storefront page(s).
 
 ## Assigning CMS Blocks to Slots
-You can assign CMS blocks to a slot selected in the **List of Slots for [name] Template**. The content of assigned CMS blocks is displayed in the the corresponding Storefront page(s). If there are no CMS blocks with content that you can assign, see [Creating a CMS Block](https://documentation.spryker.com/docs/creating-cms-block).
+You can assign CMS blocks to a slot selected in the **List of Slots for [name] Template**. The content of assigned CMS blocks is displayed in the the corresponding Storefront page(s). If there are no CMS blocks with content that you can assign, see [Creating a CMS Block](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/blocks/creating-a-cms-block.html).
 
 To assign a CMS block to a slot:
 
@@ -136,4 +137,4 @@ Selecting a product both as a part of a category in the **Product Pages per Cate
 </details>
 ***
 **What's next?**
-To know more about the attributes you see, see the [Slots: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/slots/references/slots-reference-information.html) article.
+To know more about the attributes you see, see the [Slots: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/slots/references/reference-information-slots.html) article.

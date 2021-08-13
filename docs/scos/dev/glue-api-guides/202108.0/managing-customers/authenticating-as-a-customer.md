@@ -2,19 +2,22 @@
 title: Authenticating as a customer
 description: Retrieve customer authentication tokens to send requests to protected resources.
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-customer
+originalArticleId: 4d61554f-dce0-40a2-9091-2db810bcf9a2
 redirect_from:
   - /2021080/docs/authenticating-as-a-customer
   - /2021080/docs/en/authenticating-as-a-customer
+  - /docs/authenticating-as-a-customer
+  - /docs/en/authenticating-as-a-customer
 ---
 
-This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](https://documentation.spryker.com/docs/authentication-and-authorization#list-of-private-resources).
+This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/scos/dev/glue-api-guides/{{ page.version }}/authentication-and-authorization.html#list-of-private-resources).
 
 :::(Warning)
-This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Manging customer authentication tokens via OAuth 2.0](https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens-via-oauth-20).
+This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Manging customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
 :::
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Authenticate as a customer
 
@@ -44,8 +47,8 @@ Request sample: `POST https://mysprykershop.com/access-tokens`
 
 | ATTRIBUTE | TYPE | REQUIRED  |DESCRIPTION |
 | --- | --- | --- | --- |
-| username | string | &check; | Customer's username. You define it when [creating a customer](https://documentation.spryker.com/docs/customers#create-a-customer). |
-| password | password | &check; | Customer's password. You define it when [creating a customer](https://documentation.spryker.com/docs/customers#create-a-customer). |
+| username | string | &check; | Customer's username. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html#create-a-customer). |
+| password | password | &check; | Customer's password. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customers.html#create-a-customer). |
 
 {% info_block infoBox "Username" %}
 
@@ -89,7 +92,7 @@ Note that depending on the Login feature configuration for your project, too man
 | expiresIn | Integer | The time in seconds in which the token expires.  |
 | accessToken | String | Authentication token used to send requests to the protected resources available for a customer.  |
 | refreshToken | String | Authentication token used to refresh the `accessToken`. |
-| idCompanyUser | string | A unique identifier of a user within a company. Use it to [impersonate a company user](https://documentation.spryker.com/docs/logging-in-as-a-company-user#impersonating-a-company-user). |
+| idCompanyUser | string | A unique identifier of a user within a company. Use it to [impersonate a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/searching-by-company-users.html#impersonating-a-company-user). |
 
 ## Possible errors
 
@@ -102,16 +105,16 @@ Note that depending on the Login feature configuration for your project, too man
 | 403 | Failed to authenticate a user. |
 | 901 | Unprocessable login data (incorrect email format; email or password is empty).|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Manage carts](https://documentation.spryker.com/docs/managing-carts-of-registered-users)
-* [Manage cart items](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users)
-* [Manage gift cards](https://documentation.spryker.com/docs/managing-gift-cards-of-registered-users)
-* [Manage wishlists](https://documentation.spryker.com/docs/managing-wishlists)
-* [Manage orders](https://documentation.spryker.com/docs/retrieving-customers-order-history)
-* [Managing customer authentication tokens](https://documentation.spryker.com/docs/managing-customer-access-tokens)
-* [Manage customer addresses](https://documentation.spryker.com/docs/customer-addresses)
-* [Manage customer addresses](https://documentation.spryker.com/docs/customer-addresses)
-* [Manage customer passwords](https://documentation.spryker.com/docs/customer-password)
+* [Manage carts](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
+* [Manage cart items](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
+* [Manage gift cards](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
+* [Manage wishlists](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-wishlists/managing-wishlists.html)
+* [Manage orders](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-orders.html)
+* [Managing customer authentication tokens](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-authentication-tokens.html)
+* [Manage customer addresses](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-addresses.html)
+* [Manage customer addresses](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-addresses.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-passwords.html)

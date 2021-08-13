@@ -2,6 +2,7 @@
 title: Managing product labels
 description: The Managing Product Labels section describes the procedures you can use to view, edit, activate and/or deactivate product labels in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-product-labels
+originalArticleId: 9c7648cc-d700-45a7-9eb6-7b4369151786
 redirect_from:
   - /v6/docs/managing-product-labels
   - /v6/docs/en/managing-product-labels
@@ -35,13 +36,13 @@ On the *View Product Label: “{product label name}”*  page, you can:
 
 {% info_block warningBox "Dynamic product labels" %}
 
-Products for the [dynamic product labels](https://documentation.spryker.com/docs/product-labels-feature-overview#dynamic-product-label) (like *New*, or *Sale*) are applied dynamically based on the defined rules. There is no way to apply products manually.
+Products for the [dynamic product labels](/docs/scos/dev/features/202009.0/product-labels/product-labels-feature-overview.html#dynamic-product-label) (like *New*, or *Sale*) are applied dynamically based on the defined rules. There is no way to apply products manually.
 
 {% endinfo_block %}
 
 To edit a product label:
 1. In the _Actions_ column of the *Overview of Product Labels* page, select **Edit**. 
-2. On the *Edit Product Label: “{product label name}* page, edit the values. To learn about the attributes you see on the page, see [Product Labels: Reference Information](https://documentation.spryker.com/docs/product-labels-reference-information).
+2. On the *Edit Product Label: “{product label name}* page, edit the values. To learn about the attributes you see on the page, see [Product Labels: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-labels/references/reference-information-product-labels.html).
 3. Select **Save**.
 The page is refreshed to show the message about successful product label update.
 
@@ -53,4 +54,4 @@ In the *Assigned Products* subtab of the *Products* tab, clear the check box nex
 
 ## Next steps
 
-To learn about the attributes you enter and select while managing product label, see [Product Labels: Reference Information](https://documentation.spryker.com/docs/product-labels-reference-information).
+To learn about the attributes you enter and select while managing product label, see [Product Labels: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-labels/references/reference-information-product-labels.html).

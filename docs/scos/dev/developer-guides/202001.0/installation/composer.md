@@ -2,6 +2,7 @@
 title: Composer
 description: Spryker Commerce OS uses Composer as a dependency manager.
 originalLink: https://documentation.spryker.com/v4/docs/composer
+originalArticleId: 540b1ad2-03bb-4608-a602-62591def6ad3
 redirect_from:
   - /v4/docs/composer
   - /v4/docs/en/composer

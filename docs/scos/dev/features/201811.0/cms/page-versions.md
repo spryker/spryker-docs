@@ -2,6 +2,7 @@
 title: Page Versions
 description: In the Version History you can see and compare all published versions of a CMS Page and quickly roll back to an earlier version with a simple click.
 originalLink: https://documentation.spryker.com/v1/docs/page-versions
+originalArticleId: 82f2c1eb-b87c-4095-869d-d6aad8bc8aa9
 redirect_from:
   - /v1/docs/page-versions
   - /v1/docs/en/page-versions

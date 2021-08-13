@@ -2,6 +2,7 @@
 title: Vault for Tokens
 description: The Vault for Tokens feature allows keeping your confidential data securely and protect it from theft and vulnerability.
 originalLink: https://documentation.spryker.com/v4/docs/vault-for-tokens
+originalArticleId: 3348d937-55cd-4058-a363-bfff0dc14147
 redirect_from:
   - /v4/docs/vault-for-tokens
   - /v4/docs/en/vault-for-tokens

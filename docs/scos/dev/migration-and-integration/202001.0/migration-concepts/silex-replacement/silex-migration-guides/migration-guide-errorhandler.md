@@ -2,6 +2,7 @@
 title: Migration Guide - ErrorHandler
 description: Use the guide to perform the ErrorHandler part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v4/docs/migration-guide-errorhandler
+originalArticleId: 519c0b22-a195-4a99-8ef7-de2f7d6ad66c
 redirect_from:
   - /v4/docs/migration-guide-errorhandler
   - /v4/docs/en/migration-guide-errorhandler

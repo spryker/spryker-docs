@@ -2,9 +2,12 @@
 title: ERROR- remove spryker_logs- volume is in use
 description: The solution to the `ERROR- remove spryker_logs- volume is in use` error.
 originalLink: https://documentation.spryker.com/2021080/docs/error-remove-spryker-logs-volume-is-in-use
+originalArticleId: 2c841376-da36-4778-8964-306d0088f3d6
 redirect_from:
   - /2021080/docs/error-remove-spryker-logs-volume-is-in-use
   - /2021080/docs/en/error-remove-spryker-logs-volume-is-in-use
+  - /docs/error-remove-spryker-logs-volume-is-in-use
+  - /docs/en/error-remove-spryker-logs-volume-is-in-use
 ---
 
 You get the error `ERROR: remove spryker_logs: volume is in use - [{container_hash}]`

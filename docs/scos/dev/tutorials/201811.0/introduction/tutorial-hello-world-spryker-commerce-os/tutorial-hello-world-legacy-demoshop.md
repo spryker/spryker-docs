@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Hello World - Legacy Demoshop
 originalLink: https://documentation.spryker.com/v1/docs/hello-world-legacy
+originalArticleId: 0ecd1c97-9815-4b89-bb5f-3a5394f75f30
 redirect_from:
   - /v1/docs/hello-world-legacy
   - /v1/docs/en/hello-world-legacy

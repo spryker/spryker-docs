@@ -1,12 +1,13 @@
 ---
 title: File details- product_group.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-groupcsv
+originalArticleId: baa2805b-a787-4c31-ac6a-0f180cd50479
 redirect_from:
   - /v6/docs/file-details-product-groupcsv
   - /v6/docs/en/file-details-product-groupcsv
 ---
 
-This article contains content of the **product_group.csv** file to configure [Product Group](https://documentation.spryker.com/docs/en/product-group-feature-overview) information on your Spryker Demo Shop.
+This article contains content of the **product_group.csv** file to configure [Product Group](/docs/scos/dev/features/202009.0/product-groups/product-groups-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -21,7 +22,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [product_abstract.csv](https://documentation.spryker.com/docs/file-details-product-abstractcsv)
+*    [product_abstract.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_group.csv*  file can be downloaded here:

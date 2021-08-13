@@ -1,6 +1,7 @@
 ---
 title: Twig and TwigExtension
 originalLink: https://documentation.spryker.com/v1/docs/twig-and-twig-extension
+originalArticleId: 537291a9-467c-433b-a134-1551f3a7f839
 redirect_from:
   - /v1/docs/twig-and-twig-extension
   - /v1/docs/en/twig-and-twig-extension

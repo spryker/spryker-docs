@@ -2,6 +2,7 @@
 title: Migration Guide - Translator
 description: Use the guide to perform the Translator part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-translator
+originalArticleId: 36489539-6b31-44b3-b5ec-0448c9c4704b
 redirect_from:
   - /v6/docs/migration-guide-translator
   - /v6/docs/en/migration-guide-translator
@@ -9,7 +10,7 @@ redirect_from:
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

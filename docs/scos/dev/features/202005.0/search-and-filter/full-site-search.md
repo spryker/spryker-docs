@@ -2,6 +2,7 @@
 title: Full-Site Search
 description: Give your customers the opportunity to search all products, categories and CMS pages with powerful search functionalities
 originalLink: https://documentation.spryker.com/v5/docs/full-site-search
+originalArticleId: b7eb3576-5072-4bb5-a59b-fc56fcf4f993
 redirect_from:
   - /v5/docs/full-site-search
   - /v5/docs/en/full-site-search

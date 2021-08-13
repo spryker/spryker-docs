@@ -2,9 +2,12 @@
 title: Migration Guide - DiscountPromotion
 description: Use the guide to migrate to a new version of the DiscountPromotion module.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-discount-promotion
+originalArticleId: f2b67c9c-08ac-44d6-a070-542221eec789
 redirect_from:
   - /2021080/docs/mg-discount-promotion
   - /2021080/docs/en/mg-discount-promotion
+  - /docs/mg-discount-promotion
+  - /docs/en/mg-discount-promotion
 ---
 
 ## Upgrading from Version 3.* to Version 4.0.0
@@ -12,7 +15,7 @@ redirect_from:
 In this new version of the **DiscountPromotion** module, we have added support of decimal stock. You can find more details about the changes on the [DiscountPromotion module](https://github.com/spryker/discount-promotion/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/decimal-stock-migration-concept.html
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/decimal-stock-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

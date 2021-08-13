@@ -1,6 +1,7 @@
 ---
 title: Setup tests
 originalLink: https://documentation.spryker.com/v5/docs/setup-tests
+originalArticleId: b3b0d3dd-933f-4c1b-9369-65db26be133f
 redirect_from:
   - /v5/docs/setup-tests
   - /v5/docs/en/setup-tests

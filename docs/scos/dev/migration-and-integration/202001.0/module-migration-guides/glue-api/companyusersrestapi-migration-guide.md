@@ -1,6 +1,7 @@
 ---
 title: CompanyUsersRestApi Migration Guide
 originalLink: https://documentation.spryker.com/v4/docs/companyusersrestapi-migration-guide
+originalArticleId: e7cf89bc-c775-4fb4-acb7-d4cd16cc7150
 redirect_from:
   - /v4/docs/companyusersrestapi-migration-guide
   - /v4/docs/en/companyusersrestapi-migration-guide

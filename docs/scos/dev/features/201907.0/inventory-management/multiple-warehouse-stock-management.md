@@ -2,6 +2,7 @@
 title: Multiple Warehouse Stock Management
 description: Your product's availability is calculated on a per-store basis. You can manage stocks across all international entities from a single interface.
 originalLink: https://documentation.spryker.com/v3/docs/multiple-warehouse-stock
+originalArticleId: 70c59c16-915e-4c04-b225-88534f0fc531
 redirect_from:
   - /v3/docs/multiple-warehouse-stock
   - /v3/docs/en/multiple-warehouse-stock

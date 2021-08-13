@@ -2,6 +2,7 @@
 title: Product Labels- Reference Information
 description: The guide provides additional information about the values you use when creating or updating product labels in the Back Office.
 originalLink: https://documentation.spryker.com/v2/docs/product-labels-reference-information
+originalArticleId: 7da65951-11e8-476b-a8ed-2ae6c27bb4ad
 redirect_from:
   - /v2/docs/product-labels-reference-information
   - /v2/docs/en/product-labels-reference-information

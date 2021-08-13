@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - MultiCartPage
 originalLink: https://documentation.spryker.com/v2/docs/mg-multi-cart-page
+originalArticleId: 3cfd4b4d-21e9-4983-97b3-27c23600a3d8
 redirect_from:
   - /v2/docs/mg-multi-cart-page
   - /v2/docs/en/mg-multi-cart-page

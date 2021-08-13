@@ -2,6 +2,7 @@
 title: FACT-Finder - Exporting CSVs
 description: Export data to FACT-Finder CSV by applying the configuration.
 originalLink: https://documentation.spryker.com/v2/docs/search-factfinder-export-csv
+originalArticleId: 0d81cac3-ed5e-492d-8ce2-b032124f4c48
 redirect_from:
   - /v2/docs/search-factfinder-export-csv
   - /v2/docs/en/search-factfinder-export-csv

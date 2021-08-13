@@ -2,15 +2,18 @@
 title: FACT-Finder - Integration into project
 description: This article provides details on how to integrate Fact Finder modules into the Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/fact-finder-integration-into-project
+originalArticleId: 1bd158d4-9fd7-4a62-9665-577d5347a754
 redirect_from:
   - /2021080/docs/fact-finder-integration-into-project
   - /2021080/docs/en/fact-finder-integration-into-project
+  - /docs/fact-finder-integration-into-project
+  - /docs/en/fact-finder-integration-into-project
 ---
 
 ## Prerequisites
 
 To integrate with FACT-Finder, you will need your FACT-Finder account. If you do not have a FACT-Finder account, please contact [FACT-Finder](http://www.fact-finder.de/).
-Make sure, that FactFinder modules were [installed and configured](https://documentation.spryker.com/docs/fact-finder-installation-and-configuration) before proceeding with the integration.
+Make sure, that FactFinder modules were [installed and configured](/docs/scos/dev/technology-partners/{{ page.version }}/marketing-and-conversion/analytics/fact-finder/fact-finder-installation-and-configuration.html) before proceeding with the integration.
 
 ### FactFinder Module
 

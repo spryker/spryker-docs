@@ -2,9 +2,12 @@
 title: Migration Guide - Wishlist
 description: Use the guide to learn how to update the Wishlist module to a newer version.
 originalLink: https://documentation.spryker.com/2021080/docs/mg-wishlist
+originalArticleId: c0987ced-479c-4eba-ae1d-9cfbf76ce0fb
 redirect_from:
   - /2021080/docs/mg-wishlist
   - /2021080/docs/en/mg-wishlist
+  - /docs/mg-wishlist
+  - /docs/en/mg-wishlist
 ---
 
 ## Upgrading from Version 6.* to Version 8.0.0

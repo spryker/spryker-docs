@@ -1,9 +1,12 @@
 ---
 title: CompanyUsersRestApi Migration Guide
 originalLink: https://documentation.spryker.com/2021080/docs/companyusersrestapi-migration-guide
+originalArticleId: e34e7c88-d2e4-4a05-bef5-f49da84d9420
 redirect_from:
   - /2021080/docs/companyusersrestapi-migration-guide
   - /2021080/docs/en/companyusersrestapi-migration-guide
+  - /docs/companyusersrestapi-migration-guide
+  - /docs/en/companyusersrestapi-migration-guide
 ---
 
 ## Upgrading from Version 1.3.0 to Version 2.0.0

@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Handling Data - Publish and Synchronization - Legacy Demoshop
 originalLink: https://documentation.spryker.com/v1/docs/handling-data-publish-and-synchronization
+originalArticleId: 1b690c8b-f558-4d24-b566-d6f51fa9e43f
 redirect_from:
   - /v1/docs/handling-data-publish-and-synchronization
   - /v1/docs/en/handling-data-publish-and-synchronization

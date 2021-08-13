@@ -2,6 +2,7 @@
 title: Billie
 description: Provide various payment options from Billie.
 originalLink: https://documentation.spryker.com/v6/docs/billie
+originalArticleId: 2a26033a-9201-46e7-9c2c-c4fabf84fc72
 redirect_from:
   - /v6/docs/billie
   - /v6/docs/en/billie

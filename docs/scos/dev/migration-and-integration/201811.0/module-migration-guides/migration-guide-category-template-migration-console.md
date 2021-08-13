@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Category Template Migration Console
 originalLink: https://documentation.spryker.com/v1/docs/mg-category-template-console
+originalArticleId: 6a1a15d7-bb8c-4f93-994a-83428213f2ff
 redirect_from:
   - /v1/docs/mg-category-template-console
   - /v1/docs/en/mg-category-template-console

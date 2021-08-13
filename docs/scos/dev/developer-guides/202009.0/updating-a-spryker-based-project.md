@@ -2,6 +2,7 @@
 title: Updating a Spryker-based project
 description: The article describes how to update a Spryker-based project, make the Spryker update process smoother, easier, and update efforts predictable
 originalLink: https://documentation.spryker.com/v6/docs/updating-a-spryker-based-project
+originalArticleId: 16df60cf-31a6-495c-8e95-d8c926878a74
 redirect_from:
   - /v6/docs/updating-a-spryker-based-project
   - /v6/docs/en/updating-a-spryker-based-project
@@ -23,9 +24,9 @@ The smallest building block of the Spryker product is a **module**. Usually, a m
 
 The set of features make up a **product**. Spryker offers the following products:
 
-* [B2B Demo Shop](https://documentation.spryker.com/docs/en/b2b-suite)
-* [B2C Demo Shop](https://documentation.spryker.com/docs/en/b2c-suite)
-* [Master Suite](https://documentation.spryker.com/docs/en/master-suite)
+* [B2B Demo Shop](/docs/scos/user/intro-to-spryker/202009.0/b2b-suite.html)
+* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/202009.0/b2c-suite.html)
+* [Master Suite](/docs/scos/user/intro-to-spryker/202009.0/master-suite.html)
 
 Schematically, the Spryker product structure looks like this:
 
@@ -39,9 +40,9 @@ The most typical reasons for you to update your modules or features are:
 
 * There are important security or bug fixes that have been introduced recently.
 * You want a (new) specific feature or module in your project, which requires a newer version of your module(s).
-* Your project has been started shortly before a new [product release](https://documentation.spryker.com/docs/spryker-release-process#product-releases).
+* Your project has been started shortly before a new [product release](/docs/scos/user/intro-to-spryker/202009.0/spryker-release-process.html#product-releases).
 * You experience some issues with the shop that you would like to report/consult about.
-* Besides, if you plan to extend your shop in the future with new features from the ones that are already existing in Spryker or are coming soon (see [Roadmap](https://documentation.spryker.com/docs/roadmap)) you should be staying up-to-date with your current modules/features. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster. 
+* Besides, if you plan to extend your shop in the future with new features from the ones that are already existing in Spryker or are coming soon (see [Roadmap](/docs/scos/user/intro-to-spryker/202009.0/whats-new/roadmap.html)) you should be staying up-to-date with your current modules/features. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster. 
 
 {% info_block warningBox "Warning" %}
 
@@ -51,14 +52,14 @@ The more outdated your module versions become, the more effort will be needed to
 
 But how often should you be taking care of the updates?
 
-**The most reasonable strategy - is sticking to the Spryker release cycle** and updating your current modules whenever there is a new release announcement. [Subscribe to the release notes](https://documentation.spryker.com/docs/releases) if you want to know about the new release right after it happened. 
+**The most reasonable strategy - is sticking to the Spryker release cycle** and updating your current modules whenever there is a new release announcement. [Subscribe to the release notes](/docs/scos/user/intro-to-spryker/202009.0/releases/releases.html) if you want to know about the new release right after it happened. 
 During the active development phase, it would make sense to do updates more often, i.e., monthly. 
 
 ## Features vs. individual module updates
 When you know that you need to update your Spryker-based project, you need to decide at which level you want to do updates: at the **feature level** or at the **module level**. 
 {% info_block infoBox %}
 
-Spryker does big [Product Releases](https://documentation.spryker.com/docs/spryker-release-process#product-releases) of **features** every several months. The **modules** fall under the [Code Release](https://documentation.spryker.com/docs/spryker-release-process#atomic--code--releases) process, and therefore there can be up to several module updates per day.
+Spryker does big [Product Releases](/docs/scos/user/intro-to-spryker/202009.0/spryker-release-process.html#product-releases) of **features** every several months. The **modules** fall under the [Code Release](/docs/scos/user/intro-to-spryker/202009.0/spryker-release-process.html#atomic--code--releases) process, and therefore there can be up to several module updates per day.
 
 {% endinfo_block %}
 
@@ -142,7 +143,7 @@ To check for the outdated packages, run
 ```Bash
 php -d memory_limit=-1 composer.phar outdated | grep spryker
 ```
-The command returns a list of the outdated Spryker packages. It gives you a clear picture of what is outdated, how many majors/minors/bugfixes you have, and allows you to kind of estimate the effort for the update. See [Semantic Versioning: Major vs. Minor vs. Patch Release](https://documentation.spryker.com/docs/major-minor-patch-release) for information on the module release types.
+The command returns a list of the outdated Spryker packages. It gives you a clear picture of what is outdated, how many majors/minors/bugfixes you have, and allows you to kind of estimate the effort for the update. See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/developer-guides/202009.0/architecture-guide/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) for information on the module release types.
 Now, same as for any feature update that can take a while, the best approach for the update process would be to split it into deliverable chunks. Therefore, according to our best practices, the next step would be:
 
 ### 2. Build up update iterations
@@ -181,9 +182,9 @@ For the **minor** module updates, where you have lots of customizations, it woul
 ```Bash
 php -d memory_limit=-1 composer.phar require "spryker/sales:^8.0.0"
 ```
-If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](https://documentation.spryker.com/docs/updating-a-spryker-based-project#troubleshooting) section at the end of the article, *In case when update is not possible* part.
+If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](/docs/scos/dev/developer-guides/202009.0/updating-a-spryker-based-project.html#troubleshooting) section at the end of the article, *In case when update is not possible* part.
 
-2. [Check the migration guide](https://documentation.spryker.com/docs/about-migration) for the respective major module version. See the [Sales](https://documentation.spryker.com/docs/mg-sales) migration guide for example. Find the section for your module version and complete all the steps it contains.
+2. [Check the migration guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
 
 ## Test after each iteration
@@ -200,7 +201,7 @@ Automoted tests are must-have for every project in general and are very helpful 
 *     Functional tests - cover your Facade methods in Zed
 *     Unit tests - cover classes with complex business logic and tricky algorithms
 
-See the [Testing](https://documentation.spryker.com/docs/test-framework) section for information on what Spryker has to offer in terms of testing your project's code.
+See the [Testing](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/testing/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
 
 {% info_block infoBox "Note" %}
 
@@ -210,13 +211,13 @@ The goal of the automoted tests in case of updates is not to have a 100% code co
 ### 2. Run code analysis tools
 We find the following static code analysis tools the most helpful for running after the update and strongly recommend that you use them:
 
-* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules) and many more. See [PHPStan](https://documentation.spryker.com/docs/phpstan-201903) for information on how to install and use the tool.
-* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the project code clean  and consistent after the update. See [Code Sniffer](https://documentation.spryker.com/docs/code-sniffer) for information on how to use the tool.
-* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](https://documentation.spryker.com/docs/architecture-sniffer) for information on how to run the tool.
+* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules) and many more. See [PHPStan](/docs/scos/dev/sdk/202009.0/development-tools/phpstan.html) for information on how to install and use the tool.
+* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the project code clean  and consistent after the update. See [Code Sniffer](/docs/scos/dev/sdk/202009.0/development-tools/code-sniffer.html) for information on how to use the tool.
+* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](/docs/scos/dev/sdk/202009.0/development-tools/architecture-sniffer.html) for information on how to run the tool.
 
 ### 3. Make other possible checks
 In addition to the automotive tests and code analysis tools, you can optionally do the following:
-* **Re-install the project locally** after the update, to make sure the installation process is not broken, demo-data import along with [publish and synchronization](https://documentation.spryker.com/docs/publish-and-synchronization) work as expected.
+* **Re-install the project locally** after the update, to make sure the installation process is not broken, demo-data import along with [publish and synchronization](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html) work as expected.
 * **Run a manual smoke-test** either locally or on staging to make sure everything works and looks fine. This is especially important in case you don't have enough acceptance test coverage.
 
 ## Prevent potential issues
@@ -242,18 +243,18 @@ Sometimes inheritance is exactly what you need, and none of the above strategies
 ### 3. Lock your module version after inheritance
 If you inherit a class from Spryker, there is one more way to "protect" yourself during the update by locking your module version to the current minor. You can do this by, for example, replacing the *carret* module version (“^1.3.2”) with the *tilde* version (“~1.3.2”) in your *composer.json*. Next time when the class you've updated gets minor changes on the Spryker side, composer will warn you about the locked version, and you will have to investigate why this module was locked. Make sure to leave a meaningful comment in your VCS when locking the module for the person who will investigate that.
 
-In Spryker we have the [Composer Constrainer](https://documentation.spryker.com/docs/using-composer-constraint) tool that will try to lock modules for you automatically by searching for inherited classes in your project namsepace.
+In Spryker we have the [Composer Constrainer](/docs/scos/dev/developer-guides/202009.0/architecture-guide/module-api/using-composer-constraint-for-customized-modules.html) tool that will try to lock modules for you automatically by searching for inherited classes in your project namsepace.
 
 ## Updating and installing features
 At some point, you will need to add new or update the existing features for your project. This section will help you do that.
 {% info_block infoBox "Info" %}
 
-You can learn about a new Spryker feature from the [Release Notes](https://documentation.spryker.com/docs/release-notes). We recommend [subscribing to our release mail](https://documentation.spryker.com/docs/releases) in order not to miss a new release announcement.
-A complete list of all Spryker features can be found in the [Features](https://documentation.spryker.com/v4/docs/about-features) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/about-integration-guides.html) that you will use to install or update the features.  
+You can learn about a new Spryker feature from the [Release Notes](/docs/scos/user/intro-to-spryker/202009.0/releases/release-notes/release-notes.html). We recommend [subscribing to our release mail](/docs/scos/user/intro-to-spryker/202009.0/releases/releases.html) in order not to miss a new release announcement.
+A complete list of all Spryker features can be found in the [Features](/docs/scos/dev/features/202009.0/overview-of-the-feature-guides.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/about-integration-guides.html) that you will use to install or update the features.  
 
 {% endinfo_block %}
 
-To install a new feature or update an existing one, follow the instructions of the [Integration Guide](https://documentation.spryker.com/docs/about-integration) for the feature you want to install/update. 
+To install a new feature or update an existing one, follow the instructions of the [Integration Guide](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/about-integration-guides.html) for the feature you want to install/update. 
 
 {% info_block warningBox "Warning" %}
 
@@ -275,7 +276,7 @@ A new feature might require a higher major version for a specific module. In thi
 {% endinfo_block %}
 
 ## Troubleshooting
-This section contains common issues with the updates and provides solutions on how to fix them. If your issue is not on the list, and you need help, please [contact us](https://documentation.spryker.com/docs/updating-a-spryker-based-project#let-us-know).
+This section contains common issues with the updates and provides solutions on how to fix them. If your issue is not on the list, and you need help, please [contact us](/docs/scos/dev/developer-guides/202009.0/updating-a-spryker-based-project.html#let-us-know).
 
 ### I see Spryker Code Sniffer updates
 In case you see Code Sniffer updates from Spryker, first check if the new code sniffer rules have been added. Investigate what they are doing and decide with the team if you need them.
@@ -340,7 +341,7 @@ Please let us know in case if anything goes wrong with your update. Feel free to
 
 * You found an issue in the code while reviewing the diff in a Spryker repo.
 * After running autotests / testing the website you found an issue that broke the website. If this is not a project-related conflict and other projects can potentially be affected, please report the issue as soon as you can.
-* There are missing steps in a [migration guide](https://documentation.spryker.com/docs/about-migration) in our documentation.
+* There are missing steps in a [migration guide](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/about-migration-guides.html) in our documentation.
 
 Reach us out at:
 

@@ -2,9 +2,12 @@
 title: Migration guide- MerchantGui
 description: This guide contains instructions on migrating the MerchantGui module provided by Spryker to a newer version.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-merchantgui
+originalArticleId: 2fe3e2e1-c079-471c-a9b9-3c1525039bce
 redirect_from:
   - /2021080/docs/migration-guide-merchantgui
   - /2021080/docs/en/migration-guide-merchantgui
+  - /docs/migration-guide-merchantgui
+  - /docs/en/migration-guide-merchantgui
 ---
 
 ## Upgrading from version 2.* to version 3.*
@@ -18,7 +21,7 @@ Other changes are:
 
 {% info_block infoBox "Info" %}
 
-Keep in mind that `MerchantGui` module migration depends on the [Merchant](https://documentation.spryker.com/docs/migration-guide-merchant#upgrading-from-version-2---to-version-3--) module migration.
+Keep in mind that `MerchantGui` module migration depends on the [Merchant](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-merchant.html#upgrading-from-version-2---to-version-3--) module migration.
 
 {% endinfo_block %}
 
@@ -128,7 +131,7 @@ composer require spryker/merchnat-gui:"^2.0.0" --update-with-dependencies
 ```
 {% info_block infoBox "Info" %}
 
-Also, check the Migration Guide for the [Merchant](https://documentation.spryker.com/docs/migration-guide-merchant#upgrading-from-version-1---to-version-2--).
+Also, check the Migration Guide for the [Merchant](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-merchant.html#upgrading-from-version-1---to-version-2--).
 
 {% endinfo_block %}
 

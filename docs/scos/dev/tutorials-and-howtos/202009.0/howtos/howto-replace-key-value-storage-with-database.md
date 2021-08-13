@@ -1,6 +1,7 @@
 ---
 title: HowTo - Replace key-value storage with database
 originalLink: https://documentation.spryker.com/v6/docs/howto-replace-key-value-storage-with-database
+originalArticleId: e3047891-003d-4a3f-ae39-94aa90223078
 redirect_from:
   - /v6/docs/howto-replace-key-value-storage-with-database
   - /v6/docs/en/howto-replace-key-value-storage-with-database

@@ -2,20 +2,23 @@
 title: Category Management feature overview
 description: The feature allows keeping your product catalog organized and comprehensible for the customers who can easily navigate the storefront and search products quicker
 originalLink: https://documentation.spryker.com/2021080/docs/category-management-feature-overview
+originalArticleId: 33b65d5e-fd6c-4017-92ed-7229883beeb0
 redirect_from:
   - /2021080/docs/category-management-feature-overview
   - /2021080/docs/en/category-management-feature-overview
+  - /docs/category-management-feature-overview
+  - /docs/en/category-management-feature-overview
 ---
 
-A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature allows Back Office users to structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](https://documentation.spryker.com/docs/assigning-products-to-categories) from the Back Office or [import stores for categories](). For details on how a Back Office user can group products under categories, see [Assigning products to categories](https://documentation.spryker.com/docs/assigning-products-to-categories).
+A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature allows Back Office users to structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) from the Back Office or [import stores for categories](). For details on how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/assigning-products-to-categories.html).
 
 ## Root, parent, and child categories
 
 The product catalog is structured in a category tree, which consists of root, parent, and child categories. 
 
-A *root category* is a base category that stands on top of the category hierarchy. Product and child categories are assigned to root categories, but root categories can not be assigned to anything. Also, a store can only be linked to one root category tree, while a root category tree can be linked to multiple stores. Root categories are added through [data import](https://documentation.spryker.com/docs/file-details-categorycsv) and cannot be created in the Back Office, unlike other categories, which can be added in both ways.
+A *root category* is a base category that stands on top of the category hierarchy. Product and child categories are assigned to root categories, but root categories can not be assigned to anything. Also, a store can only be linked to one root category tree, while a root category tree can be linked to multiple stores. Root categories are added through [data import](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html) and cannot be created in the Back Office, unlike other categories, which can be added in both ways.
 
-A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones via the Back Office or by importing the categories. For information on how to create child categories for the parent categories, see [Creating categories](https://documentation.spryker.com/docs/assigning-products-to-categories) and [Managing categories](https://documentation.spryker.com/docs/creating-categories). For information on how to import the child categories, see [File details: category.csv](https://documentation.spryker.com/docs/file-details-categorycsv). 
+A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones via the Back Office or by importing the categories. For information on how to create child categories for the parent categories, see [Creating categories](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) and [Managing categories](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/creating-categories.html). For information on how to import the child categories, see [File details: category.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html). 
 
 On the Storefront, in comparison to parent category names, child category names are indented so that they can be identified.
 
@@ -26,9 +29,9 @@ In the image below, the Cameras & Camcorders parent category has the Digital Cam
 
 ## Category templates
 
-A Back Office user defines the visual representation of a category on the Storefront by assigning a template to the category. For information on how to do that, see [Creating categories](https://documentation.spryker.com/docs/creating-categories).
+A Back Office user defines the visual representation of a category on the Storefront by assigning a template to the category. For information on how to do that, see [Creating categories](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/creating-categories.html).
 
-For more information about types of category templates, see [Category page template types](https://documentation.spryker.com/docs/creating-categories#category-page-template-types).
+For more information about types of category templates, see [Category page template types](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/creating-categories.html#category-page-template-types).
 
 ## Category filters
 
@@ -40,11 +43,11 @@ The default filter functionality includes s*tandard filters* and *dynamic filter
 
 #### Standard filters
 
-On the Storefront, the standard filters allow buyers to narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, brand, etc. For more details about standard filters, see [Standard filters](https://documentation.spryker.com/docs/standard-filters).
+On the Storefront, the standard filters allow buyers to narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, brand, etc. For more details about standard filters, see [Standard filters](/docs/scos/dev/features/{{ page.version }}/search/search-feature-overview/standard-filters-overview.html).
 
 #### Dynamic filters and facets
 
-Compared to standard filters, dynamic filters and facets allow creating more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details on how to configure the filter preferences in the Back Office, see [Managing filter preferences](https://documentation.spryker.com/docs/managing-filter-preferences).
+Compared to standard filters, dynamic filters and facets allow creating more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details on how to configure the filter preferences in the Back Office, see [Managing filter preferences](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/search-and-filters/managing-filter-preferences.html).
 
 ## Video tutorial
 Check out this video on managing categories:
@@ -60,7 +63,7 @@ Currently, the Category Management feature has the following functional constrai
 * A store can only be linked to one root category tree, but in the future, a store will be able to have multiple root category trees.
 * Category URLs are locale-dependent.
 * Category URLs are available in all the stores that share the same locales.
-* Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](https://documentation.spryker.com/docs/b2b-suite%). However, in the [B2C demo shop](https://documentation.spryker.com/docs/en/b2c-suite), you can still filter the products using the price range filter.
+* Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2b-suite.html). However, in the [B2C demo shop](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2c-suite.html), you can still filter the products using the price range filter.
 
 
 
@@ -74,7 +77,7 @@ Currently, the Category Management feature has the following functional constrai
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                 <li><a href="https://documentation.spryker.com/docs/ht-manage-a-big-number-of-categories" class="mr-link">Manage a big number of categories</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-categorycsv" class="mr-link">Import categories</a></li>
+                <li><a href="/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html" class="mr-link">Import categories</a></li>
                 <li><a href="https://documentation.spryker.com/docs/file-details-category-templatecsv" class="mr-link">Import category templates</a></li>
                 <li><a href="https://documentation.spryker.com/docs/file-details-category-storecsv" class="mr-link">Import store relations for categories</a></li>
                 <li><a href="https://documentation.spryker.com/docs/retrieving-category-trees" class="mr-link">Retrieve category trees via Glue API</a></li>
@@ -97,8 +100,8 @@ Currently, the Category Management feature has the following functional constrai
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-categories" class="mr-link">Create a category</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/assigning-products-to-categories" class="mr-link">Assign products to categories</a></li>
+                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/creating-categories.html" class="mr-link">Create a category</a></li>
+                 <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/assigning-products-to-categories.html" class="mr-link">Assign products to categories</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-categories" class="mr-link">Manage categories</a></li>
             </ul>
         </div>

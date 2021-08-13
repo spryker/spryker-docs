@@ -2,6 +2,7 @@
 title: Migration Guide - ProductOption
 description: Use the guide to learn how to update the ProductOption module to a newer version.
 originalLink: https://documentation.spryker.com/v4/docs/mg-product-option
+originalArticleId: d79318d2-519e-434c-8475-fef31b32b110
 redirect_from:
   - /v4/docs/mg-product-option
   - /v4/docs/en/mg-product-option
@@ -452,4 +453,4 @@ class ProductOptionCollector extends Spryker\Zed\Collector\Business\Collector\St
 
 In version 5 Product Options were updated to work with the new calculator concept. Therefore, the `SalesAggregator` plugin was moved to the `SalesAggregator` module `SubtotalWithProductOptionsAggregatorPlugin`.
 The sales option database tables received new columns for storing calculated values.
-To learn how to migrate to new structure, see the [Upgrading from version 3.* to version 4.*](https://documentation.spryker.com/v4/docs/mg-calculation#upgrading-from-version-3---to-version-4--) section in *Migration Guide - Calculation*.
+To learn how to migrate to new structure, see the [Upgrading from version 3.* to version 4.*](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-calculation.html#upgrading-from-version-3---to-version-4--) section in *Migration Guide - Calculation*.

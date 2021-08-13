@@ -2,6 +2,7 @@
 title: CrefoPay - Callback
 description: Callbacks are redirects performed by the CrefoPay system.
 originalLink: https://documentation.spryker.com/v2/docs/crefopay-callback
+originalArticleId: 13deb9a9-4210-4e1f-a941-8222bf0bacf1
 redirect_from:
   - /v2/docs/crefopay-callback
   - /v2/docs/en/crefopay-callback

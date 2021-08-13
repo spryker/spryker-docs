@@ -2,6 +2,7 @@
 title: Product Feature Integration
 description: The guide describes the process of installing the Product Concrete Search Widget feature in your project.
 originalLink: https://documentation.spryker.com/v5/docs/product-feature-integration
+originalArticleId: feb55482-ff98-4f50-bc95-2f587e9029b3
 redirect_from:
   - /v5/docs/product-feature-integration
   - /v5/docs/en/product-feature-integration

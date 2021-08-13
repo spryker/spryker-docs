@@ -2,9 +2,12 @@
 title: Best Practices - Twig Templates
 description: In this article, you get an overview of the best practices used in twig templates.
 originalLink: https://documentation.spryker.com/2021080/docs/twig-best-practices
+originalArticleId: 7a2dfb30-156f-4d93-89eb-edfa015ad440
 redirect_from:
   - /2021080/docs/twig-best-practices
   - /2021080/docs/en/twig-best-practices
+  - /docs/twig-best-practices
+  - /docs/en/twig-best-practices
 ---
 
 ## Include vs Macros vs Embed

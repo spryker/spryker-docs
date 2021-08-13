@@ -1,6 +1,7 @@
 ---
 title: Category Pages
 originalLink: https://documentation.spryker.com/v4/docs/category-pages
+originalArticleId: f415a432-ec66-42db-9864-c73a06dad8db
 redirect_from:
   - /v4/docs/category-pages
   - /v4/docs/en/category-pages

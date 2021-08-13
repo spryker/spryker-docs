@@ -2,15 +2,18 @@
 title: Code style guide
 description: We follow the PSR-2 standards. To achieve a styled codebase, we integrated the well known PHP-CS Fixer and PHPCodeSniffer.
 originalLink: https://documentation.spryker.com/2021080/docs/code-style-guide
+originalArticleId: 973d3bf2-1dd0-4219-8f2c-faa86944bb95
 redirect_from:
   - /2021080/docs/code-style-guide
   - /2021080/docs/en/code-style-guide
+  - /docs/code-style-guide
+  - /docs/en/code-style-guide
 ---
 
 We at Spryker follow the [PSR-2 standards](http://www.php-fig.org/psr/psr-2/) as the coding style guide. To achieve a styled codebase, we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 
 ## Code Sniffer and Fixer
-[Code Sniffer](https://documentation.spryker.com/docs/code-sniffer) helps to keep the code clean and to prevent simple mistakes. To make the most of the Code Sniffer, follow the recommendations below.
+[Code Sniffer](/docs/scos/dev/sdk/{{ page.version }}/development-tools/code-sniffer.html) helps to keep the code clean and to prevent simple mistakes. To make the most of the Code Sniffer, follow the recommendations below.
 
 ### Automate code style correction
 

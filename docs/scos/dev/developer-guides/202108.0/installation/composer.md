@@ -2,9 +2,12 @@
 title: Composer
 description: Spryker Commerce OS uses Composer as a dependency manager.
 originalLink: https://documentation.spryker.com/2021080/docs/composer
+originalArticleId: 89fb7da0-72ec-4f0a-897a-92a99e146ba5
 redirect_from:
   - /2021080/docs/composer
   - /2021080/docs/en/composer
+  - /docs/composer
+  - /docs/en/composer
 ---
 
 Spryker Commerce OS uses [Composer](https://getcomposer.org/) as a dependency manager. Composer allows declaring the libraries your project depends on and the versions required as well as it will manage them for you. Composer is downloaded as `composer.phar` file (PHP archive). To start using Composer in your project, all you need is a `composer.json` file. The file defines the required dependencies and is located in the root folder of the project.
@@ -128,7 +131,7 @@ Execute `composer update` command at least weekly to assert you have the latest 
 
 ## Replace Spryker Module Dependencies
 
-Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](https://documentation.spryker.com/docs/plugin) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a 3rd party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
+Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/implementing-and-using-plugins.html) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a 3rd party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
 
 The following process describes adding a replace command into a new module to indicate that it replaces a core module.
 

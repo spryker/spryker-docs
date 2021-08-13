@@ -2,9 +2,12 @@
 title: Quotation Process
 description: The Quotation Process feature allows customers to request suppliers for a better price for products
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process
+originalArticleId: 83d00fc3-f454-4095-b7cf-84b7c24d8ce8
 redirect_from:
   - /2021080/docs/quotation-process
   - /2021080/docs/en/quotation-process
+  - /docs/quotation-process
+  - /docs/en/quotation-process
 ---
 
 In the B2B world, it's a common practice to have a default price for every product. However, buyers always want a better price, and the possibility to negotiate a discounted price with suppliers, just like in a real shop, is a boon to them. Request for Quote is a great opportunity for potential suppliers to bargain the final price for products competitively. In other words, with the *Quotation Process* feature the B2B customers ask for special prices, and suppliers can get back to them with a compromise pricing suggestion.

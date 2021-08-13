@@ -2,6 +2,7 @@
 title: Cart Functionality and Calculations
 description: The extensive Cart allows your customers to add products to their Cart by simply selecting the desired quantity.
 originalLink: https://documentation.spryker.com/v3/docs/cart-functionality-calculations
+originalArticleId: 403aa1a1-19b4-477a-88f8-c5bbabc8b1ac
 redirect_from:
   - /v3/docs/cart-functionality-calculations
   - /v3/docs/en/cart-functionality-calculations

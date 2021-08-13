@@ -2,9 +2,12 @@
 title: Managing guest cart items
 description: Retrieve details about guest cart items and learn what else you can do with the resource.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-guest-cart-items
+originalArticleId: 55c07d5d-006b-4f81-99b1-92c6a8124688
 redirect_from:
   - /2021080/docs/managing-guest-cart-items
   - /2021080/docs/en/managing-guest-cart-items
+  - /docs/managing-guest-cart-items
+  - /docs/en/managing-guest-cart-items
 ---
 
 This endpoint allows you to manage guest cart items.
@@ -12,15 +15,15 @@ This endpoint allows you to manage guest cart items.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration)
-* [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
-* [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
-* [Glue API: Product options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [Glue API: Product Bundles feature integration](https://documentation.spryker.com/2021080/docs/glue-api-product-bundles-feature-integration)
-* [Glue API: Product Bundle + Cart feature integration](https://documentation.spryker.com/2021080/docs/glue-api-product-bundle-cart-feature-integration)
-* [Glue API: Configurable Bundle feature integration](https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-feature-integration)
-* [Glue API: Configurable Bundle + Cart feature integration](https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-cart-feature-integration)
-* [Glue API: Configurable Bundle + Product feature integration](https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-product-feature-integration)
+* [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Measurement Units feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+* [Glue API: Product options feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Bundles feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-bundles-feature-integration.html)
+* [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-bundle-cart-feature-integration.html)
+* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html)
+* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
+* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 
 ## Add items to a guest cart
@@ -41,7 +44,7 @@ To add items to a guest cart, send the request:
 
 | Path Parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/en/managing-guest-carts#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 
 {% endinfo_block %}
 
@@ -285,7 +288,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 {% info_block infoBox "Conversion" %}
 
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](https://documentation.spryker.com/docs/measurement-units-feature-overview) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/scos/dev/features/{{ page.version }}/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -2554,11 +2557,11 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 For the attributes of the included resources, see:
-* [Retrieve a guest cart](https://documentation.spryker.com/docs/en/managing-guest-carts#guest-cart-response-attributes)
-* [Gift cards of guest users](https://documentation.spryker.com/docs/en/managing-gift-cards-of-guest-users)
-* [Retrieving concrete products](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes)
-* [Retrieve an abstract product](https://documentation.spryker.com/docs/en/retrieving-abstract-products#abstract-products-response-attributes)
-*  [Retrieving bundled products](https://documentation.spryker.com/2021080/docs/retrieving-bundled-products#bundled-products-response-attributes)
+* [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#guest-cart-response-attributes)
+* [Gift cards of guest users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html)
+* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
+*  [Retrieving bundled products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-bundled-products.html#bundled-products-response-attributes)
 
 ## Add a configurable bundle to a guest cart
 
@@ -2607,7 +2610,7 @@ To add a configurable bundle to a guest cart, send the request:
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | Number of the configurable bundles to add. |
 | templateUuid | 	
-String | &check; | Unique identifier of the [Configurable Bundle Template](https://documentation.spryker.com/2021080/docs/retrieving-configurable-bundle-templates). To get it, retrieve all Configurable Bundle Templates. |
+String | &check; | Unique identifier of the [Configurable Bundle Template](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | slotUuid | String | &check; | Unique identifier of the slot in the configurable bundle. |
@@ -2768,7 +2771,7 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](https
 ```
 </details>
 
-For the attributes of the response sample, see [Add an item to a guest cart](https://documentation.spryker.com/docs/managing-guest-cart-items#add-items-to-a-guest-cart).
+For the attributes of the response sample, see [Add an item to a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -2792,15 +2795,15 @@ To change item quantity, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart) with the guest cart items included. |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
     
 ### Request
 
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
     
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
@@ -2856,14 +2859,14 @@ To change the quantity of the configurable bundles in a guest cart, send the req
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 | ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a guest cart](#add-a-configurable-bundle-to-a-guest-cart). |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530?include=items`
 ```json
 {
@@ -3150,7 +3153,7 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
 ```
 </details>
 
-For the attribute descriptions, see [Managing guest cart items](https://documentation.spryker.com/docs/managing-guest-cart-items).
+For the attribute descriptions, see [Managing guest cart items](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-cart-items.html).
 
 ## Remove an item from a guest carts
 
@@ -3162,14 +3165,14 @@ To remove an item from a guest cart, send the request:
     
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart) with the guest cart items included. |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
     
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
     
 Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
@@ -3186,12 +3189,12 @@ To remove a configurable bundle from a guest cart, send the request:
     
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 | ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a guest cart](#add-a-configurable-bundle-to-a-guest-cart). |
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](https://documentation.spryker.com/docs/managing-guest-carts#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
 Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530?include=items`
 
@@ -3222,5 +3225,5 @@ If the item is deleted successfully, the endpoint returns the “204 No Content�
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 

@@ -2,6 +2,7 @@
 title: Sharing Company User Carts
 description: This article describes the endpoints that provide the possibility to share and unshare carts of registered users.
 originalLink: https://documentation.spryker.com/v5/docs/sharing-company-user-carts-201907
+originalArticleId: a3b21add-72fb-42a5-ab1e-3b57f53d195b
 redirect_from:
   - /v5/docs/sharing-company-user-carts-201907
   - /v5/docs/en/sharing-company-user-carts-201907
@@ -18,21 +19,21 @@ In your development, the endpoints will help you to:
 * Allow users to stop sharing their carts when no longer needed.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by the API cannot be accessed anonymously. For this reason, you need to pass a user's authentication token in your REST requests. For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization
+The endpoints provided by the API cannot be accessed anonymously. For this reason, you need to pass a user's authentication token in your REST requests. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
 {% endinfo_block %}{target="_blank"}.)
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts Feature Integration](https://documentation.spryker.com/docs/en/shared-carts-feature-integration-201907){target="_blank"}.
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/shared-carts-feature-integration.html){target="_blank"}.
 
 ## Shared Carts in Spryker
-Registered users can [share](https://documentation.spryker.com/docs/en/shared-cart){target="_blank"} the carts owned by them with other users in their company. The feature can help them distribute the workload among their team members.
+Registered users can [share](/docs/scos/dev/features/202005.0/shopping-cart/shared-cart/shared-cart.html){target="_blank"} the carts owned by them with other users in their company. The feature can help them distribute the workload among their team members.
 
 To be able to manage shared carts, you need to impersonate customers as their respective **Company User Accounts**. Upon impersonation, you will receive a bearer token that can be used to access the endpoints provided by the API.
 
 Carts can be shared only with users that belong to the same company. As customers can impersonate themselves as multiple Company Users belonging to different companies, the available carts, as well as cart access permissions, depend on the company that a Company User Account belongs to. The active Company User can be selected when impersonating a customer as a Company User. A bearer token provided during Company User impersonation will include, among other information, the company that the user belongs to.
 
 {% info_block infoBox "Info" %}
-For details on how to receive the token, see [Logging In as Company User](https://documentation.spryker.com/docs/en/logging-in-as-company-user-201907
+For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/202005.0/b2b-account-management/logging-in-as-company-user.html
 {% endinfo_block %}{target="_blank"}.)
 
 Each access type is represented by a **Permission Group**. There are 2 Permission Groups available out of the box: **Read-only**, and **Full access**.
@@ -40,20 +41,20 @@ Each access type is represented by a **Permission Group**. There are 2 Permissio
 ## Retrieving Cart Permission Groups
 To retrieve all available Permission Groups, send a GET request to the following endpoint:
 
-[/cart-permission-groups](https://documentation.spryker.com/docs/en/rest-api-reference#/cart-permission-groups){target="_blank"}
+[/cart-permission-groups](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/cart-permission-groups){target="_blank"}
 
 Sample request: *GET http://glue.mysprykershop.com/cart-permission-groups*
 
 To retrieve a specific Permission Group, query the following endpoint:
 
-[/cart-permission-groups/{% raw %}{{{% endraw %}permission_group_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/docs/en/rest-api-reference#/cart-permission-groups){target="_blank"}
+[/cart-permission-groups/{% raw %}{{{% endraw %}permission_group_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/cart-permission-groups){target="_blank"}
 
 Sample request: *GET http://glue.mysprykershop.com/cart-permission-groups/1*
 
 where **1** is the ID of the Permission Group you need.
 
 {% info_block warningBox "Authentication Required" %}
-To get Cart Permission Groups, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization
+To get Cart Permission Groups, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
 {% endinfo_block %}{target="_blank"}.)
 
 ### Response
@@ -132,9 +133,9 @@ If all Permission Groups are requested, the resource responds with a **RestCartP
 ## Viewing Permissions for Carts
 To identify whether a cart is shared, send a request to the **/carts** or the **/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}** endpoint with the **shared-carts** resource relationship included. Additionally, to find out with whom carts are shared and what are the access levels, you can include the **company-users** and **cart-permission-groups** relationships.
 
-[/carts](https://documentation.spryker.com/docs/en/rest-api-reference#/carts){target="_blank"} - provides information on all carts of a user;
+[/carts](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/carts){target="_blank"} - provides information on all carts of a user;
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](https://documentation.spryker.com/docs/en/rest-api-reference#/carts){target="_blank"} - provides information on a specific cart.
+[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/carts){target="_blank"} - provides information on a specific cart.
 
 ### Request
 Sample requests:
@@ -144,7 +145,7 @@ Sample requests:
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the specific cart you need.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization
+To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
 {% endinfo_block %}{target="_blank"}.)
 
 {% info_block warningBox "Note" %}
@@ -155,7 +156,7 @@ You can also use the Accept-Language header to specify the locale.Sample header:
 No matter which of the 2 endpoints you use, the response will consist of a single or multiple **RestCartsResponse** objects containing the requested cart(s).
 
 {% info_block infoBox "Info" %}
-For a detailed list of **RestCartsResponse** attributes, see section *Retrieving Carts* in [Managing Carts of Registered Users](https://documentation.spryker.com/docs/en/managing-carts-of-registered-users-201907#retrieving-carts
+For a detailed list of **RestCartsResponse** attributes, see section *Retrieving Carts* in [Managing Carts of Registered Users](https://documentation.spryker.com/v5/docs/en/managing-carts-of-registered-users-201907#retrieving-carts
 {% endinfo_block %}{target="_blank"}.)
 
 **Attributes Added by the Resource Relationships**
@@ -361,7 +362,7 @@ For a detailed list of **RestCartsResponse** attributes, see section *Retrieving
 ## Sharing Carts
 To share a user's cart, send a POST request to the following endpoint:
 
-[/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/shared-carts](https://documentation.spryker.com/docs/en/rest-api-reference#/carts){target="_blank"}
+[/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/shared-carts](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/carts){target="_blank"}
 
 ### Request
 
@@ -370,7 +371,7 @@ Sample request: *POST http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aef
 where **f23f5cfa-7fde-5706-aefb-ac6c6bbadeab** is the ID of the cart you want to share.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization
+To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
 {% endinfo_block %}{target="_blank"}.)
 
 **Attributes:**
@@ -441,7 +442,7 @@ If a request was successful and a cart was shared, the endpoint responds with a 
 ## Changing Permissions
 To change permissions for a shared cart, send a PATCH request to the following endpoint:
 
-[/shared-carts/{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}](https://documentation.spryker.com/docs/en/rest-api-reference#/shared-carts){target="_blank"}
+[/shared-carts/{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/shared-carts){target="_blank"}
 
 ### Request
 
@@ -450,7 +451,7 @@ Sample request: *PATCH http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-
 where **4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa** is the ID of the shared cart object.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization
+To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
 {% endinfo_block %}{target="_blank"}.)
 
 **Attributes:**
@@ -515,7 +516,7 @@ If a request was successful and permissions for the shared cart were changed, th
 ## Unsharing Carts
 To stop sharing a cart, send a DELETE request to the following endpoint:
 
-[/shared-carts/{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}](https://documentation.spryker.com/docs/en/rest-api-reference#/shared-carts){target="_blank"}
+[/shared-carts/{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html#/shared-carts){target="_blank"}
 
 ### Request
 Sample request: *DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa*
@@ -523,7 +524,7 @@ Sample request: *DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65
 where **4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa** is the ID of the shared cart object.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization
+To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
 {% endinfo_block %}{target="_blank"}.)
 
 ### Response

@@ -2,9 +2,12 @@
 title: Migration guide - CategoryStorage
 description: Migration instructions for the CategoryStorage module.
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-categorystorage
+originalArticleId: 170f9839-b247-4898-a0c1-967fc231f6b8
 redirect_from:
   - /2021080/docs/migration-guide-categorystorage
   - /2021080/docs/en/migration-guide-categorystorage
+  - /docs/migration-guide-categorystorage
+  - /docs/en/migration-guide-categorystorage
 ---
 
 This document describes how to update the `CategoryStorage` module.

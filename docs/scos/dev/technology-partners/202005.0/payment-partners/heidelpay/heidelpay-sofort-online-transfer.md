@@ -2,6 +2,7 @@
 title: Heidelpay - Sofort (Online Transfer)
 description: Integrate Sofort payment through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v5/docs/heidelpay-sofort
+originalArticleId: a64cded5-da7c-4e92-9b47-d3d9b42d2f1d
 redirect_from:
   - /v5/docs/heidelpay-sofort
   - /v5/docs/en/heidelpay-sofort
@@ -9,7 +10,7 @@ redirect_from:
 
 ## Setup
 
-The following configuration should be made after Heidelpay has been [installed](https://documentation.spryker.com/docs/en/heidelpay-installation) and [integrated](https://documentation.spryker.com/docs/en/heidelpay-integration-scos).
+The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
 
 ## Configuration
 
@@ -58,6 +59,6 @@ class HeidelpayPostSavePlugin extends BaseAbstractPlugin implements CheckoutPost
 
 The most important data here - is the payment reference ID which can be used for further transactions like capture/cancel/etc. 
 
-In the response Heidelpay expects an URL string which defines where customer has to be redirected. In case if customer successfully confirmed payment, it should be link to checkout order success step, in case of failure - checkout payment failed action with error code (see `HeidelpayController::paymentFailedAction()` and [Heidelpay - Workflow for Errors](https://documentation.spryker.com/docs/en/heidelpay-error-workflow) section). Heidelpay redirects customer to the given URL and payment process is finished. 
+In the response Heidelpay expects an URL string which defines where customer has to be redirected. In case if customer successfully confirmed payment, it should be link to checkout order success step, in case of failure - checkout payment failed action with error code (see `HeidelpayController::paymentFailedAction()` and [Heidelpay - Workflow for Errors](/docs/scos/dev/technology-partners/202005.0/payment-partners/heidelpay/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and payment process is finished. 
 
 Now order can be considered as "paid", no further capture is needed.

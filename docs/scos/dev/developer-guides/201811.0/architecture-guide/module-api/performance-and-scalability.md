@@ -2,6 +2,7 @@
 title: Performance and Scalability
 description: Scalability, as an integral part of the core architecture, is achieved by separating the front-end (Yves) and back-end (Zed) applications.
 originalLink: https://documentation.spryker.com/v1/docs/performance-scalability
+originalArticleId: 82b4315c-d9de-4357-8d7a-9057d5c303f2
 redirect_from:
   - /v1/docs/performance-scalability
   - /v1/docs/en/performance-scalability

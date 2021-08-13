@@ -2,6 +2,7 @@
 title: HowTo - Create a Content Item
 description: If the content items shipped with Spryker do not fulfill your needs, the article will help you to create a new one.
 originalLink: https://documentation.spryker.com/v5/docs/howto-create-a-content-item
+originalArticleId: d3a5d88e-bd9c-4e3e-9f61-d0efd420922e
 redirect_from:
   - /v5/docs/howto-create-a-content-item
   - /v5/docs/en/howto-create-a-content-item
@@ -98,7 +99,7 @@ class ContentFooFormPlugin extends AbstractPlugin implements ContentPluginInterf
   2. Create `ContentFooTermForm`. The main part of the plugin is the `Form` class that implements `\Symfony\Component\Form\FormBuilderInterface`. See:
 
 * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
-* [Creating Forms](https://documentation.spryker.com/docs/en/t-working-forms#creating-forms) to learn about form creation procedure in Spryker.
+* [Creating Forms](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#creating-forms) to learn about form creation procedure in Spryker.
 * `\Spryker\Zed\ContentBannerGui\Communication\Form\BannerContentTermForm` as an example of a simple form.
 * `\Spryker\Zed\ContentProductGui\Communication\Form\ProductAbstractListContentTermForm` as an example of a form with a dedicated template and a complex Javascript functionality.
 
@@ -202,7 +203,7 @@ Now you can use your plugin as a function in Twig files. If you’ve named your 
 
 ## WYSIWYG Editor Plugin
 
-*CMS Block Glossary Edit* and *Placeholder Edit* pages contains WYSIWYG editor to put content into CMS block or page.  The **Content Item** drop-down menu in the WYSIWYG toolbar contains all the content items which you can add. See [Adding Content Item Widgets to Pages and Blocks](https://documentation.spryker.com/docs/en/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-pages-and-blocks) for more details.
+*CMS Block Glossary Edit* and *Placeholder Edit* pages contains WYSIWYG editor to put content into CMS block or page.  The **Content Item** drop-down menu in the WYSIWYG toolbar contains all the content items which you can add. See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages-and-blocks) for more details.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/content-item-menu.png){height="" width=""}
 

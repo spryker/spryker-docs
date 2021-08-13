@@ -1,6 +1,7 @@
 ---
 title: HowTo - Add a New Shipment Method 2.0
 originalLink: https://documentation.spryker.com/v1/docs/ht-add-new-shipment-method-2
+originalArticleId: c85a780f-334a-4383-88e7-d36e9aa21b40
 redirect_from:
   - /v1/docs/ht-add-new-shipment-method-2
   - /v1/docs/en/ht-add-new-shipment-method-2

@@ -2,6 +2,7 @@
 title: Browsing a Category Tree
 description: The article helps you get the full category tree, including information on a category node, as well as retrieve categories by product easily and quickly.
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-category-trees
+originalArticleId: 37f403f2-ba5b-44f2-b51c-61e9c8cff7b4
 redirect_from:
   - /v5/docs/retrieving-category-trees
   - /v5/docs/en/retrieving-category-trees
@@ -16,7 +17,7 @@ In your development, these resources can help you to:
 * Find out which categories a product belongs to
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](https://documentation.spryker.com/docs/en/category-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](https://documentation.spryker.com/v5/docs/en/category-api-feature-integration-201903).
 
 ## Get Full Category Tree
 To retrieve the full category tree, containing all available nodes and their children, send the request:
@@ -185,7 +186,7 @@ To get all categories a product belongs to, you can send the request:
 |Path parameter| Description |
 |---|---|
 | sku | SKU of a product to retrieve categories for. |
-See [Retrieving Product Information](https://documentation.spryker.com/docs/en/retrieving-product-information) to learn more about the `/abstract-products` resource. 
+See [Retrieving Product Information](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html) to learn more about the `/abstract-products` resource. 
 
 ### Request
 Request sample : `GET http://mysprykershop.com/abstract-products/058?include=category-nodes`
@@ -435,7 +436,7 @@ To retrieve a specific node by ID, send the request:
 |Path parameter| Description |
 |---|---|
 | node_id | * ID of a node to get information for. |
-*To identify the node ID of a category,  [get full category tree](https://documentation.spryker.com/docs/en/browsing-category-tree#get-full-category-tree). The ID is located in the `nodeId` field.
+*To identify the node ID of a category,  [get full category tree](/docs/scos/dev/glue-api-guides/202005.0/browsing-a-category-tree.html#get-full-category-tree). The ID is located in the `nodeId` field.
 
 ### Request
 Request sample : `GET http://mysprykershop.com/category-nodes/5`

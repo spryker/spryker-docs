@@ -1,9 +1,12 @@
 ---
 title: Resource sharing feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/resource-sharing-feature-integration
+originalArticleId: 59623dc6-5c8d-432d-8746-aa4d9ef3ede3
 redirect_from:
   - /2021080/docs/resource-sharing-feature-integration
   - /2021080/docs/en/resource-sharing-feature-integration
+  - /docs/resource-sharing-feature-integration
+  - /docs/en/resource-sharing-feature-integration
 ---
 
 ## Install Feature Core

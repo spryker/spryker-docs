@@ -1,9 +1,12 @@
 ---
 title: Docker environment infrastructure
 originalLink: https://documentation.spryker.com/2021080/docs/docker-environment-infrastructure
+originalArticleId: e94dd005-cda2-48f8-a224-dea6d6e5ea46
 redirect_from:
   - /2021080/docs/docker-environment-infrastructure
   - /2021080/docs/en/docker-environment-infrastructure
+  - /docs/docker-environment-infrastructure
+  - /docs/en/docker-environment-infrastructure
 ---
 
 This document describes the infrastructure of Spryker in Docker environment.

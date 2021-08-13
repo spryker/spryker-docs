@@ -2,6 +2,7 @@
 title: Migration guide - publish and synchronization
 description: Use the guide to learn how to update the Publish and Synchronization module to a newer version.
 originalLink: https://documentation.spryker.com/v6/docs/mg-pub-and-sync
+originalArticleId: f0b37fd0-0893-4153-ae3a-b2276e56b0e3
 redirect_from:
   - /v6/docs/mg-pub-and-sync
   - /v6/docs/en/mg-pub-and-sync

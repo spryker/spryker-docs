@@ -2,6 +2,7 @@
 title: Adding Content Item Widgets to Pages and Blocks
 description: The guide provides instructions for shop owners on how to add content items to blocks and pages using content item widgets in the Back Office
 originalLink: https://documentation.spryker.com/v3/docs/adding-content-item-widgets-to-pages-and-blocks
+originalArticleId: 6ba8cf91-fd82-47e1-9ba6-ae86bed86245
 redirect_from:
   - /v3/docs/adding-content-item-widgets-to-pages-and-blocks
   - /v3/docs/en/adding-content-item-widgets-to-pages-and-blocks
@@ -42,13 +43,13 @@ This will insert a content item widget with the following details:
 * Template
 
 {% info_block infoBox %}
-Templates are project-specific and are usually created by a developer and a business person. If you are missing a Content Item Widget template, contact them and refer to the [HowTo - Create a Content Item Widget template](https://documentation.spryker.com/v4/docs/ht-create-cms-templates#adding-a-template-for-a-content-item-widget
+Templates are project-specific and are usually created by a developer and a business person. If you are missing a Content Item Widget template, contact them and refer to the [HowTo - Create a Content Item Widget template](/docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget
 {% endinfo_block %}.)
 
 6. Click **Save**. A new content item widget will be added to the page.
 
 {% info_block infoBox %}
-You can preview the page to see how the content item widget will be displayed on the website or publish it. See  [Managing CMS Pages](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/managing-cms-pages.html
+You can preview the page to see how the content item widget will be displayed on the website or publish it. See  [Managing CMS Pages](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/managing-cms-pages.html
 {% endinfo_block %} to learn how to preview and publish the page.)
 ***
 ## Adding Content Item Widgets to Blocks
@@ -76,10 +77,10 @@ Keep in mind that you can select only **one** item and **one** template at a tim
 6. Click **Save**. The new content item widget will be added to the block. 
 
 {% info_block infoBox %}
-You can preview how the content item widget will be displayed on the website by following the steps described in  [Managing CMS Blocks](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/blocks/managing-cms-blocks.html
+You can preview how the content item widget will be displayed on the website by following the steps described in  [Managing CMS Blocks](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/blocks/managing-cms-blocks.html
 {% endinfo_block %}.)
 ***
 **What's next?**
-To know more about how to edit a content item widget, see the [Editing Content Item Widgets](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/content-item-widgets/editing-content-item-widgets.html) article.
+To know more about how to edit a content item widget, see the [Editing Content Item Widgets](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/editing-content-item-widgets.html) article.
 
-To learn more about types of content item widgets and their templates, see articles in the [References](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/content-item-widgets/references/content-item-widgets-templates-reference-information.html) section.
+To learn more about types of content item widgets and their templates, see articles in the [References](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/references/content-item-widgets-templates-reference-information.html) section.

@@ -2,6 +2,7 @@
 title: Product overview
 description: Detailed overview of the Product feature.
 originalLink: https://documentation.spryker.com/v6/docs/product-overview
+originalArticleId: 4ce5b2fb-8116-476b-bc33-bc2bce818a70
 redirect_from:
   - /v6/docs/product-overview
   - /v6/docs/en/product-overview
@@ -9,7 +10,7 @@ redirect_from:
 
 The *Product* feature allows creating products, manage their characteristics and settings.
 
-In Spryker Commerce OS, you create and manage products in the [Back Office](https://documentation.spryker.com/docs/general-back-office-overview). The product information you specify serves multiple purposes:
+In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/scos/dev/features/202009.0/spryker-core-back-office/spryker-core-back-office-feature-overview/the-back-office-overview.html). The product information you specify serves multiple purposes:
 
 * Defines product characteristics.
 * Affects shop behavior. For example, filtering and search on the Storefront is based on product attributes. 
@@ -77,7 +78,7 @@ The product information is structured as follows:
 
 #### Case 3: Selling a product in five colors, four sizes, and three materials
 
-To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](https://documentation.spryker.com/docs/product-group-feature-overview) feature. 
+To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/scos/dev/features/202009.0/product-groups/product-groups-feature-overview.html) feature. 
 
 Using the Product Group feature, you create a group of five abstract products, one for each color. Each abstract product  contains up to 12 concrete products of different combinations of the sizes and the materials.
 
@@ -91,9 +92,9 @@ Besides the Back Office, you can maintain product information in an external Pro
 
 The Spryker Commerce OS supports integration of the following PIM systems:
 
-* [Akeneo](https://documentation.spryker.com/docs/core-extension)
-* [Censhare PIM](https://documentation.spryker.com/docs/censhare-pim)
-* [Xentral](https://documentation.spryker.com/docs/xentral)
+* [Akeneo](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-the-core.html)
+* [Censhare PIM](/docs/scos/dev/technology-partners/202009.0/product-information-pimerp/censhare-pim.html)
+* [Xentral](/docs/scos/dev/technology-partners/202009.0/product-information-pimerp/xentral.html)
 
 
 ## If you are:

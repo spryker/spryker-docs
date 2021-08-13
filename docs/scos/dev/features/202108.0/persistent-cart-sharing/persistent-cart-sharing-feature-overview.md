@@ -2,9 +2,12 @@
 title: Persistent Cart Sharing feature overview
 description: With the feature, company users can generate the URL to share the cart with different levels of access.
 originalLink: https://documentation.spryker.com/2021080/docs/persistent-cart-sharing-feature-overview
+originalArticleId: a80f4aab-aec5-4e7f-ad69-e5112178f27d
 redirect_from:
   - /2021080/docs/persistent-cart-sharing-feature-overview
   - /2021080/docs/en/persistent-cart-sharing-feature-overview
+  - /docs/persistent-cart-sharing-feature-overview
+  - /docs/en/persistent-cart-sharing-feature-overview
 ---
 
 The *Persistent Cart Sharing* feature allows company users to generate the URL to share the cart with different levels of access. To be able to generate the link, you need to be logged in to a company account.
@@ -28,8 +31,8 @@ The user can view and print the information from the preview link.
 Preview link is the only available option for the B2C environment. B2C users cannot share the cart with read-only and full access permissions.
 {% endinfo_block %}
 
-* Read-only: for details see [Read only](https://documentation.spryker.com/docs/multiple-shared-shopping-lists-overview#read-only).
-* Full access: for details see [Full access](https://documentation.spryker.com/docs/multiple-shared-shopping-lists-overview#full-access).
+* Read-only: for details see [Read only](/docs/scos/dev/features/{{ page.version }}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html#read-only).
+* Full access: for details see [Full access](/docs/scos/dev/features/{{ page.version }}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html#full-access).
 
 {% info_block warningBox %}
 Sharing cart with read-Only or full access permissions is available only for internal users: the users within the same business unit.

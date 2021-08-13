@@ -2,6 +2,7 @@
 title: Product Image Sets API Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Product Image Sets API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v1/docs/product-image-sets-api-feature-integration
+originalArticleId: 7a5fab0e-cdf1-4336-8ab2-826c6eb11f78
 redirect_from:
   - /v1/docs/product-image-sets-api-feature-integration
   - /v1/docs/en/product-image-sets-api-feature-integration

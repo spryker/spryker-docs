@@ -2,9 +2,12 @@
 title: Creating product attributes
 description: Learn how to create product attributes in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-attributes
+originalArticleId: 1b1f5ddd-b2e3-4095-a1e0-abb9b298fd46
 redirect_from:
   - /2021080/docs/creating-product-attributes
   - /2021080/docs/en/creating-product-attributes
+  - /docs/creating-product-attributes
+  - /docs/en/creating-product-attributes
 ---
 
 This document describes how to create product attributes.
@@ -79,5 +82,5 @@ In the online store, the descriptive attributes are displayed on the product det
 ![Descriptive attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/descriptive-attributes.png)
 
 ## Next steps
-* Learn how to [manage the product attributes](https://documentation.spryker.com/docs/managing-attributes). 
+* Learn how to [manage the product attributes](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/attributes/managing-product-attributes.html). 
 

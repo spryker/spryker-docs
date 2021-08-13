@@ -2,6 +2,7 @@
 title: Minimum Order Value
 description: Minimum Order Value- Get buyers to checkout larger carts (can help to increase your sales), ensure that the cost of items is not too high for a transaction.
 originalLink: https://documentation.spryker.com/v4/docs/order-thresholds
+originalArticleId: ebaeb2d8-db35-4c3e-8035-86bd6e4b19bb
 redirect_from:
   - /v4/docs/order-thresholds
   - /v4/docs/en/order-thresholds

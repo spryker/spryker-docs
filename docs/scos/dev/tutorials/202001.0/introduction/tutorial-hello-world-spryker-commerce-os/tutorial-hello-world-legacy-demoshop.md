@@ -2,6 +2,7 @@
 title: Tutorial - Hello World - Legacy Demoshop
 description: The tutorial describes how to display a text string on the page in the browser by creating a new Yves module.
 originalLink: https://documentation.spryker.com/v4/docs/hello-world-legacy
+originalArticleId: 5369d39b-1fc2-4838-b8e4-8b5a55238b39
 redirect_from:
   - /v4/docs/hello-world-legacy
   - /v4/docs/en/hello-world-legacy

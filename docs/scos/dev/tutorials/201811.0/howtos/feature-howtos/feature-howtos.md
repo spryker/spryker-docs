@@ -1,6 +1,7 @@
 ---
 title: Feature HowTos
 originalLink: https://documentation.spryker.com/v1/docs/about-feature-howtos
+originalArticleId: 5cff9b57-5d6c-4a20-943c-b59c782e445a
 redirect_from:
   - /v1/docs/about-feature-howtos
   - /v1/docs/en/about-feature-howtos

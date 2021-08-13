@@ -2,6 +2,7 @@
 title: Back Office Management
 description: Through the Back Office, you can manage all Back Office tasks.
 originalLink: https://documentation.spryker.com/v5/docs/back-office-management
+originalArticleId: 3cc8671b-17d2-4bdb-af35-41874deae5f3
 redirect_from:
   - /v5/docs/back-office-management
   - /v5/docs/en/back-office-management

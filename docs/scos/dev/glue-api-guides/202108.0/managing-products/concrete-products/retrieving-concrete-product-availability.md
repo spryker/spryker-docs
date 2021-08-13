@@ -2,9 +2,12 @@
 title: Retrieving concrete product availability
 description: Retrieve availability of concrete products.
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-product-availability
+originalArticleId: 0c67acf3-3c48-484e-8a9a-3889189c7f56
 redirect_from:
   - /2021080/docs/retrieving-concrete-product-availability
   - /2021080/docs/en/retrieving-concrete-product-availability
+  - /docs/retrieving-concrete-product-availability
+  - /docs/en/retrieving-concrete-product-availability
 ---
 
 This endpoint allows to retrieve availability of concrete products.
@@ -13,7 +16,7 @@ This endpoint allows to retrieve availability of concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Inventory Management feature integration](https://documentation.spryker.com/docs/glue-api-inventory-management-feature-integration)
+* [Glue API: Inventory Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html)
 
 
 
@@ -32,7 +35,7 @@ For detailed information on the modules that provide the API functionality and r
 
 Request sample: `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities`
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 
 ### Response
 
@@ -77,5 +80,5 @@ To view generic errors that originate from the Glue Application, see [Reference 
 | --- | --- |
 | 306 | Availability is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
 

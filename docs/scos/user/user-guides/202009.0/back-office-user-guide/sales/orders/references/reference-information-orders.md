@@ -2,6 +2,7 @@
 title: Reference information- orders
 description: The guide provides reference information you see when creating, updating and viewing order details in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/orders-reference-information
+originalArticleId: 12ac4016-6f05-40f3-8f39-3e785a174b75
 redirect_from:
   - /v6/docs/orders-reference-information
   - /v6/docs/en/orders-reference-information
@@ -31,7 +32,7 @@ All the order management options that you can invoke from the *Actions* column o
 | Action | Description |
 | --- | --- |
 | View | Takes you to the *View Order: [Return ID]* page. Here, you can find all the information about the chosen order. |
-| Claim | Takes you to the Create reclamation page, where you can [create a reclamation](https://documentation.spryker.com/docs/managing-reclamations) for the order. |
+| Claim | Takes you to the Create reclamation page, where you can [create a reclamation](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/reclamations/managing-reclamations.html) for the order. |
 
 ## View Order [Order ID] page
 

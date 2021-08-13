@@ -2,6 +2,7 @@
 title: Silex Replacement
 description: The article contains information on the Silex replacement, backward compatibility, steps to be taken, changes in the old procedure and the new procedure.
 originalLink: https://documentation.spryker.com/v5/docs/silex-replacement
+originalArticleId: 6f28d677-b353-4785-83f6-71f10f8e511e
 redirect_from:
   - /v5/docs/silex-replacement
   - /v5/docs/en/silex-replacement
@@ -61,21 +62,21 @@ Under certain circumstances, an update does not contain the latest versions of t
 The modules listed below have been refactored to use _Application Plugins_. Projects need to perform additional steps to migrate the modules to the latest version.
 
 Modules that need to be migrated away from _Silex_:
-*   [ErrorHandler](https://documentation.spryker.com/docs/en/migration-guide-errorhandler)
-*   [EventDispatcher](https://documentation.spryker.com/docs/en/migration-guide-eventdispatcher)
-*   [Form](https://documentation.spryker.com/docs/en/migration-guide-form)
-*   [Http](https://documentation.spryker.com/docs/en/migration-guide-http)
-*   [Locale](https://documentation.spryker.com/docs/en/migration-guide-locale)
-*   [Propel](https://documentation.spryker.com/docs/en/migration-guide-propel)
-*   [Messenger](https://documentation.spryker.com/docs/en/migration-guide-messenger)
-*   [Router](https://documentation.spryker.com/docs/en/migration-guide-router)
-*   [Security](https://documentation.spryker.com/docs/en/migration-guide-security)
-*   [Session](https://documentation.spryker.com/docs/en/migration-guide-session)
-*   [Store](https://documentation.spryker.com/docs/en/migration-guide-store)
-*   [Translator](https://documentation.spryker.com/docs/en/migration-guide-translator)
-*   [Twig](https://documentation.spryker.com/docs/en/migration-guide-twig)
-*   [Validator](https://documentation.spryker.com/docs/en/migration-guide-validator)
-*   [WebProfiler](https://documentation.spryker.com/docs/en/migration-guide-webprofiler)
+*   [ErrorHandler](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-errorhandler.html)
+*   [EventDispatcher](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-eventdispatcher.html)
+*   [Form](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-form.html)
+*   [Http](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-http.html)
+*   [Locale](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-locale.html)
+*   [Propel](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-propel.html)
+*   [Messenger](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-messenger.html)
+*   [Router](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-router.html)
+*   [Security](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-security.html)
+*   [Session](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-session.html)
+*   [Store](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-store.html)
+*   [Translator](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-translator.html)
+*   [Twig](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-twig.html)
+*   [Validator](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-validator.html)
+*   [WebProfiler](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-webprofiler.html)
     
 ## How to extend or change the services?
 Previously, if we wanted to extend a service (for instance, Twig) with new functions or global variables, we would need to add a new _Service Provider_ and use the _extend_ functionality provided by Pimple to manipulate a registered _Service Provider_. After that, it would be necessary to add the _Service Provider_ to _Silex_ Application. This option remains available, however, it is preferable to use the provided extension interfaces for each of the services used.

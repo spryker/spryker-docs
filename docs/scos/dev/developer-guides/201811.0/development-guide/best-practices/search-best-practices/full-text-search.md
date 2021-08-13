@@ -2,6 +2,7 @@
 title: Full-Text Search
 description: Full-text search is a feature where a user enters arbitrary text into a search field and then gets documents that are relevant for that query.
 originalLink: https://documentation.spryker.com/v1/docs/full-text-search
+originalArticleId: 1e788e64-1a6c-4acd-88d3-a82420b4e61d
 redirect_from:
   - /v1/docs/full-text-search
   - /v1/docs/en/full-text-search

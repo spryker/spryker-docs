@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product Option Cart Connector
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-option-cart-connector
+originalArticleId: d9dac37f-d4e5-4ac6-b953-8aa5a2beca33
 redirect_from:
   - /v3/docs/mg-product-option-cart-connector
   - /v3/docs/en/mg-product-option-cart-connector
@@ -12,7 +13,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 {% endinfo_block %} if you have any questions.)
 ## Upgrading from Version 4.* to Version 5.*
 
-1. Update `spryker/product-option` to at least version 6.0.0. See [Migration Guide - Product Option](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productoption.html).
+1. Update `spryker/product-option` to at least version 6.0.0. See [Migration Guide - Product Option](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-product-option.html).
 2. Install/Update `spryker/price` to at least version 5.0.0. You can find additional information to price module upgrade: here.
 3. Update `spryker/product-option-cart-connector` to version 5.0.0.
 4. Optionally add `ProductOptionValuePriceExistsCartPreCheckPlugin` to your `CartPreCheckPlugin` list to pre-check product option value price if it exists before switching currency.

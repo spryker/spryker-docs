@@ -2,9 +2,12 @@
 title: Performance and Scalability
 description: Scalability, as an integral part of the core architecture, is achieved by separating the front-end (Yves) and back-end (Zed) applications.
 originalLink: https://documentation.spryker.com/2021080/docs/performance-scalability
+originalArticleId: bb8130db-dd39-4a30-9de1-7fdc13781bc8
 redirect_from:
   - /2021080/docs/performance-scalability
   - /2021080/docs/en/performance-scalability
+  - /docs/performance-scalability
+  - /docs/en/performance-scalability
 ---
 
 Spryker Commerce OS was built to enable the development of high-performance e-commerce applications that are able to support an extremely high number of unique visitors. However, no application can be both light and heavy at the same time.

@@ -2,6 +2,7 @@
 title: Afterpay - Installation and Configuration
 description: Install and Configure AfterPay into Spryker-based project by following the instructions from this article.
 originalLink: https://documentation.spryker.com/v5/docs/afterpay-installation-and-configuration
+originalArticleId: e68afbe8-1d10-46cb-b897-4b2aa40788c8
 redirect_from:
   - /v5/docs/afterpay-installation-and-configuration
   - /v5/docs/en/afterpay-installation-and-configuration

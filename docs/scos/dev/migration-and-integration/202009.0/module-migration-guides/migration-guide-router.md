@@ -2,6 +2,7 @@
 title: Migration Guide - Router
 description: Use the guide to perform the Router part of the Silex Migration Effort.
 originalLink: https://documentation.spryker.com/v6/docs/migration-guide-router
+originalArticleId: fbfd5b84-6c93-4214-9305-f08ed6b91274
 redirect_from:
   - /v6/docs/migration-guide-router
   - /v6/docs/en/migration-guide-router
@@ -9,7 +10,7 @@ redirect_from:
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](https://documentation.spryker.com/docs/silex-replacement).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

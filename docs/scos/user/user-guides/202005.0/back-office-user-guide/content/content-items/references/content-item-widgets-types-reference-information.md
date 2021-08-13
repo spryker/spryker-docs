@@ -2,6 +2,7 @@
 title: Content Item Widgets types- Reference Information
 description: The guide provides reference information about content widget types and examples of use cases in B2B, B2C demoshops.
 originalLink: https://documentation.spryker.com/v5/docs/content-item-widgets-types-reference-information
+originalArticleId: 0fb5471d-1022-4a17-ab19-ef0285f773f9
 redirect_from:
   - /v5/docs/content-item-widgets-types-reference-information
   - /v5/docs/en/content-item-widgets-types-reference-information

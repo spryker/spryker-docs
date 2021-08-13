@@ -2,9 +2,12 @@
 title: Managing customers
 description: This guide provides instructions on how shop owners can add and manage personal information, customer billing, and shipping addresses in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers
+originalArticleId: 32a86d51-5bdd-428b-8ae4-5929326f4a26
 redirect_from:
   - /2021080/docs/managing-customers
   - /2021080/docs/en/managing-customers
+  - /docs/managing-customers
+  - /docs/en/managing-customers
 ---
 
 This article describes how to manage customers. 
@@ -86,7 +89,7 @@ The *View customer details* page is designed to serve more purposes than just se
 
 On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the *Notes* section. 
 
-To know how the customer addresses are managed, see  [Managing customer addresses](https://documentation.spryker.com/docs/customers-reference-information).
+To know how the customer addresses are managed, see  [Managing customer addresses](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html).
 
 ### Viewing customer details
 

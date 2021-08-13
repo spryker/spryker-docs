@@ -2,12 +2,15 @@
 title: B2B or B2C Demo Shop installation- Windows, with Development Virtual Machine
 description: Learn how to install a B2B or a B2C Demo Shop B2B or B2C Demo Shop on Windows, with Development Virtual Machine
 originalLink: https://documentation.spryker.com/2021080/docs/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
+originalArticleId: ecc0e603-220e-4f66-b22a-73f339b97ebf
 redirect_from:
   - /2021080/docs/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
   - /2021080/docs/en/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
+  - /docs/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
+  - /docs/en/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
 ---
 
-To install the Demo Shop for [B2B](https://documentation.spryker.com/docs/b2b-suite) or [B2C](https://documentation.spryker.com/docs/b2c-suite) implementations on Windows, with Development Virtual Machine, follow the steps below.
+To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2c-suite.html) implementations on Windows, with Development Virtual Machine, follow the steps below.
 
 ### 1. Install prerequisites
 
@@ -204,5 +207,5 @@ When the installation process is complete, Spryker Commerce OS is ready to use. 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
 
 ## Next steps:
-* [Troubleshooting installation issues](https://documentation.spryker.com/docs/peer-authentication-failed-for-user-postgres)
+* [Troubleshooting installation issues](/docs/scos/dev/developer-guides/{{ page.version }}/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html)
 

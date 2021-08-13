@@ -1,6 +1,7 @@
 ---
 title: HowTo - Create CMS Templates
 originalLink: https://documentation.spryker.com/v3/docs/ht-create-cms-templates
+originalArticleId: 29a55e21-b86f-4876-92ab-e2ee12969886
 redirect_from:
   - /v3/docs/ht-create-cms-templates
   - /v3/docs/en/ht-create-cms-templates
@@ -16,7 +17,7 @@ CMS templates are fully project-specific, and to create them, some storefront de
 
 ## Adding a Template For a CMS Page
 
-In order to have a template to select in the Template drop-down list when creating a new [CMS page](/docs/scos/dev/features/202001.0/cms/cms-page/cms-page.html) on the [Create new CMS Block](https://documentation.spryker.com/v4/docs/assigning-blocks-to-category-and-product-pages) page in the Back Office, first you need to create the template itself.
+In order to have a template to select in the Template drop-down list when creating a new [CMS page](/docs/scos/dev/features/201907.0/cms/cms-page/cms-page.html) on the [Create new CMS Block](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/pages/assigning-blocks-to-category-and-product-pages.html) page in the Back Office, first you need to create the template itself.
 			
 Create a new Twig template under the `src/Pyz/Yves/Cms/Theme/default/template/ folder`.  
 
@@ -64,7 +65,7 @@ In order to have the text translated, add placeholders to the text you want to h
 
 
 ## Adding a Template for a CMS Block
-In order to have a template to select in the Template drop-down list when creating a new [CMS block](/docs/scos/dev/features/202001.0/cms/cms-block/cms-block.html) on the [Create new CMS Block](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/blocks/creating-a-cms-block.html) page in the Back Office, first you need to create the template itself.
+In order to have a template to select in the Template drop-down list when creating a new [CMS block](/docs/scos/dev/features/201907.0/cms/cms-block/cms-block.html) on the [Create new CMS Block](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/blocks/creating-a-cms-block.html) page in the Back Office, first you need to create the template itself.
 
 Procedure of adding template for the new block is similar to templates for pages.
 

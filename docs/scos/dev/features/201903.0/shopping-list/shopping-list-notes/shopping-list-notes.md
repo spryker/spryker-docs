@@ -2,6 +2,7 @@
 title: Shopping List Notes
 description: With Shopping List Notes feature you can put your thoughts, ideas, or general remarks about individual products that you would like to consider in the future.
 originalLink: https://documentation.spryker.com/v2/docs/shopping-list-notes
+originalArticleId: ce5d3dcf-9b20-4fad-b413-037269ac5031
 redirect_from:
   - /v2/docs/shopping-list-notes
   - /v2/docs/en/shopping-list-notes

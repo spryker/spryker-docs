@@ -2,6 +2,7 @@
 title: Adding a New Module
 description: When a new concept needs to be defined, a new module needs to be added on the project side to encapsulate that concept. The new module needs to follow the same folder structure and conventions as the ones in Core.
 originalLink: https://documentation.spryker.com/v1/docs/t-add-new-bundle
+originalArticleId: 2f46de69-9242-4370-92d4-a662cc3a0eea
 redirect_from:
   - /v1/docs/t-add-new-bundle
   - /v1/docs/en/t-add-new-bundle

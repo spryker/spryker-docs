@@ -2,6 +2,7 @@
 title: Comments
 description: With this feature, buyers can leave comments in the cart to record specific details on the order that they might need in the future.
 originalLink: https://documentation.spryker.com/v5/docs/comments
+originalArticleId: 47047d34-e278-4e4f-9e01-a65fda141c3c
 redirect_from:
   - /v5/docs/comments
   - /v5/docs/en/comments

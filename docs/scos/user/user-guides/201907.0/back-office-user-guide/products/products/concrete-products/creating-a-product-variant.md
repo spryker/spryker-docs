@@ -2,6 +2,7 @@
 title: Creating a Product Variant
 description: Use the guide to configure a product variant, set a price and validity period, make it searchable on the website, and more
 originalLink: https://documentation.spryker.com/v3/docs/creating-a-product-variant
+originalArticleId: c6b17212-a1b7-4969-8734-ad18dafd04ad
 redirect_from:
   - /v3/docs/creating-a-product-variant
   - /v3/docs/en/creating-a-product-variant
@@ -10,7 +11,7 @@ redirect_from:
 This topic describes the procedure you need to follow in order to add a new product variant to the abstract product.
 ***
 The procedure that you are going to perform is very similar to how you create the abstract product and update the product variants.
-To know what attributes you see, enter, and select while creating a product variant, see [Concrete Product: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/references/concrete-product-reference-information.html).
+To know what attributes you see, enter, and select while creating a product variant, see [Concrete Product: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/references/concrete-product-reference-information.html).
 ***
 To start creating the product variant, navigate to the **Products > Products** section.
 ***
@@ -32,14 +33,14 @@ The super attributes drop-down list includes only those selected during the abst
 The merchant relation prices are inherited by Product Variants as well.
 {% endinfo_block %}
     3. Otherwise, enter Original and eventually Default prices for the product for Gross and Net price modes.
-    4. **B2B only:** In the **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants](/docs/scos/user/user-guides/202001.0/back-office-user-guide/merchants/merchants.html) and [Products: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/references/products-reference-information.html) to know more.
+    4. **B2B only:** In the **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants](/docs/scos/user/user-guides/201907.0/back-office-user-guide/merchants/merchants.html) and [Products: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/references/products-reference-information.html) to know more.
     5. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 6. **Optionally**: Click **Next** to go to the next tab (Image) or select a necessary tab.
     1. In the Image tab, add images for the product and define the image order.
-7. **Optionally**: Click **Next** of select the **Assign bundled products** tab. This tab is used only if you need to create a bundles product. See [Creating and Managing Product Bundles](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/managing-products/creating-and-managing-product-bundles.html) to know more.
+7. **Optionally**: Click **Next** of select the **Assign bundled products** tab. This tab is used only if you need to create a bundles product. See [Creating and Managing Product Bundles](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/managing-products/creating-and-managing-product-bundles.html) to know more.
 8. Click **Save**.
 ***
-Once you click **Save**, the page is refreshed and you will see two additional tabs: Discontinue and Product Alternatives. See  [Discontinuing Products](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/managing-products/discontinuing-a-product.html) and [Adding Product Alternatives](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/managing-products/adding-product-alternatives.html) to know more.
+Once you click **Save**, the page is refreshed and you will see two additional tabs: Discontinue and Product Alternatives. See  [Discontinuing Products](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/managing-products/discontinuing-a-product.html) and [Adding Product Alternatives](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/managing-products/adding-product-alternatives.html) to know more.
 ***
 **What's next?**
 Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing Products](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/products/managing-products/managing-products.html) section.

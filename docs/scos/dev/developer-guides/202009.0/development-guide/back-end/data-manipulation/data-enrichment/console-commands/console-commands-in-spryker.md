@@ -2,12 +2,13 @@
 title: Console Commands in Spryker
 description: The list of console commands contains the command names together with a short description of what the command does.
 originalLink: https://documentation.spryker.com/v6/docs/console
+originalArticleId: 88c5ffc2-6dab-4180-a87d-f44e83d9a577
 redirect_from:
   - /v6/docs/console
   - /v6/docs/en/console
 ---
 
-The [list of console commands](https://documentation.spryker.com/docs/getting-the-list-of-console-commands-and-available-options) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into 4 categories : collector commands, order management system commands, setup commands, and frontend-related commands. This article provides details on each of the commands.
+The [list of console commands](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/getting-the-list-of-console-commands-and-available-options.html) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into 4 categories : collector commands, order management system commands, setup commands, and frontend-related commands. This article provides details on each of the commands.
 
 ## Collector commands
 

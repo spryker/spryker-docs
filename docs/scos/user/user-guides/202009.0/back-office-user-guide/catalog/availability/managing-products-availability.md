@@ -2,6 +2,7 @@
 title: Managing products availability
 description: This guide provides steps on how to check whether products are in stock in the warehouse of the current store in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-products-availability
+originalArticleId: 60ab1be5-da62-4dbe-89fa-729d6a7f42ec
 redirect_from:
   - /v6/docs/managing-products-availability
   - /v6/docs/en/managing-products-availability
@@ -12,13 +13,13 @@ This topic describes the actions you can do in the **Availability** section of  
 To start working with availability, navigate to **Catalog > Availability**.
 ***
 This section allows inventory managers, or other team members responsible for stock updates, to check the products' stock.
-The main advantage is that you do not need to make any manual calculations. The system does all the calculations automatically and you get the aggregated availability value. You will have a single table with  a comparison of the product's stock value and the ordered value. It also calculates the bundled products stock. See [Availability: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/availability/references/availability-reference-information.html).
+The main advantage is that you do not need to make any manual calculations. The system does all the calculations automatically and you get the aggregated availability value. You will have a single table with  a comparison of the product's stock value and the ordered value. It also calculates the bundled products stock. See [Availability: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/availability/references/reference-information-availability.html).
 ***
 ## Checking Availability 
 
 **To check** the product availability:
 1. In the _Actions_ column of the **Products availability list** table, click **View** next to the corresponding product item. 
-This will take you to the **Product Availability** page. See [Availability: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/availability/references/availability-reference-information.html) for more details.
+This will take you to the **Product Availability** page. See [Availability: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/availability/references/reference-information-availability.html) for more details.
 2. In case of a multistore setup, in the **Store** drop-down select the store locale to check the product's availability for each specific locale.
 ***
 ## Editing Stock
@@ -43,7 +44,7 @@ Product stock the DECIMAL(20,10) value, which means that your product stock can 
 6. Click **Save**.
 
 {% info_block warningBox "Note" %}
-Please note that you are updating the product variant availability, not the bundle availability itself. To see examples on how the bundle availability is calculated, see [Availability: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/availability/references/availability-reference-information.html
+Please note that you are updating the product variant availability, not the bundle availability itself. To see examples on how the bundle availability is calculated, see [Availability: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/availability/references/reference-information-availability.html
 {% endinfo_block %}.)
 ***
 **Tips & Tricks**

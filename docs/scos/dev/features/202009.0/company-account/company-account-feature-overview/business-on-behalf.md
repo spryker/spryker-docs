@@ -2,12 +2,13 @@
 title: Business on behalf
 description: Business on behalf allows having multiple company users per customer account with a possibility to select one company user to be a default user.
 originalLink: https://documentation.spryker.com/v6/docs/business-on-behalf
+originalArticleId: e9c3f423-90eb-40c1-985e-5dc817746523
 redirect_from:
   - /v6/docs/business-on-behalf
   - /v6/docs/en/business-on-behalf
 ---
 
-Every [business unit](https://documentation.spryker.com/docs/business-unit-management) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
+Every [business unit](https://documentation.spryker.com/v6/docs/business-unit-management) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
 
 For example, as a shop owner, you might have a financial manager in your company, who, for audit purposes, should be able to access company business units' accounts to check their order histories, shopping lists, etc.
 

@@ -2,6 +2,7 @@
 title: Attributes- Reference Information
 description: Use this section to check the values you add, edit, or view when managing attributes in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/attributes-reference-information
+originalArticleId: 6db7aa4d-8fc3-49ab-86f4-415375a4325a
 redirect_from:
   - /v3/docs/attributes-reference-information
   - /v3/docs/en/attributes-reference-information

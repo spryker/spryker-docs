@@ -2,6 +2,7 @@
 title: Vault for tokens
 description: The feature contains two modules where one of them encrypts/decrypts data and the other one - stores and retrieves data from the database
 originalLink: https://documentation.spryker.com/v6/docs/vault-for-tokens
+originalArticleId: ad7017b8-59c6-4ad7-9b03-21d3de53974a
 redirect_from:
   - /v6/docs/vault-for-tokens
   - /v6/docs/en/vault-for-tokens

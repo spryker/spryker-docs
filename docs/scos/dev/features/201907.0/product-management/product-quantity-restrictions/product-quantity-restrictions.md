@@ -2,6 +2,7 @@
 title: Product Quantity Restrictions
 description: The feature enables you to restrict the amount of products your customers are allowed to put to cart (by specifying minimum, maximum, and interval values).
 originalLink: https://documentation.spryker.com/v3/docs/product-quantity-restrictions
+originalArticleId: 0c0a9f00-bf3b-4667-946e-fcb1f7c6494a
 redirect_from:
   - /v3/docs/product-quantity-restrictions
   - /v3/docs/en/product-quantity-restrictions

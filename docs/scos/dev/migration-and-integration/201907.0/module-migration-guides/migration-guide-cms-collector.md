@@ -1,13 +1,14 @@
 ---
 title: Migration Guide - CMS Collector
 originalLink: https://documentation.spryker.com/v3/docs/mg-cms-collector
+originalArticleId: 4fd5e6c1-dbc7-44a3-9a53-022aafd80e9e
 redirect_from:
   - /v3/docs/mg-cms-collector
   - /v3/docs/en/mg-cms-collector
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
-Upgrade `spryker/cms` module to at least 6.2 version. See [Migration Guide - CMS](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-cms.html) for more details.
+Upgrade `spryker/cms` module to at least 6.2 version. See [Migration Guide - CMS](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-cms.html) for more details.
 Upgrade `spryker/cms-content-widget` module to at least 1.1 version if you use `CmsPageCollectorParameterMapExpanderPlugin` plugin.
 CMS page data expander plugins are applied by the `spryker/cms` module instead of the `spryker/cms-collector` module:
 

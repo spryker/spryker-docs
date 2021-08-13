@@ -2,9 +2,12 @@
 title: Front-end performance guidelines
 description: Optimize your Spryker front end.
 originalLink: https://documentation.spryker.com/2021080/docs/front-end-performance-guidelines
+originalArticleId: 1fbe7f78-9c86-4d16-8537-8de11f742f1c
 redirect_from:
   - /2021080/docs/front-end-performance-guidelines
   - /2021080/docs/en/front-end-performance-guidelines
+  - /docs/front-end-performance-guidelines
+  - /docs/en/front-end-performance-guidelines
 ---
 
 This document describes general and Spryker-specific front-end performance guidelines.

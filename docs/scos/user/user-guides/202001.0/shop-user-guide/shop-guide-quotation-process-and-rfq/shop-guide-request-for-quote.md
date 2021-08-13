@@ -2,12 +2,13 @@
 title: Shop Guide - Request for Quote
 description: The section can be used when a buyer and a sales representative can negotiate a better price on products in the cart.
 originalLink: https://documentation.spryker.com/v4/docs/request-for-quote-shop-guide
+originalArticleId: d84fd46b-28cc-4b1d-9887-5453baa72e27
 redirect_from:
   - /v4/docs/request-for-quote-shop-guide
   - /v4/docs/en/request-for-quote-shop-guide
 ---
 
-Requests for Quote allow your Buyers to bargain for products competitively. With this feature, a Buyer can send requests to a Sales Representative asking them for a better price on products in the cart. The Sales Representative in their turn can respond to the quote with the new prices, or even create a special offer for a specific buyer on their initiative, without receiving a request. For more information, see [Quotation Process & RFQ](https://documentation.spryker.com/v4/docs/quotation-process-rfq-201907).
+Requests for Quote allow your Buyers to bargain for products competitively. With this feature, a Buyer can send requests to a Sales Representative asking them for a better price on products in the cart. The Sales Representative in their turn can respond to the quote with the new prices, or even create a special offer for a specific buyer on their initiative, without receiving a request. For more information, see [Quotation Process & RFQ](https://documentation.spryker.com/v4/docs/quotation-process).
 
 The articles included in this section:
 

@@ -2,6 +2,7 @@
 title: Mutagen synchronization issue
 description: Learn how to fix the Mutagen synchronization issue
 originalLink: https://documentation.spryker.com/v6/docs/mutagen-synchronization-issue
+originalArticleId: 6df7c76d-4b87-4fd5-b805-b89764336c4b
 redirect_from:
   - /v6/docs/mutagen-synchronization-issue
   - /v6/docs/en/mutagen-synchronization-issue

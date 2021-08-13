@@ -2,12 +2,13 @@
 title: Testing the Invoice Payment Implementation
 description: This article describes how to test the invoice payment.
 originalLink: https://documentation.spryker.com/v5/docs/ht-invoice-payment-test
+originalArticleId: 1bf09326-1d88-4bc7-8ccb-a8bf2468ac89
 redirect_from:
   - /v5/docs/ht-invoice-payment-test
   - /v5/docs/en/ht-invoice-payment-test
 ---
 
-When you have completed the instructions on [front end](https://documentation.spryker.com/docs/en/ht-invoice-payment-fe), [back end](https://documentation.spryker.com/docs/en/ht-invoice-payment-be) and [shared](https://documentation.spryker.com/docs/en/ht-invoice-payment-fe-be-shared) implementation, you are able to test the payment method you just implemented.
+When you have completed the instructions on [front end](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html), [back end](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html) and [shared](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html-be-shared) implementation, you are able to test the payment method you just implemented.
 
  This is the last step for this tutorial.
 

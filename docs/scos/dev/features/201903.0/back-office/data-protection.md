@@ -2,6 +2,7 @@
 title: Data Protection
 description: The Spryker Commerce OS is fully compliant with international GDPR (General Data Protection Regulation) regulations.
 originalLink: https://documentation.spryker.com/v2/docs/data-protection
+originalArticleId: 2fb78bd6-eb48-4dbe-a36c-d6a66d40cbe2
 redirect_from:
   - /v2/docs/data-protection
   - /v2/docs/en/data-protection

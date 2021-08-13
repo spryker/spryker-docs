@@ -2,6 +2,7 @@
 title: Migration Guide - PersistentCart
 description: Use the guide to migrate to a newer version of the PersistentCart module.
 originalLink: https://documentation.spryker.com/v5/docs/mg-persistent-cart
+originalArticleId: 6eb64d0d-9260-4542-99a4-98edc2101d45
 redirect_from:
   - /v5/docs/mg-persistent-cart
   - /v5/docs/en/mg-persistent-cart

@@ -2,6 +2,7 @@
 title: Retrieving orders
 description: Retrieve all orders of a customer or a particular order via Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-orders
+originalArticleId: edc0ef42-4039-4fa6-9ed0-f6f4fe31273d
 redirect_from:
   - /v6/docs/retrieving-orders
   - /v6/docs/en/retrieving-orders
@@ -16,10 +17,10 @@ In your development, this resource can help you to:
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Order Management Feature Integration](https://documentation.spryker.com/docs/glue-api-order-management-feature-integration)
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
-* [Glue API: Product options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [Glue API: Product Bundles feature integration](https://documentation.spryker.com/upcoming-release/docs/glue-api-product-bundles-feature-integration)
+* [Glue API: Order Management Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Product options feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Bundles feature integration](https://documentation.spryker.com/v6/docs/glue-api-product-bundles-feature-integration)
 
 ## Retrieve all orders
 To retrieve a list of all orders made by a registered customer, send the request:
@@ -743,6 +744,6 @@ Request sample:
 |002| Access token is missing.  |
 |801| Order with the given order reference is not found.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 

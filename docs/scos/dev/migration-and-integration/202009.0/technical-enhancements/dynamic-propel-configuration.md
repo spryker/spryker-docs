@@ -2,6 +2,7 @@
 title: Dynamic Propel Configuration
 description: Learn about dynamic propel configuration and how to integrate it into your project.
 originalLink: https://documentation.spryker.com/v6/docs/dynamic-propel-configuration
+originalArticleId: a971b809-8960-4e44-bfa5-7acae1914efd
 redirect_from:
   - /v6/docs/dynamic-propel-configuration
   - /v6/docs/en/dynamic-propel-configuration
@@ -24,7 +25,7 @@ Ensure that the related features are installed:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 202001.0 | [Feature](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/spryker-core-feature-integration.html) |
+| Spryker Core | 202001.0 | [Feature](https://documentation.spryker.com/v6/docs/spryker-core-feature-integration-201907) |
 
 ### 1) Install the Required Modules Using Composer
 

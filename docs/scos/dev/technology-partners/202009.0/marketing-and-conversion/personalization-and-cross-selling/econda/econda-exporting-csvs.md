@@ -2,12 +2,13 @@
 title: Econda - Exporting CSVs
 description: Export Econda data via CSVs.
 originalLink: https://documentation.spryker.com/v6/docs/econda-export-csvs
+originalArticleId: 94bac366-707b-4ee7-9fba-3d01f3138b6d
 redirect_from:
   - /v6/docs/econda-export-csvs
   - /v6/docs/en/econda-export-csvs
 ---
 
-To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-a-core-module-that-is-used-by-another.html) and [plugins.](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/implementing-and-using-plugins.html)
+To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-a-core-module-that-is-used-by-another.html) and [plugins.](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/implementing-and-using-plugins.html)
 
 ## Zed Output Folder
 
@@ -20,7 +21,7 @@ The application must have proper access(es) depending on what you expect to achi
 
 ## Console
 
-To export the products and categories, we must register the Collectors that were created in the [Console](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/console-commands-in-spryker.html). Econda module has already everything in place and the only thing you need to do is to add `CollectorFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like in the snippet bellow:
+To export the products and categories, we must register the Collectors that were created in the [Console](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/console-commands-in-spryker.html). Econda module has already everything in place and the only thing you need to do is to add `CollectorFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like in the snippet bellow:
 
 ```php
 <?php

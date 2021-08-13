@@ -1,6 +1,7 @@
 ---
 title: File details- cms_block_category.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-cms-block-categorycsv
+originalArticleId: da21d495-45e5-419e-9701-24d0cc805eba
 redirect_from:
   - /v6/docs/file-details-cms-block-categorycsv
   - /v6/docs/en/file-details-cms-block-categorycsv
@@ -22,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*     [cms_block_category_position.csv](https://documentation.spryker.com/docs/file-details-cms-block-category-postioncsv) 
+*     [cms_block_category_position.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html) 
 
 ## Template File & Content Example
 A template and an example of the *cms_block_category.csv*  file can be downloaded here:

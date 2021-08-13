@@ -1,9 +1,12 @@
 ---
 title: Product + Category feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/product-category-feature-integration
+originalArticleId: 9362908d-1cd0-4db9-91c1-fe11df43060c
 redirect_from:
   - /2021080/docs/product-category-feature-integration
   - /2021080/docs/en/product-category-feature-integration
+  - /docs/product-category-feature-integration
+  - /docs/en/product-category-feature-integration
 ---
 
 This document describes how to integrate the Product + Category feature into a Spryker project.
@@ -733,9 +736,9 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
 |--- | --- | --- |
-| Category Management Feature | ✓ | [Category Management feature integration](https://documentation.spryker.com/2021080/docs/category-management-feature-integration) | 
-| Product Management Feature | ✓ | [Product feature integration](https://documentation.spryker.com/2021080/docs/product-feature-integration) | 
-| Glue API: Category Management |  |[Glue API: Category management feature integration](https://documentation.spryker.com/2021080/docs/glue-api-category-management-feature-integration) | 
-| Catalog + Category Management |  |[Catalog + Category Management feature integration](https://documentation.spryker.com/2021080/docs/catalog-category-management-feature-integration) |
-| CMS + Category Management  | | [CMS + Category Management feature integration](https://documentation.spryker.com/2021080/docs/cms-category-management-feature-integration) |
+| Category Management Feature | ✓ | [Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/category-management-feature-integration.html) | 
+| Product Management Feature | ✓ | [Product feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-feature-integration.html) | 
+| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-category-management-feature-integration.html) | 
+| Catalog + Category Management |  |[Catalog + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/catalog-category-management-feature-integration.html) |
+| CMS + Category Management  | | [CMS + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/cms-category-management-feature-integration.html) |
 

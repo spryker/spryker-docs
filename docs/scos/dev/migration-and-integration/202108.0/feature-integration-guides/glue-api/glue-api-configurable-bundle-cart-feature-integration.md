@@ -2,9 +2,12 @@
 title: Glue API- Configurable Bundle + Cart feature integration
 description: Learn how to integrate the Glue API- Configurable Bundle + Cart feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-cart-feature-integration
+originalArticleId: 684a7c95-fc8c-4d74-9214-5c5a30dec4a3
 redirect_from:
   - /2021080/docs/glue-api-configurable-bundle-cart-feature-integration
   - /2021080/docs/en/glue-api-configurable-bundle-cart-feature-integration
+  - /docs/glue-api-configurable-bundle-cart-feature-integration
+  - /docs/en/glue-api-configurable-bundle-cart-feature-integration
 ---
 
 
@@ -18,9 +21,9 @@ To start the feature integration, overview and install the necessary features:
 
 | Feature | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration) |
-| Configurable Bundle | master | [Configurable Bundle feature integration](https://documentation.spryker.com/docs/configurable-bundle-feature-integration) | 
-|Cart |  master | [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration) |
+| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Configurable Bundle | master | [Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/configurable-bundle-feature-integration.html) | 
+|Cart |  master | [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -204,7 +207,7 @@ Integrate the following related features:
 
 | Feature | Required for the current feature | Integration guide |
 | --- | --- | --- |
-| Glue API: Configurable Bundle Feature | ✓ | [Glue API: Configurable Bundle feature Integration](https://documentation.spryker.com/upcoming-release/docs/glue-api-configurable-bundle-feature-integration) |
-| Glue API: Configurable Bundle + Product Feature | ✓ |  [Glue API: Configurable Bundle + Product feature integration](https://documentation.spryker.com/upcoming-release/docs/glue-api-configurable-bundle-product-feature-integration) |
+| Glue API: Configurable Bundle Feature | ✓ | [Glue API: Configurable Bundle feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html) |
+| Glue API: Configurable Bundle + Product Feature | ✓ |  [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html) |
 
 

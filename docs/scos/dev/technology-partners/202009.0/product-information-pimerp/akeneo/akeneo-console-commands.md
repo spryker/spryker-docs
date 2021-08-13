@@ -2,12 +2,13 @@
 title: Akeneo - Console commands
 description: This guide provides the console commands for the Akeneo module.
 originalLink: https://documentation.spryker.com/v6/docs/akeneo-console-commands
+originalArticleId: 95c34ef9-e5a2-4589-8be8-60c0c5369f62
 redirect_from:
   - /v6/docs/akeneo-console-commands
   - /v6/docs/en/akeneo-console-commands
 ---
 
-The following console commands are available in your project after successful [installation](https://documentation.spryker.com/docs/akeneo-installation-configuration) of the Akeneo module. Run them one by one.
+The following console commands are available in your project after successful [installation](/docs/scos/dev/technology-partners/202009.0/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html) of the Akeneo module. Run them one by one.
 ```bash
 1) Command to import super attributes:
 vendor/bin/console middleware:process:run -p SUPER_ATTRIBUTE_IMPORT_PROCESS -o data/import/maps/super_attribute_map.json

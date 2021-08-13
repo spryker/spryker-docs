@@ -2,6 +2,7 @@
 title: Tutorial - Boosting Cart Based Search
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute.
 originalLink: https://documentation.spryker.com/v4/docs/boosting-cart-based-search
+originalArticleId: ccd91b96-564f-47a3-b771-a81c74230c8d
 redirect_from:
   - /v4/docs/boosting-cart-based-search
   - /v4/docs/en/boosting-cart-based-search

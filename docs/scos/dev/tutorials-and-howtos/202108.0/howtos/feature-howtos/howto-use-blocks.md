@@ -1,9 +1,12 @@
 ---
 title: HowTo - Use Blocks
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-cms-blocks
+originalArticleId: 655564ee-69d9-455c-a495-88b6c4c4bfe2
 redirect_from:
   - /2021080/docs/ht-use-cms-blocks
   - /2021080/docs/en/ht-use-cms-blocks
+  - /docs/ht-use-cms-blocks
+  - /docs/en/ht-use-cms-blocks
 ---
 
 Blocks can be viewed as partial content snippets that can be embedded in other pages. From a SEO perspective, blocks are a real advantage.        

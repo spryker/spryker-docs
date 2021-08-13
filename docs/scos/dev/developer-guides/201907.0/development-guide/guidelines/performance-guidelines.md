@@ -2,6 +2,7 @@
 title: Performance Guidelines
 description: This guideline explains how to optimize the server-side execution time.
 originalLink: https://documentation.spryker.com/v3/docs/performance-guidelines
+originalArticleId: 1b95043c-03e8-4fde-b7c7-d1fa2d9be3ea
 redirect_from:
   - /v3/docs/performance-guidelines
   - /v3/docs/en/performance-guidelines
@@ -143,6 +144,6 @@ $config[\Spryker\Shared\Kernel\KernelConstants::AUTO_LOADER_CACHE_FILE_PATH] = A
 
 ## Redis Mget Cache (Default: On)
 
-Yves performs a high number of `get()` calls to Redis. In case Redis is installed on the same machine, then the expected time per `get()` is below 0.1 ms. However, in case you run Spryker on a cloud environment, there is latency for each `get()` call to Redis. It can sum up to a few hundred milliseconds per request. To avoid this performance bottleneck, Spryker remembers all used `get()` calls per URL and performs a single `mget()` to retrieve all needed data in one call. This behavior works out of the box. In case you see a high number of `get()` calls in your monitoring, you should make sure that the `StorageCacheServiceProvider` is registered in `YvesBootstrap`. This provider is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Using Redis as a KV Storage](https://documentation.spryker.com/v4/docs/redis-as-kv#using-redis-cache).
+Yves performs a high number of `get()` calls to Redis. In case Redis is installed on the same machine, then the expected time per `get()` is below 0.1 ms. However, in case you run Spryker on a cloud environment, there is latency for each `get()` call to Redis. It can sum up to a few hundred milliseconds per request. To avoid this performance bottleneck, Spryker remembers all used `get()` calls per URL and performs a single `mget()` to retrieve all needed data in one call. This behavior works out of the box. In case you see a high number of `get()` calls in your monitoring, you should make sure that the `StorageCacheServiceProvider` is registered in `YvesBootstrap`. This provider is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Using Redis as a KV Storage](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/yves/client/using-and-configuring-redis-as-a-key-value-storage.html#using-redis-cache).
 
 <!-- Last review date: May 3, 2019-- by Denis Turkov -->

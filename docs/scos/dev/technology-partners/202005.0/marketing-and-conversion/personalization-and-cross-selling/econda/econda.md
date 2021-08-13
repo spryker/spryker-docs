@@ -2,6 +2,7 @@
 title: Econda
 description: Store the data, enrich it and provide instant reports by integrating Econda into Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v5/docs/econda
+originalArticleId: e34d8caa-0fda-438f-b8cc-e502e7963a0c
 redirect_from:
   - /v5/docs/econda
   - /v5/docs/en/econda
@@ -39,7 +40,7 @@ Some examples can be found at [http://downloads.econda.de/support/releases/js-sd
 
 Details on how to work with Javascript and templates in Spryker can be found in Front-End Guide<!-- link -->.
 
-Econda module uses collectors to [export data to CSV](https://documentation.spryker.com/docs/en/econda-export-csvs). Please read more about Collectors.
+Econda module uses collectors to [export data to CSV](/docs/scos/dev/technology-partners/202005.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html). Please read more about Collectors.
 
 ## Installation
 

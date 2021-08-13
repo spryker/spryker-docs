@@ -2,6 +2,7 @@
 title: Creating Content Items
 description: The guide provides a procedure on how to create a content item such as banner, abstract product list, product set, and file list in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/creating-content-items
+originalArticleId: f1e895d6-5c55-41e2-ba8e-f184221c642f
 redirect_from:
   - /v3/docs/creating-content-items
   - /v3/docs/en/creating-content-items
@@ -36,7 +37,7 @@ Keep in mind that the **Default** locale **must** be populated. If you populate 
 To create a Banner content item:
 
 1. From the **Add Content Item** drop-down menu, select **Banner**. 
-2. On the **Create Content Item: Banner** page that opens, enter **Name** and **Description** of the Banner content item. Both fields are mandatory to specify. See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
+2. On the **Create Content Item: Banner** page that opens, enter **Name** and **Description** of the Banner content item. Both fields are mandatory to specify. See [Content Items: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
 3. Amend the following **mandatory** fields per locale:
     * Title
     * Subtitle
@@ -64,7 +65,7 @@ Clicking **Back to Content Items** in the top right corner of the page can trigg
 To create an Abstract Product List content item:
 
 1. From the **Add Content Item** drop-down menu, select **Abstract Product List**.
-2. On the **Create Content Item: Abstract Product List** page that opens, enter **Name** and **Description** of the Abstract Product List content item. Both fields are mandatory to specify. See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
+2. On the **Create Content Item: Abstract Product List** page that opens, enter **Name** and **Description** of the Abstract Product List content item. Both fields are mandatory to specify. See [Content Items: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
 3. In the _Add more products_ bottom table, select the products by clicking **+Add to list** in the _Selected_ column per locale. This will add the selected products to the top table.  
 
 {% info_block infoBox %}
@@ -92,7 +93,7 @@ Clicking **Back to Content Items** in the top right corner of the page can trigg
 To create a Product Set content item:
 
 1. From the **Add Content Item** drop-down menu, select **Product Set**. 
-2. On the **Create Content Item: Product Set** page that opens, enter **Name** and **Description** of the Product Set content item. Both fields are mandatory to specify. See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
+2. On the **Create Content Item: Product Set** page that opens, enter **Name** and **Description** of the Product Set content item. Both fields are mandatory to specify. See [Content Items: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
 3. In the _Available Product Sets_ bottom table, select only **one** product set by clicking **+Add** in the _Actions_ column per locale. This will add the selected product set to the top table. 
 
 ![Product set content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/product-set-create-page.png){height="" width=""}
@@ -116,7 +117,7 @@ Clicking **Back to Content Items** in the top right corner of the page can trigg
 To create a File content item:
 
 1. From the **Add Content Item** drop-down menu, select **File List**.
-2. On the **Create Content Item: File List** page, enter **Name** and **Description** of the File List content item. Both fields are mandatory to specify. See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
+2. On the **Create Content Item: File List** page, enter **Name** and **Description** of the File List content item. Both fields are mandatory to specify. See [Content Items: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
 3. In the _Available Files_ bottom table, click **Add to list** next to the file you want to add per locale. This will add the file(s) to the _Selected Files_ top table. 
 
 {% info_block infoBox %}
@@ -142,5 +143,5 @@ Clicking **Back to Content Items** in the top right corner of the page can trigg
 **What's next?**
 The content item is created. Now, you can add it to a block or a page using a content item widget and selecting its template. Additionally, you can edit any of the content item elements if needed.
 
-* To learn more about how to add content item widgets to a block or a page, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html).
-* To know more about how to edit a content item, see [Editing Content Items](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/editing-content-items.html).
+* To learn more about how to add content item widgets to a block or a page, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html).
+* To know more about how to edit a content item, see [Editing Content Items](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/editing-content-items.html).

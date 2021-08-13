@@ -1,6 +1,7 @@
 ---
 title: HowTo - Manage a Big Number of Categories
 originalLink: https://documentation.spryker.com/v2/docs/ht-manage-a-big-number-of-categories-201903
+originalArticleId: 00d914e6-94a2-4323-9a5a-2ca3453975f5
 redirect_from:
   - /v2/docs/ht-manage-a-big-number-of-categories-201903
   - /v2/docs/en/ht-manage-a-big-number-of-categories-201903

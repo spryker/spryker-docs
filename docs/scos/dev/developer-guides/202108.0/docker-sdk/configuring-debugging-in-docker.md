@@ -2,9 +2,12 @@
 title: Configuring debugging in Docker
 description: Learn how to configure debugging in Docker.
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-debugging-in-docker
+originalArticleId: e7a98e11-2344-4aa5-b86f-112d95874218
 redirect_from:
   - /2021080/docs/configuring-debugging-in-docker
   - /2021080/docs/en/configuring-debugging-in-docker
+  - /docs/configuring-debugging-in-docker
+  - /docs/en/configuring-debugging-in-docker
 ---
 
 This document describes how to configure debugging of Spryker in Docker.

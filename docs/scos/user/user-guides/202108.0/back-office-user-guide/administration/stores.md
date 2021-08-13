@@ -2,9 +2,12 @@
 title: Stores
 description: The guide provides additional information you use when working with stores in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/stores
+originalArticleId: e3df67f3-86b5-4c66-adf5-24701b24a003
 redirect_from:
   - /2021080/docs/stores
   - /2021080/docs/en/stores
+  - /docs/stores
+  - /docs/en/stores
 ---
 
 This topic provides an overview of the Stores section in Spryker Back Office.

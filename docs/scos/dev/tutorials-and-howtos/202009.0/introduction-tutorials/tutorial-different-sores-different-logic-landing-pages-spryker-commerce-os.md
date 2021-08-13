@@ -2,6 +2,7 @@
 title: Tutorial - Different Sores Different Logic - Landing Pages - Spryker Commerce OS
 description: The tutorial describes how you can extend the functionality to set up different home pages per specific stores.
 originalLink: https://documentation.spryker.com/v6/docs/t-different-stores-different-logic-landing-pages
+originalArticleId: a3a15a3a-880d-443b-be48-453141226443
 redirect_from:
   - /v6/docs/t-different-stores-different-logic-landing-pages
   - /v6/docs/en/t-different-stores-different-logic-landing-pages

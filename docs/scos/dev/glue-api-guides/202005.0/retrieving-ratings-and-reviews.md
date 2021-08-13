@@ -1,14 +1,15 @@
 ---
 title: Retrieving Ratings and Reviews
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-ratings-and-reviews
+originalArticleId: 3c078943-f7b0-4db0-8dcf-5d015d04e739
 redirect_from:
   - /v5/docs/retrieving-ratings-and-reviews
   - /v5/docs/en/retrieving-ratings-and-reviews
 ---
 
-[Ratings and reviews](https://documentation.spryker.com/docs/en/rating-reviews) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
+[Ratings and reviews](/docs/scos/dev/features/202005.0/rating-and-reviews/rating-and-reviews.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
 
-Glue REST API allows retrieving a list of ratings and reviews for each product, as well as its average rating. This can help frontend developers in building the product page, extending it with the ratings and reviews relevant to each product. Also, the average rating of each product, as well as the number of times it has been reviewed, will be available in all endpoints where abstract and concrete products can be included as a relationship, such as, for example, [/catalog-search](https://documentation.spryker.com/docs/en/catalog-search), [/related-products](https://documentation.spryker.com/docs/en/retrieving-related-products-201903#getting-related-items-for-an-abstract-product), [/up-selling-products](https://documentation.spryker.com/docs/en/retrieving-related-products-201903#getting-up-selling-products-for-a-registered-user-s-cart), [/abstract-alternative-products](https://documentation.spryker.com/docs/en/retrieving-alternative-products-201903), etc.
+Glue REST API allows retrieving a list of ratings and reviews for each product, as well as its average rating. This can help frontend developers in building the product page, extending it with the ratings and reviews relevant to each product. Also, the average rating of each product, as well as the number of times it has been reviewed, will be available in all endpoints where abstract and concrete products can be included as a relationship, such as, for example, [/catalog-search](/docs/scos/dev/glue-api-guides/202005.0/catalog-search.html), [/related-products](https://documentation.spryker.com/v5/docs/en/retrieving-related-products-201903#getting-related-items-for-an-abstract-product), [/up-selling-products](https://documentation.spryker.com/v5/docs/en/retrieving-related-products-201903#getting-up-selling-products-for-a-registered-user-s-cart), [/abstract-alternative-products](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-alternative-products.html), etc.
 
 Apart from that, the API allows developers to add the possibility for customers to post ratings and reviews.
 
@@ -296,7 +297,7 @@ If the product hasn’t been reviewed yet, the `reviewCount` attribute is **null
 ```
 
 {% info_block infoBox "Info" %}
-For detailed information on the endpoints, response attributes, possible errors, etc., see [General Product Information](https://documentation.spryker.com/docs/en/retrieving-product-information#general-product-information
+For detailed information on the endpoints, response attributes, possible errors, etc., see [General Product Information](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html#general-product-information
 {% endinfo_block %}.)
 
 ## Rating and Reviewing Products
@@ -316,7 +317,7 @@ Sample request: `POST http://glue.mysprykershop.com/abstract-products/139/produc
 where **139** is the SKU of the **abstract** product a customer wants to rate and/or review.
 
 {% info_block warningBox "Authentication" %}
-Ratings and reviews cannot be posted anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization
+Ratings and reviews cannot be posted anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
 {% endinfo_block %}.)
 
 **Request Attributes:**

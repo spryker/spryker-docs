@@ -2,6 +2,7 @@
 title: Order Process Modelling via State Machines
 description: State Machines help you define, execute and visualize predefined and automated processes.
 originalLink: https://documentation.spryker.com/v6/docs/order-process-modelling-state-machines
+originalArticleId: 2e3e2933-779f-428d-aaec-fa12b9a7ac4e
 redirect_from:
   - /v6/docs/order-process-modelling-state-machines
   - /v6/docs/en/order-process-modelling-state-machines
@@ -23,7 +24,7 @@ You can tailor the State Machine to your needs to trigger certain processes auto
 The `StateMachine` module provides a generic implementation for state machines (SM). This module provides functionality for drawing the SM graph, triggering events, initializing a new state machine, or for getting the state history for a processed item.
 
 {% info_block warningBox %}
-If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/dev/features/202001.0/order-management/oms-order-management-system-matrix.html
+If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/dev/features/202009.0/order-management/oms-order-management-system-matrix.html
 {% endinfo_block %}.)
 
 {% info_block infoBox %}

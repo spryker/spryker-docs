@@ -2,9 +2,12 @@
 title: FACT-Finder - Campaigns
 description: The FACT-Finder Campaign Manager module allows you to target the management of search results in order to improve the customer lead process or deliberately highlight products.
 originalLink: https://documentation.spryker.com/2021080/docs/search-factfinder-campaigns
+originalArticleId: c9ceca36-2c18-45b1-840b-be14f926645c
 redirect_from:
   - /2021080/docs/search-factfinder-campaigns
   - /2021080/docs/en/search-factfinder-campaigns
+  - /docs/search-factfinder-campaigns
+  - /docs/en/search-factfinder-campaigns
 ---
 
 ## Prerequisites

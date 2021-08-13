@@ -2,6 +2,7 @@
 title: Data-Driven Ranking
 description: A common solution to sort the query returns is to manually assign ranks to products.
 originalLink: https://documentation.spryker.com/v5/docs/data-driven-ranking
+originalArticleId: 8a3ce6e7-26c6-42c8-b984-5f410b4db9d0
 redirect_from:
   - /v5/docs/data-driven-ranking
   - /v5/docs/en/data-driven-ranking

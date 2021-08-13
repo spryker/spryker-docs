@@ -2,6 +2,7 @@
 title: Company User Roles and Permissions
 description: A Company User may have one or multiple roles. The roles consist of permissions that work to actions the user with that role is permitted to carry out
 originalLink: https://documentation.spryker.com/v5/docs/company-user-roles-and-permissions
+originalArticleId: 8a6ceb1b-36a6-4739-8095-bb80324cd4f6
 redirect_from:
   - /v5/docs/company-user-roles-and-permissions
   - /v5/docs/en/company-user-roles-and-permissions

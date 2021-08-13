@@ -1,6 +1,7 @@
 ---
 title: Glue API Developer Guides
 originalLink: https://documentation.spryker.com/v4/docs/glue-api-developer-guides
+originalArticleId: c7a9e4b8-54a4-4cc1-8307-e2a6611b4620
 redirect_from:
   - /v4/docs/glue-api-developer-guides
   - /v4/docs/en/glue-api-developer-guides

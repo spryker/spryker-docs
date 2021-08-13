@@ -2,6 +2,7 @@
 title: Product Options Overview
 description: The article describes the creation process of product options and how it is managed in the Back Office
 originalLink: https://documentation.spryker.com/v3/docs/product-options-overview
+originalArticleId: 50a7dbcc-fb81-4304-afa3-9290f076b5ef
 redirect_from:
   - /v3/docs/product-options-overview
   - /v3/docs/en/product-options-overview
@@ -20,10 +21,10 @@ Each product abstract can have multiple product option groups assigned.
 The product option group name is a glossary key which translation is stored in the Glossary table. In the Back Office, it is possible to enable or disable a product option group through the active flag.
 
 {% info_block warningBox %}
-See [Activating or Deactivating a Product Option Group in the Back Office](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-options/creating-a-product-option.html
+See [Activating or Deactivating a Product Option Group in the Back Office](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-options/creating-a-product-option.html
 {% endinfo_block %} for more details.)
 
-Also, each product option group has a [tax set](https://documentation.spryker.com/v4/docs/tax-1-0) assigned which affects the final price calculation.
+Also, each product option group has a [tax set](https://documentation.spryker.com/v3/docs/reference-information-tax-module) assigned which affects the final price calculation.
 
 ## Option Value
 
@@ -59,7 +60,7 @@ Say you want to sell a product that will have several options attached, for exam
 In the Back Office, a Back Office user can create an option group including all these three option values and then assign products to options.
 
 {% info_block warningBox %}
-See [Creating a New Product Option](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-options/creating-a-product-option.html
+See [Creating a New Product Option](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-options/creating-a-product-option.html
 {% endinfo_block %} to learn more how to create a product option group and assign products in Admin UI.)
 
 After you save the changes, a new product option group will appear on the product detail page. The option values will be displayed as a drop-down list. The product option price is added to the product price in the cart.
@@ -69,7 +70,7 @@ After you save the changes, a new product option group will appear on the produc
 
 For customers, the options are displayed on the product detail page of the abstract product.
 
-You can [assign product labels](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-labels/creating-a-product-label.html) to highlight specific products in your shop. Customize the look and text of the labels as they appear in the shop. Any association can be a Label, such as "Sale" or "Christmas". Products that are new in your shop, can be automatically be marked with the Dynamic Product Label "New" for a pre-defined time range.
+You can [assign product labels](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-labels/creating-a-product-label.html) to highlight specific products in your shop. Customize the look and text of the labels as they appear in the shop. Any association can be a Label, such as "Sale" or "Christmas". Products that are new in your shop, can be automatically be marked with the Dynamic Product Label "New" for a pre-defined time range.
 
 You can easily offer services on top of a customer's choice of products, such as gift wrapping, insurance, warranty or anything else that you may want to add that is not physically part of the product. The options can have their own price value and will be added to the total cart value.
 

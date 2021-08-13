@@ -2,6 +2,7 @@
 title: Shopping Carts- Reference Information
 description: The guide provides additional information you see when managing shopping carts in the storefront.
 originalLink: https://documentation.spryker.com/v4/docs/shop-guide-shopping-carts-reference-information
+originalArticleId: e5d53a6c-c06e-4433-9d34-e2f17770fbde
 redirect_from:
   - /v4/docs/shop-guide-shopping-carts-reference-information
   - /v4/docs/en/shop-guide-shopping-carts-reference-information
@@ -26,7 +27,7 @@ On the Shopping Carts page, you see the following:
 | # | Element | Description |
 |---|---|---|
 | 1 | **Customer account menu** | A menu with navigation items to specific sections where you can manage your customer information. |
-| 2 | **Shopping Cart Name** | See [Editing Shopping Cart](https://documentation.spryker.com/v4/docs/shop-guide-managing-shopping-carts#editing-a-shopping-cart) to change the name of the shopping cart. |
+| 2 | **Shopping Cart Name** | See [Editing Shopping Cart](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-carts/shop-guide-managing-shopping-carts.html#editing-a-shopping-cart) to change the name of the shopping cart. |
 | 3 | **Access** | There are three types of access to a shopping cart: Owner, Full Access, and Read-only. |
 | 4 | **No. of items** | A number of items placed in the cart. |
 | 5 | **Prices** | Displays the prices according to its type: Gross or Net. |

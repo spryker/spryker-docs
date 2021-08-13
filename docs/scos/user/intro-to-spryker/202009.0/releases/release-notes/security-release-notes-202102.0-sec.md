@@ -1,6 +1,7 @@
 ---
 title: Security release notes- 202102.0 SEC
 originalLink: https://documentation.spryker.com/v6/docs/security-release-notes-2021020-sec
+originalArticleId: c1cad169-52f0-48d8-becb-de274b3f2b77
 redirect_from:
   - /v6/docs/security-release-notes-2021020-sec
   - /v6/docs/en/security-release-notes-2021020-sec

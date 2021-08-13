@@ -2,6 +2,7 @@
 title: Named Wishlists
 description: Users can easily keep track of their Wish Lists by naming each one individually.
 originalLink: https://documentation.spryker.com/v2/docs/named-wishlists
+originalArticleId: bb4ecee0-8e8e-4b3c-b555-a0966817996d
 redirect_from:
   - /v2/docs/named-wishlists
   - /v2/docs/en/named-wishlists

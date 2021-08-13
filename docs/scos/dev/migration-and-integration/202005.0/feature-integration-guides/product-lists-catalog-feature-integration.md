@@ -2,6 +2,7 @@
 title: Product Lists + Catalog Feature Integration
 description: The guide walks you through the process of installing the Product Lists as a catalog  feature in the project.
 originalLink: https://documentation.spryker.com/v5/docs/product-lists-catalog-feature-integration
+originalArticleId: d46051e9-a550-4580-b86c-1b1ead70fe7b
 redirect_from:
   - /v5/docs/product-lists-catalog-feature-integration
   - /v5/docs/en/product-lists-catalog-feature-integration
@@ -37,7 +38,7 @@ Once the Product List data is exported to Elasticsearch, make sure to extend you
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
-| `ProductListQueryExpanderPlugin` | Expands an Elasticsearch query for Abstract and Concrete Products with Blacklist and Whitelist filters based on the Customer session.<br>The result of the query will contain only Products that were on the given Whitelists, but not on the given Blacklists.| The Customer session must contain Product List information. See [Merchant Product Restrictions Feature Integration](https://documentation.spryker.com/docs/en/merchant-product-restrictions-feature-integration) for an example implementation. | `Spryker\Client\CustomerCatalog\Plugin\Search` |
+| `ProductListQueryExpanderPlugin` | Expands an Elasticsearch query for Abstract and Concrete Products with Blacklist and Whitelist filters based on the Customer session.<br>The result of the query will contain only Products that were on the given Whitelists, but not on the given Blacklists.| The Customer session must contain Product List information. See [Merchant Product Restrictions Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/merchant-product-restrictions-feature-integration.html) for an example implementation. | `Spryker\Client\CustomerCatalog\Plugin\Search` |
 | `ProductListQueryExpanderPlugin` | Expands search query with filtering by product list ID. | None | `Spryker\Client\ProductListSearch\Plugin\Search` |
 
 {% info_block infoBox "Info" %}

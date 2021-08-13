@@ -2,6 +2,7 @@
 title: Slots- Reference Information
 description: The article provides reference information you see when working with creating and managing slots in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/slots-reference-information
+originalArticleId: d0d66fe1-3d10-41c4-a3c6-e584100d0c58
 redirect_from:
   - /v5/docs/slots-reference-information
   - /v5/docs/en/slots-reference-information
@@ -64,7 +65,7 @@ In the **List of assigned Blocks for [name] Slot** section of the **Overview of 
 
 {% info_block infoBox "Info" %}
 
-Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content Management > Blocks**. See [CMS Block: Reference Information](https://documentation.spryker.com/docs/en/cms-block-reference-information#create-and-edit-cms-block-page) to learn about them.
+Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content Management > Blocks**. See [CMS Block: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/references/cms-block-reference-information.html#create-and-edit-cms-block-page) to learn about them.
 
 {% endinfo_block %}
 

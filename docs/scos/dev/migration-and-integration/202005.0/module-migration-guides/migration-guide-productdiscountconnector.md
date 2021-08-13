@@ -2,6 +2,7 @@
 title: Migration Guide - ProductDiscountConnector
 description: Use the guide to learn how to update the ProductDiscountConnector module.
 originalLink: https://documentation.spryker.com/v5/docs/mg-product-discount-connector
+originalArticleId: 29731a15-966d-4bd9-8806-4088bec86590
 redirect_from:
   - /v5/docs/mg-product-discount-connector
   - /v5/docs/en/mg-product-discount-connector

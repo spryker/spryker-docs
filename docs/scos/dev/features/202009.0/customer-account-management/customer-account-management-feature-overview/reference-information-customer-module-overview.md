@@ -2,6 +2,7 @@
 title: Reference information- Customer module overview
 description: This article describes how new customers can be created and managed and how to enable specific features related to customers.
 originalLink: https://documentation.spryker.com/v6/docs/reference-information-customer-module-overview
+originalArticleId: 0ece9b14-1188-4721-9323-3c0795216485
 redirect_from:
   - /v6/docs/reference-information-customer-module-overview
   - /v6/docs/en/reference-information-customer-module-overview
@@ -63,7 +64,7 @@ When creating a custom implementation, check and follow the applicable legislati
 
 ## Customer experience
 
-Spryker consistently delivers the scalable operating system without coupling it to a project infrastructure. As a consequence, the project should take care of the impact of the **Customer Delete** functionality on customer experience. Read more about session sensitive actions in [Migration Guide - Customer](https://documentation.spryker.com/docs/mg-customer).
+Spryker consistently delivers the scalable operating system without coupling it to a project infrastructure. As a consequence, the project should take care of the impact of the **Customer Delete** functionality on customer experience. Read more about session sensitive actions in [Migration Guide - Customer](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-customer.html).
 
 ### Case insensitive queries for email
 

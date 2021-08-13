@@ -2,6 +2,7 @@
 title: Payments
 description: Easily integrate several different payment gateways, including Amazon Pay, PayPal and BS Payone. You can offer multiple payment methods per checkout.
 originalLink: https://documentation.spryker.com/v6/docs/payments
+originalArticleId: 7a974bfa-e78b-4cea-988b-17b10345603e
 redirect_from:
   - /v6/docs/payments
   - /v6/docs/en/payments

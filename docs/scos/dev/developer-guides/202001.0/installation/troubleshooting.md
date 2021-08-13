@@ -2,6 +2,7 @@
 title: Troubleshooting
 description: This article provides troubleshooting steps for common issues that happen with Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v4/docs/installation-troubleshooting
+originalArticleId: 81294be3-fe2f-4687-b79e-e853d7553bb8
 redirect_from:
   - /v4/docs/installation-troubleshooting
   - /v4/docs/en/installation-troubleshooting

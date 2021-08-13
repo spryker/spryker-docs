@@ -1,6 +1,7 @@
 ---
 title: HowTo - Notify About Unsupported Browsers
 originalLink: https://documentation.spryker.com/v5/docs/howto-notify-about-unsupported-browsers
+originalArticleId: 3ae44b7e-03b0-4383-8aa0-1ec99b0224c4
 redirect_from:
   - /v5/docs/howto-notify-about-unsupported-browsers
   - /v5/docs/en/howto-notify-about-unsupported-browsers

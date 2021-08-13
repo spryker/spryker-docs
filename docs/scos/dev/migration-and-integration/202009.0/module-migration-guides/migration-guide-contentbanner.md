@@ -1,13 +1,14 @@
 ---
 title: Migration Guide - ContentBanner
 originalLink: https://documentation.spryker.com/v6/docs/mg-contentbanner-201907
+originalArticleId: 8e484f14-76b5-449e-bbac-a04ef749486d
 redirect_from:
   - /v6/docs/mg-contentbanner-201907
   - /v6/docs/en/mg-contentbanner-201907
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
-Version 2.0.0 of the ContentGui module introduces the [Content Items](https://documentation.spryker.com/v3/docs/content-items-overview-201907) functionality that allows creating and managing content and later selecting where it should be inserted.
+Version 2.0.0 of the ContentGui module introduces the [Content Items](https://documentation.spryker.com/v6/docs/content-items-overview-201907) functionality that allows creating and managing content and later selecting where it should be inserted.
 
 With the ContentBanner version 2.0, the following changes have been made:
 
@@ -22,7 +23,7 @@ With the ContentBanner version 2.0, the following changes have been made:
 You can find more details about the changes on the [ContentBanner module release notes](https://github.com/spryker/content-banner/releases/tag/2.0.0) page.
 
 **To upgrade to the new version of the module, do the following:**
-1. Perform the steps provided in [Migration Guide - ContentStorage](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-contentstorage.html).
+1. Perform the steps provided in [Migration Guide - ContentStorage](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-contentstorage.html).
 2. Upgrade the `ContentBanner` module to version 2.0.0:
 
 ```bash

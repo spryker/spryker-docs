@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Session
 originalLink: https://documentation.spryker.com/v3/docs/mg-session
+originalArticleId: 7aff63fa-3c8c-40f5-8f2c-76b24c4d2cc2
 redirect_from:
   - /v3/docs/mg-session
   - /v3/docs/en/mg-session

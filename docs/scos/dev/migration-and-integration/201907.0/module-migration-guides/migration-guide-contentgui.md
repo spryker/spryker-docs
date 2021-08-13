@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ContentGui
 originalLink: https://documentation.spryker.com/v3/docs/mg-contentgui-201907
+originalArticleId: d2ac39e9-c858-4eac-a4c1-e99643bf1023
 redirect_from:
   - /v3/docs/mg-contentgui-201907
   - /v3/docs/en/mg-contentgui-201907

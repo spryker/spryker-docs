@@ -2,9 +2,12 @@
 title: Alternative products + discontinued products feature integration
 description: This guide describes all the steps needed to be performed in order to integrate the Alternative Products + Discontinued Products features into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-discontinued-products-feature-integration
+originalArticleId: eb447174-6a43-4adb-8914-747a9771c4a9
 redirect_from:
   - /2021080/docs/alternative-products-discontinued-products-feature-integration
   - /2021080/docs/en/alternative-products-discontinued-products-feature-integration
+  - /docs/alternative-products-discontinued-products-feature-integration
+  - /docs/en/alternative-products-discontinued-products-feature-integration
 ---
 
 ## Install Feature Core
@@ -79,7 +82,7 @@ Make sure that you can see alternatives for products that are marked as **discon
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Label feature](https://documentation.spryker.com/docs/product-label) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](https://documentation.spryker.com/docs/file-details-product-label-storecsv). Otherwise, the product labels are not displayed on the Storefront. 
+If the [Product Label feature](https://documentation.spryker.com/2021080/docs/product-label) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront. 
 
 
 {% endinfo_block %}

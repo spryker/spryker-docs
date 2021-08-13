@@ -2,6 +2,7 @@
 title: Managing CMS Blocks
 description: The guide provides procedures on how to view, update, activate and deactivate CMS blocks in the editor from the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-cms-blocks
+originalArticleId: 25eec4df-1d51-4421-bfc7-e694d3f793fb
 redirect_from:
   - /v5/docs/managing-cms-blocks
   - /v5/docs/en/managing-cms-blocks
@@ -20,7 +21,7 @@ To view a block:
 * General information
 * Placeholders
 
-See [CMS Block: Reference Information](https://documentation.spryker.com/docs/en/cms-block-reference-information)  to learn more about attributes on this page.
+See [CMS Block: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/references/cms-block-reference-information.html)  to learn more about attributes on this page.
 
 **Tips & Tricks**
 On the **View CMS Block: Block ID** page, you can do the following:
@@ -34,7 +35,7 @@ On the **View CMS Block: Block ID** page, you can do the following:
 ## Editing Placeholders
 To edit a placeholder:
 1. On the **Overview of CMS Blocks** page in the _Actions_ column, click **Edit Placeholder** next to the block you want to update. 
-2. On the **Edit Block Glossary: Block ID** page that opens, you can update a title or content of the CMS block, as well as insert a content item widget. See [Adding Content Item Widgets to a Block](https://documentation.spryker.com/docs/en/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-blocks) for more details.
+2. On the **Edit Block Glossary: Block ID** page that opens, you can update a title or content of the CMS block, as well as insert a content item widget. See [Adding Content Item Widgets to a Block](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-blocks) for more details.
 3. To save the updates, click **Save**. The updated block will be displayed on the grid of List of CMS Blocks.
 
 **Tips & Tricks**
@@ -57,7 +58,7 @@ To edit a CMS block:
 * Define the validity period for your block to be visible in the online store.
 
 {% info_block infoBox %}
-See [CMS Blocks: Reference Information](https://documentation.spryker.com/docs/en/cms-block-reference-information
+See [CMS Blocks: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/references/cms-block-reference-information.html
 {% endinfo_block %}  for more details.)
 
 **Tips & Tricks**
@@ -83,5 +84,5 @@ To deactivate a CMS block:
 ***
 **What's next?**
 
-* To know what attributes you enter and select while editing the CMS block, see [CMS Block: Reference Information](https://documentation.spryker.com/docs/en/cms-block-reference-information).
+* To know what attributes you enter and select while editing the CMS block, see [CMS Block: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/content/blocks/references/cms-block-reference-information.html).
 

@@ -2,6 +2,7 @@
 title: Password Management
 description: All accounts are password protected. Passwords can easily be restored with a restore-password link.
 originalLink: https://documentation.spryker.com/v2/docs/password-management
+originalArticleId: bd9849a8-a643-42a9-9cd9-874d7e41e5dc
 redirect_from:
   - /v2/docs/password-management
   - /v2/docs/en/password-management

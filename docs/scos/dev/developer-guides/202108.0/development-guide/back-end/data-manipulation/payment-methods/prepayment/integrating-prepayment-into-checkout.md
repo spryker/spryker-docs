@@ -2,9 +2,12 @@
 title: Integrating Prepayment into Checkout
 description: This article describes how to integrate prepayment into Checkout.
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-checkout
+originalArticleId: 65a81e54-d406-4b80-a3fc-875d1301d2ac
 redirect_from:
   - /2021080/docs/ht-prepayment-checkout
   - /2021080/docs/en/ht-prepayment-checkout
+  - /docs/ht-prepayment-checkout
+  - /docs/en/ht-prepayment-checkout
 ---
 
 The next step is to integrate prepayment into `Checkout`. In the `PaymentMethods/Dependency/Injector` from Yves add the `CheckoutDependencyInjector` that will inject the prepayment form and handler into the `Checkout` module:

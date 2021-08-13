@@ -2,6 +2,7 @@
 title: CMS Pages
 description: The CMS Pages section is designed to create, view, update, publish CMS pages, compare its versions, and activate/deactivate in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/cms-pages
+originalArticleId: baff2269-9604-4d91-8e40-a47bee520928
 redirect_from:
   - /v1/docs/cms-pages
   - /v1/docs/en/cms-pages

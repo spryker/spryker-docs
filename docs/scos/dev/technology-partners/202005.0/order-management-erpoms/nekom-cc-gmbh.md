@@ -1,6 +1,7 @@
 ---
 title: NEKOM CC GmbH
 originalLink: https://documentation.spryker.com/v5/docs/nekom
+originalArticleId: 1de5a942-c47d-46e6-b64d-4e56201e0e3d
 redirect_from:
   - /v5/docs/nekom
   - /v5/docs/en/nekom

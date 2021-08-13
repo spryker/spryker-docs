@@ -1,6 +1,7 @@
 ---
 title: Catalog Feature Integration
 originalLink: https://documentation.spryker.com/v3/docs/catalog-api-feature-integration
+originalArticleId: 03b96930-118b-41bb-971e-64858ce4017d
 redirect_from:
   - /v3/docs/catalog-api-feature-integration
   - /v3/docs/en/catalog-api-feature-integration

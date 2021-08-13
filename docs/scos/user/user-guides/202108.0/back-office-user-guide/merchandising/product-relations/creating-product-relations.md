@@ -2,9 +2,12 @@
 title: Creating product relations
 description: Use this procedure to create a product relation and enter all the required values in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-relations
+originalArticleId: 3e17c514-3483-4419-8e1d-d9ae1ecbd97c
 redirect_from:
   - /2021080/docs/creating-product-relations
   - /2021080/docs/en/creating-product-relations
+  - /docs/creating-product-relations
+  - /docs/en/creating-product-relations
 ---
 
 This topic describes how you create a product relation.
@@ -28,7 +31,7 @@ To create a product relation:
 
 5. Switch to the *Products* tab or click **Next**.
 
-6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. To learn more about rules, see [Related product rules](https://documentation.spryker.com/docs/product-relations-feature-overview#related-product-rules).  
+6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. To learn more about rules, see [Related product rules](/docs/scos/dev/features/{{ page.version }}/product-relations/product-relations-feature-overview.html#related-product-rules).  
 
 7. For the rule/group, select the operator:
     * **AND**: the selected products are displayed if all the specified conditions are fulfilled
@@ -50,9 +53,9 @@ Make sure to click **Save** before clicking **List of product relations** or goi
 
 {% endinfo_block %}
 
-For reference information, see [Reference information: Creating, editing, and viewing product relations](https://documentation.spryker.com/docs/managing-product-relations#reference-information-creating-editing-and-viewing-product-relations)
+For reference information, see [Reference information: Creating, editing, and viewing product relations](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-relations/managing-product-relations.html#reference-information-creating-editing-and-viewing-product-relations)
 
 **What's next?**
 
-* To learn more about how to edit, view, or delete a product relation, see [Managing product relations](https://documentation.spryker.com/docs/managing-product-relations).
+* To learn more about how to edit, view, or delete a product relation, see [Managing product relations](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-relations/managing-product-relations.html).
 

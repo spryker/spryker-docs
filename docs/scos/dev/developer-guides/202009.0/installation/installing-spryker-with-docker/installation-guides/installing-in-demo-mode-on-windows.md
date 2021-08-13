@@ -2,16 +2,17 @@
 title: Installing in Demo mode on Windows
 description: Learn how to install Spryker in Demo mode on Windows.
 originalLink: https://documentation.spryker.com/v6/docs/installing-in-demo-mode-on-windows
+originalArticleId: c123b78c-3301-4aec-95bc-bb57e18d039f
 redirect_from:
   - /v6/docs/installing-in-demo-mode-on-windows
   - /v6/docs/en/installing-in-demo-mode-on-windows
 ---
 
-This document describes the procedure of installing Spryker in [Demo Mode](https://documentation.spryker.com/docs/choosing-an-installation-mode#demo-mode) on Windows.
+This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on Windows.
 
 ## Installing Docker prerequisites on Windows
 
-To install Docker prerequisites on Windows, follow [Installing Docker prerequisites on Windows](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-windows).
+To install Docker prerequisites on Windows, follow [Installing Docker prerequisites on Windows](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows.html).
 
 ## Installing Spryker in Demo mode on Windows
 
@@ -20,7 +21,7 @@ Follow the steps to install Spryker in Demo Mode:
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
-4. Depending on the desired [Demo Shop](https://documentation.spryker.com/docs/en/about-spryker#spryker-b2b-b2c-demo-shops):
+4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/202009.0/about-spryker.html#spryker-b2b-b2c-demo-shops):
 
     a. Clone the B2C repository:
 
@@ -127,7 +128,7 @@ To ensure that the installation is successful, make sure you can access the foll
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
-To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference - 1.0](https://documentation.spryker.com/docs/deploy-file-reference-10) to learn about the Deploy file.
+To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference - 1.0](/docs/scos/dev/developer-guides/202009.0/docker-sdk/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
 {% endinfo_block %}
 
@@ -139,10 +140,10 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 ## Next steps
 
-* [Spryker in Docker troubleshooting](https://documentation.spryker.com/docs/spryker-in-docker-troubleshooting)
-* [Configuring debugging in Docker](https://documentation.spryker.com/docs/configuring-debugging-in-docker)
-* [Deploy file reference - 1.0](https://documentation.spryker.com/docs/deploy-file-reference-10) 
-* [Configuring services](https://documentation.spryker.com/docs/configuring-services)
-* [Setting up a self-signed SSL certificate](https://documentation.spryker.com/docs/setting-up-a-self-signed-ssl-certificate) 
-* [Additional DevOPS guidelines](https://documentation.spryker.com/docs/additional-devops-guidelines)
+* [Spryker in Docker troubleshooting](/docs/scos/dev/developer-guides/202009.0/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
+* [Configuring debugging in Docker](/docs/scos/dev/developer-guides/202009.0/docker-sdk/configuring-debugging-in-docker.html)
+* [Deploy file reference - 1.0](/docs/scos/dev/developer-guides/202009.0/docker-sdk/deploy-file-reference-1.0.html) 
+* [Configuring services](/docs/scos/dev/developer-guides/202009.0/docker-sdk/configuring-services.html)
+* [Setting up a self-signed SSL certificate](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html) 
+* [Additional DevOPS guidelines](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)
 

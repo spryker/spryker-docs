@@ -2,6 +2,7 @@
 title: B2B Suite
 description: The Spryker B2B Suite is a showcase that demonstrates ready-to-use B2B-specific Spryker features in a live implementation.
 originalLink: https://documentation.spryker.com/v6/docs/b2b-suite
+originalArticleId: 9c2c2729-46c6-439a-a0a6-aa7cde09ead7
 redirect_from:
   - /v6/docs/b2b-suite
   - /v6/docs/en/b2b-suite
@@ -12,45 +13,45 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <details open>
 <summary>B2B feature list</summary>
 
-[**Company Account Management**](https://documentation.spryker.com/docs/company-account):
+[**Company Account Management**](/docs/scos/dev/features/202009.0/company-account/company-account.html):
 
-* [Company Account Overview](https://documentation.spryker.com/docs/company-account-overview)
-* [Company User Roles and Permissions](https://documentation.spryker.com/docs/company-user-roles-and-permissions-overview)
-* [Business Units Management](https://documentation.spryker.com/docs/business-unit-management)
-* [Agent Assist](https://documentation.spryker.com/docs/agent-assist)
-* [Content Restrictions](https://documentation.spryker.com/docs/hide-content-from-logged-out-users)
+* [Company Account Overview](/docs/scos/dev/features/202009.0/company-account/company-account.html-overview)
+* [Company User Roles and Permissions](https://documentation.spryker.com/v6/docs/company-user-roles-and-permissions-overview)
+* [Business Units Management](https://documentation.spryker.com/v6/docs/business-unit-management)
+* [Agent Assist](/docs/scos/dev/features/202009.0/agent-assist/agent-assist.html)
+* [Content Restrictions](/docs/scos/dev/features/202009.0/customer-access/customer-access.html)
 
-[**Product Infomation Management**](https://documentation.spryker.com/docs/product-information-management):
+[**Product Infomation Management**](/docs/scos/dev/features/202009.0/product-information-management/product-information-management.html):
 
-* [Configurable Bundles](https://documentation.spryker.com/docs/configurable-bundle)
-* [Barcode Generator](https://documentation.spryker.com/docs/barcode-generator)
-* [Product Restrictions for B2B Customers](https://documentation.spryker.com/docs/product-restrictions-from-merchant-to-buyer-201903)
+* [Configurable Bundles](/docs/scos/dev/features/202009.0/configurable-bundle/configurable-bundle.html)
+* [Barcode Generator](/docs/scos/dev/features/202009.0/product-barcode/product-barcode.html)
+* [Product Restrictions for B2B Customers](/docs/scos/dev/features/202009.0/merchant-product-restrictions/merchant-product-restrictions.html)
 
-[**Price**](https://documentation.spryker.com/docs/price):
-[Customer Specific Prices](https://documentation.spryker.com/docs/price-per-merchant-relation)
+[**Price**](/docs/scos/dev/features/202009.0/prices/prices-feature-overview/price.html):
+[Customer Specific Prices](/docs/scos/dev/features/202009.0/prices/prices-feature-overview/price.html-per-merchant-relation)
 
-[**Cart**](https://documentation.spryker.com/docs/cart):
+[**Cart**](/docs/scos/dev/features/202009.0/cart/cart.html):
 
-* [Shared Cart](https://documentation.spryker.com/docs/shared-cart)
-* [Multiple Carts Per User](https://documentation.spryker.com/docs/multiple-cart-per-user)
-* [Quick Order](https://documentation.spryker.com/docs/quick-order-201903)
+* [Shared Cart](/docs/scos/dev/features/202009.0/shared-carts/shared-carts.html)
+* [Multiple Carts Per User](/docs/scos/dev/features/202009.0/multiple-carts/multiple-carts.html)
+* [Quick Order](/docs/scos/dev/quick-add-to-cart/202009.0/quick-add-to-cart.html)
 
-[**Shopping List**](https://documentation.spryker.com/docs/shopping-list):
+[**Shopping List**](/docs/scos/dev/features/202009.0/shopping-list/shopping-list.html):
 
-* [Multiple and Shared Shopping Lists](https://documentation.spryker.com/docs/multiple-shared-shopping-lists)
-* [Shopping List Notes](https://documentation.spryker.com/docs/shopping-list-notes)
+* [Multiple and Shared Shopping Lists](/docs/scos/dev/features/202009.0/shopping-list/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists.html)
+* [Shopping List Notes](/docs/scos/dev/features/202009.0/shopping-list/shopping-list.html-notes)
 
-[**Packaging & Measurement Units**](https://documentation.spryker.com/docs/packaging-measurement-units):
+[**Packaging & Measurement Units**](/docs/scos/dev/features/202009.0/packaging-units/packaging-units.html):
 
-* [Packaging Units](https://documentation.spryker.com/docs/packaging-units-202001)
-* [Measurement Units](https://documentation.spryker.com/docs/measurement-units)
+* [Packaging Units](/docs/scos/dev/features/202009.0/packaging-units/packaging-units.html)
+* [Measurement Units](/docs/scos/dev/features/202009.0/measurement-units/measurement-units.html)
 
-[**Workflow & Process Management**](https://documentation.spryker.com/docs/workflow-process-management):
+[**Workflow & Process Management**](https://documentation.spryker.com/v6/docs/workflow-process-management):
 
-* [Approval Process](https://documentation.spryker.com/docs/approval-process)
-* [Quotation & Offer Management](https://documentation.spryker.com/docs/quotation-process-rfq-201907)
-* [Punch Out](https://documentation.spryker.com/docs/punchout-201907)
-* [Customer Login by Token](https://documentation.spryker.com/docs/customer-login-by-token-201907)
+* [Approval Process](/docs/scos/dev/features/202009.0/approval-process/approval-process.html)
+* [Quotation & Offer Management](/docs/scos/dev/features/202009.0/quotation-process/quotation-process.html)
+* [Punch Out](https://documentation.spryker.com/v6/docs/punchout-201907)
+* [Customer Login by Token](https://documentation.spryker.com/v6/docs/customer-login-by-token-overview)
 <br>
 </details>
 
@@ -63,6 +64,6 @@ To download the B2B Demo Shop, visit the following GitHub repository: [https://g
 
 To install the B2B Demo Shop, follow the instructions of the B2B Demo Shop installation guides:
 
-* [B2B Demo Shop Installation: Mac OS or Linux, with Development Virtual Machine](https://documentation.spryker.com/docs/installation-guide-b2b)
-* [B2B Demo Shop Installation: Windows, with Development Virtual Machine](https://documentation.spryker.com/docs/b2b-demo-shop-installation-windows-with-development-virtual-machine)
-* [B2B Demo Shop Installation: Without Development Virtual Machine](https://documentation.spryker.com/docs/b2b-demo-shop-installation-without-development-virtual-machine)
+* [B2B Demo Shop Installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html)
+* [B2B Demo Shop Installation: Windows, with Development Virtual Machine](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html)
+* [B2B Demo Shop Installation: Without Development Virtual Machine](/docs/scos/dev/developer-guides/202009.0/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html)

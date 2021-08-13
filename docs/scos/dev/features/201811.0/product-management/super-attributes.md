@@ -2,6 +2,7 @@
 title: Super Attributes
 description: Super Attributes in the Spryker Commerce OS are used to distinguish between the different Product Variants of an abstract product.
 originalLink: https://documentation.spryker.com/v1/docs/super-attributes
+originalArticleId: 553c829e-6a3d-4547-b07a-a27add541dee
 redirect_from:
   - /v1/docs/super-attributes
   - /v1/docs/en/super-attributes

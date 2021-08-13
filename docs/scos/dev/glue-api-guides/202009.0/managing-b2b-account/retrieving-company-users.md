@@ -2,6 +2,7 @@
 title: Retrieving company users
 description: Learn how to retrieve company users via Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-company-users
+originalArticleId: e8755bf3-ef7c-4482-a278-f156203694dc
 redirect_from:
   - /v6/docs/retrieving-company-users
   - /v6/docs/en/retrieving-company-users
@@ -10,7 +11,7 @@ redirect_from:
 This endpoint allows retrieving information about company users.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/docs/glue-api-company-account-api-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve company users
 
@@ -361,12 +362,12 @@ To retrieve information about a company user, send the request:
 | 1403| Current company account is not set. |
 | 1404 | Specified company user was not found or the user does not have permissions to view the account. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 
-* [Retrieve companies](https://documentation.spryker.com/docs/retrieving-companies)
-* [Retrieve business units](https://documentation.spryker.com/docs/retrieving-business-units)
-* [Retrieve company company roles](https://documentation.spryker.com/docs/retrieving-company-roles)
-* [Retrieve business unit addresses](https://documentation.spryker.com/docs/retrieving-business-unit-addresses)
-* [Manage company user authentication tokens](https://documentation.spryker.com/docs/managing-company-user-authentication-tokens)
+* [Retrieve companies](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-companies.html)
+* [Retrieve business units](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-business-units.html)
+* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-business-unit-addresses.html)
+* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/managing-company-user-authentication-tokens.html)

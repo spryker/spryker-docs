@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductPageSearch
 originalLink: https://documentation.spryker.com/v5/docs/migration-guide-productpagesearch
+originalArticleId: 6dfff1dc-57b2-4896-99b1-22d78d7b5734
 redirect_from:
   - /v5/docs/migration-guide-productpagesearch
   - /v5/docs/en/migration-guide-productpagesearch
@@ -9,7 +10,7 @@ redirect_from:
 ## Upgrading from Version 3.11.* to Version 3.12.*
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](https://documentation.spryker.com/docs/en/search-migration-concept). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](https://documentation.spryker.com/docs/en/mg-search#upgrading-from-version-8-9---to-version-8-10--). 
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/202005.0/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/migration-and-integration/202005.0/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
 
 {% endinfo_block %}
 To upgrade the module, do the following:

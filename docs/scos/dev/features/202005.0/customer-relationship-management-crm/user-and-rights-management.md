@@ -2,6 +2,7 @@
 title: User and Rights Management
 description: Users can be assigned to different groups while groups can have different roles that have resources assigned to them which identify what rights users have
 originalLink: https://documentation.spryker.com/v5/docs/user-and-rights-management
+originalArticleId: a69cd3a2-7ca5-4881-b611-e44ac9ab3b16
 redirect_from:
   - /v5/docs/user-and-rights-management
   - /v5/docs/en/user-and-rights-management
@@ -30,7 +31,7 @@ Also, you can find bundle names as well as controllers and actions in the file `
 
 ![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png){height="" width=""}
 
-Learn to create and manage Users, Groups and Roles in the [Users Control](https://documentation.spryker.com/docs/en/users-control) Manual.
+Learn to create and manage Users, Groups and Roles in the [Users Control](https://documentation.spryker.com/v5/docs/en/users-control) Manual.
 
 ## ACL Configuration
 Apart from being able to configure user access to Zed resources via Zed UI, you can grant access to additional resources by specifying them in `config_*.php`. The following options are used to do that:

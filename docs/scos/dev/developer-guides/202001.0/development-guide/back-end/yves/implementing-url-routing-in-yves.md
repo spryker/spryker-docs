@@ -2,6 +2,7 @@
 title: Implementing URL Routing in Yves
 description: The URL routing is a mechanism used to map URLs to the code that gets executed when a specific request is being submitted. URL routing makes URLs more human-readable and SEO friendly.
 originalLink: https://documentation.spryker.com/v4/docs/yves-url-routing
+originalArticleId: 0c70b5ea-1fbb-4944-8eae-bbcdde2d3f11
 redirect_from:
   - /v4/docs/yves-url-routing
   - /v4/docs/en/yves-url-routing

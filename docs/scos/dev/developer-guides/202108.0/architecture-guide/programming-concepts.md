@@ -2,9 +2,12 @@
 title: Programming concepts
 description: This article explains the main software and coding concepts used in Spryker.
 originalLink: https://documentation.spryker.com/2021080/docs/programming-concepts
+originalArticleId: e72b4d76-638f-414d-8577-729b26de5909
 redirect_from:
   - /2021080/docs/programming-concepts
   - /2021080/docs/en/programming-concepts
+  - /docs/programming-concepts
+  - /docs/en/programming-concepts
 ---
 
 Having covered the main architectural concepts of the Spryker’s Commerce OS, front-end, modularity, and the application and software layers, we will dive deeper inside these approaches and explain the main software and coding concepts in Spryker. There are 7 main software concepts in Spryker.  
@@ -73,5 +76,5 @@ Directories:
 
 ## Next steps
 
-* To find out how data flows are separated in Spryker Commerce OS, see [Conceptual overview](https://documentation.spryker.com/docs/concept-overview).
-* To learn about application layers and how various functionality is encapsulated in modules, see [Modules and layers](https://documentation.spryker.com/docs/modules-and-layers).
+* To find out how data flows are separated in Spryker Commerce OS, see [Conceptual overview](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/conceptual-overview.html).
+* To learn about application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/modules-and-layers.html).

@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Currency
 originalLink: https://documentation.spryker.com/v2/docs/mg-currency
+originalArticleId: 9c5f3de4-bf8c-4df2-adbb-8dee70ad97db
 redirect_from:
   - /v2/docs/mg-currency
   - /v2/docs/en/mg-currency

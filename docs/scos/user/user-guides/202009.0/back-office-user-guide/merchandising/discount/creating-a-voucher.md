@@ -2,6 +2,7 @@
 title: Creating a voucher
 description: Use the procedure to create discount vouchers your customer can redeem during checkout.
 originalLink: https://documentation.spryker.com/v6/docs/creating-a-voucher
+originalArticleId: 168137d3-659d-426f-99ea-4e685c316d4c
 redirect_from:
   - /v6/docs/creating-a-voucher
   - /v6/docs/en/creating-a-voucher
@@ -20,20 +21,20 @@ Vouchers are codes that customers can redeem during checkout. Voucher codes are 
     2. In **Discount Type** drop-down, select **Voucher codes**.
    3. In the **Name** field, specify the name for the voucher.
     4. _Optional_: Enter the description for the voucher in the **Description** field.
-    5. Specify if the voucher is exclusive. See [Discount: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/discount-reference-information.html) for more details.
+    5. Specify if the voucher is exclusive. See [Discount: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/discount/references/reference-information-discount.html) for more details.
     6. Specify the validity interval (lifetime) of the voucher.
  3. Click **Next** or select the **Discount calculation** tab to proceed.
  4. On the **Create Discount page >Discount calculation** tab, do the following:
-    1.  Select either Calculator percentage, or Calculator fixed in the **Calculator type** drop-down. See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/discount-calculation-reference-information.html) for more details.
+    1.  Select either Calculator percentage, or Calculator fixed in the **Calculator type** drop-down. See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/discount/references/reference-information-discount-calculation.html) for more details.
     {% info_block warningBox "Note" %}
 The next step varies based on the selected calculator type.
 {% endinfo_block %}
     a. **Calculator fixed**: Enter the prices to be discounted
     b.  **Calculator percentage**: Enter the values (percentage) to be discounted
-    2. Select the **Discount application type** and define what products the voucher will be applied to. See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/discount-calculation-reference-information.html) for more details.
+    2. Select the **Discount application type** and define what products the voucher will be applied to. See [Discount Calculation: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/discount/references/reference-information-discount-calculation.html) for more details.
  5. Click **Next**, or select the **Conditions** tab to proceed.
  6. On the **Create Discount page >Conditions** tab, do the following:
-    1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See [Discount Conditions: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/discount-conditions-reference-information.html) for more details.
+    1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See [Discount Conditions: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/discount/references/reference-information-discount-conditions.html) for more details.
     2. Enter the value for **The discount can be applied if the query applies for at least X item(s).** field.
 7. Click **Save** to create the new voucher. 
 ***
@@ -50,7 +51,7 @@ On the **Voucher code** tab, do the following:
 5. Click **Activate** in the top right corner to activate the voucher.
 Even if a voucher is valid and the decision rules are satisfied, a voucher can only be redeemed if it’s currently active.
 {% info_block infoBox %}
-See [Voucher Codes: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/voucher-codes-reference-information.html
+See [Voucher Codes: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/discount/references/reference-information-voucher-codes.html
 {% endinfo_block %} for more details.)
 ***
 **Tips & Tricks**
@@ -58,5 +59,5 @@ Once you generated voucher codes, you can export them as a **.csv** file.
 To do that, click **Export** below **Generate**.
 ***
 **What's next?**
-See [Managing Discounts](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/managing-discounts.html) to know more about the actions you can do once the discount is created. 
+See [Managing Discounts](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created. 
 

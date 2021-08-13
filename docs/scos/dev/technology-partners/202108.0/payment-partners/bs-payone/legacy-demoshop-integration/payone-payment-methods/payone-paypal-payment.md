@@ -2,9 +2,12 @@
 title: PayOne - Paypal Payment
 description: Integrate Paypal payment through Payone into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/2021080/docs/payone-paypal
+originalArticleId: fa4285e0-f408-4b51-807a-1f1fb1a4cdb4
 redirect_from:
   - /2021080/docs/payone-paypal
   - /2021080/docs/en/payone-paypal
+  - /docs/payone-paypal
+  - /docs/en/payone-paypal
 ---
 
 The payment using PayPal requires a redirect to PayPal website. When the customer is redirected to PayPal's website, he must authorize himself and he has the option to either cancel or validate the transaction.

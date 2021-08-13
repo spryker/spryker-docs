@@ -1,6 +1,7 @@
 ---
 title: Hosting Provider - Heroku
 originalLink: https://documentation.spryker.com/v6/docs/hosting-provider-continum-1
+originalArticleId: e94c81b9-9ca5-4e9a-869d-09dcb2d00897
 redirect_from:
   - /v6/docs/hosting-provider-continum-1
   - /v6/docs/en/hosting-provider-continum-1

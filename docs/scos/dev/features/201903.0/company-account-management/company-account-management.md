@@ -1,6 +1,7 @@
 ---
 title: Company Account Management
 originalLink: https://documentation.spryker.com/v2/docs/company-account-management
+originalArticleId: 78d022f3-d45e-4f1b-9c46-8580da7601b0
 redirect_from:
   - /v2/docs/company-account-management
   - /v2/docs/en/company-account-management

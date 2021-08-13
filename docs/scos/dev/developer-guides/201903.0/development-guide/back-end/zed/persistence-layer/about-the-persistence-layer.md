@@ -2,6 +2,7 @@
 title: About the Persistence Layer
 description: Zed’s persistence layer is the owner of the schema, entities and queries. This layer knows the database structure and holds the connection to it.
 originalLink: https://documentation.spryker.com/v2/docs/persistence-layer
+originalArticleId: 8deafd31-23ae-4e5a-b7d1-b9c177911d25
 redirect_from:
   - /v2/docs/persistence-layer
   - /v2/docs/en/persistence-layer

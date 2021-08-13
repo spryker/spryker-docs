@@ -2,6 +2,7 @@
 title: About Facade
 description: The facade acts as an internal API. The main responsibility of the facade is to hide the internal implementation.
 originalLink: https://documentation.spryker.com/v1/docs/facade
+originalArticleId: fd8ce46a-1cb8-43b8-a227-19b8517c3b1f
 redirect_from:
   - /v1/docs/facade
   - /v1/docs/en/facade

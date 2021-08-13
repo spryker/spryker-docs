@@ -1,12 +1,13 @@
 ---
 title: File details- product_quantity.csv
 originalLink: https://documentation.spryker.com/v6/docs/file-details-product-quantitycsv
+originalArticleId: 50080142-12df-4c6c-9f6e-9eb35aa63723
 redirect_from:
   - /v6/docs/file-details-product-quantitycsv
   - /v6/docs/en/file-details-product-quantitycsv
 ---
 
-This article contains content of the *product_quantity.csv* file to configure [Product Quantity](https://documentation.spryker.com/docs/product-quantity-restrictions) Store information on your Spryker Demo Shop.
+This article contains content of the *product_quantity.csv* file to configure [Product Quantity](https://documentation.spryker.com/v6/docs/product-quantity-restrictions) Store information on your Spryker Demo Shop.
 
 ## Headers & mandatory fields 
 These are the header fields to be included in the .csv file:
@@ -22,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*     [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
+*     [product_concrete.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Template file & content example
 A template and an example of the *product_quantity.csv*  file can be downloaded here:

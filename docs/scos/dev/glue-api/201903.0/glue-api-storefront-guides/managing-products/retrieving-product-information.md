@@ -1,6 +1,7 @@
 ---
 title: Retrieving Product Information
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-product-information
+originalArticleId: 524aee31-372d-4739-a028-2ecc32f0f106
 redirect_from:
   - /v2/docs/retrieving-product-information
   - /v2/docs/en/retrieving-product-information

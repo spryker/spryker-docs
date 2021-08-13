@@ -2,6 +2,7 @@
 title: Heidelpay - iDeal
 description: Integrate iDeal payment through Heidelpay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v6/docs/heidelpay-ideal
+originalArticleId: 713baf0e-c6c3-4980-a185-4d8645e79e26
 redirect_from:
   - /v6/docs/heidelpay-ideal
   - /v6/docs/en/heidelpay-ideal
@@ -9,7 +10,7 @@ redirect_from:
 
 ### Setup
 
-The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
+The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partners/202009.0/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partners/202009.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html).
 
 #### Configuration
 
@@ -40,6 +41,6 @@ No extra actions needed, quote being filled with payment method selection as def
 
  The most important data here - is the payment reference ID which can be used for further transactions like capture/cancel/etc. 
 
-In the response Heidelpay expects an URL string which defines where customer has to be redirected. In case if customer successfully confirmed payment, it should be a link to the checkout order success step, in case of the failure - checkout payment failed action with the error code (see `HeidelpayController::paymentFailedAction()` and [Heidelpay - Workflow for Errors](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and the payment process is finished. 
+In the response Heidelpay expects an URL string which defines where customer has to be redirected. In case if customer successfully confirmed payment, it should be a link to the checkout order success step, in case of the failure - checkout payment failed action with the error code (see `HeidelpayController::paymentFailedAction()` and [Heidelpay - Workflow for Errors](/docs/scos/dev/technology-partners/202009.0/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and the payment process is finished. 
 
 <u>Capture the money</u> - later on, when the item is shipped to the customer, it is time to call "capture" command of the state machine to capture the money from the customer's account. This is done in CapturePlugin of the OMS command. In the provided basic order state machine for iDeal authorize method, command will be executed automatically, when order is manually moved into the "shipped" state. Now order can be considered as "paid".

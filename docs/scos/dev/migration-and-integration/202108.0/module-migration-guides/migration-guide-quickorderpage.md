@@ -1,9 +1,12 @@
 ---
 title: Migration Guide - QuickOrderPage
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quick-order-page
+originalArticleId: 5fe55c2a-84de-48bc-8eef-ff87bff2f3cb
 redirect_from:
   - /2021080/docs/mg-quick-order-page
   - /2021080/docs/en/mg-quick-order-page
+  - /docs/mg-quick-order-page
+  - /docs/en/mg-quick-order-page
 ---
 
 ## Upgrading from Version 2.* to Version 4.0.0
@@ -19,7 +22,7 @@ First of all, there is a brand new possibility to search for concrete products b
 **To perform the migration, follow the steps:**
 1. This feature requires `ProductPageSearch` 3.x.x.
     * Update `spryker/product-page-search ^3.0.0`
-    * Follow the steps from  [Migration guide - ProductPageSearch](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productpagesearch.html).
+    * Follow the steps from  [Migration guide - ProductPageSearch](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-productpagesearch.html).
 2. Generate transfers:
 
 ```yaml

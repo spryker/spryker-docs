@@ -2,9 +2,12 @@
 title: Payolution - Installation and Configuration
 description: This article contains information on configuring the Payolution module for the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/payolution-configuration
+originalArticleId: 85e8b401-18c3-4cb3-8616-cd73c9c7817e
 redirect_from:
   - /2021080/docs/payolution-configuration
   - /2021080/docs/en/payolution-configuration
+  - /docs/payolution-configuration
+  - /docs/en/payolution-configuration
 ---
 
 To integrate Payolution into your project, first you need to install and configure the Payolution module. This topic describes how to do that.

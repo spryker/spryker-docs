@@ -2,6 +2,7 @@
 title: Shop Guide - Checkout
 description: The section can be used to buy products added to the cart by setting a delivery address, shipment details, a payment method and placing an order.
 originalLink: https://documentation.spryker.com/v5/docs/checkout-shop-guide-201911
+originalArticleId: ead39673-f6ad-423f-9783-8783e83fda75
 redirect_from:
   - /v5/docs/checkout-shop-guide-201911
   - /v5/docs/en/checkout-shop-guide-201911
@@ -10,15 +11,15 @@ redirect_from:
 Checkout allows purchasing the items added to the cart.
 
 {% info_block infoBox %}
-If you have several shopping carts in your account, choose the right one and proceed with the checkout. See [Shop Guide - Shopping Carts](https://documentation.spryker.com/docs/en/shop-guide-shopping-carts
+If you have several shopping carts in your account, choose the right one and proceed with the checkout. See [Shop Guide - Shopping Carts](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-carts/shopping-carts.html
 {% endinfo_block %} for more information.)
 
 A typical checkout process includes the following steps:
 
-* [Address](https://documentation.spryker.com/docs/en/address-step-shop-guide-201911): Define one or several delivery addresses and add a billing address.
-* [Shipment](https://documentation.spryker.com/docs/en/shipment-step-shop-guide-201911): Select a shipment method and/or a delivery date.
-* [Payment](https://documentation.spryker.com/docs/en/payment-step-shop-guide-201911): Select the payment method.
-* [Summary](https://documentation.spryker.com/docs/en/summary-step-shop-guide-201911): View the details, update the information, if needed, and place the order.
+* [Address](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html): Define one or several delivery addresses and add a billing address.
+* [Shipment](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-shipment-step.html): Select a shipment method and/or a delivery date.
+* [Payment](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-payment-step.html): Select the payment method.
+* [Summary](https://documentation.spryker.com/v5/docs/en/summary-step-shop-guide-201911): View the details, update the information, if needed, and place the order.
 
 {% info_block infoBox "Note" %}
 
@@ -38,4 +39,4 @@ If you are not logged in to shop when completing the checkout, the first page yo
 
 After you added items to cart, it is time to proceed to the *Address* step and enter the delivery information.
 
-To learn more on how to set a delivery address, see [Shop Guide - Address step](https://documentation.spryker.com/docs/en/address-step-shop-guide-201911).
+To learn more on how to set a delivery address, see [Shop Guide - Address step](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html).

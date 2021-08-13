@@ -1,6 +1,7 @@
 ---
 title: Precise search by super attributes
 originalLink: https://documentation.spryker.com/v6/docs/precise-search-by-super-attributes
+originalArticleId: c24afa01-8239-4ef3-8aa2-01121f08d6c9
 redirect_from:
   - /v6/docs/precise-search-by-super-attributes
   - /v6/docs/en/precise-search-by-super-attributes

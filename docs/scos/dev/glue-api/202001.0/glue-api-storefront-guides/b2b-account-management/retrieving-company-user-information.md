@@ -2,6 +2,7 @@
 title: Retrieving Company User Information
 description: The article provides information on how to retrieve information on company user accounts via endpoints provided by Spryker Glue API.
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-company-user-information-201907
+originalArticleId: 07a577fd-ca58-40a9-8c7f-12026122a790
 redirect_from:
   - /v4/docs/retrieving-company-user-information-201907
   - /v4/docs/en/retrieving-company-user-information-201907
@@ -18,12 +19,12 @@ The endpoints provided by this API cannot be accessed anonymously. To access the
 In your development, the API can help you to provide information on *Company User Accounts* within the company that the authenticated user belongs to.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/v4/docs/company-account-api-feature-integration-201907#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
 
 ## Retrieving All Company Users
 To retrieve a list of all the Company Users that belong to the company of the logged in user, send a GET request to the following endpoint:
 
-[/company-users](https://documentation.spryker.com/v4/docs/rest-api-reference#/company-users)
+[/company-users](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#/company-users)
 
 Sample request: *GET http://glue.mysprykershop.com/company-users*
 
@@ -106,7 +107,7 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
 ## Retrieving Available Company Users
 To retrieve a list of the Company Users that the currently logged in user can impersonate as, send a GET request to the following endpoint:
 
-[/company-users/mine](https://documentation.spryker.com/v4/docs/rest-api-reference#company-users)
+[/company-users/mine](/docs/scos/dev/glue-api/202001.0/rest-api-reference.html#company-users)
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
 

@@ -2,13 +2,14 @@
 title: Shop Guide - Approval Process
 description: Use the procedures to create the approve/buyer with limit roles, set up permissions to the approver and buyer role in the storefront and be able to submit/approve/deny approval requests.
 originalLink: https://documentation.spryker.com/v4/docs/approval-process-shop-guide
+originalArticleId: 46f9d964-e8cb-48e7-a47f-2f2b54ba6bbb
 redirect_from:
   - /v4/docs/approval-process-shop-guide
   - /v4/docs/en/approval-process-shop-guide
 ---
 
 
-On this page you can find the instructions on managing the [Approval Process](https://documentation.spryker.com/v4/docs/approval-process-feature-overview-202001).
+On this page you can find the instructions on managing the [Approval Process](/docs/scos/dev/features/202001.0/workflow-and-process-management/approval-process/approval-process-feature-overview.html).
 {% info_block infoBox "Note" %}
 
 To configure the permissions, you should have admin access to the company account.
@@ -78,7 +79,7 @@ An Approver can check all the Approval requests either on the **Shopping Carts**
 
 To approve or decline a cart, follow the steps below:
 
-1. Click the cart you would like to review to open the [Shopping Cart page](https://documentation.spryker.com/v4/docs/shop-guide-shopping-carts-reference-information#shopping-cart).
+1. Click the cart you would like to review to open the [Shopping Cart page](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-shopping-carts/shopping-carts-reference-information.html#shopping-cart).
 2. Click **Checkout** to proceed to the Checkout Summary page where the widget is located.
 3. In the **Approval Request Widget** click **Approve** or **Decline**.
 ![Approve / Deny Widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approve-deny-widget.png){height="" width=""}

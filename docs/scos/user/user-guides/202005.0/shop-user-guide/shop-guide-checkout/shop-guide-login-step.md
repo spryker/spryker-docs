@@ -1,6 +1,7 @@
 ---
 title: Shop Guide - Login Step
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-login-step
+originalArticleId: e367704a-ab8e-4819-8344-65bed5e19131
 redirect_from:
   - /v5/docs/shop-guide-login-step
   - /v5/docs/en/shop-guide-login-step
@@ -8,7 +9,7 @@ redirect_from:
 
 {% info_block warningBox "Note" %}
 
-This step appears only in case if you are not logged in to shop. Otherwise, you turn out at the [Address step](https://documentation.spryker.com/docs/en/address-step-shop-guide-201911) at once.
+This step appears only in case if you are not logged in to shop. Otherwise, you turn out at the [Address step](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html) at once.
 
 {% endinfo_block %}
 

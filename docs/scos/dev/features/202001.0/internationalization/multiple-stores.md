@@ -2,6 +2,7 @@
 title: Multiple Stores
 description: Build one Store that services multiple countries and languages or setup a different store for each region. Setup the stores together with their settings.
 originalLink: https://documentation.spryker.com/v4/docs/multiple-stores
+originalArticleId: 120d4972-146c-408d-8cb0-c7bac6960e00
 redirect_from:
   - /v4/docs/multiple-stores
   - /v4/docs/en/multiple-stores

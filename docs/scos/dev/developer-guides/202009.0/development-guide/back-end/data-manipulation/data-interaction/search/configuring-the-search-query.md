@@ -2,6 +2,7 @@
 title: Configuring the search query
 description: This  article explains how to configure search query.
 originalLink: https://documentation.spryker.com/v6/docs/configuring-search-query
+originalArticleId: c0b736b5-67db-490e-b93b-3962f3950c9b
 redirect_from:
   - /v6/docs/configuring-search-query
   - /v6/docs/en/configuring-search-query
@@ -24,7 +25,7 @@ This is the point where configuring the query is completely up to you. Use Elast
 {% info_block infoBox %}
 The `QueryInterface` instance is a stateful class; sometimes `getSearchQuery(
 {% endinfo_block %}` method is called multiple times and alters the original query (see [Expandig queries](#expanding)), so you need to make sure that it returns the same instance. This can be achieved by creating the `\Elastica\Query` instance at construction time and returning it in the `getSearchQuery()` method.)
-Besides, this new `QueryInterface ` isntance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed to be able to set and maintain a search context which would later be used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search Migration Concept](https://documentation.spryker.com/docs/search-migration-concept).
+Besides, this new `QueryInterface ` isntance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed to be able to set and maintain a search context which would later be used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search Migration Concept](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/search-migration-concept/search-migration-concept.html).
 
 <details open>
 <summary>Query</summary>
@@ -207,7 +208,7 @@ To display only records which are active within a given date range, use `\Spryke
 #### Faceted navigation and filters
 The Faceted Navigation and Filtering feature allows to re-filter search results by the specific criteria. The filters are commonly displayed on the left side of the catalog page.
 
-The responsibility of `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is to add the necessary aggregations to your query based on a predefined configuration (see: [Configure Search Features](/docs/scos/dev/features/202001.0/search-and-filter/search-widget-for-concrete-products/configure-search-features.html) ). You can use this plugin to get the necessary data for faceted navigation of your search results. If you use this plugin, also make sure to add `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\FacetResultFormatterPlugin` to your result formatter collection, which processes the returned raw aggregation data.
+The responsibility of `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is to add the necessary aggregations to your query based on a predefined configuration (see: [Configure Search Features](/docs/scos/dev/features/202009.0/search-and-filter/search-widget-for-concrete-products/configure-search-features.html) ). You can use this plugin to get the necessary data for faceted navigation of your search results. If you use this plugin, also make sure to add `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\FacetResultFormatterPlugin` to your result formatter collection, which processes the returned raw aggregation data.
 
 To optimize facet aggregations, Search module combines all fields in groups of simple faceted aggregations (e.g. string-facet). But in some cases you need more control on facet generation.
 

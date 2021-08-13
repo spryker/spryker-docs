@@ -2,9 +2,12 @@
 title: Merchant Custom Prices feature overview
 description: This feature relates to prices set for individual merchant relations. Customers see only prices applying to them, based on their merchant relation.
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-custom-prices-feature-overview
+originalArticleId: 903b5851-5d21-4823-9ca4-695a55355b02
 redirect_from:
   - /2021080/docs/merchant-custom-prices-feature-overview
   - /2021080/docs/en/merchant-custom-prices-feature-overview
+  - /docs/merchant-custom-prices-feature-overview
+  - /docs/en/merchant-custom-prices-feature-overview
 ---
 
 In B2B commerce transactions, prices are typically negotiated in contracts. Therefore merchants and their clients, which are usually company business units, expect to see their own prices in the shop. With the Merchant Custom Prices feature, the shop owners of B2B and B2C marketplaces can provide different prices for merchants and their clients. This way the relationship between merchants and buyers is reflected more accurately, and the shop owners can set different prices for various customers.

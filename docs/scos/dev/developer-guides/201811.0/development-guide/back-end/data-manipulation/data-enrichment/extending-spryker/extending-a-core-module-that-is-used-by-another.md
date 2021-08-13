@@ -2,6 +2,7 @@
 title: Extending a Core Module That is Used by Another
 description: This topic describes how to extend a core module that is used by another core module.
 originalLink: https://documentation.spryker.com/v1/docs/ht-extend-inuse-core
+originalArticleId: d03f83bb-e402-4f0e-9570-7906d5918f10
 redirect_from:
   - /v1/docs/ht-extend-inuse-core
   - /v1/docs/en/ht-extend-inuse-core

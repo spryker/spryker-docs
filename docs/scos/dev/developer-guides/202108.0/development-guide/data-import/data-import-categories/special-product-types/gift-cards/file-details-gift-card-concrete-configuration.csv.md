@@ -1,12 +1,15 @@
 ---
 title: File details- gift_card_concrete_configuration.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-gift-card-concrete-configurationcsv
+originalArticleId: 6346beb6-6aec-440e-a458-dbf86e05e33d
 redirect_from:
   - /2021080/docs/file-details-gift-card-concrete-configurationcsv
   - /2021080/docs/en/file-details-gift-card-concrete-configurationcsv
+  - /docs/file-details-gift-card-concrete-configurationcsv
+  - /docs/en/file-details-gift-card-concrete-configurationcsv
 ---
 
-This article contains content of the **gift_card_concrete_configuration.csv** file to configure [Gift Card](https://documentation.spryker.com/docs/gift-card) Concrete Configuration information on your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. In this file, you can configure the amount of money that will be loaded in the Gift Card.
+This article contains content of the **gift_card_concrete_configuration.csv** file to configure [Gift Card](https://documentation.spryker.com/2021080/docs/gift-card) Concrete Configuration information on your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. In this file, you can configure the amount of money that will be loaded in the Gift Card.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -20,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*     [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
+*     [product_concrete.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *gift_card_concrete_configuration.csv*  file can be downloaded here:

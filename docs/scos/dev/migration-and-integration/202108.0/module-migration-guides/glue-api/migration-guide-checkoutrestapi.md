@@ -1,9 +1,12 @@
 ---
 title: Migration Guide - CheckoutRestApi
 originalLink: https://documentation.spryker.com/2021080/docs/mg-checkoutrestapi
+originalArticleId: 0a30ad48-d4c1-4d82-8958-980065e9358b
 redirect_from:
   - /2021080/docs/mg-checkoutrestapi
   - /2021080/docs/en/mg-checkoutrestapi
+  - /docs/mg-checkoutrestapi
+  - /docs/en/mg-checkoutrestapi
 ---
 
 ## Upgrading from Version 2.* to Version 3.0.0
@@ -37,7 +40,7 @@ console transfer:generate
 In this new version of the **CheckoutRestApi** module, we have added support of split delivery. You can find more details about the changes on the [CheckoutRestApi module](https://github.com/spryker/checkout-rest-api/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/split-delivery-migration-concept.html
+This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/split-delivery-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

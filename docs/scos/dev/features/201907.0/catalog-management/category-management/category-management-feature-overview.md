@@ -2,6 +2,7 @@
 title: Category Management Feature Overview
 description: The feature allows keeping your product catalog organized and comprehensible for the customers who can easily navigate the storefront and search products quicker
 originalLink: https://documentation.spryker.com/v3/docs/category-management-feature-overview
+originalArticleId: d806fe41-f285-4ef3-affa-572839cae66b
 redirect_from:
   - /v3/docs/category-management-feature-overview
   - /v3/docs/en/category-management-feature-overview
@@ -37,7 +38,7 @@ Parent category "Cameras & camholders" has "Digital Cameras", "Camcorders", "Act
 
 ![child-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/child-category.png){height="" width=""}
 
-You can assign new child categories to a parent one in the **Back Office > Category** section using the **Add category to this node** action. For more details, see [Creating Categories](/docs/scos/user/user-guides/202001.0/back-office-user-guide/category/creating-categories.html).
+You can assign new child categories to a parent one in the **Back Office > Category** section using the **Add category to this node** action. For more details, see [Creating Categories](/docs/scos/user/user-guides/201907.0/back-office-user-guide/category/creating-categories.html).
 
 ![add-new-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/add-new-category.png){height="" width=""}
 

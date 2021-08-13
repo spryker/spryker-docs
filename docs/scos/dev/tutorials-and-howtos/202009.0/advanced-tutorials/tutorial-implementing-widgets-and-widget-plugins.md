@@ -2,12 +2,13 @@
 title: Tutorial - Implementing Widgets and Widget Plugins
 description: Depending on your version of spryker/kernel module, learn how to implement widgets or widget plugins.
 originalLink: https://documentation.spryker.com/v6/docs/t-widgets-widget-plugins
+originalArticleId: 0df2f018-3eee-44be-afcb-4abe6c13e595
 redirect_from:
   - /v6/docs/t-widgets-widget-plugins
   - /v6/docs/en/t-widgets-widget-plugins
 ---
 
-This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](https://documentation.spryker.com/docs/modular-frontend). 
+This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/yves/modular-frontend.html). 
 
 ## How to Implement a Widget?
 Each widget implementation is supposed to be designed as components: considering reusability and being able to render them on different Pages.
@@ -198,7 +199,7 @@ This section is valid only for projects which are running module `spryker/kernel
 
 ### Step 1 - Place Widget extensions
 
-In the module you are planning to extend, find the extension point in the twig templates and place the necessary twig widget function(s). See the [How to implement a Widget](https://documentation.spryker.com/docs/t-widgets-widget-plugins#how-to-implement-a-widget-) section.
+In the module you are planning to extend, find the extension point in the twig templates and place the necessary twig widget function(s). See the [How to implement a Widget](/docs/scos/dev/tutorials-and-howtos/202009.0/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-) section.
 
 @MyPage/views/foo/foo-bar.twig
 
@@ -334,9 +335,9 @@ In the widget template, the parameters are accessible through the `_widget` twig
 
 There are three ways of activating a widget, depending on their scope where they need to be rendered:
 
-* [Activate a widget in a Controller action](https://documentation.spryker.com/docs/t-widgets-widget-plugins#activate-a-widget-in-a-controller-action)
-* [Activate a widget in another widget](https://documentation.spryker.com/docs/t-widgets-widget-plugins#activate-a-widget-in-another-widget)
-* [Activate a widget to be available globally](https://documentation.spryker.com/docs/t-widgets-widget-plugins#activate-a-widget-to-be-available-globally)
+* [Activate a widget in a Controller action](/docs/scos/dev/tutorials-and-howtos/202009.0/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-in-a-controller-action)
+* [Activate a widget in another widget](/docs/scos/dev/tutorials-and-howtos/202009.0/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-in-another-widget)
+* [Activate a widget to be available globally](/docs/scos/dev/tutorials-and-howtos/202009.0/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-to-be-available-globally)
 
 ### Activate a Widget in a Controller Action
 

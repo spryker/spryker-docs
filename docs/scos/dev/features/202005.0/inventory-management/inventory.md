@@ -2,6 +2,7 @@
 title: Inventory
 description: Inventory is the number of products you offer to your customers. These products are cataloged and divided into items that are in stock and reserved.
 originalLink: https://documentation.spryker.com/v5/docs/about-inventory
+originalArticleId: 9232fa66-a8da-4f11-a0f7-ca49f5aacad0
 redirect_from:
   - /v5/docs/about-inventory
   - /v5/docs/en/about-inventory

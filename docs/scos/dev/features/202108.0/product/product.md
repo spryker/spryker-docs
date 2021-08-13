@@ -2,9 +2,12 @@
 title: Product
 description: Summary of the Product feature.
 originalLink: https://documentation.spryker.com/2021080/docs/product
+originalArticleId: ba0872c8-c630-4ae6-a00e-c16cf0599502
 redirect_from:
   - /2021080/docs/product
   - /2021080/docs/en/product
+  - /docs/product
+  - /docs/en/product
 ---
 
 Product is a central entity of a shop. The *Product* feature allows shop administrators to create a rich product catalog. Product configuration is highly customizable, so they can create different types of products. 

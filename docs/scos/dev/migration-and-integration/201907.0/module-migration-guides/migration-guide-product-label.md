@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product Label
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-label
+originalArticleId: cd89b0fd-5de4-41cc-a509-dc3ac6ed8639
 redirect_from:
   - /v3/docs/mg-product-label
   - /v3/docs/en/mg-product-label

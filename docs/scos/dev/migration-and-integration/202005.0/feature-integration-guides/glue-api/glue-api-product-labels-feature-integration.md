@@ -2,6 +2,7 @@
 title: Glue API- Product Labels Feature Integration
 description: This guide will navigate you through the process of installing and configuring the Product Labels API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-product-labels-feature-integration
+originalArticleId: e5f5a129-dcdd-410d-8556-2374da1d8176
 redirect_from:
   - /v5/docs/glue-api-product-labels-feature-integration
   - /v5/docs/en/glue-api-product-labels-feature-integration
@@ -14,8 +15,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required Sub-Feature |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application Feature Integration](https://documentation.spryker.com/docs/en/glue-api-glue-application-feature-integration) |
-| Product Management | master | [Products API Feature Integration](https://documentation.spryker.com/docs/en/glue-api-products-feature-integration) |
+| Spryker Core | master | [Glue Application Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html) |
+| Product Management | master | [Products API Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) |
 | Product Label | master | |
 
 

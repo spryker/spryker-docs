@@ -2,6 +2,7 @@
 title: Creating, Using and Extending the Transfer Objects
 description: The article provides information on creation and usage of the Transfer objects.
 originalLink: https://documentation.spryker.com/v4/docs/ht-use-transfer-objects
+originalArticleId: 4e656278-c662-40a8-b012-10a25310f466
 redirect_from:
   - /v4/docs/ht-use-transfer-objects
   - /v4/docs/en/ht-use-transfer-objects
@@ -251,6 +252,6 @@ You might use the following definitions to generate related code:
 
 * Add Shared Transfer Schema
 
-See the [Spryk](https://documentation.spryker.com/v4/docs/spryk-201903) documentation for details.
+See the [Spryk](/docs/scos/dev/features/202001.0/sdk/spryk-code-generator.html) documentation for details.
  
 <!-- Last review date: Apr 10, 2019 by Oleksandr Myrnyi, Andrii Tserkovnyi, Dmitry Beirak-->

@@ -1,6 +1,7 @@
 ---
 title: B2C API React Example
 originalLink: https://documentation.spryker.com/v3/docs/b2c-api-react-example
+originalArticleId: 5f17765d-664e-4177-887d-c985891e072b
 redirect_from:
   - /v3/docs/b2c-api-react-example
   - /v3/docs/en/b2c-api-react-example
@@ -25,7 +26,7 @@ The Demo shop has been built using and demonstrates the use of the endpoints and
 
 | API | Reference Documents |
 | --- | --- |
-| Search API | [Catalog Search](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/catalog-search.html)<br>[Getting Suggestions for Auto-Completion and Search](https://documentation.spryker.com/v3/docs/retrieving-suggestions-for-auto-completion-and-search) |
+| Search API | [Catalog Search](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/catalog-search.html)<br>[Getting Suggestions for Auto-Completion and Search](https://documentation.spryker.com/v3/docs/retrieving-autocomplete-and-search-suggestions) |
 | Category API | [Browsing a Category Tree](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/browsing-a-category-tree.html) |
 | Product API | [Retrieving Product Information](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html) |
 | Product Availability API | [Retrieving Product Information](/docs/scos/dev/glue-api/201907.0/glue-api-storefront-guides/managing-products/retrieving-product-information.html) |

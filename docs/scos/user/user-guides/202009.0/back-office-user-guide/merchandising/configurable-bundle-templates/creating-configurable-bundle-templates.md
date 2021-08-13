@@ -2,6 +2,7 @@
 title: Creating configurable bundle templates
 description: On this page, you will find instructions on creating Configurable Bundle Templates in the Spryker Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/creating-configurable-bundle-templates
+originalArticleId: 67a6fdba-61a5-40a8-901b-4e2c24c335f7
 redirect_from:
   - /v6/docs/creating-configurable-bundle-templates
   - /v6/docs/en/creating-configurable-bundle-templates
@@ -20,7 +21,7 @@ To create a configurable bundle:
 ***
 **What's next?**
 
-* Now that you have created a template, add Slots to it. See [Creating a Slot for a Configurable Bundle Template](https://documentation.spryker.com/docs/managing-configurable-bundle-templates#creating-a-slot-for-a-configurable-bundle-template) for details on how to do that.
-* To edit, (de)activate or delete the Configurable Bundle Tem[late, see Managing Configurable Bundle Templates](https://documentation.spryker.com/docs/managing-configurable-bundle-templates).
-* To learn about the attributes you select and enter while creating a product list, see [Configurable Bundle Templates: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html).
+* Now that you have created a template, add Slots to it. See [Creating a Slot for a Configurable Bundle Template](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-a-slot-for-a-configurable-bundle-template) for details on how to do that.
+* To edit, (de)activate or delete the Configurable Bundle Tem[late, see Managing Configurable Bundle Templates](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html).
+* To learn about the attributes you select and enter while creating a product list, see [Configurable Bundle Templates: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/configurable-bundle-templates/references/reference-information-configurable-bundle-templates.html).
 

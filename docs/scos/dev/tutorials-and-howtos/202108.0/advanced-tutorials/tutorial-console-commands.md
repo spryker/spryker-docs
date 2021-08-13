@@ -2,9 +2,12 @@
 title: Tutorial - Console Commands
 description: Use the guide to create and use a new console command.
 originalLink: https://documentation.spryker.com/2021080/docs/t-console-commands
+originalArticleId: f3f329c8-9712-46f1-bed0-a29360c451f6
 redirect_from:
   - /2021080/docs/t-console-commands
   - /2021080/docs/en/t-console-commands
+  - /docs/t-console-commands
+  - /docs/en/t-console-commands
 ---
 
 A console command is a PHP class that contains the implementation of a functionality that can get executed from the command line.

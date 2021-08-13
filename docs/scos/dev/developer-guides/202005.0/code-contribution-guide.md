@@ -1,6 +1,7 @@
 ---
 title: Code Contribution Guide
 originalLink: https://documentation.spryker.com/v5/docs/code-contribution-guide
+originalArticleId: 054a3d36-b67c-4fae-b9dc-c786497e1b9a
 redirect_from:
   - /v5/docs/code-contribution-guide
   - /v5/docs/en/code-contribution-guide
@@ -33,5 +34,5 @@ If you create a PR and feel that the issue is important, [contact our support](h
 
 --- 
 **See also:**
-* [Contributing to the Documentation](https://documentation.spryker.com/docs/en/about-documentation#contributing-to-the-documentation)
+* [Contributing to the Documentation](/docs/scos/user/about-spryker/202005.0/about-spryker-documentation.html#contributing-to-the-documentation)
 

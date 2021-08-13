@@ -2,6 +2,7 @@
 title: Customer Management
 description: Customer Account is the area of the Back Office where you can view and edit customer accounts, see details and check order history.
 originalLink: https://documentation.spryker.com/v2/docs/customer-management
+originalArticleId: c072a2c4-3cec-497f-b7ab-90edb0ca8a5f
 redirect_from:
   - /v2/docs/customer-management
   - /v2/docs/en/customer-management

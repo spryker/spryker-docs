@@ -2,6 +2,7 @@
 title: Creating a Product Label
 description: Use these procedures to create and/or activate/deactivate product labels in the Back Office.
 originalLink: https://documentation.spryker.com/v3/docs/creating-a-product-label
+originalArticleId: 54b72ab7-3653-4f81-9c02-99f5a5a037c5
 redirect_from:
   - /v3/docs/creating-a-product-label
   - /v3/docs/en/creating-a-product-label
@@ -44,6 +45,6 @@ The same applies if you want to deactivate the label. Clear the checkbox on the 
 ***
 **What's next?**
 
-* To learn how the product labels are managed, see [Managing Product Labels](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-labels/managing-product-labels.html). 
-* To learn how you can prioritize the labels, see [Prioritizing Labels](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-labels/prioritizing-labels.html).
-* To learn more about the attributes you select and enter while creating or managing the labels or see some examples of product labels, see the [References](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/product-labels/references/product-labels-reference-information.html) section.
+* To learn how the product labels are managed, see [Managing Product Labels](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-labels/managing-product-labels.html). 
+* To learn how you can prioritize the labels, see [Prioritizing Labels](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-labels/prioritizing-labels.html).
+* To learn more about the attributes you select and enter while creating or managing the labels or see some examples of product labels, see the [References](/docs/scos/user/user-guides/201907.0/back-office-user-guide/products/product-labels/references/product-labels-reference-information.html) section.

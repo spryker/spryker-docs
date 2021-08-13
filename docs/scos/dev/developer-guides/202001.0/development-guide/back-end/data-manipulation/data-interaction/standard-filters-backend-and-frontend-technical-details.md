@@ -2,6 +2,7 @@
 title: Standard Filters Backend and Frontend Technical Details
 description: In this article, you will get information on technical details for the frontend and backend development for the standard filters.
 originalLink: https://documentation.spryker.com/v4/docs/standard-filters-backend-and-frontend-technical-details
+originalArticleId: 39256711-da50-4055-b541-532bde4557de
 redirect_from:
   - /v4/docs/standard-filters-backend-and-frontend-technical-details
   - /v4/docs/en/standard-filters-backend-and-frontend-technical-details

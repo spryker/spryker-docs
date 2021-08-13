@@ -2,6 +2,7 @@
 title: Category Image Feature Integration
 description: The guide describes the process of installing the Category Image feature in your project.
 originalLink: https://documentation.spryker.com/v2/docs/category-image-feature-integration
+originalArticleId: efa544b7-c478-4820-b4f9-490ae96da1e1
 redirect_from:
   - /v2/docs/category-image-feature-integration
   - /v2/docs/en/category-image-feature-integration

@@ -2,12 +2,13 @@
 title: Implementing synchronization plugins
 description: Learn how to implement synchronization plugins.
 originalLink: https://documentation.spryker.com/v6/docs/implementing-synchronization-plugins
+originalArticleId: 4695e900-11b2-41c5-8d11-6c06327afeb5
 redirect_from:
   - /v6/docs/implementing-synchronization-plugins
   - /v6/docs/en/implementing-synchronization-plugins
 ---
 
-Sometimes it’s needed to manually [synchronize or re-syncrhonize](https://documentation.spryker.com/docs/publish-and-synchronize-repeated-export#published-data-regeneration) the published model data with Redis or ElasticSearch. To do that, you need to implement a synchronization plugin.
+Sometimes it’s needed to manually [synchronize or re-syncrhonize](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-regeneration) the published model data with Redis or ElasticSearch. To do that, you need to implement a synchronization plugin.
 
 Follow the steps below to implement and register a synchronization plugin.
 

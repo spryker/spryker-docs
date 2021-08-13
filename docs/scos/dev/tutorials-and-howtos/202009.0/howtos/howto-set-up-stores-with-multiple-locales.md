@@ -2,6 +2,7 @@
 title: HowTo - Set up Stores with Multiple Locales
 description: Use the guide to configure different locales for your store.
 originalLink: https://documentation.spryker.com/v6/docs/ht-setup-stores-with-multiple-locales
+originalArticleId: 844f609c-3c9c-4eb9-bbfe-0919c74bc4f4
 redirect_from:
   - /v6/docs/ht-setup-stores-with-multiple-locales
   - /v6/docs/en/ht-setup-stores-with-multiple-locales

@@ -2,6 +2,7 @@
 title: Migration Guide - ProductManagement
 description: Use the guide to learn how to update the ProductManagement module to a newer version.
 originalLink: https://documentation.spryker.com/v6/docs/mg-product-management
+originalArticleId: 385eb352-84a6-45a4-a756-4f59a30aea33
 redirect_from:
   - /v6/docs/mg-product-management
   - /v6/docs/en/mg-product-management
@@ -12,7 +13,7 @@ redirect_from:
 In this new version of the **ProductManagement** module, we have added support of decimal stock. You can find more details about the changes on the [ProductManagement module](https://github.com/spryker/product-management/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/decimal-stock-migration-concept.html
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/decimal-stock-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**
@@ -47,7 +48,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 The new version provides support to manage the `abstract product-store` relations per store.
 
-1. Update `/ install spryker/product` to at least 6.0.0 version. See [Migration Guide - Product](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-product.html) for more details.
+1. Update `/ install spryker/product` to at least 6.0.0 version. See [Migration Guide - Product](/docs/scos/dev/migration-and-integration/202009.0/module-migration-guides/migration-guide-product.html) for more details.
 2. Update `/ install spryker/productmanagement` to at least 0.10.0 version.
 3. Run `vendor/bin/console transfer:generate` to generate the transfer object changes.
 4. The Product Information Management (PIM) Back Office expects the `abstract product-store` relation handling a partial form to be defined in the dependency provider using the `Spryker\Zed\Kernel\Communication\Form\FormTypeInterface`. You can use the single store and multi-store compatible default implementation `Spryker\Zed\Store\Communication\Form\Type\StoreRelationToggleType` wrapped in `Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin`.
@@ -77,7 +78,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
-You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/multi-store-products-feature-integration.html). 
+You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/multi-store-products-feature-integration.html). 
 
 ## Upgrading from Version 0.8.* to Version 0.9.*
 

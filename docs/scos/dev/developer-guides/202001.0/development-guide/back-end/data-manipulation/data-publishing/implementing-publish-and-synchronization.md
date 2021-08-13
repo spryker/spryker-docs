@@ -2,6 +2,7 @@
 title: Implementing Publish and Synchronization
 description: To implement Publish and Synchronize in your code, you need to perform the following steps
 originalLink: https://documentation.spryker.com/v4/docs/publish-and-synchronization-reference
+originalArticleId: 5103a488-ce44-4381-9a3b-31c3f4a2cc4e
 redirect_from:
   - /v4/docs/publish-and-synchronization-reference
   - /v4/docs/en/publish-and-synchronization-reference

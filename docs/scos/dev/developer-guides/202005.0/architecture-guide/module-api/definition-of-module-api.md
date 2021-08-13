@@ -2,6 +2,7 @@
 title: Definition of Module API
 description: This article defines internal APIs according to which the version type is defined.
 originalLink: https://documentation.spryker.com/v5/docs/definition-api
+originalArticleId: 15f2fc9a-73d5-498e-93d7-8a906e08733f
 redirect_from:
   - /v5/docs/definition-api
   - /v5/docs/en/definition-api
@@ -11,10 +12,10 @@ According to [Semantic Versioning](http://semver.org/) the Spryker Commerce OS c
 
 In Spryker Commerce OS’s core, all public methods in theses locatable classes are considered as API:
 
-* [Facades](https://documentation.spryker.com/docs/en/facade)
-* [Clients](https://documentation.spryker.com/docs/en/client)
-* [Query Containers](https://documentation.spryker.com/docs/en/query-container)
-* [Services](https://documentation.spryker.com/docs/en/service)
+* [Facades](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/zed/business-layer/facade/about-facade.html)
+* [Clients](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/client/client.html)
+* [Query Containers](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/zed/persistence-layer/query-container/about-the-query-container.html)
+* [Services](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/messages-and-errors/registering-a-new-service.html)
 
 And the interfaces which are implemented everywhere are also part of the API:
 
@@ -23,18 +24,18 @@ And the interfaces which are implemented everywhere are also part of the API:
 
 In addition to these obvious cases, there are some other classes which are part of the API and can cause a BC break:
 
-* [module Config](https://documentation.spryker.com/docs/en/configuration-management#how-to-retrieve-the-configuration) (`Client/Yves/Zed/Shared/Service`)
+* [module Config](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/configuration-management.html#how-to-retrieve-the-configuration) (`Client/Yves/Zed/Shared/Service`)
 * Controllers
 * Twig functions
-* [CLI commands](https://documentation.spryker.com/docs/en/console-commands)
-* Public constants especially in [Constant Interfaces](https://documentation.spryker.com/docs/en/configuration-management#constant-interfaces)
+* [CLI commands](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html)
+* Public constants especially in [Constant Interfaces](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/configuration-management.html#constant-interfaces)
 
 And every change in a schema can cause a BC break:
 
-* [Database](https://documentation.spryker.com/docs/en/database-schema-definition)
+* [Database](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/zed/persistence-layer/database-schema-definition.html)
 * Search
-* [Storage](https://documentation.spryker.com/docs/en/redis-as-kv)
-* Changes in [transfer objects](https://documentation.spryker.com/docs/en/ht-use-transfer-objects-201903) can also cause BC breaks e.g. when an existing field is renamed.
+* [Storage](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/client/using-and-configuring-redis-as-a-key-value-storage.html)
+* Changes in [transfer objects](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) can also cause BC breaks e.g. when an existing field is renamed.
 
 There are several other ways to cause a BC break:
 

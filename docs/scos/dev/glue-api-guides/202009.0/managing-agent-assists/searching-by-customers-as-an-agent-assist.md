@@ -2,13 +2,14 @@
 title: Searching by customers as an agent assist
 description: As an agent assist, search by customers to find the customer reference you want to impersonate.
 originalLink: https://documentation.spryker.com/v6/docs/searching-by-customers-as-an-agent-assist
+originalArticleId: 46de7d30-57aa-4d02-9fc2-cace9bc4fa1a
 redirect_from:
   - /v6/docs/searching-by-customers-as-an-agent-assist
   - /v6/docs/en/searching-by-customers-as-an-agent-assist
 ---
 
 
-Search by customers to find out information about them. This endpoint is mostly used by [agent assists](https://documentation.spryker.com/docs/agent-assist-overview) to find out the customer reference needed to [impersonate a customer](https://documentation.spryker.com/docs/impersonating-customers-as-an-agent-assist#impersonate-a-customer).
+Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/scos/dev/features/202009.0/agent-assist/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonate-a-customer).
 
 ## Installation
 
@@ -16,11 +17,11 @@ Search by customers to find out information about them. This endpoint is mostly 
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-*   [Glue API: Agent Assist feature integration](https://documentation.spryker.com/docs/glue-api-agent-assist-feature-integration)
+*   [Glue API: Agent Assist feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-agent-assist-feature-integration.html)
     
-*   [Customer Account Management + Agent Assist feature integration](https://documentation.spryker.com/docs/customer-account-management-agent-assist-feature-integration)
+*   [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html)
     
-*   [Customer Account Management feature integration](https://documentation.spryker.com/docs/customer-account-management-feature-integration)
+*   [Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/customer-account-management-feature-integration.html)
 
 ## Search by customers
 
@@ -35,7 +36,7 @@ To search by customers, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| X-Agent-Authorization | string | ✓ |  String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](https://documentation.spryker.com/docs/authenticating-as-an-agent-assist#authenticate-as-an-agent-assist) to get the value.  |
+| X-Agent-Authorization | string | ✓ |  String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 
@@ -340,10 +341,10 @@ To search by customers, send the request:
 | 001| Access token is invalid.|
 | 4103| Agent access token is missing.|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
 
-After you’ve found the reference of the customer you want to assist, impersonate the customer to perform any actions available to them. See [ Impersonating customers as an agent assist](https://documentation.spryker.com/docs/impersonating-customers-as-an-agent-assist) for details.
+After you’ve found the reference of the customer you want to assist, impersonate the customer to perform any actions available to them. See [ Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/202009.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html) for details.
 

@@ -2,9 +2,12 @@
 title: Creating configurable bundle templates
 description: On this page, you will find instructions on creating Configurable Bundle Templates in the Spryker Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-configurable-bundle-templates
+originalArticleId: f37b931d-e630-4db3-9ffb-b5e3fb100cad
 redirect_from:
   - /2021080/docs/creating-configurable-bundle-templates
   - /2021080/docs/en/creating-configurable-bundle-templates
+  - /docs/creating-configurable-bundle-templates
+  - /docs/en/creating-configurable-bundle-templates
 ---
 
 This topic describes how to create configurable bundle templates.
@@ -43,5 +46,5 @@ All columns with headers having arrows in the *Configurable Bundle Templates* ta
 
 **What's next?**
 
-* Now that you have created a template, add slots to it. See [Creating a slot for a configurable bundle template](https://documentation.spryker.com/docs/managing-configurable-bundle-templates#creating-slots-in-configurable-bundle-templates) for details on how to do that.
-* To edit, activate, deactivate, or delete a configurable bundle template, see [Managing configurable bundle templates](https://documentation.spryker.com/docs/managing-configurable-bundle-templates).
+* Now that you have created a template, add slots to it. See [Creating a slot for a configurable bundle template](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-slots-in-configurable-bundle-templates) for details on how to do that.
+* To edit, activate, deactivate, or delete a configurable bundle template, see [Managing configurable bundle templates](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html).

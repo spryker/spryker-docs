@@ -2,6 +2,7 @@
 title: Creating a CMS page
 description: The guide provides a procedure to create a CMS page, make it searchable per store in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/creating-a-cms-page
+originalArticleId: 56546895-bcc4-4a22-aca8-72ae36012ae1
 redirect_from:
   - /v6/docs/creating-a-cms-page
   - /v6/docs/en/creating-a-cms-page
@@ -22,7 +23,7 @@ To create a page:
     * **Optional**: Select **Is searchable** if you want your page to be searched for on the web.
     * Select a page template that will determine a page layout. This is a **mandatory** step.
     {% info_block infoBox %}
-Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Page template, contact them and refer to the [HowTo - Create a CMS Page template](https://documentation.spryker.com/v4/docs/ht-create-cms-templates#adding-a-template-for-a-cms-page
+Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Page template, contact them and refer to the [HowTo - Create a CMS Page template](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-cms-page
 {% endinfo_block %}.)
     * **Optional**: Enter **Valid from** and **Valid to** if you want to define the validity period during which your page will be available in the shop.
     * Enter **Name** and **URL** of the page per locale. This is a **mandatory** step.
@@ -44,5 +45,5 @@ Templates are project-specific and are usually created by a developer and a busi
 **What's next?**
 Until now, you have created a page draft. The page itself will be available in the online store after you publish it.
 
-To learn how to view or publish the page, see [Managing CMS Pages](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/pages/managing-cms-pages.html).
+To learn how to view or publish the page, see [Managing CMS Pages](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/pages/managing-cms-pages.html).
 

@@ -2,6 +2,7 @@
 title: Computop - Paydirekt
 description: Integrate Paydirekt payment through Computop into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v4/docs/computop-paydirekt
+originalArticleId: 04cdffb9-d368-4c71-a92f-4785ffa0bde9
 redirect_from:
   - /v4/docs/computop-paydirekt
   - /v4/docs/en/computop-paydirekt

@@ -2,6 +2,7 @@
 title: Data Builders
 description: Learn how to configure data builders for creating transfer objects for your tests.
 originalLink: https://documentation.spryker.com/v6/docs/data-builders
+originalArticleId: 430bb9f9-d9f6-4124-adee-419169a03e2e
 redirect_from:
   - /v6/docs/data-builders
   - /v6/docs/en/data-builders

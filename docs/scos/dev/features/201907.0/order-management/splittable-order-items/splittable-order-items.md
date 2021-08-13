@@ -2,6 +2,7 @@
 title: Splittable Order Items
 description: The Splittable Order Items feature allows you to avoid long lists of sales order items and creates a good buying experience for your customers.
 originalLink: https://documentation.spryker.com/v3/docs/splittable-order-items
+originalArticleId: cf29c675-e0f5-475e-b1ea-433d3bf4be6f
 redirect_from:
   - /v3/docs/splittable-order-items
   - /v3/docs/en/splittable-order-items

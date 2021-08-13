@@ -2,6 +2,7 @@
 title: Convert Wishlist to Cart
 description: The direct-to-cart function enables your customers to simply add items from their Wish List to the Shopping Cart with a single click.
 originalLink: https://documentation.spryker.com/v1/docs/convert-wishlist-cart
+originalArticleId: f5510b0a-54ce-4c99-8366-8d4dfa001602
 redirect_from:
   - /v1/docs/convert-wishlist-cart
   - /v1/docs/en/convert-wishlist-cart

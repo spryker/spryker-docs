@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductSearch
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-search
+originalArticleId: aecfdf41-c517-4350-bd56-7ad4c0f75603
 redirect_from:
   - /v3/docs/mg-product-search
   - /v3/docs/en/mg-product-search

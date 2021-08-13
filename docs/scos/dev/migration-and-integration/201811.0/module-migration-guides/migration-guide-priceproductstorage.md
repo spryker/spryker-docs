@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - PriceProductStorage
 originalLink: https://documentation.spryker.com/v1/docs/mg-price-product-storage
+originalArticleId: fb5af7f4-8473-4dc5-bd65-3b0e12b0fff5
 redirect_from:
   - /v1/docs/mg-price-product-storage
   - /v1/docs/en/mg-price-product-storage

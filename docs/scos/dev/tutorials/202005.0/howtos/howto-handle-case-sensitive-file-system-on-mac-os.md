@@ -2,6 +2,7 @@
 title: HowTo - Handle Case Sensitive File-System on Mac OS
 description: Use the guide to change the case-sensitive file system on Mac OS.
 originalLink: https://documentation.spryker.com/v5/docs/ht-case-sensitive-file-system-mac
+originalArticleId: b8eb8562-5484-4a3e-8177-8fae13f0dfd5
 redirect_from:
   - /v5/docs/ht-case-sensitive-file-system-mac
   - /v5/docs/en/ht-case-sensitive-file-system-mac

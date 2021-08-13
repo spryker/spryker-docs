@@ -1,6 +1,7 @@
 ---
 title: File details- mime_type.csv
 originalLink: https://documentation.spryker.com/v5/docs/file-details-mime-typecsv
+originalArticleId: 9e8f470c-153e-4792-95db-28889f514520
 redirect_from:
   - /v5/docs/file-details-mime-typecsv
   - /v5/docs/en/file-details-mime-typecsv

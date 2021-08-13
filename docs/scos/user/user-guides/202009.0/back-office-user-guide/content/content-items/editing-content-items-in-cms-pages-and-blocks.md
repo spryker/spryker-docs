@@ -2,6 +2,7 @@
 title: Editing content items in CMS pages and blocks
 description: The guide provides instructions for shop owners on how to update content item widgets in pages and blocks from the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/editing-content-items-in-cms-pages-and-blocks
+originalArticleId: 6ab8b35f-be09-4c4c-ab2c-feabfbc4dc36
 redirect_from:
   - /v6/docs/editing-content-items-in-cms-pages-and-blocks
   - /v6/docs/en/editing-content-items-in-cms-pages-and-blocks

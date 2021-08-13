@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - QuoteRequest
 originalLink: https://documentation.spryker.com/v5/docs/mg-quoterequest
+originalArticleId: 363bca95-02e9-40ce-8e76-1b5fa3b55d94
 redirect_from:
   - /v5/docs/mg-quoterequest
   - /v5/docs/en/mg-quoterequest

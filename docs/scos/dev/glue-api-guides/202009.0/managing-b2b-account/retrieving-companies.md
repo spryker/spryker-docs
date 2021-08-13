@@ -2,6 +2,7 @@
 title: Retrieving companies
 description: Learn how to retrieve company information via Glue API.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-companies
+originalArticleId: ad451cf2-3446-4377-b1c3-ec6932de1924
 redirect_from:
   - /v6/docs/retrieving-companies
   - /v6/docs/en/retrieving-companies
@@ -10,7 +11,7 @@ redirect_from:
 This endpoint allows retrieving information about companies.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](https://documentation.spryker.com/docs/company-account-api-feature-integration-201907#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
 
 ## Retrieve a company
 
@@ -31,7 +32,7 @@ To retrieve information about a company, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](https://documentation.spryker.com/docs/authenticating-as-a-company-user#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 
 | Request | Usage |
@@ -91,11 +92,11 @@ To retrieve information about a company, send the request:
 | 1803 | Current company account is not set. You need to select the current company user with /company-user-access-tokens in order to access the resource collection.|
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 
-* [Retrieve business units](https://documentation.spryker.com/docs/retrieving-business-units)
-* [Retrieve company company roles](https://documentation.spryker.com/docs/retrieving-company-roles)
-* [Retrieve business unit addresses](https://documentation.spryker.com/docs/retrieving-business-unit-addresses)
-* [Manage company user authentication tokens](https://documentation.spryker.com/docs/managing-company-user-authentication-tokens)
+* [Retrieve business units](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-business-units.html)
+* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/retrieving-business-unit-addresses.html)
+* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/202009.0/managing-b2b-account/managing-company-user-authentication-tokens.html)

@@ -2,9 +2,12 @@
 title: B2C Suite
 description: The Spryker B2C Suite is a showcase that demonstrates ready-to-use B2C-specific Spryker features in a live implementation.
 originalLink: https://documentation.spryker.com/2021080/docs/b2c-suite
+originalArticleId: 6d82adcb-2778-4f70-9c44-4463851a1d38
 redirect_from:
   - /2021080/docs/b2c-suite
   - /2021080/docs/en/b2c-suite
+  - /docs/b2c-suite
+  - /docs/en/b2c-suite
 ---
 
 The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. Of course, every B2С project has its own set of features that meet their business needs and B2B features can be used as well, but the most common features for the B2C commerce are listed below.
@@ -12,168 +15,168 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 <details open>
 <summary>B2C feature list</summary>
 
-[**Product Information Management**](https://documentation.spryker.com/docs/product-information-management):
+[**Product Information Management**](https://documentation.spryker.com/2021080/docs/product-information-management):
 
-* [Product Abstraction](https://documentation.spryker.com/docs/product-abstraction)
-* [Product Attributes](https://documentation.spryker.com/docs/product-attributes)
-* [Super Attributes](https://documentation.spryker.com/docs/super-attributes)
-* [Product Groups](https://documentation.spryker.com/docs/product-group)
-* [Product Bundles](https://documentation.spryker.com/docs/product-bundle)
-* [Product Sets](https://documentation.spryker.com/docs/product-set)
-* [Product Relations](https://documentation.spryker.com/docs/product-relations)
-* [Product Options](https://documentation.spryker.com/docs/product-options-2)
-* [Product Labels](https://documentation.spryker.com/docs/product-label)
-* [Timed Product Availability](https://documentation.spryker.com/docs/product-ttl)
-* [Alternative Products](https://documentation.spryker.com/docs/alternative-products)
-* [Discountinued Products](https://documentation.spryker.com/docs/discontinued-products)
+* [Product Abstraction](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html)
+* [Product Attributes](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html)
+* [Super Attributes](https://documentation.spryker.com/2021080/docs/super-attributes)
+* [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
+* [Product Bundles](https://documentation.spryker.com/2021080/docs/product-bundles)
+* [Product Sets](/docs/scos/dev/features/{{ page.version }}/product-sets/product-sets.html)
+* [Product Relations](/docs/scos/dev/features/{{ page.version }}/product-relations/product-relations.html)
+* [Product Options](/docs/scos/dev/features/{{ page.version }}/product-options/product-options.html)
+* [Product Labels](https://documentation.spryker.com/2021080/docs/product-label)
+* [Timed Product Availability](https://documentation.spryker.com/2021080/docs/product-ttl)
+* [Alternative Products](https://documentation.spryker.com/2021080/docs/alternative-products)
+* [Discountinued Products](https://documentation.spryker.com/2021080/docs/discontinued-products)
 
-[**Catalog Management**](https://documentation.spryker.com/docs/catalog-management):
+[**Catalog Management**](/docs/scos/dev/features/{{ page.version }}/catalog.html):
 
-* [Category Management](https://documentation.spryker.com/docs/category-management)
-<!---* [Product to Category Association](https://documentation.spryker.com/docs/product-to-category-association)
-* [Category Hierarchy](https://documentation.spryker.com/docs/define-category-hierarchy)
-* [Product Catalog Management](https://documentation.spryker.com/docs/product-catalog-management)-->
+* [Category Management](https://documentation.spryker.com/2021080/docs/category-management)
+<!---* [Product to Category Association](https://documentation.spryker.com/2021080/docs/product-to-category-association)
+* [Category Hierarchy](https://documentation.spryker.com/2021080/docs/define-category-hierarchy)
+* [Product Catalog Management](https://documentation.spryker.com/2021080/docs/product-catalog-management)-->
 
-[**Navigation**](https://documentation.spryker.com/docs/navigation):
+[**Navigation**](https://documentation.spryker.com/2021080/docs/navigation):
 
-* [Navigation](https://documentation.spryker.com/docs/en/navigation-feature-summary) 
-* [Navigation feature](https://documentation.spryker.com/docs/en/navigation-feature-summary)
+* [Navigation](https://documentation.spryker.com/2021080/docs/en/navigation) 
+* [Navigation feature](https://documentation.spryker.com/2021080/docs/en/navigation)
 
 
-[**Search & Filter**](https://documentation.spryker.com/docs/search-filter):
+[**Search & Filter**](https://documentation.spryker.com/2021080/docs/search-filter):
 
-* [Filters & Search by Category](https://documentation.spryker.com/docs/filter-search-by-category)
-* [Full-Site Search](https://documentation.spryker.com/docs/full-site-search)
-* [Multi-Language Search](https://documentation.spryker.com/docs/multi-language-search)
-* [Textual Search](https://documentation.spryker.com/docs/textual-search)
-* [Standard Filters](https://documentation.spryker.com/docs/standard-filters)
-* [Dynamic Filters & Facets](https://documentation.spryker.com/docs/dynamic-filter-facets)
+* [Filters & Search by Category](/docs/scos/dev/features/{{ page.version }}/search/search-feature-overview/category-filters-overview.html)
+* [Full-Site Search](/docs/scos/dev/features/{{ page.version }}/search/search.html)
+* [Multi-Language Search](/docs/scos/dev/features/{{ page.version }}/search/search.html)
+* [Textual Search](/docs/scos/dev/features/{{ page.version }}/search/search.html)
+* [Standard Filters](/docs/scos/dev/features/{{ page.version }}/search/search-feature-overview/standard-filters-overview.html)
+* [Dynamic Filters & Facets](https://documentation.spryker.com/2021080/docs/dynamic-filter-facets)
 
-[**SEO**](https://documentation.spryker.com/docs/seo):
+[**SEO**](https://documentation.spryker.com/2021080/docs/seo):
 
-* [Meta Tags](https://documentation.spryker.com/docs/meta-tags)
-* [Landing Pages](https://documentation.spryker.com/docs/landing-pages)
-* [URL Redirects](https://documentation.spryker.com/docs/url-redirects)
+* [Meta Tags](https://documentation.spryker.com/2021080/docs/seo)
+* [Landing Pages](https://documentation.spryker.com/2021080/docs/seo)
+* [URL Redirects](/docs/scos/dev/features/{{ page.version }}/spryker-core/spryker-core-feature-overview/url-redirects-overview.html)
 
-[**CMS (Content Management System)**](https://documentation.spryker.com/docs/cms):
+[**CMS (Content Management System)**](/docs/scos/dev/features/{{ page.version }}/cms/cms.html):
 
-* [CMS Templates & Slots](https://documentation.spryker.com/docs/templates-slots)
-* [CMS Blocks](https://documentation.spryker.com/docs/cms-block)
-* [CMS Pages](https://documentation.spryker.com/docs/cms-page)
-* [Content Items](https://documentation.spryker.com/docs/content-items-201907)
+* [CMS Templates & Slots](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/templates-and-slots-overview.html)
+* [CMS Blocks](/docs/scos/dev/features/{{ page.version }}/cms/cms.html-block)
+* [CMS Pages](/docs/scos/dev/features/{{ page.version }}/cms/cms.html-page)
+* [Content Items](https://documentation.spryker.com/2021080/docs/content-items)
 
-[**Media Management**](https://documentation.spryker.com/docs/media-management):
+[**Media Management**](/docs/scos/dev/features/{{ page.version }}/file-manager/file-manager.html):
 
-* [Product Image Management](https://documentation.spryker.com/docs/product-image-management-201907)
-* [Image Hosting](https://documentation.spryker.com/docs/image-hosting)
-* [Asset Management](https://documentation.spryker.com/docs/asset-management)
-* [Video Embedding](https://documentation.spryker.com/docs/video-embedding)
+* [Product Image Management](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/product-images-overview.html)
+* [Image Hosting](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/product-images-overview.html)
+* [Asset Management](/docs/scos/dev/features/{{ page.version }}/file-manager/file-manager-feature-overview/asset-management.html)
+* [Video Embedding](/docs/scos/dev/features/{{ page.version }}/file-manager/file-manager.html)
 
-[**Internationalization**](https://documentation.spryker.com/docs/internationalization):
+[**Internationalization**](https://documentation.spryker.com/2021080/docs/internationalization):
 
-* [Multiple Stores](https://documentation.spryker.com/docs/multiple-stores)
-* [Multiple Currencies per Store](https://documentation.spryker.com/docs/multiple-currencies-per-store)
-* [International Tax Rates & Sets](https://documentation.spryker.com/docs/international-tax-rates-sets)
-* [Glossary Creation](https://documentation.spryker.com/docs/glossary-creation)
+* [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/howto-set-up-multiple-stores.html)
+* [Multiple Currencies per Store](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html)
+* [International Tax Rates & Sets](https://documentation.spryker.com/2021080/docs/international-tax-rates-sets)
+* [Glossary Creation](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/glossary/managing-glossary.html)
 
-[**Price**](https://documentation.spryker.com/docs/price):
+[**Price**](/docs/scos/dev/features/{{ page.version }}/prices/prices-feature-overview/prices-overview.html):
 
-* [Autodetect of Currency](https://documentation.spryker.com/docs/auto-detect-currency)
-* [Volume Prices](https://documentation.spryker.com/docs/volume-prices)
-* [Net & Gross Price Mode](https://documentation.spryker.com/docs/net-gross-price)
-* [Scheduled Prices](https://documentation.spryker.com/docs/scheduled-prices-201907)
+* [Autodetect of Currency](/docs/scos/dev/features/{{ page.version }}/prices/prices-feature-overview/prices-overview.html)
+* [Volume Prices](/docs/scos/dev/features/{{ page.version }}/prices/prices-feature-overview/volume-prices-overview.html)
+* [Net & Gross Price Mode](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
+* [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
 
-[**Tax**](https://documentation.spryker.com/docs/tax):
-[Manage Tax Rates & Sets](https://documentation.spryker.com/docs/manage-tax-rates-sets)
+[**Tax**](/docs/scos/dev/features/{{ page.version }}/tax/tax.html):
+[Manage Tax Rates & Sets](/docs/scos/dev/features/{{ page.version }}/tax/tax.html)
 
-[**Promotions & Discounts**](https://documentation.spryker.com/docs/promotions-discount):
-[Discounts](https://documentation.spryker.com/docs/discount)
+[**Promotions & Discounts**](/docs/scos/dev/features/{{ page.version }}/promotions-and-discounts/promotions-and-discounts.html):
+[Discounts](/docs/scos/dev/features/{{ page.version }}/promotions-and-discounts/promotions-and-discounts.html)
 
-[**Wishlist**](https://documentation.spryker.com/docs/wishlist):
+[**Wishlist**](/docs/scos/dev/features/{{ page.version }}/wishlist-feature-overview.html):
 
-* [Multiple Wishlists](https://documentation.spryker.com/docs/multiple-wishlists)
-* [Named Wishlists](https://documentation.spryker.com/docs/multiple-wishlists)
-* [Convert Wishlist to Cart](https://documentation.spryker.com/docs/convert-wishlist-cart)
+* [Multiple Wishlists](/docs/scos/dev/features/{{ page.version }}/wishlist-feature-overview.html)
+* [Named Wishlists](/docs/scos/dev/features/{{ page.version }}/wishlist-feature-overview.html)
+* [Convert Wishlist to Cart](/docs/scos/dev/features/{{ page.version }}/wishlist-feature-overview.html#converting-wishlist-to-cart)
 
-[**Shopping Cart**](https://documentation.spryker.com/docs/cart):
+[**Shopping Cart**](/docs/scos/dev/features/{{ page.version }}/cart/cart.html):
 
-* [Cart Functionality & Calculations](https://documentation.spryker.com/docs/cart-functionality-calculations)
-* [Discounts](https://documentation.spryker.com/docs/en/discount-feature-overview)
-* [Order Thresholds](https://documentation.spryker.com/docs/en/order-thresholds)
+* [Cart Functionality & Calculations](/docs/scos/dev/features/{{ page.version }}/cart/cart.html-functionality-calculations)
+* [Discounts](/docs/scos/dev/features/{{ page.version }}/promotions-and-discounts/promotions-and-discounts-feature-overview.html)
+* [Order Thresholds](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/order-thresholds.html)
 
-[**Shipment**](https://documentation.spryker.com/docs/shipment):
+[**Shipment**](https://documentation.spryker.com/2021080/docs/shipment):
 
-* [Shipment Carriers & Methods](https://documentation.spryker.com/docs/shipment-carriers-methods)
-* [Multiple Currencies for Shipments](https://documentation.spryker.com/docs/multiple-currency-shipment)
-* [Shipment Calculation Rules](https://documentation.spryker.com/docs/shipment-calculation-rules)
-* [Split Delivery](https://documentation.spryker.com/docs/split-delivery)
+* [Shipment Carriers & Methods](https://documentation.spryker.com/2021080/docs/shipment-carriers-methods)
+* [Multiple Currencies for Shipments](/docs/scos/dev/features/{{ page.version }}/shipment/shipment-feature-overview.html)
+* [Shipment Calculation Rules](https://documentation.spryker.com/2021080/docs/shipment-calculation-rules)
+* [Split Delivery](https://documentation.spryker.com/2021080/docs/split-delivery)
 
-[**Payment**](https://documentation.spryker.com/docs/payment):
+[**Payment**](https://documentation.spryker.com/2021080/docs/payments):
 
-* [Payment Provider Integration](https://documentation.spryker.com/docs/payment-provider-integration)
-* [Multiple Payment Methods per Order](https://documentation.spryker.com/docs/payment-methods-overview)
-* [Refund Management](https://documentation.spryker.com/docs/refund-management)
+* [Payment Provider Integration](https://documentation.spryker.com/2021080/docs/payments-provider-integration)
+* [Multiple Payment Methods per Order](https://documentation.spryker.com/2021080/docs/payments-methods-overview)
+* [Refund Management](/docs/scos/dev/features/{{ page.version }}/refunds-feature-overview.html)
 
-[**Gift Cards**](https://documentation.spryker.com/docs/gift-card):
-[Gift Cards Purchase & Management](https://documentation.spryker.com/docs/gift-card-purchase-management-201907)
+[**Gift Cards**](https://documentation.spryker.com/2021080/docs/gift-card):
+[Gift Cards Purchase & Management](https://documentation.spryker.com/2021080/docs/gift-card-purchase-management-201907)
 
-[**Checkout**](https://documentation.spryker.com/docs/checkout):
+[**Checkout**](/docs/scos/dev/features/{{ page.version }}/checkout/checkout.html):
 
-* [Multi-Step Checkout](https://documentation.spryker.com/docs/multi-step-checkout)
-* [Define Shipment Methods](https://documentation.spryker.com/v6/docs/en/shipment-carriers-methods)
+* [Multi-Step Checkout](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/multi-step-checkout.html)
+* [Define Shipment Methods](/docs/scos/dev/features/{{ page.version }}/shipment/shipment.html)
 
-[**Ratings & Review**](https://documentation.spryker.com/docs/rating-reviews):
-[Rating & Review Management](https://documentation.spryker.com/docs/rating-revew-management)
+[**Ratings & Review**](https://documentation.spryker.com/2021080/docs/rating-reviews):
+[Rating & Review Management](https://documentation.spryker.com/2021080/docs/rating-revew-management)
 
-[**Mailing & Communication**](https://documentation.spryker.com/docs/mailing-communication):
+[**Mailing & Communication**](https://documentation.spryker.com/2021080/docs/mailing-notifications):
 
-* [Transactional E-Mail Management](https://documentation.spryker.com/docs/transactional-email-management)
-* [Newsletter Subscription](https://documentation.spryker.com/docs/newsletter-subscription)
-* [Back in Stock Notification](https://documentation.spryker.com/docs/product-is-available-again-201903)
-* [Comment Widget](https://documentation.spryker.com/docs/comments-201907)
+* [Transactional E-Mail Management](https://documentation.spryker.com/2021080/docs/transactional-email-management)
+* [Newsletter Subscription](https://documentation.spryker.com/2021080/docs/newsletter-subscription)
+* [Back in Stock Notification](https://documentation.spryker.com/2021080/docs/availability-notification)
+* [Comment Widget](https://documentation.spryker.com/2021080/docs/comments)
 
-[**CRM (Customer Relationship Management)**](https://documentation.spryker.com/docs/crm):
+[**CRM (Customer Relationship Management)**](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management.html):
 
-* [Customer Accounts](https://documentation.spryker.com/docs/customer-accounts)
-* [Login & Registration Forms](https://documentation.spryker.com/docs/login-registration)
-* [Password Management](https://documentation.spryker.com/docs/password-management)
-* [Customer Groups](https://documentation.spryker.com/docs/customer-groups)
+* [Customer Accounts](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management.html)
+* [Login & Registration Forms](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)
+* [Password Management](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management-feature-overview/password-management-overview.html)
+* [Customer Groups](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management-feature-overview/customer-groups-overview.html)
 
-[**Order Management**](https://documentation.spryker.com/docs/order-management):
+[**Order Management**](/docs/scos/dev/features/{{ page.version }}/order-management/order-management.html):
 
-* [Order Management System (OMS) Matrix](https://documentation.spryker.com/docs/oms-matrix)
-* [Reorder](https://documentation.spryker.com/docs/reorder)
-<!---* [Order Processing](https://documentation.spryker.com/docs/order-processing)-->
-* [Reclamations](https://documentation.spryker.com/docs/reclamations-201903)
+* [Order Management System (OMS) Matrix](/docs/scos/dev/features/{{ page.version }}/order-management/oms-order-management-system-matrix.html)
+* [Reorder](/docs/scos/dev/features/{{ page.version }}/reorder-feature-overview.html)
+<!---* [Order Processing](https://documentation.spryker.com/2021080/docs/order-processing)-->
+* [Reclamations](https://documentation.spryker.com/2021080/docs/reclamations)
 
-[**Inventory Management**](https://documentation.spryker.com/docs/inventory-management):
+[**Inventory Management**](https://documentation.spryker.com/2021080/docs/inventory-management):
 
-* [Stock & Availability Management](https://documentation.spryker.com/docs/stock-availability-management)
-* [Multiple Warehouse Stock Management](https://documentation.spryker.com/docs/multiple-warehouse-stock)
+* [Stock & Availability Management](https://documentation.spryker.com/2021080/docs/inventory-management)
+* [Multiple Warehouse Stock Management](https://documentation.spryker.com/2021080/docs/multiple-warehouse-stock)
 
-[**Back Office**](https://documentation.spryker.com/docs/back-office):
+[**Back Office**](https://documentation.spryker.com/2021080/docs/back-office):
 
-* [Back Office Management](https://documentation.spryker.com/docs/administration-interface)
-* [Data Protection](https://documentation.spryker.com/docs/data-protection)
-* [Permission & ACL Management](https://documentation.spryker.com/docs/permission-acl)
-* [Customer Management](https://documentation.spryker.com/docs/manage-customer-accounts)
+* [Back Office Management](/docs/scos/dev/features/{{ page.version }}/spryker-core-back-office/spryker-core-back-office.html)
+* [Data Protection](https://documentation.spryker.com/2021080/docs/data-protection)
+* [Permission & ACL Management](https://documentation.spryker.com/2021080/docs/permission-acl-management)
+* [Customer Management](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management.html)
 
-[**Multi-Channel**](https://documentation.spryker.com/docs/multi-channel):
+[**Multi-Channel**](/docs/scos/dev/features/{{ page.version }}/multi-channel/multi-channel.html):
 
-* [Multiple Touchpoint Integrations](https://documentation.spryker.com/docs/multiple-touchpoint-integration)
-* [Responsive Design](https://documentation.spryker.com/docs/responsive-design)
+* [Multiple Touchpoint Integrations](/docs/scos/dev/features/{{ page.version }}/multi-channel/multi-channel.html)
+* [Responsive Design](/docs/scos/dev/features/{{ page.version }}/multi-channel/multi-channel.html)
 
-[**SDK**](https://documentation.spryker.com/docs/development):
+[**SDK**](/docs/scos/dev/sdk/{{ page.version }}/development.html):
 
-* [Development Tools](https://documentation.spryker.com/docs/development-tools)
-* [Spryk Code Generator](https://documentation.spryker.com/docs/spryk-201903)
-* [Importer](https://documentation.spryker.com/docs/importer)
-* [Development Virtual Machine, Docker Containers & Console](https://documentation.spryker.com/docs/devvm)
-* [CSS Class Customization](https://documentation.spryker.com/docs/css-class-customization)
-* [Cronjob Scheduling](https://documentation.spryker.com/docs/cronjob-scheduling)
+* [Development Tools](/docs/scos/dev/sdk/{{ page.version }}/development.html-tools)
+* [Spryk Code Generator](/docs/scos/dev/sdk/{{ page.version }}/development-tools/spryk-code-generator.html)
+* [Importer](/docs/scos/dev/sdk/{{ page.version }}/data-import.html)
+* [Development Virtual Machine, Docker Containers & Console](/docs/scos/dev/sdk/{{ page.version }}/development-virtual-machine-docker-containers-and-console.html)
+* [CSS Class Customization](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html)
+* [Cronjob Scheduling](/docs/scos/dev/sdk/{{ page.version }}/cronjob-scheduling.html)
 
-[**Technology Partner Integrations**](https://documentation.spryker.com/docs/technology-partner-integrations):
-[External Integrations](https://documentation.spryker.com/docs/partner-integration)
+[**Technology Partner Integrations**](https://documentation.spryker.com/2021080/docs/integrating-technology-partners):
+[External Integrations](/docs/scos/dev/technology-partners/{{ page.version }}/technology-partner-integration.html)
 <br>
 </details>
 
@@ -186,6 +189,6 @@ To download the B2C Demo Shop, visit the following GitHub repository: [https://g
     
 To install the B2C Demo Shop, follow the instructions of the B2C Demo Shop installation guides:
 
-* [B2C Demo Shop Installation: Mac OS or Linux, with Development Virtual Machine](https://documentation.spryker.com/docs/installation-guide-b2c)
-* [B2C Demo Shop Installation: Windows, with Development Virtual Machine](https://documentation.spryker.com/docs/b2c-demo-shop-installation-windows-with-development-virtual-machine)
-* [B2C Demo Shop Installation: Without Development Virtual Machine](https://documentation.spryker.com/docs/b2c-demo-shop-installation-without-development-virtual-machine)
+* [B2C Demo Shop Installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html)
+* [B2C Demo Shop Installation: Windows, with Development Virtual Machine](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html)
+* [B2C Demo Shop Installation: Without Development Virtual Machine](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html)

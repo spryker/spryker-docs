@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Price Cart Connector
 originalLink: https://documentation.spryker.com/v2/docs/mg-price-cart-connector
+originalArticleId: 3491b1d4-a2a1-4deb-a651-4355d770b411
 redirect_from:
   - /v2/docs/mg-price-cart-connector
   - /v2/docs/en/mg-price-cart-connector

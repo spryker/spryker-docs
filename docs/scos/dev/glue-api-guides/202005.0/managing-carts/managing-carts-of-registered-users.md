@@ -2,6 +2,7 @@
 title: Managing Carts of Registered Users
 description: This article describes the endpoints that provide access to shopping carts management functionality for the carts of the registered users.
 originalLink: https://documentation.spryker.com/v5/docs/managing-carts-of-registered-users
+originalArticleId: 9f6b9b11-3875-4241-85fa-ac02fbe45ca5
 redirect_from:
   - /v5/docs/managing-carts-of-registered-users
   - /v5/docs/en/managing-carts-of-registered-users
@@ -10,15 +11,15 @@ redirect_from:
 The **Carts API** provides access to management of customers' shopping carts. Carts come in two different forms: carts for registered customers and carts for guests. In your development, the resources provided by the API can support you in the development of shopping cart functionality.
 
 {% info_block infoBox "Cart types" %}
-The following document covers the APIs for carts for **registered customers** only. If you want to know how to access carts of unregistered users, see [Managing Guest Carts](https://documentation.spryker.com/docs/en/managing-guest-carts
+The following document covers the APIs for carts for **registered customers** only. If you want to know how to access carts of unregistered users, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/managing-guest-carts.html
 {% endinfo_block %}.)
 
 ## Multiple Carts
 
-Unlike guest carts, carts of registered users have unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](https://documentation.spryker.com/docs/en/multiple-carts-feature-integration-201903){target="_blank"} and Glue is [enabled for multi-cart operations](https://documentation.spryker.com/docs/en/multiple-carts-feature-integration-201903){target="_blank"}, registered users can have unlimited number of carts.
+Unlike guest carts, carts of registered users have unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/multiple-carts-feature-integration.html){target="_blank"} and Glue is [enabled for multi-cart operations](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/multiple-carts-feature-integration.html){target="_blank"}, registered users can have unlimited number of carts.
 
 ## Owned and Shared Carts
-Registered users can [share carts](https://documentation.spryker.com/docs/en/shared-cart) they own. Thus, a registered user can access both their personal carts and carts shared with them by other users. This feature allows company users to collaborate on company purchases as a team.
+Registered users can [share carts](/docs/scos/dev/features/202005.0/shopping-cart/shared-cart/shared-cart.html) they own. Thus, a registered user can access both their personal carts and carts shared with them by other users. This feature allows company users to collaborate on company purchases as a team.
 To be able to share carts, as well as access carts shared with them, customers need to authenticate as **Company User Accounts**. Each such account is a member of a certain Business Unit, and carts can be shared only among members of the same Unit. On the other hand, customers have the ability to impersonate as different Company Accounts depending on the job tasks they want to perform. Such accounts can belong to different Business Units, which means that any specific customer can have access to a different set of shared carts depending on the Company Account they impersonate as.
 
 To use a Company Account, a customer needs to retrieve a bearer token for the account. The token is valid for a specific combination of an authenticated user and Company Account. It provides access to:
@@ -26,7 +27,7 @@ To use a Company Account, a customer needs to retrieve a bearer token for the ac
 *  carts shared with the Company Account.
 
 {% info_block infoBox "Authentication" %}
-For details on how to receive the token, see [Logging In as Company User](https://documentation.spryker.com/docs/en/logging-in-as-company-user-201907
+For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/202005.0/b2b-account-management/logging-in-as-company-user.html
 {% endinfo_block %}{target="_blank"}.)
 
 To be able to access shared carts, the API client needs to access the endpoints provided by the Carts API using the token received when impersonating as the Company Account. Doing so provides access to management of both the user's own carts and the carts shared with the current Company Account based on the bearer token presented.
@@ -36,22 +37,22 @@ Shared carts can be accessed and manipulated the same as regular carts. The only
 By default, there are 2 levels of permissions for shared carts: **read-only** and **full access**. If a user attempts to perform an unauthorized action on a shared cart, the API will respond with the **403 Forbidden** status code.
 
 {% info_block infoBox "Info" %}
-For more details, see [Retrieving Cart Permission Groups](https://documentation.spryker.com/docs/en/sharing-company-user-carts-201907#retrieving-cart-permission-groups
+For more details, see [Retrieving Cart Permission Groups](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/sharing-company-user-carts.html#retrieving-cart-permission-groups
 {% endinfo_block %})
 
 To distinguish whether a specific cart is owned by a user directly or shared with them, you need to extend the responses of the endpoints with the **cart-permission-groups** resource relationship.. If a cart is shared with the user, it will contain the relationship, while if a cart is owned by the user directly, the relationship will not be present.
 
 
 {% info_block infoBox "Info" %}
-For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](https://documentation.spryker.com/docs/en/sharing-company-user-carts-201907
+For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/202005.0/managing-carts/sharing-company-user-carts.html
 {% endinfo_block %}{target="_blank"}.)
 
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Carts API](https://documentation.spryker.com/docs/en/cart-feature-integration)
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/en/glue-api-measurement-units-feature-integration)
-* [Promotions & Discounts API](https://documentation.spryker.com/docs/en/glue-promotions-discounts-feature-integration)
+* [Carts API](https://documentation.spryker.com/v5/docs/en/cart-feature-integration)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Promotions & Discounts API](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 
 ## Creating Carts
@@ -66,7 +67,7 @@ To create a cart, send the request:
 {% info_block infoBox %}
 
 
-* To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+* To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 * Carts created via Glue API are always set as the default carts for the user.
 
 
@@ -91,7 +92,7 @@ Sample request: `POST http://glue.mysprykershop.com/carts`
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | name | String | v | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the **422 Unprocessable Entry** status code. |
-| priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](https://documentation.spryker.com/docs/en/net-gross-price){target="_blank"}. |
+| priceMode | Enum | v | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/dev/features/202005.0/price/net-and-gross-prices.html){target="_blank"}. |
 | currency | String | v | Sets the cart currency. |
 | store | String | v | Sets the name of the store where to create the cart. |
 
@@ -171,7 +172,7 @@ To retrieve all available carts, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -876,7 +877,7 @@ To retrieve a particular cart, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -1297,7 +1298,7 @@ To add items to a cart, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %} 
 
@@ -1357,7 +1358,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | sku | String |  ✓ | SKU of the product to add. To use promotions, specify the SKU of a promoted concrete product. |
 | quantity | Integer | ✓  | Number of products to add. If the number of products exceeds the number of promotions, the exceeding items are added without promotional benefits.  |
 | idPromotionalItem | String |  | Promotional item ID. Specify the ID to apply the promotion benefits.  |
-| productOptions | Object |  | roduct options to apply. For details, see [Retrieving and Applying Product Options](https://documentation.spryker.com/docs/en/retrieving-and-applying-product-options).  |
+| productOptions | Object |  | roduct options to apply. For details, see [Retrieving and Applying Product Options](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-and-applying-product-options.html).  |
 
 
 
@@ -1855,7 +1856,7 @@ To remove an item from a cart, send a DELETE request to the following endpoint:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -1885,7 +1886,7 @@ To change the quantity of items in a cart, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -2069,7 +2070,7 @@ where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you want to
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](https://documentation.spryker.com/docs/en/authentication-and-authorization).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html).
 
 {% endinfo_block %} 
 

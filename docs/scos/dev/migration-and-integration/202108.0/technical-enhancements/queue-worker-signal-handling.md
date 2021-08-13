@@ -2,9 +2,12 @@
 title: Queue worker signal handling
 description: Configure a graceful shutdown of queue worker.
 originalLink: https://documentation.spryker.com/2021080/docs/queue-worker-signal-handling
+originalArticleId: 832df2ee-dad1-40ac-bf54-1f9aa1bb1a48
 redirect_from:
   - /2021080/docs/queue-worker-signal-handling
   - /2021080/docs/en/queue-worker-signal-handling
+  - /docs/queue-worker-signal-handling
+  - /docs/en/queue-worker-signal-handling
 ---
 
 Signal Handling is a configured behavior of an application invoked by receiving a signal. Signals are sent by an operating system to interact with the application. In PHP, there are [many signals](http://linux.die.net/man/7/signal), and just a couple of them are important. For example, the `SIGTERM` signal is a request that tells an application “I would really like you to shut down”. Most applications do terminate at such request, sometimes with issues. For example, sending the `SIGTERM` signal to an application while data is being processed may result into data inconsistency. That’s where signal handling can help. 

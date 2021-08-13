@@ -2,6 +2,7 @@
 title: Modularity and Shop Suite
 description: Everything built in Spryker is modular. Every module in Spryker is a single functional unit that is responsible for only one thing.
 originalLink: https://documentation.spryker.com/v3/docs/modularity-and-shop-suite
+originalArticleId: aa897448-6e16-4e2e-b8cf-f7166eb629f3
 redirect_from:
   - /v3/docs/modularity-and-shop-suite
   - /v3/docs/en/modularity-and-shop-suite
@@ -51,5 +52,5 @@ The API, Client, Shared, and Service application layers have simply the logic to
 
 ## Where to go from here?
 
-* To find out how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and Frontend Apps](/docs/scos/dev/developer-guides/202001.0/architecture-guide/commerce-os-and-frontend-apps.html).
-* If you want to know more about the building blocks of Spryker, see [Programming Concepts](/docs/scos/dev/developer-guides/202001.0/architecture-guide/programming-concepts.html).
+* To find out how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and Frontend Apps](/docs/scos/dev/developer-guides/201907.0/architecture-guide/commerce-os-and-frontend-apps.html).
+* If you want to know more about the building blocks of Spryker, see [Programming Concepts](/docs/scos/dev/developer-guides/201907.0/architecture-guide/programming-concepts.html).

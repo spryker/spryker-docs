@@ -2,9 +2,12 @@
 title: CRUD Scheduled Prices migration concept
 description: The article provides instructions on how to install CRUD Scheduled Prices on all modules affected in bulk and them individually.
 originalLink: https://documentation.spryker.com/2021080/docs/crud-scheduled-prices-migration-concept
+originalArticleId: 864ebca6-3170-4057-9a6b-df4affad73a7
 redirect_from:
   - /2021080/docs/crud-scheduled-prices-migration-concept
   - /2021080/docs/en/crud-scheduled-prices-migration-concept
+  - /docs/crud-scheduled-prices-migration-concept
+  - /docs/en/crud-scheduled-prices-migration-concept
 ---
 
 ## General Information
@@ -27,12 +30,12 @@ console transfer:generate
 ```
 
 3. Follow individual migration guides of the modules listed below:
-* [PriceProductSchedule](https://documentation.spryker.com/v4/docs/mg-price-product-schedule#upgrading-from-version-1---to-version-2-0-0)
-* [PriceProductScheduleGui](https://documentation.spryker.com/v4/docs/mg-price-product-schedule-gui#upgrading-from-version-1---to-version-2-0-0)
+* [PriceProductSchedule](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-priceproductschedule.html#upgrading-from-version-1---to-version-2-0-0)
+* [PriceProductScheduleGui](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-priceproductschedulegui.html#upgrading-from-version-1---to-version-2-0-0)
 
 You can find the affected modules of the CRUD scheduled prices update in the following table.
 
 | Module | Version | Migration guide |
 | --- | --- | --- |
-| `spryker/price-product-schedule	` | 	2.0.0 | [Migration Guide - PriceProductSchedule](https://documentation.spryker.com/v4/docs/mg-price-product-schedule#upgrading-from-version-1---to-version-2-0-0) |
-| `spryker/price-product-schedule-gui` | 	2.0.0 | [Migration Guide - PriceProductScheduleGui](https://documentation.spryker.com/v4/docs/mg-price-product-schedule-gui#upgrading-from-version-1---to-version-2-0-0) |
+| `spryker/price-product-schedule	` | 	2.0.0 | [Migration Guide - PriceProductSchedule](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-priceproductschedule.html#upgrading-from-version-1---to-version-2-0-0) |
+| `spryker/price-product-schedule-gui` | 	2.0.0 | [Migration Guide - PriceProductScheduleGui](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-priceproductschedulegui.html#upgrading-from-version-1---to-version-2-0-0) |

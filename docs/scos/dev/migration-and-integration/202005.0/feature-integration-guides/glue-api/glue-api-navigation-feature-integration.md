@@ -2,6 +2,7 @@
 title: Glue API- Navigation Feature Integration
 description: This guide will walk you through the process of installing and configuring the Navigation API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-navigation-feature-integration
+originalArticleId: ffa1e1a0-ccd9-4a46-9f88-b54e26dde6dc
 redirect_from:
   - /v5/docs/glue-api-navigation-feature-integration
   - /v5/docs/en/glue-api-navigation-feature-integration

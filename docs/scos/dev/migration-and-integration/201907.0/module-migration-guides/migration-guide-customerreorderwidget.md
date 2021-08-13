@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - CustomerReorderWidget
 originalLink: https://documentation.spryker.com/v3/docs/mg-customer-reorder-widget
+originalArticleId: 8938d6b0-8694-42c1-a16c-2c4041e34950
 redirect_from:
   - /v3/docs/mg-customer-reorder-widget
   - /v3/docs/en/mg-customer-reorder-widget

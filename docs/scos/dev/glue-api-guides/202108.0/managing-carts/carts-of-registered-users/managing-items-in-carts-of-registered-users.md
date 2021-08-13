@@ -2,9 +2,12 @@
 title: Managing items in carts of registered users
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource.
 originalLink: https://documentation.spryker.com/2021080/docs/managing-items-in-carts-of-registered-users
+originalArticleId: 8dbe18a1-adef-48a8-9ea0-b496f13c5630
 redirect_from:
   - /2021080/docs/managing-items-in-carts-of-registered-users
   - /2021080/docs/en/managing-items-in-carts-of-registered-users
+  - /docs/managing-items-in-carts-of-registered-users
+  - /docs/en/managing-items-in-carts-of-registered-users
 ---
 
 This endpoint allows managing items in carts of registered users by adding, changing, and deleting them.
@@ -12,15 +15,15 @@ This endpoint allows managing items in carts of registered users by adding, chan
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration)
-* [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
-* [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
-* [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
-* [Glue API: Product Bundles feature integration](https://documentation.spryker.com/2021080/docs/glue-api-product-bundles-feature-integration)
-* [Glue API: Product Bundle + Cart feature integration](https://documentation.spryker.com/2021080/docs/glue-api-product-bundle-cart-feature-integration)
-* [Glue API: Configurable Bundle feature integration](https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-feature-integration)
-* [Glue API: Configurable Bundle + Cart feature integration](https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-cart-feature-integration)
-* [Glue API: Configurable Bundle + Product feature integration](https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-product-feature-integration)
+* [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Measurement Units feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Product Options feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+* [Glue API: Product Bundles feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-bundles-feature-integration.html)
+* [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-bundle-cart-feature-integration.html)
+* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html)
+* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
+* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 
 
@@ -255,7 +258,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](https://documentation.spryker.com/docs/measurement-units-feature-overview) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/scos/dev/features/{{ page.version }}/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -2376,10 +2379,10 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 For the attributes of the included resources, see:
-* [Retrieving Measurement Units](https://documentation.spryker.com/docs/retrieving-measurement-units)
-* [Create a cart](https://documentation.spryker.com/docs/managing-carts-of-registered-users#create-a-cart)
-* [Retrieve a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-products#concrete-products-response-attributes)
-* [Retrieve an abstract product](https://documentation.spryker.com/2021080/docs/retrieving-abstract-products#abstract-products-response-attributes)
+* [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-measurement-units.html)
+* [Create a cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
 
 ## Add a configurable bundle to a registered user’s cart
 To add a configurable bundle to a registered user’s cart, send the request:
@@ -2393,7 +2396,7 @@ To add a configurable bundle to a registered user’s cart, send the request:
 
 | PATH PARAMETER | DESCRIPTIO |
 | --- | --- |
-| ***cart_uuid*** | A unique identifier of a cart. [Create a cart](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users#create-a-cart) or [Retrieve a registered user's carts](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users#retrieve-a-registered-users-carts) to get it. |
+| ***cart_uuid*** | A unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 
 ### Request
 
@@ -2432,7 +2435,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | The number of the configurabke bundles to add. |
-| templateUuid | String | &check; | Unique identifier of the configurable bundle template. To get it, [retrieve all configurable bundle templates](https://documentation.spryker.com/2021080/docs/retrieving-configurable-bundle-templates#retrieve-all-configurable-bundle-templates). |
+| templateUuid | String | &check; | Unique identifier of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | slotUuid | String | &check; | Unique identifier of the slot in the configurable bundle. |
@@ -2594,7 +2597,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 ```    
 </details>
 
-For the attributes of the response sample, see [Add an item a to a registered user's cart](https://documentation.spryker.com/2021080/docs/managing-items-in-carts-of-registered-users#add-an-item-to-a-registered-user-s-cart).
+For the attributes of the response sample, see [Add an item a to a registered user's cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-user-s-cart).
 
 
 | header | header | header | header |
@@ -2780,7 +2783,7 @@ Request sample:
 ```    
 </details>
 
-For the attributes of the included resources, see [Retrieving Concrete Products](https://documentation.spryker.com/docs/retrieving-product-information#retrieve-concrete-products).
+For the attributes of the included resources, see [Retrieving Concrete Products](https://documentation.spryker.com/2021080/docs/retrieving-product-information#retrieve-concrete-products).
 
 ## Change quantity of configurable bundles in a registered user’s cart
 
@@ -2792,7 +2795,7 @@ To change quantity of configurable bundles in a registered user’s cart, send t
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | A unique identifier of a cart.[ Create a cart](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users#create-a-cart) or [Retrieve a registered user's carts](https://documentation.spryker.com/docs/managing-items-in-carts-of-registered-users#retrieve-a-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | A unique identifier of a cart.[ Create a cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-user’s-cart). |
 
 ### Request
@@ -3168,4 +3171,4 @@ If the item is deleted successfully, the endpoint returns the “204 No Content�
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).

@@ -2,6 +2,7 @@
 title: Checkout
 description: The checkout workflow is a multi-step process that can be fullly customized to fit your needs.
 originalLink: https://documentation.spryker.com/v3/docs/checkout
+originalArticleId: b16ee585-3dc6-49d1-984c-9f387ed6bbe8
 redirect_from:
   - /v3/docs/checkout
   - /v3/docs/en/checkout

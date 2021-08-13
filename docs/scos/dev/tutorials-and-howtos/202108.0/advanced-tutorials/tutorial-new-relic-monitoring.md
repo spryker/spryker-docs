@@ -2,9 +2,12 @@
 title: Tutorial - New Relic Monitoring
 description: Use the guide to learn how to configure a New Relic agent, including on Linux,  and then test it.
 originalLink: https://documentation.spryker.com/2021080/docs/t-new-relic-monitoring
+originalArticleId: b7ba0c6c-21fb-43ae-abad-e030dccbea98
 redirect_from:
   - /2021080/docs/t-new-relic-monitoring
   - /2021080/docs/en/t-new-relic-monitoring
+  - /docs/t-new-relic-monitoring
+  - /docs/en/t-new-relic-monitoring
 ---
 
 ## Installing the PHP agent
@@ -81,5 +84,5 @@ $ sudo /etc/init.d/newrelic-daemon status
 
 To enable or migrate New Relic packages, check the following tutorial:
 
-* [Migration Guide - Monitoring](https://documentation.spryker.com/docs/mg-monitoring)
-* [New Relic](https://documentation.spryker.com/docs/new-relic)
+* [Migration Guide - Monitoring](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-monitoring.html)
+* [New Relic](/docs/scos/dev/technology-partners/{{ page.version }}/operational-tools-monitoring-legal-etc/new-relic.html)

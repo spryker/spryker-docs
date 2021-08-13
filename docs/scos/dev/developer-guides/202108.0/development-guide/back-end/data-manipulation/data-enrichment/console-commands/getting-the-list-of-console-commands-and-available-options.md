@@ -2,9 +2,12 @@
 title: Getting the list of console commands and available options
 description: The command-line Console tool enables you to execute a great variety of commands, such as managing the Spryker Commerce OS installer, to run the OS in any environment.
 originalLink: https://documentation.spryker.com/2021080/docs/getting-the-list-of-console-commands-and-available-options
+originalArticleId: e075ad9a-b328-43d4-bde1-e6d0f6e5f0bc
 redirect_from:
   - /2021080/docs/getting-the-list-of-console-commands-and-available-options
   - /2021080/docs/en/getting-the-list-of-console-commands-and-available-options
+  - /docs/getting-the-list-of-console-commands-and-available-options
+  - /docs/en/getting-the-list-of-console-commands-and-available-options
 ---
 
 With the Spryker Commerce OS comes an all-inclusive and fully pre-provisioned development environment on a virtual machine based on Vagrant and VirtualBox.
@@ -41,5 +44,5 @@ Options:
 In the above example output, you can see that Spryker prints some meta-information `Store: DE | Environment: development`. You can disable this output with the option `--quiet-meta`. This is very useful when you want to output, for example, JSON.
 
 ##  Next steps
-See [Console commands in spryker](https://documentation.spryker.com/docs/console ) for details on all the commands you can use.
+See [Console commands in spryker](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/console-commands/console-commands-in-spryker.html) for details on all the commands you can use.
 

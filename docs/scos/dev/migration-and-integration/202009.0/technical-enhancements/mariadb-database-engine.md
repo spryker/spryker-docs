@@ -2,6 +2,7 @@
 title: MariaDB database engine
 description: Learn how to switch database engine to MariaDB.
 originalLink: https://documentation.spryker.com/v6/docs/mariadb-database-engine
+originalArticleId: 39c54629-e4ef-4c58-bf26-f4974f3cc884
 redirect_from:
   - /v6/docs/mariadb-database-engine
   - /v6/docs/en/mariadb-database-engine
@@ -13,7 +14,7 @@ See [MariaDB knowledge base](https://mariadb.com/kb/en/) for more details.
 
 ## Integration into Docker-based projects
 
-For Docker-based integration instructions, see [MariaDB](https://documentation.spryker.com/docs/services#mariadb).
+For Docker-based integration instructions, see [MariaDB](/docs/scos/dev/developer-guides/202009.0/docker-sdk/configuring-services.html#mariadb).
   
 ## Integration into DevVM-based projects
 To integrate MariaDB into a DevVM-based project:

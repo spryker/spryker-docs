@@ -1,6 +1,7 @@
 ---
 title: HowTo - Customize HTTP Headers in AJAX Request
 originalLink: https://documentation.spryker.com/v3/docs/ht-customize-http-headers-in-ajax-request
+originalArticleId: 263b5f9b-664b-4d3b-b2bd-722467ed8726
 redirect_from:
   - /v3/docs/ht-customize-http-headers-in-ajax-request
   - /v3/docs/en/ht-customize-http-headers-in-ajax-request

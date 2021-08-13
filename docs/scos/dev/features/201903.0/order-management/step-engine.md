@@ -2,6 +2,7 @@
 title: Step Engine
 description: Using Step Engine, you can define Steps and additionally, you can link forms to interact with the user
 originalLink: https://documentation.spryker.com/v2/docs/step-engine
+originalArticleId: 17034b08-6d33-4c74-b8ed-e490f7470ffe
 redirect_from:
   - /v2/docs/step-engine
   - /v2/docs/en/step-engine

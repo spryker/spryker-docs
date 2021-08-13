@@ -1,6 +1,7 @@
 ---
 title: Tutorial- Product Challenge Solution
 originalLink: https://documentation.spryker.com/v1/docs/t-product-challenge-solution
+originalArticleId: f3bf3d80-c06f-4927-b7fa-48d5f1d36a28
 redirect_from:
   - /v1/docs/t-product-challenge-solution
   - /v1/docs/en/t-product-challenge-solution

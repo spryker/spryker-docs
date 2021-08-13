@@ -2,6 +2,7 @@
 title: RatePay - Installment
 description: Integrate installment payment through Ratepay into the Spryker-based shop.
 originalLink: https://documentation.spryker.com/v2/docs/ratepay-installment
+originalArticleId: cde09fb6-93f1-4c5a-97b3-cb804e6e7b65
 redirect_from:
   - /v2/docs/ratepay-installment
   - /v2/docs/en/ratepay-installment

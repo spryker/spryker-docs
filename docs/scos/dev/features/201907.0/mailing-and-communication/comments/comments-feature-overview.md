@@ -2,6 +2,7 @@
 title: Comments Feature Overview
 description: Comments feature provides the ability for online owners to add Comments Widget that  allows the customers to leave comments or special requests.
 originalLink: https://documentation.spryker.com/v3/docs/comments-feature-overview
+originalArticleId: 982e1c75-1503-4c82-bc2c-eba4545be230
 redirect_from:
   - /v3/docs/comments-feature-overview
   - /v3/docs/en/comments-feature-overview
@@ -23,11 +24,11 @@ Within the Comments feature, we have created the Comments Widget. The widget can
 
 Company users can perform the following actions using the Comment Widget:
 
-* [Add a comment](https://documentation.spryker.com/v3/docs/managing-comments-shop-guide#adding-a-comment-to-the-cart)
-* [Edit a comment](https://documentation.spryker.com/v3/docs/managing-comments-shop-guide#editing-a-comment-in-the-cart)
-* [\(Un\)Tag a comment](https://documentation.spryker.com/v3/docs/managing-comments-shop-guide#-un-tagging-a-comment-in-the-cart)
-* [\(Un\)Filter comments per tag](https://documentation.spryker.com/v3/docs/managing-comments-shop-guide#-un-filtering-a-comment-in-the-cart)
-* [Remove the comment](https://documentation.spryker.com/v3/docs/managing-comments-shop-guide#removing-a-comment)
+* [Add a comment](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html#adding-a-comment-to-the-cart)
+* [Edit a comment](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html#editing-a-comment-in-the-cart)
+* [\(Un\)Tag a comment](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html#-un-tagging-a-comment-in-the-cart)
+* [\(Un\)Filter comments per tag](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html#-un-filtering-a-comment-in-the-cart)
+* [Remove the comment](/docs/scos/user/user-guides/201907.0/shop-user-guide/comments/shop-guide-managing-comments.html#removing-a-comment)
 
 The comment contains the following information:
 

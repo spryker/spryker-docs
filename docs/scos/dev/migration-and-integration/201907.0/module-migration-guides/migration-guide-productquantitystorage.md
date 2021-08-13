@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductQuantityStorage
 originalLink: https://documentation.spryker.com/v3/docs/mg-product-quantity-storage
+originalArticleId: 0000eaa3-ef52-424a-b103-8cde64edd0db
 redirect_from:
   - /v3/docs/mg-product-quantity-storage
   - /v3/docs/en/mg-product-quantity-storage

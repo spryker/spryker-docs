@@ -2,6 +2,7 @@
 title: Creating product bundles
 description: Use the guide to assign product variants to a bundle, set its price, add SEO data and images in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/creating-product-bundles
+originalArticleId: adefeaa9-e3db-4d18-844d-82d2dea1e18f
 redirect_from:
   - /v6/docs/creating-product-bundles
   - /v6/docs/en/creating-product-bundles
@@ -20,7 +21,7 @@ For example, if your product is a smartphone, you can set it up to be sold with 
 **To create a product bundle:**
 
 1. Select **Create Bundle Product**.
-2. On the *Create a Product* page, do the procedure described in [Creating an Abstract Product](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/products/abstract-products/creating-an-abstract-product.html).
+2. On the *Create a Product* page, do the procedure described in [Creating an Abstract Product](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html).
 3. Populate the **General**, **Price & Tax**, **SEO**, and **Image** tabs.
 4. Click **Save**.
     The only difference is that you do not define the product variants for the bundle.

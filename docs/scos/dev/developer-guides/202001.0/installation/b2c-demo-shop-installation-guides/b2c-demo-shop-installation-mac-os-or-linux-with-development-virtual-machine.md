@@ -2,12 +2,13 @@
 title: B2C Demo Shop Installation- Mac OS or Linux, with Development Virtual Machine
 description: This article provides step-by-step instructions on the B2C Demo Shop installation.
 originalLink: https://documentation.spryker.com/v4/docs/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+originalArticleId: 6472e23c-3d20-444b-8bd6-fda49dd2d94d
 redirect_from:
   - /v4/docs/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
   - /v4/docs/en/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
 ---
 
-To install the [Demo Shop for B2C implementations](/docs/scos/dev/about-spryker/202001.0/b2c-suite.html) on Mac OS or Linux with Development Virtual Machine, follow the steps below.
+To install the [Demo Shop for B2C implementations](/docs/scos/user/about-spryker/202001.0/b2c-suite.html) on Mac OS or Linux with Development Virtual Machine, follow the steps below.
 
 ### 1. Install Prerequisites
 
@@ -96,4 +97,4 @@ Credentials to access the administrator interface: user `admin@spryker.com` and 
 
 
 **Next steps:**
-* [Troubleshooting](https://documentation.spryker.com/v4/docs/troubleshooting)
+* [Troubleshooting](https://documentation.spryker.com/v4/docs/peer-authentication-failed-for-user-postgres)

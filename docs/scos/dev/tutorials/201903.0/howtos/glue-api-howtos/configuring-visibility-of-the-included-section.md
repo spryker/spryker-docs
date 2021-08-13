@@ -1,6 +1,7 @@
 ---
 title: Configuring Visibility of the Included Section
 originalLink: https://documentation.spryker.com/v2/docs/ht-configuring-visibility-included-section-201903
+originalArticleId: 989b742b-92d8-42b1-b506-6e77a85c9714
 redirect_from:
   - /v2/docs/ht-configuring-visibility-included-section-201903
   - /v2/docs/en/ht-configuring-visibility-included-section-201903
@@ -23,7 +24,7 @@ You can decide whether Glue REST API includes the sections in all responses by d
 |**Enabled** | The **included** and **relationships** sections contain only the resources whose names were passed in the query string (resource _concrete-product-image-sets_ per the example). | The included section contains all the included resources (if any). |
 |**Disabled** | The response does not contain the included section with related resources. |  The included section contains all the included resources (if any).|
 
-By default, the option is enabled on the Spryker Core level, but disabled on the project level in all [Spryker Demo Shops](/docs/scos/dev/about-spryker/201903.0/demo-shops.html) (B2B Demo Shop, B2C Demo Shop and Master Shop Suite).
+By default, the option is enabled on the Spryker Core level, but disabled on the project level in all [Spryker Demo Shops](/docs/scos/user/about-spryker/201903.0/demo-shops.html) (B2B Demo Shop, B2C Demo Shop and Master Shop Suite).
         
 {% info_block infoBox %}
 For the purposes of boosting the API performance and bandwidth usage optimization, it is recommended to request only the information you need.

@@ -1,6 +1,7 @@
 ---
 title: Glue REST API
 originalLink: https://documentation.spryker.com/v5/docs/glue-rest-api
+originalArticleId: 99a9f086-004b-4881-af70-e00f008363df
 redirect_from:
   - /v5/docs/glue-rest-api
   - /v5/docs/en/glue-rest-api
@@ -14,14 +15,14 @@ The Spryker Glue REST API is a fully functional JSON REST API that comes in the 
 The Spryker API infrastructure, which is implemented as a separate layer of the Spryker Commerce OS, is called Glue. Glue is responsible for providing API endpoints, processing requests, as well as for communication with other layers of the OS in order to retrieve the necessary information. As a result, the Glue is responsible for communicating with any clients on the touchpoint side.
 
 {% info_block infoBox %}
-For more details, see [Glue Infrastructure](https://documentation.spryker.com/docs/en/glue-infrastructure
+For more details, see [Glue Infrastructure](/docs/scos/dev/developer-guides/202005.0/development-guide/glue-api/glue-infrastructure.html
 {% endinfo_block %}.)
 
 ## REST API
 The Glue REST API comes with a set of predefined APIs, and the possibility for you to extend and add APIs in your project. There is no restriction when it comes to customization. The predefined APIs support Storefront functionality and may as well be used for integrations with 3rd party systems. Storefront functionality specifically enables you to build a custom experience for your customers in any touchpoint you want and thereby leveraging data and functionality at the core of your Commerce OS. For instance, it allows you to fetch product data to be displayed on a custom product detail page in your mobile app.
 
 {% info_block infoBox %}
-For more details, see [REST API Reference](https://documentation.spryker.com/docs/en/rest-api-reference
+For more details, see [REST API Reference](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html
 {% endinfo_block %}.)
 
 ## B2C API React Example
@@ -30,7 +31,7 @@ In order to help you understand possible use cases, we offer you a sample app av
 What is more, it delivers a full customer experience from browsing the catalog to placing an order. The application allows you to understand, how the existing APIs can be leveraged to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our other demo shops (B2C and B2B), is leveraged via dedicated endpoints to deliver catalog search functionality with auto-completion, auto-suggestion, facets, sorting, and pagination.
 
 {% info_block infoBox %}
-[Install and run!](https://documentation.spryker.com/docs/en/b2c-api-react-example
+[Install and run!](/docs/scos/dev/tutorials/202005.0/advanced/glue-api/b2c-api-react-example/b2c-api-react-example.html
 {% endinfo_block %})
 
 ### What can I use the REST API for?

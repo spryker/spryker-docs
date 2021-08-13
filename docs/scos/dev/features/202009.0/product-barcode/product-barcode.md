@@ -2,6 +2,7 @@
 title: Product Barcode
 description: Barcode is both cost-effective and reliable solution. The ultimate result of a comprehensive barcoding system is a reduction in overhead.
 originalLink: https://documentation.spryker.com/v6/docs/product-barcode
+originalArticleId: 238a59d7-b313-4e8c-acb8-58b8d2be7c2f
 redirect_from:
   - /v6/docs/product-barcode
   - /v6/docs/en/product-barcode

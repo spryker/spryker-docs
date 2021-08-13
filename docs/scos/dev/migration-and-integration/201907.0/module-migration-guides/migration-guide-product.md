@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Product
 originalLink: https://documentation.spryker.com/v3/docs/mg-product
+originalArticleId: 76d68e68-bd3e-4f8a-95ab-6ed4b8838252
 redirect_from:
   - /v3/docs/mg-product
   - /v3/docs/en/mg-product
@@ -10,7 +11,7 @@ redirect_from:
 
 This version defines connection between abstract products and stores, allowing users to manage abstract product appearance per store.
 
-1. Update/install `spryker/collector` to at least 6.0.0 version. See [Migration Guide - Collector](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-collector.html) for more details.
+1. Update/install `spryker/collector` to at least 6.0.0 version. See [Migration Guide - Collector](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-collector.html) for more details.
 2. Update/install `spryker/store` to at least 1.3.0 version.
 3. Run `vendor/bin/console transfer:generate` to generate the new transfer objects.
 4. Install the new database tables by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
@@ -140,7 +141,7 @@ Collectors should now be able to export abstract product data per store both for
 9. `Facade/ProductToUrlInterface::hasUrl()` method is removed because it is not used within the module. Please check your code if you have customized calls to it.
 10. `ProductAbstractManager` internal class was amended to handle `abstract product-store` relation, take a look if you have customized it.
 
-Additionally you might want to update the Product Information Management (PIM) Zed Admin UI to manage abstract products and their store configuration. You can find further information about multi-store products here, and [Migration Guide - ProductManagement](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-productmanagement.html).
+Additionally you might want to update the Product Information Management (PIM) Zed Admin UI to manage abstract products and their store configuration. You can find further information about multi-store products here, and [Migration Guide - ProductManagement](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-productmanagement.html).
 
 Note: make sure that `ProductPriceQueryExpanderPlugin` is always registered before `FacetQueryExpanderPlugin` in your dependency provider plugin list definitions.
 Check out our Demoshop implementation for implementation example and idea.
@@ -377,4 +378,4 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 For all other issues that you might encounter after migration, please refer to the Spryker Demoshop.
 
 ## Upgrading from Version 2.* to Version 3.*
-The Product module does not provide the tax functionality anymore. Upgrade [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/202001.0/module-migration-guides/migration-guide-tax.html).
+The Product module does not provide the tax functionality anymore. Upgrade [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/201907.0/module-migration-guides/migration-guide-tax.html).

@@ -1,12 +1,15 @@
 ---
 title: File details- discount.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-discountcsv
+originalArticleId: c8bfc425-7004-4064-8e37-ad8708f07183
 redirect_from:
   - /2021080/docs/file-details-discountcsv
   - /2021080/docs/en/file-details-discountcsv
+  - /docs/file-details-discountcsv
+  - /docs/en/file-details-discountcsv
 ---
 
-This article contains content of the **discount.csv** file to configure [Discount](https://documentation.spryker.com/docs/discount) information on your Spryker Demo Shop.
+This article contains content of the **discount.csv** file to configure [Discount](/docs/scos/dev/features/{{ page.version }}/promotions-and-discounts/promotions-and-discounts.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

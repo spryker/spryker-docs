@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - Search
 originalLink: https://documentation.spryker.com/v1/docs/mg-search
+originalArticleId: 6dae8f78-0c7d-42f0-9ae1-0b11c418cb8f
 redirect_from:
   - /v1/docs/mg-search
   - /v1/docs/en/mg-search

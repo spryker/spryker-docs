@@ -2,9 +2,12 @@
 title: Product Bundles feature integration
 description: Learn how to integrate the Product bundles feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-feature-integration
+originalArticleId: d72b5db3-a8e5-4332-a2f5-b40c95bfd92c
 redirect_from:
   - /2021080/docs/product-bundles-feature-integration
   - /2021080/docs/en/product-bundles-feature-integration
+  - /docs/product-bundles-feature-integration
+  - /docs/en/product-bundles-feature-integration
 ---
 
 This integration guide expects the basic feature to be in place. It adds only the Product Bundle storage configuration.
@@ -16,8 +19,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker Core feature integration](https://documentation.spryker.com/upcoming-release/docs/spryker-core-feature-integration) |
-| Product |{% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} |[Product feature integration](https://documentation.spryker.com/docs/product-feature-integration)|
+| Spryker Core | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-ore-feature-integration.html) |
+| Product |{% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} |[Product feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-feature-integration.html)|
 
 ## 1) Install required modules using Composer
 
@@ -293,6 +296,6 @@ Integrate the following related features:
 
 | Feature | Required for the current feature | Integration guide |
 | --- | --- | --- |
-| Product Bundles + Punchout GUI |  | [Eco: Punchout Catalogs + Product Bundles feature integration](https://documentation.spryker.com/docs/eco-punchout-catalogs-product-bundles-feature-integration) |
+| Product Bundles + Punchout GUI |  | [Eco: Punchout Catalogs + Product Bundles feature integration](/docs/scos/dev/technology-partners/{{ page.version }}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html) |
 
 

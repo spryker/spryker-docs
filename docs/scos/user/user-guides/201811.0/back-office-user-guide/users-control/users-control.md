@@ -2,6 +2,7 @@
 title: Users Control
 description: The section can be used to create, update, and Back Office users, user groups and roles in the Back Office.
 originalLink: https://documentation.spryker.com/v1/docs/users-control
+originalArticleId: 291e7416-9fd4-4dd0-899d-32e3eddda8d3
 redirect_from:
   - /v1/docs/users-control
   - /v1/docs/en/users-control

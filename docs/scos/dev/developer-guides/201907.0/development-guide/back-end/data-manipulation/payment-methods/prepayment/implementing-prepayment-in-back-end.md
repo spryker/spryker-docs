@@ -2,6 +2,7 @@
 title: Implementing Prepayment in Back End
 description: This article describes how to implement prepayment in the back end.
 originalLink: https://documentation.spryker.com/v3/docs/ht-prepayment-be
+originalArticleId: 473a39fb-6ff8-4ea6-90ce-4ac9f24e5ab6
 redirect_from:
   - /v3/docs/ht-prepayment-be
   - /v3/docs/en/ht-prepayment-be

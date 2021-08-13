@@ -2,6 +2,7 @@
 title: Hierarchical Navigation
 description: The navigation is built in a tree structure to support multiple levels of linking, e.g. to categories, external links, search results and CMS pages.
 originalLink: https://documentation.spryker.com/v2/docs/hierarchical-navigation
+originalArticleId: 48c74adc-769d-42ca-a341-551fc8b327fc
 redirect_from:
   - /v2/docs/hierarchical-navigation
   - /v2/docs/en/hierarchical-navigation

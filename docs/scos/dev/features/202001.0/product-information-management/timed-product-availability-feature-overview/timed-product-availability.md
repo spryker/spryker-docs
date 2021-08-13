@@ -2,6 +2,7 @@
 title: Timed Product Availability
 description: With Timed Product Availability, you can easily define from and till when your product(s) will be visible and available for purchase by your customers.
 originalLink: https://documentation.spryker.com/v4/docs/product-ttl
+originalArticleId: 5639beb6-0fc0-4cd9-b13a-81a58cf423e2
 redirect_from:
   - /v4/docs/product-ttl
   - /v4/docs/en/product-ttl

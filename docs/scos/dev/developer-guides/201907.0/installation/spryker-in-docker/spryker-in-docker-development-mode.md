@@ -2,6 +2,7 @@
 title: Spryker in Docker - Development Mode
 description: Find all the details about development mode of Spryker in Docker in this article.
 originalLink: https://documentation.spryker.com/v3/docs/spryker-in-docker-dev-mode-201907
+originalArticleId: 28aa3f6b-6644-45f3-89b5-b9a7a3bbc823
 redirect_from:
   - /v3/docs/spryker-in-docker-dev-mode-201907
   - /v3/docs/en/spryker-in-docker-dev-mode-201907
@@ -37,7 +38,7 @@ Find more information about docker-sync, see the [docker-sync documentation](htt
 * AT and DE are handled by a separate group of containers and have a common database.
 * US is handled by a separate group of containers and has a separate database.
 
-Find more information about the multi-store setup, see [Multiple Stores](/docs/scos/dev/features/202001.0/internationalization/multiple-stores.html).
+Find more information about the multi-store setup, see [Multiple Stores](/docs/scos/dev/features/201907.0/internationalization/multiple-stores.html).
 
 ## Database Access
 

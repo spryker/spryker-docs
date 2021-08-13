@@ -2,6 +2,7 @@
 title: Extending the Spryker-Core Functionality
 description: To extend the Spryker-Core functionality and to use the Spryker Engine to develop a project, it’s important to understand the folder structure used in Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v3/docs/t-extend-spryker
+originalArticleId: bcc08403-bd04-43e3-ac36-0e1799ec3f12
 redirect_from:
   - /v3/docs/t-extend-spryker
   - /v3/docs/en/t-extend-spryker
@@ -58,7 +59,7 @@ Each module contains one folder for every layer of the application :
 ## Extending SprykerCore Functionality
 To extend the functionality of a class from SprykerCore, a new class with the same name must be added to the corresponding location on the project side.
 
-Replacement rules, described in the [Extending the Core](https://documentation.spryker.com/v4/docs/core-extension ) article work for the next classes in Spryker module:
+Replacement rules, described in the [Extending the Core](/docs/scos/dev/developer-guides/201907.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-the-core.html) article work for the next classes in Spryker module:
 
 * `Facade`
 * `BusinessFactory`

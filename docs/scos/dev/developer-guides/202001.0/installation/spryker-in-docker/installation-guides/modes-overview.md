@@ -1,6 +1,7 @@
 ---
 title: Modes Overview
 originalLink: https://documentation.spryker.com/v4/docs/modes-overview
+originalArticleId: 02aff7c4-9fdd-4d9b-8b42-6f1757816b7e
 redirect_from:
   - /v4/docs/modes-overview
   - /v4/docs/en/modes-overview
@@ -70,13 +71,13 @@ Find more more information on debugging with Xdebug in [Debugging Setup in Docke
 Demo mode is a configuration in which Spryker is built and running without development tools, like file synchronization. As a result, Docker images in this mode are smaller. Learn about Demo mode below or follow [Installation Guide - Demo mode](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/installation-guides/installation-guide-demo-mode.html) to Install Spryker in this mode.
 
 In Demo mode, the following functionalities are missing or disabled:
-1. [Swagger UI service](https://documentation.spryker.com/v4/docs/services#swagger-ui) - this image is not built, and the container is not running.
+1. [Swagger UI service](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/configuration/services.html#swagger-ui) - this image is not built, and the container is not running.
 2. [Debugging functionality](#debugging) is disabled.
 3. [File synchronization](#file-synchronization) is disabled.
 
 ### Use Cases
 Demo mode is used in the following cases:
-* To check or show the functionalities of [B2B/B2C demo shops](https://documentation.spryker.com/v4/docs/demoshops).
+* To check or show the functionalities of [B2B/B2C demo shops](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops).
 * To check a custom build or a new feature.
 * To test or deploy an application using Continuous Integration and Continuous Delivery tools.
 

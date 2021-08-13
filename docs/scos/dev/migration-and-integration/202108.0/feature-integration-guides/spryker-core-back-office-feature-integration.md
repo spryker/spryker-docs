@@ -2,9 +2,12 @@
 title: Spryker Core Back Office feature integration
 description: Learn how to integrate the Spryker Core Back Office feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-core-back-office-feature-integration
+originalArticleId: 53f711aa-6007-4fe2-8baf-ad91c72f33f4
 redirect_from:
   - /2021080/docs/spryker-core-back-office-feature-integration
   - /2021080/docs/en/spryker-core-back-office-feature-integration
+  - /docs/spryker-core-back-office-feature-integration
+  - /docs/en/spryker-core-back-office-feature-integration
 ---
 
 {% info_block errorBox %}
@@ -30,7 +33,7 @@ Ensure that the related features are installed:
 
 | Name | Version |
 | --- | --- | --- |
-| Spryker Core | {% raw %}{{{% endraw %}variable.dev-master{% raw %}}}{% endraw %} | [Spryker Core feature integration](https://documentation.spryker.com/upcoming-release/docs/spryker-core-feature-integration) |
+| Spryker Core | {% raw %}{{{% endraw %}variable.dev-master{% raw %}}}{% endraw %} | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-ore-feature-integration.html) |
  
 
 ## 1) Install the required modules using Composer

@@ -2,6 +2,7 @@
 title: Retrieving concrete product availability
 description: Retrieve availability of concrete products.
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-concrete-product-availability
+originalArticleId: 643790b7-3c3c-4d98-8bca-90f1e39a654a
 redirect_from:
   - /v6/docs/retrieving-concrete-product-availability
   - /v6/docs/en/retrieving-concrete-product-availability
@@ -13,7 +14,7 @@ This endpoint allows to retrieve availability of concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](https://documentation.spryker.com/docs/glue-api-products-feature-integration).
+* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/202009.0/feature-integration-guides/glue-api/glue-api-products-feature-integration.html).
 
 
 
@@ -32,7 +33,7 @@ For detailed information on the modules that provide the API functionality and r
 
 Request sample: `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities`
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 
 ### Response
 
@@ -77,5 +78,5 @@ To view generic errors that originate from the Glue Application, see [Reference 
 | --- | --- |
 | 306 | Availability is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/202009.0/reference-information-glueapplication-errors.html).
 

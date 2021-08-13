@@ -2,6 +2,7 @@
 title: Reference information- discount calculation
 description: The guide provides additional information on the values you use when working with discount calculations in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/discount-calculation-reference-information
+originalArticleId: 8a55c5d9-4522-4058-8cd4-28022a93e7d5
 redirect_from:
   - /v6/docs/discount-calculation-reference-information
   - /v6/docs/en/discount-calculation-reference-information
@@ -55,7 +56,7 @@ You can find plain query examples in the following table.
 |shipment-carrier != '1' AND price-mode = 'GROSS_MODE'|Discount applies if the shipment carrier with the attribute "1" is not chosen and gross pricing is selected.|
 |currency != 'EUR' OR price-mode = 'GROSS_MODE'|Discount applies if the selected currency is not Euro or the pricing mode is gross.|
 {% info_block infoBox "Info" %}
-See [Token Description Tables](/docs/scos/user/user-guides/202001.0/back-office-user-guide/discount/references/token-description-tables.html
+See [Token Description Tables](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/discount/references/token-description-tables.html
 {% endinfo_block %} for more information.)
 
 ### Discount promotion to product

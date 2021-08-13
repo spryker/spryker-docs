@@ -2,6 +2,7 @@
 title: Shopping list widget
 description: With Shopping List Widget, customers can create new shopping lists and view details about the existing ones by putting a cursor on a shopping list icon.
 originalLink: https://documentation.spryker.com/v6/docs/shopping-list-widget
+originalArticleId: bd5527a9-0f31-4512-83a2-966794fcf8de
 redirect_from:
   - /v6/docs/shopping-list-widget
   - /v6/docs/en/shopping-list-widget

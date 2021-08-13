@@ -1,9 +1,12 @@
 ---
 title: Shared carts feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/shared-carts-feature-integration
+originalArticleId: 1f7146bf-124f-435a-85aa-632c2c2738ca
 redirect_from:
   - /2021080/docs/shared-carts-feature-integration
   - /2021080/docs/en/shared-carts-feature-integration
+  - /docs/shared-carts-feature-integration
+  - /docs/en/shared-carts-feature-integration
 ---
 
 ## Install Feature Core

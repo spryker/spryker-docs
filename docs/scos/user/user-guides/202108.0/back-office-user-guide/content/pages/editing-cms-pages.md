@@ -2,9 +2,12 @@
 title: Editing CMS pages
 description: The guide provides instructions on how to update page layout, SEO data and page content in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/editing-cms-pages
+originalArticleId: a0f086e5-f744-4a25-8e3d-fa8d065a34ba
 redirect_from:
   - /2021080/docs/editing-cms-pages
   - /2021080/docs/en/editing-cms-pages
+  - /docs/editing-cms-pages
+  - /docs/en/editing-cms-pages
 ---
 
 The topic describes how to edit CMS pages in the Back Office.
@@ -58,7 +61,7 @@ To change the title and content of the page:
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png)
 
 {% info_block infoBox %}
-In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding content item widgets to a page](https://documentation.spryker.com/2021080/docs/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-pages
+In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding content item widgets to a page](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages
 {% endinfo_block %} for more details. )
 
 **Tips & tricks**

@@ -1,6 +1,7 @@
 ---
 title: Multi-Language Setup
 originalLink: https://documentation.spryker.com/v6/docs/multi-language-setup
+originalArticleId: 8de0e953-c7c8-488e-988b-aff04c3cf418
 redirect_from:
   - /v6/docs/multi-language-setup
   - /v6/docs/en/multi-language-setup
@@ -119,7 +120,7 @@ The CSV file containing the product data that needs to be imported must contain 
 The CMS blocks and pages are able to render localized content through the use of placeholders. The placeholders have a glossary key associated. At runtime, the placeholder is replaced with the glossary value that corresponds to the current locale. Also, a static page will have a distinct URL for each locale defined in the application.
 
 {% info_block infoBox %}
-For more details on CMS, see [Defining Maximum Size of Content Fields](/docs/scos/dev/tutorials/202001.0/howtos/howto-define-maximum-size-of-content-fields.html
+For more details on CMS, see [Defining Maximum Size of Content Fields](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/howto-define-maximum-size-of-content-fields.html
 {% endinfo_block %}.)
 
 The CMS blocks and pages are imported through XML files. The structure of the XML file is very simple: it contains a list of blocks, each block has a template associated, a name and a list of placeholders for each locale.

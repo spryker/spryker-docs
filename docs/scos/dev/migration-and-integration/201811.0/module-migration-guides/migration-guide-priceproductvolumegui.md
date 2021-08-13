@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - PriceProductVolumeGui
 originalLink: https://documentation.spryker.com/v1/docs/mg-price-product-volume-gui
+originalArticleId: 8c43defb-635d-484a-a113-445346c4c211
 redirect_from:
   - /v1/docs/mg-price-product-volume-gui
   - /v1/docs/en/mg-price-product-volume-gui

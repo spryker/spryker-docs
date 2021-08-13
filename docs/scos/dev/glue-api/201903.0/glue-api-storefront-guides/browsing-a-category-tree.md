@@ -1,6 +1,7 @@
 ---
 title: Browsing a Category Tree
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-category-trees
+originalArticleId: ff8a0575-3309-4638-b9c0-bb04c07fe982
 redirect_from:
   - /v2/docs/retrieving-category-trees
   - /v2/docs/en/retrieving-category-trees
@@ -15,7 +16,7 @@ In your development, these resources can help you to:
 * Find out which categories a product belongs to
 
 {% info_block infoBox %}
-For more information on managing the category tree, see [Category Hierarchy](/docs/scos/dev/features/202001.0/catalog-management/define-category-hierarchy.html
+For more information on managing the category tree, see [Category Hierarchy](/docs/scos/dev/features/201903.0/catalog-management/define-category-hierarchy.html
 {% endinfo_block %}.)
 
 ## Installation

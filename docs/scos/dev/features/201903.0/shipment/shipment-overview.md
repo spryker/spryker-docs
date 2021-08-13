@@ -2,6 +2,7 @@
 title: Shipment Overview
 description: Sales order has an associated shipment method. Shipment method is linked to a shipment carrier. Shipment carrier can have zero to many shipment methods.
 originalLink: https://documentation.spryker.com/v2/docs/shipment-overview
+originalArticleId: 2717bc3e-f06d-494e-b1f8-0340cd348cca
 redirect_from:
   - /v2/docs/shipment-overview
   - /v2/docs/en/shipment-overview

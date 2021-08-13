@@ -1,6 +1,7 @@
 ---
 title: Test helper
 originalLink: https://documentation.spryker.com/v5/docs/test-helper
+originalArticleId: b8a74c76-a147-410b-bfef-dea680f9ffb8
 redirect_from:
   - /v5/docs/test-helper
   - /v5/docs/en/test-helper

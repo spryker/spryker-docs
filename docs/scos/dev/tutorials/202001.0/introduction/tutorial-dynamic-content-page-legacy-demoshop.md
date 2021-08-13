@@ -2,6 +2,7 @@
 title: Tutorial - Dynamic Content Page - Legacy Demoshop
 description: Use this tutorial to create a static page displaying a personalized range of product offers.
 originalLink: https://documentation.spryker.com/v4/docs/dynamic-content-page
+originalArticleId: f68eb438-f045-4446-a24e-9ffc4318d77d
 redirect_from:
   - /v4/docs/dynamic-content-page
   - /v4/docs/en/dynamic-content-page

@@ -2,6 +2,7 @@
 title: Managing Customers
 description: This guide provides instructions on how shop owners can add and manage personal information, customer billing, and shipping addresses in the Back Office.
 originalLink: https://documentation.spryker.com/v5/docs/managing-customers
+originalArticleId: 244d8bc1-ea4b-45a5-b138-a438088272ed
 redirect_from:
   - /v5/docs/managing-customers
   - /v5/docs/en/managing-customers
@@ -21,7 +22,7 @@ If you don’t select this option, the customer is still able to set a password 
 {% endinfo_block %}
 4. To complete the customer creation, click **Save**.
 
-To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](https://documentation.spryker.com/docs/en/customers-reference-information). 
+To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/customer-customer-access-customer-groups/references/customers-reference-information.html). 
 
 ## Editing Customers 
 **To edit a customer:**
@@ -41,7 +42,7 @@ The **View customer details** page is designed to serve more purposes than just 
 
 On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the **Notes** section. 
 
-To know how the customer addresses are managed, see  [Managing Customer Addresses](https://documentation.spryker.com/docs/en/customers-reference-information).
+To know how the customer addresses are managed, see  [Managing Customer Addresses](/docs/scos/user/user-guides/202005.0/back-office-user-guide/customer/customer-customer-access-customer-groups/references/customers-reference-information.html).
 
 ### Viewing customer details
 **To view customer details:**

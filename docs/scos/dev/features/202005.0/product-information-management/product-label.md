@@ -1,6 +1,7 @@
 ---
 title: Product Label
 originalLink: https://documentation.spryker.com/v5/docs/product-label
+originalArticleId: 06045042-98de-45ed-8a02-f6f0063bb882
 redirect_from:
   - /v5/docs/product-label
   - /v5/docs/en/product-label

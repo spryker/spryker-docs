@@ -1,9 +1,12 @@
 ---
 title: Running production
 originalLink: https://documentation.spryker.com/2021080/docs/running-production-mode
+originalArticleId: 73489708-d2d7-4b44-a353-f8972ac45ede
 redirect_from:
   - /2021080/docs/running-production-mode
   - /2021080/docs/en/running-production-mode
+  - /docs/running-production-mode
+  - /docs/en/running-production-mode
 ---
 
 This document describes the procedure of generating images and assets suitable for a production environment. After going through all the steps, it's up to you how to proceed further.

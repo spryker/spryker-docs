@@ -2,6 +2,7 @@
 title: Legacy Demoshop Installation Guide
 description: This article provides step-by-step instructions on the Legacy Demoshop installation.
 originalLink: https://documentation.spryker.com/v1/docs/installation-guide-legacy-demoshop
+originalArticleId: eaf066b6-1b73-4c93-bec1-34825f063618
 redirect_from:
   - /v1/docs/installation-guide-legacy-demoshop
   - /v1/docs/en/installation-guide-legacy-demoshop
@@ -10,7 +11,7 @@ redirect_from:
 To install the Legacy Demoshop, use the following instructions:
 
 {% info_block infoBox %}
-All customers using the Legacy Demoshop can make their project compatible with the new Spryker Commerce OS architecture available starting from the [November release](/docs/scos/dev/about-spryker/201811.0/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
+All customers using the Legacy Demoshop can make their project compatible with the new Spryker Commerce OS architecture available starting from the [November release](/docs/scos/user/about-spryker/201811.0/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
 {% endinfo_block %}. For details, see [Updating the Legacy Demoshop with SCOS](/docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html).)
 
 
@@ -414,7 +415,7 @@ $config[ApplicationConstants::ELASTICA_PARAMETER__INDEX_NAME] = 'de_development_
 
 #### RabbitMQ
 
-Configure RabbitMQ permissions and virtual hosts according to the instructions [Tutorial - Set Up a "Hello World" Queue - Legacy Demoshop](https://documentation.spryker.com/v1/docs/setup-hello-world-queue#rabbitmq-management-ui).
+Configure RabbitMQ permissions and virtual hosts according to the instructions [Tutorial - Set Up a "Hello World" Queue - Legacy Demoshop](/docs/scos/dev/tutorials/201811.0/introduction/tutorial-set-up-a-hello-world-queue-legacy-demoshop.html#rabbitmq-management-ui).
 
 #### Hostname
 

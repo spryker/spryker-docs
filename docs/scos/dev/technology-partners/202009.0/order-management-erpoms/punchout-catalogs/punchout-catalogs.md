@@ -2,6 +2,7 @@
 title: Punchout Catalogs
 description: Connect your platform using cXML or OCI protocol with the buyer's ERP by integrating Punchout Catalogs into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/v6/docs/punchout-catalogs
+originalArticleId: 81e6a02d-3559-4be2-aa77-c7663bdc6dfe
 redirect_from:
   - /v6/docs/punchout-catalogs
   - /v6/docs/en/punchout-catalogs
@@ -9,9 +10,9 @@ redirect_from:
 
 This section page information on configuring and integrating the Punchout feature into your project:
 
-* [Punchout Catalog Feature Integration Guide](https://documentation.spryker.com/docs/punchout-catalog-feature-integration)
-* [Eco: Punchout Catalogs Feature Integration](https://documentation.spryker.com/docs/eco-punchout-catalogs-feature-integration)
-* [Eco: Punchout Catalogs + Product Bundles Feature Integration](https://documentation.spryker.com/docs/eco-punchout-catalogs-product-bundles-feature-integration)
+* [Punchout Catalog Feature Integration Guide](/docs/scos/dev/technology-partners/202009.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
+* [Eco: Punchout Catalogs Feature Integration](/docs/scos/dev/technology-partners/202009.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html)
+* [Eco: Punchout Catalogs + Product Bundles Feature Integration](/docs/scos/dev/technology-partners/202009.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html)
 
 ---
 

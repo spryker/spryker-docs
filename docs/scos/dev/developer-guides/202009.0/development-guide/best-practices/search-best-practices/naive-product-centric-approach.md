@@ -2,6 +2,7 @@
 title: Naive Product Centric Approach
 description: Finding products on e-commerce website can be tricky, even when you know exactly what you are looking for.
 originalLink: https://documentation.spryker.com/v6/docs/naive-product-centric-approach
+originalArticleId: 7921ad25-6fc3-4bdd-b2a3-f023b69cd534
 redirect_from:
   - /v6/docs/naive-product-centric-approach
   - /v6/docs/en/naive-product-centric-approach

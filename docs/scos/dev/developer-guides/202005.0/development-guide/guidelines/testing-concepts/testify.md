@@ -1,6 +1,7 @@
 ---
 title: Testify
 originalLink: https://documentation.spryker.com/v5/docs/testify
+originalArticleId: 8757ce6a-2928-4067-8fb9-d0095787e64b
 redirect_from:
   - /v5/docs/testify
   - /v5/docs/en/testify

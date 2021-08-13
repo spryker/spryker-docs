@@ -2,6 +2,7 @@
 title: CMS feature integration
 description: The guide describes how to integrate the CMS feature into your project.
 originalLink: https://documentation.spryker.com/v6/docs/cms-feature-integration-guide
+originalArticleId: 6b027a59-fc98-4bae-80a2-1a76d463a9ff
 redirect_from:
   - /v6/docs/cms-feature-integration-guide
   - /v6/docs/en/cms-feature-integration-guide
@@ -1141,7 +1142,7 @@ Enable Twig plugins:
 | --- | --- | --- |
 | `CmsBlockTwigPlugin` | Provides the list of plugins for CMS block widget. See the [table](#plugin-table). | `SprykerShop\Yves\CmsBlockWidget\Plugin` |
 | `CmsTwigPlugin` | Provides the spyCms function. | `SprykerShop\Yves\CmsPage\Plugin\Twig` |
-| `CmsContentWidgetTwigPlugin` | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](https://documentation.spryker.com/docs/en/content-items-feature-overview) instead. | `Spryker\Yves\CmsContentWidget\Plugin\Twig` |
+| `CmsContentWidgetTwigPlugin` | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/scos/dev/features/202009.0/content-items/content-items-feature-overview.html) instead. | `Spryker\Yves\CmsContentWidget\Plugin\Twig` |
 | `ShopCmsSlotTwigPlugin` | Provides the `cms_slot` Twig tag. | `SprykerShop\Yves\ShopCmsSlot\Plugin\Twig` |
 
 **Pyz\Yves\Twig\TwigDependencyProvider**
@@ -1373,14 +1374,14 @@ class ShopCmsSlotDependencyProvider extends SprykerShopShopCmsSlotDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](https://documentation.spryker.com/v4/docs/templates-slots-feature-overview ) for references.
+Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/templates-and-slots/templates-and-slots-feature-overview.html) for references.
 
 {% endinfo_block %}
 
 ### Set up SprykerCmsBlocks Content Provider Behavior
 
 :::(Info)
-Follow the further steps only if you are going to use the [visibility conidtions](https://documentation.spryker.com/docs/templates-slots-feature-overview#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
+Follow the further steps only if you are going to use the [visibility conidtions](/docs/scos/dev/features/202009.0/cms/cms-feature-overview/templates-and-slots/templates-and-slots-feature-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 :::
 
 #### 1) Install the Required Modules Using Composer
@@ -1475,7 +1476,7 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 1. Go to the Back Office > **Content Management** > **Slots** section.
 1. In the **List of Templates**, choose the template for which you've created the visibility condition.
 1. Choose a slot in the **List of Slots for {name} Template**.
-1. Select or [assign](https://documentation.spryker.com/docs/managing-slots#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for {name} Slot**.
+1. Select or [assign](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/slots/managing-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for {name} Slot**.
 1. Make sure that for each CMS block, there is an additional form allowing you to define the visibility condition you have created.
 
 

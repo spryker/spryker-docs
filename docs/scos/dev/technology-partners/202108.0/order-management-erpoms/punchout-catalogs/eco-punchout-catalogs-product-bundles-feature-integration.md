@@ -2,9 +2,12 @@
 title: Eco- Punchout Catalogs + Product Bundles feature integration
 description: Integrate Eco- Punchout Catalogs + Product Bundles Feature into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/eco-punchout-catalogs-product-bundles-feature-integration
+originalArticleId: f531698b-bacc-4a88-874a-9773a439c598
 redirect_from:
   - /2021080/docs/eco-punchout-catalogs-product-bundles-feature-integration
   - /2021080/docs/en/eco-punchout-catalogs-product-bundles-feature-integration
+  - /docs/eco-punchout-catalogs-product-bundles-feature-integration
+  - /docs/en/eco-punchout-catalogs-product-bundles-feature-integration
 ---
 
 ## Install Feature Core

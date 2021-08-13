@@ -2,6 +2,7 @@
 title: Managing product lists
 description: Use these procedures to edit, export, remove a product list or remove products from the product list in the Back Office.
 originalLink: https://documentation.spryker.com/v6/docs/managing-product-lists
+originalArticleId: 1e4baffd-17e3-4662-86bd-42ae0a02a2f7
 redirect_from:
   - /v6/docs/managing-product-lists
   - /v6/docs/en/managing-product-lists
@@ -26,7 +27,7 @@ To edit a product list:
 
 {% info_block warningBox "Blacklist" %}
 
-If a product list is used by a [configurable bundle](https://documentation.spryker.com/docs/configurable-bundle-feature-overview) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](https://documentation.spryker.com/docs/configurable-bundle-feature-overview#configurable-bundle-slots) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}*  page, switch to the **Used by** tab.
+If a product list is used by a [configurable bundle](/docs/scos/dev/features/202009.0/configurable-bundle/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/scos/dev/features/202009.0/configurable-bundle/configurable-bundle-feature-overview.html#configurable-bundle-slots) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}*  page, switch to the **Used by** tab.
 
 {% endinfo_block %}
 
@@ -100,5 +101,5 @@ To remove a product list:
 
 ***
 **What's next?**
-See [Product Lists: Reference Information](https://documentation.spryker.com/docs/product-lists-reference-information) to learn about the attributes you see, select, and enter while managing a product list.
+See [Product Lists: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/product-lists/references/reference-information-product-lists.html) to learn about the attributes you see, select, and enter while managing a product list.
 

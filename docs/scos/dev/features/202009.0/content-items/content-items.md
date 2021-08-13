@@ -2,6 +2,7 @@
 title: Content items
 description: The content item feature enhances content creation by simplifying content management.
 originalLink: https://documentation.spryker.com/v6/docs/content-items
+originalArticleId: e1930a14-b871-42e6-92b0-a31d94dfe852
 redirect_from:
   - /v6/docs/content-items
   - /v6/docs/en/content-items

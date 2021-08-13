@@ -2,6 +2,7 @@
 title: Define Category Hierarchy
 description: Use the nested categories in your shop to create a seamless navigation and guide your customers through your shop.
 originalLink: https://documentation.spryker.com/v2/docs/define-category-hierarchy
+originalArticleId: 6c5f8fe1-9caa-46f0-809f-90f46a51ccbb
 redirect_from:
   - /v2/docs/define-category-hierarchy
   - /v2/docs/en/define-category-hierarchy

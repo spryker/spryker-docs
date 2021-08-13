@@ -2,6 +2,7 @@
 title: Retrieving Alternative Products
 description: The article demonstrates how to find alternatives for discontinued products with the help of Glue API endpoints.
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-alternative-products-201903
+originalArticleId: 242c2c18-c58d-4fd9-b2cb-51b17329072e
 redirect_from:
   - /v5/docs/retrieving-alternative-products-201903
   - /v5/docs/en/retrieving-alternative-products-201903
@@ -9,7 +10,7 @@ redirect_from:
 
 The _Alternative Products_ feature allows customers to quickly find a substitute product in case if their preferred item runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for a more up-to-date generation of the same product, and suggesting possible alternatives is especially crucial.
 
-For more details, see [Alternative Products](https://documentation.spryker.com/docs/en/alternative-products) and [Discontinued Products](https://documentation.spryker.com/docs/en/discontinued-products).
+For more details, see [Alternative Products](/docs/scos/dev/features/202005.0/product-information-management/alternative-products/alternative-products.html) and [Discontinued Products](/docs/scos/dev/features/202005.0/product-information-management/discontinued-products/discontinued-products.html).
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
 
@@ -29,7 +30,7 @@ It is the responsibility of the client to identify whether a product is unavaila
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Alternative Products Feature Integration](https://documentation.spryker.com/docs/en/glue-api-alternative-products-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Alternative Products Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-alternative-products-feature-integration.html).
 
 {% info_block infoBox %}
 To be able to use **Product Alternatives API**, first, you need to have the _Alternative Products_ feature integrated with your project.<br>To be able to handle discontinued products, first, integrate the _Discontinued Products_ feature.
@@ -62,7 +63,7 @@ To be able to use Product Alternatives API, first, you need to have the Alternat
 {% endinfo_block %}
 
 ## Checking Whether Product is Discontinued
-Before suggesting an alternative product, first, check if a product is still available, i.e. not discontinued. To check if a product is discountinued, see [Retrieve Concrete Products](https://documentation.spryker.com/docs/en/retrieving-product-information#retrieve-concrete-products).
+Before suggesting an alternative product, first, check if a product is still available, i.e. not discontinued. To check if a product is discountinued, see [Retrieve Concrete Products](/docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html#retrieve-concrete-products).
 
 
 

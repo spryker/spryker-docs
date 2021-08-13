@@ -1,6 +1,7 @@
 ---
 title: Migration Guide - ProductOptionExporter
 originalLink: https://documentation.spryker.com/v2/docs/mg-product-option-exporter
+originalArticleId: c2c4344c-4ff4-40fe-8181-29972dc81149
 redirect_from:
   - /v2/docs/mg-product-option-exporter
   - /v2/docs/en/mg-product-option-exporter

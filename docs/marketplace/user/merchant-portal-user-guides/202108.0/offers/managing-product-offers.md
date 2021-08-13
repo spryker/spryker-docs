@@ -18,7 +18,7 @@ To create a product offer:
 
 1. Click **+Add Offer**.
 2. On the _Create Offer_ page, in the list of concrete products, click on the product you want to create an offer for, or hover over the three dots and then click **Create Offer**. The drawer opens.
-3. In the _Offer status_ pane, select the **Offers is Active** check box to make the product offer visible on the Storefront. Otherwise, skip this step.
+3. In the _Offer status_ pane, select the **Offers is Active** check box to make the product offer visible on the Storefront. If you don't want the product offer to be displayed on the Storefront, skip this step.
 4. In the _Merchant SKU_ pane, enter an SKU.
 5. In the _Stores_ pane, from the drop-down list, select stores for which the offer is available.
 6. In the _Available Stock_ pane, set the product offer quantity:

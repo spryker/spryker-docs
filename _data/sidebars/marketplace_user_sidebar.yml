@@ -38,16 +38,16 @@ entries:
         - title: Merchant Opening Hours feature overview
           url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
 
-        - title: Marketplace Product feature overview
-          url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
-
         - title: Marketplace Product Offer feature overview
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
+
+        - title: Marketplace Product Options feature overview
+          url: /docs/marketplace/user/features/marketplace-product-options-feature-overview.html
 
         - title: Marketplace Order Management feature overview
           url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
           nested:
-          
+
           - title: Merchant order overview
             url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/merchant-order-overview.html
 
@@ -57,13 +57,19 @@ entries:
 
             - title: Marketplace and merchant state machines interaction
               url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
-              
-        - title: Marketplace Return Management
-          url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html 
-        
+
+        - title: Marketplace Cart Notes feature overview
+          url: /docs/marketplace/user/features/marketplace-cart-notes-feature-overview.html
+
+        - title: Marketplace Return Management feature overview
+          url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html
+
         - title: Marketplace Promotions and Discounts feature overview
           url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html
-        
+
+        - title: Marketplace Product Options feature walkthrough
+          url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
+
         - title: Marketplace Wishlist feature overview
           url: /docs/marketplace/user/features/marketplace-wishlist-feature-overview.html
 
@@ -75,7 +81,7 @@ entries:
 
             - title: Managing marketplace returns
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-marketplace-returns.html
-            
+
             - title: Managing main merchant orders
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
 
@@ -122,6 +128,15 @@ entries:
 
               - title: "Products: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html
+
+        - title: Product Options
+          nested:
+
+            - title: Creating product options
+              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
+
+            - title: Managing product options
+              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/managing-product-options.html
 
         - title: Marketplace
 

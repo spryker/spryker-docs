@@ -292,9 +292,6 @@ entries:
           - title: Retrieving Marketplace orders
             url: /docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html
 
-          - title: Retrieving product offers
-            url: /docs/marketplace/dev/glue-api-guides/retrieving-product-offers.html
-
           - title: Retrieving autocomplete and search suggestions
             url: /docs/marketplace/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
 

@@ -753,10 +753,10 @@ function initToc() {
 
     let $body = $('body'),
         $window = $(window),
-        tocLinks = $('#toc a');
+        $toc = $('#toc');
 
     $body.scrollspy({
-        target: '#toc',
+        target: $toc,
         offset: pageOffset,
     });
 
@@ -786,15 +786,12 @@ function initToc() {
     $window.on('resize orientationchange', updateOffset);
 
     $window.on('activate.bs.scrollspy', function (e) {
-        let activeLink = tocLinks.filter(function(i, item){
-                return item.classList.contains('active');
-            }),
+        let activeLink = $toc.find('.active'),
             activeLinkHref;
 
-        if (activeLink) {
+        if (activeLink.length) {
             activeLinkHref = activeLink.attr('href');
+            window.history.replaceState('', '', activeLinkHref);
         }
-
-        window.history.replaceState('', '', activeLinkHref);
     });
 }

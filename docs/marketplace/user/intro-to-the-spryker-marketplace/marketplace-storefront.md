@@ -4,7 +4,7 @@ description: This document describes the peculiarities of the Marketplace Storef
 template: concept-topic-template
 ---
 
-*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/marketplace/user/intro-to-the-spryker-marketplace/{{ site.version }}/marketplace-concept.html). Based on the regular Storefront, it supports all Spryker Commerce OS features. Marketplace functionality enables buyers to browse for products, view and purchase them across different merchants.
+*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/marketplace/user/intro-to-the-spryker-marketplace/{{ site.version }}/marketplace-concept.html). Based on the regular Storefront, it supports all [Spryker Commerce OS](https://documentation.spryker.com/docs/about-spryker) features. Marketplace functionality enables buyers to browse for products, view and purchase them across different merchants.
 
 In most sections of the Marketplace Storefront, customers can see who the seller of a product or offer is.
 
@@ -18,15 +18,15 @@ If searching by merchant name in the search field, the products and offers of th
 
 ## Product Details pages
 
-On the *Product Details* page, the *Sold by* section contains the [marketplace products](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-feature-overview.html) and the [offers](docs/marketplace/user/features/{{ page.version }}/marketplace-product-offer-feature-overview.html) from other merchants for that product. Each entry has a price and a link to the respective [merchant's profile page](#merchant-profiles).
+On the *Product Details* page, the *Sold by* section contains the [marketplace products](/docs/marketplace/user/features/{{ site.version }}/marketplace-product-feature-overview.html) and the [offers](docs/marketplace/user/features/{{ site.version }}/marketplace-product-offer-feature-overview.html) from other merchants for that product. Each entry has a price and a link to the respective [merchant's profile page](#merchant-profiles).
 
 ![Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/product-details-page.png)
 
 In the *Sold by* section, when a customer opens a *Product Details* page, the product is pre-selected, and they can switch to any other offer. In the list, the pre-selected [marketplace product](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-feature-overview.html) always appears first, followed by offers in ascending order of price. If the product is not available, but there are offers for it, the cheapest offer is pre-selected.
 
-The sorting of the *Sold by* section is configurable on a project level.
+Sorting of the *Sold by* section is configurable on a project level.
 
-The product price on top of the *Product Details* page is taken from the selected merchant's product or offer. When a customer selects a product or offer in the *Sold by* section, the page refreshes showing selected merchant's price.
+The product price on top of the *Product Details* page is taken from the selected merchant's product or offer. When a customer selects a product or offer in the *Sold by* section, the page refreshes showing the selected merchant's price.
 
 ## Cart page
 
@@ -45,7 +45,7 @@ If a customer is ordering products from multiple merchants, the products are goi
 
 ![Shipment step](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/shipment-step.png)
 
-At the Summary checkout step,  merchant reference is displayed for each product. The merchant names are clickable and lead to the merchant profile pages. If a customer is ordering products from multiple merchants, the products are automatically grouped by merchants, which also represents the order's shipments.
+At the Summary checkout step,  merchant reference is displayed for each product. The merchant names are clickable and lead to the merchant profile pages. If a customer ordered products from multiple merchants, the products are automatically grouped by merchants, which also represents the order's shipments.
 
 ![Summary step](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/summary-step.png)
 
@@ -58,7 +58,7 @@ On the *Order Details* page, a merchant reference is displayed for each product.
 
 If the customer clicks **Reorder all**, the items are added to their current cart with the merchant references from the order.
 
-### Marketplace Returns
+### Marketplace returns
 
 On the *Create Return* page, products are grouped by merchants. Merchant names are clickable and lead to the merchant profile pages. A customer can return products from one merchant at a time. After creating a return for the products of one merchant, they can create a return for the products of another merchant from the same order.
 
@@ -67,7 +67,7 @@ On the *Create Return* page, products are grouped by merchants. Merchant names a
 The *Return Details* page follows the same behavior.
 
 
-### Marketplace Wishlists
+### Marketplace wishlists
 
 When a customer adds a product to a wishlist, the product is added with the merchant relation selected in the *Sold by* section.
 
@@ -83,9 +83,9 @@ If a product in a wishlist is out of stock, an [alternative product](https://doc
 
 ### Merchant profiles
 
-A merchant profile is a page where all the information about a merchant is located. From all the pages where a Merchant is mentioned, customers can access the merchant profile by selecting a merchant name.
+A merchant profile is a page where all the information about a merchant is located. From all the pages where a Merchant is mentioned, customers can access the merchant profile by selecting the merchant name.
 
-On a *Merchant Profile* page, customers can find the following merchant specific information:
+On the *Merchant Profile* page, customers can find the following merchant- specific information:
 * Logo
 * Banner
 * Contact details and address
@@ -96,6 +96,6 @@ On a *Merchant Profile* page, customers can find the following merchant specific
 * Imprint
 * Data privacy statement
 
-Customers can only access the profile pages of active merchants.
+Customers can only access the profile pages of [active](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#active-merchants) merchants.
 
 For an example, see the [Spryker merchant profile](https://www.de.marketplace.demo-spryker.com/en/merchant/spryker) in our Marketplace Demo Shop.

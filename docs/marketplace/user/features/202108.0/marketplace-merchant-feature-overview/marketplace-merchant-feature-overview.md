@@ -25,6 +25,8 @@ The Marketplace administrator manages merchants and sets their statuses in the
     * *Approved*. Once the record is approved, the merchant receives an email with the password information required to access the Merchant Portal. When the merchant is approved, merchant users can log in and create offers and products in the Merchant Portal. <a name="denied"></a>
     * *Denied*. A Marketplace administrator can deny access to the approved merchant. If denied, the merchant cannot log in to the Merchant Portal.
 
+<a name=active-merchants></a>
+
 * The merchant profile page, product offers and merchant products on the Storefront:
     * *Active*. This status can be set only for the approved merchants. It indicates that the merchant's profile page is online, and the merchant can create offers and products. A merchant can also create offers and products and manage their sales activity.
     * *Inactive*. This status indicates that the merchant's profile page, products, and offers are offline. It is the default status for the created merchant. With this status, the merchant can not perform their selling online.

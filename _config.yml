@@ -150,6 +150,7 @@ versioned_categories:
       - data-export
       - glue-api-guide
       - technology-partners
+      - docker-sdk
 
 # these are defaults used for the frontmatter for these file types
 

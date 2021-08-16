@@ -1487,13 +1487,13 @@ For the attributes of other included resources, see:
 * [Retrieve image sets of an abstract product](https://documentation.spryker.com/docs/retrieving-image-sets-of-abstract-products#abstract-product-sets-response-attributes)
 * [Retrieve availability of an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-product-availability#abstract-product-availability-response-attributes)
 * [Retrieve prices of an abstract product](https://documentation.spryker.com/docs/retrieving-abstract-product-prices#prices-response-attributes)
-* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html)
+* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
 * [Retrieve a category node](https://documentation.spryker.com/docs/retrieving-category-nodes#category-nodes-response-attributes)
 * [Retrieve tax sets](https://documentation.spryker.com/docs/retrieving-tax-sets#tax-sets-response-attributes)
 * [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
 * [Retrieve product reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
 *  [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units)
-*  [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)
+*  [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-merchant-information.html)
 
 
 ## Possible errors

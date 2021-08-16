@@ -4,15 +4,15 @@ description: This document contains concept information for the Merchants featur
 template: concept-topic-template
 ---
 
-*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](https://documentation.spryker.com/marketplace/docs/product-offer-feature-overview), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
+*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](https://documentation.spryker.com/marketplace/docs/product-offer-feature-overview), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
-You can [create merchants in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#creating-merchants) or [import merchants](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-csv.html).
+You can [create merchants in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#creating-merchants) or [import merchants](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-csv.html).
 
 {% info_block infoBox "Note" %}
 
-After you created a merchant, you can not delete it completely. You can only [deactivate](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) the merchant.
+After you created a merchant, you can not delete it completely. You can only [deactivate](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) the merchant.
 
 {% endinfo_block %}
 
@@ -40,7 +40,7 @@ The Marketplace administrator manages merchants and sets their statuses in the
 | Active | N/A | &check; |
 | Inactive | N/A | ✗ |
 
-See [Approving and denying merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) for details on how to change the merchant user statuses and (de)activate merchants in the Back Office.
+See [Approving and denying merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) for details on how to change the merchant user statuses and (de)activate merchants in the Back Office.
 
 Schematically, the merchant status change flow looks like this:
 
@@ -64,13 +64,13 @@ The Merchant entity and Stock entity are connected as follows:
 
 {% info_block infoBox "Note" %}
 
-If you [import the merchant data](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-csv.html), you should also [import the merchant stock](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-stock-csv.html) data.
+If you [import the merchant data](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-csv.html), you should also [import the merchant stock](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock-csv.html) data.
 
 {% endinfo_block %}
 
 ## Merchant category
 
-You can group merchants by categories to make your working process more efficient and simplify merchants search for customers. See [Merchant Category](/docs/marketplace/user/features/{{ page.version }}/merchant-category-feature-overview.html) for details.
+You can group merchants by categories to make your working process more efficient and simplify merchants search for customers. See [Merchant Category](/docs/marketplace/user/features/{{page.version}}/merchant-category-feature-overview.html) for details.
 
 ## Merchants on the Storefront
 
@@ -85,8 +85,8 @@ The merchant profile page is available only if the merchant is [Active](#merchan
 {% endinfo_block %}
 
 The information for the merchant profile can be defined:
-* By the Marketplace administrator in the Back Office when [creating merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#creating-merchants) or [editing merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#editing-merchants).
-* By importing the merchant profile data. See [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-profile-csv.html) and [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-profile-address-csv.html) for more information.
+* By the Marketplace administrator in the Back Office when [creating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#creating-merchants) or [editing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#editing-merchants).
+* By importing the merchant profile data. See [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile-csv.html) and [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile-address-csv.html) for more information.
 * By the merchant in the Merchant Portal:
 ![Merchant profile page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-profile-page.png)
 
@@ -94,7 +94,7 @@ The information for the merchant profile can be defined:
 
 
 ### Merchant opening hours
-To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. See [Merchant Opening Hours feature overview](/docs/marketplace/user/features/{{ page.version }}/merchant-opening-hours-feature-overview.html) for details.
+To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. See [Merchant Opening Hours feature overview](/docs/marketplace/user/features/{{page.version}}/merchant-opening-hours-feature-overview.html) for details.
 
 ### Merchant links on the Storefront pages
 
@@ -129,17 +129,17 @@ In the catalog and search results pages, there is the merchant multi-select filt
 If the merchant is not active, their products and offers are not displayed in the search suggestions, search results and in the merchant filter.
 
 ## Next steps
-[Learn about the merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/merchant-users-overview.html)
+[Learn about the merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
 
 ## Related Business User articles
 
 |FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Merchant users overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant’s profile details](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html)|
-|| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html)|
+|[Merchant users overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant’s profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html)|
+|| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)|
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-merchant-feature-walkthrough.html) for developers. 
+Are you a developer? See [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-feature-walkthrough.html) for developers. 
 
 {% endinfo_block %}

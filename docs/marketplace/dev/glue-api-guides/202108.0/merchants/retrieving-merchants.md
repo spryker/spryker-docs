@@ -626,12 +626,12 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{ page.vers
 
 </details>
 
-For the merchant attributes, see [Retrieve merchants](#merchant-response-attributes).
+For the merchant attributes, see [Retrieve merchants](#merchants-response-attributes).
 
 For the attributes of the included resources, see:
 
-* [Retrieving merchant addresses](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-addresses.html#merchant-addresses-response-attributes).
-* [Retrieving merchant opening hours](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-addresses.html#merchant-opening-hours-response-attributes).
+* [Retrieving merchant addresses](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchant-addresses.html#merchant-addresses-response-attributes).
+* [Retrieving merchant opening hours](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchant-addresses.html#merchant-opening-hours-response-attributes).
 
 
 
@@ -641,7 +641,7 @@ For the attributes of the included resources, see:
 Retrieve merchant information as a relationship when sending the following requests:
 
 * [Retrieve an abstract product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html#retrieve-a-concerete-product)
+* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 * [Retrieve a wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#retrieve-a-wishlist)
 * [Retrieve a product offer]
 * [Retrieve marketplace orders](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-marketplace-orders.html)

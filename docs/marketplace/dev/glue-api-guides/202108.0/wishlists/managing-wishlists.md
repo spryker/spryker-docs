@@ -78,11 +78,10 @@ Sample request: `POST https://glue.mysprykershop.com/wishlists`
 
 To retrieve all wishlists of a customer, send the request:
 
-------
 
+***
 `GET` **/wishlists**
-
-------
+***
 
 ### Request
 
@@ -429,15 +428,13 @@ For attributes of the included resources, see:
 
 To retrieve a specific wishlist, send the request:
 
-------
-
-`GET` **/wishlists/*{% raw %}{{wishlist_id}}{% endraw %}***
-
-------
+***
+`GET` {% raw %}**/wishlists/*{{wishlist_id}}***{% endraw %}
+***
 
 | PATH PARAMETER        | DESCRIPTION      |
 | ---------------- | ------------------------- |
-| ***{% raw %}{{wishlist_id}}{% endraw %}*** | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](https://documentation.spryker.com/docs/managing-wishlists#retrieve-wishlists) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](https://documentation.spryker.com/docs/managing-wishlists#retrieve-wishlists) to get it. |
 
 ### Request
 

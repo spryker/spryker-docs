@@ -34,7 +34,7 @@
         @include media("<tablet") {
             font-size: 20px;
             line-height: 1.4;
-            margin: 0 0 8px;
+            margin-bottom: 8px;
         }
     }
 
@@ -43,7 +43,7 @@
 
         @include media("<tablet") {
             font-size: 16px;
-            margin: 0 0 8px;
+            margin-bottom: 8px;
         }
     }
 
@@ -52,7 +52,7 @@
 
         @include media("<tablet") {
             font-size: 15px;
-            margin: 0 0 8px;
+            margin-bottom: 8px;
         }
     }
 
@@ -237,6 +237,7 @@
         border: 2px solid $grey-lighten;
         background: $grey-lightest;
         border-radius: 4px;
+        position: relative;
 
         & + details {
             margin-top: -22px;
@@ -285,6 +286,8 @@
     }
 
     .info-block {
+        position: relative;
+
         td, th {
             word-break: break-word;
         }
@@ -329,6 +332,7 @@
         margin: 0 auto 1em;
         max-width: 50%;
         cursor: zoom-in;
+        position: relative;
 
         @include media("<desktop") {
             max-width: 100%;
@@ -359,6 +363,12 @@
 
         &:after {
             content: none;
+        }
+    }
+
+    .anchorjs-link {
+        @include media("<desktop") {
+            opacity: 1;
         }
     }
 }

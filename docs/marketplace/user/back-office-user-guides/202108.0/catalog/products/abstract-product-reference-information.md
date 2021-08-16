@@ -77,6 +77,6 @@ On this page, you can view all the information entered while creating or editing
 
 {% info_block infoBox "Info" %}
 
-For the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) projects, you can check what Merchant owns the product on this page.
+For the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) projects, you can check what Merchant owns the product on this page.
 
 {% endinfo_block %}

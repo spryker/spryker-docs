@@ -189,4 +189,4 @@ The locale must be specified in the **header** of the GET request. If no locale 
 | attributeNames     | object | All attributes (except for the super attributes) and value combinations for the abstract product. |
 | url | String | Unique address using which the abstract product is found in the shop.
 
-For the abstract product response attributes, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-products.html).
+For the abstract product response attributes, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html).

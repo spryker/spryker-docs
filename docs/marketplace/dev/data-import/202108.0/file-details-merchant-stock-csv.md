@@ -5,7 +5,7 @@ description: This document describes the merchant_stock.csv file to configure me
 template: import-file-template
 ---
 
-This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/marketplace/user/features/{{ site.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-warehouse) information in your Spryker shop.
+This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-warehouse) information in your Spryker shop.
 
 To import the file, run:
 
@@ -20,13 +20,13 @@ The file should have the following parameters:
 | PARAMETER    | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION      |
 | ------------- | -------- | ------ | ------------- | --------------------------------- | ----------------- |
 | merchant_reference | &check;             | String   |                   | Unique                                                       | Identifier of the merchant in the system. |
-| stock_name         | &check;             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/marketplace/user/features/{{ site.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-warehouse). | Name of the stock.                        |
+| stock_name         | &check;             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-warehouse). | Name of the stock.                        |
 
 ## Import file dependencies
 
 The file has the following dependencies:
 
-- [merchant.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-csv.html)
+- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-csv.html)
 - [warehouse.csv](https://documentation.spryker.com/docs/file-details-warehousecsv)
 
 ## Import template file and content example

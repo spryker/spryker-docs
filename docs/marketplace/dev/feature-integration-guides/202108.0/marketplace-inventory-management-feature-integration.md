@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Spryker Core | master | [Glue API: Spryker Core feature integration](https://documentation.spryker.com/docs/glue-api-spryker-core-feature-integration)  |
-| Marketplace Product Offer | master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-product-offer-feature-integration.html)  |
+| Marketplace Product Offer | master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)  |
 | Inventory Management | master | [Inventory Management feature integration](https://documentation.spryker.com/docs/inventory-management-feature-integration)  |
 
 ### 1) Install the required modules using Composer

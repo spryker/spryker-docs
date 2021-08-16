@@ -39,7 +39,7 @@ To add items to a cart, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>items</li><li>product-measurement-units</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>concrete-products</li><li>product-options</li><li>product-offers</li><li>merchnats</li></ul>|
+| include | Adds resource relationships to the request. | <ul><li>items</li><li>product-measurement-units</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>concrete-products</li><li>product-options</li><li>product-offers</li><li>merchants</li></ul>|
 
 {% info_block infoBox "Included resources" %}
 
@@ -1602,7 +1602,7 @@ For the attributes of the included resources, see:
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
 * [Retrieving product availability](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
-* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchnats/retrieving-merchnats.html#merchants-response-attributes)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 ## Change item quantity
 

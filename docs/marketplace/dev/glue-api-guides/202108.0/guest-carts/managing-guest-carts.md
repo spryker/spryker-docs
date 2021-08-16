@@ -1931,7 +1931,7 @@ For the attributes of other included resources, see:
 * [Retrieve gift cards of guest users](https://documentation.spryker.com/docs/en/managing-gift-cards-of-guest-users)
 * [Retrieve a measurement units](https://documentation.spryker.com/docs/retrieving-measurement-units#measurement-units-response-attributes)
 * [Retrieve product labels](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
-* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchnats/retrieving-merchants.html#merchants-response-attributes)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#merchants-response-attributes)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer availability](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)

@@ -11,12 +11,12 @@ This document describes how to retrieve merchant opening hours.
 To retrieve a merchant opening hours, send the request:
 
 ***
-`GET` **/merchants/*{% raw %}{{merchantId}}{% endraw %}*/merchant-opening-hours**
+`GET` {% raw %}**/merchants/*{{merchantId}}*/merchant-opening-hours**{% endraw %}
 ***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{merchantId}}***{% endraw %} | Unique identifier of a merchant to retrieve the opening hours of. To get it, [retrieve all merchants](#retrieve-active-merchants). |
+| {% raw %}***{{merchantId}}***{% endraw %} | Unique identifier of a merchant to retrieve the addresses of. To get it, [retrieve all merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#merchant-statuses#retrieve-merchants). |
 
 {% info_block warningBox "Note" %}
 
@@ -182,7 +182,7 @@ Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchan
 
 </details>
 
-<a name="merchants-opening-hours-response-attributes"></a>
+<a name="merchant-opening-hours-response-attributes"></a>
 
 | ATTRIBUTE | DESCRIPTION |
 | --------------- | --------------------- |

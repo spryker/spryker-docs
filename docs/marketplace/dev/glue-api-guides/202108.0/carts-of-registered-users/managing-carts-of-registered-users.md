@@ -2456,7 +2456,7 @@ For the attributes of the included resources, see:
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
 * [Retrieving product availability](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
-* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchnats/retrieving-merchnats.html#merchants-response-attributes)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 ## Retrieve a registered user's cart
 
@@ -4348,7 +4348,7 @@ For the attributes of the included resources, see:
 * [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html).
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 * [Retrieve product labels](https://documentation.spryker.com/docs/en/retrieving-product-labels#product-labels-response-attributes)
-* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchnats/retrieving-merchants.html#merchants-response-attributes)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#merchants-response-attributes)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer availability](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)

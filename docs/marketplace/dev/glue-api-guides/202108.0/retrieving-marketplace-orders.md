@@ -1533,4 +1533,4 @@ GET {% raw %}**/orders/*{{order_id}}***{% endraw %}
 | order-shipments | shippingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.       |
 
 
-For the attributes of other included resources, see [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchnats/retrieving-merchants.html).
+For the attributes of other included resources, see [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html).

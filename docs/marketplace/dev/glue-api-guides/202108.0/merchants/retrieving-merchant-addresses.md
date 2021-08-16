@@ -10,14 +10,13 @@ This document describes how to retrieve merchant addresses.
 
 To retrieve merchant addresses, send the request:
 
----
-`GET` **/merchants/*{% raw %}{{merchantId}}{% endraw %}*/merchant-addresses**
-
----
+***
+`GET` {% raw %}**/merchants/*{{merchantId}}*/merchant-addresses**{% endraw %}
+***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{merchantId}}***{% endraw %} | Unique identifier of a merchant to retrieve the addresses of. To get it, [retrieve all merchants](#retrieve-active-merchants). |
+| {% raw %}***{{merchantId}}***{% endraw %} | Unique identifier of a merchant to retrieve the addresses of. To get it, [retrieve all merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html#merchant-statuses#retrieve-merchants). |
 
 {% info_block warningBox "Note" %}
 
@@ -84,7 +83,7 @@ Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchant-
 
 </details>
 
-<a name="merchants-addresses-response-attributes"></a>
+<a name="merchant-addresses-response-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTION  |
 | ------------- | -------- | --------------- |

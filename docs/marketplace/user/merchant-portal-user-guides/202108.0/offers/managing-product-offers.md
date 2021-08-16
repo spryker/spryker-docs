@@ -43,73 +43,19 @@ On all the pages described below, you can rearrange, hide, and show columns by c
 
 ### Offers page
 
-On the *Offers* page you can filter, sort and search product offers.
+On the *Offers* page you do the following:
 
-#### Filtering product offers
-
-Using the filtering menu at the top of the page, you can filter product offers by:
-
-- Stock
-- Visibility
-- Stores
-- Creation period (from and to)
-- The period when the offer was updated (from and to)
-- Validity dates (from and to)
-
-#### Sorting product offers
-
-By clicking on a respective column name, you can sort product offers list:
-
-- Offer Reference
-- Merchant SKU
-- Product SKU
-- Product Name
-- Stock
-- Visibility
-- Valid from date
-- Valid to date
-
-#### Searching product offers
-
-Using the search field in the top right corner, you can search product offers by:
-
-- Offer reference
-- merchant reference
-- product SKU
+* Filter product offers using the filtering menu at the top of the page.
+* Sort product offers by clicking on the desired column name.
+* Using the search field in the top right corner, search product offers by the criteria: offer reference, merchant reference, and product SKU.
 
 ### Create Offer page
 
-On the *Create Offer* page, you see the list of products you can create an offer for. You can filter, sort and search the products.
+On the *Create Offer* page, you see the list of products you can create an offer for. On this page, you can do the following:
 
-#### Filtering products
-
-Using the filtering menu at the top of the page, you can filter products by:
-
-- Existing offers
-- Visibility
-
-#### Sorting products
-
-By clicking on a respective column name, you can sort product offers list:
-
-- Product SKU
-- Product Name
-- Visibility
-- Number of existing orders
-- Valid from date
-- Valid to date
-
-
-#### Searching products
-
-Using the search field in the top right corner, you can search products by:
-
-
-- product SKU
-- product name
-
-
-
+* Filter products using the filtering menu at the top of the page.
+* Sort products by clicking on the desired column name.
+* Using the search field in the top right corner, search products by the criteria: product name and product SKU.
 
 
 ### Create and edit offer drawers

@@ -5,7 +5,7 @@ description: This article provides technical details on the Marketplace Promotio
 template: concept-topic-template
 ---
 
-With the *Marketplace Promotions and Discounts* feature, the discounts are correctly applied to the merchant orders.
+With the *Marketplace Promotions and Discounts* feature, the discounts are correctly to the merchant orders.
 
 ## Related Developer articles
 

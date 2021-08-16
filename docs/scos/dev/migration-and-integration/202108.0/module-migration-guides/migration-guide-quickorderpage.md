@@ -22,7 +22,7 @@ First of all, there is a brand new possibility to search for concrete products b
 **To perform the migration, follow the steps:**
 1. This feature requires `ProductPageSearch` 3.x.x.
     * Update `spryker/product-page-search ^3.0.0`
-    * Follow the steps from  [Migration guide - ProductPageSearch](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-productpagesearch.html).
+    * Follow the steps from  [Migration guide - ProductPageSearch](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-productpagesearch.html).
 2. Generate transfers:
 
 ```yaml

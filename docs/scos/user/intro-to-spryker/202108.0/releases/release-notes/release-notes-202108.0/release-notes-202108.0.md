@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements we are announcing in September 2020.
-For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{ page.version }}/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
 
 
 ## Spryker Commerce OS
@@ -20,15 +20,15 @@ Also, we’ve improved the Storefront security check. Now, the shop owners can *
 Configuration of the password comes with **brute force attack protection**: after a certain number of failed login attempts, the user account can be locked for a set amount of time. The shop owner can configure the threshold for the number of login attempts and the account lockout duration.
 
 #### Documentation
-* [Customer Registration overview](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html#customer-registration-overview)
-* [Customer Login overview](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)
+* [Customer Registration overview](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html#customer-registration-overview)
+* [Customer Login overview](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)
 
 
 ### Identity Access Manager: Back Office Login
 Due to the **support of the OpenID Connect protocol**, you can now use Identity Access Managers to log in to the Spryker Back Office. To illustrate this capability, we offer integration of the Microsoft Azure Active Directory service that allows your users to log in to the Back Office with their Microsoft Azure Active Directory credentials.
 
 #### Documentation
-[Back Office Login overview](/docs/scos/dev/features/{{ page.version }}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-login-overview.html)
+[Back Office Login overview](/docs/scos/dev/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-login-overview.html)
 
 ### Category per store
 Spryker now supports **store relations at the category level**. You can hide and show categories in stores depending on your business requirements. The store relation applies from a parent category to its child categories.
@@ -36,7 +36,7 @@ Spryker now supports **store relations at the category level**. You can hide and
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/category-per-store.png){height="" width=""}
 
 #### Documentation
-[Category management](/docs/scos/dev/features/{{ page.version }}/category-management-feature-overview.html)
+[Category management](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html)
 
 ### Avalara integration
 Calculating **sales tax** for an order is never a trivial matter. Different products and services can have different tax rates or fixed tax amounts. In Europe, tax rates are the same for the whole country, but in the USA, you get different tax rates per state, per city, and per zip code. Moreover, depending on your warehouses’ locations and your customers' locations, the taxes they pay for the same product are different. Last but not least, each jurisdiction can always change the tax rate at its discretion. Now imagine the amount of work if you would need to manage your tax calculations manually!
@@ -44,7 +44,7 @@ Since tax calculation is not an area where mistakes are allowed, Spryker decided
 The **Avalara integration** enables you to validate your customers’ and your warehouses’ addresses to improve the rate accuracy when calculating sales tax in the checkout process.
 
 #### Documentation
-[Tax](/docs/scos/dev/features/{{ page.version }}/tax/tax.html)
+[Tax](/docs/scos/dev/features/{{page.version}}/tax/tax.html)
 
 ## Data Exchange
 While expanding Spryker's out-of-the-box data exchange capabilities, we’ve implemented some **additional data importers** and made some small improvements (exception handling, dependencies, upgrading to PHP 7.3+, and minor bug fixes) that allow you to keep your software up-to-date.
@@ -52,8 +52,8 @@ While expanding Spryker's out-of-the-box data exchange capabilities, we’ve imp
 ### Data import
 These are the new data importers available in our default data import framework: 
 
-* Categories per store: [Import data associating categories with stores](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html). 
-* Warehouse address: [Import the warehouse address data](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html). 
+* Categories per store: [Import data associating categories with stores](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html). 
+* Warehouse address: [Import the warehouse address data](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html). 
 
 ### Data export
 Within Spryker’s default data export framework, we have made some small improvements (exception handling, dependencies, upgrades, and minor fixes), helping you to keep your software up-to-date.
@@ -69,42 +69,42 @@ We have completed some maintenance activities and done minor fixes helping you t
 The Docker SDK supports two new mailing-related parameters: `name` and `email address`. When sending emails like customer registration, the values of the parameters are used in the `From` field. You can define them in the `regions:services:mail:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/deploy-file-reference-1.0.html#regions-)
+[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#regions-)
 
 ### Sync solution: Mutagen
 
 The Docker SDK supports [Mutagen](https://mutagen.io/) as the new default sync solution. You can configure it in the `docker:mount:` section of the desired Deploy file.
 
 #### Documentation
-[Configuring mutagen mount mode on MacOS](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/configuring-a-mount-mode.html#configuring-mutagen-mount-mode-on-macos)
+[Configuring mutagen mount mode on MacOS](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-a-mount-mode.html#configuring-mutagen-mount-mode-on-macos)
 
 ### Smaller production images
 
 The Docker SDK supports defining if Xdebug is to be built in Docker images. By default, it is enabled for the development environment and disabled for the production environment. You can define it in the `docker:debug:enabled:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/deploy-file-reference-1.0.html#docker--debug-)
+[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#docker--debug-)
 
 ### Configurable cors-allow-origin
 
 The Docker SDK supports defining [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for the Glue API application. You can define it in the `groups: applications: endpoints: cors-allow-origin:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/deploy-file-reference-1.0.html#groups--applications--endpoints-)
+[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#groups--applications--endpoints-)
 
 ### Accessing private repositories via SSH agent
 
 The Docker SDK supports accessing private repositories via SSH agent. Private repository credentials are provided by SSH agent. They are used only when building images. You can use SSH agent for development environments and CI/CD pipelines. 
 
 #### Documentation
-[Configuring access to private repositories](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/configuring-access-to-private-repositories.html#configuring-access-to-private-repositories)
+[Configuring access to private repositories](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-access-to-private-repositories.html#configuring-access-to-private-repositories)
 
 ### Graceful handling of SIGTERM and SIGSTOP
 
 Worker processes support `SIGTERM` and `SIGSTOP` signal handling and gracefully shut down active tasks. It helps to address data consistency during autoscaling: a process can be killed to save resources or to be started in a different environment. This functionality is shipped by default with our Demo Shops.
 
 #### Documentation
-[Queue worker signal handling](/docs/scos/dev/migration-and-integration/{{ page.version }}/technical-enhancements/queue-worker-signal-handling.html#queue-worker-signal-handling)
+[Queue worker signal handling](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/queue-worker-signal-handling.html#queue-worker-signal-handling)
 
 ### ECR image scanning
 [Amazon ECR image scanning](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) is enabled in all environments and for all customers. ECR Image scanning scans each Docker image prepared during a CD pipeline execution and provides security findings you can analyze to improve security. 
@@ -114,7 +114,7 @@ Images are scanned in the background when they are pushed to AWS ECR, so it does
 The Docker SDK supports configuring `max-request-body-size` per application. It is limited in the code for security reasons, but you can increase or remove the maximum value for selected applications. You can configure `max-request-body-size` in the `groups: applications: application: http: max-request-body-size:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/deploy-file-reference-1.0.html#groups--applications-)
+[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#groups--applications-)
 
 ### CloudTrail retention time changes
 Cloud Trail logs are now saved for at least 12 months for governance, compliance, operational auditing, and risk auditing of accounts. You can adjust the interval per your requirements. 
@@ -126,7 +126,7 @@ The Docker SDK configures prefixes for Elasticsearch index names based on the `n
 We released the documentation covering the following Docker SDK topics: installing on Windows with WSL2, introduction and quick start guides, development: debugging, testing, configuring synchronization modes.
 
 #### Documentation
-[Docker SDK](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/docker-sdk.html#docker-sdk)
+[Docker SDK](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/docker-sdk.html#docker-sdk)
 
 ## Spryker Glue API
 We continue to add support for new storefront APIs.
@@ -136,28 +136,28 @@ With the **CMS APIs**, you can retrieve basic information on CMS pages individua
           If you use content banners and content product abstracts for your CMS page representation, you can retrieve their information together with the CMS page’s basic details in one request by including those resources in the request.
 
 #### Documentation
-[Retrieving CMS pages](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-cms-pages.html)
+[Retrieving CMS pages](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)
 
 ### Agent Assist APIs
 With the **Agent Assist APIs**, you can create representations that enable a user to log in as agent, search for customers and log in on their behalf by using an impersonation token. After the login, the agent can carry out actions for the selected customer.
 
 #### Documentation
 
-* [Authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticating-as-an-agent-assist)
-* [Searching by customers as an agent assist](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-agent-assists/searching-by-customers-as-an-agent-assist.html#searching-by-customers-as-an-agent-assist)
-* [Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonating-customers-as-an-agent-assist)
-* [Managing agent assist authentication tokens](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#managing-agent-assist-authentication-tokens)
+* [Authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticating-as-an-agent-assist)
+* [Searching by customers as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/searching-by-customers-as-an-agent-assist.html#searching-by-customers-as-an-agent-assist)
+* [Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonating-customers-as-an-agent-assist)
+* [Managing agent assist authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#managing-agent-assist-authentication-tokens)
 
 ### Product Bundles APIs
 With the **Product Bundles APIs**, you can create representations that cover the use of product bundles throughout the user journey, both for B2C and B2B. With this release, products, carts, and sales order endpoints support product bundles: you can retrieve product bundles, add them to the cart, manage them in the cart, and remove product bundles from the cart. All these endpoints consider the nature of the product bundles as a set of products that are always sold together. 
 
 #### Documentation
 
-* [Retrieving bundled products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-bundled-products.html#retrieving-bundled-products)
-* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-products.html#retrieving-concrete-products)
-* [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html#retrieving-abstract-products)
-* [Managing items in carts of registered users](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#managing-items-in-carts-of-registered-users)
-* [Managing guest cart items](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-cart-items.html#managing-guest-cart-items)
+* [Retrieving bundled products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-bundled-products.html#retrieving-bundled-products)
+* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieving-concrete-products)
+* [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieving-abstract-products)
+* [Managing items in carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#managing-items-in-carts-of-registered-users)
+* [Managing guest cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#managing-guest-cart-items)
 
 
 ### Configurable Bundles APIs
@@ -165,15 +165,15 @@ The **Configurable Bundle** endpoints allow you to create representations that e
 
 #### Documentation
 
-* [Retrieving configurable bundle templates](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-configurable-bundle-templates.html)
-* [Adding a configurable bundle to a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
-* [Changing quantity of configurable bundles in a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
-* [Removing a configurable bundle from a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
-* [Adding a configurable bundle to a registered user’s cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-user-s-cart) 
-* [Changing quantity of configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-user’s-cart) 
-* [Removing a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-user’s-cart)
-* [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/checking-out-purchases.html)
-* [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-orders.html)
+* [Retrieving configurable bundle templates](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-configurable-bundle-templates.html)
+* [Adding a configurable bundle to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
+* [Changing quantity of configurable bundles in a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
+* [Removing a configurable bundle from a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
+* [Adding a configurable bundle to a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-user-s-cart) 
+* [Changing quantity of configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-user’s-cart) 
+* [Removing a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-user’s-cart)
+* [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
+* [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html)
 
 
 ### Product Management Attributes API
@@ -181,43 +181,43 @@ The **Product Management Attributes API** allows you to define and set interface
 In the context of this API, you can retrieve all searchable attributes or a specific one. Besides other values, the response contains localized attribute names and possible attribute values.
 
 #### Documentation
-[Retrieving product attributes](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-product-attributes.html#retrieving-product-attributes)
+[Retrieving product attributes](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-attributes.html#retrieving-product-attributes)
 
 ### Glue APIs support split delivery
 With this release, the existing checkout-data, checkout, and orders endpoints support the **split delivery**. Now, you can create interfaces that enable a checkout process where customers can ship items to different addresses with different shipping methods in one order.
 
 #### Documentation
 
-* [Submitting checkout data](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/submitting-checkout-data.html)
-* [Checking out purchases](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/checking-out-purchases.html)
-* [Retrieving orders](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-orders.html)
+* [Submitting checkout data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html)
+* [Checking out purchases](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
+* [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html)
 
 ### Customer saved addresses can be retrieved as a related resource for the checkout process (checkout-data GLUE API improvement)
 You can now use the customers’ saved account addresses and retrieve them together with the checkout-data response in one request, as customer addresses (B2C) and business units address (B2B) can now be requested and included with the checkout data response.
 
 #### Documentation
-[Submitting checkout data](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/submitting-checkout-data.html#submitting-checkout-data)
+[Submitting checkout data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html#submitting-checkout-data)
 
 ### Double opt-in API
 When users create an account in your system, an email with the registration confirmation link is sent to the users. The double opt-in endpoint allows making the customer registration confirmation a prerequisite for the successful customer login.
 To enable the double opt-in process, we have added an incremental value to customer creation and access token endpoints.
 
 #### Documentation
-[Confirming customer registration](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/confirming-customer-registration.html#confirming-customer-registration)
+[Confirming customer registration](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/confirming-customer-registration.html#confirming-customer-registration)
 
 ### Back-in-stock product notifications (email subscriptions) APIs
 With this release, we introduce a set of endpoints that enable users to **subscribe to products** when they are out of stock, see active subscriptions and delete them.
 
 #### Documentation
 
-* [Managing availability notifications](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/managing-availability-notifications/managing-availability-notifications.html)
-* [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html#retrieving-subscriptions-to-availability-notifications)
+* [Managing availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/managing-availability-notifications.html)
+* [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html#retrieving-subscriptions-to-availability-notifications)
 
 ### Authentication compliance to OAuth 2.0 for Glue API
 In the customer authorization context, there is now a new endpoint that is fully **compliant with the Oauth 2.0** framework.
 
 #### Documentation
-[Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html#managing-customer-authentication-tokens-via-oauth-2-0)
+[Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html#managing-customer-authentication-tokens-via-oauth-2-0)
 
 ## Technical Enhancements
 ### Cart performance
@@ -238,31 +238,31 @@ We have done a complete revamp of the Spryker external libraries where we are de
 
 #### Documentation
 
-* [Symfony 5 integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/technical-enhancements/symfony-5-integration.html#symfony-5-integration)
-* [Chromium browser for tests](/docs/scos/dev/migration-and-integration/{{ page.version }}/technical-enhancements/chromium-browser-for-tests.html#chromium-browser-for-tests)
-* [Test framework](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/test-framework.html)
-* [Migrating from Twig v1 to Twig v3](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/migrating-from-twig-v1-to-twig-v3.html#migrating-from-twig-v1-to-twig-v3)
-* [Supported versions of PHP](/docs/scos/user/intro-to-spryker/{{ page.version }}/whats-new/supported-versions-of-php.html#supported-versions-of-php)
+* [Symfony 5 integration](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/symfony-5-integration.html#symfony-5-integration)
+* [Chromium browser for tests](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/chromium-browser-for-tests.html#chromium-browser-for-tests)
+* [Test framework](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html)
+* [Migrating from Twig v1 to Twig v3](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/migrating-from-twig-v1-to-twig-v3.html#migrating-from-twig-v1-to-twig-v3)
+* [Supported versions of PHP](/docs/scos/user/intro-to-spryker/{{page.version}}/whats-new/supported-versions-of-php.html#supported-versions-of-php)
 
 
 ### MariaDB as a default Spryker database
 We have chosen **Maria DB as the default database** for Spryker installations. Therefore, we have adjusted our tests, environments, and checks to this. Spryker will continue to be compatible with other engines, but expect the best performance and reliability from this new setup.
 
 #### Documentation
-[MariaDB database engine](/docs/scos/dev/migration-and-integration/{{ page.version }}/technical-enhancements/mariadb-database-engine.html#mariadb-database-engine)
+[MariaDB database engine](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/mariadb-database-engine.html#mariadb-database-engine)
 
 ### P&S Testing Infrastructure
 We are making available a **testing infrastructure** specifically for the Publish and Synchronize architecture. Now, we can run independent tests in our CI pipeline as well as constant Heartbeat tests that ensure the system is working properly.
 We have also extended the testing framework so that you can include your tests.
 
 #### Documentation
-[Test framework](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/test-framework.html)
+[Test framework](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html)
 
 ### Transfer strict mode
 We have introduced the **strict mode** and type hints for transfer objects in function arguments and return types. This allows for safer and cleaner code, raises the code legibility and the checking capacity of our validation tools. We maintain the flexibility to define assStrict, specific transfers or even fields within these transfers.
 
 #### Documentation
-[Transfer strict types](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html#transfer-strict-types)
+[Transfer strict types](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html#transfer-strict-types)
 
 
 ### Front-end (Profiling + Microdata)
@@ -270,7 +270,7 @@ Yves has also got its fresh features: the structured information is now generate
 
 #### Documentation
 
-* [Web Profiler Widget for Yves](/docs/scos/dev/migration-and-integration/{{ page.version }}/development-tools/web-profiler-widget-for-yves.html#web-profiler-widget-for-yves)
-* [Basic SEO techniques to use in your project](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/best-practices/basic-seo-techniques-to-use-in-your-project.html#basic-seo-techniques-to-use-in-your-project)
+* [Web Profiler Widget for Yves](/docs/scos/dev/migration-and-integration/{{page.version}}/development-tools/web-profiler-widget-for-yves.html#web-profiler-widget-for-yves)
+* [Basic SEO techniques to use in your project](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/best-practices/basic-seo-techniques-to-use-in-your-project.html#basic-seo-techniques-to-use-in-your-project)
 
 

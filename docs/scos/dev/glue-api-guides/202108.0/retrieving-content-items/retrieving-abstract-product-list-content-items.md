@@ -13,7 +13,7 @@ redirect_from:
 This endpoint allows retrieving information about abstract product list content items.
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html).
 
 <a name="product-list"></a>
 
@@ -360,4 +360,4 @@ Request sample: ` GET https://mysprykershop.com/content-product-abstract-lists/a
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

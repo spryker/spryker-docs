@@ -27,7 +27,7 @@ To start the feature integration, overview and install the necessary features:
 |NAME | VERSION | INTEGRATION GUIDE | 
 |--- | --- | --- | 
 | Product Options | master |  |
-| Avalara Tax | master | [Avalara Tax integration](/docs/scos/dev/technology-partners/{{ page.version }}/taxes/avalara-tax-integration.html)|
+| Avalara Tax | master | [Avalara Tax integration](/docs/scos/dev/technology-partners/{{page.version}}/taxes/avalara-tax-integration.html)|
 
 ### 1) Install the required modules using Composer
 

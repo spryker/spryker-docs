@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/ts-linter-integration-guide
 ---
 
-Follow the steps below to integrate [TS linter](/docs/scos/dev/sdk/{{ page.version }}/development-tools/ts-linter.html) into your project. 
+Follow the steps below to integrate [TS linter](/docs/scos/dev/sdk/{{page.version}}/development-tools/ts-linter.html) into your project. 
 
 ## 1. Install the dependencies
 

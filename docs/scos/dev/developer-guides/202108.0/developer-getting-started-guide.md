@@ -20,16 +20,16 @@ Typical Spryker installation process includes installing a proper starting point
 
 You can choose from the following options:
 
-* [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2b-suite.html) - a boilerplate for B2B commerce projects.
-* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2c-suite.html) - a starting point for B2C implementations.
-* Separate [Features](/docs/scos/dev/features/{{ page.version }}/overview-of-the-feature-guides.html) and modules - you can also expand both Demo Shops with separate features and modules.
+* [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html) - a boilerplate for B2B commerce projects.
+* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html) - a starting point for B2C implementations.
+* Separate [Features](/docs/scos/dev/features/{{page.version}}/overview-of-the-feature-guides.html) and modules - you can also expand both Demo Shops with separate features and modules.
 
 ### Installing Spryker with Docker
 We recommend starting with a Docker SDK environment. This option includes Docker and related tools to build images and run containers that match your requirements. 
 
 It features a lightweight environment that is closer to a production implementation. 
 
-To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installing-spryker-with-docker.html).
+To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installing-spryker-with-docker.html).
 
 ### Installing Spryker with Development Virtual Machine
 
@@ -40,14 +40,14 @@ Choose an installation guide that suits your needs best:
 
 | Operating system | B2B Shop or B2C Shop |
 | --- | --- |
-| DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html) |
-| DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html) |
+| DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html) |
+| DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html) |
 
 ### Independent Installation
-Alternatively, you can install Spryker on an operating system that fulfills Spryker [System requirements](/docs/scos/dev/developer-guides/{{ page.version }}/installation/system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html) for details.
+Alternatively, you can install Spryker on an operating system that fulfills Spryker [System requirements](/docs/scos/dev/developer-guides/{{page.version}}/installation/system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html) for details.
 
 {% info_block warningBox %}
-After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/developer-guides/{{ page.version }}/installation/post-installation-steps-and-additional-info.html
+After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/developer-guides/{{page.version}}/installation/post-installation-steps-and-additional-info.html
 {% endinfo_block %} for tips on fine-tuning Spryker.)
 
 ## 2. Manage your modules
@@ -55,11 +55,11 @@ After installing, make sure to have a look at [Post-Installation steps and addit
 Once you have completed the installation, you can start managing *modules*. A module is a single functional unit, that has well-defined dependencies, and can be used and updated independently. 
 {% info_block infoBox %}
 
-To define your strategy of taking Spryker updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/{{ page.version }}/spryker-release-process.html).
+To define your strategy of taking Spryker updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/{{page.version}}/spryker-release-process.html).
 
 {% endinfo_block %}
 
-We use [Composer](/docs/scos/dev/developer-guides/{{ page.version }}/installation/composer.html) to install and manage module dependencies. 
+We use [Composer](/docs/scos/dev/developer-guides/{{page.version}}/installation/composer.html) to install and manage module dependencies. 
 Run the following Composer commands depending on what you want to do:
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
 *  To update all the modules for your project: `composer update "spryker/*"`. 
@@ -71,28 +71,28 @@ We recommend running this command weekly to assert you have the latest fixes. We
 *  To update a particular module: `composer update "spryker/module-name"`. You can easily keep track of new module versions using the [composer-versions-check](https://github.com/Soullivaneuh/composer-versions-check) addon for your local Composer tool.
 *  To add a new module to your project: `composer require "spryker/module-name"`
 
-See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) to learn about the module versioning approach in Spryker.
+See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) to learn about the module versioning approach in Spryker.
 
 
 ## 3. Configure the environment
 
 To configure and customize your Spryker Commerce OS, do the following:
 
-1. To define how to manage and configure the settings in configuration files, see [Configuration management](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/configuration-management.html).
+1. To define how to manage and configure the settings in configuration files, see [Configuration management](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/configuration-management.html).
 2. Configure your environment: 
-    *   [Database](/docs/scos/dev/developer-guides/{{ page.version }}/installation/configuring-the-database-server.html)
-    *   [Redis](/docs/scos/dev/developer-guides/{{ page.version }}/installation/redis-configuration.html)
-    <!---*   [ElasticSearch](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
-    *   [Queue](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/queue/queue.html)
-3. [Congiure stores](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/howto-set-up-multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
-4. [Schedule tasks](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/cronjob-scheduling.html) (Cron jobs).
+    *   [Database](/docs/scos/dev/developer-guides/{{page.version}}/installation/configuring-the-database-server.html)
+    *   [Redis](/docs/scos/dev/developer-guides/{{page.version}}/installation/redis-configuration.html)
+    <!---*   [ElasticSearch](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
+    *   [Queue](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/queue/queue.html)
+3. [Congiure stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
+4. [Schedule tasks](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/cronjob-scheduling.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
 ## 4. Debugging
 
 Before you start developing, set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
-* [Configuring debugging in Docker](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/configuring-debugging-in-docker.html)
-* [Configuring debugging in Vagrant](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-vagrant/debugger/configuring-debugging-in-vagrant.html)
+* [Configuring debugging in Docker](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-debugging-in-docker.html)
+* [Configuring debugging in Vagrant](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/debugger/configuring-debugging-in-vagrant.html)
 
 {% info_block infoBox %}
 In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelisting.
@@ -102,10 +102,10 @@ In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelis
 
 As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed and Yves folders and their different layers, see the following articles:
 
-* [Conceptual overview](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/conceptual-overview.html): to learn about application layers and code structure.
-* [Modules and layers](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.
-* [Programming concepts](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
-* [Technology stack](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/technology-stack.html): to learn about the technologies we use. 
+* [Conceptual overview](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/conceptual-overview.html): to learn about application layers and code structure.
+* [Modules and layers](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.
+* [Programming concepts](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
+* [Technology stack](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/technology-stack.html): to learn about the technologies we use. 
 
 <!---* Introduction to navigating the folder structure, main concepts and namespacing.
 * The project directory
@@ -125,12 +125,12 @@ Get to know the parts of the Spryker Development Virtual Machine with which we s
 
 Select one of the topics below depending on what you want to do next:
 
-* [About Spryker](/docs/scos/user/intro-to-spryker/{{ page.version }}/about-spryker.html): general information about Spryker, news, and release notes.
-* [Features](/docs/scos/dev/features/{{ page.version }}/overview-of-the-feature-guides.html): general information about the Spryker features.
-* [Glue REST API](/docs/scos/dev/glue-api-guides/{{ page.version }}/glue-rest-api.html): Spryker Glue REST API overview, reference, and guides.
-* [User guides](/docs/scos/user/user-guides/{{ page.version }}/about-user-guides.html): step-by-step Backoffice and Storefront user guides.
-* [Developer guides](/docs/scos/dev/developer-guides/{{ page.version }}/overview-of-the-developer-guides.html): technical information and guides for developers. 
-* [Technology partners](/docs/scos/dev/technology-partners/{{ page.version }}/technology-partner-integration.html): Spryker technology partners information and integration guides.
-* [Migration and integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules and features.
-* [Tutorials](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/about-tutorials.html): tutorials and HowTos.
+* [About Spryker](/docs/scos/user/intro-to-spryker/{{page.version}}/about-spryker.html): general information about Spryker, news, and release notes.
+* [Features](/docs/scos/dev/features/{{page.version}}/overview-of-the-feature-guides.html): general information about the Spryker features.
+* [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and guides.
+* [User guides](/docs/scos/user/user-guides/{{page.version}}/about-user-guides.html): step-by-step Backoffice and Storefront user guides.
+* [Developer guides](/docs/scos/dev/developer-guides/{{page.version}}/overview-of-the-developer-guides.html): technical information and guides for developers. 
+* [Technology partners](/docs/scos/dev/technology-partners/{{page.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
+* [Migration and integration](/docs/scos/dev/migration-and-integration/{{page.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules and features.
+* [Tutorials](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/about-tutorials.html): tutorials and HowTos.
 

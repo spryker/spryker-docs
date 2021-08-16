@@ -21,7 +21,7 @@ Other changes are:
 
 {% info_block infoBox "Info" %}
 
-Keep in mind that `MerchantGui` module migration depends on the [Merchant](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-merchant.html#upgrading-from-version-2---to-version-3--) module migration.
+Keep in mind that `MerchantGui` module migration depends on the [Merchant](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-merchant.html#upgrading-from-version-2---to-version-3--) module migration.
 
 {% endinfo_block %}
 
@@ -131,7 +131,7 @@ composer require spryker/merchnat-gui:"^2.0.0" --update-with-dependencies
 ```
 {% info_block infoBox "Info" %}
 
-Also, check the Migration Guide for the [Merchant](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-merchant.html#upgrading-from-version-1---to-version-2--).
+Also, check the Migration Guide for the [Merchant](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-merchant.html#upgrading-from-version-1---to-version-2--).
 
 {% endinfo_block %}
 

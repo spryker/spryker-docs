@@ -103,4 +103,4 @@ And the values available in the drop-down lists are the product options:
 ![Select an option](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Product+Options%3A+Reference+Information/select-option-drop-down.png)
 
 **What's next?**
-Once the option is created, you may want to know how those options are managed. See [Managing product options](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/product-options/managing-product-options.html) for more details. 
+Once the option is created, you may want to know how those options are managed. See [Managing product options](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/managing-product-options.html) for more details. 

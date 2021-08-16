@@ -16,7 +16,7 @@ This article describes how to manage product sets.
 
 To start working with product sets, go to **Merchandising** > **Product Sets**.
 
-For reference information, see [Reference information: Creating product sets](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-sets/creating-product-sets.html#reference-information-creating-product-sets).
+For reference information, see [Reference information: Creating product sets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-sets/creating-product-sets.html#reference-information-creating-product-sets).
 
 ## Editing product sets
 

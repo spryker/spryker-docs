@@ -19,9 +19,9 @@ In your development, this resource can help you to let the customers set up the 
 ## Installation 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html)
-* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
-* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
+* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html)
+* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
+* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 ## Retrieve all configurable bundle templates
 To retrieve all configurable bundle templates, send the request:
@@ -730,20 +730,20 @@ A list of images assigned to a configurable bundle template.  |
 For the attributes of other included resources, see:
 
 * [Retrieving concrete products](https://documentation.spryker.com/2021080/docs/retrieving-product-information#retrieve-concrete-products)
-* [Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-concrete-product-prices.html)
-* [Retrieving concrete product image sets](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
+* [Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html)
+* [Retrieving concrete product image sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
 
 ## Other management options
 
 You can use the configurable bundle resource in the following way:
 
-* [Add a configurable bundle to a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
-* [Change the quantity of the configurable bundles in a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
-* [Remove a configurable bundle from a guest cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/guest-carts/managing-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
-* [Add a configurable bundle to a registered user’s cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-user%E2%80%99s-cart)
-* [Change the quantity of the configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-user%E2%80%99s-cart)
-* [Remove a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-user%E2%80%99s-cart)
-* [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/checking-out-purchases.html)
-* [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-orders.html)
+* [Add a configurable bundle to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
+* [Change the quantity of the configurable bundles in a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
+* [Remove a configurable bundle from a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
+* [Add a configurable bundle to a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-user%E2%80%99s-cart)
+* [Change the quantity of the configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-user%E2%80%99s-cart)
+* [Remove a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-user%E2%80%99s-cart)
+* [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
+* [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html)
 
 

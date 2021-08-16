@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
 ---
 
-As B2B environments usually implement complex business logics, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2b-suite.html), guest users cannot check out by default. In some cases, you might need guest checkout to be enabled.
+As B2B environments usually implement complex business logics, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html), guest users cannot check out by default. In some cases, you might need guest checkout to be enabled.
 
 {% info_block infoBox "Examplary implementation" %}
 

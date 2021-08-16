@@ -18,7 +18,7 @@ To start managing company roles, navigate to  **Company Account** > **Company Ro
 
 {% info_block warningBox "Note" %}
 
-Make sure to [create a company](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-companies.html#creating-a-company) before you create a company role.
+Make sure to [create a company](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-companies.html#creating-a-company) before you create a company role.
 
 {% endinfo_block %}
 
@@ -53,4 +53,4 @@ If you delete a default role, the following message is displayed: "*You cannot d
 
 **What's next?**
 Once the role is created, you can proceed with creating a company user and assign the created role to it.
-See [Managing company users](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-users.html) to know how the company users are created and managed.
+See [Managing company users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-users.html) to know how the company users are created and managed.

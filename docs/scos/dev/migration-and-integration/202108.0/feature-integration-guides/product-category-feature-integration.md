@@ -736,9 +736,9 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
 |--- | --- | --- |
-| Category Management Feature | ✓ | [Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/category-management-feature-integration.html) | 
-| Product Management Feature | ✓ | [Product feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-feature-integration.html) | 
-| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-category-management-feature-integration.html) | 
-| Catalog + Category Management |  |[Catalog + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/catalog-category-management-feature-integration.html) |
-| CMS + Category Management  | | [CMS + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/cms-category-management-feature-integration.html) |
+| Category Management Feature | ✓ | [Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/category-management-feature-integration.html) | 
+| Product Management Feature | ✓ | [Product feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-feature-integration.html) | 
+| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-category-management-feature-integration.html) | 
+| Catalog + Category Management |  |[Catalog + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/catalog-category-management-feature-integration.html) |
+| CMS + Category Management  | | [CMS + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cms-category-management-feature-integration.html) |
 

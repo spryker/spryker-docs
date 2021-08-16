@@ -17,7 +17,7 @@ To be able to use the Back Office, you have to log in to it. You can log in via:
 
 {% info_block warningBox %}
 
-Only [active](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#activating-and-deactivating-a-user) users can log in to the Back Office.
+Only [active](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#activating-and-deactivating-a-user) users can log in to the Back Office.
 
 {% endinfo_block %}
 
@@ -25,7 +25,7 @@ Only [active](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-gu
 <a name="prerequisites"></a>
 {% info_block warningBox "Prerequisites" %}
 
-To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#creating-users) or [programmatically by a developer](/docs/scos/dev/features/{{ page.version }}/spryker-core-back-office/spryker-core-back-office-feature-overview/users-and-rights-overview.html#add-acl).
+To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#creating-users) or [programmatically by a developer](/docs/scos/dev/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/users-and-rights-overview.html#add-acl).
 
 {% endinfo_block %}
 
@@ -55,11 +55,11 @@ To log in with a third-party system credentials:
 1. In the login form, click **Login with {Third-party service name}**. This redirects your to the third-party sign-in page.
 2. Log in to the third-party system by entering your username and password.
 
-You are taken to the Back Office home page as a logged-in user. User with the email you used for the third-party service login appears on the [*Users*](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#user-page) page.
+You are taken to the Back Office home page as a logged-in user. User with the email you used for the third-party service login appears on the [*Users*](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#user-page) page.
 
 {% info_block warningBox %}
 
-Depending on the [third-party login strategy](https://documentation.spryker.com/2021080/docs/back-office-login-feature-overview#strategies) configured in your project, you might not be allowed to log in with a third-party account unless a user with an email that matches the existing third-party user email has not been [preliminary created](#prerequisites) and [activated](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#activating-and-deactivating-a-user). 
+Depending on the [third-party login strategy](https://documentation.spryker.com/2021080/docs/back-office-login-feature-overview#strategies) configured in your project, you might not be allowed to log in with a third-party account unless a user with an email that matches the existing third-party user email has not been [preliminary created](#prerequisites) and [activated](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#activating-and-deactivating-a-user). 
 
 {% endinfo_block %}
 

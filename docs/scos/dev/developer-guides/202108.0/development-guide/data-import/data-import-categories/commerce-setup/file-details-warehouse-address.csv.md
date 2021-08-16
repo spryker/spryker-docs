@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/file-details-warehouse-addresscsv
 ---
 
-This document describes the `warehourse_address.csv` file to configure [warehouse address information](/docs/scos/dev/features/{{ page.version }}/inventory-management/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop. 
+This document describes the `warehourse_address.csv` file to configure [warehouse address information](/docs/scos/dev/features/{{page.version}}/inventory-management/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop. 
 
 To import the file, run
 
@@ -24,7 +24,7 @@ The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
-| warehouse_name | &check; | String |  |  | Warehouse name from the [warehouse.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html) file |
+| warehouse_name | &check; | String |  |  | Warehouse name from the [warehouse.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html) file |
 | address1 | &check; | String |  |  | Warehouse address—first line |
 | address2 |  | String |  |  | Warehouse address—second line |
 | address3 |  | String |  |  | Warehouse address—third line |
@@ -37,7 +37,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 The file has the following dependency:
-[File details: warehouse.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html)
+[File details: warehouse.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html)
 
 ## Import template file and content example
 Find the template and an example of the file below:

@@ -19,7 +19,7 @@ Spryker OS provides the following applications:
 * Backoffice (Zed)
 * Storefront API (Glue)
 
-Applications can be run and scaled independently. For more information on the provided Applications and Application Layers see [Conceptual Overview](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/conceptual-overview.html).
+Applications can be run and scaled independently. For more information on the provided Applications and Application Layers see [Conceptual Overview](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/conceptual-overview.html).
 A typical use is scaling your Storefront API servers while running a native APP marketing campaign (while it's using Storefront API for data access). Same as independently scaling Storefront during Black Friday targeted at customer web-frontend.
 
 ## Back Office security

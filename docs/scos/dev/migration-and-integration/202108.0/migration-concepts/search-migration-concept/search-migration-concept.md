@@ -175,15 +175,15 @@ That being done, the migration to Elasticsearch 7 from Elasticsearch 5 is comple
 ## Modules to upgrade
 The Search migration effort implies an upgrade of the following modules:
 
-* [Search](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--)
-* [Console](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-console.html)
-* [CmsPageSearch](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-cmspagesearch.html#upgrading-from-version-2-1---to-version-2-2--)
-* [Catalog](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-catalog.html#upgrading-from-version-5-5--to-version-5-6-)
-* [ProductPageSearch](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-productpagesearch.html#upgrading-from-version-3-11---to-version-3-12--)
-* [ProductReviewSearch](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-productreviewsearch.html#upgrading-from-version-1-3---to-version-1-4--)
-* [ProductLabelSearch](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-productlabelsearch.html#upgrading-from-version-1-2---to-version-1-3--)
-* [ProductSetPageSearch](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-productsetpagesearch.html#upgrading-from-version-1-3---to-version-1-4--)
-* [CategoryPageSearch](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-categorypagesearch.html#upgrading-from-version-1-4---to-version-1-5--)
-* [ProductNew](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-productnew.html#upgarding-from-version-1-1--to-version-1-2-)
+* [Search](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--)
+* [Console](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-console.html)
+* [CmsPageSearch](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cmspagesearch.html#upgrading-from-version-2-1---to-version-2-2--)
+* [Catalog](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-catalog.html#upgrading-from-version-5-5--to-version-5-6-)
+* [ProductPageSearch](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-productpagesearch.html#upgrading-from-version-3-11---to-version-3-12--)
+* [ProductReviewSearch](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-productreviewsearch.html#upgrading-from-version-1-3---to-version-1-4--)
+* [ProductLabelSearch](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-productlabelsearch.html#upgrading-from-version-1-2---to-version-1-3--)
+* [ProductSetPageSearch](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-productsetpagesearch.html#upgrading-from-version-1-3---to-version-1-4--)
+* [CategoryPageSearch](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-categorypagesearch.html#upgrading-from-version-1-4---to-version-1-5--)
+* [ProductNew](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-productnew.html#upgarding-from-version-1-1--to-version-1-2-)
 
 

@@ -26,7 +26,7 @@ You can tailor the State Machine to your needs to trigger certain processes auto
 The `StateMachine` module provides a generic implementation for state machines (SM). This module provides functionality for drawing the SM graph, triggering events, initializing a new state machine, or for getting the state history for a processed item.
 
 {% info_block warningBox %}
-If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/dev/features/{{ page.version }}/order-management/oms-order-management-system-matrix.html
+If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/dev/features/{{page.version}}/order-management/oms-order-management-system-matrix.html
 {% endinfo_block %}.)
 
 {% info_block infoBox %}
@@ -124,7 +124,7 @@ Here is an example of a timeout processor in an event definition:
 ```
 In this example, `OmsTimeout/Initiation` is the name of the plugin which is executed to set the starting point of the timeout.
 
-In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/order-management-feature-integration.html) plugin starts the timeout immediately, from the current time:
+In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/order-management-feature-integration.html) plugin starts the timeout immediately, from the current time:
 
 <details open>
 

@@ -84,7 +84,7 @@ This change does not require database changes but it does require Propel model r
 
 **Documentation**
 For module documentation, see Customer Module Guide<!--/capabilities/crm/customer-module-overview.htm)-->.
-For detailed migration guides, see [Customer Module Migration Guide from Version 6. to 7](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-customer.html#upgrading-from-version-6---to-version-7-0).
+For detailed migration guides, see [Customer Module Migration Guide from Version 6. to 7](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-customer.html#upgrading-from-version-6---to-version-7-0).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -146,8 +146,8 @@ Previously, breadcrumbs were missing for the product attribute translation manag
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Payment Integration - BS Payone - 1.1](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/bs-payone/bs-payone.html) 
+* [Payment Integration - BS Payone - 1.1](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html) 
 * Integration With Project - Payone
-* [PayPal Express Checkout Payment - Payone - 1.1](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html)
+* [PayPal Express Checkout Payment - Payone - 1.1](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html)
  
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey] [here](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

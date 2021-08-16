@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/releases
 ---
 
-This section contains the notes for each [Product release](/docs/scos/user/intro-to-spryker/{{ page.version }}/spryker-release-process.html#product-releases) made by Spryker. Make sure that you check this section from time-to-time to stay up to date with the improvements, bug fixes and new features that are delivered by our team.
+This section contains the notes for each [Product release](/docs/scos/user/intro-to-spryker/{{page.version}}/spryker-release-process.html#product-releases) made by Spryker. Make sure that you check this section from time-to-time to stay up to date with the improvements, bug fixes and new features that are delivered by our team.
 
 ## Mailing lists
 We recommend that you subscribe to our release newsletter and security updates mailing lists so that we can let you know about new features and be immediately informed of any security updates that you need to know about. 
@@ -23,6 +23,6 @@ To receive the security updates, please request the subsription at [support@spry
 
 **What's next:**
 
-* [Checking for newer versions](/docs/scos/dev/developer-guides/{{ page.version }}/installation/composer.html)
-* [Release notes](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/release-notes/release-notes.html)
-* [Migration guides](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/about-migration-guides.html)
+* [Checking for newer versions](/docs/scos/dev/developer-guides/{{page.version}}/installation/composer.html)
+* [Release notes](/docs/scos/user/intro-to-spryker/{{page.version}}/releases/release-notes/release-notes.html)
+* [Migration guides](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/about-migration-guides.html)

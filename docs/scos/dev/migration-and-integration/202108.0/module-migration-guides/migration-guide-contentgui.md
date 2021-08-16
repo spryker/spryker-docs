@@ -22,7 +22,7 @@ The `ContentGui` module version 2.0.0 introduced the following changes:
 You can find more details about the changes on the [ContentGui module release notes](https://github.com/spryker/content-gui/releases/tag/2.0.0) page.
 
 **To upgrade to the new version of the module, do the following:**
-1. Perform the steps in [Migration Guide - Content](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-content.html).
+1. Perform the steps in [Migration Guide - Content](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-content.html).
 2. Upgrade the `ContentGui` module to version 2.0.0:
 
 ```bash

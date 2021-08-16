@@ -116,7 +116,7 @@ The following table describes the attributes on the *Create Content Item: Naviga
 | --- | --- |
 | Name | Name of the content item. |
 | Description | Description of the content item. |
-| Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/creating-content-items.html#create-a-navigation-content-item) to learn how to create it. |
+| Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html#create-a-navigation-content-item) to learn how to create it. |
 
 
 

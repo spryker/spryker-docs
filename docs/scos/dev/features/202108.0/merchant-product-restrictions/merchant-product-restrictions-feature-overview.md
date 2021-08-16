@@ -12,7 +12,7 @@ redirect_from:
 
 At its core, Product Restrictions allow merchants to define the products that are available to each of their B2B customers.
 
-In terms of [Merchant concept](/docs/scos/dev/features/{{ page.version }}/merchant-b2b-contracts-feature-overview.html), the **merchant** is the one who sells products on a marketplace and can set prices.
+In terms of [Merchant concept](/docs/scos/dev/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html), the **merchant** is the one who sells products on a marketplace and can set prices.
 
 The diagram below shows product restrictions relations within the Merchant concept:
 
@@ -27,9 +27,9 @@ Product Restriction feature works on the basis of whitelist/blacklist lists. Tha
 
 To restrict the products, a Shop Administrator needs to create a product list, include the necessary products to the list and blacklist them for a specific merchant relationship. All other products will be available for that merchant relationship.
 
-To create product lists, follow the [guideline for the Back Office](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/product-lists/creating-a-product-list.html).
+To create product lists, follow the [guideline for the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/creating-a-product-list.html).
 
-You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/dev/features/{{ page.version }}/merchant-product-restrictions/restricted-products-behavior.html) page.
+You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/dev/features/{{page.version}}/merchant-product-restrictions/restricted-products-behavior.html) page.
 
 ## Current Constraints
 - Currently, in the situation, when a single product from the product set is blacklisted, the other items are displayed in the shop. We are going to update the logic in a way, that in case any of the items in the product set gets blacklisted, all relevant product sets containing this item will get blacklisted too.
@@ -45,7 +45,7 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="/docs/scos/dev/features/{{ page.version }}/merchant-product-restrictions/restricted-products-behavior.html" class="mr-link">Check out the use cases of the restricted products behavior</a></li>
+                <li><a href="/docs/scos/dev/features/{{page.version}}/merchant-product-restrictions/restricted-products-behavior.html" class="mr-link">Check out the use cases of the restricted products behavior</a></li>
                 <li>Integrate the Merchant Product Restrictions:</li>
                 <li><a href="https://documentation.spryker.com/docs/merchant-product-restrictions-feature-integration" class="mr-link">Integrate the Merchant Product Restrictions feature</a></li>
                 <li><a href="https://documentation.spryker.com/docs/merchant-feature-integration" class="mr-link">Integrate the Merchant feature</a></li>  
@@ -55,7 +55,7 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/product-lists/creating-a-product-list.html" class="mr-link">Create a product list to set product restrictions</a></li>
+                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/creating-a-product-list.html" class="mr-link">Create a product list to set product restrictions</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-product-lists#editing-a-product-list" class="mr-link">Edit a product list</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-product-lists#exporting-a-product-list" class="mr-link">Export a product list</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-product-lists#removing-a-product-list" class="mr-link">Remove a product list from the system</a></li>

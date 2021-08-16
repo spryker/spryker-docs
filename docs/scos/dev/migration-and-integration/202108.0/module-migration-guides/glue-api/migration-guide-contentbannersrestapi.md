@@ -23,7 +23,7 @@ You can find more details about the changes on the [ContentBannersRestApi module
 
 **To upgrade to the new version of the module, do the following:**
 
-1. Upgrade the **ContentBanner** module to version 2.0.0. See [Migration Guide - ContentBanner](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-contentbanner.html) for  details on how to upgrade.
+1. Upgrade the **ContentBanner** module to version 2.0.0. See [Migration Guide - ContentBanner](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-contentbanner.html) for  details on how to upgrade.
 
 2. Upgrade the **ContentBannerRestApi** module to version 2.0.0:
 

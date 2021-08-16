@@ -17,15 +17,15 @@ To integrate with Econda, you will need to connect your Econda account. If you d
 
 To enable Econda tracking for your application, you need to download a personalized JavaScript library from the Econda Analytics Configuration menu (you can find the detailed instructions on the [Econda website](https://support.econda.de/display/MONDE/Tracking-Bibliothek+herunterladen)).
 
-For [cross sell widgets](/docs/scos/dev/technology-partners/{{ page.version }}/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html), we will demonstrate integration of JS SDK that you can download from the [Econda website](http://downloads.econda.de/support/releases/js-sdk/current/econda-recommendations.php).
+For [cross sell widgets](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html), we will demonstrate integration of JS SDK that you can download from the [Econda website](http://downloads.econda.de/support/releases/js-sdk/current/econda-recommendations.php).
 
 Please refer to [Econda](http://www.econda.de/) documentation on how to customize your Econda widgets.
 
 Some examples can be found at [http://downloads.econda.de/support/releases/js-sdk/current/examples/](http://downloads.econda.de/support/releases/js-sdk/current/examples/)
 
-Details on how to work with Javascript and templates in Spryker can be found in the [Front-End guide](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html).
+Details on how to work with Javascript and templates in Spryker can be found in the [Front-End guide](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html).
 
-Econda module uses collectors to [export data to CSV](/docs/scos/dev/technology-partners/{{ page.version }}/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html). Please read more about Collectors.
+Econda module uses collectors to [export data to CSV](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html). Please read more about Collectors.
 
 
 

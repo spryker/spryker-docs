@@ -20,7 +20,7 @@ From now on, we support integration with Heidelpay payment service provider. Hei
 | [heidelpay 1.0.0](https://github.com/spryker-eco/heidelpay/releases/tag/1.0.0) | n/a | n/a |
 
 **Documentation**
-For more information on Heidelpay integration, see [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/heidelpay/heidelpay.html).
+For more information on Heidelpay integration, see [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html).
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -49,7 +49,7 @@ As a part of this release, we have also made some improvements. Earlier only bil
 | [ArvatoRss 2.0.0](https://github.com/spryker-eco/arvato-rss/releases/tag/2.0.0) | n/a | n/a |
 
 **Documentation**
-For more information,  see the [Risk Solution Services Integration - Arvato](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/arvato/arvato.html) documentation.
+For more information,  see the [Risk Solution Services Integration - Arvato](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html) documentation.
 
 **Migration Guides**
 To upgrade, follow the steps described below:
@@ -266,17 +266,17 @@ To use a new infrastructure, please make sure you moved your `Pyz` test into `Py
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/heidelpay/heidelpay.html)
-* [Risk Solution Services Integration - Arvato 2.0](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/arvato/arvato.html-2-0)
-* [Performance Guidelines](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/performance-guidelines.html)
-* [Performing Core Updates Smoothly](/docs/scos/dev/developer-guides/{{ page.version }}/installation/composer.html#core-updates)
-* [CMS Blocks](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-blocks-overview.html)
-* [CMS Pages](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-pages-overview.html)
+* [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
+* [Risk Solution Services Integration - Arvato 2.0](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html-2-0)
+* [Performance Guidelines](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/performance-guidelines.html)
+* [Performing Core Updates Smoothly](/docs/scos/dev/developer-guides/{{page.version}}/installation/composer.html#core-updates)
+* [CMS Blocks](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html)
+* [CMS Pages](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html)
 * [Demo Shop](https://documentation.spryker.com/2021080/docs/legacy-demoshop)
 * [Navigation](https://documentation.spryker.com/2021080/docs/navigation)
 * [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)
 * [Product Management](https://documentation.spryker.com/2021080/docs/product-information-management)
 * [Product Sets](https://documentation.spryker.com/2021080/docs/product-sets)
-* [Wishlists](/docs/scos/dev/features/{{ page.version }}/wishlist-feature-overview.html)
+* [Wishlists](/docs/scos/dev/features/{{page.version}}/wishlist-feature-overview.html)
  
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short survey [here](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

@@ -58,4 +58,4 @@ The following table describes the attributes you see, select, or enter while cre
 
 **What's next?**
 
-The next step in the company account setup is to created company roles and users. See the [Managing company roles](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-roles.html) and [Managing company users](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-users.html) articles.
+The next step in the company account setup is to created company roles and users. See the [Managing company roles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-roles.html) and [Managing company users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-users.html) articles.

@@ -23,7 +23,7 @@ This release focuses on enabling multi-currency for discounts. It allows you to 
 
 **Documentation**
 For module documentation, see Module Guide - Discount<!--/module_guide/spryker/discount.htm)-->, Module Guide - Currency<!--/module_guide/spryker/currency.htm)-->, Module Guide - Money<!--/module_guide/spryker/money.htm)-->.
-For detailed migration guides, see [Discount Module Migration Guide from Version 4. to 5](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-discount.html#upgrading-from-version-4---to-version-5--), Migration Guide - Discount Amounts Migration Console Command.
+For detailed migration guides, see [Discount Module Migration Guide from Version 4. to 5](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-discount.html#upgrading-from-version-4---to-version-5--), Migration Guide - Discount Amounts Migration Console Command.
 
 **Migration Guides**
 To upgrade, follow the steps described below:

@@ -124,4 +124,4 @@ Company users can perform the following actions on the Storefront:
 </div>
 
 ## See next 
-[Business Units overview](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/business-units-overview.html)
+[Business Units overview](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/business-units-overview.html)

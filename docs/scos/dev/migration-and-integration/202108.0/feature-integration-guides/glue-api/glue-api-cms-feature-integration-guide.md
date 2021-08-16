@@ -17,8 +17,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME         | VERSION | REQUIRED SUB-FEATURE                                         |
 | :----------- | :------ | :----------------------------------------------------------- |
-| Spryker Core | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
-| CMS          | master  | [CMS feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/cms-feature-integration.html) |
+| Spryker Core | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| CMS          | master  | [CMS feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cms-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 

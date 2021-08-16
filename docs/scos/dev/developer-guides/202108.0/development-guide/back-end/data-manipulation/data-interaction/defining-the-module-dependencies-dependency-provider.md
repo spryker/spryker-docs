@@ -60,7 +60,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 
 ## How to Use the Provided Class
 
-You can access the classes which are provided by the `DependencyProvider` in the [Factory](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/factory/creating-instances-of-classes-factory.html). Technically the `$container` variable is a simple [DI-container](http://martinfowler.com/articles/injection.html) based on [Pimple](http://pimple.sensiolabs.org/). The contained class is initialized only when you use it.
+You can access the classes which are provided by the `DependencyProvider` in the [Factory](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/factory/creating-instances-of-classes-factory.html). Technically the `$container` variable is a simple [DI-container](http://martinfowler.com/articles/injection.html) based on [Pimple](http://pimple.sensiolabs.org/). The contained class is initialized only when you use it.
 
 ```php
 <?php
@@ -160,4 +160,4 @@ You might use the following definitions to generate related code:
 * Add Zed Dependency Service Interface
 * Add Client Dependency Provider
 
-See the [Spryk](/docs/scos/dev/sdk/{{ page.version }}/development-tools/spryk-code-generator.html) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/{{page.version}}/development-tools/spryk-code-generator.html) documentation for details.

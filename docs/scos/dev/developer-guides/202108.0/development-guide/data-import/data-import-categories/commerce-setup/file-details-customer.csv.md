@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-customercsv
 ---
 
-This article contains content of the **customer.csv** file to configure [Customer](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management.html) information on your Spryker Demo Shop.
+This article contains content of the **customer.csv** file to configure [Customer](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

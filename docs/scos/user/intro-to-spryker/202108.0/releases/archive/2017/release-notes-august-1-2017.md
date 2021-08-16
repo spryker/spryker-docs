@@ -128,7 +128,7 @@ Please note that the sniff commands now are as follows:
 
 **Tip**: You can use `console c:s:s` and `console c:s:a` as shortcuts.
 
-For guidelines and documentation, see [Code Architecture Guide](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/coding-guidelines/code-architecture-guide.html).
+For guidelines and documentation, see [Code Architecture Guide](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/coding-guidelines/code-architecture-guide.html).
 
 **Affected Modules**
 
@@ -248,5 +248,5 @@ We have added `"strict" => true` for HTTP client calls to ZED, so that when redi
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Authorization and Preauthorization-Capture Flows](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html)
-* [PayPal Express Checkout Payment - Payone](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html)
+* [Authorization and Preauthorization-Capture Flows](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html)
+* [PayPal Express Checkout Payment - Payone](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html)

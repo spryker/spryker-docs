@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/database-access-credentials
 ---
 
-In this document, you can find credentials for accessing your database. By default, you can access a database only in [Development mode](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode).
+In this document, you can find credentials for accessing your database. By default, you can access a database only in [Development mode](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode).
 
 MySQL or MariaDB database:
 * `host` - `localhost`
@@ -24,4 +24,4 @@ PostgreSQL database:
 * `user` - `spryker`
 * `pw` - `secret`
 
-You can change the credentials in the [Deploy file](/docs/scos/dev/developer-guides/{{ page.version }}/docker-sdk/deploy-file-reference-1.0.html).
+You can change the credentials in the [Deploy file](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html).

@@ -13,7 +13,7 @@ redirect_from:
 The only major change of the `QuoteRequestWidget` 2.x.x is the dependency update for the `spryker/quote-request:^2.0.0`.
 
 **To migrate do the following:**
-1. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-quoterequest.html).
+1. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-quoterequest.html).
 2. Update `spryker-shop/quote-request-widget:^2.0.0`
 
 ```bash

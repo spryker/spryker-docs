@@ -146,7 +146,7 @@ docker/sdk up --build --data
 [Elasticsearch](https://www.elastic.co/elasticsearch/) is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. 
 
 See:
-* [Configuring Elasticsearch](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-elasticsearch.html) to learn more about Elastcisearch configuration in Spryker.
+* [Configuring Elasticsearch](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-elasticsearch.html) to learn more about Elastcisearch configuration in Spryker.
 * [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) for more information on Elasticsearch.
 
 ### Configuration

@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/known-issues-2020010
 ---
 
-During the [202001.0 product release](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html), we have found some issues that will be fixed in the nearest future.
+During the [202001.0 product release](/docs/scos/user/intro-to-spryker/{{page.version}}/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html), we have found some issues that will be fixed in the nearest future.
 This page contains the list of features and their issues. 
 
 ## Reorder the Previous Order 

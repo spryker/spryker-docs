@@ -105,7 +105,7 @@ Besides other products, a user with *Full access* rights is allowed to see alter
 It is possible to grant different access rights on a shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* to the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.
 
 ## Search widget for shopping lists
-Starting from v. 2019.03.0, it is possible to integrate the [Search Widget for Concrete Products](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+Starting from v. 2019.03.0, it is possible to integrate the [Search Widget for Concrete Products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 :::(Warning)
 Without the Search widget, you will not be able to search for products. Therefore, make sure that the Search Widget for Concrete Products feature is integrated into your project.
 :::

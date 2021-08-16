@@ -34,7 +34,7 @@ It is advised to recap the following topics before starting the challenge:
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
 * Facades
 * Transfer objects
-* [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html)
+* [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html)
 * Controllers in Zed
 
 ### Plan of solving the challenge
@@ -447,6 +447,6 @@ In this challenge we implemented self-documenting API based on a public API of m
 |[PHP Reflection](http://php.net/manual/en/book.reflection.php)  |  Reflection in PHP|
 | Facades | Facades in Spryker |
 | Transfer objects | Transfer Objects in Spryker |
-|  [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html)| Creating a new Module |
+|  [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html)| Creating a new Module |
 | Controllers in Zed | 	Developing controllers in ZED |
 |  Twig syntax reference| Twig syntax reference |

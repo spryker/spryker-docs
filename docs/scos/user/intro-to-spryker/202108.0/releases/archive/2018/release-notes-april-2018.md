@@ -125,17 +125,17 @@ In this release, we have fixed the following issues with SKU generation:
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Entity Manager](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/zed/persistence-layer/entity-manager.html)
-* [Repository](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/zed/persistence-layer/repository.html)
-* [Payment Integration - Computop](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html)
-* [Computop API](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html-api-details)
-* [Computop - Credit Card](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html-credit-card)
-* [Computop - Direct Debit](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html-direct-debit)
-* [Computop - Easy Credit](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html-easy-credit)
-* [Computop - iDeal](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html-ideal)
-* [Computop - OMS](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html-oms-details)
-* [Computop - Paydirekt](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html-paydirekt)
-* [Computop - PayPal](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html-paypal)
-* [Computop - Sofort](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html-sofort)
+* [Entity Manager](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/zed/persistence-layer/entity-manager.html)
+* [Repository](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/zed/persistence-layer/repository.html)
+* [Payment Integration - Computop](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
+* [Computop API](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-api-details)
+* [Computop - Credit Card](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-credit-card)
+* [Computop - Direct Debit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-direct-debit)
+* [Computop - Easy Credit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-easy-credit)
+* [Computop - iDeal](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-ideal)
+* [Computop - OMS](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-oms-details)
+* [Computop - Paydirekt](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-paydirekt)
+* [Computop - PayPal](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-paypal)
+* [Computop - Sofort](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-sofort)
 
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

@@ -22,7 +22,7 @@ Version 2.0.0 of the ContentStorage module  introduces the following changes:
 * Increased the version of `spryker/content` in composer.json.
 
 **To upgrade to the new version of the module, do the following:**
-1. Upgrade the `Content` module to version 2.0.0. See [Migration Guide - Content](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-content.html) for more details.
+1. Upgrade the `Content` module to version 2.0.0. See [Migration Guide - Content](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-content.html) for more details.
 2. Upgrade the `ContentStorage` module to version 2.0.0:
 
 ```bash

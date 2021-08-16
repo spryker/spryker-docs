@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/payments-feature-overview
 ---
 
-The *Payments* feature allows your customers to pay for orders with none (for example, a [gift card](/docs/scos/dev/features/{{ page.version }}/gift-cards-feature-overview.html), one or multiple payment methods during the checkout process. Most orders are paid with a single payment method but in some cases, it may be useful to allow multiple payment methods. For instance, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.
+The *Payments* feature allows your customers to pay for orders with none (for example, a [gift card](/docs/scos/dev/features/{{page.version}}/gift-cards-feature-overview.html), one or multiple payment methods during the checkout process. Most orders are paid with a single payment method but in some cases, it may be useful to allow multiple payment methods. For instance, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.
 
 With different payment gateways, like Amazon Pay, PayPal and BS Payone, you can adapt to your customers' needs and define the availability of payment methods based on customer preferences and country-specific regulations.
 
@@ -27,37 +27,37 @@ The Spryker Commerce OS offers integrations with several payment providers that 
 
 The Spryker Commerce OS supports integration of the following payment providers, which are our official partners:
 
-* [Adyen](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/adyen/adyen.html)
-* [AfterPay](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/afterpay/afterpay.html)
-* [Amazon Pay](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/amazon-pay/amazon-pay.html)
-* [Arvato](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/arvato/arvato.html)
-* [Billie](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/billie.html)
-* [Billpay](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/billpay/billpay.html)
-* [Braintree](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/braintree/braintree.html)
-* [BS Payone](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/bs-payone/bs-payone.html)
-* [Computop](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop.html)
-* [CrefoPay](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/crefopay/crefopay.html)
-* [Heidelpay](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/heidelpay/heidelpay.html)
-* [Klarna](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/klarna/klarna.html)
-* [Payolution](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/payolution/payolution.html)
-* [Powerpay](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/powerpay.html)
-* [Ratenkauf by Easycredit](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
-* [RatePay](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/ratepay/ratepay.html)
+* [Adyen](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/adyen/adyen.html)
+* [AfterPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html)
+* [Amazon Pay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
+* [Arvato](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
+* [Billie](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billie.html)
+* [Billpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
+* [Braintree](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
+* [BS Payone](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
+* [Computop](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
+* [CrefoPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay.html)
+* [Heidelpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
+* [Klarna](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html)
+* [Payolution](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)
+* [Powerpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/powerpay.html)
+* [Ratenkauf by Easycredit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
+* [RatePay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay.html)
 
 ## Dummy payment
 By default, Spryker provides the [DummyPayment](https://github.com/spryker/dummy-payment) module, which has Credit Card and Invoice payments implemented. You can use these implemented payment methods, or refer to the DummyPayment modulewhen implementing additional payment methods in your project.
-For details on how a new payment method is implemeted, see the articles on [how to implement the Direct Debit payment method](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html). Based on the examples in these articles, you can implement other payment methods for your projects.
+For details on how a new payment method is implemeted, see the articles on [how to implement the Direct Debit payment method](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html). Based on the examples in these articles, you can implement other payment methods for your projects.
 
 ## Payment methods in the Back Office
 In the Back Office, you can view all payment methods available in the shop application, make a payment method active (visible) or inactive (invisible) in the Payment step of the checkout process. In addition, you can define stores in which a payment method will be displayed. If changed, the payment methods will be updated in the checkout as well. 
 
 {% info_block warningBox "Note" %}
-Keep in mind that prior to managing payment methods in the Back Office, first, you need to create them by [importing payment methods data using a .CSV file](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-payment-method.csv.html
+Keep in mind that prior to managing payment methods in the Back Office, first, you need to create them by [importing payment methods data using a .CSV file](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-payment-method.csv.html
 {% endinfo_block %}. 
 
 ![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-list.png){height="" width=""}
 
-See [Managing Payment Methods](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html) to learn more on how to make a payment method available during the checkout and assign it to different stores.
+See [Managing Payment Methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/payment-methods/managing-payment-methods.html) to learn more on how to make a payment method available during the checkout and assign it to different stores.
 
 
 
@@ -87,11 +87,11 @@ Hydrating payment methods for an order
                 <li class="mr-title">Developer</li>
                 <li><a href="https://documentation.spryker.com/docs/updating-payment-data" class="mr-link">Update payment data of an order via Glue API</a></li>
                 <li><a href="https://documentation.spryker.com/docs/file-details-payment-methodcsv" class="mr-link">Import payment methods</a></li>
-                 <li><a href="/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html" class="mr-link">Implement Direct Debit</a></li>
+                 <li><a href="/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html" class="mr-link">Implement Direct Debit</a></li>
                  <li><a href="https://documentation.spryker.com/docs/ht-hydrate-payment-methods-for-order" class="mr-link">Learn how to hydrate payment methods for an order</a></li> 
                 <li><a href="https://documentation.spryker.com/docs/file-details-payment-method-storecsv" class="mr-link">Import store relations for payment methods</a></li>
                 <li><a href="https://documentation.spryker.com/docs/t-interacting-with-third-party-payment-providers-via-glue-api" class="mr-link">Interact with third-party payment providers via Glue API</a></li>
-                 <li><a href="/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/adyen/adyen.html" class="mr-link">Learn about payment provider partner integrations</a></li>
+                 <li><a href="/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/adyen/adyen.html" class="mr-link">Learn about payment provider partner integrations</a></li>
                  <li>Integrate the Payment feature:</li>
                  <li><a href="https://documentation.spryker.com/docs/payments-feature-integration" class="mr-link">Integrate the Payments feature</a></li>
                 <li><a href="https://documentation.spryker.com/docs/mg-payment#upgrading-from-version-4---to-version-5-0-0" class="mr-link">Migrate the Payments module from version 3* to version 5*</a></li>

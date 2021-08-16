@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 :::(Error) 
-This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/silex-replacement/silex-replacement.html).
 :::
 To upgrade the module, do the following:
 

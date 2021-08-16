@@ -94,7 +94,7 @@ You have the following options to select the shopping cart:
 1. (Optional) Select the product options from the drop-down list.
 2. Specify the quantity of the product you want to purchase. By default, the quantity equals **1**.
 3. (Optional) Clear the **Add as separate item** checkbox if you do not want to add this product as a separate item to the order. By default, this checkbox is selected.
-4. To complete the operation, click **Add to Cart**. The items will be added to the selected (active) shopping cart. See [Shop Guide - Checkout](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/multi-step-checkout.html) to learn more about how to proceed with the order.
+4. To complete the operation, click **Add to Cart**. The items will be added to the selected (active) shopping cart. See [Shop Guide - Checkout](/docs/scos/dev/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html) to learn more about how to proceed with the order.
 
 ![Add to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-cart-howto.png){height="" width=""}
 ***
@@ -106,7 +106,7 @@ The shopping lists are available only for **B2B** shop users.
 
 {% endinfo_block %}
 
-You can order frequently bought products faster by adding the products to a [shopping list](/docs/scos/dev/features/{{ page.version }}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html).
+You can order frequently bought products faster by adding the products to a [shopping list](/docs/scos/dev/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html).
 
 **To add a product to the shopping list:**
 
@@ -155,7 +155,7 @@ The wishlists are available only for logged in **B2C** shop users.
 
 {% endinfo_block %}
 
-If you want to purchase later the items you are interested in, you can add them to a [wishlist](/docs/scos/dev/features/{{ page.version }}/wishlist-feature-overview.html).
+If you want to purchase later the items you are interested in, you can add them to a [wishlist](/docs/scos/dev/features/{{page.version}}/wishlist-feature-overview.html).
 
 To add a product to the wishlist, click **Add to Wishlist**. This will add the product to a newly created wishlist with the default name ‘My wishlist’ in your account and redirect you to the **Customer Account > Wishlist** section.
 
@@ -166,8 +166,8 @@ If you have several wishlists in your account, then first, select the wishlist t
 
 **What’s next?**
 
-After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/multi-step-checkout.html#shop-guide---checkout).
+After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](/docs/scos/dev/features/{{page.version}}/checkout/checkout-feature-overview/multi-step-checkout.html#shop-guide---checkout).
 
 To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](https://documentation.spryker.com/2021080/docs/multiple-shared-shopping-lists-overview#multiple-and-shared-shopping-lists-on-the-storefront#shop-guide---shopping-lists).
 
-To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/dev/features/{{ page.version }}/wishlist-feature-overview.html#the-wishlist-feature-on-the-storefront). 
+To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/dev/features/{{page.version}}/wishlist-feature-overview.html#the-wishlist-feature-on-the-storefront). 

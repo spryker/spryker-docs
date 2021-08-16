@@ -12,7 +12,7 @@ redirect_from:
 
 {% info_block infoBox %}
 
-This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/search-migration-concept/search-migration-concept.html).
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/search-migration-concept/search-migration-concept.html).
 
 {% endinfo_block %}
 

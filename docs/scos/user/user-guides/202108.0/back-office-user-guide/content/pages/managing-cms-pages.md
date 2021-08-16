@@ -48,7 +48,7 @@ To preview a draft of your CMS page from the *Overview of CMS Pages* page:
 1. On the *Overview of CMS Pages* page, click **View** and select **Preview** from the drop-down list next to the page whose draft you want to view.
 2. The page in the Preview mode is opened in a new tab of your browser.
 
-To preview a draft of your CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/pages/editing-cms-pages.html#selecting-the-edit---placeholders-option) section.
+To preview a draft of your CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/editing-cms-pages.html#selecting-the-edit---placeholders-option) section.
 
 
 ## Publishing a CMS page
@@ -59,7 +59,7 @@ You can publish your page either from the *Overview of CMS Pages* page or from t
 
 * To publish a CMS page from the *Overview of CMS Pages* page, click **Publish** in the _Actions_ column. The page is successfully published.
 
-* To publish a CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/pages/editing-cms-pages.html#selecting-the-edit---placeholders-option) section.
+* To publish a CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/editing-cms-pages.html#selecting-the-edit---placeholders-option) section.
 
 ## Viewing a CMS page
 

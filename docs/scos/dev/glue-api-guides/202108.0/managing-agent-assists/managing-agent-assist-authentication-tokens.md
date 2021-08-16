@@ -19,11 +19,11 @@ This endpoint allows to refresh an agent assist access token or revoke a refresh
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-*   [Glue API: Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-agent-assist-feature-integration.html)
+*   [Glue API: Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-agent-assist-feature-integration.html)
     
-*   [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html)
+*   [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html)
     
-*   [Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/customer-account-management-feature-integration.html)
+*   [Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-account-management-feature-integration.html)
     
 
 ## Refresh an agent assist authentication token
@@ -54,7 +54,7 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) . |
+| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) . |
 
 
 
@@ -113,7 +113,7 @@ To revoke an agent assist refresh token, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| X-Agent-Authorization | string | &check; | Only required when revoking all the refresh token of an agent assist. String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
+| X-Agent-Authorization | string | &check; | Only required when revoking all the refresh token of an agent assist. String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 
@@ -138,4 +138,4 @@ The tokens are marked as expired on the date and time of the request. You can co
 |004 |Failed to refresh token.  |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

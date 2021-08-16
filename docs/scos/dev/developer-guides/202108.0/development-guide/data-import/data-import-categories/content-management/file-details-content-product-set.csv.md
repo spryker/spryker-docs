@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-content-product-setcsv
 ---
 
-This article contains content of the **content_product_set.csv** file to configure [Content Product Set](/docs/scos/dev/features/{{ page.version }}/content-items/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.
+This article contains content of the **content_product_set.csv** file to configure [Content Product Set](/docs/scos/dev/features/{{page.version}}/content-items/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -27,7 +27,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependencies:
-*    [product_set.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html)
+*    [product_set.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *content_product_set.csv*  file can be downloaded here:

@@ -24,8 +24,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature|
 | --- | --- |--- |
-| Spryker Core	 | 202009.0 |[Glue API: Spryker Core Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
-| Shopping Lists	 | 202009.0 |[Shopping Lists Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/shopping-lists-feature-integration.html) |
+| Spryker Core	 | 202009.0 |[Glue API: Spryker Core Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Shopping Lists	 | 202009.0 |[Shopping Lists Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shopping-lists-feature-integration.html) |
 
 ## 1) Install the Required Modules Using Composer
 Run the following command to install the required modules:
@@ -113,7 +113,7 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 ### Enable resources
 {% info_block infoBox %}
 
-ShoppingListsResourcePlugin GET, POST, PATCH and DELETE, ShoppingListItemsResourcePlugin POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/glue-api/glue-infrastructure.html#resource-routing).
+ShoppingListsResourcePlugin GET, POST, PATCH and DELETE, ShoppingListItemsResourcePlugin POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

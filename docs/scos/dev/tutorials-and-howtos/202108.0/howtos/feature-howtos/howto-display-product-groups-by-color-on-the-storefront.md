@@ -17,7 +17,7 @@ To enhance the visual shopping experience of your customers, you can use [produc
  
 ## Prerequisites
 
-Before you start configuration, make sure that the [Product Groups feature is integrated](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/product-groups-feature-integration.html) into your project.
+Before you start configuration, make sure that the [Product Groups feature is integrated](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-groups-feature-integration.html) into your project.
 
 ## Schema Extension
 

@@ -18,7 +18,7 @@ For each shopping cart, the following details are provided:
 
 * Shopping cart name
 * Number of items added to cart
-* Access level to a shopping cart (see [Shared Cart Feature Overview](/docs/scos/dev/features/{{ page.version }}/shared-carts-feature-overview.html) for more details)
+* Access level to a shopping cart (see [Shared Cart Feature Overview](/docs/scos/dev/features/{{page.version}}/shared-carts-feature-overview.html) for more details)
 * Price mode
 * Cart Total
 * View all carts which opens Shopping cart menu in the customer account

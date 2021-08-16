@@ -16,7 +16,7 @@ In this new version of the **Sales** module, we have added support of split deli
 You can find more details about the changes on the [Sales module release page](https://github.com/spryker/sales/releases).
     
 {% info_block errorBox %}
-This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/split-delivery-migration-concept.html
+This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/split-delivery-migration-concept.html
 {% endinfo_block %}.)
     
 **To upgrade to the new version of the module, do the following:**
@@ -244,8 +244,8 @@ Now you have two options:
 **OR**
 * migrate to the new calculators logic.
 
-1. To keep old calculation logic, see [Updating calculator stacks](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-calculation.html).
-2. To migrate to the new structure, see [Migrating sales to new calculator logic](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-calculation.html). 
+1. To keep old calculation logic, see [Updating calculator stacks](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-calculation.html).
+2. To migrate to the new structure, see [Migrating sales to new calculator logic](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-calculation.html). 
 
 ## Upgrading from Version 3.* to Version 4.*
     

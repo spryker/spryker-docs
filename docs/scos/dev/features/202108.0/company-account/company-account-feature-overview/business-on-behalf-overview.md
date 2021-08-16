@@ -75,5 +75,5 @@ Company users can assign and unassign a company business unit to their accounts 
 
 
 ## See next
-[Customer Login by Token overview](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/customer-login-by-token-overview.html)
+[Customer Login by Token overview](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/customer-login-by-token-overview.html)
 

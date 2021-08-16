@@ -11,9 +11,9 @@ redirect_from:
 
 In this section you will find the following content:
 
-* [Client](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/client/client.html)
+* [Client](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/client/client.html)
 * [Controllers and Actions](https://documentation.spryker.com/2021080/docs/controllers-actions)
-* [Frontend Translations](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/yves/adding-translations-for-yves.html)
-* [Using Redis as a KV Storage](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/client/using-and-configuring-redis-as-a-key-value-storage.html)
-* [Implementing URL Routing in Yves](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/yves/implementing-url-routing-in-yves.html)
+* [Frontend Translations](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/yves/adding-translations-for-yves.html)
+* [Using Redis as a KV Storage](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/client/using-and-configuring-redis-as-a-key-value-storage.html)
+* [Implementing URL Routing in Yves](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/yves/implementing-url-routing-in-yves.html)
 

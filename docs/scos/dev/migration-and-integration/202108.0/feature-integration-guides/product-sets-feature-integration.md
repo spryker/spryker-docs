@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/product-sets-feature-integration
 ---
 
-This document describes how to integrate the [Product Sets feature](/docs/scos/dev/features/{{ page.version }}/product-sets/product-sets-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Product Sets feature](/docs/scos/dev/features/{{page.version}}/product-sets/product-sets-feature-overview.html) into a Spryker project.
 
 ## Prerequisites
 To prepare your project to work with Product Sets:
@@ -171,7 +171,7 @@ class ProductSetDependencyProvider extends SprykerProductSetDependencyProvider
 
 {% info_block warningBox "Sorting product sets" %}
 
-You can reorder product sets in the Back Office. See [Reordering product sets](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-sets/managing-product-sets.html#reordering-product-sets) for more details.
+You can reorder product sets in the Back Office. See [Reordering product sets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-sets/managing-product-sets.html#reordering-product-sets) for more details.
 
 {% endinfo_block %}
 

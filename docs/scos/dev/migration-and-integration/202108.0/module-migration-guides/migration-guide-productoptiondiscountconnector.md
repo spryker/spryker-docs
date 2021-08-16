@@ -11,4 +11,4 @@ redirect_from:
 ---
 
 ## Upgrading from Version 2.* to Version 3.*
-The tax plugins are using the version 3.* of the Tax module. Upgrade [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-tax.html).
+The tax plugins are using the version 3.* of the Tax module. Upgrade [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-tax.html).

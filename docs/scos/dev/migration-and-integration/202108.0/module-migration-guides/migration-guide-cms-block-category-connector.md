@@ -32,7 +32,7 @@ Run Propel migrations.  `vendor/bin/console propel:diff`, manual review is neces
 ### 4. Data Migration
 Notice: You can skip this step if you don't have data in `spy_cms_block_category_connector` table.
 We prepared a migration script to migrate relations to Category.
-The script can be found in [Migration Guide - CMS Block Category Connector Console](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html).
+The script can be found in [Migration Guide - CMS Block Category Connector Console](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html).
 Copy script to `src/Pyz/Zed/CmsBlockCategoryConnector/Communication/Console/CmsBlockCategoryPosition.php` and register it in `Pyz\Zed\Console\ConsoleDependencyProvider`.
 Check that the script covers your `Category and CmsBlockCategoryConnector` configuration.
 

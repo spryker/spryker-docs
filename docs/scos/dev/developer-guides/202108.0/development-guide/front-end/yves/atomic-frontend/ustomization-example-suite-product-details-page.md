@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/сustomization-example-suite-product-details-page
 ---
 
-In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [Spryker Suite](https://github.com/spryker-shop/suite) into separate elements with their respective style files. To customize a particular element, you [override it with the desired code](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/yves/atomic-frontend/managing-the-components/overriding-a-component.html) in the respective style file.
+In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [Spryker Suite](https://github.com/spryker-shop/suite) into separate elements with their respective style files. To customize a particular element, you [override it with the desired code](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/managing-the-components/overriding-a-component.html) in the respective style file.
 
 ![suite-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+Suite+Product+Details+page/suite-1.png){height="" width=""}
 

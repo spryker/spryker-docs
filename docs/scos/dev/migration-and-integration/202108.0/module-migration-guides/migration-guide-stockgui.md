@@ -16,7 +16,7 @@ In this new version of the **StockGui** module, we have added support of the war
 
 **To upgrade to the new version of the module, do the following:**
 
-1. Follow the steps in the individual migration guide for the **Stock** module. For more information, see [Migration Guide - Stock](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-stock.html#upgrading-from-version-7---to-version-8-0-0). 
+1. Follow the steps in the individual migration guide for the **Stock** module. For more information, see [Migration Guide - Stock](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-stock.html#upgrading-from-version-7---to-version-8-0-0). 
 2. Upgrade the **StockGui** module to the new version:
 
 ```bash

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/basic-seo-techniques-integration-guide
 ---
 
-To improve the visibility of your Spryker-based shop for the search engines, you should optimize your project for them. The very first step towards the SEO of your project pages' content is the proper usage of headings on the pages and microdata usage. For details, see [Basic SEO techniques to use in your project](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/best-practices/basic-seo-techniques-to-use-in-your-project.html).
+To improve the visibility of your Spryker-based shop for the search engines, you should optimize your project for them. The very first step towards the SEO of your project pages' content is the proper usage of headings on the pages and microdata usage. For details, see [Basic SEO techniques to use in your project](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/best-practices/basic-seo-techniques-to-use-in-your-project.html).
 
 To apply the basic SEO techniques such as improved headings structure and use of microdata in your project, follow the steps below.
 
@@ -18,7 +18,7 @@ To apply the basic SEO techniques such as improved headings structure and use of
 To start the integration, overview and install the necessary features:
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-ore-feature-integration.html) |
+| Spryker Core | 202009.0 | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-ore-feature-integration.html) |
 
 ## 1) Update the required SprykerShop modules using Composer
 Run the following command to update the required modules:

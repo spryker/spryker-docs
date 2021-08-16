@@ -10,13 +10,13 @@ redirect_from:
   - /docs/en/product-groups-feature-overview
 ---
 
-The *Product Groups* feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation. 
+The *Product Groups* feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation. 
 
 ## Product groups on the Storefront
 
 {% info_block warningBox "Examplary content" %}
 
-By default, there is no way to display product groups on Storefront. This section describes an examplary implementation which you can add to your project. See [HowTo - Display Product Groups by Color on Storefront](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html) for more details.
+By default, there is no way to display product groups on Storefront. This section describes an examplary implementation which you can add to your project. See [HowTo - Display Product Groups by Color on Storefront](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html) for more details.
 
 {% endinfo_block %}
 
@@ -43,13 +43,13 @@ Product abstract card:
  
 ## Product groups in the Back Office
 
-In the Back Office, a product catalog manager can view what product group an abstract product belongs to. See [Viewing a Product](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/managing-products/managing-products.html#viewing-a-product) to learn more.   
+In the Back Office, a product catalog manager can view what product group an abstract product belongs to. See [Viewing a Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/managing-products.html#viewing-a-product) to learn more.   
 
-Also, they can insert product groups into CMS pages via content widgets in the [WYSIWYG editor](/docs/scos/dev/features/{{ page.version }}/content-items/content-items-feature-overview.html#content-item-widget).
+Also, they can insert product groups into CMS pages via content widgets in the [WYSIWYG editor](/docs/scos/dev/features/{{page.version}}/content-items/content-items-feature-overview.html#content-item-widget).
 
 ## Creating product groups 
 
-Currently, only a developer can create product groups by [importing them](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
+Currently, only a developer can create product groups by [importing them](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
 
 
 
@@ -76,15 +76,15 @@ Check out this video tutorial on product groups:
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
    <li><a href="https://documentation.spryker.com/docs/product-groups-feature-integration" class="mr-link">Integrate the Product Groups feature into your project</a></li> 
-   <li><a href="/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html" class="mr-link">Import product groups</a></li> 
-   <li><a href="/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html" class="mr-link">Display product groups by color on the Storefront</a></li> 
+   <li><a href="/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html" class="mr-link">Import product groups</a></li> 
+   <li><a href="/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html" class="mr-link">Display product groups by color on the Storefront</a></li> 
             </ul>
         </div>
  <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/managing-products/managing-products.html#viewing-a-product" class="mr-link">Check what product group a product belongs to by viewing a product</a></li>
+                                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/managing-products.html#viewing-a-product" class="mr-link">Check what product group a product belongs to by viewing a product</a></li>
             </ul>
         </div>
            </div>  

@@ -17,9 +17,9 @@ You will build a simple newsletter subscription form that contains a field for e
 
 Follow the steps described below to create the newsletter subscription form:
 
-* [Create the FormType](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#create-the-formtype)
-* [Render the Form](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#render-the-form)
-* [Post the Data](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#post-the-data)
+* [Create the FormType](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#create-the-formtype)
+* [Render the Form](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#render-the-form)
+* [Post the Data](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/forms/creating-forms.html#post-the-data)
 
 ## Create the FormType
 The best practice is to create a `FormType` class for each form you need to handle. Here you will define the fields contained in the form and the rules of validation.

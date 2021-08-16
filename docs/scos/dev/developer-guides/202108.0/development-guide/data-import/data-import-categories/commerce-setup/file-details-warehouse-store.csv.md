@@ -17,17 +17,17 @@ The file should have the following parameters:
 
 | Parameter | Required | Type | Default value | Requirements or comments | Description |
 | --- | --- | --- | --- | --- | --- |
-| warehouse_name | ✓ | String | | Must be a valid warehouse name imported from [warehouse.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html). | Name of the warehouse. |
+| warehouse_name | ✓ | String | | Must be a valid warehouse name imported from [warehouse.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html). | Name of the warehouse. |
 | store_name | ✓ | String | | Must be a valid store name imported from the existing `stores.php` configuration file of demo shop PHP project. | Name of the store. |
 
 ## Dependencies
 This file has the following dependencies: 
 
-*     [warehouse.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
+*     [warehouse.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
 *     `stores.php` configuration file of demo shop PHP project, where stores are defined initially
 
 ## Additional details
-Check the [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).  
+Check the [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).  
 The console command `data:import:stock-store` uses `…/vendor/spryker/stock-data-import/data/import/warehouse_store.csv`. 
 
 You can also create `warehouse_store.csv` in `…/data/import`. 

@@ -18,7 +18,7 @@ A Pull Request can ship a new Feature, Bugfixes, and Improvements to existing fe
 
 ## What is a "Major Release"?
 
-A release is a **major** when we make a change in the [external API of a module](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/module-api/definition-of-module-api.html). This includes changes to the internal contract. E.g., even when there is no change of a facade-method, there can be a change in the behavior so that the contract (~ expected behavior) changed. Please obey the constraints for major releases.
+A release is a **major** when we make a change in the [external API of a module](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/module-api/definition-of-module-api.html). This includes changes to the internal contract. E.g., even when there is no change of a facade-method, there can be a change in the behavior so that the contract (~ expected behavior) changed. Please obey the constraints for major releases.
 
 Our customers need to change their `composer.json` file to get major versions of modules.
 
@@ -31,7 +31,7 @@ We have two types of Major Releases:
 
 A release is **minor** when the internal API was changed. For instance, when the signature of internal models or constructors is changed, classes are renamed, etc. Actually, anything that can break extensions via inheritance or composition on a project level.
 
-Our customers will get all new minor releases automatically during composer update if they use the ^ symbol in `composer.json` (e.g. `"spryker/category": "^4.1.2"`). We recommend to use the `~` symbol (e.g. `"spryker/category": "~4.1.0"`) for all modules that have been extended at the project level to make sure that nothing breaks after a release. See [Using ~ Composer Constraint for Customized Modules](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/module-api/using-composer-constraint-for-customized-modules.html) on how you can easily detect `^` in the extended modules and update them with `~`.
+Our customers will get all new minor releases automatically during composer update if they use the ^ symbol in `composer.json` (e.g. `"spryker/category": "^4.1.2"`). We recommend to use the `~` symbol (e.g. `"spryker/category": "~4.1.0"`) for all modules that have been extended at the project level to make sure that nothing breaks after a release. See [Using ~ Composer Constraint for Customized Modules](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/module-api/using-composer-constraint-for-customized-modules.html) on how you can easily detect `^` in the extended modules and update them with `~`.
 
 ## What is a "Patch Release"?
 
@@ -48,8 +48,8 @@ It is very important to understand that Patch Release and Bugfix are not the sam
 Usually, you need to run `composer update` to get Spryker Core updates, as by default the modules are constrainted with ^. After each update, you need to run `console transfer:generate` to update DTOs. Adding a field to DTO is BC change and could be considered as Minor or Patch release.
 {% info_block infoBox %}
 
-Some minor updates require specific development effort for the project, which is caused by deprecation of some old approach or 3rd party modules. It's adviced to check out the [release notes](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/release-notes/release-notes.html) published after the project's start.
-Also, check out [General Troubleshooting](/docs/scos/dev/developer-guides/{{ page.version }}/troubleshooting/general-technical-issues/class-silex-controllerproviderinterface-not-found.html) for solutions of general technical issues you might have.
+Some minor updates require specific development effort for the project, which is caused by deprecation of some old approach or 3rd party modules. It's adviced to check out the [release notes](/docs/scos/user/intro-to-spryker/{{page.version}}/releases/release-notes/release-notes.html) published after the project's start.
+Also, check out [General Troubleshooting](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/general-technical-issues/class-silex-controllerproviderinterface-not-found.html) for solutions of general technical issues you might have.
 
 {% endinfo_block %}
 

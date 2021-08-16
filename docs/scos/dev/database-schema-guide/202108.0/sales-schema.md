@@ -59,7 +59,7 @@ The Sales Order contains a copy of the Customer data so that it is not affected 
 
 ### Sales Bundles and Options
 
-See description of the [Product Bundle](/docs/scos/dev/database-schema-guide/{{ page.version }}/catalog-schema.html#product-bundles) and [Product Option](/docs/scos/dev/database-schema-guide/{{ page.version }}/catalog-schema.html#product-options) schemas for more details.
+See description of the [Product Bundle](/docs/scos/dev/database-schema-guide/{{page.version}}/catalog-schema.html#product-bundles) and [Product Option](/docs/scos/dev/database-schema-guide/{{page.version}}/catalog-schema.html#product-options) schemas for more details.
 ![Sales and bundles options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/sales-bundles-options.png){height="" width=""}
 
 **Structure**:

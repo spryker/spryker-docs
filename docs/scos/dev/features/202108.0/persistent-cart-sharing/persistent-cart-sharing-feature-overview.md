@@ -31,8 +31,8 @@ The user can view and print the information from the preview link.
 Preview link is the only available option for the B2C environment. B2C users cannot share the cart with read-only and full access permissions.
 {% endinfo_block %}
 
-* Read-only: for details see [Read only](/docs/scos/dev/features/{{ page.version }}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html#read-only).
-* Full access: for details see [Full access](/docs/scos/dev/features/{{ page.version }}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html#full-access).
+* Read-only: for details see [Read only](/docs/scos/dev/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html#read-only).
+* Full access: for details see [Full access](/docs/scos/dev/features/{{page.version}}/shopping-lists/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html#full-access).
 
 {% info_block warningBox %}
 Sharing cart with read-Only or full access permissions is available only for internal users: the users within the same business unit.

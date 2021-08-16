@@ -42,8 +42,8 @@ On the Presentation layer, the view related content is implemented. To get the n
 ## Next steps
 
 <!---* To learn how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and frontend apps](https://documentation.spryker.com/2021080/docs/commerce-os-and-frontend-apps).-->
-* To learn about the building blocks of Spryker, see [Programming concepts](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/programming-concepts.html).
-* To learn about Application layers, see [Concept overview](/docs/scos/dev/developer-guides/{{ page.version }}/architecture-guide/conceptual-overview.html).
+* To learn about the building blocks of Spryker, see [Programming concepts](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/programming-concepts.html).
+* To learn about Application layers, see [Concept overview](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/conceptual-overview.html).
 * To learn about modular programming, see [Modular programming](https://en.wikipedia.org/wiki/Modular_programming).
 * To learn about the layered architecture pattern, see [Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
 * To learn about packaging principles, see [Packaging principles](http://principles-wiki.net/collections:robert_c._martin_s_principle_collection).

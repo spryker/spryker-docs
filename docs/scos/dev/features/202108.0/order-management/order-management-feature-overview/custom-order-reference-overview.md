@@ -47,11 +47,11 @@ When working with the order in the Back Office, you, as a Back Office user, can 
 ![zed-custom-order-ref-new](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/zed-change-custom-order-reference.gif){height="" width=""}
 
 ## Custom Order Reference with the RFQ, approval process, and share cart via a link
-If you submit a [quote request](/docs/scos/dev/features/{{ page.version }}/quotation-process/quotation-process-feature-overview.html) and then convert it to the shopping cart, the cart gets locked. However, adding and updating the customer order reference for the locked cart is still possible. 
+If you submit a [quote request](/docs/scos/dev/features/{{page.version}}/quotation-process/quotation-process-feature-overview.html) and then convert it to the shopping cart, the cart gets locked. However, adding and updating the customer order reference for the locked cart is still possible. 
 
 In the [Approval Process](https://documentation.spryker.com/2021080/docs/approval-process) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
 
-When [sharing a cart via a link with external users](/docs/scos/dev/features/{{ page.version }}/persistent-cart-sharing/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart via a link with internal users](/docs/scos/dev/features/{{ page.version }}/persistent-cart-sharing/persistent-cart-sharing-feature-overview.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions. 
+When [sharing a cart via a link with external users](/docs/scos/dev/features/{{page.version}}/persistent-cart-sharing/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart via a link with internal users](/docs/scos/dev/features/{{page.version}}/persistent-cart-sharing/persistent-cart-sharing-feature-overview.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions. 
 
 
 ## Current constraints

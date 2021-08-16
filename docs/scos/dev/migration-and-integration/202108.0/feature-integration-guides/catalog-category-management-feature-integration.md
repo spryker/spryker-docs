@@ -17,9 +17,9 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME                | VERSION | INTEGRATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core        | master  | [Spryker Сore feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-ore-feature-integration.html) |
+| Spryker Core        | master  | [Spryker Сore feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-ore-feature-integration.html) |
 | Catalog             | master  |  |
-| Category Management | master  | [Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/category-management-feature-integration.html) |
+| Category Management | master  | [Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/category-management-feature-integration.html) |
 
 ## 1) Set up behavior
 
@@ -101,5 +101,5 @@ Integrate the following related features:
 | FEATURE             | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
 | ------------------- | -------------------------------- | ------------------------------------------------------------ |
 | Catalog             |                 ✓                 | |
-| Category Management |                    ✓              | [Category Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/category-management-feature-integration.html) |
+| Category Management |                    ✓              | [Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/category-management-feature-integration.html) |
 

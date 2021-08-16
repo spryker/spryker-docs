@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 :::(Error) 
-This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html).
+This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/silex-replacement/silex-replacement.html).
 :::
 To upgrade the module, do the following:
 
@@ -151,7 +151,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 {% info_block infoBox %}
 
-For information on how to eliminate Silex Validator, see  [Migration Guide - Validator](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-validator.html).
+For information on how to eliminate Silex Validator, see  [Migration Guide - Validator](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-validator.html).
 
 {% endinfo_block %}
 

@@ -22,7 +22,7 @@ Adds the `EventDispatcherApplicationPlugin` to your test suite and provides meth
 Propel TransactionHelper ensures that a connection to the database can be established. Additionally, this helper wraps each test in a transaction. This allows you to test against the database without mocking the database away and rolling back after each test.
 
 ## Testify helpers
-[Testify](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/testify.html) offers many useful helpers that are especially helpful when setting up the infrastructure for your tests.
+[Testify](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/testify.html) offers many useful helpers that are especially helpful when setting up the infrastructure for your tests.
 
 ### Shared helpers
 Shared helpers can be used for all application tests.
@@ -65,7 +65,7 @@ More information on this helper will follow soon.
 <a name=searchhelper></a>
 
 #### SearchHelper
-When you have this helper, an in-memory search adapter is automatically used instead of the ones defined on the project side. This allows you to work with [Search](https://github.com/spryker/search) in a synchronous way, for example, when using together with the [Publish and Synchronization tests](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/publish-and-synchronization-testing.html).
+When you have this helper, an in-memory search adapter is automatically used instead of the ones defined on the project side. This allows you to work with [Search](https://github.com/spryker/search) in a synchronous way, for example, when using together with the [Publish and Synchronization tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/publish-and-synchronization-testing.html).
 
  {% info_block infoBox %}
 
@@ -83,7 +83,7 @@ This helper has the following methods:
 <a name=storagehelper></a>
 
 #### StorageHelper
-When you have this helper, an in-memory storage plugin is automatically used instead of the ones defined on the project side. This allows you to work with [Storage](https://github.com/spryker/storage) in a synchronous way, for example, when using together with the [Publish and Synchronization tests](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/publish-and-synchronization-testing.html).
+When you have this helper, an in-memory storage plugin is automatically used instead of the ones defined on the project side. This allows you to work with [Storage](https://github.com/spryker/storage) in a synchronous way, for example, when using together with the [Publish and Synchronization tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/publish-and-synchronization-testing.html).
 
 {% info_block infoBox %}
 
@@ -101,7 +101,7 @@ This helper has the following methods:
 <a name="queuehelper"></a>
 
 #### QueueHelper
-When you have this helper, an in-memory queue adapter is automatically used instead of the ones defined on the project side. This allows you to work with [Queue](https://github.com/spryker/queue) in a synchronous way, for example, when using together with the [Publish and Synchronization tests](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/publish-and-synchronization-testing.html).
+When you have this helper, an in-memory queue adapter is automatically used instead of the ones defined on the project side. This allows you to work with [Queue](https://github.com/spryker/queue) in a synchronous way, for example, when using together with the [Publish and Synchronization tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/publish-and-synchronization-testing.html).
 
 {% info_block infoBox %}
 
@@ -129,7 +129,7 @@ You can use the Zed helpers only for testing the Zed application.
 <a name="publishandsynchronizehelper"></a>
 
 #### PublishAndSynchronizeHelper
-PublishAndSynchronizeHelper is a helper wrapper that simplifies implementation of the [Publish and Synchronization tests](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/publish-and-synchronization-testing.html). 
+PublishAndSynchronizeHelper is a helper wrapper that simplifies implementation of the [Publish and Synchronization tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/publish-and-synchronization-testing.html). 
 
 This helper has the following methods:
 
@@ -153,7 +153,7 @@ Allows to mock dependencies required for your tests.
 <a name=eventbehaviorhelper></a>
 
 #### EventBehaviorHelper
-This helper is useful for the [Publish and Synchronization tests](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/publish-and-synchronization-testing.html). 
+This helper is useful for the [Publish and Synchronization tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/publish-and-synchronization-testing.html). 
 
 This helper has the following methods:
 
@@ -188,10 +188,10 @@ Allows you to create a table in the database and the `\Propel\Generator\Model\Ta
 Allows you to create Propel model files based on builders and tables.
 
 ## Next Steps
-* [Set up an organization of your tests](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/setting-up-tests.html).
-* [Create or enable a test helper](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/test-helpers.html).
-Learn about the [console commands you can use to execute your tests](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/executing-tests.html).
-* [Configure data builders to create transfers your tests](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/data-builders.html).
-* [Generate code coverage report for your tests](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/code-coverage.html).
-* Learn about the [testing best practices](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/guidelines/testing/testing-best-practices.html).
+* [Set up an organization of your tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/setting-up-tests.html).
+* [Create or enable a test helper](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-helpers.html).
+Learn about the [console commands you can use to execute your tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/executing-tests.html).
+* [Configure data builders to create transfers your tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/data-builders.html).
+* [Generate code coverage report for your tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/code-coverage.html).
+* Learn about the [testing best practices](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/testing-best-practices.html).
 

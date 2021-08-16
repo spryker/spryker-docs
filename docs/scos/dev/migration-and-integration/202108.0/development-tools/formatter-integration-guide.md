@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/formatter-integration-guide
 ---
 
-Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/{{ page.version }}/development-tools/formatter.html) intor your project. 
+Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/{{page.version}}/development-tools/formatter.html) intor your project. 
 
 ## 1. Install the dependencies
 

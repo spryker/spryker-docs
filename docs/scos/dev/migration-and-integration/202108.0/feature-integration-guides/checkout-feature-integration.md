@@ -15,7 +15,7 @@ This document describes how to integrate the Checkout feature into a Spryker pro
   
 {% info_block warningBox %}
 
-This integration guide expects the basic feature to be in place. It only adds the [Order Threshold](/docs/scos/dev/features/{{ page.version }}/checkout/checkout-feature-overview/order-thresholds.html) functionality.
+This integration guide expects the basic feature to be in place. It only adds the [Order Threshold](/docs/scos/dev/features/{{page.version}}/checkout/checkout-feature-overview/order-thresholds.html) functionality.
 
 {% endinfo_block %}
 
@@ -660,6 +660,6 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Glue API: Checkout |  | [Glue API: Checkout feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Checkout |  | [Glue API: Checkout feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |
 
 

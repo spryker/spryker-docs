@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-product-groupcsv
 ---
 
-This article contains content of the **product_group.csv** file to configure [Product Group](/docs/scos/dev/features/{{ page.version }}/product-groups-feature-overview.html) information on your Spryker Demo Shop.
+This article contains content of the **product_group.csv** file to configure [Product Group](/docs/scos/dev/features/{{page.version}}/product-groups-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -24,7 +24,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [product_abstract.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+*    [product_abstract.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_group.csv*  file can be downloaded here:

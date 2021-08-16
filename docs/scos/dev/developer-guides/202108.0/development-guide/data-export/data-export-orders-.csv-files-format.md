@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/data-export-orders-csv-files-format
 ---
 
-This article contains content of the following files you get when [exporting data on orders](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-export/exporting-data.html) generated in Spryker:
+This article contains content of the following files you get when [exporting data on orders](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-export/exporting-data.html) generated in Spryker:
 
 *     orders.csv
 *     order-items.csv

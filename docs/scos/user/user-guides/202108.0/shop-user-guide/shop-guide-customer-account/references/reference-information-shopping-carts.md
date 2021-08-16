@@ -34,7 +34,7 @@ On the Shopping Carts page, you see the following:
 | 4 | **No. of items** | A number of items placed in the cart. |
 | 5 | **Prices** | Displays the prices according to its type: Gross or Net. |
 | 6 | **Total** | Cart total amount. |
-| 7 | **Status** | Displays the status of the cart. See [Approval Process feature overview](/docs/scos/dev/features/{{ page.version }}/approval-process/approval-process-feature-overview.html) for more information on statuses. Available only after the Approval Process feature has been integrated into your project. |
+| 7 | **Status** | Displays the status of the cart. See [Approval Process feature overview](/docs/scos/dev/features/{{page.version}}/approval-process/approval-process-feature-overview.html) for more information on statuses. Available only after the Approval Process feature has been integrated into your project. |
 | 8 | **Actions** | A set of actions you can d with a shopping cart. |
 | 9 |  **+ Create Shopping Cart** | Creates a new shopping cart. |
 ***

@@ -12,7 +12,7 @@ redirect_from:
 
 The *Product* feature allows creating products, manage their characteristics and settings.
 
-In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/scos/dev/features/{{ page.version }}/spryker-core-back-office/spryker-core-back-office-feature-overview/the-back-office-overview.html). The product information you specify serves multiple purposes:
+In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/scos/dev/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/the-back-office-overview.html). The product information you specify serves multiple purposes:
 
 * Defines product characteristics.
 * Affects shop behavior. For example, filtering and search on the Storefront is based on product attributes. 
@@ -80,7 +80,7 @@ The product information is structured as follows:
 
 #### Case 3: Selling a product in five colors, four sizes, and three materials
 
-To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/scos/dev/features/{{ page.version }}/product-groups-feature-overview.html) feature. 
+To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/scos/dev/features/{{page.version}}/product-groups-feature-overview.html) feature. 
 
 Using the Product Group feature, you create a group of five abstract products, one for each color. Each abstract product  contains up to 12 concrete products of different combinations of the sizes and the materials.
 
@@ -94,9 +94,9 @@ Besides the Back Office, you can maintain product information in an external Pro
 
 The Spryker Commerce OS supports integration of the following PIM systems:
 
-* [Akeneo](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-the-core.html)
-* [Censhare PIM](/docs/scos/dev/technology-partners/{{ page.version }}/product-information-pimerp/censhare-pim.html)
-* [Xentral](/docs/scos/dev/technology-partners/{{ page.version }}/product-information-pimerp/xentral.html)
+* [Akeneo](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-the-core.html)
+* [Censhare PIM](/docs/scos/dev/technology-partners/{{page.version}}/product-information-pimerp/censhare-pim.html)
+* [Xentral](/docs/scos/dev/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
 
 
 ## If you are:

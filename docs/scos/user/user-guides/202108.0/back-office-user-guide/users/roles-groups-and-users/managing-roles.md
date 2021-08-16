@@ -30,7 +30,7 @@ This redirects you to the *Edit Role* page, where you define the permissions for
     * Action
     * Permission
 
-See [Adding rules for roles](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-roles.html#adding-rules-for-roles) for information on how to create rules.
+See [Adding rules for roles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-roles.html#adding-rules-for-roles) for information on how to create rules.
 {% info_block warningBox "Note" %}
 You can add from one to many rules to a specific role. Each time you click **Add rule**, the created rule appears in the *Assigned Rules* section.
 {% endinfo_block %}
@@ -174,8 +174,8 @@ While updating the role, you can initiate a new role creation flow.
 To do that:
 1.  In the top right corner of the *Edit Role* page, click **Create role**.
     The *Create new Role* page opens. 
-2. Repeat the steps described in the [Creating a Role](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-roles.html#creating-a-role) procedure.
+2. Repeat the steps described in the [Creating a Role](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-roles.html#creating-a-role) procedure.
 
 **What's next?**
-You need to create a group to assign this role to it. See the [Creating a group](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/users/roles-groups-and-users/managing-groups.html#creating-a-group) section in _Managing Groups_.
+You need to create a group to assign this role to it. See the [Creating a group](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-groups.html#creating-a-group) section in _Managing Groups_.
 

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/ht-prepayment-test
 ---
 
-When you have completed the instructions on [front end](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html), [back end](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html) and [shared](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html) implementation, you are able to test the payment method you just implemented.
+When you have completed the instructions on [front end](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html), [back end](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html) and [shared](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html) implementation, you are able to test the payment method you just implemented.
 
  This is the last step for this tutorial.
 

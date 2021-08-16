@@ -30,14 +30,14 @@ The `SprykerEco.Computop` module includes the integrations:
 
 The `SprykerEco.Computop` module provides the following payment methods:
 
-* [Credit Card](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop-payment-methods/computop-credit-card.html)
-* [Direct Debit](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop-payment-methods/computop-direct-debit.html)
-* [EasyCredit](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop-payment-methods/computop-easy-credit.html)
-* [iDeal](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop-payment-methods/computop-ideal.html)
-* [Paydirekt](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop-payment-methods/computop-paydirekt.html)
-* [PayNow](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop-payment-methods/computop-paynow.html)
-* [PayPal](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop-payment-methods/computop-paypal.html)
-* [SofortÜberweisung](/docs/scos/dev/technology-partners/{{ page.version }}/payment-partners/computop/computop-payment-methods/computop-sofort.html)
+* [Credit Card](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-credit-card.html)
+* [Direct Debit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-direct-debit.html)
+* [EasyCredit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-easy-credit.html)
+* [iDeal](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-ideal.html)
+* [Paydirekt](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paydirekt.html)
+* [PayNow](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paynow.html)
+* [PayPal](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paypal.html)
+* [SofortÜberweisung](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-sofort.html)
 
 ### PSD2 compatibility
 Computop PSP integration supports PSD2. For CreditCard and PayNow payment methods, customer address and additional information is sent to Computop to prevent fraud actions.

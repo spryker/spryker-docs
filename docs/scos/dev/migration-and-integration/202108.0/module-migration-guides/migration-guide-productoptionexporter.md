@@ -12,4 +12,4 @@ redirect_from:
 
 ## Upgrading from Version 2.* to Version 3.*
 
-The `ProductOptionExporter`  module does not provide the tax functionality anymore. Upgrade [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-tax.html).
+The `ProductOptionExporter`  module does not provide the tax functionality anymore. Upgrade [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-tax.html).

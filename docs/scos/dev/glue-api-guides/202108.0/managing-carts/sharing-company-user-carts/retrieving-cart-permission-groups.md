@@ -13,7 +13,7 @@ redirect_from:
 Company users can share their carts with others so that multiple representatives of the same company can work together on the same order. In addition to that, users can choose what type of access they want to grant to different users. This endoint allows retrieving cart permission groups of a company. 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/shared-carts-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shared-carts-feature-integration.html).
 
 ## Retrieve cart permission groups
 
@@ -27,7 +27,7 @@ To retrieve cart permission groups, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
 
@@ -94,7 +94,7 @@ To retrieve a cart permission group, send the request:
 
 | Header key | Type | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 
@@ -142,4 +142,4 @@ Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 ## Next steps
 
 
-* [Sharing company user carts](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html)
+* [Sharing company user carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html)

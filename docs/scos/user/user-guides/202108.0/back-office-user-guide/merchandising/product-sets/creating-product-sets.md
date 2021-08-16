@@ -117,6 +117,6 @@ The Back Office set up for this product set looks the following way:
 
 **What's next?**
 
-To know how the product sets are managed, see [Managing product sets](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-sets/managing-product-sets.html).
+To know how the product sets are managed, see [Managing product sets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-sets/managing-product-sets.html).
 
 

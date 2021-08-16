@@ -12,7 +12,7 @@ redirect_from:
 
  The Spryker Commerce OS is an end-to-end solution for e-commerce. This document contains business level description of major new features and enhancements released in November of 2018.
  
-For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-guides/{{ page.version }}/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
 
 ## Spryker Glue REST API
 In response to multiple customer requests, we are happy to introduce Glue as a new application layer to the Spryker Commerce OS architecture. Glue provides API infrastructure, own application, feature resources, and documentation generators.
@@ -25,12 +25,12 @@ The Glue allows you to use the power of the Spryker Commerce OS in a variety of 
 ### Catalog Browsing
 The catalog browsing endpoints allow you to request search results and also use the Elasticsearch facet implementation. Furthermore, you can retrieve product-related information beyond price and category, including product labels and relations.
 
-**Documentation**: [Catalog Search](/docs/scos/dev/glue-api-guides/{{ page.version }}/searching-the-product-catalog.html).
+**Documentation**: [Catalog Search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html).
 
 ### Login/Registration
 Endpoints ensure access-token login and retrieval. Customers can also register and request new passwords in case they forgot or want to change their current password.
 
-**Documentation**: [Managing Customers](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html).
+**Documentation**: [Managing Customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html).
 
 ### Cart
 Customers and guests can add products to their cart. Guest carts are now also persisted and retrievable via anonymous IDs, handled by your client application.
@@ -45,14 +45,14 @@ Retrieve all the necessary information to build your checkout for guest customer
 ### Customer Account
 Your customers can benefit from the same shop experience with the customer account endpoints. Not only can basic customer information be administered, but also wishlist and order history functionality is offered.
 
-**Documentation**: [Managing Customers](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html), [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-wishlists/managing-wishlists.html), [Retrieving Customer's Order History](https://documentation.spryker.com/2021080/docs/retrieving-order-history).
+**Documentation**: [Managing Customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html), [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html), [Retrieving Customer's Order History](https://documentation.spryker.com/2021080/docs/retrieving-order-history).
 
 ## Documentation Swagger Generator
 ![Documentation Swagger generator](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image3.png){height="" width=""}
 
 To help you keep track of your API development, we implemented a simple command that will create a YAML file to be used in your Swagger implementation to share the progress of development in your company.
 
-**Documentation**: [REST API Reference](/docs/scos/dev/glue-api-guides/{{ page.version }}/rest-api-reference.html).
+**Documentation**: [REST API Reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html).
 
 ## B2C API React Example
 ![B2C API React example](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image2.png){height="" width=""}

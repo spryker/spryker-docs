@@ -23,11 +23,11 @@ The following page is a report of what’s new and changed in the Spryker Commer
 
 To subscribe to our release notes and security updates, see the following articles:
 
-* [Releases](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/releases.html)
-* [Release notes](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/release-notes/release-notes.html)
-* [Security Updates](/docs/scos/user/intro-to-spryker/{{ page.version }}/whats-new/security-updates.html)
+* [Releases](/docs/scos/user/intro-to-spryker/{{page.version}}/releases/releases.html)
+* [Release notes](/docs/scos/user/intro-to-spryker/{{page.version}}/releases/release-notes/release-notes.html)
+* [Security Updates](/docs/scos/user/intro-to-spryker/{{page.version}}/whats-new/security-updates.html)
 
-To check our previous release notes, go to the [Releases Archive](/docs/scos/user/intro-to-spryker/{{ page.version }}/releases/releases-archive.html) section.
+To check our previous release notes, go to the [Releases Archive](/docs/scos/user/intro-to-spryker/{{page.version}}/releases/releases-archive.html) section.
 
 <!--
 <details open>

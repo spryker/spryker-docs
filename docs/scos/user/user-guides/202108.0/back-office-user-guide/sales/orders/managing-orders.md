@@ -59,7 +59,7 @@ The page refreshes to show the message about the successful status change. In th
 
 To change the status of all the items inside a shipment at once, click **pay** in the *Trigger all matching states of order inside this shipment* section of the corresponding shipment. 
 
-The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ### Reference information: Changing order statuses 
 
@@ -92,7 +92,7 @@ Statuses flow:
 
 ## Creating returns
 
-If a sales order item is[ returnable](/docs/scos/dev/features/{{ page.version }}/return-management/return-management-feature-overview.html), you can create a return for it. Keep in mind that you can create returns for both the registered and guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
+If a sales order item is[ returnable](/docs/scos/dev/features/{{page.version}}/return-management/return-management-feature-overview.html), you can create a return for it. Keep in mind that you can create returns for both the registered and guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
 
 To create a return:
 
@@ -100,7 +100,7 @@ To create a return:
 2. On the *Create Return* page, select the items you want to return and optionally the return reason for the items.
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](/docs/scos/dev/features/{{ page.version }}/configurable-bundle/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+For a [Configurable Bundle](/docs/scos/dev/features/{{page.version}}/configurable-bundle/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
 The [Product Bundles](https://documentation.spryker.com/2021080/docs/product-bundles), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
@@ -154,11 +154,11 @@ If returns have been created for an order, they are displayed on the *View Order
 
 {% info_block infoBox "Info" %}
 
-Returns of the registered and guest users have different return references. See [Returns Section](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/orders/managing-orders.html#returns-section) for details on the return references.
+Returns of the registered and guest users have different return references. See [Returns Section](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#returns-section) for details on the return references.
 
 {% endinfo_block %}
 
-To view details on a return, click **View** in the Actions column of the *Returns* table. This takes you to the *Overview of Return: [Return ID]* page. See [Managing Returns](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/returns/managing-returns.html) for information on how you can manage the returns on this page.
+To view details on a return, click **View** in the Actions column of the *Returns* table. This takes you to the *Overview of Return: [Return ID]* page. See [Managing Returns](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/managing-returns.html) for information on how you can manage the returns on this page.
 
 ### Reference information: Viewing the returns for orders
 
@@ -199,7 +199,7 @@ To remove the custom order reference, clear the *Custom Order Reference* field a
 
 ## Claiming orders
 
-To [claim an order](/docs/scos/dev/features/{{ page.version }}/reclamations-feature-overview.html):
+To [claim an order](/docs/scos/dev/features/{{page.version}}/reclamations-feature-overview.html):
 1. On the *Overview of Orders* page, click **Claim** next to the order you want to create a reclamation for.
 2. On the *Create reclamation* page, select one or more products you want to create the reclamation for.
 3. Click **Create Reclamation**.
@@ -220,7 +220,7 @@ Claiming an order does not change the status of the order or the items inside th
 
 ## Commenting orders
 
-To add a [comment](/docs/scos/dev/features/{{ page.version }}/comments/comments-feature-overview.html) to an order:
+To add a [comment](/docs/scos/dev/features/{{page.version}}/comments/comments-feature-overview.html) to an order:
 1. Click **View** next to the order you want to comment.
 2. On the *View Order: [Order ID]* page, scroll down to the *Comments* section.
 3. Enter the comment in the *Message* field.
@@ -259,6 +259,6 @@ The followning table describes the attributes you enter and select when adding a
 
 
 **Next steps**
-To learn how you can manage the created returns, see [Managing returns](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/returns/managing-returns.html). 
+To learn how you can manage the created returns, see [Managing returns](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/managing-returns.html). 
 
 

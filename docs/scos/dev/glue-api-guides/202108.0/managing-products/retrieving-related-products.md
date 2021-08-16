@@ -10,9 +10,9 @@ redirect_from:
   - /docs/en/retrieving-related-products
 ---
 
-Using the [Product Relations](/docs/scos/dev/features/{{ page.version }}/product-relations/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
+Using the [Product Relations](/docs/scos/dev/features/{{page.version}}/product-relations/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
-Only [abstract](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/dev/features/{{ page.version }}/product-relations/product-relations-feature-overview.html).)
+Only [abstract](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/dev/features/{{page.version}}/product-relations/product-relations-feature-overview.html).)
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 
@@ -27,7 +27,7 @@ In your development, the endpoints can help you to:
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html).
 
 ## Retrieve related items of an abstract product
 To get related items of an abstract product, send the request:
@@ -632,7 +632,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. | 
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. | 
 
 ### Request
 | Query parameter | Description | Exemplary values |
@@ -996,7 +996,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 
 For response attributes, see [Retrieving related items of an abstract product](#related-product-attributes) for the list of response attributes.
-For the attributes of the included resources, see [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+For the attributes of the included resources, see [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 
 
@@ -1355,5 +1355,5 @@ See [Retrieving Related Items of an Abstract Product](#related-product-attribute
 | 311 | Abstract product ID not specified. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

@@ -29,7 +29,7 @@ There are slight differences in customer accounts' information for the B2B and B
 | Shopping Carts | ✓ |  |
 | Wishlist |  | ✓ |
 
-See [Customer Registration overview](/docs/scos/dev/features/{{ page.version }}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html) for details on how customer accounts can be created.
+See [Customer Registration overview](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html) for details on how customer accounts can be created.
 
 
 Customers manage their accounts directly on the Storefront. If a customer updates an account, the data is synchronized, and the Back Office user sees the updated information in the Back Office > **Customers** > **Customers** section. The exceptions are newsletter subscriptions and password changes: this information is not stored in the Back Office.
@@ -53,7 +53,7 @@ A Back Office user can do the following:
 * Send a password token via email.
 * Check last orders of a customer in the shop.
 
-See [Managing customers](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
+See [Managing customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
 
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:
@@ -94,13 +94,13 @@ Customer can perform the following actions the Storefront:
         <!-- col1 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
+                 <li class="mr-title">Developer</li>
                  <li><a href="https://documentation.spryker.com/docs/reference-information-customer-module-overview" class="mr-link">Referene information: Customer module overview 7.0</a></li>
-                <li><a href="<li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html-via-glue-api" class="mr-link">Manage customer accounts via Glue API</a></li>
-                <li><a href="<li><a href="https://documentation.spryker.com/docs/managing-customer-addresses-via-glue-api" class="mr-link">Manage customer account addresses via Glue API</a></li>
-                <li><a href="<li><a href="https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration" class="mr-link">Integrate the Customer Account Management Glue API</a></li>
-                <li>Enable Customer Accounts:</li>
-                <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-integration" class="mr-link">Integrate the Customer Account Management feature</a></li>
+                 <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html-via-glue-api" class="mr-link">Manage customer accounts via Glue API</a></li>
+                 <li><a href="https://documentation.spryker.com/docs/managing-customer-addresses-via-glue-api" class="mr-link">Manage customer account addresses via Glue API</a></li>
+                 <li><a href="https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration" class="mr-link">Integrate the Customer Account Management Glue API</a></li>
+                 <li>Enable Customer Accounts:</li>
+                 <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-integration" class="mr-link">Integrate the Customer Account Management feature</a></li>
                  <li><a href="https://documentation.spryker.com/docs/mg-customer#upgrading-from-version-6---to-version-7-0" class="mr-link">Migrate the Customer module from version 6.* to version 7.0</a></li>
             </ul>
         </div>
@@ -108,7 +108,7 @@ Customer can perform the following actions the Storefront:
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html" class="mr-link">Manage customer accounts</a></li>
+                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html" class="mr-link">Manage customer accounts</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-customer-addresses" class="mr-link">Manage customer addresses</a></li>
             </ul>
         </div>

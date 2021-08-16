@@ -45,7 +45,7 @@ The only major change of the `QuoteRequestPage 2.x.x` is the dependency update f
 Also, transfer property `QuoteRequestTranser::isLatestVersionHidden` was replaced by `QuoteRequestTransfer:isLatestVersionVisible`.
 
 **To migrate do the following:**
-1. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-quoterequest.html).
+1. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-quoterequest.html).
 2. Update `spryker-shop/quote-request-page:^2.0.0`
 
 ```bash

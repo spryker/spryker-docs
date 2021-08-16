@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 
-Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop—by product SKU, product name, etc. The *Quick Add to Cart* feature enables your customers to find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the *Quick Add to Cart* page, accessible directly from the header, and quickly order items by typing product SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/scos/dev/features/{{ page.version }}/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the *Quick Add to Cart* page. The *Quick Add to Cart* form can also be used to add items to [shopping lists](https://documentation.spryker.com/2021080/docs/multiple-shared-shopping-lists). Also, if a customer has a list of products to be ordered, for example, in a .csv file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. This being done, the customer either adds the items to cart or proceeds directly to checkout.
+Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop—by product SKU, product name, etc. The *Quick Add to Cart* feature enables your customers to find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the *Quick Add to Cart* page, accessible directly from the header, and quickly order items by typing product SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/scos/dev/features/{{page.version}}/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the *Quick Add to Cart* page. The *Quick Add to Cart* form can also be used to add items to [shopping lists](https://documentation.spryker.com/2021080/docs/multiple-shared-shopping-lists). Also, if a customer has a list of products to be ordered, for example, in a .csv file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. This being done, the customer either adds the items to cart or proceeds directly to checkout.
 
 
 
@@ -31,7 +31,7 @@ To view how to create a quick order, see [Quick Order on the Storefront](#quick-
 <!--- ![Quick Order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-page.png)
 --->
 
-As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/scos/dev/features/{{ page.version }}/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
+As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/scos/dev/features/{{page.version}}/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
 
 {% info_block errorBox %}
 The integration is possible only if the Measurement Units feature is enabled in your project.
@@ -39,7 +39,7 @@ The integration is possible only if the Measurement Units feature is enabled in 
 Moreover, after adding a quick order to cart, a shop owner can observe the default amount and default sales units for the product packaging unit in the cart overview.
 ![Quick Order packaging units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-packaging-units.png)
 
-When the customer has found the products they need, they can set the quantity of each product using a scroll-down box. By default, "1" is set in the *Quantity* field. If there are any quantity restrictions applied to the product, they are taken into account: the customer can choose only the value which meets the quantity restrictions. See [Quantity Restrictions for Quick Order](/docs/scos/dev/features/{{ page.version }}/quick-add-to-cart/quick-add-to-cart-feature-overview.html#quantity-restrictions-for-quick-order) to learn more about how the quantity limitations are applied to the *Quick Order* form.
+When the customer has found the products they need, they can set the quantity of each product using a scroll-down box. By default, "1" is set in the *Quantity* field. If there are any quantity restrictions applied to the product, they are taken into account: the customer can choose only the value which meets the quantity restrictions. See [Quantity Restrictions for Quick Order](/docs/scos/dev/features/{{page.version}}/quick-add-to-cart/quick-add-to-cart-feature-overview.html#quantity-restrictions-for-quick-order) to learn more about how the quantity limitations are applied to the *Quick Order* form.
 
 Once the products and their quantities have been selected, the order can be:
 
@@ -65,14 +65,14 @@ However, separators should be the same for all products entered in this form at 
 ## Quantity restrictions for Quick Order
 Quick Order quantity rules fall under limitations set by [quantity restrictions](https://documentation.spryker.com/2021080/docs/product-quantity-restrictions). Quantity restriction values define the number of items that customers can put into the cart.
 
-When manually filling the *SKU/Name* field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/dev/features/{{ page.version }}/non-splittable-products-feature-overview.html) set for that SKU. That means, for example, if a concrete product has the minimum quantity restriction for 4 units, the interval restriction to 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
+When manually filling the *SKU/Name* field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/dev/features/{{page.version}}/non-splittable-products-feature-overview.html) set for that SKU. That means, for example, if a concrete product has the minimum quantity restriction for 4 units, the interval restriction to 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
 
 The *Quantity* field in the Quick Order adheres to these quantities. Therefore, if the shopper enters an invalid number into the *Quantity* field, for instance, 5, the number will automatically change to the next higher quantity set in quantity restrictions, that is 6.
 
 ## Product prices for Quick Order
 To see the price, a shop visitor has to select the concrete product and set the item quantity.
 
-The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](https://documentation.spryker.com/2021080/docs/merchants-and-merchant-relations) dimensions, respectively. If the item has any [volume prices](/docs/scos/dev/features/{{ page.version }}/prices/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
+The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](https://documentation.spryker.com/2021080/docs/merchants-and-merchant-relations) dimensions, respectively. If the item has any [volume prices](/docs/scos/dev/features/{{page.version}}/prices/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
 
 ## File upload form for concrete products
 To save your buyers' time and help them order the products in bulk quickly, enable your customers to use the *File Upload* form. The *File Upload* form allows users to add multiple products to the *Quick Order* page by uploading data using a .csv file.

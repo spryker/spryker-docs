@@ -10,12 +10,12 @@ redirect_from:
   - /docs/en/creating-abstract-products-and-product-bundles
 ---
 
-This topic describes how to create [abstract products](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/scos/dev/features/{{ page.version }}/product-bundles-feature-overview.html).
+This topic describes how to create [abstract products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/scos/dev/features/{{page.version}}/product-bundles-feature-overview.html).
 
 ## Prerequisites 
 
 To start working with products:
-1. To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/attributes/creating-product-attributes.html).
+1. To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/attributes/creating-product-attributes.html).
 2. Go to  **Catalog > Products**.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
@@ -50,11 +50,11 @@ The following table describes the attributes you enter and select when defining 
 
 | ATTRIBUTE | DESCRIPTION | 
 | --- | --- |
-| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/howto-set-up-multiple-stores.html) the product will be available in.</br>You can select multiple values. | 
+| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html) the product will be available in.</br>You can select multiple values. | 
 | SKU Prefix | Unique product identifier that will be used to track unique information related to the product. |
 | Name | Name that will be displayed for the product on the Storefront. | 
 | Description | Description that will be displayed for the product on the Storefront. | 
-| New from</br>New to  | Defines the period of time for which: </br><ul><li>A [dynamic product label](/docs/scos/dev/features/{{ page.version }}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/dev/features/{{ page.version }}/category-management-feature-overview.html)</li></ul></br> You can either select no dates or both. | 
+| New from</br>New to  | Defines the period of time for which: </br><ul><li>A [dynamic product label](/docs/scos/dev/features/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html)</li></ul></br> You can either select no dates or both. | 
 
 ## Defining prices
 
@@ -73,8 +73,8 @@ The following table describes the attributes you enter and select when defining 
 
 | ATTRIBUTE |DESCRIPTION | 
 | --- | --- |
-|Merchant Price Dimension| B2B only</br>Defines the [merchant](/docs/scos/dev/features/{{ page.version }}/merchant-custom-prices-feature-overview.html) the prices will apply to.</br>If you select **Default prices**, the prices will apply to all customers.</br>To [manage merchant relations](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace** > **Merchant Relations**. |
-| Gross price</br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.</br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html#product-information-inheritance) the price you enter here. | 
+|Merchant Price Dimension| B2B only</br>Defines the [merchant](/docs/scos/dev/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices will apply to.</br>If you select **Default prices**, the prices will apply to all customers.</br>To [manage merchant relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace** > **Merchant Relations**. |
+| Gross price</br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.</br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html#product-information-inheritance) the price you enter here. | 
 |Default</br>Original | Default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
 | Tax Set | Conditions under which the product will be taxed.</br>To [manage tax sets](https://documentation.spryker.com/2021080/docs/managing-tax-rates-sets), go to **Taxes** > **Tax Sets**.|
 
@@ -103,7 +103,7 @@ In the *Variants* tab, define product variants:
 The reference information in this section is relevant only for abstract products. When you create a product bundle, a single product variant is created automatically.
 {% endinfo_block %}
 
-In the *Variants* tab, you can see all the existing [super attributes](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html#super-attributes). You can [create](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog** > **Attributes**.
+In the *Variants* tab, you can see all the existing [super attributes](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html#super-attributes). You can [create](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog** > **Attributes**.
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product. 
 
@@ -165,7 +165,7 @@ To convert an abstract product into a product bundle, you can update the **Assig
 
 ## Next steps
 
-* [Add volume prices](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html)
-* [Add scheduled prices](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/adding-scheduled-prices-to-abstract-products.html)
-* [Edit abstract products](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/editing-abstract-products.html)
+* [Add volume prices](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html)
+* [Add scheduled prices](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/adding-scheduled-prices-to-abstract-products.html)
+* [Edit abstract products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/editing-abstract-products.html)
 

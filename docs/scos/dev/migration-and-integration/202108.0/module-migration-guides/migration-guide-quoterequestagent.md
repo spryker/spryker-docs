@@ -47,7 +47,7 @@ The one major change of `QuoteRequestAgent` 2.x.x is the dependency update for `
 
 **To migrate the module `QuoteRequestAgent` from version 1.0.0 to 2.0.0, do the following:**
 
-1. Update `spryker/quote-request:^2.0.` by following the steps from the [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-quoterequest.html)
+1. Update `spryker/quote-request:^2.0.` by following the steps from the [Migration Guide - QuoteRequest](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-quoterequest.html)
 2. Update `spryker/quote-request-agent:^2.0.0`:
 
 ```bash

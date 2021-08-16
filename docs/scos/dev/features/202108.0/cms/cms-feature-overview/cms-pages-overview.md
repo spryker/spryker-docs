@@ -91,5 +91,5 @@ With the CMS Pages feature, you can:
     
 ## See next
 
-* [CMS block](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-blocks-overview.html)
+* [CMS block](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html)
 

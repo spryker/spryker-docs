@@ -19,7 +19,7 @@ In your development, this endpoint can help you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-catalog-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-catalog-feature-integration.html).
 
 ## Search by products
 
@@ -43,7 +43,7 @@ To search by products, send the request:
 | color | Specifies the product color | {% raw %}{{{% endraw %}color{% raw %}}}{% endraw %} |
 | storage_capacity[] | Specifies the storage capacity of a product | {% raw %}{{{% endraw %}storage_capacity{% raw %}}}{% endraw %} |
 | rating[min] | Specifies the minimum rating of a product | {% raw %}{{{% endraw %}rating{% raw %}}}{% endraw %} |
-| category | Specifies the category to search the products in | {% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}</br>For the category node IDs, [retrieve the category tree](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-categories/retrieving-category-trees.html). |
+| category | Specifies the category to search the products in | {% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}</br>For the category node IDs, [retrieve the category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html). |
 | currency | Sets a currency | {currency{% raw %}}}{% endraw %} |
 | sort | Sorts the search results | For the list of possible values, run the catalog search request and find the list in the `sortParamNames` array.</br>For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
 | page | Sets the number of the search results page from which the results are retrieved | {% raw %}{{{% endraw %}page_number{% raw %}}}{% endraw %} |
@@ -6653,8 +6653,8 @@ To search by products, send the request:
 
 For other abstract product attributes, see:
 
-* [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-products.html){target="_blank"}
-* [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-products/abstract-products/retrieving-abstract-product-prices.html){target="_blank"}
+* [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html){target="_blank"}
+* [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html){target="_blank"}
 
 **Value facets**
 
@@ -6697,6 +6697,6 @@ For other abstract product attributes, see:
 | 502      | Invalid price mode.  |
 | 503      | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 

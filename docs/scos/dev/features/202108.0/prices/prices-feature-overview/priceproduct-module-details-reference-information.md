@@ -10,10 +10,10 @@ redirect_from:
   - /docs/en/priceproduct-module-details-reference-information
 ---
 
-This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-priceproduct.html#upgrading-from-version-1---to-version-2--) of the module. 
+This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-priceproduct.html#upgrading-from-version-1---to-version-2--) of the module. 
 
 ## Price dimension
-Starting from vesion 2.0.0 of the PriceProduct module, to save BC, we have implemented *Default Price Dimension* inside the  PriceProduct, so all prices imported by new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/dev/features/{{ page.version }}/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
+Starting from vesion 2.0.0 of the PriceProduct module, to save BC, we have implemented *Default Price Dimension* inside the  PriceProduct, so all prices imported by new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/dev/features/{{page.version}}/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
 
 ## PriceProductService
 Starting from version 2.0.0 of the PriceProduct module, we have added the Service layer with `PriceProductService`. Its purpose is to choose only one price from the list of prices available for the current customer, taking into account the provided filter, which could contain selected Store, Currency, Price mode (gross or net), and Quote (with customer information inside).

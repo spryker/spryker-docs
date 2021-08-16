@@ -28,7 +28,7 @@ Expired tokens are stored in the database, and you can configure them to be dele
 
 ## Protected resources
 
-Below, you can find a list of the default protected resources. As Glue API is highly customizable, a shop is likely to have its own list of protected resources. To avoid extra calls, we recommend [retrieving protected resources](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-protected-resources.html) of the shop before you start working with the API or setting up a flow. 
+Below, you can find a list of the default protected resources. As Glue API is highly customizable, a shop is likely to have its own list of protected resources. To avoid extra calls, we recommend [retrieving protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html) of the shop before you start working with the API or setting up a flow. 
 
 | Action | Method | Endpoints |
 | --- | --- | --- |
@@ -120,13 +120,13 @@ Response sample with an error:
 ## User types
 
 Different endpoints require the client to be authenticated as different users. By default, you can:
-* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-customers/authenticating-as-a-customer.html)
-* [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-b2b-account/authenticating-as-a-company-user.html)
-* [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{ page.version }}/managing-agent-assists/authenticating-as-an-agent-assist.html)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html)
+* [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
+* [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html)
 
 ## Next steps
 
-* [Retrieve protected resources](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-protected-resources.html)
+* [Retrieve protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html)
 
 
 

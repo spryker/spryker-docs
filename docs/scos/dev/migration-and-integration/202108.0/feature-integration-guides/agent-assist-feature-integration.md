@@ -20,8 +20,8 @@ To start feature integration, overview and install the necessary features:
 | Name | Version | Integration guide|
 | --- | --- | --- |
 | Spryker Core | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker core feature integration](https://documentation.spryker.com/2021080/docs/spryker-core-feature-integrationn) |
-| Product | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker Core Back Office feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/spryker-core-back-office-feature-integration.html) |
-| Cart | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %}| [Customer Account Management](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/customer-account-management-feature-integration.html) |
+| Product | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %} | [Spryker Core Back Office feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-core-back-office-feature-integration.html) |
+| Cart | {% raw %}{{{% endraw %}variable.master{% raw %}}}{% endraw %}| [Customer Account Management](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-account-management-feature-integration.html) |
 
 ### 1) Install the required modules using composer
 

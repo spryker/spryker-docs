@@ -17,7 +17,7 @@ Imagine you have thousands of products and customers with unique pricing terms a
 
 Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and he receives his own prices for the whole catalog. It might be considered as a discount, but usually it is not a single simple rule, but a set of rules and their priorities for each partner. These rules exist in an ERP system which can export data through SOAP or CSV files. 
 
-In Spryker, each price is imported as a [price dimension](/docs/scos/dev/features/{{ page.version }}/merchant-custom-prices-feature-overview.html) and has a unique key which determines its relation to a customer. For example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices should appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories. 
+In Spryker, each price is imported as a [price dimension](/docs/scos/dev/features/{{page.version}}/merchant-custom-prices-feature-overview.html) and has a unique key which determines its relation to a customer. For example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices should appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories. 
 
 
 Price import flow:
@@ -32,7 +32,7 @@ When enabling Spryker to handle such a number of prices, we faced the following 
 
 2. A product can have about 40 000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows ElasticSearch(ES) down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1000. 
 
-3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html). Average document size is bigger than 1 MB.
+3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html). Average document size is bigger than 1 MB.
 
 4. When more than 100 product abstract search documents are processed at a time, payload gets above 100 MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
 The queries rejected by ES are considered successful by Spryker because the [Elastica library](https://elastica.io/) ignores the 413 error code.
@@ -199,7 +199,7 @@ The side effects of this solution are:
 
 ### How to speed up publishing process
 
-To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them depending on the incoming event. Due to a big number of prices, the publish process became slow. This causes the following issues.
+To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them depending on the incoming event. Due to a big number of prices, the publish process became slow. This causes the following issues.
 
 #### Issues
 We addressed the following issues related to a slow publish process:
@@ -223,7 +223,7 @@ See [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://
 We evaluated the following solutions:
  
 
-1. Use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries to handle bulk insert and update operations in the `_search` table. We chose this solution because we had implemented it previously. See [Data Importer Speed Optimization](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-importer-speed-optimization.html#data-importer-speed-optimization) to learn how this solution is used to optimize the speed of data importers. 
+1. Use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries to handle bulk insert and update operations in the `_search` table. We chose this solution because we had implemented it previously. See [Data Importer Speed Optimization](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importer-speed-optimization.html#data-importer-speed-optimization) to learn how this solution is used to optimize the speed of data importers. 
 2. Use [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html) to fill the `search` table on the insert update operations in the `entity` table.
 3. Implement a reconnection logic that establishes a new connection after catching an exception.
 

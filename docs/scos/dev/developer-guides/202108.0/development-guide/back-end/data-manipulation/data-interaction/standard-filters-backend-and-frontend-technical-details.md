@@ -17,7 +17,7 @@ The backend part of Standard Filters feature is located in the following modules
 2. ProductCategoryFilterGui (`spryker/product-category-filter-gui`),
 3. ProductCategoryFilterStorage (`spryker/product-category-filter-storage`).
 
-Category Filters management is described in the [Back Office guide](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html).
+Category Filters management is described in the [Back Office guide](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html).
 
 ## Frontend Technical Details
 CatalogPage module (`spryker-shop/catalog-page`) provides all applicable product filters and a basic set of templates, used by all pages.

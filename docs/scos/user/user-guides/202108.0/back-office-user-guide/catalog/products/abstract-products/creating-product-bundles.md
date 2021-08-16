@@ -24,7 +24,7 @@ To start creating product bundles, navigate to **Catalog** > **Products**.
 
 To create a product bundle:
 1. Click **+Create Bundle Product**.
-2. On the *Create a Product* page, do the procedure described in [Creating an Abstract Product](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html).
+2. On the *Create a Product* page, do the procedure described in [Creating an Abstract Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html).
 3. Populate the *General*, *Price & Tax*, *SEO*, and *Image* tabs.
 4. Click **Save**.
     The only difference is that you do not define the product variants for the bundle.

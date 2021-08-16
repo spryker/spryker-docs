@@ -90,21 +90,21 @@ Update the following modules using the provided migration guides:
 
 | MODULE | MIGRATION GUIDE |
 | --- | --- |
-| ErrorHandler | [Migration guide - ErrorHandler](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-errorhandler.html) |
-| EventDispatcher | [Migration guide - EventDispatcher](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-eventdispatcher.html) |
-| Form | [Migration guide - Form](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-form.html) |
-| Http | [Migration guide - Http](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-http.html) |
-| Locale | [Migration guide - Locale](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-locale.html) |
-|Propel | [Migration guide - Propel](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-propel.html) |
-| Messenger | [Migration guide - Messenger](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-messenger.html) |
-|Router | [Migration guide - Router](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-router.html) |
-| Security| [Migration guide -Security](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-security.html) |
-|Session | [Migration guide - Session](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-session.html) |
-| Store | [Migration guide - Store](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-store.html) |
-| Translator | [Migration guide - Translator](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-translator.html) |
-| Twig | [Migration guide -Twig](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-twig.html) |
-| Validator | [Migration guide - Validator](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-validator.html) |
-| WebProfiler | [Migration guide - WebProfiler](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-webprofiler.html) |
+| ErrorHandler | [Migration guide - ErrorHandler](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-errorhandler.html) |
+| EventDispatcher | [Migration guide - EventDispatcher](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-eventdispatcher.html) |
+| Form | [Migration guide - Form](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-form.html) |
+| Http | [Migration guide - Http](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-http.html) |
+| Locale | [Migration guide - Locale](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-locale.html) |
+|Propel | [Migration guide - Propel](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-propel.html) |
+| Messenger | [Migration guide - Messenger](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-messenger.html) |
+|Router | [Migration guide - Router](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-router.html) |
+| Security| [Migration guide -Security](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-security.html) |
+|Session | [Migration guide - Session](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-session.html) |
+| Store | [Migration guide - Store](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-store.html) |
+| Translator | [Migration guide - Translator](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-translator.html) |
+| Twig | [Migration guide -Twig](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-twig.html) |
+| Validator | [Migration guide - Validator](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-validator.html) |
+| WebProfiler | [Migration guide - WebProfiler](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-webprofiler.html) |
 
 You've replaced silex. 
 
@@ -116,7 +116,7 @@ To remove Silex:
 2. In `public/Glue/index.php` replace `Pyz\Glue\GlueApplication\Bootstrap\GlueBootstrap` with `Spryker\Glue\GlueApplication\Bootstrap\GlueBootstrap`. 
 3. Add `Spryker\Shared\Http\Plugin\EventDispatcher\ResponseListenerEventDispatcherPlugin` to `\Pyz\Glue\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`.
 4. Add `Spryker\Glue\Http\Plugin\Application\HttpApplicationPlugin` to `\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider::getApplicationPlugins()`.
-5. Remove the `Pimple` plugin everywhere. To access an [Application](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/application.html) service, use `$container->getApplicationService('service id');` in the `DependencyProvider`. Then, you can retrieve it within the modules Factory with `$this->getProvidedDependency()`.
+5. Remove the `Pimple` plugin everywhere. To access an [Application](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/silex-replacement/application.html) service, use `$container->getApplicationService('service id');` in the `DependencyProvider`. Then, you can retrieve it within the modules Factory with `$this->getProvidedDependency()`.
 
 6. Add `Spryker\Shared\Http\Plugin\EventDispatcher\ResponseListenerEventDispatcherPlugin` to `\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`.
 

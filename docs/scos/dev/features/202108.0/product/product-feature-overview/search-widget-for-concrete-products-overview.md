@@ -14,7 +14,7 @@ With the search widget, the customer doesn't need to go to the product details p
 
 You can add search widget on the Quick order, Shopping List and Shopping Cart pages. Using the widget, the customer only needs to paste the necessary items either by entering the concrete products SKUs or typing their name. The matching product variants are suggested in the drop-down.
 
-Using the search widget, online shoppers are able to find products assigned specifically to the stores the users are in. Also, only products corresponding to user's [currency](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html) and [price mode](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html) settings are searched for.
+Using the search widget, online shoppers are able to find products assigned specifically to the stores the users are in. Also, only products corresponding to user's [currency](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html) and [price mode](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html) settings are searched for.
 
 Here's an example of what the search widget looks like on:
 
@@ -31,7 +31,7 @@ A picture with 2 products of the same SKU added
 With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](https://documentation.spryker.com/2021080/docs/merchant-product-restrictions) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
 
 {% info_block infoBox %}
-You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/features/{{ page.version }}/merchant-product-restrictions/restricted-products-behavior.html
+You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/features/{{page.version}}/merchant-product-restrictions/restricted-products-behavior.html
 {% endinfo_block %} page.)
 
 ## Shopping List Page

@@ -19,7 +19,7 @@ To start feature integration, overview and install the necessary features:
 
 |FEATURE  |VERSION |REQUIRED SUB-FEATURE |
 |---  |--- |--- |
-| Spryker Core |dev-master |[Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Spryker Core |dev-master |[Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
 | Category Management |dev-master| | 
 
   

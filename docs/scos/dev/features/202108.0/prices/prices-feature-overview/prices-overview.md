@@ -34,7 +34,7 @@ The concerns for the product price calculation are the following :
 * calculate amount of tax
 
 price for the options that were selected for the product (e.g.: frame, fabric, etc.)
-For more information, see [Checkout Calculation](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/calculation-3.0.html).
+For more information, see [Checkout Calculation](/docs/scos/dev/features/{{page.version}}/cart/cart-feature-overview/calculation-3.0.html).
 
 
 ## If you are:

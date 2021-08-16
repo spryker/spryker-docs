@@ -83,5 +83,5 @@ $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY]
 ];
 ```
 
-For more details, see [Performance Monitoring - New Relic](/docs/scos/dev/technology-partners/{{ page.version }}/operational-tools-monitoring-legal-etc/new-relic.html).
+For more details, see [Performance Monitoring - New Relic](/docs/scos/dev/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic.html).
 

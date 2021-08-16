@@ -65,25 +65,25 @@ To learn how the template is created, check the exemplary procedure below.
 
 The text in the defined placeholders will be replaced at runtime by the glossary keys assigned to them.
 
-A content manager can apply this template when [creating a CMS page](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/pages/creating-a-cms-page.html) in the Back Office.
+A content manager can apply this template when [creating a CMS page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-a-cms-page.html) in the Back Office.
 
 ## Template with Slots
 
-[Template with slots](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/templates-and-slots-overview.html) is a Twig file that defines the layout of slots across a Storefront page and has at least one slot assigned. 
+[Template with slots](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html) is a Twig file that defines the layout of slots across a Storefront page and has at least one slot assigned. 
 
 ***
 **Create a template with slots:**
 
 1. Create a Twig template as described in [CMS Page Template](#cms-page-template). 
 
-2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/templates-and-slots-overview.html#slot-widget). 
+2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#slot-widget). 
 
-3. [Import](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/templates-and-slots-overview.html#correlation) section of **Templates & Slots Feature Overview**.
+3. [Import](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#correlation) section of **Templates & Slots Feature Overview**.
 
 Templates with slots are universal. In the Back Office, a content manager can:
 
-*     apply this template when [creating a CMS page](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/pages/creating-a-cms-page.html).
-*     apply this template when [creating a category](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/creating-categories.html).
+*     apply this template when [creating a CMS page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-a-cms-page.html).
+*     apply this template when [creating a category](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html).
 
 {% info_block warningBox %}
 
@@ -93,7 +93,7 @@ You can assign the template with slots to other page types only on a code level.
 
 ## CMS Block Template
 
-CMS block template is a Twig file that, when applied to a [CMS block](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-blocks-overview.html), defines its design and layout. 
+CMS block template is a Twig file that, when applied to a [CMS block](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html), defines its design and layout. 
 
 Create the Twig template - `src/Pyz/Shared/CmsBlock/Theme/default/template//hello.twig`. 
 
@@ -105,7 +105,7 @@ Create the Twig template - `src/Pyz/Shared/CmsBlock/Theme/default/template//hell
 </div>	
 ```
  
-A content manager can apply this template when [creating a CMS block](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/blocks/creating-a-cms-block.html) in the Back Office.
+A content manager can apply this template when [creating a CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-a-cms-block.html) in the Back Office.
 
 ## Content Item Widget Template
 

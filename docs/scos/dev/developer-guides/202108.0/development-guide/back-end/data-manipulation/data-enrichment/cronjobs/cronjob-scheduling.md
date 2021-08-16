@@ -21,7 +21,7 @@ While setting up and configuring a scheduler, a developer is to solve the follow
 2. Get jobs to run on remote servers. This is an environment-dependent task.
 3. Set up monitoring of job execution. This may as well be provided by a scheduler.
 {% info_block infoBox %}
-See [Creating a New Custom Scheduler](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/creating-a-new-custom-scheduler.html
+See [Creating a New Custom Scheduler](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/creating-a-new-custom-scheduler.html
 {% endinfo_block %} to learn about scheduler creation.)
 Currently, Spryker B2B and B2C demo shops are shipped with Jenkins as a default scheduler. Jenkins manages running and monitoring jobs. Spryker provides a module to control Jenkins and propagate the jobs it manages.
 

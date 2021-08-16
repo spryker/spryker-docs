@@ -698,4 +698,4 @@ After the preceding procedures have been completed, set up a state machine, whic
 
 **What's next?**
 
-After the Direct Debit payment method has been created and integrated in the back-end, you need to [identify the new Direct Debit payment type in the shared layer](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html).
+After the Direct Debit payment method has been created and integrated in the back-end, you need to [identify the new Direct Debit payment type in the shared layer](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html).

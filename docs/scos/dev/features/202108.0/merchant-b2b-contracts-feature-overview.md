@@ -15,8 +15,8 @@ In the B2B partnership, which is usually based on contracts, the selling company
 There are three key figures: marketplace owner, merchant, and buyer.
 
 * The marketplace owner owns the platform and acts as a broker between merchants and buyers.
-* The merchants are sellers usually represented by a [company](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/company-accounts-overview.html#company).
-* The buyers are often [business units](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/business-units-overview.html) of companies that purchase products or services from the merchants.
+* The merchants are sellers usually represented by a [company](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/company-accounts-overview.html#company).
+* The buyers are often [business units](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/business-units-overview.html) of companies that purchase products or services from the merchants.
 
 The business relationships between merchants and buyers are usually based on contracts.
 
@@ -24,7 +24,7 @@ The diagram below shows relations within the merchant domain:
 
 ![merchants-diagram.png](https://confluence-connect.gliffy.net/embed/image/9c3eb6cd-8492-4550-a280-e218bd3b974a.png?utm_medium=live&utm_source=custom)
 
-A Back Office user can manage merchants and merchant relataions. See [Managing merchants](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html) and [Managing merchant relations](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to learn how to do that. 
+A Back Office user can manage merchants and merchant relataions. See [Managing merchants](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html) and [Managing merchant relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to learn how to do that. 
 
 A developer can also import merchants and merchant relations.
 

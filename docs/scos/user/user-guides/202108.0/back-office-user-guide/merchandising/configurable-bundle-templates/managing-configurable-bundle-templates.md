@@ -16,7 +16,7 @@ This article describes how to manage configurable bundle templates.
 
 To start working with configurable bundle templates, go to **Merchandising** > **Configurable Bundle Templates**.
 
-For reference information, see [Creating configurable bundle templates](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html#reference-information-creating-configurable-bundles).
+For reference information, see [Creating configurable bundle templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html#reference-information-creating-configurable-bundles).
 
 ## Editing configurable bundle templates
 

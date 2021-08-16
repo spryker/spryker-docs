@@ -25,7 +25,7 @@ With the ContentBanner version 2.0, the following changes have been made:
 You can find more details about the changes on the [ContentBanner module release notes](https://github.com/spryker/content-banner/releases/tag/2.0.0) page.
 
 **To upgrade to the new version of the module, do the following:**
-1. Perform the steps provided in [Migration Guide - ContentStorage](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-contentstorage.html).
+1. Perform the steps provided in [Migration Guide - ContentStorage](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-contentstorage.html).
 2. Upgrade the `ContentBanner` module to version 2.0.0:
 
 ```bash

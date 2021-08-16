@@ -52,4 +52,4 @@ On the *CMS Redirects* page, you can also:
 #### What's next?
 The redirect URL has been created. However, you can either edit it or delete.
 
-* To learn how to edit and/or delete a redirect, see [Managing CMS redirects](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/redirects/managing-cms-redirects.html).
+* To learn how to edit and/or delete a redirect, see [Managing CMS redirects](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/redirects/managing-cms-redirects.html).

@@ -91,6 +91,6 @@ In the *Products* tab, you can do the following:
 
 **What's next?**
 
-* To learn how to edit product labels, see [Editing Product Labels](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-labels/managing-product-labels.html#editing-product-labels).
-* To learn how you can manage product labels, see [Managing Product Labels](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-labels/managing-product-labels.html).
+* To learn how to edit product labels, see [Editing Product Labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/managing-product-labels.html#editing-product-labels).
+* To learn how you can manage product labels, see [Managing Product Labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/managing-product-labels.html).
 

@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
-Upgrade `spryker/cms` module to at least 6.2 version. See [Migration Guide - CMS](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-cms.html) for more details.
+Upgrade `spryker/cms` module to at least 6.2 version. See [Migration Guide - CMS](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-cms.html) for more details.
 Upgrade `spryker/cms-content-widget` module to at least 1.1 version if you use `CmsPageCollectorParameterMapExpanderPlugin` plugin.
 CMS page data expander plugins are applied by the `spryker/cms` module instead of the `spryker/cms-collector` module:
 

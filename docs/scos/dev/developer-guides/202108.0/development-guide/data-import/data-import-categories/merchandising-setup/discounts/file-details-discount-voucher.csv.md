@@ -28,7 +28,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*   [ discount.csv ](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
+*   [ discount.csv ](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
 
 ## Recommendations & other information
 The generated voucher code consists of two parts: 

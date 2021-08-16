@@ -20,7 +20,7 @@ You can log in to the[ support portal](https://support.spryker.com) by using the
 
 ## Creating new cases
 ## 
-You can create cases by using the drop down menu “Create a case” and selecting the respective case type, or by clicking on the case type on the landing page. When creating cases, please make use of the recommendations explained [here](/docs/scos/user/intro-to-spryker/{{ page.version }}/support/how-to-share-secrets-with-the-spryker-support-team.html).
+You can create cases by using the drop down menu “Create a case” and selecting the respective case type, or by clicking on the case type on the landing page. When creating cases, please make use of the recommendations explained [here](/docs/scos/user/intro-to-spryker/{{page.version}}/support/how-to-share-secrets-with-the-spryker-support-team.html).
 
 ### Requests
 
@@ -32,7 +32,7 @@ Problems can be reports suspecting a bug or issues with our hosting. Please make
 
 ### Emergencies
 
-Emergencies are reserved for problems that have significant business impact now or very soon. Emergency cases regularly start an [escalation](/docs/scos/user/intro-to-spryker/{{ page.version }}/support/case-escalation.html). Please do not use this case type to simply try to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
+Emergencies are reserved for problems that have significant business impact now or very soon. Emergency cases regularly start an [escalation](/docs/scos/user/intro-to-spryker/{{page.version}}/support/case-escalation.html). Please do not use this case type to simply try to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
 
 ### Hosting Change Requests
 
@@ -43,4 +43,4 @@ In cases you need changes done at a certain date, please include that informatio
 
 ## Managing Cases
 
-Clicking on “Our Cases” brings you to a list view of all cases that you have opened with us. If you want to take a look at the details of a particular case, just click on the case number and it will bring you to the detail page of that particular case. Here you can perform actions like starting a Case [Escalation](/docs/scos/user/intro-to-spryker/{{ page.version }}/support/case-escalation.html), taking a look at the communication history, and see the current status of the case and any Jira Ticket that might be associated with the case. 
+Clicking on “Our Cases” brings you to a list view of all cases that you have opened with us. If you want to take a look at the details of a particular case, just click on the case number and it will bring you to the detail page of that particular case. Here you can perform actions like starting a Case [Escalation](/docs/scos/user/intro-to-spryker/{{page.version}}/support/case-escalation.html), taking a look at the communication history, and see the current status of the case and any Jira Ticket that might be associated with the case. 

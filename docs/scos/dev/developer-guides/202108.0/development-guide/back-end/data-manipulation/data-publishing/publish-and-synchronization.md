@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/publish-and-synchronization
 ---
 
-To access data rapidly, a client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. The client does not have direct access to the [SQL database](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/zed/persistence-layer/about-the-persistence-layer.html) used by the back end. To keep the client data sources always up to date, all the changes made on the back end should be propagated to the front-end data sources. To do this, Spryker implements a two-step process, called Publish and Synchronize:
+To access data rapidly, a client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. The client does not have direct access to the [SQL database](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/zed/persistence-layer/about-the-persistence-layer.html) used by the back end. To keep the client data sources always up to date, all the changes made on the back end should be propagated to the front-end data sources. To do this, Spryker implements a two-step process, called Publish and Synchronize:
 
 1.  Publish:
 
@@ -42,7 +42,7 @@ The advantages of the approach are as follows:
 *   Data can be localized and target a particular store.
 
 
-Both Publish and Synchronize implement the queue pattern. See [Spryker Queue Module](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/queue/queue.html) to learn more.
+Both Publish and Synchronize implement the queue pattern. See [Spryker Queue Module](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/queue/queue.html) to learn more.
 
 The process relies heavily on Propel Behaviors. Propel Behaviors are used to trigger actions automatically on updating the database. This way, you don’t need to trigger any step of the process manually in code. See [Boostrapping a Behavior](http://propelorm.org/documentation/cookbook/writing-behavior.html) to learn more.
 
@@ -50,7 +50,7 @@ The process relies heavily on Propel Behaviors. Propel Behaviors are used to tri
 
 There are 2 ways to start the Publish process:
 
-1.  Trigger the publish event manually using the [Event Facade](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/event/adding-events.html):
+1.  Trigger the publish event manually using the [Event Facade](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/event/adding-events.html):
 
 ```php
 $this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventEntityTransfer())->setId($id));

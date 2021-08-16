@@ -225,6 +225,6 @@ After Log minor 3.4.0, a project could get unexpected behavior if methods were e
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Coding Best Practices](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/best-practices/coding-best-practices.html)
+* [Coding Best Practices](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/best-practices/coding-best-practices.html)
 
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

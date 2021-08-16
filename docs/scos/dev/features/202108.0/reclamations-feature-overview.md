@@ -14,9 +14,9 @@ Handling order claims are the reality of doing business for most e-commerce site
 
 The Reclamations feature is a simple, yet effective way for administrators to handle all the customer order claims. The shop administrators can create, view, and edit the reclamations in the dedicated section of the Administration Interface. The editing implies making a refund (depending on your state machine configuration) or closing the reclamation. Thus, the Reclamation feature makes the process of claims-handling easier, faster and more efficient for the store administrators, as well as helps to improve customer service.
 
-Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/orders/managing-orders.html#claiming-orders) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).
+Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#claiming-orders) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).
 
-After the reclamation has been created, it appears on the [Reclamations](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/reclamations/managing-reclamations.html) page under the **Sales** menu in the Back Office. Each reclamation is linked to a specific order by order ID, however, one and the same order can have more than one reclamation.
+After the reclamation has been created, it appears on the [Reclamations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/reclamations/managing-reclamations.html) page under the **Sales** menu in the Back Office. Each reclamation is linked to a specific order by order ID, however, one and the same order can have more than one reclamation.
 
 With the reclamations in place, you can find the problematic issues with orders that a shop owner has (e.g., the product is faulty or broken) and manage them.
 
@@ -53,9 +53,9 @@ In the Back Office in the order list, a Back Office user doesn't have the functi
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/reclamations/managing-reclamations.html" class="mr-link">Create an order linked to a reclamation</a></li>
-                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/reclamations/managing-reclamations.html" class="mr-link">Manage reclamations</a></li>
-                <li><a href="/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/sales/orders/managing-orders.html#claiming-orders" class="mr-link">Create a new order-related reclamation</a></li>
+                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/reclamations/managing-reclamations.html" class="mr-link">Create an order linked to a reclamation</a></li>
+                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/reclamations/managing-reclamations.html" class="mr-link">Manage reclamations</a></li>
+                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#claiming-orders" class="mr-link">Create a new order-related reclamation</a></li>
             </ul>
         </div>
     </div>

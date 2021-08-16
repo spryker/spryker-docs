@@ -73,4 +73,4 @@ If you have assigned too many products to your category, you can remove some of 
 
 ## Next steps
 
-You have assigned products to a category. Now, you can learn how to [manage categories](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/category/managing-categories.html).
+You have assigned products to a category. Now, you can learn how to [manage categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/managing-categories.html).

@@ -12,7 +12,7 @@ redirect_from:
 
 ## Upgrading from Version 6.* to Version 7.*
     
-Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs/scos/dev/features/{{ page.version }}/cms/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 ### BC breaks and solutions:
 

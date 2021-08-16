@@ -30,7 +30,7 @@ Follow the steps below to select a content item you want to create:
     * [Create a file list](#create-a-file-list-content-item)
     * [Create a navigation](#create-a-navigation-content-item)
 
-To learn about the content item types, see [Content item types: Module relations](/docs/scos/dev/features/{{ page.version }}/content-items/content-item-types-module-relations.html).
+To learn about the content item types, see [Content item types: Module relations](/docs/scos/dev/features/{{page.version}}/content-items/content-item-types-module-relations.html).
 
 ### Reference information: Select a content item
 
@@ -59,7 +59,7 @@ On the *Overview of Content Items* page, you can:
 ## Create a banner content item
 {% info_block infoBox %}
 
-For the use cases and examples of the banner content item, see [Banner Content Item Widget](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) and [Banner Content Item Widget Templates](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#banner-content-item-widget-templates).
+For the use cases and examples of the banner content item, see [Banner Content Item Widget](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) and [Banner Content Item Widget Templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#banner-content-item-widget-templates).
 
 {% endinfo_block %}
 Follow the steps to create a banner:
@@ -76,7 +76,7 @@ Follow the steps to create a banner:
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
 
 
@@ -122,7 +122,7 @@ The following table describes the attributes on the *Create Content Item: Banner
 
 {% info_block infoBox %}
 
-For the use cases and examples of the abstract product list content item, see [Abstract Product List Content Item Widget](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#abstract-product-list-content-item-widget) and [Abstract Product List Content Item Widget Templates](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#abstract-product-list-content-item-widget-templates).
+For the use cases and examples of the abstract product list content item, see [Abstract Product List Content Item Widget](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#abstract-product-list-content-item-widget) and [Abstract Product List Content Item Widget Templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#abstract-product-list-content-item-widget-templates).
 
 {% endinfo_block %}
 
@@ -142,7 +142,7 @@ Follow the steps to create an abstract product list:
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no products are selected for a locale, the default products are displayed on a Storefront page with the locale selected.
 
 
@@ -192,7 +192,7 @@ The following table describes the attributes on the *Create Content Item: Abstra
 
 {% info_block infoBox %}
 
-For the use cases and examples of the product set content item, see [Product Set Content Item Widget](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#product-set-content-item-widget) and [Product Set Content Item Widget Templates](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#product-set-content-item-widget-templates).
+For the use cases and examples of the product set content item, see [Product Set Content Item Widget](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#product-set-content-item-widget) and [Product Set Content Item Widget Templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#product-set-content-item-widget-templates).
 
 {% endinfo_block %}
 
@@ -210,7 +210,7 @@ Follow the steps to create a product set:
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* A locale-specific product set overwrites the default product set when the product set content item is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* A locale-specific product set overwrites the default product set when the product set content item is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no product set is selected for a locale, the default product set is displayed on a Storefront page with the locale selected.
 
 
@@ -256,7 +256,7 @@ The following table describes the attributes on the *CreateContent Item: Product
 ## Create a file list content item
 {% info_block infoBox %}
 
-For the use cases and examples of the file list content item, see [File List Content Item Widget](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#product-set-content-item-widget) and [File List](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#file-list).
+For the use cases and examples of the file list content item, see [File List Content Item Widget](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-types.html#product-set-content-item-widget) and [File List](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-item-widgets-templates.html#file-list).
 
 {% endinfo_block %}
 Follow the steps to create a file list:
@@ -271,13 +271,13 @@ Follow the steps to create a file list:
 {% endinfo_block %}
     2.  In the *Selected Files* table, sort the added files by clicking **Move Down** or **Move Up**. 
 
-See [Content items: reference information](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/references/reference-information-content-items.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
+See [Content items: reference information](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/references/reference-information-content-items.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page. 
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific files overwrite the default files when the file list is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific files overwrite the default files when the file list is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no files are selected for a locale, the default files are displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}
@@ -323,14 +323,14 @@ The following table describes the attributes on the *Create Content Item: File L
 To create a navigation content item:
 
 1. On the *Create Content Item: Navigation* page, enter **Name** and **Description**.
-2. In the *Default* tab, select a navigation from the *Navigation* drop-down list. See [Creating navigation elements](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn about creating navigation elements.
+2. In the *Default* tab, select a navigation from the *Navigation* drop-down list. See [Creating navigation elements](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn about creating navigation elements.
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific navigation element overwrites the default navigation element when rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific navigation element overwrites the default navigation element when rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no navigation element is selected for a locale, the default navigation element is displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}
@@ -351,5 +351,5 @@ The following table describes the attributes on the *Create Content Item: Naviga
 **What's next?**
 The content item is created. Now, you can add it to a CMS block. 
 
-* To learn about adding content item to CMS blocks or a pages, see [Adding content items to CMS pages and blocks](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
-* To learn about editing content items, see [Editing content items](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/content-items/editing-content-items.html).
+* To learn about adding content item to CMS blocks or a pages, see [Adding content items to CMS pages and blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+* To learn about editing content items, see [Editing content items](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/editing-content-items.html).

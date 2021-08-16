@@ -15,7 +15,7 @@ Oryx is the Spryker projects frontend helper. The purpose of Oryx is to simplify
 Oryx relies on webpack 2.
 
 {% info_block warningBox "Oryx for Zed" %}
-If you're looking for Oryx Zed dedicated solution, see [Oryx for Zed](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/zed/oryx-for-zed.html
+If you're looking for Oryx Zed dedicated solution, see [Oryx for Zed](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-for-zed.html
 {% endinfo_block %}.)
 
 ### Requirements

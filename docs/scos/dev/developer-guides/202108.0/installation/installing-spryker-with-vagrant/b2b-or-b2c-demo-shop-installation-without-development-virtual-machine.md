@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/b2b-b2c-demo-shop-installation-without-development-virtual-machine
 ---
 
-To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2c-suite.html) implementations without the Development Virtual Machine, follow the steps below.
+To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html) implementations without the Development Virtual Machine, follow the steps below.
 
 ### Minimum requirements
 
@@ -220,5 +220,5 @@ If you want to configure the hostname, set the values for Yves and Zed hostnames
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
 
 ## Next steps:
-* [Troubleshooting installation issues](/docs/scos/dev/developer-guides/{{ page.version }}/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html)
+* [Troubleshooting installation issues](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html)
 

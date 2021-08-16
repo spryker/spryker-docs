@@ -14,5 +14,5 @@ This section will help the developers to handle situations when a new feature re
 
 Here you will find instructions on how implement these changes in your project. The section includes the following parts:
 
-* [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/split-delivery-migration-concept.html): Contains general information about the Split Delivery feature and describes the steps to update all the affected modules in bulk.
-* [Silex Replacement Migration Concept](/docs/scos/dev/migration-and-integration/{{ page.version }}/migration-concepts/silex-replacement/silex-replacement.html): Outlines the main changes to be applied in a project and concepts on how to migrate away from Silex to the Spryker Application replacing it.
+* [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/split-delivery-migration-concept.html): Contains general information about the Split Delivery feature and describes the steps to update all the affected modules in bulk.
+* [Silex Replacement Migration Concept](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/silex-replacement/silex-replacement.html): Outlines the main changes to be applied in a project and concepts on how to migrate away from Silex to the Spryker Application replacing it.

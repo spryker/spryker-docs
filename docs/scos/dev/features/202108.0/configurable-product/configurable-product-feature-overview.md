@@ -39,9 +39,9 @@ After adding a configurable product to cart, a customer can configure the produc
 
 Configurable products are created in two steps:
 
-1.  A Back Office user creates regular products or a developer imports them. See [Creating an abstract product](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html#creating-an-abstract-product) to learn how they create products in the Back Office or [File details: product_concrete.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html) to learn about the file they import.
+1.  A Back Office user creates regular products or a developer imports them. See [Creating an abstract product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html#creating-an-abstract-product) to learn how they create products in the Back Office or [File details: product_concrete.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html) to learn about the file they import.
     
-2.  A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
+2.  A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
     
 
 ### Managing configurable products
@@ -100,7 +100,7 @@ If a configurator does not pass availability, [regular product availability](htt
 
 The price of a configurable product is based on the selected configuration. When a customer selects a configuration, the price of the product in the selected configuration is displayed. After a customer saves the configuration, the price of the product in the selected configuration is passed to the shop. The customer is redirected back to the shop where they can purchase the product for the price.
 
-If a price is not provided by the configurator, [a regular product price](/docs/scos/dev/features/{{ page.version }}/prices/prices-feature-overview/prices-overview.html) is used.
+If a price is not provided by the configurator, [a regular product price](/docs/scos/dev/features/{{page.version}}/prices/prices-feature-overview/prices-overview.html) is used.
 
 ### Complete and incomplete configuration
 
@@ -122,7 +122,7 @@ Even if all the parameter values are [pre-configured](#pre-configured-parameter-
 
 #### Request for quote with a configurable product
 
-The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/dev/features/{{ page.version }}/quotation-process/quotation-process-feature-overview.html#quotation-process---rfq-feature-overview) functionalities. A Storefront user can only request a quote for a product with a complete configuration.
+The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/dev/features/{{page.version}}/quotation-process/quotation-process-feature-overview.html#quotation-process---rfq-feature-overview) functionalities. A Storefront user can only request a quote for a product with a complete configuration.
 
 ### Pre-configured parameter values
 
@@ -149,7 +149,7 @@ Storefront users configure a product on the Storefront as follows:
                 <li class="mr-title">Developer</li>
                 <li><a href="https://documentation.spryker.com/docs/product-configuration-feature-integration" class="mr-link">Integrate the Configurable Product</a></li>
                  <li><a href="https://documentation.spryker.com/docs/glue-api-product-configuration-feature-integration" class="mr-link">Integrate the Configurable Product Glue API</a></li>
-                <li><a href="/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html" class="mr-link">Import configurable products</a></li>
+                <li><a href="/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html" class="mr-link">Import configurable products</a></li>
             </ul>
         </div>
 </div>

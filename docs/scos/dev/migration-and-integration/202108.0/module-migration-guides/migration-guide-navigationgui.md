@@ -14,7 +14,7 @@ redirect_from:
 
 In version 2, validity dates allow preseting date boundaries for each navigation node to control their own and their descendants visibility.
 
-* Upgrade Navigation module to at least 2.0.0 version. See [Migration Guide - Navigation](/docs/scos/dev/migration-and-integration/{{ page.version }}/module-migration-guides/migration-guide-navigation.html) to learn how to migrate the `Navigation` module.
+* Upgrade Navigation module to at least 2.0.0 version. See [Migration Guide - Navigation](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-navigation.html) to learn how to migrate the `Navigation` module.
 * Update the NavigationGui module to at least 2.0.0 version in your `composer.json`.
 * Make sure the new Zed user interface assets are built by running `npm run zed` (or `antelope build zed` for older versions).
 

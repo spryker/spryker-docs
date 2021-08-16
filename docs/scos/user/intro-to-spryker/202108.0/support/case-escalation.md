@@ -29,7 +29,7 @@ In Support, we acknowledge that we cannot always produce a satisfying result. We
 
 ### How can I initiate an escalation?
 There are two ways to initiate an escalation:
-1. Creating an [Emergency Case](/docs/scos/user/intro-to-spryker/{{ page.version }}/support/how-to-use-the-support-portal.html#emergencies) always start an escalation. You will receive an Email notifying you that an Escalation was started.
+1. Creating an [Emergency Case](/docs/scos/user/intro-to-spryker/{{page.version}}/support/how-to-use-the-support-portal.html#emergencies) always start an escalation. You will receive an Email notifying you that an Escalation was started.
 2. Every email that our support representatives send out includes and "Escalate Case" Link. You will also find an "Escalate Support Case" button on the top right corner of the detail case view on the[ Support Portal](https://support.spryker.com). This link will open a form that you can use to describe why you want to escalate this case. The issue will then be evaluated by internal stakeholders in Spryker and we will get in touch with you within 24h (working hours) to resolve the issue blocking the orderly processing of your case.
 
 ### When can I initiate an escalation?

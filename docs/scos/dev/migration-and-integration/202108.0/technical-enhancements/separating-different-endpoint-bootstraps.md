@@ -569,4 +569,4 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 
 1. Update the Docker SDK to version `1.36.1` or higher. 
 
-2. [Development environment](/docs/scos/dev/developer-guides/{{ page.version }}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Update the hosts file by running the `docker/sdk boot {deploy_file}` command and following the instructions in the output. 
+2. [Development environment](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Update the hosts file by running the `docker/sdk boot {deploy_file}` command and following the instructions in the output. 

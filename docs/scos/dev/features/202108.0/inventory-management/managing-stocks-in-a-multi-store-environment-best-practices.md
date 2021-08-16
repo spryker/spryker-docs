@@ -70,7 +70,7 @@ There is a console command to export all reservations: `\Spryker\Zed\Oms\Communi
 
 {% info_block infoBox %}
 
-This is the default scenario implemented in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/{{ page.version }}/about-spryker.html#spryker-b2bb2c-demo-shops).
+This is the default scenario implemented in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/{{page.version}}/about-spryker.html#spryker-b2bb2c-demo-shops).
 
 {% endinfo_block %}
 

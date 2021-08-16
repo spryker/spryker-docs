@@ -12,10 +12,10 @@ redirect_from:
 
 Easily import your business logic and data, such as Product Information, Customer Base, Categories, and many more into the Spryker Commerce OS.
 
-The* Data Import* feature allows you to configure what you need to import. You don't need to import all data that is available in Spryker OS out of the box. Instead, you can define what data you want to import for your project using a YAML configuration file. See [Importing data with a configuration file](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/importing-data-with-a-configuration-file.html) for details on how you can do that.
+The* Data Import* feature allows you to configure what you need to import. You don't need to import all data that is available in Spryker OS out of the box. Instead, you can define what data you want to import for your project using a YAML configuration file. See [Importing data with a configuration file](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-data-with-a-configuration-file.html) for details on how you can do that.
 {% info_block infoBox "Data import help" %}
 
-To help you build your import files, define the correct order of the data importers to run, there is the [Data import documentation](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/about-data-import-categories.html) for your reference. Consult it whenever you need to import data into your project.
+To help you build your import files, define the correct order of the data importers to run, there is the [Data import documentation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/about-data-import-categories.html) for your reference. Consult it whenever you need to import data into your project.
 
 {% endinfo_block %}
 
@@ -28,9 +28,9 @@ The main benefits of the Data Import feature are:
 
 **What's next?**
 
-* For an overview and implementation details of the Spryker data importers, see [Data importers overview and implementation](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-importers-overview-and-implementation.html).
-* To create your own data importer, see [Creating a data importer](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/creating-a-data-importer.html).
-* To import the Demo Shop data, see [Importing Demo Shop data](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/demo-shop-data-import/importing-demo-shop-data.html) and[ About data import categories](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/about-data-import-categories.html).
-* To import data with a YAML configuration file, see [Importing data with a configuration file](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/importing-data-with-a-configuration-file.html).
+* For an overview and implementation details of the Spryker data importers, see [Data importers overview and implementation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importers-overview-and-implementation.html).
+* To create your own data importer, see [Creating a data importer](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/creating-a-data-importer.html).
+* To import the Demo Shop data, see [Importing Demo Shop data](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/demo-shop-data-import/importing-demo-shop-data.html) and[ About data import categories](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/about-data-import-categories.html).
+* To import data with a YAML configuration file, see [Importing data with a configuration file](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-data-with-a-configuration-file.html).
 
 

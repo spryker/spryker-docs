@@ -19,14 +19,14 @@ In your development, this resource can help you to:
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Shipment feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html)
-* [Glue API: Order Management Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html)
-* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
-* [Glue API: Product options feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Product Bundles feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-product-bundles-feature-integration.html)
-* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html)
-* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
-* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
+* [Glue API: Shipment feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html)
+* [Glue API: Order Management Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Product options feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Bundles feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-bundles-feature-integration.html)
+* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html)
+* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
+* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 ## Retrieve all orders
 To retrieve a list of all orders made by a registered customer, send the request:
@@ -1221,7 +1221,7 @@ To retrieve detailed information on an order, send the request:
 
 | ATTRIBUTE       | TYPE   | DESCRIPTION                                                  |
 | --------------- | ------ | ------------------------------------------------------------ |
-| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
+| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
 | createdAt       | String | Date and time when the order was created.                    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode       | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
@@ -1262,7 +1262,7 @@ To retrieve detailed information on an order, send the request:
 | billingAddress.email       | String | Email address to use for communication.                      |
 | billingAddress.country     | String | Specifies the country.                                       |
 | billingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.                            |
-| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/checking-out-purchases.html) to learn how to do that. |
+| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html) to learn how to do that. |
 
 
 **Order item information** 
@@ -1317,7 +1317,7 @@ To retrieve detailed information on an order, send the request:
 | items.salesOrderConfiguredBundleItem |Object |Contains information about the items of the configured bundle. |
 | items.salesOrderConfiguredBundleItem.configurableBundleTemplateSlotUuid| String| Unique identifier of the configurable bundle slot in the system. |
 | items.metadata                          | object  | Metadata of the concrete product.                            |
-| items.metadata.superAttributes          | String  | [Attributes](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/product-attributes-overview.html) of the order item. |
+| items.metadata.superAttributes          | String  | [Attributes](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/product-attributes-overview.html) of the order item. |
 | items.metadata.image                    | String  | Product image URL.                                           |
 
 **Measurement unit calculations**
@@ -1400,7 +1400,7 @@ To retrieve detailed information on an order, send the request:
 **Shipments**
 | ATTRIBUTE | TYPE   | DESCRIPTION                                                  |
 | :-------- | :----- | :----------------------------------------------------------- |
-| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{ page.version }}/checking-out/checking-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders in version 202009.0](/docs/scos/dev/glue-api-guides/{{ page.version }}/retrieving-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
+| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
 
 | **Included resource** | **Attribute**              | **Type** |
 | :-------------------- | :------------------------- | :------- |
@@ -1436,6 +1436,6 @@ To retrieve detailed information on an order, send the request:
 |002| Access token is missing.  |
 |801| Order with the given order reference is not found.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{ page.version }}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 

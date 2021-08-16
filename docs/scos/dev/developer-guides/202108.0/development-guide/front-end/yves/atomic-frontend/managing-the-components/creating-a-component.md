@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/t-create-component
 ---
 
-As Spryker Shop implements the [Component Model](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html#component-model), adding new functionality to it usually means implementing a new component. In this document, we shall review creation of a new component on the example of a simple block that displays the count of DOM elements of a certain type. To implement it:
+As Spryker Shop implements the [Component Model](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html#component-model), adding new functionality to it usually means implementing a new component. In this document, we shall review creation of a new component on the example of a simple block that displays the count of DOM elements of a certain type. To implement it:
 
 ## 1. Create Component Folder
 First of all, you need to create a folder on the file system where all component files will be located. By default, project level components are located under `src/Pyz/Yves/ShopUi/Theme/default/components`. This folder should contain subfolders for each component type (_atoms_, _molecules_, _organisms_). A links counter is a simple molecule, so it will be created under the **molecules** subfolder. Per naming conventions, the folder name follows [Kebab Case](http://wiki.c2.com/?KebabCase): `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/new-component-counter`.
@@ -150,7 +150,7 @@ Open file `new-component-counter.scss` file and add the following code:
 ```
 
 {% info_block infoBox %}
-As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer
+As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer
 {% endinfo_block %} section in _Atomic Frontend_.)
 
 Also, the styles must be locatable by Webpack. For this purpose, we need to add them to the entry point of the component. Open the `index.ts` file and add the following line:

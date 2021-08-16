@@ -68,6 +68,6 @@ All columns with headers having arrows in the *List of Product Lists* table are 
 
 **What's next?**
 
-* To learn how to manage existing product lists, see the [Managing product lists](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/product-lists/managing-product-lists.html).
+* To learn how to manage existing product lists, see the [Managing product lists](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html).
 
 

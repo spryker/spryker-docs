@@ -19,8 +19,8 @@ The following Feature Integration guide expects the basic feature to be in place
 The current feature integration guide adds the following functionality:
 
 * [Warehouse Management](https://documentation.spryker.com/2021080/docs/multiple-warehouse-stock)
-* [Add to cart from catalog page](/docs/scos/dev/features/{{ page.version }}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
-* [Warehouse address](/docs/scos/dev/features/{{ page.version }}/inventory-management/inventory-management-feature-overview.html#defining-a-warehouse-address)
+* [Add to cart from catalog page](/docs/scos/dev/features/{{page.version}}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
+* [Warehouse address](/docs/scos/dev/features/{{page.version}}/inventory-management/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
 
@@ -552,7 +552,7 @@ Make sure that the warehouse address management works:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
 |--- | --- | --- | 
-| Inventory Management API | | [Glue API: Inventory Management feature integration](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html) |
-| Alternative Products | | [Alternative Products + Inventory Management Feature Integration - ongoing](/docs/scos/dev/migration-and-integration/{{ page.version }}/feature-integration-guides/alternative-products-inventory-management-feature-integration.html)|
+| Inventory Management API | | [Glue API: Inventory Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html) |
+| Alternative Products | | [Alternative Products + Inventory Management Feature Integration - ongoing](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/alternative-products-inventory-management-feature-integration.html)|
 
 

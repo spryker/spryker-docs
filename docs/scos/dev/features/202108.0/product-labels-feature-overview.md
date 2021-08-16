@@ -38,7 +38,7 @@ The product labels are applied to products to be displayed on their product card
 
 
 
-A Back Office user can [create product labels](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) and assign them to products in the Back Office. 
+A Back Office user can [create product labels](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) and assign them to products in the Back Office. 
 
 A developer can create [dynamic product labels](#dynamic-product-label).
 
@@ -48,15 +48,15 @@ A developer can create [dynamic product labels](#dynamic-product-label).
 
 The following dynamic product labels are shipped by default:
 * *Discontinued* 
-The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. See [Discontinuing a Product](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/managing-products/discontinuing-products.html) to learn more.
+The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. See [Discontinuing a Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/discontinuing-products.html) to learn more.
 
 * *Alternatives available*
-The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/scos/dev/features/{{ page.version }}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. See [Adding Product Alternatives](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to learn more.
+The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/scos/dev/features/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. See [Adding Product Alternatives](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to learn more.
 
 * *NEW*
-The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. See [Creating an Abstract Product](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn more. 
+The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. See [Creating an Abstract Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn more. 
 * *SALE* 
-The *SALE* product label is added to a product automatically when the product’s original price is superior to the default price. See [Creating an Abstract Product](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn more. 
+The *SALE* product label is added to a product automatically when the product’s original price is superior to the default price. See [Creating an Abstract Product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn more. 
 
 {% info_block infoBox "Prices" %}
 
@@ -110,7 +110,7 @@ A Back Office user can select the design and the position of the product label o
 </details>
 
 
-When creating a product label, a Back Office user selects a design by entering its name as a **Front-end Reference**. See [Creating a Product Label](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to learn more.
+When creating a product label, a Back Office user selects a design by entering its name as a **Front-end Reference**. See [Creating a Product Label](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to learn more.
 
 If the product label designs shipped by default are not sufficient for your project, a developer can create new HTML classes to use as a Front-end Reference.
 
@@ -127,7 +127,7 @@ The product labels are displayed in ascending order of Priority. So, the label w
 
 In the picture above, the priority value of *Alternatives available* product label is *4*. The Priority value of *Discontinued* product label is *5*.
 
-See [Creating a Product Label](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to learn how a Back Office user can define the product label priority.
+See [Creating a Product Label](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to learn how a Back Office user can define the product label priority.
 
  
 
@@ -136,9 +136,9 @@ See [Creating a Product Label](/docs/scos/user/user-guides/{{ page.version }}/ba
 
 A Back Office user can define the stores each product label is displayed in. For example, if a promotion campaign targets Germany, the *Sale* product label can be displayed only in the *DE* store.
 
-See [Creating a Product Label](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to learn how a Back Office user can define store relation for a product label.
+See [Creating a Product Label](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to learn how a Back Office user can define store relation for a product label.
 
-A developer can also [import store relations for product labels](/docs/scos/dev/developer-guides/{{ page.version }}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html).
+A developer can also [import store relations for product labels](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html).
 
 
 ## Product label statuses
@@ -149,13 +149,13 @@ A product label can have the following statuses:
 
 If a product label is active, it is displayed on all the product pages it is applied to. If a product label is inactive, it is still applied to the selected product, but it is not displayed on the respective product pages. This might be useful when you want to prepare for an event beforehand. You can create an inactive product label and apply it to the desired products. When the event starts, you just need to activate the label to show it on all the product pages it is applied to.
 
-See [Activating/Deactivating a Product Label](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-labels/managing-product-labels.html#activating-deactivating-a-product-label) to learn how a Back Office user can activate and deactivate product labels in the Back Office.
+See [Activating/Deactivating a Product Label](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/managing-product-labels.html#activating-deactivating-a-product-label) to learn how a Back Office user can activate and deactivate product labels in the Back Office.
 
 
 ## Product label exclusivity
 *Exclusive* product label is a product label that, when applied to a product, discards all the other product labels applied to it. The other product labels are still applied to the product, but only the exclusive one is displayed on the respective product card and product details page. This might be useful when running several discounts in a store at the same time. By assigning the labels with corresponding discount names to desired products, you can show the shop users to which products each discount is applied.
 
-See [Creating a Product Label](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to learn how a Back Office user can create an exclusive product label.
+See [Creating a Product Label](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to learn how a Back Office user can create an exclusive product label.
 
  
 

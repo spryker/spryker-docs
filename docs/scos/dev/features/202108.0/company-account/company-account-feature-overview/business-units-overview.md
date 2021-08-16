@@ -101,5 +101,5 @@ This will move the address to Unassigned addresses section.
 
 ## See next 
 
-[Company user rules and permissions overview](/docs/scos/dev/features/{{ page.version }}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
+[Company user rules and permissions overview](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
 

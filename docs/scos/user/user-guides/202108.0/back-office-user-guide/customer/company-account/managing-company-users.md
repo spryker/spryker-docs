@@ -17,7 +17,7 @@ This topic describes how to manage company users.
 To start working with company users, go to the **Customers** > **Company Users** section.
 {% info_block warningBox "Note" %}
 
-Make sure you have a [company role](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-roles.html), [company](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-companies.html), and [business unit](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-units.html) created.
+Make sure you have a [company role](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-roles.html), [company](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-companies.html), and [business unit](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-units.html) created.
 
 {% endinfo_block %}
 
@@ -33,7 +33,7 @@ To add a new company user:
     3. Enter the date of birth and phone values.
     4. Select company and business units from the respective drop-down lists.
     5. Enter the phone number of the user (optional).
-    6. Check the checkbox for the roles you want to assign to the user. The values available for selection are limited by those assigned to a company. See [Managing company roles](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/customer/company-account/managing-company-roles.html) to learn how the company roles are created.
+    6. Check the checkbox for the roles you want to assign to the user. The values available for selection are limited by those assigned to a company. See [Managing company roles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-roles.html) to learn how the company roles are created.
 3. Click **Save**.
 
 ## Editing a company user

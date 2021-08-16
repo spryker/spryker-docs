@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/product-barcode-feature-overview
 ---
 
-The *Product Barcode*  feature allows creating barcodes for any kind of enity. By default, barcodes are only generated for [products](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html).
+The *Product Barcode*  feature allows creating barcodes for any kind of enity. By default, barcodes are only generated for [products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html).
 
 
 ## What is a barcode?
@@ -21,7 +21,7 @@ A barcode is a square or rectangular image consisting of a series of parallel bl
 By default, barcodes are generated based on product SKUs using the [Code128](https://en.wikipedia.org/wiki/Code_128) format. 
 
 {% info_block infoBox %}
-You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/dev/features/{{ page.version }}/product/product-feature-overview/products-overview.html
+You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html
 {% endinfo_block %}.)
 
 {% info_block errorBox %}

@@ -35,7 +35,7 @@ The table with shopping carts shows details for each of the carts, including:
 * Number of products added to cart
 * Price mode (Net or Gross)
 * Cart Total
-* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/dev/features/{{ page.version }}/shared-carts-feature-overview.html), dismiss, delete, switch cart to shopping list (see the *Actions* table for details)
+* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/dev/features/{{page.version}}/shared-carts-feature-overview.html), dismiss, delete, switch cart to shopping list (see the *Actions* table for details)
 
 ![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-cart-list.png)
 
@@ -52,7 +52,7 @@ The table bellow provides detailed information on the possible actions to manage
 To view how to create, edit, duplicate, and delete a cart and how to dissmiss shared carts, see the [Multiple Carts on the storefront](#multiple-carts-per-user-on-the-storefront) section.
 :::
 
-To learn more about sharing the shopping cart, check out [Shared Cart documentation](/docs/scos/dev/features/{{ page.version }}/shared-carts-feature-overview.html).
+To learn more about sharing the shopping cart, check out [Shared Cart documentation](/docs/scos/dev/features/{{page.version}}/shared-carts-feature-overview.html).
 
 Active shopping cart is highlighted in bold.
 
@@ -105,14 +105,14 @@ On the storefront, company users can perform the following actions using the Mul
 ![Dismiss and duplicate a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/dismiss-and-duplicate-a-shopping-cart.gif)
 </details>
 
-* To share a cart with external and internal users via a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/scos/dev/features/{{ page.version }}/persistent-cart-sharing/persistent-cart-sharing-feature-overview.html).
-* To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/scos/dev/features/{{ page.version }}/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
-* To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/scos/dev/features/{{ page.version }}/order-management/order-management-feature-overview/custom-order-reference-overview.html).
-* To add comments to a cart, see [Comments feature overview](/docs/scos/dev/features/{{ page.version }}/comments/comments-feature-overview.html#comments-on-the-storefront).
-* To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/scos/dev/features/{{ page.version }}/order-management/order-management-feature-overview/custom-order-reference-overview.html).
+* To share a cart with external and internal users via a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/scos/dev/features/{{page.version}}/persistent-cart-sharing/persistent-cart-sharing-feature-overview.html).
+* To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/scos/dev/features/{{page.version}}/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
+* To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/scos/dev/features/{{page.version}}/order-management/order-management-feature-overview/custom-order-reference-overview.html).
+* To add comments to a cart, see [Comments feature overview](/docs/scos/dev/features/{{page.version}}/comments/comments-feature-overview.html#comments-on-the-storefront).
+* To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/scos/dev/features/{{page.version}}/order-management/order-management-feature-overview/custom-order-reference-overview.html).
 
 
-In this video, we explain how to use shopping carts in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{ page.version }}/b2b-suite.html).
+In this video, we explain how to use shopping carts in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html).
 <iframe src="https://fast.wistia.net/embed/iframe/s776wlo9ds" title="How to use Shopping Carts in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="640" height="480"></iframe>
 
 ## If you are:

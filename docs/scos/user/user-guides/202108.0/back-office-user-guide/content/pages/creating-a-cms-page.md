@@ -33,7 +33,7 @@ To create a page:
     * **Optional**: Select **Is searchable** to make your page searchable on the web.
     * Select a page template that will determine a page layout. This is a *mandatory* step.
     {% info_block infoBox %}
-Templates are project-specific and are usually created by a developer and business person. If you are missing a CMS page template, contact them and refer to the [HowTo - Create CMS templates](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-page-template
+Templates are project-specific and are usually created by a developer and business person. If you are missing a CMS page template, contact them and refer to the [HowTo - Create CMS templates](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-page-template
 {% endinfo_block %}.)
     * **Optional**: Enter **Valid from** and **Valid to** if you want to define the validity period during which your page will be available on the Storefront.
     * Enter **Name** and **URL** of the page per locale. This is a *mandatory* step.
@@ -92,5 +92,5 @@ The following table describes the attributes you enter when creating a CMS page.
 **What's next?**
 Until now, you have created a page draft. The page itself will be available in the online store after you publish it.
 
-To learn how to view or publish the page, see [Managing CMS pages](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/content/pages/managing-cms-pages.html).
+To learn how to view or publish the page, see [Managing CMS pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-pages.html).
 

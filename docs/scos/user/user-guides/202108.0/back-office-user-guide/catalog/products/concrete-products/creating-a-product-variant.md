@@ -45,11 +45,11 @@ The merchant relation prices are inherited by Product Variants as well.
 5. **Optionally**: Click **Next** to go to the *Image* to add images for the product and define the image order.
  6. **Optionally**: Click **Next** of select the *Assign bundled products* tab to create a bundles product. See [Creating and Managing Product Bundles](https://documentation.spryker.com/2021080/docs/creating-and-managing-product-bundles) to know more.
 7. Click **Save**.
-The page is refreshed and you can see two additional tabs: *Discontinue* and* Product Alternatives*. See  [Discontinuing products](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/managing-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to know more.
+The page is refreshed and you can see two additional tabs: *Discontinue* and* Product Alternatives*. See  [Discontinuing products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 
-To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{ page.version }}/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
+To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
 
 {% endinfo_block %}
 
@@ -119,5 +119,5 @@ On this tab, you see a table with the scheduled prices imported via a CSV file. 
 
 
 **What's next?**
-Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/scos/user/user-guides/{{ page.version }}/back-office-user-guide/catalog/products/managing-products/managing-products.html) section.
+Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/managing-products.html) section.
 

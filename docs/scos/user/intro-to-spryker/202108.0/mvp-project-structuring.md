@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/mvp-project-structuring
   - /docs/mvp-project-structuring
   - /docs/en/mvp-project-structuring
+  - /v5/docs/mvp-project-structuring
+  - /v5/docs/en/mvp-project-structuring
+  - /v4/docs/mvp-project-structuring
+  - /v4/docs/en/mvp-project-structuring
+  - /v3/docs/mvp-project-structuring
+  - /v3/docs/en/mvp-project-structuring
+  - /v2/docs/mvp-project-structuring
+  - /v2/docs/en/mvp-project-structuring
 ---
 
 The purpose of these guidelines described in this topic is to help with the project planning stage. 

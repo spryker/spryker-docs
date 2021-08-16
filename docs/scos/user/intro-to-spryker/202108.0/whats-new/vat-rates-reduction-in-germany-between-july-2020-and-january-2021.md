@@ -7,6 +7,8 @@ redirect_from:
   - /2021080/docs/en/vat-rates-reduction-in-germany-between-july-2020-and-january-2021
   - /docs/vat-rates-reduction-in-germany-between-july-2020-and-january-2021
   - /docs/en/vat-rates-reduction-in-germany-between-july-2020-and-january-2021
+  - /v5/docs/vat-rates-reduction-in-germany-between-july-2020-and-january-2021
+  - /v5/docs/en/vat-rates-reduction-in-germany-between-july-2020-and-january-2021
 ---
 
 On 3 June 2020, the German parliament proposed to temporarily reduce the VAT rates from 1 July 2020 until 31 December 2020.

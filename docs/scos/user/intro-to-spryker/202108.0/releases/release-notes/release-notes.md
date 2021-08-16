@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/release-notes
   - /docs/release-notes
   - /docs/en/release-notes
+  - /v5/docs/release-notes
+  - /v5/docs/en/release-notes
+  - /v4/docs/release-notes
+  - /v4/docs/en/release-notes
+  - /v3/docs/release-notes
+  - /v3/docs/en/release-notes
+  - /v2/docs/release-notes
+  - /v2/docs/en/release-notes
+  - /v1/docs/release-notes
+  - /v1/docs/en/release-notes
 ---
 
 Here you can find the latest Product release notes and the archived content. 

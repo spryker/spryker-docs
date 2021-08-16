@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/security-audit
   - /docs/security-audit
   - /docs/en/security-audit
+  - /v5/docs/security-audit
+  - /v5/docs/en/security-audit
+  - /v4/docs/security-audit
+  - /v4/docs/en/security-audit
+  - /v3/docs/security-audit
+  - /v3/docs/en/security-audit
+  - /v2/docs/security-audit
+  - /v2/docs/en/security-audit
 ---
 
 Between Oktober 7th and November 22nd 2019 SektionEins performed a source code audit and penetration test of the two variants of the Spryker Framework, called Spryker B2B and Spryker B2C.

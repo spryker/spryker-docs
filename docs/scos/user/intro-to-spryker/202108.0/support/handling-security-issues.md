@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/handling-security-issues
   - /docs/handling-security-issues
   - /docs/en/handling-security-issues
+  - /v5/docs/handling-security-issues
+  - /v5/docs/en/handling-security-issues
+  - /v4/docs/handling-security-issues
+  - /v4/docs/en/handling-security-issues
+  - /v3/docs/handling-security-issues
+  - /v3/docs/en/handling-security-issues
+  - /v2/docs/handling-security-issues
+  - /v2/docs/en/handling-security-issues
 ---
 
 If you found a security issue in a Spryker Product, please report it to us.

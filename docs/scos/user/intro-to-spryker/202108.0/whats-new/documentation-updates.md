@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/documentation-updates
   - /docs/documentation-updates
   - /docs/en/documentation-updates
+  - /v5/docs/documentation-updates
+  - /v5/docs/en/documentation-updates
+  - /v4/docs/documentation-updates
+  - /v4/docs/en/documentation-updates
+  - /v3/docs/documentation-updates
+  - /v3/docs/en/documentation-updates
+  - /v2/docs/documentation-updates
+  - /v2/docs/en/documentation-updates
 ---
 
 This page lists all the updates to the documentation made for each release.

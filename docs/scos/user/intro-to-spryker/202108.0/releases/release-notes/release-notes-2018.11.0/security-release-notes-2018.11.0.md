@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/security-release-notes-2018-11-0
   - /docs/security-release-notes-2018-11-0
   - /docs/en/security-release-notes-2018-11-0
+  - /v5/docs/security-release-notes-2018-11-0
+  - /v5/docs/en/security-release-notes-2018-11-0
+  - /v4/docs/security-release-notes-2018-11-0
+  - /v4/docs/en/security-release-notes-2018-11-0
+  - /v3/docs/security-release-notes-2018-11-0
+  - /v3/docs/en/security-release-notes-2018-11-0
+  - /v2/docs/security-release-notes-2018-11-0
+  - /v2/docs/en/security-release-notes-2018-11-0
+  - /v1/docs/security-release-notes-2018-11-0
+  - /v1/docs/en/security-release-notes-2018-11-0
 ---
 
 The following information pertains to security related issues that were discovered and resolved.

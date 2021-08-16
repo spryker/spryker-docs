@@ -7,6 +7,14 @@ redirect_from:
   - /2021080/docs/en/getting-support
   - /docs/getting-support
   - /docs/en/getting-support
+  - /v5/docs/getting-support
+  - /v5/docs/en/getting-support
+  - /v4/docs/getting-support
+  - /v4/docs/en/getting-support
+  - /v3/docs/getting-support
+  - /v3/docs/en/getting-support
+  - /v2/docs/getting-support
+  - /v2/docs/en/getting-support
 ---
 
 If you need technical help for issues that can't be resolved with our documentation, you can always count on our support team.

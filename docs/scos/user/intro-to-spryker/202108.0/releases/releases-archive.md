@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/releases-archive
   - /docs/releases-archive
   - /docs/en/releases-archive
+  - /v5/docs/releases-archive
+  - /v5/docs/en/releases-archive
+  - /v4/docs/releases-archive
+  - /v4/docs/en/releases-archive
+  - /v3/docs/releases-archive
+  - /v3/docs/en/releases-archive
+  - /v2/docs/releases-archive
+  - /v2/docs/en/releases-archive
+  - /v1/docs/releases-archive
+  - /v1/docs/en/releases-archive
 ---
 
 In this section, you can check the archived release notes:

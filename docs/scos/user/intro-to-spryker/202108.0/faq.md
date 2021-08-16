@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/faq
   - /docs/faq
   - /docs/en/faq
+  - /v5/docs/faq
+  - /v5/docs/en/faq
+  - /v4/docs/faq
+  - /v4/docs/en/faq
+  - /v3/docs/faq
+  - /v3/docs/en/faq
+  - /v2/docs/faq
+  - /v2/docs/en/faq
 ---
 
 ## Does Spryker have features?

@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/roadmap
   - /docs/roadmap
   - /docs/en/roadmap
+  - /v5/docs/roadmap
+  - /v5/docs/en/roadmap
+  - /v4/docs/roadmap
+  - /v4/docs/en/roadmap
+  - /v3/docs/roadmap-1
+  - /v3/docs/en/roadmap-1
+  - /v2/docs/roadmap-1
+  - /v2/docs/en/roadmap-1
 ---
 
 **Updated: April 2021**

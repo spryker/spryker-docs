@@ -7,6 +7,12 @@ redirect_from:
   - /2021080/docs/en/security-release-notes-202001
   - /docs/security-release-notes-202001
   - /docs/en/security-release-notes-202001
+  - /v5/docs/security-release-notes-202001
+  - /v5/docs/en/security-release-notes-202001
+  - /v4/docs/security-release-notes-202001
+  - /v4/docs/en/security-release-notes-202001
+  - /v3/docs/security-release-notes-201903-0
+  - /v3/docs/en/security-release-notes-201903-0
 ---
 
 The following information pertains to security-related issues that have been recently resolved. Issues are listed by description and affected modules.

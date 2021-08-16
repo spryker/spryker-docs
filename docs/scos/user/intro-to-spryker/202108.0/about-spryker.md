@@ -8,6 +8,20 @@ redirect_from:
   - /2021080/docs/en/about-spryker
   - /docs/about-spryker
   - /docs/en/about-spryker
+  - /v5/docs/about-spryker
+  - /v5/docs/en/about-spryker
+  - /v4/docs/about-spryker
+  - /v4/docs/en/about-spryker
+  - /v4/docs/understanding-spryker
+  - /v4/docs/en/understanding-spryker
+  - /v3/docs/about-spryker
+  - /v3/docs/en/about-spryker
+  - /v3/docs/understanding-spryker
+  - /v3/docs/en/understanding-spryker
+  - /v2/docs/about-spryker
+  - /v2/docs/en/about-spryker
+  - /v2/docs/understanding-spryker
+  - /v2/docs/en/understanding-spryker
 ---
 
 ## What is the Spryker Commerce OS?

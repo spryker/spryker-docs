@@ -7,6 +7,10 @@ redirect_from:
   - /2021080/docs/en/spryker-release-process
   - /docs/spryker-release-process
   - /docs/en/spryker-release-process
+  - /v5/docs/spryker-release-process
+  - /v5/docs/en/spryker-release-process
+  - /v4/docs/spryker-release-process
+  - /v4/docs/en/spryker-release-process
 ---
 
 Spryker has always prided itself on the fast pace of innovation and rapid development of new functionality. New features and enhancements are shipped almost daily.

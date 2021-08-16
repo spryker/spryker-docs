@@ -8,6 +8,15 @@ redirect_from:
   - /2021080/docs/en/security-updates
   - /docs/security-updates
   - /docs/en/security-updates
+  - /v5/docs/security-updates
+  - /v5/docs/en/security-updates
+  - /v4/docs/security-updates
+  - /v4/docs/en/security-updates
+  - /v3/docs/security-updates
+  - /v3/docs/en/security-updates
+  - /v2/docs/security-updates
+  - /v2/docs/en/security-updates
+  - 
 ---
 
 To receive a security updates email, please request the subscription at [support@spryker.com](support@spryker.com).

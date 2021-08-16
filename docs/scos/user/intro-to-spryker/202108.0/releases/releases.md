@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/releases
   - /docs/releases
   - /docs/en/releases
+  - /v5/docs/releases
+  - /v5/docs/en/releases
+  - /v4/docs/releases
+  - /v4/docs/en/releases
+  - /v3/docs/releases
+  - /v3/docs/en/releases
+  - /v2/docs/releases
+  - /v2/docs/en/releases
+  - /v1/docs/releases
+  - /v1/docs/en/releases
 ---
 
 This section contains the notes for each [Product release](/docs/scos/user/intro-to-spryker/{{page.version}}/spryker-release-process.html#product-releases) made by Spryker. Make sure that you check this section from time-to-time to stay up to date with the improvements, bug fixes and new features that are delivered by our team.

@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/whats-new
   - /docs/whats-new
   - /docs/en/whats-new
+  - /v5/docs/whats-new
+  - /v5/docs/en/whats-new
+  - /v4/docs/whats-new
+  - /v4/docs/en/whats-new
+  - /v3/docs/whats-new
+  - /v3/docs/en/whats-new
+  - /v2/docs/whats-new
+  - /v2/docs/en/whats-new
 ---
 
 <!--

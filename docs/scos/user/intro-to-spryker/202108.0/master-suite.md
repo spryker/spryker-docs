@@ -7,6 +7,14 @@ redirect_from:
   - /2021080/docs/en/master-suite
   - /docs/master-suite
   - /docs/en/master-suite
+  - /v5/docs/master-suite
+  - /v5/docs/en/master-suite
+  - /v4/docs/master-suite
+  - /v4/docs/en/master-suite
+  - /v3/docs/demoshops
+  - /v3/docs/en/demoshops
+  - /v2/docs/demoshops
+  - /v2/docs/en/demoshops
 ---
 
 Master Suite represents a collection of both [B2B](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html) and [B2C](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html) modules. However, unlike B2B and B2C Demo Shops, the code in the [Master Suite project repository](https://github.com/spryker-shop/suite) is released as soon as it is ready.  If you have an implementation that combines B2B and B2C, you can benefit from the full range of SCOS functionality. 

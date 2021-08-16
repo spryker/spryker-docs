@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/supported-versions-of-php
   - /docs/supported-versions-of-php
   - /docs/en/supported-versions-of-php
+  - /v5/docs/supported-versions-of-php
+  - /v5/docs/en/supported-versions-of-php
+  - /v4/docs/supported-versions-of-php
+  - /v4/docs/en/supported-versions-of-php
+  - /v3/docs/supported-versions-of-php
+  - /v3/docs/en/supported-versions-of-php
+  - /v2/docs/supported-versions-of-php
+  - /v2/docs/en/supported-versions-of-php
 ---
 
 **PHP 7.3** is supported until the end of August 2021. Therefore, we strongly recommend switching to **PHP 7.4+** until then.

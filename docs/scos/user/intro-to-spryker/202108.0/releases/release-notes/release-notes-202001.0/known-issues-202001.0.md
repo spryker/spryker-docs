@@ -7,6 +7,10 @@ redirect_from:
   - /2021080/docs/en/known-issues-2020010
   - /docs/known-issues-2020010
   - /docs/en/known-issues-2020010
+  - /v5/docs/known-issues-2020010
+  - /v5/docs/en/known-issues-2020010
+  - /v4/docs/known-issues-2020010
+  - /v4/docs/en/known-issues-2020010
 ---
 
 During the [202001.0 product release](/docs/scos/user/intro-to-spryker/{{page.version}}/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html), we have found some issues that will be fixed in the nearest future.

@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/release-notes-201907-0
   - /docs/release-notes-201907-0
   - /docs/en/release-notes-201907-0
+  - /v5/docs/release-notes-201907-0
+  - /v5/docs/en/release-notes-201907-0
+  - /v4/docs/release-notes-201907-0
+  - /v4/docs/en/release-notes-201907-0
+  - /v3/docs/release-notes-201907-0
+  - /v3/docs/en/release-notes-201907-0
+  - /v2/docs/release-notes-201907-0
+  - /v2/docs/en/release-notes-201907-0
+  - /v1/docs/release-notes-201907-0
+  - /v1/docs/en/release-notes-201907-0
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in August of 2019.

@@ -19,7 +19,7 @@ Specify reasons for returning the sales order items.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-return-management-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html).
 
 ## Create a return
 
@@ -191,7 +191,7 @@ To create a return for a registered user, send the Request sample:
 | return-items | reason | String | Predefined reason why the return was created. |
 | return-items | orderItemUuid | String | Unique identifier of the order item. |
 
-For the attributes of the included resources, see [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-marketplace-orders.html).
+For the attributes of the included resources, see [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html).
 
 ## Retrieve returns
 
@@ -551,8 +551,8 @@ To retrieve returns, send the Request sample:
 | return-items | orderItemUuid | String | Unique identifier of the order item. |
 
 For the attributes of the other other included resources, see the following:
-* [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-marketplace-orders.html)
-* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html)
+* [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html)
 
 ## Retrieve a return
 

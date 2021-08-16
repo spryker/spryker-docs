@@ -16,6 +16,9 @@ entries:
           - title: Back Office for Marketplace Operator
             url: /docs/marketplace/user/intro-to-the-spryker-marketplace/back-office-for-marketplace-operator.html
 
+          - title: Marketplace Storefront
+            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-storefront.html
+
       - title: Features
         url: /docs/marketplace/user/features/
         nested:

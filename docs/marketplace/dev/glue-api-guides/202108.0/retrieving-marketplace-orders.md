@@ -510,7 +510,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | ATTRIBUTE    | TYPE  | DESCRIPTION     |
 | -------------- | -------- | ----------------------- |
-| merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
+| merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
 | itemStates  | Array  | State of the item in the order.    |
 | createdAt  | String   | Date and time when the order was created.    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
@@ -528,7 +528,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 | canceledTotal     | Integer | Total canceled amount.                                  |
 | remunerationTotal | Integer | Total sum of remuneration.                              |
 
-For the attributes of the included resources, see [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html).
+For the attributes of the included resources, see [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html).
 
 ## Retrieve an order
 
@@ -1334,7 +1334,7 @@ GET {% raw %}**/orders/*{{order_id}}***{% endraw %}
 
 | ATTRIBUTE     | TYPE | DESCRIPTION     |
 | ------------------ | -------- | --------------------- |
-| merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
+| merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
 | itemStates      | Array  | Statuses of the order’s items in the [state machine](https://documentation.spryker.com/docs/order-process-modelling-state-machines). |
 | createdAt       | String | Date and time when the order was created.   |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
@@ -1533,4 +1533,4 @@ GET {% raw %}**/orders/*{{order_id}}***{% endraw %}
 | order-shipments | shippingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.       |
 
 
-For the attributes of other included resources, see [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/merchants/retrieving-merchants.html).
+For the attributes of other included resources, see [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html).

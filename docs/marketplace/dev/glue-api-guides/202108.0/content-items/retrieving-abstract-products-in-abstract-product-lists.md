@@ -15,15 +15,14 @@ For details on the modules that provide the API functionality and how to install
 
 To retrieve abstract products in an abstract product list, send the request:
 
-------
 
-`GET` **/content-product-abstract-lists/{% raw %}*{{content_item_key}}*{% endraw %}/abstract-products**
-
-------
+***
+`GET` {% raw %}**/content-product-abstract-lists/*{{content_item_key}}*/abstract-products**{% endraw %}
+***
 
 | PATH PARAMETER | DESCRIPTION      |
 | ----------------- | -------------------------- |
-| ***{{content_item_key}}***   | Unique identifier of an abstract product list to  retrieve the abstract products of. |
+| {% raw %}***{{content_item_key}}***{% endraw %}   | Unique identifier of an abstract product list to  retrieve the abstract products of. |
 
 
 {% info_block warningBox "Info" %}

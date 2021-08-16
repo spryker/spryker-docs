@@ -8,9 +8,9 @@ The *Product Offer* entity is created when multiple merchants need to sell the s
 
 Product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *product offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference is mandatory and can only be defined once.
 
-Merchants can create product offers in the Merchant Portal <!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offers](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-offer-csv.html).
+Merchants can create product offers in the Merchant Portal <!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-csv.html).
 
- Marketplace administrators can view and approve or deny merchants' product offers in the Back Office. See [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html) for details.
+ Marketplace administrators can view and approve or deny merchants' product offers in the Back Office. See [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html) for details.
 
  Every merchant can have multiple offers for the same concrete product. However, a product offer is related to a single merchant and cannot be shared between other merchants:
 
@@ -20,7 +20,7 @@ Merchants can create product offers in the Merchant Portal <!---LINK TO MERCHANT
 
 {% info_block infoBox "Note" %}
 
-You can retrieve product offer details via Glue API. See [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/product-offers/retrieving-product-offers.html) and [Retrieving product offers for a concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-product-offers-of-concrete-products.html) for details.
+You can retrieve product offer details via Glue API. See [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html) and [Retrieving product offers for a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html) for details.
 
 {% endinfo_block %}
 
@@ -33,7 +33,7 @@ To define visibility of a product offer on the Storefront, the following details
 | Merchant SKU         | Allows the merchant to identify the product offer in the ERP system. |
 | Offer Reference      | Unique ID that helps to identify the product offer in the Marketplace. Offer reference is mandatory. |
 | Store                | Defines the store where the product offer is available.      |
-| Price                | Allows the merchant to set their price for the offer. {% info_block infoBox "Info" %} You can also set [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) for a product offer. For now, you can only [import volume prices for product offers](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-price-product-offer-csv.html). {% endinfo_block %}      |
+| Price                | Allows the merchant to set their price for the offer. {% info_block infoBox "Info" %} You can also set [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) for a product offer. For now, you can only [import volume prices for product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer-csv.html). {% endinfo_block %}      |
 | Stock                | Allows the merchant to define stock for the product offer. The stock can be reserved and available. |
 | Status               | Approval status: <ul><li>Approval status (Waiting for approval, Approved, Denied).</li><li>Visibility: Visibility (Active, Inactive).</li></ul> |
 | Validity Dates       | Specifies the period during which the product offer is visible on the Storefront. Concrete product validity dates have higher priority over the Offer validity dates. |
@@ -46,9 +46,9 @@ Product offer status defines whether the offer is active and displayed on the St
 
 * *Waiting for Approval*: Default status that is applied to the offer after it has been created.
 
-* *Approved*:  The approved offer can be displayed on the Storefront. Only the Marketplace administrator can approve the offer. See [Approving or denying offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html#approving-or-denying-offers) for details on how a Marketplace administrator can approve offers in the Back Office.
+* *Approved*:  The approved offer can be displayed on the Storefront. Only the Marketplace administrator can approve the offer. See [Approving or denying offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html#approving-or-denying-offers) for details on how a Marketplace administrator can approve offers in the Back Office.
 
-* *Denied*: If the offer is denied, it cannot be displayed on the Storefront. Only the Marketplace administrator can deny the offer. See [Approving or denying offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html#approving-or-denying-offers) for details on how a Marketplace administrator can deny offers in the Back Office.
+* *Denied*: If the offer is denied, it cannot be displayed on the Storefront. Only the Marketplace administrator can deny the offer. See [Approving or denying offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html#approving-or-denying-offers) for details on how a Marketplace administrator can deny offers in the Back Office.
 
 ### Visibility
 
@@ -70,7 +70,7 @@ The product offer prices support:
 
 Product offer price follows the [concrete product price inheritance model](https://documentation.spryker.com/docs/price-functionality#price-inheritance). So if the Merchant doesn't set a price in the offer, it is taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it is indicated. If at least one price is defined for the offer (e.g., original), it is valid for this offer even if the concrete product has a default price (sales price), but the offer does not. See [Price types](https://documentation.spryker.com/docs/scheduled-prices-feature-overview#price-types) for details on the price types.
 
-Merchants can define product offer prices in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer price](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-price-product-offer-csv.html).
+Merchants can define product offer prices in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer price](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer-csv.html).
 
 ## Product offer stores
 Merchant product offer is defined per store. Merchants set their own prices per store for the product offer.
@@ -83,7 +83,7 @@ The table below illustrates the logic according to which the product offer is d
 | Store where the product offer is added    | x    | &check;    | &check;    |
 | Is product offer visible?                 | no   | yes  | no   |
 
-Merchants can define product offer stores in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer store](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-product-offer-store-csv.html).
+Merchants can define product offer stores in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer store](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-store-csv.html).
 
 ## Product offer stock
 A product offer has its own stock in one or many warehouses. A warehouse can hold stock for multiple offers.
@@ -95,7 +95,7 @@ In cases when an offer doesn't have any physical stock and can always be purchas
 When `is_never_out_of_stock` is set to `true`, then this offer is always available in terms of stock.
 When the offer is out of stock, it is displayed as an out-of-stock product.
 
-Merchants can define product offer stocks in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer stock](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock-csv.html).
+Merchants can define product offer stocks in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer stock](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock-csv.html).
 
 ### Product offer availability
 Product offer availability calculation differs from the calculation of concrete products availability:
@@ -122,7 +122,7 @@ Let's assume that a merchant has defined quantity 10 for product offer 1. The cu
 
 Merchant product offer with all the related offer information is visible on the product detail page, and further on the shopping cart page and checkout pages when the following conditions are met:
 
-1. The merchant who owns the offer is [*Active*](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+1. The merchant who owns the offer is [*Active*](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
 2. The product offer status is:
     * Approved
     * Active
@@ -167,10 +167,10 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 
 |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|
-| [Managing merchant product offers](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/offers/managing-merchant-product-offers.html)|
+| [Managing merchant product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html)|
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}//marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html) and [Marketplace Product Offer Prices feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-product-offer-prices-feature-walkthrough.html for developers.
+Are you a developer? See [Marketplace Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}//marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html) and [Marketplace Product Offer Prices feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-prices-feature-walkthrough.html for developers.
 
 {% endinfo_block %}

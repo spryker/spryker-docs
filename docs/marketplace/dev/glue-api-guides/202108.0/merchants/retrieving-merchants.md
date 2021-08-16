@@ -8,7 +8,7 @@ Merchant is an individual or an organization selling products on the Marketplace
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-merchant-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html).
 
 ## Retrieve merchants
 

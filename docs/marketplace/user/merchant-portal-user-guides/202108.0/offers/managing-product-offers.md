@@ -79,7 +79,7 @@ Using the search field in the top right corner, you can search product offers by
 
 ### Create Offer page
 
-On the *Create Offer* page, you see the list of product you can create an offer for. You can filter, sort and search the products.
+On the *Create Offer* page, you see the list of products you can create an offer for. You can filter, sort and search the products.
 
 #### Filtering products
 

@@ -33,7 +33,7 @@
                 }
 
                 &__link {
-                    padding-left: 52px + 16px * $i;
+                    padding-left: 68px + 16px * $i;
 
                     @include media("<desktop") {
                         padding-left: 18px + 24px * $i;

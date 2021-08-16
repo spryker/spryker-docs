@@ -11,4 +11,4 @@ With the *Marketplace Promotions and Discounts* feature, the discounts are appli
 
 | INTEGRATION GUIDES  |
 | --------------- |
-| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-promotions-discounts-feature-integration.html) | 
+| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-promotions-discounts-feature-integration.html) | 

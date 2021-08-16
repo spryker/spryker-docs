@@ -85,6 +85,12 @@
                 }
             }
 
+            .toc-active & {
+                @include media("<tablet") {
+                    transform: translateY(0);
+                }
+            }
+
             &-line {
                 position: absolute;
                 width: 16px;

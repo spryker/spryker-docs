@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Prom
 template: concept-topic-template
 related: 
     - title: Discount
-    - link: /docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-promotions-and-discounts-feature-walkthrough.html)
+      link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-promotions-and-discounts-feature-walkthrough.html
 ---
 
 The *Marketplace Promotions and Discounts* feature ensures that the discounts are applied to orders. 
@@ -178,6 +178,7 @@ A product catalog manager defines calculation when [creating a voucher](https://
 An exclusive discount is a discount that, when applied to a cart, discards all the other discounts applied to it. If a cart is eligible for multiple exclusive discounts, the highest-value discount is applied.
 
 In the following example, a cart with the order total amount of €100 contains the following discounts.
+
 | Discount name  | Discount amount | Discount type | Exclusiveness | Discounted amount |
 | --- | --- | --- | --- | --- |
 | D1 | 15 | Calculator percentage | Exclusive | €15 |
@@ -194,6 +195,7 @@ The discount exclusivity is resolved as follows:
 A non-exclusive discount is a discount that can be combined with other non-exclusive discounts in a single order.
 
 In the following example, a cart with the order total amount of €30 contains the following discounts.
+
 | Discount name  | Discount amount | Discount type | Exclusiveness | Discounted amount |
 | --- | --- | --- | --- | --- |
 | D1 | 15 | Calculator percentage | Non-exclusive | €15 |

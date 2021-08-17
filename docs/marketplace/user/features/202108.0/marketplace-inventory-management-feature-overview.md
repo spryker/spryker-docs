@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Prod
 template: concept-topic-template
 ---
 
-The *Marketplace Inventory Management* feature includes maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.
+The *Marketplace Inventory Management* feature allows maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.
 In the context of the inventory management, the *warehouse* is the physical place where your products are stored, and stock is the number of products available in the warehouse. 
 
 ## Marketplace warehouse management
@@ -26,7 +26,7 @@ When `is_never_out_of_stock` attribute is set to `true`, then this offer is alwa
 
 When the offer is out of stock, it is displayed as an out-of-stock product.
 
-Merchants can define product offer stock in the Merchant Portal. See [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html) for more details.
+Merchants can define product offer stock in the Merchant Portal. See [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html) for details.
 
 ## Marketplace availability management 
 
@@ -46,13 +46,13 @@ Offer availability is considered on the Storefront: 
 
 {% info_block infoBox "Example" %}
 
-Let's assume that a merchant has defined quantity 10 for product offer 1. The customer adds 8 items of the product offer 1 to cart, and later updates the quantity to 12. In such a situation, the availability of the product offer 1 is checked and the customer is notified to update the quantity of the product offer to the available number to proceed with the purchase. 
+Let's assume that a merchant has defined quantity 10 for product offer 1. A customer adds 8 items of the product offer 1 to cart, and later updates the quantity to 12. In such a situation, the availability of the product offer 1 is checked and the customer is notified to update the quantity of the product offer to the available number to proceed with the purchase. 
 
 {% endinfo_block %}
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Inventory Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-inventory-management-feature-walkthrough.html) <!---LINK--> for developers.
+Are you a developer? See [Marketplace Inventory Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{ page.version }}/marketplace-inventory-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}
 

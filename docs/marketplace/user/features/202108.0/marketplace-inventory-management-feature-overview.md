@@ -28,6 +28,13 @@ When the offer is out of stock, it is displayed as an out-of-stock product.
 
 Merchants can define product offer stock in the Merchant Portal. See [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html) for details.
 
+Also, you can do the following using the data import:
+
+- Manage stock of product offers for a merchant by importing the product offer and stock data separately: [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-product-offer-stock-csv.html).
+-  Define stock when importing the product offer data: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-combined-merchant-product-offer-csv.html).
+-  Import merchant stock data: [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{ page.version }}/file-details-merchant-stock-csv.html) for details.
+-  Import stock of merchant products: [File details: product_stock.csv](https://documentation.spryker.com/docs/file-details-product-stockcsv).
+
 ## Marketplace availability management 
 
 The difference between the current quantity of items in stock and the quantity of these items in the pending orders is called the *availability* of products.

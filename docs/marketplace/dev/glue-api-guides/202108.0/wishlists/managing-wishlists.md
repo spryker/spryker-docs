@@ -16,11 +16,9 @@ For detailed information on the modules that provide the API functionality and r
 
 To create a wishlist, send the request:
 
-------
-
+***
 `POST` **/wishlists**
-
-------
+***
 
 ### Request
 

@@ -631,7 +631,7 @@ For the merchant attributes, see [Retrieve merchants](#merchants-response-attrib
 For the attributes of the included resources, see:
 
 * [Retrieving merchant addresses](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchant-addresses.html#merchant-addresses-response-attributes).
-* [Retrieving merchant opening hours](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchant-addresses.html#merchant-opening-hours-response-attributes).
+* [Retrieving merchant opening hours](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchant-opening-hours.html#merchant-opening-hours-response-attributes).
 
 
 
@@ -646,7 +646,7 @@ Retrieve merchant information as a relationship when sending the following reque
 * [Retrieve a product offer]
 * [Retrieve marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
 
-Search by merchants in the product catalog. See [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html#retrieve-a-wishlist) for details.
+Search by merchants in the product catalog. See [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) for details.
 Resolve a search engine friendly URL of a merchant page. See [Resolving search engine friendly URLs](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html) for details.
 
 

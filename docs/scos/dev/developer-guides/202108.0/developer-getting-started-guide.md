@@ -20,9 +20,9 @@ Typical Spryker installation process includes installing a proper starting point
 
 You can choose from the following options:
 
-* [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html) - a boilerplate for B2B commerce projects.
-* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html) - a starting point for B2C implementations.
-* Separate [Features](/docs/scos/dev/features/{{page.version}}/overview-of-the-feature-guides.html) and modules - you can also expand both Demo Shops with separate features and modules.
+* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html) - a boilerplate for B2B commerce projects.
+* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) - a starting point for B2C implementations.
+* Separate [Features](/docs/scos/dev/features/{{site.version}}/overview-of-the-feature-guides.html) and modules - you can also expand both Demo Shops with separate features and modules.
 
 ### Installing Spryker with Docker
 We recommend starting with a Docker SDK environment. This option includes Docker and related tools to build images and run containers that match your requirements. 
@@ -55,7 +55,7 @@ After installing, make sure to have a look at [Post-Installation steps and addit
 Once you have completed the installation, you can start managing *modules*. A module is a single functional unit, that has well-defined dependencies, and can be used and updated independently. 
 {% info_block infoBox %}
 
-To define your strategy of taking Spryker updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/{{page.version}}/spryker-release-process.html).
+To define your strategy of taking Spryker updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/spryker-release-process.html).
 
 {% endinfo_block %}
 
@@ -125,7 +125,7 @@ Get to know the parts of the Spryker Development Virtual Machine with which we s
 
 Select one of the topics below depending on what you want to do next:
 
-* [About Spryker](/docs/scos/user/intro-to-spryker/{{page.version}}/about-spryker.html): general information about Spryker, news, and release notes.
+* [About Spryker](/docs/scos/user/intro-to-spryker/about-spryker.html): general information about Spryker, news, and release notes.
 * [Features](/docs/scos/dev/features/{{page.version}}/overview-of-the-feature-guides.html): general information about the Spryker features.
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and guides.
 * [User guides](/docs/scos/user/user-guides/{{page.version}}/about-user-guides.html): step-by-step Backoffice and Storefront user guides.

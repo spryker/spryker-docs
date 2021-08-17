@@ -23,7 +23,7 @@ Follow the steps to install Spryker in Development mode:
 In case you are going to run the script on Windows, open Ubuntu (For more details, see the *Install Docker Desktop* section in [Docker Install Prerequisites - Windows](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites.html-windows
 {% endinfo_block %}.))
 2. Create a new folder and navigate into this folder.
-3. Depending on the desired [Demo Shop](/docs/scos/user/about-spryker/202005.0/about-spryker.html#spryker-b2b-b2c-demo-shops):
+3. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops):
    
     a. Clone the B2C repository:
 

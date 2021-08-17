@@ -60,7 +60,7 @@ In Demo mode, the following functionalities are missing or disabled:
 
 ### Use Cases
 Demo mode is used in the following cases:
-* To check or show the functionalities of [[B2B](/docs/scos/user/intro-to-spryker/202009.0/b2b-suite.html)/[B2C demo shops](/docs/scos/user/intro-to-spryker/202009.0/b2c-suite.html)].
+* To check or show the functionalities of [[B2B](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html)/[B2C demo shops](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html)].
 * To check a custom build or a new feature.
 * To test or deploy an application using Continuous Integration and Continuous Delivery tools.
 

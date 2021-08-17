@@ -18,8 +18,8 @@ Typical Spryker installation process includes installing a proper starting point
 
 You can choose from the following options:
 
-* [B2B Demo Shop](/docs/scos/user/about-spryker/202005.0/b2b-suite.html) - a boilerplate for B2B commerce projects;
-* [B2C Demo Shop](/docs/scos/user/about-spryker/202005.0/b2c-suite.html) - a starting point for B2C implementations;
+* [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) - a boilerplate for B2B commerce projects;
+* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) - a starting point for B2C implementations;
 * Separate [Features](https://documentation.spryker.com/v5/docs/overview-of-the-feature-guides) and modules - you can also add separate features and modules to the both Demo Shops to expand their functionality.
 
 ### Spryker in Docker
@@ -52,7 +52,7 @@ After installing, make sure to have a look at [Post-Installation Steps and Addit
 Once you have completed the installation, you can start managing the modules. A module is a single functional unit, that has well-defined dependencies, and can be used and updated independently. 
 {% info_block infoBox %}
 
-See [Spryker Release Process](/docs/scos/user/about-spryker/202005.0/spryker-release-process.html) to learn about our module and feature release process, and to define your strategy as to taking the Spryker updates. 
+See [Spryker Release Process](/docs/scos/user/intro-to-spryker/{{site.version}}/spryker-release-process.html) to learn about our module and feature release process, and to define your strategy as to taking the Spryker updates. 
 
 {% endinfo_block %}
 
@@ -121,7 +121,7 @@ Get to know the parts of the Spryker Development Virtual Machine with which we s
 
 Select one of the topics below depending on what you want to do next:
 
-* [About Spryker](/docs/scos/user/about-spryker/202005.0/about-spryker.html): general information about Spryker, news, and release notes.
+* [About Spryker](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html): general information about Spryker, news, and release notes.
 * [Features](https://documentation.spryker.com/v5/docs/overview-of-the-feature-guides): general information about the Spryker features.
 * [Glue REST API](/docs/scos/dev/glue-api-guides/202005.0/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
 * [User Guides](/docs/scos/user/user-guides/202005.0/about-user-guides.html): step-by-step Backoffice and Storefront user guides.

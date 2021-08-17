@@ -12,7 +12,7 @@ This document provides an overview of REST API endpoints provided by Spryker by 
 
 {% info_block warningBox %}
 
-This REST API reference is valid for [Master Suite](/docs/scos/user/intro-to-spryker/202009.0/master-suite.html) only. Not all the endpoints are available or are the same for B2B and B2C Demo Shops.
+This REST API reference is valid for [Master Suite](/docs/scos/user/intro-to-spryker/{{site.version}}/master-suite.html) only. Not all the endpoints are available or are the same for B2B and B2C Demo Shops.
 
 {% endinfo_block %}
 

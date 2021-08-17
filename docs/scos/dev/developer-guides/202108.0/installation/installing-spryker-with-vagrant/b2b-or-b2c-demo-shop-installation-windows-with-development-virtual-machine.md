@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
 ---
 
-To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html) implementations on Windows, with Development Virtual Machine, follow the steps below.
+To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html) implementations on Windows, with Development Virtual Machine, follow the steps below.
 
 ### 1. Install prerequisites
 

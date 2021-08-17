@@ -44,7 +44,7 @@ Once the company is approved, a Company Administrator can go to `/company/overvi
 {% info_block infoBox %}
 A Company Administrator needs to log out and then log in to refresh the changes.
 {% endinfo_block %}
-Don't forget to check out the video tutorial on setting up [Company](/docs/scos/dev/features/201907.0/company-account-management/company-account-overview/company-account-overview.html) Structure in Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/201907.0/demo-shops.html#b2b-demo-shop):
+Don't forget to check out the video tutorial on setting up [Company](/docs/scos/dev/features/201907.0/company-account-management/company-account-overview/company-account-overview.html) Structure in Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html):
 
 <iframe src="https://fast.wistia.net/embed/iframe/qkdgkeannb" title="How to set up Company Structure in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="589" height="315"></iframe>
 <!-- Last review date: Mar 18, 2019 -->

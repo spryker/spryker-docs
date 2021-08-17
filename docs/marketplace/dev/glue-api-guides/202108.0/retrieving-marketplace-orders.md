@@ -514,7 +514,7 @@ The endpoint responds with an array of orders placed by the authenticated custom
 
 | ATTRIBUTE    | TYPE  | DESCRIPTION     |
 | -------------- | -------- | ----------------------- |
-| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for more details. |
+| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for more details. |
 | itemStates  | Array  | State of the item in the order.    |
 | createdAt  | String   | Date and time when the order was created.    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
@@ -532,7 +532,7 @@ The endpoint responds with an array of orders placed by the authenticated custom
 | canceledTotal     | Integer | Total canceled amount.                                  |
 | remunerationTotal | Integer | Total sum of remuneration.                              |
 
-For the attributes of the included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).
+For the attributes of the included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-merchant-information.html).
 
 ## Retrieve an order
 
@@ -562,7 +562,7 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 | ----------------- | ------------------ |
 | `GET http://glue.mysprykershop.com/orders/DE--6`   | Retrieve information about the `DE--6` order.  |
 | `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieve information about the order with the id `DE--6` with order shipments included. |
-| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with information on merchants.{% info_block warningBox "Note" %}This option is available only if you upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html).{% endinfo_block %} |
+| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with information on merchants.{% info_block warningBox "Note" %}This option is available only if you upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html).{% endinfo_block %} |
 
 ### Response
 
@@ -1538,4 +1538,4 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 | order-shipments | shippingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.       |
 
 
-For the attributes of other included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).
+For the attributes of other included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-merchant-information.html).

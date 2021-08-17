@@ -5,7 +5,7 @@ description: This document describes the product_offer_stock.csv file to configu
 template: import-file-template
 ---
 
-This document describes the `product_offer_stock.csv` file to configure [Merchant product offer stock](/docs/marketplace/user/features/{{ site.version }}/marketplace-product-offer-feature-overview.html#product-offer-stock) information in your Spryker shop.
+This document describes the `product_offer_stock.csv` file to configure [Merchant product offer stock](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html#product-offer-stock) information in your Spryker shop.
 
 To import the file, run:
 
@@ -19,16 +19,16 @@ The file should have the following parameters:
 
 | PARAMETER     | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION        |
 | ------------- | ---------- | ------- | ------------- | ---------------------------- | ----------------------- |
-| product_offer_reference | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{ site.version }}/marketplace-product-offer-feature-overview.html) in the system. |
-| stock_name              | &check;             | String   |                   | Stock name is defined as described in the [merchant warehouse](/docs/marketplace/user/features/{{ site.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-warehouse). | Name of the stock.                                           |
+| product_offer_reference | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+| stock_name              | &check;             | String   |                   | Stock name is defined as described in the [merchant warehouse](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-warehouse). | Name of the stock.                                           |
 | quantity                | &check;             | Integer  |                   |                                                              | The number of product offers that are in stock.              |
-| is_never_out_of_stock   |               | Integer  |                   | 1—option is enabled</br>0—option is disabled.               | Allows the offer to be [never out of stock](/docs/marketplace/user/features/{{ site.version }}/marketplace-product-offer-feature-overview.html#product-offer-stock). |
+| is_never_out_of_stock   |               | Integer  |                   | 1—option is enabled</br>0—option is disabled.               | Allows the offer to be [never out of stock](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html#product-offer-stock). |
 
 ## Import file dependencies
 
 The file has the following dependencies:
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{ site.version }}/file-details-merchant-product-offer-csv.html)
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-product-offer-csv.html)
 - [warehouse.csv](https://documentation.spryker.com/docs/file-details-warehousecsv)
 
 ## Import template file and content example

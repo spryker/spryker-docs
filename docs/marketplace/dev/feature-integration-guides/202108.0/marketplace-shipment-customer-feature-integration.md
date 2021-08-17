@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | -----------|
-| Marketplace Shipment | dev-master | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/marketplace-shipment-feature-integration.html) |
+| Marketplace Shipment | dev-master | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
 | Customer | 202001.0 |  |
 
 ### 1) Set up behavior

@@ -11,7 +11,7 @@ This topic describes how to edit merchant's profile details in the Merchant Port
 
 To start managing a merchant profile, navigate to the **Merchant Portal** > **Profile**.
 
-This section allows [merchant users](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/merchant-users-overview.html) to check and update the merchant profile information.
+This section allows [merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) to check and update the merchant profile information.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
@@ -38,9 +38,9 @@ The contact person is the only contact of the merchant with the Marketplace admi
 |-|-|-|
 | Role | Role in the company/organization the contact person performs. |   |
 | Title | Formal salutation for your contact person (e.g., Mr, Ms, Mrs, Dr).  |   |
-| First Name | First name of the contact person. The first name is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
-| Last Name | Last name of the contact person. The last name is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
-| Email | Email address of the contact person. This email is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
+| First Name | First name of the contact person. The first name is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
+| Last Name | Last name of the contact person. The last name is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
+| Email | Email address of the contact person. This email is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
 | Phone Number | Phone number of the contact person. |   |
 
 #### Company
@@ -65,7 +65,7 @@ To edit the merchant's online profile, in the *Online Profile* tab, edit the nec
 
 ### Reference information: Editing merchant's online profile
 
-This section describes attributes you see when editing he merchant's online profile in the *Online Profile* tab. This  tab contains the information that will further be displayed on the [Merchant Profile page on the Storefront](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
+This section describes attributes you see when editing he merchant's online profile in the *Online Profile* tab. This  tab contains the information that will further be displayed on the [Merchant Profile page on the Storefront](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
 
 #### Store Profile URL
 

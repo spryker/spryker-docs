@@ -245,13 +245,13 @@ To retrieve the product offers, send the request:
 | --------------- | -------- | -------------------- |
 | merchantSku       | String   | The merchant's unique identifier of the product offer. |
 | merchantReference | String   | Unique identifier of the merchant. |
-| isDefault         | Boolean  | Defines if the product offer is [default](docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html#product-offers-on-the-product-details-page) for the concrete product. |
+| isDefault         | Boolean  | Defines if the product offer is [default](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html#product-offers-on-the-product-details-page) for the concrete product. |
 
 
 For the response attributes of the other included resources, see the following:
-* [Retrieve product offer prices](docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
-* [Retrieve product offer availability](docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
-* [Retrieving merchants](docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
+* [Retrieve product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
+* [Retrieve product offer availability](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 
 

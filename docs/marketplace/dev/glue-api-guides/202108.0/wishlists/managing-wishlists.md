@@ -2222,7 +2222,7 @@ For the attributes of the included resources, see
 
 [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
 
-[Retrieving merchants](docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
+[Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 
 

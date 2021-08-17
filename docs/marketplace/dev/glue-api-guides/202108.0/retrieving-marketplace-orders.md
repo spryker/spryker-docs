@@ -22,10 +22,9 @@ For detailed information on the modules that provide the API functionality and r
 
 To retrieve a list of all orders made by a registered customer, send the request:
 
----
+***
 `GET` **/orders**
-
----
+***
 
 ### Request
 
@@ -535,7 +534,7 @@ For the attributes of the included resources, see [Retrieving merchants](/docs/m
 To retrieve detailed information on an order, send the request:
 
 ***
-GET {% raw %}**/orders/*{{order_id}}***{% endraw %}
+`GET` {% raw %}**/orders/*{{order_id}}***{% endraw %}
 ***
 
 | PATH PARAMETER | DESCRIPTION     |

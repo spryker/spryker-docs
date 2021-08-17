@@ -14,7 +14,7 @@ With Spryker shopping cart prospective buyers have the possibility to preselect,
 
 Multiple Shopping Carts provide your customers with a convenient and intuitive shopping experience and enable your shoppers to manage several shopping carts in one place.
 
-In this video we explain how to use Shopping Carts in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/202009.0/b2b-suite.html).
+In this video we explain how to use Shopping Carts in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html).
 <iframe src="https://fast.wistia.net/embed/iframe/s776wlo9ds" title="How to use Shopping Carts in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="640" height="480"></iframe>
 
 ## If you are:

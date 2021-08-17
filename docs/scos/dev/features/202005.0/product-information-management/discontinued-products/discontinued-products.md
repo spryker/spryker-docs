@@ -8,7 +8,7 @@ redirect_from:
   - /v5/docs/en/discontinued-products
 ---
 
-Providing the best cost-performance services and products is the key mission of every B2B company. From time to time, a company may decide to discontinue a product. By discontinuing a product, the merchant stops producing and supporting a product. The [SCOS](/docs/scos/user/about-spryker/202005.0/about-spryker.html) Discontinued Products feature, allows Back Office users to indicate that products are no longer available
+Providing the best cost-performance services and products is the key mission of every B2B company. From time to time, a company may decide to discontinue a product. By discontinuing a product, the merchant stops producing and supporting a product. The [SCOS](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html) Discontinued Products feature, allows Back Office users to indicate that products are no longer available
 in your store with a ‘discontinued’ label. Also, shop owners can temporarily deactivate products for a set period of time. At the
 same time, you can offer Alternative Products to your customers to maintain revenues and customer loyalty.
 

@@ -11,7 +11,7 @@ redirect_from:
 To install the Legacy Demoshop, use the following instructions:
 
 {% info_block infoBox %}
-All customers using the Legacy Demoshop can make their project compatible with the new Spryker Commerce OS architecture available starting from the [November release](/docs/scos/user/about-spryker/201811.0/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
+All customers using the Legacy Demoshop can make their project compatible with the new Spryker Commerce OS architecture available starting from the [November release](/docs/scos/user/intro-to-spryker/{{site.version}}/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
 {% endinfo_block %}. For details, see [Updating the Legacy Demoshop with SCOS](/docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html).)
 
 

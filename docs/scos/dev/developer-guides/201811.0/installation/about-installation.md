@@ -29,4 +29,4 @@ For additional information and resources see:
 * [Configuring the Database Server](/docs/scos/dev/developer-guides/201811.0/installation/configuring-the-database-server.html) – if you want to switch a database
 * [Troubleshooting](/docs/scos/dev/developer-guides/201811.0/installation/troubleshooting.html) - for frequently encountered issues
 * [Debugging Setup](/docs/scos/dev/developer-guides/201811.0/installation/debugging/debugging-setup.html) – how to install and use the Xdebug module
-* For a list of our available GitHub Repositories, see [Demo Shops](/docs/scos/user/about-spryker/201811.0/demo-shops.html).
+* For a list of our available GitHub Repositories, see [Demo Shops](/docs/scos/user/intro-to-spryker/{{site.version}}/master-suite.html).

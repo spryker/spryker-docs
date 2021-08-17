@@ -24,7 +24,7 @@ You can chose from the following options:
 * **Legacy Demoshop** - an old version of Spryker Demo Shop for legacy projects. Use this option only if your project was started before the [November release](http://documentation.spryker.com/v3/docs/release-notes-2018-11-0), and you did not [take steps to make it compatible](/docs/scos/dev/migration-and-integration/201907.0/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html) with the new Spryker architecture.
 
 {% info_block infoBox %}
-For more information, see [Demo Shops](/docs/scos/user/about-spryker/201907.0/demo-shops.html
+For more information, see [Master Suite](/docs/scos/user/intro-to-spryker/master-suite.html
 {% endinfo_block %}.)
 
 **Using the Development Virtual Machine**

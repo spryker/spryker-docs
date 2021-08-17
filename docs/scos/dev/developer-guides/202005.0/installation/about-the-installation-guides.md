@@ -15,9 +15,9 @@ Before proceeding with the installation, make sure you fulfill all the [System R
 {% endinfo_block %}.)
 Using various installation types and environments, you can install:
 
-* [Spryker B2B Demo Shop](/docs/scos/user/about-spryker/202005.0/b2b-suite.html),
-* [Spryker B2C Demo Shop](/docs/scos/user/about-spryker/202005.0/b2c-suite.html),
-* separate [features](https://documentation.spryker.com/v5/docs/en/overview-of-the-feature-guides) and [modules](https://documentation.spryker.com/v20/docs) of the [Spryker Commerce OS](/docs/scos/user/about-spryker/202005.0/master-suite.html).
+* [Spryker B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html),
+* [Spryker B2C Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html),
+* separate [features](https://documentation.spryker.com/v5/docs/en/overview-of-the-feature-guides) and [modules](https://documentation.spryker.com/v20/docs) of the [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/{{site.version}}/master-suite.html).
 
  
 Check out the [Developer Getting Started Guide](/docs/scos/dev/developer-guides/202005.0/developer-getting-started-guide.html) for information regarding the installation process. There you will find information about choosing the right installation type for you.
@@ -28,4 +28,4 @@ For additional information and resources see:
 * [Configuring the Database Server](/docs/scos/dev/developer-guides/202005.0/installation/configuring-the-database-server.html) – if you want to switch a database
 * [Troubleshooting](https://documentation.spryker.com/v5/docs/en/peer-authentication-failed-for-user-postgres) - for frequently encountered issues
 * [Debugging Setup](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-vagrant/debugger/debugger-setup-in-vagrant.html) – how to install and use the Xdebug module
-* For a list of our available GitHub Repositories, see [B2B](/docs/scos/user/about-spryker/202005.0/b2b-suite.html), [B2C](/docs/scos/user/about-spryker/202005.0/b2c-suite.html), [Master Suite](/docs/scos/user/about-spryker/202005.0/master-suite.html).
+* For a list of our available GitHub Repositories, see [B2B](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html), [B2C](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html), [Master Suite](/docs/scos/user/intro-to-spryker/{{site.version}}/master-suite.html).

@@ -61,7 +61,7 @@ To migrate to a newer product release, use the Jarvis *basic* view. This view li
 This view is especially useful when: 
 
 * You have a Spryker-based product and finished the main development part of it.
-* Your project uses feature repositories, or the project is based on the Spyker[ B2B Demo Shop](/docs/scos/user/intro-to-spryker/202009.0/b2b-suite.html) or the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/202009.0/b2c-suite.html). 
+* Your project uses feature repositories, or the project is based on the Spyker[ B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html) or the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html). 
 
 Use this view if you want to stay up-to-date with Spryker and get new features every Spryker product release.
 

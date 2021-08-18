@@ -1,38 +1,45 @@
 ---
-title: Retrieving abstract product lists
-description: This glue API document describes how to retrieve product abstract lists by the content abstract product list content item in Spryker.
+title: Retrieving abstract products in abstract product lists
+description: This glue API document describes how to retrieve abstract products in abstract product lists.
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows retrieving product abstract lists by the content abstract product list content item.
+This endpoint allows retrieving abstract products in [abstract product lists](https://documentation.spryker.com/docs/content-items-feature-overview).
 
 ## Installation
 
 For details on the modules that provide the API functionality and how to install them, see [Content Items API](https://documentation.spryker.com/docs/content-items-api-feature-integration).
 
-## Retrieve abstract product list with its abstract products
+## Retrieve abstract products in an abstract product list
 
-To retrieve an abstract product list by the content abstract product list content item, you can retrieve abstract product list data and include *abstract-products* as the resource relation. Alternatively, you can run this request:
 
-------
+To retrieve abstract products in an abstract product list, send the request:
 
-*`{GET}` **/content-product-abstract-lists/{content_item_key}/abstract-products***
 
-------
+***
+`GET` {% raw %}**/content-product-abstract-lists/*{{content_item_key}}*/abstract-products**{% endraw %}
+***
 
 | PATH PARAMETER | DESCRIPTION      |
 | ----------------- | -------------------------- |
-| content_item_key   | Key of the Abstract Product List content item. |
+| {% raw %}***{{content_item_key}}***{% endraw %}   | Unique identifier of an abstract product list to  retrieve the abstract products of. |
+
+
+{% info_block warningBox "Info" %}
+
+Alternatively, you can [retrieve an abstract product list](https://documentation.spryker.com/docs/retireving-abstract-product-list-content-items#retrieve-abstract-product-list-content-item) with the `abstract-products` resource included.
+
+{% endinfo_block %}
 
 ### Request
 
 Request sample: `GET http://mysprykershop.com/content-product-abstract-lists/apl-1/abstract-products`
 
-{% info_block warningBox "Note" %}
 
-The locale must be specified in the **header** of the GET request. If no locale is specified, data from the **default** locale will be returned.
 
-{% endinfo_block %}
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| Accept-Language | string | &check; | Comma-separated list of locales. If no locale is specified, data from the default locale is returned. |
 
 
 
@@ -169,24 +176,22 @@ The locale must be specified in the **header** of the GET request. If no locale 
 
 | ATTRIBUTE    | TYPE   | DESCRIPTION   |
 | ---------------- | ----- | ----------------------- |
-| attributes     | string | List of the abstract product's attributes and their values.  |
-| sku      | string | SKU of the abstract product.    |
-| merchantReference | string | Unique identifier of the merchant in the system.|
-| averageRating | String | Average rating of the product based on customer rating. |
-| reviewCount | String | Number of reviews left by customer for this abstract product. |
-| name     | string | Name of the abstract product.        |
-| description   | string | Description of the abstract product.  |
-| attributes   | string | List of all available attributes for the product.     |
-| superAttributesDefinition  | string | Attributes used to distinguish between different variants of the abstract product. |
-| superAttributes    | string | List of super attributes and their values for the product variants. |
-| attributeMap   | object | Combination of super attribute/value the product has and the corresponding concrete product IDs. |
-| attributeMap.attribute_variants   | object | List of super attributes with the list of values.   |
-| attributeMap.super_attributes   | object | Applicable super attribute and its values for the product variant. |
-| attributeMap.product_concrete_ids | string | IDs of the product variant.   |
-| metaTitle    | string | Meta title of the abstract product.     |
-| metaKeywords   | string | Meta keywords of the abstract product.    |
+| attributes     | string | The abstract product's attributes.  |
+| attributes.sku      | string | Unique identifier of the abstract product.    |
+| attributes.merchantReference | string | Unique identifier of the merchant to which this product belongs.|
+| attributes.averageRating | String | Average rating of the product based on customer rating. |
+| attributes.reviewCount | String | Number of reviews left by customers for the abstract product. |
+| attributes.name     | string | Abstract product name.        |
+| attributes.description   | string | Abstract product description.  |
+| attributes.attributes   | string | All the attributes for the product.     |
+| attributes.superAttributesDefinition  | string | Super attributes used to distinguish product variants. |
+| attributes.superAttributes    | string | Super attributes of the product variants. |
+| attributes.attributeMap   | object | Super attributes the product has and the corresponding concrete product IDs. |
+| attributes.attributeMap.attribute_variants   | object | List of super attributes.   |
+| attributes.attributeMap.super_attributes   | object | Applicable super attribute of the product variant. |
+| attributes.attributeMap.product_concrete_ids | string | IDs of the product variant.   |
+| attributes.metaTitle    | string | Meta title of the abstract product.     |
+| attributes.metaKeywords   | string | Meta keywords of the abstract product.    |
 | metaDescription  | string | Meta description of the abstract product.    |
-| attributeNames     | object | All attributes (except for the super attributes) and value combinations for the abstract product. |
-| url | String | Unique address using which the abstract product is found in the shop.
-
-For the abstract product response attributes, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html).
+| attributes.attributeNames     | object | All attributes the abstract product, except the super attributes. |
+| attributes.url | String | Unique web address of the abstract product without the domain.|

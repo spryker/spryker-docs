@@ -1,43 +1,45 @@
 ---
-title: Retrieving merchant information
-description: Retrieve the Marketplace merchant information via API
+title: Retrieving merchants
+description: Retrieve merchant information via Glue API
 template: glue-api-storefront-guide-template
 ---
 
-Merchant is the individual or an organization selling products on the Marketplace. Every merchant has a profile page where the customer can check contact information, opening hours, legal details, etc.
-In your development, the Merchant API will help you perform the following tasks:
-
-* Retrieve the profile information of a specific Merchant.
-* Retrieve Merchant’s Addresses.
-* Retrieve Merchant’s Opening Hours.
+Merchant is an individual or an organization selling products on the Marketplace. Every merchant has a profile page where the customer can check information like contact information, opening hours, and legal details.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html).
 
-## Retrieve information about all merchants
+## Retrieve merchants
 
-To retrieve information about all the active merchants, send the request:
-
----
-`GET` **/merchants/**
+To retrieve all merchants, send the request:
 
 ---
+`GET` **/merchants**
+
+---
+
+{% info_block warningBox "Note" %}
+
+This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+
+{% endinfo_block %}
+
 
 ### Request
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| category-keys[] | Category key that is assigned to a merchant. | {% raw %}{{category key}}{% endraw %} |
+| category-keys[] | Filters merchants by category keys. | {% raw %}{{category key}}{% endraw %} |
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/merchants` | Retrieve all active merchants. |
-| `GET https://glue.mysprykershop.com/merchants?category-keys[]=demoshop&category-keys[]=notebooks` | Retrieve merchants with multiple category keys. |
+| `GET https://glue.mysprykershop.com/merchants` | Retrieve all merchants. |
+| `GET https://glue.mysprykershop.com/merchants?category-keys[]=demoshop&category-keys[]=notebooks` | Retrieve merchants with the `demoshop` and `notebooks` category keys assigned. |
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve all active merchants</summary>
+<details><summary markdown='span'>Response sample: retrieve all merchants</summary>
 
 ```json
 {
@@ -195,7 +197,7 @@ To retrieve information about all the active merchants, send the request:
 
 
 
-<details><summary markdown='span'>Response sample: retrieve merchants with multiple category keys</summary>
+<details><summary markdown='span'>Response sample: retrieve merchants by category keys</summary>
 
 ```json
 {
@@ -287,9 +289,12 @@ To retrieve information about all the active merchants, send the request:
 
 </details>
 
+<a name="merchants-response-attributes"></a>
+
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| merchantName           | String   | Name of the Merchant.                             |
+| merchantName           | String   | Name of the merchant.                             |
 | merchantUrl            | String   | Merchant’s profile URL.                           |
 | contactPersonRole      | String   | Role of the contact person.                       |
 | contactPersonTitle     | String   | Salutation to use when addressing the contact person. |
@@ -304,28 +309,34 @@ To retrieve information about all the active merchants, send the request:
 | deliveryTime           | String   | Average delivery time.                            |
 | latitude               | String   | Merchant’s latitude.                              |
 | longitude              | String   | Merchant’s longitude.                             |
-| faxNumber              | String   | Merchant’s fax number.                                |
-| legalInformation       | Object   | List of legal information.                            |
-| terms                  | String   | Merchant’s terms and conditions.                      |
-| cancellationPolicy     | String   | Merchant’s cancellation policy.                       |
-| imprint                | String   | Merchant’s imprint information.                       |
-| dataPrivacy            | String   | Merchant’s data privacy conditions.                   |
-| categories             | Array    | List of categories where the merchant belongs.        |
-| categoryKey            | String   | Category key used for the erchant.                       |
-| name                   | String   | Name of the merchant category.
+| faxNumber              | String   | Merchant’s fax number.                            |
+| legalInformation       | Object   | List of legal information.                        |
+| legalInformation.terms                  | String   | Merchant’s terms and conditions. |
+| legalInformation. cancellationPolicy     | String   | Merchant’s cancellation policy.|
+| legalInformation.imprint                | String   | Merchant’s imprint information.|
+| legalInformation.dataPrivacy            | String   | Merchant’s data privacy conditions.|
+| categories             | Array    | List of categories where the merchant belongs.    |
+| categories.categoryKey            | String   | Category key used for the merchant.  |
+| categories.name                   | String   | Name of the merchant category.
 
-## Retrieve profile information for a merchant
+## Retrieve a merchant
 
-To get the details of a specific merchant, send the request:
+To retrieve a merchant, send the request:
 
 ---
-`GET` **/merchants/{% raw %}*{{merchantId}}*{% endraw %}**
+`GET` {% raw %}**/merchants/*{{merchantId}}***{% endraw %}
 
 ---
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{merchantId}}***{% endraw %} | Merchant reference assigned to every merchant. |
+| {% raw %}***{{merchantId}}***{% endraw %} | Unique identifier of a merchant to retrieve. To get it, [retrieve all merchants](#retrieve-merchants). |
+
+{% info_block warningBox "Note" %}
+
+This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+
+{% endinfo_block %}
 
 ### Request
 
@@ -335,12 +346,12 @@ To get the details of a specific merchant, send the request:
 
 | USAGE | DESCRIPTION |
 | -------------------- | ---------------------- |
-| `GET http://glue.mysprykershop.com/merchants/MER000006` | Retrieve information about merchant MER000006. |
-| `GET http://glue.mysprykershop.com/merchants/MER000006?include=merchant-addresses,merchant-opening-hours` | Retrieve information about merchant MER000006 with the merchant addresses and opening hours included. |
+| `GET http://glue.mysprykershop.com/merchants/MER000006` | Retrieve the merchant with the `MER000006` ID. |
+| `GET http://glue.mysprykershop.com/merchants/MER000006?include=merchant-addresses,merchant-opening-hours` | Retrieve the merchant with the `MER000006` ID, including merchant addresses and opening hours. |
 
 ### Response
 
-<details><summary markdown='span'>Response sample with specific merchant information</summary>
+<details><summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -615,268 +626,29 @@ To get the details of a specific merchant, send the request:
 
 </details>
 
-For the merchant attributes, see Retrieving all merchants.
+For the merchant attributes, see [Retrieve merchants](#merchants-response-attributes).
 
-For details about the attributes of the included resources `merchant-addresses` and `merchant-opening-hours`, see:
+For the attributes of the included resources, see:
 
-* Retrieving merchant addresses.
-* Retrieving merchant opening hours.
-
-## Retrieve merchant addresses
-
-To retrieve merchant addresses, send the request:
-
----
-`GET` **/merchants/*{% raw %}{{merchantId}}{% endraw %}*/merchant-addresses**
-
----
-
-| PATH PARAMETER | DESCRIPTION  |
-| ---------------- | ----------------------- |
-| {% raw %}***{{merchantId}}*** {% endraw %}  | Merchant reference assigned to every merchant. |
-
-### Request
-
-Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchant-addresses`
-
-### Response
-
-<details><summary markdown='span'>Response sample: retrieve merchant addresses</summary>
-
-```json
-{
-    "data": [
-        {
-            "type": "merchant-addresses",
-            "id": "MER000001",
-            "attributes": {
-                "addresses": [
-                    {
-                        "countryName": "CountryName",
-                        "address1": "address1",
-                        "address2": "address2",
-                        "address3": null,
-                        "city": "City",
-                        "zipCode": null,
-                        "email": null
-                    },
-                    {
-                        "countryName": "CountryName2",
-                        "address1": "address3",
-                        "address2": "address4",
-                        "address3": null,
-                        "city": "City2",
-                        "zipCode": null,
-                        "email": null
-                    },
-                    {
-                        "countryName": "Germany",
-                        "address1": "Caroline-Michaelis-Straße",
-                        "address2": "8",
-                        "address3": "",
-                        "city": "Berlin",
-                        "zipCode": "10115",
-                        "email": null
-                    }
-                ]
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/merchants/MER000001/merchant-addresses"
-            }
-        }
-    ],
-    "links": {
-        "self": "https://glue.mysprykershop.com/merchants/MER000001/merchant-addresses"
-    }
-}
-```
-
-</details>
+* [Retrieving merchant addresses](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchant-addresses.html#merchant-addresses-response-attributes).
+* [Retrieving merchant opening hours](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchant-opening-hours.html#merchant-opening-hours-response-attributes).
 
 
-| ATTRIBUTE | TYPE | DESCRIPTION  |
-| ------------- | -------- | --------------- |
-| addresses       | Array    | List of merchant addresses information. |
-| countryName     | String   | Name of the country.                |
-| address1        | String   | 1st line of the merchant address.   |
-| address2        | String   | 2nd line of the merchant address.   |
-| address3        | String   | 3rd line of the merchant address.   |
-| city            | String   | Name of the city.                   |
-| zipCode         | String   | ZIP code.                           |
-| email           | String   | Email address.                      |
 
-## Retrieve merchant opening hours
 
-To retrieve a merchant opening hours, send the request:
-***
-`GET` **/merchants/*{% raw %}{{merchantId}}{% endraw %}*/merchant-opening-hours**
-***
+## Other management options
 
-| PATH PARAMETER | DESCRIPTION    |
-| ------------ | ----------- |
-| {% raw %}***{{merchantId}}***{% endraw %} | Merchant reference assigned to every merchant. |
+Retrieve merchant information as a relationship when sending the following requests:
 
-### Request
+* [Retrieve an abstract product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-a-wishlist)
+* [Retrieve a product offer]
+* [Retrieve marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
 
-Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours`
+Search by merchants in the product catalog. See [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) for details.
+Resolve a search engine friendly URL of a merchant page. See [Resolving search engine friendly URLs](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html) for details.
 
-### Response
-
-<details><summary markdown='span'>Response sample: retrieve merchant opening hours</summary>
-
-```json
-{
-    "data": [
-        {
-            "type": "merchant-opening-hours",
-            "id": "MER000001",
-            "attributes": {
-                "weekdaySchedule": [
-                    {
-                        "day": "MONDAY",
-                        "timeFrom": "07:00:00.000000",
-                        "timeTo": "13:00:00.000000"
-                    },
-                    {
-                        "day": "MONDAY",
-                        "timeFrom": "14:00:00.000000",
-                        "timeTo": "20:00:00.000000"
-                    },
-                    {
-                        "day": "TUESDAY",
-                        "timeFrom": "07:00:00.000000",
-                        "timeTo": "20:00:00.000000"
-                    },
-                    {
-                        "day": "WEDNESDAY",
-                        "timeFrom": "07:00:00.000000",
-                        "timeTo": "20:00:00.000000"
-                    },
-                    {
-                        "day": "THURSDAY",
-                        "timeFrom": "07:00:00.000000",
-                        "timeTo": "20:00:00.000000"
-                    },
-                    {
-                        "day": "FRIDAY",
-                        "timeFrom": "07:00:00.000000",
-                        "timeTo": "20:00:00.000000"
-                    },
-                    {
-                        "day": "SATURDAY",
-                        "timeFrom": "07:00:00.000000",
-                        "timeTo": "20:00:00.000000"
-                    },
-                    {
-                        "day": "SUNDAY",
-                        "timeFrom": null,
-                        "timeTo": null
-                    }
-                ],
-                "dateSchedule": [
-                    {
-                        "date": "2020-01-01",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "New Year's Day"
-                    },
-                    {
-                        "date": "2020-04-10",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "Good Friday"
-                    },
-                    {
-                        "date": "2020-04-12",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "Easter Sunday"
-                    },
-                    {
-                        "date": "2020-04-13",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "Easter Monday"
-                    },
-                    {
-                        "date": "2020-05-01",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "May Day"
-                    },
-                    {
-                        "date": "2020-05-21",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "Ascension of Christ"
-                    },
-                    {
-                        "date": "2020-05-31",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "Whit Sunday"
-                    },
-                    {
-                        "date": "2020-06-01",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "Whit Monday"
-                    },
-                    {
-                        "date": "2020-06-11",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "Corpus Christi"
-                    },
-                    {
-                        "date": "2020-11-01",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "All Saints' Day"
-                    },
-                    {
-                        "date": "2020-12-25",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "1st Christmas day"
-                    },
-                    {
-                        "date": "2020-12-26",
-                        "timeFrom": null,
-                        "timeTo": null,
-                        "note": "2nd Christmas day"
-                    },
-                    {
-                        "date": "2021-11-28",
-                        "timeFrom": "13:00:00.000000",
-                        "timeTo": "18:00:00.000000",
-                        "note": "Sunday Opening"
-                    },
-                    {
-                        "date": "2021-12-31",
-                        "timeFrom": "10:00:00.000000",
-                        "timeTo": "17:00:00.000000",
-                        "note": ""
-                    }
-                ]
-            },
-            "links": {
-                "self": "http://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours"
-            }
-        }
-    ],
-    "links": {
-        "self": "http://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours"
-    }
-}
-```
-
-</details>
-
-| ATTRIBUTE | DESCRIPTION |
-| --------------- | --------------------- |
-| weekdaySchedule | Array of the schedule for weekdays. The following information is available for each weekday:<ul><li>`day`—name of the day.</li><li>`timeFrom`—time when the merchant starts working on a usual day.</li><li>`timeTo`—time when the Mmrchant stops working on a usual day.</li></ul> |
-| dateSchedule | Array of the schedule for special working days, e.g., holidays. Each day exposes the following information:<ul><li>`date`—specifies the date.</li><li>`timeFrom`—time when the merchant starts working on holiday.</li><li>`timeTo`—time when the merchant stops working on the holiday.</li><li>`note`—name of the holiday or special note.</li>|
 
 ## Possible errors
 

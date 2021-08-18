@@ -9,7 +9,7 @@ This endpoint allows managing items in carts of registered users by adding, chan
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Cart feature integration](https://documentation.spryker.com/docs/glue-api-cart-feature-integration)
-* [Glue API: Measurement Units Feature Integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
+* [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 * [Glue API: Promotions & Discounts feature integration](https://documentation.spryker.com/docs/glue-api-promotions-discounts-feature-integration)
 * [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
@@ -22,7 +22,7 @@ For detailed information on the modules that provide the API functionality and r
 To add items to a cart, send the request:
 
 ---
-`POST` **carts/{% raw %}*{{cart_uuid}}*{% endraw %}/items**
+`POST` {% raw %}**carts/*{{cart_uuid}}*/items**{% endraw %}
 
 ---
 
@@ -39,7 +39,7 @@ To add items to a cart, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>items</li><li>product-measurement-units</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>concrete-products</li><li>product-options</li>|
+| include | Adds resource relationships to the request. | <ul><li>items</li><li>product-measurement-units</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>concrete-products</li><li>product-options</li><li>product-offers</li><li>merchants</li></ul>|
 
 {% info_block infoBox "Included resources" %}
 
@@ -200,7 +200,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 
 <details>
-<summary markdown='span'>Request sample with merchant products</summary>
+<summary markdown='span'>Request sample: adding a merchant product</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 
@@ -209,25 +209,50 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     "data": {
         "type": "items",
         "attributes": {
-            "sku": "109_19416433",
-            "quantity": "6"
+            "sku": "020_21081478",
+            "quantity": "6",
+            "merchantReference": "MER000001"
         }
     }
 }
 ```
 </details>
 
+<details>
+<summary markdown='span'>Request sample with items and merchants</summary>
+
+`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=items,merchants`
+
+```json
+{
+    "data": {
+        "type": "items",
+        "attributes": {
+            "sku": "020_21081478",
+            "quantity": "6",
+            "merchantReference": "MER000001"
+        }
+    }
+}
+```
+</details>
+
+
+
+
+
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| sku | String | &check; | Specifies the SKU of the concrete product to add to the cart. |
-| quantity | String | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
+| sku | String | &check; | SKU of the concrete product to add to the cart. |
+| quantity | Integer | &check; | Number of items to add to the guest cart. If you add a promotional item, and the number of products exceeds the number of promotions, the exceeding items are added without the promotional benefits. |
+| merchantReference | String | Required when adding a merchant product. | Unique identifier of the merchant the product of which to add to the cart. |
 | salesUnit | Object |  | List of attributes defining the sales unit to be used for item amount calculation. |
 | salesUnit.id | Integer |  | Unique identifier of the sales units to calculate the item amount in. |
 | salesUnit.amount | Integer |  | Amount of the product in the defined sales units.  |
-| idPromotionalItem | String |  | Promotional item ID. Specify the ID to apply the promotion benefits.  |
+| idPromotionalItem | String |  | Unique identifier of a promotional item to add to the cart. |
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
-| productOfferReference | String | | Unique identifier of the product offer in the system.|
+| productOfferReference | String |Required when adding a product offer. |Unique identifier of the product offer to add to the cart. |
 
 {% info_block infoBox "Conversion" %}
 
@@ -1222,7 +1247,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers </summary>
+<summary markdown='span'>Response sample with product offers</summary>
 
 ```json
 {
@@ -1355,7 +1380,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with merchant products</summary>
+<summary markdown='span'>Response sample: adding a merchant product</summary>
 
 ```json
 {
@@ -1371,22 +1396,56 @@ It is the responsibility of the API Client to track whether the selected items a
             "totals": {
                 "expenseTotal": 0,
                 "discountTotal": 0,
-                "taxTotal": 4935,
-                "subtotal": 75432,
-                "grandTotal": 75432,
-                "priceToPay": 75432
+                "taxTotal": 10135,
+                "subtotal": 63480,
+                "grandTotal": 63480,
+                "priceToPay": 63480
             },
             "discounts": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
+            "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
+        }
+    }
+}
+```
+
+</details>
+
+
+<details>
+<summary markdown='span'>Response sample with items and merchants</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "61ab15e9-e24a-5dec-a1ef-fc333bd88b0a",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "My Cart",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 0,
+                "taxTotal": 20271,
+                "subtotal": 126960,
+                "grandTotal": 126960,
+                "priceToPay": 126960
+            },
+            "discounts": []
+        },
+        "links": {
+            "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
         },
         "relationships": {
             "items": {
                 "data": [
                     {
                         "type": "items",
-                        "id": "109_19416433"
+                        "id": "020_21081478"
                     }
                 ]
             }
@@ -1394,44 +1453,85 @@ It is the responsibility of the API Client to track whether the selected items a
     },
     "included": [
         {
-            "type": "items",
-            "id": "109_19416433",
+            "type": "merchants",
+            "id": "MER000001",
             "attributes": {
-                "sku": "109_19416433",
-                "quantity": 6,
-                "groupKey": "109_19416433",
-                "abstractSku": "109",
+                "merchantName": "Spryker",
+                "merchantUrl": "/en/merchant/spryker",
+                "contactPersonRole": "E-Commerce Manager",
+                "contactPersonTitle": "Mr",
+                "contactPersonFirstName": "Harald",
+                "contactPersonLastName": "Schmidt",
+                "contactPersonPhone": "+49 30 208498350",
+                "logoUrl": "https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-logo.png",
+                "publicEmail": "info@spryker.com",
+                "publicPhone": "+49 30 234567891",
+                "description": "Spryker is the main merchant at the Demo Marketplace.",
+                "bannerUrl": "https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png",
+                "deliveryTime": "1-3 days",
+                "faxNumber": "+49 30 234567800",
+                "legalInformation": {
+                    "terms": "<p><h3>General Terms</h3><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><h3>Using your Information</h3><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><h3>Protecting visitor information</h3><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
+                    "cancellationPolicy": "You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.",
+                    "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>",
+                    "dataPrivacy": "Spryker Systems GmbH values the privacy of your personal data."
+                },
+                "categories": []
+            },
+            "links": {
+                "self": "http://glue.mysprykershop.com/merchants/MER000001"
+            }
+        },
+        {
+            "type": "items",
+            "id": "020_21081478",
+            "attributes": {
+                "sku": "020_21081478",
+                "quantity": 12,
+                "groupKey": "020_21081478",
+                "abstractSku": "020",
                 "amount": null,
                 "productOfferReference": null,
                 "merchantReference": "MER000001",
                 "calculations": {
-                    "unitPrice": 12572,
-                    "sumPrice": 75432,
-                    "taxRate": 7,
+                    "unitPrice": 10580,
+                    "sumPrice": 126960,
+                    "taxRate": 19,
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
-                    "unitGrossPrice": 12572,
-                    "sumGrossPrice": 75432,
-                    "unitTaxAmountFullAggregation": 822,
-                    "sumTaxAmountFullAggregation": 4935,
-                    "sumSubtotalAggregation": 75432,
-                    "unitSubtotalAggregation": 12572,
+                    "unitGrossPrice": 10580,
+                    "sumGrossPrice": 126960,
+                    "unitTaxAmountFullAggregation": 1689,
+                    "sumTaxAmountFullAggregation": 20271,
+                    "sumSubtotalAggregation": 126960,
+                    "unitSubtotalAggregation": 10580,
                     "unitProductOptionPriceAggregation": 0,
                     "sumProductOptionPriceAggregation": 0,
                     "unitDiscountAmountAggregation": 0,
                     "sumDiscountAmountAggregation": 0,
                     "unitDiscountAmountFullAggregation": 0,
                     "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 12572,
-                    "sumPriceToPayAggregation": 75432
+                    "unitPriceToPayAggregation": 10580,
+                    "sumPriceToPayAggregation": 126960
                 },
                 "configuredBundle": null,
                 "configuredBundleItem": null,
+                "productConfigurationInstance": null,
                 "salesUnit": null,
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/109_19416433"
+                "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/020_21081478"
+            },
+            "relationships": {
+                "merchants": {
+                    "data": [
+                        {
+                            "type": "merchants",
+                            "id": "MER000001"
+                        }
+                    ]
+                }
             }
         }
     ]
@@ -1494,32 +1594,22 @@ It is the responsibility of the API Client to track whether the selected items a
 | vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| product-offer-availabilities | isNeverOutOfStock| Boolean | Shows if this is an item that is never out of stock. |
-| product-offer-availabilities  | availability | Boolean | Informs you about availability. |
-| product-offer-availabilities | quantity | Integer | Available stock. |
-| product-offer-prices | price  | Integer | Price to pay for the item in cents. |
-| product-offer-prices  | prices  | Array   | Array of prices for the product offer.|
-| product-offer-prices | priceTypeName | String  | Price type. |
-| product-offer-prices | netAmount | Integer | Net price in cents. |
-| product-offer-prices | grossAmount | Integer | Gross price in cents.  |
-| product-offer-prices | currency.code | String  | Currency code. |
-| product-offer-prices | currency.name | String  | Currency name. |
-| product-offer-prices | currency.symbol | String  | Currency symbol.|
-| product-offers | merchantSku | String  | SKU of the merchant the product offer belongs to.|
-| product-offers | merchantReference | String  | Merchant reference assigned to every merchant. |
-| product-offers | isDefault  | Boolean | Defines whether the product offer is default or not. |
 
 For the attributes of the included resources, see:
-* [Retrieving Measurement Units](https://documentation.spryker.com/docs/retrieving-measurement-units)
+* [Retrieving measurement units](https://documentation.spryker.com/docs/retrieving-measurement-units)
 * [Create a cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
+* [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
+* [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
+* [Retrieving product availability](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 ## Change item quantity
 
 To change the number of items in a cart, send the request:
 
 ***
-`PATCH` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}/items/{% raw %}*{{item_group_key}}*{% endraw %}**
+`PATCH` {% raw %}**/carts/*{{cart_uuid}}*/items/*{{item_group_key}}***{% endraw %}
 ***
 
 
@@ -1688,7 +1778,7 @@ For the attributes of the included resources, see [Retrieving concrete products]
 
 To remove an item from a registered user's cart, send the request:
 ***
-`DELETE` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}/items/{% raw %}*{{item_group_key}}*{% endraw %}**
+`DELETE` {% raw %}**/carts/*{{cart_uuid}}*/items/*{{item_group_key}}***{% endraw %}
 ***
 
 | PATH PARAMETER | DESCRIPTION |

@@ -214,17 +214,14 @@ entries:
             - title:  Retrieving abstract products
               url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html
 
-            - title:  Retrieving abstract product lists
-              url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-product-lists.html
-
           - title: Concrete products
             nested:
 
             - title:  Retrieving concrete products
               url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
 
-            - title:  Retrieving product offers for a concrete product
-              url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-for-a-concrete-product.html
+            - title:  Retrieving product offers of concrete products
+              url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-of-concrete-products.html
 
           - title: Сarts of registered users
             nested:
@@ -235,6 +232,12 @@ entries:
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 
+          - title: Content items
+            nested:
+
+            - title:  Retrieving abstract products in abstract product lists
+              url: /docs/marketplace/dev/glue-api-guides/content-items/retrieving-abstract-products-in-abstract-product-lists.html
+
           - title: Guest carts
             nested:
 
@@ -243,6 +246,30 @@ entries:
 
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
+
+          - title: Merchants
+            nested:
+
+            - title:  Retrieving merchants
+              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html
+
+            - title:  Retrieving merchant addresses
+              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html
+
+            - title:  Retrieving merchant opening hours
+              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-opening-hours.html
+
+          - title: Product offers
+            nested:
+
+            - title: Retrieving product offers
+              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html
+
+            - title: Retrieving product offer availability
+              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-availability.html
+
+            - title: Retrieving product offer prices
+              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-prices.html
 
           - title: Wishlists
             nested:
@@ -253,8 +280,8 @@ entries:
             - title: Managing wishlist items
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 
-          - title: Catalog search
-            url: /docs/marketplace/dev/glue-api-guides/catalog-search.html
+          - title: Searching the product catalog
+            url: /docs/marketplace/dev/glue-api-guides/searching-the-product-catalog.html
 
           - title: Managing the returns
             url: /docs/marketplace/dev/glue-api-guides/managing-the-returns.html
@@ -265,14 +292,8 @@ entries:
           - title: Retrieving Marketplace orders
             url: /docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html
 
-          - title: Retrieving merchant information
-            url: /docs/marketplace/dev/glue-api-guides/retrieving-merchant-information.html
-
-          - title: Retrieving product offers
-            url: /docs/marketplace/dev/glue-api-guides/retrieving-product-offers.html
-
-          - title: Retrieving suggestions for auto-completion and search
-            url: /docs/marketplace/dev/glue-api-guides/retrieving-suggestions-for-auto-completion-and-search.html
+          - title: Retrieving autocomplete and search suggestions
+            url: /docs/marketplace/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
 
 
       - title: HowTos

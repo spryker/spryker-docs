@@ -14,15 +14,14 @@ For detailed information on the modules that provide the API functionality and r
 
 To add an item to a wishlist, send the request:
 
-------
 
-`POST` **/wishlists/*{{wishlist_id}}*/wishlist-items**
-
-------
+***
+`POST` {% raw %}**/wishlists/*{{wishlist_id}}*/wishlist-items**{% endraw %}
+***
 
 | PATH PARAMETER   | DESCRIPTION     |
 | --------------- | ---------------- |
-| ***{{wishlist_id}}*** | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 
 ### Request
 
@@ -44,7 +43,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a  product offer to wishlist</summary>
+<summary markdown='span'>Request sample: adding a product offer to wishlist</summary>
 
  `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
 
@@ -78,10 +77,10 @@ To add an item to a wishlist, send the request:
 ```
 </details>
 
-| ATTRIBUTE  | TYPE   | DESCRIPTION   |
-| ------------ | ----- | ---------------- |
-| sku                   | String | SKU of a concrete product to add.                    |
-| productOfferReference | String | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-for-a-concrete-product.html).|
+| ATTRIBUTE  | TYPE   | REQUIRED | DESCRIPTION   |
+| ------------ | ----- | ---| ---------------- |
+| sku  | String | &check; | SKU of a concrete product or a merchant concrete product to add. |
+| productOfferReference | String | | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html).|
 
 ### Response
 
@@ -105,7 +104,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a  product offer to wishlist</summary>
+<summary markdown='span'>Response sample: adding a product offer to wishlist</summary>
 
 ```json
 {
@@ -164,7 +163,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample -  - adding a merchant product</summary>
+<summary markdown='span'>Response sample - adding a merchant product</summary>
 
 ```json
 {
@@ -195,36 +194,37 @@ To add an item to a wishlist, send the request:
 
 | ATTRIBUTE  | TYPE    | DESCRIPTION  |
 | ----------- | ------ | --------------- |
+| productOfferReference | String  | Unique identifier of the product offer.|
+| merchantReference | String  | Unique identifier of the merchant.  |
+| id     | String  | Unique identifier of the product offer in the wishlist. It's based on the `sku` and `productOfferReference`. |
 | sku       | String  | SKU of the concrete product in the wishlist.     |
-| productOfferReference | String  | Unique identifier of the product offer in the system.|
-| merchantReference | String  | Merchant reference assigned to every merchant.  |
-| id     | String  | Unique identifier of the product offer in the wishlist. It's created based on the SKU and offer reference. |
 | availability    | Object  | Contains information on the product's availability. |
-| isNeverOutOfStock | Boolean | A boolean to show if this is a product that is never out of stock. |
-| availability  | Boolean | Boolean to inform about the availability.  |
-| quantity  | Integer | Available stock (all warehouses aggregated).   |
+| availability.isNeverOutOfStock | Boolean | Defines if the product is never out of stock. |
+| availability.availability  | Boolean | Defines if the product is available.  |
+| availability.quantity  | Integer | Aggregated stock of the item in all [warehouses](https://documentation.spryker.com/docs/inventory-management-feature-overview#warehouse-management).   |
 | prices  | Array   | Contains information on prices.    |
-| priceTypeName  | String  | Price type. |
-| grossAmount  | Integer | Gross price in cents.  |
-| netAmount | Integer | Net price in cents.   |
-| currency.code  | String  | Currency code. |
-| currency.name   | String  | Currency name. |
-| currency.symbol       | String  | Currency symbol.   |
+| prices.priceTypeName  | String  | Price type. |
+| prices.grossAmount  | Integer | Gross price in cents.  |
+| prices.netAmount | Integer | Net price in cents.   |
+| prices.currency | Object | Currency information of the price |
+| prices.currency.code  | String  | Currency code. |
+| prices.currency.name   | String  | Currency name. |
+| prices.currency.symbol       | String  | Currency symbol.   |
 
 ## Delete a wishlist item
 
 To delete wishlist item, send the request:
 
-------
 
-`DELETE` **/wishlists/*{{wishlist_id}}*/wishlist-items/*{{item_sku}}***
+***
+`DELETE` {% raw %}**/wishlists/*{{wishlist_id}}*/wishlist-items/*{{item_sku}}***{% endraw %}
+***
 
-------
 
 | PATH PARAMETER | DESCRIPTION   |
 | -------------- | -------------- |
-| ***{{wishlist_id}}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
-| ***{{item_sku}}***    | Unique identifier of the product to delete.                  |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| {% raw %}***{{item_sku}}***{% endraw %}    | Unique identifier of the product to delete.                  |
 
 ### Request
 

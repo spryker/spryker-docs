@@ -8,6 +8,9 @@ redirect_from:
   - /2021080/docs/en/installing-in-development-mode-on-windows
   - /docs/installing-in-development-mode-on-windows
   - /docs/en/installing-in-development-mode-on-windows
+  - /v6/docs/installing-in-development-mode-on-windows
+  - /v6/docs/en/installing-in-development-mode-on-windows
+
 ---
 
 This document describes how to install Spryker in [Development Mode](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) on Windows.
@@ -114,13 +117,13 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
     {% info_block infoBox %}
 
     You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
-    
+
 {% endinfo_block %}
     9. Select **File** > **Save**.
     10. Close the file.
 
 12. Once the job finishes, build and start the instance:
-    
+
 ```bash
 docker/sdk up
 ```
@@ -149,9 +152,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 * [Spryker in Docker troubleshooting](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
 * [Configuring debugging in Docker](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-debugging-in-docker.html)
-* [Deploy File Reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html) 
+* [Deploy File Reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-services.html)
-* [Setting up a self-signed SSL certificate](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html) 
+* [Setting up a self-signed SSL certificate](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
 * [Additional DevOPS guidelines](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)
-
-

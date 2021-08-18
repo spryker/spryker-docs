@@ -14,6 +14,12 @@ redirect_from:
   - /v5/docs/en/modes-overview
   - /v4/docs/modes-overview
   - /v4/docs/en/modes-overview
+  - /v4/docs/getting-started-with-docker-old
+  - /v4/docs/en/getting-started-with-docker-old
+  - /v4/docs/getting-started-with-docker
+  - /v4/docs/en/getting-started-with-docker
+  - /v3/docs/getting-started-with-docker-201907
+  - /v3/docs/en/getting-started-with-docker-201907
 ---
 
 

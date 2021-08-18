@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/configuring-debugging-in-vagrant-with-vm-below-version-91
   - /docs/configuring-debugging-in-vagrant-with-vm-below-version-91
   - /docs/en/configuring-debugging-in-vagrant-with-vm-below-version-91
+  - /v6/docs/configuring-debugging-in-vagrant-with-vm-below-version-91
+  - /v6/docs/en/configuring-debugging-in-vagrant-with-vm-below-version-91
+  - /v5/docs/debugging-setup-prior-vm91
+  - /v5/docs/en/debugging-setup-prior-vm91
+  - /v4/docs/debugging-setup-prior-vm91
+  - /v4/docs/en/debugging-setup-prior-vm91
+  - /v3/docs/debugging-setup-prior-vm91
+  - /v3/docs/en/debugging-setup-prior-vm91
+  - /v2/docs/debugging-setup-prior-vm91
+  - /v2/docs/en/debugging-setup-prior-vm91
+  - /v1/docs/debugging-setup-prior-vm91
+  - /v1/docs/en/debugging-setup-prior-vm91
 ---
 
 This article describes how to configure debugging in a development environment for VM below version 91.
@@ -39,7 +51,7 @@ In your virtual machine, navigate to `/etc/php5/mods-available/xdebug.ini` and s
 3. Export Xdebug configuration:
 
 ```php
- export XDEBUG_CONFIG='idekey=PHPSTORM' 
+ export XDEBUG_CONFIG='idekey=PHPSTORM'
 ```
 
 3. Restart PHP:
@@ -53,7 +65,7 @@ If the restart is successful, you should get the following message: `[ ok ] Rest
 ## Configuring servers
 
 Define servers in PhpStorm:
-1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**. 
+1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**.
 2. Add a new server:
     1. Select **+**.
     2. For **Name**, enter *zed.mysprykershop.com*.
@@ -82,12 +94,12 @@ To debug with PhpStorm:
     2. Enter a **Name**.
     3. For **Servers**, enter *zed.mysprykershop.com*.
     4. For **Ide Key(session id)**, enter *PHPSTORM*.
-3. Select *Listen for PHP Debug Connections* ![listen-to-php-debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/listen-php-debug-connections.png). 
+3. Select *Listen for PHP Debug Connections* ![listen-to-php-debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/listen-php-debug-connections.png).
 
 
 4. Select *Debug* ![debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/debug-button.png). You should get the message: “Waiting for incoming connection with IDE key ‘PHPSTORM’”.
 
- 
+
 
 ### Debugging Console Commands
 
@@ -100,7 +112,7 @@ XDEBUG_CONFIG="remote_host=10.10.0.1" PHP_IDE_CONFIG="serverName=zed.mysprykersh
 
 ## Configuring a Google Chrome helper for Xdebug
 
-As a Chrome user, you can optionally configure the Xdebug helper extension as follows: 
+As a Chrome user, you can optionally configure the Xdebug helper extension as follows:
 
 1. Add [Xdebug helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) to the browser.
 2. In the extension settings, for *IDE Key*, select **PhpStorm**.
@@ -110,11 +122,10 @@ Now you can manage debugging sessions in the browser toolbar.
 ## Configuring browser bookmarklets for Xdebug
 
 To manage debugging sessions directly in a browser, configure browser bookmarklets as follows:
-1. [Generate helper bookmarklets](http://www.jetbrains.com/phpstorm/marklets/). 
-2. Bookmark the generated links. 
+1. [Generate helper bookmarklets](http://www.jetbrains.com/phpstorm/marklets/).
+2. Bookmark the generated links.
 
 
 As a Chrome user, you can install the “Xdebug helper” extension. Under options set the IDE Key to “PhpStorm”. Everybody else can thengenerate bookmarklets with IDE key set to “PhpStorm” ([Debugger bookmarklets generator for PhpStorm](http://www.jetbrains.com/phpstorm/marklets/)).
 =======
-Now you can manage debugging sessions using the bookmarks you've created. 
-
+Now you can manage debugging sessions using the bookmarks you've created.

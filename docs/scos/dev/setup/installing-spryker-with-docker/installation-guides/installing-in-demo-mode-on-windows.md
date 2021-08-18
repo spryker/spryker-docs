@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/installing-in-demo-mode-on-windows
   - /docs/installing-in-demo-mode-on-windows
   - /docs/en/installing-in-demo-mode-on-windows
+  - /v6/docs/installing-in-demo-mode-on-windows
+  - /v6/docs/en/installing-in-demo-mode-on-windows
 ---
 
 This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on Windows.
@@ -144,8 +146,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 * [Spryker in Docker troubleshooting](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
 * [Configuring debugging in Docker](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-debugging-in-docker.html)
-* [Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html) 
+* [Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-services.html)
-* [Setting up a self-signed SSL certificate](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html) 
+* [Setting up a self-signed SSL certificate](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
 * [Additional DevOPS guidelines](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)
-

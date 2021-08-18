@@ -8,6 +8,15 @@ redirect_from:
   - /2021080/docs/en/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
   - /docs/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
   - /docs/en/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
+  - /v6/docs/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
+  - /v6/docs/en/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
+  - /v5/docs/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
+  - /v5/docs/en/b2b-b2c-demo-shop-installation-windows-with-development-virtual-machine
+  - /v4/docs/b2b-demo-shop-installation-windows-with-development-virtual-machine
+  - /v4/docs/en/b2b-demo-shop-installation-windows-with-development-virtual-machine
+  - /v4/docs/b2c-demo-shop-installation-windows-with-development-virtual-machine
+  - /v4/docs/en/b2c-demo-shop-installation-windows-with-development-virtual-machine
+
 ---
 
 To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html) implementations on Windows, with Development Virtual Machine, follow the steps below.
@@ -154,7 +163,7 @@ xcopy C:\b2b-demo-shop s: /he
 ```
 where:
 * **s:** - is the network drive you have mounted in the previous step.
-        
+
 **For a B2C Demo Shop:**
 1. Logout from the VM and clone the codebase into the `c:\b2c-demo-shop` directory by executing the following commands in Git Bash:
 ```bash
@@ -208,4 +217,3 @@ Credentials to access the administrator interface: user `admin@spryker.com` and 
 
 ## Next steps:
 * [Troubleshooting installation issues](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html)
-

@@ -7,6 +7,12 @@ redirect_from:
   - /2021080/docs/en/running-production-mode
   - /docs/running-production-mode
   - /docs/en/running-production-mode
+  - /v6/docs/running-production-mode
+  - /v6/docs/en/running-production-mode
+  - /v5/docs/running-production-mode
+  - /v5/docs/en/running-production-mode
+  - /v4/docs/running-production-mode
+  - /v4/docs/en/running-production-mode
 ---
 
 This document describes the procedure of generating images and assets suitable for a production environment. After going through all the steps, it's up to you how to proceed further.
@@ -17,7 +23,7 @@ This functionality is available in the Docker SDK from version 1.7.2.
 
 Follow the steps to generate Docker images and assests for a production environment:
 
-1. Clone or update the Docker SDK repository to version 1.7.2. 
+1. Clone or update the Docker SDK repository to version 1.7.2.
 
 ```bash
 git clone https://github.com/spryker/docker-sdk.git -b 1.7.2 --single-branch docker

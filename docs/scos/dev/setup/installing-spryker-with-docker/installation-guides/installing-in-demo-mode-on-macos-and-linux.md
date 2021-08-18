@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/installing-in-demo-mode-on-macos-and-linux
   - /docs/installing-in-demo-mode-on-macos-and-linux
   - /docs/en/installing-in-demo-mode-on-macos-and-linux
+  - /v6/docs/installing-in-demo-mode-on-macos-and-linux
+  - /v6/docs/en/installing-in-demo-mode-on-macos-and-linux
+  - /v5/docs/installation-guide-demo-mode
+  - /v5/docs/en/installation-guide-demo-mode
+  - /v4/docs/installation-guide-demo-mode
+  - /v4/docs/en/installation-guide-demo-mode
+  - /v3/docs/spryker-in-docker-dev-mode-201907
+  - /v3/docs/en/spryker-in-docker-dev-mode-201907
 ---
 
 This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on MacOS and Linux.

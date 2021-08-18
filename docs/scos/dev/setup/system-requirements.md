@@ -20,6 +20,8 @@ redirect_from:
   - /v2/docs/en/system-requirements
   - /v1/docs/system-requirements
   - /v1/docs/en/system-requirements
+  - /v4/docs/supported-browsers
+  - /v4/docs/en/supported-browsers
 ---
 
 | Operating System                          | Native: LinuxOnly via VM: MacOS and MS Windows               |

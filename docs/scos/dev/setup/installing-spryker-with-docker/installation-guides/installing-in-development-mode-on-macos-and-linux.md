@@ -8,6 +8,12 @@ redirect_from:
   - /2021080/docs/en/installing-in-development-mode-on-macos-and-linux
   - /docs/installing-in-development-mode-on-macos-and-linux
   - /docs/en/installing-in-development-mode-on-macos-and-linux
+  - /v6/docs/installing-in-development-mode-on-macos-and-linux
+  - /v6/docs/en/installing-in-development-mode-on-macos-and-linux
+  - /v5/docs/installation-guide-development-mode
+  - /v5/docs/en/installation-guide-development-mode
+  - /v4/docs/installation-guide-development-mode
+  - /v4/docs/en/installation-guide-development-mode
 ---
 
 This document describes how to install Spryker in [Development Mode](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) on MacOS and Linux.
@@ -96,7 +102,7 @@ Follow the installation instructions in the white box from the `docker/sdk boots
 
 
 9. Once the job finishes, build and start the instance:
-    
+
 ```bash
 docker/sdk up
 ```
@@ -113,7 +119,7 @@ To ensure that the installation is successful, make sure you can access the conf
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
-To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. 
+To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`.
 
 {% endinfo_block %}
 
@@ -125,9 +131,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 * [Spryker in Docker troubleshooting](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
 * [Configuring debugging in Docker](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-debugging-in-docker.html)
-* [Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html) 
+* [Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-services.html)
-* [Setting up a self-signed SSL certificate](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html) 
+* [Setting up a self-signed SSL certificate](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
 * [Additional DevOPS guidelines](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)
-
-

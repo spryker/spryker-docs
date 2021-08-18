@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/b2b-b2c-demo-shop-installation-without-development-virtual-machine
   - /docs/b2b-b2c-demo-shop-installation-without-development-virtual-machine
   - /docs/en/b2b-b2c-demo-shop-installation-without-development-virtual-machine
+  - /v6/docs/b2b-b2c-demo-shop-installation-without-development-virtual-machine
+  - /v6/docs/en/b2b-b2c-demo-shop-installation-without-development-virtual-machine
+  - /v5/docs/b2b-b2c-demo-shop-installation-without-development-virtual-machine
+  - /v5/docs/en/b2b-b2c-demo-shop-installation-without-development-virtual-machine
+  - /v4/docs/b2b-demo-shop-installation-without-development-virtual-machine
+  - /v4/docs/en/b2b-demo-shop-installation-without-development-virtual-machine
+  - /v4/docs/b2c-demo-shop-installation-without-development-virtual-machine
+  - /v4/docs/en/b2c-demo-shop-installation-without-development-virtual-machine
 ---
 
 To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html) implementations without the Development Virtual Machine, follow the steps below.
@@ -203,8 +211,8 @@ If you want to configure the hostname, set the values for Yves and Zed hostnames
    composer install
    vendor/bin/install
    ```
-   
-   
+
+
  When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 
 **B2B Demo Shop:**
@@ -221,4 +229,3 @@ Credentials to access the administrator interface: user `admin@spryker.com` and 
 
 ## Next steps:
 * [Troubleshooting installation issues](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html)
-

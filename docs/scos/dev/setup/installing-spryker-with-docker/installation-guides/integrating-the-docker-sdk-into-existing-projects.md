@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/integrating-the-docker-sdk-into-existing-projects
   - /docs/integrating-the-docker-sdk-into-existing-projects
   - /docs/en/integrating-the-docker-sdk-into-existing-projects
+  - /v6/docs/integrating-the-docker-sdk-into-existing-projects
+  - /v6/docs/en/integrating-the-docker-sdk-into-existing-projects
+  - /v5/docs/integrating-docker-into-existing-projects
+  - /v5/docs/en/integrating-docker-into-existing-projects
+  - /v4/docs/integrating-docker-into-existing-projects
+  - /v4/docs/en/integrating-docker-into-existing-projects
+  - /v3/docs/integrating-docker-into-an-existing-project-201907
+  - /v3/docs/en/integrating-docker-into-an-existing-project-201907
 ---
 
 This page describes how you can convert a non-Docker based project into a Docker based one. If you want to install Spryker in Docker from scratch, start with [Development Mode](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) or [Demo Mode](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode).
@@ -20,7 +28,7 @@ To start integrating Docker into your project:
     * [Installing Docker prerequisites on MacOS](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
     * [Installing Docker prerequisites on Linux](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
     * [Installing Docker prerequisites on Windows](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows.html)
-2. Integrate the [Spryker Core](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-ore-feature-integration.html) feature into your project. 
+2. Integrate the [Spryker Core](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-ore-feature-integration.html) feature into your project.
 
 ## Set up .dockerignore
 
@@ -46,7 +54,7 @@ See [.dockerignore file](https://docs.docker.com/engine/reference/builder/#docke
 
 ## Set up configuration
 
-In `config/Shared`, adjust or create a configuration file. The name of the file should correspond to your environment. See  [config_default-docker.php](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/Shared/config_default-docker.php) as an example. 
+In `config/Shared`, adjust or create a configuration file. The name of the file should correspond to your environment. See  [config_default-docker.php](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/Shared/config_default-docker.php) as an example.
 
 Make sure to adjust the configuration for each separate store. See [config_default-docker_DE.php](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/Shared/config_default-docker_DE.php) as an example.
 
@@ -126,8 +134,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 ## Next steps
 * [Troubleshooting](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
 * [Debugging Setup in Docker](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-debugging-in-docker.html)
-* [Deploy File Reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html) 
+* [Deploy File Reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html)
 * [Services](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-services.html)
-* [Self-signed SSL Certificate Setup](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html) 
+* [Self-signed SSL Certificate Setup](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
 * [Additional DevOPS Guidelines](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)
-

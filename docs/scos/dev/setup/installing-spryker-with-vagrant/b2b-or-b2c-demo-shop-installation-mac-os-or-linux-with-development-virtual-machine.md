@@ -8,6 +8,26 @@ redirect_from:
   - /2021080/docs/en/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
   - /docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
   - /docs/en/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v6/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v6/docs/en/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v5/docs/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v5/docs/en/b2b-b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v4/docs/installation-guide-b2b
+  - /v4/docs/en/installation-guide-b2b
+  - /v4/docs/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v4/docs/en/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v3/docs/installation-guide-b2b
+  - /v3/docs/en/installation-guide-b2b
+  - /v3/docs/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v3/docs/en/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v2/docs/installation-guide-b2b
+  - /v2/docs/en/installation-guide-b2b
+  - /v2/docs/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v2/docs/en/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /v1/docs/installation-guide-b2b
+  - /v1/docs/en/installation-guide-b2b
+  - /v1/docs/installation-guide-b2c
+  - /v1/docs/en/installation-guide-b2c
 ---
 
 To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html) implementations on Mac OS or Linux with Development Virtual Machine, follow the steps below.
@@ -111,4 +131,3 @@ Credentials to access the administrator interface: user `admin@spryker.com` and 
 
 ## Next steps:
 * [Troubleshooting installation issues](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html)
-

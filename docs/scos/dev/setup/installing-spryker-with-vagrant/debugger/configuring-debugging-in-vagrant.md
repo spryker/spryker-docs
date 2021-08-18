@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/configuring-debugging-in-vagrant
   - /docs/configuring-debugging-in-vagrant
   - /docs/en/configuring-debugging-in-vagrant
+  - /v6/docs/configuring-debugging-in-vagrant
+  - /v6/docs/en/configuring-debugging-in-vagrant
+  - /v5/docs/debugging-setup
+  - /v5/docs/en/debugging-setup
+  - /v4/docs/debugging-setup
+  - /v4/docs/en/debugging-setup
+  - /v3/docs/debugging-setup
+  - /v3/docs/en/debugging-setup
+  - /v2/docs/debugging-setup
+  - /v2/docs/en/debugging-setup
+  - /v1/docs/debugging-setup
+  - /v1/docs/en/debugging-setup
 ---
 
 This article describes how to configure debugging in your development environment.
@@ -71,7 +83,7 @@ sudo -i bash -c "phpdismod xdebug && systemctl restart php7.4-fpm.service"
 ## Configuring servers
 
 Define servers in PhpStorm:
-    1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**. 
+    1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**.
     2. Add a new server:
         1. Select **+**.
         2. Enter a **Name**. For example, `zed.mysprykershop.com` (it is used in CLI below).
@@ -99,7 +111,7 @@ To debug with PhpStorm:
     2. Enter a **Name**.
     3. For **Servers**, enter *zed.mysprykershop.com*.
     4. For **Ide Key(session id)**, enter *PHPSTORM*.
-3. Select *Listen for PHP Debug Connections* ![listen-to-php-debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/listen-php-debug-connections.png). 
+3. Select *Listen for PHP Debug Connections* ![listen-to-php-debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/listen-php-debug-connections.png).
 
 
 4. Select *Debug* ![debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/debug-button.png). You should get the message: “Waiting for incoming connection with IDE key ‘PHPSTORM’”.
@@ -116,7 +128,7 @@ The value of `serverName` should reflect the server name you've entered when [co
 
 ## Configuring a Google Chrome helper for Xdebug
 
-As a Chrome user, you can optionally configure the Xdebug helper extension as follows: 
+As a Chrome user, you can optionally configure the Xdebug helper extension as follows:
 
 1. Add [Xdebug helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) to the browser.
 2. In the extension settings, for *IDE Key*, select **PhpStorm**.
@@ -126,8 +138,7 @@ Now you can manage debugging sessions in the browser toolbar.
 ## Configuring browser bookmarklets for Xdebug
 
 To manage debugging sessions directly in a browser, configure browser bookmarklets as follows:
-1. [Generate helper bookmarklets](http://www.jetbrains.com/phpstorm/marklets/). 
-2. Bookmark the generated links. 
+1. [Generate helper bookmarklets](http://www.jetbrains.com/phpstorm/marklets/).
+2. Bookmark the generated links.
 
-Now you can manage debugging sessions using the bookmarks you've created. 
-
+Now you can manage debugging sessions using the bookmarks you've created.

@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/vm-cleanup
   - /docs/vm-cleanup
   - /docs/en/vm-cleanup
+  - /v6/docs/vm-cleanup
+  - /v6/docs/en/vm-cleanup
+  - /v5/docs/vm-cleanup
+  - /v5/docs/en/vm-cleanup
+  - /v4/docs/vm-cleanup
+  - /v4/docs/en/vm-cleanup
+  - /v3/docs/vm-cleanup
+  - /v3/docs/en/vm-cleanup
+  - /v2/docs/vm-cleanup
+  - /v2/docs/en/vm-cleanup
+  - /v1/docs/vm-cleanup
+  - /v1/docs/en/vm-cleanup
 ---
 
 <!-- Used to be: http://spryker.github.io/getting-started/installation/virtual-machine-cleanup/ -->
@@ -85,7 +97,7 @@ php composer.phar install
 
 Install npm dependencies:
 ```bash
-npm install -d 
+npm install -d
 ```
 
 5. **Install application:**

@@ -12,6 +12,9 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 * [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
+* [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/glue-api-marketplace-product-offer-volume-prices.html)
 
 
 ## Retrieve a concrete product
@@ -31,10 +34,16 @@ To retrieve general information about a concrete product, send the request:
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | concrete-product-image-sets, concrete-product-availabilities, product-options, product-reviews, product-offers, concrete-product-prices, product-measurement-units, sales-units, product-labels, product-offers, merchants |
+| include | Adds resource relationships to the request. | <ul><li>concrete-product-image-sets</li> <li>concrete-product-availabilities</li> <li>product-options</li> <li>product-reviews</li> <li>concrete-product-prices</li> <li>product-measurement-units</li> <li>sales-units</li> <li>product-labels</li> <li>product-offers</li> <li>product-offer-prices</li> <li>merchants</li></ul> |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
 
-{% info_block warningBox "Warning" %}
+{% info_block infoBox "Included resources" %}
+
+To retrieve product offer prices, include `product-offers` and `product-offer-prices`.
+
+{% endinfo_block %}
+
+{% info_block infoBox "Filtering" %}
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
@@ -46,18 +55,19 @@ To retrieve general information about a concrete product, send the request:
 
 | REQUEST  | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Get information about the `001_25904006` product with its image sets.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Get information about the `001_25904006` product with its availability.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its [default prices](https://documentation.spryker.com/v4/docs/products-reference-information#default-and-original-prices). |
+| `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Retrieve information about the `001_25904006` product.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Retrieve information about the `001_25904006` product with its image sets.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Retrieve information about the `001_25904006` product with its availability.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Retrieve information about the `001_25904006` product with its [default prices](https://documentation.spryker.com/docs/creating-abstract-products-and-product-bundles#reference-information--defining-prices). |
 | `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices (default and [volume prices](https://documentation.spryker.com/docs/volume-prices)) |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Get information about the `001_25904006` product with its product options.  |
-| `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Get information about the `001_25904006` product with its product reviews.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Get information about the `001_25904006` product with its product offers.  |
-| `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Retrieve information about the `001_25904006` product with its product options.  |
+| `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Retrieve information about the `001_25904006` product with its product reviews.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information about the `001_25904006` product with its product offers.  |
+| `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Retrieve information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information for a concrete product with the SKU `001_25904006` with product offers included.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
-| `GET https://glue.mysprykershop.com/concrete-products/111_12295890?include=abstract-products,merchants` | Retrieve information for a concrete product with SKU `111_12295890` with details on its abstract product and the merchant who sells it.<br>{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information about a concrete product with the SKU `001_25904006` with product offers included. |
+| `GET https://glue.mysprykershop.com/concrete-products/076_24394207?include=product-offers,product-offer-prices` | Retrieve information about a concrete product with the SKU `076_24394207` with product offers and the product offer prices included.
+| `GET https://glue.mysprykershop.com/concrete-products/111_12295890?include=abstract-products,merchants` | Retrieve information about a concrete product with SKU `111_12295890` with details on its abstract product and the merchant who sells it.|
 
 ### Response
 
@@ -863,6 +873,120 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
+<summary markdown='span'>Response sample with product offers and product offer prices</summary>
+
+```json
+{
+    "data": {
+        "type": "concrete-products",
+        "id": "076_24394207",
+        "attributes": {
+            "sku": "076_24394207",
+            "isDiscontinued": false,
+            "discontinuedNote": null,
+            "averageRating": null,
+            "reviewCount": 0,
+            "productAbstractSku": "076",
+            "name": "Sony Xperia Z3 Compact",
+            "description": "Dive into new experiences Xperia Z3 Compact is the smartphone designed to enhance your life. And life isn’t lived inside. With the highest waterproof rating*, Xperia Z3 Compact lets you answer calls in the rain or take pictures in the pool. And it can handle all the drops into the sink in between. Combined with a slim, compact design that’s easy to use with one hand, Xperia Z3 Compact is the Android smartphone that teams durability with beauty. Some of the best times happen in the lowest light. Years of Sony camera expertise have been brought to Xperia Z3 Compact, to deliver unparalleled low-light capability. Thanks to Cyber-shot and Handycam technologies you can record stunning videos on the move and take crisp shots under water. Want to take your shots to the next level? Get creative with our unique camera apps. It’s our best smartphone camera yet – for memories that deserve more than good.",
+            "attributes": {
+                "internal_ram": "2048 MB",
+                "display_type": "TFT",
+                "bluetooth_version": "4.0 LE",
+                "form_factor": "Bar",
+                "brand": "Sony",
+                "color": "White"
+            },
+            "superAttributesDefinition": [
+                "form_factor",
+                "color"
+            ],
+            "metaTitle": "Sony Xperia Z3 Compact",
+            "metaKeywords": "Sony,Communication Electronics",
+            "metaDescription": "Dive into new experiences Xperia Z3 Compact is the smartphone designed to enhance your life. And life isn’t lived inside. With the highest waterproof ratin",
+            "attributeNames": {
+                "internal_ram": "Internal RAM",
+                "display_type": "Display type",
+                "bluetooth_version": "Blootooth version",
+                "form_factor": "Form factor",
+                "brand": "Brand",
+                "color": "Color"
+            },
+            "productConfigurationInstance": null
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/concrete-products/076_24394207"
+        },
+        "relationships": {
+            "product-offers": {
+                "data": [
+                    {
+                        "type": "product-offers",
+                        "id": "offer169"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "product-offer-prices",
+            "id": "offer169",
+            "attributes": {
+                "price": 30355,
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": null,
+                        "grossAmount": 30355,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": [
+                            {
+                                "grossAmount": 38400,
+                                "netAmount": 39100,
+                                "quantity": 3
+                            }
+                                 
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer169/product-offer-prices"
+            }
+        },
+        {
+            "type": "product-offers",
+            "id": "offer169",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000006",
+                "isDefault": true
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer169"
+            },
+            "relationships": {
+                "product-offer-prices": {
+                    "data": [
+                        {
+                            "type": "product-offer-prices",
+                            "id": "offer169"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+</details>
+
+<details>
 <summary markdown='span'>Response sample with details on the abstract product and the merchant who sells the concrete product</summary>
 
 ```json
@@ -1009,7 +1133,8 @@ For other attributes of the included resources, see:
 * [Retrieve prices of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-prices#concrete-product-prices-response-attributes)
 * [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
 * [Retrieve product ratings and reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
-* [Retrieve product offers](https://documentation.spryker.com/marketplace/docs/retrieving-product-offers#product-offers-response-attributes)
+* [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-product-offers.html#product-offers-response-attributes)
+* [Retrieve product offer prices] (/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-product-offers.html#retrieving-product-offer-prices)
 * [Retrieve abstract products](https://documentation.spryker.com/marketplace/docs/retrieving-abstract-products)
 * [Retrieve merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)
 

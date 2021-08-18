@@ -19,7 +19,7 @@ Specify reasons for returning the sales order items.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-return-management-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html).
 
 ## Create a return
 
@@ -143,7 +143,7 @@ To create a return for a registered user, send the request:
             }
         },
         "links": {
-            "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R2?include=return-items"
+            "self": "https://glue.mysprykershop.com/returns/DE--21-R2?include=return-items"
         },
         "relationships": {
             "return-items": {
@@ -166,7 +166,7 @@ To create a return for a registered user, send the request:
                 "orderItemUuid": "c319e465-5160-59f1-a5b8-85073d1472b7"
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R2/return-items/717e94dd-7eb6-5a3f-837b-2ea745f6ae0a"
+                "self": "https://glue.mysprykershop.com/returns/DE--21-R2/return-items/717e94dd-7eb6-5a3f-837b-2ea745f6ae0a"
             }
         }
     ]
@@ -191,7 +191,7 @@ To create a return for a registered user, send the request:
 | return-items | reason | String | Predefined reason why the return was created. |
 | return-items | orderItemUuid | String | Unique identifier of the order item in the system. |
 
-For the attributes of the included resources, see [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-marketplace-orders.html).
+For the attributes of the included resources, see [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html).
 
 ## Retrieve returns
 
@@ -289,7 +289,7 @@ To retrieve returns, send the request:
                 }
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R4?include=return-items"
+                "self": "https://glue.mysprykershop.com/returns/DE--21-R4?include=return-items"
             },
             "relationships": {
                 "return-items": {
@@ -316,7 +316,7 @@ To retrieve returns, send the request:
                 }
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R3?include=return-items"
+                "self": "https://glue.mysprykershop.com/returns/DE--21-R3?include=return-items"
             },
             "relationships": {
                 "return-items": {
@@ -343,7 +343,7 @@ To retrieve returns, send the request:
                 }
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R2?include=return-items"
+                "self": "https://glue.mysprykershop.com/returns/DE--21-R2?include=return-items"
             },
             "relationships": {
                 "return-items": {
@@ -370,7 +370,7 @@ To retrieve returns, send the request:
                 }
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R1?include=return-items"
+                "self": "https://glue.mysprykershop.com/returns/DE--21-R1?include=return-items"
             },
             "relationships": {
                 "return-items": {
@@ -385,7 +385,7 @@ To retrieve returns, send the request:
         }
     ],
     "links": {
-        "self": "https://glue.de.marketplace.demo-spryker.com:80/returns?include=return-items"
+        "self": "https://glue.mysprykershop.com/returns?include=return-items"
     },
     "included": [
         {
@@ -397,7 +397,7 @@ To retrieve returns, send the request:
                 "orderItemUuid": "120b7a51-69e4-54b9-96a6-3b5eab0dfe7a"
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R4/return-items/b3c46290-2eaa-5b37-bba2-60171638fabb"
+                "self": "https://glue.mysprykershop.com/returns/DE--21-R4/return-items/b3c46290-2eaa-5b37-bba2-60171638fabb"
             }
         },
         {
@@ -409,7 +409,7 @@ To retrieve returns, send the request:
                 "orderItemUuid": "42de8c95-69a7-56b1-b43e-ce876ca79458"
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R3/return-items/3071bef7-f26f-5be4-b9e7-bef1d670a94b"
+                "self": "https://glue.mysprykershop.com/returns/DE--21-R3/return-items/3071bef7-f26f-5be4-b9e7-bef1d670a94b"
             }
         },
         {
@@ -421,7 +421,7 @@ To retrieve returns, send the request:
                 "orderItemUuid": "c319e465-5160-59f1-a5b8-85073d1472b7"
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R2/return-items/717e94dd-7eb6-5a3f-837b-2ea745f6ae0a"
+                "self": "https://glue.mysprykershop.com/returns/DE--21-R2/return-items/717e94dd-7eb6-5a3f-837b-2ea745f6ae0a"
             }
         },
         {
@@ -433,7 +433,7 @@ To retrieve returns, send the request:
                 "orderItemUuid": "7be8d4ff-a41e-527f-adb5-077e6192062b"
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R1/return-items/56c8d9c7-7ea5-59ec-83ca-a633b4c0ee5c"
+                "self": "https://glue.mysprykershop.com/returns/DE--21-R1/return-items/56c8d9c7-7ea5-59ec-83ca-a633b4c0ee5c"
             }
         }
     ]
@@ -552,8 +552,8 @@ To retrieve returns, send the request:
 | return-items | orderItemUuid | String | Unique identifier of the order item in the system. |
 
 For the details on other included resources, see:
-* [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-marketplace-orders.html)
-* [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)
+* [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
+* [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-merchant-information.html)
 
 ## Retrieve a return
 
@@ -659,7 +659,7 @@ To retrieve a return, send the request:
             }
         },
         "links": {
-            "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R4?include=return-items"
+            "self": "https://glue.mysprykershop.com/returns/DE--21-R4?include=return-items"
         },
         "relationships": {
             "return-items": {
@@ -682,7 +682,7 @@ To retrieve a return, send the request:
                 "orderItemUuid": "120b7a51-69e4-54b9-96a6-3b5eab0dfe7a"
             },
             "links": {
-                "self": "https://glue.de.marketplace.demo-spryker.com:80/returns/DE--21-R4/return-items/b3c46290-2eaa-5b37-bba2-60171638fabb"
+                "self": "https://glue.mysprykershop.com/returns/DE--21-R4/return-items/b3c46290-2eaa-5b37-bba2-60171638fabb"
             }
         }
     ]

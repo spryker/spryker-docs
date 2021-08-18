@@ -1,11 +1,11 @@
 ---
 title: Managing merchant users
 last_updated: Apr 23, 2021
-description: This guide explains how Marketplace Administrator can manage merchant users in the Back Office.
+description: This guide explains how Marketplace administrator can manage merchant users in the Back Office.
 template: back-office-user-guide-template
 ---
 
-A merchant user is a user that performs tasks on behalf of the merchant in the Merchant Portal. Marketplace Administrator can manage merchant users in the Back Office.
+A merchant user is a user that performs tasks on behalf of the merchant in the Merchant Portal. Marketplace administrator can manage merchant users in the Back Office.
 
 ---
 

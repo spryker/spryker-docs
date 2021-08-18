@@ -10,7 +10,10 @@ In your development, product offers API can help you to retrieve relevant extend
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see:
+* [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/glue-api-marketplace-product-offer-volume-prices.html)
 
 ## Retrieve product offers
 
@@ -23,7 +26,9 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 
 | PATH PARAMETER| DESCRIPTION |
 | ------------------ | ------------------------------------------------------------ |
-| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/concrete-products/retrieving-product-offers-for-a-concrete-product.html). |
+| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-for-a-concrete-product.html). |
+
+<a name="product-offer-included-resources"></a>
 
 ### Request
 
@@ -35,7 +40,9 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 | REQUEST | USAGE     |
 | ---------- | ----------- |
 | `GET https://glue.mysprykershop.com/product-offers/offer56`| Get information about the offer56.   |
-| `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-prices,product-offer-availabilities,merchants` | Get information about the offer101 with the details on product offer prices and product offer availability and merchants included. |
+| `GET https://glue.mysprykershop.com/product-offers/offer78?product-offer-prices` | Get information about the offer78 with the details on product offer prices. |
+| `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-availabilities` | Get information about the offer101 with the details on product offer availability and merchants. |
+| `GET https://glue.mysprykershop.com/product-offers/offer101?merchants` | Get information about the offer101 with the details on merchants. |
 
 ### Response
 
@@ -61,23 +68,72 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer prices, product offer availabilities, and merchant information</summary>
+<summary markdown='span'>Response sample with product offer prices</summary>
 
 ```json
 {
     "data": {
         "type": "product-offers",
-        "id": "offer56",
+        "id": "offer78",
         "attributes": {
             "merchantSku": null,
             "merchantReference": "MER000005",
-            "isDefault": false
+            "isDefault": true
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer56"
+            "self": "https://glue.mysprykershop.com/product-offers/offer78"
+        },
+        "relationships": {
+            "product-offer-prices": {
+                "data": [
+                    {
+                        "type": "product-offer-prices",
+                        "id": "offer78"
+                    }
+                ]
+            }
         }
-    }
+    },
+    "included": [
+        {
+            "type": "product-offer-prices",
+            "id": "offer78",
+            "attributes": {
+                "price": 40522,
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": null,
+                        "grossAmount": 40522,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"                        
+                    },
+                        "volumePrices": [
+                            {
+                                "grossAmount": 38400,
+                                "netAmount": 39100,
+                                "quantity": 3
+                            }
+                                 
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer78/product-offer-prices"
+            }
+        }
+    ]
 }
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample with product offer availabilities</summary>
+
+```json
 {
     "data": {
         "type": "product-offers",
@@ -88,7 +144,7 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
+            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities"
         },
         "relationships": {
             "product-offer-availabilities": {
@@ -98,24 +154,7 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
                         "id": "offer101"
                     }
                 ]
-            },
-            "product-offer-prices": {
-                "data": [
-                    {
-                        "type": "product-offer-prices",
-                        "id": "offer101"
-                    }
-                ]
-            },
-            "merchants": {
-                "data": [
-                    {
-                        "type": "merchants",
-                        "id": "MER000006"
-                    }
-                ]
-            }
-        }
+           }
     },
     "included": [
         {
@@ -129,39 +168,40 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
             "links": {
                 "self": "http://glue.mysprykershop.com/product-offers/offer101/product-offer-availabilities"
             }
+            
+        }
+    ]
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample with product offer and merchant information</summary>
+
+```json
+{
+    "data": {
+        "type": "product-offers",
+        "id": "offer101",
+        "attributes": {
+            "merchantSku": null,
+            "merchantReference": "MER000006",
+            "isDefault": false
         },
-        {
-            "type": "product-offer-prices",
-            "id": "offer101",
-            "attributes": {
-                "price": 4165,
-                "prices": [
+        "links": {
+            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
+        },
+            "merchants": {
+                "data": [
                     {
-                        "priceTypeName": "DEFAULT",
-                        "netAmount": null,
-                        "grossAmount": 4165,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        }
-                    },
-                    {
-                        "priceTypeName": "ORIGINAL",
-                        "netAmount": null,
-                        "grossAmount": 4420,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        }
+                        "type": "merchants",
+                        "id": "MER000006"
                     }
                 ]
-            },
-            "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer101/product-offer-prices"
             }
-        },
+        }
+    },
+    "included": [
         {
             "type": "merchants",
             "id": "MER000006",
@@ -200,59 +240,39 @@ GET **/product-offers/{% raw %}*{{offerId}}*{% endraw %}**
 
 <a name="product-offers-response-attributes"></a>
 
-**General product offer information**
-
 | ATTRIBUTE   | TYPE | DESCRIPTION      |
 | --------------- | -------- | -------------------- |
 | merchantSku       | String   | SKU a merchant uses to identify the offer. |
 | merchantReference | String   | Merchant reference assigned to every merchant. |
 | isDefault         | Boolean  | Defines whether the Product Offer is default for the concrete product. |
 
-**Product offer availability information**
+|INCLUDED RESOURCE  |ATTRIBUTE  |TYPE  |DESCRIPTION  |
+|---------|---------|---------|---------|
+|merchant                | merchantName           | String   | Merchant’s name. |
+|merchant                | merchantUrl            | String   | Relative merchant's profile URL. |
+|merchant                | contactPersonRole      | String   | Role of the contact person.  |
+|merchant                | contactPersonTitle     | String   | Salutation to use when addressing the contact person. |
+|merchant                | contactPersonFirstName | String   | Contact person’s first name. |
+|merchant                | contactPersonLastName  | String   | Contact person’s last name.  |
+|merchant                | contactPersonPhone     | String   | Contact person’s phone number. |
+|merchant                | logoUrl                | String   | Merchant’s logo URL.   |
+|merchant                | publicEmail            | String   | Merchant’s public email address.  |
+|merchant                | publicPhone            | String   | Merchant’s public phone number.  |
+|merchant                | description            | String   | Merchant’s description.  |
+|merchant                | bannerUrl              | String   | Merchant’s banner URL. |
+|merchant                | deliveryTime           | String   | Average delivery time.  |
+|merchant                | latitude               | String   | Merchant’s latitude.|
+|merchant                | longitude              | String   | Merchant’s longitude.  |
+|merchant                | faxNumber              | String   | Merchant’s fax number.  |
+|merchant                | legalInformation       | Object   | List of legal information. |
+|merchant                | terms                  | String   | Merchant’s terms and conditions.  |
+|merchant                | cancellationPolicy     | String   | Merchant’s cancellation policy.  |
+|merchant                | imprint                | String   | Merchant’s imprint information.  |
+|merchant                | dataPrivacy            | String   | Merchant’s data privacy conditions. |
 
-| ATTRIBUTE  | TYPE | DESCRIPTION |
-| ----------------- | -------- | ------------------------ |
-| isNeverOutOfStock | boolean  | Boolean to show if this is an item that is never out of stock. |
-| availability  | boolean  | Boolean to inform you about availability.    |
-| quantity          | integer  | Available stock.  |
-
-**Product offer prices information**
-
-| ATTRIBUTE  | TYPE | DESCRIPTION |
-| --------------- | -------- | -------------------------------------- |
-| price           | Integer  | Price to pay for the product in cents. |
-| priceTypeName   | String   | Price type.                            |
-| netAmount       | Integer  | Net price in cents.                    |
-| grossAmount     | Integer  | Gross price in cents.                  |
-| currency.code   | String   | Currency code.                         |
-| currency.name   | String   | Currency name.                         |
-| currency.symbol | String   | Currency symbol.                       |
-
-**Merchant information**
-
-| ATTRIBUTE  | TYPE | DESCRIPTION |
-| ----------------- | -------- | ---------------------- |
-| merchantName           | String   | Merchant’s name. |
-| merchantUrl            | String   | Merchant’s profile URL. |
-| contactPersonRole      | String   | Role of the contact person.  |
-| contactPersonTitle     | String   | Salutation to use when addressing the contact person. |
-| contactPersonFirstName | String   | Contact person’s first name. |
-| contactPersonLastName  | String   | Contact person’s last name.  |
-| contactPersonPhone     | String   | Contact person’s phone number. |
-| logoUrl                | String   | Merchant’s logo URL.   |
-| publicEmail            | String   | Merchant’s public email address.  |
-| publicPhone            | String   | Merchant’s public phone number.  |
-| description            | String   | Merchant’s description.  |
-| bannerUrl              | String   | Merchant’s banner URL. |
-| deliveryTime           | String   | Average delivery time.  |
-| latitude               | String   | Merchant’s latitude.|
-| longitude              | String   | Merchant’s longitude.  |
-| faxNumber              | String   | Merchant’s fax number.  |
-| legalInformation       | Object   | List of legal information. |
-| terms                  | String   | Merchant’s terms and conditions.  |
-| cancellationPolicy     | String   | Merchant’s cancellation policy.  |
-| imprint                | String   | Merchant’s imprint information.  |
-| dataPrivacy            | String   | Merchant’s data privacy conditions. |
+See attribute descriptions of other included resources in:
+* [Retrieve product offer prices](#prices)
+* [Retrieve product offer availability](#product-offer-availabilities)
 
 
 ## Retrieve product offer availability
@@ -298,8 +318,13 @@ Response sample:
     }
 }
 ```
+<a name="product-offer-availabilities"></a>
 
-Find all the related attribute descriptions in [Retrieve product offers](#retrieve-product-offers).
+|ATTRIBUTE  |TYPE  |DESCRIPTION  |
+|---------|---------|---------|
+| isNeverOutOfStock          |  Boolean         | Shows if the product offer is never out of stock.          |
+| availability          | Boolean          |Defines if the product offer is available.           |
+| quantity          | Integer          |Stock of the product offer.           |
 
 ## Retrieving product offer prices
 
@@ -327,32 +352,31 @@ Response sample:
     "data": [
         {
             "type": "product-offer-prices",
-            "id": "offer54",
+            "id": "offer78",
             "attributes": {
-                "price": 31050,
+                "price": 40522,
                 "prices": [
                     {
                         "priceTypeName": "DEFAULT",
                         "netAmount": null,
-                        "grossAmount": 31050,
+                        "grossAmount": 40522,
                         "currency": {
                             "code": "EUR",
                             "name": "Euro",
-                            "symbol": "€"
-                        }
-                    },
-                    {
-                        "priceTypeName": "ORIGINAL",
-                        "netAmount": null,
-                        "grossAmount": 31320,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        }
+                            "symbol": "€"                        
+                        },
+                        "volumePrices": [
+                            {
+                                "grossAmount": 38400,
+                                "netAmount": 39100,
+                                "quantity": 3
+                            }
+                                 
+                        ]
                     }
                 ]
             },
+           
             "links": {
                 "self": "http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
             }
@@ -363,18 +387,37 @@ Response sample:
     }
 }
 ```
+<a name="prices"></a>
 
-Find all the related attribute descriptions in [Retrieve product offers](#retrieve-product-offers).
+|ATTRIBUTE  |TYPE  |DESCRIPTION  |
+|---------|---------|---------|
+| price |  Integer  | Price to pay for the product in cents.        |
+| priceTypeName   | String   |Price type.         |
+| netAmount   | Integer    |Net price in cents.    |
+| grossAmount   |  Integer  | Gross price in cents.  |
+| currency.code   | String  |Currency code.   |
+| currency.name   | String  |  Currency name.  |
+| currency.symbol   | String  |  Currency symbol.  |
+| volumePrices   | Object  |  An array of objects defining the [volume prices](https://documentation.spryker.com/docs/volume-prices-overview) of the product offer.  |
+| grossAmount | Integer   |  Gross volume price in cents.         |
+| netAmount | Integer   | Net volume price in cents.          |
+| quantity  |  Integer         | Quantity of items in offer when the volume price applies.  |
+
+{% info_block infoBox "Info" %}
+
+You can also retrieve the product offer prices as an included resource of the `product-offer-prices` endpoint. See [Retrieve product offers](#product-offer-included-resources) for details.
+
+{% endinfo_block %}
 
 ## Other management options
 
 You can use the product offers resource as follows:
 
-- Retrieve information about the existing product offers of a concrete product—[Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html)
-- Add product offers to a guest cart—[Creating a guest cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
-- Retrieve information for the product offers in a guest cart—[Retrieving a guest cart](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
-- Add product offers to a registered user's cart—[Adding items to a cart of a registered user](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
-- Retrieve information for the product offers in registered users' carts—[Retrieving all carts](/docs/marketplace/dev/glue-api-guides/{{ page.version }}//carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts).
+- Retrieve information about the existing product offers of a concrete product—[Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-product-offers.html)
+- Add product offers to a guest cart—[Creating a guest cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
+- Retrieve information for the product offers in a guest cart—[Retrieving a guest cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart).
+- Add product offers to a registered user's cart—[Adding items to a cart of a registered user](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
+- Retrieve information for the product offers in registered users' carts—[Retrieving all carts](/docs/marketplace/dev/glue-api-guides/{{page.version}}//carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts).
 
 ## Possible errors
 

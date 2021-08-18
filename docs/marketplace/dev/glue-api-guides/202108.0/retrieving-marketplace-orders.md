@@ -40,15 +40,15 @@ To retrieve a list of all orders made by a registered customer, send the request
 | ---------------- | ---------------------- | ----------------------------- |
 | offset | The offset of the order at which to begin the response. Works only together with page[limit]. To work correctly, the value should be devisable by the value of page[limit]. The default value is 0. | From 0 to any. |
 | limit | The maximum number of entries to return. Works only together with page[offset]. The default value is 10. | From 1 to any. |
-| include | Adds resource relationships to the request.  | merchants{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| include | Adds resource relationships to the request.  | merchants |
 
 | REQUEST | USAGE  |
 | --------------------- | ------------------ |
-| `GET https://glue.mysprykershop.com/orders`  | Retrieve all customer’s orders.  |
+| `GET https://glue.mysprykershop.com/orders`  | Retrieve all orders of the customer.  |
 | `GET https://glue.mysprykershop.com/orders?page[limit]=10`  | Retrieve 10 orders. |
 | `GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10` | Retrieve orders 11 through 20.  |
 | `GET https://glue.mysprykershop.com/orders?page[offset]=20`  | Retrieve all orders starting from the twenty-first order.  |
-| `GET https://glue.mysprykershop.com/orders?include=merchants`  | Retrieve all customer’s orders with the information on merchants included.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| `GET https://glue.mysprykershop.com/orders?include=merchants`  | Retrieve all orders of the customer with the information on merchants included. |
 
 ### Response
 
@@ -203,12 +203,6 @@ The endpoint responds with an array of orders placed by the authenticated custom
 
 <details>
 <summary markdown='span'>Response sample with information on merchants</summary>
-
-{% info_block warningBox "Note" %}
-
-This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.
-
-{% endinfo_block %}
 
 ```json
 {
@@ -520,7 +514,7 @@ This option is available only in case you have upgraded your shop to the [Market
 
 | ATTRIBUTE    | TYPE  | DESCRIPTION     |
 | -------------- | -------- | ----------------------- |
-| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for more details.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| merchantReferences | Array    | Merchant reference in the system. See [Merchant feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for more details. |
 | itemStates  | Array  | State of the item in the order.    |
 | createdAt  | String   | Date and time when the order was created.    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
@@ -538,7 +532,7 @@ This option is available only in case you have upgraded your shop to the [Market
 | canceledTotal     | Integer | Total canceled amount.                                  |
 | remunerationTotal | Integer | Total sum of remuneration.                              |
 
-For the attributes of the included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).
+For the attributes of the included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-merchant-information.html).
 
 ## Retrieve an order
 
@@ -568,7 +562,7 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 | ----------------- | ------------------ |
 | `GET http://glue.mysprykershop.com/orders/DE--6`   | Retrieve information about the `DE--6` order.  |
 | `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieve information about the order with the id `DE--6` with order shipments included. |
-| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with information on merchants.{% info_block warningBox "Note" %}This option is available only if you upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html).{% endinfo_block %} |
+| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with information on merchants.{% info_block warningBox "Note" %}This option is available only if you upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html).{% endinfo_block %} |
 
 ### Response
 
@@ -1345,7 +1339,7 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 
 | ATTRIBUTE     | TYPE | DESCRIPTION     |
 | ------------------ | -------- | --------------------- |
-| merchantReferences | Array    | Merchant reference in the system. {% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| merchantReferences | Array    | Merchant reference in the system. |
 | itemStates      | Array  | Statuses of the order’s items in the [state machine](https://documentation.spryker.com/docs/order-process-modelling-state-machines). |
 | createdAt       | String | Date and time when the order was created.   |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
@@ -1394,7 +1388,7 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 | ATTRIBUTE | TYPE | DESCRIPTION     |
 | --- | --- | --- |
 | items   | array   | Items in the order.     |
-| merchantReference | String    | Merchant reference in the system. {% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %} |
+| merchantReference | String    | Merchant reference in the system. |
 | state  | String  | Defines the state of the item in the state machine.    |
 | items.name | String  | Product name.     |
 | items.sku   | String  | Product SKU.     |
@@ -1544,4 +1538,4 @@ GET **/orders/{% raw %}*{{order_id}}*{% endraw %}**
 | order-shipments | shippingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.       |
 
 
-For the attributes of other included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html).
+For the attributes of other included resources, see [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-merchant-information.html).

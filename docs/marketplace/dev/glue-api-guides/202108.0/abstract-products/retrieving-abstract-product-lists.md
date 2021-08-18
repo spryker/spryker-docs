@@ -171,7 +171,7 @@ The locale must be specified in the **header** of the GET request. If no locale 
 | ---------------- | ----- | ----------------------- |
 | attributes     | string | List of the abstract product's attributes and their values.  |
 | sku      | string | SKU of the abstract product.    |
-| merchantReference | string | Unique identifier of the merchant in the system.{% info_block warningBox "Note" %}This option is available only in case you have upgraded your shop to the [Marketplace](/docs/marketplace/user/intro-to-spryker/marketplace-concept.html) provided by Spryker.{% endinfo_block %}|
+| merchantReference | string | Unique identifier of the merchant in the system.|
 | averageRating | String | Average rating of the product based on customer rating. |
 | reviewCount | String | Number of reviews left by customer for this abstract product. |
 | name     | string | Name of the abstract product.        |
@@ -189,4 +189,4 @@ The locale must be specified in the **header** of the GET request. If no locale 
 | attributeNames     | object | All attributes (except for the super attributes) and value combinations for the abstract product. |
 | url | String | Unique address using which the abstract product is found in the shop.
 
-For the abstract product response attributes, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/abstract-products/retrieving-abstract-products.html).
+For the abstract product response attributes, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html).

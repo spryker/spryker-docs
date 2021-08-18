@@ -49,7 +49,7 @@ entries:
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html
 
           - title: Marketplace Merchant Portal Product Offer Management feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html      
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 
           - title: Marketplace Product Offer Prices feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
@@ -57,8 +57,17 @@ entries:
           - title: Marketplace Order Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
 
+          - title: Marketplace Return Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
+
           - title: Marketplace Promotions and Discounts feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html
+
+          - title: Marketplace Product Options feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
+
+          - title: Marketplace Cart Notes feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-cart-notes-feature-walkthrough.html
 
           - title: Marketplace Wishlist feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
@@ -190,8 +199,8 @@ entries:
               - title: "Glue API: Merchant Opening Hours feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
 
-              - title: "Glue API: Offer Volume Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/offer-volume-prices.html
+              - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/glue-api-marketplace-product-offer-volume-prices.html
 
               - title: "Glue API: Marketplace Product Offer + Cart feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html

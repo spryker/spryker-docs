@@ -20,5 +20,5 @@ The developer guides are meant for:
 
 The developer guides contain the following content areas:
 * [Spryker OS installation guides](/docs/scos/dev/developer-guides/202009.0/installation/about-the-installation-guides.html): Install the Spryker Demo Shop
-* [Spryker architecture guide](/docs/scos/dev/developer-guides/202009.0/architecture-guide/about-the-architecture-guide.html): Understand the architecture of the Spryker Commerce OS
+* [Spryker architecture guide](/docs/scos/dev/developer-guides/202009.0/architecture-guide/architecture.html): Understand the architecture of the Spryker Commerce OS
 * [Develoment guides](/docs/scos/dev/developer-guides/202009.0/development-guide/about-the-development-guide.html): Customize your Spryker project to your needs

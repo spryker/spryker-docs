@@ -63,7 +63,7 @@ To migrate to a newer product release, use the Jarvis *basic* view. This view li
 This view is especially useful when: 
 
 * You have a Spryker-based product and finished the main development part of it.
-* Your project uses feature repositories, or the project is based on the Spyker[ B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html) or the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html). 
+* Your project uses feature repositories, or the project is based on the Spyker[ B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) or the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html). 
 
 Use this view if you want to stay up-to-date with Spryker and get new features every Spryker product release.
 
@@ -114,7 +114,7 @@ This view shows you what features you could use based on the modules you already
 
 The *missing-features* view is especially useful when your project uses just Spryker modules and does not use the Spryker features, but you want to use them. If you want to start keeping your project up-to-date with the Spryker product release, but you do not know which Spryker features of which versions are compatible with your project, this the right view. 
 
-To see this view, run `node jarvis.js <path to your spryker project folder> --missing-features` in the terminal. This shows you which modules of which features you have installed and what modules you still need to install to be able to use those features. This page tells you which highest versions of the features you can replace the modules with and what [integration guide](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/about-integration-guides.html) you should follow to enable the respective features:
+To see this view, run `node jarvis.js <path to your spryker project folder> --missing-features` in the terminal. This shows you which modules of which features you have installed and what modules you still need to install to be able to use those features. This page tells you which highest versions of the features you can replace the modules with and what [integration guide](/docs/scos/dev/migration-and-integration/{{site.version}}/feature-integration-guides/about-integration-guides.html) you should follow to enable the respective features:
 
 <video width="720" height="480" controls>
   <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screen+Recording+2020-08-06+at+10.50.47.mov">

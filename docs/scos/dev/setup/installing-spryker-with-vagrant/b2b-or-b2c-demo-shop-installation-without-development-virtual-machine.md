@@ -18,7 +18,7 @@ redirect_from:
   - /v4/docs/en/b2c-demo-shop-installation-without-development-virtual-machine
 ---
 
-To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{page.version}}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{page.version}}/b2c-suite.html) implementations without the Development Virtual Machine, follow the steps below.
+To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html) implementations without the Development Virtual Machine, follow the steps below.
 
 ### Minimum requirements
 

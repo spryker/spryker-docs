@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 {% info_block infoBox "Info" %}
-Check [this article](/docs/scos/user/about-spryker/201903.0/demo-shops.html#spryker-commerce-os--scos-
+Check [this article](/docs/scos/user/intro-to-spryker/{{site.version}}/master-suite.html
 {% endinfo_block %} to learn about Spryker Commerce OS (SCOS).)
 
 ## Include Econda Libraries and Scripts for Tracking and Cross-sell

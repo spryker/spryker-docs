@@ -44,5 +44,5 @@ Multiple Shopping Carts provide your customers with a convenient and intuitive s
     </div>
 </div>
 
-In this video we explain how to use [Shopping Carts](/docs/scos/dev/features/201903.0/shopping-cart/multiple-carts-per-user/multiple-carts-per-user.html) in the Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/201903.0/demo-shops.html#b2b-demo-shop).
+In this video we explain how to use [Shopping Carts](/docs/scos/dev/features/201903.0/shopping-cart/multiple-carts-per-user/multiple-carts-per-user.html) in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html).
 <iframe src="https://fast.wistia.net/embed/iframe/s776wlo9ds" title="How to use Shopping Carts in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="640" height="480"></iframe>

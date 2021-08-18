@@ -125,4 +125,4 @@ Currently, the Category Management feature has the following functional constrai
 * A category page is accessible via the same URL across all the stores
 * Category URLs are locale dependent
 * Category URLs are available in all the stores that share the same locales
-* Price Range Filter is not supported with the Merchant Relations, that is why this filter is not included in the B2B demo shop. However, in [the B2C demo shop](/docs/scos/user/intro-to-spryker/202009.0/b2c-suite.html), you can still filter the products using the price range filter.
+* Price Range Filter is not supported with the Merchant Relations, that is why this filter is not included in the B2B demo shop. However, in [the B2C demo shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html), you can still filter the products using the price range filter.

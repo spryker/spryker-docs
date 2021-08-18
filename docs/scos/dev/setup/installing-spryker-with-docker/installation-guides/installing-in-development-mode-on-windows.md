@@ -28,7 +28,7 @@ Follow the steps to install Spryker in Development mode:
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
-4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/{{page.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops):
+4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops):
 
     a. Clone the B2C repository:
 

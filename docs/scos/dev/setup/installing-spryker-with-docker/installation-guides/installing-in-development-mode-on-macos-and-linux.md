@@ -30,7 +30,7 @@ Follow the steps to install Spryker in Development mode:
 
 1. Open a terminal.
 2. Create a new folder and navigate into it.
-3. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/{{page.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops):
+3. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops):
 
     a. Clone the B2C repository:
 

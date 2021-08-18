@@ -24,9 +24,9 @@ The smallest building block of the Spryker product is a **module**. Usually, a m
 
 The set of features make up a **product**. Spryker offers the following products:
 
-* [B2B Demo Shop](/docs/scos/user/about-spryker/202005.0/b2b-suite.html)
-* [B2C Demo Shop](/docs/scos/user/about-spryker/202005.0/b2c-suite.html)
-* [Master Suite](/docs/scos/user/about-spryker/202005.0/master-suite.html)
+* [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html)
+* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html)
+* [Master Suite](/docs/scos/user/intro-to-spryker/{{site.version}}/master-suite.html)
 
 Schematically, the Spryker product structure looks like this:
 
@@ -40,9 +40,9 @@ The most typical reasons for you to update your modules or features are:
 
 * There are important security or bug fixes that have been introduced recently.
 * You want a (new) specific feature or module in your project, which requires a newer version of your module(s).
-* Your project has been started shortly before a new [product release](/docs/scos/user/about-spryker/202005.0/spryker-release-process.html#product-releases).
+* Your project has been started shortly before a new [product release](/docs/scos/user/intro-to-spryker/{{site.version}}/spryker-release-process.html#product-releases).
 * You experience some issues with the shop that you would like to report/consult about.
-* Besides, if you plan to extend your shop in the future with new features from the ones that are already existing in Spryker or are coming soon (see [Roadmap](/docs/scos/user/about-spryker/202005.0/whats-new/roadmap.html)) you should be staying up-to-date with your current modules/features. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster. 
+* Besides, if you plan to extend your shop in the future with new features from the ones that are already existing in Spryker or are coming soon (see [Roadmap](/docs/scos/user/intro-to-spryker/{{site.version}}/whats-new/roadmap.html)) you should be staying up-to-date with your current modules/features. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster. 
 
 {% info_block warningBox "Warning" %}
 
@@ -52,14 +52,14 @@ The more outdated your module versions become, the more effort will be needed to
 
 But how often should you be taking care of the updates?
 
-**The most reasonable strategy- is sticking to the Spryker release cycle** and updating your current modules whenever there is a new release announcement. [Subscribe to the release notes](/docs/scos/user/about-spryker/202005.0/releases/releases.html) if you want to know about the new release right after it happened. 
+**The most reasonable strategy- is sticking to the Spryker release cycle** and updating your current modules whenever there is a new release announcement. [Subscribe to the release notes](/docs/scos/user/intro-to-spryker/{{site.version}}/releases/releases.html) if you want to know about the new release right after it happened. 
 During the active development phase, it would make sense to do updates more often, i.e., monthly. 
 
 ## Features vs. Individual Module Updates
 When you know that you need to update your Spryker-based project, you need to decide at which level you want to do updates: at the **feature level** or at the **module level**. 
 {% info_block infoBox %}
 
-Spryker does big [Product Releases](/docs/scos/user/about-spryker/202005.0/spryker-release-process.html#product-releases) of **features** every several months. The **modules** fall under the [Code Release](/docs/scos/user/about-spryker/202005.0/spryker-release-process.html#atomic--code--releases) process, and therefore there can be up to several module updates per day.
+Spryker does big [Product Releases](/docs/scos/user/intro-to-spryker/{{site.version}}/spryker-release-process.html#product-releases) of **features** every several months. The **modules** fall under the [Code Release](/docs/scos/user/intro-to-spryker/{{site.version}}/spryker-release-process.html#atomic--code--releases) process, and therefore there can be up to several module updates per day.
 
 {% endinfo_block %}
 
@@ -236,7 +236,7 @@ In Spryker we have the [Composer Constrainer](/docs/scos/dev/developer-guides/20
 At some point, you will need to add new or update the existing features for your project. This section will help you do that.
 {% info_block infoBox "Info" %}
 
-You can learn about a new Spryker feature from the [Release Notes](/docs/scos/user/about-spryker/202005.0/releases/release-notes/release-notes.html). We recommend [subscribing to our release mail](/docs/scos/user/about-spryker/202005.0/releases/releases.html) in order not to miss a new release announcement.
+You can learn about a new Spryker feature from the [Release Notes](/docs/scos/user/intro-to-spryker/{{site.version}}/releases/release-notes/release-notes.html). We recommend [subscribing to our release mail](/docs/scos/user/intro-to-spryker/{{site.version}}/releases/releases.html) in order not to miss a new release announcement.
 A complete list of all Spryker features can be found in the [Features](/docs/scos/dev/features/202005.0/about-features.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/about-integration-guides.html) that you will use to install or update the features.  
 
 {% endinfo_block %}

@@ -70,7 +70,7 @@ The product offer prices support:
 
 Product offer price follows the [concrete product price inheritance model](https://documentation.spryker.com/docs/price-functionality#price-inheritance). So if the Merchant doesn't set a price in the offer, it is taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it is indicated. If at least one price is defined for the offer (e.g., original), it is valid for this offer even if the concrete product has a default price (sales price), but the offer does not. See [Price types](https://documentation.spryker.com/docs/scheduled-prices-feature-overview#price-types) for details on the price types.
 
-Merchants can define product offer prices in the Merchant Portal when they [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-merchant-product-offers.html#) or [import product offer prices](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer-csv.html).
+Merchants can define product offer prices in the Merchant Portal when they [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer) or [import product offer prices](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer-csv.html).
 
 ## Product offer stores
 Merchant product offer is defined per store. Merchants set their own prices per store for the product offer.

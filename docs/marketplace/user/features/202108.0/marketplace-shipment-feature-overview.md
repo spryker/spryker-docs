@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Ship
 template: concept-topic-template
 ---
 
-The *Marketplace Shipment* feature allows splitting the [marketplace order](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management/marketplace-order-management-overview/marketplace-order-management-overview.html) into different shipments based on merchants who will process them.
+The *Marketplace Shipment* feature allows splitting the [marketplace order](/docs/marketplace/user/features/{{ page.version }}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) into different shipments based on merchants who will process them.
 
 A *shipment* is a set of two or more products combined by the same delivery address.
 

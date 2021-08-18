@@ -12,7 +12,7 @@ redirect_from:
 
 This article describes how to implement [Client](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/client/client.html) part of the Spryker Yves application layer.
 {% info_block infoBox %}
-See [Conceptual Overview](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/conceptual-overview.html
+See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html
 {% endinfo_block %} to learn more about the Spryker applications and their layers.)
 ## How to implement a Client
 All Clients have the same structure. There is always one class that represents the Client. This is quite close to the facades which we use in Zed. This class is the entry point, and it usually delegates to concrete implementations, that are placed in the optional subdirectories `Search`, `Session`, `Storage`, and `Zed`.

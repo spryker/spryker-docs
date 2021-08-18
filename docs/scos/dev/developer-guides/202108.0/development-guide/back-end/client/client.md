@@ -13,7 +13,7 @@ redirect_from:
 This article provides general information about the Client part of the Yves applications layer and describes how to use it. 
 
 {% info_block infoBox %}
-See [Conceptual Overview](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/conceptual-overview.html
+See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html
 {% endinfo_block %} to learn more about the Spryker applications and their layers.)
 
 ## General Information

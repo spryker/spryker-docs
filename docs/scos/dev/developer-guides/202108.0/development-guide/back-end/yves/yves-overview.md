@@ -12,7 +12,7 @@ redirect_from:
 Yves is one of the application layers of the Spryker Commerce OS, providing the front-end functionality. 
 
 {% info_block infoBox %}
-See [Conceptual Overview](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/conceptual-overview.html
+See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html
 {% endinfo_block %} to learn more about the Spryker applications and their layers.)
 
 Yves is divided into two parts:

@@ -71,7 +71,7 @@ We recommend running this command weekly to assert you have the latest fixes. We
 *  To update a particular module: `composer update "spryker/module-name"`. You can easily keep track of new module versions using the [composer-versions-check](https://github.com/Soullivaneuh/composer-versions-check) addon for your local Composer tool.
 *  To add a new module to your project: `composer require "spryker/module-name"`
 
-See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) to learn about the module versioning approach in Spryker.
+See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) to learn about the module versioning approach in Spryker.
 
 
 ## 3. Configure the environment
@@ -102,10 +102,10 @@ In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelis
 
 As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed and Yves folders and their different layers, see the following articles:
 
-* [Conceptual overview](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/conceptual-overview.html): to learn about application layers and code structure.
-* [Modules and layers](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.
-* [Programming concepts](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
-* [Technology stack](/docs/scos/dev/developer-guides/{{page.version}}/architecture-guide/technology-stack.html): to learn about the technologies we use. 
+* [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
+* [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.
+* [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
+* [Technology stack](/docs/scos/dev/architecture/technology-stack.html): to learn about the technologies we use. 
 
 <!---* Introduction to navigating the folder structure, main concepts and namespacing.
 * The project directory

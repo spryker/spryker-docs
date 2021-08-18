@@ -22,10 +22,6 @@ A warehouse can be assigned to a single store or shared between several stores. 
 ## Marketplace stock management
 The stock for product offers is defined in the corresponding merchant warehouse. The stock does not reflect the actual availability of products, as not all the items available in stock are available for sale. For example, when there are pending orders with offers, these order items are *reserved*, so they are not available for ordering, even if they are physically on hand. 
 
-When `is_never_out_of_stock` attribute is set to `true`, then this offer is always available in terms of stock.
-
-When the offer is out of stock, it is displayed as an out-of-stock product.
-
 Merchants can define product offer stock in the Merchant Portal. See [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html) for details.
 
 Also, you can do the following using the data import:
@@ -68,6 +64,6 @@ Are you a developer? See [Marketplace Inventory Management feature walkthrough](
 
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
-| [Editing a product offer](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/offers/managing-product-offers.html#editing-a-product-offer)                            | [Managing warehouses](https://documentation.spryker.com/docs/managing-warehouses) <!--- UPDATE LINK-->                        |
+| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html)                            | [Managing warehouses](https://documentation.spryker.com/docs/managing-warehouses) <!--- UPDATE LINK-->                        |
 
 

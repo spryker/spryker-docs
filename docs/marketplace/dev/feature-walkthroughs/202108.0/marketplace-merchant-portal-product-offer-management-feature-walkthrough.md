@@ -1,20 +1,16 @@
 ---
 title: Marketplace Merchant Portal Product Offer Management feature walkthrough
-description: This article provides reference information about product offers in the Back Office.
+description: This article provides reference information about product offers in the Merchant Portal.
 template: concept-topic-template
 ---
 
-To inject the [Marketplace Product Offer](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html) feature into the [Back office](https://documentation.spryker.com/docs/spryker-core-back-office) the following modules are used:
+The *Marketplace Merchant Portal Product Offer Management* feature allows merchants to manage product offers in the Merchant portal.
 
-| MODULE | DESCRIPTION |
-| -------------------- | ---------- |
-| [ProductOfferGui](https://github.com/spryker/product-offer-gui) | Main module which provides CRUD functionality for product offers in the Back Office. You can extend the module by implementing interfaces from the ProductOfferGuiExtension module. |
-| [ProductOfferGuiExtension](https://github.com/spryker/product-offer-gui-extension) | Provides interfaces for extending the ProductOfferGui module.  |
-| [MerchantProductOfferGui](https://github.com/spryker/merchant-product-offer-gui) | Extends the ProductOfferGui module, adds merchant context for managing offers in the Back office. |
-| [ProductOfferValidityGui](https://github.com/spryker/product-offer-validity-gui) | Extends the ProductOfferGui module, adds the [validity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html) context for managing offers in the Back office. | 
+To learn more about the feature and to find out how end users use it, see [Marketplace Merchant Portal Product Offer Management feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-overview.html) for business users.
 
-## Module relations
+## Related Developer articles
 
-The following schema illustrates module relations in the Product Offer entity for the Back Office:
 
-![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/5db1ea40-576c-4663-b53d-e37469be0f81.png?utm_medium=live&utm_source=custom)
+|INTEGRATION GUIDES  |
+|---------|
+|[Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) |

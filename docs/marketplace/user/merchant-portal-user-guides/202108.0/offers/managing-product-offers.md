@@ -18,7 +18,25 @@ To create a product offer:
 
 1. Click **Add Offer**.
 2. From the list of concrete products, select the  product you want to create an offer for.
-3. In the drawer, fill the necessary fields and click **Create**.
+  The *Create Offer* drawer opens.
+3. Optional: To make the offer active after creating it, select **Offer is Active**.
+4. Optional: Enter a **Merchant SKU**.
+5. Select one or more **Stores**.
+6. Enter a **Quantity**.
+7. Optional: To always display the product offer as available on the Storefront, select **Always in Stock**.
+8. To add prices, in the *Price* section, do the following:
+  1. select **Add*.
+  2. Select a **STORE**.
+  3. Select a **CURRENCY**.
+  4. Optional: Enter any of the prices:
+    * **NET DEFAULT**
+    * **GROSS DEFAULT**
+    * **NET ORIGINAL**
+    * **GROSS ORIGINAL**
+  5. Optional: Enter a **VOLUME QUANTITY**.
+  6. Repeat steps 1-5 until you add all the desired prices.
+9. Optional: Select **Validity Dates**.
+10. Scroll up and select **Create**.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/creating-product-offers.gif)
 
@@ -29,7 +47,8 @@ To create a product offer:
 To edit an existing product offer:
 
 1. From the list of offers, select the offer you want to edit.
-2. In the drawer, change the desired fields and click **Save**.
+2. In the drawer, change the desired fields
+3. Select **Save**.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/edit-offers.gif)
 
@@ -64,10 +83,10 @@ The following table describes the attributes on the *Create offer* and *Edit off
 
 | ATTRIBUTE     | DESCRIPTION |
 | ------------- |  ------------- |
-| Offer visibility | Defines if the offer is displayed on the Storefront. By default, the offer is online. |
+| Offer status | Defines if the offer is displayed on the Storefront. By default, the offer is online. |
 | Merchant SKU     | Unique identifier of product offer in the merchant's ERP.              |
 | Offer Reference  | Unique identifier of the product offer in the Marketplace. |
 | Stores           | Defines the stores where the product offer is available.      |
-| Stock            | Defines the stock of the product offer.                     |
+| Quantity            | Defines the stock of the product offer.                     |
 | Price            | Prices of the product offer per store, currency, and volume quantity. Volume quantity defines the minimum product offer quantity to be added to cart for the price to apply. |
 | Validity Dates   | Defines the period during which the product offer is visible on the Storefront. |

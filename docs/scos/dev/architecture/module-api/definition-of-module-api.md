@@ -27,7 +27,7 @@ According to [Semantic Versioning](http://semver.org/) the Spryker Commerce OS c
 In Spryker Commerce OS’s core, all public methods in theses locatable classes are considered as API:
 
 * [Facades](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/zed/business-layer/facade/about-facade.html)
-* [Clients](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/client/client.html)
+* [Clients](/docs/scos/dev/back-end-development/client/client.html)
 * [Query Containers](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/zed/persistence-layer/query-container/about-the-query-container.html)
 * [Services](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/messages-and-errors/registering-a-new-service.html)
 
@@ -48,7 +48,7 @@ And every change in a schema can cause a BC break:
 
 * [Database](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/zed/persistence-layer/database-schema-definition.html)
 * Search
-* [Storage](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/client/using-and-configuring-redis-as-a-key-value-storage.html)
+* [Storage](/docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html)
 * Changes in [transfer objects](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) can also cause BC breaks e.g. when an existing field is renamed.
 
 There are several other ways to cause a BC break:

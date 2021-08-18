@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/t-widgets-widget-plugins
 ---
 
-This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/yves/modular-frontend.html). 
+This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html). 
 
 ## How to Implement a Widget?
 Each widget implementation is supposed to be designed as components: considering reusability and being able to render them on different Pages.

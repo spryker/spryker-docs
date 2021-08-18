@@ -272,7 +272,7 @@ Starting from this release, Yves, our backend-rendered frontend application, has
 The new recommended console entry endpoint for Yves is located in `vendor/bin/yves` and is based on [Symfony’s console component](https://symfony.com/doc/current/components/console.html). Therefore, you can add your own console command implementations by extending the corresponding classes. Within the implementation, you have multiple options to tailor your command to your needs, such as adding application plugins, event subscribers as well as pre- and post-run hooks.
 
 #### Documentation
-[CLI Entry Point for Yves](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/yves/cli-entry-point-for-yves.html)
+[CLI Entry Point for Yves](/docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html)
 
 ### Custom OMS Timeout Processors
 The order management system (OMS) validates the state of order items in fixed time intervals. This can lead to a high number of unnecessary checks if orders have a fixed future date for shipment, delivery or pick up, etc. This can be the case if, for example, the orders contain perishables or are subject to other constraints.

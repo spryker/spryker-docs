@@ -57,16 +57,16 @@ Signup for Docker Hub is not required.
 You can set lower **Memory:** and **Swap:** limit values. However, the default limits won't be sufficient to run the application, so make sure to increase them.
 {% endinfo_block %}
 
-5. [Development mode](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install Mutagen:
+5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install Mutagen:
 ```shell
 brew install mutagen-io/mutagen/mutagen-beta
 ```
 
 ## Next steps
 
-See [Chossing an installation mode](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to choose an installation mode.
+See [Chossing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to choose an installation mode.
 If you've already selected an installation mode, follow one of the guides below:
-* [Installing in Development mode on MacOS and Linux](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
-* [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
-* [Integrating Docker into existing projects](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
-* [Running production](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/running-production.html)
+* [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
+* [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
+* [Integrating Docker into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
+* [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html)

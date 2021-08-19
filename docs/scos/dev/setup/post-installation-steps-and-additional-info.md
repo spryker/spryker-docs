@@ -155,7 +155,7 @@ echo "127.0.0.1 {endpointName}" | sudo tee -a /etc/hosts
 | PostgreSQL Server | 5432 | Username is `development`, password is `mate20mg`. |
 | Redis | 10009 | You can explore Redis with Redis Desktop Manager or a similar tool. |
 | Mailcatcher|1080|Catches all the mails that are sent during development in the Dev VM.|
-|Management UI|15672|See [Default Queue Engine](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/queue/queue.html#default-queue-engine) for more information. |
+|Management UI|15672|See [Default Queue Engine](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html#default-queue-engine) for more information. |
 
 ## Activating the Opcache Module
 To optimize the performance of the system, you can enable the Opcache. This is not recommend for development, because you may get strange results. To activate the Opcache, just put the following lines at the end of the `php.ini` and `restart.php`.
@@ -216,4 +216,4 @@ $config[ApplicationConstants::HOST_YVES] = 'www.de.XXX.local';
 The first key is responsible for proper call from Yves to Zed, while the second one is used for domain name used for session cookies.
 
 ## Upgrading to a Newer Version
-To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/scos/dev/developer-guides/{{page.version}}/installation/composer.html#core-updates).
+To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/scos/dev/setup/composer.html#core-updates).

@@ -90,7 +90,7 @@ Apart from that, if your business case does not fit in one of the proposed model
 This documentation site contains lots of information on Spryker Commerce OS. Select one of the topics below depending on what you want to do next:
 
 * [What's new](/docs/scos/user/intro-to-spryker/whats-new/whats-new.html): general information about Spryker, news, and release notes.
-* [Spryker Installation Guides](/docs/scos/dev/developer-guides/{{page.version}}/installation/about-the-installation-guides.html): installation of Spryker.
+* [Spryker Installation Guides](/docs/scos/dev/setup/about-the-installation-guides.html): installation of Spryker.
 * [Features](/docs/scos/dev/features/{{page.version}}/overview-of-the-feature-guides.html): the Spryker features.
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
 * [User Guides](/docs/scos/user/user-guides/{{page.version}}/about-user-guides.html): step-by-step Backoffice and Storefront user guides.

@@ -35,6 +35,6 @@ To receive the security updates, please request the subsription at [support@spry
 
 **What's next:**
 
-* [Checking for newer versions](/docs/scos/dev/developer-guides/{{page.version}}/installation/composer.html)
+* [Checking for newer versions](/docs/scos/dev/setup/composer.html)
 * [Release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html)
 * [Migration guides](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/about-migration-guides.html)

@@ -29,7 +29,7 @@ We recommend starting with a Docker SDK environment. This option includes Docker
 
 It features a lightweight environment that is closer to a production implementation. 
 
-To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installing-spryker-with-docker.html).
+To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
 
 ### Installing Spryker with Development Virtual Machine
 
@@ -40,14 +40,14 @@ Choose an installation guide that suits your needs best:
 
 | Operating system | B2B Shop or B2C Shop |
 | --- | --- |
-| DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html) |
-| DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html) |
+| DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html) |
+| DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html) |
 
 ### Independent Installation
-Alternatively, you can install Spryker on an operating system that fulfills Spryker [System requirements](/docs/scos/dev/developer-guides/{{page.version}}/installation/system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html) for details.
+Alternatively, you can install Spryker on an operating system that fulfills Spryker [System requirements](/docs/scos/dev/setup/system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html) for details.
 
 {% info_block warningBox %}
-After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/developer-guides/{{page.version}}/installation/post-installation-steps-and-additional-info.html
+After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/setup/post-installation-steps-and-additional-info.html
 {% endinfo_block %} for tips on fine-tuning Spryker.)
 
 ## 2. Manage your modules
@@ -59,7 +59,7 @@ To define your strategy of taking Spryker updates, learn about our [module and f
 
 {% endinfo_block %}
 
-We use [Composer](/docs/scos/dev/developer-guides/{{page.version}}/installation/composer.html) to install and manage module dependencies. 
+We use [Composer](/docs/scos/dev/setup/composer.html) to install and manage module dependencies. 
 Run the following Composer commands depending on what you want to do:
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
 *  To update all the modules for your project: `composer update "spryker/*"`. 
@@ -80,8 +80,8 @@ To configure and customize your Spryker Commerce OS, do the following:
 
 1. To define how to manage and configure the settings in configuration files, see [Configuration management](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/configuration-management.html).
 2. Configure your environment: 
-    *   [Database](/docs/scos/dev/developer-guides/{{page.version}}/installation/configuring-the-database-server.html)
-    *   [Redis](/docs/scos/dev/developer-guides/{{page.version}}/installation/redis-configuration.html)
+    *   [Database](/docs/scos/dev/setup/configuring-the-database-server.html)
+    *   [Redis](/docs/scos/dev/setup/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
     *   [Queue](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/queue/queue.html)
 3. [Congiure stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
@@ -91,8 +91,8 @@ To configure and customize your Spryker Commerce OS, do the following:
 ## 4. Debugging
 
 Before you start developing, set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
-* [Configuring debugging in Docker](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-debugging-in-docker.html)
-* [Configuring debugging in Vagrant](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/debugger/configuring-debugging-in-vagrant.html)
+* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html)
+* [Configuring debugging in Vagrant](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger/configuring-debugging-in-vagrant.html)
 
 {% info_block infoBox %}
 In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelisting.

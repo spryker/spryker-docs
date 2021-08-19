@@ -13,31 +13,31 @@ redirect_from:
 This section includes guidance for problems related to issues you might encounter with your Spryker-based project in the Docker environment.  
 
 ## Topics
-Troubleshooting [Docker installation](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installing-spryker-with-docker.html):
-* [Docker daemon is not running](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
-* [docker-sync cannot start](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html)
-* [Setup of new indexes throws an exception](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html)
-* [Vendor folder synchronization error](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html)
-* [An error during front end setup](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html)
-* [Demo data was imported incorrectly](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html)
+Troubleshooting [Docker installation](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html):
+* [Docker daemon is not running](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
+* [docker-sync cannot start](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html)
+* [Setup of new indexes throws an exception](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html)
+* [Vendor folder synchronization error](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html)
+* [An error during front end setup](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html)
+* [Demo data was imported incorrectly](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html)
 
 Troubleshooting running applications in Docker:
 
-* [Port is already occupied on host](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html)
-* [413 Request Entity Too Large](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/413-request-entity-too-large.html)
-* [Nginx welcome page](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html)
-* [An application is not reachable via http](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/an-application-is-not-reachable-via-http.html)
-* [Mutagen error](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-error.html)
-* [Mutagen synchronization issue](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-synchronization-issue.html)
-* [MacOS and Windows: file synchronization issues in Development mode](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html)
+* [Port is already occupied on host](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html)
+* [413 Request Entity Too Large](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/413-request-entity-too-large.html)
+* [Nginx welcome page](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html)
+* [An application is not reachable via http](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/an-application-is-not-reachable-via-http.html)
+* [Mutagen error](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-error.html)
+* [Mutagen synchronization issue](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-synchronization-issue.html)
+* [MacOS and Windows: file synchronization issues in Development mode](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html)
 
 Troubleshooting debugging in Docker:
 
-* [Xdebug does not work](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-debugging-in-docker/xdebug-does-not-work.html)
-* [`nc` command does not give any output](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-debugging-in-docker/nc-command-does-not-give-any-output.html)
-* [`nc` command tells that the port is opened](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-debugging-in-docker/nc-command-tells-that-the-port-is-opened.html)
-* [PHP `xdebug` extension is not active in CLI](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-in-cli.html)
-* [PHP `xdebug` extension is not active when accessing the website via a browser or curl](/docs/scos/dev/developer-guides/{{page.version}}/troubleshooting/spryker-in-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl.html)
+* [Xdebug does not work](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-debugging-in-docker/xdebug-does-not-work.html)
+* [`nc` command does not give any output](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-debugging-in-docker/nc-command-does-not-give-any-output.html)
+* [`nc` command tells that the port is opened](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-debugging-in-docker/nc-command-tells-that-the-port-is-opened.html)
+* [PHP `xdebug` extension is not active in CLI](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-in-cli.html)
+* [PHP `xdebug` extension is not active when accessing the website via a browser or curl](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl.html)
 
 {% info_block infoBox %}
 

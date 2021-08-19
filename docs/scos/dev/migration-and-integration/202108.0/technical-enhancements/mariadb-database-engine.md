@@ -16,7 +16,7 @@ See [MariaDB knowledge base](https://mariadb.com/kb/en/) for more details.
 
 ## Integration into Docker-based projects
 
-For Docker-based integration instructions, see [MariaDB](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-services.html#mariadb).
+For Docker-based integration instructions, see [MariaDB](/docs/scos/dev/the-docker-sdk/configuring-services.html#mariadb).
   
 ## Integration into DevVM-based projects
 To integrate MariaDB into a DevVM-based project:

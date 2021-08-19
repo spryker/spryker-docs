@@ -10,6 +10,8 @@ redirect_from:
   - /docs/en/test-framework
   - /v6/docs/test-framework
   - /v6/docs/en/test-framework
+  - /v5/docs/test-framework
+  - /v5/docs/en/test-framework
 ---
 
 To easily test every aspect of Spryker and the code you write, Spryker uses the [Codeception testing framework](https://codeception.com/) and [PHPUnit ](https://phpunit.de/).

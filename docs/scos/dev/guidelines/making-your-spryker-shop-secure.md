@@ -9,6 +9,10 @@ redirect_from:
   - /docs/en/making-your-spryker-shop-secure
   - /v6/docs/making-your-spryker-shop-secure
   - /v6/docs/en/making-your-spryker-shop-secure
+  - /v5/docs/making-your-spryker-shop-secure
+  - /v5/docs/en/making-your-spryker-shop-secure
+  - /v4/docs/making-your-spryker-shop-secure
+  - /v4/docs/en/making-your-spryker-shop-secure
 ---
 
 Digital security is critical in our modern digital world, especially for successful businesses. Therefore, Spryker is advising to go through the following security actions to ensure the safety of your customers’ and partners’ data.

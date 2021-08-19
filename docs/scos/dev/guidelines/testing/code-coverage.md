@@ -10,6 +10,8 @@ redirect_from:
   - /docs/en/code-coverage
   - /v6/docs/code-coverage
   - /v6/docs/en/code-coverage
+  - /v5/docs/codecoverage
+  - /v5/docs/en/codecoverage
 ---
 
 To be aware of what you are testing, you should know the code coverage. To get the code coverage report generated, make sure Xdebug is enabled and run your tests with an additional flag:

@@ -10,6 +10,16 @@ redirect_from:
   - /docs/en/code-architecture-guide
   - /v6/docs/code-architecture-guide
   - /v6/docs/en/code-architecture-guide
+  - /v5/docs/code-architecture-guide
+  - /v5/docs/en/code-architecture-guide
+  - /v4/docs/code-architecture-guide
+  - /v4/docs/en/code-architecture-guide
+  - /v3/docs/code-architecture-guide
+  - /v3/docs/en/code-architecture-guide
+  - /v2/docs/code-architecture-guide
+  - /v2/docs/en/code-architecture-guide
+  - /v1/docs/code-architecture-guide
+  - /v1/docs/en/code-architecture-guide
 ---
 
 We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to assert a certain quality of Spryker architecture for both core and project.

@@ -10,6 +10,16 @@ redirect_from:
   - /docs/en/performance-guidelines
   - /v6/docs/performance-guidelines
   - /v6/docs/en/performance-guidelines
+  - /v5/docs/performance-guidelines
+  - /v5/docs/en/performance-guidelines
+  - /v4/docs/performance-guidelines
+  - /v4/docs/en/performance-guidelines
+  - /v3/docs/performance-guidelines
+  - /v3/docs/en/performance-guidelines
+  - /v2/docs/performance-guidelines
+  - /v2/docs/en/performance-guidelines
+  - /v1/docs/performance-guidelines
+  - /v1/docs/en/performance-guidelines
 ---
 
 Spryker is a fast application by design. These guidelines explain how to optimize the server-side execution time.

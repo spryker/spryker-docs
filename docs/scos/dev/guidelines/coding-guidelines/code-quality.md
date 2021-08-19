@@ -10,6 +10,16 @@ redirect_from:
   - /docs/en/code-quality
   - /v6/docs/code-quality
   - /v6/docs/en/code-quality
+  - /v5/docs/code-quality
+  - /v5/docs/en/code-quality
+  - /v4/docs/code-quality
+  - /v4/docs/en/code-quality
+  - /v3/docs/code-quality
+  - /v3/docs/en/code-quality
+  - /v2/docs/code-quality
+  - /v2/docs/en/code-quality
+  - /v1/docs/code-quality
+  - /v1/docs/en/code-quality
 ---
 
 Spryker Commerce OS’s code base receives very high scores in terms of quality measures, indicating significantly higher code quality than many other ecommerce solutions.

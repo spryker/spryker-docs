@@ -10,6 +10,16 @@ redirect_from:
   - /docs/en/code-style-guide
   - /v6/docs/code-style-guide
   - /v6/docs/en/code-style-guide
+  - /v5/docs/code-style-guide
+  - /v5/docs/en/code-style-guide
+  - /v4/docs/code-style-guide
+  - /v4/docs/en/code-style-guide
+  - /v3/docs/code-style-guide
+  - /v3/docs/en/code-style-guide
+  - /v2/docs/code-style-guide
+  - /v2/docs/en/code-style-guide
+  - /v1/docs/code-style-guide
+  - /v1/docs/en/code-style-guide
 ---
 
 We at Spryker follow the [PSR-2 standards](http://www.php-fig.org/psr/psr-2/) as the coding style guide. To achieve a styled codebase, we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).

@@ -10,6 +10,8 @@ redirect_from:
   - /docs/en/testing-best-practices
   - /v6/docs/testing-best-practices
   - /v6/docs/en/testing-best-practices
+  - /v5/docs/best-practices
+  - /v5/docs/en/best-practices
 ---
 
 The rule of thumb for your [tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html) should be:

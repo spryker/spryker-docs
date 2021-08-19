@@ -10,6 +10,8 @@ redirect_from:
   - /docs/en/setting-up-tests
   - /v6/docs/setting-up-tests
   - /v6/docs/en/setting-up-tests
+  - /v5/docs/setup-tests
+  - /v5/docs/en/setup-tests
 ---
 
 To get all the things working, you need to prepare a proper organization for your tests. For this, you, first of all, have the root `codeception.yml` file . Its main responsibility is to include other `codecpetion.yml` files that contain the suite configuration. See [Configuration](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html#configuration) for details.

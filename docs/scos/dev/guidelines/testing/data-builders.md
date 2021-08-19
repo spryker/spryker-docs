@@ -10,6 +10,8 @@ redirect_from:
   - /docs/en/data-builders
   - /v6/docs/data-builders
   - /v6/docs/en/data-builders
+  - /v5/docs/data-builder
+  - /v5/docs/en/data-builders
 ---
 
 Data builders help you create transfer objects for your tests. Instead of preparing transfers each time you need them, data builders do the work for you. Data builders use the [Faker library](https://github.com/fzaninotto/Faker).

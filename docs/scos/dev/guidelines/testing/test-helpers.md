@@ -10,6 +10,8 @@ redirect_from:
   - /docs/en/test-helpers
   - /v6/docs/test-helpers
   - /v6/docs/en/test-helpers
+  - /v5/docs/test-helper
+  - /v5/docs/en/test-helper
 ---
 
 [Codeception](https://codeception.com) provides so-called modules, which are *helpers* used for building your tests. These helpers allow you to hook into the lifecycle of tests and get handy methods available wherever the helper is enabled. Codeception and Spryker provide a lot of ready to use helpers. Checkout [Available Test Helpers](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/available-test-helpers.html) for information on some of them.

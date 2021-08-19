@@ -10,6 +10,8 @@ redirect_from:
   - /docs/en/project-development-guidelines
   - /v6/docs/project-development-guidelines
   - /v6/docs/en/project-development-guidelines
+  - /v5/docs/project-development-guidelines
+  - /v5/docs/en/project-development-guidelines
 ---
 
 Spryker OS exposes codebase Projects, which enables a high level of customization and can satisfy even the most complex Project business requirements.

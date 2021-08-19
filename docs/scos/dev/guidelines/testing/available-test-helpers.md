@@ -10,6 +10,10 @@ redirect_from:
   - /docs/en/available-test-helpers
   - /v6/docs/available-test-helpers
   - /v6/docs/en/available-test-helpers
+  - /v5/docs/twig
+  - /v5/docs/en/twig
+  - /v5/docs/propel
+  - /v5/docs/en/propel
 ---
 
 Spryker supports a number of test helpers to assist you in testing your project. This article provides details on the supported helpers.

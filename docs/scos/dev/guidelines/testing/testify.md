@@ -10,6 +10,10 @@ redirect_from:
   - /docs/en/testify
   - /v6/docs/testify
   - /v6/docs/en/testify
+  - /v5/docs/testify
+  - /v5/docs/en/testify
+  - /v5/docs/testify-1
+  - /v5/docs/en/testify-1
 ---
 
 On top of [Codeception](https://codeception.com), Spryker offers some classes to make your test life easier. In the Spryker [Testify](https://github.com/spryker/testify) module, you can find many useful  helpers.

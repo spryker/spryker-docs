@@ -10,6 +10,16 @@ redirect_from:
   - /docs/en/module-configuration-convention
   - /v6/docs/module-configuration-convention
   - /v6/docs/en/module-configuration-convention
+  - /v5/docs/module-configuration-convention
+  - /v5/docs/en/module-configuration-convention
+  - /v4/docs/module-configuration-convention
+  - /v4/docs/en/module-configuration-convention
+  - /v3/docs/module-configuration-convention
+  - /v3/docs/en/module-configuration-convention
+  - /v2/docs/module-configuration-convention
+  - /v2/docs/en/module-configuration-convention
+  - /v1/docs/module-configuration-convention
+  - /v1/docs/en/module-configuration-convention
 ---
 
 ## Definitions

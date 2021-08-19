@@ -10,6 +10,8 @@ redirect_from:
   - /docs/en/executing-tests
   - /v6/docs/executing-tests
   - /v6/docs/en/executing-tests
+  - /v5/docs/executing-tests
+  - /v5/docs/en/executing-tests
 ---
 
 There are many ways to execute the [tests](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html). You can do a full run of all tests, or you can narrow it down to only execute a specific test method.

@@ -1,0 +1,19 @@
+---
+title: Scheduled Prices feature walkthrough
+last_updated: Aug 19, 2021
+description: The Scheduled Prices feature enables Back Office users to schedule price changes, which are to happen in the future for multiple products simultaneously.
+template: concept-topic-template
+---
+
+The _Scheduled Prices_ feature enables Back Office users to schedule price changes, which are to happen in the future for multiple products simultaneously.
+
+<!--
+To learn more about the feature and to find out how end users use it, see [Scheduled Prices feature overview](https://documentation.spryker.com/docs/scheduled-prices-feature-overview) for business users.
+-->
+
+## Related Developer articles
+
+|INTEGRATION GUIDES  | MIGRATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+|---------|---------|---------|---------|
+|Scheduled prices feature integration | PriceProductSchedule migration guide  | File details: product_price_schedule.csv | HowTo - Schedule cron job for Scheduled Prices  |
+|   |PriceProductScheduleGui migration guide  |   |   |

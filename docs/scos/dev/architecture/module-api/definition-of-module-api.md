@@ -26,9 +26,9 @@ According to [Semantic Versioning](http://semver.org/) the Spryker Commerce OS c
 
 In Spryker Commerce OS’s core, all public methods in theses locatable classes are considered as API:
 
-* [Facades](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/zed/business-layer/facade/about-facade.html)
+* [Facades](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/zed/business-layer/facade/facade.html)
 * [Clients](/docs/scos/dev/back-end-development/client/client.html)
-* [Query Containers](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/zed/persistence-layer/query-container/about-the-query-container.html)
+* [Query Containers](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/zed/persistence-layer/query-container/query-container.html)
 * [Services](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/messages-and-errors/registering-a-new-service.html)
 
 And the interfaces which are implemented everywhere are also part of the API:

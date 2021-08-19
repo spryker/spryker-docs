@@ -14,7 +14,7 @@ redirect_from:
   - /v5/docs/en/setup-tests
 ---
 
-To get all the things working, you need to prepare a proper organization for your tests. For this, you, first of all, have the root `codeception.yml` file . Its main responsibility is to include other `codecpetion.yml` files that contain the suite configuration. See [Configuration](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html#configuration) for details.
+To get all the things working, you need to prepare a proper organization for your tests. For this, you, first of all, have the root `codeception.yml` file . Its main responsibility is to include other `codecpetion.yml` files that contain the suite configuration. See [Configuration](/docs/scos/dev/guidelines/testing/test-framework.html#configuration) for details.
 
 ### Directory Structure
 To organize your tests, follow this structure of the tests directory:
@@ -39,8 +39,8 @@ tests/
 
 Check out the organization within the [tests/PyzTest/](https://github.com/spryker-shop/suite/tree/master/tests/PyzTest) directory in Spryker Master Suite for example.
 
-Together with the [root configuration](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html#configuration), you are now able to organize your tests in a way that each test suite can have its own helper applied and can be executed separately.
+Together with the [root configuration](/docs/scos/dev/guidelines/testing/test-framework.html#configuration), you are now able to organize your tests in a way that each test suite can have its own helper applied and can be executed separately.
 
 ## Next Steps
-* Learn about the [available test helpers](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/available-test-helpers.html).
-* [Create or enable a test helper](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-helpers.html).
+* Learn about the [available test helpers](/docs/scos/dev/guidelines/testing/available-test-helpers.html).
+* [Create or enable a test helper](/docs/scos/dev/guidelines/testing/test-helpers.html).

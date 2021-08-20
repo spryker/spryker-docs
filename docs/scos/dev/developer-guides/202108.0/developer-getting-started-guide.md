@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 Welcome to the Spryker Commerce OS getting started guide.
- 
+
 We structured this page as a step-by-step checklist for you to follow through all the stages of working with Spryker.
 
 ## 1. Install Spryker
@@ -25,44 +25,44 @@ You can choose from the following options:
 * Separate [Features](/docs/scos/dev/features/{{site.version}}/overview-of-the-feature-guides.html) and modules - you can also expand both Demo Shops with separate features and modules.
 
 ### Installing Spryker with Docker
-We recommend starting with a Docker SDK environment. This option includes Docker and related tools to build images and run containers that match your requirements. 
+We recommend starting with a Docker SDK environment. This option includes Docker and related tools to build images and run containers that match your requirements.
 
-It features a lightweight environment that is closer to a production implementation. 
+It features a lightweight environment that is closer to a production implementation.
 
-To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installing-spryker-with-docker.html).
+To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
 
 ### Installing Spryker with Development Virtual Machine
 
-Spryker Commerce OS comes with a Virtual Machine that has all the prerequisites to run Spryker. It provides a full-featured development environment that will help you customize Spryker per your project requirements. The Development Virtual Machine (DevVM) is based on VirtualBox and Vagrant, and can be used to install Spryker on any Operating System. 
+Spryker Commerce OS comes with a Virtual Machine that has all the prerequisites to run Spryker. It provides a full-featured development environment that will help you customize Spryker per your project requirements. The Development Virtual Machine (DevVM) is based on VirtualBox and Vagrant, and can be used to install Spryker on any Operating System.
 
 Choose an installation guide that suits your needs best:
 
 
 | Operating system | B2B Shop or B2C Shop |
 | --- | --- |
-| DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html) |
-| DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html) |
+| DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html) |
+| DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html) |
 
 ### Independent Installation
-Alternatively, you can install Spryker on an operating system that fulfills Spryker [System requirements](/docs/scos/dev/developer-guides/{{page.version}}/installation/system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html) for details.
+Alternatively, you can install Spryker on an operating system that fulfills Spryker [System requirements](/docs/scos/dev/setup/system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html) for details.
 
 {% info_block warningBox %}
-After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/developer-guides/{{page.version}}/installation/post-installation-steps-and-additional-info.html
+After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/setup/post-installation-steps-and-additional-info.html
 {% endinfo_block %} for tips on fine-tuning Spryker.)
 
 ## 2. Manage your modules
 
-Once you have completed the installation, you can start managing *modules*. A module is a single functional unit, that has well-defined dependencies, and can be used and updated independently. 
+Once you have completed the installation, you can start managing *modules*. A module is a single functional unit, that has well-defined dependencies, and can be used and updated independently.
 {% info_block infoBox %}
 
 To define your strategy of taking Spryker updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/spryker-release-process.html).
 
 {% endinfo_block %}
 
-We use [Composer](/docs/scos/dev/developer-guides/{{page.version}}/installation/composer.html) to install and manage module dependencies. 
+We use [Composer](/docs/scos/dev/setup/composer.html) to install and manage module dependencies.
 Run the following Composer commands depending on what you want to do:
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
-*  To update all the modules for your project: `composer update "spryker/*"`. 
+*  To update all the modules for your project: `composer update "spryker/*"`.
 {% info_block infoBox %}
 
 We recommend running this command weekly to assert you have the latest fixes. We also recommend [subscribing to our release notes newsletter](https://now.spryker.com/release-notes) to stay up-to-date with the improvements.
@@ -79,7 +79,7 @@ See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/arch
 To configure and customize your Spryker Commerce OS, do the following:
 
 1. To define how to manage and configure the settings in configuration files, see [Configuration management](/docs/scos/dev/back-end-development/zed/data-manipulation/configuration-management.html).
-2. Configure your environment: 
+2. Configure your environment:
     *   [Database](/docs/scos/dev/developer-guides/{{page.version}}/installation/configuring-the-database-server.html)
     *   [Redis](/docs/scos/dev/developer-guides/{{page.version}}/installation/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
@@ -91,8 +91,8 @@ To configure and customize your Spryker Commerce OS, do the following:
 ## 4. Debugging
 
 Before you start developing, set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
-* [Configuring debugging in Docker](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-debugging-in-docker.html)
-* [Configuring debugging in Vagrant](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-vagrant/debugger/configuring-debugging-in-vagrant.html)
+* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html)
+* [Configuring debugging in Vagrant](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger/configuring-debugging-in-vagrant.html)
 
 {% info_block infoBox %}
 In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelisting.
@@ -105,7 +105,7 @@ As a developer, the Spryker structure is the first thing you need to know to ext
 * [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
 * [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.
 * [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
-* [Technology stack](/docs/scos/dev/architecture/technology-stack.html): to learn about the technologies we use. 
+* [Technology stack](/docs/scos/dev/architecture/technology-stack.html): to learn about the technologies we use.
 
 <!---* Introduction to navigating the folder structure, main concepts and namespacing.
 * The project directory
@@ -129,8 +129,7 @@ Select one of the topics below depending on what you want to do next:
 * [Features](/docs/scos/dev/features/{{page.version}}/overview-of-the-feature-guides.html): general information about the Spryker features.
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and guides.
 * [User guides](/docs/scos/user/user-guides/{{page.version}}/about-user-guides.html): step-by-step Backoffice and Storefront user guides.
-* [Developer guides](/docs/scos/dev/developer-guides/{{page.version}}/overview-of-the-developer-guides.html): technical information and guides for developers. 
+* [Developer guides](/docs/scos/dev/developer-guides/{{page.version}}/overview-of-the-developer-guides.html): technical information and guides for developers.
 * [Technology partners](/docs/scos/dev/technology-partners/{{page.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
 * [Migration and integration](/docs/scos/dev/migration-and-integration/{{page.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules and features.
 * [Tutorials](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/about-tutorials.html): tutorials and HowTos.
-

@@ -69,35 +69,35 @@ We have completed some maintenance activities and done minor fixes helping you t
 The Docker SDK supports two new mailing-related parameters: `name` and `email address`. When sending emails like customer registration, the values of the parameters are used in the `From` field. You can define them in the `regions:services:mail:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#regions-)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html#regions-)
 
 ### Sync solution: Mutagen
 
 The Docker SDK supports [Mutagen](https://mutagen.io/) as the new default sync solution. You can configure it in the `docker:mount:` section of the desired Deploy file.
 
 #### Documentation
-[Configuring mutagen mount mode on MacOS](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-a-mount-mode.html#configuring-mutagen-mount-mode-on-macos)
+[Configuring mutagen mount mode on MacOS](/docs/scos/dev/the-docker-sdk/configuring-a-mount-mode.html#configuring-mutagen-mount-mode-on-macos)
 
 ### Smaller production images
 
 The Docker SDK supports defining if Xdebug is to be built in Docker images. By default, it is enabled for the development environment and disabled for the production environment. You can define it in the `docker:debug:enabled:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#docker--debug-)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html#docker--debug-)
 
 ### Configurable cors-allow-origin
 
 The Docker SDK supports defining [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for the Glue API application. You can define it in the `groups: applications: endpoints: cors-allow-origin:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#groups--applications--endpoints-)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html#groups--applications--endpoints-)
 
 ### Accessing private repositories via SSH agent
 
 The Docker SDK supports accessing private repositories via SSH agent. Private repository credentials are provided by SSH agent. They are used only when building images. You can use SSH agent for development environments and CI/CD pipelines. 
 
 #### Documentation
-[Configuring access to private repositories](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-access-to-private-repositories.html#configuring-access-to-private-repositories)
+[Configuring access to private repositories](/docs/scos/dev/the-docker-sdk/configuring-access-to-private-repositories.html#configuring-access-to-private-repositories)
 
 ### Graceful handling of SIGTERM and SIGSTOP
 
@@ -114,7 +114,7 @@ Images are scanned in the background when they are pushed to AWS ECR, so it does
 The Docker SDK supports configuring `max-request-body-size` per application. It is limited in the code for security reasons, but you can increase or remove the maximum value for selected applications. You can configure `max-request-body-size` in the `groups: applications: application: http: max-request-body-size:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#groups--applications-)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html#groups--applications-)
 
 ### CloudTrail retention time changes
 Cloud Trail logs are now saved for at least 12 months for governance, compliance, operational auditing, and risk auditing of accounts. You can adjust the interval per your requirements. 
@@ -126,7 +126,7 @@ The Docker SDK configures prefixes for Elasticsearch index names based on the `n
 We released the documentation covering the following Docker SDK topics: installing on Windows with WSL2, introduction and quick start guides, development: debugging, testing, configuring synchronization modes.
 
 #### Documentation
-[Docker SDK](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/docker-sdk.html#docker-sdk)
+[Docker SDK](/docs/scos/dev/the-docker-sdk/docker-sdk.html#docker-sdk)
 
 ## Spryker Glue API
 We continue to add support for new storefront APIs.

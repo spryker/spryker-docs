@@ -187,9 +187,9 @@ For production setups, now you can generate optimized docker images.
 
 #### Documentation
 
-* [Getting Started with Docker](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installing-spryker-with-docker.html#running-production)
-* [Deploy File Reference](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html)
-* [Spryker in Docker Services](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-services.html)
+* [Getting Started with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#running-production)
+* [Deploy File Reference](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html)
+* [Spryker in Docker Services](/docs/scos/dev/the-docker-sdk/configuring-services.html)
 
 
 ***

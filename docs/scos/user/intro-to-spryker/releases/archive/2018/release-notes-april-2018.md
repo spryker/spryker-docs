@@ -125,8 +125,8 @@ In this release, we have fixed the following issues with SKU generation:
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Entity Manager](/docs/scos/dev/back-end-development/zed/zed/persistence-layer/entity-manager.html)
-* [Repository](/docs/scos/dev/back-end-development/zed/zed/persistence-layer/repository.html)
+* [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html)
+* [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html)
 * [Payment Integration - Computop](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
 * [Computop API](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-api-details)
 * [Computop - Credit Card](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html-credit-card)

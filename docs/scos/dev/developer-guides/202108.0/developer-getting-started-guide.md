@@ -83,7 +83,7 @@ To configure and customize your Spryker Commerce OS, do the following:
     *   [Database](/docs/scos/dev/developer-guides/{{page.version}}/installation/configuring-the-database-server.html)
     *   [Redis](/docs/scos/dev/developer-guides/{{page.version}}/installation/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
-    *   [Queue](/docs/scos/dev/back-end-development/zed/data-manipulation/queue/queue.html)
+    *   [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
 3. [Congiure stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
 4. [Schedule tasks](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/cronjobs/cronjob-scheduling.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->

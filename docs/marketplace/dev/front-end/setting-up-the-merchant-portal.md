@@ -1,11 +1,11 @@
 ---
-title: Setting up the project
+title: Setting up the Merchant Portal
 description: This article provides details about setting up Spryker Marketplace project.
 template: howto-guide-templat
 ---
 
 
-This article provides details on how to set up the Spryker Marketplace project.
+This article provides details on how to set up the Spryker Merchant Portal.
 
 ## Prerequisites
 To start using Merchant Portal, install Spryker demo-shop:

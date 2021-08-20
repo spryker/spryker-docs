@@ -41,7 +41,7 @@ In addition to these obvious cases, there are some other classes which are part 
 * module Config (`Client/Yves/Zed/Shared/Service`)(https://documentation.spryker.com/docs/configuration-management#how-to-retrieve-the-configuration)
 * Controllers
 * Twig functions
-* [CLI commands](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html)
+* [CLI commands](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html)
 * Public constants especially in [Constant Interfaces](/docs/scos/dev/back-end-development/zed/data-manipulation/configuration-management.html#constant-interfaces)
 
 And every change in a schema can cause a BC break:

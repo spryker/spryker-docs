@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/configuration-management
 ---
 
-A configuration file is a set of key-value pairs, properties, and methods that define how to manage and configure the settings. Spryker config is represented as a set of the files located in `/project/config/` folder of your project. 
+A configuration file is a set of key-value pairs, properties, and methods that define how to manage and configure the settings. Spryker config is represented as a set of the files located in `/project/config/` folder of your project.
 
 The directory includes the following subfolders with configuration files:
 
@@ -68,8 +68,8 @@ There are some other configuration files for specific purposes.
 
 |       Filename        |                           Purpose                            |
 | :-------------------: | :----------------------------------------------------------: |
-| `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing, you need to explicitly pass the environment to all [command line calls](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html). |
-|   `default_store.php`   | This file returns the default store which is used for all [command line calls](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/console-commands/implementing-a-new-console-command.html). |
+| `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing, you need to explicitly pass the environment to all [command line calls](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html). |
+|   `default_store.php`   | This file returns the default store which is used for all [command line calls](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html). |
 |      `stores.php`       | This file contains an array with all stores and their configuration like locale, date format, currency, etc. |
 
 ## How to Retrieve the Configuration
@@ -110,7 +110,7 @@ From kernel version 3.14, it is possible to create shared configuration classes,
 
 ```php
 <?php
-         
+
 namespace Spryker\Shared\ModuleName;
 
 use Spryker\Shared\Kernel\AbstractSharedConfig;
@@ -150,9 +150,9 @@ use Spryker\Zed\Kernel\AbstractBundleConfig;
      }
  }
  ```
- 
+
  The same way it can also be included to Yves, Client configuration classes.
- 
+
  ## Related Spryks
 You might use the following definitions to generate related code:
 

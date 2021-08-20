@@ -16,7 +16,7 @@ The *critical CSS* includes all the components from the [ShopUi](https://github.
 
 The *non-critical CSS* includes all other styles and service CSS classes called *utils*. The non-critical assets are not necessary for every page loading and can be loaded when the whole page has already been loaded.
 
-To support the assets loading behavior as described above, most pages considered as not landing are loading both critical and non-critical assets into the `<head>` tag at the start of the page loading. The assets loading approach for the landing pages is described further in this article. 
+To support the assets loading behavior as described above, most pages considered as not landing are loading both critical and non-critical assets into the `<head>` tag at the start of the page loading. The assets loading approach for the landing pages is described further in this article.
 
 ## Page-critical-path layout
 For the landing pages, there is the `page-critical-path` layout defining the assets loading behavior. It is an extension of the `page-blank` layout with the overwritten `nonCriticalStyles` and `styleLazyLoader` blocks. The `page-critical-path` contains a `style-loader` component before the closing tag of `<body>`. The `style-loader` component is responsible for loading the non-critical CSS only after the whole page is loaded.
@@ -28,7 +28,7 @@ The main purpose of the page-critical-path layout is to use the CSS Lazy Load on
 ## Building CSS and JS chunks
 As mentioned above, all the Yves CSS are split into critical, non-critical, and utils chunks using the Webpack `MiniCssExtractPlugin` and are loaded separately to all pages. Due to the fact that the utils CSS is a part of the non-critical CSS, they are built separately **only** for the user's first session on the site if the pages use `page-critical-path` layout.
 
-Building the JS chunks using a code-splitting Webpack feature allows splitting JS code into various bundles. It builds a smaller bundles size and allows you to control the resource load prioritization impact on a page load time. 
+Building the JS chunks using a code-splitting Webpack feature allows splitting JS code into various bundles. It builds a smaller bundles size and allows you to control the resource load prioritization impact on a page load time.
 
 There are three general approaches to code splitting:
 
@@ -43,11 +43,11 @@ You can create a JS build in ES5 and ES6 modes and switch between them only if n
 
 To achieve this, the front-end builder settings have the `buildVariantSettings` statement that includes building mode naming (legacy for ES5 and ESM for ES6) and boolean variable `isES6Module`. Also, the previous `ts-loader` has been changed to `babel-loader` and `isES6Module` variable is used to switch to ES6 building mode. For the `babel-loader`, a preset with plugins `@babel/preset-typescript`, `@babel/plugin-transform-runtime` and `@babel/plugin-proposal-class-properties` is used.
 
-The command list for building fronted is extended with the new attributes module:esm and module:legacy. 
+The command list for building fronted is extended with the new attributes module:esm and module:legacy.
 
 {% info_block infoBox %}
 
-To create a frontend build in different ES5 and ES6 modes, use the list of commands from [Frontend-related commands](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/console-commands/console-commands-in-spryker.html#frontend-related-commands). See the YVES section.
+To create a frontend build in different ES5 and ES6 modes, use the list of commands from [Frontend-related commands](/docs/scos/dev/back-end-development/console-commands/console-commands-in-spryker.html#frontend-related-commands). See the YVES section.
 
 {% endinfo_block %}
 
@@ -142,7 +142,7 @@ Depending on the usage of the CSS Lazy Load feature and ES5 supporting mode,  th
 ```
 `<body>`
 
-* Split scripts are compiled in ES5 and ES6 modes (`isNewFrontendBuildSupported`) and loaded depending on whether the ES5 is supported or not. By default, only ES6 mode is supported. 
+* Split scripts are compiled in ES5 and ES6 modes (`isNewFrontendBuildSupported`) and loaded depending on whether the ES5 is supported or not. By default, only ES6 mode is supported.
 ```html
 <body>
 ...
@@ -169,4 +169,3 @@ Depending on the usage of the CSS Lazy Load feature and ES5 supporting mode,  th
 ...
 </body>
 ```
-

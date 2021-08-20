@@ -67,7 +67,7 @@ class PriceProductConfig extends SprykerPriceProductConfig
 }
 ```
 or run `console price-product-store:optimize` from time to time when needed.
-:::
+
 
 ### Service
 - `PriceProductFilterPluginInterface` - filters array of prices based on `PriceProductFilterTransfer`

@@ -35,14 +35,22 @@ Similar to the customer registration flow, password restore makes use of a token
 
 Out of the box, Spryker provides the plugin `CustomerRestorePasswordMailTypePlugin` (Customer module) to handle a restore password email template. To enable it, register this plugin in your `MailDependencyProvider` (e.g., `Pyz\Zed\Mail\MailDependencyProvider`).
 
-@(Info)(Token link generation)(By default, the **Customer** module will lead to `'‹YVES HOST›/password/restore?token='`. If it's different in your project, you should configure the generation of restore links in `Spryker\Zed\Customer\CustomerConfig::getCustomerPasswordRestoreTokenUrl()`)
+{% info_block infoBox "Token link generation" %}
+
+By default, the **Customer** module will lead to `'‹YVES HOST›/password/restore?token='`. If it's different in your project, you should configure the generation of restore links in `Spryker\Zed\Customer\CustomerConfig::getCustomerPasswordRestoreTokenUrl()`
+
+{% endinfo_block %}
 
 ## Delete customer
 Customers can remove themselves by clicking **Delete Account** on the Yves Profile page. In addition, this functionality is also available in the Back Office (**Customer > View > Delete**).
 
 Complete removal from the customer table is strictly prohibited as it could affect the database consistency of e-commerce projects or even be illegal in terms of tax reporting and auditing. In Spryker, we don't remove identifiers from a customer table but anonymize private information. Information related to orders and bills will stay untouched.
 
-@(Error)()(We use irreversible algorithms to make it impossible to repair deleted data.)
+{% info_block errorBox "Error" %}
+
+We use irreversible algorithms to make it impossible to repair deleted data.
+
+{% endinfo_block %}
 
 After the deletion, customers can use an old email for registration, as the new registration does not have any connections to an old one (anonymized).
 
@@ -52,7 +60,11 @@ To prevent missing any customer-related information, do the following:
 2. Anonymize customer address information.
 3. Anonymize private customer information. Information directly related to customer fields (first name, last name, date of birth, etc.).
 
-@(Error)(Information privacy law )(When creating a custom implementation, check and follow the applicable legislation in your country.)
+{% info_block errorBox "Information privacy law " %}
+
+When creating a custom implementation, check and follow the applicable legislation in your country.
+
+{% endinfo_block %}
 
 ## Customer experience
 

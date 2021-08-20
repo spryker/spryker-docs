@@ -47,7 +47,11 @@ public function recalculate(CalculableObjectTransfer $calculableObjectTransfer);
 `TotalsTransfer::expenseTotal = sum(ExpenseTransfer::sumGrossPrice)`
 
 * `DiscountCalculatorPlugin`—Applies discounts to current `QuoteTransfer` each discountable item with property `calculatedDiscounts`, gets discounts filled. Also `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
-@(Info)(Discount Calculation)(Discount calculation is a separate topic and is explained here Discount.)
+{% info_block infoBox "Discount Calculation" %}
+
+Discount calculation is a separate topic and is explained here Discount.
+
+{% endinfo_block %}
 
 * `SumGrossCalculatedDiscountAmountCalculatorPlugin`—Calculates and sets `ItemTransfer` amounts after discounts to `sumGrossPriceWithProductOptionAndDiscountAmounts` and `unitGrossPriceWithProductOptionAndDiscountAmounts`; sets expense amounts after discounts to `unitGrossPriceWithDiscounts` and `sumGrossPriceWithDiscounts`.
     ```

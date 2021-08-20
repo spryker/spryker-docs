@@ -1,0 +1,28 @@
+---
+title: Customer Relationship Management (CRM)
+description: The compact and powerful customer management tool allows you to easily manage customer accounts and effectively monitor their shopping habits.
+originalLink: https://documentation.spryker.com/v2/docs/crm
+originalArticleId: 82d12bd9-23b0-4dfe-9bb3-fcaafb6276f5
+redirect_from:
+  - /v2/docs/crm
+  - /v2/docs/en/crm
+---
+
+<div class='feature-text'>
+    <div class='feature-images'>
+    <img class="light-mode" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Document+360/Capabilities+icons/light/CRM.svg"/>
+    <img class="dark-mode" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Document+360/Capabilities+icons/dark/CRM.svg"/>
+    </div>
+    <div class="feature-text-wrap">
+The compact and powerful customer management tool allows you easily manage customer accounts and effectively monitor their shopping habits. Customers can easily create customer accounts, which you can use to create personalized shopping experiences via customer segmentation. Group your customers based on their location, order history, age, gender or any other property and target specific groups for certain products, promotions, content pages, languages and many more.
+    </div>
+    </div>
+
+**Features:**
+
+<div>
+<a class="feature-link" href="https://documentation.spryker.com/v2/docs/customer-accounts">Customer Accounts</a>    
+<a class="feature-link" href="https://documentation.spryker.com/v2/docs/login-registration-forms">Login & Registration Forms</a>
+<a class="feature-link" href="https://documentation.spryker.com/v2/docs/password-management">Password Management</a>
+<a class="feature-link" href="https://documentation.spryker.com/v2/docs/customer-groups">Customer Groups</a>
+</div>

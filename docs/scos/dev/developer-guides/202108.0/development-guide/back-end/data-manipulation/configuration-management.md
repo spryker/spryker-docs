@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/configuration-management
 ---
 
-A configuration file is a set of key-value pairs, properties, and methods that define how to manage and configure the settings. Spryker config is represented as a set of the files located in `/project/config/` folder of your project. 
+A configuration file is a set of key-value pairs, properties, and methods that define how to manage and configure the settings. Spryker config is represented as a set of the files located in `/project/config/` folder of your project.
 
 The directory includes the following subfolders with configuration files:
 
@@ -110,7 +110,7 @@ From kernel version 3.14, it is possible to create shared configuration classes,
 
 ```php
 <?php
-         
+
 namespace Spryker\Shared\ModuleName;
 
 use Spryker\Shared\Kernel\AbstractSharedConfig;
@@ -150,9 +150,9 @@ use Spryker\Zed\Kernel\AbstractBundleConfig;
      }
  }
  ```
- 
+
  The same way it can also be included to Yves, Client configuration classes.
- 
+
  ## Related Spryks
 You might use the following definitions to generate related code:
 

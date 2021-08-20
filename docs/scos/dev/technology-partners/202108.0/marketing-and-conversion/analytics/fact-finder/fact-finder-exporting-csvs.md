@@ -74,7 +74,7 @@ You need to create an URL for a CSV file or put it into a public folder. Then yo
 
 If all the steps were correct you should be able to see the `fact-finder:export:products` command in the FACT-Finder section when you run `vendor/bin/console` from the project's root folder.
 
-Running `vendor/bin/console fact-finder:export:products` will create several CSV files (one per locale) in the folder you specified in 
+Running `vendor/bin/console fact-finder:export:products` will create several CSV files (one per locale) in the folder you specified in
 ```
 $config[FactFinderSdkConstants::CSV_DIRECTORY]
 ```

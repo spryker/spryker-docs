@@ -52,7 +52,7 @@ To register the query in the Econda module, extend the `AbstractPdoEcondaQuery` 
 If you are using the demo shop as your starting point, you can use the code snippets below.
 
 **For Categories**
-    
+
 ```php
 <?php
 
@@ -169,7 +169,7 @@ FROM spy_product
 
 }
 ```
- 
+
 Now that we have defined queries we must register them with Econda module by adding them to project level Econda configuration.
 
 In the example below we assume that you are using PostgreSql but if you use MySql just register your queries under MySql key in array.
@@ -313,9 +313,9 @@ and running:
 
 ```php
 ID,Name,Description,PRODUCTURL,ImageURL,Price,Stock,ProductCategory
-001_25904006,"Canon IXUS 160","Add a personal touch Make 
-shots your own with quick and easy control over picture 
-settings such as brightness and colour intensity. 
+001_25904006,"Canon IXUS 160","Add a personal touch Make
+shots your own with quick and easy control over picture
+settings such as brightness and colour intensity.
 Preview the results whi
 ",http://mysprykershop.com/en/canon-ixus-160-1,http://images.icecat.biz/img/norm/medium/25904006-8438.jpg,0,10,4
 Tracking

@@ -1,0 +1,30 @@
+---
+title: Resource Sharing feature overview
+description: The feature allows you to generate a link to your cart and share it within your business unit with various access permissions
+originalLink: https://documentation.spryker.com/2021080/docs/resource-sharing-feature-overview
+originalArticleId: 34e2ae9e-8d7e-4789-9282-b8de21ee5c09
+redirect_from:
+  - /2021080/docs/resource-sharing-feature-overview
+  - /2021080/docs/en/resource-sharing-feature-overview
+  - /docs/resource-sharing-feature-overview
+  - /docs/en/resource-sharing-feature-overview
+---
+
+The Resource Sharing feature makes sharing of different resources easy. You can generate a unique URL for any entity in Spryker. For example, you can generate a unique URL for a cart and share it with different access permissions. 
+
+For each entity, you should use an additional connector module. For example, to share carts, combine the Resource Sharing feature with the [Persistent Cart Sharing](/docs/scos/dev/features/{{page.version}}/persistent-cart-sharing/persistent-cart-sharing-feature-overview.html) feature.
+
+## If you are:
+
+<div class="mr-container">
+    <div class="mr-list-container">
+        <!-- col1 -->
+        <div class="mr-col">
+            <ul class="mr-list mr-list-green">
+                <li class="mr-title">Developer</li>
+                 <li><a href="https://documentation.spryker.com/docs/resource-sharing-feature-integration" class="mr-link">Integrate the Resource Sharing feature</a></li>
+            </ul>
+        </div>
+         <!-- col3 -->
+    </div>
+</div>

@@ -68,7 +68,7 @@ Follow the steps below to create the following:
 ## 2. Data Structure
 
 
-Usually, the data for Yves is stored differently from the data for Zed. It’s because the data model used in Redis and Elasticsearch is more optimized to be used by a front end. With P&S, data is always carried in the form of [**Transfer Objects**](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) between Zed and Yves.
+Usually, the data for Yves is stored differently from the data for Zed. It’s because the data model used in Redis and Elasticsearch is more optimized to be used by a front end. With P&S, data is always carried in the form of [**Transfer Objects**](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) between Zed and Yves.
 
 Follow the steps below to create a transfer object.
 

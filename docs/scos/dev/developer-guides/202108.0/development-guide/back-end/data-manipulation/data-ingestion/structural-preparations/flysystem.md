@@ -38,7 +38,7 @@ Flysystem's Service API is almost exactly like [Flysystem's API](http://flysyste
 
 it takes an additional mandatory parameter containing a pre-configured filesystem name.
 
-See [Plugin Configuration](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/file-system.html) for details.
+See [Plugin Configuration](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/file-system.html) for details.
 
 For example, to extract an image's metadata information stored under `foo/bar.jpg`, use the `getMetadata()` method with the media store's name.
 
@@ -139,7 +139,7 @@ The `build()` method is expected to return a class implementing the `\League\Fly
 
 The `acceptType()` method is expected to return true if the filesystem type can be handled by the implementation.
 
-Mapping between Filesystem and the type it can handle is done via configuration, see [Plugin Configuration](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/file-system.html) for details.
+Mapping between Filesystem and the type it can handle is done via configuration, see [Plugin Configuration](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/file-system.html) for details.
 
 ```php
 <?php

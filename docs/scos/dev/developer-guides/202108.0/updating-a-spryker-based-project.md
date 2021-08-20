@@ -219,7 +219,7 @@ We find the following static code analysis tools the most helpful for running af
 
 ### 3. Make other possible checks
 In addition to the automotive tests and code analysis tools, you can optionally do the following:
-* **Re-install the project locally** after the update, to make sure the installation process is not broken, demo-data import along with [publish and synchronization](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html) work as expected.
+* **Re-install the project locally** after the update, to make sure the installation process is not broken, demo-data import along with [publish and synchronization](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html) work as expected.
 * **Run a manual smoke-test** either locally or on staging to make sure everything works and looks fine. This is especially important in case you don't have enough acceptance test coverage.
 
 ## Prevent potential issues

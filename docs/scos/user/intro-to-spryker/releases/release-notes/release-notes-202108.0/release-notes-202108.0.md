@@ -262,7 +262,7 @@ We have also extended the testing framework so that you can include your tests.
 We have introduced the **strict mode** and type hints for transfer objects in function arguments and return types. This allows for safer and cleaner code, raises the code legibility and the checking capacity of our validation tools. We maintain the flexibility to define assStrict, specific transfers or even fields within these transfers.
 
 #### Documentation
-[Transfer strict types](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html#transfer-strict-types)
+[Transfer strict types](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html#transfer-strict-types)
 
 
 ### Front-end (Profiling + Microdata)

@@ -8,7 +8,7 @@ redirect_from:
   - /v2/docs/en/publish-and-synchronization
 ---
 
-For faster access to data, the client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. It does not have direct access to the [SQL database](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/zed/persistence-layer/about-the-persistence-layer.html) used by the backend. To have the client data sources always up to date, all changes made on the backend need to be propagated to the client data stores. For this purpose, Spryker implements a two-step process, called **Publish and Synchronize**. First, the data is *published*. This means generating an event that describes a change, collecting the related data and publishing it in a form suitable for the client. Then, the data is **synchronized** to *Redis* and *Elasticsearch*.
+For faster access to data, the client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. It does not have direct access to the [SQL database](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/zed/persistence-layer/persistence-layer.html) used by the backend. To have the client data sources always up to date, all changes made on the backend need to be propagated to the client data stores. For this purpose, Spryker implements a two-step process, called **Publish and Synchronize**. First, the data is *published*. This means generating an event that describes a change, collecting the related data and publishing it in a form suitable for the client. Then, the data is **synchronized** to *Redis* and *Elasticsearch*.
 
 The advantages of the approach are:
 

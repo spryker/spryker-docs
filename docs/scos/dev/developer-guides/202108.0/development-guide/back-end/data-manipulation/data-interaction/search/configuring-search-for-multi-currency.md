@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/search-multi-currency
 ---
 
-If you don't have the multi-currency feature in you current project yet and want to migrate, you have to follow certain steps to migrate your system. First [migrate Price](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-price.html) and [modules related to multi-currency](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.
+If you don't have the multi-currency feature in you current project yet and want to migrate, you have to follow certain steps to migrate your system. First [migrate Price](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-price.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.
 
 In the current multi-currency feature we store prices grouped by price mode and currency, so prices are as follows now:
 ```php

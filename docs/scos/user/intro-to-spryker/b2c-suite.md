@@ -81,7 +81,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 [**Internationalization**](https://documentation.spryker.com/2021080/docs/internationalization):
 
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html)
-* [Multiple Currencies per Store](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html)
+* [Multiple Currencies per Store](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html)
 * [International Tax Rates & Sets](https://documentation.spryker.com/2021080/docs/international-tax-rates-sets)
 * [Glossary Creation](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/glossary/managing-glossary.html)
 
@@ -89,7 +89,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 * [Autodetect of Currency](/docs/scos/dev/features/{{page.version}}/prices/prices-feature-overview/prices-overview.html)
 * [Volume Prices](/docs/scos/dev/features/{{page.version}}/prices/prices-feature-overview/volume-prices-overview.html)
-* [Net & Gross Price Mode](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
+* [Net & Gross Price Mode](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
 * [Scheduled Prices](https://documentation.spryker.com/2021080/docs/scheduled-prices)
 
 [**Tax**](/docs/scos/dev/features/{{page.version}}/tax/tax.html):

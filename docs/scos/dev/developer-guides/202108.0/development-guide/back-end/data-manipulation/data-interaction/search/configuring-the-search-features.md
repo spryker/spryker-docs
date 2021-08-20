@@ -12,7 +12,7 @@ redirect_from:
 
 This article explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
 
-This configuration is only relevant if you enable the three query expanders and the result formatters. See [Configuring the search query](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-the-search-query.html) for details.
+This configuration is only relevant if you enable the three query expanders and the result formatters. See [Configuring the search query](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-the-search-query.html) for details.
 
 To build configuration for the search features, provide implementation for `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigBuilderPluginInterface`:
 

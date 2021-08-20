@@ -219,7 +219,7 @@ The **POST** and the **PATCH** verbs allow you to pass the body in your request.
 The same as with any other data source, you can use containers called **Transfer Objects** for the convenience of dealing with data retrieved from POST requests. The objects are defined in the XML transfer file located in the Shared layer. The names of the transfer objects need to start with **Rest**.
 
 {% info_block infoBox %}
-For information on how to define the objects and syntax, see [How to create transfer objects](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
+For information on how to define the objects and syntax, see [How to create transfer objects](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
 {% endinfo_block %}.)
 
 In the example below, the `RestWishlistsAttributesTransfer` Transfer Object will have three string attributes automatically mapped from a POST request:

@@ -31,7 +31,7 @@ To check out Spryker features and how Spryker works in general, go with the Demo
 
 If you are already running a Spryker project with another solution like Vagrant, and you want to switch to Docker, see [Integrating the Docker SDK into existing projects](https://documentation.spryker.com/2021080/docs/integrating-the-docker-SDK-into-existing-projects).
 
-To launch a live Spryker project based on Docker, see [Running production](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/running-production.html).
+To launch a live Spryker project based on Docker, see [Running production](/docs/scos/dev/back-end-development/zed/running-production.html).
 
 Find more details about each mode below.
 
@@ -81,7 +81,7 @@ Learn how to convert a project into a Docker based instance in [Integrating the 
 
 Currently, there is no installation guide for deploying Spryker in Docker in a production environment. But you can generate the images suitable for a production environment and the archives with assets for each application - Yves, BackOffice(Zed) and Glue.
 
-Learn how to generate Docker images and assets for a production environment in [Running production](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/running-production.html).
+Learn how to generate Docker images and assets for a production environment in [Running production](/docs/scos/dev/back-end-development/zed/running-production.html).
 
 ## Next steps 
 Once you've selected and installation mode, follow one of the guides below:
@@ -90,4 +90,4 @@ Once you've selected and installation mode, follow one of the guides below:
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
 * [Integrating Docker into existing projects](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
-* [Running production](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/running-production.html)
+* [Running production](/docs/scos/dev/back-end-development/zed/running-production.html)

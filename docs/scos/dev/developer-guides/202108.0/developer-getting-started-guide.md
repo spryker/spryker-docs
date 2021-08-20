@@ -78,14 +78,14 @@ See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/arch
 
 To configure and customize your Spryker Commerce OS, do the following:
 
-1. To define how to manage and configure the settings in configuration files, see [Configuration management](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/configuration-management.html).
+1. To define how to manage and configure the settings in configuration files, see [Configuration management](/docs/scos/dev/back-end-development/zed/data-manipulation/configuration-management.html).
 2. Configure your environment: 
     *   [Database](/docs/scos/dev/developer-guides/{{page.version}}/installation/configuring-the-database-server.html)
     *   [Redis](/docs/scos/dev/developer-guides/{{page.version}}/installation/redis-configuration.html)
-    <!---*   [ElasticSearch](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
-    *   [Queue](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/queue/queue.html)
+    <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
+    *   [Queue](/docs/scos/dev/back-end-development/zed/data-manipulation/queue/queue.html)
 3. [Congiure stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
-4. [Schedule tasks](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/cronjob-scheduling.html) (Cron jobs).
+4. [Schedule tasks](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/cronjobs/cronjob-scheduling.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
 ## 4. Debugging

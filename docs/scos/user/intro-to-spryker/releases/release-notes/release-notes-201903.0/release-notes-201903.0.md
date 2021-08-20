@@ -96,7 +96,7 @@ In this release, we have improved the way the session works in Spryker. Out of t
 
 If a user does not interact with the site for a specific period of time, the session will expire, and the user will be redirected to the login page for their next action.
 
-**Documentation**: [Session Management](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/session-handlers.html).
+**Documentation**: [Session Management](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/session-handlers.html).
 
 ## SDK
 ### Code Sniffer, Architecture Sniffer, PHPStan Improvements

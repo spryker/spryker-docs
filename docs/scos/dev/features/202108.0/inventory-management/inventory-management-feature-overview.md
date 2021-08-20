@@ -83,7 +83,7 @@ Availability of a product bundle is defined by the availability of each product 
 
 {% endinfo_block %}
 
-In the [state machine](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when payment fails and order is canceled, the item is not reserved anymore:
+In the [state machine](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when payment fails and order is canceled, the item is not reserved anymore:
 
 <details open>
 <summary>State machine example</summary>

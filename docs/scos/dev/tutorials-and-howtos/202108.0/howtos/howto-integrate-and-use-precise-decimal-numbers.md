@@ -35,7 +35,7 @@ You can specify Decimal as a type of your Data Transfer Object’s property. To 
 </transfer>
 ```
 
-For more information about how to work with Data Transfer Objects, see [Creating, Using and Extending the Transfer Objects](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
+For more information about how to work with Data Transfer Objects, see [Creating, Using and Extending the Transfer Objects](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
 
 ## Creating a Decimal Value Object
 Decimal objects can be created using one of the following types: int, numeric string (including numbers in exponential representation), float, objects that have the `__toString()` method defined and returning a numeric string, for example:

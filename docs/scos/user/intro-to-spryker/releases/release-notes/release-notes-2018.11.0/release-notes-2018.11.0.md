@@ -134,7 +134,7 @@ Easily set a minimum order value for any of your products where either the custo
 You can easily manage gross and net prices per product, country, and currency. Please note that you cannot mix Net and Gross prices in the same shopping cart.
 ![Net and gross price](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image14.png){height="" width=""}
 
-**Documentation**: [Net &amp; Gross Prices](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
+**Documentation**: [Net &amp; Gross Prices](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html)
 
 ### Volume Prices
 With the Volume Prices feature, you can define individual prices for a product for different order quantities. Set specific volume thresholds for your products to encourage your customers to purchase larger quantities of a product in order to receive the special volume discount.

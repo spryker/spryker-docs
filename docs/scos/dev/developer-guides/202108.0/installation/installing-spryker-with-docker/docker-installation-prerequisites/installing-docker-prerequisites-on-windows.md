@@ -66,5 +66,5 @@ If you've already selected an installation mode, follow one of the guides below:
 * [Installing in Development mode on Windows](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
 * [Integrating Docker into existing projects](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
-* [Running production](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/running-production.html)
+* [Running production](/docs/scos/dev/back-end-development/zed/running-production.html)
 

@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/queue-pool
 ---
 
-Queue pool is designed to allow P&S ([Publish and Synchronization](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html)) messages to be sent to several queues.
+Queue pool is designed to allow P&S ([Publish and Synchronization](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html)) messages to be sent to several queues.
 
 ## Configuration
 Queue pools are defined with unique names in `config/Shared/stores.php`

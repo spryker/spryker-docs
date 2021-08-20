@@ -143,7 +143,7 @@ echo "127.0.0.1 {endpointName}" | sudo tee -a /etc/hosts
 | PostgreSQL Server | 5432 | Username is `development`, password is `mate20mg`. |
 | Redis | 10009 | You can explore Redis with Redis Desktop Manager or a similar tool. |
 | Mailcatcher|1080|Catches all the mails that are sent during development in the Dev VM.|
-|Management UI|15672|See [Default Queue Engine](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/queue/queue.html#default-queue-engine) for more information. |
+|Management UI|15672|See [Default Queue Engine](/docs/scos/dev/back-end-development/zed/data-manipulation/queue/queue.html#default-queue-engine) for more information. |
 
 ## Activating the Opcache Module
 To optimize the performance of the system, you can enable the Opcache. This is not recommend for development, because you may get strange results. To activate the Opcache, just put the following lines at the end of the `php.ini` and `restart.php`.

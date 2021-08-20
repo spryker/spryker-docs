@@ -12,7 +12,7 @@ redirect_from:
 
 One of the most important questions addressed during project development is “How to bring data in my project?”. Spryker provides the required infrastructure to address performance and consistency when dealing with project data.
 
-The simplest way to bring data to a project is to leverage [Data Importers](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/creating-a-data-importer.html) and [P&S](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html) infrastructure. See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/data-processing-guidelines.html) for the list of available importers. 
+The simplest way to bring data to a project is to leverage [Data Importers](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/creating-a-data-importer.html) and [P&S](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html) infrastructure. See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/data-processing-guidelines.html) for the list of available importers. 
 
 ## Strategies and Concepts
 

@@ -10,12 +10,6 @@ entries:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
 
-          - title: Installation
-            url: /docs/marketplace/dev/setup/installation.html
-
-          - title: Post-installation steps
-            url: /docs/marketplace/dev/setup/post-installation-steps.html
-
       - title: Feature walkthroughs
         nested:
           - title: Merchant
@@ -304,12 +298,6 @@ entries:
           - title: Retrieving autocomplete and search suggestions
             url: /docs/marketplace/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
 
-
-      - title: HowTos
-        nested:
-          - title: HowTos sample page
-            url: /docs/marketplace/dev/howtos/howtos-sample-page.html
-
       - title: Data export
         nested:
 
@@ -377,8 +365,8 @@ entries:
       - title: Front-end
         nested:
 
-        - title: "Setting up the project"
-          url: /docs/marketplace/dev/front-end/setting-up-the-project.html
+        - title: "Setting up the Merchant portal"
+          url: /docs/marketplace/dev/front-end/setting-up-the-merchant-portal.html
 
         - title: "Building the project"
           url: /docs/marketplace/dev/front-end/building-the-project.html
@@ -445,17 +433,14 @@ entries:
             - title: "Persistence"
               url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
 
-        - title: "How-To: Create a new module with application"
-          url: /docs/marketplace/dev/front-end/how-to-create-a-new-module-with-application.html
-
         - title: "Angular Services"
           url: /docs/marketplace/dev/front-end/angular-services.html
 
         - title: "Angular Components"
           url: /docs/marketplace/dev/front-end/angular-components.html
 
-      - title: Back-end
+      - title: HowTos
         nested:
-
-          - title: "Marketplace infrastructure setup"
-            url: /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
+          
+          - title: "How-To: Create a new module with application"
+            url: /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html

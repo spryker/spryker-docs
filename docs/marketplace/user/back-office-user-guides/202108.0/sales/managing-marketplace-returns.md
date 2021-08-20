@@ -5,7 +5,7 @@ description: This guide explains how to manage marketplace returns in the Back O
 template: back-office-user-guide-template
 ---
 
-After a [marketplace return](/docs/marketplace/user/features/{{ page.version }}/marketplace-return-management-feature-overview.html) has been created by a Back Office user or by a [shop user](/docs/marketplace/user/features/{{ page.version }}/marketplace-return-management-feature-overview.html#marketplace-return-management-on-the-storefront), it appears on the *Sales* > *Returns* page. On this page, you can manage the returns as follows:
+After a [marketplace return](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html) has been created by a Back Office user or by a [shop user](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html#marketplace-return-management-on-the-storefront), it appears on the *Sales* > *Returns* page. On this page, you can manage the returns as follows:
 
 - Set the return states.
 - Print the return slip.
@@ -131,7 +131,7 @@ The Total section displays the total amount of items to be returned.
 
 ## Printing a marketplace return slip
 
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/sales/managing-marketplace-returns.html#marketplace-return-item-states).
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/marketplace/user/back-office-user-guides/{{page.version}}/sales/managing-marketplace-returns.html#marketplace-return-item-states).
 
 To print the return slip:
 

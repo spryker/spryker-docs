@@ -183,7 +183,7 @@ You need to remove the cache files for each project deployment.
 
 See [EventDispatcher module migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-eventdispatcher.html) for information on how to upgrade to a newer version of the EventDispatcher module.
 
-See [Cache of Unresolved Entities for Zed](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/cache-of-unresolved-entities-for-zed.html) for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
+See [Cache of Unresolved Entities for Zed](/docs/scos/dev/technical-enhancements/cache-of-unresolved-entities-for-zed.html) for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
 
 
 ## Redis Mget cache

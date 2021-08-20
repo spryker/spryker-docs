@@ -13,7 +13,7 @@ Yves gets most of its data from the client-side NoSQL data stores (data such as 
 
 In this tutorial, we’ll exemplify how you can set up the communication between Yves and Zed.
 
-We’ll display a random salutation message that is retrieved from Zed. Follow the steps in [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/201903.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html) to have the backend implementation ready.
+We’ll display a random salutation message that is retrieved from Zed. Follow the steps in [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/201903.0/back-end-development/extending-spryker/adding-a-new-module.html) to have the backend implementation ready.
 
 To implement this functionality, you need to follow the steps described below:
 

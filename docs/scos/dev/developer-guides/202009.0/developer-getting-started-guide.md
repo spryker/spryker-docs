@@ -83,7 +83,7 @@ To configure and customize your Spryker Commerce OS, do the following:
     <!---*   [ElasticSearch](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
     *   [Queue](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/queue/queue.html)
 3. [Congiure stores](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/howto-set-up-multiple-stores.html#configure-stores) to have one or multiple stores in your online shop.
-4. [Schedule tasks](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/cronjob-scheduling.html) (Cron jobs).
+4. [Schedule tasks](/docs/scos/dev/{{site.version}}/back-end-development/cronjobs/cronjob-scheduling.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
 ## 4. Debugging

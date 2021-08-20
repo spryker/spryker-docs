@@ -1,6 +1,6 @@
 ---
 title: System requirements
-Descriptions: System requirements for the Spryker Merchant Portal
+Descriptions: System requirements for the Spryker Marketplace with Merchant Portal
 template: howto-guide-template
 ---
 
@@ -26,7 +26,7 @@ template: howto-guide-template
 ### Supported browsers
 The Spryker Marketplace supports the following browsers:
 
-| Desktop (MP) | Tablet (MP) |
+| Desktop (Merchant Portal) | Tablet (Merchant Portal) |
 | --- | --- |
 | **Browsers**: <ul><li> Windows, macOS: Chrome (latest version)</li> <li>Windows: Firefox (latest version)</li><li>Windows: Edge (latest version)</li><li>macOS: Safari (latest version)</li></ul> **Windows versions**:<ul><li>Windows 10</li><li>Windows 7</li></ul>**macOS versions**:<ul><li> Catalina (basically, the latest released version)</li></ul>**Screen resolutions**:<ul><li>1024-1920 width</li></ul>| **Browsers**: <ul><li>iOS: Safari</li><li>Android: Chrome</li></ul>**iOS versions**:<ul><li>iOS 13</li></ul>**Screen resolutions**:<ul><li>1024x703 (e.g. iPad Air)</li></ul>|
 

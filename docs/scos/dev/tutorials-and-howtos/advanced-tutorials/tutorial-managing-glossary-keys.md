@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/tutorial-managing-glossary-keys
   - /docs/tutorial-managing-glossary-keys
   - /docs/en/tutorial-managing-glossary-keys
+  - /v6/docs/tutorial-managing-glossary-keys
+  - /v6/docs/en/tutorial-managing-glossary-keys
 ---
 
 Glossary keys present two layers of persistence:
@@ -29,7 +31,7 @@ $facade-&gt;saveGlossaryKeyTranslations($formData);
 $facade-&gt;deleteTranslation($keyName,$locale);
 ```
 
-## Retrieving glossary keys 
+## Retrieving glossary keys
 The support for listing the glossary keys is exposed through `GlossaryBusinessContainer`:
 
 ```php
@@ -59,13 +61,12 @@ On the Storefront, you can use glossary keys to translate rendered content. The 
 ```xml
 <div><label>{% raw %}{{{% endraw %} 'First Name' | trans {% raw %}}}{% endraw %}</label>
     <div>
-    
+
         <input type="text" name="first_name" value="{% raw %}{{{% endraw %} form.first_name.value {% raw %}}}{% endraw %}">
         {#{% raw %}{{{% endraw %} form_row(form.first_name) {% raw %}}}{% endraw %}#}
-        
+
     </div>
 </div>
 ```
 
 The keyword `trans` marks an operation exposed by the `TwigTranslator` extension. This means that the text of the label is either the default value provided in the view or the corresponding translation for it.
-

@@ -8,9 +8,15 @@ redirect_from:
   - /2021080/docs/en/howto-import-packaging-units
   - /docs/howto-import-packaging-units
   - /docs/en/howto-import-packaging-units
+  - /v6/docs/howto-import-packaging-units
+  - /v6/docs/en/howto-import-packaging-units
+  - /v5/docs/howto-import-packaging-units
+  - /v5/docs/en/howto-import-packaging-units
+  - /v4/docs/howto-import-packaging-units
+  - /v4/docs/en/howto-import-packaging-units
 ---
 
-This HowTo provides the steps on how to extend the list of the packaging unit types available by default (box, bag, palette etc.) by importing packaging unit information and types using a .CSV file. 
+This HowTo provides the steps on how to extend the list of the packaging unit types available by default (box, bag, palette etc.) by importing packaging unit information and types using a .CSV file.
 
 {% info_block warningBox "Note" %}
 Keep in mind that packaging unit type import should happen first, otherwise, you won't be able to import packaging units if the types are not present yet.

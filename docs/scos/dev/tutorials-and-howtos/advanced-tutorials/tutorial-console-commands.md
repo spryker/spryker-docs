@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/t-console-commands
   - /docs/t-console-commands
   - /docs/en/t-console-commands
+  - /v6/docs/t-console-commands
+  - /v6/docs/en/t-console-commands
+  - /v5/docs/t-console-commands
+  - /v5/docs/en/t-console-commands
+  - /v4/docs/t-console-commands
+  - /v4/docs/en/t-console-commands
+  - /v3/docs/t-console-commands
+  - /v3/docs/en/t-console-commands
+  - /v2/docs/t-console-commands
+  - /v2/docs/en/t-console-commands
+  - /v1/docs/t-console-commands
+  - /v1/docs/en/t-console-commands  
 ---
 
 A console command is a PHP class that contains the implementation of a functionality that can get executed from the command line.
@@ -31,13 +43,13 @@ The console commands must be added in Zed, under the Communication layer of the 
 ```php
 <?php
 namespace Pyz\Zed\Tutorial\Communication\Console;
- 
+
 use Spryker\Zed\Kernel\Communication\Console\Console;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
- 
+
 class UpdateApplicationConsole extends Console
-{ 
+{
 //..
 }
 ```
@@ -81,13 +93,13 @@ protected function execute(InputInterface $input, OutputInterface $output)
 {
     $this->runDependingCommand('router:cache:warm-up');
     $this->info('Route cache was successfully updated', false);
-        
+
     $this->runDependingCommand('twig:cache:warmer');
     $this->info('Twig cache was successfully updated', false);
-        
+
     $this->runDependingCommand('navigation:build-cache');
     $this->info('Navigation cache was successfully updated', false);
-        
+
     $this->runDependingCommand('glue:rest:build-request-validation-cache');
     $this->info('Glue request validation cache was successfully updated', false);
 }
@@ -110,7 +122,7 @@ public function getConsoleCommands()
     $commands = [
         ...
         new UpdateApplicationConsole(),
- 
+
     ];
     return $commands;
 }

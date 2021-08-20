@@ -8,13 +8,17 @@ redirect_from:
   - /2021080/docs/en/howto-display-product-groups-by-color-on-the-storefront
   - /docs/howto-display-product-groups-by-color-on-the-storefront
   - /docs/en/howto-display-product-groups-by-color-on-the-storefront
+  - /v5/docs/howto-display-product-groups-by-color-on-the-storefront
+  - /v5/docs/en/howto-display-product-groups-by-color-on-the-storefront
+  - /v6/docs/howto-display-product-groups-by-color-on-the-storefront
+  - /v6/docs/en/howto-display-product-groups-by-color-on-the-storefront
 ---
 
- 
+
 
 To enhance the visual shopping experience of your customers, you can use [product groups](https://documentation.spryker.com/2021080/docs/en/product-groups). A product group is a group of products logically united by an attribute. You can create product groups, but there is no way to display them on the Storefront by default. This guide shows how to display a product group on the Storefront using the color attribute as an example. The behavior to be configured is described in [Product Groups Feature Overview](https://documentation.spryker.com/2021080/docs/en/product-groups-feature-overview).
 
- 
+
 ## Prerequisites
 
 Before you start configuration, make sure that the [Product Groups feature is integrated](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-groups-feature-integration.html) into your project.
@@ -98,7 +102,7 @@ Transfer objects have been prepared for the `colorCode` field.
 
 {% endinfo_block %}
 
-## Extension of Product Abstract Data Import 
+## Extension of Product Abstract Data Import
 
 Extend the product abstract writer with the color code data in the data import module. In `src/Pyz/Zed/DataImport/Business/Model/ProductAbstract/ProductAbstractWriterStep.php`, edit `ProductAbstractWriterStep` as follows:
 
@@ -151,7 +155,7 @@ class ProductAbstractWriterStep extends PublishAwareStep implements DataImportSt
     }
 }
 ```
- 
+
 ## Demo Data Preparation
 
 Prepare the demo data for the color code field:
@@ -182,7 +186,6 @@ Make sure that:
 
 {% endinfo_block %}
 
-## Front-end Configuration 
+## Front-end Configuration
 
 If you want to change the product attribute used for grouping, re-define `colorAttributeName` in the `src/Pyz/Yves/ProductGroupWidget/Theme/default/components/molecules/color-selector/color-selector.twig` Twig template.
-

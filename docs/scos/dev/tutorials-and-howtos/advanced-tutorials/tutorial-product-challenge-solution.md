@@ -7,6 +7,18 @@ redirect_from:
   - /2021080/docs/en/t-product-challenge-solution
   - /docs/t-product-challenge-solution
   - /docs/en/t-product-challenge-solution
+  - /v6/docs/t-product-challenge-solution
+  - /v6/docs/en/t-product-challenge-solution
+  - /v5/docs/t-product-challenge-solution
+  - /v5/docs/en/t-product-challenge-solution
+  - /v4/docs/t-product-challenge-solution
+  - /v4/docs/en/t-product-challenge-solution
+  - /v3/docs/t-product-challenge-solution
+  - /v3/docs/en/t-product-challenge-solution
+  - /v2/docs/t-product-challenge-solution
+  - /v2/docs/en/t-product-challenge-solution
+  - /v1/docs/t-product-challenge-solution
+  - /v1/docs/en/t-product-challenge-solution
 ---
 
 <!-- used to be: http://spryker.github.io/onboarding/product-solution/ -->
@@ -18,7 +30,7 @@ File: `Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.sche
 
 <details open>
 <summary>Click to expand the code sample</summary>
-    
+
 ```
 &lt;?xml version="1.0"?&gt;
 &lt;database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -45,7 +57,7 @@ File: `Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.sche
 
 &lt;/database&gt;
 ```
-    
+
 </br>
 </details>
 
@@ -55,7 +67,7 @@ Method: `Pyz\Zed\ProductCountry\Communication\Controller\ImportController::index
 
 <details open>
 <summary>Click to expand the code sample</summary>
-    
+
 ```
 &lt;?php
 
@@ -81,7 +93,7 @@ class ProductCountryQueryContainer extends AbstractQueryContainer implements Pro
     //...
 }
 ```
-    
+
 </br>
 </details>
 
@@ -89,7 +101,7 @@ In the `ProductCountryBusinessFactory` class you need to create a new instance o
 
 <details open>
 <summary>Click to expand the code sample</summary>
-    
+
 ```
 &lt;?php
 
@@ -123,7 +135,7 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
 
 }
 ```
-    
+
 </br>
 </details>
 
@@ -131,7 +143,7 @@ Now, implement the logic to save a new product, within the `ProductCountryManage
 
 <details open>
 <summary>Click to expand the code sample</summary>
-    
+
 ```
 &lt;?php
 
@@ -182,7 +194,7 @@ class ProductCountryManager implements ProductCountryManagerInterface
 
 }
 ```
-    
+
 </br>
 </details>
 
@@ -210,7 +222,7 @@ Now we need to add the new selected column `product_country` to the collectItem 
 
 <details open>
 <summary>Click to expand the code sample</summary>
-    
+
 ```
 &lt;?php
 
@@ -245,7 +257,7 @@ class ProductCollector extends AbstractStoragePdoCollector
     //...
 }
 ```
-    
+
 </br>
 </details>
 

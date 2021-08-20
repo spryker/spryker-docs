@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/ht-make-product-shown-on-frontend-by-url
   - /docs/ht-make-product-shown-on-frontend-by-url
   - /docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v6/docs/ht-make-product-shown-on-frontend-by-url
+  - /v6/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v5/docs/ht-make-product-shown-on-frontend-by-url
+  - /v5/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v4/docs/ht-make-product-shown-on-frontend-by-url
+  - /v4/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v2/docs/ht-make-product-shown-on-frontend-by-url
+  - /v2/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v1/docs/ht-make-product-shown-on-frontend-by-url
+  - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
 ---
 
 {% info_block infoBox %}

@@ -8,6 +8,10 @@ redirect_from:
   - /2021080/docs/en/howto-create-a-visibility-condition-for-cms-blocks
   - /docs/howto-create-a-visibility-condition-for-cms-blocks
   - /docs/en/howto-create-a-visibility-condition-for-cms-blocks
+  - /v6/docs/howto-create-a-visibility-condition-for-cms-blocks
+  - /v6/docs/en/howto-create-a-visibility-condition-for-cms-blocks
+  - /v5/docs/howto-create-a-visibility-condition-for-cms-blocks
+  - /v5/docs/en/howto-create-a-visibility-condition-for-cms-blocks
 ---
 
 Visibility Condition is a [Templates & Slots](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html) feature functionality that allows you to define in which cases a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#spryker-cms-blocks) for slots has the following [visibility conditions](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) by default:
@@ -16,7 +20,7 @@ Visibility Condition is a [Templates & Slots](/docs/scos/dev/features/{{page.ver
 * Product and category conditions for Product details page.
 * CMS page condition for CMS page.
 
-Each page type has a dedicated template with several [slot widgets](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#slot-widget). The visibility conditions of each template are defined in module configuration. 
+Each page type has a dedicated template with several [slot widgets](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#slot-widget). The visibility conditions of each template are defined in module configuration.
 
 ```php
 namespace Pyz\Zed\CmsSlotBlock;
@@ -55,7 +59,7 @@ As shown in the example above, the visibility condition configuration is an arra
 
 ## Visibility Condition for a Template
 
-To show the procedure, the following steps will walk you through the creation of the `customer` visibility condition for the product details page template. 
+To show the procedure, the following steps will walk you through the creation of the `customer` visibility condition for the product details page template.
 
 1. Assign the new condition to the template in `src/Pyz/Zed/CmsSlotBlock/CmsSlotBlockConfig.php`:
 
@@ -74,7 +78,7 @@ To show the procedure, the following steps will walk you through the creation of
     }
 ```
 
-2. From the properties available on the product details page, choose the properties which you want to pass to the slot widget. For example, the property values related to user account details (like `age` or `city`) can be fetched from the session. 
+2. From the properties available on the product details page, choose the properties which you want to pass to the slot widget. For example, the property values related to user account details (like `age` or `city`) can be fetched from the session.
     The slot widget with `idProductAbstract`, `isGuest`, `age` and `city` properties looks as follows:
 
 ```twig
@@ -165,7 +169,7 @@ Child form elements can have any names and subsequent child form elements.
 
 {% endinfo_block %}
 
-In our case the created form has 5 elements: 
+In our case the created form has 5 elements:
 * `customer` parent form with 4 children:
     * `isGuest` radio button;
     * `fromAge` numeric input field;
@@ -187,13 +191,13 @@ In our case the created form has 5 elements:
                 '.' => static::FIELD_ALL,
             ]
           ]);
-          
+
          $builder->get('customer')->add('isGuest', ChoiceType::class, [
             'choices' => ['For logged-in Users' => false, 'For Guests' => true],
             'multiple' => false,
          ]);
-         
-         $builder->get('customer')->add('fromAge', IntegerType::class); 
+
+         $builder->get('customer')->add('fromAge', IntegerType::class);
          $builder->get('customer')->add('toAge', IntegerType::class);
          $builder->get('customer')->add('city', Select2ComboBoxType::class, [
             'choices' => $options['city_list'], // from CustomerSlotBlockFormDataProvider
@@ -205,7 +209,7 @@ In our case the created form has 5 elements:
 
 {% info_block warningBox "Verification" %}
 
-1. Go to the Back Office > **Content Management** > **Slots**. 
+1. Go to the Back Office > **Content Management** > **Slots**.
 
 2. Select a product details page template in the **List of Templates**.
 
@@ -221,7 +225,7 @@ You should be able to see a rendered form of the customer visibility condition.
 
 6. Click **Save**.
 
-7. In database, check the last added rows in `spy_cms_slot_block.conditions` and `spy_cms_slot_block_storage.data` columns. 
+7. In database, check the last added rows in `spy_cms_slot_block.conditions` and `spy_cms_slot_block_storage.data` columns.
 
     {% info_block infoBox %}
 They should contain the customer condition data you have set in the Back Office.
@@ -231,12 +235,12 @@ They should contain the customer condition data you have set in the Back Office.
 
 ## Visibility Condition Resolver Plugin for Slot Widget
 
-1. Implement the following plugin using `\Spryker\Client\CmsSlotBlockExtension\Dependency\Plugin\CmsSlotBlockVisibilityResolverPluginInterface`. 
+1. Implement the following plugin using `\Spryker\Client\CmsSlotBlockExtension\Dependency\Plugin\CmsSlotBlockVisibilityResolverPluginInterface`.
 
 CustomerSlotBlockConditionResolverPlugin
-    
+
 ```php
-    
+
 namespace Pyz\Client\CmsSlotBlockCustomer\Plugin\CmsSlotBlock;
 
 use Generated\Shared\Transfer\CmsSlotBlockTransfer;
@@ -281,14 +285,14 @@ class CustomerSlotBlockConditionResolverPlugin extends AbstractPlugin implements
             if ($cmsSlotBlockConditionTransfer->getFromAge() && $age < $cmsSlotBlockConditionTransfer->getFromAge()) {
                 return false;
             }
-            
+
             if ($cmsSlotBlockConditionTransfer->getToAge() && $age > $cmsSlotBlockConditionTransfer->getToAge()) {
                 return false;
             }
 
             $isBlockVisible = true;
         }
-        
+
         if ($cmsSlotParamsTransfer->getCity()) {
             if (
               $cmsSlotBlockConditionTransfer->getCity()

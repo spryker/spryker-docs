@@ -7,6 +7,8 @@ redirect_from:
   - /2021080/docs/en/howto-generate-a-token-for-login
   - /docs/howto-generate-a-token-for-login
   - /docs/en/howto-generate-a-token-for-login
+  - /v6/docs/howto-generate-a-token-for-login
+  - /v6/docs/en/howto-generate-a-token-for-login
 ---
 
 [Customer Login by Token](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/customer-login-by-token-overview.html) feature allows B2B users to log in to a Spryker Shop using a token.
@@ -20,15 +22,15 @@ To generate a token, follow the steps:
 <transfer name="Customer">
 	<property name="additionalProperty" type="array" />
 </transfer>
- 
+
 <transfer name="CompanyUserIdentifier">
 	<property name="additionalProperty" type="array" />
 </transfer>
- 
+
 <transfer name="OauthUser">
 	<property name="additionalProperty" type="array" />
 </transfer>
- 
+
 <transfer name="OauthRequest">
 	<property name="additionalProperty" type="array" />
 </transfer>
@@ -39,7 +41,7 @@ To generate a token, follow the steps:
 $customerTransfer = (new CustomerTransfer())
 	->setCompanyUserTransfer((new CompanyUserTransfer())->setIdCompanyUser(11))
 	->setAdditionalProperty(['key' => 'value']);
- 
+
 $oauthResponseTransfer = OauthCompanyUserFacade::createCompanyUserAccessToken($customerTransfer);
 $accessToken = $oauthResponseTransfer->getAccessToken();
 ```
@@ -47,6 +49,6 @@ $accessToken = $oauthResponseTransfer->getAccessToken();
 
 ```php
 $customerTransfer = OauthCompanyUserClient::getCustomerByAccessToken($accessToken)->getCustomerTransfer();
- 
+
 $additionalProperty = $customerTransfer->getAdditionalProperty(); // ['key' => 'value']
 ```

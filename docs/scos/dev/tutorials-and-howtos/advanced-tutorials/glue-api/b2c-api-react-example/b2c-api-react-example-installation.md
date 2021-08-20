@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/b2c-api-react-example-installation
   - /docs/b2c-api-react-example-installation
   - /docs/en/b2c-api-react-example-installation
+  - /v6/docs/b2c-api-react-example-installation
+  - /v6/docs/en/b2c-api-react-example-installation
+  - /v5/docs/b2c-api-react-example-installation
+  - /v5/docs/en/b2c-api-react-example-installation
+  - /v4/docs/b2c-api-react-example-installation
+  - /v4/docs/en/b2c-api-react-example-installation
+  - /v3/docs/b2c-api-react-example-installation
+  - /v3/docs/en/b2c-api-react-example-installation
+  - /v2/docs/b2c-api-react-example-installation
+  - /v2/docs/en/b2c-api-react-example-installation
+  - /v1/docs/b2c-api-react-example-installation
+  - /v1/docs/en/b2c-api-react-example-installation
 ---
 
 B2C API React Example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/{{page.version}}/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. Below, you will find detailed steps on how to perform both the installation scenarios.
@@ -29,7 +41,7 @@ To perform the app installation on the VM:
 `vagrant ssh`
 3. After logging in to the VM, the current directory will be the folder where your Spryker project is installed, which is /data/shop/development/current by default. Go one directory up. To do this, execute the following command:
 `cd ..`
-4. Prepare a folder where the example app will be installed. For example, if you want to place it in folder `api-rest-example`, execute the following 
+4. Prepare a folder where the example app will be installed. For example, if you want to place it in folder `api-rest-example`, execute the following
 
 ```
 commands:sudo mkdir api-rest-example

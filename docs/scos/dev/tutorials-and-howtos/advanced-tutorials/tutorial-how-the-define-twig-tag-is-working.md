@@ -8,6 +8,12 @@ redirect_from:
   - /2021080/docs/en/tutorial-how-define-twig-tag-is-working
   - /docs/tutorial-how-define-twig-tag-is-working
   - /docs/en/tutorial-how-define-twig-tag-is-working
+  - /v6/docs/tutorial-how-define-twig-tag-is-working
+  - /v6/docs/en/tutorial-how-define-twig-tag-is-working
+  - /v5/docs/tutorial-how-define-twig-tag-is-working
+  - /v5/docs/en/tutorial-how-define-twig-tag-is-working
+  - /v4/docs/tutorial-how-define-twig-tag-is-working
+  - /v4/docs/en/tutorial-how-define-twig-tag-is-working
 ---
 
 This tutorial explains how the **define** tag works on particular examples.

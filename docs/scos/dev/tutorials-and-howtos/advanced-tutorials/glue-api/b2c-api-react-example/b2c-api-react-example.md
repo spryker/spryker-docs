@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/b2c-api-react-example
   - /docs/b2c-api-react-example
   - /docs/en/b2c-api-react-example
+  - /v6/docs/b2c-api-react-example
+  - /v6/docs/en/b2c-api-react-example
+  - /v5/docs/b2c-api-react-example
+  - /v5/docs/en/b2c-api-react-example
+  - /v4/docs/b2c-api-react-example
+  - /v4/docs/en/b2c-api-react-example
+  - /v3/docs/b2c-api-react-example
+  - /v3/docs/en/b2c-api-react-example
+  - /v2/docs/b2c-api-react-example
+  - /v2/docs/en/b2c-api-react-example
+  - /v1/docs/b2c-api-react-example
+  - /v1/docs/en/b2c-api-react-example
 ---
 
 As a part of documentation related to Spryker Glue REST API, we have also developed a B2C API React Example. It is a [React](https://reactjs.org/) single page application based on a [webpack](https://webpack.js.org/) devserver, Typescript, [Redux](https://redux.js.org/), and Material UI.
@@ -48,7 +60,7 @@ The Demo shop has been built using and demonstrates the use of the endpoints and
 ## Running the Example Application
 The app source code can be found in the following GitHub repository: [https://github.com/spryker-shop/b2c-api-react-example](https://github.com/spryker-shop/b2c-api-react-example). You can install it inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/{{page.version}}/development-virtual-machine-docker-containers-and-console.html) or on a dedicated web server.
 
-For detailed installation steps, see [B2C API React Example Installation](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example-installation.html).
+For detailed installation steps, see [B2C API React Example Installation](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html).
 
 ## Peeking Requests
 After installing and running the example app, you can try its functionality. Depending on how you installed it, the shop will be available at:

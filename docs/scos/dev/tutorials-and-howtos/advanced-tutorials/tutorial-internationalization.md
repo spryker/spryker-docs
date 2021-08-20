@@ -7,6 +7,18 @@ redirect_from:
   - /2021080/docs/en/t-internationalization
   - /docs/t-internationalization
   - /docs/en/t-internationalization
+  - /v6/docs/t-internationalization
+  - /v6/docs/en/t-internationalization
+  - /v5/docs/t-internationalization
+  - /v5/docs/en/t-internationalization
+  - /v4/docs/t-internationalization
+  - /v4/docs/en/t-internationalization
+  - /v3/docs/t-internationalization
+  - /v3/docs/en/t-internationalization
+  - /v2/docs/t-internationalization
+  - /v2/docs/en/t-internationalization
+  - /v1/docs/t-internationalization
+  - /v1/docs/en/t-internationalization
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/internationalization/-->

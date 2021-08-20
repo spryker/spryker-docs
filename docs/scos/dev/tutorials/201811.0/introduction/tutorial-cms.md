@@ -34,7 +34,7 @@ Go back to the [page](http://www.de.demoshop.local/de/contact) and have a look a
 | [CMS Manual](/docs/scos/dev/features/201811.0/cms/cms.html)  |
 |  [Implementing URL Routing in Yves](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/yves/implementing-url-routing-in-yves.html)| Steps to implement URL Routing in Yves |
 | [Glossary Creation](/docs/scos/dev/features/201811.0/internationalization/glossary-creation/glossary-creation.html) |Glossary module documentation  |
-| [Cronjob Scheduling](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/data-manipulation/data-enrichment/cronjobs/adding-and-configuring-a-cronjob.html) | Set up cron jobs in Jenkins |
+| [Cronjob Scheduling](/docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-a-cronjob.html) | Set up cron jobs in Jenkins |
 
 <!-- Last review date: Sep 11, 2017_
 

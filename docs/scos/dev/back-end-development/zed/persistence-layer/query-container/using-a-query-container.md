@@ -22,7 +22,7 @@ redirect_from:
   - /v1/docs/en/using-a-query-container
 ---
 
-The query container of the current unterminated query is available via `$this->getQueryContainer()` in the [factory](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/factory/creating-instances-of-classes-factory.html) of the communication and the business layer and can be injected into any model.
+The query container of the current unterminated query is available via `$this->getQueryContainer()` in the [factory](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/factory/factory.html) of the communication and the business layer and can be injected into any model.
 
 ![Query container via factory](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Persistence+Layer/Query+Container/query-container-via-factory.png){height="" width=""}
 

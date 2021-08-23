@@ -6,6 +6,7 @@ template: concept-topic-template
 ---
 
 ## Overview
+
 The `Navigation` module manages multiple navigation menus that can be displayed on the frontend (Yves). Every navigation section can contain its own nested structure of navigation nodes. Navigation nodes have types that help define what kind of link they represent.
 
 The following node types are available:
@@ -20,8 +21,8 @@ You can control and adjust Navigation node appearance and add icons by assigning
 This feature is shipped with three modules:
 
 * **Navigation module** provides database structure and a public API to manage what’s in the database. It also provides a small toolkit for rendering navigation menus in the frontend.
-* **NavigationGui** module provides a Zed UI to manage navigation menus.
-* **NavigationCollector** module provides full collector logic for exporting navigation menus to the KV storage (Redis).
+* **NavigationGui** provides a Zed UI to manage navigation menus.
+* **NavigationCollector** provides full collector logic for exporting navigation menus to the KV storage (Redis).
 
 ## Database schema
 The Navigation module provides the `spy_navigation` table that stores navigation menus. They have a `name` field which is only used for backend display and they also have a `key` field used to reference the navigation menus from Yves.

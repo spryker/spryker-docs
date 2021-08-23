@@ -1,7 +1,7 @@
 ---
 title:  "Reference information: AvailabilityStorage module overview"
 last_updated: Aug 13, 2021
-description: This article describes the AvailabilityStorage module, which publishes all the availability information for abstract and concrete products.
+description: This article describes the AvailabilityStorage module, which publishes all the availability information for abstract and concrete products
 template: concept-topic-template
 ---
 

@@ -1,26 +1,15 @@
 ---
 title: Gift Cards feature walkthrough
-last_updated: Aug , 2021
-description: The Gift Card feature enables you to create a virtual product (a gift card) with a chosen value amount
+last_updated: Aug 13, 2021
+description: The Gift Cards feature enables you to create a virtual product (a gift card) with a chosen value amount
 template: concept-topic-template
 ---
 
-The _Gift Card_ feature enables you to create a virtual product (a gift card) with a chosen value amount. The purchase of a gift card generates an individual code that is used as a payment method during checkout.
+The _Gift Cards_ feature enables you to create a virtual product (a gift card) with a chosen value amount. The purchase of a gift card generates an individual code that is used as a payment method during checkout.
 
 <!--
 To learn more about the feature and to find out how end users use it, see [Gift Cards feature overview](https://documentation.spryker.com/docs/gift-cards-feature-overview) for business users.
 -->
-
-## Entity diagram
-
-The following schema illustrates relations between alternative products:
-
-<div class="width-100">
-
-![-entity-diagram]()
-
-</div>
-
 
 ## Related Developer articles
 

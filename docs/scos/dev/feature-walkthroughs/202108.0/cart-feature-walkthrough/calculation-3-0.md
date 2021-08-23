@@ -7,7 +7,7 @@ template: concept-topic-template
 
 Spryker uses the Calculation module to calculate the cart totals that are displayed in the cart/checkout or when the order is placed.
 
-The calculation module extensively uses plugins to inject calculation algorithms.
+The Сalculation module extensively uses plugins to inject calculation algorithms.
 
 ## How calculation works
 
@@ -25,7 +25,7 @@ For more details, check [Cart Data Flow](https://documentation.spryker.com/docs/
 
 {% endinfo_block %}
 
-If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](https://documentation.spryker.com/docs/calculation-data-structure#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes, etc.). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
+If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](https://documentation.spryker.com/docs/calculation-data-structure#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
 
 {% info_block infoBox "Calculated amounts" %}
 
@@ -50,33 +50,34 @@ interface CalculatorPluginInterface
 }
 ```
 
-* `RemoveTotalsCalculatorPlugin`—Resets quote totals, sets `TotalsTransfer` empty.
-* `RemoveAllCalculatedDiscountsCalculatorPlugin`—Resets every `CalculatedDiscountTransfer`.
-* `ItemGrossAmountsCalculatorPlugin`—Calculates `sumGrossPrice` for each `ItemTransfer`.
+* `RemoveTotalsCalculatorPlugin`—resets quote totals, sets `TotalsTransfer` empty.
+* `RemoveAllCalculatedDiscountsCalculatorPlugin`—resets every `CalculatedDiscountTransfer`.
+* `ItemGrossAmountsCalculatorPlugin`—calculates `sumGrossPrice` for each `ItemTransfer`.
 
 `ItemTransfer::sumGrossPrice = ItemTransfer::unitGrossPrice * ItemTransfer::quantity`
 
-* `ProductOptionGrossSumCalculatorPlugin`—Calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`.—Calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`.
+* `ProductOptionGrossSumCalculatorPlugin`—calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`—calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`.
 
 ```php
+
 ProductOptionTransfer::sumGrossPrice = ProductOptionTransfer::unitGrossPrice * ProductOptionTransfer::quantity
 ItemTransfer::unitGrossPriceWithProductOptions = sum(ProductOptionTransfer::unitGrossPrice) + ItemTransfer::unitGrossPrice
 ItemTransfer::sumGrossPriceWithProductOptions = sum(ProductOptionTransfer::sumGrossPrice) + ItemTransfer:sumGrossPrice
 ```
 
-* `SubtotalTotalsCalculatorPlugin`—Sums each of the `sumGrossPriceWithProductOptions` items.
+* `SubtotalTotalsCalculatorPlugin`—sums each of the `sumGrossPriceWithProductOptions` items.
 
 `TotalsTransfer::subtotal = sum(ItemTransfer::sumGrossPriceWithProductOptions)`
 
-* `ExpensesGrossSumAmountCalculatorPlugin`—Calculates `sumGrossPrice` for each item.
+* `ExpensesGrossSumAmountCalculatorPlugin`—calculates `sumGrossPrice` for each item.
 
 `ExpenseTransfer::sumGrossPrice = ExpenseTransfer::unitGrossPrice * ExpenseTransfer::quantity`
 
-* `ExpenseTotalsCalculatorPlugin`—Calculates `expenseTotal` in `TotalsTransfer`.
+* `ExpenseTotalsCalculatorPlugin`—calculates `expenseTotal` in `TotalsTransfer`.
 
 `TotalsTransfer::expenseTotal = sum(ExpenseTransfer::sumGrossPrice)`
 
-* `DiscountCalculatorPlugin`—Applies discounts to current `QuoteTransfer` each discountable item with property `calculatedDiscounts`, gets discounts filled. Also, `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
+* `DiscountCalculatorPlugin`—applies discounts to current `QuoteTransfer` each discountable item with property `calculatedDiscounts`, gets discounts filled. Also, `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
 
 {% info_block infoBox "Discount Calculation" %}
 
@@ -86,14 +87,14 @@ Discount calculation is a separate topic and is explained in the [Discount](http
 {% endinfo_block %}
 
 
-* `SumGrossCalculatedDiscountAmountCalculatorPlugin`—Calculates and sets `ItemTransfer` amounts after discounts to `sumGrossPriceWithProductOptionAndDiscountAmounts` and `unitGrossPriceWithProductOptionAndDiscountAmounts`; sets expense amounts after discounts to `unitGrossPriceWithDiscounts` and `sumGrossPriceWithDiscounts`.
+* `SumGrossCalculatedDiscountAmountCalculatorPlugin`—calculates and sets `ItemTransfer` amounts after discounts to `sumGrossPriceWithProductOptionAndDiscountAmounts` and `unitGrossPriceWithProductOptionAndDiscountAmounts`; sets expense amounts after discounts to `unitGrossPriceWithDiscounts` and `sumGrossPriceWithDiscounts`.
 
 ```php
 ItemTransfer::unitGrossPriceWithProductOptionAndDiscountAmounts = ItemTransfer::unitGrossPriceWithProductOptions— (sum(ItemTransfer:calculatedDiscounts::unitGrossPrice) + sum(ProductOptionTransfer::calculatedDiscounts::unitGrossPrice))
 ItemTransfer::sumGrossPriceWithProductOptionAndDiscountAmounts = ItemTransfer::sumGrossPriceWithProductOptions— (sum(ItemTransfer:calculatedDiscounts::sumGrossPrice) + sum(ProductOptionTransfer::calculatedDiscounts::sumGrossPrice))
 ```
 
-* `DiscountTotalsCalculatorPlugin`—Calculates total for discounts used and sets it to `totalDiscount` in `TotalsTransfer`. Sum all discountable item `CalculatedDiscountTransfer` gross amounts:
+* `DiscountTotalsCalculatorPlugin`—calculates total for discounts used and sets it to `totalDiscount` in `TotalsTransfer`. Sum all discountable item `CalculatedDiscountTransfer` gross amounts:
 
 ```php
 TotalsTransfer:discountTotal += sum(ItemTransfer::CalculateDiscountTransfer::sumGrossAmount +
@@ -102,16 +103,18 @@ GrandTotalTotalsCalculatorPlugin—Calculates grandTotal in TotalsTransfer.
 TotalsTransfer:grandTotal = TotalsTransfer::subtotal + TotalsTransfer:expenseTotal
 ```
 
-* `GrandTotalWithDiscountsCalculatorPlugin` —Calculates GrandTotal after discounts in `TotalsTransfer`.
+* `GrandTotalWithDiscountsCalculatorPlugin` —calculates `GrandTotal` after discounts in `TotalsTransfer`.
 
 `TotalsTransfer:grandTotal = TotalsTransfer::subtotal + TotalsTransfer:expenseTotal - TotalsTransfer::discountTotal`
 
-* **TaxTotalsCalculatorPlugin` —Calculates taxTotal and taxRate used from `TotalTransfer::grandTotal`, sets it in `TotalsTransfer::TaxTotalsTransfer`.
+* `TaxTotalsCalculatorPlugin`—calculates taxTotal and taxRate used from `TotalTransfer::grandTotal`, sets it in `TotalsTransfer::TaxTotalsTransfer`.
 
 
 `TaxableItems = ItemTransfer, ProductOptionTransfer, ExpenseTransfer. TaxTotalsTransfer::taxRate = sum(TaxableItems) / TaxableItems TaxTotalsTransfer::taxAmount = round((TotalsTransfer::grandTotal * TaxTotalsTransfer::taxRate) / TaxTotalsTransfer::taxRate / 100)`
 
 ## Calculation data structure
+
+This section describes calculation data structure.
 
 ### Quote Transfer
 
@@ -168,24 +171,24 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 |sku (string)|Concrete product sku|
 |groupKey (string)|Group key used for grouping items in cart|
 |quantity (int)|Number of items selected|
-|IDSalesOrderItem (int)|ID of order item, stored when items is saved, after PlaceOrderStep|
+|IDSalesOrderItem (int)|ID of order item, stored when items is saved after `PlaceOrderStep`|
 |name (string)|Concrete product name|
 |IDProductAbstract (int)|ID of abstract product|
 |abstractSku (string)|Abstract product sku|
-|variety (string)|Used when item is in a module|
-|status (string)|State machine state when item used as order item|
-|addedAt (string)|Used in wishlist to have date when item was added|
-|productConcrete (ProductConcreteTransfer)|Concrete product details added in the wishlist|
-|unitGrossPrice (int)|Single item gross price. It’s set with `CartItemPricePlugin` cart expander plugin|
+|variety (string)|Used when an item is in a module|
+|status (string)|State machine state when an item used as order item|
+|addedAt (string)|Used in wishlist to have date when an item was added|
+|productConcrete (ProductConcreteTransfer)|Concrete product details added to the wishlist|
+|unitGrossPrice (int)|Single item gross price. It’s set with the `CartItemPricePlugin` cart expander plugin|
 |sumGrossPrice (int)|Sum of items gross price. Calculated with `ExpensesGrossSumAmountCalculatorPlugin`.|
 |unitGrossPriceWithDiscounts (int)|Unit gross price after the discounts are applied. It’s set by `SumGrossCalculatedDiscountAmountCalculatorPlugin`.|
-|sumGrossPriceWithDiscounts (int)|Sum of item gross price after discounts. It’s set by `SumGrossCalculatedDiscountAmountCalculatorPlugin`.|
-|taxRate (int)|Current tax rate. It’s set by `ProductCartPlugin` cart expander plugin.|
+|sumGrossPriceWithDiscounts (int)|Sum of an item gross price after discounts. It’s set by `SumGrossCalculatedDiscountAmountCalculatorPlugin`.|
+|taxRate (int)|Current tax rate. It’s set by the `ProductCartPlugin` cart expander plugin.|
 |unitGrossPriceWithProductOptions (int)|Single item with product options gross price. It’s set by `ProductOptionGrossSumCalculatorPlugin`.|
 |sumGrossPriceWithProductOptions (int)|Sum of item gross price with product options. It’s set by `ProductOptionGrossSumCalculatorPlugin`.|
 |unitGrossPriceWithProductOptionAndDiscountAmounts (int)|Single item with product options gross price and after discounts. It’s set by `SumGrossCalculatedDiscountAmountCalculatorPlugin`.|
 |sumGrossPriceWithProductOptionAndDiscountAmounts (int)|Sum of item gross price with product options and after discounts. It’s set by `SumGrossCalculatedDiscountAmountCalculatorPlugin`.|
-|unitTaxAmountWithProductOptionAndDiscountAmounts (int)|single item tax amount with product options after discounts. (order only)|
+|unitTaxAmountWithProductOptionAndDiscountAmounts (int)|Single item tax amount with product options after discounts. (order only)|
 |sumTaxAmountWithProductOptionAndDiscountAmounts (int)|Sum of items gross price with product options after discounts. (order only)|
 |refundableAmount (int)|Item available refundable amount (order only)|
 |unitTaxAmount (int)|Tax amount for single item (order only)|
@@ -196,7 +199,7 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 
 ### Calculated Discount Transfer
 
-Each item which can have discounts applied have `calculatedDiscounts` property added which holds collection of discounts for each discount type.
+Each item which can have discounts applied have `calculatedDiscounts` property added which holds the collection of discounts for each discount type.
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -204,8 +207,8 @@ Each item which can have discounts applied have `calculatedDiscounts` property a
 |description (string)|Applied discount description|
 |voucherCode (string)|Used voucher code|
 |quantity(int)|Number of discounted items|
-|unitGrossAmount (int)|Discount gross amount for single items; It’s set by `DiscountCalculatorPlugin`.|
-|sumGrossAmount (int)|Discount gross amount for sum of items; It’s set by `DiscountCalculatorPlugin`. |
+|unitGrossAmount (int)|Discount gross amount for single items; it’s set by `DiscountCalculatorPlugin`.|
+|sumGrossAmount (int)|Discount gross amount for sum of items; it’s set by `DiscountCalculatorPlugin`. |
 
 
 ### Product Option Transfer

@@ -13,15 +13,15 @@ To learn more about the feature and to find out how end users use it, see [Retur
 
 ## Related Developer articles
 
-| INTEGRATION   GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
+| INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|
-| Return   Management feature integration | Managing the returns | HowTo - Set number of days for a   return policy |
-| Configurable   Bundle + Order Management feature integration |  |  |
-| Glue   API: Return Management feature integration |  |  |
-| Order   management feature integration |  |  |
-| Product   + Order Management feature integration |  |  |
-| Product   Bundles + Order Management feature integration |  |  |
-| Product   Bundles + Return Management feature integration |  |  |
-| Product   Measurement Unit feature integration |  |  |
-| Product   Options + Order Management feature integration |  |  |
-| Product   Packaging Unit feature integration |  |  |
+| Return Management feature integration | Managing the returns | HowTo - Set number of days for a return policy |
+| Configurable Bundle + Order Management feature integration |  |  |
+| Glue API: Return Management feature integration |  |  |
+| Order management feature integration |  |  |
+| Product + Order Management feature integration |  |  |
+| Product Bundles + Order Management feature integration |  |  |
+| Product Bundles + Return Management feature integration |  |  |
+| Product Measurement Unit feature integration |  |  |
+| Product Options + Order Management feature integration |  |  |
+| Product Packaging Unit feature integration |  |  |

@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Tax f
 
 ## Entity diagram
 
-The following schema illustrates relations between modules when Avalara is integrated into different entities:
+The following schemas illustrates relations between modules when Avalara is integrated into different entities:
 
 <details><summary>Product and Cart entities</summary>
 

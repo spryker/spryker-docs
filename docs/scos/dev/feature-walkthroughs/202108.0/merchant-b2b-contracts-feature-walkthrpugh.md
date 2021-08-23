@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Merchant B2B Contracts_ feature allows setting up contracts between a merchant and B2B customer.
 
 <!--
-To learn more about the feature and to find out how end users use it, see [Merchant B2B Contracts feature Overview](https://documentation.spryker.com/docs/merchant-b2b-contracts-feature-overview) for business users.
+To learn more about the feature and to find out how end users use it, see [Merchant B2B Contracts feature overview](https://documentation.spryker.com/docs/merchant-b2b-contracts-feature-overview) for business users.
 -->
 
 ## Entity diagram

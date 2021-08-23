@@ -26,6 +26,6 @@ The following schema illustrates relations between the _Payment_, _PaymentGui_, 
 
 | INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|
-| Payments feature integration | Payment migration guide | Updating payment data | File details: payment_method.csv | HowTo - Hydrate Payment Methods for an Order | Payment partners |
+| Payments feature integration | Payment migration guide | Updating payment data | File details: payment_method.csv | HowTo - Hydrate payment methods for an order | Payment partners |
 |  |  |  | File details: payment_method_store.csv | Implementing Direct Debit Payment |  |
-|  |  |  |  | Tutorial - Interacting with Third Party Payment Providers via Glue API |  |
+|  |  |  |  | Tutorial - Interacting with third party payment providers via Glue API |  |

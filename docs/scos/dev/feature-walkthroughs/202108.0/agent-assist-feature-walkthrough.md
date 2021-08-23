@@ -1,7 +1,7 @@
 ---
 title: Agent Assist feature walkthrough
 last_updated: Aug 11, 2021
-description: The Agent Assist feature allows to add an agent.
+description: The Agent Assist feature allows to add an agent, a person who assists customers
 template: concept-topic-template
 ---
 

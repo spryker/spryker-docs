@@ -13,7 +13,8 @@ To learn more about the feature and to find out how end users use it, see [Multi
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | MIGRATION GUIDES |
-|---------|---------|
-| Merchant custom prices feature integration  | PriceProduct migration guide  |
-| Merchant feature integration  |   |
+|INTEGRATION GUIDES  |
+|---------|
+| Multiple Carts feature integration  |
+| Multiple carts + Quick Order feature integration  |
+| Multiple carts + Reorder feature integration   |

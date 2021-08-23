@@ -14,6 +14,6 @@ To learn more about the feature and to find out how end users use it, see [Check
 ## Related Developer articles
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | DATA IMPORT |
-|---------|---------|---------|---------|---------|
-| Checkout feature integration | Checkout migration guide  | File details: sales_order_threshold.csv  |   |
+|---------|---------|---------|
+| Checkout feature integration | Checkout migration guide  | File details: sales_order_threshold.csv  |
 | Merchant feature integration | CheckoutPage migration guide |   |

@@ -1,7 +1,7 @@
 ---
 title: Customer Access feature walkthrough
 last_updated: Aug 13, 2021
-description: The Customer Access feature allows you to limit what information guest customers can access.
+description: The Customer Access feature allows you to limit what information guest customers can access
 template: concept-topic-template
 ---
 

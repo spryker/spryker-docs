@@ -10,3 +10,7 @@ The _Search_ feature enables you to control search and filtering preferences and
 <!--
 To learn more about the feature and to find out how end users use it, see [Search](https://documentation.spryker.com/docs/search-summary) for business users.
 -->
+
+| GLUE API GUIDES |
+|---|
+| Retrieving autocomplete and search suggestions |

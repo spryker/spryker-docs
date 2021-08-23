@@ -1,7 +1,7 @@
 ---
 title: CMS feature walkthrough
 last_updated: Aug 13, 2021
-description: The CMS feature adds a content management system that allows creating and managing the content of custom pages that are not part of the product catalog.
+description: The CMS feature adds a content management system that allows creating and managing the content of custom pages that are not part of the product catalog
 template: concept-topic-template
 ---
 
@@ -24,8 +24,8 @@ To learn more about the feature and to find out how end users use it, see [CMS](
 | Glue API: CMS feature integration  | CMS Block Category Connector migration guide|   |  File details: cms_slot_block.csv |   |   |   |
 |   | CMS Block Category Connector Migration Console migration guide|   |  File details: content_navigation.csv |   |   |   |
 |   | CMS Block Collector migration guide|   | File details: content_banner.csv   |   |   |   |
-|   | CmsBlockGui migration guide |   |   |   | File details: content_product_set.csv   |   |
-|   | CMSBlockStorage migration guide  |   |   | File details: content_product_abstract_list.csv  |   |   |
+|   | CmsBlockGui migration guide |   | File details: content_product_set.csv   |   |   |   |
+|   | CMSBlockStorage migration guide  |   | File details: content_product_abstract_list.csv  |   |   |   |
 |   | CmsBlockWidget migration guide  |   |   |   |   |   |
 |   | ContentBannerGui migration guide   |   |   |   |   |   |
 |   | ContentBanner migration guide  |   |   |   |   |   |

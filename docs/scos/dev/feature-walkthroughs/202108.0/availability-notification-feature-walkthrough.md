@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Avail
 
 ## Entity diagram
 
-The following scheme illustrates relations between Availability, AvailabilityNotification, AvailabilityNotificationWidget, and ProductDetailPage modules:
+The following scheme illustrates relations between Availability, `AvailabilityNotification`, `AvailabilityNotificationWidget`, and `ProductDetailPage` modules:
 
 <div class="width-100">
 

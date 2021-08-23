@@ -24,8 +24,8 @@ The following schema illustrates module relations in the Comments feature:
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | DATA IMPORT | TUTORIALS AND HOWTOS |
-|---------|---------|--------|
+|INTEGRATION GUIDES  | DATA IMPORT |
+|---------|---------|
 | Comments feature integration  | File details: comment.csv  |
-| Comments + persistent cart feature integration |   |
-| Comments + order management feature integration |   |
+| Comments + persistent cart feature integration |
+| Comments + order management feature integration |

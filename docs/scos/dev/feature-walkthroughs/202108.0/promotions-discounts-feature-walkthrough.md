@@ -5,7 +5,7 @@ description: The Promotions & Discounts feature allows defining several types of
 template: concept-topic-template
 ---
 
-The _Promotions & Discounts_ feature allows defining several types of discounts based on a brand, overall cart value, certain product ranges, or special customer groups. You can also offer discount vouchers or simply incentivize certain products through coupon codes.
+The _Promotions & Discounts_ feature allows defining several types of discounts based on a brand, overall cart value, certain product ranges, or special customer groups. You can also offer discount vouchers or incentivize certain products through coupon codes.
 
 <!--
 To learn more about the feature and to find out how end users use it, see [Promotions & Discounts feature overview](https://documentation.spryker.com/docs/promotions-discounts-feature-overview) for business users.

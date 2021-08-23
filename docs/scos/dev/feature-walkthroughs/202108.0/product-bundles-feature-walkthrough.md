@@ -14,6 +14,6 @@ To learn more about the feature and to find out how end users use it, see [Produ
 
 ## Related Developer articles
 
-INTEGRATION GUIDES | GLUE API GUIDES  |
+|INTEGRATION GUIDES | GLUE API GUIDES  |
 |---------|---------|
-|Product Bundles feature integration  |Retrieving bundled products |
+|Product Bundles feature integration | Retrieving bundled products |

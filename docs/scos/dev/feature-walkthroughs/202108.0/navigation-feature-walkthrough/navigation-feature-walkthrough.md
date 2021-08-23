@@ -13,8 +13,8 @@ To learn more about the feature and to find out how end users use it, see [Navig
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | GLUE API GUIDES | DATA IMPORT | REFERENCES |
-|---|---|---|
+| INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
+|---|---|---|---|
 | Navigation feature integration | Retrieving navigation trees | File details: navigation.csv | Navigation module: Reference information |
 | Glue API: Navigation feature integration |  | File details: navigation_node.csv | |
 | CMS feature integration |  |  |  |

@@ -1,14 +1,14 @@
 ---
 title: Measurement Units feature walkthrough
 last_updated: Aug 13, 2021
-description: The Measurement Units feature allows selling products by any unit of measure defined by in the Back Office.
+description: The Measurement Units feature allows selling products by any unit of measure defined by in the Back Office
 template: concept-topic-template
 ---
 
 The _Measurement Units_ feature allows selling products by any unit of measure defined by in the Back Office.
 
 <!--
-To learn more about the feature and to find out how end users use it, see [ feature overview]() for business users.
+To learn more about the feature and to find out how end users use it, see [Measurement Units feature overview](https://documentation.spryker.com/docs/measurement-units-feature-overview) for business users.
 -->
 
 ## Entity diagram
@@ -32,5 +32,5 @@ The following schema illustrates relations between alternative products:
 |INTEGRATION GUIDES | GLUE API GUIDES |
 |---------|---------|
 | Product measurement unit feature integration  | Retrieving measurement units  |
-| Quick order + measurement units feature integration  | Retrieving sales units  |
+| Quick order + measurement units feature integration | Retrieving sales units  |
 | Glue API: Measurement units feature integration  |   |

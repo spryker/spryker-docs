@@ -26,8 +26,8 @@ The following schema illustrates the module relations of the Custom Order Refere
 
 | INTEGRATION GUIDES | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|
-| Custom Order Reference feature integration | Split delivery migration concept | Retrieving orders | HowTo - Disable Split Delivery in Yves Interface | Sales module: reference information |
-| Order Management feature integration |  |  | HowTo - Emailing Invoices Using BCC |  |
+| Custom Order Reference feature integration | Split delivery migration concept | Retrieving orders | HowTo - Disable split delivery in Yves interface | Sales module: reference information |
+| Order Management feature integration |  |  | HowTo - Emailing invoices using BCC |  |
 | Quick Order + Non-splittable Products feature integration |  |  |  |  |
 | Glue API: Checkout feature integration |  |  |  |  |
 | Glue API: Company Account feature integration |  |  |  |  |

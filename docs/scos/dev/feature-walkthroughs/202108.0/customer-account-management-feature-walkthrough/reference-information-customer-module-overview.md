@@ -42,6 +42,7 @@ By default, the **Customer** module will lead to `'‹YVES HOST›/password/rest
 {% endinfo_block %}
 
 ## Delete customer
+
 Customers can remove themselves by clicking **Delete Account** on the Yves Profile page. In addition, this functionality is also available in the Back Office (**Customer > View > Delete**).
 
 Complete removal from the customer table is strictly prohibited as it could affect the database consistency of e-commerce projects or even be illegal in terms of tax reporting and auditing. In Spryker, we don't remove identifiers from a customer table but anonymize private information. Information related to orders and bills will stay untouched.

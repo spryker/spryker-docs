@@ -16,5 +16,5 @@ To learn more about the feature and to find out how end users use it, see [Spryk
 
 |INTEGRATION GUIDES  | REFERENCES|
 |---------|---------|
-| Spryker Core Back Office feature integration  |   |
-| Microsoft Azure Active Directory   |   |
+| Spryker Core Back Office feature integration  | Back Office Translations overview |
+| Microsoft Azure Active Directory   | Users and rights overview  |

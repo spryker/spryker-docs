@@ -1,7 +1,7 @@
 ---
 title: Approval Process feature walkthrough
 last_updated: Aug 12, 2021
-description: he Approval Process feature allows managers to control purchases requested by their employees.  employees
+description: The Approval Process feature allows managers to control purchases requested by their employees
 template: concept-topic-template
 ---
 
@@ -26,5 +26,5 @@ The following schema illustrates module relations in the Approval Process featur
 
 |INTEGRATION GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|
-| Approval Process feature integration | HowTo - Implement Customer Approval Process Based on a Generic State Machine  |
+| Approval Process feature integration | HowTo - Implement customer approval process based on a generic state machine  |
 | Shipment + Approval Process feature integration  |   |

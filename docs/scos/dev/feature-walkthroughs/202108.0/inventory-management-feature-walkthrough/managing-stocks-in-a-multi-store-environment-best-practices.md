@@ -52,9 +52,9 @@ Also, there are plugins to help you implement synchronization of the reservation
 
 | PLUGIN | DESCRIPTION |
 | --- | --- |
-|`\Spryker\Zed\Oms\Business\OmsFacadeInterface::importReservation` | You can use this plugin when reading export data from another store. The plugin stores reservation information to `spy_oms_product_reservation_store` table and updates all timestamps accordingly. |
-| `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationHandler\ReservationVersionHandlerPlugin` | The plugin is called when a customer makes an order, and a reservation is made. It stores reservation in the `spy_oms_reservation_change_version` database table. Register this plugin in `\Pyz\Zed\Oms\OmsDependencyProvider::getReservationHandlerPlugins` plugin stack. |
-| `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationImport\ReservationExportPlugin` | The plugin is called when a reservation export to another store is initiated. This plugin decides if the export should be accepted. We do not provide the delivery mechanism: you could do this with files or a queue. For example, when `ReservationExportPlugin` is called, you can write a file copy to another server and read it there. Same for queue: you could publish an event in the queue and then consume it on the other end. |
+|\Spryker\Zed\Oms\Business\OmsFacadeInterface::importReservation | You can use this plugin when reading export data from another store. The plugin stores reservation information to `spy_oms_product_reservation_store` table and updates all timestamps accordingly. |
+| \Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationHandler\ReservationVersionHandlerPlugin | The plugin is called when a customer makes an order, and a reservation is made. It stores reservation in the `spy_oms_reservation_change_version` database table. Register this plugin in `\Pyz\Zed\Oms\OmsDependencyProvider::getReservationHandlerPlugins` plugin stack. |
+| \Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationImport\ReservationExportPlugin | The plugin is called when a reservation export to another store is initiated. This plugin decides if the export should be accepted. We do not provide the delivery mechanism: you could do this with files or a queue. For example, when `ReservationExportPlugin` is called, you can write a file copy to another server and read it there. Same for queue: you could publish an event in the queue and then consume it on the other end. |
 
 {% info_block infoBox "" %}
 

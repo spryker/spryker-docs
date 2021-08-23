@@ -35,7 +35,7 @@ The following schemas illustrates module relations in the Configurable Bundle fe
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
-| Configurable Bundle feature integration | ConfigurableBundle migration guide | Retrieving configurable bundle templates | HowTo - Render Configurable Bundle Templates in the Storefront  |
+| Configurable Bundle feature integration | ConfigurableBundle migration guide | Retrieving configurable bundle templates | HowTo - Render configurable bundle templates in the Storefront  |
 | Merchant Product Restrictions feature integration | ConfigurableBundleStorage migration guide |   |   |
 | Product Lists + Catalog feature integration  | ProductListGui migration guide |   |   |
 | Prices feature integration  | MerchantRelationshipProductListGui migration guide  |   |   |

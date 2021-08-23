@@ -17,4 +17,3 @@ redirect_from:
 sudo lsof -nPi:9000 | grep LISTEN
 ```
 2. If it's not your IDE, free up the port to be used by the IDE.
-

@@ -357,32 +357,32 @@ There are a few common Table types that are available in UI library as separate 
 ### Columns
 
 - `table.column.autocomplete` - displays an `autocomplete` component.
-- `table.column.chip`
-- `table.column.date`
-- `table.column.dynamic`
-- `table.column.image`
-- `table.column.input`
-- `table.column.select`
-- `table.column.text`
+- `table.column.chip` - displays a `chip` component.
+- `table.column.date` - displays a date.
+- `table.column.dynamic` - dynamically loads columns with a specific type.
+- `table.column.image` - displays an image.
+- `table.column.input` - displays an `input` component.
+- `table.column.select` - displays a `select` component.
+- `table.column.text` - displays a text.
 
 ### Features
 
-- `table.feature.batch-actions`
-- `table.feature.editable`
-- `table.feature.filters`
-- `table.feature.pagination`
-- `table.feature.row-actions`
-- `table.feature.search`
-- `table.feature.selectable`
-- `table.feature.settings`
-- `table.feature.sync-state`
-- `table.feature.title`
-- `table.feature.total`
+- `table.feature.batch-actions` - displays a checkmark that triggers a specific actions.
+- `table.feature.editable` - displays an editable cell that toggles popup with a specific component (input, select, etc.).
+- `table.feature.filters` - displays row with filters.
+- `table.feature.pagination` - displays a pagination.
+- `table.feature.row-actions` - triggers a specific action by row clicking.
+- `table.feature.search` - displays search.
+- `table.feature.selectable` - displays a checkmark that triggers row selection.
+- `table.feature.settings` - displays a button that triggers a popup with a table settings.
+- `table.feature.sync-state` - syncs table state with a configuration.
+- `table.feature.title` - displays title.
+- `table.feature.total` - displays amount of table rows.
 
 ### Filter components
 
-- `table.filter.date-range`
-- `table.filter.select`
-- `table.filter.tree-select`
+- `table.filter.date-range` - displays filter with `date-range` component.
+- `table.filter.select` - displays filter with `select` component.
+- `table.filter.tree-select` - displays filter with `tree-select` component.
 
 

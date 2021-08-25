@@ -89,4 +89,4 @@ If you re-created this example in Demoshop, perform some adjustments on the `sel
 ***
 **What's next?**
 
-Once done, you need to [create and integrate the Direct Debit payment method in the back-end](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html).
+Once done, you need to [create and integrate the Direct Debit payment method in the back-end](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html).

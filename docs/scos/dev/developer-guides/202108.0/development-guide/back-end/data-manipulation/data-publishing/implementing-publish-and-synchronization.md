@@ -13,7 +13,7 @@ redirect_from:
 To implement *Publish and Synchronize* in your code, you need to perform the following steps:
 
 ## 1. Add Publish Events
-*Publish* and *Synchronize* are event-driven. To start publishing data to the frontend, an event must be triggered. For this purpose, you need to add events for all changes you want to synchronize. For information on how to add events to your module, see [Adding Events](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/event/adding-events.html).
+*Publish* and *Synchronize* are event-driven. To start publishing data to the frontend, an event must be triggered. For this purpose, you need to add events for all changes you want to synchronize. For information on how to add events to your module, see [Adding Events](/docs/scos/dev/back-end-development/zed/data-manipulation/event/adding-events.html).
 
 For example, the following code creates an event once an entity is created, updated or deleted in the spy_product_abstract table (see `data/shop/development/current/vendor/spryker/product/src/Spryker/Zed/Product/Dependency/ProductEvents.php`):
 
@@ -74,7 +74,7 @@ protected function getQueueOptions()
 ```
 
 ## 3. Create Publication Table
-The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
+The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
 
 {% info_block infoBox %}
 As a naming convention, it is recommended to append `_storage` to the end of the table name, if it is synchronized with Redis, and `_search`, if it is synchronized with Elasticsearch.
@@ -185,7 +185,7 @@ For performance considerations, events are passed to the listener in bulk. Even 
 {% endinfo_block %}
 
 
-Implementing a listener is detailed in [Listening to Events](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/event/listening-to-events.html). Follow the guide to create your listener classes.
+Implementing a listener is detailed in [Listening to Events](/docs/scos/dev/back-end-development/zed/data-manipulation/event/listening-to-events.html). Follow the guide to create your listener classes.
 
 Also, you need to map listeners to the events. For this purpose, you need to add a plugin class that extends the **AbstractPlugin** and implements the **EventSubscriberInterface** interfaces. For example, this is how the *ProductStorage* module maps changes in abstract products to the respective listeners (see full code in data/shop/development/current/vendor/spryker/product-storage/src/Spryker/Zed/ProductStorage/Communication/Plugin/Event/Subscriber/ProductStorageEventSubscriber.php):
 

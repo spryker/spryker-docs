@@ -13,7 +13,7 @@ redirect_from:
 Usually, the first step of the Direct Debit payment method implementation is set-up on Yves. This article provides step-by-step instructions on how to do that.
 
 ## Prerequisites
-Prior to proceeding with the first step, the form creation, add a new module on the project level in Yves - for example, the `PaymentMethods` module. If you haven't had any experience in creating a new module yet, see [Tutorial - Adding a New Module](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html). Create a *Form* folder in the module.
+Prior to proceeding with the first step, the form creation, add a new module on the project level in Yves - for example, the `PaymentMethods` module. If you haven't had any experience in creating a new module yet, see [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html). Create a *Form* folder in the module.
 
 ## Creating a Form
 The starting point is to create the form in Yves.
@@ -416,4 +416,4 @@ Don’t forget to add the factory and the dependency provider for this new  modu
 ***
 **What's next?**
 
-After the form has been created and the payment handler has been set up, you need to [integrate them into the Checkout module](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html).
+After the form has been created and the payment handler has been set up, you need to [integrate them into the Checkout module](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html).

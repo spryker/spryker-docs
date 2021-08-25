@@ -28,7 +28,7 @@ This tutorial explains how to retrieve data from the database and render it in a
 
 **Prerequisites:**
 
-* You have created a new [module](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html).
+* You have created a new [module](/docs/scos/dev/back-end-development/zed/data-manipulation/data-enrichment/extending-spryker/adding-a-new-module.html).
 
 ## Creating a Table
 Create the `ProductTable` class under the `src/Pyz/Zed/HelloWorld/Communication/Table` folder:

@@ -16,7 +16,7 @@ For security reasons and to reduce the database storage space, it is recommended
 
 To configure the time during which an outdated refresh token is stored:
 
-1. [Extend](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-the-spryker-core-functionality.html) the `Spryker\Shared\Oauth\OauthConfig` class on your project level.
+1. [Extend](/docs/scos/dev/developer-guides/202005.0/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html) the `Spryker\Shared\Oauth\OauthConfig` class on your project level.
 2. Configure the time interval for the job via the `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` method.
 
 After configuring the token lifetime, invalidated tokens will be deleted automatically by a [Cron job](/docs/scos/dev/features/202005.0/sdk/cronjob-scheduling.html) once their storage time expires.

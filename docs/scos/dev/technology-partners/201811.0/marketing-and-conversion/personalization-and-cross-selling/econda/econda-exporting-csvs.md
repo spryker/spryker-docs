@@ -8,7 +8,7 @@ redirect_from:
   - /v1/docs/en/econda-export-csvs
 ---
 
-To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/data-manipulation/data-enrichment/extending-spryker/extending-a-core-module-that-is-used-by-another.html) and [plugins.](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/data-manipulation/data-enrichment/implementing-and-using-plugins.html)
+To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/developer-guides/201811.0/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) and [plugins.]((/docs/scos/dev/{{site.version}}/back-end-development/implementing-and-using-plugins.html/implementing-and-using-plugins.html)
 
 ## Zed Output Folder
 
@@ -21,7 +21,7 @@ The application must have proper access(es) depending on what you expect to achi
 
 ## Console
 
-To export the products and categories, we must register the Collectors that were created in the [Console](/docs/scos/dev/developer-guides/201811.0/development-guide/back-end/data-manipulation/data-enrichment/console-commands/console-commands-in-spryker.html). Econda module has already everything in place and the only thing you need to do is to add `CollectorFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like in the snippet bellow:
+To export the products and categories, we must register the Collectors that were created in the [Console](/docs/scos/dev/back-end-development/{{site.version}}/console-commandsconsole-commands-in-spryker.html). Econda module has already everything in place and the only thing you need to do is to add `CollectorFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like in the snippet bellow:
 
 ```php
 <?php
@@ -50,7 +50,7 @@ To register the query in the Econda module, extend the `AbstractPdoEcondaQuery` 
 If you are using the demo shop as your starting point, you can use the code snippets below.
 <details open>
 <summary>For Categories</summary>
-    
+
 ```php
 <?php
 
@@ -171,7 +171,7 @@ FROM spy_product
 ```
  <br>
 </details>
- 
+
 Now that we have defined queries we must register them with Econda module by adding them to project level Econda configuration.
 
 In the example below we assume that you are using PostgreSql but if you use MySql just register your queries under MySql key in array.
@@ -313,9 +313,9 @@ and running:
 
 ```php
 ID,Name,Description,PRODUCTURL,ImageURL,Price,Stock,ProductCategory
-001_25904006,"Canon IXUS 160","Add a personal touch Make 
-shots your own with quick and easy control over picture 
-settings such as brightness and colour intensity. 
+001_25904006,"Canon IXUS 160","Add a personal touch Make
+shots your own with quick and easy control over picture
+settings such as brightness and colour intensity.
 Preview the results whi
 ",http://mysprykershop.com/en/canon-ixus-160-1,http://images.icecat.biz/img/norm/medium/25904006-8438.jpg,0,10,4
 Tracking

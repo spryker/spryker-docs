@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/implementing-synchronization-plugins
 ---
 
-Sometimes it’s needed to manually [synchronize or re-syncrhonize](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-regeneration) the published model data with Redis or ElasticSearch. To do that, you need to implement a synchronization plugin.
+Sometimes it’s needed to manually [synchronize or re-syncrhonize](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-regeneration) the published model data with Redis or ElasticSearch. To do that, you need to implement a synchronization plugin.
 
 Follow the steps below to implement and register a synchronization plugin.
 

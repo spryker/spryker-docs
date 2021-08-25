@@ -34,7 +34,7 @@ If you need to modify the CSV column mapping for any reason, you will have to ex
 
 ### Console
 
-To export the products and categories using the queries we made before, we must register the `FactFinderSdk` console command in [Console](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-enrichment/console-commands/console-commands-in-spryker.html).
+To export the products and categories using the queries we made before, we must register the `FactFinderSdk` console command in [Console](/docs/scos/dev/back-end-development/console-commands/console-commands-in-spryker.html).
 
 The `FactFinderSdk` module already includes everything though you will need to add `FactFinderSdkExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like below:
 ```php
@@ -74,7 +74,7 @@ You need to create an URL for a CSV file or put it into a public folder. Then yo
 
 If all the steps were correct you should be able to see the `fact-finder:export:products` command in the FACT-Finder section when you run `vendor/bin/console` from the project's root folder.
 
-Running `vendor/bin/console fact-finder:export:products` will create several CSV files (one per locale) in the folder you specified in 
+Running `vendor/bin/console fact-finder:export:products` will create several CSV files (one per locale) in the folder you specified in
 ```
 $config[FactFinderSdkConstants::CSV_DIRECTORY]
 ```

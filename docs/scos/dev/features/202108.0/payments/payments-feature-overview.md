@@ -46,7 +46,7 @@ The Spryker Commerce OS supports integration of the following payment providers,
 
 ## Dummy payment
 By default, Spryker provides the [DummyPayment](https://github.com/spryker/dummy-payment) module, which has Credit Card and Invoice payments implemented. You can use these implemented payment methods, or refer to the DummyPayment modulewhen implementing additional payment methods in your project.
-For details on how a new payment method is implemeted, see the articles on [how to implement the Direct Debit payment method](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html). Based on the examples in these articles, you can implement other payment methods for your projects.
+For details on how a new payment method is implemeted, see the articles on [how to implement the Direct Debit payment method](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html). Based on the examples in these articles, you can implement other payment methods for your projects.
 
 ## Payment methods in the Back Office
 In the Back Office, you can view all payment methods available in the shop application, make a payment method active (visible) or inactive (invisible) in the Payment step of the checkout process. In addition, you can define stores in which a payment method will be displayed. If changed, the payment methods will be updated in the checkout as well. 
@@ -87,7 +87,7 @@ Hydrating payment methods for an order
                 <li class="mr-title">Developer</li>
                 <li><a href="https://documentation.spryker.com/docs/updating-payment-data" class="mr-link">Update payment data of an order via Glue API</a></li>
                 <li><a href="https://documentation.spryker.com/docs/file-details-payment-methodcsv" class="mr-link">Import payment methods</a></li>
-                 <li><a href="/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html" class="mr-link">Implement Direct Debit</a></li>
+                 <li><a href="/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html" class="mr-link">Implement Direct Debit</a></li>
                  <li><a href="https://documentation.spryker.com/docs/ht-hydrate-payment-methods-for-order" class="mr-link">Learn how to hydrate payment methods for an order</a></li> 
                 <li><a href="https://documentation.spryker.com/docs/file-details-payment-method-storecsv" class="mr-link">Import store relations for payment methods</a></li>
                 <li><a href="https://documentation.spryker.com/docs/t-interacting-with-third-party-payment-providers-via-glue-api" class="mr-link">Interact with third-party payment providers via Glue API</a></li>

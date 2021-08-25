@@ -272,12 +272,12 @@ Starting from this release, Yves, our backend-rendered frontend application, has
 The new recommended console entry endpoint for Yves is located in `vendor/bin/yves` and is based on [Symfony’s console component](https://symfony.com/doc/current/components/console.html). Therefore, you can add your own console command implementations by extending the corresponding classes. Within the implementation, you have multiple options to tailor your command to your needs, such as adding application plugins, event subscribers as well as pre- and post-run hooks.
 
 #### Documentation
-[CLI Entry Point for Yves](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/yves/cli-entry-point-for-yves.html)
+[CLI Entry Point for Yves](/docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html)
 
 ### Custom OMS Timeout Processors
 The order management system (OMS) validates the state of order items in fixed time intervals. This can lead to a high number of unnecessary checks if orders have a fixed future date for shipment, delivery or pick up, etc. This can be the case if, for example, the orders contain perishables or are subject to other constraints.
 To avoid the unnecessary checks and load on the OMS, we have added custom Timeout Processors for the OMS, which allow you to specify custom checks for orders within the OMS state machine. Due to the Timeout processors, the checks are executed according to defined parameters in the state machine, such as timeout and frequency of the check. 
 
 #### Documentation
-[OMS Timeout Processor](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)
+[OMS Timeout Processor](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)
 

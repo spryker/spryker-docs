@@ -217,7 +217,7 @@ To display only records which are active within a given date range, use `\Spryke
 
 The *Faceted navigation and filtering* feature allows you to re-filter search results by the specific criteria. The filters are commonly displayed on the left side of the catalog page.
 
-`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configuring the search features](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-interaction/search/configuring-the-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results. 
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configuring the search features](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-the-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results. 
 
 {% info_block warningBox "Note" %}
 

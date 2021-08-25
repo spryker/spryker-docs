@@ -40,7 +40,7 @@ Also, let us assume that you modified the product storage data to match your pro
 
 {% info_block warningBox %}
 For more details, see [Product Attributes](/docs/scos/dev/database-schema-guide/{{page.version}}/catalog-schema.html#product-attributes
-{% endinfo_block %} and [Extending the Database Schema](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).)
+{% endinfo_block %} and [Extending the Database Schema](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).)
 
 Now, let us add this field to responses of the _Products API_ endpoints:
 

@@ -7,6 +7,16 @@ redirect_from:
   - /2021080/docs/en/extending-a-rest-request-resource
   - /docs/extending-a-rest-request-resource
   - /docs/en/extending-a-rest-request-resource
+  - /v6/docs/extending-a-rest-request-resource
+  - /v6/docs/en/extending-a-rest-request-resource
+  - /v5/docs/extending-a-rest-request-resource
+  - /v5/docs/en/extending-a-rest-request-resource
+  - /v4/docs/extending-a-rest-request-resource
+  - /v4/docs/en/extending-a-rest-request-resource
+  - /v2/docs/extending-a-rest-request-resource
+  - /v2/docs/en/extending-a-rest-request-resource
+  - /v1/docs/extending-a-rest-request-resource
+  - /v1/docs/en/extending-a-rest-request-resource
 ---
 
 Spryker Glue REST API comes with a set of predefined APIs out of the box. You have the possibility to extend and customize them to your own project needs. For this purpose, you need to extend the Glue API modules that provide the relevant functionality on your project level.
@@ -18,8 +28,8 @@ The following guide relies on your knowledge of the structure of a Glue REST API
 ## Prerequisites:
 To complete this tutorial, you need to comply with the following prerequisites:
 
-* [Install Spryker Development Machine](/docs/scos/dev/sdk/{{page.version}}/development-virtual-machine-docker-containers-and-console.html); 
-* [Enable Glue Rest API](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html); 
+* [Install Spryker Development Machine](/docs/scos/dev/sdk/{{page.version}}/development-virtual-machine-docker-containers-and-console.html);
+* [Enable Glue Rest API](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html);
 * [Integrate Products API](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html).
 
 {% info_block infoBox %}
@@ -46,21 +56,21 @@ All transfer file names end with `.transfer.xml`.
 * In the newly created file, define only the field(s) you want to add, in our case, `manufacturerCountry`:
 
 **Code sample**
-    
+
 ```xml
 <?xml version="1.0"?>
 <transfers xmlns="spryker:transfer-01"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
- 
+
     <transfer name="AbstractProductsRestAttributes">
         <property name="manufacturerCountry" type="string"/>
     </transfer>
- 
+
     <transfer name="ConcreteProductsRestAttributes">
         <property name="manufacturerCountry" type="string"/>
     </transfer>
- 
+
     </transfers>
 ```
 
@@ -87,15 +97,15 @@ In more complicated cases, when, for example, you need to pull data from alterna
 * Implement `\Pyz\Glue\ProductsRestApi\Processor\Mapper\AbstractProductsResourceMapper` as follows:
 
 AbstractProductsResourceMapper.php
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\ProductsRestApi\Processor\Mapper;
- 
+
 use Generated\Shared\Transfer\AbstractProductsRestAttributesTransfer;
 use Spryker\Glue\ProductsRestApi\Processor\Mapper\AbstractProductsResourceMapper as SprykerAbstractProductsResourceMapper;
- 
+
 class AbstractProductsResourceMapper extends SprykerAbstractProductsResourceMapper
 {
     /**
@@ -106,9 +116,9 @@ class AbstractProductsResourceMapper extends SprykerAbstractProductsResourceMapp
     public function mapAbstractProductsDataToAbstractProductsRestAttributes(array $abstractProductData): AbstractProductsRestAttributesTransfer
     {
         $restAbstractProductsAttributesTransfer = parent::mapAbstractProductsDataToAbstractProductsRestAttributes($abstractProductData);
- 
+
         $restAbstractProductsAttributesTransfer->setManufacturerCountry('Portugal');
- 
+
         return $restAbstractProductsAttributesTransfer;
     }
 }
@@ -136,13 +146,13 @@ ProductsRestApiFactory.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\ProductsRestApi;
- 
+
 use Pyz\Glue\ProductsRestApi\Processor\Mapper\AbstractProductsResourceMapper;
 use Spryker\Glue\ProductsRestApi\Processor\Mapper\AbstractProductsResourceMapperInterface;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiFactory as SprykerProductsRestApiFactory;
- 
+
 class ProductsRestApiFactory extends SprykerProductsRestApiFactory
 {
     /**
@@ -169,4 +179,3 @@ This will add mapper initialization to the project level factory.
 
 ## 4. Verify implementation
 No, you can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving Product Information](https://documentation.spryker.com/2021080/docs/retrieving-product-information).
-

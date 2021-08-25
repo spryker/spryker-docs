@@ -7,6 +7,12 @@ redirect_from:
   - /2021080/docs/en/ht-hydrate-payment-methods-for-order
   - /docs/ht-hydrate-payment-methods-for-order
   - /docs/en/ht-hydrate-payment-methods-for-order
+  - /v6/docs/ht-hydrate-payment-methods-for-order
+  - /v6/docs/en/ht-hydrate-payment-methods-for-order
+  - /v5/docs/ht-hydrate-payment-methods-for-order
+  - /v5/docs/en/ht-hydrate-payment-methods-for-order
+  - /v4/docs/ht-hydrate-payment-methods-for-order
+  - /v4/docs/en/ht-hydrate-payment-methods-for-order
 ---
 
 ## Multiple Payments

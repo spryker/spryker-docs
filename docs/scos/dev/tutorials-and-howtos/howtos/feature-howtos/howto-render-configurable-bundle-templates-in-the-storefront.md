@@ -8,6 +8,12 @@ redirect_from:
   - /2021080/docs/en/howto-rendering-configurable-bundles-in-the-storefront
   - /docs/howto-rendering-configurable-bundles-in-the-storefront
   - /docs/en/howto-rendering-configurable-bundles-in-the-storefront
+  - /v6/docs/howto-rendering-configurable-bundles-in-the-storefront
+  - /v6/docs/en/howto-rendering-configurable-bundles-in-the-storefront      
+  - /v5/docs/howto-rendering-configurable-bundles-in-the-storefront
+  - /v5/docs/en/howto-rendering-configurable-bundles-in-the-storefront
+  - /v4/docs/howto-rendering-configurable-bundles-in-the-storefront
+  - /v4/docs/en/howto-rendering-configurable-bundles-in-the-storefront
 ---
 
 The configurable bundle functionality is implemented by 3 widgets:
@@ -53,7 +59,7 @@ To add comments to a `configured bundle` product, set up the `ConfiguredBundleNo
 ```
 
 ## Rendering Configurable Bundle Templates on the Checkout Summary Page
-## 
+##
 To render the  `configured bundle` product on the Checkout Summary page, call `QuoteConfiguredBundleWidget`  in the checkout summary page template (`CheckoutPage/Theme/default/views/summary/summary.twig`).
 
 **Code example that renders configured bundle product on the Checkout page, Summary step**

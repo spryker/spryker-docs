@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/t-content-search-personalized-catalog-page
   - /docs/t-content-search-personalized-catalog-page
   - /docs/en/t-content-search-personalized-catalog-page
+  - /v6/docs/t-content-search-personalized-catalog-page
+  - /v6/docs/en/t-content-search-personalized-catalog-page
+  - /v5/docs/t-content-search-personalized-catalog-page
+  - /v5/docs/en/t-content-search-personalized-catalog-page
+  - /v4/docs/t-content-search-personalized-catalog-page
+  - /v4/docs/en/t-content-search-personalized-catalog-page
+  - /v2/docs/t-content-search-personalized-catalog-page
+  - /v2/docs/en/t-content-search-personalized-catalog-page
+  - /v1/docs/t-content-search-personalized-catalog-page
+  - /v1/docs/en/t-content-search-personalized-catalog-page
 ---
 
 {% info_block infoBox %}
@@ -15,38 +25,38 @@ This tutorial is also available on the Spryker Training web-site. For more infor
 {% endinfo_block %} web-site.)
 
 ## Challenge Description
-The aim of this task is to build the first block of personalization for your shop. We are going to build a new CMS page and fill it with personalized products using the user's session ID. 
+The aim of this task is to build the first block of personalization for your shop. We are going to build a new CMS page and fill it with personalized products using the user's session ID.
 
-We will use the session ID just to show that products change when a new customer visits the page. 
+We will use the session ID just to show that products change when a new customer visits the page.
 
 {% info_block infoBox %}
 In a real case scenario, the session ID can be replaced and a score calculated from the customer's preferences and order history.
 {% endinfo_block %}
 
 ### 1. Create the CMS Page
-    
-    
-  1. First, we will create the CMS page template. 
+
+
+  1. First, we will create the CMS page template.
 
 In `src/Pyz/Shared/Cms/Theme/default/templates`, add a new directory called _my-offers_.
 
 Inside this folder, add a twig file called _my-offers.twig_.
-    
+
 ```php
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
 	title: _view.pageTitle | default('global.spryker.shop' | trans),
 	metaTitle: _view.pageTitle | default('global.spryker.shop' | trans),
 	metaDescription: _view.pageDescription | default(''),
 	metaKeywords: _view.pageKeywords | default('')
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block title {% raw %}%}{% endraw %}
 	<!-- CMS_PLACEHOLDER : "title" -->
     <h3>{% raw %}{{{% endraw %} spyCms('title') | raw {% raw %}}}{% endraw %}</h3>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
 	<!-- CMS_PLACEHOLDER : "content" -->
 	<div class="box">
@@ -54,10 +64,10 @@ Inside this folder, add a twig file called _my-offers.twig_.
     </div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-    
-2. Create a new CMS page from CMS tab in the back office. Use the twig template you have just added, and use the `URL /my-offers`. 
-					
-3. Click **Next** and fill in the title and content of the page. 
+
+2. Create a new CMS page from CMS tab in the back office. Use the twig template you have just added, and use the `URL /my-offers`.
+
+3. Click **Next** and fill in the title and content of the page.
 Use any title and description you like to add.
 
 4. Save the page, and publish it.
@@ -67,8 +77,8 @@ That is it! It is very simple to add a CMS page and publish it.
 Next, let's get the personalized products and add them to the page.
 
 ### 2. Get the Personalized Products
-    
-To get the products, we will use **Elasticsearch**. To do so, we need to work with the `SearchClient` as it is the place to connect with Elasticsearch. 
+
+To get the products, we will use **Elasticsearch**. To do so, we need to work with the `SearchClient` as it is the place to connect with Elasticsearch.
 So, mainly we will work with Yves to get the request from the shop, and the client to pass the request to Elasticsearch and get the response back.
 1. First, create a new Yves module in `src/Pyz/Yves` and call it `PersonalizedProduct`.
 2. Create a `PersonalizedProductRouteProviderPlugin` inside `src/Pyz/Yves/PersonalizedProduct/Plugin/Router` and add the route to the personalized products inside of it.
@@ -78,11 +88,11 @@ namespace Pyz\Yves\PersonalizedProduct\Plugin\Router;
 
 use Spryker\Yves\Router\Plugin\RouteProvider\AbstractRouteProviderPlugin;
 use Spryker\Yves\Router\Route\RouteCollection;
- 
+
 class PersonalizedProductRouteProviderPlugin extends AbstractRouteProviderPlugin
 {
     public const ROUTE_NAME_PERSONALIZED_PRODUCT_INDEX = 'personalized-product-index';
- 
+
     /**
      * Specification:
      * - Adds Routes to the RouteCollection.
@@ -99,24 +109,24 @@ class PersonalizedProductRouteProviderPlugin extends AbstractRouteProviderPlugin
         $routeCollection->add(static::ROUTE_NAME_PERSONALIZED_PRODUCT_INDEX, $route);
 
         return $routeCollection;
-    } 
+    }
 }
 ```
-    
+
 {% info_block infoBox %}
 The `value(
 {% endinfo_block %}` method gives a default value in case the limit value is not passed from the URL.</br>The `assert()` method checks if the limit value is a positive integer.)
 
 3. Register the `PersonalizedProductRouteProviderPlugin` to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouteProvider()`method.
 
-4. Create an `IndexController` for the `PersonalizedProduct` module in `src/Pyz/Yves/PersonalizedProduct/Controller` and add an `indexAction()`. 
+4. Create an `IndexController` for the `PersonalizedProduct` module in `src/Pyz/Yves/PersonalizedProduct/Controller` and add an `indexAction()`.
 Then, add the twig template for the controller and the action in `src/Pyz/Yves/PersonalizedProduct/Theme/default/views/index` and call it `index.twig`.
 
 ```php
 namespace Pyz\Yves\PersonalizedProduct\Controller;
- 
+
 use Spryker\Yves\Kernel\Controller\AbstractController;
- 
+
 class IndexController extends AbstractController
 {
 	/**
@@ -133,7 +143,7 @@ class IndexController extends AbstractController
 
 ```
 {% raw %}{%{% endraw %} extends template('page-blank') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
 	{% raw %}{{{% endraw %} 'My Personalized Products' {% raw %}}}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
@@ -147,7 +157,7 @@ For now, the Yves part is done. You can now go to [http://www.de.suite.local/per
 
 ```php
 namespace Pyz\Client\PersonalizedProduct;
- 
+
 interface PersonalizedProductClientInterface
 {
 	/**
@@ -161,9 +171,9 @@ interface PersonalizedProductClientInterface
 
 ```php
 namespace Pyz\Client\PersonalizedProduct;
- 
+
 use Spryker\Client\Kernel\AbstractClient;
- 
+
 class PersonalizedProductClient extends AbstractClient implements PersonalizedProductClientInterface
 {
 	/**
@@ -177,22 +187,22 @@ class PersonalizedProductClient extends AbstractClient implements PersonalizedPr
 }
 ```
 
-6. To get the products from Elasticsearch, we need to use the `SearchClient`. In the SearchClient, there is the `search()` method that queries the search engine and takes a search query and an array of formatters as parameters. 
+6. To get the products from Elasticsearch, we need to use the `SearchClient`. In the SearchClient, there is the `search()` method that queries the search engine and takes a search query and an array of formatters as parameters.
 
-So, we need three main steps here: 
+So, we need three main steps here:
 * create the query
-* get the formatters 
+* get the formatters
 * get the SearchClient.
 
-Then, we can hook things together. 
+Then, we can hook things together.
 
-First, let's create the query. The query is basically a plugin implementing the QueryInterface. 
+First, let's create the query. The query is basically a plugin implementing the QueryInterface.
 1. Add the following directory structure inside the client's directory: `Plugin/Elasticsearch/Query`.
 2. Then, add the query plugin inside it and call it `PersonalizedProductQueryPlugin`:
 
 ```php
 namespace Pyz\Client\PersonalizedProduct\Plugin\Elasticsearch\Query;
- 
+
 use Elastica\Query;
 use Elastica\Query\BoolQuery;
 use Elastica\Query\FunctionScore;
@@ -201,14 +211,14 @@ use Elastica\Query\MatchAll;
 use Generated\Shared\Search\PageIndexMap;
 use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
 use Spryker\Shared\ProductSearch\ProductSearchConfig;
- 
+
 class PersonalizedProductQueryPlugin implements QueryInterface
 {
 	/**
 	 * @var int
 	 */
 	protected $limit;
- 
+
 	/**
 	 * @param int $limit
 	 */
@@ -216,7 +226,7 @@ class PersonalizedProductQueryPlugin implements QueryInterface
 	{
 		$this->limit = $limit;
 	}
- 
+
 	/**
 	 * @return \Elastica\Query
 	 */
@@ -229,12 +239,12 @@ class PersonalizedProductQueryPlugin implements QueryInterface
 				->setScoreMode('sum'))
 			->addMust((new Match())
 				->setField(PageIndexMap::TYPE, ProductSearchConfig::RESOURCE_TYPE_PRODUCT_ABSTRACT));
- 
+
 		$query = (new Query())
 			->setSource([PageIndexMap::SEARCH_RESULT_DATA])
 			->setQuery($boolQuery)
 			->setSize($this->limit);
- 
+
 		return $query;
 	}
 }
@@ -244,7 +254,7 @@ class PersonalizedProductQueryPlugin implements QueryInterface
 As you notice, we have the limit passed in the constructor of the query plugin. Also, the seed value is the `session_id(
 {% endinfo_block %}` of the customer and it is used with the random score from Elasticsearch. Again, you can change these values according to your needs.)
 
-7. Both the formatters and the `SearchClient` are and external dependency to our `PersonalizedProductClient`, therefore we need to use the dependency provider to get them and inject them inside our client. Create the `PersonalizedProductDependencyProvider` in `src/Pyz/Client` and get both the formatters array and the SearchClient. 
+7. Both the formatters and the `SearchClient` are and external dependency to our `PersonalizedProductClient`, therefore we need to use the dependency provider to get them and inject them inside our client. Create the `PersonalizedProductDependencyProvider` in `src/Pyz/Client` and get both the formatters array and the SearchClient.
 
 The formatter that we need to use here is the `RawCatalogSearchResultFormatterPlugin`.
 
@@ -253,16 +263,16 @@ Your dependency provider will look like this:
 ```php
 
 namespace Pyz\Client\PersonalizedProduct;
- 
+
 use Spryker\Client\Catalog\Plugin\Elasticsearch\ResultFormatter\RawCatalogSearchResultFormatterPlugin;
 use Spryker\Client\Kernel\AbstractDependencyProvider;
 use Spryker\Client\Kernel\Container;
- 
+
 class PersonalizedProductDependencyProvider extends AbstractDependencyProvider
 {
 	const CLIENT_SEARCH = 'CLIENT_SEARCH';
 	const CATALOG_SEARCH_RESULT_FORMATTER_PLUGINS = 'CATALOG_SEARCH_RESULT_FORMATTER_PLUGINS';
- 
+
 	/**
 	 * @param \Spryker\Client\Kernel\Container $container
 	 *
@@ -272,10 +282,10 @@ class PersonalizedProductDependencyProvider extends AbstractDependencyProvider
 	{
 		$container = $this->addSearchClient($container);
 		$container = $this->addCatalogSearchResultFormatterPlugins($container);
- 
+
 		return $container;
 	}
- 
+
 	/**
 	 * @param \Spryker\Client\Kernel\Container $container
 	 *
@@ -286,10 +296,10 @@ class PersonalizedProductDependencyProvider extends AbstractDependencyProvider
 		$container[static::CLIENT_SEARCH] = function (Container $container) {
 			return $container->getLocator()->search()->client();
 		};
- 
+
 		return $container;
 	}
- 
+
 	public function addCatalogSearchResultFormatterPlugins($container)
 	{
 		$container[static::CATALOG_SEARCH_RESULT_FORMATTER_PLUGINS] = function () {
@@ -297,7 +307,7 @@ class PersonalizedProductDependencyProvider extends AbstractDependencyProvider
 				new RawCatalogSearchResultFormatterPlugin()
 			];
 		};
- 
+
 		return $container;
 	}
 }
@@ -307,11 +317,11 @@ class PersonalizedProductDependencyProvider extends AbstractDependencyProvider
 
 ```php
 namespace Pyz\Client\PersonalizedProduct;
- 
+
 use Pyz\Client\PersonalizedProduct\Plugin\Elasticsearch\Query\PersonalizedProductQueryPlugin;
 use Spryker\Client\Kernel\AbstractFactory;
 use Spryker\Client\Search\SearchClientInterface;
- 
+
 class PersonalizedProductFactory extends AbstractFactory
 {
 	/**
@@ -323,7 +333,7 @@ class PersonalizedProductFactory extends AbstractFactory
 	{
 		return new PersonalizedProductQueryPlugin($limit);
 	}
- 
+
 	/**
 	 * @throws \Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException
 	 *
@@ -333,7 +343,7 @@ class PersonalizedProductFactory extends AbstractFactory
 	{
 		return $this->getProvidedDependency(PersonalizedProductDependencyProvider::CATALOG_SEARCH_RESULT_FORMATTER_PLUGINS);
 	}
- 
+
 	/**
 	 * @throws \Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException
 	 *
@@ -346,7 +356,7 @@ class PersonalizedProductFactory extends AbstractFactory
 }
 ```
 
-9. The client now can get all the objects it needs to send the search query and to get the response back from Elasticsearch. 
+9. The client now can get all the objects it needs to send the search query and to get the response back from Elasticsearch.
 
 ```php
 
@@ -362,18 +372,18 @@ public function getPersonalizedProducts($limit)
 	$searchQuery = $this
 		->getFactory()
 		->createPersonalizedProductsQueryPlugin($limit);
- 
+
 	$searchQueryFromatters = $this
 		->getFactory()
 		->getSearchQueryFormatters();
- 
+
 	$searchResult = $this->getFactory()
 		->getSearchClient()
 		->search(
 			$searchQuery,
 			$searchQueryFromatters
 		);
- 
+
 	return $searchResult;
 }
 ```
@@ -382,9 +392,9 @@ public function getPersonalizedProducts($limit)
 
 ```php
 namespace Pyz\Yves\PersonalizedProduct\Controller;
- 
+
 use Spryker\Yves\Kernel\Controller\AbstractController;
- 
+
 class IndexController extends AbstractController
 {
 	/**
@@ -397,7 +407,7 @@ class IndexController extends AbstractController
 	public function indexAction($limit)
 	{
 		$searchResults = $this->getClient()->getPersonalizedProducts($limit);
- 
+
 		return $this->view(
 			$searchResults,
 			[],
@@ -409,11 +419,11 @@ class IndexController extends AbstractController
 
 ```php
 {% raw %}{%{% endraw %} extends template('page-blank') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
 	products: _view.products
  {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
 	<div>
 		{% raw %}{%{% endraw %} for product in data.products {% raw %}%}{% endraw %}
@@ -439,28 +449,28 @@ That's it for getting the personalized products. </br>To demonstrate having diff
 {% endinfo_block %} and check out the products. Refresh the page, you should see the same products as you still have the same session ID.</br> Now, remove the Spryker cookie so the session ID is different and refresh the page, you should see different products. This different customers with different sessions IDs get different personalized products.)
 
 ### 3. Put the personalized products in the CMS page
-    
-Let's put our personalized products inside our CMS page, the one we have created in the first step, so they get the same look and feel of the whole shop with extra content around them. 
 
-To do so, we will use the `render()` method with the twig templates. 
+Let's put our personalized products inside our CMS page, the one we have created in the first step, so they get the same look and feel of the whole shop with extra content around them.
+
+To do so, we will use the `render()` method with the twig templates.
 
 The method takes a path for the route name as a parameter. What it does is that it creates a sub-request internally and calls the route with the provided name, then it renders the results inside another twig template. Open `my-offers.twig` and use the render method like this `{% raw %}{{{% endraw %} render(path('personalized-product-index', {'limit': 12})) {% raw %}}}{% endraw %}`.
 
 ```php
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
 	title: _view.pageTitle | default('global.spryker.shop' | trans),
 	metaTitle: _view.pageTitle | default('global.spryker.shop' | trans),
 	metaDescription: _view.pageDescription | default(''),
 	metaKeywords: _view.pageKeywords | default('')
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block title {% raw %}%}{% endraw %}
 	<!-- CMS_PLACEHOLDER : "title" -->
     <h3>{% raw %}{{{% endraw %} spyCms('title') | raw {% raw %}}}{% endraw %}</h3>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
 	<!-- CMS_PLACEHOLDER : "content" -->
 	<div class="box">
@@ -472,9 +482,8 @@ The method takes a path for the route name as a parameter. What it does is that 
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```		
 
-Done! To check the results, go to [http://www.de.suite.local/my-offers](http://www.de.suite.local/my-offers). 
+Done! To check the results, go to [http://www.de.suite.local/my-offers](http://www.de.suite.local/my-offers).
 
 Remove the Spryker cookie and refresh again to see different personalized products.
-    
-[//]: # (_Last review date: Jul 03, 2018_ by Hussam Hebbo, Anastasija Datsun)
 
+[//]: # (_Last review date: Jul 03, 2018_ by Hussam Hebbo, Anastasija Datsun)

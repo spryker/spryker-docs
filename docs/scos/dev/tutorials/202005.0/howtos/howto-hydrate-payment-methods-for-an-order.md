@@ -3,6 +3,8 @@ title: HowTo - Hydrate Payment Methods for an Order
 originalLink: https://documentation.spryker.com/v5/docs/ht-hydrate-payment-methods-for-order
 originalArticleId: 561d78a2-a001-48e4-9fbc-87b1c54fcdaa
 redirect_from:
+  - /v6/docs/ht-hydrate-payment-methods-for-order
+  - /v6/docs/en/ht-hydrate-payment-methods-for-order
   - /v5/docs/ht-hydrate-payment-methods-for-order
   - /v5/docs/en/ht-hydrate-payment-methods-for-order
 ---

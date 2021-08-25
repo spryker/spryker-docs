@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/how-tos
   - /docs/how-tos
   - /docs/en/how-tos
+  - /v6/docs/ht-make-product-shown-on-frontend-by-url
+  - /v6/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v5/docs/ht-make-product-shown-on-frontend-by-url
+  - /v5/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v4/docs/ht-make-product-shown-on-frontend-by-url
+  - /v4/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v2/docs/ht-make-product-shown-on-frontend-by-url
+  - /v2/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v1/docs/ht-make-product-shown-on-frontend-by-url
+  - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
 ---
 
 HowTos are simple step-by-step instructions to guide you through the process of performing a single task. There are three types of HowTos: [Feature HowTos](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/feature-howtos.html), [Glue API HowTos](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/glue-api-howtos/glue-api-howtos.html) and miscellaneous _HowTos for developers_.
@@ -15,10 +25,10 @@ HowTos are simple step-by-step instructions to guide you through the process of 
 **Feature HowTos** can be useful for shop owners, administrators and developers as they explain how to perform tasks related to Spryker features. Specifically, this section contains the following guides:
 
 * [HowTo - Change the Default Behavior of Event Triggering in Availability Storage Module](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html)
-* [HowTo - Configure Separators and Default Number of Rows](https://documentation.spryker.com/2021080/docs/ht-configure-separators-default-number-rows) 
+* [HowTo - Configure Separators and Default Number of Rows](https://documentation.spryker.com/2021080/docs/ht-configure-separators-default-number-rows)
 * [HowTo - Create CMS Templates](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html)
 * [HowTo - Import Minimum Order Value Data](https://documentation.spryker.com/2021080/docs/ht-import-minimum-order-value-data-201903)
-* [HowTo - Make a Product Searchable and Shown on Yves by URL](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html) 
+* [HowTo - Make a Product Searchable and Shown on Yves by URL](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html)
 * [HowTo - Manage a Big Number of Categories](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html)
 * [HowTo - Disable Accounts Switch for Business on Behalf](https://documentation.spryker.com/2021080/docs/ht-disable-accounts-switch-for-bob-201907)
 * [HowTo - Enable CMS Content Widgets Button in the WYSIWYG Editor](https://documentation.spryker.com/2021080/docs/ht-enable-cms-content-widgets-button-201907)

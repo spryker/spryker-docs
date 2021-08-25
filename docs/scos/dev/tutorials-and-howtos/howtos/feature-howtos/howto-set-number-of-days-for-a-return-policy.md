@@ -8,6 +8,10 @@ redirect_from:
   - /2021080/docs/en/howto-set-number-of-days-for-a-return-policy
   - /docs/howto-set-number-of-days-for-a-return-policy
   - /docs/en/howto-set-number-of-days-for-a-return-policy
+  - /v6/docs/howto-set-number-of-days-for-a-return-policy
+  - /v6/docs/en/howto-set-number-of-days-for-a-return-policy
+  - /v5/docs/howto-set-number-of-days-for-a-return-policy
+  - /v5/docs/en/howto-set-number-of-days-for-a-return-policy
 ---
 
 To define a period within which an item can be returned, redefine the Config in `Pyz\Zed\SalesReturn\SalesReturnConfig` by adding the following there:
@@ -23,5 +27,3 @@ namespace Pyz\Zed\SalesReturn;use Spryker\Zed\SalesReturn\SalesReturnConfig as S
     protected const GLOBAL_RETURNABLE_NUMBER_OF_DAYS = 30;
 }
 ```
-
-

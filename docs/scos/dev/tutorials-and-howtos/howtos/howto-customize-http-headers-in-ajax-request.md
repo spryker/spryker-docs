@@ -7,6 +7,16 @@ redirect_from:
   - /2021080/docs/en/ht-customize-http-headers-in-ajax-request
   - /docs/ht-customize-http-headers-in-ajax-request
   - /docs/en/ht-customize-http-headers-in-ajax-request
+  - /v6/docs/ht-customize-http-headers-in-ajax-request
+  - /v6/docs/en/ht-customize-http-headers-in-ajax-request
+  - /v5/docs/ht-customize-http-headers-in-ajax-request
+  - /v5/docs/en/ht-customize-http-headers-in-ajax-request
+  - /v4/docs/ht-customize-http-headers-in-ajax-request
+  - /v4/docs/en/ht-customize-http-headers-in-ajax-request
+  - /v2/docs/ht-customize-http-headers-in-ajax-request
+  - /v2/docs/en/ht-customize-http-headers-in-ajax-request
+  - /v1/docs/ht-customize-http-headers-in-ajax-request
+  - /v1/docs/en/ht-customize-http-headers-in-ajax-request
 ---
 
 The `XMLHttpRequest` method `setRequestHeader()` sets the value of an HTTP request header. When using `setRequestHeader()`, you must call it after calling `open()`, but before calling `send()`. If this method is called several times with the same header, the values are merged into a single request header.

@@ -7,6 +7,8 @@ redirect_from:
   - /2021080/docs/en/howto-replace-key-value-storage-with-database
   - /docs/howto-replace-key-value-storage-with-database
   - /docs/en/howto-replace-key-value-storage-with-database
+  - /v6/docs/howto-replace-key-value-storage-with-database
+  - /v6/docs/en/howto-replace-key-value-storage-with-database
 ---
 
 One of the main ways of transferring data from Zed to Yves is the Publish & Synchronization mechanism. It works by:
@@ -37,7 +39,7 @@ Out of the box, the `StorageDatabase` module can work with two RDBS vendors - My
 ## Installation
 Install the required modules by running
 ```Bash
-composer require spryker/storage:3.8.0 spryker/storage-database 
+composer require spryker/storage:3.8.0 spryker/storage-database
 ```
 
 ## Configuring the Storage Database (DevOps)
@@ -45,12 +47,12 @@ composer require spryker/storage:3.8.0 spryker/storage-database
 1. For the key-value storage bypass to work properly, add a set of new configuration values to the environment configuration of a project:
 
 config/Shared/config_default.php
-  
+
 ```PHP
 <?php
 use Spryker\Shared\StorageDatabase\StorageDatabaseConfig;
 use Spryker\Shared\StorageDatabase\StorageDatabaseConstants;
- 
+
 // ---------- Database storage
 $config[StorageDatabaseConstants::DB_DEBUG] = false;
 $config[StorageDatabaseConstants::DB_ENGINE] = StorageDatabaseConfig::DB_ENGINE_PGSQL;
@@ -67,9 +69,9 @@ The storage database is configured with the database credentials separately, alt
 
 ```php
 namespace Pyz\Zed\SynchronizationBehavior;
- 
+
 use Spryker\Zed\SynchronizationBehavior\SynchronizationBehaviorConfig as SprykerSynchronizationBehaviorConfig;
- 
+
 class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 {
     /**
@@ -85,7 +87,7 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
     {
         return false;
     }
- 
+
     /**
      * Specification:
      * - If true, then the alias_keys column is added to all the storage tables, for which mappings are defined.
@@ -112,13 +114,13 @@ spy_product_page_search.schema.xml
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ProductPageSearch\Persistence"
           package="src.Orm.Zed.ProductPageSearch.Persistence">
- 
+
     <table name="spy_product_abstract_page_search">
         <behavior name="synchronization">
             <parameter name="synchronization_enabled" value="true"/>
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -134,11 +136,11 @@ src/Pyz/Client/Storage/StorageConfig.php
 
 ```php    
 <?php
- 
+
 namespace Pyz\Client\Storage;
- 
+
 use Spryker\Client\Storage\StorageConfig as SprykerStorageConfig;
- 
+
 class StorageConfig extends SprykerStorageConfig
 {
     /**
@@ -155,12 +157,12 @@ class StorageConfig extends SprykerStorageConfig
 
 ```php
 <?php
-  
+
 namespace Pyz\Glue\EntityTagsRestApi;
-  
+
 use Spryker\Glue\CartsRestApi\CartsRestApiConfig;
 use Spryker\Glue\EntityTagsRestApi\EntityTagsRestApiConfig as SprykerEntityTagsRestApiConfig;
-  
+
 class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 {
     /**
@@ -181,11 +183,11 @@ Pyz\Client\StorageDatabase\StorageDatabaseConfig
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\StorageDatabase;
- 
+
 use Spryker\Client\StorageDatabase\StorageConfig as SprykerStorageDatabaseConfig;
- 
+
 class StorageDatabaseConfig extends SprykerStorageDatabaseConfig
 {
     public function getResourceNameToStorageTableMap(): array
@@ -213,13 +215,13 @@ Pyz\Client\StorageDatabase\StorageDatabaseConfig
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\Storage;
- 
+
 use Spryker\Client\Storage\StorageDependencyProvider as SprykerStorageDependencyProvider;
 use Spryker\Client\StorageDatabase\Plugin\StorageDatabasePlugin;
 use Spryker\Client\StorageExtension\Dependency\Plugin\StoragePluginInterface;
- 
+
 class StorageDependencyProvider extends SprykerStorageDependencyProvider
 {
     /**
@@ -239,13 +241,13 @@ Pyz\Client\StorageDatabase\StorageDatabaseDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\StorageDatabase;
- 
+
 use Spryker\Client\StorageDatabase\Plugin\PostgreSqlStorageReaderPlugin;
 use Spryker\Client\StorageDatabase\StorageDatabaseDependencyProvider as SprykerStorageDatabaseDependencyProvider;
 use Spryker\Client\StorageDatabaseExtension\Dependency\Plugin\StorageReaderPluginInterface;
- 
+
 /**
  * @method \Spryker\Client\StorageDatabase\StorageDatabaseConfig getConfig()
  */

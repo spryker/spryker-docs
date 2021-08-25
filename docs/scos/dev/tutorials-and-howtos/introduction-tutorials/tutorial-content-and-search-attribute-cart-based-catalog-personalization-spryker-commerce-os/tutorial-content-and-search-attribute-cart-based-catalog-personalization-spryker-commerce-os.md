@@ -8,9 +8,19 @@ redirect_from:
   - /2021080/docs/en/t-content-search-attribute-cart-based-catalog-personalization
   - /docs/t-content-search-attribute-cart-based-catalog-personalization
   - /docs/en/t-content-search-attribute-cart-based-catalog-personalization
+  - /v6/docs/t-content-search-attribute-cart-based-catalog-personalization
+  - /v6/docs/en/t-content-search-attribute-cart-based-catalog-personalization
+  - /v5/docs/t-content-search-attribute-cart-based-catalog-personalization
+  - /v5/docs/en/t-content-search-attribute-cart-based-catalog-personalization
+  - /v4/docs/t-content-search-attribute-cart-based-catalog-personalization
+  - /v4/docs/en/t-content-search-attribute-cart-based-catalog-personalization
+  - /v2/docs/t-content-search-attribute-cart-based-catalog-personalization
+  - /v2/docs/en/t-content-search-attribute-cart-based-catalog-personalization
+  - /v1/docs/t-content-search-attribute-cart-based-catalog-personalization
+  - /v1/docs/en/t-content-search-attribute-cart-based-catalog-personalization
 ---
 
-In this tutorial, we will boost and personalize the catalog using the color attribute of a product when it is added to cart. 
+In this tutorial, we will boost and personalize the catalog using the color attribute of a product when it is added to cart.
 {% info_block infoBox %}
 This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit [Spryker Training](https://training.spryker.com/
 {% endinfo_block %}.)
@@ -21,28 +31,28 @@ When you add a red camera to cart, all red cameras are going to be boosted in th
 In this task, you will also learn how to work with plugins and extend the search plugin stack.
 
 ## Challenge Solving Highlights
-In this task, we are using the cart only for the sake of training. In a real-life scenario, you can use the customer's order history to analyze what colors this customer likes and boost the catalog accordingly, or even use another attribute. 
+In this task, we are using the cart only for the sake of training. In a real-life scenario, you can use the customer's order history to analyze what colors this customer likes and boost the catalog accordingly, or even use another attribute.
 
-Fulltext search engines like Elasticsearch provide a possibility to influence sorting of products by tweaking the scoring function. The scoring function assigns weights to each result based on a formula, which in its turn is usually based on text similarity or synonyms, but we can change it to boost specific products higher than others. 
+Fulltext search engines like Elasticsearch provide a possibility to influence sorting of products by tweaking the scoring function. The scoring function assigns weights to each result based on a formula, which in its turn is usually based on text similarity or synonyms, but we can change it to boost specific products higher than others.
 
 In this challenge, we will try to affect the scoring function based on products that are already in the cart.
 
 To solve the challenge, follow the instructions below.
 
 ### 1. Prepare the search query plugin
-    
+
 As we are working with search and Elasticsearch, we need to work with the client level. We need the catalog, so our main place to work is **CatalogClient** in `src/Pyz/Client/Catalog`.
 
 The client uses a stack of plugins that implement `\Spryker/Client/SearchExtension/Dependency/Plugin/QueryExpanderPluginInterface`. In this task, we will extend this plugin stack by creating a new plugin for boosting and injecting it into the plugin stack. By creating a new plugin for boosting and injecting it in the plugin stack, we can alter the search query accordingly
-    
+
 To create the plugin:
-1. Inside the catalog client directory, create the following directories: `Plugin/Elasticsearch/QueryExpander`. 
+1. Inside the catalog client directory, create the following directories: `Plugin/Elasticsearch/QueryExpander`.
 
 2. Inside the _QueryExpander_ directory, create a new query plugin and call it `AttributeCartBasedBoostingQueryExpanderPlugin`. This plugin implements  `QueryExpanderPluginInterface`.
  <details open>
 
 <summary>Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander</summary>
-    
+
 ```php
 namespace Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander;
 
@@ -178,22 +188,22 @@ class AttributeCartBasedBoostingQueryExpanderPlugin extends AbstractPlugin imple
 }
 ```
  </details>
-    
+
 3. As you may notice, *CartClient* does not exist as a dependency for the *CatalogClient*. Let's add this dependency, so our query plugin works. For this, open `CatalogDependencyProvider` in `src/Pyz/Client/Catalog` and add *CartClient* as a dependency:
 
 <details open>
 <summary>Pyz\Client\Catalog</summary>
-    
+
 ```php
 namespace Pyz\Client\Catalog;
- 
+
 
 use Spryker\Client\Cart\CartClientInterface;
 use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
 ...
 use Spryker\Client\Kernel\Container;
 ...
- 
+
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
     public const CLIENT_CART = 'CLIENT_CART';
@@ -225,11 +235,11 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 
         return $container;
     }
-... 
-} 
+...
+}
 ```
 </details>
-    
+
 3. Next, get the *CartClient* dependency using the *CatalogFactory*. Extend the *CatalogFactory* of the catalog client in `src/Pyz/Client/Catalog` and get the *CartClient*.
 
 ```php
@@ -247,11 +257,11 @@ class CatalogFactory extends SprykerCatalogFactory
     {
         return $this->getProvidedDependency(CatalogDependencyProvider::CLIENT_CART);
     }
-} 
+}
 ```
-    
+
 4. To get the color of a product from the cart, we need to read the product data from the _key-value storage; Redis_.  For that, `ProductStorageClient` should be used with the method `getProductAbstractStorageData()`.
- 
+
 Like the *CartClient*, the *ProductStorageClient* needs to be added to the `CatalogDependencyProvider`. Then the `CatalogFactory` can get it from the dependency provider:
 
 <details open>
@@ -259,11 +269,11 @@ Like the *CartClient*, the *ProductStorageClient* needs to be added to the `Cata
 
  ```php
 namespace Pyz\Client\Catalog;
- 
+
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
 	...
-        public const CLIENT_PRODUCT_STORAGE = 'CLIENT_PRODUCT_STORAGE'; 
+        public const CLIENT_PRODUCT_STORAGE = 'CLIENT_PRODUCT_STORAGE';
 
 	/**
 	 * @param \Spryker\Client\Kernel\Container $container
@@ -273,13 +283,13 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 	public function provideServiceLayerDependencies(Container $container): Container
 	{
 		$container = parent::provideServiceLayerDependencies($container);
- 
+
 		$container = $this->addCartClient($container);
 		$container = $this->addProductStorageClient($container);
- 
+
 		return $container;
 	}
- 
+
 	...
     /**
      * @param \Spryker\Client\Kernel\Container $container
@@ -297,7 +307,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ... }
 ```
 </details>
- 
+
  <details open>
 <summary>Pyz\Client\Catalog</summary>
 
@@ -305,7 +315,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 namespace Pyz\Client\Catalog;
 
 use Spryker\Client\Catalog\CatalogFactory as SprykerCatalogFactory;
-use Spryker\Client\ProductStorage\ProductStorageClientInterface; 
+use Spryker\Client\ProductStorage\ProductStorageClientInterface;
 
 class CatalogFactory extends SprykerCatalogFactory {
  ...
@@ -315,13 +325,13 @@ class CatalogFactory extends SprykerCatalogFactory {
     public function getProductStorageClient(): ProductStorageClientInterface
     {
         return $this->getProvidedDependency(CatalogDependencyProvider::CLIENT_PRODUCT_STORAGE);
-    } 
+    }
 }
 ```
 </details>
-    
+
 ### 2. Extend the catalog's search queries stack
-    
+
 The final step is very simple.
 
 In  `CatalogDependencyProvider`, there is a stack of plugins for expanding the search query.
@@ -354,10 +364,10 @@ protected function createCatalogSearchQueryExpanderPlugins(): array
 	];
 }
 ```
-    
+
 Done! Now go to the *Cameras* catalog page in your shop [http://www.de.suite.local/en/cameras-&amp;-camcorders/digital-cameras](http://www.de.suite.local/en/cameras-&amp;-camcorders/digital-cameras) and do the following:
 1. Add a red camera to cart.
-2. Go back to the same catalog page. 
+2. Go back to the same catalog page.
 
 All red cameras are on the top now.
 

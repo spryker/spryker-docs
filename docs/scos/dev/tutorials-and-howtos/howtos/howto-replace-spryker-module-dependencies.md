@@ -7,6 +7,16 @@ redirect_from:
   - /2021080/docs/en/ht-replace-bundle-dependencies
   - /docs/ht-replace-bundle-dependencies
   - /docs/en/ht-replace-bundle-dependencies
+  - /v6/docs/ht-replace-bundle-dependencies
+  - /v6/docs/en/ht-replace-bundle-dependencies
+  - /v5/docs/ht-replace-bundle-dependencies
+  - /v5/docs/en/ht-replace-bundle-dependencies
+  - /v4/docs/ht-replace-bundle-dependencies
+  - /v4/docs/en/ht-replace-bundle-dependencies
+  - /v2/docs/ht-replace-bundle-dependencies
+  - /v2/docs/en/ht-replace-bundle-dependencies
+  - /v1/docs/ht-replace-bundle-dependencies
+  - /v1/docs/en/ht-replace-bundle-dependencies
 ---
 
 {% info_block infoBox "Spryker Dependencies" %}

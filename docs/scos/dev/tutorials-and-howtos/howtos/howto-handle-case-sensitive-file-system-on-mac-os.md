@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/ht-case-sensitive-file-system-mac
   - /docs/ht-case-sensitive-file-system-mac
   - /docs/en/ht-case-sensitive-file-system-mac
+  - /v6/docs/ht-case-sensitive-file-system-mac
+  - /v6/docs/en/ht-case-sensitive-file-system-mac
+  - /v5/docs/ht-case-sensitive-file-system-mac
+  - /v5/docs/en/ht-case-sensitive-file-system-mac
+  - /v4/docs/ht-case-sensitive-file-system-mac
+  - /v4/docs/en/ht-case-sensitive-file-system-mac
+  - /v2/docs/ht-case-sensitive-file-system-mac
+  - /v2/docs/en/ht-case-sensitive-file-system-mac
+  - /v1/docs/ht-case-sensitive-file-system-mac
+  - /v1/docs/en/ht-case-sensitive-file-system-mac
 ---
 
 By default Mac OS uses a case-insensitive file system to support compatibility to applications (e.g. Photoshop) provided for the operating system. The file-system itself is capable of working in a case-sensitive mode. There are a number of options on how to change case sensitivity:
@@ -82,4 +92,3 @@ The first time you open one of the projects form the disk-image you will notice 
 
 For more information, see [Filesystem Case-Sensitivity Mismatch](https://confluence.jetbrains.com/display/IDEADEV/Filesystem+Case-Sensitivity+Mismatch){target="_blank"}.
  
-

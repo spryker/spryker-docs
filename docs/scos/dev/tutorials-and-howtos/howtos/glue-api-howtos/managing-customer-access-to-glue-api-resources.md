@@ -7,6 +7,12 @@ redirect_from:
   - /2021080/docs/en/managing-customer-access-to-glue-api-resources
   - /docs/managing-customer-access-to-glue-api-resources
   - /docs/en/managing-customer-access-to-glue-api-resources
+  - /v6/docs/managing-customer-access-to-api-resources
+  - /v6/docs/en/managing-customer-access-to-api-resources
+  - /v5/docs/managing-customer-access-to-api-resources
+  - /v5/docs/en/managing-customer-access-to-api-resources
+  - /v4/docs/managing-customer-access-to-api-resources
+  - /v4/docs/en/managing-customer-access-to-api-resources
 ---
 
 The [Customer Access API](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html) allows storefront owners to prevent unauthorized (guest) users from accessing certain REST API resources. This capability is tied up to the [Customer Access](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customer-access.html) Feature that allows you to restrict access to certain content items in *Spryker Back Office*.
@@ -32,10 +38,10 @@ For example, in the following code block, item **can place an order** is mapped 
 
    ```php
    <?php
- 
+
    namespace Pyz\Glue\CustomerAccessRestApi;
    ...
- 
+
    class CustomerAccessRestApiConfig extends SprykerCustomerAccessRestApiConfig
    {
        protected const CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING = [
@@ -62,16 +68,16 @@ The default `CustomerAccessRestApiConfig.php` of Spryker Storefronts looks as fo
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\CustomerAccessRestApi;
- 
+
 use Spryker\Glue\CheckoutRestApi\CheckoutRestApiConfig;
 use Spryker\Glue\CartsRestApi\CartsRestApiConfig;
 use Spryker\Glue\CustomerAccessRestApi\CustomerAccessRestApiConfig as SprykerCustomerAccessRestApiConfig;
 use Spryker\Glue\ProductPricesRestApi\ProductPricesRestApiConfig;
 use Spryker\Glue\WishlistsRestApi\WishlistsRestApiConfig;
 use Spryker\Shared\CustomerAccess\CustomerAccessConfig;
- 
+
 class CustomerAccessRestApiConfig extends SprykerCustomerAccessRestApiConfig
 {
     protected const CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING = [
@@ -95,4 +101,3 @@ class CustomerAccessRestApiConfig extends SprykerCustomerAccessRestApiConfig
 ```
 
 {% endinfo_block %}
-

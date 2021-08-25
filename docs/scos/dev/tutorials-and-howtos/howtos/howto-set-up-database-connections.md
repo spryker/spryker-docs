@@ -7,15 +7,25 @@ redirect_from:
   - /2021080/docs/en/ht-setup-database-connections
   - /docs/ht-setup-database-connections
   - /docs/en/ht-setup-database-connections
+  - /v6/docs/ht-setup-database-connections
+  - /v6/docs/en/ht-setup-database-connections
+  - /v5/docs/ht-setup-database-connections
+  - /v5/docs/en/ht-setup-database-connections
+  - /v4/docs/ht-setup-database-connections
+  - /v4/docs/en/ht-setup-database-connections
+  - /v2/docs/ht-setup-database-connections
+  - /v2/docs/en/ht-setup-database-connections
+  - /v1/docs/ht-setup-database-connections
+  - /v1/docs/en/ht-setup-database-connections
 ---
 
 Spryker provides flexible database connection configuration.
-		
+
 ## Single connection
 Most probable use case and the Zed DB connection is a good example here.
 
 For this you need to open environment config file (eg. `APP_DIR/config/Shared/config_default-development_DE.php`) and add the following parameters:
-		
+
 ```
 $config[PropelConstants::ZED_DB_USERNAME] = 'username';
 $config[PropelConstants::ZED_DB_PASSWORD] = 'password';
@@ -26,7 +36,7 @@ $config[PropelConstants::ZED_DB_ENGINE] = $config[PropelConstants::ZED_DB_ENGINE
 ```
 
 By default Spryker provides configuration for a single connection (two zed and default, but with the same configuration). The configuration you could find in `APP_DIR/config/Shared/config_propel.php` and it will look like the following:
-		
+
 ```
 $engine = $config[PropelConstants::ZED_DB_ENGINE];
 $config[PropelConstants::PROPEL]['database']['connections']['default'] = $connections[$engine];

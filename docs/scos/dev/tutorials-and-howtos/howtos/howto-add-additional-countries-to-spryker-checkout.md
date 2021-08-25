@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/howto-add-additional-countries-to-spryker-checkout
   - /docs/howto-add-additional-countries-to-spryker-checkout
   - /docs/en/howto-add-additional-countries-to-spryker-checkout
+  - /v6/docs/howto-add-additional-countries-to-spryker-checkout
+  - /v6/docs/en/howto-add-additional-countries-to-spryker-checkout
 ---
 
 This HowTo explains how to add additional shipping countries selected by the end users upon checkout.

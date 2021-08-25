@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/howto-allow-zed-cssjs-on-a-project
   - /docs/howto-allow-zed-cssjs-on-a-project
   - /docs/en/howto-allow-zed-cssjs-on-a-project
+  - /v6/docs/howto-allow-zed-cssjs-on-a-project
+  - /v6/docs/en/howto-allow-zed-cssjs-on-a-project
 ---
 
 To allow Zed CSS/JS on a project level, do the following:

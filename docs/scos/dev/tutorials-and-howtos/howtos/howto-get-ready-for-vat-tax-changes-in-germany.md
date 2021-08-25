@@ -7,6 +7,10 @@ redirect_from:
   - /2021080/docs/en/howto-get-ready-for-vat-tax-changes-in-germany
   - /docs/howto-get-ready-for-vat-tax-changes-in-germany
   - /docs/en/howto-get-ready-for-vat-tax-changes-in-germany
+  - /v5/docs/howto-get-ready-for-vat-tax-changes-in-germany
+  - /v5/docs/en/howto-get-ready-for-vat-tax-changes-in-germany
+  - /v6/docs/howto-get-ready-for-vat-tax-changes-in-germany
+  - /v6/docs/en/howto-get-ready-for-vat-tax-changes-in-germany
 ---
 
 The German government [has planned to adjust VAT as a part of the COVID-19 measures](https://www.tagesschau.de/wirtschaft/coronakrise-konjunkturpaket-mehrwertsteuer-101.html). The VAT update could become a nightmare for E-Commerce engineers and Web Developers. However, Spryker provides out-of-the-box mechanisms to support tax adjustments in runtime without migrating prices stored in the Spryker Commerce OS.

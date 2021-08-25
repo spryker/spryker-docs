@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/ht-force-https
   - /docs/ht-force-https
   - /docs/en/ht-force-https
+  - /v6/docs/ht-force-https
+  - /v6/docs/en/ht-force-https
+  - /v5/docs/ht-force-https
+  - /v5/docs/en/ht-force-https
+  - /v4/docs/ht-force-https
+  - /v4/docs/en/ht-force-https
+  - /v2/docs/ht-force-https
+  - /v2/docs/en/ht-force-https
+  - /v1/docs/ht-force-https
+  - /v1/docs/en/ht-force-https
 ---
 
 The following article describes how you can force to use HTTPS in your pages.
@@ -20,7 +30,7 @@ If your servers are behind a load balancer and the load balancer is doing the re
 To force HTTPS on all pages, you have to set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The application will then always force HTTPS on all pages.
 
 **Configuration:**
-    
+
 ```php
 <?php
 

@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
   - /docs/howto-enable-guest-checkout-in-b2b-demo-shop
   - /docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
+  - /v6/docs/howto-enable-guest-checkout-in-b2b-demo-shop
+  - /v6/docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
 ---
 
 As B2B environments usually implement complex business logics, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html), guest users cannot check out by default. In some cases, you might need guest checkout to be enabled.
@@ -30,7 +32,7 @@ To enable guest checkout:
     2. Clear all the permissions.
     ![customer-permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+enable+guest+checkout+in+B2B+Demo+Shop/customer-permissions.png){height="" width=""}
     3. Select **Save**
-    This refreshes the page with the success message displayed. 
+    This refreshes the page with the success message displayed.
 
 3. In `​ Pyz\Client\Permission\PermissionDependencyProvider.php`, remove or comment `​PlaceOrderWithAmountUpToPermissionPlugin()`​.
 
@@ -151,11 +153,4 @@ and can('SeeOrderPlaceSubmitPermissionPlugin')
 and (not is_granted('ROLE_USER') or can('WriteSharedCartPermissionPlugin', data.cart.idQuote)),
 ```
 
-Now you can check out as a guest user. After adding items to cart, use the `http://yves.de.spryker.local/en/cart` custom URL for checkout. 
-
-
-
-
-
-
-
+Now you can check out as a guest user. After adding items to cart, use the `http://yves.de.spryker.local/en/cart` custom URL for checkout.

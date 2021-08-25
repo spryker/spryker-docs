@@ -10,6 +10,16 @@ redirect_from:
   - /docs/en/about-tutorials
   - /v3/docs/advanced-glue-api-tutorials
   - /v3/docs/en/advanced-glue-api-tutorials
+  - /v6/docs/about-tutorials
+  - /v6/docs/en/about-tutorials
+  - /v5/docs/about-tutorials
+  - /v5/docs/en/about-tutorials
+  - /v4/docs/about-tutorials
+  - /v4/docs/en/about-tutorials
+  - /v2/docs/about-tutorials
+  - /v2/docs/en/about-tutorials
+  - /v1/docs/about-tutorials
+  - /v1/docs/en/about-tutorials
 ---
 
 Welcome to Spryker Tutorials, in this section of the documentation you will find instructions on how to perform all types of tasks with Spryker Commerce OS.

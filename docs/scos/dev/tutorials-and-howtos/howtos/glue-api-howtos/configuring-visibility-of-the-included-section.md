@@ -7,6 +7,16 @@ redirect_from:
   - /2021080/docs/en/ht-configuring-visibility-included-section-201903
   - /docs/ht-configuring-visibility-included-section-201903
   - /docs/en/ht-configuring-visibility-included-section-201903
+  - /v6/docs/ht-configuring-visibility-included-section-201903
+  - /v6/docs/en/ht-configuring-visibility-included-section-201903
+  - /v5/docs/ht-configuring-visibility-included-section-201903
+  - /v5/docs/en/ht-configuring-visibility-included-section-201903
+  - /v4/docs/ht-configuring-visibility-included-section-201903
+  - /v4/docs/en/ht-configuring-visibility-included-section-201903
+  - /v3/docs/ht-configuring-visibility-included-section-201903
+  - /v3/docs/en/ht-configuring-visibility-included-section-201903
+  - /v2/docs/ht-configuring-visibility-included-section-201903
+  - /v2/docs/en/ht-configuring-visibility-included-section-201903
 ---
 
 Responses of Spryker Glue REST API can return the **included** and **relationships** sections. The sections contain additional information on the resource requested. Such information is presented in the form of related resources. For example, if you request information on products, the sections can include such additional related resources as image sets, prices, availability information etc.
@@ -27,7 +37,7 @@ You can decide whether Glue REST API includes the sections in all responses by d
 |**Disabled** | The response does not contain the included section with related resources. |  The included section contains all the included resources (if any).|
 
 By default, the option is enabled on the Spryker Core level, but disabled on the project level in all [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops) (B2B Demo Shop, B2C Demo Shop and Master Shop Suite).
-        
+
 {% info_block infoBox %}
 For the purposes of boosting the API performance and bandwidth usage optimization, it is recommended to request only the information you need.
 {% endinfo_block %}
@@ -39,14 +49,14 @@ To make the option possible, you need to have at least version **1.12.0** of `Gl
 
 ## Configuration
 To configure the behavior of the sections:
-        
+
 1. Open or create the `Pyz\Glue\GlueApplication\GlueApplicationConfig.php` file on your project level.
 2. Set the value of the `getIsEagerRelatedResourcesInclusionEnabled` parameter according to the desired behavior:
     * **true** - to enable related resources everywhere;
     * **false** - to return related resources per request only.
 
 **Sample Implementation:**
-    
+
 ```php
 <?php
 
@@ -58,7 +68,7 @@ use Spryker\Glue\GlueApplication\GlueApplicationConfig as SprykerGlueApplication
 class GlueApplicationConfig extends SprykerGlueApplicationConfig
 {
     ...
-    
+
     /**
      * @return bool
      */
@@ -78,7 +88,7 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 _http://mysprykershop.com/concrete-products/177_24867659?**include=concrete-product-image-sets**_
 
 2. Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
-   
+
 **Sample response:**
 
 ```json

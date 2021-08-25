@@ -7,6 +7,16 @@ redirect_from:
   - /2021080/docs/en/versioning-rest-api-resources
   - /docs/versioning-rest-api-resources
   - /docs/en/versioning-rest-api-resources
+  - /v6/docs/versioning-rest-api-resources
+  - /v6/docs/en/versioning-rest-api-resources
+  - /v5/docs/versioning-rest-api-resources
+  - /v5/docs/en/versioning-rest-api-resources
+  - /v4/docs/versioning-rest-api-resources
+  - /v4/docs/en/versioning-rest-api-resources
+  - /v2/docs/versioning-rest-api-resources
+  - /v2/docs/en/versioning-rest-api-resources
+  - /v1/docs/versioning-rest-api-resources
+  - /v1/docs/en/versioning-rest-api-resources
 ---
 
 In the course of development of your REST APIs, you may need to change the data contracts of API resources. However, you can also have clients that rely on the existing contracts. To preserve backward compatibility for such clients, we recommend implementing a versioning system for REST API resources. In this case, each resource version has its own contract in terms of data, and various clients can request the exact resource versions they are designed for.
@@ -28,12 +38,12 @@ For more information on route plugins, see the [Resource Routing](/docs/scos/dev
 Let us consider the following implementation of a route plugin:
 
 CustomerRestorePasswordResourceRoutePlugin.php
-    
+
 ```php
 <?php
- 
+
 namespace Spryker\Glue\CustomersRestApi\Plugin;
- 
+
 use Generated\Shared\Transfer\RestCustomerRestorePasswordAttributesTransfer;
 use Generated\Shared\Transfer\RestVersionTransfer;
 use Spryker\Glue\CustomersRestApi\CustomersRestApiConfig;
@@ -41,7 +51,7 @@ use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRouteCollect
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceVersionableInterface;
 use Spryker\Glue\Kernel\AbstractPlugin;
- 
+
 /**
  * @method \Spryker\Glue\CustomersRestApi\CustomersRestApiFactory getFactory()
  */
@@ -51,25 +61,25 @@ class CustomerRestorePasswordResourceRoutePlugin extends AbstractPlugin implemen
     {
         $resourceRouteCollection
             ->addPatch('patch', false);
- 
+
         return $resourceRouteCollection;
     }
- 
+
     public function getResourceType(): string
     {
         return CustomersRestApiConfig::RESOURCE_CUSTOMER_RESTORE_PASSWORD;
     }
- 
+
     public function getController(): string
     {
         return CustomersRestApiConfig::CONTROLLER_CUSTOMER_RESTORE_PASSWORD;
     }
- 
+
     public function getResourceAttributesClassName(): string
     {
         return RestCustomerRestorePasswordAttributesTransfer::class;
     }
- 
+
     public function getVersion(): RestVersionTransfer
     {
         return (new RestVersionTransfer())
@@ -184,4 +194,3 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 You can add as many plugins as required by your project needs.
-

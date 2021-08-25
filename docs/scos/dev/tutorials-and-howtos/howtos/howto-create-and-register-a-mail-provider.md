@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/ht-create-register-provider-plugin
   - /docs/ht-create-register-provider-plugin
   - /docs/en/ht-create-register-provider-plugin
+  - /v6/docs/ht-create-register-provider-plugin
+  - /v6/docs/en/ht-create-register-provider-plugin
+  - /v5/docs/ht-create-register-provider-plugin
+  - /v5/docs/en/ht-create-register-provider-plugin
+  - /v4/docs/ht-create-register-provider-plugin
+  - /v4/docs/en/ht-create-register-provider-plugin
+  - /v2/docs/ht-create-register-provider-plugin
+  - /v2/docs/en/ht-create-register-provider-plugin
+  - /v1/docs/ht-create-register-provider-plugin
+  - /v1/docs/en/ht-create-register-provider-plugin
 ---
 
 {% info_block infoBox %}
@@ -26,16 +36,16 @@ namespace Pyz\Zed\Mail;
 
 ...
 
-public function provideBusinessLayerDependencies(Container $container) 
+public function provideBusinessLayerDependencies(Container $container)
 {
     ...
-    
+
     $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollectionAddInterface $mailProviderCollection) {
         $mailProviderCollection->addProvider(new YourProviderPlugin(), MailConfig::MAIL_TYPE_ALL);
-    
+
         return $mailProviderCollection;
     });
-    
+
     ...
 }
 ...
@@ -54,18 +64,18 @@ namespace Pyz\Zed\Mail;
 
 ...
 
-public function provideBusinessLayerDependencies(Container $container) 
+public function provideBusinessLayerDependencies(Container $container)
 {
     ...
-    
+
     $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollectionAddInterface $mailProviderCollection) {
         $mailProviderCollection
             ->addProvider(new ProviderAPlugin(), [MailTypeA::MAIL_TYPE, MailTypeB::MAIL_TYPE])
             ->addProvider(new ProviderBPlugin(), MailTypeC::MAIL_TYPE);
-    
+
         return $mailProviderCollection;
     });
-    
+
     ...
 }
 ...

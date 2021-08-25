@@ -8,16 +8,18 @@ redirect_from:
   - /2021080/docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
   - /docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
   - /docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
+  - /v6/docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
+  - /v6/docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
 ---
 
 
 B2B business model usually challenges any software with higher requirements to amounts of data and business complexity.
 
-Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned — one per customer. In this article, we share the technical challenges of handling such a number of prices and the solutions we used to solve them. 
+Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned — one per customer. In this article, we share the technical challenges of handling such a number of prices and the solutions we used to solve them.
 
-Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and he receives his own prices for the whole catalog. It might be considered as a discount, but usually it is not a single simple rule, but a set of rules and their priorities for each partner. These rules exist in an ERP system which can export data through SOAP or CSV files. 
+Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and he receives his own prices for the whole catalog. It might be considered as a discount, but usually it is not a single simple rule, but a set of rules and their priorities for each partner. These rules exist in an ERP system which can export data through SOAP or CSV files.
 
-In Spryker, each price is imported as a [price dimension](/docs/scos/dev/features/{{page.version}}/merchant-custom-prices-feature-overview.html) and has a unique key which determines its relation to a customer. For example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices should appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories. 
+In Spryker, each price is imported as a [price dimension](/docs/scos/dev/features/{{page.version}}/merchant-custom-prices-feature-overview.html) and has a unique key which determines its relation to a customer. For example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices should appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories.
 
 
 Price import flow:
@@ -26,11 +28,11 @@ Price import flow:
 
 ## Challenges
 
-When enabling Spryker to handle such a number of prices, we faced the following challenges: 
+When enabling Spryker to handle such a number of prices, we faced the following challenges:
 
 1. 25 000 000 prices should be imported in two separate price dimensions.
 
-2. A product can have about 40 000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows ElasticSearch(ES) down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1000. 
+2. A product can have about 40 000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows ElasticSearch(ES) down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1000.
 
 3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-publishing/publish-and-synchronization.html). Average document size is bigger than 1 MB.
 
@@ -88,7 +90,7 @@ All the `specificPrice-DEFAULT-EUR-NET_MODE-FOO-BAR` properties in the document 
 \/de_search\/page\/product_abstract:de:de_de:576 caused Limit of total fields [1000] in index [de_search] has been exceeded\nindex`
 ```
 
-We could increase the limit, but it makes the reindexing process a lot slower. 
+We could increase the limit, but it makes the reindexing process a lot slower.
 
 The events with the data for ES are processed and acknowledged in RabbitMQ but not delivered to the search service, and we don’t get any related errors.
 
@@ -101,17 +103,17 @@ We evaluated the following solutions:
 1. ES join field type
 This ES functionality is similar to the classical joins in relational databases.
 
-We chose this solution because it looked like it solved our problem faster and with less effort. See [ElasticSearch join data type - implementation](#elasticsearch-join-data-type-implementation) to learn how we implemented this solution. Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case. 
+We chose this solution because it looked like it solved our problem faster and with less effort. See [ElasticSearch join data type - implementation](#elasticsearch-join-data-type-implementation) to learn how we implemented this solution. Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
 
 Documentation: [Join field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html)
 
 2. Multi sharding with the `_routing` field
-The idea is to avoid indexing problems by sharing big documents between shards. Breaking a huge index into smaller ones makes it easier for the search to index data. The solution is complex and does not solve the payload issues. 
+The idea is to avoid indexing problems by sharing big documents between shards. Breaking a huge index into smaller ones makes it easier for the search to index data. The solution is complex and does not solve the payload issues.
 
 Documentation: [`_routing` field](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-routing-field.html)
 
 3. Use Postgres or combine ES and Postgres
-Postgres provides search functionalities and it is possible to set up an additional database dedicated to running searches or helping ES with additional data. The `script_scoring` function in search allows to embed any data, though performance is decreased, as this script is evaluated for every document when search is being performed. 
+Postgres provides search functionalities and it is possible to set up an additional database dedicated to running searches or helping ES with additional data. The `script_scoring` function in search allows to embed any data, though performance is decreased, as this script is evaluated for every document when search is being performed.
 Compared to the first option, this solution is more complex.
 
 Documentation:
@@ -120,7 +122,7 @@ Documentation:
 
 ## ElasticSearch Join field type - implementation
 
-To solve the ES indexing issue, we reduced the size of product abstract documents which reduced dynamic mapping properties. 
+To solve the ES indexing issue, we reduced the size of product abstract documents which reduced dynamic mapping properties.
 
 To implement the solution:
 
@@ -149,7 +151,7 @@ To implement the solution:
 
 2. To make the product-price relation work:
 	1. Extend product abstract documents with the required `joined_price` section:
-    
+
     ```json
     product_abstract:abc:en_us:876
     {
@@ -168,8 +170,8 @@ To implement the solution:
 	* parent document ID
     * price
 	* currency
-	* unique identifier. 
-    
+	* unique identifier.
+
     Example of the price document:
 
     ```json
@@ -185,7 +187,7 @@ To implement the solution:
     }
     ```
 
-These two documents can be viewed as two tables with a foreign key in terms of relational databases. 
+These two documents can be viewed as two tables with a foreign key in terms of relational databases.
 
 
 
@@ -193,7 +195,7 @@ These two documents can be viewed as two tables with a foreign key in terms of r
 
 The side effects of this solution are:
 
-1. The [Product Reviews feature](https://documentation.spryker.com/2021080/docs/product-reviews) is disabled because it requires multiple document types per index. 
+1. The [Product Reviews feature](https://documentation.spryker.com/2021080/docs/product-reviews) is disabled because it requires multiple document types per index.
 2. Performance requires additional attention. You can read about performance issues related to the feature in [Parent-join and performance](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html#_parent_join_and_performance).
 3. You can’t build proper queries to run sorting by prices due to ES limitations. Only facet filtering is possible.
 
@@ -205,9 +207,9 @@ To implement a parent-child relationship between documents, we built a standard 
 We addressed the following issues related to a slow publish process:
 
 
-1. Memory limit and performance issues. As a product abstract can stand for about forty thousand prices, a table with 25 000 000 rows is parsed every time to find them. 
+1. Memory limit and performance issues. As a product abstract can stand for about forty thousand prices, a table with 25 000 000 rows is parsed every time to find them.
 
-The default message chunk size of an event queue is 500. With this size, about two million rows of data have to be published per one bulk. 
+The default message chunk size of an event queue is 500. With this size, about two million rows of data have to be published per one bulk.
 
 
 2. The following has to be done simultaneously:
@@ -221,9 +223,9 @@ See [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://
 #### Evaluated Solutions
 
 We evaluated the following solutions:
- 
 
-1. Use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries to handle bulk insert and update operations in the `_search` table. We chose this solution because we had implemented it previously. See [Data Importer Speed Optimization](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importer-speed-optimization.html#data-importer-speed-optimization) to learn how this solution is used to optimize the speed of data importers. 
+
+1. Use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries to handle bulk insert and update operations in the `_search` table. We chose this solution because we had implemented it previously. See [Data Importer Speed Optimization](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importer-speed-optimization.html#data-importer-speed-optimization) to learn how this solution is used to optimize the speed of data importers.
 2. Use [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html) to fill the `search` table on the insert update operations in the `entity` table.
 3. Implement a reconnection logic that establishes a new connection after catching an exception.
 
@@ -235,86 +237,86 @@ We evaluated the following solutions:
     <summary>SQL query example</summary>
 
 ```sql
-WITH records AS 
-( 
-          SELECT    input.fkproduct, 
-                    input.fkkg, 
-                    input.fkekg, 
-                    input.pricekey, 
-                    input.fkerprecid, 
-                    input.data, 
-                    input.KEY, 
+WITH records AS
+(
+          SELECT    input.fkproduct,
+                    input.fkkg,
+                    input.fkekg,
+                    input.pricekey,
+                    input.fkerprecid,
+                    input.data,
+                    input.KEY,
                     id_pyz_price_product_concrete_group_specific_search AS idpyzpriceproductconcretegroupspecificsearch
-          FROM      ( 
-                           SELECT Unnest(? :: varchar []) AS fkkg, 
-                                  Unnest(? :: varchar []) AS fkekg, 
-                                  Json_array_elements(?)  AS data, 
-                                  unnest(?::integer[])    AS fkproduct, 
-                                  unnest(?::varchar[])    AS pricekey, 
-                                  unnest(?::varchar[])    AS fkerprecid, 
-                                  unnest(?::varchar[])    AS KEY ) input 
-          LEFT JOIN pyz_price_product_concrete_group_specific_search 
+          FROM      (
+                           SELECT Unnest(? :: varchar []) AS fkkg,
+                                  Unnest(? :: varchar []) AS fkekg,
+                                  Json_array_elements(?)  AS data,
+                                  unnest(?::integer[])    AS fkproduct,
+                                  unnest(?::varchar[])    AS pricekey,
+                                  unnest(?::varchar[])    AS fkerprecid,
+                                  unnest(?::varchar[])    AS KEY ) input
+          LEFT JOIN pyz_price_product_concrete_group_specific_search
           ON        pyz_price_product_concrete_group_specific_search.KEY = input.KEY ), updated AS
-( 
-       UPDATE pyz_price_product_concrete_group_specific_search 
-       SET    fk_kg = records.fkkg, 
-              fk_ekg = records.fkekg, 
-              fk_product = records.fkproduct, 
-              data = records.data, 
-              price_key = records.pricekey, 
-              fk_erp_rec_id = records.fkerprecid, 
-              KEY = records.KEY, 
-              updated_at = now() 
-       FROM   records 
+(
+       UPDATE pyz_price_product_concrete_group_specific_search
+       SET    fk_kg = records.fkkg,
+              fk_ekg = records.fkekg,
+              fk_product = records.fkproduct,
+              data = records.data,
+              price_key = records.pricekey,
+              fk_erp_rec_id = records.fkerprecid,
+              KEY = records.KEY,
+              updated_at = now()
+       FROM   records
        WHERE  records.KEY = pyz_price_product_concrete_group_specific_search.KEY returning id_pyz_price_product_concrete_group_specific_search ), inserted AS
-( 
-            INSERT INTO pyz_price_product_concrete_group_specific_search 
-                        ( 
-                                    id_pyz_price_product_concrete_group_specific_search, 
-                                    fk_kg, 
-                                    fk_ekg, 
-                                    fk_product, 
-                                    data, 
-                                    price_key, 
-                                    fk_erp_rec_id, 
-                                    KEY, 
-                                    created_at, 
-                                    updated_at 
-                        ) 
-                        ( 
+(
+            INSERT INTO pyz_price_product_concrete_group_specific_search
+                        (
+                                    id_pyz_price_product_concrete_group_specific_search,
+                                    fk_kg,
+                                    fk_ekg,
+                                    fk_product,
+                                    data,
+                                    price_key,
+                                    fk_erp_rec_id,
+                                    KEY,
+                                    created_at,
+                                    updated_at
+                        )
+                        (
                                SELECT nextval('pyz_price_product_concrete_group_specific_search_pk_seq'),
-                                      fkkg, 
-                                      fkekg, 
-                                      fkproduct, 
-                                      data, 
-                                      pricekey, 
-                                      fkerprecid, 
-                                      KEY, 
-                                      now(), 
-                                      now() 
-                               FROM   records 
+                                      fkkg,
+                                      fkekg,
+                                      fkproduct,
+                                      data,
+                                      pricekey,
+                                      fkerprecid,
+                                      KEY,
+                                      now(),
+                                      now()
+                               FROM   records
                                WHERE  idpyzpriceproductconcretegroupspecificsearch IS NULL ) returning id_pyz_price_product_concrete_group_specific_search )
-SELECT updated.id_pyz_price_product_concrete_group_specific_search 
-FROM   updated 
-UNION ALL 
-SELECT inserted.id_pyz_price_product_concrete_group_specific_search 
+SELECT updated.id_pyz_price_product_concrete_group_specific_search
+FROM   updated
+UNION ALL
+SELECT inserted.id_pyz_price_product_concrete_group_specific_search
 FROM   inserted;
 ```
-    
+
 </details>
 
 ### Price Events Quick Lane
 
-Prices are published by pushing the corresponding message to the generic event queue. As this queue can hold a lot more messages than just those related to prices, it makes sense to introduce a dedicated queue for publishing only price-related information. 
+Prices are published by pushing the corresponding message to the generic event queue. As this queue can hold a lot more messages than just those related to prices, it makes sense to introduce a dedicated queue for publishing only price-related information.
 
-You can configure it by tweaking the Event and EventBehavior modules. Allow the `EventBehavior` Propel behavior to accept additional parameters (except those related to columns). For example, allow it to accept the name of a custom queue, which is used later for pushing messages to the queue. In this case, price events are segregated from all other events and can be processed in parallel without being blocked by other heavier events. Also, this allows to configure different chunk size for the subscriber, resulting in a more optimized usage of CPU and faster processing. 
+You can configure it by tweaking the Event and EventBehavior modules. Allow the `EventBehavior` Propel behavior to accept additional parameters (except those related to columns). For example, allow it to accept the name of a custom queue, which is used later for pushing messages to the queue. In this case, price events are segregated from all other events and can be processed in parallel without being blocked by other heavier events. Also, this allows to configure different chunk size for the subscriber, resulting in a more optimized usage of CPU and faster processing.
 
 
 To implement this functionality:
 
 
 1. Extend `EventEntityTransfer` with a new field, like `queueName`.
-2. Override `\Spryker\Zed\EventBehavior\Persistence\Propel\Behavior\EventBehavior` and adjust it to be able to accept an additional `queueName` parameter (except those related to columns) through the Propel schema files. 
+2. Override `\Spryker\Zed\EventBehavior\Persistence\Propel\Behavior\EventBehavior` and adjust it to be able to accept an additional `queueName` parameter (except those related to columns) through the Propel schema files.
 
 {% info_block errorBox %}
 
@@ -326,17 +328,17 @@ Ensure that `\Pyz\Zed\EventBehavior\Persistence\Propel\Behavior\ResourceAwareEve
 
 4. Configure `\Spryker\Zed\Event\Business\Queue\Producer\EventQueueProducer::enqueueListenerBulk()` to check if `queueName` is set on the `EventEntityTransfer.` If it is set, this queue name should be used to push event messages to. Otherwise, it should fall back to the default event queue.
 
-Now you should have a separate event queue for prices. This approach is applicable to any type of event. “Quick lane” ensures that critical data is replicated faster. 
+Now you should have a separate event queue for prices. This approach is applicable to any type of event. “Quick lane” ensures that critical data is replicated faster.
 
 ### Tweaking Database
 
-With millions of prices in a shop, we needed analytics tools to monitor data consistency in the database. The CSV files, which are the source of price data for analytics, are too big, so it’s hard to process them. That's why we decided to convert them into Postgres database tables. 
+With millions of prices in a shop, we needed analytics tools to monitor data consistency in the database. The CSV files, which are the source of price data for analytics, are too big, so it’s hard to process them. That's why we decided to convert them into Postgres database tables.
 
-The Postgres `COPY` command is the fastest and easiest way to do that. This command copies the data from a CSV file to a database table. 
+The Postgres `COPY` command is the fastest and easiest way to do that. This command copies the data from a CSV file to a database table.
 
 {% info_block errorBox %}
 
-To convert data successfully, the order of the columns in the database table should reflect the order in the CSV files. 
+To convert data successfully, the order of the columns in the database table should reflect the order in the CSV files.
 
 {% endinfo_block %}
 
@@ -361,9 +363,9 @@ fi
 
 #### Disabling Synchronous Commit
 
-We were running the analytics at night when there was no intensive activity in our shop. This allowed us to disable synchronous commit to reduce the processing time of the `COPY` operations. 
+We were running the analytics at night when there was no intensive activity in our shop. This allowed us to disable synchronous commit to reduce the processing time of the `COPY` operations.
 
-The following line in the previous code snippet disables synchronous commit: `SET synchronous_commit TO OFF;` 
+The following line in the previous code snippet disables synchronous commit: `SET synchronous_commit TO OFF;`
 
 
 
@@ -385,7 +387,7 @@ Exemplary procedure:
 1. Create an aggregated view of all the merchant prices that are already imported into a relational database with a proper normalization.
 
 ```sql
-CREATE materialized VIEW IF NOT EXISTS debug_merchant_relationship_prices_view AS 
+CREATE materialized VIEW IF NOT EXISTS debug_merchant_relationship_prices_view AS
 SELECT *
 FROM spy_price_product_merchant_relationship;
 
@@ -395,14 +397,14 @@ create index IF NOT exists debug_merchant_relationship_prices_view_net_price ON 
 2. Create another view based on the table that contains the pure data copied from the original CSV source file.
 
 ```sql
-CREATE materialized VIEW IF NOT EXISTS debug_merchant_relationship_prices_csv_data_view AS 
+CREATE materialized VIEW IF NOT EXISTS debug_merchant_relationship_prices_csv_data_view AS
 SELECT *
 FROM csv_data_merchant_relationship_prices;
 
 create index IF NOT exists csv_data_merchant_relationship_prices_net_price ON csv_data_merchant_relationship_prices (net_price);
 ```
 
-3. Compare the views to detect inconsistencies. 
+3. Compare the views to detect inconsistencies.
 
 ## Conclusion
 With the configuration and customizations described in this document, Spryker can hold and manage millions of prices in one instance. RabbitMQ, internal APIs, data import modules and Glue API allow to build a custom data import to:
@@ -410,6 +412,3 @@ With the configuration and customizations described in this document, Spryker ca
 * Fetch a lot of data from a third-party system
 * Successfully import it into the database
 * Denormalize and replicate it to be used by quick storages, such as Redis and ES
-
-
-

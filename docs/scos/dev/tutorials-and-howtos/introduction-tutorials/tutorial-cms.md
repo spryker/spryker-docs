@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/t-cms
   - /docs/t-cms
   - /docs/en/t-cms
+  - /v6/docs/t-cms
+  - /v6/docs/en/t-cms
+  - /v5/docs/t-cms
+  - /v5/docs/en/t-cms
+  - /v4/docs/t-cms
+  - /v4/docs/en/t-cms
+  - /v2/docs/t-cms
+  - /v2/docs/en/t-cms
+  - /v1/docs/t-cms
+  - /v1/docs/en/t-cms
 ---
 
 <!--used to be: http://spryker.github.io/challenge/cms/-->

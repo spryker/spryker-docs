@@ -7,6 +7,14 @@ redirect_from:
   - /2021080/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
   - /docs/ht-schedule-cron-job-for-scheduled-prices-201907
   - /docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /v6/docs/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /v6/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /v5/docs/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /v5/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /v4/docs/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /v4/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /v3/docs/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /v3/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
 ---
 
 This article describes how to change the default behavior of the cron job shipped with the Scheduled Prices feature.

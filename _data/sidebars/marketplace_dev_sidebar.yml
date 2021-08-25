@@ -30,11 +30,12 @@ entries:
           - title: Marketplace Product Offer feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
             nested:
-              - title: Rendering merchant product offers on the Storefront
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/rendering-merchant-product-offers-on-the-storefront.html
 
               - title: Product Offer in the Back Office
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-in-the-back-office.html
+
+              - title: Rendering merchant product offers on the Storefront
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/rendering-merchant-product-offers-on-the-storefront.html
 
               - title: Product Offer storage
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-storage.html
@@ -44,6 +45,9 @@ entries:
 
               - title: Product Offer validity dates
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html
+
+          - title: Marketplace Merchant Portal Product Offer Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 
           - title: Marketplace Product Offer Prices feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
@@ -164,8 +168,8 @@ entries:
           - title: Merchant Portal - Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
 
-          - title: Merchant Portal - Marketplace Product Offer feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-offer-feature-integration.html
+          - title: Marketplace Merchant Portal Product Offer Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html
 
           - title: Merchant Portal - Marketplace Product + Tax feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html

@@ -225,7 +225,7 @@ See [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://
 We evaluated the following solutions:
 
 
-1. Use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries to handle bulk insert and update operations in the `_search` table. We chose this solution because we had implemented it previously. See [Data Importer Speed Optimization](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importer-speed-optimization.html#data-importer-speed-optimization) to learn how this solution is used to optimize the speed of data importers.
+1. Use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries to handle bulk insert and update operations in the `_search` table. We chose this solution because we had implemented it previously. See [Data Importer Speed Optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html#data-importer-speed-optimization) to learn how this solution is used to optimize the speed of data importers.
 2. Use [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html) to fill the `search` table on the insert update operations in the `entity` table.
 3. Implement a reconnection logic that establishes a new connection after catching an exception.
 

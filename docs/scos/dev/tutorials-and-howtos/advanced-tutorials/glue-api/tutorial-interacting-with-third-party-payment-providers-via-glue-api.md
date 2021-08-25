@@ -21,7 +21,7 @@ redirect_from:
 The checkout process of Spryker Glue API can be leveraged to involve third parties in the process of order confirmation. This can be required, for example, when the method of payment selected by the user requires additional steps to complete the purchase. These can include, but not limited to, card validation, processing a bank transfer, etc.
 {% info_block infoBox %}
 
-For details, see [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html).
+For details, see [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html).
 
 {% endinfo_block %}
 In this tutorial, you will find out how to invoke third parties in the API payment process.
@@ -98,7 +98,7 @@ To help you understand which payments need to be processed, you can use the opti
 
 {% info_block infoBox %}
 
-For details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#UpdatingPaymentData).
+For details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html#UpdatingPaymentData).
 
 {% endinfo_block %}
 

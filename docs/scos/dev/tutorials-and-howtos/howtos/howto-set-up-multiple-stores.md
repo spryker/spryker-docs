@@ -97,7 +97,7 @@ stores['DE'] = [
        'de' => 'de_DE',
     ],
  ```
- See [HowTo - Set up stores with multiple locales](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-stores-with-multiple-locales.html) for details on how to configure stores with multiple locales.
+ See [HowTo - Set up stores with multiple locales](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html) for details on how to configure stores with multiple locales.
 
  * Specify currency and country for the store you configure:
  ```php

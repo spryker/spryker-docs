@@ -40,9 +40,9 @@ After adding a configurable product to cart, a customer can configure the produc
 Configurable products are created in two steps:
 
 1.  A Back Office user creates regular products or a developer imports them. See [Creating an abstract product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html#creating-an-abstract-product) to learn how they create products in the Back Office or [File details: product_concrete.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html) to learn about the file they import.
-    
+
 2.  A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
-    
+
 
 ### Managing configurable products
 
@@ -139,18 +139,8 @@ Storefront users configure a product on the Storefront as follows:
 ![configurable-product-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-on-the-storefront.gif)
 
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-configuration-feature-integration" class="mr-link">Integrate the Configurable Product</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/glue-api-product-configuration-feature-integration" class="mr-link">Integrate the Configurable Product Glue API</a></li>
-                <li><a href="/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html" class="mr-link">Import configurable products</a></li>
-            </ul>
-        </div>
-</div>
-</div>
+Are you a developer? See [Configurable Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-product-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: Editing a product variant
+title: Editing product variants
 description: The guide describes how to update the product variant in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/editing-a-product-variant
 originalArticleId: b9119173-d733-4ffa-b93d-1f19d88a364c
@@ -11,28 +11,28 @@ redirect_from:
 ---
 
 This article describes how to update the product variant added during the abstract product setup.
-The described procedure is also valid for an existing product variant. 
+The described procedure is also valid for an existing product variant.
 
 ## Prerequisistes
 
 To start working with product variants, go to **Catalog** > **Products**.
 
-The procedure you are going to perform is very similar to the procedure described in the Creating a product variant article. For details, see  [Creating a product variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html). 
+The procedure you are going to perform is very similar to the procedure described in the Creating a product variant article. For details, see  [Creating a product variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html).
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
-## Editing a product variant 
+## Editing a product variant
 
-To update a product variant:
+To edit a product variant:
 
 1. Navigate to the *Edit Concrete Product* page using one of the following paths:
    * **Products** > **View** in the _Actions_ column for a specific abstract product **>** scroll down to the **Variants tab** > **Edit** in the _Actions_ column for a specific product variant
     * **Products > Edit** in the _Actions_ column for a specific abstract product **> Variants tab > Edit** in the _Actions_ column for a specific product variant
-2. On the *Edit Concrete Product* page, update the following tabs: 
+2. On the *Edit Concrete Product* page, update the following tabs:
     1. *General* tab: populate name and description, valid from and to dates, make the product searchable by selecting the Searchable checkbox for the appropriate locale (or all locales).
     2. *Price & Stock* tab: define the default/original, gross/net prices, and stock.
     {% info_block warningBox "Note" %}
-The prices for the variant are inherited from the abstract product so you will see the same values as you have entered while creating the abstract product. **B2B:** The merchant relation prices are inherited by Product Variants as well. 
+The prices for the variant are inherited from the abstract product so you will see the same values as you have entered while creating the abstract product. **B2B:** The merchant relation prices are inherited by Product Variants as well.
 {% endinfo_block %}
     3. *Image* tab: define the image(s), image set(s), and the image order for you product variant.
     4. *Assign bundled products* tab: this tab is used in case you need to create a product bundle. See [Creating Product Bundles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) for details.
@@ -48,7 +48,7 @@ This section describes the attributes you enter and select when  creating a prod
 #### General tab
 
 | ATTRIBUTE |DESCRIPTION | CREATE CONCRETE PRODUCT | UPDATE CONCRETE PRODUCT|
-| --- | --- | --- | --- | 
+| --- | --- | --- | --- |
 |Store relation  | Defines the store for which the product can be available.</br>You can select multiple values. | **No**|**No**|
 | SKU Prefix | A number that you assign to the product will help to track unique information related to that product. | **Yes**|**Display Only**|
 | Autogenerate SKU | Allows the system to autogenerate the SKU once you click **Save**. | **Yes**|**No**|
@@ -64,7 +64,7 @@ This section describes the attributes you enter and select when  creating a prod
 | --- | --- | --- | --- |
 |Use prices from abstract product|Once the checkbox is selected, the prices from the abstract product are taken over.|**Yes**|**No**|
 |Merchant Price Dimension|**B2B Only**</br>The drop-down list that allows you to select a merchant relation and set up a specific price for a specific merchant.</br>If the Default value is selected, the prices will be the same for everyone.</br>The values available for selection derive from **Merchants > Merchant Relations**.</br>Only one value can be selected.|**Yes**|**Yes**|
-| Gross price</br>Net price | The price value for gross and net mode.</br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  | 
+| Gross price</br>Net price | The price value for gross and net mode.</br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  |
 |Default</br>Original|Default prices are the prices your customers will pay, whereas original prices are the "previous prices" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
 |Add Product Volume Price</br>Edit Product Volume Price|Once selected, the Add volume price (Edit volume price) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.</br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.</br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
 |(Stock) Type|Display-only field that displays warehouses according to your store|**Yes**|**Yes**|
@@ -91,7 +91,7 @@ Once you select to discontinue the product, you can add a note about that on thi
 
 #### Product Alternatives tab
 
-The only field available is **Add Product Alternative by Name or SKU**. Here it is enough to enter three characters of a product name or SKU to see the autosuggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab. 
+The only field available is **Add Product Alternative by Name or SKU**. Here it is enough to enter three characters of a product name or SKU to see the autosuggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab.
 
 #### Scheduled Prices tab
 
@@ -101,5 +101,4 @@ On this tab, you see a table with the scheduled prices imported via a CSV file. 
 
 **What's next?**
 Following the same steps, you will update all variants that you have added to your abstract product.
-You may also want to add more product variants. Learn how you do that by navigating to [Creating a product variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html). 
-
+You may also want to add more product variants. Learn how you do that by navigating to [Creating a product variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html).

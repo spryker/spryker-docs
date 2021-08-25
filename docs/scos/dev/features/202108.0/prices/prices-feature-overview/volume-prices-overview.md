@@ -39,7 +39,7 @@ You can find the example of the JSON below:
 		"DEFAULT" => 8999,
 		"ORIGINAL" => 11308,
 	],
- 
+
 		"price_data" => ["QTY" => 10, "GROSS(DEFAULT)" => 100, "NET(DEFAULT)" => 90], ["QTY" => 20, "GROSS(DEFAULT)" => 90, "NET(DEFAULT)" => 80]
 	],
 		"CHF" => [
@@ -139,3 +139,15 @@ Currently, the feature has the following functional constraints which are going 
         </div>
     </div>
 </div>
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Add volume prices to abstract products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html)  |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

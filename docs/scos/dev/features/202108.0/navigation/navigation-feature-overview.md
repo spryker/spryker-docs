@@ -15,25 +15,25 @@ The *Navigation* feature enables product catalog managers to create intuitive na
 They can create different types of navigation for different places of the shop. For example, create a fully-fledged navigation tree for main website navigation, several simple navigation lists for the footer, and any number of custom navigation elements for CMS pages.
 
 ## Navigation element
-A *navigation element* is a page section that contains links to shop resources, as well as external resources. 
+A *navigation element* is a page section that contains links to shop resources, as well as external resources.
 
-![navigation-element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation+element.png){height="" width=""}
+![navigation-element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation+element.png)
 
 See [Creating a Navigation Element](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn how a Back Office user can create a navigation element.
 
 
 ### Navigation element duplication
-If you have a configured navigation element in a shop and you want to use it as a basis for another navigation element, you can duplicate it. This is especially useful in a multi-shop scenario. 
-See [Duplicating a Navigation Element](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#duplicating-a-navigation-element) to learn how a Back Office user can do that. 
+If you have a configured navigation element in a shop and you want to use it as a basis for another navigation element, you can duplicate it. This is especially useful in a multi-shop scenario.
+See [Duplicating a Navigation Element](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#duplicating-a-navigation-element) to learn how a Back Office user can do that.
 
 
-## Navigation tree 
+## Navigation tree
 
 
 A *navigation tree* is a navigation element consisting of [navigation nodes](#navigation-node) structured hierarchically as an expandable tree.
-In the Back Office, navigation elements are displayed as navigation trees. 
+In the Back Office, navigation elements are displayed as navigation trees.
 
-![navigation-tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation-tree.png){height="" width=""}
+![navigation-tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation-tree.png)
 
 
 
@@ -43,7 +43,7 @@ However, when publishing a navigation element as a content item on the Storefron
 
 ## Navigation node
 
-A *navigation node* is a single item in a navigation element. 
+A *navigation node* is a single item in a navigation element.
 
 The following node types are available by default:
 * Label: a piece of text.
@@ -54,7 +54,7 @@ The following node types are available by default:
 In the context of a navigation tree, there can be *child nodes* and *parent nodes*. A child node is a navigation node that is added to another navigation node. A parent node is a navigation node that has one or more assigned child nodes.
 
 
-![parent-child-navigation-node](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/parent-child-navigation-node.png){height="" width=""}
+![parent-child-navigation-node](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/parent-child-navigation-node.png)
 
 
 A navigation node can be both of the parent type and the child type. For example, the parent navigation node *Writing Materials* from the previous screenshot can be represented as a child node as follows.
@@ -63,38 +63,38 @@ A navigation node can be both of the parent type and the child type. For example
 
 
 
-![child-parent-navigation-node](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/child-parent-navigation-node.png){height="" width=""}
+![child-parent-navigation-node](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/child-parent-navigation-node.png)
 
 
 
-See [Creating a Navigation Node](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a Back Office user can create navigation nodes. 
+See [Creating a Navigation Node](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a Back Office user can create navigation nodes.
 
 
 ### Navigation node design
 You can define the design for each navigation node separately by entering a Custom CSS class in the Back Office.
 The only class you can use by default is *label*. This class capitalizes the navigation node name.
 
-![label-navigation-node-design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/label-navigation-node-design.png){height="" width=""}
+![label-navigation-node-design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/label-navigation-node-design.png)
 
 
 A front-end developer can create more classes for navigation nodes.
 
-See [Creating a Navigation Node](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a Back office user can define a navigation node design. 
+See [Creating a Navigation Node](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a Back office user can define a navigation node design.
 
 ## Navigation node validity period
 You can define the time period a navigation node is valid for:
-* When the validity period ends, the navigation node with its child stops being displayed on the Storefront. 
-* When the validity period starts, the navigation node with its child starts being displayed on the Storefront. 
-See [Creating a Navigation Node](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a product catalog manager can define a navigation node validity period. 
+* When the validity period ends, the navigation node with its child stops being displayed on the Storefront.
+* When the validity period starts, the navigation node with its child starts being displayed on the Storefront.
+See [Creating a Navigation Node](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a product catalog manager can define a navigation node validity period.
 
 ## Navigation as content item
-To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/scos/dev/features/{{page.version}}/content-items/content-items-feature-overview.html). 
+To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/scos/dev/features/{{page.version}}/content-items/content-items-feature-overview.html).
 The schema shows how the Navigation feature affects content management in a Spryker shop:
 
-![navigation-as-content-item-schema](https://confluence-connect.gliffy.net/embed/image/a086fe4e-1d09-49ae-a181-ebd8b0f8c051.png?utm_medium=live&utm_source=custom){height="" width=""}
+![navigation-as-content-item-schema](https://confluence-connect.gliffy.net/embed/image/a086fe4e-1d09-49ae-a181-ebd8b0f8c051.png?utm_medium=live&utm_source=custom)
 
-See [Create a Navigation Content Item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html#create-a-navigation-content-item) to learn how a Back Office user can create a Navigation content item. 
-See [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html#adding-content-to-storefront-pages-using-templates---slots) to learn how a marketing content manager can add content to the Storefront. 
+See [Create a Navigation Content Item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html#create-a-navigation-content-item) to learn how a Back Office user can create a Navigation content item.
+See [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html#adding-content-to-storefront-pages-using-templates---slots) to learn how a marketing content manager can add content to the Storefront.
 
 ### Navigation content item templates
 A content item template defines how a content item is displayed on the Storefront. The following templates are shipped for the Navigation content item by default:
@@ -107,30 +107,30 @@ A content item template defines how a content item is displayed on the Storefron
 
 <details open>
     <summary>"Tree structure after the first level" template representation - Storefront</summary>
-    
-![tree-structure-after-the-first-level](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure-after-the-first-level.png){height="" width=""}
+
+![tree-structure-after-the-first-level](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure-after-the-first-level.png)
 
 </details>
 
 <details open>
     <summary>"Inline navigation" template representation - Storefront</summary>
 
-![inline-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/inline-navigation.png){height="" width=""}
-    
+![inline-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/inline-navigation.png)
+
 </details>
 
 <details open>
     <summary>"List navigation" template representation - Storefront</summary>
-    
-![list-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/list-navigation.png){height="" width=""}
-    
+
+![list-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/list-navigation.png)
+
 </details>
 
 <details open>
     <summary>"Tree structure" template representation - Storefront</summary>
-    
-![tree-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure.png){height="" width=""}
-    
+
+![tree-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure.png)
+
 </details>
 
 
@@ -138,35 +138,14 @@ A content item template defines how a content item is displayed on the Storefron
 For more details on navigation, check the video:
 <iframe src="https://spryker.wistia.com/medias/anlwttuexm" title="Navigation" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Manage navigation elements](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html)   |
 
+{% info_block warningBox "Developer guides" %}
 
+Are you a developer? See [Navigation feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-feature-walkthrough.html) for developers.
 
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-          <li><a href="https://documentation.spryker.com/docs/file-details-navigationcsv" class="mr-link">Import navigation elements</a></li>
-          <li><a href="https://documentation.spryker.com/docs/file-details-navigation-nodecsv" class="mr-link">Import navigation nodes</a></li>
-          <li><a href="https://documentation.spryker.com/docs/retrieving-navigation-trees" class="mr-link">Retrieve navigation trees via Glue API</a></li>
-          <li><a href="https://documentation.spryker.com/docs/glue-api-navigation-feature-integration" class="mr-link">Integrate the Navigation Glue API</a></li>
-               <li>Integrate the Navigation feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/navigation-feature-integration" class="mr-link">Integrate the Navigation feature</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/cms-feature-integration-guide" class="mr-link">Integrate the CMS feature</a></li>
-                 </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-navigation-elements" class="mr-link">Manage navigation elements</a></li>
-            </ul>
-       
-</div>
-
-
-
+{% endinfo_block %}

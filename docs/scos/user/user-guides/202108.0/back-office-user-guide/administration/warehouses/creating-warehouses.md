@@ -1,5 +1,5 @@
 ---
-title: Creating a warehouse
+title: Creating warehouses
 description: Use the procedure to create warehouses and define warehouses per specific stores in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-warehouse
 originalArticleId: 4c157a54-6b6e-43d1-abb9-23b8a88fed8c
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/creating-a-warehouse
 ---
 
-The topic describes how to create a warehouse in the Back Office.
+The topic describes how to create warehouses in the Back Office.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ To create a warehouse:
 1. On the *Warehouses* page, in the top right corner, click **Create Warehouse**.
 The *Create warehouse* page with two tabs opens: *Configuration* and *Store relation*.
 2. In the *Configuration* tab, do the following:
-    * **Name**: Enter the name of the warehouse you want to create. 
+    * **Name**: Enter the name of the warehouse you want to create.
     * **Is this warehouse available?**: Select *Yes* if you want to make your warehouse available (active) or *No* if you want to make your warehouse unavailable (inactive).
 3. (optional) Switch to the *Store relation* tab. By default, the warehouse you are creating will be available for all the stores you have.
 To make your warehouse unavailable for specific store, clear the checkbox for those stores.
@@ -48,7 +48,7 @@ The following table describes the attributes you see and enter when creating, vi
 
 ## What's next?
 
-The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html). 
+The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-a-product-variant.html).
 
 Additionally, you can edit any warehouse. For more details, see the [Editing warehouse details](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html#editing-warehouse-details) section in *Managing Warehouses*.
 

@@ -18,7 +18,7 @@ In the *File List* section, you can do the actual managing action only in case y
 
 To start working with the file list, navigate to **File Manager** > **File List**.
 
-## Viewing a file
+## Viewing files
 
 To view a file:
 
@@ -30,7 +30,8 @@ On this page, you can download the file:
 1. Click **Download** in the _Actions_ column.
 2. Follow the download pop-up instructions.
 
-## Editing a file
+## Editing files
+
 To edit a file:
 1. On the *File List* page in the _Actions_ column, click **Edit**.
 2. On the *Edit File* page, update the attributes.
@@ -38,8 +39,8 @@ To edit a file:
 
 On the *Edit File* page, an additional tab name *File versions* appears.
 
-The *File versions* tab shows the version of the file. 
-* A new version is created if you download a new file instead of the one already used. 
+The *File versions* tab shows the version of the file.
+* A new version is created if you download a new file instead of the one already used.
 * If you only update the attributes, no new version is created.
 
 **Tips & tricks**
@@ -47,7 +48,8 @@ In the *File versions* tab, you can manage the versions by:
 * Removing the not needed versions. Click **Delete** in the _Actions_ column for the version you want to remove.
 * Downloading a specific version by clicking **Download**.
 
-## Deleting a file
+## Deleting files
+
 If the file is no longer needed, you can permanently delete it from the system.
 
 To delete a file, in the _Actions_ column, click **Delete** for a file you want to remove.

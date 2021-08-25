@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/comments-feature-overview
 ---
 
-The *Comments* feature provides the ability for online owners to add the сomments widget. The widget allows the customers to leave comments, special requests or instructions to any entity in the Spryker shop and tag these comments depending on your project specification. 
+The *Comments* feature provides the ability for online owners to add the сomments widget. The widget allows the customers to leave comments, special requests or instructions to any entity in the Spryker shop and tag these comments depending on your project specification.
 
 An *entity* is a unit or a component that has some properties and may have relationships with other entities within a system. So, in terms of Spryker Commerce OS, an entity is represented by a Shopping Cart, a Shopping List, a CMS page, etc. It is where the Comments Widget can be located.
 
@@ -22,8 +22,8 @@ Thus, the Comments feature enables your B2B customers to effectively communicate
 
 
 ## Comments widget
-Within the Comments feature, we have created the Comments widget. The widget can be placed on any entity page. In our case, it is the *Shopping Cart* page. 
- 
+Within the Comments feature, we have created the Comments widget. The widget can be placed on any entity page. In our case, it is the *Shopping Cart* page.
+
 The comment contains the following information:
 
 * Company user's name
@@ -36,7 +36,7 @@ Company users can add comments to a shared cart in both Read-only and Full Acces
 {% info_block warningBox "Note" %}
 When reordering the existing order, the comments attached to the order are not duplicated.
 {% endinfo_block %}
-When the order with the attached comments is placed, the Back Office user can view it with the comments in the  **Orders** section of the Back Office. 
+When the order with the attached comments is placed, the Back Office user can view it with the comments in the  **Orders** section of the Back Office.
 
 ### Comment tags
 
@@ -46,46 +46,34 @@ Every comment may be tagged. *Tags* are keywords associated with the comments. T
 
 ## Comments on the Storefront
 Company users can perform the following actions using the Comments widget on the Storefront:
-<details open>
+<details>
 <summary>Create and edit comments</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/creating-and-editing-comments.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/creating-and-editing-comments.gif)
 
 </details>
 
-<details open>
+<details>
 <summary>Remove comments</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/removing-comments.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/removing-comments.gif)
 </details>
 
-<details open>
+<details>
 <summary>Tag comments</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/adding-tags.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/adding-tags.gif)
 
 </details>
 
-<details open>
+<details>
 <summary>Filter comments by tags</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filtering-tags.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filtering-tags.gif)
 </details>
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-commentcsv" class="mr-link">Import comments</a></li>
-                <li>Integrate the Comments feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/comments-feature-integration" class="mr-link">Integrate the Comments feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/comments-persistent-cart-feature-integration" class="mr-link">Integrate the Comments + Persistent Cart feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/comments-order-management-feature-integration" class="mr-link">Integrate the Comments + Order Management feature</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+Are you a developer? See [Comments feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/comments-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

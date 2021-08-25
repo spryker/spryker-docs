@@ -1,5 +1,5 @@
 ---
-title: Creating a product list
+title: Creating product lists
 description: Use the procedure to create a product list by assigning products and selecting the category in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-list
 originalArticleId: e7682701-b572-4934-9422-2a95d31610a1
@@ -20,7 +20,7 @@ To start working with product lists, go to **Catalog** > **Product Lists**.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
-## Creating a product list
+## Creating product lists
 
 To create a product list:
 
@@ -31,15 +31,15 @@ The *Create a Product List* page opens.
     2. Select a type of the product list.
 3. Optional: In the *Assign Categories* tab, assign categories:
     1. In the **Categories** field, type the name of a category to see the list of matching results and select the desired category.
-    2. Repeat the previous step until you assign all the desired categories. 
+    2. Repeat the previous step until you assign all the desired categories.
 4. Optional: In the *Assign Products* tab, assign products in one of the following ways:
     *  Import a product list:
         1. Select **Choose File**.
-        2. Select the product list file to be uploaded. 
+        2. Select the product list file to be uploaded.
             The file should contain the `product_list_key` and `concrete_sku` fields.
 
     *  Assign products to the list manually: in the *Selected* column of the *Select Products to assign* table, select the products to add to the list.
- 5. Select **Save**. The page refreshes with the success message displayed. 
+ 5. Select **Save**. The page refreshes with the success message displayed.
 
 **Tips & tricks**
 
@@ -48,12 +48,12 @@ The *Create a Product List* page opens.
 
 {% info_block warningBox "Concrete and abstract products" %}
 
-If you select all the concrete products of an abstract product, the abstract product is selected too. 
+If you select all the concrete products of an abstract product, the abstract product is selected too.
 If an abstract product is selected, all its concrete products are selected too.
 
 {% endinfo_block %}
 
-### Reference information: Creating a product list
+### Reference information: Creating product lists
 
 On the *Overview of Product Lists* page, you see the following information:
 
@@ -69,5 +69,3 @@ All columns with headers having arrows in the *List of Product Lists* table are 
 **What's next?**
 
 * To learn how to manage existing product lists, see the [Managing product lists](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html).
-
-

@@ -15,7 +15,7 @@ A price can be attached to an abstract product as well as to a concrete product.
 Each price is assigned to a price type ( e.g. gross price, net price ) and for a price type there can be one to n product prices defined. Price type entity is used to differentiate between use cases: for example we have DEFAULT and ORIGINAL type where we use it for sale pricing.
 
 The price can have gross or net value which can be used based on a price mode selected by customer in Yves. You can have shop running in both modes and select net mode for business customer, for example. Price also has currency and store assigned to it.
-![Price calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_calculation.png){height="" width=""}
+![Price calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_calculation.png)
 
 ## Price inheritance
 
@@ -24,7 +24,7 @@ As a general rule, if a concrete product doesn’t have a specific entity stored
 If it still can’t find a price, then it throws an exception (basically this shouldn’t happen if the products have been exported and are up to date).
 
 The diagram bellow summarizes the logic for retrieving the price for a product:
-![Price retrieval logic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_retrieval_logic.png){height="" width=""}
+![Price retrieval logic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_retrieval_logic.png)
 
 ## Price calculation
 
@@ -36,32 +36,17 @@ The concerns for the product price calculation are the following :
 price for the options that were selected for the product (e.g.: frame, fabric, etc.)
 For more information, see [Checkout Calculation](/docs/scos/dev/features/{{page.version}}/cart/cart-feature-overview/calculation-3.0.html).
 
+## Related Business User articles
 
-## If you are:
+|BACK OFFICE USER GUIDES|
+|---|
+| [Define prices when creating abstract products and product bundles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html)   |
+| [Edit prices of an abstract product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/editing-abstract-products.html#editing-prices-of-an-abstract-product)   |
+| [Define prices when creating a concrete product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/creating-product-variants.html)  |
+| [Edit prices of a concrete product](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/editing-product-variants.html)   |
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/prices-feature-integration" class="mr-link">Enable Prices by integrating the Prices feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/glue-api-prices-api-feature-integration" class="mr-link">Integrate the Product Price Glue API into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-product-pricecsv" class="mr-link">Import product prices</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-abstract-product-prices" class="mr-link">Retrieve abstract product prices via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-concrete-product-prices" class="mr-link">Retrieve concrete product prices via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os" class="mr-link">Learn how to handle twenty five million prices in Spryker Commerce OS</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-abstract-products-and-product-bundles" class="mr-link">Define prices when creating an abstract product or a product bundle</a></li>
-                <li><a href="https://documentation.spryker.com/docs/editing-abstract-products#editing-prices-of-an-abstract-product" class="mr-link">Edit prices of an abstract product</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-concrete-products" class="mr-link">Define prices when creating a concrete product</a></li>
-                <li><a href="https://documentation.spryker.com/docs/editing-a-product-variant#editing-a-product-variant" class="mr-link">Edit prices of a concrete product</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

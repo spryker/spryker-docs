@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/inventory-management-feature-overview
 ---
 
-*Inventory Management* refers to warehousing and managing your store’s stock. In this context, the *warehouse* is the physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details on how to manage them.
+Thr *Inventory Management* feature refers to warehousing and managing your store’s stock. In this context, a *warehouse* is the physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details on how to manage them.
 Stock does not always reflect the real availability of products, as not all the items available in stock are available for sale. For example, if items are *reserved*, that is, there are pending orders with these items, they can not be ordered, even though physically, they are still in stock. The value that reflects the difference between the current quantity of products in stock and the quantity of these products in the pending orders, is referred to as the *availability* of products. The availability is calculated per store. See [Availability management](#availability-management) for details on how to manage availability.
 
 ## Warehouse management
@@ -63,7 +63,7 @@ When order is made, stock is not updated automatically in the system, you have t
 
 ## Availability management
 
-In contrast to stock, availability considers not just the number of products in the warehouse but also current open orders. 
+In contrast to stock, availability considers not just the number of products in the warehouse but also current open orders.
 
 When a buyer places an order, the products in the order become *reserved*, and the product availability changes. The changes are reflected in the Back Office: The availability is equal to the stock before the order is placed, and after the order is placed, the availability decreases, but the stock remains the same.
 
@@ -79,7 +79,7 @@ See [Checking availability](/docs/scos/user/user-guides/{{page.version}}/back-of
 
 {% info_block infoBox %}
 
-Availability of a product bundle is defined by the availability of each product in the bundle. If at least one of them is out of stock, the entire bundle is unavailable. 
+Availability of a product bundle is defined by the availability of each product in the bundle. If at least one of them is out of stock, the entire bundle is unavailable.
 
 {% endinfo_block %}
 
@@ -98,33 +98,16 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 {% endinfo_block %}
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create a warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html)  |
+| [Manage warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html) |
+| [Manage product availabilities](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html)  |
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-       <li><a href="https://documentation.spryker.com/docs/inventory-management-feature-integration" class="mr-link">Integrate the Inventory Management feature</a></li>
-       <li><a href="https://documentation.spryker.com/docs/inventory-management-feature-integration" class="mr-link">Integrate the Inventory Management Glue API</a></li>
-       <li><a href="/docs/scos/dev/features/{{page.version}}/inventory-management/managing-stocks-in-a-multi-store-environment-best-practices.html" class="mr-link">Manage stocks in a multi-store environment: Best practices</a></li>
-       <li><a href="https://documentation.spryker.com/docs/file-details-product-stockcsv" class="mr-link">Import product stock</a></li>
-       <li><a href="/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html" class="mr-link">Import warehouse and store data</a></li>
-       <li><a href="/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html" class="mr-link">Import warehouse address data</a></li>
-       <li><a href="https://documentation.spryker.com/docs/retrieving-abstract-product-availability" class="mr-link">Retrieve abstract product availability via Glue API</a></li>
-       <li><a href="https://documentation.spryker.com/docs/retrieving-concrete-product-availability" class="mr-link">Retrieve concrete product availability via Glue API</a></li>
-        </div>
-         <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office user</li>
-                 <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-a-warehouse.html" class="mr-link">Create a warehouse</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/managing-warehouses" class="mr-link">Manage stocks warehouses</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/managing-products-availability" class="mr-link">Manage product availabilities</a></li>
-               </ul>
-        </div>
-        </div>
-</div>
+Are you a developer? See [Inventory Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

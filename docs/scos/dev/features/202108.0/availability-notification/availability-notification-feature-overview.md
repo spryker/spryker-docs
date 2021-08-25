@@ -40,23 +40,8 @@ Currently, a Back Office user cannot manage newsletter subscriptions.
 
 A developer can manage the newsletter text files in `/src/Spryker/Zed/AvailabilityNotification/Presentation/Mail` and check the list of subscriptions in the `spy_availability_subscription`database table.
 
+{% info_block warningBox "Developer guides" %}
 
+Are you a developer? See [Availability Notification feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/availability-notification-feature-walkthrough.html) for developers.
 
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-availability-notifications" class="mr-link">Manage availability notifications via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/availability-notifications-module-relations" class="mr-link">See the module relations for the Availability Notifications feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-subscriptions-to-availability-notifications" class="mr-link">Retrieve subscriptions to availability notifications via Glue API</a></li>                
-                <li><a href="https://documentation.spryker.com/docs/availability-notification-feature-integration" class="mr-link">Integrate the Availability Notification feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/glue-api-availability-notification-feature-integration" class="mr-link">Integrate the Availability Notification Glue API</a></li>
-            </ul>
-        </div>
-        </div>
-</div> 
+{% endinfo_block %}

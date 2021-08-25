@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/approval-process-feature-overview
 ---
 
-The *Approval Process* feature enables B2B customers to have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout. 
+The *Approval Process* feature enables B2B customers to have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.
 
 Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
 
@@ -23,7 +23,7 @@ When a company user requests approval for their cart, the cart gets locked, and 
 
 Definitions that are used throughout the feature:
 
-| Definition | Description |
+| DEFINITION | DESCRIPTION |
 | --- | --- |
 | Approver | A person/manager who is responsible for approving the purchase order. |
 | Buyer | A person who has created and submitted the order. |
@@ -33,11 +33,11 @@ Definitions that are used throughout the feature:
 
 Generally speaking, approval is usually given when someone has a positive opinion about something.
 
-In the B2B industry, approvals are referred to shopping carts and items in the carts that the authorized people have to review and respond to, either approving or declining the order. The Approval Process is used to submit a cart for approval after passing the necessary steps of the checkout, allowing the responsible manager to review the order. 
+In the B2B industry, approvals are referred to shopping carts and items in the carts that the authorized people have to review and respond to, either approving or declining the order. The Approval Process is used to submit a cart for approval after passing the necessary steps of the checkout, allowing the responsible manager to review the order.
 
 For the approval process, you can set specific permissions for the Approver and Buyer roles:
 
-* The *Buy up to grand total* permission that restricts the cart checkout when the cart grand total amount reaches the limit specified in this permission. 
+* The *Buy up to grand total* permission that restricts the cart checkout when the cart grand total amount reaches the limit specified in this permission.
 {% info_block warningBox "Note" %}
 
 It is mandatory for the Buyer role to set this permission, if you want to use the Approval Process feature in your project.
@@ -56,7 +56,7 @@ Every approval request, in turn, can have three statuses:
 * Declined—the cart has been rejected.
 
 ## Approval Process workflow
-Approval Process as such introduces steps that company employees should follow to order, request for approval, and pay for products. 
+Approval Process as such introduces steps that company employees should follow to order, request for approval, and pay for products.
 
 Here’s how approvals fit into the buying process:
 
@@ -74,7 +74,7 @@ At this point, the approver cannot alter the quote in any way (like editing it, 
 
 Schematically, the Approval Process workflow can be defined in the following way:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-workflow.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-workflow.png)
 
 ### Approval Process scenarios
 Approval process workflow can be most clearly described in several common scenarios:
@@ -85,7 +85,7 @@ Prerequisites:
 
 The company has the following company users:
 
-| Person | Role | Description |
+| PERSON | ROLE | DESCRIPTION |
 | --- | --- | --- |
 | Company Employee | Buyer | Has the *Buy up to grand total* permission set to €500 and submits quote A with the cart total €400.</br>The *Send cart for approval* permission is enabled. |
 | Manager | Approver  | Has the *Approve up to grand total* permission for €600. |
@@ -100,14 +100,14 @@ Prerequisites:
 
 The company has the following company users:
 
-| Person | Role | Description |
+| PERSON | ROLE | DESCRIPTION |
 | --- | --- | --- |
 | Company Employee | Buyer | Has the *Buy up to grand total* permission set to €500 and submits quote B with the cart total €600.</br> The *Send cart for approval* permission is enabled. |
 | Manager | Approver  | Has the *Approve up to grand total* permission set to €600. |
 | Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
 | Head of the department | Buyer  | Has the *Buy up to grand total* permission set to €1000.  |
 
-Submitting quote B triggers an approval process as the quote total exceeds the amount set in the *Buy up to grand total* permission. To approve that request, an employee asks for approval from either the manager or the head of the department using the Approval widget and waits until the quote gets the Approved status. Once the request is approved, the employee can complete the checkout. 
+Submitting quote B triggers an approval process as the quote total exceeds the amount set in the *Buy up to grand total* permission. To approve that request, an employee asks for approval from either the manager or the head of the department using the Approval widget and waits until the quote gets the Approved status. Once the request is approved, the employee can complete the checkout.
 
 **Case 3.  Approval Process is initiated (senior approver)**
 
@@ -115,7 +115,7 @@ Prerequisites:
 
 The company has the following company users:
 
-| Person | Role | Description |
+| PERSON | ROLE | DESCRIPTION |
 | --- | --- | --- |
 | Company Employee | Buyer | Has the *Buy up to grand total* €500 permission and submits quote C with the cart total €900.</br>The *Send cart for approval permission* is enabled. |
 | Manager | Approver  | Has the *Approve up to grand total* permission set to €600. |
@@ -129,7 +129,7 @@ Quote C needs approval that has to be provided by the head of the department as 
 
 The company has the following company users:
 
-| Person | Role | Description |
+| PERSON | ROLE | DESCRIPTION |
 | --- | --- | --- |
 | Company Employee | Buyer | Has the *Buy up to grand total* €500 permission and submits quote D with the cart total €1200.</br>The *Send cart for approval* permission is enabled. |
 | Manager | Approver  | Has the *Approve up to grand total* permission for €600. |
@@ -140,7 +140,7 @@ Quote D can't be processed as the quote total is higher than any Approver permis
 ### Quote lock functionality
 After the quote is submitted for approval, it gets locked for both the buyer and the approver. This functionality prevents any changes to the quote's content while it's in the pending approval state.
 
-Quote lock is fulfilled with the help of the `isLocked` bool parameter that has been added to the Cart module. The `IsLocked` parameter is added to `\Spryker\Zed\Quote\QuoteConfig::getQuoteFieldsAllowedForSaving()`.
+Quote lock is fulfilled with the help of the `isLocked` bool parameter that has been added to the Cart module. The `IsLocked` parameter is added to `/Spryker/Zed/Quote/QuoteConfig::getQuoteFieldsAllowedForSaving()`.
 
 When the `isLocked` parameter is set to true, then:
 * Items cannot be added or removed from the quote.
@@ -181,20 +181,8 @@ Company users can perform the following actions using the Approval Process featu
 </details>
 
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/t-implement-customer-approval-process-on-state-machine" class="mr-link">Implement customer approval process based on a generic state machine</a></li>
-                <li>Integrate the Approval Process feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/approval-process-feature-integration" class="mr-link">Integrate the Approval Process feature</a></li>
-               <li><a href="https://documentation.spryker.com/docs/shipment-approval-process-feature-integration" class="mr-link"> Integrate the Shipment + Approval Process feature</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+Are you a developer? See [Approval Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/approval-process-feature-walkthrough.html) for developers.
 
+{% endinfo_block %}

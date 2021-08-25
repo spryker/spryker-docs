@@ -1,5 +1,5 @@
 ---
-title: Creating a product variant
+title: Creating product variants
 description: Use the guide to configure a product variant, set a price and validity period, make it searchable on the website, and more
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-variant
 originalArticleId: cb558d64-c3df-4acf-a149-3eac51f413c2
@@ -22,7 +22,7 @@ Review the reference information before you start, or just look up the necessary
 
 To create a product variant:
 
-1. Next to the abstract product you want to create a variant for, select **Edit**. 
+1. Next to the abstract product you want to create a variant for, select **Edit**.
 2. On the *Edit Abstract* page, select **Add Variant**.
 3. In the *General* tab, do the following:
     1. Define a **SKU**:
@@ -35,7 +35,7 @@ To create a product variant:
     4. **Opionally**: Enter **Valid From** and **Valid To** dates to specify when the product should go online in the web-shop.
     5. Go to the *Price & Stock* tab.
 4. In the *Price & Tax* tab, set prices and taxes for products:
-    1. To take the prices over from the abstract product, select **Use prices from abstract product**. 
+    1. To take the prices over from the abstract product, select **Use prices from abstract product**.
     {% info_block warningBox "Note" %}
 The merchant relation prices are inherited by Product Variants as well.
 {% endinfo_block %}
@@ -60,7 +60,7 @@ This section describes the attributes you enter and select when  creating a prod
 #### General tab
 
 | ATTRIBUTE |DESCRIPTION | CREATE CONCRETE PRODUCT | UPDATE CONCRETE PRODUCT|
-| --- | --- | --- | --- | 
+| --- | --- | --- | --- |
 |Store relation  | Defines the store for which the product can be available.</br>You can select multiple values. | **No**|**No**|
 | SKU Prefix | A number that you assign to the product will help to track unique information related to that product. | **Yes**|**Display Only**|
 | Autogenerate SKU | Allows the system to autogenerate the SKU once you click **Save**. | **Yes**|**No**|
@@ -77,7 +77,7 @@ This section describes the attributes you enter and select when  creating a prod
 | --- | --- | --- | --- |
 |Use prices from abstract product|Once the checkbox is selected, the prices from the abstract product are taken over.|**Yes**|**No**|
 |Merchant Price Dimension|**B2B Only**</br>The drop-down list that allows you to select a merchant relation and set up a specific price for a specific merchant.</br>If the Default value is selected, the prices will be the same for everyone.</br>The values available for selection derive from **Merchants > Merchant Relations**.</br>Only one value can be selected.|**Yes**|**Yes**|
-| Gross price</br>Net price | The price value for gross and net mode.</br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  | 
+| Gross price</br>Net price | The price value for gross and net mode.</br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  |
 |Default</br>Original|Default prices are the prices your customers will pay, whereas original prices are the "previous prices" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
 |Add Product Volume Price</br>Edit Product Volume Price|Once selected, the Add volume price (Edit volume price) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.</br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.</br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
 |(Stock) Type|Display-only field that displays warehouses according to your store|**Yes**|**Yes**|
@@ -108,7 +108,7 @@ Once you select to discontinue the product, you can add a note about that on thi
 
 #### Product Alternatives tab
 
-The only field available is **Add Product Alternative by Name or SKU**. Here it is enough to enter three characters of a product name or SKU to see the autosuggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab. 
+The only field available is **Add Product Alternative by Name or SKU**. Here it is enough to enter three characters of a product name or SKU to see the autosuggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab.
 
 
 #### Scheduled Prices tab
@@ -120,4 +120,3 @@ On this tab, you see a table with the scheduled prices imported via a CSV file. 
 
 **What's next?**
 Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/managing-products.html) section.
-

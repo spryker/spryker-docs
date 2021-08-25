@@ -16,7 +16,7 @@ In terms of [Merchant concept](/docs/scos/dev/features/{{page.version}}/merchant
 
 The diagram below shows product restrictions relations within the Merchant concept:
 
-![product-restrictions-model.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Product+Restrictions+from+Merchant+to+Buyer/Product+Restrictions+from+Merchant+to+Buyer+Overview/product-restrictions-model.png){height="" width=""}
+![product-restrictions-model.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Product+Restrictions+from+Merchant+to+Buyer/Product+Restrictions+from+Merchant+to+Buyer+Overview/product-restrictions-model.png)
 
 Product Restrictions from Merchant to Buyer give merchants [another layer](https://documentation.spryker.com/2021080/docs/customer-access) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
 
@@ -35,32 +35,19 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 - Currently, in the situation, when a single product from the product set is blacklisted, the other items are displayed in the shop. We are going to update the logic in a way, that in case any of the items in the product set gets blacklisted, all relevant product sets containing this item will get blacklisted too.
 -  The current functionality allows displaying the whole product bundle even if it contains the blacklisted customer-specific products. We are working on updating the logic so that if the bundle product includes a blacklisted item, the whole bundle is also blacklisted for a customer.
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create product lists to set product restrictions](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/creating-product-lists.html)  |
+| [Edit a product list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html#editing-a-product-list) |
+| [Export a product list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html#exporting-a-product-list) |
+| [Remove a product list from the system](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html#removing-a-product-list)  |
+| [Assign products to a product list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html#assigning-products-to-a-product-list) |
+| [Remove products from a product list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html#deassigning-products-form-a-product-list) |
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="/docs/scos/dev/features/{{page.version}}/merchant-product-restrictions/restricted-products-behavior.html" class="mr-link">Check out the use cases of the restricted products behavior</a></li>
-                <li>Integrate the Merchant Product Restrictions:</li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-product-restrictions-feature-integration" class="mr-link">Integrate the Merchant Product Restrictions feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-feature-integration" class="mr-link">Integrate the Merchant feature</a></li>  
-            </ul>
-        </div>
-         <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/creating-a-product-list.html" class="mr-link">Create a product list to set product restrictions</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-lists#editing-a-product-list" class="mr-link">Edit a product list</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-lists#exporting-a-product-list" class="mr-link">Export a product list</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-lists#removing-a-product-list" class="mr-link">Remove a product list from the system</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-lists#removing-products-form-a-product-list" class="mr-link">Remove products from a product list</a></li>
-            </ul>
-        </div>
-        
+Are you a developer? See [Merchant Product Restrictions feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html) for developers.
 
+{% endinfo_block %}

@@ -11,28 +11,15 @@ redirect_from:
 
 The *Prices* feature enables Back Office users to effectively manage the prices of all types of products. They can set different types of prices, like default, original, and volume prices.
 
-## If you are:
+## Related Business User articles
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/prices" class="mr-link">Get a general idea of Prices</a></li>
-                   <li><a href="https://documentation.spryker.com/docs/volume-prices" class="mr-link">Get a general idea of Volume Prices</a></li>
-                <li><a href="https://documentation.spryker.com/docs/priceproduct-module-details-reference-information" class="mr-link">Get a general idea of the PriceProduct module</a></li>
-                <li><a href="https://documentation.spryker.com/docs/money-module-reference-information" class="mr-link">Get a general idea of the Money module</a></li>
-                            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/prices" class="mr-link">Get a general idea of Prices</a></li>
-                   <li><a href="https://documentation.spryker.com/docs/volume-prices" class="mr-link">Get a general idea of Volume Prices</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+|BACK OFFICE USER GUIDES|
+|---|
+| [Get a general idea of Prices](/docs/scos/dev/features/{{page.version}}/prices/prices-feature-overview/prices-overview.html) |
+| [Get a general idea of Volume Prices](/docs/scos/dev/features/{{page.version}}/prices/prices-feature-overview/volume-prices-overview.html)   |
 
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/configurable-bundle-feature-overview
 ---
 
-A *configurable bundle*  is a [product bundle](https://documentation.spryker.com/2021080/docs/product-bundles) for which a Storefront User selectes products on the Storefront. 
+A *configurable bundle*  is a [product bundle](https://documentation.spryker.com/2021080/docs/product-bundles) for which a Storefront User selectes products on the Storefront.
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.
 
 ## Configurable bundle template
@@ -77,10 +77,10 @@ When a Back Office user creates a configurable bundle template, they create the 
 To learn how a Back Office User edits product lists, see [Managing product lists](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-lists/managing-product-lists.html).
 To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-slots-in-configurable-bundle-templates).
 
-When a Storefront user configures a bundle, for each slot, they select a product from the provided product list. 
+When a Storefront user configures a bundle, for each slot, they select a product from the provided product list.
 ![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png)
 
-By default, it is not obligatory to select products for all the slots to order a configurable bundle. 
+By default, it is not obligatory to select products for all the slots to order a configurable bundle.
 
 Schematically, a configurable bundle looks as follows:
 ![Config Bundle Schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/slots+scheme.png)
@@ -236,47 +236,20 @@ Currently, the feature has the following functional constraints which are going 
     - [Gift cards](/docs/scos/dev/features/{{page.version}}/gift-cards-feature-overview.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](https://documentation.spryker.com/2021080/docs/product-options-overview)
-    * [Product labels](https://documentation.spryker.com/2021080/docs/product-label-feature-overview) 
+    * [Product labels](https://documentation.spryker.com/2021080/docs/product-label-feature-overview)
     * [Product quantity restrictions](/docs/scos/dev/features/{{page.version}}/non-splittable-products-feature-overview.html)
 * The *Slot* page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 
+## Related Business User articles
 
-## If you are:
+|BACK OFFICE USER GUIDES|
+|---|
+|  [Create a configurable bundle template](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html)  |
+|  [Manage configurable bundle templates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html)  |
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/configurable-bundle-module-relations" class="mr-link">Check the module schema for the Configurable Bundle feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/howto-rendering-configurable-bundles-in-the-storefront" class="mr-link">Render configurable bundle templates on the Storefront</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-configurable-bundle-templates" class="mr-link">Retrieve configurable bundle templates via Glue API</a></li>
-                <li>Integrate the Configurable Bundle feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/configurable-bundle-feature-integration" class="mr-link">Integrate the Configurable Bundle feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-product-restrictions-feature-integration" class="mr-link">Integrate the Merchant Product Restrictions feature</a></li>
-                 <li><a href="/docs/scos/dev/features/{{page.version}}/product-lists-feature-overview.html-catalog-feature-integration" class="mr-link">Integrate the Product Lists + Catalog feature</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/prices-feature-integration" class="mr-link">Integrate the Prices feature</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/product-feature-integration" class="mr-link">Integrate the Product feature</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/product-images-configurable-bundle-feature-integration" class="mr-link">Integrate the Product Images + Configurable Bundle feature</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/migration-guide-configurablebundle" class="mr-link">Migrate the ConfigurableBundle module from version 1.* to  version 2.*</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/migration-guide-configurablebundlestorage" class="mr-link">Migrate the ConfigurableBundleStorage module from version 1.* to  version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-product-list-gui" class="mr-link">Migrate the ProductListGui module from version 1.* to  version 2.*</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/migration-guide-merchantrelationshipproductlistgui" class="mr-link">Migrate the MerchantRelationshipProductListGui module from version 1.* to  version 2.*</a></li>
-                 <li>Integrate the Configurable Bundle Glue API:</li>
-                  <li><a href="https://documentation.spryker.com/docs/glue-api-configurable-bundle-feature-integration" class="mr-link">Integrate the Configurable Bundle Glue API</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/glue-api-configurable-bundle-cart-feature-integration" class="mr-link">Integrate the Configurable Bundle + Cart Glue API</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/glue-api-configurable-bundle-product-feature-integration" class="mr-link">Integrate the Configurable Bundle + Product Glue API</a></li>
-              </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-configurable-bundle-templates" class="mr-link">Create a configurable bundle template</a></li>
-                <li><a href="https://documentation.spryker.com/docs/configurable-bundle-templates" class="mr-link">Manage configurable bundle templates</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Configurable Bundle feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-bundle-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

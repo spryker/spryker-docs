@@ -1,5 +1,5 @@
 ---
-title: Configurable product feature walkthrough
+title: Configurable Product feature walkthrough
 last_updated: Aug 12, 2021
 description: The _Configurable Product_ feature introduces a new type of product that can be customized by customers—a configurable product
 template: concept-topic-template

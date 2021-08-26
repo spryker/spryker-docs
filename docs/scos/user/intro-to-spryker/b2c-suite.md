@@ -45,7 +45,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 
 [**Navigation**](https://documentation.spryker.com/2021080/docs/navigation):
 
-* [Navigation](https://documentation.spryker.com/2021080/docs/en/navigation) 
+* [Navigation](https://documentation.spryker.com/2021080/docs/en/navigation)
 * [Navigation feature](https://documentation.spryker.com/2021080/docs/en/navigation)
 
 
@@ -190,11 +190,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 To demonstrate the B2C features in a live impementation, we use a B2C Demo Shop. The B2C Demo Shop is a showcase that is pre-loaded with a combination of modules and functionalities best suited for B2C commerce. This Demo Shop is our recommended starting point for all standard B2C commerce projects. New features for the B2C Demo Shop are released every several months.
 
 <iframe src="https://fast.wistia.net/embed/iframe/e169fy8miw" title="B2C Demo Shop Overview" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
-    
-To download the B2C Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop)
-    
-To install the B2C Demo Shop, follow the instructions of the B2C Demo Shop installation guides:
 
-* [B2C Demo Shop Installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html)
-* [B2C Demo Shop Installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html)
-* [B2C Demo Shop Installation: Without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html)
+To download the B2C Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop)
+
+To install the B2C Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).

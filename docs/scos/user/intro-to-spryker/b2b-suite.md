@@ -72,8 +72,4 @@ To demonstrate the B2B features in a live impementation, we use a B2B Demo Shop.
 
 To download the B2B Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2b-demo-shop](https://github.com/spryker-shop/b2b-demo-shop)
 
-To install the B2B Demo Shop, follow the instructions of the B2B Demo Shop installation guides:
-
-* [B2B Demo Shop Installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html)
-* [B2B Demo Shop Installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html)
-* [B2B Demo Shop Installation: Without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html)
+To install the B2B Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).

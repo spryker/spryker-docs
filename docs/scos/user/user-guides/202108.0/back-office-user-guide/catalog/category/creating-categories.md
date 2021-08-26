@@ -139,6 +139,6 @@ When you already know the exact parent category under which the category that yo
 
 The same products can be assigned to multiple categories.
 
-## Next іteps
+## Next Steps
 
 [Assign product to categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html)

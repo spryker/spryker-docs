@@ -10,53 +10,24 @@ redirect_from:
   - /docs/en/product
 ---
 
-Product is a central entity of a shop. The *Product* feature allows shop administrators to create a rich product catalog. Product configuration is highly customizable, so they can create different types of products. 
+Product is a central entity of a shop. The *Product* feature allows shop administrators to create a rich product catalog. Product configuration is highly customizable, so they can create different types of products.
 
 From time to time, a company may decide to discontinue a product. By discontinuing a product, the merchant stops producing and supporting a product. The Product feature allows Back Office users to indicate the products that are no longer available in your store with a ‘discontinued’ label.
 
 With timed product availability, you can easily define timeframes for the availability of products without having to manually manage your inventory. This feature is extremely useful if you sell products with an expiry date, seasonal products or products that are valid for a certain period of time (for example, tickets). If for promotional reasons, you temporally sell some products within a limited time frame, or if you want to start selling some products (e.g. a collection) from a specific date and time, the product validity time can be set to up-to-the-minute accuracy.
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Get a general idea of Products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html)  |
+| [Get a general idea of Product Attributes](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/product-attributes-overview.html)  |
+| [Get a general idea of Discontinued Products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/discontinued-products-overview.html)  |
+| [Get a general idea Product Images](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)  |
+| [Get a general idea of Timed Product Availability](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/timed-product-availability-overview.html)  |
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/products-overview" class="mr-link">Get a general idea of Products</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/product-attributes-overview" class="mr-link">Get a general idea of Product Attributes</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/discontinued-products-overview" class="mr-link">Get a general idea of Discontinued Products</a></li>
-                   <li><a href="https://documentation.spryker.com/docs/product-image-management" class="mr-link">Get a general idea Product Images</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/timed-product-availability-overview" class="mr-link">Get a general idea of Timed Product Availability</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/products-overview" class="mr-link">Get a general idea of Products</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/product-attributes-overview" class="mr-link">Get a general idea of Product Attributes</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/discontinued-products-overview" class="mr-link">Get a general idea of Discontinued Products</a></li>
-                   <li><a href="https://documentation.spryker.com/docs/product-image-management" class="mr-link">Get a general idea Product Images</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/timed-product-availability-overview" class="mr-link">Get a general idea of Timed Product Availability</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) for developers.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+{% endinfo_block %}

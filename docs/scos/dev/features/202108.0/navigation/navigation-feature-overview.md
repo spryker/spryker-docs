@@ -15,6 +15,7 @@ The *Navigation* feature enables product catalog managers to create intuitive na
 They can create different types of navigation for different places of the shop. For example, create a fully-fledged navigation tree for main website navigation, several simple navigation lists for the footer, and any number of custom navigation elements for CMS pages.
 
 ## Navigation element
+
 A *navigation element* is a page section that contains links to shop resources, as well as external resources.
 
 ![navigation-element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation+element.png)
@@ -23,12 +24,12 @@ See [Creating a Navigation Element](/docs/scos/user/user-guides/{{page.version}}
 
 
 ### Navigation element duplication
+
 If you have a configured navigation element in a shop and you want to use it as a basis for another navigation element, you can duplicate it. This is especially useful in a multi-shop scenario.
 See [Duplicating a Navigation Element](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#duplicating-a-navigation-element) to learn how a Back Office user can do that.
 
 
 ## Navigation tree
-
 
 A *navigation tree* is a navigation element consisting of [navigation nodes](#navigation-node) structured hierarchically as an expandable tree.
 In the Back Office, navigation elements are displayed as navigation trees.
@@ -38,8 +39,6 @@ In the Back Office, navigation elements are displayed as navigation trees.
 
 
 However, when publishing a navigation element as a content item on the Storefront, you can select a different [navigation template](#navigation-content-item-templates)
-
-
 
 ## Navigation node
 
@@ -82,12 +81,14 @@ A front-end developer can create more classes for navigation nodes.
 See [Creating a Navigation Node](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a Back office user can define a navigation node design.
 
 ## Navigation node validity period
+
 You can define the time period a navigation node is valid for:
 * When the validity period ends, the navigation node with its child stops being displayed on the Storefront.
 * When the validity period starts, the navigation node with its child starts being displayed on the Storefront.
 See [Creating a Navigation Node](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a product catalog manager can define a navigation node validity period.
 
 ## Navigation as content item
+
 To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/scos/dev/features/{{page.version}}/content-items/content-items-feature-overview.html).
 The schema shows how the Navigation feature affects content management in a Spryker shop:
 
@@ -97,37 +98,38 @@ See [Create a Navigation Content Item](/docs/scos/user/user-guides/{{page.versio
 See [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html#adding-content-to-storefront-pages-using-templates---slots) to learn how a marketing content manager can add content to the Storefront.
 
 ### Navigation content item templates
+
 A content item template defines how a content item is displayed on the Storefront. The following templates are shipped for the Navigation content item by default:
 
-* *Tree structure after the first level* - the first level of navigation nodes is displayed in a horizontal line. Hovering over an element opens a menu showing all the child nodes as a list.
-* *Inline navigation* - the first level of navigation nodes is displayed as a list. Child nodes are not displayed.
-* *List navigation* - the first level of navigation nodes is displayed as a list. Child nodes are not displayed.
-* *Tree structure* - all the levels of navigation nodes are displayed as a list.
+* *Tree structure after the first level*—the first level of navigation nodes is displayed in a horizontal line. Hovering over an element opens a menu showing all the child nodes as a list.
+* *Inline navigation*—the first level of navigation nodes is displayed as a list. Child nodes are not displayed.
+* *List navigation*—the first level of navigation nodes is displayed as a list. Child nodes are not displayed.
+* *Tree structure*—all the levels of navigation nodes are displayed as a list.
 
 
 <details open>
-    <summary>"Tree structure after the first level" template representation - Storefront</summary>
+    <summary>"Tree structure after the first level" template representation*—Storefront</summary>
 
 ![tree-structure-after-the-first-level](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure-after-the-first-level.png)
 
 </details>
 
 <details open>
-    <summary>"Inline navigation" template representation - Storefront</summary>
+    <summary>"Inline navigation" template representation*—Storefront</summary>
 
 ![inline-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/inline-navigation.png)
 
 </details>
 
 <details open>
-    <summary>"List navigation" template representation - Storefront</summary>
+    <summary>"List navigation" template representation*—Storefront</summary>
 
 ![list-navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/list-navigation.png)
 
 </details>
 
 <details open>
-    <summary>"Tree structure" template representation - Storefront</summary>
+    <summary>"Tree structure" template representation*—Storefront</summary>
 
 ![tree-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/tree-structure.png)
 

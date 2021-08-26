@@ -119,27 +119,6 @@ Currently, the feature has the following functional constraints which are going 
 
 * volume prices cannot be applied to the [prices per merchant relation](https://documentation.spryker.com/2021080/docs/merchant-custom-prices).
 
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/prices-feature-integration" class="mr-link">Enable Volume Prices by integrating the Prices feature</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/adding-volume-prices-to-abstract-products" class="mr-link">Add volume prices to abstract products</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|

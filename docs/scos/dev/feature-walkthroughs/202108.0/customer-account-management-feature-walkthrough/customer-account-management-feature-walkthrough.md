@@ -16,7 +16,7 @@ To learn more about the feature and to find out how end users use it, see [Custo
 
 | INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|---|
-| Agent Assist feature integration | Customer migration guide | Authenticating as a customer | File details: customer.csv | Reference information: Customer module overview|
+| Agent Assist feature integration | CompanyUser migration guide | Authenticating as a customer | File details: customer.csv | Reference information: Customer module overview|
 | Company Account feature integration |  | Confirming customer registration |  |  |
 | Customer Account Management feature integration |  | Managing customer addresses |  |  |
 | Glue API: Customer Account Management feature integration |  | Managing customer authentication tokens |  |  |

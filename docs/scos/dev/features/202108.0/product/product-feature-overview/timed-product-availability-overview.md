@@ -23,7 +23,7 @@ Time set for the product validity **Valid from** and **Valid to** fields is accu
 ## Use Cases
 The table below shows possible usage scenarios with the TTL feature and resulting system behavior.
 
-| Validity dates settings | Result |
+| VALIDITY DATES SETTINGS | RESULT |
 | --- | --- |
 | "Valid from" is set, "Valid to" is set and lies in the future | Product goes online starting from "Valid to" time and remains online until after the "Valid to" time. |
 | "Valid from" is set, "Valid to" is not set | Product goes online from "Valid from" time and never goes offline. |
@@ -31,24 +31,14 @@ The table below shows possible usage scenarios with the TTL feature and resultin
 | "Valid to" is set in the past | Product will be deactivated shortly. |
 | "Valid from" is set, "Valid to" is set and lies in the future, the product is deactivated manually | Message saying that the product will be activated because of setting "Valid from" and "Valid to" time.|
 
+## Related Business User articles
 
-## If you are:
+|BACK OFFICE USER GUIDES|
+|---|
+| [Manage concrete product validity dates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/concrete-products/editing-product-variants.html) |
 
-<div class="mr-container">
-    <div class="mr-list-container">
-                <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                 <li><a href="https://documentation.spryker.com/v4/docs/mg-product-validity" class="mr-link">Enable Time Product Availability by integrating the ProductValidity module</a></li>
-                 </ul>
-              </div>                
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-product-variant" class="mr-link">Manage concrete product validity dates</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

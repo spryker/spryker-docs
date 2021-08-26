@@ -109,7 +109,9 @@ Also, you need to modify twig template to include form money value collection ta
 This will render table with all currencies enabled in store. You have to handle persistence yourself, which means that you have to save and read data to `MoneyValueTransfer` collection.
 
 {% info_block infoBox %}
+
 Component provides only initial data.
+
 {% endinfo_block %}
 
 <!-- Last review date: Oct 6, 2017 by Aurimas Ličkus -->

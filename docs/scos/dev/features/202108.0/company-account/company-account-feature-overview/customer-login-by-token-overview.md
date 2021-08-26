@@ -18,13 +18,13 @@ Most modern e-commerce applications allow customers to log in by token or, in ot
 
 * Extensibility and access control: In the token payload, you can specify user roles, permissions as well as resources that the user can access. Besides, you can share some permissions with other applications.
 
-*Customer Login* by Token feature allows B2B users to log in to Spryker Shop using a token. 
+*Customer Login* by Token feature allows B2B users to log in to Spryker Shop using a token.
 
 A *token* is a unique identifier that contains all the information needed for authentication to fetch a specific resource without using a username and password. The tokens are JSON strings that are encoded in base64url format.
 
 The lifetime of the token is 8 hours by default, but this value can be changed on the project level.
 
-## Token Structure
+## Token structure
 Every token consists of the three sections separated by periods.
 
 ![Token struc](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Customer+Login+by+Token/Customer+Login+by+Token+Feature+Overview/token-structure.png)
@@ -99,17 +99,8 @@ Module Relations for Customer Login by Token feature are schematically represent
 ![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Customer+Login+by+Token/Customer+Login+by+Token+Feature+Overview/customer-login-by-token-module-relations.png)
 
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/howto-generate-a-token-for-login" class="mr-link">Generate a token for login</a></li>
-                <!---<li><a href="https://documentation.spryker.com/docs/ht-disable-accounts-switch-for-bob" class="mr-link">HowTo - Disable Accounts Switch for Business on Behalf</a></li>-->
-                 <li><a href="https://documentation.spryker.com/docs/company-account-integration" class="mr-link">Enable Customer Login by Token by integrating the Company Account feature into your project</a></li>
-            </ul>
-        </div>
+Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough.html) for developers.
 
+{% endinfo_block %}

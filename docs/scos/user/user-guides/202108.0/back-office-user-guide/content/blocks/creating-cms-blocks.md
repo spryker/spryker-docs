@@ -1,5 +1,5 @@
 ---
-title: Creating a CMS block
+title: Creating CMS blocks
 description: The guide provides instructions on how to create a CMS block in the Back Office.
 originalLink: https://documentation.spryker.com/2021080/docs/creating-cms-block
 originalArticleId: 6ff82722-c1ed-4fd5-b57e-402c7af92a70
@@ -87,4 +87,3 @@ The following table describes the attributes on the *Create CMS Block* page.
 After a new block has been created, you can add the content if needed.
 
 * To learn more about editing a CMS block, see the [Editing CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html#editing-blocks).
-

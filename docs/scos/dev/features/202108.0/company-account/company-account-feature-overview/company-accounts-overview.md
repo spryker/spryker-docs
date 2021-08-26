@@ -49,7 +49,7 @@ The company user contains all the information about the customer and has a one-t
 ## Company account on the Storefront
 Company users can perform the following actions on the Storefront:
 
-<details open>
+<details>
 <summary>Create a company</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/create-a-company.gif)
@@ -57,20 +57,20 @@ Company users can perform the following actions on the Storefront:
 </details>
 
 
-<details open>
+<details>
 <summary>Create a business unit</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/create-a-business-unit.gif)
 
 </details>
 
-<details open>
+<details>
 <summary>Edit a business unit</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/edit-a-business-unit.gif)
 </details>
 
-<details open>
+<details>
 <summary>Delete a business unit</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/delete-a-business-unit.gif)
@@ -78,50 +78,37 @@ Company users can perform the following actions on the Storefront:
 </details>
 
 
-<details open>
+<details>
 <summary>Create a user</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/create-a-user.gif)
 </details>
 
-<details open>
+<details>
 <summary>Edit, enable, and disable a user</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/enable-disable-edit-a-user.gif)
 
 </details>
 
-<details open>
+<details>
 <summary>Delete a user</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/delete-a-user.gif)
 </details>
 
+## Related Business User articles
 
-## If you are:
+|BACK OFFICE USER GUIDES|
+|---|
+| [Manage companies](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-companies.html) |
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                 <li><a href="https://documentation.spryker.com/docs/retrieving-companies" class="mr-link">Retrieve company information via Glue API</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/glue-api-company-account-api-feature-integration" class="mr-link">Integrate the Company Account Glue API</a></li>
-                <li>Enable Company Accounts:</li>
-                <li><a href="https://documentation.spryker.com/docs/company-account-feature-integration" class="mr-link">Integrate the Company Account feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-companyuser#upgrading-from-version-1-0-0-to-version-2-0-0" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>    
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-companies" class="mr-link">Manage companies</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
 
-## See next 
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}
+
+## See next
 [Business Units overview](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/business-units-overview.html)

@@ -30,7 +30,7 @@ By default, a warehouse is not linked to a sales order item. The logic described
 
 {% endinfo_block %}
 
-During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/dev/features/{{page.version}}/order-management/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfill them.
+During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/dev/features/{{page.version}}/order-management/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfil them.
 
 By default, if a buyer orders several items of the same SKU, the requested item’s stock is checked in all the warehouses of the store. Based on the item stock, the warehouses are sorted in descending order, for example:
 
@@ -48,11 +48,11 @@ The warehouse with the *never out of stock* item quantity is always assigned to 
 
 {% endinfo_block %}
 
-If the first warehouse's stock is insufficient to fulfill the order item, this warehouse and the next one is assigned to the order item to fulfill the remaining quantity.
+If the first warehouse's stock is insufficient to fulfil the order item, this warehouse and the next one is assigned to the order item to fulfill the remaining quantity.
 
 Schematically, the process looks like this:
 
-![image](https://confluence-connect.gliffy.net/embed/image/74e2001e-4443-4e6c-b3d6-fafb14548702.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/74e2001e-4443-4e6c-b3d6-fafb14548702.png?utm_medium=live&utm_source=custom)
 
 ## Stock management
 
@@ -69,11 +69,11 @@ When a buyer places an order, the products in the order become *reserved*, and t
 
 Product availability before the order:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/before-order-placement.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/before-order-placement.png)
 
 Product availability after the order:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/after-order-placement.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/after-order-placement.png)
 
 See [Checking availability](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/availability/managing-products-availability.html#checking-availability) for details on how you can check product availability in the Back Office.
 
@@ -83,12 +83,12 @@ Availability of a product bundle is defined by the availability of each product 
 
 {% endinfo_block %}
 
-In the [state machine](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when payment fails and order is canceled, the item is not reserved anymore:
+In the [state machine](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when payment fails and order is cancelled, the item is not reserved anymore:
 
 <details open>
 <summary>State machine example</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/state-machine.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/state-machine.png)
 
 </details>
 

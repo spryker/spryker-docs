@@ -16,9 +16,9 @@ The very first step of defining the company structure is setting up business uni
 
 The **business units hierarchy** poses a system in which business units are arranged into levels:
 
-* upper level
-* lower level
-* the same level
+* Upper level
+* Lower level
+* Same level
 
 The business unit of the upper level is referred to as **parent business unit**, and the business units below it are its **child business units**.
 
@@ -37,7 +37,7 @@ The user can also select a parent business unit of the newly created unit. If it
 
 The parent and child business units are visually differentiated by means of indents. This differentiation is described in the following table:
 
-| Level | Indents |
+| LEVEL | INDENTS |
 | --- | --- |
 | 0 level business units (parents) | Have no indents before their lines. |
 | 1 level business units | Have a single indent before them. |
@@ -69,37 +69,22 @@ This will move the address to Unassigned addresses section.
 
 ![unassigned-addresses.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassigned-addresses.png)
 
-## If you are:
+## Related Business User articles
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                 <li><a href="https://documentation.spryker.com/docs/retrieving-business-units" class="mr-link">Retrieve business unit information via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-business-unit-addresses" class="mr-link">Retrieve business unit addresses via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/glue-api-company-account-api-feature-integration" class="mr-link">Enable the Business Units Glue API by integrating the Company Account Glue API</a></li>
-                <li>Enable Business Units:</li>
-                <li><a href="https://documentation.spryker.com/docs/company-account-feature-integration" class="mr-link">Integrate the Company Account feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-companyuser#upgrading-from-version-1-0-0-to-version-2-0-0" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-companies" class="mr-link">Manage company units</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-company-unit-addresses" class="mr-link">Manage company unit addresses</a></li>
-            </ul>
-        </div>
-         </div>
-</div>
+|BACK OFFICE USER GUIDES|
+|---|
+| [Manage company units](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-units.html) |
+| [Manage company unit addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-unit-addresses.html) |
+
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}
 
 
 
-
-## See next 
+## See next
 
 [Company user rules and permissions overview](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
-

@@ -48,23 +48,15 @@ In comparison with Shopping Cart, for Shopping lists, the quantity that is being
 
 The same works for the [product restriction](https://documentation.spryker.com/2021080/docs/merchant-product-restrictions) rules: it is impossible to add blacklisted products to a shopping list, the shopper will get "No search results" message in the widget field, and only whitelisted products will be suggested in the search results in case of a whitelist.
 
-## Quick Order Page
+## Quick Order page
 The widget allows searching the products on the quick order page too:
 ![Quick order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/quick-order-page.png){height="" width=""}
 
 The module relations can be schematically represented in the following way:
 ![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/module-relations.png){height="" width=""}
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-feature-integration" class="mr-link">Enable the search widget for concrete products by integrating the Product feature into your project</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

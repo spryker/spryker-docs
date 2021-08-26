@@ -18,19 +18,8 @@ The CMS pages in search results functionality allows searching not only for prod
 Page sorting and pagination on the search results page helps shop visitors to find content easier. Breadcrumbs allow a shop administrator to structure the content to reduce the number of steps a customer takes to return to a previous page.
 
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li>Enable CMS pages in search results:</li>
-                <li><a href="https://documentation.spryker.com/docs/cms-feature-integration" class="mr-link">Integrate the CMS feature</a></li>
-                <li><a href="/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html-search-product-lists-catalog-feature-integration" class="mr-link">Integrate the CMS + Product Lists + Catalog feature</a></li>
-                <li><a href="/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.htmls-in-search-results-integration" class="mr-link">Integrate CMS + Catalog feature</a></li>
-            </ul>
-        </div>
-    </div>
-</div>      
+Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

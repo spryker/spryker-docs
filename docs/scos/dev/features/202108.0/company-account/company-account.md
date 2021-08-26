@@ -34,37 +34,6 @@ Setting up company users:
 Setting up company users and roles:
 <iframe src="https://fast.wistia.net/embed/iframe/72qy3slwjo" title="How to set up Company Users and Roles in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/company-accounts-overview" class="mr-link">Get a general idea of Company Accounts</a></li>
-                <li><a href="https://documentation.spryker.com/docs/business-units-overview" class="mr-link">Get a general idea of Business Units</a></li>
-                <li><a href="https://documentation.spryker.com/docs/company-user-roles-and-permissions-overview" class="mr-link">Get a general idea of company user roles and permissions</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/business-on-behalf-overview" class="mr-link">Get a general idea of Business on Behalf</a></li>                
-                  <li><a href="https://documentation.spryker.com/docs/customer-login-by-token" class="mr-link">Get a general idea of Customer Login by Token</a></li>
-                  <li>Integrate the Company Account feature:</li>
-                  <li><a href="https://documentation.spryker.com/docs/company-account-feature-integration" class="mr-link">Integrate the Company Account feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-companyuser#upgrading-from-version-1-0-0-to-version-2-0-0" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/company-accounts-overview" class="mr-link">Get a general idea of Company Accounts</a></li>
-                <li><a href="https://documentation.spryker.com/docs/business-units-overview" class="mr-link">Get a general idea of Business Units</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/business-on-behalf-overview" class="mr-link">Get a general idea of Business on Behalf</a></li>          
-                  <li><a href="https://documentation.spryker.com/docs/company-user-roles-and-permissions-overview" class="mr-link">Get a general idea of company user roles and permissions</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|

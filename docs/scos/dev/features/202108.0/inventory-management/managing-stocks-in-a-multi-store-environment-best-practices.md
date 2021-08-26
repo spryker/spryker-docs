@@ -24,11 +24,12 @@ Suppose you own a big e-commerce business and ship orders worldwide. You want to
 
 In this case, each store can have its own warehouse and an own database. Stocks, product reservations, and availability are not co-depended between stores, and therefore are not synced:
 
-![image](https://confluence-connect.gliffy.net/embed/image/62d92512-6863-421f-bdc8-abcc9682c784.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/62d92512-6863-421f-bdc8-abcc9682c784.png?utm_medium=live&utm_source=custom)
 
 This scenario is good for big businesses managed from various locations, with worldwide deliveries. The stores do not depend on each other in any way and do not require additional communication or synchronization.
 
 ## Scenario 2: A shared warehouse but separate databases
+
 {% info_block infoBox %}
 
 To enable this scenario for your project, a developer should configure it. See [implementation reference](#implementation-reference) for recommendations.
@@ -56,13 +57,13 @@ Also, there are plugins to help you implement synchronization of the reservation
 
 | PLUGIN | DESCRIPTION |
 | --- | --- |
-|`\Spryker\Zed\Oms\Business\OmsFacadeInterface::importReservation` | You can use this plugin when reading export data from another store. The plugin stores reservation information to `spy_oms_product_reservation_store` table and updates all timestamps accordingly. |
-| `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationHandler\ReservationVersionHandlerPlugin` | The plugin is called when a customer makes an order, and a reservation is made. It stores reservation in the `spy_oms_reservation_change_version` database table. Register this plugin in `\Pyz\Zed\Oms\OmsDependencyProvider::getReservationHandlerPlugins` plugin stack. |
-| `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationImport\ReservationExportPlugin` | The plugin is called when a reservation export to another store is initiated. This plugin decides if the export should be accepted. We do not provide the delivery mechanism: you could do this with files or a queue. For example, when `ReservationExportPlugin` is called, you can write a file copy to another server and read it there. Same for queue: you could publish an event in the queue and then consume it on the other end. |
+|`/Spryker/Zed/Oms/Business/OmsFacadeInterface::importReservation` | You can use this plugin when reading export data from another store. The plugin stores reservation information to `spy_oms_product_reservation_store` table and updates all timestamps accordingly. |
+| `/Spryker/Zed/Oms/Communication/Plugin/Oms/ReservationHandler/ReservationVersionHandlerPlugin` | The plugin is called when a customer makes an order, and a reservation is made. It stores reservation in the `spy_oms_reservation_change_version` database table. Register this plugin in `/Pyz/Zed/Oms/OmsDependencyProvider::getReservationHandlerPlugins` plugin stack. |
+| `/Spryker/Zed/Oms/Communication/Plugin/Oms/ReservationImport/ReservationExportPlugin` | The plugin is called when a reservation export to another store is initiated. This plugin decides if the export should be accepted. We do not provide the delivery mechanism: you could do this with files or a queue. For example, when `ReservationExportPlugin` is called, you can write a file copy to another server and read it there. Same for queue: you could publish an event in the queue and then consume it on the other end. |
 
 {% info_block infoBox %}
 
-There is a console command to export all reservations: `\Spryker\Zed\Oms\Communication\Console\ExportReservationConsole`. It triggers `ReservationExportPlugin` with reservations amounts to export. You can run this command as a cronjob.
+There is a console command to export all reservations: `/Spryker/Zed/Oms/Communication/Console/ExportReservationConsole`. It triggers `ReservationExportPlugin` with reservations amounts to export. You can run this command as a cronjob.
 
 {% endinfo_block %}
 
@@ -82,7 +83,7 @@ In this case, consider separated warehouses but a shared database:
 
 {% info_block infoBox %}
 
-When a buyer places an order, a reservation record  is created in the database. The record also contains information about the store the reservation is made for. 
+When a buyer places an order, a reservation record  is created in the database. The record also contains information about the store the reservation is made for.
 
 {% endinfo_block %}
 

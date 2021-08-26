@@ -19,7 +19,7 @@ To learn more about the feature and to find out how end users use it, see [CMS](
 | CMS + product lists + catalog feature integration  | CmsStorage migration guide |  Retrieving autocomplete and search suggestions | File details: cms_block.csv  | HowTo - Define the maximum size of content fields  | Enabling the product CMS block |   |
 | Content Items feature integration | CmsGui migration guide | Retrieving abstract product list content items  | File details: cms_block_store.csv  | HowTo - Create a visibility condition for CMS blocks  | Enabling CMS block widget |   |
 | CMS + Catalog feature integration | CmsPageSearch migration guide | Retrieving banner content items  | File details: cms_template.csv  | HowTo - Create a custom content item  |   |   |
-| Content Items feature integration  | CmsCollector migration guide |   | File details: cms_slot.csv  |   |   |   |
+| Content Items feature integration  | CmsCollector migration guide |   | File details: cms_slot.csv  | [Learn about the CoreMedia technology partner integration](/docs/scos/dev/technology-partners/{{page.version}}/content-management/coremedia/coremedia.html-with-templates-slots)  |   |   |
 | Glue API: Content items API feature integration | CmsBlock migration guide |   |  File details: cms_slot_template.csv |   |   |   |
 | Glue API: CMS feature integration  | CMS Block Category Connector migration guide|   |  File details: cms_slot_block.csv |   |   |   |
 |   | CMS Block Category Connector Migration Console migration guide|   |  File details: content_navigation.csv |   |   |   |

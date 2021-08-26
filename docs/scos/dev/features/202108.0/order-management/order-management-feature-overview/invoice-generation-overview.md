@@ -18,7 +18,7 @@ You can send a hidden copy of the invoice to yourself or your employees. Keep in
 
 {% endinfo_block %}
 
-It is possible to generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the *View Order* page. See [Changing order statuses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#changing-order-statuses) for details on how a Back Office User initiates events for orders. After generating the invoice, the OMS state of the order changes to `exported`. 
+It is possible to generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the *View Order* page. See [Changing order statuses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#changing-order-statuses) for details on how a Back Office User initiates events for orders. After generating the invoice, the OMS state of the order changes to `exported`.
 
 {% info_block infoBox "Info" %}
 
@@ -41,7 +41,7 @@ In the generated invoice template, the following data is **not hardcoded**:
 * Invoice number
 * All order data in the table
 
-All other text is hardcoded. This text is glossary keys, and you can change them for your project as you want. 
+All other text is hardcoded. This text is glossary keys, and you can change them for your project as you want.
 
 {% info_block infoBox "Product bundles" %}
 
@@ -54,25 +54,14 @@ Keep in mind that bundled product itself always has a 0 tax rate. However, all o
 * Product options are not fully supported in the generated invoice for now. If product options have one tax rate and the product itself another, the tax rate difference is not reflected in the invoice. The invoice shows prices that already include tax rates of products and product options.
 * .pdf files of the invoices are not generated.
 
+## Related Business User articles
 
-## If you are:
+|BACK OFFICE USER GUIDES|
+|---|
+| [Trigger invoice generation in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#changing-order-statuses)  |
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/order-management-feature-integration" class="mr-link">Enable invoice generation by integrating the Order Management feature into your project </a></li>
-                <li><a href="/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html" class="mr-link">Configure emailing of invoices using BCC</a></li> 
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/en/managing-orders#changing-order-statuses" class="mr-link">Trigger invoice generation in the Back Office</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
+
+{% endinfo_block %}

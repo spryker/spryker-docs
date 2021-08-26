@@ -35,7 +35,7 @@ The `BusinessOnBehalfGui` module provides the `BusinessOnBehalfGuiAttachToCompan
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
-| Company Account feature integration,| CompanyUser migration guide  | Retrieving companies | HowTo - Generate a token for login  |
+| Company Account feature integration| CompanyUser migration guide  | Retrieving companies | HowTo - Generate a token for login  |
 | Glue API: Company Account feature integration | BusinessOnBehalfDataImport migration guide  | Retrieving business units  |   |
 |   |   | Retrieving business unit addresses |   |
 |   |   | Retrieving company users  |   |

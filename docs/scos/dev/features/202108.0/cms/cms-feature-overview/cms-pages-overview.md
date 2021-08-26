@@ -12,7 +12,7 @@ redirect_from:
 
 A CMS page is an HTML page you can create and edit in the Back Office using the WYSIWYG editor. The *About Us*, *Impressum*, *Terms*, *Contacts*, and *Conditions* pages are the examples of CMS pages that you can create.
 
-Each CMS page has a unique URLs. 
+Each CMS page has a unique URLs.
 
 ## CMS page template
 
@@ -48,48 +48,22 @@ With the CMS Pages feature, you can:
 * Specify validity dates for CMS Pages.
 * Assign a CMS Page to a specific locale, thus making it visible or hidden for a specific store (the Multi-store CMS feature).
 
+## Related Business User articles
 
-## If you are:
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create a CMS page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-a-cms-page.html)  |
+| [Manage CMS pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-a-cms-page.html)  |
+| [Edit CMS pages](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/editing-cms-pages.html)  |
+| [Manage versions of a CMS page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/managing-cms-page-versions.html)  |
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                    <li><a href="https://documentation.spryker.com/docs/file-details-cms-pagecsv" class="mr-link">Import CMS pages</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/file-details-cms-pagecsv" class="mr-link">Import store relations for CMS pages</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/ht-create-cms-templates#adding-a-template-for-a-cms-page" class="mr-link">Create a template for a CMS page</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/howto-define-the-maxiumum-size-of-content-fields" class="mr-link">Define the maximum length of content fields</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/reference-information-cms-extension-points" class="mr-link">Enable an extension point for post activation and deactivation of CMS pages</a></li> 
-                    <li><a href="https://documentation.spryker.com/docs/retrieving-cms-pages" class="mr-link">Retrieve CMS pages via Glue API</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/retrieving-suggestions-for-auto-completion-and-search" class="mr-link">Retrieve CMS pages in search suggetions for auto-completion and search via Glue API</a></li>
-                    <li>Enable CMS Pages:</li>
-                    <li><a href="https://documentation.spryker.com/docs/cms-feature-integration-guide" class="mr-link">Integrate the CMS feature</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/cms-page-search-product-lists-catalog-feature-integration" class="mr-link">Integrate the CMS Page Search + Product Lists + Catalog feature</a></li> 
-                    <li><a href="https://documentation.spryker.com/docs/mg-cms#upgrading-from-version-6---to-version-7--" class="mr-link">Migrate the CMS module from version 6.* to version 7.*</a></li>
-                     <li><a href="https://documentation.spryker.com/docs/mg-cmsstorage#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsStorage module from version 1.* to version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-cmsgui#upgrading-from-version-4---to-version-5--" class="mr-link">Migrate the CmsGui module from version 4.* to version 5.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-cmspagesearch#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsPageSearch module from version 1.* to version 2.*</a></li>
-                <li>Enable the CMS Pages Glue API:</li>
-                <li><a href="https://documentation.spryker.com/docs/glue-api-cms-feature-integration-guide" class="mr-link">Integrate the CMS Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/content-items-feature-integration" class="mr-link">Integrate the Content Items feature</a></li>
-  </ul>
-        </div>
-        <!-- col3 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-red">
-                <li class="mr-title">Back Office User</li>
-                  <li><a href="https://documentation.spryker.com/docs/creating-a-cms-page" class="mr-link">Create a CMS page</a></li> 
-                  <li><a href="https://documentation.spryker.com/docs/managing-cms-pages" class="mr-link">Manage CMS pages</a></li> 
-                  <li><a href="https://documentation.spryker.com/docs/editing-cms-pages" class="mr-link">Edit CMS pages</a></li> 
-                  <li><a href="https://documentation.spryker.com/docs/managing-cms-page-versions" class="mr-link">Manage versions of a CMS page</a></li>
-            </ul>
-        </div>  
-</div>
-</div>
-    
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}
+
 ## See next
 
 * [CMS block](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html)
-

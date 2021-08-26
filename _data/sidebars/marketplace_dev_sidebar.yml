@@ -51,21 +51,18 @@ entries:
 
           - title: Marketplace Product Offer Prices feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
-          
+
           - title: Marketplace Inventory Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
           
-          - title: Marketplace Product feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html          
-
           - title: Marketplace Order Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
-          
+
           - title: Marketplace Return Management feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
 
           - title: Marketplace Shipment feature walkthrough
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shipment-feature-walkthrough.html  
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shipment-feature-walkthrough.html
 
           - title: Marketplace Promotions and Discounts feature walkthrough
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html
@@ -445,6 +442,6 @@ entries:
 
       - title: HowTos
         nested:
-          
+
           - title: "How-To: Create a new module with application"
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html

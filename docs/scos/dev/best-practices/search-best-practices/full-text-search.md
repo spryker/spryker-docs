@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/full-text-search
   - /docs/full-text-search
   - /docs/en/full-text-search
+  - /v6/docs/full-text-search
+  - /v6/docs/en/full-text-search  
+  - /v5/docs/full-text-search
+  - /v5/docs/en/full-text-search  
+  - /v4/docs/full-text-search
+  - /v4/docs/en/full-text-search  
+  - /v3/docs/full-text-search
+  - /v3/docs/en/full-text-search  
+  - /v2/docs/full-text-search
+  - /v2/docs/en/full-text-search  
+  - /v1/docs/full-text-search
+  - /v1/docs/en/full-text-search
 ---
 
 Full-text search is a feature where a user enters arbitrary text into a search field and then gets documents that are relevant for that query. It is normally combined with faceted navigation. In the example below, a user searched for “hammer” and then further filtered for hammer weights of 2000 gram and prices between 10€ and 50€:

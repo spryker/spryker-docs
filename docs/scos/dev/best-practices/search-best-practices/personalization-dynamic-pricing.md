@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/personalization-dymanic-pricing
   - /docs/personalization-dymanic-pricing
   - /docs/en/personalization-dymanic-pricing
+  - /v6/docs/personalization-dymanic-pricing
+  - /v6/docs/en/personalization-dymanic-pricing  
+  - /v5/docs/personalization-dymanic-pricing
+  - /v5/docs/en/personalization-dymanic-pricing  
+  - /v4/docs/personalization-dymanic-pricing
+  - /v4/docs/en/personalization-dymanic-pricing  
+  - /v3/docs/personalization-dymanic-pricing
+  - /v3/docs/en/personalization-dymanic-pricing  
+  - /v2/docs/personalization-dymanic-pricing
+  - /v2/docs/en/personalization-dymanic-pricing  
+  - /v1/docs/personalization-dymanic-pricing
+  - /v1/docs/en/personalization-dymanic-pricing
 ---
 
 Especially in businesses with a B2B focus, customers expect to get discounts after they have been using the service/website for a longer period of time. The search infrastructure should be able to handle such use cases and customers should be able to see their own discounted prices while browsing the catalog. Luckily, Elasticsearch enables us to extend basic filtering, aggregation and fetching functionalities with scripts that are executed within the document context and can be used instead of fixed document values.

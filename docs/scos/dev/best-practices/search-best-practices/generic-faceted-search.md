@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/generic-faceted-search
   - /docs/generic-faceted-search
   - /docs/en/generic-faceted-search
+  - /v6/docs/generic-faceted-search
+  - /v6/docs/en/generic-faceted-search  
+  - /v5/docs/generic-faceted-search
+  - /v5/docs/en/generic-faceted-search  
+  - /v4/docs/generic-faceted-search
+  - /v4/docs/en/generic-faceted-search  
+  - /v3/docs/generic-faceted-search
+  - /v3/docs/en/generic-faceted-search  
+  - /v2/docs/generic-faceted-search
+  - /v2/docs/en/generic-faceted-search  
+  - /v1/docs/generic-faceted-search
+  - /v1/docs/en/generic-faceted-search
 ---
 
 Faceted search (sometimes also called faceted navigation) allows users to navigate through a web site by applying filters for categories, attributes, price ranges and so on. It’s probably the most basic feature of a search and users expect this to work. Unfortunately, we observed that this is also one of the features that developers struggle with the most.
@@ -82,9 +94,9 @@ This requires a special treatment in the mapping, because otherwise Elasticsearc
    "facet-value": ["Fortis", "2000", "Red"]
  }
  ```
- 
+
  Aggregations would in this case provide incorrect results because the relation between the specific attribute name and it’s values is lost. Therefore, facet fields need to be marked as “`type`”: “`nested`” in the Elasticsearch mapping:
- 
+
  ```js
  "string_facets": {
   "type": "nested",

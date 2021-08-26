@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/naive-product-centric-approach
   - /docs/naive-product-centric-approach
   - /docs/en/naive-product-centric-approach
+  - /v6/docs/naive-product-centric-approach
+  - /v6/docs/en/naive-product-centric-approach  
+  - /v5/docs/naive-product-centric-approach
+  - /v5/docs/en/naive-product-centric-approach  
+  - /v4/docs/naive-product-centric-approach
+  - /v4/docs/en/naive-product-centric-approach  
+  - /v3/docs/naive-product-centric-approach
+  - /v3/docs/en/naive-product-centric-approach  
+  - /v2/docs/naive-product-centric-approach
+  - /v2/docs/en/naive-product-centric-approach  
+  - /v1/docs/naive-product-centric-approach
+  - /v1/docs/en/naive-product-centric-approach
 ---
 
 Finding products on e-commerce website can be tricky, even when you know exactly what you are looking for. Throughout this document, we will assume a customer wants to buy a hammer that weighs 2kg. A product that would meet his needs might be this “Fäustel” by Fortis:

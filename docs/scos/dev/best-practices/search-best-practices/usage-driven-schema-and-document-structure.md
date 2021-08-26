@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/usage-driven-schema-structure
   - /docs/usage-driven-schema-structure
   - /docs/en/usage-driven-schema-structure
+  - /v6/docs/usage-driven-schema-structure
+  - /v6/docs/en/usage-driven-schema-structure  
+  - /v5/docs/usage-driven-schema-structure
+  - /v5/docs/en/usage-driven-schema-structure  
+  - /v4/docs/usage-driven-schema-structure
+  - /v4/docs/en/usage-driven-schema-structure  
+  - /v3/docs/usage-driven-schema-structure
+  - /v3/docs/en/usage-driven-schema-structure  
+  - /v2/docs/usage-driven-schema-structure
+  - /v2/docs/en/usage-driven-schema-structure  
+  - /v1/docs/usage-driven-schema-structure
+  - /v1/docs/en/usage-driven-schema-structure
 ---
 
 Both the schema and the query generator should not need to know that there is such a thing as as the weight of a hammer. We will argue for a document structure and schema design that is not built around the original data but around the usage of attributes in search operations.

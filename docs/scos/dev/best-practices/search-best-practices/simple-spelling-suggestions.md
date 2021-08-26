@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/simple-spelling-suggestions
   - /docs/simple-spelling-suggestions
   - /docs/en/simple-spelling-suggestions
+  - /v6/docs/simple-spelling-suggestions
+  - /v6/docs/en/simple-spelling-suggestions  
+  - /v5/docs/simple-spelling-suggestions
+  - /v5/docs/en/simple-spelling-suggestions  
+  - /v4/docs/simple-spelling-suggestions
+  - /v4/docs/en/simple-spelling-suggestions  
+  - /v3/docs/simple-spelling-suggestions
+  - /v3/docs/en/simple-spelling-suggestions  
+  - /v2/docs/simple-spelling-suggestions
+  - /v2/docs/en/simple-spelling-suggestions  
+  - /v1/docs/simple-spelling-suggestions
+  - /v1/docs/en/simple-spelling-suggestions
 ---
 
 Spelling suggestions provide the users with alternative search terms when the search query does not return any results:

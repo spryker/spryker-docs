@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/coding-best-practices
   - /docs/coding-best-practices
   - /docs/en/coding-best-practices
+  - /v6/docs/oding-best-practices
+  - /v6/docs/en/oding-best-practices  
+  - /v5/docs/oding-best-practices
+  - /v5/docs/en/oding-best-practices  
+  - /v4/docs/oding-best-practices
+  - /v4/docs/en/oding-best-practices  
+  - /v3/docs/oding-best-practices
+  - /v3/docs/en/oding-best-practices  
+  - /v2/docs/oding-best-practices
+  - /v2/docs/en/oding-best-practices  
+  - /v1/docs/oding-best-practices
+  - /v1/docs/en/oding-best-practices
 ---
 
 In this article we outline a few common PHP coding problems and the recommended solutions.
@@ -24,6 +36,6 @@ To facilitate readability and debugging, it is recommended to use only one opera
 
 Long methods tend to have too many responsibilities, and are usually harder to understand and maintain than smaller ones. Therefore it is advisable to stick to the "single responsibility" principle, when a method is just a few lines long.
 
- 
+
 
 <!-- Last review date: Nov. 22nd, 2017--  by Mark Scherer -->

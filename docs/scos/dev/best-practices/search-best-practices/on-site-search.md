@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/search-design-patterns
   - /docs/search-design-patterns
   - /docs/en/search-design-patterns
+  - /v6/docs/search-design-patterns
+  - /v6/docs/en/search-design-patterns  
+  - /v5/docs/search-design-patterns
+  - /v5/docs/en/search-design-patterns  
+  - /v4/docs/search-design-patterns
+  - /v4/docs/en/search-design-patterns  
+  - /v3/docs/search-design-patterns
+  - /v3/docs/en/search-design-patterns  
+  - /v2/docs/search-design-patterns
+  - /v2/docs/en/search-design-patterns  
+  - /v1/docs/search-design-patterns
+  - /v1/docs/en/search-design-patterns
 ---
 
 ## Search Design Patterns for E-Commerce: Schema Structure, Data Driven Ranking & More
@@ -36,5 +48,3 @@ All examples are from early 2015 and have proven to work in Elasticsearch 1.x. S
 {% endinfo_block %}
 
 Slides: <http://project-a.github.io/on-site-search-design-patterns-for-e-commerce/>
-
-

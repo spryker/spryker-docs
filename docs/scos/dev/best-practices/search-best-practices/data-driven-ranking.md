@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/data-driven-ranking
   - /docs/data-driven-ranking
   - /docs/en/data-driven-ranking
+  - /v6/docs/data-driven-ranking
+  - /v6/docs/en/data-driven-ranking  
+  - /v5/docs/data-driven-ranking
+  - /v5/docs/en/data-driven-ranking  
+  - /v4/docs/data-driven-ranking
+  - /v4/docs/en/data-driven-ranking  
+  - /v3/docs/data-driven-ranking
+  - /v3/docs/en/data-driven-ranking  
+  - /v2/docs/data-driven-ranking
+  - /v2/docs/en/data-driven-ranking  
+  - /v1/docs/data-driven-ranking
+  - /v1/docs/en/data-driven-ranking
 ---
 
 When a query returns hundreds or thousands of results, it is absolutely crucial that the products at the top of the search result page are the ones that are most relevant to the user. Getting this right will lead to a higher conversion probability and increase customer happiness. Implementing proper data-driven ranking, however, is usually very tricky, because there might be large numbers of heuristics, which define what a good search result for a certain query is.
@@ -147,5 +159,5 @@ CREATE TABLE search_next.product_search_score AS
 
   FROM search_tmp.product_search_score_kpi;
   ```
-  
+
 But even without a data integration infrastructure in place, it should be quite easy to collect relevant metrics and translate them into scores. Since none of these numbers (except the random score) changes very quickly, it is sufficient if they are computed once a night.

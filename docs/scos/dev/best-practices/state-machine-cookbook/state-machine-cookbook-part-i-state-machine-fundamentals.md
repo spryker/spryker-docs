@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/state-machine-cookbook
   - /docs/state-machine-cookbook
   - /docs/en/state-machine-cookbook
+  - /v6/docs/state-machine-cookbook
+  - /v6/docs/en/state-machine-cookbook  
+  - /v5/docs/state-machine-cookbook
+  - /v5/docs/en/state-machine-cookbook  
+  - /v4/docs/state-machine-cookbook
+  - /v4/docs/en/state-machine-cookbook  
+  - /v3/docs/state-machine-cookbook
+  - /v3/docs/en/state-machine-cookbook  
+  - /v2/docs/state-machine-cookbook
+  - /v2/docs/en/state-machine-cookbook  
+  - /v1/docs/state-machine-cookbook
+  - /v1/docs/en/state-machine-cookbook
 ---
 
 State machines are a model of computation used to automate processes. In Spryker you can use the `OMS` module to automate the management of orders or the `StateMachine` module to automate other processes you define in your shop. Both behave similar, but the `OMS` one is a customized solution to manage the orders in a shop.
@@ -145,7 +157,7 @@ class PaymentIsCompleted extends AbstractPlugin implements ConditionInterface
     {
       //..
     }
-} 
+}
 ```
 
 #### Checking conditions through a cronjob

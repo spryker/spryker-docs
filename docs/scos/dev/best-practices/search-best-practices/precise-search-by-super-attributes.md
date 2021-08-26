@@ -7,6 +7,8 @@ redirect_from:
   - /2021080/docs/en/precise-search-by-super-attributes
   - /docs/precise-search-by-super-attributes
   - /docs/en/precise-search-by-super-attributes
+  - /v6/docs/precise-search-by-super-attributes
+  - /v6/docs/en/precise-search-by-super-attributes
 ---
 
 ## Task to achieve
@@ -72,7 +74,7 @@ Update ProductConcretePageSearchPublisher to load into ProductConcreteTransfers 
 
 Update ProductConcreteSearchDataMapper to use productAbstractMapExpanderPlugins
 
-Update query plugin used to point to concrete index, using ProductConcreteCatalogSearchQueryPlugin in CatalogDependencyProvider::createCatalogSearchQueryPlugin 
+Update query plugin used to point to concrete index, using ProductConcreteCatalogSearchQueryPlugin in CatalogDependencyProvider::createCatalogSearchQueryPlugin
 
 #### Downsides
 

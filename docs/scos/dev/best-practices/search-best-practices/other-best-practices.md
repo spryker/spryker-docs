@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/other-best-practices
   - /docs/other-best-practices
   - /docs/en/other-best-practices
+  - /v6/docs/other-best-practices
+  - /v6/docs/en/other-best-practices  
+  - /v5/docs/other-best-practices
+  - /v5/docs/en/other-best-practices  
+  - /v4/docs/other-best-practices
+  - /v4/docs/en/other-best-practices  
+  - /v3/docs/other-best-practices
+  - /v3/docs/en/other-best-practices  
+  - /v2/docs/other-best-practices
+  - /v2/docs/en/other-best-practices  
+  - /v1/docs/other-best-practices
+  - /v1/docs/en/other-best-practices
 ---
 
 Finally, we want to provide you with a list of some additional and potentially useful principles regarding the setup of an on-site search experience.
@@ -38,7 +50,7 @@ We do this because we think that different page types (for example brand pages, 
       "<p>Die Versandkosten innerhalb Deutschlands betragen 5,95€ pro Bestellung. Ab einem Warenwert von %freeShippingPrice% liefert Contorion versandkostenfrei.</p><p>Contorion.de liefert im Moment nur nach Deutschland.</p> <p>Die Versandkosten innerhalb Deutschlands betragen 5,95€ pro Bestellung. Ab einem Warenwert von %freeShippingPrice% liefert Contorion versandkostenfrei.</p><p>Contorion.de liefert im Moment nur nach Deutschland.</p>"
     ]
   }
-} 
+}
 ```
 
 Furthermore, our generic page-based schema allows for other search operations such as rendering a “staple page” (an overview of different variants of a product; often with their own facet navigation such as the aforementioned [Senkkopf-Holzbauschraube](https://www.contorion.de/befestigungstechnik/spax-universal-senkkopf-holzbauschraube-vg-SP84167377)):

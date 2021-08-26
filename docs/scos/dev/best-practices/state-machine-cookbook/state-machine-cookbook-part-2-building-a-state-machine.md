@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/state-machine-cookbook-2
   - /docs/state-machine-cookbook-2
   - /docs/en/state-machine-cookbook-2
+  - /v6/docs/tate-machine-cookbook-2
+  - /v6/docs/en/tate-machine-cookbook-2  
+  - /v5/docs/tate-machine-cookbook-2
+  - /v5/docs/en/tate-machine-cookbook-2  
+  - /v4/docs/tate-machine-cookbook-2
+  - /v4/docs/en/tate-machine-cookbook-2  
+  - /v3/docs/tate-machine-cookbook-2
+  - /v3/docs/en/tate-machine-cookbook-2  
+  - /v2/docs/tate-machine-cookbook-2
+  - /v2/docs/en/tate-machine-cookbook-2  
+  - /v1/docs/tate-machine-cookbook-2
+  - /v1/docs/en/tate-machine-cookbook-2
 ---
 
 {% info_block infoBox %}
@@ -491,6 +503,3 @@ The mapping between a submitted order and the corresponding state machine that i
 
 $order->setProcess('Prepayment');
 ```
-
-
-

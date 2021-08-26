@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/multi-term-auto-completion
   - /docs/multi-term-auto-completion
   - /docs/en/multi-term-auto-completion
+  - /v6/docs/multi-term-auto-completion
+  - /v6/docs/en/multi-term-auto-completion  
+  - /v5/docs/multi-term-auto-completion
+  - /v5/docs/en/multi-term-auto-completion  
+  - /v4/docs/multi-term-auto-completion
+  - /v4/docs/en/multi-term-auto-completion  
+  - /v3/docs/multi-term-auto-completion
+  - /v3/docs/en/multi-term-auto-completion  
+  - /v2/docs/multi-term-auto-completion
+  - /v2/docs/en/multi-term-auto-completion  
+  - /v1/docs/multi-term-auto-completion
+  - /v1/docs/en/multi-term-auto-completion
 ---
 
 Term completion is a feature where a user gets suggestions for search terms and matching search results as he types the query. We call a completion multi-term when it is able to combine terms from different attributes in an open-ended fashion. In the below example, a user entered “fortis” (a brand) and started typing “hammer” (a category):

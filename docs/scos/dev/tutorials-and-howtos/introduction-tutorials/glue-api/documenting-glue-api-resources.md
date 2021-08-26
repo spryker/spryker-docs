@@ -93,7 +93,7 @@ vendor/bin/console transfer:generate
 ```
 
 ### Resource Relationships
-Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-infrastructure.html#resource-relationships).
+Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-relationships).
 
 The resource relationships that already exist, are added to the documentation automatically. However, some resources are only available through the relationships, which means, they do not have their own resource route. In these cases, to facilitate implementation of clients based on the Glue REST API of your project, you can describe such relationships in the generated documentation. To describe how two resources are related to each other, add an additional annotation to the `ResourceRelationshipPlugin` that links the resources together. For example, in the code sample below `ResourceRelationshipPlugin` allows including items while requesting a cart, is expanded with the specification of the relationship attributes type:
 
@@ -110,7 +110,7 @@ The resource relationships that already exist, are added to the documentation au
 
 {% info_block infoBox "Info" %}
 
-For more information on `ResourceRelationshipPlugins`, see [Relationship Plugin](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-infrastructure.html#resource-relationships).
+For more information on `ResourceRelationshipPlugins`, see [Relationship Plugin](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-relationships).
 
 {% endinfo_block %}
 

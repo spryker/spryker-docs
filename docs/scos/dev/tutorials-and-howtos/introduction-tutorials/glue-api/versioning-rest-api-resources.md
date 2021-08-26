@@ -32,7 +32,7 @@ To implement versioning for a REST API resource, you need to do the following:
 To add versioning to a resource, the route plugin of the resource module needs to implement not only `ResourceRoutePluginInterface`, but also `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceVersionableInterface`. The latter exposes a method called `getVersion` that allows you to set the resource version.
 
 {% info_block warningBox %}
-For more information on route plugins, see the [Resource Routing](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-infrastructure.html#resource-routing
+For more information on route plugins, see the [Resource Routing](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-routing
 {% endinfo_block %} section in **Glue Infrastructure**.)
 
 Let us consider the following implementation of a route plugin:

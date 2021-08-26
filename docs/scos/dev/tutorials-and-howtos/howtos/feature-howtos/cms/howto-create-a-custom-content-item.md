@@ -38,7 +38,7 @@ To create a new content form plugin:
 
 * `getTermKey()` - returns a string displaying the term for this content type in database, e.g. `Foo`, `Foo List` or `Foo Query`. In database, a content type can have different term representations. Correspondingly, there are different ways of getting information about content. For example:
     * `Foo List` - product list IDs
-    * `Foo Query` - product query as part of SQL/ElasticSearch query. 
+    * `Foo Query` - product query as part of SQL/ElasticSearch query.
 
     This value will be displayed in the Back Office > **Content Management** > **Content Items** section.
 * `getForm()` - a form class name with a namespace which should be displayed in the *Content create* or *Content edit* pages.
@@ -121,7 +121,7 @@ class ContentFooTermForm extends AbstractType
     {
         return 'foo';
     }
-    
+
     **
      * @param \Symfony\Component\Form\FormBuilderInterface $builder
      * @param array $options
@@ -133,20 +133,20 @@ class ContentFooTermForm extends AbstractType
         $builder->add('name', TextType::class, [
             'label' => 'Name',
         ]);
-        
+
         $builder->add('city', TextType::class, [
             'label' => 'City',
         ]);
-        
+
         $builder->add('address', TextType::class, [
             'label' => 'Address',
         ]);
-        
+
         $builder->add('numberOfEmployees', IntegerType::class, [
             'label' => 'Number of employees',
         ]);
     }
-    
+
     /**
      * User this method if you need to provide custom template path or additional data to template
      *
@@ -175,13 +175,13 @@ After enabling the content form plugin, you will have your new content item data
 
 * `$contentKey` is generated automatically after content saving.
 
-* `$localeName` is an automatically provided locale by current Store. 
+* `$localeName` is an automatically provided locale by current Store.
 
-The method returns `ContentTypeContextTransfer` where `ContentTypeContextTransfer::$parameters` is the data saved by the form created in the previous section. 
+The method returns `ContentTypeContextTransfer` where `ContentTypeContextTransfer::$parameters` is the data saved by the form created in the previous section.
 
 ***
 To create a new Twig plugin:
-    
+
 1. Using `ContentTypeContextTransfer::$term` and `ContentTypeContextTransfer::$parameters`, fill in the properties of your new content transfer object, e.g. `ContentFooTransfer`, in `src/Shared/ContentFoo/Transfer/`.
 
 2. Create a new module, e. g. `src/Yves/ContentFooWidget`.
@@ -192,19 +192,19 @@ To create a new Twig plugin:
 
 {% info_block infoBox "Function parameters" %}
 
-The `$key` parameter is obligatory for the function, e.g. `function (string $key)`. 
+The `$key` parameter is obligatory for the function, e.g. `function (string $key)`.
 
 Optionally, you can add the `$templateIdentifier` parameter, e.g. `function (string $key, string $templateIdentifier)`.
 
 {% endinfo_block %}
 
-5. Register your Twig plugin in `\Pyz\Yves\Twig\TwigDependencyProvider::getTwigPlugins()`. 
+5. Register your Twig plugin in `\Pyz\Yves\Twig\TwigDependencyProvider::getTwigPlugins()`.
 
 Now you can use your plugin as a function in Twig files. If you’ve named your plugin `content_foo`, in a Twig file, the function will look like `{% raw %}{{{% endraw %} content_foo('content-key', 'big-header') {% raw %}}}{% endraw %}`.
 
 ## WYSIWYG Editor Plugin
 
-*CMS Block Glossary Edit* and *Placeholder Edit* pages contains WYSIWYG editor to put content into CMS block or page.  The **Content Item** drop-down menu in the WYSIWYG toolbar contains all the content items which you can add. See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages-and-blocks) for more details.
+*CMS Block Glossary Edit* and *Placeholder Edit* pages contains WYSIWYG editor to put content into CMS block or page.  The **Content Item** drop-down menu in the WYSIWYG toolbar contains all the content items which you can add. See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{site.version}}content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages-and-blocks) for more details.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/content-item-menu.png){height="" width=""}
 
@@ -216,7 +216,7 @@ You can find the method descriptions below:
 
 * `getTemplates()` returns an array of templates supported by your Twig plugin created in the previous section. If there are no supported templates defined, returns an empty array.
 
-* `getTwigFunctionTemplate()` returns a Twig expression that will be added into the content. 
+* `getTwigFunctionTemplate()` returns a Twig expression that will be added into the content.
 
 ```php
 <?php
@@ -246,7 +246,7 @@ class ContentFooContentGuiEditorPlugin extends AbstractPlugin implements Content
     {
         return [
             (new ContentWidgetTemplateTransfer())
-                ->setIdentifier('big-header') // $templateIdentifier from step 2 
+                ->setIdentifier('big-header') // $templateIdentifier from step 2
                 ->setName('Big Header'), // will be visible in UI.
             (new ContentWidgetTemplateTransfer())
                 ->setIdentifier('full-width')

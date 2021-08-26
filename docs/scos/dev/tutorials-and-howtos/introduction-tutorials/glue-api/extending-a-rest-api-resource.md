@@ -22,7 +22,7 @@ redirect_from:
 Spryker Glue REST API comes with a set of predefined APIs out of the box. You have the possibility to extend and customize them to your own project needs. For this purpose, you need to extend the Glue API modules that provide the relevant functionality on your project level.
 
 {% info_block infoBox "Before You Begin" %}
-The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-infrastructure.html#resource-modules
+The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-modules
 {% endinfo_block %} section in **Glue Infrastructure**.)
 
 ## Prerequisites:
@@ -39,7 +39,7 @@ If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/us
 Also, let us assume that you modified the product storage data to match your product requirements. For example, let's assume that you added the `manufacturerCountry` field to the product data not as an attribute, but as another field in the database.
 
 {% info_block warningBox %}
-For more details, see [Product Attributes](/docs/scos/dev/database-schema-guide/{{page.version}}/catalog-schema.html#product-attributes
+For more details, see [Database schema for product attributes](/docs/scos/user/features/product/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes)
 {% endinfo_block %} and [Extending the Database Schema](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).)
 
 Now, let us add this field to responses of the _Products API_ endpoints:
@@ -81,7 +81,7 @@ All transfer file names end with `.transfer.xml`.
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-spryks.html) to extend Glue transfers. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/back-end-development/glue-api/glue-spryks.html) to extend Glue transfers. Run the following command:  
 ```Bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
 ```
@@ -128,7 +128,7 @@ As you can see from the code, the mapper that you implemented extends the origin
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-spryks.html) to put data. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/back-end-development/glue-api/glue-spryks.html) to put data. Run the following command:  
 ```Bash
 console spryk:run AddGlueResourceMapper --mode=project --module=ResourcesRestApi --organization=Pyz  --subDirectory=Mapper --className=Resource
 ```
@@ -169,7 +169,7 @@ The same as the mapper, `ProductsRestApiFactory` extends the core factory and on
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-spryks.html) to override mapper initialization. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/back-end-development/glue-api/glue-spryks.html) to override mapper initialization. Run the following command:  
 ```Bash
 console spryk:run AddGlueMapperFactoryMethod --mode=project --module=ResourcesRestApi --organization=Pyz --subDirectory=Mapper --className=Resource
 ```

@@ -135,7 +135,7 @@ vendor/bin/console rest-api:build-request-validation-cache
 ```
 {% info_block infoBox %}
 
-Alternatively, use a [Spryk](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-spryks.html) for validation. Run the following command:
+Alternatively, use a [Spryk](/docs/scos/dev/back-end-development/glue-api/glue-spryks.html) for validation. Run the following command:
 ```Bash
 cconsole spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
 ```

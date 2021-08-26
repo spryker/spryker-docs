@@ -19,7 +19,7 @@ Every search engine comes along with its own functionalities and search approach
 
 In this tutorial, we will show you how to integrate the FACT-Finder (PHP) search platform. A system integrator development team could use this guide to integrate other platforms, taking into account the differences of the target search platform.
 
-The integration is following the concept described in [Search Migration Concept](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/search-migration-concept/search-migration-concept.html).
+The integration is following the concept described in [Search Migration Concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
 
 ## Challenge solving highlights
 To use FACT-Finder as a search data provider, you have to do the following:

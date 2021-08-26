@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/t-database-transactions
   - /docs/t-database-transactions
   - /docs/en/t-database-transactions
+  - /v6/docs/t-database-transactions
+  - /v6/docs/en/t-database-transactions
+  - /v5/docs/t-database-transactions
+  - /v5/docs/en/t-database-transactions
+  - /v4/docs/t-database-transactions
+  - /v4/docs/en/t-database-transactions
+  - /v3/docs/t-database-transactions
+  - /v3/docs/en/t-database-transactions
+  - /v2/docs/t-database-transactions
+  - /v2/docs/en/t-database-transactions
+  - /v1/docs/t-database-transactions
+  - /v1/docs/en/t-database-transactions
 ---
 
 <!--Used to be: http://spryker.github.io/tutorials/zed/database-transaction-handling/-->
@@ -21,7 +33,7 @@ To reduce boilerplate code and properly handle database transactions you can use
 To use database transactions in the `DatabaseTransactionHandlingExample` class:
 
 **Code sample:**
-    
+
 ```php
 <?php
 
@@ -31,7 +43,7 @@ class DatabaseTransactionHandlingExample
 {
 
     use TransactionTrait;
-    
+
     /**
      * @param string $fooName
      * @param \Bar[] $barCollection
@@ -44,7 +56,7 @@ class DatabaseTransactionHandlingExample
             return $this->executeCreateFooTransaction($fooName, $barCollection);
         });
     }
-    
+
     /**
      * @param string $fooName
      * @param \Bar[] $barCollection
@@ -56,7 +68,7 @@ class DatabaseTransactionHandlingExample
         $fooEntity = new Foo();
         $fooEntity->setFooName($fooName);
         $fooEntity->save();
-        
+
         foreach ($barCollection as $bar) {
             $bar->setFkFoo($fooEntity->getIdFoo());
             $bar->save();

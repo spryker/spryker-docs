@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/ht-create-register-provider-plugin
   - /docs/ht-create-register-provider-plugin
   - /docs/en/ht-create-register-provider-plugin
+  - /v6/docs/ht-create-register-provider-plugin
+  - /v6/docs/en/ht-create-register-provider-plugin
+  - /v5/docs/ht-create-register-provider-plugin
+  - /v5/docs/en/ht-create-register-provider-plugin
+  - /v4/docs/ht-create-register-provider-plugin
+  - /v4/docs/en/ht-create-register-provider-plugin
+  - /v2/docs/ht-create-register-provider-plugin
+  - /v2/docs/en/ht-create-register-provider-plugin
+  - /v1/docs/ht-create-register-provider-plugin
+  - /v1/docs/en/ht-create-register-provider-plugin
 ---
 
 {% info_block infoBox %}
@@ -26,16 +36,16 @@ namespace Pyz\Zed\Mail;
 
 ...
 
-public function provideBusinessLayerDependencies(Container $container) 
+public function provideBusinessLayerDependencies(Container $container)
 {
     ...
-    
+
     $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollectionAddInterface $mailProviderCollection) {
         $mailProviderCollection->addProvider(new YourProviderPlugin(), MailConfig::MAIL_TYPE_ALL);
-    
+
         return $mailProviderCollection;
     });
-    
+
     ...
 }
 ...
@@ -43,7 +53,7 @@ public function provideBusinessLayerDependencies(Container $container)
 
 By using `$container->extend()`, you get the `MailProviderCollectionAddInterface` where you can add your provider. The `MailProviderCollectionAddInterface::addProvider()` takes the provider you want to use as the first argument, and as the second argument, one `MailType` or a list of MailTypes which should be handled by this provider.
 
-As you can see in the example above, the provider is registered to all MailTypes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to only handle a specific MailType, use the `MailType` constant from your `MailTypePlugin` e.g. `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. See [HowTo - Creating and Registering a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-create-and-register-a-mailtypeplugin.html){target="_blank"} for information on how to create and register a MailTypePlugin.
+As you can see in the example above, the provider is registered to all MailTypes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to only handle a specific MailType, use the `MailType` constant from your `MailTypePlugin` e.g. `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. See [HowTo - Creating and Registering a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html){target="_blank"} for information on how to create and register a MailTypePlugin.
 
 ### Using More Than One Provider
 To send emails through different providers, register more than one provider to the `Mail` module. You can even create a scenario when all marketing emails go through provider A, and all others - through provider B. In *Register the Mail Provider* you already made use of this technique to register one provider to all types. The following example demonstrates how to wire up more than one provider:
@@ -54,18 +64,18 @@ namespace Pyz\Zed\Mail;
 
 ...
 
-public function provideBusinessLayerDependencies(Container $container) 
+public function provideBusinessLayerDependencies(Container $container)
 {
     ...
-    
+
     $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollectionAddInterface $mailProviderCollection) {
         $mailProviderCollection
             ->addProvider(new ProviderAPlugin(), [MailTypeA::MAIL_TYPE, MailTypeB::MAIL_TYPE])
             ->addProvider(new ProviderBPlugin(), MailTypeC::MAIL_TYPE);
-    
+
         return $mailProviderCollection;
     });
-    
+
     ...
 }
 ...

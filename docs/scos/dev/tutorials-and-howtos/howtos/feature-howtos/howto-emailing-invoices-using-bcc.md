@@ -8,9 +8,11 @@ redirect_from:
   - /2021080/docs/en/howto-emailing-invoices-using-bcc
   - /docs/howto-emailing-invoices-using-bcc
   - /docs/en/howto-emailing-invoices-using-bcc
+  - /v6/docs/howto-emailing-invoices-using-bcc
+  - /v6/docs/en/howto-emailing-invoices-using-bcc
 ---
 
-Every time you generate an[ invoice for your customer’s orders](/docs/scos/dev/features/{{page.version}}/order-management/order-management-feature-overview/invoice-generation-overview.html), it is sent to the customer’s email address. If you also need a copy of the invoice, you can include yourself or your employees to BCC recipients of the emails with the invoices. Since the copy is hidden, when customers receive the email, they do not see other recipients' email addresses. 
+Every time you generate an[ invoice for your customer’s orders](/docs/scos/user/features/{{site.version}}/order-management/order-management-feature-overview/invoice-generation-overview.html), it is sent to the customer’s email address. If you also need a copy of the invoice, you can include yourself or your employees to BCC recipients of the emails with the invoices. Since the copy is hidden, when customers receive the email, they do not see other recipients' email addresses.
 
 {% info_block infoBox "Info" %}
 
@@ -18,7 +20,7 @@ Currently, BCC is the only way to keep invoices for your reference, as for now, 
 
 {% endinfo_block %}
 
-To configure emailing BCC for the generated invoice, in `SalesInvoiceConfig.php` file, add the `getOrderInvoiceBcc()` method and specify email addresses and name of the recipient as shown in the example: 
+To configure emailing BCC for the generated invoice, in `SalesInvoiceConfig.php` file, add the `getOrderInvoiceBcc()` method and specify email addresses and name of the recipient as shown in the example:
 
 ```php
 namespace Pyz\Zed\SalesInvoice;

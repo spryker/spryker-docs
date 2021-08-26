@@ -8,17 +8,29 @@ redirect_from:
   - /2021080/docs/en/t-widgets-widget-plugins
   - /docs/t-widgets-widget-plugins
   - /docs/en/t-widgets-widget-plugins
+  - /v6/docs/t-widgets-widget-plugins
+  - /v6/docs/en/t-widgets-widget-plugins
+  - /v5/docs/t-widgets-widget-plugins
+  - /v5/docs/en/t-widgets-widget-plugins
+  - /v4/docs/t-widgets-widget-plugins
+  - /v4/docs/en/t-widgets-widget-plugins
+  - /v3/docs/t-widgets-widget-plugins
+  - /v3/docs/en/t-widgets-widget-plugins
+  - /v2/docs/t-widgets-widget-plugins
+  - /v2/docs/en/t-widgets-widget-plugins
+  - /v1/docs/t-widgets-widget-plugins
+  - /v1/docs/en/t-widgets-widget-plugins
 ---
 
-This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html). 
+This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html).
 
 ## How to Implement a Widget?
 Each widget implementation is supposed to be designed as components: considering reusability and being able to render them on different Pages.
 
 ### Step 1 - Implement the Widget Class
-    
+
 To implement a widget class, follow the detailed example below.
-    
+
 ```php
 <?php
 
@@ -74,7 +86,7 @@ src/Pyz/Yves/FooModule/Theme/default/views/foo-bar-widget/foo-bar-widget.twig
 {% raw %}{%{% endraw %} extends template('widget') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} define data = {
-    param1: _widget.param1, 
+    param1: _widget.param1,
     param2: _widget.param2 | default
 } {% raw %}%}{% endraw %}
 
@@ -99,12 +111,12 @@ A widget with a given set of parameters, called multiple times, in the same `htt
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use Pyz\Yves\FooModule\Widget\FooBarWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
 	/**
@@ -135,7 +147,7 @@ Widgets are placed and rendered in twig templates. The following examples show s
 ```json
 {% raw %}{%{% endraw %} widget 'FooBarWidget' use view('view1') only {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} widget 'FooBarWidget' use view('view2') only {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
@@ -144,12 +156,12 @@ Widgets are placed and rendered in twig templates. The following examples show s
 
 ```json
 {% raw %}{%{% endraw %} set color = 'red' {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} if widgetExists('FooBarWidgetPlugin') {% raw %}%}{% endraw %}
 	<div style="border:1px solid {% raw %}{{{% endraw %} color {% raw %}}}{% endraw %}">
 		{% raw %}{{{% endraw %} widget('FooBarWidgetPlugin', param1, param2) {% raw %}}}{% endraw %}
 	</div>
-{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}	
+{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
 **Widget rendering with additional HTML and context variables:**
@@ -197,19 +209,19 @@ Widgets are placed and rendered in twig templates. The following examples show s
 This section is valid only for projects which are running module `spryker/kernel` up to version **3.24.0**, exclusively. In version 3.24.0 of the `Kernel` module, the widget plugins were deprecated. In case you are running version 3.24.0 or later, refer to the previous section.
 {% endinfo_block %}
 
- Follow the steps below to implement a widget. 
+ Follow the steps below to implement a widget.
 
 ### Step 1 - Place Widget extensions
 
-In the module you are planning to extend, find the extension point in the twig templates and place the necessary twig widget function(s). See the [How to implement a Widget](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-) section.
+In the module you are planning to extend, find the extension point in the twig templates and place the necessary twig widget function(s). See the [How to implement a Widget](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-) section.
 
 @MyPage/views/foo/foo-bar.twig
 
 ```json
 <p>Some MyPage related content.</p>
- 
+
 {% raw %}{{{% endraw %} widget('MyWidgetPlugin', $param1, param2) {% raw %}}}{% endraw %}
- 
+
 <p>Some other MyPage related content.</p>
 ```
 
@@ -237,15 +249,15 @@ src/Pyz/Yves/MyPage/Dependency/Plugin/MyWidget/MyWidgetPluginInterface.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\MyPage\Dependency\Plugin\MyWidget;
- 
+
 use Spryker\Yves\Kernel\Dependency\Plugin\WidgetPluginInterface;
- 
+
 interface MyWidgetPluginInterface extends WidgetPluginInterface
 {
 	const NAME = 'MyWidgetPlugin';
- 
+
 	/**
 	 * @param string $myMandatoryParam
 	 * @param int|null $myOptionalParam
@@ -262,7 +274,7 @@ In the target widget module (MyWidget in the examples), you can implement the wi
 
 * `getName()` - returns the name of the widget as it's used in the template. Most cases you can return `static::NAME;` in the method when the name is defined in the interface.
 
-* `getTemplate()` - returns the template file path to renter the widget. 
+* `getTemplate()` - returns the template file path to renter the widget.
 
 * `initialize()` - initializes the rendering of the widget template, by processing the input parameters and providing parameters for the template to be rendered. Also, sub-widgets can be registered here.
 
@@ -272,12 +284,12 @@ In the target widget module (MyWidget in the examples), you can implement the wi
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\MyWidget\Plugin\MyPage;
- 
+
 use Pyz\Yves\MyPage\Dependency\Plugin\MyWidget\MyWidgetPluginInterface;
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
- 
+
 class MyWidgetPlugin extends AbstractWidgetPlugin implements MyWidgetPluginInterface
 {
 	/**
@@ -292,7 +304,7 @@ class MyWidgetPlugin extends AbstractWidgetPlugin implements MyWidgetPluginInter
 			->addParameter('myOptionalParam', $myOptionalParam)
 			->addParameter('myComputedParam', $this->getMyComputedParam());
 	}
- 
+
 	/**
 	 * @return string
 	 */
@@ -300,7 +312,7 @@ class MyWidgetPlugin extends AbstractWidgetPlugin implements MyWidgetPluginInter
 	{
 		return static::NAME;
 	}
- 
+
 	/**
 	 * @return string
 	 */
@@ -321,7 +333,7 @@ src/Pyz/Yves/MyWidget/Theme/default/views/my-widget/my-widget.twig
 {% raw %}{%{% endraw %} extends template('widget') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} define data = {
-    myMandatoryParam: _widget.myMandatoryParam, 
+    myMandatoryParam: _widget.myMandatoryParam,
     myOptionalParam: _widget.myOptionalParam | default,
     myComputedParam: _widget.myComputedParam
 } {% raw %}%}{% endraw %}
@@ -337,23 +349,23 @@ In the widget template, the parameters are accessible through the `_widget` twig
 
 There are three ways of activating a widget, depending on their scope where they need to be rendered:
 
-* [Activate a widget in a Controller action](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-in-a-controller-action)
-* [Activate a widget in another widget](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-in-another-widget)
-* [Activate a widget to be available globally](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-to-be-available-globally)
+* [Activate a widget in a Controller action](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-in-a-controller-action)
+* [Activate a widget in another widget](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-in-another-widget)
+* [Activate a widget to be available globally](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-to-be-available-globally)
 
 ### Activate a Widget in a Controller Action
 
-Most of the times when a Page needs extension, we need to extend a template that is rendered by a `Controller` action. In this case, the action need to return the `\Spryker\Yves\Kernel\View\View` object. 
+Most of the times when a Page needs extension, we need to extend a template that is rendered by a `Controller` action. In this case, the action need to return the `\Spryker\Yves\Kernel\View\View` object.
 
 This View object can define the data for the template of the controller to be rendered, the list of active widget plugins, and the template to render.
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\MyPage\Controller;
- 
+
 use SprykerShop\Yves\ShopApplication\Controller\AbstractController;
- 
+
 /**
  * @method \Pyz\Yves\MyPage\MyPageFactory getFactory()
  */
@@ -370,7 +382,7 @@ class FooController extends AbstractController
 			'@MyPage/views/foo/foo-bar.twig'
 		);
 	}
- 
+
 	/**
 	 * @return array
 	 */
@@ -389,30 +401,11 @@ When a controller action returns a View object, in the rendered twig template by
 
 ```php
 <?php
- 
-namespace Pyz\Yves\MyPage;
- 
-use Spryker\Yves\Kernel\AbstractFactory;
- 
-class MyPageFactory extends AbstractFactory
-{
-	/**
-	 * @return string[]
-	 */
-	public function getMyPageFooBarWidgetPlugins(): array
-	{
-		return $this->getProvidedDependency(MyPageDependencyProvider::PLUGIN_MY_PAGE_FOO_BAR_WIDGETS);
-	}
-}	
-```
 
-```php
-<?php
- 
 namespace Pyz\Yves\MyPage;
- 
+
 use Spryker\Yves\Kernel\AbstractFactory;
- 
+
 class MyPageFactory extends AbstractFactory
 {
 	/**
@@ -427,17 +420,36 @@ class MyPageFactory extends AbstractFactory
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\MyPage;
- 
+
+use Spryker\Yves\Kernel\AbstractFactory;
+
+class MyPageFactory extends AbstractFactory
+{
+	/**
+	 * @return string[]
+	 */
+	public function getMyPageFooBarWidgetPlugins(): array
+	{
+		return $this->getProvidedDependency(MyPageDependencyProvider::PLUGIN_MY_PAGE_FOO_BAR_WIDGETS);
+	}
+}
+```
+
+```php
+<?php
+
+namespace Pyz\Yves\MyPage;
+
 use Pyz\Yves\MyWidget\Plugin\MyPage\MyWidgetPlugin;
 use Spryker\Yves\Kernel\AbstractBundleDependencyProvider;
 use Spryker\Yves\Kernel\Container;
- 
+
 class ProductSetDetailPageDependencyProvider extends AbstractBundleDependencyProvider
 {
 	const PLUGIN_MY_PAGE_FOO_BAR_WIDGETS = 'PLUGIN_MY_PAGE_FOO_BAR_WIDGETS';
- 
+
 	/**
 	 * @param \Spryker\Yves\Kernel\Container $container
 	 *
@@ -446,10 +458,10 @@ class ProductSetDetailPageDependencyProvider extends AbstractBundleDependencyPro
 	public function provideDependencies(Container $container)
 	{
 		$container = $this->addMyPageFooBarWidgetPlugins($container);
- 
+
 		return $container;
 	}
- 
+
 	/**
 	 * @param \Spryker\Yves\Kernel\Container $container
 	 *
@@ -460,10 +472,10 @@ class ProductSetDetailPageDependencyProvider extends AbstractBundleDependencyPro
 		$container[self::PLUGIN_MY_PAGE_FOO_BAR_WIDGETS] = function () {
 			return $this->getMyPageFooBarWidgetPlugins();
 		};
- 
+
 		return $container;
 	}
- 
+
 	/**
 	 * @return string[]
 	 */
@@ -485,12 +497,12 @@ Those widgets that were activated in a controller are not available in other wid
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\MyWidget\Plugin\MyPage;
- 
+
 use Pyz\Yves\MyPage\Dependency\Plugin\MyWidget\MyWidgetPluginInterface;
 use Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin;
- 
+
 /**
  * @method \Pyz\Yves\MyWidget\MyPageWidget getFactory()
  */
@@ -507,7 +519,7 @@ class MyWidgetPlugin extends AbstractWidgetPlugin implements MyWidgetPluginInter
 		// activate list of sub-widgets
 		$this->addWidgets($this->getFactory()->getMyWidgetSubWidgets());
 	}
- 
+
 	// ...
 }
 ```
@@ -518,11 +530,11 @@ Widgets available globally are activated in a central place, in the dependency p
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
 	/**
@@ -536,4 +548,3 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 	}
 }
 ```
-

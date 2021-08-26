@@ -18,8 +18,8 @@ CMS templates are usually project specific. To create them, some Storefront desi
 
 ## CMS Page Template
 
-CMS page template is a [Twig](https://twig.symfony.com/) file that, when applied to a Storefront page, defines its design and layout. 
-To learn how the template is created, check the exemplary procedure below. 
+CMS page template is a [Twig](https://twig.symfony.com/) file that, when applied to a Storefront page, defines its design and layout.
+To learn how the template is created, check the exemplary procedure below.
 ***
 1. Create the Twig template - `src/Pyz/Shared/Cms/Theme/default/templates/contact_page.twig`:
 
@@ -39,7 +39,7 @@ To learn how the template is created, check the exemplary procedure below.
         <br>
     </div>
 ```
- 
+
 2. Define placeholders for translation:
 
 ```twig
@@ -48,7 +48,7 @@ To learn how the template is created, check the exemplary procedure below.
     <!-- CMS_PLACEHOLDER : "PlaceholderPhoneNr" -->
     <!-- CMS_PLACEHOLDER : "PlaceholderEmail" -->
     <!-- CMS_PLACEHOLDER : "PlaceholderStoreAddress" -->
-    
+
  <h1>{% raw %}{{{% endraw %} spyCms('PlaceholderContactPageHeader') {% raw %}}}{% endraw %} </h1>
     <div>
         <strong>{% raw %}{{{% endraw %} spyCms('PlaceholderContactHeader') {% raw %}}}{% endraw %} </strong> <br>
@@ -56,7 +56,7 @@ To learn how the template is created, check the exemplary procedure below.
         <strong>{% raw %}{{{% endraw %} spyCms('PlaceholderEmail') {% raw %}}}{% endraw %}  </strong> info@companyname.com <br>
         <strong>{% raw %}{{{% endraw %} spyCms('PlaceholderStoreAddress') {% raw %}}}{% endraw %}  
         </strong><br>
-      
+
         123 Demo Street<br>
         Demo City<br>
         1234<br>
@@ -65,58 +65,58 @@ To learn how the template is created, check the exemplary procedure below.
 
 The text in the defined placeholders will be replaced at runtime by the glossary keys assigned to them.
 
-A content manager can apply this template when [creating a CMS page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-a-cms-page.html) in the Back Office.
+A content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}content/pages/creating-a-cms-page.html) in the Back Office.
 
 ## Template with Slots
 
-[Template with slots](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html) is a Twig file that defines the layout of slots across a Storefront page and has at least one slot assigned. 
+[Template with slots](/docs/scos/user/features/{{site.version}}/cms/cms-feature-overview/templates-and-slots-overview.html) is a Twig file that defines the layout of slots across a Storefront page and has at least one slot assigned.
 
 ***
 **Create a template with slots:**
 
-1. Create a Twig template as described in [CMS Page Template](#cms-page-template). 
+1. Create a Twig template as described in [CMS Page Template](#cms-page-template).
 
-2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#slot-widget). 
+2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/user/features/{{site.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#slot-widget).
 
-3. [Import](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#correlation) section of **Templates & Slots Feature Overview**.
+3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/user/features/{{site.version}}/cms/cms-feature-overview/templates-and-slots-overview.html#correlation) section of **Templates & Slots Feature Overview**.
 
 Templates with slots are universal. In the Back Office, a content manager can:
 
-*     apply this template when [creating a CMS page](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/pages/creating-a-cms-page.html).
-*     apply this template when [creating a category](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html).
+*     apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}content/pages/creating-a-cms-page.html).
+*     apply this template when [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}catalog/category/creating-categories.html).
 
 {% info_block warningBox %}
 
-You can assign the template with slots to other page types only on a code level. 
+You can assign the template with slots to other page types only on a code level.
 
 {% endinfo_block %}
 
 ## CMS Block Template
 
-CMS block template is a Twig file that, when applied to a [CMS block](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html), defines its design and layout. 
+CMS block template is a Twig file that, when applied to a [CMS block](/docs/scos/user/features/{{site.version}}/cms/cms-feature-overview/cms-blocks-overview.html), defines its design and layout.
 
-Create the Twig template - `src/Pyz/Shared/CmsBlock/Theme/default/template//hello.twig`. 
+Create the Twig template - `src/Pyz/Shared/CmsBlock/Theme/default/template//hello.twig`.
 
 ```twig
 <!-- CMS_BLOCK_PLACEHOLDER : "helloBlockText" -->
 <div class="cms-block">
 	<h1>Hello World!</h1>
 	<p>{% raw %}{{{% endraw %} spyCmsBlockPlaceholder('helloBlockText') | raw {% raw %}}}{% endraw %}</p>
-</div>	
+</div>
 ```
- 
-A content manager can apply this template when [creating a CMS block](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-a-cms-block.html) in the Back Office.
+
+A content manager can apply this template when [creating a CMS block](/docs/scos/user/back-office-user-guides/{{site.version}}content/blocks/creating-a-cms-block.html) in the Back Office.
 
 ## Content Item Widget Template
 
 [Content item widget](https://documentation.spryker.com/2021080/docs/content-items-widgets-overview) template is a Twig file that defines the layout of the content item it renders on Storefront.
 
-By default, two content item widget templates are shipped per each content item: 
+By default, two content item widget templates are shipped per each content item:
 
 * Banner widget
 * Abstract Product List widget
-* Product Set widget 
-* File widget 
+* Product Set widget
+* File widget
 
 ***
 
@@ -138,7 +138,7 @@ Depending on the content item widget you create the template for, make sure to i
 
 * `{new-template}` - template name.
 * `{ModuleWidget}` - name of the respective Content Item Widget module.
-* `{template-folder}` - template folder name. Based on the content item widget, choose: 
+* `{template-folder}` - template folder name. Based on the content item widget, choose:
     * banner;
     * cms-product-abstract;
     * content-product-set;
@@ -157,11 +157,11 @@ Pyz/Yves/{ModuleWidget}/Twig/{ModuleWidgetTwigFunction}.php
 
 ```php
 namespace \Pyz\Yves\{ModuleWidget}\Twig;
- 
+
 class {ModuleWidgetTwigFunction} extends \SprykerShop\Yves\{ModuleWidget}\Twig\{ModuleWidgetTwigFunction}
 {
     protected const WIDGET_TEMPLATE_IDENTIFIER_NEW_TEMPLATE = 'new-template';
-     
+
     /**
     * @return array
     */
@@ -177,12 +177,12 @@ class {ModuleWidgetTwigFunction} extends \SprykerShop\Yves\{ModuleWidget}\Twig\{
 3. Override the method in the factory that creates the object of `{ModuleWidgetTwigFunction}`:
 
 Pyz/Yves/{ModuleWidget}/{ModuleWidget}Factory.php
-    
+
 ```php
 namespace \Pyz\Yves\{ModuleWidget};
- 
+
 use \Pyz\Yves\{ModuleWidget}\Twig\{ModuleWidgetTwigFunction};
- 
+
 class {ModuleWidget}Factory extends \SprykerShop\Yves\{ModuleWidget}\{ModuleWidget}Factory
 {
     /**
@@ -201,4 +201,3 @@ class {ModuleWidget}Factory extends \SprykerShop\Yves\{ModuleWidget}\{ModuleWidg
     }
 }
 ```
-

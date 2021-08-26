@@ -7,6 +7,18 @@ redirect_from:
   - /2021080/docs/en/t-zed-rest-api
   - /docs/t-zed-rest-api
   - /docs/en/t-zed-rest-api
+  - /v6/docs/t-zed-rest-api
+  - /v6/docs/en/t-zed-rest-api
+  - /v5/docs/t-zed-rest-api
+  - /v5/docs/en/t-zed-rest-api
+  - /v4/docs/t-zed-rest-api
+  - /v4/docs/en/t-zed-rest-api
+  - /v3/docs/t-zed-rest-api
+  - /v3/docs/en/t-zed-rest-api
+  - /v2/docs/t-zed-rest-api
+  - /v2/docs/en/t-zed-rest-api
+  - /v1/docs/t-zed-rest-api
+  - /v1/docs/en/t-zed-rest-api
 ---
 
 <!--used to be: http://spryker.github.io/challenge/zed-restapi/-->
@@ -52,7 +64,7 @@ Code snippets below are stripped of doc strings and comments to minimize footpri
 
 ### Step 1: Create a simple Zed Module with controller
 
-Create a new module Api in `Pyz/Zed` scope. 
+Create a new module Api in `Pyz/Zed` scope.
 
 It is a good practice to version an API, so create a controller `V1Controller` in this module. At this point, the module contains one file – the controller, and looks as follows:
 
@@ -108,7 +120,7 @@ class ApiBusinessFactory extends AbstractBusinessFactory
     protected function getBundleFacade($bundle)
     {
         $locator = $this->createContainer()->getLocator();
-        return $locator->$bundle()->facade(); 
+        return $locator->$bundle()->facade();
     }
     // This instantiates our business model and passes the facade inside it.
     public function createFacadeProxy($bundle)
@@ -128,7 +140,7 @@ Now implement the `__construct` method of `ApiEntry` to receive a facade and add
 class ApiEntry
 ...
     protected $wrappedFacade;
-    
+
     public function __construct(AbstractFacade $wrappedFacade)
     {
         $this->wrappedFacade = $wrappedFacade;
@@ -179,7 +191,7 @@ Now the controller should work, but will return empty values, we can start imple
 
 <details open>
 <summary>Code sample:</summary>
-    
+
 ```php
 <?php
 namespace Pyz\Zed\Api\Business\Model;
@@ -191,19 +203,19 @@ use ReflectionType;
 class ApiEntry
 {
     protected $wrappedFacade;
-    
+
     public function __construct(AbstractFacade $wrappedFacade)
     {
         $this->wrappedFacade = $wrappedFacade;
     }
-    
+
     public function getAnnotations()
     {
         $className = get_class($this->wrappedFacade); // Locator returns an instance, reflection needs a class name.
         $reflection = new ReflectionClass($className);
         return $this->getPublicInterfaceAnnotations($reflection);
     }
-    
+
     protected function getPublicInterfaceAnnotations(ReflectionClass $reflection)
     {
         $result = [];
@@ -228,7 +240,7 @@ class ApiEntry
 
         return $result;
     }
-    
+
     protected function annotateIncomingParameters(ReflectionMethod $method)
     {
         $result = [];

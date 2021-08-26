@@ -7,12 +7,22 @@ redirect_from:
   - /2021080/docs/en/versioning-rest-api-resources
   - /docs/versioning-rest-api-resources
   - /docs/en/versioning-rest-api-resources
+  - /v6/docs/versioning-rest-api-resources
+  - /v6/docs/en/versioning-rest-api-resources
+  - /v5/docs/versioning-rest-api-resources
+  - /v5/docs/en/versioning-rest-api-resources
+  - /v4/docs/versioning-rest-api-resources
+  - /v4/docs/en/versioning-rest-api-resources
+  - /v2/docs/versioning-rest-api-resources
+  - /v2/docs/en/versioning-rest-api-resources
+  - /v1/docs/versioning-rest-api-resources
+  - /v1/docs/en/versioning-rest-api-resources
 ---
 
 In the course of development of your REST APIs, you may need to change the data contracts of API resources. However, you can also have clients that rely on the existing contracts. To preserve backward compatibility for such clients, we recommend implementing a versioning system for REST API resources. In this case, each resource version has its own contract in terms of data, and various clients can request the exact resource versions they are designed for.
 
 {% info_block infoBox %}
-Resources provided by Spryker out of the box do not have a version. When developing resources, only new resources, attributes etc are added without removing anything, which ensures backward compatibility for all clients. </br>If necessary, you can implement versioning for built-in resources as well by [extending](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
+Resources provided by Spryker out of the box do not have a version. When developing resources, only new resources, attributes etc are added without removing anything, which ensures backward compatibility for all clients. </br>If necessary, you can implement versioning for built-in resources as well by [extending](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
 {% endinfo_block %} the corresponding resource module on your project level.)
 
 To implement versioning for a REST API resource, you need to do the following:
@@ -22,18 +32,18 @@ To implement versioning for a REST API resource, you need to do the following:
 To add versioning to a resource, the route plugin of the resource module needs to implement not only `ResourceRoutePluginInterface`, but also `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceVersionableInterface`. The latter exposes a method called `getVersion` that allows you to set the resource version.
 
 {% info_block warningBox %}
-For more information on route plugins, see the [Resource Routing](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-infrastructure.html#resource-routing
+For more information on route plugins, see the [Resource Routing](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-routing
 {% endinfo_block %} section in **Glue Infrastructure**.)
 
 Let us consider the following implementation of a route plugin:
 
 CustomerRestorePasswordResourceRoutePlugin.php
-    
+
 ```php
 <?php
- 
+
 namespace Spryker\Glue\CustomersRestApi\Plugin;
- 
+
 use Generated\Shared\Transfer\RestCustomerRestorePasswordAttributesTransfer;
 use Generated\Shared\Transfer\RestVersionTransfer;
 use Spryker\Glue\CustomersRestApi\CustomersRestApiConfig;
@@ -41,7 +51,7 @@ use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRouteCollect
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceVersionableInterface;
 use Spryker\Glue\Kernel\AbstractPlugin;
- 
+
 /**
  * @method \Spryker\Glue\CustomersRestApi\CustomersRestApiFactory getFactory()
  */
@@ -51,25 +61,25 @@ class CustomerRestorePasswordResourceRoutePlugin extends AbstractPlugin implemen
     {
         $resourceRouteCollection
             ->addPatch('patch', false);
- 
+
         return $resourceRouteCollection;
     }
- 
+
     public function getResourceType(): string
     {
         return CustomersRestApiConfig::RESOURCE_CUSTOMER_RESTORE_PASSWORD;
     }
- 
+
     public function getController(): string
     {
         return CustomersRestApiConfig::CONTROLLER_CUSTOMER_RESTORE_PASSWORD;
     }
- 
+
     public function getResourceAttributesClassName(): string
     {
         return RestCustomerRestorePasswordAttributesTransfer::class;
     }
- 
+
     public function getVersion(): RestVersionTransfer
     {
         return (new RestVersionTransfer())
@@ -184,4 +194,3 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 You can add as many plugins as required by your project needs.
-

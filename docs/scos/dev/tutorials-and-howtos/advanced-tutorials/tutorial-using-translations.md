@@ -7,6 +7,18 @@ redirect_from:
   - /2021080/docs/en/t-using-translations
   - /docs/t-using-translations
   - /docs/en/t-using-translations
+  - /v6/docs/t-using-translations
+  - /v6/docs/en/t-using-translations
+  - /v5/docs/t-using-translations
+  - /v5/docs/en/t-using-translations
+  - /v4/docs/t-using-translations
+  - /v4/docs/en/t-using-translations
+  - /v3/docs/t-using-translations
+  - /v3/docs/en/t-using-translations
+  - /v2/docs/t-using-translations
+  - /v2/docs/en/t-using-translations
+  - /v1/docs/t-using-translations
+  - /v1/docs/en/t-using-translations
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/yves/using-translations/-->

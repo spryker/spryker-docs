@@ -7,15 +7,25 @@ redirect_from:
   - /2021080/docs/en/url-handling-new-entity
   - /docs/url-handling-new-entity
   - /docs/en/url-handling-new-entity
+  - /v6/docs/url-handling-new-entity
+  - /v6/docs/en/url-handling-new-entity
+  - /v5/docs/url-handling-new-entity
+  - /v5/docs/en/url-handling-new-entity
+  - /v4/docs/url-handling-new-entity
+  - /v4/docs/en/url-handling-new-entity
+  - /v2/docs/url-handling-new-entity
+  - /v2/docs/en/url-handling-new-entity
+  - /v1/docs/url-handling-new-entity
+  - /v1/docs/en/url-handling-new-entity
 ---
 
 The following information describes how to handle URLs for other types of entities that Spryker core provides.
 
 ## Prerequisites
 
-* Before you begin, make sure the target entity is already in your database (the one to which you would like to assign URLs). In the examples below we'll call this entity `my_entity`. 
-* The next step is to run a working storage collector to export your entities into the key-value storage (Redis). 
-			
+* Before you begin, make sure the target entity is already in your database (the one to which you would like to assign URLs). In the examples below we'll call this entity `my_entity`.
+* The next step is to run a working storage collector to export your entities into the key-value storage (Redis).
+
 {% info_block infoBox %}
 To see how to create a new collector, see  Collector.
 {% endinfo_block %}
@@ -36,7 +46,7 @@ For example: `fk_resource_my_entity`
 2. The propel schema XML file should appear as follows:
 
 Pyz/Zed/MyBundle/Persistence/Propel/Schema/spy_url.schema.xml
-   
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Url\Persistence" package="src.Orm.Zed.Url.Persistence">
@@ -57,16 +67,16 @@ Pyz/Zed/MyBundle/Persistence/Propel/Schema/spy_url.schema.xml
 * `vendor/bin/console propel:install`
 
 ## Preparing URL Transfer Object
-Define a new property for `UrlTransfer`. 
+Define a new property for `UrlTransfer`.
 
 {% info_block infoBox %}
-The name of the new property should match the name of the newly added database column's name but must be `CamelCase` formatted. 
+The name of the new property should match the name of the newly added database column's name but must be `CamelCase` formatted.
 {% endinfo_block %}
 
 The transfer definition xml should appear as follows:
 
 Pyz/Shared/MyBundle/Transfer/my_bundle.transfer.xm
-    
+
 ```xml
 <?xml version="1.0"?>
 <transfers xmlns="spryker:transfer-01"
@@ -80,7 +90,7 @@ Pyz/Shared/MyBundle/Transfer/my_bundle.transfer.xm
     </transfers>
 ```
 
-To apply the change to the UrlTransfer run the following command: 
+To apply the change to the UrlTransfer run the following command:
 `vendor/bin/console transfer:generate`
 
 {% info_block infoBox %}
@@ -89,7 +99,7 @@ With the steps above you prepared both the database and the code to handle the U
 
 ## Using the URL Facade
 To manipulate URLs, the URL module's public API is used : `\Spryker\Zed\Url\Business\UrlFacade`.
-The methods there accept instances of `\Generated\Shared\Transfer\UrlTransfer`. 
+The methods there accept instances of `\Generated\Shared\Transfer\UrlTransfer`.
 The code snippet below demonstrates how to create a new URL for `my_entity`.
 
 ```php
@@ -109,7 +119,7 @@ public function createUrlForMyEntity($url, $idMyEntity, $idLocale)
         ->setUrl($url)
         ->setFkResourceMyEntity($idMyEntity)
         ->setFkLocale($idLocale);
-    
+
     return $this->urlFacade->createUrl($urlTransfer);
 }
 ```
@@ -132,9 +142,9 @@ This means that, if a `URL /foo` is linked to a `my_entity` record, then there m
 To create an instance of `ResourceCreatorInterface` that provides information to a controller to handles URLs for your custom entity and register the `ResourceCreator` in the `StorageRouter`, follow the example below:
 
 **Code sample**
-    
+
 <!-- Get the code sample used in Suite-->
-    
+
 ```php
 <?php
 namespace Pyz\Yves\MyBundle\Controller;
@@ -331,7 +341,7 @@ class CollectorFactory extends AbstractFactory
 ```
 
 ## Next Steps
-You should now be able to open the URLs in Yves for the new entities that already have assigned URLs and were collected to the key-value storage as described above. 
+You should now be able to open the URLs in Yves for the new entities that already have assigned URLs and were collected to the key-value storage as described above.
 
 Next, you can:
 

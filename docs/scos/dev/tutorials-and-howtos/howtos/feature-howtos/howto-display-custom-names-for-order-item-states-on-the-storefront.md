@@ -7,6 +7,8 @@ redirect_from:
   - /2021080/docs/en/howto-display-custom-names-for-order-item-states-on-the-storefront
   - /docs/howto-display-custom-names-for-order-item-states-on-the-storefront
   - /docs/en/howto-display-custom-names-for-order-item-states-on-the-storefront
+  - /v6/docs/howto-display-custom-names-for-order-item-states-on-the-storefront
+  - /v6/docs/en/howto-display-custom-names-for-order-item-states-on-the-storefront
 ---
 
 For the order items states on the Storefront, it is not always appropriate to display the states as they are in the state machine, as they do not make much sense for Buyers. For example, for the OMS *confirmed* state, you might want to display this sate as, for example, *waiting for shipment* for the Storefront users.
@@ -57,11 +59,10 @@ a. Click **Edit** in the *Actions* column. You are taken to the *Edit translatio
 
 b. Enter translations for the available locales and click **Save**. You are taken to the *Overview of Translation* page where you can see the translations of the order state for the Storefront.
 
-That’s it! Now, on the *Order Overview* and *Order History* pages on the Storefront, customers see the states that correspond to the values of the `display` parameter you set in .XML files of the respective payment methods and sub-processes. 
+That’s it! Now, on the *Order Overview* and *Order History* pages on the Storefront, customers see the states that correspond to the values of the `display` parameter you set in .XML files of the respective payment methods and sub-processes.
 
 {% info_block infoBox "your title goes here" %}
 
 If you delete the `display` parameter with its value, the OMS state, that is, the one specified in the `state name` parameter, is displayed on the Storefront.
 
 {% endinfo_block %}
-

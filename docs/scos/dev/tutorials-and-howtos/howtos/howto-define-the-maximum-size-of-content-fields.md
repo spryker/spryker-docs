@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/howto-define-the-maxiumum-size-of-content-fields
   - /docs/howto-define-the-maxiumum-size-of-content-fields
   - /docs/en/howto-define-the-maxiumum-size-of-content-fields
+  - /v6/docs/howto-define-the-maxiumum-size-of-content-fields
+  - /v6/docs/en/howto-define-the-maxiumum-size-of-content-fields
 ---
 
 By default CMS module doesn't specify the content field size. For MySQL and MariaDB, it is transferred to TEXT (65535 bytes), and, for PostgreSQL, it is transferred to TEXT (unlimited length).
@@ -28,7 +30,3 @@ For example, place the following into `src/Pyz/Zed/Cms/Persistence/Propel/Schema
 	</database>
 </div>
 ```
-
-
-
-

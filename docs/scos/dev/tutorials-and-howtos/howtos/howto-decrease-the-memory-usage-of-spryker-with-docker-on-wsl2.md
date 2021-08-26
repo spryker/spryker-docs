@@ -8,9 +8,11 @@ redirect_from:
   - /2021080/docs/en/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2
   - /docs/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2
   - /docs/en/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2
+  - /v6/docs/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2
+  - /v6/docs/en/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2
 ---
 
-When running Spryker with Docker on WSL2, the memory usage of VMmem can get significant, even if the memory usage of the instance is small. 
+When running Spryker with Docker on WSL2, the memory usage of VMmem can get significant, even if the memory usage of the instance is small.
 
 This HowTo explains how you can limit the memory usage of this process.
 
@@ -36,10 +38,8 @@ processors=2 # Sets the number of CPU cores WSL2 is allowed to use to 2.
 
     1. In the Start menu, enter *Services* and press *Enter*.
     2. Right-click the *LXSSMANAGER* service and select **Restart**.
-    
+
 
 ![refresh-lxssmanager-service](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+decrease+the+memory+usage+of+Spryker+with+Docker+on+WSL2/refresh-lxssmanager-service.png){height="" width=""}
 
 Now the VMmem memory usage should not exceed the specified limit.
-
-

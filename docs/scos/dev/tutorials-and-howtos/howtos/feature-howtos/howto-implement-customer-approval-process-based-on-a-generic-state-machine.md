@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/t-implement-customer-approval-process-on-state-machine
   - /docs/t-implement-customer-approval-process-on-state-machine
   - /docs/en/t-implement-customer-approval-process-on-state-machine
+  - /v6/docs/t-implement-customer-approval-process-on-state-machine
+  - /v6/docs/en/t-implement-customer-approval-process-on-state-machine
+  - /v5/docs/t-implement-customer-approval-process-on-state-machine
+  - /v5/docs/en/t-implement-customer-approval-process-on-state-machine
+  - /v4/docs/t-implement-customer-approval-process-on-state-machine
+  - /v4/docs/en/t-implement-customer-approval-process-on-state-machine
+  - /v3/docs/t-implement-customer-approval-process-on-state-machine
+  - /v3/docs/en/t-implement-customer-approval-process-on-state-machine
+  - /v2/docs/t-implement-customer-approval-process-on-state-machine
+  - /v2/docs/en/t-implement-customer-approval-process-on-state-machine
+  - /v1/docs/t-implement-customer-approval-process-on-state-machine
+  - /v1/docs/en/t-implement-customer-approval-process-on-state-machine
 ---
 
 ## Introduction
@@ -29,19 +41,19 @@ Customer Approve Process Database Schema
     <column name="fk_customer" type="INTEGER" required="true"/>
     <column name="fk_state_machine_item_state" type="INTEGER" required="false"/>
     <column name="fk_state_machine_process" type="INTEGER" required="false"/>
- 
+
     <foreign-key name="pyz_customer_approve_process_item-fk_customer" foreignTable="spy_customer">
         <reference local="fk_customer" foreign="id_customer"/>
     </foreign-key>
- 
+
     <foreign-key name="pyz_customer_approve_process_item-fk_state_machine_item_state" foreignTable="spy_state_machine_item_state">
         <reference local="fk_state_machine_item_state" foreign="id_state_machine_item_state"/>
     </foreign-key>
- 
+
     <foreign-key name="pyz_customer_approve_process_item-fk_state_machine_process" foreignTable="spy_state_machine_process">
         <reference local="fk_state_machine_process" foreign="id_state_machine_process"/>
     </foreign-key>
- 
+
     <id-method-parameter value="pyz_customer_approve_process_item_pk_seq"/>
 </table>
 ```
@@ -55,13 +67,13 @@ CustomerApproveProcessFacadeInterface
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CustomerApproveProcess\Business;
- 
+
 use Generated\Shared\Transfer\CustomerApproveProcessItemTransfer;
 use Generated\Shared\Transfer\CustomerTransfer;
 use Generated\Shared\Transfer\StateMachineItemTransfer;
- 
+
 interface CustomerApproveProcessFacadeInterface
 {
     /**
@@ -70,7 +82,7 @@ interface CustomerApproveProcessFacadeInterface
      * @return \Generated\Shared\Transfer\CustomerApproveProcessItemTransfer[]
      */
     public function getAllCustomerApproveProcessItems(): array;
- 
+
     /**
      * Retrieves approve process items by state ids. Used in `StateMachineHandlerPlugin`.
      *
@@ -79,7 +91,7 @@ interface CustomerApproveProcessFacadeInterface
      * @return \Generated\Shared\Transfer\CustomerApproveProcessItemTransfer[]
      */
     public function getCustomerApproveProcessItemsByStateIds(array $stateIds = []): array;
- 
+
     /**
      * Creates `SpyCustomerApproveProcessItem` entity based on `CustomerTransfer` (only customer id is used) and saves it into DB.
      *
@@ -88,7 +100,7 @@ interface CustomerApproveProcessFacadeInterface
      * @return \Generated\Shared\Transfer\CustomerApproveProcessItemTransfer
      */
     public function createCustomerApproveProcessStateMachineItem(CustomerTransfer $customerTransfer): CustomerApproveProcessItemTransfer;
- 
+
     /**
      * Updates `SpyCustomerApproveProcessItem` entity and saves it into DB. Used when we moving item through state machine.
      *
@@ -97,7 +109,7 @@ interface CustomerApproveProcessFacadeInterface
      * @return \Generated\Shared\Transfer\CustomerApproveProcessItemTransfer
      */
     public function updateCustomerApproveProcessStateMachineItem(StateMachineItemTransfer $stateMachineItemTransfer): CustomerApproveProcessItemTransfer;
- 
+
     /**
      * Deletes `SpyCustomerApproveProcessItem` entity from DB.
      *
@@ -130,15 +142,15 @@ CustomerApproveProcessStateMachineHandlerPlugin
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CustomerApproveProcess\Communication\Plugin;
- 
+
 use Generated\Shared\Transfer\StateMachineItemTransfer;
 use Pyz\Zed\CustomerApproveProcess\Communication\Plugin\Command\CustomerApproveProcessCommandPlugin;
 use Pyz\Zed\CustomerApproveProcess\Communication\Plugin\Condition\CustomerApproveProcessConditionPlugin;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Spryker\Zed\StateMachine\Dependency\Plugin\StateMachineHandlerInterface;
- 
+
 /**
  * @method \Pyz\Zed\CustomerApproveProcess\Business\CustomerApproveProcessFacadeInterface getFacade()
  */
@@ -155,7 +167,7 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
             'CustomerApproveProcess/CustomerApproveProcessCommand' => new CustomerApproveProcessCommandPlugin(),
         ];
     }
- 
+
     /**
      * List of condition plugins for this state machine for all processes.
      *
@@ -167,7 +179,7 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
             'CustomerApproveProcess/CustomerApproveProcessCondition' => new CustomerApproveProcessConditionPlugin(),
         ];
     }
- 
+
     /**
      * Name of state machine used by this handler.
      *
@@ -177,7 +189,7 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
     {
         return 'CustomerApproveProcess';
     }
- 
+
     /**
      * List of active processes used for this state machine
      *
@@ -189,7 +201,7 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
             'Process01',
         ];
     }
- 
+
     /**
      * Provide initial state name for item when state machine initialized. Using process name.
      *
@@ -203,7 +215,7 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
     {
         return 'new';
     }
- 
+
     /**
      * This method is called when state of item was changed, client can create custom logic for example update it's related table with new state id/name.
      * StateMachineItemTransfer:identifier is id of entity from implementor.
@@ -216,14 +228,14 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
     {
         $customerApproveProcessItemTransfer = $this->getFacade()
             ->updateCustomerApproveProcessStateMachineItem($stateMachineItemTransfer);
- 
+
         if ($customerApproveProcessItemTransfer->getIdCustomerApproveProcessItem()) {
             return true;
         }
- 
+
         return false;
     }
- 
+
     /**
      * This method should return all list of StateMachineItemTransfer, with (identifier, IdStateMachineProcess, IdItemState)
      *
@@ -238,7 +250,7 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
         foreach ($customerApproveProcessItems as $customerApproveProcessItem) {
             $stateMachineItems[] = $customerApproveProcessItem->getStateMachineItem();
         }
- 
+
         return $stateMachineItems;
     }
 }
@@ -249,13 +261,13 @@ CustomerApproveProcessCommandPlugin
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CustomerApproveProcess\Communication\Plugin\Command;
- 
+
 use Generated\Shared\Transfer\StateMachineItemTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Spryker\Zed\StateMachine\Dependency\Plugin\CommandPluginInterface;
- 
+
 /**
  * @method \Pyz\Zed\ExampleStateMachine\Business\ExampleStateMachineFacade getFacade()
  * @method \Pyz\Zed\ExampleStateMachine\Communication\ExampleStateMachineCommunicationFactory getFactory()
@@ -279,13 +291,13 @@ CustomerApproveProcessConditionPlugin
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CustomerApproveProcess\Communication\Plugin\Condition;
- 
+
 use Generated\Shared\Transfer\StateMachineItemTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Spryker\Zed\StateMachine\Dependency\Plugin\ConditionPluginInterface;
- 
+
 /**
  * @method \Pyz\Zed\ExampleStateMachine\Business\ExampleStateMachineFacade getFacade()
  * @method \Pyz\Zed\ExampleStateMachine\Communication\ExampleStateMachineCommunicationFactory getFactory()
@@ -301,7 +313,7 @@ class CustomerApproveProcessConditionPlugin extends AbstractPlugin implements Co
     public function check(StateMachineItemTransfer $stateMachineItemTransfer): bool
     {
         //Check your condition here.
-         
+
         return true;
     }
 }
@@ -318,9 +330,9 @@ Process01.xml
     xmlns="spryker:state-machine-01"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="spryker:state-machine-01 http://static.spryker.com/state-machine-01.xsd">
- 
+
     <process name="Process01" main="true">
- 
+
         <states>
             <state name="new" />
             <state name="waiting for approve" />
@@ -328,49 +340,49 @@ Process01.xml
             <state name="declined" />
             <state name="closed" />
         </states>
- 
+
         <events>
             <event name="ask for approve" onEnter="true" command="CustomerApproveProcess/CustomerApproveProcessCommand" />
             <event name="approve" manual="true" command="CustomerApproveProcess/CustomerApproveProcessCommand" />
             <event name="decline" manual="true" command="CustomerApproveProcess/CustomerApproveProcessCommand" />
             <event name="close" manual="true" command="CustomerApproveProcess/CustomerApproveProcessCommand" />
         </events>
- 
+
         <transitions>
             <transition happy="true">
                 <source>new</source>
                 <target>waiting for approve</target>
                 <event>ask for approve</event>
             </transition>
- 
+
             <transition happy="true" condition="CustomerApproveProcess/CustomerApproveProcessCondition">
                 <source>waiting for approve</source>
                 <target>approved</target>
                 <event>approve</event>
             </transition>
- 
+
             <transition>
                 <source>waiting for approve</source>
                 <target>declined</target>
                 <event>decline</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>approved</source>
                 <target>closed</target>
                 <event>close</event>
             </transition>
- 
+
             <transition>
                 <source>declined</source>
                 <target>closed</target>
                 <event>close</event>
             </transition>
- 
+
         </transitions>
- 
+
     </process>
- 
+
 </statemachine>
 ```
 
@@ -382,15 +394,15 @@ StateMachineItemsController
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CustomerApproveProcess\Communication\Controller;
- 
+
 use Generated\Shared\Transfer\CustomerTransfer;
 use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
 use Spryker\Zed\StateMachine\Business\StateMachineFacadeInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
- 
+
 /**
  * @method \Pyz\Zed\CustomerApproveProcess\Communication\CustomerApproveProcessCommunicationFactory getFactory()
  * @method \Pyz\Zed\CustomerApproveProcess\Business\CustomerApproveProcessFacadeInterface getFacade()
@@ -404,22 +416,22 @@ class StateMachineItemsController extends AbstractController
     {
         $customerApproveProcessStateItems = $this->getFacade()
             ->getAllCustomerApproveProcessItems();
- 
+
         $processedStateMachineItems = $this->getStateMachineFacade()
             ->getProcessedStateMachineItems(
                 $this->getStateMachineItems($customerApproveProcessStateItems)
             );
- 
+
         $manualEvents = $this->getStateMachineFacade()
             ->getManualEventsForStateMachineItems($processedStateMachineItems);
- 
+
         return [
             'customerApproveProcessItems' => $customerApproveProcessStateItems,
             'manualEvents' => $manualEvents,
             'stateMachineItems' => $this->createCustomerApproveProcessItemsLookupTable($processedStateMachineItems),
         ];
     }
- 
+
     /**
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
@@ -427,12 +439,12 @@ class StateMachineItemsController extends AbstractController
     {
         $customerTransfer = (new CustomerTransfer())
             ->setIdCustomer(mt_rand(1, 26));
- 
+
         $this->getFacade()->createCustomerApproveProcessStateMachineItem($customerTransfer);
- 
+
         return $this->redirectResponse('/customer-approve-process/state-machine-items/list');
     }
- 
+
     /**
      * @param \Symfony\Component\HttpFoundation\Request $request
      *
@@ -442,10 +454,10 @@ class StateMachineItemsController extends AbstractController
     {
         $idCustomerApproveProcessItem = $this->castId($request->query->get('id'));
         $this->getFacade()->deleteCustomerApproveProcessStateMachineItem($idCustomerApproveProcessItem);
- 
+
         return $this->redirectResponse('/customer-approve-process/state-machine-items/list');
     }
- 
+
     /**
      * @param \Generated\Shared\Transfer\CustomerApproveProcessItemTransfer[] $customerApproveProcessStateItems
      *
@@ -457,10 +469,10 @@ class StateMachineItemsController extends AbstractController
         foreach ($customerApproveProcessStateItems as $customerApproveProcessStateItem) {
             $stateMachineItems[] = $customerApproveProcessStateItem->getStateMachineItem();
         }
- 
+
         return $stateMachineItems;
     }
- 
+
     /**
      * @param \Generated\Shared\Transfer\StateMachineItemTransfer[] $stateMachineItems
      *
@@ -472,10 +484,10 @@ class StateMachineItemsController extends AbstractController
         foreach ($stateMachineItems as $stateMachineItemTransfer) {
             $lookupIndex[$stateMachineItemTransfer->getIdentifier()] = $stateMachineItemTransfer;
         }
- 
+
         return $lookupIndex;
     }
- 
+
     /**
      * @return \Spryker\Zed\StateMachine\Business\StateMachineFacadeInterface
      */
@@ -492,12 +504,12 @@ transfer.xml
 
 ```html
 {% raw %}{%{% endraw %} extends '@Cms/Layout/layout.twig' {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} set widget_title = 'Customer Approve Process State Machine' {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block head_title widget_title {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} block section_title widget_title {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
     <a href="/customer-approve-process/state-machine-items/add-item">Add item</a>  <br />
     <table class="table table-striped table-bordered table-hover gui-table-data dataTable">

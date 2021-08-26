@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/t-new-relic-monitoring
   - /docs/t-new-relic-monitoring
   - /docs/en/t-new-relic-monitoring
+  - /v6/docs/t-new-relic-monitoring
+  - /v6/docs/en/t-new-relic-monitoring
+  - /v5/docs/t-new-relic-monitoring
+  - /v5/docs/en/t-new-relic-monitoring
+  - /v4/docs/t-new-relic-monitoring
+  - /v4/docs/en/t-new-relic-monitoring
+  - /v3/docs/t-new-relic-monitoring
+  - /v3/docs/en/t-new-relic-monitoring
+  - /v2/docs/t-new-relic-monitoring
+  - /v2/docs/en/t-new-relic-monitoring
+  - /v1/docs/t-new-relic-monitoring
+  - /v1/docs/en/t-new-relic-monitoring
 ---
 
 ## Installing the PHP agent
@@ -38,14 +50,14 @@ Enter the license key  and follow the instructions:
 Once the installation is finished,  check/modify the following files: a mapping default fpm (web) transaction to the default Yves, and the console commands (non-web) to the default Zed.
 
 /etc/php/7.2/cli/conf.d/newrelic.ini
-    
+
 ```bash
 newrelic.appname = "YVES-DE (environment)"
 newrelic.framework = "no_framework"
 ```
-    
+
 /etc/php/7.2/fpm/conf.d/newrelic.ini
-    
+
 ```bash
 newrelic.appname = "ZED-DE (environment)"
 newrelic.framework = "no_framework"
@@ -61,14 +73,14 @@ newrelic.transaction_tracer.enabled = false
 The same is for the `vhost` configuration of php parameters.
 
 /etc/php/7.2/fpm/pool.d/environment-yves.conf
-    
+
 ```php
 php_admin_value[newrelic.appname] = "YVES-DE (environment)"
 php_admin_value[newrelic.framework] = "no_framework"
 ```
 
 /etc/php/7.2/fpm/pool.d/environment-zed.conf
-    
+
 ```php
 php_admin_value[newrelic.appname] = "ZED-DE (environment)"
 php_admin_value[newrelic.framework] = "no_framework"
@@ -84,5 +96,5 @@ $ sudo /etc/init.d/newrelic-daemon status
 
 To enable or migrate New Relic packages, check the following tutorial:
 
-* [Migration Guide - Monitoring](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-monitoring.html)
-* [New Relic](/docs/scos/dev/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic.html)
+* [Migration Guide - Monitoring](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-monitoring.html)
+* [New Relic](/docs/scos/user/technology-partners/{{site.version}}/operational-tools-monitoring-legal-etc/new-relic.html)

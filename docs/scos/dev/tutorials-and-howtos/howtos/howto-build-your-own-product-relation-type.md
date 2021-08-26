@@ -7,6 +7,16 @@ redirect_from:
   - /2021080/docs/en/ht-build-product-relation
   - /docs/ht-build-product-relation
   - /docs/en/ht-build-product-relation
+  - /v6/docs/ht-build-product-relation
+  - /v6/docs/en/ht-build-product-relation
+  - /v5/docs/ht-build-product-relation
+  - /v5/docs/en/ht-build-product-relation
+  - /v4/docs/ht-build-product-relation
+  - /v4/docs/en/ht-build-product-relation
+  - /v2/docs/ht-build-product-relation
+  - /v2/docs/en/ht-build-product-relation
+  - /v1/docs/ht-build-product-relation
+  - /v1/docs/en/ht-build-product-relation
 ---
 
 {% info_block infoBox %}
@@ -54,8 +64,8 @@ class RelationNewDataProvider implements ProductRelationDataProviderInterface
 ```
 
 ## Yves
-By default, the demoshop provides a carousel type javascript component which renders related products. 
-This component can be added with a twig product_relation(type, parameters, title, templatePath) function. 
+By default, the demoshop provides a carousel type javascript component which renders related products.
+This component can be added with a twig product_relation(type, parameters, title, templatePath) function.
 
 The type is a string which maps to a specific data provider and provides custom data when used, like related-product, up-selling.
 
@@ -68,7 +78,7 @@ It accepts the following arguments:
 | `title` | Is the title displayed in the carousel component. |
 | `templatePath` | Is the path to the template for rendering the carousel component.</br>For example: `@ProductRelation/partial/product_relation_carousel.twig`. |
 
-Each type has a data provider. This data provider reads data from redis and sends it to the template. 
+Each type has a data provider. This data provider reads data from redis and sends it to the template.
 
 {% info_block warningBox %}
 You can use `RelatedProductsDataProvider` or `UpSellingDataProvider` as sample implementations.

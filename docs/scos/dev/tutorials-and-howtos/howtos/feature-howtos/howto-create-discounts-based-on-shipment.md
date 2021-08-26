@@ -8,12 +8,18 @@ redirect_from:
   - /2021080/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
   - /docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
   - /docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
+  - /v6/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
+  - /v6/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
+  - /v5/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
+  - /v5/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
+  - /v4/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
+  - /v4/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
 ---
 
 The HowTo guide provides steps on how to:
 
 * activate a discount rule based on a shipment carrier, a shipment method or a shipment price.
-* add a shipment pre-check plugin to checkout 
+* add a shipment pre-check plugin to checkout
 
 ## Activate a Discount Rule Based on a Shipment Carrier
 
@@ -86,9 +92,9 @@ Then, add the  `\Spryker\Zed\ShipmentCheckoutConnector\Communication\Plugin\Chec
 <?php
 
 namespace Pyz\Zed\Checkout;
-	
+
 	use Spryker\Zed\ShipmentCheckoutConnector\Communication\Plugin\Checkout\ShipmentCheckoutPreCheckPlugin;
-	
+
 	class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 	{
 	    /**
@@ -103,5 +109,5 @@ namespace Pyz\Zed\Checkout;
 	              new ShipmentCheckoutPreCheckPlugin()
 	          ];
 	      }
-	}	
+	}
 ```

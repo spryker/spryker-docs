@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/t-customer-import
   - /docs/t-customer-import
   - /docs/en/t-customer-import
+  - /v6/docs/t-customer-import
+  - /v6/docs/en/t-customer-import
+  - /v5/docs/t-customer-import
+  - /v5/docs/en/t-customer-import
+  - /v4/docs/t-customer-import
+  - /v4/docs/en/t-customer-import
+  - /v3/docs/t-customer-import
+  - /v3/docs/en/t-customer-import
+  - /v2/docs/t-customer-import
+  - /v2/docs/en/t-customer-import
+  - /v1/docs/t-customer-import
+  - /v1/docs/en/t-customer-import
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/import-customers/-->
@@ -21,7 +33,7 @@ Create the `CustomerInstaller` class under the `src/Pyz/Zed/Customer/Business/In
 Place the following code in the `CustomerInstaller` class:
 
 **Code sample:**
-    
+
 ```php
 <?php
 

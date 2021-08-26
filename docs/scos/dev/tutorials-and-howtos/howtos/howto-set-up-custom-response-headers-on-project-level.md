@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/howto-set-up-custom-response-headers-on-project-level
   - /docs/howto-set-up-custom-response-headers-on-project-level
   - /docs/en/howto-set-up-custom-response-headers-on-project-level
+  - /v6/docs/howto-set-up-custom-response-headers-on-project-level
+  - /v6/docs/en/howto-set-up-custom-response-headers-on-project-level
 ---
 
 This HowTo will teach you how to create customer response headers in your Spryker project. We use a header that allows playing full-screen videos in Chrome is used as an example.
@@ -44,5 +46,4 @@ $response = new \Symfony\Component\HttpFoundation\Response();
 $response->headers->set('Feature-Policy', 'fullscreen *');
 ```
 
-You should now be able to see the video on the full screen. 
-
+You should now be able to see the video on the full screen.

@@ -7,6 +7,18 @@ redirect_from:
   - /2021080/docs/en/t-twig-extensions
   - /docs/t-twig-extensions
   - /docs/en/t-twig-extensions
+  - /v6/docs/t-twig-extensions
+  - /v6/docs/en/t-twig-extensions
+  - /v5/docs/t-twig-extensions
+  - /v5/docs/en/t-twig-extensions
+  - /v4/docs/t-twig-extensions
+  - /v4/docs/en/t-twig-extensions
+  - /v3/docs/t-twig-extensions
+  - /v3/docs/en/t-twig-extensions
+  - /v2/docs/t-twig-extensions
+  - /v2/docs/en/t-twig-extensions
+  - /v1/docs/t-twig-extensions
+  - /v1/docs/en/t-twig-extensions
 ---
 
 This article will teach you to implement a Twig extension. For the sake of an example, we’ll build a filter which can be used for displaying prices.
@@ -28,13 +40,13 @@ To implement the filter, add the logic to a dedicated class in the module you’
 ```php
 <?php
 namespace Pyz\Service\ExampleBundle\Plugin\Twig\Filters;
- 
+
 class PriceFilter
 {
     const DECIMALS = 2;
- 
+
     const DIVIDER = 100;
- 
+
     /**
      * @return string
      */
@@ -43,7 +55,7 @@ class PriceFilter
         // here can be more logic to get the used currency
         return '&euro;';
     }
- 
+
     /**
      * @return string
      */
@@ -77,7 +89,7 @@ class ServiceFactory extends AbstractServiceFactory
     {
         return new PriceFilter();
     }
- 
+
 }
 ```
 
@@ -86,7 +98,7 @@ class ServiceFactory extends AbstractServiceFactory
 ```php
 <?php
 namespace Pyz\Service\ExampleBundle;
- 
+
 class PriceFilterService extends AbstractService implements PriceFilterServiceInterface
 {
     /**
@@ -98,7 +110,7 @@ class PriceFilterService extends AbstractService implements PriceFilterServiceIn
     {
         return $this->getFactory()->createPriceFilter()->getConvertedPrice($price);
     }
- 
+
 }
 ```
 
@@ -110,7 +122,7 @@ Having implemented the filter, you have to add the Twig extension. To do so, cre
 ```php
 <?php
 namespace Pyz\Service\ExampleBundle\Plugin\Twig;
- 
+
 use Spryker\Service\Twig\Plugin\AbstractTwigExtensionPlugin;
 use Spryker\Shared\Twig\TwigFilter;
 
@@ -165,4 +177,3 @@ Now, the Twig extension is ready to be used in the Twig templates.
 {% raw %}{{{% endraw %} 100|myFilter {% raw %}}}{% endraw %}
 ```
 An input of `100` will be output as `1.00 &euro`.
-

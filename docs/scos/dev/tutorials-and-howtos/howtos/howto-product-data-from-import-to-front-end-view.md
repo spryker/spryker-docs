@@ -7,6 +7,16 @@ redirect_from:
   - /2021080/docs/en/ht-product-data-import-frontend
   - /docs/ht-product-data-import-frontend
   - /docs/en/ht-product-data-import-frontend
+  - /v6/docs/ht-product-data-import-frontend
+  - /v6/docs/en/ht-product-data-import-frontend
+  - /v5/docs/ht-product-data-import-frontend
+  - /v5/docs/en/ht-product-data-import-frontend
+  - /v4/docs/ht-product-data-import-frontend
+  - /v4/docs/en/ht-product-data-import-frontend
+  - /v2/docs/ht-product-data-import-frontend
+  - /v2/docs/en/ht-product-data-import-frontend
+  - /v1/docs/ht-product-data-import-frontend
+  - /v1/docs/en/ht-product-data-import-frontend
 ---
 
 {% info_block warningBox "Product Customization" %}

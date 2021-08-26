@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/sending-an-email
   - /docs/sending-an-email
   - /docs/en/sending-an-email
+  - /v6/docs/sending-an-email
+  - /v6/docs/en/sending-an-email
 ---
 
 The following example represents a real-world scenario: `CustomerRegistration`.
@@ -36,21 +38,21 @@ class Customer extends SprykerCustomer
      */
     protected function sendRegistrationToken(CustomerTransfer $customerTransfer)
     {
-        // Create a MailTransfer instance which is 
+        // Create a MailTransfer instance which is
         // used for further processing
         $mailTransfer = new MailTransfer();
-        
-        // Set the mail type which is used for the 
+
+        // Set the mail type which is used for the
         // internal mapping e.g. which mail provider
         // should send this mail
         $mailTransfer->setType(CustomerRegistrationMailTypePlugin::MAIL_TYPE);
-        
+
         // Set the CustomerTransfer to the MailTransfer
-        // this can be any Transfer object which is 
+        // this can be any Transfer object which is
         // needed in the Mail
         $mailTransfer->setCustomer($customerTransfer);
-        
-        // Set the LocaleTransfer which should be used 
+
+        // Set the LocaleTransfer which should be used
         // for e.g. translation inside your templates
         $mailTransfer->setLocale($customerTransfer->getLocale());
 
@@ -101,7 +103,7 @@ All MailTransfer’s need at least to know which mail type (nothing more than a 
 A minimalistic example could look like this:
 
 ```php
-protected function sendRegistrationToken() 
+protected function sendRegistrationToken()
 {
     $mailTransfer = new MailTransfer();
     $mailTransfer->setType(YourMailTypePlugin::MAIL_TYPE);
@@ -110,10 +112,10 @@ protected function sendRegistrationToken()
 ```
 ## 2. Creating a MailTypePlugin
 
-Now, create the `MailType` plugin for this example. See [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-create-and-register-a-mailtypeplugin.html) for more information on creating a MailTypePlugin:
+Now, create the `MailType` plugin for this example. See [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html) for more information on creating a MailTypePlugin:
 
 **Code sample:**
-    
+
 ```php
 <?php
 
@@ -231,7 +233,7 @@ When the plugin is created, it should be registered in `MailDependencyProvider`:
 <?php
         ...
         $container->extend(self::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
-            .... 
+            ....
             $mailCollection->add(new CustomCustomerRegistrationMailTypePlugin());
 
             return $mailCollection
@@ -267,19 +269,19 @@ A string is used as a key of the translation. The `MailBuilder` internally does 
 ```php
 <?php
 namespace Spryker\Zed\Mail\Business\Model\Mail\Builder;
-    
+
     ...
-    
+
     protected function setSubject($subject, array $data = [])
     {
         $subject = $this->translate($subject, $data);
-        
+
         $this->getMailTransfer()->setSubject($subject);
-        
+
         return $this;
     }
     ...
-    
+
     protected function translate($keyName, array $data = [])
     {
         $localeTransfer = $this->getLocaleTransfer();
@@ -303,7 +305,7 @@ In your `MailType` plugin, you can use the `orderReference` from the given `Orde
 protected function setSubject(MailBuilderInterface $mailBuilder)
 {
     $orderTransfer = $mailBuilder->getMailTransfer()->getOrder();
-    
+
     $mailBuilder->setSubject(
         'mail.order.shipped.subject',
         [

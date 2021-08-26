@@ -8,6 +8,12 @@ redirect_from:
   - /2021080/docs/en/ht-integrate-and-use-precise-decimal-numbers
   - /docs/ht-integrate-and-use-precise-decimal-numbers
   - /docs/en/ht-integrate-and-use-precise-decimal-numbers
+  - /v6/docs/ht-integrate-and-use-precise-decimal-numbers
+  - /v6/docs/en/ht-integrate-and-use-precise-decimal-numbers
+  - /v5/docs/ht-integrate-and-use-precise-decimal-numbers
+  - /v5/docs/en/ht-integrate-and-use-precise-decimal-numbers
+  - /v4/docs/ht-integrate-and-use-precise-decimal-numbers
+  - /v4/docs/en/ht-integrate-and-use-precise-decimal-numbers
 ---
 
 The article provides information on how to install and work with precise decimal objects.
@@ -21,7 +27,7 @@ Benefits of using decimal numbers are as follows:
 * Supporting arithmetic, comparing, rounding, and casting operations.
 * Representing objects instead of strings.
 * Supporting exponential representation of the value.
-* Being immutable: the operations construct a new decimal value and the value of the original decimal stays unchangeable. 
+* Being immutable: the operations construct a new decimal value and the value of the original decimal stays unchangeable.
 
 ## Installation
 To install the `{% raw %}{{{% endraw %}decimal-object{% raw %}}}{% endraw %}` library, composer can be used. For more information, see the [Decimal Object](https://github.com/spryker/decimal-object) documentation.
@@ -134,7 +140,7 @@ The table provides additional information about exceptions that may occur when w
 | **add(), subtract(), multiply(), divide(), mod()** | `InvalidArgumentException` | Thrown if the given value is not a **decimal**, **float**, **string**, or **integer**. |
 | **divide()** | `DivisionByZeroError` | Thrown if dividing by 0. |
 
-### Comparing operations 
+### Comparing operations
 Decimal objects can be compared to the given values to check the equal or relative ordering of these values. You can determine whether the new decimal is positive or negative, equal or greater/less than a specified one.
 
 1. **equals():** Returns *true* if the decimal value equals the specified value, otherwise *false*.
@@ -219,7 +225,7 @@ $result = $decimalOne->compareTo($decimalTwo); //-1
 ### Rounding operations
 The rounding operations return a new decimal object value that rounds up or down to the original decimal value. The following methods can be used in the rounding mode for decimal objects:
 
-1. **round():** Returns a rounded version of the given decimal value. 
+1. **round():** Returns a rounded version of the given decimal value.
 
 {% info_block warningBox "Note" %}
 Rounds follow the rules of mathematics.

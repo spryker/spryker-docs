@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/t-create-table-view
   - /docs/t-create-table-view
   - /docs/en/t-create-table-view
+  - /v6/docs/t-create-table-view
+  - /v6/docs/en/t-create-table-view
+  - /v5/docs/t-create-table-view
+  - /v5/docs/en/t-create-table-view
+  - /v4/docs/t-create-table-view
+  - /v4/docs/en/t-create-table-view
+  - /v3/docs/t-create-table-view
+  - /v3/docs/en/t-create-table-view
+  - /v2/docs/t-create-table-view
+  - /v2/docs/en/t-create-table-view
+  - /v1/docs/t-create-table-view
+  - /v1/docs/en/t-create-table-view
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/create-table-view/-->
@@ -22,7 +34,7 @@ This tutorial explains how to retrieve data from the database and render it in a
 Create the `ProductTable` class under the `src/Pyz/Zed/HelloWorld/Communication/Table` folder:
 
 **Code sample:**
-    
+
 ```php
 <?php
 

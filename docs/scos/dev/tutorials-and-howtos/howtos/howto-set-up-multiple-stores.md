@@ -8,13 +8,15 @@ redirect_from:
   - /2021080/docs/en/howto-set-up-multiple-stores
   - /docs/howto-set-up-multiple-stores
   - /docs/en/howto-set-up-multiple-stores
+  - /v6/docs/howto-set-up-multiple-stores
+  - /v6/docs/en/howto-set-up-multiple-stores
 ---
 
 With the Spryker Commerce OS, you can create multiple stores for different scenarios that suit your business needs. The multi-store setup is very versatile and can be customized to your needs. For example, you can:
 
 * Build one store that services multiple countries and languages or set up a different store for each region.
 * Share abstract products, discounts, and other logics and code between stores or separate your setup for each store.
-* Define separate search preferences to create an entirely different set of rankings, rules, and settings per store (for example, a date format or a currency). 
+* Define separate search preferences to create an entirely different set of rankings, rules, and settings per store (for example, a date format or a currency).
 * Set up the default store for your application.
 
 If you set up multiple stores that represent different countries of the shop, you might choose the following approaches:
@@ -62,7 +64,7 @@ stores['DE'] = [
     ]
   ];
   ```
-  
+
 * Set up shared configuration for common settings, for example, a timezone:
 
 ```php
@@ -84,7 +86,7 @@ stores['DE'] = [
     ]
   ];
   ```
-  
+
 * For each store, specify the locales that need to be supported:
 
 ```php
@@ -95,8 +97,8 @@ stores['DE'] = [
        'de' => 'de_DE',
     ],
  ```
- See [HowTo - Set up stores with multiple locales](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-stores-with-multiple-locales.html) for details on how to configure stores with multiple locales.
- 
+ See [HowTo - Set up stores with multiple locales](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html) for details on how to configure stores with multiple locales.
+
  * Specify currency and country for the store you configure:
  ```php
  <?php
@@ -186,4 +188,4 @@ return 'DE';
 
 ## 4. Verification
 
-Once done, you can check the list of the created stores in the Back Office, in [**Administration > Stores**](https://documentation.spryker.com/2021080/docs/stores-reference-information-201911).	
+Once done, you can check the list of the created stores in the Back Office, in [**Administration > Stores**](https://documentation.spryker.com/2021080/docs/stores-reference-information-201911).

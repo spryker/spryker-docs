@@ -8,9 +8,15 @@ redirect_from:
   - /2021080/docs/en/ht-import-delivery-methods-linked-to-store
   - /docs/ht-import-delivery-methods-linked-to-store
   - /docs/en/ht-import-delivery-methods-linked-to-store
+  - /v6/docs/ht-import-delivery-methods-linked-to-store
+  - /v6/docs/en/ht-import-delivery-methods-linked-to-store
+  - /v5/docs/ht-import-delivery-methods-linked-to-store
+  - /v5/docs/en/ht-import-delivery-methods-linked-to-store
+  - /v4/docs/ht-import-delivery-methods-linked-to-store
+  - /v4/docs/en/ht-import-delivery-methods-linked-to-store
 ---
 
-In addition to creating and managing delivery methods in the Back Office <!-- link -->, you can also import them with the stores assigned from a .CSV file. 
+In addition to creating and managing delivery methods in the Back Office <!-- link -->, you can also import them with the stores assigned from a .CSV file.
 
 By default, the data is stored to the `/ShipmentDataImport/data/import/delivery_method_store.csv` file that should contain the following columns:
 

@@ -7,6 +7,16 @@ redirect_from:
   - /2021080/docs/en/documenting-glue-api-resources
   - /docs/documenting-glue-api-resources
   - /docs/en/documenting-glue-api-resources
+  - /v6/docs/documenting-glue-api-resources
+  - /v6/docs/en/documenting-glue-api-resources
+  - /v5/docs/documenting-glue-api-resources
+  - /v5/docs/en/documenting-glue-api-resources
+  - /v4/docs/documenting-glue-api-resources
+  - /v4/docs/en/documenting-glue-api-resources
+  - /v2/docs/documenting-glue-api-resources
+  - /v2/docs/en/documenting-glue-api-resources
+  - /v1/docs/documenting-glue-api-resources
+  - /v1/docs/en/documenting-glue-api-resources
 ---
 
 To help developers understand and use the public API of your project, you need to cover it with complete and up-to-date documentation. Spryker Glue provides the possibility to generate it automatically with the help of the **DocumentationGeneratorRestApi** Module. It extracts information on your REST API endpoints directly from their implementation. It also adds the possibility to provide additional information on endpoints, such as their purpose, usage details, request parameters (e.g. in headers, paths, queries, or cookies), etc.
@@ -14,7 +24,7 @@ To help developers understand and use the public API of your project, you need t
 The resulting document is a full description of your REST API following the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification) (formerly known as Swagger Document Format). It can be viewed, edited and consumed with the help of such tools as [Swagger Tools](https://swagger.io/), [Postman](https://www.getpostman.com/) etc.
 
 {% info_block warningBox %}
-REST API endpoints shipped by Spryker will be covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html
+REST API endpoints shipped by Spryker will be covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-reference.html
 {% endinfo_block %}.)
 
 ## Prerequisites
@@ -41,7 +51,7 @@ After installation, open the file `src/Pyz/Zed/DocumentationGeneratorRestApi/Doc
 | `APPLICATION_PROJECT_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **project** level. | `/Glue/%1$s/Controller/` |
 | `APPLICATION_CORE_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **vendor** level. | `/*/*/src/*/Glue/%1$s/Controller/` |
 
-For details on REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#4--create-a-resource-controller) in the **Implementing a REST API Resource** article.
+For details on REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#4--create-a-resource-controller) in the **Implementing a REST API Resource** article.
 
 ## 2. Test Run
 To make sure that the documentation generator is working properly, run the following command in the console:
@@ -64,7 +74,7 @@ If the `restRequestParameter` attribute is not present for a field, the default 
 A response is generated using all properties of a transfer object. Below, you can see an example definition of a request transfer object:
 
 auth_rest_api.transfer.xml
-    
+
 ```xml
 <transfer name="RestAccessTokensAttributes">
     <property name="username" type="string" restRequestParameter="required" /> <!-- field is included in the specification and required -->
@@ -83,7 +93,7 @@ vendor/bin/console transfer:generate
 ```
 
 ### Resource Relationships
-Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-infrastructure.html#resource-relationships).
+Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-relationships).
 
 The resource relationships that already exist, are added to the documentation automatically. However, some resources are only available through the relationships, which means, they do not have their own resource route. In these cases, to facilitate implementation of clients based on the Glue REST API of your project, you can describe such relationships in the generated documentation. To describe how two resources are related to each other, add an additional annotation to the `ResourceRelationshipPlugin` that links the resources together. For example, in the code sample below `ResourceRelationshipPlugin` allows including items while requesting a cart, is expanded with the specification of the relationship attributes type:
 
@@ -97,10 +107,10 @@ The resource relationships that already exist, are added to the documentation au
  class CartItemsByQuoteResourceRelationshipPlugin extends AbstractPlugin implements ResourceRelationshipPluginInterface
  {
  ```
- 
+
 {% info_block infoBox "Info" %}
 
-For more information on `ResourceRelationshipPlugins`, see [Relationship Plugin](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/glue-infrastructure.html#resource-relationships). 
+For more information on `ResourceRelationshipPlugins`, see [Relationship Plugin](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-relationships).
 
 {% endinfo_block %}
 
@@ -113,7 +123,7 @@ In addition to requests and responses, you can also supply additional informatio
 Each controller has `getAction`, `postAction`, `patchAction`, or `deleteAction` functions, each providing functionality for the respective REST verbs (GET, POST, PATCH, DELETE). In the PHP-DOC blocks of such functions, you can use a new type of annotations: `@Glue`. The annotations use JSON-like format as follows:
 
 **View sample**
-    
+
 ```php
 /**
  * @Glue({
@@ -158,7 +168,7 @@ The annotation keys are described below:
 | `isEmptyResponse` | When set to **true**, indicates that the HTTP method does not have a response body. | Do not use this annotation for the DELETE method. It has an empty response body by default.	 |
 
 **Example 1: GET endpoint that returns a single resource**
-    
+
 ```php
 /**
  * @Glue({
@@ -182,7 +192,7 @@ public function getAction(RestRequestInterface $restRequest): RestResponseInterf
 ```
 
 **Example 2: POST endpoint with an optional header**
-    
+
 ```php
 /**
  * @Glue({
@@ -219,4 +229,3 @@ vendor/bin/console rest-api:generate:documentation
 
 ## Result
 When the command completes, you should see a specification file generated in the directory and with the filename as you configured in step **2. Configuration**. By default, it is `src/Pyz/Generated/Glue/Specification/spryker_rest_api.schema.yml`. The specification will contain all REST API endpoints configured in Glue, both on the global and project levels, along with data models for all requests and responses. You can upload the file to [Swagger Editor](https://editor.swagger.io/) to get a visual representation of your API or use it in tools like Postman (with the OpenAPI v3 support) for development purposes.
-

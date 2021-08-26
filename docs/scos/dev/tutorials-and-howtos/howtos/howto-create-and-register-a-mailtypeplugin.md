@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/ht-mail-create-mailtype-plugin
   - /docs/ht-mail-create-mailtype-plugin
   - /docs/en/ht-mail-create-mailtype-plugin
+  - /v6/docs/ht-make-product-shown-on-frontend-by-url
+  - /v6/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v5/docs/ht-make-product-shown-on-frontend-by-url
+  - /v5/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v4/docs/ht-make-product-shown-on-frontend-by-url
+  - /v4/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v2/docs/ht-make-product-shown-on-frontend-by-url
+  - /v2/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v1/docs/ht-make-product-shown-on-frontend-by-url
+  - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
 ---
 
 {% info_block infoBox %}
@@ -34,7 +44,7 @@ use Spryker\Zed\Mail\Dependency\Plugin\MailTypePluginInterface;
 class YourMailTypePlugin extends AbstractPlugin implements MailTypePluginInterface
 {
     const MAIL_TYPE = 'name of your mail';
-    
+
     /**
      * @return string
      */
@@ -42,7 +52,7 @@ class YourMailTypePlugin extends AbstractPlugin implements MailTypePluginInterfa
     {
         return static::MAIL_TYPE;
     }
-    
+
     /**
      * @param \Spryker\Zed\Mail\Business\Model\Mail\Builder\MailBuilderInterface $mailBuilder
      *
@@ -57,9 +67,9 @@ class YourMailTypePlugin extends AbstractPlugin implements MailTypePluginInterfa
             ->setSender($mailBuilder)
             ->setRecipient($mailBuilder);
     }
-    
+
     ...
-    
+
 }
 ```
 
@@ -72,16 +82,16 @@ namespace Pyz\Zed\Mail;
 
 ...
 
-public function provideBusinessLayerDependencies(Container $container) 
+public function provideBusinessLayerDependencies(Container $container)
 {
     ...
-    
+
     $container->extend(self::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
         $mailCollection->add(new YourMailTypePlugin());
-    
+
         return $mailCollection;
     }
-    
+
     ...
 }
 ...

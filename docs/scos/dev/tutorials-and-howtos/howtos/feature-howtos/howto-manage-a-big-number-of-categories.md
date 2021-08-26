@@ -7,6 +7,16 @@ redirect_from:
   - /2021080/docs/en/ht-manage-a-big-number-of-categories
   - /docs/ht-manage-a-big-number-of-categories
   - /docs/en/ht-manage-a-big-number-of-categories
+  - /v6/docs/ht-manage-a-big-number-of-categories
+  - /v6/docs/en/ht-manage-a-big-number-of-categories
+  - /v5/docs/ht-manage-a-big-number-of-categories-201903
+  - /v5/docs/en/ht-manage-a-big-number-of-categories-201903
+  - /v4/docs/ht-manage-a-big-number-of-categories-201903
+  - /v4/docs/en/ht-manage-a-big-number-of-categories-201903
+  - /v3/docs/ht-manage-a-big-number-of-categories-201903
+  - /v3/docs/en/ht-manage-a-big-number-of-categories-201903
+  - /v2/docs/ht-manage-a-big-number-of-categories-201903
+  - /v2/docs/en/ht-manage-a-big-number-of-categories-201903
 ---
 
 ## Preface
@@ -38,4 +48,3 @@ composer require "spryker/category-gui":"^1.0.0"
     </category>
 </config>
 ```
-

@@ -7,12 +7,21 @@ redirect_from:
   - /2021080/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
   - /docs/t-interacting-with-third-party-payment-providers-via-glue-api
   - /docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
+  - /v6/docs/t-interacting-with-third-party-payment-providers-via-glue-api
+  - /v6/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
+  - /v5/docs/t-interacting-with-third-party-payment-providers-via-glue-api
+  - /v5/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
+  - /v4/docs/t-interacting-with-third-party-payment-providers-via-glue-api
+  - /v4/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
+  - /v3/docs/t-interacting-with-third-party-payment-providers-via-glue-api
+  - /v3/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
+  
 ---
 
 The checkout process of Spryker Glue API can be leveraged to involve third parties in the process of order confirmation. This can be required, for example, when the method of payment selected by the user requires additional steps to complete the purchase. These can include, but not limited to, card validation, processing a bank transfer, etc.
 {% info_block infoBox %}
 
-For details, see [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html).
+For details, see [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html).
 
 {% endinfo_block %}
 In this tutorial, you will find out how to invoke third parties in the API payment process.
@@ -40,7 +49,7 @@ First, we need to implement a plugin that maps the checkout response and fills i
 The plugin must implement the **CheckoutResponseMapperPluginInterface**. Using the the `mapRestCheckoutResponseTransferToRestCheckoutResponseAttributesTransfer` function of the interface, you can set the redirect URL and specify whether it is an internal or external redirect.
 
 **Sample implementation**
-   
+
 ```PHP
 <?php
 
@@ -89,12 +98,12 @@ To help you understand which payments need to be processed, you can use the opti
 
 {% info_block infoBox %}
 
-For details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#UpdatingPaymentData).
+For details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html#UpdatingPaymentData).
 
 {% endinfo_block %}
 
 **Sample implementation**
-   
+
 ```PHP
 <?php
 

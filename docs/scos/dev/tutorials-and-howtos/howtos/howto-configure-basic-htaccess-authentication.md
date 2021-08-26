@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/howto-configure-basic-htaccess-authentication
   - /docs/howto-configure-basic-htaccess-authentication
   - /docs/en/howto-configure-basic-htaccess-authentication
+  - /v6/docs/howto-configure-basic-htaccess-authentication
+  - /v6/docs/en/howto-configure-basic-htaccess-authentication
 ---
 
 This document describes how to configure basic htaccess authentication for the Storefront and the Back Office.
@@ -34,7 +36,7 @@ x-frontend-auth: &frontend-auth
         users:
             - username: {secure_username} # Replace the placeholder and the brackets with the actual username
               password: {secure_password} # Replace the placeholder and the brackets with the actual password
-``` 
+```
 
 2. In the same `deploy.*.yml`, define the endpoints that should be protected by adding `<<: *frontend-auth` to each desired endpoint as follows:
 

@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/tutorial-architecture-walkthrough-scos
   - /docs/tutorial-architecture-walkthrough-scos
   - /docs/en/tutorial-architecture-walkthrough-scos
+  - /v6/docs/tutorial-architecture-walkthrough-scos
+  - /v6/docs/en/tutorial-architecture-walkthrough-scos
+  - /v5/docs/tutorial-architecture-walkthrough-scos
+  - /v5/docs/en/tutorial-architecture-walkthrough-scos
+  - /v4/docs/tutorial-architecture-walkthrough-scos
+  - /v4/docs/en/tutorial-architecture-walkthrough-scos
+  - /v2/docs/tutorial-architecture-walkthrough-scos
+  - /v2/docs/en/tutorial-architecture-walkthrough-scos
+  - /v1/docs/tutorial-architecture-walkthrough-scos
+  - /v1/docs/en/tutorial-architecture-walkthrough-scos
 ---
 
 {% info_block infoBox %}
@@ -21,7 +31,7 @@ We will implement a very simple functionality in the back-end application to rev
 * Build a **HelloSpryker** module in Zed that will render the "Hello Spryker!" string in reverse order "!rekyrpS olleH" on the screen.
 * Build a **HelloSpryker** module in Yves that communicates with Zed using the Client to retrieve the same reversed string "!rekyrpS olleH"  and shows on a webpage in the shop.
 * Add Zed persistence layer in **HelloSpryker** module to store and get the reversed string to and from the database.
-* Move the functionality that returns the reversed string to a new module (*StringFormat*), then provide the string to the HelloSpryker module. 
+* Move the functionality that returns the reversed string to a new module (*StringFormat*), then provide the string to the HelloSpryker module.
 
 {% info_block infoBox "Info" %}
 This means building a dependency from the HelloSpryker module to the StringFormat one.
@@ -40,10 +50,10 @@ A new module is simply a new folder.
     3. Create a new controller called IndexController. This controller has an action that returns only "HelloSpryker!" for now:
     ```php
     namespace Pyz\Zed\HelloSpryker\Communication\Controller;
-								
+
     use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
     use Symfony\Component\HttpFoundation\Request;
- 
+
     class IndexController extends AbstractController
     {
 	    /**
@@ -79,9 +89,9 @@ As reversing a string belongs to the business logic, you need to build a Busines
 Following that, first build the facade class, and don't forget the facade interface:
 ```php
 namespace Pyz\Zed\HelloSpryker\Business;
- 
+
 use Spryker\Zed\Kernel\Business\AbstractFacade;
- 
+
 class HelloSprykerFacade extends AbstractFacade implements HelloSprykerFacadeInterface
 {
 	// Your code goes here
@@ -91,10 +101,10 @@ class HelloSprykerFacade extends AbstractFacade implements HelloSprykerFacadeInt
 Second, add the factory:
 ```php
 namespace Pyz\Zed\HelloSpryker\Business;
- 
+
 use Pyz\Zed\HelloSpryker\Business\Model\StringReverser;
 use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
- 
+
 class HelloSprykerBusinessFactory extends AbstractBusinessFactory
 {
 	// Your code goes here
@@ -140,7 +150,7 @@ It's time to hook things together.
     {
 	    $originalString = "Hello Spryker!";
 	    $reversedString = $this->getFacade()->reverseString($originalString);
-     
+
 	    return ['string' => $reversedString];
     }		
     ```
@@ -155,11 +165,11 @@ It's time to hook things together.
     2. Add the following controller class called `IndexController`:
     ```php
     namespace Pyz\Yves\HelloSpryker\Controller;
- 
+
     use Generated\Shared\Transfer\HelloSprykerTransfer;
     use Spryker\Yves\Kernel\Controller\AbstractController;
     use Symfony\Component\HttpFoundation\Request;
- 
+
 	    /**
 	    * @method \Pyz\Client\HelloSpryker\HelloSprykerClientInterface getClient()
 	    */
@@ -173,7 +183,7 @@ It's time to hook things together.
 	    public function indexAction(Request $request)
 	    {
 		    $data = ['reversedString' => 'Hello Spryker!'];
- 
+
 		    return $this->view(
 			    $data,
 			    [],
@@ -188,14 +198,14 @@ It's time to hook things together.
     3. Add your RouteProviderPlugin class with the name `HelloSprykerRouteProviderPlugin`:
     ```php
     namespace Pyz\Yves\HelloSpryker\Plugin\Router;
- 
+
     use Spryker\Yves\Router\Plugin\RouteProvider\AbstractRouteProviderPlugin;
     use Spryker\Yves\Router\Route\RouteCollection;
- 
+
     class HelloSprykerRouteProviderPlugin extends AbstractRouteProviderPlugin
     {
 	    public const ROUTE_NAME_HELLO_SPRYKER_INDEX = 'hello-spryker-index';
- 
+
 	    /**
              * Specification:
              * - Adds Routes to the RouteCollection.
@@ -215,7 +225,7 @@ It's time to hook things together.
 	    }
     }
     ```
-4. Register the `HelloSprykerRouteProviderPlugin` in the application, so the application knows about your controller action. 
+4. Register the `HelloSprykerRouteProviderPlugin` in the application, so the application knows about your controller action.
     Go to `RouterDependencyProvider::getRouteProvider()` method in the **Router** module and add the `HelloSprykerRouteProviderPlugin` to the array.
 5. Finally add the twig file to render your Hello Spryker page.
     Add the following folder structure inside the HelloSpryker module: `Theme/default/views/index`.
@@ -223,16 +233,16 @@ It's time to hook things together.
     As your action is called index, add a twig file for your action called `index.twig`:
     ```xml
     {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
     {% raw %}{%{% endraw %} define data = {
 	    reversedString: _view.reversedString
     } {% raw %}%}{% endraw %}
- 
+
     {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
 	    <div><h2>{% raw %}{{{% endraw %} data.reversedString {% raw %}}}{% endraw %}</h2></div>
     {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
     ```
-    
+
 ### 3. Create HelloSpryker transfer object and use it
 Transfer objects are a great way to send data from Yves to Zed, and for communication between different objects in general. Transfer object definitions are located in Shared directories as these objects are shared between Yves and Zed.
 1. To add a **HelloSpryker** transfer, add a new folder inside `/src/Shared` and call it *HelloSpryker*. Then add another folder called *Transfer*.
@@ -242,12 +252,12 @@ Transfer objects are a great way to send data from Yves to Zed, and for communic
     <transfers xmlns="spryker:transfer-01"
 	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	    xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-     
+
 	    <transfer name="HelloSpryker">
 		    <property name="originalString" type="string" />
 		    <property name="reversedString" type="string" />
 		    </transfer>
-    </transfers>	
+    </transfers>
     ```
 3. Run the console command: console transfer:generate.
     The transfer object is generated and ready to use.
@@ -265,24 +275,24 @@ Transfer objects are a great way to send data from Yves to Zed, and for communic
 		    ->reverseString($helloSprykerTransfer);
     }
     ```
-5. Update your model and `IndexController` accordingly. 
+5. Update your model and `IndexController` accordingly.
     {% info_block infoBox "Info" %}
 You should still get **"!rekyrpS olleH"** when accessing [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker
 {% endinfo_block %}.)
-    
+
 ### 4. Build a HelloSpryker Client to connect Yves to Zed
 To build the communication between Yves and Zed, we need the **Client**. Building a client for **HelloSpryker** is similar to building a module in Zed or Yves.
 1. Add a new folder under `/src/Pyz/Client` and call it *HelloSpryker*.
-2. The Client structure consists also of three main classes: 
+2. The Client structure consists also of three main classes:
     * Client to function as the main API to the clilent
     * Factory  to instantiate the needed objects and inject their dependencies
     * Stub to do the actual call to Zed with the right payload.
     Create the client class inside the *HelloSpryker*client folder like this:
     ```php
     namespace Pyz\Client\HelloSpryker;
- 
+
     use Spryker\Client\Kernel\AbstractClient;
- 
+
     class HelloSprykerClient extends AbstractClient implements  HelloSprykerClientInterface
     {
 	    // Your code goes here
@@ -291,10 +301,10 @@ To build the communication between Yves and Zed, we need the **Client**. Buildin
     Now add the factory:
     ```php
     namespace Pyz\Client\HelloSpryker;
- 
+
     use Pyz\Client\HelloSpryker\Zed\HelloSprykerStub;
     use Spryker\Client\Kernel\AbstractFactory;
- 
+
     class HelloSprykerFactory extends AbstractFactory
     {
 	    // Your code goes here
@@ -303,9 +313,9 @@ To build the communication between Yves and Zed, we need the **Client**. Buildin
     Then add the stub. As the client is calling Zed, create a folder called *Zed* and add the stub inside it:
     ```php
     namespace Pyz\Client\HelloSpryker\Zed;
- 
+
     use Spryker\Client\ZedRequest\Stub\ZedRequestStub;
- 
+
     class HelloSprykerStub extends ZedRequestStub implements    HelloSprykerStubInterface
     {
 	    // Your code goes here
@@ -317,14 +327,14 @@ Any client that calls Zed from Yves uses the **ZedRequest** module. This module 
 {% endinfo_block %}
     ```php									
     namespace Pyz\Client\HelloSpryker;
- 
+
     use Spryker\Client\Kernel\AbstractDependencyProvider;
     use Spryker\Client\Kernel\Container;
- 
+
     class HelloSprykerDependencyProvider extends    AbstractDependencyProvider
     {
 	    const CLIENT_ZED_REQUEST = 'CLIENT_ZED_REQUEST';
- 
+
 	    /**
 	    * @param \Spryker\Client\Kernel\Container $container
 	    *
@@ -333,10 +343,10 @@ Any client that calls Zed from Yves uses the **ZedRequest** module. This module 
 	    public function provideServiceLayerDependencies(Container $container)
 	    {
 		    $container = $this->addZedRequestClient($container);
- 
+
 		    return $container;
 	    }
- 
+
 	    /**
 	    * @param \Spryker\Client\Kernel\Container $container
 	    *
@@ -347,7 +357,7 @@ Any client that calls Zed from Yves uses the **ZedRequest** module. This module 
 		    $container[static::CLIENT_ZED_REQUEST] = function (Container    $container) {
 			    return $container->getLocator()->zedRequest()->client();
 		    };
- 
+
 		    return $container;
 	    }
     }
@@ -361,7 +371,7 @@ Any client that calls Zed from Yves uses the **ZedRequest** module. This module 
     {
 	    return new HelloSprykerStub($this->getZedRequestClient());
     }
- 
+
     /**
     * @return \Spryker\Client\ZedRequest\ZedRequestClientInterface
     */
@@ -406,13 +416,13 @@ This method will call the Zed module **HelloSpryker**.</br>The first parameter i
     That's it from the client side.
 
 Let's get everything hooked together:
-1. First, create the `GatewayController` in the communication layer of Zed, the one that responds to the client's request. 
+1. First, create the `GatewayController` in the communication layer of Zed, the one that responds to the client's request.
     ```php
     namespace Pyz\Zed\HelloSpryker\Communication\Controller;
- 
+
     use Generated\Shared\Transfer\HelloSprykerTransfer;
     use     Spryker\Zed\Kernel\Communication\Controller\AbstractGatewayController;
- 
+
     class GatewayController extends AbstractGatewayController
     {
 	    /**
@@ -438,10 +448,10 @@ Let's get everything hooked together:
     {
 	    $helloSprykerTransfer = new HelloSprykerTransfer();
 	    $helloSprykerTransfer->setOriginalString('Hello Spryker!');
- 
+
 	    $helloSprykerTransfer = $this->getClient()
 		    ->reverseString($helloSprykerTransfer);
- 
+
 	    return ['reversedString' => $helloSprykerTransfer->getReversedString()];
     }			
     ```
@@ -458,11 +468,11 @@ Done! Now go to [http://www.de.suite.local/hello-spryker](http://www.de.suite.lo
 	    namespace="Orm\Zed\HelloSpryker\Persistence"
 	    namespaceAutoPackage="false"
 	    package="src.Orm.Zed.HelloSpryker.Persistence">
- 
+
 		    <table name="pyz_hello_spryker" idMethod="native">
 			    <column name="id_hello_spryker" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
 			    <column name="reversed_string" required="true" size="128" type="VARCHAR"/>
- 
+
 			    <id-method-parameter value="pyz_hello_spryker_pk_seq"/>
 		    </table>
     </database>
@@ -481,18 +491,18 @@ To make sure, open the database and check if the table is there.
     protected function saveReversedString(HelloSprykerTransfer $helloSprykerTransfer)
     {
 	    $helloSprykerEntity = new PyzHelloSpryker();
- 
+
 	    $helloSprykerEntity->setReversedString($helloSprykerTransfer-   >getReversedString())->save();
-    }	
+    }
     ```					
-5. To read from the database, Spryker provides a concept called *QueryContainer*. It's the place where you create query objects to get data from the database. 
+5. To read from the database, Spryker provides a concept called *QueryContainer*. It's the place where you create query objects to get data from the database.
     Inside the **Persistence** directory, create the `HelloSprykerPersistenceFactory` and `HelloSprykerQueryContainer`:
     ```php
     namespace Pyz\Zed\HelloSpryker\Persistence;
- 
+
     use Orm\Zed\HelloSpryker\Persistence\PyzHelloSprykerQuery;
     use Spryker\Zed\Kernel\Persistence\AbstractPersistenceFactory;
- 
+
     class HelloSprykerPersistenceFactory extends AbstractPersistenceFactory
     {
 	    /**
@@ -506,9 +516,9 @@ To make sure, open the database and check if the table is there.
     ```
     ```php
     namespace Pyz\Zed\HelloSpryker\Persistence;
- 
+
     use Spryker\Zed\Kernel\Persistence\AbstractQueryContainer;
- 
+
     class HelloSprykerQueryContainer extends AbstractQueryContainer     implements HelloSprykerQueryContainerInterface
     {
 	    /**
@@ -524,7 +534,7 @@ To make sure, open the database and check if the table is there.
 			    ->createHelloSprykerQuery()
 			    ->filterByIdHelloSpryker($idHelloSpryker);
 	    }
- 
+
 	    /**
 	    * @api
 	    *
@@ -537,7 +547,7 @@ To make sure, open the database and check if the table is there.
 	    }
     }																	
     ```
-6. Now, let the *IndexController* in Zed read from the database. 
+6. Now, let the *IndexController* in Zed read from the database.
     To do so, add a facade method with a model to read and from the database in the business layer.
     Call the model *StringReader*. Then call the facade method from the *IndexController* in the communication layer.
     To read from the database, you need to inject the `HelloSprykerQueryContainer` inside the *StringReader* using the `HelloSprykerBusinessFactory` like this:
@@ -563,11 +573,11 @@ To make sure, open the database and check if the table is there.
 	    $helloSprykerEntity = $this->helloSprykerQueryContainer
 		    ->queryHelloSprykerById($id)
 		    ->findOne();
- 
+
 	    $helloSprykerTransfer = new HelloSprykerTransfer();
 	    $helloSprykerTransfer->fromArray($helloSprykerEntity->toArray(), true);
- 
- 
+
+
 	    return $helloSprykerTransfer;
     }							
     ```					
@@ -577,23 +587,23 @@ Now go to [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/he
 The idea of this bonus task is to handle module dependency using the concept of Dependency Providers.
 As mentioned before, Dependency Providers provide dependencies in a module level, from one module to another. Mainly they provide facades and clients only.
 1. One module can't access other classes form another module. To use Dependency Providers, create a new module in Zed and call it *StringReverser*.
-2. Move the logic of reversing a string from **HelloSpryker** to *StringReverser*. 
+2. Move the logic of reversing a string from **HelloSpryker** to *StringReverser*.
     {% info_block infoBox "Info" %}
 You need to build a business later inside *StringReverser* with a facade and a model to revers the string.
 {% endinfo_block %}
 3. In the **HelloSpryker** module, create a dependency provider class and call it `HelloSprykerDependencyProvider`.
-4. Provide the business layer dependency to the **HelloSpryker** module and internally use the *StringReverser* facade to provide the string reversing functionality. 
+4. Provide the business layer dependency to the **HelloSpryker** module and internally use the *StringReverser* facade to provide the string reversing functionality.
     The HelloSprykerDependencyProvider will look like this:
     ```php
     namespace Pyz\Zed\HelloSpryker;
- 
+
     use Spryker\Zed\Kernel\AbstractBundleDependencyProvider;
     use Spryker\Zed\Kernel\Container;
- 
+
     class HelloSprykerDependencyProvider extends    AbstractBundleDependencyProvider
     {
 	    const FACADE_STRING_REVERSER = 'FACADE_STRING_REVERSER';
- 
+
 	    /**
 	    * @param \Spryker\Zed\Kernel\Container $container
 	    *
@@ -602,10 +612,10 @@ You need to build a business later inside *StringReverser* with a facade and a m
 	    public function provideBusinessLayerDependencies(Container  $container)
 	    {
 		    $container = $this->addStringReverserFacade($container);
- 
+
 		    return $container;
 	    }
- 
+
 	    /**
 	    * @param \Spryker\Zed\Kernel\Container $container
 	    *
@@ -616,12 +626,12 @@ You need to build a business later inside *StringReverser* with a facade and a m
 		    $container[static::FACADE_STRING_REVERSER] = function (Container    $container) {
 			    return $container->getLocator()->stringReverser()->facade();
 		    };
- 
+
 		    return $container;
 	    }
     }									
     ```
-								
+
 5. Inject the dependency using the HelloSprykerBusinessFactory.
     ```php
     /**
@@ -632,8 +642,7 @@ You need to build a business later inside *StringReverser* with a facade and a m
 	    return $this-   >getProvidedDependency(HelloSprykerDependencyProvider::FACADE_STRIN G_REVERSER);
     }						
     ```
-					
+
 6. Use the `StringReverserFacade` to reverse the string instead of using the logic directly inside the **HelloSpryker** module.
 
 Go to [http://zed.de.suite.local/hello-spryker](http://zed.de.suite.local/hello-spryker) and [http://www.de.suite.local/hello-spryker](http://www.de.suite.local/hello-spryker). You should see: **"!rekyrpS olleH"**.
-

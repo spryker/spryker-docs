@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/ht-setup-spryker-with-mysql
   - /docs/ht-setup-spryker-with-mysql
   - /docs/en/ht-setup-spryker-with-mysql
+  - /v6/docs/ht-setup-spryker-with-mysql
+  - /v6/docs/en/ht-setup-spryker-with-mysql
+  - /v5/docs/ht-setup-spryker-with-mysql
+  - /v5/docs/en/ht-setup-spryker-with-mysql
+  - /v4/docs/ht-setup-spryker-with-mysql
+  - /v4/docs/en/ht-setup-spryker-with-mysql
+  - /v2/docs/ht-setup-spryker-with-mysql
+  - /v2/docs/en/ht-setup-spryker-with-mysql
+  - /v1/docs/ht-setup-spryker-with-mysql
+  - /v1/docs/en/ht-setup-spryker-with-mysql
 ---
 
 Spryker supports MySQL database. To install it with this database, follow these instructions to adjust the configuration.
@@ -34,7 +44,7 @@ DATABASE_DEFAULT_ENGINE='mysql'
 
 ## MySQL GroupBy Setting
 In some MySQL servers, there is the `ONLY_FULL_GROUP_BY` option which forces all columns to be present in `group_by`. This option should be removed from your configurations of MySQL:
-        
+
 **Wrong setting:**
 
 ```bash

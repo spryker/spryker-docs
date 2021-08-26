@@ -7,6 +7,18 @@ redirect_from:
   - /2021080/docs/en/ht-product-review-feature-configuration
   - /docs/ht-product-review-feature-configuration
   - /docs/en/ht-product-review-feature-configuration
+  - /v6/docs/ht-product-review-feature-configuration
+  - /v6/docs/en/ht-product-review-feature-configuration
+  - /v5/docs/ht-product-review-feature-configuration
+  - /v5/docs/en/ht-product-review-feature-configuration
+  - /v4/docs/ht-product-review-feature-configuration
+  - /v4/docs/en/ht-product-review-feature-configuration
+  - /v3/docs/ht-product-review-feature-configuration
+  - /v3/docs/en/ht-product-review-feature-configuration
+  - /v2/docs/ht-product-review-feature-configuration
+  - /v2/docs/en/ht-product-review-feature-configuration
+  - /v1/docs/ht-product-review-feature-configuration
+  - /v1/docs/en/ht-product-review-feature-configuration
 ---
 
 ## Configuring the Maximum Rating

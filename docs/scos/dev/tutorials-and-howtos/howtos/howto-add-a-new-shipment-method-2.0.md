@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/ht-add-new-shipment-method-2
   - /docs/ht-add-new-shipment-method-2
   - /docs/en/ht-add-new-shipment-method-2
+  - /v6/docs/ht-add-new-shipment-method-2
+  - /v6/docs/en/ht-add-new-shipment-method-2
+  - /v5/docs/ht-add-new-shipment-method-2
+  - /v5/docs/en/ht-add-new-shipment-method-2
+  - /v4/docs/ht-add-new-shipment-method-2
+  - /v4/docs/en/ht-add-new-shipment-method-2
+  - /v2/docs/ht-add-new-shipment-method-2
+  - /v2/docs/en/ht-add-new-shipment-method-2
+  - /v1/docs/ht-add-new-shipment-method-2
+  - /v1/docs/en/ht-add-new-shipment-method-2
 ---
 
 {% info_block infoBox %}
@@ -47,8 +57,8 @@ The corresponding XML for this transition would be:
 ## Adding a New Shipment Method
 **To add a new shipment method:**
 
-1. In the Back Office, navigate to the **Shipment** section and click **Add new Carrier Company**. 
-2. Specify a name for the carrier company and the corresponding glossary key for having a localized name. 
+1. In the Back Office, navigate to the **Shipment** section and click **Add new Carrier Company**.
+2. Specify a name for the carrier company and the corresponding glossary key for having a localized name.
 3. To  use this carrier company in the shop, select **Enabled** in the check box.
 ![Enabled checkbox](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_add_carrier_cmpany.png){height="" width=""}
 
@@ -57,8 +67,8 @@ Now that we have a new shipment carrier, we can add a new shipment method to it.
 **To add a new shipment method to a carrier:**
 
 1. Click **Add new Shipment Method**.
-You will be redirected to the _Add a new shipment method_ dialog. 
-2. Select the carrier you created in the previous step. 
+You will be redirected to the _Add a new shipment method_ dialog.
+2. Select the carrier you created in the previous step.
 3. Add the name and store/currency specific net and gross prices.
 4. Mark it as "Active".
 5. Select the corresponding tax set.

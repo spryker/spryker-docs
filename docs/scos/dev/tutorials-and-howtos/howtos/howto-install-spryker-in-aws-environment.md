@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/ht-install-spryker-in-aws-environment
   - /docs/ht-install-spryker-in-aws-environment
   - /docs/en/ht-install-spryker-in-aws-environment
+  - /v6/docs/ht-install-spryker-in-aws-environment
+  - /v6/docs/en/ht-install-spryker-in-aws-environment
+  - /v5/docs/ht-install-spryker-in-aws-environment
+  - /v5/docs/en/ht-install-spryker-in-aws-environment
+  - /v4/docs/ht-install-spryker-in-aws-environment
+  - /v4/docs/en/ht-install-spryker-in-aws-environment
+  - /v2/docs/ht-install-spryker-in-aws-environment
+  - /v2/docs/en/ht-install-spryker-in-aws-environment
+  - /v1/docs/ht-install-spryker-in-aws-environment
+  - /v1/docs/en/ht-install-spryker-in-aws-environment
 ---
 
 ## Introduction
@@ -25,21 +35,21 @@ The first thing you need to do to install Spryker or AWS is to configure the fol
 
 Follow the guidelines below to create and configure the services.
 
-    
+
 ### Security Group
 
 To create a security group, do the following:
 
-1. Open EC2 console. 
-    
+1. Open EC2 console.
+
 ![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png){height="" width=""}
 
-2. Click **Create Security Group**. 
-    
+2. Click **Create Security Group**.
+
 ![Create security group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/create-security-group.png){height="" width=""}
 
-3. Fill out the outlined fields and click **Create**. 
-    
+3. Fill out the outlined fields and click **Create**.
+
 ![Choose security group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-security-group.png){height="" width=""}
 
 See [Creating a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group) and [Adding Rules to a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group) for more information on how to create and configure the security group.
@@ -54,28 +64,28 @@ You need to choose the security group for all services/instances that you will c
 
 To create and configure RDS, do the following:
 
-1. Open RDS console. 
+1. Open RDS console.
 ![RDS console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/rds-console.png){height="" width=""}
 
 2. Click **Create database**.
-    
+
 ![Create database](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/create-database.png){height="" width=""}
 
-3. Select **PostgreSQL**. 
+3. Select **PostgreSQL**.
 
 ![Choose PostgreSQL](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-postgresql.png){height="" width=""}
 
 4. Choose a use case
 {% info_block infoBox %}
 
-For production purposes, we recommend choosing Multi-AZ Deployment. 
+For production purposes, we recommend choosing Multi-AZ Deployment.
 
 {% endinfo_block %}
-    
+
 ![Choose usecase](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-use-case.png){height="" width=""}
 
-5. Fill out all the outlined fields. 
-    
+5. Fill out all the outlined fields.
+
 ![Choose database details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-db-details.png){height="" width=""}
 
 ![Database login details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/db-login-details.png){height="" width=""}
@@ -84,26 +94,26 @@ For production purposes, we recommend choosing Multi-AZ Deployment.
 
 ![Database options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/db-options.png){height="" width=""}
 
-6. Get **DB Name**, **Endpoint** and **port**. 
-    
+6. Get **DB Name**, **Endpoint** and **port**.
+
 ![Get database name endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-db-name-endpoint.png){height="" width=""}
 
 See [Database creation manual](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html) for more details on how to create the database.
-    
+
 ### Elasticsearch Service
 To create and configure Elasticsearch service console, do the following:
 
-1. Open Elasticsearch service console. 
-    
+1. Open Elasticsearch service console.
+
 ![Elasticsearch console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastic-search-console.png){height="" width=""}
 
 2. Click **Create a new domain**.
 
 ![Create new domain](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/create-new-domain.png){height="" width=""}
 
-3. Fill out all the outlined fields. 
-   
-4. Choose a deployment type 
+3. Fill out all the outlined fields.
+
+4. Choose a deployment type
 
 {% info_block infoBox %}
 
@@ -120,35 +130,35 @@ For production purposes, we recommend choosing the Production deployment type.
 
 ![Domain access policy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/domain-access-policy.png){height="" width=""}
 
-5. Get **VPC endpoint**. 
+5. Get **VPC endpoint**.
 
 ![Get VPS endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-vpc-endpoint.png){height="" width=""}
 
 See [Elasticseacrh service creation manual](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains) for more details on how to create an Elasticsearch service domain.
-    
+
 ### ElastiCache
 
 To configure ElastiCache, do the following:
 
-1. Open ElastiCache console. 
-    
+1. Open ElastiCache console.
+
 ![ElastiCache console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elasticache-console.png){height="" width=""}
 
-2. Click **Get Started Now**. 
-    
+2. Click **Get Started Now**.
+
 ![Elastisearch - Get started now](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastisearch-start.png){height="" width=""}
 
-3. Fill out all the outlined fields. 
-    
+3. Fill out all the outlined fields.
+
 ![Elastisearch config](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastisearch-config.png){height="" width=""}
 
 
-4. Get **Primary Endpoint**. 
-    
+4. Get **Primary Endpoint**.
+
 ![Primary endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-primary-endpoint.png){height="" width=""}
 
 See [ElastiCache creation manual](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/GettingStarted.CreateCluster.html) for more details.
-    
+
 ## EC2 Instance Installation and Configuration
 To install and configure EC2 instance, you need to:
 
@@ -158,65 +168,65 @@ To install and configure EC2 instance, you need to:
 * Connect to the Instance
 
 Follow the guidelines below to perform these actions.
-    
+
 ### Creating the SSH Key
 Use the [manual](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) to create the SSH key.
 
-    
+
 ### Launching Instance
 To launch the instance, do the following:
 
-1. Open EC2 console. 
-    
+1. Open EC2 console.
+
 ![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png){height="" width=""}
 
-2. Click **Launch instance**. 
-    
+2. Click **Launch instance**.
+
 ![Launch instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/launch-instance.png){height="" width=""}
 
-3. Select the Ubuntu server with the **64-bit (x86)** configuration. 
-    
+3. Select the Ubuntu server with the **64-bit (x86)** configuration.
+
 ![Choose OS](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-os.png){height="" width=""}
 
 4. Choose the instance type and click **Next: Configure Instance Details**.
-    
+
 ![Choose instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-instance.png){height="" width=""}
 
 5. Leave default configuration and click  **Next: Add Storage**.
-6. Add storage and click **Next: Add Tags**. 
-    
+6. Add storage and click **Next: Add Tags**.
+
 ![Add storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/add-storage.png){height="" width=""}
 
-7. Add a Name tag and click **Next: Configure Security Group**. 
-    
+7. Add a Name tag and click **Next: Configure Security Group**.
+
 ![Add tags](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/add-tags.png){height="" width=""}
 
 8. Choose the security group which you have previously created and click **Review and Launch**.
-9. Choose the ssh key you have previously created, download it, and click **Launch Instances**. 
+9. Choose the ssh key you have previously created, download it, and click **Launch Instances**.
 
 ![Select SHH keys](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/select-ssh-key.png){height="" width=""}
 
 ### Elastic IP
 To configure Elastic IP, do the following:
 
-1. Open EC2 console. 
+1. Open EC2 console.
 
 ![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png){height="" width=""}
 
-2. Click **Allocate new address**. 
-    
+2. Click **Allocate new address**.
+
 ![Allocate new address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/allocate-new-address.png){height="" width=""}
 
-3. Leave the default setup and click **Allocate**. 
-    
+3. Leave the default setup and click **Allocate**.
+
 ![Allocate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/allocate.png){height="" width=""}
 
-4. Click **Actions** > **Associate address**. 
-    
+4. Click **Actions** > **Associate address**.
+
 ![Associate address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/associate-address.png){height="" width=""}
 
-5. Choose Spryker instance and click **Associate**. 
-    
+5. Choose Spryker instance and click **Associate**.
+
 
 ![Choose Spryker instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-spryker-instance.png){height="" width=""}
 
@@ -226,18 +236,18 @@ See [Allocating an Elastic IP Address](https://docs.aws.amazon.com/AWSEC2/latest
 
 To connect to the instance, do the following:
 
-1. Click **Actions** > **Connect**. 
-    
+1. Click **Actions** > **Connect**.
+
 ![Connect action](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/actions-connect.png){height="" width=""}
 
-2. Connect to the Spryker instance using the provided details. 
-    
+2. Connect to the Spryker instance using the provided details.
+
 ![Connection instructions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/connection-instructions.png){height="" width=""}
 
 ## Installing Additional Software
 
 You need to install and configure additional software to install Spryker in AWS. Follow the guidelines below for instructions.
-    
+
 ### System Tools Installation
 
 To install the system toools, do the following:
@@ -250,7 +260,7 @@ sudo apt-get install -q -y --no-install-recommends wget gnupg apt-transport-http
 sudo add-apt-repository ppa:ondrej/php
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 ```
-    
+
 2. Install additional software and dependencies:
 
 ```shell
@@ -276,10 +286,10 @@ g++ \
 make  \
 apache2-utils
 ```
-    
+
 ### PHP Installation
 To install PHP, run the commands:
-    
+
 ```shell
 sudo apt-get install -q -y php7.2-fpm \
 php7.2-curl \
@@ -306,7 +316,7 @@ php7.2-fpm \
 php7.2-cli \
 php7.2-dev
 ```
-    
+
 ```shell
 sudo update-alternatives --set php /usr/bin/php7.2
 sudo update-alternatives --set phar /usr/bin/phar7.2
@@ -314,7 +324,7 @@ sudo update-alternatives --set phar.phar /usr/bin/phar.phar7.2
 sudo update-alternatives --set phpize /usr/bin/phpize7.2
 sudo update-alternatives --set php-config /usr/bin/php-config7.2
 ```
-    
+
 ### PHP Configuration
 To configure PHP, do the following:
 
@@ -322,7 +332,7 @@ To configure PHP, do the following:
 
 <details open>
 <summary>/etc/php/7.2/fpm/php.ini</summary>
-    
+
 ```
 memory_limit = 1024M
 [mail function]
@@ -331,10 +341,10 @@ sendmail_path = /usr/sbin/sendmail -t -i
     <br>
 </details>
 
-    
+
 <details open>
 <summary>/etc/php/7.2/fpm/pool.d/yves.conf</summary>
-    
+
 ```
 [yves]
 clear_env = no
@@ -367,10 +377,10 @@ php_admin_value[error_log] = /dev/stderr
 ```
  <br>
 </details>
-    
+
 <details open>
 <summary>/etc/php/7.2/fpm/pool.d/zed.conf</summary>/
-    
+
 ```
 [zed]
 clear_env = no
@@ -406,7 +416,7 @@ php_admin_value[error_log] = /dev/stderr
 
 <details open>
 <summary>/etc/php/7.2/fpm/pool.d/glue.conf</summary>
-    
+
 ```
 [glue]
 clear_env = no
@@ -439,14 +449,14 @@ php_admin_value[error_log] = /dev/stderr
 ```
 <br>
 </details>    
-    
+
 
 2. Edit the following file using the template:
 
 <details open>
 <summary>
-/etc/php/7.2/fpm/conf.d/10-opcache.ini</summary> 
-    
+/etc/php/7.2/fpm/conf.d/10-opcache.ini</summary>
+
 ```
 ;zend_extension=opcache.so
 opcache.enable=1
@@ -471,21 +481,21 @@ opcache.optimization_level=0
 
 ### Postfix Installation
 Postfix is a mail server which will be used to send mail. Run these commands to install it:    
-    
+
 ```shell
 sudo apt update
 sudo apt install -q -y postfix
 ```
-    
+
 ### Nginx Installation
 Nginx  is an open source web server which will proxy requests to PHP FPM via FCGI protocol. Run these commands to install it:
-    
+
 ```shell
-sudo apt update 
+sudo apt update
 sudo apt-get  install -q -y nginx nginx-extras
 sudo rm /etc/nginx/sites-enabled/default
 ```
-    
+
 ### Nginx Configuration
 To configure Nginx, do the following:
 
@@ -493,7 +503,7 @@ To configure Nginx, do the following:
 
 <details open>
 <summary>vhost-yves.conf template</summary>
-    
+
 ```
 upstream backend-yves {
 server unix:/tmp/.fpm.yves.sock;
@@ -509,7 +519,7 @@ root /data/public/Yves;
 
 set $application_env staging;
 set $application_store DE;
- 
+
 # Maintenance mode
 #include /etc/nginx/maintenance.conf;
 
@@ -552,12 +562,12 @@ fastcgi_index index.php;
 include /etc/nginx/fastcgi_params;
 fastcgi_param SCRIPT_NAME /index.php;
 fastcgi_param SCRIPT_FILENAME $document_root/index.php;
-    
+
 fastcgi_param APPLICATION_ENV $application_env;
 fastcgi_param APPLICATION_STORE $application_store;
 
 more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
-    
+
 }
 
 }
@@ -565,18 +575,18 @@ more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
  <br>
 </details>
 
-    
+
 2. Create a `passwd` file by running the command:
 
 ```
 sudo htpasswd -c /etc/nginx/.htpasswd {% raw %}{{{% endraw %}SOME_USER{% raw %}}}{% endraw %}
 ```
-    
+
 3. Update `{% raw %}{{{% endraw %}ZED_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-zed-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
 <details open>
 <summary>vhost-zed.conf template</summary>
-    
+
 ```
 upstream backend-zed {
 server unix:/tmp/.fpm.zed.sock;
@@ -589,7 +599,7 @@ keepalive_timeout 0;
 access_log /var/log/nginx/zed.log;
 
 root /data/public/Zed;
-    
+
 set $application_env staging;
 set $application_store DE;
 
@@ -628,19 +638,19 @@ fastcgi_param APPLICATION_ENV $application_env;
 fastcgi_param APPLICATION_STORE $application_store;
 
 more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
-    
+
 }
-    
+
 }
 ```
  <br>
 </details>
-    
+
 4. Update `{% raw %}{{{% endraw %}GLUE_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-glue-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
 <details open>
 <summary>vhost-glue.conf template</summary>
-    
+
 ```
 upstream backend-glue {
 server unix:/tmp/.fpm.glue.sock;
@@ -703,12 +713,12 @@ more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
 5. Restart php-fpm service:
 ```
 sudo service php7.2-fpm restart
-``` 
+```
 6. Create  `/etc/nginx/conf.d/jenkins.conf`:
 
 <details open>
 <summary>/etc/nginx/conf.d/jenkins.conf</summary>
-    
+
 ```
 server {
 
@@ -743,12 +753,12 @@ proxy_request_buffering off;
 ```
   <br>
 </details>
-   
+
 7. Create `/etc/nginx/fastcgi_params` using the template:
 
 <details open>
 <summary>fastcgi_params template</summary>
-    
+
 ```
 fastcgi_param QUERY_STRING $query_string;
 fastcgi_param REQUEST_METHOD $request_method;
@@ -786,17 +796,17 @@ fastcgi_param HTTP_X_REQUEST_START "t=${msec}";
 ```
  <br>
 </details>
-    
+
 ### Node.js Installation
 To install Node.js, run the following command:
-    
+
 ```shell
 sudo apt-get install -y nodejs
 ```
-    
+
 ### RabbitMQ Installation
 To install RabbitMQ, run the commands as root:
-    
+
 ```shell
 wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
 wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
@@ -807,7 +817,7 @@ echo "deb https://dl.bintray.com/rabbitmq/debian $(lsb_release -sc) main" | sudo
 sudo apt-get update
 sudo apt-get install -y rabbitmq-server
 ```
-    
+
 ### RabbitMQ Configuration
 To configure RabbitMQ, run the commands as root:   
 
@@ -818,7 +828,7 @@ sudo service rabbitmq-server start
 sudo rabbitmq-plugins enable rabbitmq_management
 sudo chown -R rabbitmq:rabbitmq /var/lib/rabbitmq/
 ```
-    
+
 * Admin user configuration.
 
 ```shell
@@ -837,13 +847,13 @@ sudo rabbitmqctl set_user_tags spryker administrator
 sudo rabbitmqctl set_permissions -p /DE_spryker_zed spryker ".*" ".*" ".*"
 ```
 Repeat for '/AT_spryker_zed', '/US_spryker_zed' virtual hosts.
-    
+
 ### Jenkins Installation
 To install Jenkins, do the following:
 1. Run the commands as root:
-    
+
 ```shell
-wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add - 
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/>/etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
 sudo apt-get install -y jenkins=2.164.3 openjdk-8-jdk
@@ -867,7 +877,7 @@ To configure Jenkins, do the following:
 ```shell
 sudo mkdir -p /var/lib/jenkins/init.groovy.d/
 ```
-3. Create an init script which disabled CSRF 
+3. Create an init script which disabled CSRF
 **/var/lib/jenkins/init.groovy.d/init.groovy**
 ```
 import jenkins.model.Jenkins
@@ -888,11 +898,11 @@ sudo chown -R www-data:www-data /var/log/jenkins
 ```shell
 sudo systemctl daemon-reload
 ```
-6. Update Jenkins configuration file: 
+6. Update Jenkins configuration file:
 
 <details open>
 <summary>/var/lib/jenkins/config.xml</summary>
-    
+
 ```
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson>
@@ -937,7 +947,7 @@ sudo systemctl daemon-reload
 ```
 <br>
 </details>
-   
+
 
 5. Restart Jenkins service:
 
@@ -960,7 +970,7 @@ ulimit -n 65535
 3. Create logrotate configuration for Spryker:
 
 **/etc/logrotate.d/spryker**
-    
+
 ```
 /data/data/*/logs/*/*.log {
 daily
@@ -977,7 +987,7 @@ endscript
 su www-data www-data
 }
 ```
-    
+
 ## Spryker Installation
 To install Spryker, do the following:    
 
@@ -1003,7 +1013,7 @@ You should update all variables in curly braces such as {% raw %}{{{% endraw %}R
 
 <details open>
 <summary>/data/config/Shared/config_local.php</summary>
-    
+
 ```
 <?php
 use Pyz\Shared\Scheduler\SchedulerConfig;
@@ -1913,4 +1923,3 @@ avg: 0.48 (20038 samples
 The following diagramm illustrates the connections:
 
 ![List of connections](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/connections-list.jpg){height="" width=""}
-

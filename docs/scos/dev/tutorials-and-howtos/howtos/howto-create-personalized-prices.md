@@ -7,6 +7,16 @@ redirect_from:
   - /2021080/docs/en/ht-create-personalized-prices
   - /docs/ht-create-personalized-prices
   - /docs/en/ht-create-personalized-prices
+  - /v6/docs/ht-create-personalized-prices
+  - /v6/docs/en/ht-create-personalized-prices
+  - /v5/docs/ht-create-personalized-prices
+  - /v5/docs/en/ht-create-personalized-prices
+  - /v4/docs/ht-create-personalized-prices
+  - /v4/docs/en/ht-create-personalized-prices
+  - /v2/docs/ht-create-personalized-prices
+  - /v2/docs/en/ht-create-personalized-prices
+  - /v1/docs/ht-create-personalized-prices
+  - /v1/docs/en/ht-create-personalized-prices
 ---
 
 {% info_block infoBox "Personalized Prices" %}
@@ -48,7 +58,7 @@ Prices are imported by the `ProductPriceImporter`. If you are using the Importer
 
 The prices displayed for the products included in the cart must be according to the group the logged in customer is part of( in case the current user is a guest, the default price should be displayed).
 
-The prices for the products in the cart are added by the `CartItemPricePlugin`. 
+The prices for the products in the cart are added by the `CartItemPricePlugin`.
 
 These values are used by the cart calculators.
 
@@ -130,9 +140,9 @@ The product data is collected by the `ProductCollector`. The `ProductCollector:c
             'category' => $this->generateCategories($collectItemData[CollectorConfig::COLLECTOR_RESOURCE_ID]),
         ];
       $specialPrices = $this->getSpecialPricesBySku($collectItemData[static::ABSTRACT_SKU]),
- 
+
       $collectedItem=$specialPrices;    
-      
+
       return $collectedItem;
     }
 ```

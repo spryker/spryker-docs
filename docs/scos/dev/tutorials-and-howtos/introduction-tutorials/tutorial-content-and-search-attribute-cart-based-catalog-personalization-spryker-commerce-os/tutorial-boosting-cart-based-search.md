@@ -8,6 +8,16 @@ redirect_from:
   - /2021080/docs/en/boosting-cart-based-search
   - /docs/boosting-cart-based-search
   - /docs/en/boosting-cart-based-search
+  - /v6/docs/boosting-cart-based-search
+  - /v6/docs/en/boosting-cart-based-search
+  - /v5/docs/boosting-cart-based-search
+  - /v5/docs/en/boosting-cart-based-search
+  - /v4/docs/boosting-cart-based-search
+  - /v4/docs/en/boosting-cart-based-search
+  - /v2/docs/boosting-cart-based-search
+  - /v2/docs/en/boosting-cart-based-search
+  - /v1/docs/boosting-cart-based-search
+  - /v1/docs/en/boosting-cart-based-search
 ---
 
 This tutorial describes how you can boost the cart-based search in your project.
@@ -60,7 +70,7 @@ class CatalogFactory extends SprykerCatalogFactory
 Check out the example code of the `CartBoostQueryExpanderPlugin` plugin:
 <details open>
 <summary>src/Pyz/Client/Catalog/Plugin/Elasticsearch/QueryExpander/CartBoostQueryExpanderPlugin.php</summary>
-    
+
 ```php
 <?php
 
@@ -204,5 +214,3 @@ class CartBoostQueryExpanderPlugin extends AbstractPlugin implements QueryExpand
 
 ### Testing
 Now, to test the results, go to a category having products of different colors, for example, *Cameras & Camcoders*. Then, add any red product to your cart and return to the catalog page. The order of products should be changed accordingly, and you should see red products first.
-
-

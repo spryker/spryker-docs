@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/t-calculator-plugin
   - /docs/t-calculator-plugin
   - /docs/en/t-calculator-plugin
+  - /v6/docs/t-calculator-plugin
+  - /v6/docs/en/t-calculator-plugin
+  - /v5/docs/t-calculator-plugin
+  - /v5/docs/en/t-calculator-plugin
+  - /v4/docs/t-calculator-plugin
+  - /v4/docs/en/t-calculator-plugin
+  - /v3/docs/t-calculator-plugin
+  - /v3/docs/en/t-calculator-plugin
+  - /v2/docs/t-calculator-plugin
+  - /v2/docs/en/t-calculator-plugin
+  - /v1/docs/t-calculator-plugin
+  - /v1/docs/en/t-calculator-plugin
 ---
 
 <!-- used to be: http://spryker.github.io/tutorials/zed/calculator-plugin/

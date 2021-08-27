@@ -191,7 +191,7 @@ All the significant features of Spryker Marketplace are covered with Glue APIs.
   * [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-marketplace-orders.html)
   * [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{site.version}}/managing-the-returns.html)
   * [Managing wishlist items](/docs/marketplace/dev/glue-api-guides/{{site.version}}/wishlists/managing-wishlist-items.html)
-  * [Search the product catalog](/docs/marketplace/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html.html)
+  * [Search the product catalog](/docs/marketplace/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html)
   * [Retrieving autocomplete and search suggestions](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-autocomplete-and-search-suggestions.html)
 
 

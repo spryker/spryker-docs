@@ -31,8 +31,8 @@ _Merchant Portal_ is the management interface where merchants do all administrat
 
 
   Documentation:
-  * [Merchant Portal overview](/docs/marketplace/user/merchant-portal-user-guides/logging-in-to-the-merchant-portal.html)
-  * [Merchant users](/docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-overview/merchant-users.html)
+  * [Merchant Portal overview](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/logging-in-to-the-merchant-portal.html)
+  * [Merchant users](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant/marketplace-merchant-overview/merchant-users.html)
 
 
 ### Merchant Profile
@@ -55,7 +55,7 @@ Every reference to a merchant on the Storefront is linked to their merchant prof
 
 ![Merchant profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-profile-page.png)
 
-  Documentation: [Marketplace Merchant feature overview](/docs/marketplace/user/features/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html)
+  Documentation: [Marketplace Merchant feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html)
 
 
 
@@ -71,7 +71,7 @@ A _Merchant Product_ is a product created by a merchant. The merchant that creat
 
 ![Merchant product on the Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-product-on-pdp.png)
 
-  Documentation: [Marketplace Products feature overview](/docs/marketplace/user/features/marketplace-product-feature-overview.html)
+  Documentation: [Marketplace Products feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-feature-overview.html)
 
 
 ### Merchant Product Offers
@@ -82,14 +82,14 @@ The _Product Details _page contains a section where a customer can view and sele
 
 ![Merchant offers on the Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-offers-on-pdp.png)
 
-  Documentation: [Marketplace Product Offer](/docs/marketplace/user/features/marketplace-product-offer.html)
+  Documentation: [Marketplace Product Offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer.html)
 
 
 ### Merchant Product Options
 
 Merchants can create and connect product options to their or other merchants’ products.
 
-Documentation: [Marketplace Product Options feature overview](https://docs.spryker.com/docs/marketplace/user/features/marketplace-product-options-feature-overview.html)
+Documentation: [Marketplace Product Options feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-options-feature-overview.html)
 
 
 
@@ -113,7 +113,7 @@ Customers can add products from different merchants to a single cart and order t
 
 ![Marketplace order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-storefront-order-details.png)
 
-	Documentation: [Marketplace Order Management](/docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html)
+	Documentation: [Marketplace Order Management](/docs/marketplace/user/features/{{site.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html)
 
 
 
@@ -131,7 +131,7 @@ The operator can create, edit, and approve merchants and merchant users. They al
 ![Merchants in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-back-office-merchants.png)
 
   Documentation:
-  * [Managing merchants](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html)
+  * [Managing merchants](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/merchants/managing-merchants.html)
   * [Managing merchant users](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html)
 
 
@@ -141,7 +141,7 @@ The operator can edit and activate merchant products and product options.
 
 ![Merchnat products in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-back-office-products.png)
 
-  Documentation: [Marketplace Products feature overview](/docs/marketplace/user/features/marketplace-product-feature-overview.html)
+  Documentation: [Marketplace Products feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-feature-overview.html)
 
 
 ### Merchant product offer management
@@ -150,7 +150,7 @@ The operator can view and approve merchant product offers.
 
 ![Merchant offer in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-back-office-offers.png)
 
-  Documentation: [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html)
+  Documentation: [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/offers/managing-merchant-product-offers.html)
 
 
 ### Marketplace and merchant order management
@@ -159,7 +159,7 @@ The operator can view and cancel marketplace and merchant orders.
 
 ![Marketplace orders in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-back-office-orders.png)
 
-  Documentation: [Managing marketplace orders](/docs/marketplace/user/back-office-user-guides/marketplace/orders/managing-marketplace-orders.html)
+  Documentation: [Managing marketplace orders](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/orders/managing-marketplace-orders.html)
 
 
 ### Marketplace and merchant return management
@@ -172,7 +172,7 @@ The operator can view and create marketplace and merchant returns.
 
 The operator can act as a _Main Merchant_ and sell products. In Back Office, they manage their own orders and returns separately from the other merchants’ orders and returns.
 
-  Documentation: [Managing main merchant orders](/docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html)
+  Documentation: [Managing main merchant orders](/docs/marketplace/user/back-office-user-guides/{{site.version}}/sales/managing-main-merchant-orders.html)
 
 
 
@@ -182,17 +182,17 @@ The operator can act as a _Main Merchant_ and sell products. In Back Office, the
 All the significant features of Spryker Marketplace are covered with Glue APIs.
 
   Documentation:
-  * [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/retrieving-merchant-information.html)
-  * [Retrieving merchant abstract products](/docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html)
-  * [Retrieving merchant concrete products](/docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html)
-  * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/retrieving-product-offers.html)
-  * [Retrieving product offers for a concrete product](/docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-for-a-concrete-product.html)
-  * [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
-  * [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html)
-  * [Managing the returns](/docs/marketplace/dev/glue-api-guides/managing-the-returns.html)
-  * [Managing wishlist items](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html)
-  * [Catalog search](/docs/marketplace/dev/glue-api-guides/catalog-search.html)
-  * [Retrieving suggestions for auto-completion and search](/docs/marketplace/dev/glue-api-guides/retrieving-suggestions-for-auto-completion-and-search.html)
+  * [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-merchant-information.html)
+  * [Retrieving merchant abstract products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/abstract-products/retrieving-abstract-products.html)
+  * [Retrieving merchant concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-concrete-products.html)
+  * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-product-offers.html)
+  * [Retrieving product offers for a concrete product](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-product-offers-for-a-concrete-product.html)
+  * [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{site.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
+  * [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-marketplace-orders.html)
+  * [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{site.version}}/managing-the-returns.html)
+  * [Managing wishlist items](/docs/marketplace/dev/glue-api-guides/{{site.version}}/wishlists/managing-wishlist-items.html)
+  * [Catalog search](/docs/marketplace/dev/glue-api-guides/{{site.version}}/catalog-search.html)
+  * [Retrieving suggestions for auto-completion and search](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-suggestions-for-auto-completion-and-search.html)
 
 
 
@@ -205,12 +205,12 @@ To ensure a smooth merchant onboarding process and overall marketplace setup, we
 
 These are the new data importers available in our data import framework:
 
-* Product offers: The operator can provide a template to the merchants, so that they can add all offer-related information in one file that can be imported afterwards. Documentation: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer-csv.html).
-* Merchant Order items status. Documentation: [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import/file-details-merchant-order-status-csv.html).
+* Product offers: The operator can provide a template to the merchants, so that they can add all offer-related information in one file that can be imported afterwards. Documentation: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-combined-merchant-product-offer-csv.html).
+* Merchant Order items status. Documentation: [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import//{{site.version}}/file-details-merchant-order-status-csv.html).
 
 
 ### Data export
 
 The new merchant order exporter allows to export information like orders, order Items, and expenses.
 
-  Documentation: [Data export Merchant Orders .csv files format](/docs/marketplace/dev/data-export/data-export-merchant-orders-csv-files-format.html)
+  Documentation: [Data export Merchant Orders .csv files format](/docs/marketplace/dev/data-export//{{site.version}}/data-export-merchant-orders-csv-files-format.html)

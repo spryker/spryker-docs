@@ -371,7 +371,7 @@ There are a few common Table types that are available in UI library as separate 
 - `table.feature.editable` - displays an editable cell that toggles popup with a specific component (input, select, etc.).
 - `table.feature.filters` - displays row with filters.
 - `table.feature.pagination` - displays a pagination.
-- `table.feature.row-actions` - triggers a specific action by row clicking.
+- `table.feature.row-actions` - displays dropdown menu that contains actions related specifically to the table row.
 - `table.feature.search` - displays search.
 - `table.feature.selectable` - displays a checkmark that triggers row selection.
 - `table.feature.settings` - displays a button that triggers a popup with a table settings.

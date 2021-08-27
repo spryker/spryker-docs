@@ -23,7 +23,7 @@ Example usage the Table Column List in the `@spryker/table` config:
         type: 'list',
         typeOptions: {
           limit: 2,
-          type: 'test',
+          type: 'text',
           typeOptions: {
             text: '${value}',
           },

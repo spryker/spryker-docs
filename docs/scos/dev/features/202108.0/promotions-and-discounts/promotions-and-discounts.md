@@ -19,12 +19,12 @@ You can choose between two discount types - Voucher and Cart rule. Depending on 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Get a general idea of the Promotions & Discounts feature]()  |
-| [Create a voucher](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\discount\creating-a-voucher.md)  |
-| [Create a cart rule](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\discount\creating-a-cart-rule.md)  |
-| [Manage discounts](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\discount\managing-discounts.md)  |
+| [Create a voucher](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-a-voucher.html)  |
+| [Create a cart rule](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-a-cart-rule.html)  |
+| [Manage discounts](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/managing-discounts.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Promotions & Discounts feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\promotions-and-discounts-feature-walkthrough.md) for developers.
+Are you a developer? See [Promotions & Discounts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/promotions-and-discounts-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

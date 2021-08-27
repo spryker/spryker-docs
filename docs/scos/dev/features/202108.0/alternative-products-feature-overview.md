@@ -37,10 +37,10 @@ On the product details page of a product that's a product alternaive for another
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add product alternatives](docs\scos\user\user-guides\202108.0\back-office-user-guide\catalog\products\managing-products\adding-product-alternatives.md) |
+| [Add product alternatives](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/managing-products/adding-product-alternatives.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Alternative Products feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\alternative-products-feature-walkthrough.md) for developers.
+Are you a developer? See [Alternative Products feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/alternative-products-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

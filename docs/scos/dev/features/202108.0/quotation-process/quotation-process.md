@@ -20,6 +20,6 @@ RFQ is a simple, great way for B2B buyers to choose the best supplier and get th
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Quotation Process feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\quotation-process-feature-walkthrough.md) for developers.
+Are you a developer? See [Quotation Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

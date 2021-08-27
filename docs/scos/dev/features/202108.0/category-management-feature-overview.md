@@ -114,10 +114,10 @@ Currently, the Category Management feature has the following functional constrai
 |---|
 | [Create a category](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html) |
 | [Assign products to categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) |
-| [Manage categories](docs\scos\user\user-guides\201811.0\back-office-user-guide\category\managing-categories.md) |
+| [Manage categories](/docs/scos/user/user-guides/201811.0/back-office-user-guide/category/managing-categories.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Category management feature walkthrough](docs\scos\dev\features\202108.0\category-management-feature-overview.md) for developers.
+Are you a developer? See [Category management feature walkthrough](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html) for developers.
 
 {% endinfo_block %}

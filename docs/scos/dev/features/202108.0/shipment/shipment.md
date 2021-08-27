@@ -26,12 +26,12 @@ Shipment is the feature your shop will benefit from, as it allows you to:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Shipment feature](docs\scos\dev\features\202108.0\shipment\shipment-feature-overview.md)  |
-| [Create a carrier company](docs\scos\user\user-guides\202108.0\back-office-user-guide\administration\delivery-methods\creating-a-carrier-company.md)  |
-| [Create and manage delivery methods](docs\scos\user\user-guides\202108.0\back-office-user-guide\administration\delivery-methods\creating-and-managing-delivery-methods.md)  |
+| [Get a general idea of the Shipment feature](/docs/scos/dev/features/{{page.version}}/shipment/shipment-feature-overview.html)  |
+| [Create a carrier company](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-a-carrier-company.html)  |
+| [Create and manage delivery methods](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/delivery-methods/creating-and-managing-delivery-methods.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Shipment feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\shipment-feature-walkthrough\shipment-feature-walkthrough.md) for developers.
+Are you a developer? See [Shipment feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -14,21 +14,20 @@ The schema below illustrates relations between modules when Avalara is integrate
 
 Product and Cart entities:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+tax+product.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+tax+product.png)
 
 Calculation entity:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avatar+Tax+Integration+module+dependency+graph.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avatar+Tax+Integration+module+dependency+graph.png)
 
 Checkout entity:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Tax+checkout.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Tax+checkout.png)
 
 Sales order entity:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Sales+Order+dependency.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Sales+Order+dependency.png)
 
 Stock entity:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Stock+context.png){height="" width=""}
-
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Stock+context.png)

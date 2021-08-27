@@ -24,12 +24,12 @@ To summarize, the Product Relations feature brings a lot of benefits to shop own
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Product Relations feature](docs\scos\dev\features\202108.0\product-rating-and-reviews\product-rating-and-reviews-feature-overview.md)  |   |
-| [Create product relations](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\product-relations\creating-product-relations.md)  |   |
-| [Manage product relations](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\product-relations\managing-product-relations.md)  |   |
+| [Get a general idea of the Product Relations feature](/docs/scos/dev/features/{{page.version}}/product-rating-and-reviews/product-rating-and-reviews-feature-overview.html)  |   |
+| [Create product relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/creating-product-relations.html)  |   |
+| [Manage product relations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-relations/managing-product-relations.html)  |   |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Relations feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\product-relations-feature-walkthrough.md) for developers.
+Are you a developer? See [Product Relations feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-relations-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

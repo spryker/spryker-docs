@@ -71,11 +71,11 @@ Currently, the feature has the following functional constraints which are going 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a product option](docs\scos\user\user-guides\202108.0\back-office-user-guide\catalog\product-options\creating-a-product-option.md)  |
-| [Manage product options](docs\scos\user\user-guides\202108.0\back-office-user-guide\catalog\product-options\managing-product-options.md)  |
+| [Create a product option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/creating-a-product-option.html)  |
+| [Manage product options](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/managing-product-options.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Options feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\product-options-feature-walkthrough.md) for developers.
+Are you a developer? See [Product Options feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-options-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

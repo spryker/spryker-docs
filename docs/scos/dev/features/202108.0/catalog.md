@@ -31,6 +31,6 @@ The main benefits of working with the catalog are to pave the way for a smooth s
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Catalog feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\catalog-feature-walkthrough.md) for developers.
+Are you a developer? See [Catalog feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

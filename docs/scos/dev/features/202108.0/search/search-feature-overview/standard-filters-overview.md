@@ -37,10 +37,10 @@ Price Range Filter is not supported with the Merchant Relations, that is why thi
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage filter preferences](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\search-and-filters\managing-filter-preferences.md)  |
+| [Manage filter preferences](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-filter-preferences.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Search feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\search-feature-walkthrough.md) for developers.
+Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

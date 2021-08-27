@@ -41,7 +41,7 @@ See [Managing users](/docs/scos/user/user-guides/{{page.version}}/back-office-us
 
 {% info_block infoBox "Adding users in the ACL module" %}
 
-You can add Zed users not only via the Back Office, but also in the ACL module. To do so, add the user in `\Spryker\Zed\Acl\AclConfig::getInstallerUsers()`(see [AclConfig.php](https://github.com/spryker/acl/blob/d3193c9259ed2f2b6815f3b2c9f52f4e4e250bbe/src/Spryker/Zed/Acl/AclConfig.php) for example) and run `console setup:init-db`.
+You can add Zed users not only via the Back Office, but also in the ACL module. To do so, add the user in `/Spryker/Zed/Acl/AclConfig::getInstallerUsers()`(see [AclConfig.php](https://github.com/spryker/acl/blob/d3193c9259ed2f2b6815f3b2c9f52f4e4e250bbe/src/Spryker/Zed/Acl/AclConfig.php) for example) and run `console setup:init-db`.
 
 {% endinfo_block %}
 
@@ -49,7 +49,7 @@ You can add Zed users not only via the Back Office, but also in the ACL module. 
 
 Apart from being able to configure user access to Zed resources via Zed UI, you can grant access to additional resources by specifying them in `config_*.php`. The following options are used to do that:
 
-* `AclConstants::ACL_DEFAULT_RULES`—is used to provide/restrict access to Zed resources, defined in the `Spryker\Zed\Auth\AuthConfig::$ingorable` property. For example:
+* `AclConstants::ACL_DEFAULT_RULES`—is used to provide/restrict access to Zed resources, defined in the `Spryker/Zed/Auth/AuthConfig::$ingorable` property. For example:
 
 ```php
 $config[AclConstants::ACL_DEFAULT_RULES] = [
@@ -109,12 +109,12 @@ In the example, we grant the user **winner@spryker.com** access to all Zed resou
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create and manage roles](docs\scos\user\user-guides\202108.0\back-office-user-guide\users\roles-groups-and-users\managing-roles.md) |
-| [Create and manage groups](docs\scos\user\user-guides\202108.0\back-office-user-guide\users\roles-groups-and-users\managing-groups.md) |
+| [Create and manage roles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-roles.html) |
+| [Create and manage groups](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-groups.html) |
 | [Create and manage users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Spryker Core back Office feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\spryker-core-back-office-feature-walkthrough\spryker-core-back-office-feature-walkthrough.md) for developers.
+Are you a developer? See [Spryker Core back Office feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

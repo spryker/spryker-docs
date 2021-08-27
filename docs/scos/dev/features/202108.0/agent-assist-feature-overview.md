@@ -53,6 +53,6 @@ Check out this video tutorial on setting up an Agent user in a B2B company accou
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Agent Assist feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\agent-assist-feature-walkthrough.md) for developers.
+Are you a developer? See [Agent Assist feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/agent-assist-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

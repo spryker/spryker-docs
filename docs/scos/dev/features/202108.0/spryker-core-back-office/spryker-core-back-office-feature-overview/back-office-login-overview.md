@@ -58,10 +58,10 @@ Each of the Identity Managers is an ECO module that should be developed separate
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Log in to the Back Office](docs\scos\user\user-guides\202108.0\back-office-user-guide\logging-in-to-the-back-office.md) |
+| [Log in to the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/logging-in-to-the-back-office.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Spryker Core back Office feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\spryker-core-back-office-feature-walkthrough\spryker-core-back-office-feature-walkthrough.md) for developers.
+Are you a developer? See [Spryker Core back Office feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

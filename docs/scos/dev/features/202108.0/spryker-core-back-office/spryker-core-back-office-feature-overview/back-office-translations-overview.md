@@ -56,10 +56,10 @@ The scheme below illustrates relations between Translator, UserExtension, User, 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Assign language to Back Office users](docs\scos\user\user-guides\202108.0\back-office-user-guide\users\roles-groups-and-users\managing-users.md#creating-users) |
+| [Assign language to Back Office users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.md#creating-users) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Spryker Core back Office feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\spryker-core-back-office-feature-walkthrough\spryker-core-back-office-feature-walkthrough.md) for developers.
+Are you a developer? See [Spryker Core back Office feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

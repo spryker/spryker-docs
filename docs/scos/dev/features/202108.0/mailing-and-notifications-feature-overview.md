@@ -36,6 +36,6 @@ The following links provide additional information about the Mail module, plugin
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Mailing & Notification feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\mailing-and-notifications-feature-walkthrough.md) for developers.
+Are you a developer? See [Mailing & Notification feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/mailing-and-notifications-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

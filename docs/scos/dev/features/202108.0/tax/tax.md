@@ -20,12 +20,12 @@ Align your business with international tax standards by defining tax rates and s
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Tax feature](docs\scos\dev\features\202108.0\tax\tax-feature-overview.md) |
-| [Manage tax rates](docs\scos\user\user-guides\202108.0\back-office-user-guide\administration\tax-rates\managing-tax-rates.md) |
-| [Manage tax sets](docs\scos\user\user-guides\202108.0\back-office-user-guide\administration\tax-sets\managing-tax-sets.md) |
+| [Get a general idea of the Tax feature](/docs/scos/dev/features/{{page.version}}/tax/tax-feature-overview.html) |
+| [Manage tax rates](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/tax-rates/managing-tax-rates.html) |
+| [Manage tax sets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/tax-sets/managing-tax-sets.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Tax feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\tax-feature-walkthrough\tax-feature-walkthrough.md) for developers.
+Are you a developer? See [Tax feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/tax-feature-walkthrough/tax-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

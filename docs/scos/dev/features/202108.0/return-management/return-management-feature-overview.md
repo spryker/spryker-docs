@@ -113,10 +113,10 @@ Currently, the feature has the following functional constraints which are going 
 |---|
 | [Create returns in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return)  |
 | [View return details, set return statuses and print return slips in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/returns/managing-returns.html)  |
-| [Choose a suitable return management process for your project](docs\scos\dev\features\202108.0\return-management\building-a-return-management-process-best-practices.md)  |
+| [Choose a suitable return management process for your project](/docs/scos/dev/features/{{page.version}}/return-management/building-a-return-management-process-best-practices.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Return Management feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\return-management-feature-walkthrough.md) for developers.
+Are you a developer? See [Return Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

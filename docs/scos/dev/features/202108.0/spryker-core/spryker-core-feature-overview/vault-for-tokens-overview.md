@@ -33,6 +33,6 @@ The feature supports special characters and different [writing systems](https://
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Spryker Core feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\spryker-core-feature-walkthrough\spryker-core-feature-walkthrough.md) for developers.
+Are you a developer? See [Spryker Core feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

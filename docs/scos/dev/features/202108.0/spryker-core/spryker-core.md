@@ -13,6 +13,6 @@ The Spryker Core feature is the very basis of all the functionality in Spryker.
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Spryker Core feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\spryker-core-feature-walkthrough\spryker-core-feature-walkthrough.md) for developers.
+Are you a developer? See [Spryker Core feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

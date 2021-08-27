@@ -75,6 +75,6 @@ Even though the Balance strategy is a bit more complicated than Replacement, it 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Gift Cards feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\gift-cards-feature-walkthrough.md) for developers.
+Are you a developer? See [Gift Cards feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

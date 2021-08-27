@@ -22,12 +22,12 @@ Multiple products can be offered as a set so that the customer can add them to c
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Product Sets feature](docs\scos\dev\features\202108.0\product-sets\product-sets-feature-overview.md) |
-| [Create product sets](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\product-sets\creating-product-sets.md) |
-| [Manage product sets](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\product-sets\managing-product-sets.md) |
+| [Get a general idea of the Product Sets feature](/docs/scos/dev/features/{{page.version}}/product-sets/product-sets-feature-overview.html) |
+| [Create product sets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-sets/creating-product-sets.html) |
+| [Manage product sets](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/product-sets/managing-product-sets.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Relations feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\product-relations-feature-walkthrough.md) for developers.
+Are you a developer? See [Product Relations feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-relations-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

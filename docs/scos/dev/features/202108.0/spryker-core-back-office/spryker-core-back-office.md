@@ -69,24 +69,24 @@ The Back Office users can translate the Back Office into English and German lang
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Back Office](docs\scos\dev\features\202108.0\spryker-core-back-office\spryker-core-back-office-feature-overview\the-back-office-overview.md) |
-| [Get a general idea of the Back Office Login](docs\scos\dev\features\202108.0\spryker-core-back-office\spryker-core-back-office-feature-overview\back-office-login-overview.md) |
-| [Get a general idea of the Back Office Translations](docs\scos\dev\features\202108.0\spryker-core-back-office\spryker-core-back-office-feature-overview\back-office-translations-overview.md) |
-| [Log in to the Back Office](docs\scos\user\user-guides\202108.0\back-office-user-guide\logging-in-to-the-back-office.md) |
+| [Get a general idea of the Back Office](/docs/scos/dev/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/the-back-office-overview.html) |
+| [Get a general idea of the Back Office Login](/docs/scos/dev/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-login-overview.html) |
+| [Get a general idea of the Back Office Translations](/docs/scos/dev/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
+| [Log in to the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/logging-in-to-the-back-office.html) |
 | **Work with the Back Office**: |
-| [View Dashboard](docs\scos\user\user-guides\202108.0\back-office-user-guide\dashboard\viewing-dashboard.md) |
-| [Mange Punch Out](docs\scos\user\user-guides\202108.0\back-office-user-guide\punch-out\managing-punch-out-connections.md) |
-| [View Order Matrix](docs\scos\user\user-guides\202108.0\back-office-user-guide\sales\order-matrix\viewing-the-order-matrix.md) |
-| [Manage customers](docs\scos\user\user-guides\202108.0\back-office-user-guide\customer\customer-customer-access-customer-groups\managing-customers.md) |
-| [Create an abstract product and product bundles](docs\scos\user\user-guides\202108.0\back-office-user-guide\catalog\products\abstract-products\creating-abstract-products-and-product-bundles.md) |
-| [Create content items](docs\scos\user\user-guides\202108.0\back-office-user-guide\content\content-items\creating-content-items.md) |
-| [Create a voucher](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\discount\creating-a-voucher.md) |
-| [Manage users](docs\scos\user\user-guides\202108.0\back-office-user-guide\users\roles-groups-and-users\managing-users.md) |
-| [Manage merchants](docs\scos\user\user-guides\202108.0\back-office-user-guide\marketplace\merchants-and-merchant-relations\managing-merchants.md) |
-| [Create a warehouse](docs\scos\user\user-guides\202108.0\back-office-user-guide\administration\warehouses\creating-warehouses.md) |
+| [View Dashboard](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/dashboard/viewing-dashboard.html) |
+| [Mange Punch Out](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/punch-out/managing-punch-out-connections.html) |
+| [View Order Matrix](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/order-matrix/viewing-the-order-matrix.html) |
+| [Manage customers](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html) |
+| [Create an abstract product and product bundles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) |
+| [Create content items](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html) |
+| [Create a voucher](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-a-voucher.html) |
+| [Manage users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html) |
+| [Manage merchants](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/marketplace/merchants-and-merchant-relations/managing-merchants.html) |
+| [Create a warehouse](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Spryker Core back Office feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\spryker-core-back-office-feature-walkthrough\spryker-core-back-office-feature-walkthrough.md) for developers.
+Are you a developer? See [Spryker Core back Office feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

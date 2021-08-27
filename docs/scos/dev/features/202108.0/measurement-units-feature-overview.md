@@ -71,6 +71,6 @@ If a global unit conversion exists between the base and sales unit, then factor 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Measurement Units feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\measurement-units-feature-walkthrough.md) for developers.
+Are you a developer? See [Measurement Units feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/measurement-units-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

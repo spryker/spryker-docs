@@ -21,6 +21,6 @@ When customer transfers shopping list items to cart, their notes are taken over 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Shopping Lists feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\shopping-lists-feature-walkthrough.md) for developers.
+Are you a developer? See [Shopping Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

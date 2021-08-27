@@ -29,6 +29,6 @@ Currently, the feature has the following functional constraints which are going 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Search feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\search-feature-walkthrough.md) for developers.
+Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

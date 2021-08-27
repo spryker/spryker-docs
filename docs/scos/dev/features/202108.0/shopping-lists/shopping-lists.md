@@ -27,12 +27,12 @@ Check out this video tutorial on how to use shopping lists.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Multiple and Shared Shopping Lists](docs\scos\dev\features\202108.0\shopping-lists\shopping-lists-feature-overview\multiple-and-shared-shopping-lists-overview.md) |
-| [Get a general idea of the shopping list widget](docs\scos\dev\features\202108.0\shopping-lists\shopping-lists-feature-overview\shopping-list-widget-overview.md)  |
-| [Get a general idea of Shopping List Notes](docs\scos\dev\features\202108.0\shopping-lists\shopping-lists-feature-overview\shopping-list-notes-overview.md)  |
+| [Get a general idea of Multiple and Shared Shopping Lists](/docs/scos\dev\features/{{page.version}}/shopping-lists\shopping-lists-feature-overview\multiple-and-shared-shopping-lists-overview.html) |
+| [Get a general idea of the shopping list widget](/docs/scos\dev\features/{{page.version}}/shopping-lists\shopping-lists-feature-overview\shopping-list-widget-overview.html)  |
+| [Get a general idea of Shopping List Notes](/docs/scos\dev\features/{{page.version}}/shopping-lists\shopping-lists-feature-overview\shopping-list-notes-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Shopping Lists feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\shopping-lists-feature-walkthrough.md) for developers.
+Are you a developer? See [Shopping Lists feature walkthrough](/docs/scos\dev\feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

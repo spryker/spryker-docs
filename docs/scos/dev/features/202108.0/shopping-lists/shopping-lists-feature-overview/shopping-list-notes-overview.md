@@ -19,16 +19,8 @@ When customer transfers shopping list items to cart, their notes are taken over 
 * If an item **without notes** exists in a shopping list, and is transferred to cart, where the same item already exists **without notes**, the items are **merged**.
 * If an item **without notes exists in a shopping list, and is transferred to cart, where the same item already exists with a note**, the item is added as a **separate item**.
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/shopping-lists-feature-integration" class="mr-link">Enable Shopping List Notes in your project by integrating the Shopping Lists feature</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+Are you a developer? See [Shopping Lists feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\shopping-lists-feature-walkthrough.md) for developers.
+
+{% endinfo_block %}

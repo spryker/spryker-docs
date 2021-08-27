@@ -21,16 +21,14 @@ Currently, the feature has the following functional constraints which are going 
 * Category filters are shared across all the stores of a project.
 * It is impossible to restrict availability of a category filter to a store.
 
-## If you are:
+## Related Business User articles
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-               <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html" class="mr-link">Manage category filters</a></li>           
-            </ul>
-        </div>
-    </div>
-</div>
+|BACK OFFICE USER GUIDES|
+|---|
+| [Manage category filters](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html)  |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Search feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\search-feature-walkthrough.md) for developers.
+
+{% endinfo_block %}

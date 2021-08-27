@@ -18,26 +18,8 @@ RFQ is a simple, great way for B2B buyers to choose the best supplier and get th
 * Direct interaction between shop owners and buyers creates customer loyalty and increases sales.
 * If buyers negotiate better prices, they will most likely make the purchase immediately.
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/quotation-process-rfq-feature-overview" class="mr-link">Get a general idea of the Quotation Process feature</a></li>
-                <li>Integrate Quotation Process feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/quotation-process-feature-integration" class="mr-link">Integrate Quotation Process feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/quotation-process-multiple-carts-feature-integration" class="mr-link">Integrate Quotation Process + Multiple Carts feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/quotation-process-approval-process-feature-integration" class="mr-link">Integrate Quotation Process + Approval Process feature</a></li>
-             <li><a href="https://documentation.spryker.com/docs/approval-process-feature-integration" class="mr-link">Integrate Approval Process feature</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/shipment-cart-feature-integration" class="mr-link">Integrate Shipment + Cart feature</a></li>
-                  <li><a href="https://documentation.spryker.com/docs/shipment-feature-integration" class="mr-link">Integrate Shipment feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/checkout-quotation-process-feature-integration" class="mr-link">Integrate Checkout + Quotation Process feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-quoterequestpage#upgrading-from-version-2-x-x-to-version-3-x-x" class="mr-link">Migrate the QuoteRequestPage module from version 2.* to version 3.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-quoterequestagent#upgrading-from-version-2-x-x-to-version-3-x-x" class="mr-link">Migrate the QuoteRequestAgentPage module from version 2.* to version 3.*</a></li>
-                </ul>
-        </div>
-    </div>
-</div>
+Are you a developer? See [Quotation Process feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\quotation-process-feature-walkthrough.md) for developers.
+
+{% endinfo_block %}

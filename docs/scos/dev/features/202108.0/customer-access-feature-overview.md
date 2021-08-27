@@ -39,32 +39,22 @@ Shop application (on the right)
 
 By default, all content types are hidden for a logged out user.
 
-A developer can add more content types on a project level. 
+A developer can add more content types on a project level.
 
 {% info_block errorBox %}
+
 Even if the **Add to Cart** button is available, an unauthenticated customer is redirected to the login page after clicking it.
+
 {% endinfo_block %}
 
-## If you are:
+## Related Business User articles
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/customer-access-feature-integration" class="mr-link">Integrate the Customer Access feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customer-access-feature-integration" class="mr-link">Integrate the Customer Access Glue API</a></li>
-               <li><a href="https://documentation.spryker.com/docs/retrieving-protected-resources" class="mr-link">Retrieve protected resources via Glue API</a></li>
-               <li><a href="https://documentation.spryker.com/docs/managing-customer-access-to-glue-api-resources" class="mr-link">Learn how to manage customer access to Glue API resources</a></li>
-            </ul>
-        </div>
-<!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-customer-access" class="mr-link">Manage customer access</a></li>
-            </ul>
-        </div>
-        </div>
-</div>
+|BACK OFFICE USER GUIDES|
+|---|
+| [Manage customer access](docs\scos\dev\features\202108.0\customer-access-feature-overview.md) |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Customer Access feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\customer-access-feature-walkthrough.md) for developers.
+
+{% endinfo_block %}

@@ -10,22 +10,24 @@ redirect_from:
   - /docs/en/spryker-core-back-office
 ---
 
-From the Back Office, you can manage all the back-office activities. For example, the Back Office users can manage user and administrator accounts, create product pages, check orders, and do many more tasks. 
+From the Back Office, you can manage all the back-office activities. For example, the Back Office users can manage user and administrator accounts, create product pages, check orders, and do many more tasks.
 
 The Spryker Back Office supports two types of authentication:
 
 * Regular authentication with the Back Office user email and password
 * Third-party sign-on
 
-You can define access permissions and roles for all Back Office users where needed and set initial passwords. 
+You can define access permissions and roles for all Back Office users where needed and set initial passwords.
 
-The Back Office users can translate the Back Office into English and German languages by default and integrate any other language depending on their needs. 
+The Back Office users can translate the Back Office into English and German languages by default and integrate any other language depending on their needs.
+
+<!--
 
 ## If you are:
 
 <div class="mr-container">
     <div class="mr-list-container">
-        <!-- col1 -->
+
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
@@ -36,7 +38,7 @@ The Back Office users can translate the Back Office into English and German lang
                 <li><a href="https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration" class="mr-link">Integrate the Spryker Core Back Office feature into your project</a></li>
             </ul>
         </div>
-        <!-- col2 -->
+
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
@@ -59,4 +61,32 @@ The Back Office users can translate the Back Office into English and German lang
             </ul>
         </div>
         </div>
-</div>   
+</div>
+
+-->
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Get a general idea of the Back Office](docs\scos\dev\features\202108.0\spryker-core-back-office\spryker-core-back-office-feature-overview\the-back-office-overview.md) |
+| [Get a general idea of the Back Office Login](docs\scos\dev\features\202108.0\spryker-core-back-office\spryker-core-back-office-feature-overview\back-office-login-overview.md) |
+| [Get a general idea of the Back Office Translations](docs\scos\dev\features\202108.0\spryker-core-back-office\spryker-core-back-office-feature-overview\back-office-translations-overview.md) |
+| [Log in to the Back Office](docs\scos\user\user-guides\202108.0\back-office-user-guide\logging-in-to-the-back-office.md) |
+| **Work with the Back Office**: |
+| [View Dashboard](docs\scos\user\user-guides\202108.0\back-office-user-guide\dashboard\viewing-dashboard.md) |
+| [Mange Punch Out](docs\scos\user\user-guides\202108.0\back-office-user-guide\punch-out\managing-punch-out-connections.md) |
+| [View Order Matrix](docs\scos\user\user-guides\202108.0\back-office-user-guide\sales\order-matrix\viewing-the-order-matrix.md) |
+| [Manage customers](docs\scos\user\user-guides\202108.0\back-office-user-guide\customer\customer-customer-access-customer-groups\managing-customers.md) |
+| [Create an abstract product and product bundles](docs\scos\user\user-guides\202108.0\back-office-user-guide\catalog\products\abstract-products\creating-abstract-products-and-product-bundles.md) |
+| [Create content items](docs\scos\user\user-guides\202108.0\back-office-user-guide\content\content-items\creating-content-items.md) |
+| [Create a voucher](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\discount\creating-a-voucher.md) |
+| [Manage users](docs\scos\user\user-guides\202108.0\back-office-user-guide\users\roles-groups-and-users\managing-users.md) |
+| [Manage merchants](docs\scos\user\user-guides\202108.0\back-office-user-guide\marketplace\merchants-and-merchant-relations\managing-merchants.md) |
+| [Create a warehouse](docs\scos\user\user-guides\202108.0\back-office-user-guide\administration\warehouses\creating-warehouses.md) |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Spryker Core back Office feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\spryker-core-back-office-feature-walkthrough\spryker-core-back-office-feature-walkthrough.md) for developers.
+
+{% endinfo_block %}

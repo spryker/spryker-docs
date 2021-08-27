@@ -31,8 +31,8 @@ There are a couple of entities that have a tax set associated as a foreign key, 
 ### TaxDefault Class
 TaxDefault class contains two important operations:
 
-* getDefaultTaxCountry() - retrieves the default tax country from the configuration file (e.g.: Germany).
-* getDefaultTaxRate() - retrieved the default tax rate from the configuration file (e.g.: 19%).
+* `getDefaultTaxCountry()`—retrieves the default tax country from the configuration file (e.g.: Germany).
+* `getDefaultTaxRate()`—retrieved the default tax rate from the configuration file (e.g.: 19%).
 
 These methods are called if the tax calculator cannot find the corresponding tax rate for one of the related entities.
 
@@ -45,9 +45,9 @@ The calculators are called to recalculate the taxes every time addToCart() metho
 
 #### Calculator Plugins for Tax Rates:
 
-* `ProductItemTaxCalculatorsPlugin` - calculates tax rates based on `IdAbstractProduct` in the items contained in the QuoteTransfer (Tax module)
-* `ProductIOptionTaxCalculatorsPlugin` - calculated tax rates based on `IdOptionValueUsage` for every product option of the items contained in the QuoteTransfer (ProductOption module)
-* `ShipmentTaxCalculatorsPlugin` - calculates tax rates based on the shipment method set in the `QuoteTransfer` (Shipment module)
+* `ProductItemTaxCalculatorsPlugin`—calculates tax rates based on `IdAbstractProduct` in the items contained in the QuoteTransfer (Tax module)
+* `ProductIOptionTaxCalculatorsPlugin`—calculated tax rates based on `IdOptionValueUsage` for every product option of the items contained in the QuoteTransfer (ProductOption module)
+* `ShipmentTaxCalculatorsPlugin`—calculates tax rates based on the shipment method set in the `QuoteTransfer` (Shipment module)
 
 The calculator plugins are registered in the `CalculationDependencyProvider:getCalculatorStack()` method.
 
@@ -141,5 +141,6 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 }
 ```
 
-## Migration Guide
+## Migration guide
+
 If you’re migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Migration Guide - Tax](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-tax.html).

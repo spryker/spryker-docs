@@ -23,32 +23,16 @@ Shopping list notes enable customers to attach notes to shopping list items. For
 Check out this video tutorial on how to use shopping lists.
 <iframe src="https://fast.wistia.net/embed/iframe/zk32pr3lgt" title="How to use Shopping Lists in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Get a general idea of Multiple and Shared Shopping Lists](docs\scos\dev\features\202108.0\shopping-lists\shopping-lists-feature-overview\multiple-and-shared-shopping-lists-overview.md) |
+| [Get a general idea of the shopping list widget](docs\scos\dev\features\202108.0\shopping-lists\shopping-lists-feature-overview\shopping-list-widget-overview.md)  |
+| [Get a general idea of Shopping List Notes](docs\scos\dev\features\202108.0\shopping-lists\shopping-lists-feature-overview\shopping-list-notes-overview.md)  |
 
+{% info_block warningBox "Developer guides" %}
 
-## If you are:
+Are you a developer? See [Shopping Lists feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\shopping-lists-feature-walkthrough.md) for developers.
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                            <li><a href="https://documentation.spryker.com/docs/multiple-and-shared-shopping-lists-overview" class="mr-link">Get a general idea of Multiple and Shared Shopping Lists</a></li>
-                                <li><a href="https://documentation.spryker.com/docs/shopping-list-widget-overview" class="mr-link">Get a general idea of the shopping list widget</a></li>
-                                <li><a href="https://documentation.spryker.com/docs/shopping-list-notes-overview" class="mr-link">Get a general idea of Shopping List Notes</a></li>
-                                 <li><a href="https://documentation.spryker.com/docs/managing-shopping-lists" class="mr-link">Manage shopping lists via Glue API</a></li>
-                                      <li><a href="https://documentation.spryker.com/docs/managing-shopping-list-items" class="mr-link">Manage shopping list items via Glue API</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/shopping-lists-feature-integration" class="mr-link">Integrate the Shopping Lists feature into your project</li>
-            </ul>
-        </div>
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                            <li><a href="https://documentation.spryker.com/docs/multiple-and-shared-shopping-lists-overview" class="mr-link">Get a general idea of Multiple and Shared Shopping Lists</a></li>
-                                <li><a href="https://documentation.spryker.com/docs/shopping-list-widget-overview" class="mr-link">Get a general idea of the shopping list widget</a></li>
-                                <li><a href="https://documentation.spryker.com/docs/shopping-list-notes-overview" class="mr-link">Get a general idea of Shopping List Notes</a></li>
-            </ul>
-                </div>
-    </div>
-</div>
+{% endinfo_block %}

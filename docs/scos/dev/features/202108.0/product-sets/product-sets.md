@@ -18,27 +18,16 @@ Multiple products can be offered as a set so that the customer can add them to c
 * Product set page with variant selector (for products with multiple variants), SEO meta data and images per set.
 * Place product sets in CMS placeholders.
 
-## If you are:
+## Related Business User articles
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-sets-feature-overview" class="mr-link">Get a general idea of the Product Sets feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/product-sets-feature-integration" class="mr-link">Integrate the Product Sets feature into your project</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/file-details-product-setcsv" class="mr-link">Import product sets</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-               <li><a href="https://documentation.spryker.com/docs/product-sets-feature-overview" class="mr-link">Get a general idea of the Product Sets feature</a></li>
-               <li><a href="https://documentation.spryker.com/docs/creating-product-sets" class="mr-link">Create product sets</a></li>
-               <li><a href="https://documentation.spryker.com/docs/managing-product-sets" class="mr-link">Manage product sets</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+|BACK OFFICE USER GUIDES|
+|---|
+| [Get a general idea of the Product Sets feature](docs\scos\dev\features\202108.0\product-sets\product-sets-feature-overview.md) |
+| [Create product sets](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\product-sets\creating-product-sets.md) |
+| [Manage product sets](docs\scos\user\user-guides\202108.0\back-office-user-guide\merchandising\product-sets\managing-product-sets.md) |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Product Relations feature walkthrough](docs\scos\dev\feature-walkthroughs\202108.0\product-relations-feature-walkthrough.md) for developers.
+
+{% endinfo_block %}

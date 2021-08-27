@@ -205,8 +205,7 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/orders/managing-merchant-orders.html
 
       - title: Release notes
-        url: /docs/marketplace/user/release-notes/
         nested:
-          
+
         - title: Release notes 202108.0
           url: /docs/marketplace/user/release-notes/release-notes-2021080.html

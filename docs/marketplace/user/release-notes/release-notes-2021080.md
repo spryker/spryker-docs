@@ -1,3 +1,9 @@
+---
+title: Release notes 202108.0
+description: Release notes for the release 202108.0
+template: concept-topic-template
+---
+
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements.
 

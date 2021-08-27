@@ -1,25 +1,25 @@
 ---
-title: Retrieving suggestions for auto-completion and search
+title: Retrieving autocomplete and search suggestions
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields
 template: glue-api-storefront-guide-template
 ---
 
-In addition to [catalog search](https://documentation.spryker.com/docs/catalog-search), the Spryker search engine also provides auto-completion terms and suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
+In addition to [catalog search](https://documentation.spryker.com/docs/catalog-search), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Catalog Feature Integration](https://documentation.spryker.com/docs/catalog-api-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](https://documentation.spryker.com/docs/glue-api-catalog-feature-integration).
 
-## Retrieve a suggestion
+## Retrieve a search suggestion
 
 To retrieve a search suggestion, send the request:
 
----
+***
 `GET` **/catalog-search-suggestions**
+***
 
----
 
 ### Request
 
@@ -32,19 +32,20 @@ To retrieve a search suggestion, send the request:
 
 | REQUEST | USAGE |
 | ---------------------- | ------------------------ |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions` | Retrieve suggestions for an empty search string. |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=` | Retrieve suggestions for an empty search string.    |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=058` | Retrieve suggestions in search for an abstract product by SKU *058*. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=058&include=abstract-products` | Retrieve suggestions in search for an abstract product by SKU *058* with the included product details. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=Acer Liquid Jade` | Retrieve suggestions in search for an abstract product by *Acer Liquid Jade* name. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=Ac` | Retrieve suggestions in search for a product by 2 letters (*Ac*). |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=acer+cb5-31` | Retrieve suggestions in search for a product by 11 symbols (*acer+cb5-31*). |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=058_24245592` | Retrieve suggestions in search for a concrete product by SKU *058_24245592*. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=acer+red` | Retrieve suggestions in search for a product by multiple attributes (brand *acer* and *red* color). |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=058` | Retrieve search suggestions for the SKU `058`. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=058&include=abstract-products` | Retrieve search suggestions for the SKU `058`, including product details. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=Acer Liquid Jade` | Retrieve search suggestions for the `Acer Liquid Jade` name. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=Ac` | Retrieve search suggestions for the two letters: `Ac`. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=acer+cb5-31` | Retrieve search suggestions for the 11 symbols: `acer+cb5-31`. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=058_24245592` | Retrieve search suggestions for the SKU `058_24245592`. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=acer+red` | Retrieve search suggestions for the following attributes: brand `acer` and color `red`. |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=acer&currency=CHF` | Set the *CHF* currency in search suggestions.  |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=Sony&currency=EUR&priceMode=GROSS_MODE` | Set the *EUR* currency and the *GROSS_MODE* price mode in search suggestions. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=telecom-%26-navigation` | Retrieve suggestions in search by category.                  |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=Smart` | Retrieve suggestions in search by part of a category name (*Smart*). |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=video%20king` | Retrieve suggestions in search by the *video king*Merchant name. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=Sony&currency=EUR&priceMode=GROSS_MODE` | Retrieve search suggestions for the phrase `Sony` with the `EUR` currency and `GROSS_MODE` price mode. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=telecom-%26-navigation` | Retreive search suggestions for the phrase `telecom&navigation`.          |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=Smart` | Retrieve search suggestions for the word `Smart`, which is a part of a category name. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=video%20king` | Retrieve search suggestions for the `video king` phrase, which is a merchant name. |
 
 ### Response
 
@@ -125,7 +126,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve suggestions for an abstract product with the included abstract product details</summary>
+<summary markdown='span'>Response sample: retrieve suggestions for an abstract product with abstract product details included</summary>
 
 ```json
 {
@@ -248,7 +249,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for an abstract product by name</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions for an abstract product name</summary>
 
 ```json
 {
@@ -401,7 +402,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for an abstract product by 2 letters</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions for two letters</summary>
 
 ```json
 {
@@ -605,7 +606,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for for a product by enetring 11 symbols</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions for 11 symbols</summary>
 
 ```json
 {
@@ -758,7 +759,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for a concrete product by SKU</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions for a concrete product SKU</summary>
 
 ```json
 {
@@ -803,7 +804,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve suggestions for a product in search by multiple attributes</summary>
+<summary markdown='span'>Response sample: retrieve suggestions for multiple product attributes</summary>
 
 ```json
 {
@@ -954,7 +955,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: set currency in search suggestions</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions with a currency set</summary>
 
 ```json
 {
@@ -1116,7 +1117,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: set currency and price mode in search suggestions</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions with a currency and a price mode set</summary>
 
 ```json
 {
@@ -1278,7 +1279,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions by category</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions for a category name</summary>
 
 ```json
 {
@@ -1439,7 +1440,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions by part of a category name</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions for a part of a category name</summary>
 
 ```json
 {
@@ -1623,7 +1624,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions by Merchant name - Marketplace only</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions for a merchant name</summary>
 
 ```json
 {
@@ -1776,34 +1777,28 @@ To retrieve a search suggestion, send the request:
 
 | ATTRIBUTE| TYPE | DESCRIPTION |
 | ---------------- | -------- | ---------- |
-| completion         | Array    | Provides a list of autocompletion suggestions for the query string. Each item in the array is a *String*. |
-| categories         | Array    | Contains an array of categories matching the search query. This attribute is deprecated and will be removed soon. For the updated attributes, see the *Category collection attributes* table below. |
-| cmsPages           | Array    | Contains an array of CMS pages matching the search query. This attribute is deprecated and will be removed soon. For the updated attributes, see the *CMS page Collection attributes* table below. |
-| abstractProducts   | Array    | Contains an array of abstract products matching the search query. Each item in the array is an *Object* representing a product. |
-| categoryCollection | Array    | Contains an array of categories matching the search query. Each item in the array is an *Object* representing a category. |
-| cmsPageCollection  | Array    | Contains an array of CMS pages. Each item in the array is an *Object* representing a single page. |
+| completion | Array | Autocomplete suggestions for the search query. </br> Each item in the array is a string. |
+| categories         | Array    | Categories that match the search query. The matching categories are now returned as the `categoryCollection` attribute. |
+| cmsPages           | Array    | CMS pages that match the search query. This attribute is deprecated and will be removed soon. The matching CMS pages are now returned as the `cmsPageCollection` attribute. |
+| abstractProducts   | Array    | Abstract products matching the search query. Each item in the array is an *Object* representing a product. |
+| abstractProducts.price | Integer | Product price. |
+| abstractProducts.abstractName | String | Product name. |
+| abstractProducts.abstractSku | String | Product SKU. |
+| abstractProducts.url | String | URL of the product's product details page. |
+| abstractProducts.images | Object | URLs of the product's images. |
+| abstractProducts.images.externalUrlSmall | String | URL of the product's preview image. |
+| abstractProducts.images.externalUrlLarge | String | URL of the product's large image. |
+| categoryCollection | Array    | Categories that match the search query. Each item in the array is an *Object* representing a category. |
+| categoryCollection.name     | String   | Specifies the category name. |
+| categoryCollection.URL    | String   | Specifies the category URL.  |
+| cmsPageCollection  | Array    | CMS pages that match the search query. Each item in the array is an *Object* representing a single page. |
+| cmsPageCollection.name       | String   | Specifies the page title. |
+| cmsPageCollection.url      | String   | Specifies the page URL.   |
 
-**Abstract product attributes**
 
-For the abstract product attributes, see [Retrieving abstract products](https://documentation.spryker.com/docs/retrieving-abstract-products).
+{% info_block infoBox "SEO-friendly URLs" %}
 
-**Category collection attributes**
-
-| ATTRIBUTE| TYPE | DESCRIPTION |
-| ----------- | -------- | ------------------- |
-| name     | String   | Specifies the category name. |
-| URL    | String   | Specifies the category URL.  |
-
-**CMS page collection attributes**
-
-| ATTRIBUTE| TYPE | DESCRIPTION |
-| ------------- | -------- | ----------------- |
-| name       | String   | Specifies the page title. |
-| url      | String   | Specifies the page URL.   |
-
-{% info_block infoBox "Info" %}
-
-The `url` attribute of categories and abstract products exposes a Search Engine Friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Using Search Engine Friendly URLs](https://documentation.spryker.com/docs/using-search-engine-friendly-urls).
+The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](https://documentation.spryker.com/docs/resolving-search-engine-friendly-urls).
 
 {% endinfo_block %}
 

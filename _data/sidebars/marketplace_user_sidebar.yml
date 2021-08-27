@@ -8,13 +8,16 @@ entries:
         nested:
 
           - title: Marketplace concept
-            url: /docs/marketplace/user/intro-to-spryker/marketplace-concept.html
+            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html
 
           - title: Marketplace personas
-            url: /docs/marketplace/user/intro-to-spryker/marketplace-personas.html
+            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html
 
           - title: Back Office for Marketplace Operator
-            url: /docs/marketplace/user/intro-to-spryker/back-office-for-marketplace-operator.html
+            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/back-office-for-marketplace-operator.html
+
+          - title: Marketplace Storefront
+            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-storefront.html
 
       - title: Features
         url: /docs/marketplace/user/features/
@@ -26,8 +29,9 @@ entries:
           - title: Merchant users overview
             url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html
 
-          - title: Main merchant concept
-            url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/main-merchant-concept.html
+        - title: Marketplace Merchant Portal Product Offer Management feature overview
+          url: /docs/marketplace/user/features/marketplace-merchant-portal-product-offer-management-feature-overview.html
+
 
         - title: Merchant Category feature overview
           url: /docs/marketplace/user/features/merchant-category-feature-overview.html
@@ -35,14 +39,14 @@ entries:
         - title: Merchant Opening Hours feature overview
           url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
 
-        - title: Marketplace Product feature overview
-          url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
-
         - title: Marketplace Product Offer feature overview
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 
         - title: Marketplace Product Options feature overview
           url: /docs/marketplace/user/features/marketplace-product-options-feature-overview.html
+
+        - title: Marketplace Inventory Management feature overview
+          url: /docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html
 
         - title: Marketplace Order Management feature overview
           url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
@@ -58,11 +62,17 @@ entries:
             - title: Marketplace and merchant state machines interaction
               url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
 
-        - title: Marketplace Return Management
+        - title: Marketplace Cart Notes feature overview
+          url: /docs/marketplace/user/features/marketplace-cart-notes-feature-overview.html
+
+        - title: Marketplace Return Management feature overview
           url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html
 
         - title: Marketplace Promotions and Discounts feature overview
           url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html
+
+        - title: Marketplace Shipment feature overview
+          url: /docs/marketplace/user/features/marketplace-shipment-feature-overview.html
 
         - title: Marketplace Wishlist feature overview
           url: /docs/marketplace/user/features/marketplace-wishlist-feature-overview.html

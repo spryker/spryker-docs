@@ -10,7 +10,7 @@ This article describes how to create Marketplace product options.
 
 To start working with product options, go to **Catalog** > **Product Options**.
 
-There should be an existing tax set to apply it to the [product option group](/docs/marketplace/user/features/{{ page.version }}/marketplace-product-options-feature-overview.html). See [Managing tax sets](https://documentation.spryker.com/docs/managing-tax-sets) for detailed instructions on creating tax sets.
+There should be an existing tax set to apply it to the [product option group](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html). See [Managing tax sets](https://documentation.spryker.com/docs/managing-tax-sets) for detailed instructions on creating tax sets.
 
 Each section in this article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
@@ -82,4 +82,4 @@ And the values available in the drop-down lists are the product options:
 
 ## Next steps
 
-* [Managing product options](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/product-options/creating-product-options.html)
+* [Managing product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html)

@@ -36,7 +36,6 @@ Below you can find interfaces for Table Feature Selectable.
 ```ts
 export interface TableSelectableConfig extends TableFeatureConfig {}
 
-// Table row data
 export interface TableSelectionRow {
   data: TableDataRow;
   index: number;

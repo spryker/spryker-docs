@@ -24,7 +24,7 @@ To start feature integration, integrate the required features:
 
 Install the required modules:
 ```bash
-composer require spryker/merchants-rest-api:"^0.3.0" --update-with-dependencies
+composer require spryker/merchants-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -57,7 +57,13 @@ Make sure that the following changes have been applied in transfer objects:
 | RestOrdersAttributesTransfer.merchantReferences | property | Created | src/Generated/Shared/Transfer/RestOrdersAttributesTransfer |
 | RestOrderDetailsAttributesTransfer.merchantReferences | property | Created | src/Generated/Shared/Transfer/RestOrderDetailsAttributesTransfer |
 | RestOrderItemsAttributesTransfer.merchantReference | property | Created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer |
-| RestErrorMessageTransfer | object | Created | src/Generated/Shared/Transfer/RestErrorMessageTransfer |
+| MerchantStorageProfileTransfer.description | property | Created | src/Generated/Shared/Transfer/MerchantStorageProfileTransfer |
+| MerchantStorageProfileTransfer.bannerUrl | property | Created | src/Generated/Shared/Transfer/MerchantStorageProfileTransfer |
+| MerchantStorageProfileTransfer.deliveryTime | property | Created | src/Generated/Shared/Transfer/MerchantStorageProfileTransfer |
+| MerchantStorageProfileTransfer.termsConditions | property | Created | src/Generated/Shared/Transfer/MerchantStorageProfileTransfer |
+| MerchantStorageProfileTransfer.cancellationPolicy | property | Created | src/Generated/Shared/Transfer/MerchantStorageProfileTransfer |
+| MerchantStorageProfileTransfer.imprint | property | Created | src/Generated/Shared/Transfer/MerchantStorageProfileTransfer |
+| MerchantStorageProfileTransfer.dataPrivacy | property | Created | src/Generated/Shared/Transfer/MerchantStorageProfileTransfer |
 
 {% endinfo_block %}
 

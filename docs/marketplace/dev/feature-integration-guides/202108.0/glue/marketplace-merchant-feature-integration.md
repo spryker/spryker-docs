@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Marketplace Merchant feature integration"
-last_updated: Dec 03, 2020
+last_updated: Aug 27, 2021
 description: This document describes the process how to integrate the Marketplace Merchant Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -67,9 +67,9 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Enable resources and relationships
+### 3) Set up behavior
 
-Activate the following plugins:
+Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -80,7 +80,7 @@ Activate the following plugins:
 | MerchantRestUrlResolverAttributesTransferProviderPlugin | Adds functionality for merchant url resolving to UrlRestApi. |  | Spryker\Glue\MerchantsRestApi\Plugin\UrlsRestApi |
 | MerchantsByOrderResourceRelationshipPlugin | Adds `merchants` resources as relationship by order merchant references. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
 
-<details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -92,6 +92,8 @@ use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationship
 use Spryker\Glue\MerchantsRestApi\MerchantsRestApiConfig;
 use Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication\MerchantAddressByMerchantReferenceResourceRelationshipPlugin;
 use Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication\MerchantAddressesResourceRoutePlugin;
+use Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication\MerchantByMerchantReferenceResourceRelationshipPlugin;
+use Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication\MerchantsByOrderResourceRelationshipPlugin;
 use Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication\MerchantsResourceRoutePlugin;
 
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
@@ -119,13 +121,21 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             MerchantsRestApiConfig::RESOURCE_MERCHANTS,
             new MerchantAddressByMerchantReferenceResourceRelationshipPlugin()
         );
+        
+        $resourceRelationshipCollection->addRelationship(
+            OrdersRestApiConfig::RESOURCE_ORDERS,
+            new MerchantsByOrderResourceRelationshipPlugin()
+        );
+        
+        $resourceRelationshipCollection->addRelationship(
+            MerchantProductOffersRestApiConfig::RESOURCE_PRODUCT_OFFERS,
+            new MerchantByMerchantReferenceResourceRelationshipPlugin()
+        );
 
         return $resourceRelationshipCollection;
     }
 }
 ```
-
-</details>
 
 **src/Pyz/Glue/UrlsRestApi/UrlsRestApiDependencyProvider.php**
 

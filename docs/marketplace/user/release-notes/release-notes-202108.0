@@ -1,7 +1,7 @@
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements.
 
-For information about installing the Spryker Commerce OS see [Developer getting started guide](https://documentation.spryker.com/docs/dev-getting-started).
+For information about installing the Spryker Commerce OS, see [Developer getting started guide](https://documentation.spryker.com/docs/dev-getting-started).
 
 
 ## Merchants
@@ -207,15 +207,4 @@ These are the new data importers available in our data import framework:
 
 The new merchant order exporter allows to export information like orders, order Items, and expenses.
 
-
-    Documentation: [Data export Merchant Orders .csv files format](/docs/marketplace/dev/data-export/data-export-merchant-orders-csv-files-format.html)
-
-
-## Technical Enhancements
-
-In this release, we implemented the following technical enhancements.
-
-
-### ACL
-
-tbd
+  Documentation: [Data export Merchant Orders .csv files format](/docs/marketplace/dev/data-export/data-export-merchant-orders-csv-files-format.html)

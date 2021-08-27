@@ -8,7 +8,7 @@ This document explains the Table Column Type List in the Components library.
 
 ## Overview
 
-Table Column List is an Angular Component that provides list of Table Column components with defined type via the `table-column-renderer` component and limits their displaying by `@spryker/popover` component.
+Table Column List is an Angular Component that provides list of Table Column components with defined type via the `table-column-renderer` component and limits their displaying to 2 by default while the rest of the list is displayed in the `@spryker/popover` component.
 
 Example usage the Table Column List in the `@spryker/table` config:
 

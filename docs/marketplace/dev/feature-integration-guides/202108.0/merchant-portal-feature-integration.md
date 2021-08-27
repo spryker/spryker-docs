@@ -50,8 +50,6 @@ Install needed packages for Merchant Portal with dependencies, see the available
    ],
    ```
 
-
-
    1. Connect users and merchant using Zed UI (Backoffice) or data import with data/import/ files.
 
       1. merchant.csv
@@ -60,17 +58,13 @@ Install needed packages for Merchant Portal with dependencies, see the available
          merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
          sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
          ```
-
-
-
+    
       2. merchant_user.csv
 
          ```yaml
          merchant_key,username
          sony-experts,michele@sony-experts.com
          ```
-
-
 
       3. Enable importer command and plugins:
 
@@ -86,61 +80,158 @@ Install needed packages for Merchant Portal with dependencies, see the available
                return $this->createMerchantUserImporter($dataImportConfigurationActionTransfer);
             ...
             ```
-
-
-
+    
          3. Add both of them to full import config (if needed)`\Pyz\Zed\DataImport\DataImportConfig::getFullImportTypes()`
 
-**ACL rules**
+**ACL**
 
+***ACL rules***
+   
 1. Create ACL group to allow Merchant Portal pages (*-merchant-portal-gui) for merchant users (optionally deny access to them for Admin roles)
 
-   1. Use `\Spryker\Zed\MerchantUser\Communication\Plugin\Acl\MerchantUserAclInstallerPlugin` to install additional roles for ACL during install command.
+    Use `\Spryker\Zed\MerchantUser\Communication\Plugin\Acl\MerchantUserAclInstallerPlugin` to install additional roles for ACL during install command.
+   
+   ```php
+   <?php
+   namespace Pyz\Zed\Acl;
+ 
+   use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
+   use Spryker\Zed\MerchantUser\Communication\Plugin\Acl\MerchantUserAclInstallerPlugin;
+ 
+   class AclDependencyProvider extends SprykerAclDependencyProvider
+   {
+       /**
+        * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclInstallerPluginInterface[]
+        */
+       public function getAclInstallerPlugins(): array
+       {
+          return [
+               new MerchantUserAclInstallerPlugin(),
+           ];
+       }
+   }
+   ```
+2. use `addMerchantPortalInstallerRules` function in `AclConfig` to set up acl rules for Merchant portal gui modules
+   ```php
+   class AclConfig extends SprykerAclConfig
+   {
+       protected const RULE_TYPE_DENY = 'deny';
+       
+       /**
+        * @param string[][] $installerRules
+        *
+        * @return string[][]
+        */
+       protected function addMerchantPortalInstallerRules(array $installerRules): array
+       {
+           $bundleNames = [
+               'dashboard-merchant-portal-gui',
+               'merchant-profile-merchant-portal-gui',
+               'product-merchant-portal-gui',
+               'product-offer-merchant-portal-gui',
+               'security-merchant-portal-gui',
+               'sales-merchant-portal-gui',
+               'user-merchant-portal-gui',
+               'dummy-merchant-portal-gui',
+           ];
+   
+           foreach ($bundleNames as $bundleName) {
+               $installerRules[] = [
+                   'bundle' => $bundleName,
+                   'controller' => AclConstants::VALIDATOR_WILDCARD,
+                   'action' => AclConstants::VALIDATOR_WILDCARD,
+                   'type' => static::RULE_TYPE_DENY,
+                   'role' => AclConstants::ROOT_ROLE,
+               ];
+           }
+   
+           return $installerRules;
+       }  
+   }
+   ```
+   
+   For default users (defined in UserConfig) you can add default group in `\Pyz\Zed\Acl\AclConfig::getInstallerUsers()`
+   
+   ```php
+   class AclConfig extends SprykerAclConfig
+   {
+       protected const GROUP_MERCHANT_ADMIN = 'Merchant Admin';
+       
+       /**
+        * @return array
+        */
+       public function getInstallerUsers()
+       {
+           return [
+               'admin@spryker.com' => [
+                   'group' => AclConstants::ROOT_GROUP,
+               ],
+               'admin_de@spryker.com' => [
+                   'group' => AclConstants::ROOT_GROUP,
+               ],
+               'martha@video-king.nl' => [
+                   'group' => static::GROUP_MERCHANT_ADMIN,
+               ],
+               'harald@spryker.com' => [
+                   'group' => static::GROUP_MERCHANT_ADMIN,
+               ],
+               'jason.weidmann@budgetcamerasonline.com' => [
+                   'group' => static::GROUP_MERCHANT_ADMIN,
+               ],
+               'michele@sony-experts.com' => [
+                   'group' => static::GROUP_MERCHANT_ADMIN,
+               ],
+               //this is related to existent username and will be searched into the database
+           ];
+       }
+   ```
+   
+***ACL entity rules***
 
-      ```php
-      <?php
-      namespace Pyz\Zed\Acl;
-
-      use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
-      use Spryker\Zed\MerchantUser\Communication\Plugin\Acl\MerchantUserAclInstallerPlugin;
-
-      class AclDependencyProvider extends SprykerAclDependencyProvider
-      {
-          /**
-           * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclInstallerPluginInterface[]
-           */
-          public function getAclInstallerPlugins(): array
-          {
-              return [
-                  new MerchantUserAclInstallerPlugin(),
-              ];
-          }
-      }
-      ```
-
-By default, it will install the “Merchant Admin” group and “Merchant Admin” roles. You can change the behavior by extending `\Spryker\Zed\MerchantUser\MerchantUserConfig` by add groups, rules.
-
-For default users (defined in UserConfig) you can add default group in `\Pyz\Zed\Acl\AclConfig::getInstallerUsers()`
+1. Use `\Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalAclEntityMetadataConfigExpanderPlugin` to install additional Merchant portal entity roles and rules for ACL.
 
 ```php
-    /**
-     * @return array
-     */
-    public function getInstallerUsers()
+<?php
+    namespace Pyz\Zed\AclEntity;
+ 
+    use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
+    use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalAclEntityMetadataConfigExpanderPlugin;
+
+    class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
     {
-        return [
-            'admin@spryker.com' => [
-                'group' => AclConstants::ROOT_GROUP,
-            ],
-            'admin_de@spryker.com' => [
-                'group' => AclConstants::ROOT_GROUP,
-            ],
-            'michele@sony-experts.com' => [
-                'group' => static::GROUP_MERCHANT_ADMIN,
-            ],
-            //this is related to existent username and will be searched into the database
-        ];
-    }
+         /**
+          * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface[]
+          */
+          protected function getAclEntityMetadataCollectionExpanderPlugins(): array
+          {
+              return [
+                  new MerchantPortalAclEntityMetadataConfigExpanderPlugin(),
+              ];
+          }
+     }
+```
+        
+2. use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetadataConfigExpanderPlugin` as an example of `AclEntityMetadataCollection` configuration. 
+
+```php
+<?php
+     namespace Pyz\Zed\AclEntity;
+ 
+     use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
+     use Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetadataConfigExpanderPlugin;
+
+     class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
+     {
+         /**
+          * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface[]
+          */
+          protected function getAclEntityMetadataCollectionExpanderPlugins(): array
+          {
+              return [
+                  new DummyProductAclEntityMetadataConfigExpanderPlugin(),
+              ];
+          }
+     }
 ```
 
 Run console setup:init-db to create users with ACL rules,
@@ -148,7 +239,6 @@ Run console setup:init-db to create users with ACL rules,
 Run `console data:import merchant`
 
 Run `console data:import:merchant-user`
-
 
 
 **Merchant Portal Navigation Links in Sidebar**

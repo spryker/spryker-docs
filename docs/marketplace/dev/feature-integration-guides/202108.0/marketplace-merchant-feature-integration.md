@@ -144,7 +144,6 @@ Enable the following behaviors by registering the plugins:
 | MerchantProfileFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant profile data. |   | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
 | MerchantProfileLegalInformationFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant legal information. |   | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
 | MerchantProfileFormExpanderPlugin | Expands MerchantForm with merchant profile fields. |   | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui |
-| MerchantUserAclInstallerPlugin | Provides merchant user roles to ACL. |    | Spryker\Zed\MerchantUser\Communication\Plugin\Acl |
 | SyncMerchantUsersStatusMerchantPostUpdatePlugin | Updates merchant users status by merchant status on merchant update. |   | Spryker\Zed\MerchantUser\Communication\Plugin\Merchant |
 | MerchantUserTabMerchantFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
@@ -271,40 +270,6 @@ Make sure that when you edit a merchant in the Merchants section of the Back Off
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>src/Pyz/Zed/Acl/AclDependencyProvider.php</summary>
-
-```
-<?php
-
-namespace Pyz\Zed\Acl;
-
-use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
-use Spryker\Zed\MerchantUser\Communication\Plugin\Acl\MerchantUserAclInstallerPlugin;
-
-class AclDependencyProvider extends SprykerAclDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclInstallerPluginInterface[]
-     */
-    public function getAclInstallerPlugins(): array
-    {
-        return [
-            new MerchantUserAclInstallerPlugin(),
-        ];
-    }
-}
-
-```
-</details>
-
-{% info_block warningBox "Verification" %}
-
-Make sure after executing `console setup:init-db`, the Merchant Admin role is present in `spy_acl_role`.
-
-Make sure the `console sync:data url` command exports the merchant URL data from `spy_url`  to Redis.
-
-{% endinfo_block %}
-
 ### 6) Configure navigation
 
 Add marketplace section to `navigation.xml`:
@@ -365,7 +330,8 @@ namespace Pyz\Zed\Publisher;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 use Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin;
 use Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin;
-ss PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
    /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]

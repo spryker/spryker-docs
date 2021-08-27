@@ -32,7 +32,7 @@ _Merchant Portal_ is the management interface where merchants do all administrat
 
   Documentation:
   * [Merchant Portal overview](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/logging-in-to-the-merchant-portal.html)
-  * [Merchant users](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant/marketplace-merchant-overview/merchant-users.html)
+  * [Merchant users](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
 
 
 ### Merchant Profile
@@ -55,7 +55,7 @@ Every reference to a merchant on the Storefront is linked to their merchant prof
 
 ![Merchant profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-profile-page.png)
 
-  Documentation: [Marketplace Merchant feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant/marketplace-merchant-overview/marketplace-merchant-overview.html)
+  Documentation: [Marketplace Merchant feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html)
 
 
 
@@ -82,7 +82,7 @@ The _Product Details _page contains a section where a customer can view and sele
 
 ![Merchant offers on the Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-offers-on-pdp.png)
 
-  Documentation: [Marketplace Product Offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer.html)
+  Documentation: [Marketplace Product Offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html)
 
 
 ### Merchant Product Options
@@ -132,7 +132,7 @@ The operator can create, edit, and approve merchants and merchant users. They al
 
   Documentation:
   * [Managing merchants](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/merchants/managing-merchants.html)
-  * [Managing merchant users](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html)
+  * [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/merchants/managing-merchant-users.html)
 
 
 ### Merchant product management
@@ -182,17 +182,17 @@ The operator can act as a _Main Merchant_ and sell products. In Back Office, the
 All the significant features of Spryker Marketplace are covered with Glue APIs.
 
   Documentation:
-  * [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-merchant-information.html)
+  * [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{site.version}}/merchants/retrieving-merchants.html)
   * [Retrieving merchant abstract products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/abstract-products/retrieving-abstract-products.html)
   * [Retrieving merchant concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-concrete-products.html)
-  * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-product-offers.html)
-  * [Retrieving product offers for a concrete product](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-product-offers-for-a-concrete-product.html)
+  * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{site.version}}/product-offers/retrieving-product-offers.html)
+  * [Retrieving product offers of concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html)
   * [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{site.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
   * [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-marketplace-orders.html)
   * [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{site.version}}/managing-the-returns.html)
   * [Managing wishlist items](/docs/marketplace/dev/glue-api-guides/{{site.version}}/wishlists/managing-wishlist-items.html)
-  * [Catalog search](/docs/marketplace/dev/glue-api-guides/{{site.version}}/catalog-search.html)
-  * [Retrieving suggestions for auto-completion and search](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-suggestions-for-auto-completion-and-search.html)
+  * [Search the product catalog](/docs/marketplace/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html.html)
+  * [Retrieving autocomplete and search suggestions](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-autocomplete-and-search-suggestions.html)
 
 
 

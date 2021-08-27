@@ -207,5 +207,5 @@ entries:
       - title: Release notes
         nested:
 
-        - title: Release notes 202108.0
-          url: /docs/marketplace/user/release-notes/release-notes-2021080.html
+          - title: Release notes 202108.0
+            url: /docs/marketplace/user/release-notes/release-notes-2021080.html

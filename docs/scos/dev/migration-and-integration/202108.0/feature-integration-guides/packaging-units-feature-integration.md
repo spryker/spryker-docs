@@ -1,5 +1,5 @@
 ---
-title: Product packaging unit feature integration
+title: Packaging Units feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/product-packaging-unit-feature-integration
 originalArticleId: 2603fbfb-bc14-462a-b412-1d715c57e779
 redirect_from:
@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 ## Install Feature Core
-Follow the steps to install Product packaging unit feature core.
+Follow the steps to install Packaging Units feature core.
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
@@ -42,12 +42,12 @@ Adjust synchronization queue pools in `src/Pyz/Zed/ProductPackagingUnitStorage/P
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductPackagingUnitStorage;
- 
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\ProductPackagingUnitStorage\ProductPackagingUnitStorageConfig as SprykerProductPackagingUnitStorageConfig;
- 
+
 class ProductPackagingUnitStorageConfig extends SprykerProductPackagingUnitStorageConfig
 {
     /**
@@ -67,7 +67,7 @@ Adjust the schema definition, so entity changes can trigger events.
 |  Affected entity| Triggered events |
 | --- | --- |
 | spy_product_packaging_unit | <ul><li>Entity.spy_product_packaging_unit.create</li><li>Entity.spy_product_packaging_unit.update</li><li>Entity.spy_product_packaging_unit.delete</li></ul> |
-| spy_product_packaging_unit_type | <ul><li>Entity.spy_product_packaging_unit_type.create</li><li>Entity.spy_product_packaging_unit_type.update</li><li>Entity.spy_product_packaging_unit_type.delete</li></ul> | 
+| spy_product_packaging_unit_type | <ul><li>Entity.spy_product_packaging_unit_type.create</li><li>Entity.spy_product_packaging_unit_type.update</li><li>Entity.spy_product_packaging_unit_type.delete</li></ul> |
 
 
 **src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml**
@@ -75,13 +75,13 @@ Adjust the schema definition, so entity changes can trigger events.
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductPackagingUnit\Persistence" package="src.Orm.Zed.ProductPackagingUnit.Persistence">
- 
+
     <table name="spy_product_packaging_unit" phpName="SpyProductPackagingUnit">
         <behavior name="event">
             <parameter name="spy_product_packaging_unit_all" column="*"/>
         </behavior>
     </table>
- 
+
     <table name="spy_product_packaging_unit_type" phpName="SpyProductPackagingUnitType">
         <behavior name="event">
             <parameter name="spy_product_packaging_unit_type_all" column="*"/>
@@ -101,13 +101,13 @@ Set up synchronization queue pools, so non-multistore entities (not store-specif
           xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ProductPackagingUnitStorage\Persistence"
           package="src.Orm.Zed.ProductPackagingUnitStorage.Persistence">
- 
+
     <table name="spy_product_packaging_unit_storage">
         <behavior name="synchronization">
             <parameter name="queue_pool" value="synchronizationPool" />
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -215,19 +215,19 @@ This step publishes tables on change (create, edit, delete) to the `spy_product_
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Event;
- 
+
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
 use Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Event\Subscriber\ProductPackagingUnitStorageEventSubscriber;
- 
+
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
     public function getEventSubscriberCollection()
     {
         $eventSubscriberCollection = parent::getEventSubscriberCollection();
         $eventSubscriberCollection->add(new ProductPackagingUnitStorageEventSubscriber());
- 
+
         return $eventSubscriberCollection;
     }
 }
@@ -243,12 +243,12 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\EventBehavior;
- 
+
 use Spryker\Zed\EventBehavior\EventBehaviorDependencyProvider as SprykerEventBehaviorDependencyProvider;
 use Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Event\ProductPackagingUnitEventResourceBulkRepositoryPlugin;
- 
+
 class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProvider
 {
     public function getEventTriggerResourcePlugins()
@@ -270,12 +270,12 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Synchronization;
- 
+
 use Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Synchronization\ProductPackagingUnitSynchronizationDataBulkPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
- 
+
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
@@ -306,12 +306,12 @@ Add infrastructural data:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Installer;
- 
+
 use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Installer\ProductPackagingUnitTypeInstallerPlugin;
- 
+
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
@@ -369,12 +369,12 @@ Register the following plugin to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport\ProductPackagingUnitTypeDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -434,13 +434,13 @@ Register the following plugin to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport\ProductPackagingUnitDataImportPlugin;
 use Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport\ProductPackagingUnitTypeDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -492,7 +492,7 @@ Enable the following behaviors by registering the plugins:
 | `ProductPackagingUnitAmountPersistentCartChangeExpanderPlugin` | Sets the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` fields in `ItemTransfers` with packaging units for persistent cart change. | Expects a request to contain the to-be-used information. | `Spryker\Client\ProductPackagingUnit\Plugin\PersistentCartExtension` |
 | `ProductPackagingUnitReservationAggregationStrategyPlugin` | Aggregates the product reservation for packaging untis and lead product of packaging untis. | None | `Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms` |
 | `ProductPackagingUnitProductAbstractAddToCartPlugin` | Filters out products which have packaging unit available. | None | `Spryker\Zed\ProductPackagingUnit\Communication\Plugin\ProductPageSearch` |
-| `AmountLeadProductOrderItemExpanderPlugin` | Expands order items with additional packaging unit amount lead product. | None | `Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales` | 
+| `AmountLeadProductOrderItemExpanderPlugin` | Expands order items with additional packaging unit amount lead product. | None | `Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales` |
 | `AmountSalesUnitOrderItemExpanderPlugin` | Expands order items with additional packaging unit sales unit. | None | `Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales` |
 
 **src/Pyz/Client/Cart/CartDependencyProvider.php**
@@ -587,13 +587,13 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Checkout;
- 
+
 use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Checkout\AmountAvailabilityCheckoutPreConditionPlugin;
 use Spryker\Zed\Kernel\Container;
- 
+
 class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
     /**
@@ -614,13 +614,13 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\PersistentCart;
- 
+
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\PersistentCart\PersistentCartDependencyProvider as SprykerPersistentCartDependencyProvider;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PersistentCart\ProductPackagingUnitCartAddItemStrategyPlugin;
- 
+
 class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
 {
     /**
@@ -641,14 +641,14 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Oms;
- 
+
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms\ProductPackagingUnitReservationAggregationStrategyPlugin;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Reservation\LeadProductReservationHandlerPlugin;
- 
+
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
     /**
@@ -662,7 +662,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
             new LeadProductReservationHandlerPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\ReservationAggregationStrategyPluginInterface[]
      */
@@ -679,9 +679,9 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales\AmountLeadProductHydrateOrderPlugin;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales\AmountLeadProductOrderItemExpanderPlugin;
@@ -689,7 +689,7 @@ use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales\AmountSalesUnitH
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales\AmountSalesUnitOrderItemExpanderPlugin;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension\AmountSalesUnitOrderItemExpanderPreSavePlugin;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension\ProductPackagingUnitOrderItemExpanderPreSavePlugin;
- 
+
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
@@ -702,7 +702,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new AmountSalesUnitHydrateOrderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPreSavePluginInterface[]
      */
@@ -713,7 +713,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new AmountSalesUnitOrderItemExpanderPreSavePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface[]
      */
@@ -731,13 +731,13 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Stock;
- 
+
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Stock\LeadProductStockUpdateHandlerPlugin;
 use Spryker\Zed\Stock\StockDependencyProvider as SprykerStockDependencyProvider;
- 
+
 class StockDependencyProvider extends SprykerStockDependencyProvider
 {
     /**
@@ -758,12 +758,12 @@ class StockDependencyProvider extends SprykerStockDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\Cart;
- 
+
 use Spryker\Client\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Client\ProductPackagingUnit\Plugin\CartExtension\ProductPackagingUnitAmountCartChangeRequestExpanderPlugin;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
@@ -782,12 +782,12 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\PersistentCart;
- 
+
 use Spryker\Client\PersistentCart\PersistentCartDependencyProvider as SprykerPersistentCartDependencyProvider;
 use Spryker\Client\ProductPackagingUnit\Plugin\PersistentCartExtension\ProductPackagingUnitAmountPersistentCartChangeExpanderPlugin;
- 
+
 class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
 {
     /**
@@ -804,7 +804,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Add an item with packaging units to cart. 
+Add an item with packaging units to cart.
 
 *     Check if a packaging unit can be found for an item.
 *     Check if the `amount`, `amountSalesUnit`, `amountLeadProduct` and `ProductPackagingUnit` fields in the `ItemTransfer` properties get fully populated.
@@ -919,12 +919,12 @@ src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ProductPackagingUnitWidget\Widget\ProductPackagingUnitWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**

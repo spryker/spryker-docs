@@ -403,6 +403,9 @@ entries:
                 - title: "Chip"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
 
+                - title: "Date"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html
+
             - title: "Table Feature extension"
               url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
 

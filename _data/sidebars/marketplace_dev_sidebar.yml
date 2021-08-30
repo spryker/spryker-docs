@@ -400,6 +400,9 @@ entries:
                 - title: "Autocomplete"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
 
+                - title: "Chip"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
+
             - title: "Table Feature extension"
               url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
 

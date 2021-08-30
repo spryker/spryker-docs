@@ -149,7 +149,7 @@ UI library comes with a number of standard column types that can be used on any 
 
 - [list](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html)—renders a list of column types.
 - [autocomplete](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html)—renders `@spryker/input` and `@spryker/autocomplete` components.
-- chip—renders `@spryker/chip` component.
+- [chip](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html)—renders `@spryker/chip` component.
 - date—renders a formatted date by `config`.
 - dynamic—is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.
 - image—renders an image.

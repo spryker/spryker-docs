@@ -13,7 +13,7 @@ template: back-office-user-guide-template
 
 ## Prerequisites
 
-To start managing the returns for the [main merchant](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales** > **My Returns**.
+To start managing the returns for the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales** > **My Returns**.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
@@ -132,7 +132,7 @@ You can trigger the following states for the returns on the *Overview of Return:
 
 ## Printing a main merchant return slip
 
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/marketplace/user/features/{{ page.version }}/marketplace-return-management-feature-overview.html#marketplace-return-slip).
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html#marketplace-return-slip).
 
 To print the return slip, take one of the following steps:
 

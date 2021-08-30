@@ -19,16 +19,16 @@ Specify reasons for returning the sales order items.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-return-management-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html).
 
 ## Create a return
 
-To create a return for a registered user, send the request:
+To create a return for a registered user, send the Request sample:
 
----
+***
 `POST` **/returns/**
+***
 
----
 
 ### Request
 
@@ -42,7 +42,7 @@ To create a return for a registered user, send the request:
 | limit | Maximum number of entries to return.  Works only together with `page[offset]`.  The default value is `10`. | From `1` to any. |
 | include | Adds resource relationships to the request. | <ul><li>return-items</li><li>order-itemsorder-items</li><li>merchants</li></ul> |
 
-<details><summary>Request: create a return</summary>
+<details><summary>Request sample: create a return</summary>
 
 `POST https://glue.mysprykershop.com/returns`
 ```JSON
@@ -68,7 +68,7 @@ To create a return for a registered user, send the request:
 
 </details>
 
-<details><summary>Request: create a return with return items</summary>
+<details><summary>Request sample: create a return with return items</summary>
 
 `POST https://glue.mysprykershop.com/returns?include=return-items`
 ```JSON
@@ -177,10 +177,10 @@ To create a return for a registered user, send the request:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 |---|---|---|
-| merchantReference | String | Unique identifier of the merchant in the system. |
-| returnReference | String | Unique identifier of the return in the system. You can get it when creating the return. |
+| merchantReference | String | Unique identifier of the merchant. |
+| returnReference | String | Unique identifier of the return. You can get it when creating the return. |
 | store | String | Store for which the return was created. |
-| customerReference | String | Unique identifier of the customer in the system. |
+| customerReference | String | Unique identifier of the customer. |
 | returnTotals | Object | List of totals to return. |
 | refundTotal | Integer | Total refund amount. |
 | remunerationTotal | Integer | Total remuneration. |
@@ -189,18 +189,17 @@ To create a return for a registered user, send the request:
 |---|---|---|---|
 | return-items | uuid | String | Unique identifier of the returned item. |
 | return-items | reason | String | Predefined reason why the return was created. |
-| return-items | orderItemUuid | String | Unique identifier of the order item in the system. |
+| return-items | orderItemUuid | String | Unique identifier of the order item. |
 
-For the attributes of the included resources, see [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-marketplace-orders.html).
+For the attributes of the included resources, see [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html).
 
 ## Retrieve returns
 
-To retrieve returns, send the request:
+To retrieve returns, send the Request sample:
 
----
+***
 `GET` **/returns**
-
----
+***
 
 ### Request
 
@@ -218,7 +217,7 @@ To retrieve returns, send the request:
 |---|---|
 | `GET https://glue.mysprykershop.com/returns` | Retrieve all returns. |
 | `GET https://glue.mysprykershop.com/returns?include=return-items` | Retrieve all returns with the information on return items included. |
-| `GET https://glue.mysprykershop.com/returns?include=merchants` | Retrieve all returns with the information on merchants included. |
+| `GET https://glue.mysprykershop.com/returns?include=merchants` | Retrieve all returns with the respective merchants included. |
 
 ### Response
 
@@ -442,7 +441,7 @@ To retrieve returns, send the request:
 
 </details>
 
-<details><summary>Response sample: retrieve returns with the merchant information</summary>
+<details><summary>Response sample: retrieve returns with the respective merchant included</summary>
 
 ```JSON
 {
@@ -537,36 +536,35 @@ To retrieve returns, send the request:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 |---|---|---|
-| merchantReference | String | Unique identifier of the merchant in the system. |
-| returnReference | String | Unique identifier of the return in the system. You can get it when creating the return. |
+| merchantReference | String | Unique identifier of the merchant. |
+| returnReference | String | Unique identifier of the return. |
 | store | String | Store for which the return was created. |
-| customerReference | String | Unique identifier of the customer in the system. |
-| returnTotals | Object | List of totals to return. |
+| customerReference | String | Unique identifier of the customer who created the return. |
+| returnTotals | Object | List of totals of the return. |
 | refundTotal | Integer | Total refund amount. |
-| remunerationTotal | Integer | Total remuneration. |
+| remunerationTotal | Integer | Total remuneration amount. |
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |---|---|---|---|
 | return-items | uuid | String | Unique identifier of the returned item. |
-| return-items | reason | String | Predefined reason why the return was created. |
-| return-items | orderItemUuid | String | Unique identifier of the order item in the system. |
+| return-items | reason | String | Reason which the customer selected for the return. |
+| return-items | orderItemUuid | String | Unique identifier of the order item. |
 
-For the details on other included resources, see:
-* [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-marketplace-orders.html)
-* [Retrieving merchant information](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-merchant-information.html)
+For the attributes of the other other included resources, see the following:
+* [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html)
 
 ## Retrieve a return
 
-To retrieve a return, send the request:
+To retrieve a return, send the Request sample:
 
----
-`GET` **/returns/{% raw %}{{returnID}}{% endraw %}**
-
----
+***
+`GET` {% raw %}**/returns/{{returnID}}**{% endraw %}
+***
 
 | PATH PARAMETER | DESCRIPTION |
 |---|---|
-| {% raw %}***{{returnID}}***{% endraw %} | Unique identifier of a return to retrieve. |
+| {% raw %}***{{returnID}}***{% endraw %} | Unique identifier of a return to retrieve. To get it [create a return](#create-a-return) or [retrieve returns](#retrieve-returns)|
 
 ## Request
 
@@ -582,10 +580,10 @@ To retrieve a return, send the request:
 
 | REQUEST | USAGE |
 |---|---|
-| `GET http://glue.mysprykershop.com/returns/DE--21-R9` | Retrieve return `DE--21-R9` for the sales order items. |
-|  `GET http://glue.mysprykershop.com/returns/DE--21-R6` | Retrieve return `DE--21-R6` for the merchant order items. |
-| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=return-items` | Retrieve return `DE--21-R6` with the details on return items. |
-| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=merchants` | Retrieve return `DE--21-R6` with the details on merchant(s) responsible for the return. |
+| `GET http://glue.mysprykershop.com/returns/DE--21-R9` | Retrieve return the return with the ID `DE--21-R9` for sales order items. |
+|  `GET http://glue.mysprykershop.com/returns/DE--21-R6` | Retrieve return with the ID `DE--21-R6` for sales oreder items. |
+| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=return-items` | Retrieve return with the ID `DE--21-R6`, including the return items. |
+| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=merchants` | Retrieve return  with the ID `DE--21-R6` for merchant order items, including the respective merchants. |
 
 ### Response
 

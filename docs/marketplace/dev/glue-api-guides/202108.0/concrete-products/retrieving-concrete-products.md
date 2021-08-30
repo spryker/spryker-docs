@@ -12,19 +12,18 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Measurement Units feature integration](https://documentation.spryker.com/docs/glue-api-measurement-units-feature-integration)
 * [Glue API: Product Options feature integration](https://documentation.spryker.com/docs/glue-product-options-feature-integration)
 * [Glue API: Product Labels feature integration](https://documentation.spryker.com/docs/glue-api-product-labels-feature-integration)
-* [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-feature-integration.html)
-* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/marketplace-product-offer-prices-feature-integration.html)
-* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/glue/glue-api-marketplace-product-offer-volume-prices.html)
+* [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/glue-api-marketplace-product-offer-volume-prices.html)
 
 
 ## Retrieve a concrete product
 
 To retrieve general information about a concrete product, send the request:
 
----
-`GET` **/concrete-products/{% raw %}*{{concrete_product_sku}}*{% endraw %}**
-
----
+***
+`GET` {% raw %}**/concrete-products/*{{concrete_product_sku}}***{% endraw %}
+***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -58,16 +57,16 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Retrieve information about the `001_25904006` product.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Retrieve information about the `001_25904006` product with its image sets.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Retrieve information about the `001_25904006` product with its availability.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Retrieve information about the `001_25904006` product with its [default prices](https://documentation.spryker.com/docs/products-reference-information#default-and-original-prices). |
-| `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices (default and [volume prices](https://documentation.spryker.com/docs/volume-prices)) |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Retrieve information about the `001_25904006` product with its [default prices](https://documentation.spryker.com/docs/prices-overview). |
+| `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices: default and [volume prices](https://documentation.spryker.com/docs/volume-prices)) |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Retrieve information about the `001_25904006` product with its product options.  |
 | `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Retrieve information about the `001_25904006` product with its product reviews.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information about the `001_25904006` product with its product offers.  |
 | `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Retrieve information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information about a concrete product with the SKU `001_25904006` with product offers included. |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information about a concrete product with the SKU `001_25904006` with the product offers for this product included. |
 | `GET https://glue.mysprykershop.com/concrete-products/076_24394207?include=product-offers,product-offer-prices` | Retrieve information about a concrete product with the SKU `076_24394207` with product offers and the product offer prices included.
-| `GET https://glue.mysprykershop.com/concrete-products/111_12295890?include=abstract-products,merchants` | Retrieve information about a concrete product with SKU `111_12295890` with details on its abstract product and the merchant who sells it.|
+| `GET https://glue.mysprykershop.com/concrete-products/111_12295890?include=abstract-products,merchants` | Retrieve information about the concrete product with SKU `111_12295890` with its abstract product and the merchant who sells it.|
 
 ### Response
 
@@ -950,7 +949,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
                                 "netAmount": 39100,
                                 "quantity": 3
                             }
-                                 
+
                         ]
                     }
                 ]
@@ -1110,9 +1109,9 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 | attributes | Object | List of attribute keys and their values for the product. |
 | superAttributeDefinition | String | List of attributes that are flagged as super attributes. |
 | metaTitle|String|Meta title of the product. |
-|metaKeywords|String|Meta keywords of the product. |
-|metaDescription|String|Meta description of the product. |
-|attributeNames | String | List of attribute keys and their translations. |
+| metaKeywords|String|Meta keywords of the product. |
+| metaDescription|String|Meta description of the product. |
+| attributeNames | String | List of attribute keys and their translations. |
 | productAbstractSku | String | Unique identifier of the abstract product owning this concrete product. |
 
 
@@ -1124,7 +1123,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 | product-options | price | Integer | Specifies the option price in cents. |
 | product-options | currencyIsoCode | String | Specifies the ISO 4217 code of the currency in which the product option price is specified. |
 
-For other attributes of the included resources, see:
+For attributes of the other included resources, see the following:
 
 * [Retrieve sales units of a concrete product](https://documentation.spryker.com/docs/retrieving-sales-units#sales-units-response-attributes)
 * [Retrieve a measurement unit](https://documentation.spryker.com/docs/retrieving-measurement-units#measurement-units-response-attributes)
@@ -1133,10 +1132,10 @@ For other attributes of the included resources, see:
 * [Retrieve prices of a concrete product](https://documentation.spryker.com/docs/retrieving-concrete-product-prices#concrete-product-prices-response-attributes)
 * [Retrieve a product label](https://documentation.spryker.com/docs/retrieving-product-labels#product-labels-response-attributes)
 * [Retrieve product ratings and reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
-* [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html#product-offers-response-attributes)
-* [Retrieve product offer prices] (/docs/marketplace/dev/glue-api-guides/{{ page.version }}/retrieving-product-offers.html#retrieving-product-offer-prices)
-* [Retrieve abstract products](https://documentation.spryker.com/marketplace/docs/retrieving-abstract-products)
-* [Retrieve merchant information](https://documentation.spryker.com/marketplace/docs/retrieving-merchant-information)
+* [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
+* [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
+* [Retrieving abstract products](https://documentation.spryker.com/marketplace/docs/retrieving-abstract-products#abstract-products-response-attributes)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}//merchants/retrieving-merchants.html#merchants-response-attributes)
 
 
 ## Possible errors

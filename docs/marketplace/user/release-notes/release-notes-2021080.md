@@ -32,7 +32,7 @@ _Merchant Portal_ is the management interface where merchants do all administrat
 
   Documentation:
   * [Merchant Portal overview](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/logging-in-to-the-merchant-portal.html)
-  * [Merchant users](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
+  * [Merchant users overview](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
 
 
 ### Merchant Profile
@@ -82,7 +82,7 @@ The _Product Details _page contains a section where a customer can view and sele
 
 ![Merchant offers on the Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-offers-on-pdp.png)
 
-  Documentation: [Marketplace Product Offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html)
+  Documentation: [Marketplace Product Offer feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html)
 
 
 ### Merchant Product Options
@@ -113,9 +113,8 @@ Customers can add products from different merchants to a single cart and order t
 
 ![Marketplace order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-storefront-order-details.png)
 
-	Documentation: [Marketplace Order Management](/docs/marketplace/user/features/{{site.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html)
 
-
+Documentation: [Marketplace Order Management feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html)
 
 
 
@@ -214,3 +213,36 @@ These are the new data importers available in our data import framework:
 The new merchant order exporter allows to export information like orders, order Items, and expenses.
 
   Documentation: [Data export Merchant Orders .csv files format](/docs/marketplace/dev/data-export//{{site.version}}/data-export-merchant-orders-csv-files-format.html)
+
+
+
+
+## Technical enhancements
+
+In this release, we implemented the following technical enhancements.
+
+
+### Persistence ACL
+
+Added the ability to grant access to the data of SQL database tables:
+
+
+* Extended the existing ACL (Access Control List) roles with new rules.
+* Added CRUD based rules for database entities.
+* Added the ability to grant access to flexible segments of data in tables.
+* Merchant Portal is covered by ACL by default.
+
+
+### GuiTable
+
+Introduced a new component for rendering tables:
+
+* WebComponent based front-end library.
+* Integrated into the back end by default.
+* By default, it is used for all the tables in the Merchant Portal, but it also can be used in the Back Office or Storefront.
+* Based on a provided configuration, the library can consume data from any source.
+
+
+### 	Security system upgrade
+
+We migrated to `symfony/security` as a default authentication system for Zed-based applications: Gateway, BackOffice, MerchantPortal. As Yves and Zed based applications now use the same infrastructure under the hood, you can reuse community supported implementations of the most popular authorization frameworks like `oauth2`.

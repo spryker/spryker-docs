@@ -237,7 +237,7 @@ Added the ability to grant access to the data of SQL database tables:
 
 Introduced a new component for rendering tables:
 
-* WebComponent based front-end library.
+* The front-end library is based on WebComponent.
 * Integrated into the back end by default.
 * By default, it is used for all the tables in the Merchant Portal, but it also can be used in the Back Office or Storefront.
 * Based on a provided configuration, the library can consume data from any source.

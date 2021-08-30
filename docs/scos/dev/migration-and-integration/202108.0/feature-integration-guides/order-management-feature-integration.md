@@ -1,5 +1,5 @@
 ---
-title: Order management feature integration
+title: Order Management feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/order-management-feature-integration
 originalArticleId: 848449f8-ca6e-4e63-ba21-1c66f248afba
 redirect_from:
@@ -9,90 +9,128 @@ redirect_from:
   - /docs/en/order-management-feature-integration
 ---
 
+
+This document describes how to integrate the Order Management feature into a Spryker project.
+
+
 {% info_block warningBox "Included features" %}
 
-The following feature integration guide expects the basic feature to be in place.
+The following feature integration guide expects the basic feature to be in place. It only adds the following functionalities:
 
-The current Feature Integration guide only adds the following functionalities:
-
-*     Order cancellation behavior
-*     Show `display names` for order item states 
-*     Invoice generation
-
+- Order cancellation behavior
+- Show `display names` for order item states
+- Invoice generation
+- Custom order reference
 
 {% endinfo_block %}
 
-## Install Feature Core
+
+
+## Install feature core
 
 Follow the steps below to install the Order Management feature core.
 
-### Prerequisites
+###  Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
+| NAME                    | VERSION    |
+| :---------------------- | :--------- |
+| Spryker Core            | dev-master |
+| Mailing & Notifications | dev-master |
+| Order Management        | dev-master |
+| Persistent Cart         | dev-master |
 
-| Name | Version |
-| --- | --- |
-| Spryker Core |  202009.0 |
-| Mailing & Notifications |  202009.0 |
+### 1) Install the required modules using Composer
 
-### 1) Install the Required Modules Using Composer
-
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
-composer require spryker-feature/order-management: "202009.0" --update-with-dependencies
+composer require spryker-feature/order-management: "dev-master" --update-with-dependencies
 ```
 
-### Set up Database Schema and Transfer Objects
-Run the following commands to apply database changes and generate transfer changes:
+{% info_block warningBox "Verification" %}
+
+
+
+Make sure that the following modules have been installed:
+
+| MODULE                  | EXPECTED DIRECTORY                        |
+| :---------------------- | :---------------------------------------- |
+| OrderCustomReference    | vendor/spryker/order-custom-reference     |
+| OrderCustomReferenceGui | vendor/spryker/order-custom-reference-gui |
+
+ {% endinfo_block %}
+
+## 2) Set up database schema and transfer objects
+
+Apply database changes and generate transfer changes:
 
 ```bash
 console transfer:generate
 console propel:install
 console transfer:entity:generate
+console frontend:zed:build
 ```
+
+
+
+
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in database:
+Make sure that the following changes have been applied in the database:
 
-| Datatabase Entity | Type | Event |
-| --- | --- | --- |
-| `spy_sales_order_invoice` | table | created |
+| DATABASE ENTITY                        | TYPE   | EVENT   |
+| :------------------------------------- | :----- | :------ |
+| spy_sales_order_invoice                | table  | created |
+| spy_sales_order.order_custom_reference | column | created |
 
-{% endinfo_block %}
+
+
+ {% endinfo_block %}
+
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
-| --- | --- | --- | --- |
-| `OrderInvoice` | class | created | `src/Generated/Shared/Transfer/OrderInvoiceTransfer` |
-| `OrderInvoiceSendRequest` | class | created | `src/Generated/Shared/Transfer/OrderInvoiceSendRequestTransfer` |
-| `OrderInvoiceSendResponse` | class | created |`src/Generated/Shared/Transfer/OrderInvoiceSendResponseTransfer` |
-| `OrderInvoiceCriteria` | class | created | `src/Generated/Shared/Transfer/OrderInvoiceCriteriaTransfer` |
-| `OrderInvoiceCollection` | class | created | `src/Generated/Shared/Transfer/OrderInvoiceCollectionTransfer` |
-| `OrderInvoiceResponse` | class | created | `src/Generated/Shared/Transfer/OrderInvoiceResponseTransfer` |
-| `Mail.recipientBccs` | property | created | `src/Generated/Shared/Transfer/MailTransfer` |
+| TRANSFER                                          | TYPE     | EVENT   | PATH                                                         |
+| :------------------------------------------------ | :------- | :------ | :----------------------------------------------------------- |
+| OrderInvoice                                      | class    | created | src/Generated/Shared/Transfer/OrderInvoiceTransfer           |
+| OrderInvoiceSendRequest                           | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendRequestTransfer |
+| OrderInvoiceSendResponse                          | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendResponseTransfer |
+| OrderInvoiceCriteria                              | class    | created | src/Generated/Shared/Transfer/OrderInvoiceCriteriaTransfer   |
+| OrderInvoiceCollection                            | class    | created | src/Generated/Shared/Transfer/OrderInvoiceCollectionTransfer |
+| OrderInvoiceResponse                              | class    | created | src/Generated/Shared/Transfer/OrderInvoiceResponseTransfer   |
+| Mail.recipientBccs                                | property | created | src/Generated/Shared/Transfer/MailTransfer                   |
+| OrderCustomReferenceResponse                      | class    | created | Generated/Shared/Transfer/OrderCustomReferenceResponseTransfer |
+| Quote.orderCustomReference                        | property | created | Generated/Shared/Transfer/QuoteTransfer                      |
+| QuoteUpdateRequestAttributes.orderCustomReference | property | created | Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer |
+| Order.orderCustomReference                        | property | created | Generated/Shared/Transfer/OrderTransfer                      |
 
-{% endinfo_block %}
 
-### 3) Set up Configuration 
+
+ {% endinfo_block %}
+
+### 3) Set up configuration
 
 Set up the following configuration.
 
-#### 2.1) Configure OMS
-{% info_block infoBox "Info" %}
+#### 3.1) Configure OMS
 
-The `cancellable` flag allows to proceed to the `order cancel` process.
 
-The `display` attribute allows to attach the `display name` attribute to specific order item states.
-
-The` DummyInvoice` sub-process allows triggering `invoice-generate` events.
-
+{% info_block infoBox %}
+- The `cancellable` flag allows proceeding to the `order cancel` process.
+- The `display` attribute allows attaching the `display name` attribute to specific order item states.
+- The `DummyInvoice` sub-process allows triggering `invoice-generate` events.
 {% endinfo_block %}
-Create the OMS sub-process file.
-**config/Zed/oms/DummySubprocess/DummyInvoice01.xml**
+
+
+1. Create the OMS sub-process file:
+
+<dertails>
+    <summary markdown='span'>config/Zed/oms/DummySubprocess/DummyInvoice01.xml</summary>
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -127,17 +165,23 @@ Create the OMS sub-process file.
 
 </statemachine>
 ```
+
+</details>
+
 {% info_block warningBox "Verification" %}
 
-The verification of the invoice state machine configuration will be checked in a later step.
+Verify the invoice state machine configuration in the next step.
 
 {% endinfo_block %}
 
-Using the `DummyPayment01.xml` process as an example, adjust your OMS state-machine configuration according to your project’s requirements.
+2. Using the following process as an example, adjust your OMS state-machine configuration according to your project’s requirements.
 
-<details open>
-    <summary>config/Zed/oms/DummyPayment01.xml</summary>
-    
+
+
+
+<dertails>
+    <summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -287,28 +331,30 @@ Using the `DummyPayment01.xml` process as an example, adjust your OMS state-mach
 
 </statemachine>
 ```
+
 </details>
+
+
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve configured the OMS:
+
+Ensure that you’ve configured OMS:
 
 1. Go to the Back Office > **Administration** > **OMS**.
 
-2. Select *DummyPayment01 [preview-version]*.
+2. Select *DummyPayment01 [preview-version]* and check the following:
 
-2. Ensure that the `new`, `payment pending`, `paid`, and `confirmed` states keep the `cancellable` tag inside.
-
-4. Ensure that `invoice generated` state was added.
+- The `new`, `payment pending`, `paid`, and `confirmed` states keep the `cancellable` tag inside.
+- The `invoice generated` state has been added.
 
 {% endinfo_block %}
 
-### 2.2) Configure Fallback Display Name Prefix 
+#### 3.2) Configure the fallback display name prefix
 
-Adjust configuration according to your project’s needs:
+Adjust configuration according to your project’s requirements:
 
-
-**src/Pyz/Zed/Oms/OmsConfig.php**
+ **src/Pyz/Zed/Oms/OmsConfig.php**                          
 ```php
 <?php
 
@@ -330,22 +376,10 @@ class OmsConfig extends SprykerOmsConfig
     }
 }
 ```
-	
-{% info_block warningBox "Verification" %}
 
-Once you've finished [setting up behavior](#set-up-behavior), ensure that, on the following Storefront pages, the item states are displayed correctly even if the `display` property is not set in the process definition:
+#### 3.2) Configure an order invoice template
 
-* *Customer overview*
-* *Order history*
-* *Order details*
-* *Returns*
-* *Return details*
-
-
-{% endinfo_block %}
-#### 3.2) Configure Order Invoice Template
-
-Adjust configuration according to your project’s needs:
+1. Adjust the configuration according to your project’s requirements:
 
 **src/Pyz/Zed/SalesInvoice/SalesInvoiceConfig.php**
 ```php
@@ -368,11 +402,14 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
     }
 }
 ```
-Add oder invoice twig template. For example:
-<details open>
-    <summary>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
-    
-```html
+
+2. Using the example below,  add an order invoice Twig template according to your project’s requirements:
+
+
+<dertails>
+    <summary markdown='span'>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
+
+```twig
 {# @var order \Generated\Shared\Transfer\OrderTransfer #}
 {# @var invoice \Generated\Shared\Transfer\OrderInvoiceTransfer #}
 
@@ -433,26 +470,26 @@ Add oder invoice twig template. For example:
                 <img src="" width="200" alt="Logo">
             </td>
             <td width="300">
-                <strong>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.company.name' | trans {% raw %}}}{% endraw %}</strong>
-                <div class="spacing-bottom text-small">{% raw %}{{{% endraw %} 'order_invoice.invoice_template.company.group' | trans {% raw %}}}{% endraw %}</div>
-                <div class="spacing-bottom text-small">{% raw %}{{{% endraw %} 'order_invoice.invoice_template.company.address' | trans | raw {% raw %}}}{% endraw %}</div>
+                <strong>{{ 'order_invoice.invoice_template.company.name' | trans }}</strong>
+                <div class="spacing-bottom text-small">{{ 'order_invoice.invoice_template.company.group' | trans }}</div>
+                <div class="spacing-bottom text-small">{{ 'order_invoice.invoice_template.company.address' | trans | raw }}</div>
             </td>
         </tr>
         <tr>
             <td width="300">
                 <div class="spacing-bottom spacing-right">
-                    <strong>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.merchant.name' | trans {% raw %}}}{% endraw %}</strong>
-                    <div class="text-small">{% raw %}{{{% endraw %} 'order_invoice.invoice_template.merchant.address' | trans {% raw %}}}{% endraw %}</div>
+                    <strong>{{ 'order_invoice.invoice_template.merchant.name' | trans }}</strong>
+                    <div class="text-small">{{ 'order_invoice.invoice_template.merchant.address' | trans }}</div>
                 </div>
                 <div class="spacing-bottom">
-                    {% raw %}{{{% endraw %} order.billingAddress.firstName {% raw %}}}{% endraw %} {% raw %}{{{% endraw %} order.billingAddress.lastName {% raw %}}}{% endraw %}<br>
-                    {% raw %}{{{% endraw %} order.billingAddress.address1 {% raw %}}}{% endraw %} {% raw %}{{{% endraw %} order.billingAddress.address2 {% raw %}}}{% endraw %} {% raw %}{{{% endraw %} order.billingAddress.address3 {% raw %}}}{% endraw %}<br>
-                    {% raw %}{{{% endraw %} order.billingAddress.zipcode {% raw %}}}{% endraw %} {% raw %}{{{% endraw %} order.billingAddress.city {% raw %}}}{% endraw %}<br>
-                    {% raw %}{{{% endraw %} order.billingAddress.region {% raw %}}}{% endraw %}
+                    {{ order.billingAddress.firstName }} {{ order.billingAddress.lastName }}<br>
+                    {{ order.billingAddress.address1 }} {{ order.billingAddress.address2 }} {{ order.billingAddress.address3 }}<br>
+                    {{ order.billingAddress.zipcode }} {{ order.billingAddress.city }}<br>
+                    {{ order.billingAddress.region }}
                 </div>
             </td>
             <td width="300" class="align-top">
-                <div class="spacing-bottom">{% raw %}{{{% endraw %} invoice.issueDate | date('d. M Y') {% raw %}}}{% endraw %}</div>
+                <div class="spacing-bottom">{{ invoice.issueDate | date('d. M Y') }}</div>
             </td>
         </tr>
     </table>
@@ -461,13 +498,13 @@ Add oder invoice twig template. For example:
         <tr>
             <td width="600">
                 <div class="spacing-bottom">
-                    <strong>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.reference' | trans {% raw %}}}{% endraw %} {% raw %}{{{% endraw %} invoice.reference {% raw %}}}{% endraw %}</strong>
+                    <strong>{{ 'order_invoice.invoice_template.reference' | trans }} {{ invoice.reference }}</strong>
                 </div>
             </td>
         </tr>
         <tr>
             <td width="600">
-                <div class="spacing-bottom">{% raw %}{{{% endraw %} 'order_invoice.invoice_template.introduction' | trans {% raw %}}}{% endraw %}</div>
+                <div class="spacing-bottom">{{ 'order_invoice.invoice_template.introduction' | trans }}</div>
             </td>
         </tr>
     </table>
@@ -475,156 +512,151 @@ Add oder invoice twig template. For example:
     <table class="products-table">
         <thead>
             <tr class="background-gray">
-                <th width="75"><strong>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.number' | trans {% raw %}}}{% endraw %}</strong></th>
-                <th width="75"><strong>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.quantity' | trans {% raw %}}}{% endraw %}</strong></th>
-                <th width="275" class="text-left"><strong>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.name' | trans {% raw %}}}{% endraw %}</strong></th>
-                <th width="100"><strong>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.tax' | trans {% raw %}}}{% endraw %}</strong></th>
-                <th width="75"><strong>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.price' | trans | raw {% raw %}}}{% endraw %}</strong></th>
+                <th width="75"><strong>{{ 'order_invoice.invoice_template.table.number' | trans }}</strong></th>
+                <th width="75"><strong>{{ 'order_invoice.invoice_template.table.quantity' | trans }}</strong></th>
+                <th width="275" class="text-left"><strong>{{ 'order_invoice.invoice_template.table.name' | trans }}</strong></th>
+                <th width="100"><strong>{{ 'order_invoice.invoice_template.table.tax' | trans }}</strong></th>
+                <th width="75"><strong>{{ 'order_invoice.invoice_template.table.price' | trans | raw }}</strong></th>
             </tr>
         </thead>
         <tbody>
-        {% raw %}{%{% endraw %} set linenumber = 0 {% raw %}%}{% endraw %}
-        {% raw %}{%{% endraw %} set renderedBundles = [] {% raw %}%}{% endraw %}
-        {% raw %}{%{% endraw %} set taxes = {} {% raw %}%}{% endraw %}
-        {% raw %}{%{% endraw %} set itemSumByTaxes = {} {% raw %}%}{% endraw %}
+        {% set linenumber = 0 %}
+        {% set renderedBundles = [] %}
+        {% set taxes = {} %}
+        {% set itemSumByTaxes = {} %}
 
-        {% raw %}{%{% endraw %} for item in order.items {% raw %}%}{% endraw %}
+        {% for item in order.items %}
             {# @var item \Generated\Shared\Transfer\ItemTransfer #}
 
-            {% raw %}{%{% endraw %} set taxRate = item.taxRate {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} set rateSum = taxes[item.taxRate] | default(0) + item.sumTaxAmountFullAggregation {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} set taxes = taxes | merge({ (taxRate): rateSum }) {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} set rateItemSum = itemSumByTaxes[taxRate] | default(0) + item.sumPriceToPayAggregation {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} set itemSumByTaxes = itemSumByTaxes | merge({ (taxRate): rateItemSum }) {% raw %}%}{% endraw %}
+            {% set taxRate = item.taxRate %}
+            {% set rateSum = taxes[item.taxRate] | default(0) + item.sumTaxAmountFullAggregation %}
+            {% set taxes = taxes | merge({ (taxRate): rateSum }) %}
+            {% set rateItemSum = itemSumByTaxes[taxRate] | default(0) + item.sumPriceToPayAggregation %}
+            {% set itemSumByTaxes = itemSumByTaxes | merge({ (taxRate): rateItemSum }) %}
 
-            {% raw %}{%{% endraw %} if item.productBundle is not defined or item.productBundle is null {% raw %}%}{% endraw %}
-                {% raw %}{%{% endraw %} set linenumber = linenumber + 1 {% raw %}%}{% endraw %}
+            {% if item.productBundle is not defined or item.productBundle is null %}
+                {% set linenumber = linenumber + 1 %}
 
                 <tr>
-                    <td class="text-center">{% raw %}{{{% endraw %} linenumber {% raw %}}}{% endraw %}</td>
-                    <td class="text-center">{% raw %}{{{% endraw %} item.quantity {% raw %}}}{% endraw %}</td>
-                    <td>{% raw %}{{{% endraw %} item.name {% raw %}}}{% endraw %}</td>
-                    <td class="text-center">{% raw %}{{{% endraw %} item.taxRate | number_format {% raw %}}}{% endraw %}%</td>
-                    <td class="text-center">{% raw %}{{{% endraw %} item.sumPriceToPayAggregation | money(true, order.currencyIsoCode) {% raw %}}}{% endraw %}</td>
+                    <td class="text-center">{{ linenumber }}</td>
+                    <td class="text-center">{{ item.quantity }}</td>
+                    <td>{{ item.name }}</td>
+                    <td class="text-center">{{ item.taxRate | number_format }}%</td>
+                    <td class="text-center">{{ item.sumPriceToPayAggregation | money(true, order.currencyIsoCode) }}</td>
                 </tr>
-            {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+            {% endif %}
 
-            {% raw %}{%{% endraw %} if item.productBundle is defined and item.productBundle is not null {% raw %}%}{% endraw %}
-                {% raw %}{%{% endraw %} if item.relatedBundleItemIdentifier not in renderedBundles {% raw %}%}{% endraw %}
+            {% if item.productBundle is defined and item.productBundle is not null %}
+                {% if item.relatedBundleItemIdentifier not in renderedBundles %}
                     {# @var productBundle \Generated\Shared\Transfer\ItemTransfer #}
 
-                    {% raw %}{%{% endraw %} set linenumber = linenumber + 1 {% raw %}%}{% endraw %}
-                    {% raw %}{%{% endraw %} set productBundle = item.productBundle {% raw %}%}{% endraw %}
+                    {% set linenumber = linenumber + 1 %}
+                    {% set productBundle = item.productBundle %}
 
                     <tr>
-                        <td class="text-center">{% raw %}{{{% endraw %} linenumber {% raw %}}}{% endraw %}</td>
-                        <td class="text-center">{% raw %}{{{% endraw %} productBundle.quantity {% raw %}}}{% endraw %}</td>
-                        <td>{% raw %}{{{% endraw %} productBundle.name {% raw %}}}{% endraw %}</td>
-                        <td class="text-center">{% raw %}{{{% endraw %} productBundle.taxRate | number_format {% raw %}}}{% endraw %}%</td>
-                        <td class="text-center">{% raw %}{{{% endraw %} productBundle.sumPriceToPayAggregation | money(true, order.currencyIsoCode) {% raw %}}}{% endraw %}</td>
+                        <td class="text-center">{{ linenumber }}</td>
+                        <td class="text-center">{{ productBundle.quantity }}</td>
+                        <td>{{ productBundle.name }}</td>
+                        <td class="text-center">{{ productBundle.taxRate | number_format }}%</td>
+                        <td class="text-center">{{ productBundle.sumPriceToPayAggregation | money(true, order.currencyIsoCode) }}</td>
                     </tr>
 
-                    {% raw %}{%{% endraw %} for bundleditem in order.items {% raw %}%}{% endraw %}
-                        {% raw %}{%{% endraw %} if item.relatedBundleItemIdentifier == bundleditem.relatedBundleItemIdentifier {% raw %}%}{% endraw %}
+                    {% for bundleditem in order.items %}
+                        {% if item.relatedBundleItemIdentifier == bundleditem.relatedBundleItemIdentifier %}
                             <tr>
                                 <td></td>
-                                <td class="text-center">{% raw %}{{{% endraw %} bundleditem.quantity {% raw %}}}{% endraw %}</td>
-                                <td>{% raw %}{{{% endraw %} bundleditem.name {% raw %}}}{% endraw %}</td>
-                                <td class="text-center">{% raw %}{{{% endraw %} bundleditem.taxRate | number_format {% raw %}}}{% endraw %}%</td>
-                                <td class="text-center">{% raw %}{{{% endraw %} bundleditem.sumPriceToPayAggregation | money(true, order.currencyIsoCode) {% raw %}}}{% endraw %}</td>
+                                <td class="text-center">{{ bundleditem.quantity }}</td>
+                                <td>{{ bundleditem.name }}</td>
+                                <td class="text-center">{{ bundleditem.taxRate | number_format }}%</td>
+                                <td class="text-center">{{ bundleditem.sumPriceToPayAggregation | money(true, order.currencyIsoCode) }}</td>
                             </tr>
-                        {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
-                    {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
+                        {% endif %}
+                    {% endfor %}
 
-                    {% raw %}{%{% endraw %} set renderedBundles = renderedBundles | merge([item.relatedBundleItemIdentifier]) {% raw %}%}{% endraw %}
-                {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
-        {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
+                    {% set renderedBundles = renderedBundles | merge([item.relatedBundleItemIdentifier]) %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
 
-        {% raw %}{%{% endraw %} for expense in order.expenses {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} set linenumber = linenumber + 1 {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} set taxRate = expense.taxRate {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} set rateSum = taxes[expense.taxRate] | default(0) + expense.sumTaxAmount {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} set taxes = taxes | merge({ (taxRate): rateSum }) {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} set rateItemSum = itemSumByTaxes[taxRate] | default(0) + expense.sumPriceToPayAggregation {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} set itemSumByTaxes = itemSumByTaxes | merge({ (taxRate): rateItemSum }) {% raw %}%}{% endraw %}
+        {% for expense in order.expenses %}
+            {% set linenumber = linenumber + 1 %}
+            {% set taxRate = expense.taxRate %}
+            {% set rateSum = taxes[expense.taxRate] | default(0) + expense.sumTaxAmount %}
+            {% set taxes = taxes | merge({ (taxRate): rateSum }) %}
+            {% set rateItemSum = itemSumByTaxes[taxRate] | default(0) + expense.sumPriceToPayAggregation %}
+            {% set itemSumByTaxes = itemSumByTaxes | merge({ (taxRate): rateItemSum }) %}
 
             <tr>
-                <td class="text-center">{% raw %}{{{% endraw %} linenumber {% raw %}}}{% endraw %}</td>
+                <td class="text-center">{{ linenumber }}</td>
                 <td></td>
-                <td>{% raw %}{{{% endraw %} expense.name {% raw %}}}{% endraw %}</td>
-                <td class="text-center">{% raw %}{{{% endraw %} expense.taxRate | number_format {% raw %}}}{% endraw %}%</td>
-                <td class="text-center">{% raw %}{{{% endraw %} expense.sumPrice | money(true, order.currencyIsoCode) {% raw %}}}{% endraw %}</td>
+                <td>{{ expense.name }}</td>
+                <td class="text-center">{{ expense.taxRate | number_format }}%</td>
+                <td class="text-center">{{ expense.sumPrice | money(true, order.currencyIsoCode) }}</td>
             </tr>
-        {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
+        {% endfor %}
 
         <tr class="background-gray">
             <td colspan="3"></td>
-            <td>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.subtotal' | trans {% raw %}}}{% endraw %}</td>
-            <td class="text-center">{% raw %}{{{% endraw %} order.totals.subtotal | money(true, order.currencyIsoCode) {% raw %}}}{% endraw %}</td>
+            <td>{{ 'order_invoice.invoice_template.table.subtotal' | trans }}</td>
+            <td class="text-center">{{ order.totals.subtotal | money(true, order.currencyIsoCode) }}</td>
         </tr>
         <tr class="background-gray">
             <td colspan="3"></td>
-            <td>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.discount' | trans {% raw %}}}{% endraw %}</td>
-            <td class="text-center">{% raw %}{{{% endraw %} order.totals.discountTotal | money(true, order.currencyIsoCode) {% raw %}}}{% endraw %}</td>
+            <td>{{ 'order_invoice.invoice_template.table.discount' | trans }}</td>
+            <td class="text-center">{{ order.totals.discountTotal | money(true, order.currencyIsoCode) }}</td>
         </tr>
 
-        {% raw %}{%{% endraw %} for rate, tax in taxes {% raw %}%}{% endraw %}
+        {% for rate, tax in taxes %}
             <tr>
-                <td colspan="2">{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.tax.included' | trans({ '%tax_rate%': rate | number_format }) {% raw %}}}{% endraw %}</td>
-                <td class="text-center">{% raw %}{{{% endraw %} (itemSumByTaxes[rate] - tax) | money(true, order.currencyIsoCode) {% raw %}}}{% endraw %}</td>
-                <td class="text-center">{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.tax.name' | trans {% raw %}}}{% endraw %}</td>
-                <td class="text-center">{% raw %}{{{% endraw %} tax | money(true, order.currencyIsoCode) {% raw %}}}{% endraw %}</td>
+                <td colspan="2">{{ 'order_invoice.invoice_template.table.tax.included' | trans({ '%tax_rate%': rate | number_format }) }}</td>
+                <td class="text-center">{{ (itemSumByTaxes[rate] - tax) | money(true, order.currencyIsoCode) }}</td>
+                <td class="text-center">{{ 'order_invoice.invoice_template.table.tax.name' | trans }}</td>
+                <td class="text-center">{{ tax | money(true, order.currencyIsoCode) }}</td>
             </tr>
-        {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
+        {% endfor %}
 
         <tr>
-            <td colspan="2">{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.total.net' | trans {% raw %}}}{% endraw %}</td>
-            <td class="text-center">{% raw %}{{{% endraw %} (order.totals.grandTotal - order.totals.taxTotal.amount) | money(true, order.currencyIsoCode) {% raw %}}}{% endraw %}</td>
+            <td colspan="2">{{ 'order_invoice.invoice_template.table.total.net' | trans }}</td>
+            <td class="text-center">{{ (order.totals.grandTotal - order.totals.taxTotal.amount) | money(true, order.currencyIsoCode) }}</td>
             <td colspan="2"></td>
         </tr>
         <tr class="background-gray">
             <td colspan="3"></td>
-            <td><strong>{% raw %}{{{% endraw %} 'order_invoice.invoice_template.table.grandtotal' | trans {% raw %}}}{% endraw %}</strong></td>
-            <td class="text-center">{% raw %}{{{% endraw %} order.totals.grandTotal | money(true, order.currencyIsoCode) {% raw %}}}{% endraw %}</td>
+            <td><strong>{{ 'order_invoice.invoice_template.table.grandtotal' | trans }}</strong></td>
+            <td class="text-center">{{ order.totals.grandTotal | money(true, order.currencyIsoCode) }}</td>
         </tr>
         </tbody>
     </table>
 </body>
 </html>
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
-
-The verification of the invoice template configuration will be checked in a later step.
-
+You will be able to verify the invoice template configuration in a later step.
 {% endinfo_block %}
 
 
+### 4) Add translations
 
- ### 4) Add Translations
+
 {% info_block errorBox %}
-
 An `oms.state.` prefixed translation key is a combination of the `OmsConfig::getFallbackDisplayNamePrefix()` and a normalized state machine name. If you have different OMS state-machine states or a fallback display name prefix, adjust the corresponding translations.
-
 {% endinfo_block %}
-
 {% info_block infoBox "Normalized state machine names" %}
+By default, in state machine names, the following applies:
 
-By default, in state machine names:
-
-* Spaces are replaced with dashes.
-* All the words are decapitalized.
-
+- Spaces are replaced with dashes.
+- All the words are decapitalized.
 {% endinfo_block %}
-
-
-Add translations as follows:
 
 1. Append glossary according to your configuration:
+<dertails>
+    <summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
-```yaml
+ **src/data/import/glossary.csv**                             
+```csv
 sales.error.customer_order_not_found,Customer Order not found.,en_US
 sales.error.customer_order_not_found,Die Bestellung wurde nicht gefunden.,de_DE
 sales.error.order_cannot_be_canceled_due_to_wrong_item_state,Order cannot be canceled due to wrong item state.,en_US
@@ -653,35 +685,51 @@ quote_request.status.closed,Closed,en_US
 quote_request.status.closed,Geschlossen,de_DE
 mail.order_invoice.subject,"Invoice: %invoiceReference%",en_US
 mail.order_invoice.subject,"Rechnung: %invoiceReference%",de_DE
+order_custom_reference.reference_saved,Custom order reference was successfully saved.,en_US
+order_custom_reference.reference_saved,Ihre Bestellreferenz wurde erfolgreich gespeichert.,de_DE
+order_custom_reference.reference_not_saved,Custom order reference has not been changed.,en_US
+order_custom_reference.reference_not_saved,Ihre Bestellreferenz wurde nicht geändert.,de_DE
+order_custom_reference.validation.error.message_invalid_length,Custom order reference length is invalid.,en_US
+order_custom_reference.validation.error.message_invalid_length,Die Länge der Bestellreferenz ist ungültig.,de_DE
+order_custom_reference.title,Custom Order Reference,en_US
+order_custom_reference.title,Ihre Bestellreferenz,de_DE
+order_custom_reference.form.placeholder,Add custom order reference,en_US
+order_custom_reference.form.placeholder,Ihre Bestellreferenz hinzufügen,de_DE
+order_custom_reference.save,Save,en_US
+order_custom_reference.save,Speichern,de_DE
 ```
 
-2. Import data:
+</details>
+
+ 2. Import data:
 
 ```bash
 console data:import:glossary
 ```
 
-{% info_block warningBox "Verification" %}
 
+
+{% info_block warningBox "Verification" %}
 Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
-### 5) Set up Behavior
+### 5) Set up behavior
 
 Set up the following behaviors.
 
 #### 5.1) Set up Order Item Display Name
 
+| PLUGIN                                            | SPECIFICATION                                  | PREREQUISITES | NAMESPACE                                    |
+| :------------------------------------------------ | :--------------------------------------------- | :------------ | :------------------------------------------- |
+| CurrencyIsoCodeOrderItemExpanderPlugin            | Expands order items with currency codes (ISO). |               | Spryker\Zed\Sales\Communication\Plugin\Sales |
+| StateHistoryOrderItemExpanderPlugin               | Expands order items with history states.       |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
+| ItemStateOrderItemExpanderPlugin                  | Expands order items with its item states.      |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
+| OrderAggregatedItemStateSearchOrderExpanderPlugin | Expands orders with aggregated item states.    |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
 
-| Plugin | Specification | Prerequisites | Namespace |
-| --- | --- | --- | --- |
-| `CurrencyIsoCodeOrderItemExpanderPlugin` | Expands order items with currency codes (ISO). | None | `Spryker\Zed\Sales\Communication\Plugin\Sales` |
-| `StateHistoryOrderItemExpanderPlugin` | Expands order items with history states. | None | `Spryker\Zed\Oms\Communication\Plugin\Sales` |
-| `ItemStateOrderItemExpanderPlugin` | Expands order items with its item states. | None | `Spryker\Zed\Oms\Communication\Plugin\Sales` |
-| `OrderAggregatedItemStateSearchOrderExpanderPlugin` | Expands orders with aggregated item states. | None | `Spryker\Zed\Oms\Communication\Plugin\Sales` |
 
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+<dertails>
+    <summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -707,7 +755,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new ItemStateOrderItemExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\SearchOrderExpanderPluginInterface[]
      */
@@ -717,30 +765,34 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new OrderAggregatedItemStateSearchOrderExpanderPlugin()
         ];
     }
-}   
+}
 ```
+
+ </details>
+
+
+
 {% info_block warningBox "Verification" %}
 
-Ensure that:
 
-* Every order item from the `SalesFacade::getOrderItems()` result contains:
-    * Currency ISO code
-    * State history code
-    * Item state data
-* Every order from the `SalesFacade::getCustomerOrders()` result contains aggregated item state data.
-
+- Make sure that every order item from the `SalesFacade::getOrderItems()` result contains the following:
+  - Currency ISO code
+  - State history code
+  - Item state data
+- Make sure that every order from the `SalesFacade::getCustomerOrders()` result contains aggregated item state data.
 
 {% endinfo_block %}
 
-#### 5.2) Set up Order Cancellation Behavior
+### 5.2) Set up order cancellation behavior
+
+| PLUGIN                                 | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                    |
+| :------------------------------------- | :-------------------------------------------------- | :------------ | :------------------------------------------- |
+| IsCancellableOrderExpanderPlugin       | Checks if each order item has the cancellable flag. |               | Spryker\Zed\Sales\Communication\Plugin\Sales |
+| IsCancellableSearchOrderExpanderPlugin | Checks if each order item has the cancellable flag. |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
 
 
-| Plugin | Specification | Prerequisites | Namespace |
-| --- | --- | --- | --- |
-| IsCancellableOrderExpanderPlugin | Checks if each order item has the cancellable flag. | None | Spryker\Zed\Sales\Communication\Plugin\Sales |
-| IsCancellableSearchOrderExpanderPlugin | Checks if each order item has the cancellable flag. | None | Spryker\Zed\Oms\Communication\Plugin\Sales |
-
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+<dertails>
+    <summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -772,29 +824,40 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new IsCancellableOrderExpanderPlugin(),
         ];
     }
-}   
+}
 ```
+
+ </details>
+
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, on the following pages, each order contains the `isCancellable` flag:
+Ensure that, on the following pages, each order contains the `isCancellable` flag:
 
-* The Storefront:
-    * *Order History*
-    * *Overview* 
-* The Back Office:
-    * *Overview of Orders*
+- The Storefront:
+  - *Order History*
+  - *Overview*
+- The Back Office:
+  - *Overview of Orders*
+
+  {% endinfo_block %}
+
+### 5.3) Set up order invoice generation behavior
+
+Set up the following order invoice generation behaviors.
+
+#### 5.3.1) Set up order invoice mail type
+
+Set up the following plugin:
+
+| PLUGIN                     | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                          |
+| :------------------------- | :------------------------------------------------------ | :------------ | :------------------------------------------------- |
+| OrderInvoiceMailTypePlugin | Email type that prepares an invoice email for an order. |               | Spryker\Zed\SalesInvoice\Communication\Plugin\Mail |
 
 
-{% endinfo_block %}
+<dertails>
+    <summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
 
-#### 5.3) Set up Order Invoice Generation Behavior
-##### 5.3.1) Setup Order Invoice Mail Type
-
-| Plugin | Specification | Prerequisites | Namespace |
-| --- | --- | --- | --- |
-| `OrderInvoiceMailTypePlugin` | An email type that prepares invoice email for an order. | cell | cell |
-**src/Pyz/Zed/Mail/MailDependencyProvider.php**
 ```php
 <?php
 
@@ -828,13 +891,21 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     }
 }
 ```
-##### 5.3.2) Set up Order Invoice OMS Command
 
-| Plugin | Specification | Prerequisites | Namespace |
-| --- | --- | --- | --- |
-| `GenerateOrderInvoiceCommandPlugin` | A command in OMS state machine, that generates invoice for order. | None | `Spryker\Zed\SalesInvoice\Communication\Plugin\Oms` |
+</details>
 
-**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
+
+#### 5.3.2) Set up an order invoice OMS command
+
+Set up the following plugin:
+
+| PLUGIN                            | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                         |
+| :-------------------------------- | :----------------------------------------------------------- | :------------ | :------------------------------------------------ |
+| GenerateOrderInvoiceCommandPlugin | A command in the OMS state machine that generates an invoice for an order. |               | Spryker\Zed\SalesInvoice\Communication\Plugin\Oms |
+
+
+<dertails>
+    <summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -865,11 +936,15 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 }
 ```
 
-#### 5.3.3) Set up Order Invoice OMS Command
+ </details>
 
-| Plugin | Specification | Prerequisites | Namespace |
-| --- | --- | --- | --- |
-| `OrderInvoiceSendConsole` | A console command that sends not-yet-sent order invoices via email. | None | `Spryker\Zed\SalesInvoice\Communication\Console` |
+#### 5.3.3) Set up an order invoice OMS command
+
+1. Set up the following plugin:
+
+| PLUGIN                  | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                      |
+| :---------------------- | :----------------------------------------------------------- | :------------ | :--------------------------------------------- |
+| OrderInvoiceSendConsole | A console command that sends not-yet-sent order invoices via email. |               | Spryker\Zed\SalesInvoice\Communication\Console |
 
 **src/Pyz/Zed/Oms/OmsDependencyProvider.php**
 
@@ -894,14 +969,19 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         $commands = [
             new OrderInvoiceSendConsole(),
         ];
-        
+
         return $commands;
     }
 }
+
 ```
-Adjust scheduler project configuration:
+
+
+
+2. Adjust the scheduler project configuration:
 
 **config/Zed/cronjobs/jenkins.php**
+
 ```php
 /* Order invoice */
 $jobs[] = [
@@ -912,53 +992,194 @@ $jobs[] = [
     'stores' => $allStores,
 ];
 ```
-To apply scheduler configuration update, run next commands:
+
+
+
+3. Apply the scheduler configuration update:
+
 ```bash
 vendor/bin/console scheduler:suspend
 vendor/bin/console scheduler:setup
 vendor/bin/console scheduler:resume
 ```
+
+
 {% info_block warningBox "Verification" %}
 
-Once all invoice related configuration was set up, ensure that the right order invoice template was assigned to the order (`spy_sales_order_invoice`) after moving at least 1 item in the order to `invoice generated` state based on your `DummyInvoice01.xml` and `SalesInvoiceConfig::getOrderInvoiceTemplatePath()` configuration.
-
-{% endinfo_block %}
-{% info_block warningBox "Verification" %}
-
-The email with the invoice based on the configured invoice template should be sent to the email address of the order’s customer within the scheduled (5 mins) time.
+Make sure that you’ve set up the invoice-related configuration: move at least one item in an order to the `invoice generated` state and make sure that, according to your `DummyInvoice01.xml` and `SalesInvoiceConfig::getOrderInvoiceTemplatePath()` configuration, the correct order invoice template has been assigned to the order (`spy_sales_order_invoice`).
 
 {% endinfo_block %}
 
-## Install Feature Front End
 
-Follow the steps below to install the feature front end.
+{% info_block warningBox "Verification" %}
 
-### Prerequisites
+Place an order with an invoice and make sure that you receive an invoice within the time configured in the scheduler.
 
-Overview and install the necessary features before beginning the integration step.
+{% endinfo_block %}
 
-| Name | Version |
-| --- | --- |
-| Spryker Core | 202009.0 |
+### 5.4. Set up a custom order reference workflow
 
+Enable the following behaviors by registering the plugins:
 
+| PLUGIN                                                       | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
+| :----------------------------------------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| OrderCustomReferenceOrderPostSavePlugin                      | After an order is saved, persists `orderCustomReference` in the `spy_sales_order` schema. |               | Spryker\Zed\OrderCustomReference\Communication\Plugin\Sales\ |
+| OrderCustomReferenceQuoteFieldsAllowedForSavingProviderPlugin | Returns the `QuoteTransfer` fields related to a custom order reference. |               | Spryker\Zed\OrderCustomReference\Communication\Plugin\Quote  |
 
-### 1) Install the Required Modules Using Composer
+**src/Pyz/Zed/Sales/SalesDependencyProvider.php**            
+```php
+<?php
 
-Run the following command(s) to install the required modules:
+namespace Pyz\Zed\Sales;
 
-```bash
-composer require spryker-feature/order-management: "202009.0" --update-with-dependencies
+use Spryker\Zed\OrderCustomReference\Communication\Plugin\Sales\OrderCustomReferenceOrderPostSavePlugin;
+use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
+
+class SalesDependencyProvider extends SprykerSalesDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderPostSavePluginInterface[]
+     */
+    protected function getOrderPostSavePlugins()
+    {
+        return [
+            new OrderCustomReferenceOrderPostSavePlugin(),
+        ];
+    }
+}
+```
+
+ **src/Pyz/Zed/Quote/QuoteDependencyProvider.php**     
+```php
+<?php
+
+namespace Pyz\Zed\Quote;
+
+use Spryker\Zed\OrderCustomReference\Communication\Plugin\Quote\OrderCustomReferenceQuoteFieldsAllowedForSavingProviderPlugin;
+use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
+
+class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteFieldsAllowedForSavingProviderPluginInterface[]
+     */
+    protected function getQuoteFieldsAllowedForSavingProviderPlugins(): array
+    {
+        return [
+            new OrderCustomReferenceQuoteFieldsAllowedForSavingProviderPlugin(),
+        ];
+    }
+}
 ```
 
 
-### 2) Add Translations
 
-Add translations as follows:
+{% info_block warningBox "Verification" %}
+Log in and make sure that, at `zed.mysprykershop.com/sales/detail`, you can see the *Custom Order Reference* section with the **Edit Reference** button in the order details.
 
-1. Append glossary according to your configuration:
+{% endinfo_block %}
 
-```yaml
+### 5.5. Set up order saving plugins
+
+Set up the following plugins:
+
+| PLUGIN                        | SPECIFICATION                                    | PREREQUISITES | NAMESPACE                                          |
+| :---------------------------- | :----------------------------------------------- | :------------ | :------------------------------------------------- |
+| OrderSaverPlugin              | Saves an order.                                  |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
+| OrderTotalsSaverPlugin        | Saves order totals.                              |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
+| SalesOrderShipmentSaverPlugin | Saves an order shipment. Adds shipment expenses. |               | Spryker\Zed\Shipment\Communication\Plugin\Checkout |
+| OrderItemsSaverPlugin         | Saves order items.                               |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
+
+
+<dertails>
+    <summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\Checkout;
+
+use Spryker\Zed\Sales\Communication\Plugin\Checkout\OrderItemsSaverPlugin;
+use Spryker\Zed\Sales\Communication\Plugin\Checkout\OrderSaverPlugin;
+use Spryker\Zed\Sales\Communication\Plugin\Checkout\OrderTotalsSaverPlugin;
+use Spryker\Zed\Shipment\Communication\Plugin\Checkout\SalesOrderShipmentSavePlugin;
+use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
+
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface[]
+     */
+    protected function getCheckoutOrderSavers(Container $container)
+    {
+        /** @var \Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface[] $plugins */
+        $plugins = [
+            new OrderSaverPlugin(),
+            new OrderTotalsSaverPlugin(),
+            new SalesOrderShipmentSavePlugin(),
+            new OrderItemsSaverPlugin(),
+        ];
+
+        return $plugins;
+    }
+}
+```
+
+</details>
+
+
+{% info_block warningBox "Verification" %}
+Make sure that, on the following Storefront pages, even if the `display` property is not set in the process definition, the item states are displayed correctly:
+
+- *Customer overview*
+- *Order history*
+- *Order details*
+- *Returns*
+- *Return details*
+
+{% endinfo_block %}
+
+## Install feature front end
+
+Follow the steps below to install the Order Management feature front end.
+
+### Prerequisites
+
+To start the feature integration, overview and install the necessary features.
+
+| NAME                        | VERSION    |
+| :-------------------------- | :--------- |
+| Spryker Core                | dev-master |
+| Cart                        | dev-master |
+| Checkout                    | dev-master |
+| Customer Account Management | dev-master |
+
+### 1) Install the required modules using Composer
+
+Install the required modules:
+
+```bash
+composer require spryker-feature/order-management: "dev-master" --update-with-dependencies
+```
+
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules have been installed:
+
+| MODULE                     | EXPECTED DIRECTORY                                |
+| :------------------------- | :------------------------------------------------ |
+| OrderCustomReferenceWidget | vendor/spryker-shop/order-custom-reference-widget |
+
+{% endinfo_block %}
+
+### 2) Add translations
+
+1. Append the glossary according to your configuration:
+
+```
 order_cancel_widget.cancel_order,Cancel Order,en_US
 order_cancel_widget.cancel_order,Bestellung stornieren,de_DE
 order_cancel_widget.order.cancelled,Order was canceled successfully.,en_US
@@ -971,24 +1192,21 @@ order_cancel_widget.order.cancelled,Die Bestellung wurde erfolgreich storniert.,
 console data:import:glossary
 ```
 
+
 {% info_block warningBox "Verification" %}
 
 Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
+### 3) Enable controllers
 
-### 3) Enable Controllers
+Register the following route provider on the Storefront:
 
-Register the following route provider(s) on the Storefront:
+| PROVIDER                             | NAMESPACE                                        |
+| :----------------------------------- | :----------------------------------------------- |
+| OrderCancelWidgetRouteProviderPlugin | SprykerShop\Yves\OrderCancelWidget\Plugin\Router |
 
- 
-
-| Provider | Namespace |
-| --- | --- |
-| `OrderCancelWidgetRouteProviderPlugin` | `SprykerShop\Yves\OrderCancelWidget\Plugin\Router`|
-
-	
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
 ```php
@@ -1013,25 +1231,27 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
+
+
 {% info_block warningBox "Verification" %}
+
 
 Ensure that the `yves.mysprykershop.com/order/cancel` route is available for POST requests.
 
 {% endinfo_block %}
 
-
-### 4) Set up Behavior
+### 4) Set up behavior
 
 Set up the following behaviors.
 
-#### 4.1) Set up Order Cancellation Behavior
- 
+#### 4.1) Set up an order cancellation behavior
 
-| Plugin | Specification | Prerequisites | Namespace |
-| --- | --- | --- | --- |
-| `OrderCancelButtonWidget` | Shows a **Cancel** button on the Storefront. | None | `SprykerShop\Yves\OrderCancelWidget\Widget` |
+Set up the following plugin:
 
-	
+| PLUGIN                  | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                 |
+| :---------------------- | :------------------------------------------- | :------------ | :---------------------------------------- |
+| OrderCancelButtonWidget | Shows a **Cancel** button on the Storefront. |               | SprykerShop\Yves\OrderCancelWidget\Widget |
+
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
@@ -1055,28 +1275,117 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
-{% info_block warningBox "Verification" %}
-
-Ensure that:
-
-* The `OrderCancelButtonWidget` widget has been registered.
-* The **Cancel** button is displayed on the *Order Details* page on the Storefront.
-
-
-{% endinfo_block %}
-
-
-#### 4.2) Set up Order Item Display Names
 
 
 {% info_block warningBox "Verification" %}
 
-Ensure that:
+Ensure the following:
 
-* You can see the aggregated order item states in the *item state* table column on the *Customer Overview* and *Order History* pages on the Storefront;
-* Aggregated return item states are displayed on the *Return Page* on the Storefront.
-* Item states are displayed on the *Order Details* and *Return Details* pages on the Storefront.
+- The `OrderCancelButtonWidget` widget has been registered.
+- On the *Order Details* page on the Storefront, the **Cancel** button is displayed.
+- In the *item state* table column on the *Customer Overview* and *Order History* pages on the Storefront, you can see the aggregated order item states.
+- On the *Return Page* on the Storefront, aggregated return item states are displayed .
+- On the *Order Detail* and *Return Detail* pages on the Storefront, item states are displayed .
+
+{% endinfo_block %}
+
+### 5) Enable a route provider plugin
+
+Register the route provider in the Yves application:
+
+| PROVIDER                                      | NAMESPACE                                                 |
+| :-------------------------------------------- | :-------------------------------------------------------- |
+| OrderCustomReferenceWidgetRouteProviderPlugin | SprykerShop\Yves\OrderCustomReferenceWidget\Plugin\Router |
+
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\Router;
+
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+use SprykerShop\Yves\OrderCustomReferenceWidget\Plugin\Router\OrderCustomReferenceWidgetRouteProviderPlugin;
+
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
+{
+    /**
+     * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
+     */
+    protected function getRouteProvider(): array
+    {
+        return [
+            new OrderCustomReferenceWidgetRouteProviderPlugin(),
+        ];
+    }
+}
+```
+
+
+
+### 5) Set up widgets
+
+1. Register the following plugin to enable widgets:
+
+| PLUGIN                     | DESCRIPTION                                                 | PREREQUISITES | NAMESPACE                                          |
+| :------------------------- | :---------------------------------------------------------- | :------------ | :------------------------------------------------- |
+| OrderCustomReferenceWidget | Edits and shows a custom order reference on the Storefront. |               | SprykerShop\Yves\OrderCustomReferenceWidget\Widget |
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\OrderCustomReferenceWidget\Widget\OrderCustomReferenceWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+/**
+ * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+ */
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return string[]
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            OrderCustomReferenceWidget::class,
+        ];
+    }
+}
+```
+
+
+
+2. Run the following command to enable Javascript and CSS changes:
+
+```bash
+console frontend:yves:build
+```
+
+
+
+{% info_block warningBox "Verification" %}
+To make sure that you’ve registered the widget, log in as a customer on the Storefront and check that the **Custom order reference** form is present on the order view page.
+
 
 
 {% endinfo_block %}
 
+## Related features
+
+Integrate the following related features:
+
+| FEATURE                                                      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
+| :----------------------------------------------------------- | :------------------------------- | :----------------------------------------------------------- |
+| Comments + Order Management feature integration              |                                  | [Comments + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{page.version}/comments-order-management-feature-integration.html) |
+| Glue API: Order Management feature integration               |                                  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{page.version}/glue-api-order-management-feature-integration.html) |
+| Company Account + Order Management feature integration       |                                  | [Company Account + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{page.version}/company-account-order-management-feature-integration.html) |
+| Product + Order Management feature integration               |                                  | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{page.version}/product-order-management-feature-integration.html) |
+| Customer Account Management + Order Management feature integration |                                  | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{page.version}/customer-account-management-order-management-feature-integration.html) |
+| Packaging Units feature integration                  |                                  | [Packaging Units feature integration](/docs/scos/dev/feature-integration-guides/{page.version}/packaging-unit-feature-integration.html) |
+| Product + Order Management feature integration                      |                                  | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{page.version}/product-order-management-feature-integration.html) |
+| Product Options + Order Management feature integration                       |                                  | [Product Options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{page.version}/product-options-order-management-feature-integration.html) |

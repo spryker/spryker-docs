@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/ht-use-transfer-objects
   - /docs/ht-use-transfer-objects
   - /docs/en/ht-use-transfer-objects
+  - /v6/docs/ht-use-transfer-objects
+  - /v6/docs/en/ht-use-transfer-objects
+  - /v5/docs/ht-use-transfer-objects
+  - /v5/docs/en/ht-use-transfer-objects
+  - /v4/docs/ht-use-transfer-objects
+  - /v4/docs/en/ht-use-transfer-objects
+  - /v2/docs/ht-use-transfer-objects
+  - /v2/docs/en/ht-use-transfer-objects
 ---
 
 Transfer objects are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
@@ -37,7 +45,7 @@ The following example describes a Customer with email, first name, last name, an
 ```
 
 ### Available types
-You can use any name for your transfer objects. However, make sure that the names start with a small letter and use the camelCase format. 
+You can use any name for your transfer objects. However, make sure that the names start with a small letter and use the camelCase format.
 As for the types, you can use PHP native types: `int`, `string`, `bool`, and `array`. To create a nested transfer object, use the name of the transfer object as the type. You can also define collections of objects with the [] symbols.
 
 ```xml
@@ -163,7 +171,7 @@ $fooBarTransfer->getFooOrFail();
 
 // unhappy case
 $fooBarTransfer->getBarOrFail(); // exception will be thrown
-``` 
+```
 Keep in mind that these new methods are not generated for the array and collection transfer properties, as these properties cannot be nullable by design.
 
 ### Property constants
@@ -267,7 +275,7 @@ Starting from version 3.27.0 of the [Transfer](https://github.com/spryker/transf
 
     <transfer name="Foo" strict="true">
     </transfer>
-	
+
      <transfer name="Bar">
         <property name="test" type="string" strict="true"/>
     </transfer>
@@ -275,7 +283,7 @@ Starting from version 3.27.0 of the [Transfer](https://github.com/spryker/transf
     <transfer name="Buzz">
         <property name="foo" type="Foo" strict="true"/>
     </transfer>
-	
+
 </transfers>
 ```
 
@@ -323,4 +331,3 @@ You can use the following definitions to generate the related code:
 
 See the [Spryk](/docs/scos/dev/sdk/{{page.version}}/development-tools/spryk-code-generator.html) documentation for details.
  
-

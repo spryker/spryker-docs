@@ -8,8 +8,9 @@ This article provides details about the Table Feature Row Actions component in t
 
 ## Overview
 
-Table Feature Row Actions is a feature of the Table Component that displays dropdown 
-menu that contains actions related specifically to the table row.
+Table Feature Row Actions is a feature of the Table Component that renders dropdown 
+menu that contains actions related specifically to the table row. 
+Also this feature allows triggering actions via row click.
 See an example below, how to use the Row Actions feature.
 
 `enabled` - will enable feature via config.  

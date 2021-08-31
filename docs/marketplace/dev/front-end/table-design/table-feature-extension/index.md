@@ -159,7 +159,7 @@ There are multiple standard Table Features that are shipped with the UI library:
 - `Total`—renders the total number of the data set.
 - `Title`—renders the title of the table.
 - `Selectable`—allows selecting multiple rows.
-- `Row Actions`—allows triggering actions from rows.
+- [Row Actions](/docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-row-actions.html) — allows triggering actions from rows.
 - `Batch Actions`—allows triggering batch/multiple actions from rows.
 - `Filters`—allows filtering the data set.
 - `Search`—allows searching within the data set.

@@ -8,7 +8,7 @@ This article provides details about the Table Feature Selectable component in th
 
 ## Overview
 
-Table Feature Selectable is a feature of the Table Component that displays a checkmark that triggers row selection.
+Table Feature Selectable is a feature of the Table Component that allows selecting multiple rows.
 Row selection toggles whether a row is selected. 
 Typically, an empty box indicates a row is not selected and a checkmark indicates a row is selected. 
 The table commonly has an indication at the header to show whether all rows are selected. 
@@ -41,7 +41,6 @@ export interface TableSelectionRow {
   index: number;
 }
 
-// Emits event on the table row selection
 export type TableSelectionChangeEvent = TableSelectionRow[];
 
 // Component registration

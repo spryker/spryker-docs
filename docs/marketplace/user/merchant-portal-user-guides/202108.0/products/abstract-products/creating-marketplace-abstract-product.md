@@ -80,7 +80,7 @@ To create a new abstract product:
 
 To return to the previous step, click **Back**.
 
-Once the product is created, it needs to be [activated by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/managing-products/managing-products.html#activating-a-product). Only the active marketplace products are displayed in the Merchant Portal and Marketplace Storefront.
+Once the product is created, it needs to be [activated](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only the active marketplace products are displayed in the Merchant Portal and Marketplace Storefront.
 
 ### Reference information: Create abstract product
 

@@ -19,20 +19,20 @@ To add an attribute for a marketplace concrete product:
 
 1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page. Scroll down to the *Attributes* pane.
 2. In the *Attributes* pane, click **+Add**. The empty cells appear in the table below.
-3. From the drop-down menu *Attribute*, select the attribute you would like to add.
-4. Depending on the attribute selected in the step below, for the *Default* cell, select or enter the predefined value.
+3. From the drop-down menu *Attribute*, a predefined value or enter your own when allowed by the Marketplace operator.
+4. Depending on the attribute selected in the step below, for the *Default* cell, select or enter the predefined value. Use the *Default* cell if no translations are needed.
 5. Add/select translations for the attribute values for the desired locales.
 
 **Tips & Tricks**
 
-Click **Cancel** to stop adding a new attribute for a concrete product.
+Click **Cancel** if a new attribute should not be added to a concrete product.
 
 ## Editing marketplace concrete product attributes
 
 To edit the attributes for a marketplace concrete product:
 
 1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page. Scroll down to the *Attributes* pane.
-2. In the *Attributes* pane, hover over the table and update the necessary columns.
+2. In the *Attributes* pane, hover over the table and update the necessary cells.
 
 **Tips & Tricks**
 
@@ -50,8 +50,8 @@ To remove the attribute from the concrete product:
 | ATTRIBUTE                 | DESCRIPTION                                                  |
 | ------------------------- | ------------------------------------------------------------ |
 | Attribute                 | Name of the attribute, for example, *color*.                 |
-| Default                   | Values for you attribute, e.g., if the attribute is a *color*, the values for it can be *red*, *green*, *black*, etc. |
-| Locale value (e.g. DE_DE) | Translation for either an attribute key into the other language based on the locales for which you add the translation. |
+| Default                   | Values for you attribute, e.g., if the attribute is a *color*, the values for it can be *red*, *green*, *black*, etc. This value is used for all locales without the specific value. |
+| Locale value (e.g. DE_DE) | Translation for the attribute values to the other locales. |
 
 ## Next steps
 

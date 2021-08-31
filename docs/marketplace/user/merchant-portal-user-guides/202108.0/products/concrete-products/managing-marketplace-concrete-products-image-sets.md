@@ -30,7 +30,7 @@ To add an image for a marketplace concrete product:
 To edit an image of the marketplace concrete product:
 
 1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page. Scroll down to the *Images* pane.
-2. Select a locale you want to update images for.
+2. Select a default or a specific locale you want to update images for.
 3. Update the following:
     - SET NAME
     - IMAGE ORDERED
@@ -43,7 +43,7 @@ To edit an image of the marketplace concrete product:
 To delete an image in the image set for the marketplace abstract product:
 
 1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page. Scroll down to the *Images* pane.
-2. Select a locale you want to delete an image for.
+2. Select a default or a specific locale you want to delete an image for.
 3. Click the **Delete** icon.
 
 To delete an image set with its images for the abstract product, click **Delete Image Set**.

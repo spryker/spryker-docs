@@ -28,18 +28,27 @@ Select one or more sorting parameters from the drop-down menu on the *Concrete P
 
 By default, the table is sorted descendingly by SKU.
 
+## (De)Activating a concrete product
+
+To activate a marketplace concrete product:
+
+1. On the *Concrete Products* page, next to the concrete product you want to activate, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page.
+2. In the *Status* pane, select *Concrete Product is online* to make the concrete product online.
+3. Click **Save**.
+
+To deactivate the product, deselect *Concrete Product is online* to make the concrete product offline.
+
 ## Editing marketplace concrete product details
 
 To edit the existing marketplace concrete product:
 
 1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page.
-2. In the *Status* pane, (de)select *Concrete Product is online* to make the concrete product online/offline.
-3. In the *Stock* pane, enter the quantity in the *Quantity* field. 
-4. In the *Name* pane, edit *Name* for every locale.
-5. In the *Description* pane, edit *Description* for every locale.
-6. In the *Validity Dates & Time* pane, populate the *Valid from* and *Valid to* fields.
-7. In the *Searchability* pane, from the drop-down menu select the locale(s) where the product is searchable.
-8. Click **Save**.
+2. In the *Stock* pane, enter the quantity in the *Quantity* field. 
+3. In the *Name* pane, edit *Name* for every locale.
+4. In the *Description* pane, edit *Description* for every locale.
+5. In the *Validity Dates & Time* pane, populate the *Valid from* and *Valid to* fields.
+6. In the *Searchability* pane, from the drop-down menu select the locale(s) where the product is searchable.
+7. Click **Save**.
 
 ### Reference information: *Concrete Product SKU, Name* page
 

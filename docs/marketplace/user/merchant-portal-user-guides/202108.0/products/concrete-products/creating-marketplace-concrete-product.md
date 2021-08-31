@@ -21,7 +21,7 @@ You can create a marketplace concrete product following two scenarios:
 - By adding a concrete product to the existing abstract product. To do so:
   1. Hover over the three dots next to the abstract product for which you will create a concrete product and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer. Navigate to the *Concrete Products* tab.
   2. On the *Concrete Products* page, click **Add Concrete Products**. *Create Concrete Products for [Abstract product name SKU]* drawer opens.
-  3. Based on the super attribute(s) selected while [creating an abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/creating-marketplace-abstract-product.html), add or select values to the existing super attribute(s). Upon adding the super attribute values, the preview of the concrete products will be displayed.
+  3. Based on the super attribute(s) selected while [creating an abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/creating-marketplace-abstract-product.html), add or select values to the existing super attribute(s). Upon adding the super attribute values, the preview of the concrete products is displayed.
 
   {% info_block infoBox "Info" %}
 
@@ -35,15 +35,15 @@ You can create a marketplace concrete product following two scenarios:
 
   You can remove a concrete product from the preview list by clicking the **Remove** icon.
 
-Once the product is created, it needs to be [activated by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/catalog/products/managing-products/managing-products.html#activating-a-product). Only the active marketplace products are displayed in the Merchant Portal and Marketplace Storefront.
+Once the product is created, it needs to be [activated](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/products/concrete-products/managing-marketplace-concrete-product.html#deactivating-a-concrete-product). Only the active marketplace products are displayed in the Merchant Portal and Marketplace Storefront.
 
 ### Reference information: Create Concrete Products for [Abstract product name SKU]
 
 This page contains a drop-down menu that displays the super attribute values based on the super attribute selected while [creating a marketplace abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/creating-marketplace-abstract-product.html). When you select a product attribute value, a concrete product based on this value is displayed. In the *Concrete Products’ Preview* pane you can view the products to be created.
 
-By selecting **Autogenerate SKU**s, the SKU numbers for the concrete products are generated automatically, based on the SKU prefix of their abstract product.
+By selecting **Autogenerate SKUs**, the SKU numbers for the concrete products are generated automatically, based on the SKU prefix of their abstract product.
 
-By selecting **Same Name as Abstract Product**, the name of the concrete product gets copied from the abstract product’s name.
+By selecting **Same Name as Abstract Product**, the name of the abstract product is used for the concrete products as well.
 
 
 ## Next steps

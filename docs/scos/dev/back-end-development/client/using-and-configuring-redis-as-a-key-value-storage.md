@@ -64,7 +64,7 @@ See [Publish and Synchronization](/docs/scos/dev/back-end-development/zed/data-m
 
 Of course, the data stored in the SQL database is the subject of change; data can be updated or deleted, or new entries can be added. The data currently stored in Redis is a snapshot of the data in the SQL database from when the last update was run. The key-value data storage must be kept in sync with the data persisted in the SQL database. To achieve this, you must set up a cron job that runs on a specified time interval and updates the key-value data storage.
 
-For more information, see [Cronjob Scheduling](/docs/scos/dev/sdk/{{page.version}}/cronjob-scheduling.html).
+For more information, see [Cronjob Scheduling](/docs/scos/dev/sdk/{{site.version}}/cronjob-scheduling.html).
 
 You must also find out which data has changed because you don’t want to completely reload the content stored in Redis. The Touch module takes care of marking the items that were updated in the meantime. You must keep in mind that every time you make an update/delete/insert for data that’s also stored in Redis, you must touch that data so that it’s marked for export when the next storage update task will run.
 
@@ -194,4 +194,3 @@ To change the default configuration values for the TTL and the key-size limit fo
 
 * **getStorageCacheIncrementalStrategyKeySizeLimit** to change the limit size for the incremental strategy.
 * **getStorageCacheTtl** to change the TTL for the cache.
-

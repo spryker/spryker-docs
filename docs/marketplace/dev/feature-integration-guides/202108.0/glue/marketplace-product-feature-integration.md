@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Marketplace Product feature integration"
-last_updated: Dec 07, 2020
+last_updated: Aug 31, 2021
 description: This document describes how to integrate the Marketplace Product Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-products-rest-api: "dev-master" --update-with-dependencies
+composer require spryker/merchant-products-rest-api: "^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -91,7 +91,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -135,8 +135,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</details>
-
 {% info_block warningBox "Verification" %}
 
 Make sure that you can add a merchant product to the cart using a `POST` request to `http://glue.de.demo-spryker.com/guest-cart-items or http://glue.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}/items`.
@@ -146,3 +144,15 @@ Make sure that when you do a `GET` request for the carts with merchant products,
 Make sure that when you do a `GET` request to retrieve abstract products that belong to a specific merchant, it returns products' data together with their merchants `http://glue.de.demo-spryker.com/abstract-products/{% raw %}{{abstractProductSku}}{% endraw %}?include=merchants`.
 
 {% endinfo_block %}
+
+
+### 4) Add translations
+
+```
+merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US
+merchant_product.message.invalid,Der Produkt "%sku%" mit dem Händler "%merchant_reference%" ist nicht gefunden.,de_DE
+merchant.message.removed,Merchant "%merchant_reference%" not found.,en_US
+merchant.message.removed,Händler "%merchant_reference%" ist nicht gefunden.,de_DE
+merchant.message.inactive,Merchant "%merchant_reference%" is not active.,en_US
+merchant.message.inactive,Der Händler "%merchant_reference%" ist nicht aktiv.,de_DE
+```

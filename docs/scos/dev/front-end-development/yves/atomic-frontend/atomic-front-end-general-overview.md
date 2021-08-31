@@ -73,8 +73,8 @@ The following technologies are used to enable Spryker Atomic Frontend:
 * **Typescript**
 
     Typescript is a superset of Javascript that allows you to reinforce the object-oriented approach in programming behaviors. It is used to make Javascript strictly typed, increasing readability and maintainability, reducing the likelihood of type-related mistakes and enforces strong contracts in terms of data. For more information, see the [Typescript](https://www.typescriptlang.org/) documentation.
-    
-    
+
+
 <!-- {% info_block warningBox %}
 If necessary, you can develop in pure Javascript. For details, see //How to Customize Spryker Frontend TODO:.
 {% endinfo_block %}-->
@@ -85,7 +85,7 @@ If necessary, you can develop in pure Javascript. For details, see //How to Cust
 
 * **Webpack**
     The frontend is based on [Webpack](https://webpack.js.org/). This bundler is responsible for building and compiling project assets. It provides the benefit that allows using Typescript for manipulating behavior, SASS for designing styles, and Twig as the template language, compiling them to native HTML, Javascript and CSS that can be rendered by the browser. In addition to that, it provides Polyfills to enable the support for older web browsers. It is extremely flexible and totally configurable to the project needs.
-    
+
 ## Implementation Details
 Spryker Shop is a modular system composed of several independent modules. The atomic frontend follows the general modular approach:
 
@@ -146,11 +146,11 @@ There are 3 entrypoints that will be loaded in the DOM in the following order:
 * **es6-polyfill**:
     `src/Pyz/Yves/ShopUi/Theme/default/es-polyfill.ts`
     Provides ES6 polyfills used for compatibility with older browsers.
-    
-* **vendor**: 
+
+* **vendor**:
     `src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`
     Contains all external dependencies required for your project.
-    
+
 * **app**:
     `src/Pyz/Yves/ShopUi/Theme/default/app.ts`
     Contains the initialization logic for the project and the bootstrap code for the shop application.
@@ -163,9 +163,9 @@ There are 3 entrypoints that will be loaded in the DOM in the following order:
  </br>
  `src/Pyz/Yves/ShopUi/Theme/default/styles/util.scss`
  Contains util styles for the project. It is loaded at the very end as the styles defined in it must override all styles, even the styles defined in components.
-    
+
 ### Webpack
-The core Spryker frontend functionality is provided by Webpack. It serves as the main basis for the shop application and used to compile Typescript code and SASS into Javascript and CSS. In addition to that, Webpack collects static assets, such as images and fonts. 
+The core Spryker frontend functionality is provided by Webpack. It serves as the main basis for the shop application and used to compile Typescript code and SASS into Javascript and CSS. In addition to that, Webpack collects static assets, such as images and fonts.
 
 Out of the box, the Webpack implementation provided by Spryker is sufficient to satisfy the needs of supporting a shop with the help of a Spryker shop application. However, if necessary, you can configure it the way you need.
 
@@ -188,30 +188,30 @@ The SASS layer is responsible for styling the frontend UI. It contains the style
 
 Depending on their location and function, SASS styles are divided into 4 types:
 
-* **Basic Styles** - comprise the most basic styles used everywhere. Typical examples include HTML reset, grid layouts or animations etc. Such styles are loaded by Webpack at the very beginning of application bootstrapping and can be easily overridden at the component level. They are located in the following files: 
+* **Basic Styles** - comprise the most basic styles used everywhere. Typical examples include HTML reset, grid layouts or animations etc. Such styles are loaded by Webpack at the very beginning of application bootstrapping and can be easily overridden at the component level. They are located in the following files:
     `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/basic.scss`
         - on the global level;
       `src/Pyz/Yves/ShopUi/Theme/default/styles/basic.scss` - on the project level.
       You can find default basic styles in the following folder: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/basics`.
-      
+
 * **Component Styles** - are styles of each specific component. These styles are defined for each component separately in its own *SCSS* file. Such styles are loaded after the basic styles, thus they can override them. Depending on where a component is located, the visibility of its styles is different. Mixins that define styles of core components located in the vendor folder are visible everywhere and shared across the whole application. Mixins of project components located in the `src/Pyz` folder are not shared and visible only within the component itself by default.
 * **Util Styles** - this group includes utility styles for the Shop UI, like, for example, the spacing system, text helpers, float-right, float-left or is-hidden implementations. Such styles are typically used to modify or even override the default layout or behavior of the components whenever necessary. For example, *is-hidden* implementations can be used to hide elements that are usually visible. For this reason, such styles should not be overridden by any other styles. Because of this, they are loaded at the very end of application bootstrap, when all other styles are loaded. Utility styles are located in the following files:
 
     `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/util.scss`- on the global level;
     `src/Pyz/Yves/ShopUi/Theme/default/styles/util.scss` - on the project level.
     You can find default util styles in the following folder: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/util`.
-    
+
 
 * **Shared Styles** - is the place to put global SASS variables, functions and mixins. Such style files are loaded automatically before loading each style file, and thus available in any style file in the project.
 
     The global implementation is located in the following file: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/shared.scss`.
     You can provide your global SASS components in the following file:  `src/Pyz/Yves/ShopUi/Theme/default/style/shared.scss`.
-    
+
 By default, global styles are imported from the settings and helpers folders. Any imports can be overridden directly in your shared.scss file. The folders contain the following:
 
 * **settings** - contains only variables, organized by topic
 * **helpers** - contains all global functions and mixins used in the system.
-        
+
 ## Naming Conventions
 The following naming conventions must be observed in Spryker Shop:
 **Files and Folders:**
@@ -237,7 +237,7 @@ The main templates in *ShopUi* are:
 
 ## Components
 Every component is a self-contained entity that implements a certain functional purpose. It does not have parts that are executed in other components, nor it executes parts of code for them. However, a part of a component is executed on the server side (Twig), and the other part is run on the client side (SCSS and Typescript). For this reason, data required for a component should be retrieved via Twig, and then rendered into HTML code. As the data source, it is possible to use controller code or output of another component.
-        
+
 The following conventions are applied to components:
 
 * every component, template or view is always contained in a folder with the same name;
@@ -269,7 +269,7 @@ When defining a component template with Twig, you need to use the following defa
 * `config` variable: specifies the following base information about a component:
 
 **Example:**
-    
+
 ```php
     % define config = {
         name: 'new-component-counter',
@@ -287,14 +287,14 @@ When defining a component template with Twig, you need to use the following defa
    * **tag**: specifies the HTML tag name for the component (optional)
    Every component is defined in the DOM as an HTML class with its dedicated tag name. Therefore a tag name must be specified. You can use either a standard HTML5 tag name (for example, `p` or `td`) or have a custom element tag name in order to attach Javascript behavior. In case you want to create a component with custom behavior defined in Javascript, Web Component specification, you must specify a custom tag name.
    If tag name is not specified, `div`is used by default.
-   
+
 * `data` variable: defines the data contract for the component.
 This variable is used the data contract for the component. The contract consists of the attributes required for the component to function properly. The attributes provided by this variable can be either required or optional. Required attributes must always be defined whenever a component is used, while optional ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it. The default value will be used if an attribute value is not set explicitly or via context.
 
 Whenever possible, use primitive types (e. g. strings, numbers etc). Avoid complex objects as a change in the object might lead to a broken component outside the contract itself.
 
 **Example:**
-    
+
 ```php
 % define data = {
     name: required,
@@ -306,7 +306,7 @@ Whenever possible, use primitive types (e. g. strings, numbers etc). Avoid compl
 If not **null** or **false**, the specified attributes will be rendered in the component's HTML5 tag. The same as data attributes, an HTML5 attribute can be required or optional with a default value.
 
 **Example:**
-    
+
 ```php
 % define attributes = {
     'element-selector': required
@@ -427,7 +427,7 @@ When defining styles for a component, you can include the global mixins, variabl
 ```php
 @include shop-ui-side-drawer('.new-existing-component-side-drawer') { //Create component style based on mixin of a core component
     color: $setting-color-alt; // Use system-wide variables
- 
+
     &__overlay {
         background-color: $setting-color-main; // Use system-wide variables
     }
@@ -448,7 +448,7 @@ The component class must element a DOM callback. You can use any callback define
 In your code, you can use keyword this to access the public API of the HTML element associated with the component.
 
 **Typical implementation:**
-    
+
 ```php
 import Component from 'ShopUi/models/component';
 
@@ -456,7 +456,7 @@ export default class ComponentName extends Component {
     protected readyCallback(): void {
         // TODO: your code here
     }
-} 
+}
 ```
 
 The above example extend the default Component model defined in the ShopUi application. However, you can extend from any component both on the global and on the project level. In this case, your new component will inherit the logic and behavior of the component it is derived from. The following example shows a component inherited from the default side-drawer component of Spryker Shop:
@@ -464,7 +464,7 @@ The above example extend the default Component model defined in the ShopUi appli
 ```php
 // Import class SideDrawer
 import SideDrawer from 'ShopUi/components/organisms/side-drawer/side-drawer';
- 
+
 // Export the extended class
 export default class ComponentName extends SideDrawer {
     protected readyCallback(): void {
@@ -483,13 +483,13 @@ To register the component in the DOM, you need to use the **register** function 
 * **importer** - must be a call of Webpack's import function to import Typescript code for the component. The call must include a Webpack magic comment that specifies which type of import you want for the component, 'lazy' or 'eager'. For details, see [Dynamic Imports](https://webpack.js.org/guides/code-splitting/#dynamic-imports).
 
 **Typical implementation:**
-    
+
 ```php
 import './component-name.scss';
 
 // Import the 'register' function from the Shop Application
 import register from 'ShopUi/app/registry';
- 
+
 // Export the component behavior
 export default register(
     'component-name',
@@ -509,4 +509,3 @@ The following topics will help you in developing Spryker Atomic Frontend step-by
 [Tutorial - Frontend - Extend a Component](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/managing-the-components/extending-a-component.html)
 [Tutorial - Frontend - Integrate JQuery into Atomic Frontend](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
 [Tutorial - Frontend - Use a Component](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/managing-the-components/using-a-component.html)
-

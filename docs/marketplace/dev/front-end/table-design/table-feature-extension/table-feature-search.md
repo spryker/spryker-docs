@@ -8,7 +8,7 @@ This article provides details about the Table Feature Search component in the Co
 
 ## Overview
 
-Table Feature Search is a feature of the Table Component that displays search field.
+Table Feature Search is a feature of the Table Component that allows searching within the data set.
 See an example below, how to use the Search feature.
 
 `enabled` - will enable feature via config.  

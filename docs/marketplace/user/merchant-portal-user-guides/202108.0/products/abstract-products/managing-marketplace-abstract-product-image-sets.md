@@ -33,7 +33,7 @@ To edit an image of the marketplace abstract product:
 2. Select a locale you want to update images for.
 3. Update the following:
     - SET NAME
-    - IMAGE ORDERED
+    - ORDER
     - SMALL IMAGE URL
     - LARGE IMAGE URL
 4. Click **Save**.
@@ -43,7 +43,7 @@ To edit an image of the marketplace abstract product:
 To delete an image in the image set for the marketplace abstract product:
 
 1. Next to the abstract product, which image you want to delete, hover over the three dots, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the *Images* pane.
-2. Select a locale you want to delete an image for.
+2. Select default or a specific locale you want to delete an image for.
 3. Click the **Delete** icon.
 
 To delete an image set with its images for the abstract product, click **Delete Image Set**.

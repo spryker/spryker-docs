@@ -41,7 +41,7 @@ Once the product is created, it needs to be [activated by the Marketplace admini
 
 This page contains a drop-down menu that displays the super attribute values based on the super attribute selected while [creating a marketplace abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/creating-marketplace-abstract-product.html). When you select a product attribute value, a concrete product based on this value is displayed. In the *Concrete Products’ Preview* pane you can view the products to be created.
 
-By selecting **Autogenerate SKU**s, the SKU numbers for the concrete products are generated automatically, based on the SKU of their abstract product.
+By selecting **Autogenerate SKU**s, the SKU numbers for the concrete products are generated automatically, based on the SKU prefix of their abstract product.
 
 By selecting **Same Name as Abstract Product**, the name of the concrete product gets copied from the abstract product’s name.
 

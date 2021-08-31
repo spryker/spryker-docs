@@ -22,11 +22,11 @@ To add a new price for a marketplace abstract product:
 2. In the *Price* pane, click **+Add**. The empty cells appear in the table below.
 3. From the drop-down menu *Store*, select the store for which the price is created.
 4. From the drop-down menu *Currency*, select the currency in which the price is defined.
-5. For *NET DEFAULT* cell, enter a price. Use `.` separator.
-6. For *GROSS DEFAULT* cell, enter a price. Use `.` separator.
-7. (Optional) For *GROSS DEFAULT* cell, enter a price. Use `.` separator.
-8. (Optional) For *NET ORIGINAL* cell, enter a price. Use `.` separator.
-9. (Optional) For *GROSS ORIGINAL* cell, enter a price. Use `.` separator.
+5. For *NET DEFAULT* cell, enter a price. Use `.` or `,` separators.
+6. For *GROSS DEFAULT* cell, enter a price. Use `.` or `,` separators.
+7. (Optional) For *GROSS DEFAULT* cell, enter a price. Use `.` or `,` separators.
+8. (Optional) For *NET ORIGINAL* cell, enter a price. Use `.` or `,` separators.
+9. (Optional) For *GROSS ORIGINAL* cell, enter a price. Use `.` or `,` separators.
 
 **Tips & Tricks**
 
@@ -37,7 +37,7 @@ Click **Cancel** to stop creating a new price.
 To edit prices of a marketplace abstract product:
 
 1. Next to the abstract product, the price of which you want to edit, hover over the three dots, or just click the line, and then click **Manage Product**. This takes you to the *[Product name]*, *Abstract Product Details* tab. Scroll down to the **Price** pane.
-2. Next to the price you want to edit, hover over the table and update the necessary columns.
+2. Next to the price you want to edit, hover over the table and update the necessary cells.
 
 **Tips & Tricks**
 
@@ -56,8 +56,8 @@ To remove the price of the abstract product:
 
 |ATTRIBUTE  | DESCRIPTION   |
 | ------------- | --------------------- |
-| Store          | [Store](https://documentation.spryker.com/docs/multiple-stores) in which the scheduled price will be displayed. |
-| Currency       | Currency in which the abstract product is defined.           |
+| Store          | [Store](https://documentation.spryker.com/docs/multiple-stores) in which the price will be displayed. |
+| Currency       | Currency in which the abstract product price is defined.           |
 | Net default    | A default price of the item before tax displayed in the Storefront. |
 | Gross default  | A price of the item after tax displayed in the Storefront.   |
 | Net original   | A price of the item before tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |

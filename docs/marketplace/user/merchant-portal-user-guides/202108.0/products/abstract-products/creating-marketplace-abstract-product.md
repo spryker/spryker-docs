@@ -25,7 +25,7 @@ To create a new abstract product:
 
    2. Enter a **Name** for the default locale. The rest of the locales will be defined once the product is created.
 
-   3. Select **Abstract product has 1 concrete product** if you are creating an abstract product with a single concrete product. *Create an Abstract Product with 1 Concrete Product* drawer opens.
+   3. Select **Abstract product has 1 concrete product** if you are creating an abstract product that doesn't require variants. *Create an Abstract Product with 1 Concrete Product* drawer opens.
 
    {% info_block warningBox "Warning" %}
 
@@ -34,9 +34,9 @@ To create a new abstract product:
    {% endinfo_block %}
 
    
-   Select **Abstract product has multiple concrete products** if the abstract product you are creating will contain multiple concrete products assigned to it.
+   Select **Abstract product has multiple concrete products** if the abstract product you are creating will require variants.
 
-   4. Click **Next**. </br>
+   1. Click **Next**. </br>
 
    </br>
 
@@ -57,8 +57,8 @@ To create a new abstract product:
 
    </br>
 
-      1. Select a super attribute that define your concrete products.
-      2. In the field next to the super attribute you've selected, select one or more product attribute values. Upon adding the super attribute values, the preview of the concrete products will be displayed.
+      1. Select a super attribute that defines the variation of your concrete products.
+      2. In the field next to the super attribute you've selected, select one or more values for each super attribute. Upon adding the super attribute values, the preview of the concrete products will be displayed.
     
       {% info_block infoBox "Info" %}
     
@@ -66,7 +66,7 @@ To create a new abstract product:
     
       {% endinfo_block %}
     
-      3. (Optional) Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute. 
+      1. (Optional) Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute. 
     
       ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-multiple-variants-mp.gif)
     
@@ -86,7 +86,7 @@ Once the product is created, it needs to be [activated by the Marketplace admini
 
 | ATTRIBUTE             | DESCRIPTION       |
 | ----------------------------- | ------------------------------------ |
-| SKU prefix                                      | Unique abstract product identifier that is used to track unique information related to the product. |
+| SKU prefix                                      | Unique abstract product identifier that is used to track unique information related to the product.|
 | Name                                            | The name of the abstract product that is displayed for the product on the Storefront. |
 | Abstract product has 1 concrete product         | Select this option when you want your abstract product to have a single concrete product. |
 | Abstract product has multiple concrete products | Select this option when you want your abstract product to have multiple concrete products. |
@@ -96,17 +96,17 @@ Once the product is created, it needs to be [activated by the Marketplace admini
 | ATTRIBUTE            | DESCRIPTION             |
 | --------------------- | ------------------------------------ |
 | Concrete Product SKU     | Unique product identifier that is used to track unique information related to the product. |
-| Autogenerate SKU         | Select this checkmark if you want the SKU to be generated automatically. By default, -1 is added to the abstract product SKU. For example, |
+| Autogenerate SKU         | Select this checkmark if you want the SKU to be generated automatically. By default, -1 is added to the abstract product SKU prefix. For example, `product-1` |
 | Concrete Product Name    | The name of the concrete product that is displayed for the product on the Storefront. |
-| Same as Abstract Product | Select this checkmark when you want the name of the concrete product to be copied from the abstract product’s name. |
+| Same as Abstract Product | Select this checkmark when you want the name of the abstract product to be used for the concrete product as well. |
 
 ### Reference information: Create an Abstract Product with multiple Concrete Products
 
 You can select as many super attributes as you need and define one or more values for them. When you select a product attribute value, a concrete product based on this value is displayed. In the *Concrete Products’ Preview* pane you can view the products to be created.
 
-By selecting **Autogenerate SKU**s, the SKU numbers for the variants are generated automatically, based on the SKU of their abstract product.
+By selecting **Autogenerate SKUs**, the SKU numbers for the variants are generated automatically, based on the SKU prefix of their abstract product.
 
-By selecting **Same Name as Abstract Product**, the name of the concrete product gets copied from the abstract product’s name.
+By selecting **Same Name as Abstract Product**, the name of the abstract product is used for the concrete products as well.
 
 ## Next steps
 

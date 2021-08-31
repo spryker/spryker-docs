@@ -7,6 +7,7 @@ template: concept-topic-template
 This article describes the Table Design in the Components Library.
 
 ## Overview
+
 A Table Component is an arrangement of data in rows and columns, or possibly in a more complex structure 
 (with sorting, filtering, pagination, row selections, infinite scrolling, etc.). 
 It is an essential building block of a user interface.
@@ -14,6 +15,7 @@ A basic able Component is `<spy-table [config]="config"></spy-table>` where `con
 
 - `dataSource` - an array of rows to be displayed on the table.
 - `columns` - an array of columns.
+
 ```ts
 const config: TableConfig = {
   dataSource: {
@@ -350,39 +352,10 @@ export interface TableRowClickEvent {
 }
 ```
 
-## Types
+## Extensions
 
-There are a few common Table types that are available in UI library as separate packages:
+There are a few common Table extensions that are available in UI library:
 
-### Columns
-
-- `table.column.autocomplete` - displays an `autocomplete` component.
-- `table.column.chip` - displays a `chip` component.
-- `table.column.date` - displays a date.
-- `table.column.dynamic` - dynamically loads columns with a specific type.
-- `table.column.image` - displays an image.
-- `table.column.input` - displays an `input` component.
-- `table.column.select` - displays a `select` component.
-- `table.column.text` - displays a text.
-
-### Features
-
-- `table.feature.batch-actions` - displays a checkmark that triggers a specific actions.
-- `table.feature.editable` - displays an editable cell that toggles popup with a specific component (input, select, etc.).
-- `table.feature.filters` - displays row with filters.
-- `table.feature.pagination` - displays a pagination.
-- `table.feature.row-actions` - displays dropdown menu that contains actions related specifically to the table row.
-- `table.feature.search` - displays search.
-- `table.feature.selectable` - displays a checkmark that triggers row selection.
-- `table.feature.settings` - displays a button that triggers a popup with a table settings.
-- `table.feature.sync-state` - syncs table state with a configuration of browser address bar.
-- `table.feature.title` - displays title.
-- `table.feature.total` - displays amount of table rows.
-
-### Filter components
-
-- `table.filter.date-range` - displays filter with `date-range` component.
-- `table.filter.select` - displays filter with `select` component.
-- `table.filter.tree-select` - displays filter with `tree-select` component.
-
-
+- [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-type-extension/) - describes how a specific type of the column is rendered within a table column.
+- [Feature](/docs/marketplace/dev/front-end/table-design/table-feature-extension/) - encapsulating a piece of UI that is targeted to a specific location within a Table Component or that may provide additional functionality.
+- [Filter](/docs/marketplace/dev/front-end/table-design/table-filter-extension/) - provides filtering functionality to the Core Table Component.

@@ -362,13 +362,13 @@ entries:
           nested:
 
             - title: "Table Column Type extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension.html
+              url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/
 
             - title: "Table Feature extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
+              url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/
 
             - title: "Table Filter extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html
+              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/
 
         - title: "UI components library"
           nested:

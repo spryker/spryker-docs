@@ -8,8 +8,8 @@ This article provides details about the Table Feature Batch Actions component in
 
 ## Overview
 
-Table Feature Batch Actions is a feature of the Table Component that displays a checkmark that triggers a specific actions.
-As Table Feature Batch Actions based on the [Table Feature Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html)), 
+Table Feature Batch Actions is a feature of the Table Component that allows triggering batch/multiple actions from rows.
+As Table Feature Batch Actions based on the [Table Feature Selectable](/docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-selectable.html), 
 make sure to register and to enable this feature via table config.
 Batch actions are functions that may be performed on multiple items within a table. 
 Once the user selects at least one row from the table, the batch action bar appears at the top of the table, 

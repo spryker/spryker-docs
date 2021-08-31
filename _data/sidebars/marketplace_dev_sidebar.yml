@@ -388,17 +388,15 @@ entries:
         - title: Table design
           nested:
 
-            - title: "Table features"
-              nested:
-
-                - title: "Table Feature Pagination"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
-
             - title: "Table Column Type extension"
               url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension.html
 
             - title: "Table Feature extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
+              url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/
+              nested:
+
+                - title: "Table Feature Pagination"
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-pagination.html
 
             - title: "Table Filter extension"
               url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html

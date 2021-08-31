@@ -8,7 +8,7 @@ This article provides details about the Table Feature Pagination component in th
 
 ## Overview
 
-Table Feature Pagination is a feature of the Table Component that displays pagination and `sizes` dropdown.
+Table Feature Pagination is a feature of the Table Component that renders pagination of the table.
 This feature based on the [Pagination component](/docs/marketplace/dev/front-end/ui-components-library/pagination.html).
 See an example below, how to use the Pagination feature.
 

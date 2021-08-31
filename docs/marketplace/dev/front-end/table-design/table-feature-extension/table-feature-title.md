@@ -8,11 +8,11 @@ This article provides details about the Table Feature Title component in the Com
 
 ## Overview
 
-Table Feature Title is a feature of the Table Component that displays title.
+Table Feature Title is a feature of the Table Component that renders the title of the table.
 See an example below, how to use the Title feature.
 
 `enabled` - will enable feature via config.  
-`title` - provides a table title.
+`title` - a table title text.
 
 ```html
 <spy-table [config]="{

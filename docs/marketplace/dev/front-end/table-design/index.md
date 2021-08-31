@@ -375,7 +375,7 @@ There are a few common Table types that are available in UI library as separate 
 - `table.feature.search` - displays search.
 - `table.feature.selectable` - displays a checkmark that triggers row selection.
 - `table.feature.settings` - displays a button that triggers a popup with a table settings.
-- `table.feature.sync-state` - syncs table state with a configuration.
+- `table.feature.sync-state` - syncs table state with a configuration of browser address bar.
 - `table.feature.title` - displays title.
 - `table.feature.total` - displays amount of table rows.
 

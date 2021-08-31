@@ -8,9 +8,9 @@ This article provides details about the Table Feature Total component in the Com
 
 ## Overview
 
-Table Feature Total is a feature of the Table Component that displays amount of table 
-rows via [Chips component](/docs/marketplace/dev/front-end/ui-components-library/chips.html).
-In case table rows are selectable, Table Feature Total will also display number of selected rows.
+Table Feature Total is a feature of the Table Component that renders the total number of the data 
+set via [Chips component](/docs/marketplace/dev/front-end/ui-components-library/chips.html).
+In case table rows are selectable, Table Feature Total will also render number of selected rows.
 See an example below, how to use the Total feature.
 
 `enabled` - will enable feature via config.

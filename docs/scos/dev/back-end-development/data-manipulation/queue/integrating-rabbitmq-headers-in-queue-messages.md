@@ -7,6 +7,12 @@ redirect_from:
   - /2021080/docs/en/rabbitmq-headers-in-queue-messages
   - /docs/rabbitmq-headers-in-queue-messages
   - /docs/en/rabbitmq-headers-in-queue-messages
+  - /v6/docs/rabbitmq-headers-in-queue-messages
+  - /v6/docs/en/rabbitmq-headers-in-queue-messages
+  - /v5/docs/rabbitmq-headers-in-queue-messages
+  - /v5/docs/en/rabbitmq-headers-in-queue-messages
+  - /v4/docs/rabbitmq-headers-in-queue-messages
+  - /v4/docs/en/rabbitmq-headers-in-queue-messages
 ---
 
 ## General Information
@@ -14,19 +20,19 @@ The main goal of RabbitMQ headers in the AMQP (Advanced Message Queuing Protocol
 
 ```php
 <?php
- 
+
 $headers = [
     'header1' => 'header1',
     'header2' => 'header2',
     ....,
 ];
- 
+
 $messageTransfer = (new QueueSendMessageTransfer())
             ->setHeaders($headers)
             ...;
- 
+
 // OR
- 
+
 $messageTransfer = (new QueueSendMessageTransfer())
             ->addHeader('header1', 'header1')
             ->addHeader('header2', 'header2')
@@ -37,16 +43,16 @@ $messageTransfer = (new QueueSendMessageTransfer())
 1. Register a new RabbitMQ queue:
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Client\RabbitMq;
- 
+
 ...
- 
+
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
     /**
@@ -57,35 +63,35 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
         $queueOptionCollection = new ArrayObject();
         .....
         $queueOptionCollection->append($this->createQueueOption({MODULENAME}Constants::DEMO_QUEUE_NAME, {MODULENAME}Constants::'DEMO_ERROR_QUEUE_NAME'));
-        
- 
+
+
         return $queueOptionCollection;
     }
- 
+
    ....
 }
 ```
 2. Create a queue writer:
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Zed\Mail\Business\Model;
- 
+
 ...
- 
+
 class DemoQueueWriter implements DemoQueueWriterInterface
 {
-     
+
    /**
      * @var \Spryker\Client\Queue\QueueClientInterface $queueClient
      */
     private $queueClient;
- 
+
     /**
      * The constructor of MailQueueHelper
      *
@@ -95,7 +101,7 @@ class DemoQueueWriter implements DemoQueueWriterInterface
     {
         $this->queueClient = $queueClient;
     }
- 
+
     /**
      * @param \Generated\Shared\Transfer\DataTransfer $dataTransfer
      *
@@ -107,13 +113,13 @@ class DemoQueueWriter implements DemoQueueWriterInterface
             ->addHeader('header1', 'header1')
             ->addHeader('header2', 'header2')
             ->setBody(json_encode($dataTransfer->toArray()));
- 
+
         $this->queueClient->sendMessage(
             {MODULENAME}Constants::DEMO_QUEUE_NAME,
             $queueSendMessageTransfer
         );
     }
- 
+
    ....
 }
 ```
@@ -123,6 +129,6 @@ class DemoQueueWriter implements DemoQueueWriterInterface
 
 * Queue
 * Migration Guide - RabbitMQ
---> 
+-->
 
 <!-- _Last review date: Mar 05, 2019_ by Oleksandr Myrnyi, Andrii Tserkovnyi -->

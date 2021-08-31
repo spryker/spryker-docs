@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/adding-publish-events
   - /docs/adding-publish-events
   - /docs/en/adding-publish-events
+  - /v6/docs/adding-publish-events
+  - /v6/docs/en/adding-publish-events
 ---
 
 [Publish and Synchronize](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html) are event-driven. Data is published only after a registered event is triggered. Follow the steps below to register the events for them:
@@ -23,7 +25,7 @@ redirect_from:
 </table>
 ```
 
-2. Register publish queue and the events to be tracked in `\Spryker\Shared\GlossaryStorage\GlossaryStorageConfig`: 
+2. Register publish queue and the events to be tracked in `\Spryker\Shared\GlossaryStorage\GlossaryStorageConfig`:
 
 ```php
 <?php
@@ -155,13 +157,3 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 
 Now, you can track the changes in the `Glossary` entity. When it is created, updated, or deleted, an event is created and posted to the specified RabbitMQ publish queue (`publish.translation`).
-
-
-
-
-
-
-
-
-
-

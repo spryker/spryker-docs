@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/step-engine-use-case-scenario
   - /docs/step-engine-use-case-scenario
   - /docs/en/step-engine-use-case-scenario
+  - /v6/docs/step-engine-use-case-scenario
+  - /v6/docs/en/step-engine-use-case-scenario
+  - /v5/docs/step-engine-use-case-scenario
+  - /v5/docs/en/step-engine-use-case-scenario
+  - /v4/docs/step-engine-use-case-scenario
+  - /v4/docs/en/step-engine-use-case-scenario
+  - /v3/docs/step-engine-use-case-scenario
+  - /v3/docs/en/step-engine-use-case-scenario
+  - /v2/docs/step-engine-use-case-scenario
+  - /v2/docs/en/step-engine-use-case-scenario
+  - /v1/docs/step-engine-use-case-scenario
+  - /v1/docs/en/step-engine-use-case-scenario
 ---
 
 Below you can see an example of configuration for the checkout process, containing two steps: an entry step and a success step.
@@ -98,7 +110,7 @@ class StepFactory extends AbstractFactory
             HomePageControllerProvider::ROUTE_HOME
         );
     }
-    
+
     /**
      * @return \Symfony\Component\Routing\Generator\UrlGeneratorInterface
      */

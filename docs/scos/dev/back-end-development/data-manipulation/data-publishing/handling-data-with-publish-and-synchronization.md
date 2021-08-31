@@ -8,9 +8,11 @@ redirect_from:
   - /2021080/docs/en/handling-data-with-publish-and-synchronization
   - /docs/handling-data-with-publish-and-synchronization
   - /docs/en/handling-data-with-publish-and-synchronization
+  - /v6/docs/handling-data-with-publish-and-synchronization
+  - /v6/docs/en/handling-data-with-publish-and-synchronization
 ---
 
-Publish and Synchronization (P&S) allows exporting data from Spryker back end (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the front end (Yves) or API (Glue). 
+Publish and Synchronization (P&S) allows exporting data from Spryker back end (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the front end (Yves) or API (Glue).
 In this step-by-step tutorial, you will learn how P&S works and how to export data using a Hello World P&S module example. The module synchronizes(syncs) the data stored in a Zed database table to Redis. When a record is changed, created or deleted in the table, the module automatically makes changes in Redis.
 
 ## 1. Module and Table
@@ -19,18 +21,18 @@ In this step-by-step tutorial, you will learn how P&S works and how to export d
 Follow the steps below to create the following:
 
 *   Data source module
-    
+
 *   Zed database table
-    
+
 *   Data publishing module
-    
+
 
 1.  Create the HelloWorld module by creating the `HelloWorld` folder in Zed. The module is the source of data for publishing:
-    
+
 2.  Create `spy_hello_world_message` table in database:
-    
+
     1.  Inside the `HelloWorld` module, define the table schema by creating `\Pyz\Zed\HelloWorld\Persistence\Propel\Schema\spy_hello_world.schema.xml`:
-        
+
     ```xml
     <?xml version="1.0"?>
     <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\HelloWorld\Persistence" package="src.Orm.Zed.HelloWorld.Persistence">
@@ -60,10 +62,10 @@ Follow the steps below to create the following:
     *   All the modules related to Redis should have the `Storage` suffix.
 
     *   All the modules related to Elasticsearch should have the `Search` suffix.
-    
+
 {% endinfo_block %}
 
-    
+
 
 ## 2. Data Structure
 
@@ -73,7 +75,7 @@ Usually, the data for Yves is stored differently from the data for Zed. It’s 
 Follow the steps below to create a transfer object.
 
 1.  Create `\Pyz\Shared\HelloWorldStorage\Transfer\hello_world_storage.transfer.xml`:
-    
+
 ```xml
 <transfer name="HelloWorldStorage">
     <property name="name" type="string"/>
@@ -137,12 +139,12 @@ class HelloWorldStorageConfig extends AbstractBundleConfig
      * This event will be used for spy_hello_world_message entity creation.
      */
     public const ENTITY_SPY_HELLO_WORLD_MESSAGE_CREATE = 'Entity.spy_hello_world_message.create';
-    
+
     /**
      * This event will be used for spy_hello_world_message entity changes.
      */
     public const ENTITY_SPY_HELLO_WORLD_MESSAGE_UPDATE = 'Entity.spy_hello_world_message.update';
-    
+
     /**
      * This event will be used for spy_hello_world_message entity deletion.
      */
@@ -158,10 +160,10 @@ Now, we have enabled events for the `SpyHelloWorldMessage` entity.
 For P&S to work, the publishers need to catch the events and run the appropriate code.
 
 1.  Create a writer plugin that handles the creation and changes of the `spy_hello_world_message` entity.  
-    
+
 <details open>
     <summary>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldWritePublisherPlugin</summary>
-    
+
 ```php
 <?php
 
@@ -216,7 +218,7 @@ class HelloWorldWritePublisherPlugin extends AbstractPlugin implements Publisher
 
 <details open>
     <summary>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldDeletePublisherPlugin</summary>
-    
+
 ```php
 <?php
 
@@ -281,7 +283,7 @@ class HelloWorldStorageConfig extends AbstractBundleConfig
      * Defines queue name as used for processing hello world messages.
      */
     public const PUBLISH_HELLO_WORLD = 'publish.hello_world';
-    
+
     ...
 }
 ```
@@ -362,7 +364,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 Now you can manually trigger events. Follow the steps below trigger events manually:
 
 1.  Stop all Cron jobs or disable background queue processing in Jenkins using the following command:
-    
+
 ```bash
 vendor/bin/console schedule:suspend
 ```
@@ -399,9 +401,9 @@ class IndexController extends AbstractController
 Ensure that the event has been created:
 
 1.  Open the RabbitMQ management GUI at `http(s)://{host_name}:15672/#/queues`
-    
+
 2.  You should see an event in the `publish.hello_world` queue:
-    
+
 
 ![rabbitmq-event](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/rabbitmq-event.png){height="" width=""}
 
@@ -415,7 +417,7 @@ Ensure that the event has been created:
 Ensure that the triggered event has the correct structure:
 
 1.  Open the message in the `publish.hello_world` queue. You should see a similar message:
-    
+
 ```xml
 {
   "listenerClassName":"Pyz\\Zed\\HelloWorldStorage\\Communication\\Plugin\\Publisher\\HelloWorldWritePublisherPlugin",
@@ -448,7 +450,7 @@ Ensure that the triggered event has the correct structure:
     *   ID: the primary key of the record
 
     *   ForeignKey: the key to backtrack the updated Propel entities
-    
+
 
 {% endinfo_block %}
 
@@ -499,9 +501,9 @@ Hello World!
 Ensure that the event has been processed correctly:
 
 *   You can see a message from the publisher in the event.
-    
+
 *   The `publish.hello_world` queue is empty:
-    
+
 ![empty-rabbitmq-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/empty-rabbitmq-queue.png){height="" width=""}
 
 
@@ -522,7 +524,7 @@ To publish data in Redis, an intermediate database table in Zed is required. The
 Follow the steps to create the table:
 
 1.  Create the table schema file:
-    
+
 ```xml
 <table name="spy_hello_world_message_storage" idMethod="native" allowPkInsert="true">
     <column name="id_hello_world_message_storage" type="BIGINT" autoIncrement="true" primaryKey="true"/>
@@ -550,27 +552,27 @@ console propel:install
 The schema file defines the table as follows:
 
 *   ID - the primary key of the table (`id_hello_world_message_storage` in our example).
-    
+
 *   ForeignKey - foreign key to the main resource that you want to export (`fk_hello_world_message` for `spy_hello_world_message`).
-    
+
 *   `SynchronizationBehaviour` modifies the table as follows:
-    
+
     *   Adds the `Data` column that stores data in the format that can be sent directly to Redis. The database field type is `TEXT`_._
-        
+
     *   Adds the `Key` column that stores the Redis Key. The data type is `VARCHAR`.
-        
+
     *   Defines `Resource` name for key generation.
-        
+
     *   Defines `Store` value for store specific data.
-        
+
     *   Defines `Locale` value for localizable data.
-        
+
     *   Defines `Key Suffix Column` value for key generation.
-        
+
     *   Defines `queue_group` to send a copy of the `data` column.
-        
+
 *   Timestamp Behavior is added to keep timestamps and use incremental sync strategy.
-    
+
 {% info_block infoBox "Incremental sync" %}
 
 An *incremental sync* is a sync that only processes the data records that have changed (created or modified) since the last time the integration ran as opposed to processing the entire data set every time.
@@ -603,9 +605,9 @@ To do this, create facade and model classes to handle the logic of the publish 
 Find the facade methods below:
 
 *   `writeCollectionByHelloWorldEvents(array $eventTransfers)`
-    
+
 *   `deleteCollectionByHelloWorldEvents(array $eventTransfers)`
-    
+
 
 1. Create the `HelloWorldStorageWriter` model and implement the following method:
 
@@ -635,9 +637,9 @@ class HelloWorldStorageWriter implements HelloWorldStorageWriterInterface
             $this->store($message->getIdHelloWorldMessage(), $messageStorageTransfer);
         }
     }
-    
+
     /**
-    * @return void 
+    * @return void
     */
     protected function store($idMessage, HelloWorldStorageTransfer $messageStorageTransfer): void
     {
@@ -677,7 +679,7 @@ class HelloWorldStorageDeleter implements HelloWorldStorageWriterInterface
             $this->store($message->getIdHelloWorldMessage(), $messageStorageTransfer);
         }
     }
-    
+
     /**
      * @return void
      */
@@ -686,7 +688,7 @@ class HelloWorldStorageDeleter implements HelloWorldStorageWriterInterface
         $messages = SpyHelloWorldMessageStorageQuery::create()
             ->filterByFkHelloWorldMessage_In($messageIds)
             ->find();
- 
+
         foreach ($messages as $message) {
             $message->delete();
         }
@@ -701,9 +703,9 @@ class HelloWorldStorageDeleter implements HelloWorldStorageWriterInterface
 <?php
 
 namespace Pyz\Zed\HelloWorldStorage\Business;
- 
+
 use Spryker\Zed\Kernel\Business\AbstractFacade;
- 
+
 class HelloWorldStorageFacade extends AbstractFacade implements HelloWorldStorageFacadeInterface
 {
     /**
@@ -717,7 +719,7 @@ class HelloWorldStorageFacade extends AbstractFacade implements HelloWorldStorag
             ->createHelloWorldMessageStorageWriter()
             ->writeCollectionByHelloWorldEvents($eventTransfers);
     }
- 
+
    /**
      * @param \Generated\Shared\Transfer\EventEntityTransfer[] $eventTransfers
      *
@@ -764,9 +766,9 @@ class HelloWorldWritePublisherPlugin extends AbstractPlugin implements Publisher
     {
         $this->getFacade()->writeCollectionByHelloWorldEvents($eventTransfers);
     }
- 
+
  ....
-    
+
 }    
 ```
 
@@ -800,9 +802,9 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
     {
         $this->getFacade()->deleteCollectionByHelloWorldEvents($eventTransfers);
     }
- 
+
  ....
-    
+
 }      
 ```
 
@@ -828,7 +830,7 @@ class HelloWorldStorageConfig extends AbstractBundleConfig
      * Defines queue name as used for processing translation messages.
      */
     public const SYNC_STORAGE_HELLO = 'sync.storage.hello';
-    
+
     ....
 }   
 ```
@@ -960,7 +962,7 @@ This section describes how to check the data export in Redis.
 Follow the steps to check the data in Redis:
 
 1.  Connect to Redis Desktop Manager at `http(s)://{host}:10009`.
-    
+
 
 2. Сheck if the data is structured correctly:
 
@@ -974,9 +976,9 @@ This section describes how to read the data from Redis.
 To read the data from Redis, create the following:
 
 *   Client layer
-    
+
 *   `Client\Storage\MessageStorageReader` class:
-    
+
 ```php
 <?php
 
@@ -991,7 +993,7 @@ use Spryker\Service\Synchronization\SynchronizationServiceInterface;
 class MessageStorageReader implements MessageStorageReaderInterface
 {
 	...
-	
+
     public function getMessageById($idMessage)
     {
         $synchronizationDataTransfer = new SynchronizationDataTransfer();
@@ -1003,14 +1005,13 @@ class MessageStorageReader implements MessageStorageReaderInterface
             ->generateKey($synchronizationDataTransfer);
 
         $data = $this->storageClient->get($key);
-        
+
         $messageStorageTransfer = new HelloWorldStorageTransfer();
         $messageStorageTransfer->fromArray($data, true);
-        
+
         return $messageStorageTransfer;
     }
-    
+
     ...
 }
 ```
-

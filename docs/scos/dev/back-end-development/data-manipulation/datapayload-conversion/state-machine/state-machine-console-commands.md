@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/state-machine-cronjob
   - /docs/state-machine-cronjob
   - /docs/en/state-machine-cronjob
+  - /v6/docs/state-machine-cronjob
+  - /v6/docs/en/state-machine-cronjob
+  - /v5/docs/state-machine-cronjob
+  - /v5/docs/en/state-machine-cronjob
+  - /v4/docs/state-machine-cronjob
+  - /v4/docs/en/state-machine-cronjob
+  - /v3/docs/state-machine-cronjob
+  - /v3/docs/en/state-machine-cronjob
+  - /v2/docs/state-machine-cronjob
+  - /v2/docs/en/state-machine-cronjob
+  - /v1/docs/state-machine-cronjob
+  - /v1/docs/en/state-machine-cronjob
 ---
 
 There are three console commands dedicated for the state machine:
@@ -24,7 +36,7 @@ A low level sequence diagram of what happens when trigger method is being invoke
 ## State Machine Handler Interface
 
 StateMachineHandlerInterface
-   
+
 ```php
 <?php
 interface StateMachineHandlerInterface
@@ -137,5 +149,3 @@ interface CommandPluginInterface
 
 }
 ```
-
-

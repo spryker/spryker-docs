@@ -7,6 +7,18 @@ redirect_from:
   - /2021080/docs/en/event-configure-q
   - /docs/event-configure-q
   - /docs/en/event-configure-q
+  - /v6/docs/event-configure-q
+  - /v6/docs/en/event-configure-q
+  - /v5/docs/event-configure-q
+  - /v5/docs/en/event-configure-q
+  - /v4/docs/event-configure-q
+  - /v4/docs/en/event-configure-q
+  - /v3/docs/event-configure-q
+  - /v3/docs/en/event-configure-q
+  - /v2/docs/event-configure-q
+  - /v2/docs/en/event-configure-q
+  - /v1/docs/event-configure-q
+  - /v1/docs/en/event-configure-q
 ---
 
 This article descirbes how event queues are configured.

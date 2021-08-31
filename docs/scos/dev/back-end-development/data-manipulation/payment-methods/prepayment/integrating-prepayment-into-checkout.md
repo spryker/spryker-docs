@@ -8,13 +8,25 @@ redirect_from:
   - /2021080/docs/en/ht-prepayment-checkout
   - /docs/ht-prepayment-checkout
   - /docs/en/ht-prepayment-checkout
+  - /v6/docs/ht-prepayment-checkout
+  - /v6/docs/en/ht-prepayment-checkout
+  - /v5/docs/ht-prepayment-checkout
+  - /v5/docs/en/ht-prepayment-checkout
+  - /v4/docs/ht-prepayment-checkout
+  - /v4/docs/en/ht-prepayment-checkout
+  - /v3/docs/ht-prepayment-checkout
+  - /v3/docs/en/ht-prepayment-checkout
+  - /v2/docs/ht-prepayment-checkout
+  - /v2/docs/en/ht-prepayment-checkout
+  - /v1/docs/ht-prepayment-checkout
+  - /v1/docs/en/ht-prepayment-checkout
 ---
 
 The next step is to integrate prepayment into `Checkout`. In the `PaymentMethods/Dependency/Injector` from Yves add the `CheckoutDependencyInjector` that will inject the prepayment form and handler into the `Checkout` module:
 
 <details open>
 <summary>Code sample:</summary>
-    
+
 ```php
 <?php
 

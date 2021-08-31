@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/ht-implement-dd
   - /docs/ht-implement-dd
   - /docs/en/ht-implement-dd
+  - /v6/docs/ht-implement-dd
+  - /v6/docs/en/ht-implement-dd
+  - /v5/docs/ht-implement-dd
+  - /v5/docs/en/ht-implement-dd
+  - /v4/docs/ht-implement-dd
+  - /v4/docs/en/ht-implement-dd
+  - /v3/docs/ht-implement-dd
+  - /v3/docs/en/ht-implement-dd
+  - /v2/docs/ht-implement-dd
+  - /v2/docs/en/ht-implement-dd
+  - /v1/docs/ht-implement-dd
+  - /v1/docs/en/ht-implement-dd
 ---
 
 This set of articles will guide you through implementation of the Direct Debit payment method without integrating with a third party payment service provider.

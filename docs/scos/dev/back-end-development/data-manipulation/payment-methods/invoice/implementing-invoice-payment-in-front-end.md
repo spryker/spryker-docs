@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/ht-invoice-payment-fe
   - /docs/ht-invoice-payment-fe
   - /docs/en/ht-invoice-payment-fe
+  - /v6/docs/ht-invoice-payment-fe
+  - /v6/docs/en/ht-invoice-payment-fe
+  - /v5/docs/ht-invoice-payment-fe
+  - /v5/docs/en/ht-invoice-payment-fe
+  - /v4/docs/ht-invoice-payment-fe
+  - /v4/docs/en/ht-invoice-payment-fe
+  - /v3/docs/ht-invoice-payment-fe
+  - /v3/docs/en/ht-invoice-payment-fe
+  - /v2/docs/ht-invoice-payment-fe
+  - /v2/docs/en/ht-invoice-payment-fe
+  - /v1/docs/ht-invoice-payment-fe
+  - /v1/docs/en/ht-invoice-payment-fe
 ---
 
 ## Form creation
@@ -18,9 +30,9 @@ In Yves, the starting point is to build a form.
 * Add a `Form` folder where we will place the implementation for building the form
 
 ### 1. Adding the data provider
-    
+
 The first step is to add the data provider, inside the `Form/DataProvider/` folder:
-    
+
 ```php
 <?php
 namespace Pyz\Yves\PaymentMethods\Form\DataProvider;

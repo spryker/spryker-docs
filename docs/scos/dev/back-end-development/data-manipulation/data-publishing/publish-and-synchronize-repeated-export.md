@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/publish-and-synchronize-repeated-export
   - /docs/publish-and-synchronize-repeated-export
   - /docs/en/publish-and-synchronize-repeated-export
+  - /v6/docs/publish-and-synchronize-repeated-export
+  - /v6/docs/en/publish-and-synchronize-repeated-export
+  - /v5/docs/publish-and-synchronize-repeated-export
+  - /v5/docs/en/publish-and-synchronize-repeated-export
+  - /v4/docs/publish-and-synchronize-repeated-export
+  - /v4/docs/en/publish-and-synchronize-repeated-export
+  - /v3/docs/publish-and-synchronize-repeated-export
+  - /v3/docs/en/publish-and-synchronize-repeated-export
+  - /v2/docs/publish-and-synchronize-repeated-export
+  - /v2/docs/en/publish-and-synchronize-repeated-export
+  - /v1/docs/publish-and-synchronize-repeated-export
+  - /v1/docs/en/publish-and-synchronize-repeated-export
 ---
 
 Automatic execution of the [Publish & Synchronize process](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to re-generate the published data and re-write the data of the database tables in the Storage and Search modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.
@@ -85,4 +97,3 @@ vendor/bin/console publish:trigger-events -r cms_block,availability -i 1,2
 To trigger data re-publish for a resource, there should be a corresponding publisher plugin created for this resource.
 
 See [Implementing event trigger publisher plugins](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html) to learn how to create it.
-

@@ -8,9 +8,11 @@ redirect_from:
   - /2021080/docs/en/order-management-system-multi-thread
   - /docs/order-management-system-multi-thread
   - /docs/en/order-management-system-multi-thread
+  - /v6/docs/order-management-system-multi-thread
+  - /v6/docs/en/order-management-system-multi-thread
 ---
 
-Order management system (OMS) heavily relies on the state machine-related concepts like [event timeouts](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#timeout) and [conditions](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#conditions). When an order is managed, a lot of the timeout and condition entities are being processed. Processing of timeouts and conditions in Spryker is done by two console commands:
+Order management system (OMS) heavily relies on the state machine-related concepts like [event timeouts](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#timeout) and [conditions](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#conditions). When an order is managed, a lot of the timeout and condition entities are being processed. Processing of timeouts and conditions in Spryker is done by two console commands:
 
 * `oms:check-timeout`
 * `oms:check-condition`
@@ -61,7 +63,7 @@ This value will serve as the upper boundary for a generated processor identifier
 
 <details>
 <summary>config/Zed/cronjobs/jenkins.php</summary>
-    
+
 ```PHP
 /* STATE MACHINE */
 $jobs[] = [
@@ -100,5 +102,3 @@ Regarding performance, there are a few things to keep in mind when running the O
 
 * The `limit options`: as mentioned above, commands `oms:check-timeout` and `oms:check-condition` have an option that allows specifying the maximum number of order items to be handled during a single command run. It’s recommended to provide this option for speeding up the database-related activities.
 * It is possible to specify more than one processor identifier for a single command run. But for large databases, this is generally not recommended. Specifying more than one process identifier affects the SQL query running under the hood and might disable a table index needed for this query to be executed in the most performant way.
-
- 

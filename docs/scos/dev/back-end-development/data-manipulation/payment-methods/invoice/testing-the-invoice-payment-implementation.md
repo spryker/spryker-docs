@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/ht-invoice-payment-test
   - /docs/ht-invoice-payment-test
   - /docs/en/ht-invoice-payment-test
+  - /v6/docs/ht-invoice-payment-test
+  - /v6/docs/en/ht-invoice-payment-test
+  - /v5/docs/ht-invoice-payment-test
+  - /v5/docs/en/ht-invoice-payment-test
+  - /v4/docs/ht-invoice-payment-test
+  - /v4/docs/en/ht-invoice-payment-test
+  - /v3/docs/ht-invoice-payment-test
+  - /v3/docs/en/ht-invoice-payment-test
+  - /v2/docs/ht-invoice-payment-test
+  - /v2/docs/en/ht-invoice-payment-test
+  - /v1/docs/ht-invoice-payment-test
+  - /v1/docs/en/ht-invoice-payment-test
 ---
 
 When you have completed the instructions on [front end](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html), [back end](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html) and [shared](/docs/scos/dev/back-end-development/zed/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html-be-shared) implementation, you are able to test the payment method you just implemented.
@@ -15,4 +27,3 @@ When you have completed the instructions on [front end](/docs/scos/dev/back-end-
  This is the last step for this tutorial.
 
 All you need to do is to submit a new order from Yves. After that you can control the flow of the order in the Back Office.
-

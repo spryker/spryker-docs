@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/flysystem
   - /docs/flysystem
   - /docs/en/flysystem
+  - /v6/docs/flysystem
+  - /v6/docs/en/flysystem
+  - /v5/docs/flysystem
+  - /v5/docs/en/flysystem
+  - /v4/docs/flysystem
+  - /v4/docs/en/flysystem
+  - /v3/docs/flysystem
+  - /v3/docs/en/flysystem
+  - /v2/docs/flysystem
+  - /v2/docs/en/flysystem
+  - /v1/docs/flysystem
+  - /v1/docs/en/flysystem
 ---
 
 The Flysystem module integrates Spryker with the [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package.

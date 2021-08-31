@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/step-engine-workflow
   - /docs/step-engine-workflow
   - /docs/en/step-engine-workflow
+  - /v6/docs/step-engine-workflow
+  - /v6/docs/en/step-engine-workflow
+  - /v5/docs/step-engine-workflow
+  - /v5/docs/en/step-engine-workflow
+  - /v4/docs/step-engine-workflow
+  - /v4/docs/en/step-engine-workflow
+  - /v3/docs/step-engine-workflow
+  - /v3/docs/en/step-engine-workflow
+  - /v2/docs/step-engine-workflow
+  - /v2/docs/en/step-engine-workflow
+  - /v1/docs/step-engine-workflow
+  - /v1/docs/en/step-engine-workflow
 ---
 
 When you need to define a multi-step process using the StepEngine feature, you need to implement the following interfaces:

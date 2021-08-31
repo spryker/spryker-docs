@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/order-process-modelling-state-machines
   - /docs/order-process-modelling-state-machines
   - /docs/en/order-process-modelling-state-machines
+  - /v6/docs/order-process-modelling-state-machines
+  - /v6/docs/en/order-process-modelling-state-machines
+  - /v5/docs/order-process-modelling-state-machines
+  - /v5/docs/en/order-process-modelling-state-machines
+  - /v4/docs/order-process-modelling-state-machines
+  - /v4/docs/en/order-process-modelling-state-machines
+  - /v3/docs/order-process-modelling-state-machines
+  - /v3/docs/en/order-process-modelling-state-machines
+  - /v2/docs/order-process-modelling-state-machines
+  - /v2/docs/en/order-process-modelling-state-machines
+  - /v1/docs/order-process-modelling-state-machines
+  - /v1/docs/en/order-process-modelling-state-machines
 ---
 
 State machines help you define, execute and visualize predefined and automated processes. It can model events that involve performing a predetermined sequence of actions, for example, in the order process.
@@ -26,11 +38,11 @@ You can tailor the State Machine to your needs to trigger certain processes auto
 The `StateMachine` module provides a generic implementation for state machines (SM). This module provides functionality for drawing the SM graph, triggering events, initializing a new state machine, or for getting the state history for a processed item.
 
 {% info_block warningBox %}
-If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/dev/features/{{page.version}}/order-management/oms-order-management-system-matrix.html
+If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/dev/features/{{site.version}}/order-management/oms-order-management-system-matrix.html
 {% endinfo_block %}.)
 
 {% info_block infoBox %}
-There is already an example state machine implemented in Legacy Demoshop. Look for the `stateMachineExample` module. You can use it as a base for implementing your custom SM. 
+There is already an example state machine implemented in Legacy Demoshop. Look for the `stateMachineExample` module. You can use it as a base for implementing your custom SM.
 {% endinfo_block %}
 
 ## States
@@ -94,7 +106,7 @@ The events can be fired as follows:
 * Automatically: If an event has the `onEnter="true"` attribute associated, then the event is fired automatically when the source state is reached. For example, `<event name="authorize" onEnter="true"/>` means that the OMS state-authorized is triggered automatically.
 * By setting the `manual` attribute to `true`: This adds a button in the **Back Office → View Order [Order ID**] page that allows you to manually trigger the corresponding transition by clicking the button. For example, `<event name="cancel" manual="true"/>` means that the OMS state canceled can only be triggered by clicking the **cancel** button for the order state.
 * Via an API call: The `triggerEvent`method allows triggering an event for a given process instance. For example, if a message from the payment provider is received that the capture was successful, the corresponding process instance can be triggered via the API call.
-* By a timeout: Events are triggered after the defined time has passed. For example, `<event name="close" manual="true" timeout="1 hour"/>` means that the OMS state closed will be triggered in 1 hour, if not triggered manually from the Back Office earlier. Now let’s assume we are trying to define the prepayment process, in which if after 15 days no payment is received, `reminder sent` is fired due to the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the `sendFirstReminder` event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order/order item stays in the source state. 
+* By a timeout: Events are triggered after the defined time has passed. For example, `<event name="close" manual="true" timeout="1 hour"/>` means that the OMS state closed will be triggered in 1 hour, if not triggered manually from the Back Office earlier. Now let’s assume we are trying to define the prepayment process, in which if after 15 days no payment is received, `reminder sent` is fired due to the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the `sendFirstReminder` event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order/order item stays in the source state.
 ```XML
 <transition command="Oms/sendFirstReminder">
     <source>payment pending</source>
@@ -112,11 +124,11 @@ You can also set the date and time from when the timeout should be started. See 
 
 ### OMS timeout processor
 
-Timeout processor is designed to set a custom timeout for an OMS event. 
+Timeout processor is designed to set a custom timeout for an OMS event.
 
 Let’s imagine today is Monday, and your shop plans to ship orders only on Friday. In this case, you can not specify the exact timeout (in days, hours, etc.) to start the shipping process. Even if you specify just the timeout, say, four days, for example, `<event name="ship" manual="" timeout="96 hour"/>`, the scheduler will be regularly checking if the event happened. This creates an unnecessary load on the OMS and is bad for your shop’s performance, especially if you have many orders. For this specific case, it would be enough to start running the check in four days. This is when a timeout processor comes in handy: you use it to specify from when the timeout should be calculated.
 
-Here is an example of a timeout processor in an event definition: 
+Here is an example of a timeout processor in an event definition:
 ```XML
 <events>
     <event name="pay" timeout="1 hour" timeoutProcessor="OmsTimeout/Initiation" command="DummyPayment/Pay"/>
@@ -124,7 +136,7 @@ Here is an example of a timeout processor in an event definition:
 ```
 In this example, `OmsTimeout/Initiation` is the name of the plugin which is executed to set the starting point of the timeout.
 
-In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/order-management-feature-integration.html) plugin starts the timeout immediately, from the current time:
+In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/scos/dev/feature-integration-guides/{{site.version}}order-management-feature-integration.html) plugin starts the timeout immediately, from the current time:
 
 <details open>
 
@@ -196,7 +208,7 @@ class InitiationTimeoutProcessorPlugin extends AbstractPlugin implements Timeout
 ```
 </details>
 
-With this implementation of the plugin, if the timeout is set to 1 hour, the event will be triggered 1 hour after the previous event. 
+With this implementation of the plugin, if the timeout is set to 1 hour, the event will be triggered 1 hour after the previous event.
 
 If you need to start the timeout, say, on November 15, 2021, the plugin should be modified as follows:
 <details open>
@@ -417,4 +429,3 @@ Regarding performance, there are a few things to keep in mind when determining s
 * To move high time cost operation from handling HTTP-request for order creation to the background, you can use `timeout="1 second"` instead of `onEnter="true"` for the event in transition from the first state of order.
 
 <!-- Last review date: Feb 21, 2019 by Aurimas Ličkus, Anastasija Datsun -->
-

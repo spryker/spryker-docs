@@ -7,6 +7,18 @@ redirect_from:
   - /2021080/docs/en/event-listen
   - /docs/event-listen
   - /docs/en/event-listen
+  - /v6/docs/event-listen
+  - /v6/docs/en/event-listen
+  - /v5/docs/event-listen
+  - /v5/docs/en/event-listen
+  - /v4/docs/event-listen
+  - /v4/docs/en/event-listen
+  - /v3/docs/event-listen
+  - /v3/docs/en/event-listen
+  - /v2/docs/event-listen
+  - /v2/docs/en/event-listen
+  - /v1/docs/event-listen
+  - /v1/docs/en/event-listen
 ---
 
 There are two ways to listen to events: using direct listeners or subscribers. The difference between these two is that a subscriber allows the module providing the subscriber to wire up the handlers in the module that owns it without touching the `EventDependencyProvider` exception’s initial subscriber initialization. It is best to use a subscriber from the beginning, as this simplifies future listener registration. When you need to listen to specific listener, use `\Pyz\Zed\Event\EventDependencyProvider::getEventListenerCollection`.

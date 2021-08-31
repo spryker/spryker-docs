@@ -8,9 +8,21 @@ redirect_from:
   - /2021080/docs/en/search-multi-currency
   - /docs/search-multi-currency
   - /docs/en/search-multi-currency
+  - /v6/docs/search-multi-currency
+  - /v6/docs/en/search-multi-currency
+  - /v5/docs/search-multi-currency
+  - /v5/docs/en/search-multi-currency
+  - /v4/docs/search-multi-currency
+  - /v4/docs/en/search-multi-currency
+  - /v3/docs/search-multi-currency
+  - /v3/docs/en/search-multi-currency
+  - /v2/docs/search-multi-currency
+  - /v2/docs/en/search-multi-currency
+  - /v1/docs/search-multi-currency
+  - /v1/docs/en/search-multi-currency
 ---
 
-If you don't have the multi-currency feature in you current project yet and want to migrate, you have to follow certain steps to migrate your system. First [migrate Price](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-price.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.
+If you don't have the multi-currency feature in you current project yet and want to migrate, you have to follow certain steps to migrate your system. First [migrate Price](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-price.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.
 
 In the current multi-currency feature we store prices grouped by price mode and currency, so prices are as follows now:
 ```php
@@ -37,7 +49,7 @@ The "price" field has the same structure, but value has a different meaning. Thi
 Value will be adjusted according to the customer state (currency, price mode and price type). Because of this you have to decorate `RawCatalogSearchResultFormatterPlugin` with `\Spryker\Client\CatalogPriceProductConnector\Plugin\CurrencyAwareCatalogSearchResultFormatterPlugin` in modules using it. For `\Pyz\Client\Catalog\CatalogDependencyProvider`:   
 
 **Pyz\Client\Catalog:**
-   
+
 ```php
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
@@ -93,10 +105,10 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 For `\Pyz\Client\ProductNew\ProductNewDependencyProvider`:
 
 **Pyz\Client\ProductNew**
-   
+
 ```php
 <?php
-    
+
 namespace Pyz\Client\ProductNew;
 
 class ProductNewDependencyProvider extends AbstractDependencyProvider
@@ -127,7 +139,7 @@ class ProductNewDependencyProvider extends AbstractDependencyProvider
 For `\Pyz\Client\ProductSale\ProductSaleDependencyProvider`:
 
 **Pyz\Client\ProductSale**
-   
+
 ```php
 <?php
 
@@ -156,13 +168,13 @@ class ProductSaleDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 }
-            
+
 ```
 
 You also have to update the price expander to export grouped prices. To do this, change `\Pyz\Zed\ProductSearch\Business\Map\Expander\PriceExpander` class:
 
 **Pyz\Zed\ProductSearch\Business\Map\Expander**
-   
+
 ```php
 <?php
 
@@ -257,13 +269,13 @@ public function expandProductPageMap(
        $pageMapBuilder->addSearchResultData($pageMapTransfer, 'prices', $pricesGrouped);
    }
 }
-			
+
 ```
 
 Inject a new dependency:
 
 **Pyz\Zed\ProductSearch**
-   
+
 ```php
 <?php
 
@@ -301,7 +313,7 @@ class ProductSearchDependencyProvider extends SprykerProductSearchDependencyProv
 ```
 
 **Pyz\Zed\ProductSearch\Business**
-   
+
 ```php
 <?php
 
@@ -327,13 +339,13 @@ class ProductSearchBusinessFactory extends SprykerProductSearchBusinessFactory
       return $this->getProvidedDependency(ProductSearchDependencyProvider::CLIENT_PRICE_PRODUCT_CONNECTOR_CLIENT);
   }
 }
-		
+
 ```
 
 It is also needed to configure prices for catalog search in `\Pyz\Client\Catalog\Plugin\Config\CatalogSearchConfigBuilder`:
 
 **Pyz\Client\Catalog\Plugin\Config**
-   
+
 ```php
 <?php
 
@@ -406,13 +418,13 @@ class CatalogSearchConfigBuilder extends AbstractPlugin implements SearchConfigB
         return $this;
     }
 }
-			
+
 ```
 
 Inject a new dependency:
 
 **Pyz\Client\Catalog**
-   
+
 ```php
 <?php
 
@@ -452,7 +464,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 Create a factory method for the new dependency:
 
 **Pyz\Client\Catalog**
-   
+
 ```php
 <?php
 

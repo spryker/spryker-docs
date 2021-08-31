@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/dd-shared-implementation
   - /docs/dd-shared-implementation
   - /docs/en/dd-shared-implementation
+  - /v6/docs/dd-shared-implementation
+  - /v6/docs/en/dd-shared-implementation
+  - /v5/docs/dd-shared-implementation
+  - /v5/docs/en/dd-shared-implementation
+  - /v4/docs/dd-shared-implementation
+  - /v4/docs/en/dd-shared-implementation
+  - /v3/docs/dd-shared-implementation
+  - /v3/docs/en/dd-shared-implementation
+  - /v2/docs/dd-shared-implementation
+  - /v2/docs/en/dd-shared-implementation
+  - /v1/docs/dd-shared-implementation
+  - /v1/docs/en/dd-shared-implementation
 ---
 
 This article provides step-by-step instructions on how to identify the new payment type using some unique constants. We are going to define those constants under the `Shared` namespace, since they’re needed both for Yves and Zed.
@@ -16,7 +28,7 @@ To identify the new payment type, do the following:
 1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you’ll define these unique constants.
 
 **Code sample:**
-    
+
 ```php
 <?php
 namespace Pyz\Shared\PaymentMethods;

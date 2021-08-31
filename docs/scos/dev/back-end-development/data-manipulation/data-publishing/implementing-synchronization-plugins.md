@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/implementing-synchronization-plugins
   - /docs/implementing-synchronization-plugins
   - /docs/en/implementing-synchronization-plugins
+  - /v6/docs/implementing-synchronization-plugins
+  - /v6/docs/en/implementing-synchronization-plugins
 ---
 
 Sometimes it’s needed to manually [synchronize or re-syncrhonize](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-regeneration) the published model data with Redis or ElasticSearch. To do that, you need to implement a synchronization plugin.
@@ -18,7 +20,7 @@ Follow the steps below to implement and register a synchronization plugin.
 
 <details open>
     <summary>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Synchronization</summary>
-    
+
 ```php
 <?php
 
@@ -124,7 +126,7 @@ Make sure to fulfill the requirements:
 
 
 namespace Pyz\Zed\Synchronization;
- 
+
 ...
 use Pyz\Zed\HelloWorldStorage\Communication\Plugin\Synchronization\HelloWorldSynchronizationDataRepositoryPlugin;
 ...

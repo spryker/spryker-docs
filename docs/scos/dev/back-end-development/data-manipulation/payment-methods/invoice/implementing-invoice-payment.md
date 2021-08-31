@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/ht-implement-invoice-payment
   - /docs/ht-implement-invoice-payment
   - /docs/en/ht-implement-invoice-payment
+  - /v6/docs/ht-implement-invoice-payment
+  - /v6/docs/en/ht-implement-invoice-payment
+  - /v5/docs/ht-implement-invoice-payment
+  - /v5/docs/en/ht-implement-invoice-payment
+  - /v4/docs/ht-implement-invoice-payment
+  - /v4/docs/en/ht-implement-invoice-payment
+  - /v3/docs/ht-implement-invoice-payment
+  - /v3/docs/en/ht-implement-invoice-payment
+  - /v2/docs/ht-implement-invoice-payment
+  - /v2/docs/en/ht-implement-invoice-payment
+  - /v1/docs/ht-implement-invoice-payment
+  - /v1/docs/en/ht-implement-invoice-payment
 ---
 
 {% info_block infoBox "Invoice Payment" %}

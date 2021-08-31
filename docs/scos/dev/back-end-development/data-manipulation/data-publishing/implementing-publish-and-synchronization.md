@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/publish-and-synchronization-reference
   - /docs/publish-and-synchronization-reference
   - /docs/en/publish-and-synchronization-reference
+  - /v6/docs/publish-and-synchronization-reference
+  - /v6/docs/en/publish-and-synchronization-reference
+  - /v5/docs/publish-and-synchronization-reference
+  - /v5/docs/en/publish-and-synchronization-reference
+  - /v4/docs/publish-and-synchronization-reference
+  - /v4/docs/en/publish-and-synchronization-reference
+  - /v3/docs/publish-and-synchronization-reference
+  - /v3/docs/en/publish-and-synchronization-reference
+  - /v2/docs/publish-and-synchronization-reference
+  - /v2/docs/en/publish-and-synchronization-reference
+  - /v1/docs/publish-and-synchronization-reference
+  - /v1/docs/en/publish-and-synchronization-reference
 ---
 
 To implement *Publish and Synchronize* in your code, you need to perform the following steps:
@@ -361,7 +373,7 @@ To see all listeners mapped for a certain event, Ctrl+Click it in PhpStorm. The 
 ### Debug Publish and Synchronize
 To debug Publish and Synchronize:
 
-1. Turn off [Jenkins](/docs/scos/dev/sdk/{{page.version}}/cronjob-scheduling.html) to stop processing all queues. This can be done using the following command:
+1. Turn off [Jenkins](/docs/scos/dev/sdk/{{site.version}}/cronjob-scheduling.html) to stop processing all queues. This can be done using the following command:
 
    ```bash
    console setup:jenkins:disable
@@ -419,4 +431,3 @@ foreach ($productAbstracts as $productAbstract) {
 
 ### Disable Events
 If you want to disable all events, call `EventBehaviorConfig::disableEvent()`. To disable events of a specific entity, call `$glossaryTranslationEntity->disableEvent()`.
-

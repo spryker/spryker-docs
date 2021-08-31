@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/checkout-steps
   - /docs/checkout-steps
   - /docs/en/checkout-steps
+  - /v6/docs/checkout-steps
+  - /v6/docs/en/checkout-steps
+  - /v5/docs/checkout-steps
+  - /v5/docs/en/checkout-steps
+  - /v4/docs/checkout-steps
+  - /v4/docs/en/checkout-steps
+  - /v2/docs/checkout-steps
+  - /v2/docs/en/checkout-steps
 ---
 
 The checkout process consists of the following steps:
@@ -141,8 +149,8 @@ When the success page is executed, `QuoteTransfer` is cleared. Also, customer se
 	public function getEscapeRoute();
  }
  ```
- 
- 
+
+
  ### Step with External Redirect Interface
  ```php
   <?php
@@ -161,4 +169,3 @@ When the success page is executed, `QuoteTransfer` is cleared. Also, customer se
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
 
 * all the stores inside a project share a single checkout with the same steps
-

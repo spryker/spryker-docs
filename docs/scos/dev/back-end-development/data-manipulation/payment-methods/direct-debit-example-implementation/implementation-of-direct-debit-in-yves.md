@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/dd-fe-implementation
   - /docs/dd-fe-implementation
   - /docs/en/dd-fe-implementation
+  - /v6/docs/dd-fe-implementation
+  - /v6/docs/en/dd-fe-implementation
+  - /v5/docs/dd-fe-implementation
+  - /v5/docs/en/dd-fe-implementation
+  - /v4/docs/dd-fe-implementation
+  - /v4/docs/en/dd-fe-implementation
+  - /v3/docs/dd-fe-implementation
+  - /v3/docs/en/dd-fe-implementation
+  - /v2/docs/dd-fe-implementation
+  - /v2/docs/en/dd-fe-implementation
+  - /v1/docs/dd-fe-implementation
+  - /v1/docs/en/dd-fe-implementation
 ---
 
 Usually, the first step of the Direct Debit payment method implementation is set-up on Yves. This article provides step-by-step instructions on how to do that.
@@ -21,9 +33,9 @@ The starting point is to create the form in Yves.
 To create the form, do the following:
 
 ### 1. Add the data provider
-    
+
 In the created module, in our example `PaymentMethods`, add the data provider to the `Form/DataProvider/` folder:
-    
+
 ```php
 <?php
 namespace Pyz\Yves\PaymentMethods\Form\DataProvider;
@@ -301,7 +313,7 @@ class DirectDebitHandler
 
 ### 2. Plug the payment handler into the checkout
 
-To plug this payment handler into the checkout, add a plugin to the following folders: 
+To plug this payment handler into the checkout, add a plugin to the following folders:
 
 * the `Plugin/` folder:
 
@@ -354,7 +366,7 @@ class DirectDebitHandler
 	* @const string
 	*/
 	const PAYMENT_PROVIDER = PaymentMethodsConstants::PROVIDER;
-	
+
 	/**
 	* @const string
 	*/
@@ -366,7 +378,7 @@ class DirectDebitHandler
 	*
 	* @return \Generated\Shared\Transfer\QuoteTransfer
 	*/
-	public function addPaymentToQuote(Request $request, QuoteTransfer $quoteTransfer)	
+	public function addPaymentToQuote(Request $request, QuoteTransfer $quoteTransfer)
 	{
 		$quoteTransfer->getPayment()		
 			->setPaymentProvider(static::PAYMENT_PROVIDER)

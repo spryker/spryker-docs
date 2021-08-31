@@ -8,6 +8,12 @@ redirect_from:
   - /2021080/docs/en/multiple-currencies-per-store-configuration
   - /docs/multiple-currencies-per-store-configuration
   - /docs/en/multiple-currencies-per-store-configuration
+  - /v6/docs/multiple-currencies-per-store-configuration
+  - /v6/docs/en/multiple-currencies-per-store-configuration
+  - /v5/docs/multiple-currencies-per-store-configuration
+  - /v5/docs/en/multiple-currencies-per-store-configuration
+  - /v4/docs/multiple-currencies-per-store-configuration
+  - /v4/docs/en/multiple-currencies-per-store-configuration
 ---
 
 In a Spryker-based shop, you can define multiple currencies per store for product, product option, and shipping method. A product can, for example, cost 5 EUR in Germany, 6 EUR in France and 5 CHF in Switzerland. Your customers may easily choose between these different currencies.
@@ -44,13 +50,13 @@ The methods defined in the `CurrencyFacade` return an instance of the `CurrencyT
 
 In addition, `CurrencyTransfer` contains information that specifies if it is the default currency or not. `CurrencyTransfer::$isDefault` can be used to check if currency that was retrieved by `CurrencyFacade::fromIsoCode()` is the same as the one configured as default for the current store.
 
-From currency version 3, we have introduced currency table where currencies are persisted. Also, currency facade provides API to read this data. 
+From currency version 3, we have introduced currency table where currencies are persisted. Also, currency facade provides API to read this data.
 {% info_block infoBox "Info" %}
 
-Check the [Curency migration guide](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-currency.html) to migrate to the latest  module version.
+Check the [Curency migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-currency.html) to migrate to the latest  module version.
 
 {% endinfo_block %}
- We have also introduced a currency switcher to Yves. To use it, do the following: 
+ We have also introduced a currency switcher to Yves. To use it, do the following:
 
 1. Add the `\SprykerShop\Yves\CurrencyWidget\Widget\CurrencyWidget` to your `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getGlobalWidgets()` method. With this switcher, we have introduced a new extension point to act when currency is changed. Implement `"\Spryker\Yves\Currency\Dependency\CurrencyPostChangePluginInterface"` in your custom plugin, place it to `"\Pyz\Yves\Currency\CurrencyDependencyProvider::getCurrencyPostChangePlugins"` and get notified when currency is changed.
 
@@ -115,4 +121,3 @@ class CurrencyDependencyProvider extends SprykerCurrencyDependencyProvider
     }
 }
 ```
-

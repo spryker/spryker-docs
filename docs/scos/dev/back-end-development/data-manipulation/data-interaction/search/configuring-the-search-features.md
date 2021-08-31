@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/configuring-the-search-features
   - /docs/configuring-the-search-features
   - /docs/en/configuring-the-search-features
+  - /v6/docs/configuring-the-search-features
+  - /v6/docs/en/configuring-the-search-features
+  - /v5/docs/configuring-the-search-features
+  - /v5/docs/en/configuring-the-search-features
+  - /v4/docs/configuring-the-search-features
+  - /v4/docs/en/configuring-the-search-features
+  - /v3/docs/configuring-the-search-features
+  - /v3/docs/en/configuring-the-search-features
+  - /v2/docs/configuring-the-search-features
+  - /v2/docs/en/configuring-the-search-features
+  - /v1/docs/configuring-the-search-features
+  - /v1/docs/en/configuring-the-search-features
 ---
 
 This article explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
@@ -41,7 +53,7 @@ class CatalogSearchConfigBuilderPlugin extends AbstractPlugin implements SearchC
     public function buildConfig(SearchConfigurationTransfer $searchConfigurationTransfer): SearchConfigurationTransfer
     {
         // Build configuration and extend $searchConfigurationTransfer
-        
+
         return $searchConfigurationTransfer;
     }
 
@@ -78,7 +90,7 @@ use Generated\Shared\Transfer\SearchConfigurationTransfer;
 
         return $searchConfigurationTransfer;
     }
-    
+
     /**
      * @param \Generated\Shared\Transfer\SearchConfigurationTransfer $searchConfigurationTransfer
      *
@@ -114,7 +126,7 @@ You can create and add as many `FacetConfigTransfers` as you need. Let’s analy
 
 <details open>
 <summary>Pyz\Client\Catalog\Plugin\Config</summary>
-   
+
 ```php
 <?php
 
@@ -263,7 +275,7 @@ use Generated\Shared\Transfer\PaginationConfigTransfer;
 
     const DEFAULT_ITEMS_PER_PAGE = 6;
     const VALID_ITEMS_PER_PAGE_OPTIONS = [6, 18, 36];
-    
+
     /**
      * @param \Generated\Shared\Transfer\SearchConfigurationTransfer $searchConfigurationTransfer
      *
@@ -279,7 +291,7 @@ use Generated\Shared\Transfer\PaginationConfigTransfer;
 
     /**
      * @param \Generated\Shared\Transfer\SearchConfigurationTransfer $searchConfigurationTransfer
-     * 
+     *
      * @return \Generated\Shared\Transfer\SearchConfigurationTransfer
      */
     public function buildPaginationConfig(SearchConfigurationTransfer $searchConfigurationTransfer)
@@ -289,7 +301,7 @@ use Generated\Shared\Transfer\PaginationConfigTransfer;
             ->setItemsPerPageParameterName('ipp')
             ->setDefaultItemsPerPage(static::DEFAULT_ITEMS_PER_PAGE)
             ->setValidItemsPerPageOptions(static::VALID_ITEMS_PER_PAGE_OPTIONS);
-        
+
         $searchConfigurationTransfer->setPaginationConfig($paginationConfigTransfer);
 
         return $searchConfigurationTransfer;
@@ -335,4 +347,3 @@ class SearchDependencyProvider extends SprykerSearchElasticsearchDependencyProvi
 }
 ```
 After providing the instance of your search configuration builder, the *expander* and *result formatter* plugins start to generate data next time when you run a search query. This tutorial doesn’t cover how to display the filters, but you can find examples using them in our Demo Shops.
-

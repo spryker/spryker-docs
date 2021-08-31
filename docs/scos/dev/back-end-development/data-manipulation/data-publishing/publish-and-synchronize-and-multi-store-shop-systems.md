@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/p-s-and-multi-store-shop-systems
   - /docs/p-s-and-multi-store-shop-systems
   - /docs/en/p-s-and-multi-store-shop-systems
+  - /v6/docs/p-s-and-multi-store-shop-systems
+  - /v6/docs/en/p-s-and-multi-store-shop-systems
+  - /v5/docs/p-s-and-multi-store-shop-systems
+  - /v5/docs/en/p-s-and-multi-store-shop-systems
+  - /v4/docs/p-s-and-multi-store-shop-systems
+  - /v4/docs/en/p-s-and-multi-store-shop-systems
+  - /v3/docs/p-s-and-multi-store-shop-systems
+  - /v3/docs/en/p-s-and-multi-store-shop-systems
+  - /v2/docs/p-s-and-multi-store-shop-systems
+  - /v2/docs/en/p-s-and-multi-store-shop-systems
+  - /v1/docs/p-s-and-multi-store-shop-systems
+  - /v1/docs/en/p-s-and-multi-store-shop-systems
 ---
 
 ## Introduction

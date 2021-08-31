@@ -8,11 +8,23 @@ redirect_from:
   - /2021080/docs/en/t-transfer-data-yves-zed
   - /docs/t-transfer-data-yves-zed
   - /docs/en/t-transfer-data-yves-zed
+  - /v6/docs/t-transfer-data-yves-zed
+  - /v6/docs/en/t-transfer-data-yves-zed
+  - /v5/docs/t-transfer-data-yves-zed
+  - /v5/docs/en/t-transfer-data-yves-zed
+  - /v4/docs/t-transfer-data-yves-zed
+  - /v4/docs/en/t-transfer-data-yves-zed
+  - /v3/docs/t-transfer-data-yves-zed
+  - /v3/docs/en/t-transfer-data-yves-zed
+  - /v2/docs/t-transfer-data-yves-zed
+  - /v2/docs/en/t-transfer-data-yves-zed
+  - /v1/docs/t-transfer-data-yves-zed
+  - /v1/docs/en/t-transfer-data-yves-zed
 ---
 
 Yves gets most of its data from the client-side NoSQL data stores (data such as product details, product categories, prices, etc.). There are situations when Yves needs to communicate with Zed either to submit data (for example, the customer has submitted a new order or subscribed to a newsletter) or to retrieve data (for example, order history for the customer, customer account details).
 
-In this article, we’ll exemplify how you can set up communication between Yves and Zed. We’ll display a random salutation message that is retrieved from Zed. 
+In this article, we’ll exemplify how you can set up communication between Yves and Zed. We’ll display a random salutation message that is retrieved from Zed.
 
 {% info_block warningBox "Prerequisites" %}
 
@@ -94,7 +106,7 @@ Your next step is to move to the client part to add support for calling the cont
 
 <details open>
 <summary>Pyz\Client\HelloWorld\Zed</summary>
-    
+
 ```php
 <?php
 
@@ -344,7 +356,7 @@ vendor/bin/console router:cache:warm-up
 That's it! `http://www.de.demoshop.local/hello` now displays a random salutation message.
 
 ## ZedRequest header
-Since [ZedRequest 3.16.0](https://github.com/spryker/zed-request/releases/tag/3.16.0), you can alter the headers sent with each ZedRequest. You can either use the *default header plugins* or *create your own* by using the `\Spryker\Client\ZedRequestExtension\Dependency\Plugin\HeaderExpanderPluginInterface`. 
+Since [ZedRequest 3.16.0](https://github.com/spryker/zed-request/releases/tag/3.16.0), you can alter the headers sent with each ZedRequest. You can either use the *default header plugins* or *create your own* by using the `\Spryker\Client\ZedRequestExtension\Dependency\Plugin\HeaderExpanderPluginInterface`.
 
 ### Default header plugins
 
@@ -358,7 +370,7 @@ These plugins can be added to `\Pyz\Client\ZedRequest\ZedRequestDependencyProvid
 
 ### Create your own header plugin
 
-You can create your own header expander plugin with the `\Spryker\Client\ZedRequestExtension\Dependency\Plugin\HeaderExpanderPluginInterface`. 
+You can create your own header expander plugin with the `\Spryker\Client\ZedRequestExtension\Dependency\Plugin\HeaderExpanderPluginInterface`.
 For example, if you need a header with the name `Project-Name`, you just create a plugin like this:
 
 ```php
@@ -385,4 +397,3 @@ class ProjectNameHeaderExpanderPlugin extends AbstractPlugin implements HeaderEx
 }
 ```
 Once you add this plugin to `\Pyz\Client\ZedRequest\ZedRequestDependencyProvider::getHeaderExpanderPlugins()`, your new header will be used with every ZedRequest.
-

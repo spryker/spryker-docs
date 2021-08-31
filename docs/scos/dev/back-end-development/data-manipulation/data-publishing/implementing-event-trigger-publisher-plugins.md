@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/howto-implement-event-trigger-publisher-plugins
   - /docs/howto-implement-event-trigger-publisher-plugins
   - /docs/en/howto-implement-event-trigger-publisher-plugins
+  - /v6/docs/howto-implement-event-trigger-publisher-plugins
+  - /v6/docs/en/howto-implement-event-trigger-publisher-plugins
 ---
 
 Sometimes it’s necessary to [publish or re-publish](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1215792106/WIP+Publish+and+Synchronize+Repeated+Export#Published-Data-Re-generation) the model data manually for all or a particular resource. To do that, you need to implement an event trigger publisher plugin.
@@ -16,7 +18,7 @@ Follow the steps below to implement and register a new event trigger publisher p
 
 <details open>
     <summary>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher</summary>
-    
+
 ```php
 <?php
 
@@ -105,7 +107,7 @@ use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDepende
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
     ...
-    
+
     /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface[]
      */
@@ -117,7 +119,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             ......,
         ];
     }
-    
+
     ...
 }
 ```

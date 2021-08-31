@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/t-working-filter-facets
   - /docs/t-working-filter-facets
   - /docs/en/t-working-filter-facets
+  - /v6/docs/t-working-filter-facets
+  - /v6/docs/en/t-working-filter-facets
+  - /v5/docs/t-working-filter-facets
+  - /v5/docs/en/t-working-filter-facets
+  - /v4/docs/t-working-filter-facets
+  - /v4/docs/en/t-working-filter-facets
+  - /v3/docs/t-working-filter-facets
+  - /v3/docs/en/t-working-filter-facets
+  - /v2/docs/t-working-filter-facets
+  - /v2/docs/en/t-working-filter-facets
+  - /v1/docs/t-working-filter-facets
+  - /v1/docs/en/t-working-filter-facets
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/yves/working-with-filter-facets/-->
@@ -40,7 +52,7 @@ On the category detail page, the `catalogSearch($searchString, $parameters)` sho
             $this->getCategoryNodeTemplate($idCategoryNode)
         );
     }
-    
+
     protected function executeIndexAction(array $categoryNode, int $idCategoryNode, Request $request): array
     {
         $searchString = $request->query->get('q', '');
@@ -112,7 +124,7 @@ The search attributes must be configured in the `CatalogDependencyProvider`.
             new ProductLabelFacetConfigTransferBuilderPlugin(),
         ];
     }
-    
+
     protected function createCatalogSearchResultFormatterPlugins()
     {
         return [
@@ -132,4 +144,3 @@ Having the price attribute added to configuration as an active facet enables us 
 `http://www.de.demoshop.local/en/computers/notebooks?price=0-300` request will perform a search using the category and price facets. It will return the products that are under the notebooks category with the price range between 0 and 300.
 
 `http://www.de.demoshop.local/search?q=tablet&price=0-300` request will perform a full-text search with the search string tablet and with the facet filter price (price in the range 0-300).
-

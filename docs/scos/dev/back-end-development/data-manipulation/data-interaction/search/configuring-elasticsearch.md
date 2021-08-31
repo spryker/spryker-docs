@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/search-configure-elasticsearch
   - /docs/search-configure-elasticsearch
   - /docs/en/search-configure-elasticsearch
+  - /v6/docs/search-configure-elasticsearch
+  - /v6/docs/en/search-configure-elasticsearch
+  - /v5/docs/search-configure-elasticsearch
+  - /v5/docs/en/search-configure-elasticsearch
+  - /v4/docs/search-configure-elasticsearch
+  - /v4/docs/en/search-configure-elasticsearch
+  - /v3/docs/search-configure-elasticsearch
+  - /v3/docs/en/search-configure-elasticsearch
+  - /v2/docs/search-configure-elasticsearch
+  - /v2/docs/en/search-configure-elasticsearch
+  - /v1/docs/search-configure-elasticsearch
+  - /v1/docs/en/search-configure-elasticsearch
 ---
 
 Elasticsearch is a NoSQL data store that allows us to predefine the structure of the data we get to store in it.
@@ -57,4 +69,3 @@ For the default page index, the class is `\Generated\Shared\Search\PageIndexMap`
 These classes provide some information from the mapping, such as the fields and the metadata. Use these classes for references when you need to program against something related to that mapping schema.
 
 If you change mapping and run the installer, the auto-generated classes will also change accordingly.
-

@@ -8,6 +8,12 @@ redirect_from:
   - /2021080/docs/en/standard-filters-backend-and-frontend-technical-details
   - /docs/standard-filters-backend-and-frontend-technical-details
   - /docs/en/standard-filters-backend-and-frontend-technical-details
+  - /v6/docs/standard-filters-backend-and-frontend-technical-details
+  - /v6/docs/en/standard-filters-backend-and-frontend-technical-details
+  - /v5/docs/standard-filters-backend-and-frontend-technical-details
+  - /v5/docs/en/standard-filters-backend-and-frontend-technical-details
+  - /v4/docs/standard-filters-backend-and-frontend-technical-details
+  - /v4/docs/en/standard-filters-backend-and-frontend-technical-details
 ---
 
 ## Backend Technical Details
@@ -17,7 +23,7 @@ The backend part of Standard Filters feature is located in the following modules
 2. ProductCategoryFilterGui (`spryker/product-category-filter-gui`),
 3. ProductCategoryFilterStorage (`spryker/product-category-filter-storage`).
 
-Category Filters management is described in the [Back Office guide](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/search-and-filters/managing-category-filters.html).
+Category Filters management is described in the [Back Office guide](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/search-and-filters/managing-category-filters.html).
 
 ## Frontend Technical Details
 CatalogPage module (`spryker-shop/catalog-page`) provides all applicable product filters and a basic set of templates, used by all pages.
@@ -31,26 +37,26 @@ The general look of the `page-layout-catalog.twig` template is shown below:
 
 ```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define config = {
     name: 'filter-section',
     tag: 'section',
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
     facets: [],
     filterPath: null,
     categories: [],
     isEmptyCategoryFilterValueVisible: null,
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} set isContentPresent = data.facets | length > 0 {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block class {% raw %}%}{% endraw %}
     {% raw %}{{{% endraw %}  parent() {% raw %}}}{% endraw %}
     {% raw %}{{{% endraw %} config.jsName {% raw %}}}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} if isContentPresent {% raw %}%}{% endraw %}
         <h3 class="{% raw %}{{{% endraw %} config.name ~ '__title' {% raw %}}}{% endraw %} is-hidden-lg-xxl">{% raw %}{{{% endraw %} 'catalog.filter.and.sorting.button' | trans {% raw %}}}{% endraw %}</h3>
@@ -61,18 +67,18 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                 },
             } only {% raw %}%}{% endraw %}
         </button>
- 
+
         <div class="{% raw %}{{{% endraw %} config.name ~ '__sorting ' ~ config.jsName ~ '__sorting' {% raw %}}}{% endraw %} is-hidden-lg-xxl"></div>
         <div class="{% raw %}{{{% endraw %} config.name ~ '__holder' {% raw %}}}{% endraw %}">
             {% raw %}{%{% endraw %} for filter in data.facets {% raw %}%}{% endraw %}
                 {% raw %}{%{% endraw %} set filterHasValues = filter.values is not defined or filter.values | length > 0 {% raw %}%}{% endraw %}
                 {% raw %}{%{% endraw %} set togglerClass = '' {% raw %}%}{% endraw %}
- 
+
                 {% raw %}{%{% endraw %} if filterHasValues {% raw %}%}{% endraw %}
                     {% raw %}{%{% endraw %} block filters {% raw %}%}{% endraw %}
- 
+
                         {% raw %}{%{% endraw %} if filter.config.type == 'price-range' and can('SeePricePermissionPlugin') is empty {% raw %}%}{% endraw %}
- 
+
                         {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
                             <div class="{% raw %}{{{% endraw %} config.name ~ '__item' {% raw %}}}{% endraw %} {% raw %}{%{% endraw %} if filter.name == 'category' {% raw %}%}{% endraw %}{% raw %}{{{% endraw %} config.name ~ '__item--hollow' {% raw %}}}{% endraw %}{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}">
                                 <h6 class="{% raw %}{{{% endraw %} config.name ~ '__item-title toggler-accordion__item ' ~ config.jsName ~ '__trigger' ~ '-' ~ filter.name{% raw %}}}{% endraw %} {% raw %}{%{% endraw %} if filter.name == 'category' {% raw %}%}{% endraw %}{% raw %}{{{% endraw %} 'is-hidden-lg-xxl' {% raw %}}}{% endraw %}{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}">
@@ -88,7 +94,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                                 {% raw %}{%{% endraw %} set contentModifier = filter.name == 'category' ? config.name ~ '__item-content--hollow' : '' {% raw %}%}{% endraw %}
                                 {% raw %}{%{% endraw %} set hiddenClassToToggleSections = filter.name == 'category' ? 'is-hidden-sm-md' : 'is-hidden' {% raw %}%}{% endraw %}
                                 {% raw %}{%{% endraw %} set toglerClass = config.name ~ '__item-content ' ~ config.jsName ~ '__' ~ filter.name ~ ' ' ~ hiddenClassToToggleSections ~ ' ' ~ contentModifier {% raw %}%}{% endraw %}
- 
+
                                 {% raw %}{%{% endraw %} include [
                                     molecule('filter-' ~ filter.config.name, 'CatalogPage'),
                                     molecule('filter-' ~ filter.config.type, 'CatalogPage'),
@@ -106,7 +112,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                                     },
                                     class: toglerClass,
                                 } only {% raw %}%}{% endraw %}
- 
+
                                 {% raw %}{%{% endraw %} include molecule('toggler-click') with {
                                     attributes: {
                                         'trigger-selector': '.' ~ config.jsName ~ '__trigger-' ~ filter.name,
@@ -121,7 +127,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
             {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
         </div>
- 
+
         <button type="submit" class="button button--expand button--big {% raw %}{{{% endraw %} config.name ~ '__button' {% raw %}}}{% endraw %}">{% raw %}{{{% endraw %} 'catalog.filter.button' | trans {% raw %}}}{% endraw %}</button>
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
@@ -129,7 +135,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
 </details>
 ```twig
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
     products: required,
     facets: required,
@@ -138,7 +144,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
     categoryId: null,
     filterPath: null,
     viewMode: null,
- 
+
     pagination: {
         currentPage: required,
         maxPage: required,
@@ -147,17 +153,17 @@ The general look of the `page-layout-catalog.twig` template is shown below:
         showAlwaysFirstAndLast: true
     }
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} macro renderBreadcrumbSteps(categoryNode, isLastLeaf, filterPath) {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} import _self as self {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} set categoryUrl = categoryNode.url | default {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} set categoryUrl = filterPath is not empty ? url(filterPath, {categoryPath: categoryUrl}) : categoryUrl {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} set categoryLabel = categoryNode.name | default {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} set categoryParentNodes = categoryNode.parents | default {% raw %}%}{% endraw %}
- 
+
     {% raw %}{%{% endraw %} if categoryParentNodes is not empty {% raw %}%}{% endraw %}
         {% raw %}{{{% endraw %} self.renderBreadcrumbSteps(categoryParentNodes | first, false, filterPath) {% raw %}}}{% endraw %}
- 
+
         {% raw %}{%{% endraw %} if not isLastLeaf {% raw %}%}{% endraw %}
             {% raw %}{%{% endraw %} include molecule('breadcrumb-step') with {
                 data: {
@@ -168,10 +174,10 @@ The general look of the `page-layout-catalog.twig` template is shown below:
         {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endmacro {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block breadcrumbs {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} import _self as self {% raw %}%}{% endraw %}
- 
+
     {% raw %}{%{% endraw %} embed molecule('breadcrumb') with {
         embed: {
             breadcrumbs: self.renderBreadcrumbSteps(data.category, false, data.filterPath)
@@ -182,9 +188,9 @@ The general look of the `page-layout-catalog.twig` template is shown below:
         {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block contentClass {% raw %}%}{% endraw %}page-layout-main page-layout-main--catalog-page{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
     <form method="GET" class="grid grid--gap js-form-input-default-value-disabler__catalog-form page-layout-main--catalog-page-content">
         {% raw %}{%{% endraw %} block form {% raw %}%}{% endraw %}
@@ -194,7 +200,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                     'input-selector': '.js-form-input-default-value-disabler__catalog-input'
                 }
             } only {% raw %}%}{% endraw %}
- 
+
             <div class="col col--sm-12 col--lg-4 col--xl-3">
                 {% raw %}{%{% endraw %} block filterBar {% raw %}%}{% endraw %}
                     {% raw %}{%{% endraw %} include molecule('view-mode-switch', 'CatalogPage') with {
@@ -203,7 +209,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                             viewMode: data.viewMode
                         }
                     } only {% raw %}%}{% endraw %}
- 
+
                     <button class="button button--justify button--additional js-catalog-filters-trigger is-hidden-lg-xxl spacing-bottom spacing-bottom--big">
                         {% raw %}{{{% endraw %} 'catalog.filter.and.sorting.button' | trans {% raw %}}}{% endraw %}
                         {% raw %}{%{% endraw %} include atom('icon') with {
@@ -213,7 +219,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                             }
                         } only {% raw %}%}{% endraw %}
                     </button>
- 
+
                     {% raw %}{%{% endraw %} include molecule('toggler-click') with {
                         attributes: {
                             'trigger-selector': '.js-catalog-filters-trigger',
@@ -223,7 +229,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                             'class-to-fix-body': 'is-locked-mobile'
                         }
                     } only {% raw %}%}{% endraw %}
- 
+
                     {% raw %}{%{% endraw %} include organism('filter-section', 'CatalogPage') with {
                         class: 'is-hidden-sm-md',
                         data: {
@@ -234,7 +240,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                     } only {% raw %}%}{% endraw %}
                 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
             </div>
- 
+
             <div class="col col--sm-12 col--lg-8 col--xl-9">
                 <div class="grid grid--column-mob-reverse">
                     <div class="col col--sm-12">
@@ -260,7 +266,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                         } only {% raw %}%}{% endraw %}
                     </div>
                 </div>
- 
+
                 <div class="grid grid--stretch grid--gap">
                     {% raw %}{%{% endraw %} for product in data.products {% raw %}%}{% endraw %}
                         {% raw %}{%{% endraw %} widget 'CatalogPageProductWidget' args [
@@ -270,7 +276,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
                         {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
                     {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
                 </div>
- 
+
                 {% raw %}{%{% endraw %} include molecule('pagination') with {
                     data: data.pagination
                 } only {% raw %}%}{% endraw %}
@@ -316,26 +322,26 @@ When you look closer to the `filter-section.twig` template, you may notice, that
 
 ```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define config = {
     name: 'filter-section',
     tag: 'section',
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
     facets: [],
     filterPath: null,
     categories: [],
     isEmptyCategoryFilterValueVisible: null,
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} set isContentPresent = data.facets | length > 0 {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block class {% raw %}%}{% endraw %}
     {% raw %}{{{% endraw %}  parent() {% raw %}}}{% endraw %}
     {% raw %}{{{% endraw %} config.jsName {% raw %}}}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} if isContentPresent {% raw %}%}{% endraw %}
         <h3 class="{% raw %}{{{% endraw %} config.name ~ '__title' {% raw %}}}{% endraw %} is-hidden-lg-xxl">{% raw %}{{{% endraw %} 'catalog.filter.and.sorting.button' | trans {% raw %}}}{% endraw %}</h3>
@@ -346,18 +352,18 @@ When you look closer to the `filter-section.twig` template, you may notice, that
                 },
             } only {% raw %}%}{% endraw %}
         </button>
- 
+
         <div class="{% raw %}{{{% endraw %} config.name ~ '__sorting ' ~ config.jsName ~ '__sorting' {% raw %}}}{% endraw %} is-hidden-lg-xxl"></div>
         <div class="{% raw %}{{{% endraw %} config.name ~ '__holder' {% raw %}}}{% endraw %}">
             {% raw %}{%{% endraw %} for filter in data.facets {% raw %}%}{% endraw %}
                 {% raw %}{%{% endraw %} set filterHasValues = filter.values is not defined or filter.values | length > 0 {% raw %}%}{% endraw %}
                 {% raw %}{%{% endraw %} set togglerClass = '' {% raw %}%}{% endraw %}
- 
+
                 {% raw %}{%{% endraw %} if filterHasValues {% raw %}%}{% endraw %}
                     {% raw %}{%{% endraw %} block filters {% raw %}%}{% endraw %}
- 
+
                         {% raw %}{%{% endraw %} if filter.config.type == 'price-range' and can('SeePricePermissionPlugin') is empty {% raw %}%}{% endraw %}
- 
+
                         {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
                             <div class="{% raw %}{{{% endraw %} config.name ~ '__item' {% raw %}}}{% endraw %} {% raw %}{%{% endraw %} if filter.name == 'category' {% raw %}%}{% endraw %}{% raw %}{{{% endraw %} config.name ~ '__item--hollow' {% raw %}}}{% endraw %}{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}">
                                 <h6 class="{% raw %}{{{% endraw %} config.name ~ '__item-title toggler-accordion__item ' ~ config.jsName ~ '__trigger' ~ '-' ~ filter.name{% raw %}}}{% endraw %} {% raw %}{%{% endraw %} if filter.name == 'category' {% raw %}%}{% endraw %}{% raw %}{{{% endraw %} 'is-hidden-lg-xxl' {% raw %}}}{% endraw %}{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}">
@@ -373,7 +379,7 @@ When you look closer to the `filter-section.twig` template, you may notice, that
                                 {% raw %}{%{% endraw %} set contentModifier = filter.name == 'category' ? config.name ~ '__item-content--hollow' : '' {% raw %}%}{% endraw %}
                                 {% raw %}{%{% endraw %} set hiddenClassToToggleSections = filter.name == 'category' ? 'is-hidden-sm-md' : 'is-hidden' {% raw %}%}{% endraw %}
                                 {% raw %}{%{% endraw %} set toglerClass = config.name ~ '__item-content ' ~ config.jsName ~ '__' ~ filter.name ~ ' ' ~ hiddenClassToToggleSections ~ ' ' ~ contentModifier {% raw %}%}{% endraw %}
- 
+
                                 {% raw %}{%{% endraw %} include [
                                     molecule('filter-' ~ filter.config.name, 'CatalogPage'),
                                     molecule('filter-' ~ filter.config.type, 'CatalogPage'),
@@ -391,7 +397,7 @@ When you look closer to the `filter-section.twig` template, you may notice, that
                                     },
                                     class: toglerClass,
                                 } only {% raw %}%}{% endraw %}
- 
+
                                 {% raw %}{%{% endraw %} include molecule('toggler-click') with {
                                     attributes: {
                                         'trigger-selector': '.' ~ config.jsName ~ '__trigger-' ~ filter.name,
@@ -406,7 +412,7 @@ When you look closer to the `filter-section.twig` template, you may notice, that
                 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
             {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
         </div>
- 
+
         <button type="submit" class="button button--expand button--big {% raw %}{{{% endraw %} config.name ~ '__button' {% raw %}}}{% endraw %}">{% raw %}{{{% endraw %} 'catalog.filter.button' | trans {% raw %}}}{% endraw %}</button>
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
@@ -425,9 +431,9 @@ src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filte
             {% raw %}{%{% endraw %} for filter in data.facets {% raw %}%}{% endraw %}
                 {% raw %}{%{% endraw %} if filterHasValues {% raw %}%}{% endraw %}
                     {% raw %}{%{% endraw %} block filters {% raw %}%}{% endraw %}
- 
+
                         {% raw %}{%{% endraw %} if filter.config.type == 'price-range' and can('SeePricePermissionPlugin') is empty {% raw %}%}{% endraw %}
- 
+
                         {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
                             <div class="{% raw %}{{{% endraw %} config.name ~ '__item' {% raw %}}}{% endraw %} {% raw %}{%{% endraw %} if filter.name == 'category' {% raw %}%}{% endraw %}{% raw %}{{{% endraw %} config.name ~ '__item--hollow' {% raw %}}}{% endraw %}{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}">
                                 {% raw %}{%{% endraw %} include [

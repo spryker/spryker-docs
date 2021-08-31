@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/publish-and-synchronization
   - /docs/publish-and-synchronization
   - /docs/en/publish-and-synchronization
+  - /v6/docs/publish-and-synchronization
+  - /v6/docs/en/publish-and-synchronization
+  - /v5/docs/publish-and-synchronization
+  - /v5/docs/en/publish-and-synchronization
+  - /v4/docs/publish-and-synchronization
+  - /v4/docs/en/publish-and-synchronization
+  - /v3/docs/publish-and-synchronization
+  - /v3/docs/en/publish-and-synchronization
+  - /v2/docs/publish-and-synchronization
+  - /v2/docs/en/publish-and-synchronization
+  - /v1/docs/publish-and-synchronization
+  - /v1/docs/en/publish-and-synchronization
 ---
 
 To access data rapidly, a client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. The client does not have direct access to the [SQL database](/docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html) used by the back end. To keep the client data sources always up to date, all the changes made on the back end should be propagated to the front-end data sources. To do this, Spryker implements a two-step process, called Publish and Synchronize:
@@ -169,4 +181,3 @@ When a change happens in the mirror table, its **Synchronization Behavior** send
 	}
 }
 ```
-

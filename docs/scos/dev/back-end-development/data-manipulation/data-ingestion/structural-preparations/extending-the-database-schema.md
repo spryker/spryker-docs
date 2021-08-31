@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/t-extend-db-schema
   - /docs/t-extend-db-schema
   - /docs/en/t-extend-db-schema
+  - /v6/docs/t-extend-db-schema
+  - /v6/docs/en/t-extend-db-schema
+  - /v5/docs/t-extend-db-schema
+  - /v5/docs/en/t-extend-db-schema
+  - /v4/docs/t-extend-db-schema
+  - /v4/docs/en/t-extend-db-schema
+  - /v3/docs/t-extend-db-schema
+  - /v3/docs/en/t-extend-db-schema
+  - /v2/docs/t-extend-db-schema
+  - /v2/docs/en/t-extend-db-schema
+  - /v1/docs/t-extend-db-schema
+  - /v1/docs/en/t-extend-db-schema
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/extending-database-schema/-->
@@ -73,4 +85,3 @@ If you stumble upon an exception *Uncommitted migrations have been found*, you s
 ```bash
 vendor/bin/console propel:migration:delete
 ```
-

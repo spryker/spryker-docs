@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/configuring-search-query
   - /docs/configuring-search-query
   - /docs/en/configuring-search-query
+  - /v6/docs/configuring-search-query
+  - /v6/docs/en/configuring-search-query
+  - /v5/docs/configuring-search-query
+  - /v5/docs/en/configuring-search-query
+  - /v4/docs/configuring-search-query
+  - /v4/docs/en/configuring-search-query
+  - /v3/docs/configuring-search-query
+  - /v3/docs/en/configuring-search-query
+  - /v2/docs/configuring-search-query
+  - /v2/docs/en/configuring-search-query
+  - /v1/docs/configuring-search-query
+  - /v1/docs/en/configuring-search-query
 ---
 
 Once you have all the necessary data in Elasticsearch, it’s time to display it on Yves.
@@ -28,11 +40,11 @@ This is the point where configuring the query is completely up to you. Use Elast
 {% info_block infoBox %}
 The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuery(
 {% endinfo_block %}` method is called multiple times and alters the original query (see [Expanding queries](#expanding)), so make sure that it returns the same instance. This can be achieved by creating the `\Elastica\Query` instance at construction time and returning it in the `getSearchQuery()` method.)
-Besides, this new `QueryInterface ` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that would later be used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/search-migration-concept/search-migration-concept.html).
+Besides, this new `QueryInterface ` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that would later be used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
 
 <details open>
 <summary>Query</summary>
-   
+
 ```php
 <?php
 
@@ -54,7 +66,7 @@ class MatchAllQueryPlugin extends AbstractPlugin implements QueryInterface, Sear
      * @var \Elastica\Query
      */
     protected $query;
-    
+
     /**
      * @var \Generated\Shared\Transfer\SearchContextTransfer
      */
@@ -99,7 +111,7 @@ class MatchAllQueryPlugin extends AbstractPlugin implements QueryInterface, Sear
 
         return $baseQuery;
     }
-    
+
     /**
      * @return \Generated\Shared\Transfer\SearchContextTransfer
      */
@@ -217,7 +229,7 @@ To display only records which are active within a given date range, use `\Spryke
 
 The *Faceted navigation and filtering* feature allows you to re-filter search results by the specific criteria. The filters are commonly displayed on the left side of the catalog page.
 
-`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configuring the search features](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-the-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results. 
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configuring the search features](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-the-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results.
 
 {% info_block warningBox "Note" %}
 
@@ -235,7 +247,7 @@ However, if your project requires more, replace the default behavior in the prov
 
 It provides information about paginating the catalog pages and their current state.
 
-`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\PaginatedQueryExpanderPlugin` takes care of paginating your results based on the predefined configuration. 
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\PaginatedQueryExpanderPlugin` takes care of paginating your results based on the predefined configuration.
 
 {% info_block warningBox "Note" %}
 
@@ -279,7 +291,7 @@ To enable autocompletion when the user types, add some analyzers to the full-tex
 
 <details open>
 <summary>src/Pyz/Shared/Search/Schema/page.json</summary>
-   
+
 ```json
 {
   "settings": {
@@ -336,7 +348,7 @@ It’s also possible to not provide any result formatters; in this case, the raw
 
 <details open>
 <summary>Pyz\Client\Catalog\Plugin\ResultFormatter</summary>
-   
+
 ```php
 <?php
 

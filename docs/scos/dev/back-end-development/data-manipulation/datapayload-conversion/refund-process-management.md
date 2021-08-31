@@ -8,6 +8,12 @@ redirect_from:
   - /2021080/docs/en/refund-process-management
   - /docs/refund-process-management
   - /docs/en/refund-process-management
+  - /v6/docs/refund-process-management
+  - /v6/docs/en/refund-process-management
+  - /v5/docs/refund-process-management
+  - /v5/docs/en/refund-process-management
+  - /v4/docs/refund-process-management
+  - /v4/docs/en/refund-process-management
 ---
 
 {% info_block infoBox %}

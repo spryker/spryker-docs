@@ -8,6 +8,12 @@ redirect_from:
   - /2021080/docs/en/net-gross-prices-management
   - /docs/net-gross-prices-management
   - /docs/en/net-gross-prices-management
+  - /v6/docs/net-gross-prices-management
+  - /v6/docs/en/net-gross-prices-management
+  - /v5/docs/net-gross-prices-management
+  - /v5/docs/en/net-gross-prices-management
+  - /v4/docs/net-gross-prices-management
+  - /v4/docs/en/net-gross-prices-management
 ---
 
 ## Price Mode
@@ -34,7 +40,7 @@ You can use these keys in environment configuration:
   ```yaml
   $config[PriceProductConstants::DEFAULT_PRICE_TYPE] = 'DEFAULT';
   ```
- 
+
 
 - For default price mode:
 
@@ -78,10 +84,9 @@ To use it, do the following:
 
    The switch can happen only if quote have to items.
 
-   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-price.html).
-   
-   
+   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-price.html).
+
+
  {% info_block infoBox "Switching shop to Net prices:" %}
 If you want to have only NET prices shown in catalog, but proceed in cart and checkout with Gross ones, you need to override `getDefaultPriceMode` and change to `PRICE_MODE_NET` in this class:<br>`return PriceConfig::PRICE_MODE_GROSS;`
 {% endinfo_block %}
-

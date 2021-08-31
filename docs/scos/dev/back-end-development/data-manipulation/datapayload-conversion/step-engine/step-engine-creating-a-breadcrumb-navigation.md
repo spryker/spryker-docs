@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/step-engine-breadcrumb
   - /docs/step-engine-breadcrumb
   - /docs/en/step-engine-breadcrumb
+  - /v6/docs/step-engine-breadcrumb
+  - /v6/docs/en/step-engine-breadcrumb
+  - /v5/docs/step-engine-breadcrumb
+  - /v5/docs/en/step-engine-breadcrumb
+  - /v4/docs/step-engine-breadcrumb
+  - /v4/docs/en/step-engine-breadcrumb
+  - /v3/docs/step-engine-breadcrumb
+  - /v3/docs/en/step-engine-breadcrumb
+  - /v2/docs/step-engine-breadcrumb
+  - /v2/docs/en/step-engine-breadcrumb
+  - /v1/docs/step-engine-breadcrumb
+  - /v1/docs/en/step-engine-breadcrumb
 ---
 
 To set up breadcrumb navigation for a step collection, first, mark which steps you would like to have in your breadcrumb. To mark a step available for breadcrumb, implement `\Spryker\Yves\StepEngine\Dependency\Step\StepWithBreadcrumbInterface` in all the necessary steps.
@@ -15,7 +27,7 @@ To set up breadcrumb navigation for a step collection, first, mark which steps y
 The following example shows how to enable `MyStep` in the breadcrumb. The comments in each method describe their responsibilities.
 
 **Code sample**:
-   
+
 ```php
 <?php
 
@@ -66,7 +78,7 @@ class MyStep extends AbstractBaseStep implements StepWithBreadcrumbInterface
          */
         return !$this->requireInput($dataTransfer);
     }
-    
+
     // also implement AbstractBaseStep methods...
 
 }
@@ -91,4 +103,3 @@ The example below shows a template fragment how to render the breadcrumb with th
     {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 </ul>
 ```
-

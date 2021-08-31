@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/queue
   - /docs/queue
   - /docs/en/queue
+  - /v6/docs/queue
+  - /v6/docs/en/queue
+  - /v5/docs/queue
+  - /v5/docs/en/queue
+  - /v4/docs/queue
+  - /v4/docs/en/queue
+  - /v3/docs/queue
+  - /v3/docs/en/queue
+  - /v2/docs/queue
+  - /v2/docs/en/queue
+  - /v1/docs/queue
+  - /v1/docs/en/queue
 ---
 
 ## Concepts

@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/dd-checkout-implementation
   - /docs/dd-checkout-implementation
   - /docs/en/dd-checkout-implementation
+  - /v6/docs/dd-checkout-implementation
+  - /v6/docs/en/dd-checkout-implementation
+  - /v5/docs/dd-checkout-implementation
+  - /v5/docs/en/dd-checkout-implementation
+  - /v4/docs/dd-checkout-implementation
+  - /v4/docs/en/dd-checkout-implementation
+  - /v3/docs/dd-checkout-implementation
+  - /v3/docs/en/dd-checkout-implementation
+  - /v2/docs/dd-checkout-implementation
+  - /v2/docs/en/dd-checkout-implementation
+  - /v1/docs/dd-checkout-implementation
+  - /v1/docs/en/dd-checkout-implementation
 ---
 
 This article provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
@@ -15,7 +27,7 @@ This article provides instructions on how to integrate the Direct Debit payment 
 For this purpose, in Yves, add the `CheckoutDependencyInjector` to the `PaymentMethods/Dependency/Injector`. This will inject the direct debit form and handler into the `Checkout`module:
 
 **Code sample:**
-    
+
 ```php
 <?php
 

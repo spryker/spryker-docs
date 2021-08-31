@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/ht-prepayment-fe
   - /docs/ht-prepayment-fe
   - /docs/en/ht-prepayment-fe
+  - /v6/docs/ht-prepayment-fe
+  - /v6/docs/en/ht-prepayment-fe
+  - /v5/docs/ht-prepayment-fe
+  - /v5/docs/en/ht-prepayment-fe
+  - /v4/docs/ht-prepayment-fe
+  - /v4/docs/en/ht-prepayment-fe
+  - /v3/docs/ht-prepayment-fe
+  - /v3/docs/en/ht-prepayment-fe
+  - /v2/docs/ht-prepayment-fe
+  - /v2/docs/en/ht-prepayment-fe
+  - /v1/docs/ht-prepayment-fe
+  - /v1/docs/en/ht-prepayment-fe
 ---
 
 ## Form creation
@@ -19,9 +31,9 @@ In Yves, the starting point is to build a form.
 
 <details open>
 <summary>1. Adding the data provider</summary>
-    
+
 The first step is to add the data provider, inside the `Form/DataProvider/` folder:
-    
+
 ```php
 <?php
 namespace Pyz\Yves\PaymentMethods\Form\DataProvider;
@@ -275,10 +287,10 @@ Add the Twig template that will be rendered when prepayment method is selected u
     <p><strong>IBAN:</strong> [Place IBAN here..]</p>
 <p><strong>BIC:</strong> [Place BIC here..]</p>
     <p>Additional payment instructions go here...</p>
-    
+
     {% raw %}{{{% endraw %} form_widget(form.paymentmethods_prepayment) {% raw %}}}{% endraw %}
     {% raw %}{{{% endraw %} form_errors(form.paymentmethods_prepayment) {% raw %}}}{% endraw %}
-    
+
 </div>
 ```
 

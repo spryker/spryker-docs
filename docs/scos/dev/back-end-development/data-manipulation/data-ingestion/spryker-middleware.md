@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/spryker-middleware
   - /docs/spryker-middleware
   - /docs/en/spryker-middleware
+  - /v6/docs/spryker-middleware
+  - /v6/docs/en/spryker-middleware
+  - /v5/docs/spryker-middleware
+  - /v5/docs/en/spryker-middleware
+  - /v4/docs/spryker-middleware
+  - /v4/docs/en/spryker-middleware
+  - /v3/docs/spryker-middleware
+  - /v3/docs/en/spryker-middleware
+  - /v2/docs/spryker-middleware
+  - /v2/docs/en/spryker-middleware
+  - /v1/docs/spryker-middleware
+  - /v1/docs/en/spryker-middleware
 ---
 
 ## Overview
@@ -54,7 +66,7 @@ class AkeneoPimConfigurationProfilePlugin extends AbstractPlugin implements Conf
         return $this->getFactory()
             ->getAkeneoPimProcesses();
     }
- 
+
     /**
      * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\TranslatorFunction\TranslatorFunctionPluginInterface[]
      */
@@ -63,7 +75,7 @@ class AkeneoPimConfigurationProfilePlugin extends AbstractPlugin implements Conf
         return $this->getFactory()
             ->getAkeneoPimTranslatorFunctions();
     }
- 
+
     /**
      * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Validator\ValidatorPluginInterface[]
      */
@@ -96,7 +108,7 @@ You can use one of two iterators that are provided out of the box (NullIterator,
 class CategoryImportConfigurationPlugin extends AbstractPlugin implements ProcessConfigurationPluginInterface
 {
     const PROCESS_NAME = 'CATEGORY_IMPORT_PROCESS';
- 
+
     /**
      * @return string
      */
@@ -104,7 +116,7 @@ class CategoryImportConfigurationPlugin extends AbstractPlugin implements Proces
     {
         return static::PROCESS_NAME;
     }
- 
+
     /**
      * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Stream\InputStreamPluginInterface
      */
@@ -113,7 +125,7 @@ class CategoryImportConfigurationPlugin extends AbstractPlugin implements Proces
         return $this->getFactory()
             ->getCategoryImportInputStreamPlugin();
     }
- 
+
     /**
      * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Stream\OutputStreamPluginInterface
      */
@@ -122,7 +134,7 @@ class CategoryImportConfigurationPlugin extends AbstractPlugin implements Proces
         return $this->getFactory()
             ->getCategoryImportOutputStreamPlugin();
     }
- 
+
     /**
      * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Iterator\ProcessIteratorPluginInterface
      */
@@ -131,7 +143,7 @@ class CategoryImportConfigurationPlugin extends AbstractPlugin implements Proces
         return $this->getFactory()
             ->getCategoryImportIteratorPlugin();
     }
- 
+
     /**
      * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\StagePluginInterface[]
      */
@@ -140,7 +152,7 @@ class CategoryImportConfigurationPlugin extends AbstractPlugin implements Proces
         return $this->getFactory()
             ->getCategoryImportStagePluginsStack();
     }
- 
+
     /**
      * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Log\MiddlewareLoggerConfigPluginInterface
      */
@@ -149,7 +161,7 @@ class CategoryImportConfigurationPlugin extends AbstractPlugin implements Proces
         return $this->getFactory()
             ->getAkeneoPimLoggerConfigPlugin();
     }
- 
+
     /**
      * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Hook\PreProcessorHookPluginInterface[]
      */
@@ -158,7 +170,7 @@ class CategoryImportConfigurationPlugin extends AbstractPlugin implements Proces
         return $this->getFactory()
             ->getCategoryImportPreProcessorPluginsStack();
     }
- 
+
     /**
      * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Hook\PostProcessorHookPluginInterface[]
      */
@@ -207,7 +219,7 @@ use SprykerMiddleware\Zed\Process\Communication\Console\ProcessConsole;
 protected function getConsoleCommands(Container $container): array
 {
    $commands = [
-       … 
+       …
        new ProcessConsole(),
    ];
    …
@@ -226,7 +238,7 @@ class ProcessDependencyProvider extends SprykerMiddlewareProcessDependencyProvid
        $profileStack = parent::getConfigurationProfilePluginsStack();
        $profileStack[] = new PimConfigurationProfilePlugin();
        $profileStack[] = new DefaultConfigurationProfilePlugin();
- 
+
        return $profileStack;
    }
 }    
@@ -322,10 +334,10 @@ public function provideBusinessLayerDependencies(Container $container)
    $container = parent::provideBusinessLayerDependencies($container);
    $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
        $commandCollection->add(new TriggerOrderExportProcessCommand(), ‘Order/Export);
-        
+
        return $commandCollection;
    });
- 
+
    return $container;
 }
 ...
@@ -405,9 +417,9 @@ $payload = [
 					],
 				],
 			];
- 
+
 	...
- 
+
 	class TestImportMap extends AbstractMap
 	{
 		/**
@@ -422,7 +434,7 @@ $payload = [
 						foreach ($payload['values']['name'] as $name) {
 							$result[$name['locale']] = $name['name'];
 						}
- 
+
 						return $result;
 					},
 				'&values.attributes.color' => 'values.attributes.size', //DynamicMapRule
@@ -441,7 +453,7 @@ $payload = [
 					],
 			];
 		}
- 
+
 		/**
 		 * @return string
 		 */
@@ -450,9 +462,9 @@ $payload = [
 			return MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN;
 		}
 	}
- 
+
 	...
- 
+
 	$result = [
 		'categories' => [
 			'category1',
@@ -560,7 +572,7 @@ Now, you are ready to create a new validator plugin. You need to extend `Spryker
 					],
 				];
 			}
-		}	
+		}
 ```
 
 ### Translator
@@ -613,7 +625,7 @@ Use the following format to define translation rules:
 			];
 		}
 	}
- 
+
 	...
 ```
 
@@ -648,11 +660,11 @@ Check out an example of the dictionary below:
 	...
 	use SprykerMiddleware\Zed\Process\Business\Translator\Dictionary\AbstractDictionary;
 	...
- 
+
 	class ProductImportDictionary extends AbstractDictionary
 	{
 		...
- 
+
 		/**
 		 * @return array
 		 */
@@ -756,7 +768,7 @@ Check out an example of the dictionary below:
 				],
 			];
 		}
-     
+
 		...
 	}		
 ```
@@ -768,31 +780,31 @@ First of all, you need to create a business model to import data to the database
 
 ```php
 	<?php
- 
+
 	namespace Pyz\Zed\MyModule\Business\Importer;
- 
+
 	use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
 	use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface;
 	use Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface;
 	use Spryker\Zed\EventBehavior\EventBehaviorConfig;
- 
+
 	class Importer implements ImporterInterface
 	{
 		/**
 		 * @var \Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface
 		 */
 		protected $dataImporterPublisher;
- 
+
 		/**
 		 * @var \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface
 		 */
 		private $dataSetStepBroker;
- 
+
 		/**
 		 * @var \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface
 		 */
 		private $dataSet;
- 
+
 		/**
 		 * @param \Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface $dataImporterPublisher
 		 * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface $dataSetStepBroker
@@ -807,7 +819,7 @@ First of all, you need to create a business model to import data to the database
 			$this->dataSetStepBroker = $dataSetStepBroker;
 			$this->dataSet = $dataSet;
 		}
- 
+
 		/**
 		 * @param array $data
 		 *
@@ -820,7 +832,7 @@ First of all, you need to create a business model to import data to the database
 				$this->dataSet->exchangeArray($item);
 				$this->dataSetStepBroker->execute($this->dataSet);
 			}
- 
+
 			EventBehaviorConfig::enableEvent();
 			$this->dataImporterPublisher->triggerEvents();
 		}
@@ -837,11 +849,11 @@ Firstly, you need to update the business factory with the following methods:
 ```php
 	<?php
 	...
- 
+
 	class MyModuleBusinessFactory extends SprykerMyModuleBusinessFactory
 	{
 		...
-      
+
 		public function createCategoryImporter()
 		{
 			return new Importer(
@@ -850,51 +862,51 @@ Firstly, you need to update the business factory with the following methods:
 				$this->createDataSet()
 			);
 		}
- 
+
 		protected function createDataImporterPublisher()
 		{
 			return new DataImporterPublisher($this->createDataImportToEventBridge());
 		}
- 
+
 		protected function createCategoryImportDataSetStepBroker()
 		{
 			$dataSetStepBroker = new DataSetStepBroker();
 			$dataSetStepBroker->addStep($this->createCategoryWriteStep());
 			return $dataSetStepBroker;
 		}
- 
+
 		protected function createCategoryWriteStep()
 		{
 			return new CategoryWriterStep($this->createCategoryReader());
 		}
- 
+
 		protected function createCategoryReader(): CategoryReader
 		{
 			return new CategoryReader();
 		}
- 
+
 		protected function createDataSet()
 		{
 			return new DataSet();
 		}
- 
+
 		...
 	}
-  
-	...	
+
+	...
 ```
 
 So, now we can create a facade method which uses Importer.
 
 ```php
 	<?php
- 
+
 	...
- 
+
 	class MyModuleFacade extends SprykerMyModuleFacade implements MyModuleFacadeInterface
 	{
 		...
- 
+
 		/**
 		 * @param array $data
 		 *
@@ -906,7 +918,7 @@ So, now we can create a facade method which uses Importer.
 				->createCategoryImporter()
 				->import($data);
 		}
- 
+
 		...
 	}
 ```
@@ -942,7 +954,7 @@ Then, you need to add `CategoryDataImporterPlugin` to communication dependencies
 		$container[static::MY_MODULE_CATEGORY_IMPORTER_PLUGIN] = function () {
 			return new CategoryDataImporterPlugin();
 		};
- 
+
 		return $container;
 	}
 ```
@@ -958,12 +970,12 @@ To save the categories into the database you need to create your own `WriteStrea
 		 * @var \SprykerEco\Zed\MyModule\Dependency\Plugin\DataImporterPluginInterface
 		 */
 		protected $dataImporterPlugin;
- 
+
 		/**
 		 * @var array
 		 */
 		protected $data = [];
- 
+
 		/**
 		 * @param \SprykerEco\Zed\MyModule\Dependency\Plugin\DataImporterPluginInterface $dataImporterPlugin
 		 */
@@ -971,7 +983,7 @@ To save the categories into the database you need to create your own `WriteStrea
 		{
 			$this->dataImporterPlugin = $dataImporterPlugin;
 		}
- 
+
 		/**
 		 * @return bool
 		 */
@@ -980,7 +992,7 @@ To save the categories into the database you need to create your own `WriteStrea
 			$this->data = [];
 			return true;
 		}
- 
+
 		/**
 		 * @return bool
 		 */
@@ -988,7 +1000,7 @@ To save the categories into the database you need to create your own `WriteStrea
 		{
 			return true;
 		}
- 
+
 		/**
 		 * @param int $offset
 		 * @param int $whence
@@ -1001,7 +1013,7 @@ To save the categories into the database you need to create your own `WriteStrea
 		{
 			throw new MethodNotSupportedException();
 		}
- 
+
 		/**
 		 * @throws \SprykerMiddleware\Zed\Process\Business\Exception\MethodNotSupportedException
 		 *
@@ -1011,7 +1023,7 @@ To save the categories into the database you need to create your own `WriteStrea
 		{
 			throw new MethodNotSupportedException();
 		}
- 
+
 		/**
 		 * @param array $data
 		 *
@@ -1022,7 +1034,7 @@ To save the categories into the database you need to create your own `WriteStrea
 			$this->data[] = $data;
 			return 1;
 		}
- 
+
 		/**
 		 * @return bool
 		 */
@@ -1052,9 +1064,9 @@ Finally, you are ready to update process plugins:
 
 ```php
 	class MyModuleDependencyProvider {
- 
+
 	...
- 
+
 	/**
 	 * @param \Spryker\Zed\Kernel\Container $container
 	 *
@@ -1063,13 +1075,13 @@ Finally, you are ready to update process plugins:
 	protected function addCategoryImportProcessPlugins(Container $container): Container
 	{
 		...
- 
+
 		$container[static::CATEGORY_IMPORT_OUTPUT_STREAM_PLUGIN] = function () {
 			return new CategoryWriteStreamPlugin();
 		};
- 
+
 		...
- 
+
 		return $container;
 	}
 ```
@@ -1091,7 +1103,7 @@ The last step is to update Configuration plugin:
 	class CategoryImportConfigurationPlugin extends AbstractPlugin implements ProcessConfigurationPluginInterface
 	{
 		protected const PROCESS_NAME = 'CATEGORY_IMPORT_PROCESS';
- 
+
 		/**
 		 * @return string
 		 */
@@ -1099,8 +1111,8 @@ The last step is to update Configuration plugin:
 		{
 			return static::PROCESS_NAME;
 		}
- 
- 
+
+
 		/**
 		 * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Stream\OutputStreamPluginInterface
 		 */
@@ -1109,8 +1121,7 @@ The last step is to update Configuration plugin:
 			return $this->getFactory()
 				->getCategoryImportOutputStreamPlugin();
 		}
-	}	
+	}
 ```
 
 If the configuration plugin is updated accordingly, category import from `ReadStream` to `WriteStream` will be executed every time when the `CATEGORY_IMPORT_PROCESS` command is run.
-

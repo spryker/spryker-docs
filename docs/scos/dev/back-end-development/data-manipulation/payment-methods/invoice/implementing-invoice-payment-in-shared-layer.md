@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/ht-invoice-payment-fe-be-shared
   - /docs/ht-invoice-payment-fe-be-shared
   - /docs/en/ht-invoice-payment-fe-be-shared
+  - /v6/docs/ht-invoice-payment-fe-be-shared
+  - /v6/docs/en/ht-invoice-payment-fe-be-shared
+  - /v5/docs/ht-invoice-payment-fe-be-shared
+  - /v5/docs/en/ht-invoice-payment-fe-be-shared
+  - /v4/docs/ht-invoice-payment-fe-be-shared
+  - /v4/docs/en/ht-invoice-payment-fe-be-shared
+  - /v3/docs/ht-invoice-payment-fe-be-shared
+  - /v3/docs/en/ht-invoice-payment-fe-be-shared
+  - /v2/docs/ht-invoice-payment-fe-be-shared
+  - /v2/docs/en/ht-invoice-payment-fe-be-shared
+  - /v1/docs/ht-invoice-payment-fe-be-shared
+  - /v1/docs/en/ht-invoice-payment-fe-be-shared
 ---
 
 This procedure will help us to identify the new payment type through some unique constants. We are going to define those constants under the `Shared` namespace, since they’re needed both by Yves and Zed.
@@ -16,7 +28,7 @@ This procedure will help us to identify the new payment type through some unique
 
 <details open>
 <summary>Code sample:</summary>
-    
+
 ```php
 <?php
 
@@ -64,7 +76,7 @@ interface PaymentMethodsConstants
     </transfer>
     </transfers>
 ```
-    
+
 </br>
 </details>
 

@@ -7,6 +7,12 @@ redirect_from:
   - /2021080/docs/en/multi-language-setup
   - /docs/multi-language-setup
   - /docs/en/multi-language-setup
+  - /v6/docs/multi-language-setup
+  - /v6/docs/en/multi-language-setup
+  - /v5/docs/multi-language-setup
+  - /v5/docs/en/multi-language-setup
+  - /v4/docs/multi-language-setup
+  - /v4/docs/en/multi-language-setup
 ---
 
 ## Multi-Language Setup
@@ -122,7 +128,7 @@ The CSV file containing the product data that needs to be imported must contain 
 The CMS blocks and pages are able to render localized content through the use of placeholders. The placeholders have a glossary key associated. At runtime, the placeholder is replaced with the glossary value that corresponds to the current locale. Also, a static page will have a distinct URL for each locale defined in the application.
 
 {% info_block infoBox %}
-For more details on CMS, see [Defining Maximum Size of Content Fields](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-define-the-maximum-size-of-content-fields.html
+For more details on CMS, see [Defining Maximum Size of Content Fields](/docs/scos/dev/tutorials-and-howtos/{{site.version}}/howtos/howto-define-the-maximum-size-of-content-fields.html
 {% endinfo_block %}.)
 
 The CMS blocks and pages are imported through XML files. The structure of the XML file is very simple: it contains a list of blocks, each block has a template associated, a name and a list of placeholders for each locale.

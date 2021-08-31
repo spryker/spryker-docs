@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/running-reverting-db-migration
   - /docs/running-reverting-db-migration
   - /docs/en/running-reverting-db-migration
+  - /v6/docs/running-reverting-db-migration
+  - /v6/docs/en/running-reverting-db-migration
+  - /v5/docs/running-reverting-db-migration
+  - /v5/docs/en/running-reverting-db-migration
+  - /v4/docs/running-reverting-db-migration
+  - /v4/docs/en/running-reverting-db-migration
+  - /v3/docs/running-reverting-db-migration
+  - /v3/docs/en/running-reverting-db-migration
+  - /v2/docs/running-reverting-db-migration
+  - /v2/docs/en/running-reverting-db-migration
+  - /v1/docs/running-reverting-db-migration
+  - /v1/docs/en/running-reverting-db-migration
 ---
 
 Database migration allows you to update your database with the latest changes.
@@ -19,4 +31,3 @@ To revert the database migration, run
 `vendor/bin/propel migration:down --config-dir=src/Orm/Propel/STORE/Config/development`
 
 <!-- Last review date: Nov 6, 2018 by Rene Klatt, Helen Kravchenko -->
-

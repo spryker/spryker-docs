@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/ht-invoice-payment-be
   - /docs/ht-invoice-payment-be
   - /docs/en/ht-invoice-payment-be
+  - /v6/docs/ht-invoice-payment-be
+  - /v6/docs/en/ht-invoice-payment-be
+  - /v5/docs/ht-invoice-payment-be
+  - /v5/docs/en/ht-invoice-payment-be
+  - /v4/docs/ht-invoice-payment-be
+  - /v4/docs/en/ht-invoice-payment-be
+  - /v3/docs/ht-invoice-payment-be
+  - /v3/docs/en/ht-invoice-payment-be
+  - /v2/docs/ht-invoice-payment-be
+  - /v2/docs/en/ht-invoice-payment-be
+  - /v1/docs/ht-invoice-payment-be
+  - /v1/docs/en/ht-invoice-payment-be
 ---
 
 ## Checkout Plugins
@@ -23,7 +35,7 @@ Perform the following procedure:
 
 <details open>
 <summary>InvoicePreCheckPlugin</summary>
-    
+
 ```php
 <?php
 
@@ -279,10 +291,10 @@ Once the preceding procedures are completed, we’ll need to design a state mach
 </statemachine>
 
 ```
-		
+
  </br>
  </details>
- 
+
  2. Add this new state machine to `OmsConfig`:
 
 <details open>

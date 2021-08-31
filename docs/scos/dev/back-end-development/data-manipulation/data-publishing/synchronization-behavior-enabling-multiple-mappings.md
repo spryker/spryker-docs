@@ -8,12 +8,14 @@ redirect_from:
   - /2021080/docs/en/synchronization-behavior-enabling-multiple-mappings
   - /docs/synchronization-behavior-enabling-multiple-mappings
   - /docs/en/synchronization-behavior-enabling-multiple-mappings
+  - /v6/docs/synchronization-behavior-enabling-multiple-mappings
+  - /v6/docs/en/synchronization-behavior-enabling-multiple-mappings
 ---
 
 During the [Publish and Synchronization](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html) process, a unique key is generated for each resource published. Resource’s denormalized data is then saved with this key to storage for later use. To enforce keys' uniqueness for each resource entity, by default, Spryker uses database IDs of the corresponding records during the key generation.
 
  Let’s take abstract products as an example. A typical key, with which abstract product data is saved to the storage, would look something like this:
- 
+
  ```PHP
  kv:product_abstract:de:de_de:123
  ```
@@ -25,9 +27,9 @@ You can instruct Publish & Synchronize facilities to create mappings for any res
 <a name="defining"></a>
 
 ## Defining mappings
-Mappings are defined in Propel schema files. 
+Mappings are defined in Propel schema files.
 
-To illustrate the process, we’ll stick to our example abstract product and create a mapping between its ID and SKU. 
+To illustrate the process, we’ll stick to our example abstract product and create a mapping between its ID and SKU.
 
 Suppose we have an abstract product with ID *123* and SKU *xyz*. To create a mapping between SKU and ID for abstract products, we must add an extra parameter called **mappings** to the **synchronization** behavior of the resource schema definition:
 
@@ -50,7 +52,7 @@ The key with which this record is stored, looks like this:
 ```PHP
 kv:product_abstract:de:de_de:sku:xyz
 ```
-where *xyz* is the SKU of the particular product. 
+where *xyz* is the SKU of the particular product.
 
 That being done, we have mapped the product’s SKU to the product’s ID.
 
@@ -82,7 +84,7 @@ You can configure the delimiter to separate mappings by overriding `\Spryker\Zed
 
 {% endinfo_block %}
 
-For each mapping, a separate storage key is generated. 
+For each mapping, a separate storage key is generated.
 
 After this adjustment, Propel entity classes have to be rebuilt.
 {% info_block warningBox "Note" %}

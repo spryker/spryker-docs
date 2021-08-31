@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/ht-implement-prepayment
   - /docs/ht-implement-prepayment
   - /docs/en/ht-implement-prepayment
+  - /v6/docs/ht-implement-prepayment
+  - /v6/docs/en/ht-implement-prepayment
+  - /v5/docs/ht-implement-prepayment
+  - /v5/docs/en/ht-implement-prepayment
+  - /v4/docs/ht-implement-prepayment
+  - /v4/docs/en/ht-implement-prepayment
+  - /v3/docs/ht-implement-prepayment
+  - /v3/docs/en/ht-implement-prepayment
+  - /v2/docs/ht-implement-prepayment
+  - /v2/docs/en/ht-implement-prepayment
+  - /v1/docs/ht-implement-prepayment
+  - /v1/docs/en/ht-implement-prepayment
 ---
 
 {% info_block infoBox "Prepayment" %}

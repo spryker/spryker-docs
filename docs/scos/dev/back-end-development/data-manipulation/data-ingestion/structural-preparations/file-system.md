@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/filesystem
   - /docs/filesystem
   - /docs/en/filesystem
+  - /v6/docs/filesystem
+  - /v6/docs/en/filesystem
+  - /v5/docs/filesystem
+  - /v5/docs/en/filesystem
+  - /v4/docs/filesystem
+  - /v4/docs/en/filesystem
+  - /v3/docs/filesystem
+  - /v3/docs/en/filesystem
+  - /v2/docs/filesystem
+  - /v2/docs/en/filesystem
+  - /v1/docs/filesystem
+  - /v1/docs/en/filesystem
 ---
 
 The FileSystem Service provides an abstraction for file systems. It uses the same interface to access different types of file systems, regardless of their location or protocol.

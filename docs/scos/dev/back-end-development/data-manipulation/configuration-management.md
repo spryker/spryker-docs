@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/configuration-management
   - /docs/configuration-management
   - /docs/en/configuration-management
+  - /v6/docs/configuration-management
+  - /v6/docs/en/configuration-management
+  - /v5/docs/configuration-management
+  - /v5/docs/en/configuration-management
+  - /v4/docs/configuration-management
+  - /v4/docs/en/configuration-management
+  - /v3/docs/configuration-management
+  - /v3/docs/en/configuration-management
+  - /v2/docs/configuration-management
+  - /v2/docs/en/configuration-management
+  - /v1/docs/configuration-management
+  - /v1/docs/en/configuration-management
 ---
 
 A configuration file is a set of key-value pairs, properties, and methods that define how to manage and configure the settings. Spryker config is represented as a set of the files located in `/project/config/` folder of your project.
@@ -182,4 +194,4 @@ You might use the following definitions to generate related code:
 
 * `console spryk:run AddSharedConstantsInterface`
     * Adds a Shared Constants Interface
-See the [Spryk](/docs/scos/dev/sdk/{{page.version}}/development-tools/spryk-code-generator.html) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/{{site.version}}/development-tools/spryk-code-generator.html) documentation for details.

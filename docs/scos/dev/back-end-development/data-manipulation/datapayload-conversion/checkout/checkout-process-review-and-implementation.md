@@ -8,6 +8,14 @@ redirect_from:
   - /2021080/docs/en/checkout-process-review-and-implementation
   - /docs/checkout-process-review-and-implementation
   - /docs/en/checkout-process-review-and-implementation
+  - /v6/docs/checkout-process-review-and-implementation
+  - /v6/docs/en/checkout-process-review-and-implementation
+  - /v5/docs/checkout-process-review-and-implementation
+  - /v5/docs/en/checkout-process-review-and-implementation
+  - /v4/docs/checkout-process-review-and-implementation
+  - /v4/docs/en/checkout-process-review-and-implementation
+  - /v2/docs/checkout-process-review-and-implementation
+  - /v2/docs/en/checkout-process-review-and-implementation
 ---
 
 ### Checkout Process

@@ -8,18 +8,30 @@ redirect_from:
   - /2021080/docs/en/dd-be-implementation
   - /docs/dd-be-implementation
   - /docs/en/dd-be-implementation
+  - /v6/docs/dd-be-implementation
+  - /v6/docs/en/dd-be-implementation
+  - /v5/docs/dd-be-implementation
+  - /v5/docs/en/dd-be-implementation
+  - /v4/docs/dd-be-implementation
+  - /v4/docs/en/dd-be-implementation
+  - /v3/docs/dd-be-implementation
+  - /v3/docs/en/dd-be-implementation
+  - /v2/docs/dd-be-implementation
+  - /v2/docs/en/dd-be-implementation
+  - /v1/docs/dd-be-implementation
+  - /v1/docs/en/dd-be-implementation
 ---
 
 This article provides the instructions on how to implement the Direct Debit payment method and integrate it into Checkout, State Machine, and OMS on the back-end side.
 
 ## Persisting Payment Details
 
-The payment details for the Direct Debit payment method need to be persisted in the database. 
+The payment details for the Direct Debit payment method need to be persisted in the database.
 
 To persist the payment details, do the following:
 
 ### 1. Create a new table to store payment details data
-    
+
 Add the `spy_payment_direct_debit.schema.xml` file with the following content to the `Persistence/Propel/Schema/` folder in Zed:
 
 ```php
@@ -46,17 +58,17 @@ Add the `spy_payment_direct_debit.schema.xml` file with the following content to
 
     </database>
 ```
-    
+
 ### 2. Perform a database migration and generate the query object:
-    
+
 Run the following command:
-    
+
 ```bash
 vendor/bin/console propel:install
 ```
-    
+
 ### 3. Save the Direct Debit payment details in the persistence layer:
-    
+
 To do this, perform the following steps:
 
 1. Create the `PaymentMethodsPersistenceFactory` class on the persistence layer:
@@ -222,7 +234,7 @@ class DirectDebitWriter
 ```
 
 3. Implement the `PaymentMethodsBusinessFactory` to get instances for these 2 classes:
-				
+
 **Code sample:**
 
 ```php
@@ -405,7 +417,7 @@ To integrate the Direct Debit method into the checkout, you need to implement th
 To do this, perform the following steps:
 
 1. In Zed, add the following 3 plugins to the `Communication/Plugin/Checkout/` folder of the new module you've created (`PaymentMethods`).
-	
+
 **DirectDebitPreCheckPlugin**
 
 ```php

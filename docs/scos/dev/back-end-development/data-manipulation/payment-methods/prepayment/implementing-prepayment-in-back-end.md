@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/ht-prepayment-be
   - /docs/ht-prepayment-be
   - /docs/en/ht-prepayment-be
+  - /v6/docs/ht-prepayment-be
+  - /v6/docs/en/ht-prepayment-be
+  - /v5/docs/ht-prepayment-be
+  - /v5/docs/en/ht-prepayment-be
+  - /v4/docs/ht-prepayment-be
+  - /v4/docs/en/ht-prepayment-be
+  - /v3/docs/ht-prepayment-be
+  - /v3/docs/en/ht-prepayment-be
+  - /v2/docs/ht-prepayment-be
+  - /v2/docs/en/ht-prepayment-be
+  - /v1/docs/ht-prepayment-be
+  - /v1/docs/en/ht-prepayment-be
 ---
 
 To integrate the prepayment method into the checkout, we need to provide implementations for these 2 plugins:
@@ -21,7 +33,7 @@ Perform the following procedure:
 
 <details open>
 <summary>PrepaymentPreCheckPlugin</summary>
-    
+
 ```php
 <?php
 

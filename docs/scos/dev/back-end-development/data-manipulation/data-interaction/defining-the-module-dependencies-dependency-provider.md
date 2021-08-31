@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/dependency-provider
   - /docs/dependency-provider
   - /docs/en/dependency-provider
+  - /v6/docs/dependency-provider
+  - /v6/docs/en/dependency-provider
+  - /v5/docs/dependency-provider
+  - /v5/docs/en/dependency-provider
+  - /v4/docs/dependency-provider
+  - /v4/docs/en/dependency-provider
+  - /v3/docs/dependency-provider
+  - /v3/docs/en/dependency-provider
+  - /v2/docs/dependency-provider
+  - /v2/docs/en/dependency-provider
+  - /v1/docs/dependency-provider
+  - /v1/docs/en/dependency-provider
 ---
 
 Each module ships with a `DependencyProvider` class which explicitly defines services and external dependencies to other modules. For instance, when the `Cms` module requires the `Glossary` module, this needs to be configured here. The `DependencyProvider` defines dependencies for each layer. Usually you require some of these classes:
@@ -52,7 +64,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
         $container->set(static::SERVICE_UTIL_SANITIZE, function (Container $container) {
             return $container->getLocator()->utilSanitize()->service();
         });
-        
+
         return $container;
     }
 }
@@ -160,4 +172,4 @@ You might use the following definitions to generate related code:
 * Add Zed Dependency Service Interface
 * Add Client Dependency Provider
 
-See the [Spryk](/docs/scos/dev/sdk/{{page.version}}/development-tools/spryk-code-generator.html) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/{{site.version}}/development-tools/spryk-code-generator.html) documentation for details.

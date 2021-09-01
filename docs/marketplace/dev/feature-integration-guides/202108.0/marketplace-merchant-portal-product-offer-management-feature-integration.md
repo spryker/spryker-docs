@@ -21,7 +21,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/product-offer-merchant-portal-gui:"dev-master" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant-portal-product-offer-management:"dev-master" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -48,8 +48,23 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE  | EVENT   | PATH |
 | ------------- | ---- | ------ |---------------- |
-| MerchantDashboardCard      | class | Created | src/Generated/Shared/Transfer/MerchantDashboardCard      |
-| MerchantProductOfferCounts | class | Created | src/Generated/Shared/Transfer/MerchantProductOfferCounts |
+| ProductOfferTableCriteria  | class | Created | src/Generated/Shared/Transfer/ProductOfferTableCriteriaTransfer |
+| ProductOfferCollection.pagination  | property | Created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer |
+| ProductConcrete.numberOfOffers  | property | Created | src/Generated/Shared/Transfer/ProductConcreteTransfer |
+| ProductConcrete.productOfferStock  | property | Created | src/Generated/Shared/Transfer/ProductConcreteTransfer |
+| ProductOffer.productImages  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOffer.productLocalizedAttributes  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOffer.productAttributes  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOffer.createdAt  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOffer.updatedAt  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| ProductOfferCriteria.merchantIds  | property | Created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| MerchantStockCriteria.merchantReference  | property | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
+| MerchantProductOfferCounts  | class | Created | src/Generated/Shared/Transfer/MerchantProductOfferCountsTransfer |
+| Item.merchantSku  | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
+| PriceProductOfferTableCriteria  | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableCriteriaTransfer |
+| PriceProductOfferTableViewCollection  | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableViewCollectionTransfer |
+| PriceProductOfferTableView  | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableViewTransfer |
+| PriceProductOfferCriteria.volumeQuantities  | property | Created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
 
 {% endinfo_block %}
 
@@ -63,7 +78,7 @@ Activate the following plugins:
 
 | PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
 | --------------- | ------------ | ----------- | ------------ |
-| ProductOfferMerchantOrderItemTableExpanderPlugin | Adds `merchantReference` and `ProductOfferSku` to Sales tables in the `MerchantPortal`. | Marketplace Sales Merchant Portal integrated | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
+| ProductOfferMerchantOrderItemTableExpanderPlugin | Adds `merchantReference` and `ProductOfferSku` to Sales tables in the `MerchantPortal`. | Marketplace Sales Merchant Portal integrated | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\SalesMerchantPortalGui |
 
 **src/Pyz/Zed/SalesMerchantPortalGui/SalesMerchantPortalGuiDependencyProvider.php**
 
@@ -101,7 +116,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE  |
 | ---------------- | ------------- | --------- | ---------------- |
-| OffersMerchantDashboardCardPlugin | Adds Offers widget to `MerchantDashobard`. | | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin |
+| OffersMerchantDashboardCardPlugin | Adds Offers widget to `MerchantDashobard`. | | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui |
 
 **src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
 

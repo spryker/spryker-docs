@@ -8,7 +8,7 @@ This article provides details about the Table Feature Editable component in the 
 
 ## Overview
 
-Table Feature Editable is a feature of the Table Component that displays an editable cell that toggles popup with a specific component (input, select, etc.).
+Table Feature Editable is a feature of the Table Component that allows editing/adding rows of the table.
 Below you can see base config of the Editable feature, that contains next options: 
 
 `columns` - an array with config for each editable column.  

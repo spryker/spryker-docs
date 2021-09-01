@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-profile-merchant-portal-gui:"^0.3.0" --update-with-dependencies
+composer require spryker/merchant-profile-merchant-portal-gui:"^1.0.1" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -37,28 +37,3 @@ Make sure that the following modules have been installed:
 | MerchantProfileMerchantPortalGui | vendor/spryker/merchant-profile-merchant-portal-gui |
 
 {% endinfo_block %}
-
-### 2) Set up transfer objects
-
-Generate transfer changes:
-
-```bash
-console transfer:generate
-```
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes have been applied in transfer objects:
-
-| TRANSFER  | TYPE  | EVENT | PATH  |
-| ------------- | ------ | ------- | ----------------- |
-| MerchantProfile | object | Created | src/Generated/Shared/Transfer/MerchantProfile |
-
-{% endinfo_block %}
-
-### Zed translations
-
-Generate a new translation cache for Zed:
-
-```bash
-console translator:generate-cache
-```

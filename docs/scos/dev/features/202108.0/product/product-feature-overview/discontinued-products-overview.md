@@ -24,10 +24,7 @@ When a Back Office user discountinues a product, they can define the date until 
 Only [concrete products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html#abstract-and-concrete-products--variants)
 can become discontinued.
 
-{% endinfo_block %} 
-
-The schema below illustrates the relations between discontinued products, abstract and concrete products:
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-schema.png)
+{% endinfo_block %}
 
 ## Related Business User articles
 

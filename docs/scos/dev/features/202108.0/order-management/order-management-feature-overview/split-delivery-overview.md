@@ -21,9 +21,6 @@ Each shipment defines:
 In the Storefront, Split Delivery allows you, as a customer, to set different delivery addresses for the order items, specify the date when you want the items to be delivered and select shipment methods per each shipment.
 
 In the Back Office, the Split Delivery allows you, as a Back Office user, to view, update and/or create multiple shipments for an order that had originally one delivery address.
-The following scheme illustrates relations between **Shipment**, **ShipmentGui**, and **Sales** modules:
-
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Split+Delivery/split-delivery-module-relations.png)
 
 ## Split Delivery on the Storefront
 

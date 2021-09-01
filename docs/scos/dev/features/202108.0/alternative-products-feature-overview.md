@@ -16,11 +16,6 @@ For marketplace relations, alternative products are useful because for a marketp
 
 A Back Office user can add product alternatives for both abstract and concrete products in **Catalog** > **Products**.
 
-The schema below illustrates relations between the alternative products:
-<!-- Remove the following schema? It is already present in Alternative Products feature walkthrough (/docs/scos/dev/feature-walkthroughs/{{page.version}}/alternative-products-feature-walkthrough.html) -->
-
-![Database relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Alternative+Products/Alternative+Products+Feature+Overview/alternative-schema.png)
-
 All the available alternative products are shown on the abstract product details page, if one of the following occurs:
 
 * All the concrete products of the abstract one are in the "out of stock" status.

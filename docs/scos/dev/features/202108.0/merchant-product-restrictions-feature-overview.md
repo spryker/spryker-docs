@@ -14,14 +14,10 @@ At its core, the _Product Restrictions_ feature allows merchants to define the p
 
 In terms of [Merchant concept](/docs/scos/dev/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html), the **merchant** is the one who sells products on a marketplace and can set prices.
 
-The diagram below shows product restrictions relations within the Merchant concept:
+Product restrictions from a merchant to a buyer give merchants [another layer](https://documentation.spryker.com/2021080/docs/customer-access) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
 
-![product-restrictions-model.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Product+Restrictions+from+Merchant+to+Buyer/Product+Restrictions+from+Merchant+to+Buyer+Overview/product-restrictions-model.png)
-
-Product Restrictions from Merchant to Buyer give merchants [another layer](https://documentation.spryker.com/2021080/docs/customer-access) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
-
-* create a list of products;
-* hide the product information for the products (pricing, appearance in the search/filters), and limit access to a product details page.
+* Create a list of products;
+* Hide the product information for the products (pricing, appearance in the search/filters), and limit access to a product details page.
 
 Product Restriction feature works on the basis of whitelist/blacklist lists. That means that products that are added to whitelist are always shown to a customer while blacklisted products are hidden from the customer view.
 

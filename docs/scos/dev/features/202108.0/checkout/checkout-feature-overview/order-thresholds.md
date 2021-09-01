@@ -122,9 +122,6 @@ If the global minimum threshold is €400, and the minimum threshold per merchan
 
 {% endinfo_block %}
 
-The scheme below shows the relations of entities in the order thresholds functionality.  
-![context-of-the-minimum-order-value-module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Minimum+Order+Value/Minimum+Order+Value+Feature+Overview/context-of-the-minimum-order-value-module.png)
-
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|

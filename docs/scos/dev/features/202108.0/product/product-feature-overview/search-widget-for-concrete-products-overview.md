@@ -18,7 +18,8 @@ Using the search widget, online shoppers are able to find products assigned spec
 
 Here's an example of what the search widget looks like on:
 
-## Shopping Cart Page
+## Shopping Cart page
+
 ![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/shopping-cart-page.png)
 
 When the customer selects the product they can set the necessary item quantity in the **Quantity** field. If the customer adds a product that has quantity restrictions, these restrictions are automatically adjusted and the item obtains the closest valid quantity.
@@ -49,11 +50,9 @@ In comparison with Shopping Cart, for Shopping lists, the quantity that is being
 The same works for the [product restriction](https://documentation.spryker.com/2021080/docs/merchant-product-restrictions) rules: it is impossible to add blacklisted products to a shopping list, the shopper will get "No search results" message in the widget field, and only whitelisted products will be suggested in the search results in case of a whitelist.
 
 ## Quick Order page
+
 The widget allows searching the products on the quick order page too:
 ![Quick order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/quick-order-page.png)
-
-The module relations can be schematically represented in the following way:
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/module-relations.png)
 
 {% info_block warningBox "Developer guides" %}
 

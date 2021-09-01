@@ -33,9 +33,10 @@ A developer can do the following:
 * [Import content items](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importers-overview-and-implementation.html)
 * [Get content items data via API](https://documentation.spryker.com/2021080/docs/retrieving-content-item-data-201907)
 
-See [Content Items Types: Module Relations](/docs/scos/dev/features/{{page.version}}/content-items/content-item-types-module-relations.html) for more information on each content item type and module relations.
+See [Content Items feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-items-feature-walkthrough.html) for more information on each content item type and module relations.
 
 ## Content Item Widget
+
 Content Item Widget is a Twig code piece that is used to render a content item on Storefront.
 
 You can insert a content item widget into a CMS block or a CMS page by selecting a respective content item in the WYSIWYG editor drop-down menu:
@@ -45,16 +46,16 @@ You can insert a content item widget into a CMS block or a CMS page by selecting
 In the WYSIWYG editor, the inserted content item widget will not be displayed as a code piece. Instead, you will see a block with the content item widget setting.
 
 <details open>
-    <summary>Content item widget representation - the Back Office</summary>
+    <summary>Content item widget representation—the Back Office</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-item-widget-the-back-office.png)
 
 </details>
 
-After inserting the CMS block with the cotnent item widget into a published page, the content item widget will render the content item on Storefront:
+After inserting the CMS block with the content item widget into a published page, the content item widget will render the content item on Storefront:
 
 <details open>
-    <summary>Content item representation - Storefront</summary>
+    <summary>Content item representation—Storefront</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-item-storefront.png)
 
@@ -72,16 +73,16 @@ See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guide
 The content item design on Storefront depends on the template you select for the content item widget in the WYSIWYG editor. There are several content item widget templates shipped by default per each content item type.
 
 You can select a template when inserting a content item widget into a CMS block. Below, you can see the difference between the default templates for the Abstract product list content item:
-* *Product Slider for store/landing pages* :
+* *Product Slider for store/landing pages*:
 <details open>
-    <summary>Content item widget template - the Back Office</summary>
+    <summary>Content item widget template—the Back Office</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-the-back-office.png )
 
 </details>
 
 <details open>
-    <summary>Content item widget template - Storefront</summary>
+    <summary>Content item widget template—Storefront</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-storefront.png )
 
@@ -90,14 +91,14 @@ You can select a template when inserting a content item widget into a CMS block.
 * *Top Title*:
 
 <details open>
-    <summary>Content item widget template - the Back Office</summary>
+    <summary>Content item widget template—the Back Office</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/top-title-content-item-widget-template-the-back-office.png )
 
 </details>
 
 <details open>
-    <summary>Content item widget template - Storefront</summary>
+    <summary>Content item widget template—Storefront</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/top-title-content-item-widget-template-storefront.png )
 
@@ -116,7 +117,7 @@ CMS content is an item that can contain different content based on its type (ban
 Structure:
 
 *     CMS Content has the following:
-    *         Key - a unique content item identifier.
+    *         Key—a unique content item identifier.
     *         Content type and content term to identify its content type.
     *         Came and description.
 *     CMS Content Item can be toggled per Locale.

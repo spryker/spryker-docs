@@ -43,10 +43,6 @@ On the Storefront, only abstract products are displayed in the product catalog a
 
 Product variants are always a part of an abstract product. Abstract product and all its product variants share the same URL.
 
-The example on the following diagram shows the realtions between abstract products and product variants on the Storefront.
-
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/product-abstraction.png)
-
 In this example, a T-shirt, which is an abstract product, is available in sizes S, M, and L, which are three different product variants, each having its own stock. When you search *T-shirt* on the Storefront, it's the abstract product that appears as the search result. A Storefront user can only buy one of the product variants. On the *Product details* page of the abstract product, they select and add to cart one of the product variants: S, M, L.
 
 

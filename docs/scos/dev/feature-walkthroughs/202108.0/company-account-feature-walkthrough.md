@@ -31,6 +31,14 @@ The following schema illustrates relations between modules in of the business on
 
 The `BusinessOnBehalfGui` module provides the `BusinessOnBehalfGuiAttachToCompanyButtonCustomerTableActionExpanderPlugin` plugin for the `Customer` module, and `CompanyUserTableAttachToBusinessUnitActionLinksExpanderPlugin` as well as `ReplaceDeleteButtonCompanyUserTableActionLinksExpanderPlugin` plugins for the `CompanyUserG` module. Also, `BusinessOnBehalfGui` takes user information from the `CompanyUser` module.
 
+The following schema represents module relations of the Customer Login by Token feature:
+
+<div class="width-100">
+
+![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Customer+Login+by+Token/Customer+Login+by+Token+Feature+Overview/customer-login-by-token-module-relations.png)
+
+</div>
+
 ## Related Developer articles
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |

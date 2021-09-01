@@ -21,6 +21,13 @@ The following schema illustrates the module relations of the Custom Order Refere
 
 </div>
 
+The following scheme illustrates relations between **Shipment**, **ShipmentGui**, and **Sales** modules:
+
+<div class="width-100">
+
+![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Split+Delivery/split-delivery-module-relations.png)
+
+</div>
 
 ## Related Developer articles
 

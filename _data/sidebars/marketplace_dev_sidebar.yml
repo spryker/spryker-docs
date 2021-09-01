@@ -392,7 +392,11 @@ entries:
               url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
 
             - title: "Table Filter extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension.html
+              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/
+              nested:
+
+                - title: "Table Filter Tree Select"
+                  url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/table-filter-tree-select.html
 
         - title: UI components library
           nested:

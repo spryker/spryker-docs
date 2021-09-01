@@ -163,6 +163,6 @@ There are multiple standard Table Features that are shipped with the UI library:
 - `Batch Actions`—allows triggering batch/multiple actions from rows.
 - `Filters`—allows filtering the data set.
 - `Search`—allows searching within the data set.
-- `Sync State`—allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
+- [Sync State](/docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-sync-state.html) — allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
 - `Editable`—allows editing/adding rows of the table.
 - `Settings`—allows customizing columns of the table (show/hide and reorder).

@@ -8,12 +8,12 @@ This article provides details about the Table Feature Sync State component in th
 
 ## Overview
 
-Table Feature Sync State is a feature of the Table Component that syncs table state 
-with a configuration of browser address bar (sorting, filters, etc.).
+Table Feature Sync State is a feature of the Table Component that allows 
+syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
 See an example below, how to use the Sync State feature.
 
 `enabled` - will enable feature via config.   
-`tableId` - `id` of the table that will syncs with the browser address bar.
+`tableId` - `id` of the table that will sync the state of the table with browser URL.  
 
 ```html
 <spy-table [config]="{

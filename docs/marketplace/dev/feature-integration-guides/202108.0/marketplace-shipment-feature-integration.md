@@ -17,7 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Merchant feature | {{page.version}} | [Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Shipment feature | {{page.version}} | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
 
 
 ### 1) Install the required modules using Composer
@@ -25,7 +26,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-shipment --update-with-dependencies
+composer require spryker-feature/marketplace-shipment:"dev-master" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -34,8 +35,8 @@ Make sure that the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
-| MerchantShipment | spryker/merchant-shipment |
-| MerchantShipmentGui | spryker/merchant-shipment-gui |
+| MerchantShipment | vendor/spryker/merchant-shipment |
+| MerchantShipmentGui | vendor/spryker/merchant-shipment-gui |
 
 {% endinfo_block %}
 
@@ -101,7 +102,7 @@ Make sure that the following changes were applied in transfer objects:
 
 {% endinfo_block %}
 
-### 4) Setup behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

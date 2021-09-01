@@ -1,0 +1,78 @@
+---
+title: Table Column Type Dynamic
+description: This document provides details about the Table Column Type Dynamic in the Components Library.
+template: concept-topic-template
+---
+
+This document explains the Table Column Type Dynamic in the Components library.
+
+## Overview
+
+Table Column Dynamic is an Angular Component that provides a dynamic Table Column Type via the `@spryker/datasource` component.
+
+Example usage the Table Column Dynamic in the `@spryker/table` config:
+
+```html
+<spy-table [config]="{
+    ...,
+    columns: [
+      ...
+      {
+        id: 'columnId',
+        title: 'Column Title',
+        type: 'dynamic',
+        typeOptions: {
+          datasource: {
+            type: 'inline',
+            data: {
+              type: 'select',
+              typeOptions: {
+                options: [
+                  {
+                    title: 'Option dynamic 1',
+                    value: 'Option dynamic 1',
+                  },
+                  {
+                    title: 'Option dynamic 2',
+                    value: 'Option dynamic 2',
+                  },
+                ],
+              },
+            },
+          },
+        },
+      },
+      ...
+    ]
+  }"
+>
+</spy-table>
+```
+
+## Interfaces
+
+The Table Column Dynamic interface:
+
+```ts
+interface DataTransformerConfig {
+    type: string;
+    // Reserved for types that may have extra configuration
+    [extraConfig: string]: unknown;
+}
+
+interface DatasourceConfig {
+    type: string;
+    transform?: DataTransformerConfig;
+    // Specific Datasource types may have custom props
+    [k: string]: unknown;
+}
+
+interface TableColumnDynamicDatasourceConfig implements DatasourceConfig {
+    type: string;
+    [k: string]: unknown;
+}
+
+interface TableColumnDynamicConfig {
+    datasource: TableColumnDynamicDatasourceConfig;
+}
+```

@@ -8,7 +8,7 @@ This article provides details about the Table Feature Settings component in the 
 
 ## Overview
 
-Table Feature Settings is a feature of the Table Component that displays a button that triggers a popup with a table toolbar settings.
+Table Feature Settings is a feature of the Table Component that allows customizing columns of the table (show/hide and reorder).
 See an example below, how to use the Settings feature.
 
 `enabled` - will enable feature via config.  

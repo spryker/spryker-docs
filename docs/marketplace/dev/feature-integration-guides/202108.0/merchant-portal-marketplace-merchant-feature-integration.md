@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-profile-merchant-portal-gui:"^0.3.0" --update-with-dependencies
+composer require spryker/merchant-profile-merchant-portal-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -51,14 +51,48 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 | ------------- | ------ | ------- | ----------------- |
-| MerchantProfile | object | Created | src/Generated/Shared/Transfer/MerchantProfile |
+| Country | object | Created | src/Generated/Shared/Transfer/CountryTransfer |
+| CountryCollection | object | Created | src/Generated/Shared/Transfer/CountryCollectionTransfer |
+| Locale | object | Created | src/Generated/Shared/Transfer/LocaleTransfer |
+| Merchant | object | Created | src/Generated/Shared/Transfer/MerchantTransfer |
+| MerchantCriteria | object | Created | src/Generated/Shared/Transfer/MerchantCriteriaTransfer |
+| MerchantError | object | Created | src/Generated/Shared/Transfer/MerchantErrorTransfer |
+| MerchantProfile | object | Created | src/Generated/Shared/Transfer/MerchantProfileTransfer |
+| MerchantProfileAddress | object | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
+| MerchantProfileGlossaryAttributeValues | object | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer |
+| MerchantProfileLocalizedGlossaryAttributes.locale | attribute | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
+| MerchantProfileLocalizedGlossaryAttributes.merchantProfileGlossaryAttributeValues | attribute | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
+| MerchantProfileLocalizedGlossaryAttributes.fkLocale | attribute | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
+| MerchantResponse | object | Created | src/Generated/Shared/Transfer/MerchantResponseTransfer |
+| MerchantUser.idMerchantUser | attribute | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| MerchantUser.idMerchant | attribute | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| MerchantUser.merchant | attribute | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| Store | object | Created | src/Generated/Shared/Transfer/StoreTransfer |
+| StoreRelation | object | Created | src/Generated/Shared/Transfer/StoreRelationTransfer |
+| Translation | object | Created | src/Generated/Shared/Transfer/TranslationTransfer |
+| Url | object | Created | src/Generated/Shared/Transfer/UrlTransfer |
+| User | object | Created | src/Generated/Shared/Transfer/UserTransfer |
 
 {% endinfo_block %}
 
-### Zed translations
+### 3) Zed translations
 
 Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
 ```
+### 4) Configure navigation
+
+Build navigation cache
+
+Execute the following command:
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, the navigation menu of the **MerchantPortal** has **Profile** section.
+
+{% endinfo_block %}

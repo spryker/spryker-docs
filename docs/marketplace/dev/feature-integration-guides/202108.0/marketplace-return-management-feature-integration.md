@@ -32,6 +32,11 @@ Make sure that the following modules have been installed:
 | MerchantSalesReturn | spryker/merchant-sales-return |
 | MerchantSalesReturnGui | spryker/merchant-sales-return-gui |
 | MerchantSalesReturnMerchantUserGui | spryker/merchant-sales-return-merchant-user-gui |
+| MerchantSalesReturnWidget | spryker-shop/merchant-sales-return-widget |
+| SalesReturn | spryker/sales-return |
+| SalesReturnDataImport | spryker/sales-return-data-import |
+| SalesReturnPage | spryker-shop/sales-return-page |
+| SalesReturnSearch | spryker/sales-return-search |
 
 {% endinfo_block %}
 
@@ -369,12 +374,92 @@ Make sure that the following changes have been triggered in transfer objects:
 
 | TRANSFER | TYPE | EVENT  | PATH  |
 | --------- | ------- | ----- | ------------- |
-| MerchantOrderCriteria.orderItemUuids | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteria |
-| MerchantOrder.merchant | attribute | created | src/Generated/Shared/Transfer/MerchantOrderRequest |
-| MerchantOrder | class | created | src/Generated/Shared/Transfer/MerchantOrder |
-| MerchantOrderCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderCriteria |
-| ReturnCreateRequest | class | created | src/Generated/Shared/Transfer/ReturnCreateRequest |
-| Return.merchantOrders | attribute | created | src/Generated/Shared/Transfer/ReturnRequest |
+| Customer| class | created | src/Generated/Shared/Transfer/CustomerTransfer|
+| Customer.email| class | created | src/Generated/Shared/Transfer/CustomerTransfer|
+| Customer.firstName| class | created | src/Generated/Shared/Transfer/CustomerTransfer|
+| Customer.lastName| class | created | src/Generated/Shared/Transfer/CustomerTransfer|
+| Item| class | created | src/Generated/Shared/Transfer/ItemTransfer|
+| Item.uuid| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
+| Item.merchantReference| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
+| Item.merchantOrderReference| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
+| Item.fkSalesOrder| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
+| Item.isReturnable| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
+| Item.returnPolicyMessages| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
+| Item.orderReference| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
+| Item.idSalesOrderItem| attribute | created | src/Generated/Shared/Transfer/ItemTransfer|
+| Locale | class | created | src/Generated/Shared/Transfer/LocaleTransfer|
+| Merchant | class | created | src/Generated/Shared/Transfer/MerchantTransfer|
+| Merchant.merchantReference | class | created | src/Generated/Shared/Transfer/MerchantTransfer|
+| MerchantOmsTriggerRequest | class | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
+| MerchantOmsTriggerRequest.merchantOmsEventName | attribute | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
+| MerchantOmsTriggerRequest.merchantOrderItemReference | attribute | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
+| MerchantOmsTriggerRequest.merchantOrderItems | attribute | created | src/Generated/Shared/Transfer/MerchantOmsTriggerRequestTransfer |
+| MerchantOmsTriggerResponse | class | created | src/Generated/Shared/Transfer/MerchantOmsTriggerResponseTransfer |
+| MerchantOmsTriggerResponse.isSuccessful | attribute | created | src/Generated/Shared/Transfer/MerchantOmsTriggerResponseTransfer |
+| MerchantOmsTriggerResponse.message | attribute | created | src/Generated/Shared/Transfer/MerchantOmsTriggerResponseTransfer |
+| MerchantOrder | class | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
+| MerchantOrder.merchantOrderReference | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
+| MerchantOrder.merchantOrderItems | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
+| MerchantOrder.order | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
+| MerchantOrder.return | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
+| MerchantOrderCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.idOrder | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.idMerchantOrder | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.idMerchant | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.merchantOrderReference | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.orderItemUuids | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.withMerchant | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.withItems | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.withOrder | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCollection.merchantOrders | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCollectionTransfer |
+| MerchantOrderItem | class | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
+| MerchantOrderItem.state | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
+| MerchantOrderItem.manualEvents | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
+| MerchantOrderItem.idMerchantOrderItem | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
+| MerchantOrderItem.stateHistory | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
+| MerchantOrderItem.idOrderItem | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
+| MerchantOrderItemCollection | class | created | src/Generated/Shared/Transfer/MerchantOrderItemCollectionTransfer |
+| MerchantOrderItemCollection.merchantOrderItems | class | created | src/Generated/Shared/Transfer/MerchantOrderItemCollectionTransfer |
+| MerchantOrderItemCriteria | class | created | src/Generated/Shared/Transfer/MerchantOrderItemCriteriaTransfer |
+| MerchantOrderItemCriteria.merchantOrderItemIds | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemCriteriaTransfer |
+| MerchantOrderItemCriteria.orderItemIds | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemCriteriaTransfer |
+| MerchantUser | class | created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| MerchantUser.idMerchant | attribute | created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| MerchantUser.merchant | attribute | created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+| Message| class | created | src/Generated/Shared/Transfer/MessageTransfer|
+| Message.value| attribute | created | src/Generated/Shared/Transfer/MessageTransfer|
+| Order| class | created | src/Generated/Shared/Transfer/OrderTransfer|
+| Order.idSalesOrder | attribute | created | src/Generated/Shared/Transfer/OrderTransfer|
+| Order.items | attribute | created | src/Generated/Shared/Transfer/OrderTransfer|
+| Return| class | created | src/Generated/Shared/Transfer/ReturnTransfer|
+| Return.merchantSalesOrderReference| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
+| Return.returnItems| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
+| Return.merchantOrders| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
+| Return.idSalesReturn| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
+| Return.returnItems| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
+| Return.customerReference| attribute | created | src/Generated/Shared/Transfer/ReturnTransfer|
+| ReturnCreateRequest | class | created | src/Generated/Shared/Transfer/ReturnCreateRequestTransfer |
+| ReturnCreateRequest.returnItems | attribute | created | src/Generated/Shared/Transfer/ReturnCreateRequestTransfer |
+| ReturnCreateRequest.customer | attribute | created | src/Generated/Shared/Transfer/ReturnCreateRequestTransfer |
+| ReturnCreateRequest.store | attribute | created | src/Generated/Shared/Transfer/ReturnCreateRequestTransfer |
+| ReturnCollection| class | created | src/Generated/Shared/Transfer/ReturnCollectionTransfer|
+| ReturnCollection.returns| attribute | created | src/Generated/Shared/Transfer/ReturnCollectionTransfer|
+| ReturnFilter| class | created | src/Generated/Shared/Transfer/ReturnFilterTransfer|
+| ReturnFilter.returnIds| attribute | created | src/Generated/Shared/Transfer/ReturnFilterTransfer|
+| ReturnItem| class | created | src/Generated/Shared/Transfer/ReturnItemTransfer|
+| ReturnItem.orderItem| attribute | created | src/Generated/Shared/Transfer/ReturnItemTransfer|
+| ReturnItem.reason| attribute | created | src/Generated/Shared/Transfer/ReturnItemTransfer|
+| ReturnReason| class | created | src/Generated/Shared/Transfer/ReturnReasonTransfer|
+| ReturnReason.glossaryKeyReason| class | created | src/Generated/Shared/Transfer/ReturnReasonTransfer|
+| ReturnReasonCollection | class | created | src/Generated/Shared/Transfer/ReturnReasonCollectionTransfer|
+| ReturnReasonCollection.returnReasons | attribute | created | src/Generated/Shared/Transfer/ReturnReasonCollectionTransfer|
+| ReturnReasonFilter | class | created | src/Generated/Shared/Transfer/ReturnReasonFilterTransfer|
+| ReturnResponse| class | created | src/Generated/Shared/Transfer/ReturnResponseTransfer|
+| ReturnResponse.return| attribute | created | src/Generated/Shared/Transfer/ReturnResponseTransfer|
+| ReturnResponse.isSuccessful| attribute | created | src/Generated/Shared/Transfer/ReturnResponseTransfer|
+| ReturnResponse.messages| attribute | created | src/Generated/Shared/Transfer/ReturnResponseTransfer|
+| StateMachineItem| class | created | src/Generated/Shared/Transfer/StateMachineItemTransfer|
+| StateMachineItem.stateName| class | created | src/Generated/Shared/Transfer/StateMachineItemTransfer|
 
 {% endinfo_block %}
 
@@ -429,6 +514,8 @@ Enable the following behaviors by adding and registering the plugins:
 | ShipByMerchantMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | ShipReturnMarketplaceOrderItemCommandPlugin | Triggers 'ship-return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
 | MerchantReturnCreateTemplatePlugin |  Replace the template, that renders item table on return create page in Zed. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget`. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
+| MerchantSalesReturnCreateFormWidget |  Provides "Create Return" only with the items of one merchant order at a time and only for the returnable items. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnDependencyProvider.php</summary>
@@ -941,13 +1028,63 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 
 </details>
 
+
+<details>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\MerchantSalesReturnWidget\Plugin\MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin;
+use SprykerShop\Yves\MerchantSalesReturnWidget\Widget\MerchantSalesReturnCreateFormWidget;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return string[]
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+              MerchantSalesReturnCreateFormWidget::class,
+        ];
+    }
+
+    /**
+     * @return \SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface[]
+     */
+    protected function getWidgetCacheKeyGeneratorStrategyPlugins(): array
+    {
+        return [
+            new MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin(),
+        ];
+    }
+}
+```
+
+</details>
+
+{% info_block warningBox "Verification" %}
+
+<!--Describe how a developer can check they have completed the step correctly.-->
+
+Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
+
+| WIDGET | VERIFICATION |
+| ---------------- | ----------------- |
+| MerchantSalesReturnCreateFormWidget | Go through the Return flow in the same way as now by clicking the **Create Return** button on the top of the *Order Details* page. Go to the *Create Return* page and create a return only with the items of one merchant order at a time and only for returnable items. |
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that when you create and process return for merchant order items, it's statuses synced between state machines in the following way:
 
-| Marketplace SM	  | Default Merchant SM	 | Main Merchant SM
+| Marketplace SM     | Default Merchant SM     | Main Merchant SM
 | -------- | ------------------- | ---------- |
 | Used by Operator	 | Used by 3rd-party Merchant	 | Used by Main Merchant
 | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return	  | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return	 | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return
@@ -1017,9 +1154,8 @@ class SalesReturnConfig extends SprykerSalesReturnConfig
 
 </details>
 
-
 ### 6) Configure navigation
-Add product offers section to marketplace section of `navigation.xml`:
+Add marketplace section to `navigation.xml`:
 
 **config/Zed/navigation.xml**
 
@@ -1027,8 +1163,12 @@ Add product offers section to marketplace section of `navigation.xml`:
 <?xml version="1.0"?>
 <config>
     <sales>
+        <label>Sales</label>
+        <uri>/sales</uri>
+        <title>Sales</title>
+        <icon>fa-shopping-cart</icon>
         <pages>
-           <merchant-sales-return>
+            <merchant-sales-return>
                 <label>My Returns</label>
                 <title>My Returns</title>
                 <bundle>merchant-sales-return-merchant-user-gui</bundle>
@@ -1039,6 +1179,9 @@ Add product offers section to marketplace section of `navigation.xml`:
         </pages>
     </sales>
     <marketplace>
+        <label>Marketplace</label>
+        <title>Marketplace</title>
+        <icon>fa-shopping-basket</icon>
         <pages>
             <returns>
                 <label>Returns</label>
@@ -1060,96 +1203,14 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Returns** as well as **Sales->My Returns** menu items.
+Make sure that, in the navigation menu of the Back Office, you can see the **Returns** button in **Marketplace** section and **My Returns** button in **Sales** section.
 
 {% endinfo_block %}
 
 
 ## Install feature front end
 
-Follow the steps below to install the Marketplace return management feature front end.
-
-### 1) Install required modules using Сomposer
-
-<!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
-
-Install the required modules:
-
-```bash
-composer require spryker-feature/marketplace-return-management --update-with-dependencies
-```
-
-{% info_block warningBox "Verification" %}
-
-<!--Describe how a developer can check they have completed the step correctly.-->
-
-Make sure that the following modules have been installed:
-
-| MODULE  | EXPECTED DIRECTORY <!--for public Demo Shops--> |
-| -------- | ------------------- |
-| MerchantSalesReturnWidget | spryker-shop/merchant-sales-return-widget |
-
-{% endinfo_block %}
-
-### 2) Set up widgets
-
-<!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->
-
-Set up widgets as follows:
-
-1. Register the following plugins to enable widgets:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE   |
-| --------------- | -------------- | ------ | -------------- |
-| MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget`. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
-| MerchantSalesReturnCreateFormWidget |  Provides "Create Return" only with the items of one merchant order at a time and only for the returnable items. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
-
-
-```php
-<?php
-
-namespace Pyz\Yves\ShopApplication;
-
-use SprykerShop\Yves\MerchantSalesReturnWidget\Plugin\MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin;
-use SprykerShop\Yves\MerchantSalesReturnWidget\Widget\MerchantSalesReturnCreateFormWidget;
-
-class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{
-    /**
-     * @return string[]
-     */
-    protected function getGlobalWidgets(): array
-    {
-        return [
-              MerchantSalesReturnCreateFormWidget::class,
-        ];
-    }
-
-    /**
-     * @return \SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface[]
-     */
-    protected function getWidgetCacheKeyGeneratorStrategyPlugins(): array
-    {
-        return [
-            new MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-<!--Describe how a developer can check they have completed the step correctly.-->
-
-Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
-
-| WIDGET | VERIFICATION |
-| ---------------- | ----------------- |
-| MerchantSalesReturnCreateFormWidget | Go through the Return flow in the same way as now by clicking the **Create Return** button on the top of the *Order Details* page. Go to the *Create Return* page and create a return only with the items of one merchant order at a time and only for returnable items. |
-
-{% endinfo_block %}
-
-2. Enable Javascript and CSS changes:
+1. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

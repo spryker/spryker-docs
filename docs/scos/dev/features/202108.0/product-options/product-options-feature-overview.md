@@ -26,6 +26,7 @@ With the feature in the Back Office, you can create, update, activate or deactiv
 In the Storefront, customers can select and add options to products on the product detail page.
 
 ## Product Options in the Back Office
+
 In the Back Office, you can perform the following actions on product options:
 
 * create a product option
@@ -49,23 +50,27 @@ Each product option group may contain as many product options as you need. For e
 {% endinfo_block %}
 
 ## Product Options in the Storefront
+
 On the product detail page, the new product option group (1) will be displayed as a drop-down list with the option values (2).
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-yves.png)
 
 For more information about what other actions customers can perform on the product detail page, see [Shop Guide - Managing Products](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-managing-products.html).
 
-## Current Constraints
+## Current constraints
+
 {% info_block infoBox %}
+
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
+
 {% endinfo_block %}
 
-* product options are available in all the stores where the corresponding concrete product is available
-* unlike cart, shopping list does not support product options
-* if you add a product with an option to shopping list, the product option gets discarded
-* you cannot define product option prices in a per-merchant manner
-* if you create a product option, the price will be the same for all merchants
-* unlike other prices in Spryker, product option price is not bound to any of the available price types (DEFAULT or ORIGINAL)
+* Product options are available in all the stores where the corresponding concrete product is available
+* Unlike cart, shopping list does not support product options
+* If you add a product with an option to shopping list, the product option gets discarded
+* You cannot define product option prices in a per-merchant manner
+* If you create a product option, the price will be the same for all merchants
+* Unlike other prices in Spryker, product option price is not bound to any of the available price types (DEFAULT or ORIGINAL)
 
 
 

@@ -14,7 +14,7 @@ To learn more about the feature and to find out how end users use it, see [Conte
 
 | INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|
-| Content Items feature integration |  ContentBanner migration guide | Retrieving abstract product list content items | File details: content_banner.csv | HowTo - Create a custom content item | [Content item types: module relations](docs\scos\dev\feature-walkthroughs\202108.0\content-items-feature-walkthrough\content-item-types-module-relations.md)  |  |
+| Content Items feature integration |  ContentBanner migration guide | Retrieving abstract product list content items | File details: content_banner.csv | HowTo - Create a custom content item | [Content item types: module relations](/docs/scos/dev/feature-walkthroughs/202108.0/content-items-feature-walkthrough/content-item-types-module-relations.html)  |  |
 | Glue API: Content items API feature integration | Content migration guide | Retrieving banner content items | File details: content_navigation.csv |  |  |
 |  | ContentBannerGui migration guide |  | File details: content_product_abstract_list.csv |  |  |
 |  | ContentStorage migration guide |  | File details: content_product_set.csv |  |  |

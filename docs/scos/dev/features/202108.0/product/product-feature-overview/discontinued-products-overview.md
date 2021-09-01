@@ -20,8 +20,11 @@ A *discontinued product* is a product which is no longer produced by its manufac
 When a Back Office user discountinues a product, they can define the date until which the product is displayed in the shop. Discontinued products have a certain period of time when they will still be shown on the website (active_until). This may be usefule, for example, when a product was discontinued but it's still in stock in the shop. On the define date, the product becomes inactive.
 
 {% info_block warningBox %}
-Only [concrete products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html#abstract-and-concrete-products--variants-
-{% endinfo_block %} can become discontinued.)
+
+Only [concrete products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html#abstract-and-concrete-products--variants)
+can become discontinued.
+
+{% endinfo_block %} 
 
 The schema below illustrates the relations between discontinued products, abstract and concrete products:
 ![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-schema.png)

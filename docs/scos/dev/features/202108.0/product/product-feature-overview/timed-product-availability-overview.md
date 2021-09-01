@@ -12,15 +12,18 @@ redirect_from:
 
 Timed product availability, or product TTL (Time to Live) allows you to define when your products are available online and when they are not. To get the main idea of the TTL, go to the general feature overview for more detailed information on how it works as well as familiarize yourself with its usage scenarios.
 
-The Timed Product Availability feature is implemented through the `isActive` field by introducing two more fields for product concretes in the Back Office - **Valid from** and **Valid to**. A product can have exactly one "life" - one (or no) start, one (or no) end. If the **Valid from** date has not come yet, or if **Valid to** has been reached, the value of isActive field is set to `false` and the product is invisible for customers. This being said, the product validity settings overrule manual (de)activation of products.
+The Timed Product Availability feature is implemented through the `isActive` field by introducing two more fields for product concretes in the Back Office—**Valid from** and **Valid to**. A product can have exactly one "life"—one (or no) start, one (or no) end. If the **Valid from** date has not come yet, or if **Valid to** has been reached, the value of isActive field is set to `false` and the product is invisible for customers. This being said, the product validity settings overrule manual (de)activation of products.
 
 {% info_block infoBox %}
+
 Which means that, if, for example, the following **conditions** are met: <br>* a product has been manually set to *Deactivated* <br> * this product has **Valid from** and **Valid to** values specified<br> * **Valid to** date lies in the future<br>The **result** is: the product will be displayed until after the time set in "Valid to" field.<br>To deactivate the product in this case, it would be necessary to clear the values in the **Valid from** and **Valid to** fields.
+
 {% endinfo_block %}
 
 Time set for the product validity **Valid from** and **Valid to** fields is accurate up to the minute. However, technically it is possible to change the accuracy (up to the second or up to the days) via a cronjob. The time is set in GMT by default.
 
-## Use Cases
+## Use cases
+
 The table below shows possible usage scenarios with the TTL feature and resulting system behavior.
 
 | VALIDITY DATES SETTINGS | RESULT |

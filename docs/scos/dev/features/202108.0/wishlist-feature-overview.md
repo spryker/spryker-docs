@@ -47,6 +47,7 @@ Specifically, the customer can:
 <!--- ![Multiple wishlists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/multiple_wishlists.gif)-->
 
 ## The Wishlist feature on the Storefront
+
 Buyers can do the following actions using the Wishlists feature:
 <details>
 <summary>Create, rename, and edit a wishlist </summary>

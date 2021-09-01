@@ -47,6 +47,7 @@ The cart rule is applied automatically. If the decision rules of a discount are 
 See [Creating a Cart Rule](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-a-cart-rule.html) to learn how a product catalog manager can create a cart rule in the Back Office.
 
 ### Decision rule
+
 A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied.
 
 A discount can have one or more decision rules. Find an exemplary combination below:

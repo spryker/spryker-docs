@@ -23,7 +23,7 @@ To start feature integration, integrate the required features:
 
 Install the required modules:
 ```bash
-composer require spryker/merchant-product-offers-rest-api:"^0.4.0" --update-with-dependencies
+composer require spryker/merchant-product-offers-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -53,7 +53,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) nable resources and relationships
+### 3) Anable resources and relationships
 
 Activate the following plugins:
 

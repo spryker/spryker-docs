@@ -7,9 +7,21 @@ redirect_from:
   - /2021080/docs/en/t-create-component
   - /docs/t-create-component
   - /docs/en/t-create-component
+  - /v6/docs/t-create-component
+  - /v6/docs/en/t-create-component
+  - /v5/docs/t-create-component
+  - /v5/docs/en/t-create-component
+  - /v4/docs/t-create-component
+  - /v4/docs/en/t-create-component
+  - /v3/docs/t-create-component
+  - /v3/docs/en/t-create-component
+  - /v2/docs/t-create-component
+  - /v2/docs/en/t-create-component
+  - /v1/docs/t-create-component
+  - /v1/docs/en/t-create-component
 ---
 
-As Spryker Shop implements the [Component Model](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html#component-model), adding new functionality to it usually means implementing a new component. In this document, we shall review creation of a new component on the example of a simple block that displays the count of DOM elements of a certain type. To implement it:
+As Spryker Shop implements the [Component Model](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#component-model), adding new functionality to it usually means implementing a new component. In this document, we shall review creation of a new component on the example of a simple block that displays the count of DOM elements of a certain type. To implement it:
 
 ## 1. Create Component Folder
 First of all, you need to create a folder on the file system where all component files will be located. By default, project level components are located under `src/Pyz/Yves/ShopUi/Theme/default/components`. This folder should contain subfolders for each component type (_atoms_, _molecules_, _organisms_). A links counter is a simple molecule, so it will be created under the **molecules** subfolder. Per naming conventions, the folder name follows [Kebab Case](http://wiki.c2.com/?KebabCase): `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/new-component-counter`.
@@ -150,7 +162,7 @@ Open file `new-component-counter.scss` file and add the following code:
 ```
 
 {% info_block infoBox %}
-As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer
+As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer
 {% endinfo_block %} section in _Atomic Frontend_.)
 
 Also, the styles must be locatable by Webpack. For this purpose, we need to add them to the entry point of the component. Open the `index.ts` file and add the following line:
@@ -187,16 +199,16 @@ export default class NewComponentCounter extends Component {
 
     protected readyCallback(): void {
         this.counter = <HTMLElement>document.querySelector(`.${this.jsName}__counter`);
-        this.elements = <HTMLElement[]>Array.from(document.querySelectorAll(this.elementSelector)); 
-        this.count(); 
+        this.elements = <HTMLElement[]>Array.from(document.querySelectorAll(this.elementSelector));
+        this.count();
     }
-    
-    count(): void { 
-        this.counter.innerText = `${this.elements.length}`; 
-    } 
-    
+
+    count(): void {
+        this.counter.innerText = `${this.elements.length}`;
+    }
+
     get elementSelector(): string {
-        return this.getAttribute('element-selector'); 
+        return this.getAttribute('element-selector');
     }
 }
 ```
@@ -246,7 +258,7 @@ When done, you can include it into other components, views and templates.
 
 <details open>
 <summary>See resulting file (page-layout-main.twig)</summary>
-    
+
 ```twig
 {% raw %}{%{% endraw %} extends template('page-blank') {% raw %}%}{% endraw %}
 
@@ -334,13 +346,10 @@ When done, you can include it into other components, views and templates.
     {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-    
+
 </br>
 </details>
-    
+
 Now, open the front page of Spryker Shop. The new component will appear on the top of the page, below the header.
 
 ![New component counter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-component-counter.png){height="" width=""}
-
-
-

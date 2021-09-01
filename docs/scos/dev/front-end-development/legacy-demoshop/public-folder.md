@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/public-folder
   - /docs/public-folder
   - /docs/en/public-folder
+  - /v6/docs/public-folder
+  - /v6/docs/en/public-folder
+  - /v5/docs/public-folder
+  - /v5/docs/en/public-folder
+  - /v4/docs/public-folder
+  - /v4/docs/en/public-folder
+  - /v3/docs/public-folder
+  - /v3/docs/en/public-folder
+  - /v2/docs/public-folder
+  - /v2/docs/en/public-folder
+  - /v1/docs/public-folder
+  - /v1/docs/en/public-folder
 ---
 
 To publish means to place the built assets in a place where they can be accessed and loaded by the browser.

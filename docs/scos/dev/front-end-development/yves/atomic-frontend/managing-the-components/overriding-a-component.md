@@ -7,6 +7,18 @@ redirect_from:
   - /2021080/docs/en/t-override-component
   - /docs/t-override-component
   - /docs/en/t-override-component
+  - /v6/docs/t-override-component
+  - /v6/docs/en/t-override-component
+  - /v5/docs/t-override-component
+  - /v5/docs/en/t-override-component
+  - /v4/docs/t-override-component
+  - /v4/docs/en/t-override-component
+  - /v3/docs/t-override-component
+  - /v3/docs/en/t-override-component
+  - /v2/docs/t-override-component
+  - /v2/docs/en/t-override-component
+  - /v1/docs/t-override-component
+  - /v1/docs/en/t-override-component
 ---
 
 If the implementation of any of the components shipped with Spryker frontend does not suite your needs, you can override it with a component of your own. The following article shows how to override a molecule called **simple-carousel**. By default, the component is used, for example, to display product suggestions at the bottom of the page.
@@ -38,7 +50,7 @@ As we are not going to change the component template, let us copy the whole of t
 
 <details open>
 <summary>simple-carousel.twig</summary>
-    
+
 ```
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
 
@@ -113,7 +125,7 @@ As we are not going to change the component template, let us copy the whole of t
     </div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-    
+
 </br>
 </details>
 
@@ -174,7 +186,7 @@ After implementing the component behavior, let us bond it to the DOM element tha
 ```Javascript
 // Import the 'register' function from the Shop Application
 import register from 'ShopUi/app/registry';
- 
+
 // Register the component
 export default register(
     'simple-carousel',

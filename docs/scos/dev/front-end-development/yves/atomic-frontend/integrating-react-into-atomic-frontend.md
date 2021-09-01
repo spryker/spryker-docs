@@ -7,6 +7,14 @@ redirect_from:
   - /2021080/docs/en/integrating-react-into-atomic-frontend
   - /docs/integrating-react-into-atomic-frontend
   - /docs/en/integrating-react-into-atomic-frontend
+  - /v6/docs/integrating-react-into-atomic-frontend
+  - /v6/docs/en/integrating-react-into-atomic-frontend
+  - /v5/docs/integrating-react-into-atomic-frontend
+  - /v5/docs/en/integrating-react-into-atomic-frontend
+  - /v4/docs/integrating-react-into-atomic-frontend
+  - /v4/docs/en/integrating-react-into-atomic-frontend
+  - /v3/docs/integrating-react-into-atomic-frontend
+  - /v3/docs/en/integrating-react-into-atomic-frontend
 ---
 
 This guide aims to illustrate how to integrate React within Spryker frontend.
@@ -18,8 +26,8 @@ This guide aims to illustrate how to integrate React within Spryker frontend.
     ```bash
     npm install react react-dom @types/react @types/react-dom --save
     ```
-    
-    
+
+
 {% info_block warningBox %}
 `./package.json` is updated as follows:
 {% endinfo_block %}
@@ -37,8 +45,8 @@ This guide aims to illustrate how to integrate React within Spryker frontend.
 
 2. Update webpack configuration.
 			React relies on `.jsx` (or `.tsx`) files. As they must be specifically transpiled into Javascript, you need to tell Webpack to read them. Add the following to `./frontend/configs/development.js`:
-            
-            
+
+
 ```php
 resolve: {
   extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.scss'], // add .jsx and tsx here
@@ -69,7 +77,7 @@ module: {
 }
 ```
 
-4. Add the following lines to  `./src/Pyz/Yves/ShopUi/Theme/default/vendor.ts` to make sure that React is included into the final output:	
+4. Add the following lines to  `./src/Pyz/Yves/ShopUi/Theme/default/vendor.ts` to make sure that React is included into the final output:
 
 ```php
 import 'react';
@@ -83,7 +91,7 @@ By doing this, Webpack will know to place React source code inside the vendor ch
     a. Create the example folder `./src/Pyz/Yves/ShopUi/Theme/default/components/molecules/react-component`.
     b. In this folder, create 2 files:
       * `index.ts` - will be used as the component entry point, automatically globbed by the application and injected into the DOM;
-      
+
     ```php
     import(/* webpackMode: "lazy" */'./react-component');
     ```

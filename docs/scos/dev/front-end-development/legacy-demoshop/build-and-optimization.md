@@ -8,9 +8,21 @@ redirect_from:
   - /2021080/docs/en/build-optimization
   - /docs/build-optimization
   - /docs/en/build-optimization
+  - /v6/docs/build-optimization
+  - /v6/docs/en/build-optimization
+  - /v5/docs/build-optimization
+  - /v5/docs/en/build-optimization
+  - /v4/docs/build-optimization
+  - /v4/docs/en/build-optimization
+  - /v3/docs/build-optimization
+  - /v3/docs/en/build-optimization
+  - /v2/docs/build-optimization
+  - /v2/docs/en/build-optimization
+  - /v1/docs/build-optimization
+  - /v1/docs/en/build-optimization
 ---
 
-We use [Webpack](https://webpack.js.org/) and [Oryx](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-builder-overview-and-setup.html) for transpiling/building the assets and to optimize the resulting output.
+We use [Webpack](https://webpack.js.org/) and [Oryx](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html) for transpiling/building the assets and to optimize the resulting output.
 
 For more on **Webpack** build process and requirements see:
 
@@ -21,11 +33,11 @@ For more on **Webpack** build process and requirements see:
 
 Learn more about Spryker **Oryx** frontend helper:
 
-* [Oryx documentation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-builder-overview-and-setup.html) 
-* [Oryx for Zed documentation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-builder-overview-and-setup.html-for-zed)
+* [Oryx documentation](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html)
+* [Oryx for Zed documentation](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html-for-zed)
 
 ## Automatic loading for Webpack Entry Points
- [Oryx's globbing system](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-builder-overview-and-setup.html#find--), enables Webpack to automatically find and load entry points. 
+ [Oryx's globbing system](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html#find--), enables Webpack to automatically find and load entry points.
 
 ### Yves
 On a project level, you can pass your own entry points directly in the Webpack configuration. We recommend also using `theoryx.find()` API to import any Yves related code. This way, you will get every frontend feature developed in the core (i.e. payments method UI).
@@ -52,11 +64,11 @@ const webpackConfiguration = {
 `**/Yves/**/*.entry.js` is the default pattern for Yves automatic inclusion: every filename endings with `.entry.js` and contained in a parent folder called Yves will be included by webpack into the build process.
 
 ### Zed
-Zed frontend is fully managed by Oryx for Zed. It relies on the  `oryx.find()` API to automatically globb the entry point files across the project. 
+Zed frontend is fully managed by Oryx for Zed. It relies on the  `oryx.find()` API to automatically globb the entry point files across the project.
 
-To add or change entry points in Zed, [extend the Oryx for Zed Webpack configuration](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-builder-overview-and-setup.html-for-zed#extend-change-settings).
+To add or change entry points in Zed, [extend the Oryx for Zed Webpack configuration](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html-for-zed#extend-change-settings).
 
 For more about Zed assets management:
 
-* [Oryx globbing system](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-builder-overview-and-setup.html#find--) 
-* [Oryx for Zed API](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-builder-overview-and-setup.html-for-zed#api)
+* [Oryx globbing system](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html#find--)
+* [Oryx for Zed API](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html-for-zed#api)

@@ -8,9 +8,11 @@ redirect_from:
   - /2021080/docs/en/сustomization-example-b2b-product-details-page
   - /docs/сustomization-example-b2b-product-details-page
   - /docs/en/сustomization-example-b2b-product-details-page
+  - /v6/docs/сustomization-example-b2b-product-details-page
+  - /v6/docs/en/сustomization-example-b2b-product-details-page
 ---
 
-In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html#b2b-demo-shop) into separate elements with their respective style files. To customize a particular element, you adjust the code in the respective style file. 
+In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html#b2b-demo-shop) into separate elements with their respective style files. To customize a particular element, you adjust the code in the respective style file.
 
 You can see the [full version of this page](https://www.de.b2b.demo-spryker.com/en/soennecken-permanentmarker-4mm-rundspitze-M22663) in our B2B Demo Shop.
 
@@ -42,9 +44,3 @@ You can see the [full version of this page](https://www.de.b2b.demo-spryker.com/
 | 15 | project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.scss </br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.scss </br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-average-display/review-average-display.scss </br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-distribution-display/review-distribution-display.scss |
 | 16 | project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review/review.scss |
 | 17 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/pagination/pagination.scss |
-
-
-
-
-
-

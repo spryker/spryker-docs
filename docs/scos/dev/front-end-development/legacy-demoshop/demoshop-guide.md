@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/demoshop-guide
   - /docs/demoshop-guide
   - /docs/en/demoshop-guide
+  - /v6/docs/demoshop-guide
+  - /v6/docs/en/demoshop-guide
+  - /v5/docs/demoshop-guide
+  - /v5/docs/en/demoshop-guide
+  - /v4/docs/demoshop-guide
+  - /v4/docs/en/demoshop-guide
+  - /v3/docs/demoshop-guide
+  - /v3/docs/en/demoshop-guide
+  - /v2/docs/demoshop-guide
+  - /v2/docs/en/demoshop-guide
+  - /v1/docs/demoshop-guide
+  - /v1/docs/en/demoshop-guide
 ---
 
 ## Bootstrap the project

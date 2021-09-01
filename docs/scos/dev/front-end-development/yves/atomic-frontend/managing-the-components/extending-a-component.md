@@ -7,9 +7,21 @@ redirect_from:
   - /2021080/docs/en/t-extend-component
   - /docs/t-extend-component
   - /docs/en/t-extend-component
+  - /v6/docs/t-extend-component
+  - /v6/docs/en/t-extend-component
+  - /v5/docs/t-extend-component
+  - /v5/docs/en/t-extend-component
+  - /v4/docs/t-extend-component
+  - /v4/docs/en/t-extend-component
+  - /v3/docs/t-extend-component
+  - /v3/docs/en/t-extend-component
+  - /v2/docs/t-extend-component
+  - /v2/docs/en/t-extend-component
+  - /v1/docs/t-extend-component
+  - /v1/docs/en/t-extend-component
 ---
 
-With the idea of [atomic design](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html) implemented in Spryker frontend, you have the possibility to develop each functional element of user interface in a self-contained, isolated container called a component. The frontend design allows you not only to [create components](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html) on your own, but also [replace](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/managing-the-components/extending-a-component.html) any of them with a component that suits your needs better. But what if you do not want to replace a component? You can create a new component on the basis of an existing one. In this case, you will be able to use both the new component and the source one at the same time.
+With the idea of [atomic design](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html) implemented in Spryker frontend, you have the possibility to develop each functional element of user interface in a self-contained, isolated container called a component. The frontend design allows you not only to [create components](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html) on your own, but also [replace](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html) any of them with a component that suits your needs better. But what if you do not want to replace a component? You can create a new component on the basis of an existing one. In this case, you will be able to use both the new component and the source one at the same time.
 
 Let us review the process of extending a component on the example of **side-drawer**. This component appears in Spryker Shop only on mobile screens. You can access it by clicking the menu button.
 
@@ -153,5 +165,3 @@ Now, whenever you access a page with a side drawer in Spryker Shop, you will ge
 Also, the drawer itself has a new outlook.
 
 ![New side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-side-drawer.png){height="" width=""}
-
-

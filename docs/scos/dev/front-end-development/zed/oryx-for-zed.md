@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/oryx-for-zed
   - /docs/oryx-for-zed
   - /docs/en/oryx-for-zed
+  - /v6/docs/oryx-for-zed
+  - /v6/docs/en/oryx-for-zed
+  - /v5/docs/oryx-for-zed
+  - /v5/docs/en/oryx-for-zed
+  - /v4/docs/oryx-for-zed
+  - /v4/docs/en/oryx-for-zed
+  - /v3/docs/oryx-for-zed
+  - /v3/docs/en/oryx-for-zed
+  - /v2/docs/oryx-for-zed
+  - /v2/docs/en/oryx-for-zed
+  - /v1/docs/oryx-for-zed
+  - /v1/docs/en/oryx-for-zed
 ---
 
 ## Introduction
@@ -26,7 +38,7 @@ Open the terminal, go to your project root folder and type:
 
 ```bash
 npm install @spryker/oryx-for-zed --save-dev
-# or 
+# or
 yarn add @spryker/oryx-for-zed --dev
 ```
 
@@ -60,13 +72,13 @@ Open the terminal and type:
 
 ```
 npm run build-zed
-# or 
+# or
 yarn run build-zed
 ```
 
 ### Extend/change settings
 
-Settings are extended and changed by using the onyx-for-zed [API](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-for-zed.html#api).
+Settings are extended and changed by using the onyx-for-zed [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
 
 The example below shows how to create a custom build:
 
@@ -85,7 +97,7 @@ oryxForZed.getConfiguration(myCustomZedSettings).then(configuration => oryx.buil
 
 ```
 
-**Step 2:** `package.json` 
+**Step 2:** `package.json`
 Add a script into your `package.json` pointing to `build.js`.
 
 ```json
@@ -98,7 +110,7 @@ Add a script into your `package.json` pointing to `build.js`.
 You will now be able to…
 
 ### Extend/change webpack configuration
-`webpack` is customised by using the `onyx-for-zed` [API](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-for-zed.html#api). 
+`webpack` is customised by using the `onyx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
 The example below shows how to create a custom build:
 
 **Step 1:** `webpack.config.js`
@@ -159,7 +171,7 @@ You can pass them using the terminal:
 
 ```
 npm run zed -- --arg
-# or 
+# or
 yarn run zed -- --arg
 ```
 
@@ -180,4 +192,3 @@ Args list
 * `--boost`: boost mode (experimental); build assets using eval source maps
 
 If no arg is passed, development is activated but without watchers.
-

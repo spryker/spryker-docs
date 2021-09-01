@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/oryx
   - /docs/oryx
   - /docs/en/oryx
+  - /v6/docs/oryx
+  - /v6/docs/en/oryx
+  - /v5/docs/oryx
+  - /v5/docs/en/oryx
+  - /v4/docs/oryx
+  - /v4/docs/en/oryx
+  - /v3/docs/oryx
+  - /v3/docs/en/oryx
+  - /v2/docs/oryx
+  - /v2/docs/en/oryx
+  - /v1/docs/oryx
+  - /v1/docs/en/oryx
 ---
 
 Oryx is the Spryker projects frontend helper. The purpose of Oryx is to simplify the asset building process, giving developers the freedom to choose and configure the preprocessors for the frontend.
@@ -15,7 +27,7 @@ Oryx is the Spryker projects frontend helper. The purpose of Oryx is to simplify
 Oryx relies on webpack 2.
 
 {% info_block warningBox "Oryx for Zed" %}
-If you're looking for Oryx Zed dedicated solution, see [Oryx for Zed](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-for-zed.html
+If you're looking for Oryx Zed dedicated solution, see [Oryx for Zed](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html
 {% endinfo_block %}.)
 
 ### Requirements
@@ -34,7 +46,7 @@ Open the terminal, go to your project root folder and type:
 
 ```
 npm install @spryker/oryx --save-dev
-# or 
+# or
 yarn add @spryker/oryx --dev
 ```
 
@@ -112,14 +124,14 @@ You can now run your script directly from the terminal console.
 
 ```
 npm run yves
-# or 
+# or
 yarn run yves
 ```
 
 ## API
 
 ### find()
- 
+
 ```
 oryx.find(settings, [initial])
 ```

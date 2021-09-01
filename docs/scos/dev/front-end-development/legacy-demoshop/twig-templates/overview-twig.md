@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/twig-overview
   - /docs/twig-overview
   - /docs/en/twig-overview
+  - /v6/docs/twig-overview
+  - /v6/docs/en/twig-overview
+  - /v5/docs/twig-overview
+  - /v5/docs/en/twig-overview
+  - /v4/docs/twig-overview
+  - /v4/docs/en/twig-overview
+  - /v3/docs/twig-overview
+  - /v3/docs/en/twig-overview
+  - /v2/docs/twig-overview
+  - /v2/docs/en/twig-overview
+  - /v1/docs/twig-overview
+  - /v1/docs/en/twig-overview
 ---
 
 Given that we are working on a web application, we need a proper way to generate HTML dynamically. The most common approach relies on templates and for this we decided to go with Twig Template Engine.
@@ -17,7 +29,7 @@ You can use other technology for the front-end of your application as well; this
 {% endinfo_block %}
 
 **Typical twig layout template**
-    
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -60,7 +72,7 @@ You can use other technology for the front-end of your application as well; this
 </html>
 ```
 
-For more information, see [Best Practices - Twig Templates](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/legacy-demoshop/twig-templates/best-practices-twig-templates.html). 
+For more information, see [Best Practices - Twig Templates](/docs/scos/dev/front-end-development/legacy-demoshop/twig-templates/best-practices-twig-templates.html).
 
 ## Markup Tags
 
@@ -107,4 +119,3 @@ if you are doing something and not printing something, use this tag:
 
 **See also:**
 [Twig Homepage](https://twig.symfony.com/)
-

@@ -5,6 +5,8 @@ originalArticleId: 0ab1b1ed-e3ef-4144-9557-5483d545e2e0
 redirect_from:
   - /v6/docs/categories
   - /v6/docs/en/categories
+  - /v5/docs/categories
+  - /v5/docs/en/categories
 ---
 
 **Categories** contains data required to set up categories in your online store. We have structured this section according to the two .csv files that you will have to use to import the data:

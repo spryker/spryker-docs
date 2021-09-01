@@ -1,8 +1,12 @@
 ---
 title: File details- category_template.csv
-originalLink: https://documentation.spryker.com/v6/docs/file-details-category-templatecsv
-originalArticleId: 5cd0cea0-c741-40d2-9087-d774a3fe69c1
+originalLink: https://documentation.spryker.com/2021080/docs/file-details-category-templatecsv
+originalArticleId: fac13464-5ddc-4b2a-8dff-f257e196e222
 redirect_from:
+  - /2021080/docs/file-details-category-templatecsv
+  - /2021080/docs/en/file-details-category-templatecsv
+  - /docs/file-details-category-templatecsv
+  - /docs/en/file-details-category-templatecsv
   - /v6/docs/file-details-category-templatecsv
   - /v6/docs/en/file-details-category-templatecsv
   - /v5/docs/file-details-category-templatecsv

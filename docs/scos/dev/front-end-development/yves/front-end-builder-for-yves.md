@@ -8,6 +8,10 @@ redirect_from:
   - /2021080/docs/en/front-end-builder-for-yves
   - /docs/front-end-builder-for-yves
   - /docs/en/front-end-builder-for-yves
+  - /v6/docs/front-end-builder-for-yves
+  - /v6/docs/en/front-end-builder-for-yves
+  - /v4/docs/front-end-builder-for-yves
+  - /v4/docs/en/front-end-builder-for-yves
 ---
 
 This article provides information about how to prepare assets (CSS, js, images, etc.) for different namespaces and their themes.
@@ -44,25 +48,25 @@ The config file should contain the following data:
 
 ```php
 {
- 
+
     "path": "assets/%namespace%/%theme%/", // pattern of the path to the public assets
- 
+
     "namespaces": [ // the array of the namespaces
- 
+
         {
- 
+
             "moduleSuffix": "DE", // a special suffix for the module which will be rendered for the current namespace
- 
+
             "namespace": "DE", // the name of namespace
- 
+
             "themes": ["red-theme", "new-year-theme"], // an array of the themes which will be rendered for this namespace, if the additional themes aren't needed - should leave an empty array
- 
+
             "defaultTheme": "default" // the reqired default theme
- 
+
         }
- 
+
     ]
- 
+
 }
 ```
 
@@ -99,9 +103,9 @@ All incoming files (images, fonts, etc.) are copied from `global` (for every nam
  {% info_block infoBox "Info" %}
 If the assets were generated earlier for this namespace and theme, these assets will be substituted by the newest ones. If namespace or theme were removed from the config file, assets for this namespace or theme won't be removed, and you should remove it manually, if necessary.
 {% endinfo_block %}
- 
+
  ## How frontend builder collects SCSS and JS files
- 
+
 ### Levels
 
 The builder is looking for entry points for components on several levels (from smaller to higher priority):
@@ -129,5 +133,3 @@ You can overwrite these files in your own namespace and/or theme.
 All components in the Core level provide global mixin for every level, so you can include them into Eco and Project levels.
 
 Besides the components, you can find SCSS files with global classes, mixins, variables like `basic.scss`, `util.scss`, `shared.scss`. The order of including these files you can find here `/frontend/configs/development.js`.
-
-

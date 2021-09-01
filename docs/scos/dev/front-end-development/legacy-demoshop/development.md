@@ -8,7 +8,18 @@ redirect_from:
   - /2021080/docs/en/development-for-legacy-demoshop
   - /docs/development-for-legacy-demoshop
   - /docs/en/development-for-legacy-demoshop
----
+  - /v6/docs/development-for-legacy-demoshop
+  - /v6/docs/en/development-for-legacy-demoshop
+  - /v5/docs/development-for-legacy-demoshop
+  - /v5/docs/en/development-for-legacy-demoshop
+  - /v4/docs/development-for-legacy-demoshop
+  - /v4/docs/en/development-for-legacy-demoshop
+  - /v3/docs/development-for-legacy-demoshop
+  - /v3/docs/en/development-for-legacy-demoshop
+  - /v2/docs/development-for-legacy-demoshop
+  - /v2/docs/en/development-for-legacy-demoshop
+  - /v1/docs/development-for-legacy-demoshop
+  - /v1/docs/en/development-for-legacy-demoshop
 
 Development refers to writing your own assets, consuming external dependencies and linking resources to make them work together.
 
@@ -50,4 +61,4 @@ With this approach, you can directly include every module (external/local) that 
 
 As far as this approach has been designed to use javascript on server side (node.js), commands like `require`, `module` or `export` are reserved words not naturally available in browsers’ vanilla javascript. To use them, you need to add a library or a pre-compiling tool capable of interpreting them.
 
-For this reason, we rely on [Oryx](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/oryx-builder-overview-and-setup.html).
+For this reason, we rely on [Oryx](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html).

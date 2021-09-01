@@ -7,6 +7,10 @@ redirect_from:
   - /2021080/docs/en/atomic-front-end-general-overview
   - /docs/atomic-front-end-general-overview
   - /docs/en/atomic-front-end-general-overview
+  - /v6/docs/atomic-front-end-general-overview
+  - /v6/docs/en/atomic-front-end-general-overview
+  - /v4/docs/atomic-front-end-general-overview
+  - /v4/docs/en/atomic-front-end-general-overview
 ---
 
 To provide each customer with the features they require, Spryker Commerce OS has been split into modules. Each customer can have a unique set of modules, and even module versions, specific to their business requirements. This fact combined with the possibility for customers to develop functionality on their own poses a big challenge for frontend developers. To ease the task, Spryker Frontend implements a design methodology called **atomic design**. Because of this, the UI layer of Spryker is called *Atomic Frontend*.
@@ -503,9 +507,9 @@ See [Modules to Components Mapping](https://cdn.document360.io/9fafa0d5-d76f-40c
 **What's next?**
 The following topics will help you in developing Spryker Atomic Frontend step-by-step:
 
-[Tutorial - Customize Spryker Frontend](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/customizing-spryker-front-end.html)
-[Tutorial - Frontend - Create a Component](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/managing-the-components/creating-a-component.html)
-[Tutorial - Frontend - Override a Component](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
-[Tutorial - Frontend - Extend a Component](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/managing-the-components/extending-a-component.html)
-[Tutorial - Frontend - Integrate JQuery into Atomic Frontend](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
-[Tutorial - Frontend - Use a Component](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/managing-the-components/using-a-component.html)
+[Tutorial - Customize Spryker Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html)
+[Tutorial - Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html)
+[Tutorial - Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
+[Tutorial - Frontend - Extend a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html)
+[Tutorial - Frontend - Integrate JQuery into Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
+[Tutorial - Frontend - Use a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html)

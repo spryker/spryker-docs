@@ -7,6 +7,18 @@ redirect_from:
   - /2021080/docs/en/t-integrate-jquery
   - /docs/t-integrate-jquery
   - /docs/en/t-integrate-jquery
+  - /v6/docs/t-integrate-jquery
+  - /v6/docs/en/t-integrate-jquery
+  - /v5/docs/t-integrate-jquery
+  - /v5/docs/en/t-integrate-jquery
+  - /v4/docs/t-integrate-jquery
+  - /v4/docs/en/t-integrate-jquery
+  - /v3/docs/t-integrate-jquery
+  - /v3/docs/en/t-integrate-jquery
+  - /v2/docs/t-integrate-jquery
+  - /v2/docs/en/t-integrate-jquery
+  - /v1/docs/t-integrate-jquery
+  - /v1/docs/en/t-integrate-jquery
 ---
 
 This guide aims to illustrate how to use _JQuery_ and any _JQuery_ plugin inside Spryker components.
@@ -88,7 +100,7 @@ Same goes for this component: In order to safely have JQuery available in the co
 To do so, add one of the following code chunks to `./src/Pyz/Yves/ShopUi/Theme/default/app.ts`.
 
 **ShopUi module сonfiguration version 1.9 or earlier:**
-    
+
 ```php
 import { mount } from 'ShopUi/app';
 import { LogLevel, log, info, error, config as setLogConfig } from 'ShopUi/app/logger';
@@ -123,9 +135,9 @@ info('mode:', config().isProduction ? 'PRODUCTION,' : 'DEVELOPMENT,', 'log-level
 
 $(() => onDocumentReady());
 ```
-    
+
 **ShopUi module сonfiguration version 1.10 or later:**
-    
+
 ```php
 import { setup, mount } from 'ShopUi/app';
 import { log, error } from 'ShopUi/app/logger';

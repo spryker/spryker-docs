@@ -8,6 +8,18 @@ redirect_from:
   - /2021080/docs/en/twig-best-practices
   - /docs/twig-best-practices
   - /docs/en/twig-best-practices
+  - /v6/docs/twig-best-practices
+  - /v6/docs/en/twig-best-practices
+  - /v5/docs/twig-best-practices
+  - /v5/docs/en/twig-best-practices
+  - /v4/docs/twig-best-practices
+  - /v4/docs/en/twig-best-practices
+  - /v3/docs/twig-best-practices
+  - /v3/docs/en/twig-best-practices
+  - /v2/docs/twig-best-practices
+  - /v2/docs/en/twig-best-practices
+  - /v1/docs/twig-best-practices
+  - /v1/docs/en/twig-best-practices
 ---
 
 ## Include vs Macros vs Embed
@@ -16,7 +28,7 @@ With includes, you can include an entire template. The template has access to an
 
 With macros, you are defining a kind of function within Twig that can render a particular component given appropriate objects.
 
-So you could have a macro for rendering, for example, a shopping list which takes a list as a parameter - and you could then reuse this macro. 
+So you could have a macro for rendering, for example, a shopping list which takes a list as a parameter - and you could then reuse this macro.
 
 Variables that are not explicitly passed into the macro, won’t be within scope in that macro.
 
@@ -132,16 +144,16 @@ class IndexController
     public function indexAction()
     {
         $table = $this->getFactory()->createCustomerTable();
-    
+
         return $this->viewResponse([
             'customerTable' => $table->render(),
         ]);
     }
-    
+
     public function tableAction()
     {
         $table = $this->getFactory()->createCustomerTable();
-    
+
         return $this->jsonResponse($table->fetchData());
     }
 }

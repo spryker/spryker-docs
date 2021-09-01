@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/frontend-assets-building-and-loading
   - /docs/frontend-assets-building-and-loading
   - /docs/en/frontend-assets-building-and-loading
+  - /v6/docs/frontend-assets-building-and-loading
+  - /v6/docs/en/frontend-assets-building-and-loading
 ---
 
 Spryker assets are split into critical and non-critical CSS chunks. Their main purpose is to provide loading of the critical CSS at the start of the page loading and load the non-critical CSS only after the full page is loaded.
@@ -23,7 +25,7 @@ For the landing pages, there is the `page-critical-path` layout defining the ass
 
 The `page-critical-path` layout uses cookies to track whether it is the first session on the site. If it is the first session, the critical CSS and utils are loaded into the `<head>` tag at the start of the page loading. Only after the whole page is loaded, the `style-loader` component appends the non-critical CSS to the end of the `<head>` tag. Otherwise, the approach for the non-landing pages is used.
 
-The main purpose of the page-critical-path layout is to use the CSS Lazy Load only for the landing pages. To enable the CSS Lazy Load for your project, see [Frontend CSS Lazy Load integration](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/frontend-css-lazy-load-integration.html).
+The main purpose of the page-critical-path layout is to use the CSS Lazy Load only for the landing pages. To enable the CSS Lazy Load for your project, see [Frontend CSS Lazy Load integration](/docs/scos/dev/technical-enhancements/frontend-css-lazy-load-integration.html).
 
 ## Building CSS and JS chunks
 As mentioned above, all the Yves CSS are split into critical, non-critical, and utils chunks using the Webpack `MiniCssExtractPlugin` and are loaded separately to all pages. Due to the fact that the utils CSS is a part of the non-critical CSS, they are built separately **only** for the user's first session on the site if the pages use `page-critical-path` layout.

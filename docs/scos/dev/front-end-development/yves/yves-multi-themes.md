@@ -8,13 +8,15 @@ redirect_from:
   - /2021080/docs/en/yves-multi-themes
   - /docs/yves-multi-themes
   - /docs/en/yves-multi-themes
+  - /v6/docs/yves-multi-themes
+  - /v6/docs/en/yves-multi-themes
 ---
 
-This document describes how to use and extend themes on the project level. 
+This document describes how to use and extend themes on the project level.
 
-In a multi-theme environment, a shop can have multiple themes for the same component. On a core level, there is a default theme, which is used if no theme is provided for a component on a project level. 
+In a multi-theme environment, a shop can have multiple themes for the same component. On a core level, there is a default theme, which is used if no theme is provided for a component on a project level.
 
-You can extend the default theme from the project level or from the core level. 
+You can extend the default theme from the project level or from the core level.
 
 ![yves-multi-themes-diagram](https://confluence-connect.gliffy.net/embed/image/9add4ad5-cbe0-4610-82f1-b10610721b23.png?utm_medium=live&utm_source=custom)
 
@@ -106,5 +108,3 @@ export default class ProductItemColorSelector extends ProductItemColorSelectorCo
     }
 }
 ```
-
-

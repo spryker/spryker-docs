@@ -34,7 +34,7 @@ When an order is placed, payment state machine is executed and an item is moved 
 When items are moved to state with the "reserved" flag, `ReservationHandlerPluginInterface::handle()` is triggered. This call means that the product availability has to be updated. State machine is also tracking products in the "reserved" state, and the database table `spy_oms_product_reservation` is used for this.
 
 Below you can see dummy payment state machine, which is a sample implementation with the "reserved" flags:
-![Reserved flags](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/dummy_payment.jpg){height="" width=""}
+![Reserved flags](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/dummy_payment.jpg)
 
 ### Availability Storage
 
@@ -104,10 +104,10 @@ The main change in Availability in that `spy_availability` and `spy_availability
 With Spryker shop, you can actually have several scenarios pertain to product warehouses in a multi-store environment. Each scenario is configured and enabled manually. The possible scenarios are listed below.
 
 1. Each store has own database and own warehouse. This means that stores have separate independent stocks and therefore separated product reservations and availability.
-![Scenario 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_1.png){height="" width=""}
+![Scenario 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_1.png)
 
 2. Each store has own database, but warehouse is shared between the stores. This means that reservation and availabilities are synced.For the case when stores do not share database, but reservations must be shared, three new database tables have been created.
-![Scenario 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_2.png){height="" width=""}
+![Scenario 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_2.png)
 
 * spy_oms_product_reservation_store - this table will store reservation request from other stores.
 * spy_oms_reservation_change_version - this table will store information about when last reservation occurred.
@@ -122,7 +122,7 @@ Also, we provide a few plugins to help implement synchronization:
 There is a console command to export all reservations: `\Spryker\Zed\Oms\Communication\Console\ExportReservationConsole`. It will trigger `ReservationExportPlugin` with reservations amounts to export. This command can be added to cronjob and run periodically.
 
 3. Database is shared between stores, but warehouses are separated by store. This means, that reservations and availability are separated per store and the warehouses (and their stocks) belong to specific stores. Assume there are DE and AT stores. DE store has Warehouse 1 and Warehouse 2, and AT has Warehouse 2. If user wants to buy some product from Warehouse 2 which is not available for AT store, but available in DE store, he/she would not be able to buy it in AT store (since the warehouses are separated), but could buy it in DE store (since the database is shared and it’s possible to switch between stores). When orders are placed, each reservation in
-![Scenario 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_3.png){height="" width=""}
+![Scenario 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_3.png)
 
 `spy_oms_product_reservation` table will also store information about store, the relation `fk_store`, to `spy_store` table. When adding a product to cart and displaying it there, the store identifier `fk_store` is used to define the correct availability value for the specific store.
 From Availability module version 6.0 we have added a new configuration option to store.php file to have information about store with shared persistence. Add `'sharedPersistenceWithStores' => []` to `stores.php`, where array is store names.
@@ -144,6 +144,6 @@ For example:
 That means that DE and AT both share database. This information will be used when updating OMS reservations.
 
 4. Database is shared between stores, warehouses are shared by the stores. In this case the reservation must be synchronized.
-![Scenario 4](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_4.png){height="" width=""}
+![Scenario 4](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_4.png)
 
 When placing an order in Store A, the reservation is stored with the store identifier `fk_store`. An event is created and published in the queue, and synchronization with Store B happens. See scenario 3 above for information about how reservations are handled as well learn about the new configuration option for shared database in the `store.php` file.

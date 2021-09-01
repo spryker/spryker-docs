@@ -67,7 +67,7 @@ The following error responses can be returned by the server when a resource supp
 ## Workflow Diagram
 The workflow of resources that support concurrent requests is presented in the diagram below:
 
-![Workflow diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Handling+Concurrent+REST+Requests+and+Caching+with+Etags/entity-tag-process-flow.png){height="" width=""}
+![Workflow diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Handling+Concurrent+REST+Requests+and+Caching+with+Etags/entity-tag-process-flow.png)
 
 ## Supported Resources
 Currently, only a single resource supports concurrent requests with ETag headers out of the box:

@@ -24,13 +24,13 @@ In the Back Office, you can view all payment methods available in the shop appli
 Keep in mind that prior to managing payment methods in the Back Office, first, you need to create them by importing payment methods data using a .CSV file. <!-- link -->
 {% endinfo_block %}
 
-![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-list.png){height="" width=""}
+![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-list.png)
 
 See Managing Payment Methods <!-- link --> to learn more on how to make a payment method available during the checkout and assign it to different stores.
 
 The following scheme shows relations between **Payment**, **PaymentGui**, and **PaymentDataImport** modules:
 
-![Scheme of modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-modules-scheme.png){height="" width=""}
+![Scheme of modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-modules-scheme.png)
 
 
 <!-- Managing Payment Methods in the Back Office

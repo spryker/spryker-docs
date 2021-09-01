@@ -15,7 +15,7 @@ redirect_from:
 {% info_block infoBox %}
 The customer can select a shipment method and a related carrier during the checkout. Each shipment method has a dedicated price and tax set.
 {% endinfo_block %}
-![Shipment carriers](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Shipment+Schema/shipment-carriers.png){height="" width=""}
+![Shipment carriers](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Shipment+Schema/shipment-carriers.png)
 
 **Structure**:
 

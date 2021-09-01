@@ -14,11 +14,11 @@ In a tax system, the tax rate is the ratio (usually expressed as a percentage) a
 Tax set is a set of tax rates that can be applied to a specific product.
 
 Keeping that in mind, the tax rate is created first.
-![Tax rate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-rate.gif){height="" width=""}
+![Tax rate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-rate.gif)
 
 Once the rate is defined, you can attach it to a tax set(s). A tax set can contain from one to many tax rates.
-![Tax set](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-set.gif){height="" width=""}
+![Tax set](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-set.gif)
 
 The described values are defined in the **Back Office** > **Taxes** section.
 
-![Tax section](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/taxes-section.gif){height="" width=""}
+![Tax section](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/taxes-section.gif)

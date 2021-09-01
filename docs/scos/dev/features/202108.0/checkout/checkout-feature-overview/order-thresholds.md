@@ -67,7 +67,7 @@ For example, a shop owner sets a soft minimum threshold €400 with a flexible f
 
 The diagram below shows how orders are checked against defined thresholds.
 
-![minimum-order-value-schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Order+Thresholds/minimum-order-value-schema.jpg){height="" width=""}
+![minimum-order-value-schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Order+Thresholds/minimum-order-value-schema.jpg)
 
 ## Thresholds and discounts
 When an order is checked against the defined thresholds, discounts are not taken into account.

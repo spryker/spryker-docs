@@ -60,4 +60,4 @@ To get a list of Glue API requests that were used to build a page:
 2. Activate the **Console** section.
 3. To get details of a specific request, expand it in the console.
 
-![glue-requests-sample.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/B2C+API+React+Example/glue-requests-sample.png){height="" width=""}
+![glue-requests-sample.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/B2C+API+React+Example/glue-requests-sample.png)

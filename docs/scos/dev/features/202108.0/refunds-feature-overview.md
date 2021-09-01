@@ -28,7 +28,7 @@ For the refunded items, you can use the default OMS states to be displayed on th
                 <li><a href="https://documentation.spryker.com/docs/mg-refund" class="mr-link">Migrate the Refund module to a newer version</a></li>
                 <li><a href="https://documentation.spryker.com/docs/refund-process-management" class="mr-link">Learn about the refund process management</a></li>
                     </ul>
-                </li> 
+                </li>
             </ul>
         </div>
         <!-- col2 -->
@@ -40,3 +40,16 @@ For the refunded items, you can use the default OMS states to be displayed on th
                 </div>
     </div>
 </div>
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [View refunds](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/refunds/viewing-refunds.html)  |
+| [See the reference information for refunds](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/refunds/viewing-refunds.html#reference-information-viewing-refunds)  |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Refunds feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/refunds-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

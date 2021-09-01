@@ -20,7 +20,7 @@ Customer registration requires two steps:
 
 After these two steps are performed, the customer can use the account.
 
-![customer.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Groups/Customer+Module+Overview/customer.png){height="" width=""}
+![customer.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Groups/Customer+Module+Overview/customer.png)
 
 ## Customer address
 

@@ -16,7 +16,7 @@ The *Product Sets* feature allows you to create and sell collections of products
 
 When browsing a product set, a Storefront user can select variants per product in a set, add an individual or all products from the set to cart.
 
-![product-set-actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Sets/product-set-actions.png){height="" width=""}
+![product-set-actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Sets/product-set-actions.png)
 
 
 A Back Office user can define the following:

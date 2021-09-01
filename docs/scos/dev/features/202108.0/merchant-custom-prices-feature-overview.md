@@ -73,37 +73,14 @@ Or, you can remove merchant relation prices referring to specific merchant relat
 console price-product-merchant-relationship:delete [-m X] . X = MR ID
 ```
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Set prices per merchant relations when creating abstract products and product bundles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html)   |
 
+{% info_block warningBox "Developer guides" %}
 
+Are you a developer? See [Merchant B2B Contracts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-b2b-contracts-feature-walkthrpugh.html) for developers.
 
-
-
-
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-              <!--  <li><a href="https://documentation.spryker.com/docs/merchant-custom-prices-feature-overview" class="mr-link">Import prices for merchant relations</a></li> -->
-                <li>Integrate the Merchant Custom Prices feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/en/merchant-custom-prices-feature-integration" class="mr-link">Integrate the Merchant Custom Prices feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-feature-integration" class="mr-link">Integrate the Merchant feature</a></li>  
-               <li><a href="https://documentation.spryker.com/docs/mg-priceproduct" class="mr-link">Migrate to the latest version of the PriceProduct module</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-abstract-products-and-product-bundles" class="mr-link">Set prices per merchant relations when creating abstract products and product bundles</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+{% endinfo_block %}

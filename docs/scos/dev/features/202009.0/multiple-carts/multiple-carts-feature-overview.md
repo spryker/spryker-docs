@@ -35,7 +35,7 @@ The table with shopping carts shows details for each of the carts, including:
 * Cart Total
 * Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/dev/features/202009.0/shared-carts/shared-carts-feature-overview.html), dismiss, delete, switch cart to shopping list (see the *Actions* table for details)
 
-![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-cart-list.png){height="" width=""}
+![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-cart-list.png)
 
 The table bellow provides detailed information on the possible actions to manage shopping carts.
 
@@ -80,7 +80,7 @@ After the shopping cart is set to active, the user is redirected to a respective
 * Tax
 * Grand Total
 
-![Shopping Cart Page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/a-shopping-cart-page.png){height="" width=""}
+![Shopping Cart Page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/a-shopping-cart-page.png)
 
 ## Multiple Carts on the Storefront 
 On the storefront, company users can perform the following actions using the Multiple Carts feature:
@@ -89,18 +89,18 @@ On the storefront, company users can perform the following actions using the Mul
 <details open>
 <summary>Create a cart</summary>
 
-![Create a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/create-a-cart.gif){height="" width=""}
+![Create a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/create-a-cart.gif)
 </details>
 
 <details open>
 <summary>Edit and delete a cart</summary>
 
-![Edit and delete a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/manage-a-shopping-cart.gif){height="" width=""}
+![Edit and delete a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/manage-a-shopping-cart.gif)
 </details>
 <details open>
 <summary>Dismiss and duplicate a cart</summary>
 
-![Dismiss and duplicate a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/dismiss-and-duplicate-a-shopping-cart.gif){height="" width=""}
+![Dismiss and duplicate a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/dismiss-and-duplicate-a-shopping-cart.gif)
 </details>
 
 * To share a cart with external and internal users via a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/scos/dev/features/202009.0/resource-sharing/unique-url-per-cart-for-easy-sharing/unique-url-per-cart-for-easy-sharing-feature-overview.html).

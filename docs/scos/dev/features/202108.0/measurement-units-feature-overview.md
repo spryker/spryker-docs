@@ -39,6 +39,7 @@ On the cart page, the user sees quantity both in base unit and sales unit.
 If user puts one and the same product in different sales units, they will be shown as two different items in the cart.
 
 The schema below illustrates relations between products and measurement units, where:
+<!-- the following schema was already added to [Measurement Units feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/measurement-units-feature-walkthrough.html-->
 
 * **conversion**—factor to convert a value from sales to base unit. If it is "null" then the information is taken from the global conversions (`MeasurementUnitConverter.php` file).
 * **precision**—ratio between a sales unit and a base unit. For example, a base unit is "item", and user selects "kg" as a sales unit.

@@ -31,7 +31,7 @@ You can have the following return process:
     5. Ships the order to the shop.
 
 * When the shop receives the return, the *Shop Administrator* checks the returned items. If all is good and if items meet the shop’s policy for the condition of returned items, the Shop Administrator confirms the return and makes the refund. Otherwise, the Shop Administrator contacts the Buyer and either cancels the return, or clarifies the details and makes the refund. 
-![image](https://confluence-connect.gliffy.net/embed/image/ceba5ea5-5ee2-4e8c-acce-65b64467421c.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/ceba5ea5-5ee2-4e8c-acce-65b64467421c.png?utm_medium=live&utm_source=custom)
 
 This scenario is typical for most B2C models, and its main advantages are:
 
@@ -63,7 +63,7 @@ You can have the following return process:
 
 The schema below illustrates the workflow as well as the areas that require custom development for your project:
 
-![image](https://confluence-connect.gliffy.net/embed/image/2599f923-6892-42bc-a867-e2b38bed5b2b.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/2599f923-6892-42bc-a867-e2b38bed5b2b.png?utm_medium=live&utm_source=custom)
 
 This scenario suites both B2B and B2C models and is especially good for resolving disputes and handling warranty cases that can imply return or replacement. So it is best to use such a workflow when human intervention is needed.
 
@@ -94,7 +94,7 @@ The workflow for this scenario is:
 * If *Buyer* receives faulty items or has questions about them, they contact the *Customer Service*.
 * Customer Service either consults the Buyer about the items or creates a reclamation.
 * The reclamation is checked internally, and the decision about the return, exchange, or cancellation is made. Customer Service contacts Buyer with the results of the check.
-![image](https://confluence-connect.gliffy.net/embed/image/fbcca843-0c8c-4f85-8cd9-9d2cf20b68e2.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/fbcca843-0c8c-4f85-8cd9-9d2cf20b68e2.png?utm_medium=live&utm_source=custom)
 
 Like with scenario 2, this scenario is best to use for resolving disputes and handling the warranty cases. That is, when you can not do without the human intervention. 
 

@@ -50,27 +50,27 @@ Company users can perform the following actions using the Comments widget on the
 <details open>
 <summary>Create and edit comments</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/creating-and-editing-comments.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/creating-and-editing-comments.gif)
 
 </details>
 
 <details open>
 <summary>Remove comments</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/removing-comments.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/removing-comments.gif)
 </details>
 
 <details open>
 <summary>Tag comments</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/adding-tags.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/adding-tags.gif)
 
 </details>
 
 <details open>
 <summary>Filter comments by tags</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filtering-tags.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filtering-tags.gif)
 </details>
 
 

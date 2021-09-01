@@ -15,7 +15,7 @@ redirect_from:
 ### Customer with Addresses
 
 Customers can register themselves directly or during the checkout. They can log in and log out to the shop and use the password forgotten mechanism.
-![Customer with addresses](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Schema/customer-with-address.png){height="" width=""}
+![Customer with addresses](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Schema/customer-with-address.png)
 
 **Structure**:
 
@@ -28,12 +28,12 @@ Customers can register themselves directly or during the checkout. They can log 
 ### Customer Groups
 
 Customers can be grouped so that they qualify for specific discounts. This feature can also be used for other use cases like "customer-group specific prices".
-![Customer groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Schema/customer-groups.png){height="" width=""}
+![Customer groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Schema/customer-groups.png)
 
 ### Newsletter
 
 Shop users can subscribe to the newsletter.
-![Newsletter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Schema/newsletter.png){height="" width=""}
+![Newsletter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Schema/newsletter.png)
 
 * **Structure**:
 * Newsletter subscribers are saved into *spy_newsletter_subscriber*.
@@ -49,4 +49,4 @@ Spryker does not have a newsletter sending mechanism. The data need to be export
 {% info_block infoBox %}
 Customers can be related to Zed Users. This is used for rendering CMS Page reviews which regular users cannot see.
 {% endinfo_block %}
-![Zed users](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Schema/zed-users.png){height="" width=""}
+![Zed users](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Schema/zed-users.png)

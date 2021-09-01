@@ -8,4 +8,4 @@ redirect_from:
 ---
 
 The following schema illustrates module relations in the Approval Process feature:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-schema.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-schema.png)

@@ -26,10 +26,10 @@ The table below shows quantities that will be created in the system if a concret
 | example concrete 2 | false | 5 | 1 | 5 |
 
 Product concrete with `is_quantity_splittable = true` has a separate line for each order item in the web shop:
-![Order details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Splittable+Order+Items/Splittable+Order+Items+Feature+Overview/SOI.png){height="" width=""}
+![Order details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Splittable+Order+Items/Splittable+Order+Items+Feature+Overview/SOI.png)
 
 Product concrete with `is_quantity_splittable = false` is counted as one sales item in the web shop:
-![is_quantity_splittable = false](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Splittable+Order+Items/Splittable+Order+Items+Feature+Overview/SOI-false.png){height="" width=""}
+![is_quantity_splittable = false](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Splittable+Order+Items/Splittable+Order+Items+Feature+Overview/SOI-false.png)
 
 It is possible to import splittable information for product concretes in the `product_concrete.csv` file by setting the value of the `is_splittable` field to either 1 or 0.
 

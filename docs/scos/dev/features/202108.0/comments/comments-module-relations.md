@@ -11,4 +11,4 @@ redirect_from:
 ---
 
 The following schema illustrates module relations in the Comments feature:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/techspec-comments-module-diagram.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/techspec-comments-module-diagram.png)

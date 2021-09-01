@@ -20,10 +20,10 @@ Before starting make sure you are familiar with the concept of Spryker Super Att
 Cart now supports changing the items in the cart by modifying their attributes. If we have a wrong T-Shirt size in the cart we will be able to change it.
 
 Cart now also supports product images out of the box.
-![cart_product_images](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/cart_product_images.png){height="" width=""}
+![cart_product_images](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/cart_product_images.png)
 
 If we have products with multiple super attributes we can now, narrowing-down in the cart.
-![product_super_attributes](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product_super_attributes.png){height="" width=""}
+![product_super_attributes](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product_super_attributes.png)
 
 ## Installation
 ### Item images in cart

@@ -49,11 +49,11 @@ The above states are the default ones in the OMS. You can display them as they a
 {% endinfo_block %}
 -->
 The relation of sales order items statuses and the return states is as follows:
-![Sales Order Items and Statuses](https://confluence-connect.gliffy.net/embed/image/cebbb529-19b7-4623-bd6d-ef2b30fe97a9.png?utm_medium=live&utm_source=custom){height="" width=""}
+![Sales Order Items and Statuses](https://confluence-connect.gliffy.net/embed/image/cebbb529-19b7-4623-bd6d-ef2b30fe97a9.png?utm_medium=live&utm_source=custom)
 
 ## Return slip
 Buyers and Back Office users can have a paper version of the return by printing the automatically generated *return slip*. The return slip contains return and sales order references, details on the returnable sales order items, and a barcode generated based on the return reference. 
-![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/print-return-slip.png){height="" width=""}
+![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/print-return-slip.png)
 
 ## Return Management on the Storefront
 The **registered buyers** can return entire orders or individual sales order items as soon as they have been delivered to them. When returning, the buyers can select or enter a return reason.
@@ -76,7 +76,7 @@ Next to each sales order item, there is the date till which the item can be retu
 
 All the returns created by the buyer or by the Back Office user for the buyer are listed on the *Returns* page in the *Customer Account*. From here, the Buyer can [view the return details](/docs/scos/user/user-guides/202009.0/shop-user-guide/shop-guide-customer-account/references/reference-information-return-details.html) and print the return slip.
 The following figure shows how to create a return, view its details and print a slip:
-![create and print a return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-and-print-a-return.gif){height="" width=""}
+![create and print a return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-and-print-a-return.gif)
 
 ## Return Management in the Back Office
 A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. See [Back Office user guide - Managing orders](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/orders/managing-orders.html) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office user guide - Manging returns](/docs/scos/user/user-guides/202009.0/back-office-user-guide/sales/returns/managing-returns.html)  for instructions on how to manage the returns in the Back Office.

@@ -30,7 +30,7 @@ On the Storefront, only Abstract Products appear in the Product Catalog and can 
 
 Le't consider an example illustrating the relation between Abstract and Concrete Products and their behavior on the Storefront:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/product-abstraction.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/product-abstraction.png)
 
 In this example, a T-shirt, the Abstract Product, is available in sizes S, M, and L, which are three different Product Variants, each holding its own stock. When you search *T-shirt* on the Storefront, it's the Abstract Product that appears as the search result. Your customers can not buy the Abstract Product. On the product detail page, they have to select between the Product Variants S, M, L to put the *T-shirt* product to cart. 
 

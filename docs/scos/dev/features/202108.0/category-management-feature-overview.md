@@ -65,59 +65,16 @@ Currently, the Category Management feature has the following functional constrai
 * Category URLs are available in all the stores that share the same locales.
 * Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html). However, in the [B2C demo shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html), you can still filter the products using the price range filter.
 
-
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/ht-manage-a-big-number-of-categories" class="mr-link">Manage a big number of categories</a></li>
-                <li><a href="/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html" class="mr-link">Import categories</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-category-templatecsv" class="mr-link">Import category templates</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-category-storecsv" class="mr-link">Import store relations for categories</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-category-trees" class="mr-link">Retrieve category trees via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-category-nodes" class="mr-link">Retrieve category nodes via Glue API</a></li>          
-                <li><a href="https://documentation.spryker.com/docs/glue-api-category-management-feature-integration" class="mr-link">Integrate  Category Management Glue API</a></li>
-                 <li>Integrate the Category Management feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/category-management-feature-integration" class="mr-link">Integrate the Category Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/product-category-feature-integration" class="mr-link">Integrate the Product + Category Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/cms-category-management-feature-integration" class="mr-link">Integrate the CMS + Category Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/cms-category-management-feature-integration" class="mr-link">Integrate the Catalog + Category Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-categorygui" class="mr-link">Migrate the CategoryGui module from version 1* to version 2*</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/migration-guide-category#upgrading-from-version-3---to-version-4--" class="mr-link">Migrate the Category module from version 3* to version 4*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-category#upgrading-from-version-4---to-5--" class="mr-link">Migrate the Category module from version 4* to version 5*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-categorypagesearch" class="mr-link">Migrate the CategoryPageSearch module from version 1* to version 2*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-categorystorage" class="mr-link">Migrate the CategoryStorage module from version 1* to version 2*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-productcategorystorage" class="mr-link">Migrate the ProductCategoryStorage module from version 1* to version 2*</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html" class="mr-link">Create a category</a></li>
-                 <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html" class="mr-link">Assign products to categories</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-categories" class="mr-link">Manage categories</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create a category](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html) |
 | [Assign products to categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) |
-| [Manage categories](/docs/scos/user/user-guides/201811.0/back-office-user-guide/category/managing-categories.html) |
+| [Manage categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/managing-categories.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Category management feature walkthrough](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html) for developers.
+Are you a developer? See [Category management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/category-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

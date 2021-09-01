@@ -58,11 +58,11 @@ Product tax set is calculated when buyers add products to cart. Therefore, by de
 
 Tax on the *Cart* page:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/tax-in-cart.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/tax-in-cart.png)
 
 Tax in the checkout:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/tax-in-checkout.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/tax-in-checkout.png)
 
 ## Current constraints
 

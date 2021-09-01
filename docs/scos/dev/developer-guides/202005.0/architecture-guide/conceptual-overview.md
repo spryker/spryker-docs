@@ -15,7 +15,7 @@ Spryker is a Commerce Operating System, mainly composed of several applications,
 * *Storefront API*- an application providing resources for customers' interaction, provided by Glue Application Layer, based on [JSON API convention](https://jsonapi.org/).
 
 The following diagram shows the conceptual parts of the application and their connections:
-![Spryker overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Conceptual+Overview/spryker-overview.png){height="" width=""}
+![Spryker overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Conceptual+Overview/spryker-overview.png)
 
 The Spryker OS provides the following Application Layers:
 

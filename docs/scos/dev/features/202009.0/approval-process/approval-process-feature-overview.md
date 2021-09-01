@@ -65,7 +65,7 @@ At this point, the approver cannot alter the quote in any way (like editing it, 
 
 Schematically, the Approval Process workflow can be defined in the following way:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-workflow.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-workflow.png)
 
 ### Approval Process scenarios
 Approval process workflow can be most clearly described in several common scenarios:

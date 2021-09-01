@@ -49,7 +49,7 @@ Because your time is valuable, include only two questions. For these questions w
 If you rate us low, we would like to ask you in a comment, why. Depending on your comment, our teamlead might contact you for a follow up. The feedback we receive will be discussed openly in our weekly team meetings.
 
 ## Our Processes
-![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28131%29.png){height="" width=""}
+![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28131%29.png)
 
 
 Our internal processes are designed with speed and reliability in mind. We use a state of the art case management system wired up directly with our internal communication tool to provide the best possible visibility to incoming communication. 

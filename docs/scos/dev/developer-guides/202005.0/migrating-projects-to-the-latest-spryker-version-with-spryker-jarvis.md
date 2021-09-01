@@ -48,13 +48,13 @@ Depending on the specifics of your project and your goals, you can use various m
 
 ### Migration to a Newer Product Release
 Run `node jarvis.js <path to your spryker project folder>` in the terminal to see this view:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04+at+13.55.08.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04+at+13.55.08.png)
 
 This view lists all the Spryker features for your project, where manual migration is needed. For each feature, we list the upgraded and removed dependencies. Each dependency contains the migration guide that you should follow to migrate. We also show the namespace you should check in your project when a dependency is removed from a feature:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04+at+13.58.50.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04+at+13.58.50.png)
 
 It can be that a dependency has been upgraded, but no migration is needed. In this case, we will highlight it:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04+at+14.00.13.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04+at+14.00.13.png)
 
 ### Upgrading Modules to their Current Majors
 
@@ -62,7 +62,7 @@ Run `node jarvis.js <path to your spryker project folder> --no-features` in the 
 
 This view is only useful when your project does not use Spryker features, as it lists just modules.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-06+at+09.57.56.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-06+at+09.57.56.png)
 
 This view allows you to understand to what extent your project is outdated. You can see all modules that are behind majors and minors.
 
@@ -79,7 +79,7 @@ Run `node jarvis.js <path to your spryker project folder> --missing-features` in
 
 This view is useful when you want to use Spryker features but do not know which versions are compatible with your project.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-06+at+10.42.15.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-06+at+10.42.15.png)
 
 This view allows you to see all Spryker features that are compatible with your project and which minimum version you must take.
 
@@ -91,6 +91,6 @@ Here you can also see what modules are already installed on your project and wha
 
 Most of the time, you will need to add missing dependencies to your project to be able to use the Spryker features. But in some cases, you can swap your modules with the Spryker features, because your project already has all the dependencies:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-06+at+11.02.11.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-06+at+11.02.11.png)
 
 

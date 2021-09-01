@@ -35,7 +35,7 @@ When more than one discount was calculated it's important to know that each disc
 {% info_block infoBox %}
 A cart rule is a discount that is automatically added to the quote if certain conditions are satisfied. These conditions can be entered as a query string. For instance, you can say that the cart rule is applied if the subtotal is higher than an amount and the day-of-the-week is Tuesday. Alternatively, you can also define an SKU and a quantity to promote specific products directly.
 {% endinfo_block %}
-![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Discounts+Schema/cart-rule.png){height="" width=""}
+![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Discounts+Schema/cart-rule.png)
 
 **Structure**:
 
@@ -57,7 +57,7 @@ A cart rule is a discount that is automatically added to the quote if certain co
 {% info_block infoBox %}
 A Voucher Code is basically the same as a Cart Rule but with a code which needs to be entered by the user.
 {% endinfo_block %}
-![Voucher codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Discounts+Schema/voucher-codes.png){height="" width=""}
+![Voucher codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Discounts+Schema/voucher-codes.png)
 
 **Structure**:
 
@@ -78,7 +78,7 @@ There are two typical scenarios:
 ### Discount Promotion
 
 Discount Promotion extends the Discount feature with product promotion functionality. Discount promotions add the ability to give away discounted or even free products to create promotions like "buy one, get one for free", "buy product X, get product Y for free", "buy 10 of product X and get 1 of product X for a discounted price", etc.
-![Discount promotion](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Discounts+Schema/discount-promotion.png){height="" width=""}
+![Discount promotion](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Discounts+Schema/discount-promotion.png)
 
 **Structure**:
 

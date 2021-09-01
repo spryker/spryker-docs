@@ -12,7 +12,7 @@ One and the same product can have multiple variants, such as size or color. In t
 
 For example, if a laptop comes in black and blue colors, the laptop itself will be the Abstract Product with two Concrete Products (Variants) that customers can buy: black laptops and blue laptops:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/abstract-concrete-products.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/abstract-concrete-products.png)
 
 ## Product Data that Differ Abstracts from Concretes
 So the topmost hierarchical level of a product is the Abstract Product. The Abstract Product does not have its own stock, but defines various default properties for the descendant Product Variants. The Product Variant always belongs to one Abstract Product, has a distinctive stock, and always differs from another Product Varian with at least one Super Product Attribute <!---LINK-->.
@@ -33,7 +33,7 @@ On the Storefront, only Abstract Products appear in the Product Catalog and can 
 
 Le't consider an example illustrating the relation between Abstract and Concrete Products and their behavior on the Storefront:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/product-abstraction.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/product-abstraction.png)
 
 In this example, a T-shirt, the Abstract Product, is available in sizes S, M, and L, which are three different Product Variants, each holding its own stock. When you search *T-shirt* on the Storefront, it's the Abstract Product that appears as the search result. Your customers can not buy the Abstract Product. On the product detail page, they have to select between the Product Variants S, M, L to put the *T-shirt* product to cart. 
 

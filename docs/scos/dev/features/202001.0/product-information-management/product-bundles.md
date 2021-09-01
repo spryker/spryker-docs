@@ -13,7 +13,7 @@ With the Product Bundles feature you can freely tie individual items together an
 A bundle represents two or more products, sold as a set; it is a distinct product that incorporates other concrete products.
 
 Example:
-![Product bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles.png){height="" width=""}
+![Product bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles.png)
 
 {% info_block infoBox %}
 Bundles are handled in different ways:<br>For example, a marketing bundle of two items that gives a 20% discount is purchased as a single item and then split for processing into its two constituent items. Another scenario is when products are put together from separate purchase items, for example when tires and rims are sold as separate items and then delivered assembled as wheels.
@@ -40,7 +40,7 @@ Product bundles are two or more existing products combined into a new type of pr
 
 
 ## Product Bundle Entity Relationship Diagram
-![Product bundle entity diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles_entity_diagram.png){height="" width=""}
+![Product bundle entity diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles_entity_diagram.png)
 
 ## Availability Calculation
 Bundle availability is calculated from bundled product availability. When bundled product availability is changed, for example state machine move through reserved flags then all bundles is updated accordingly.

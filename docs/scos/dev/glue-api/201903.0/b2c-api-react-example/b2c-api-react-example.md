@@ -60,5 +60,5 @@ To get a list of Glue API requests that were used to build a page:
 2. Activate the **Console** section.
 3. To get details of a specific request, expand it in the console.
 
-![glue-requests-sample.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/glue-requests-sample.png){height="" width=""}
+![glue-requests-sample.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/glue-requests-sample.png)
 

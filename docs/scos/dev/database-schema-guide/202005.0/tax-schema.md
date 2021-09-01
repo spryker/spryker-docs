@@ -14,7 +14,7 @@ redirect_from:
 {% info_block infoBox %}
 Each product can be related to a tax set which contains the tax rates for each destination country.
 {% endinfo_block %}
-![Tax set rate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Tax+Schema/tax-set-rate.png){height="" width=""}
+![Tax set rate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Tax+Schema/tax-set-rate.png)
 
 **Structure**:
 

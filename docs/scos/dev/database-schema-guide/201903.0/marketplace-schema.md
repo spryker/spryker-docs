@@ -17,7 +17,7 @@ A Merchant is someone who sells Products on a Marketplace. Merchants sometimes h
 {% info_block warningBox %}
 This feature is being developed.
 {% endinfo_block %}
-![Merchant and merchant relationships](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Marketplace+Schema/merchant-and-relationship.png){height="" width=""}
+![Merchant and merchant relationships](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Marketplace+Schema/merchant-and-relationship.png)
 
 **Structure**:
 
@@ -33,7 +33,7 @@ In a B2B context, there are special agreements between a Merchant and "his" cust
 {% info_block warningBox %}
 It may happen that a Business Unit gets contradicting Relationships with the same Merchant. This has to be obeyed in all use cases.
 {% endinfo_block %}
-![Merchant Relationship to Company Business Units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Marketplace+Schema/merchant-relationship-company-business-units.png){height="" width=""}
+![Merchant Relationship to Company Business Units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Marketplace+Schema/merchant-relationship-company-business-units.png)
 
 **Structure**:
 

@@ -41,23 +41,27 @@ The table with shopping carts shows details for each of the carts, including:
 
 The table bellow provides detailed information on the possible actions to manage shopping carts.
 
-| Action | Description |
+| ACTION | DESCRIPTION |
 | --- | --- |
 | Edit Name | Allows a customer to edit the name of the shopping cart. |
 | Duplicate | Creates a copy of the chosen shopping cart including the items added to the cart.<br>The duplicate copy of the cart is named according to the template: `<Name of the original cart> Copied At <Mo. dd, yyyy hh:mm>` <br>A cart can be converted into shopping list on the *Shopping cart* page by clicking on **To shopping list**.|
 | Dismiss | Allows a customer to dismiss a shared shopping cart. |
 | Delete | Deletes the shopping cart. <br>Deleting a shopping cart also deletes the items added to it. |
 
-:::(Info)
+{% info_block infoBox %}
+
 To view how to create, edit, duplicate, and delete a cart and how to dissmiss shared carts, see the [Multiple Carts on the storefront](#multiple-carts-per-user-on-the-storefront) section.
-:::
+
+{% endinfo_block %}
 
 To learn more about sharing the shopping cart, check out [Shared Cart documentation](/docs/scos/dev/features/{{page.version}}/shared-carts-feature-overview.html).
 
 Active shopping cart is highlighted in bold.
 
 {% info_block infoBox %}
+
 Only one shopping cart can be set as active in the customer account.
+
 {% endinfo_block %}
 
 There are 2 ways to set a shopping cart as active:
@@ -84,22 +88,22 @@ After the shopping cart is set to active, the user is redirected to a respective
 
 ![Shopping Cart Page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/a-shopping-cart-page.png)
 
-## Multiple Carts on the Storefront 
+## Multiple Carts on the Storefront
 On the storefront, company users can perform the following actions using the Multiple Carts feature:
 <a id="multiple-carts-per-user-on-the-storefront"></a>
 
-<details open>
+<details>
 <summary>Create a cart</summary>
 
 ![Create a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/create-a-cart.gif)
 </details>
 
-<details open>
+<details>
 <summary>Edit and delete a cart</summary>
 
 ![Edit and delete a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/manage-a-shopping-cart.gif)
 </details>
-<details open>
+<details>
 <summary>Dismiss and duplicate a cart</summary>
 
 ![Dismiss and duplicate a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/dismiss-and-duplicate-a-shopping-cart.gif)
@@ -115,19 +119,8 @@ On the storefront, company users can perform the following actions using the Mul
 In this video, we explain how to use shopping carts in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html).
 <iframe src="https://fast.wistia.net/embed/iframe/s776wlo9ds" title="How to use Shopping Carts in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="640" height="480"></iframe>
 
-## If you are:
+{% info_block warningBox %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li>Integrate the Multiple Carts feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/multiple-carts-feature-integration" class="mr-link">Integrate the Multiple Carts feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/multiple-carts-quick-order-integration" class="mr-link">Integrate the Multiple Carts + Quick Order feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/multiple-carts-reorder-feature-integration" class="mr-link">Integrate the Multiple Carts + Reorder feature</a></li> 
-            </ul>
-        </div>
-    </div>
-</div>
+Are you a developer? See [Multiple Carts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/multiple-carts-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

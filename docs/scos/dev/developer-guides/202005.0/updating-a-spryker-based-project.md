@@ -30,7 +30,7 @@ The set of features make up a **product**. Spryker offers the following products
 
 Schematically, the Spryker product structure looks like this:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Updating+a+Spryker-based+Project/product-structure.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Updating+a+Spryker-based+Project/product-structure.png)
 
 ## Why and When you Should Update Your Spryker Shop
 

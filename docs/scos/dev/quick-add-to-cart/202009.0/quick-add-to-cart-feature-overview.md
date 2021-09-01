@@ -19,7 +19,7 @@ Use the Tab button to automatically fill in a partially typed product name or SK
 By default, we use SKU as a product identifier for filtering the results. The identifier determines what input to validate in the *SKU/Name* field. You can configure to use more than one identifier such as EAN, GTIN, or Article number on the project level by changing the template in the `ProductSearchWidget` module and use any of the available fields for the product.
 {% endinfo_block %}
 To view how to create a quick order, see [Quick Order on the Storefront](#quick-order-on-the-storefront).
-<!--- ![Quick Order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-page.png){height="" width=""}
+<!--- ![Quick Order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-page.png)
 --->
 
 As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/scos/dev/features/202009.0/measurement-units/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
@@ -28,7 +28,7 @@ As a shop owner, you can also integrate the Quick Order with [Measurement Units]
 The integration is possible only if the Measurement Units feature is enabled in your project.
 {% endinfo_block %}
 Moreover, after adding a quick order to cart, a shop owner can observe the default amount and default sales units for the product packaging unit in the cart overview.
-![Quick Order packaging units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-packaging-units.png){height="" width=""}
+![Quick Order packaging units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-packaging-units.png)
 
 When the customer has found the products they need, they can set the quantity of each product using a scroll-down box. By default, "1" is set in the *Quantity* field. If there are any quantity restrictions applied to the product, they are taken into account: the customer can choose only the value which meets the quantity restrictions. See [Quantity Restrictions for Quick Order](/docs/scos/dev/quick-add-to-cart/202009.0/quick-add-to-cart-feature-overview.html#quantity-restrictions-for-quick-order) to learn more about how the quantity limitations are applied to the *Quick Order* form.
 
@@ -75,11 +75,11 @@ You can update the project configuration in case you need to use other file form
 
 After the feature is integrated<!-- link to integration guide-->, a buyer can see a box on the *Quick Order* page:
 
-![File Upload form](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/file-upload-form.png){height="" width=""}
+![File Upload form](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/file-upload-form.png)
 
 Buyers can upload a CSV by choosing a file from their local system or via drag & drop. To make the process more clear, they can download a sample CSV file and add the necessary data (SKU and Qty) there:
 
-![File Upload csv file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/file-upload-csv.png){height="" width=""}
+![File Upload csv file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/file-upload-csv.png)
 
 :::(Info)
 Make sure to populate the product data in the following format: [CONCRETE_SKU, QUANTITY].
@@ -101,6 +101,4 @@ Using the Quick Order feature on the Storefront, company users can:
 * Add a quick order to a shopping cart.
 
 The following figure shows how to perform these actions:
-![create-quick-order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/create-quick-order.gif){height="" width=""}
-
-
+![create-quick-order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/create-quick-order.gif)

@@ -22,7 +22,7 @@ The set of features make up a **product**. Spryker offers the following products
 
 Schematically, the Spryker product structure looks like this:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Updating+a+Spryker-based+Project/product-structure.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Updating+a+Spryker-based+Project/product-structure.png)
 
 ## Features vs. Individual Module Updates
 Now that you know about the Spryker structure, you need to decide at which level you want to do updates of your projects: at the **feature level** or at the **module level**. 

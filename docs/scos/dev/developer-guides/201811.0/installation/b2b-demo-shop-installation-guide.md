@@ -117,7 +117,7 @@ To install the VM, you need to run the following commands. For this purpose, use
 * Start typing Git Bash.
 
 * In the search results, right-click **Git Bash** and select **Run as administrator**.
-![Run git bash as administrator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/B2B+Demo+Shop+Installation+Guide/run-git-bash-as-administrator.png){height="" width=""}
+![Run git bash as administrator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/B2B+Demo+Shop+Installation+Guide/run-git-bash-as-administrator.png)
 
 1. **Create the folder in which you want the source code to be placed:**
 

@@ -13,7 +13,7 @@ A price can be attached to an abstract product as well as to a concrete product.
 Each price is assigned to a price type ( e.g. gross price, net price ) and for a price type there can be one to n product prices defined. Price type entity is used to differentiate between use cases: for example we have DEFAULT and ORIGINAL type where we use it for sale pricing.
 
 The price can have gross or net value which can be used based on a price mode selected by customer in Yves. You can have shop running in both modes and select net mode for business customer, for example. Price also has currency and store assigned to it.
-![Price calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_calculation.png){height="" width=""}
+![Price calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_calculation.png)
 
 ## Price Inheritance
 
@@ -22,7 +22,7 @@ As a general rule, if a concrete product doesn’t have a specific entity stored
 If it still can’t find a price, then it throws an exception (basically this shouldn’t happen if the products have been exported and are up to date).
 
 The diagram bellow summarizes the logic for retrieving the price for a product:
-![Price retrieval logic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_retrieval_logic.png){height="" width=""}
+![Price retrieval logic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_retrieval_logic.png)
 
 ## Price Calculation
 

@@ -38,7 +38,7 @@ If a user who does not exist in the Spryker database logs in for the first time,
 
 With Strategy 1, the login process looks like this:
 
-![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom)
 
 **Strategy 2: Do not log in the user unless they exist in the Spryker database.**
 
@@ -46,7 +46,7 @@ Before a user can log in to Back Office with a third-party service credentials, 
 
 With Strategy 2, the login process looks like this:
 
-![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom)
 
 ## Current constraints
 

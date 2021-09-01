@@ -14,7 +14,7 @@ The Tax module is responsible for handling tax rates that can apply for products
 
 ## Overview
 The tax sets can have different tax rates for each country defined in your shop. You can see in the diagram below how these entities are modeled in the database.
-![Database for tax sets](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Tax+Version+1.0/tax.png){height="" width=""}
+![Database for tax sets](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Tax+Version+1.0/tax.png)
 
 A tax set is defined by a name and is uniquely identified by an `id`. As its name says, it’s associated to a set of rates. A tax rate is defined by a name, a numeric rate value and it’s linked to a country.
 

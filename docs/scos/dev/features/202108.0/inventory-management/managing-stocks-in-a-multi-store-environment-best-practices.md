@@ -40,7 +40,7 @@ Suppose you have a big e-commerce business, with many products and orders, so yo
 
 In this case, you can have a common warehouse for all your stores but separate databases. Since the warehouse is shared, for the correct product availability calculations, product reservations must be synced between the databases:
 
-![image](https://confluence-connect.gliffy.net/embed/image/728ee336-f3e0-4d03-b519-24bc15566360.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/728ee336-f3e0-4d03-b519-24bc15566360.png?utm_medium=live&utm_source=custom)
 
 This approach is good for big businesses that can’t have or don’t need multiple warehouses but still want to have data of each store separated.
 
@@ -79,7 +79,7 @@ Suppose you own a medium to big e-commerce business and ship orders worldwide. Y
 
 In this case, consider separated warehouses but a shared database:
 
-![image](https://confluence-connect.gliffy.net/embed/image/f02757ee-9f81-496b-8b71-5dbdb801afe8.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/f02757ee-9f81-496b-8b71-5dbdb801afe8.png?utm_medium=live&utm_source=custom)
 
 {% info_block infoBox %}
 
@@ -100,7 +100,7 @@ Suppose you own a small to big e-commerce business and can’t have or don’t n
 
 In this case, consider having a shared warehouse and a shared database for all the stores. Since the warehouse is shared, for the correct product availability calculations, product reservations are synced between the stores:
 
-![image](https://confluence-connect.gliffy.net/embed/image/2848116a-7530-407f-8cef-384bdd82b9ac.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/2848116a-7530-407f-8cef-384bdd82b9ac.png?utm_medium=live&utm_source=custom)
 
 {% info_block infoBox %}
 

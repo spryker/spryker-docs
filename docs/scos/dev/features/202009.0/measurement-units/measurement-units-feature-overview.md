@@ -24,13 +24,13 @@ The shop owner can define if conversion factor between base and sales units shou
 
 | Example | Display Value | Product Details Page |
 | --- | --- | --- |
-| The base unit is meter and the sales unit is feet | "**1 meter=3,048 feet**" is displayed under the drop-down field with measuring units on product details page | ![Quantity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Measurement+Units/Measurement+Units+Feature+Overview/quantity.png){height="" width=""}|
+| The base unit is meter and the sales unit is feet | "**1 meter=3,048 feet**" is displayed under the drop-down field with measuring units on product details page | ![Quantity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Measurement+Units/Measurement+Units+Feature+Overview/quantity.png)|
 
 On the cart page, the user sees quantity both in base unit and sales unit.
 
 | Example | Display Value | Cart Page |
 | --- | --- | --- |
-| Suppose if base unit of cables is meters and the user selects to buy 12.19 feet of cable | Both, the quantity **4** and **12.19** feet are displayed on the cart page.<br>12.19 (sales unit) = 4 (base unit) |![Quantity on the cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Measurement+Units/Measurement+Units+Feature+Overview/quantity_cart.png){height="" width=""}|
+| Suppose if base unit of cables is meters and the user selects to buy 12.19 feet of cable | Both, the quantity **4** and **12.19** feet are displayed on the cart page.<br>12.19 (sales unit) = 4 (base unit) |![Quantity on the cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Measurement+Units/Measurement+Units+Feature+Overview/quantity_cart.png)|
 
 If user puts one and the same product in different sales units, they will be shown as two different items in the cart.
 
@@ -40,7 +40,7 @@ The schema below illustrates relations between products and measurement units, w
 * **precision** - ratio between a sales unit and a base unit. For example, a base unit is "item", and user selects "kg" as a sales unit.
 * **is_displayed** - If true, then the value is shown in shop.
 * **is_default** - If true then the unit is shown as default unit in shop.
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Measurement+Units/Measurement+Units+Feature+Overview/product_units_relation.png){height="" width=""}
+![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Measurement+Units/Measurement+Units+Feature+Overview/product_units_relation.png)
 
 Let's take an example to better understand the feature. Suppose, 1 apple (1=factor) weights 0,1 Kg, then ratio will be 10 (1kg = 10 apples). If the precision is 100, the user can specify a number as 0.40 Kg (which will be 4 apples). Likewise, if in this case the user selects kg and precision is set to "1", it's quantity in sales units on the cart page will be "0", as precision 1 implies that no digits are shown after the decimal sign. Actually,
 

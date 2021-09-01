@@ -18,14 +18,17 @@ Example:
 ![Product bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles.png)
 
 {% info_block infoBox %}
+
 Bundles are handled in different ways:<br>For example, a marketing bundle of two items that gives a 20% discount is purchased as a single item and then split for processing into its two constituent items. Another scenario is when products are put together from separate purchase items, for example when tires and rims are sold as separate items and then delivered assembled as wheels.
+
 {% endinfo_block %}
 
 
 * A bundle can contain multiple quantities of the same item
 * The availability of a bundle product is equal to the item with the lowest availability
 
-## Product-Bundle Module
+## Product-Bundle module
+
 Product bundles are two or more existing products combined into a new type of product for the sole purpose to be displayed as one product in the shop frontend and to be sold together. Typically the products are concrete products, because both need to be potential order items. The new (bundled) product does not physically exist in the bundled state. The Product-Bundle can be bought by customers, but in the order management system the items are handled separately, this way the shop owner can manage the products separately.
 
 ### Characteristics of product bundles
@@ -42,9 +45,11 @@ Product bundles are two or more existing products combined into a new type of pr
 
 
 ## Product bundle entity relationship diagram
-![Product bundle entity diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles_entity_diagram.png){height="" width=""}
+
+![Product bundle entity diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles_entity_diagram.png)
 
 ## Availability calculation
+
 Bundle availability is calculated from bundled product availability. When bundled product availability is changed, for example state machine move through reserved flags then all bundles is updated accordingly.
 
 Bundle is updated when:
@@ -57,6 +62,7 @@ Bundle is updated when:
 
 
 ## Stock calculation
+
 Bundle have "dynamic stock", the stock is defined by bundled products. It cannot be imported as regular products. That means a bundle will get maximum possible stock quantity based on bundled product quantity. Stock is calculated for each warehouse separately.
 
 For example.
@@ -74,6 +80,7 @@ Then product bundle stock is:
 * Warehouse 2: **Bundle stock x 2**
 
 ## Product bundle structure in cart
+
 Because of changed structure, cart uses special Yves class to handle bundle operations ProductBundleAwareCartOperationHandler.
 
 When bundle item added to cart there is additional ExpandBundleItemsPlugin cart expander plugin which extracts bundled items from given bundle SKU.
@@ -90,28 +97,19 @@ If bundled items have quantity > 1 then it will be split as separate items in ca
 BundleProduct have price this price, it is distributed to whole bundled items. Overwriting original product price. If bundle have price 100, and there is 3 bundled products, each will get price 33,34,33 distributed, 34 is to cover rounding error.
 
 ## Persisting when placing an order, end of checkout
-Bundle product information is stored to `spy_sales_order_item_bundle`. When order is placed in order detail page you will see all bundled items stored as separate row. This allows process state machine separately for each item, for example (ship, refund, return, etc..).
+
+Bundle product information is stored to `spy_sales_order_item_bundle`. When order is placed in order detail page you will see all bundled items stored as separate row. This allows process state machine separately for each item, for example (ship, refund, return, etc.).
 
 If bundled item moves to reserved state machine state then corresponding bundle availability will be updated also.
 
+## Related Business User articles
 
-## If you are:
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create product bundles](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html)  |
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-bundled-products" class="mr-link">Retrieve bundled products via Glue API</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-abstract-products-and-product-bundles" class="mr-link">Create product bundles</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Product Bundles feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-bundles-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

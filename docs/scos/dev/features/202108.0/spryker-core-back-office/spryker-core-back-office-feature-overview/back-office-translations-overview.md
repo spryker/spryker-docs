@@ -56,7 +56,7 @@ The scheme below illustrates relations between Translator, UserExtension, User, 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Assign language to Back Office users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.md#creating-users) |
+| [Assign language to Back Office users](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#creating-users) |
 
 {% info_block warningBox "Developer guides" %}
 

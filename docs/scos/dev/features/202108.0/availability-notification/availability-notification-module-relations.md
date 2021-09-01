@@ -11,5 +11,5 @@ redirect_from:
 ---
 
 The scheme below illustrates relations between Availability, AvailabilityNotification, AvailabilityNotificationWidget, and ProductDetailPage modules:
-![Module relations scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Product+is+Available+Again/module-diagram.png){height="" width=""}
+![Module relations scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Product+is+Available+Again/module-diagram.png)
 

@@ -17,7 +17,7 @@ redirect_from:
 {% info_block infoBox %}
 Company users use shopping lists to prepare and manage orders that they do regularly. For example, a restaurant can prepare lists for their regular orders of meat, vegetables, and drinks. These lists can be merged into one cart, adjusted and checked out by the chef on a daily basis.
 {% endinfo_block %}
-![Shopping lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Lists+Schema/shopping-list.png){height="" width=""}
+![Shopping lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Lists+Schema/shopping-list.png)
 
 **Structure**:
 
@@ -32,7 +32,7 @@ Company users use shopping lists to prepare and manage orders that they do regul
 {% info_block infoBox %}
 Customers can create one or multiple wishlists, add products to them and transfer wishlists to carts.
 {% endinfo_block %}
-![Wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Lists+Schema/wishlist.png){height="" width=""}
+![Wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Customer+Lists+Schema/wishlist.png)
 
 **Structure**:
 

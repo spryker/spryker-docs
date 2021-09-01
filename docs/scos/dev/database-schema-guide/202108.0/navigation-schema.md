@@ -20,7 +20,7 @@ Every shop can have several independent navigation trees. For instance, there ca
 {% info_block warningBox %}
 The main difference to Categories is that a Category Tree represents a hierarchical structure for the Products while a Navigation is just a nested list of links.
 {% endinfo_block %}
-![Navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Navigation+Schema/navigation.png){height="" width=""}
+![Navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Navigation+Schema/navigation.png)
 
 **Structure**:
 

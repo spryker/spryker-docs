@@ -44,7 +44,7 @@ A module in the Commerce OS consists of 4 main software layers. Each layer is re
    This layer is where the look and feel of the Backoffice are implemented. It only contains the templates of the Backoffice page of a module. The Presentation layer sends requests to the Communication layer in order to get the needed data. Then it shows the data using the templates.
 
 Here is a graph that shows the 4 software layers in Zed Layer.
-![Application layers](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Modularity+and+Shop+Suite/application-layers.png){height="" width=""}
+![Application layers](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Modularity+and+Shop+Suite/application-layers.png)
 
 On the other hand, the front-end architecture is fairly simple. It has routes, controllers, templates, and forms when needed. There are no software layers in the front-end application as there is no need for them and for the additional complexity.
 

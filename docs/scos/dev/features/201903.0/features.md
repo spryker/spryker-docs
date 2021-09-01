@@ -14,7 +14,7 @@ What to know more? Learn about [Master Suite](/docs/scos/user/intro-to-spryker/{
 {% endinfo_block %} we provide.)
 
 Capabilities are high level descriptions of what a certain facet of Spryker can do. Each Capability is mapped to a list of Features. A Feature is a specific aspect of a Capability, for example, the Inventory Management Capability includes the features, **Stock and Availability Management** and **Multiple Warehouse Stock Management** . All the features together help to define the exact scope of a Capability. This helps us to guide you to the relevant functionality you are looking for.
-![Features on the Capability page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/features-list-on-capability-page.png){height="" width=""}
+![Features on the Capability page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/features-list-on-capability-page.png)
 
  Each Feature has its own distinct functionality, this is the actionable information about a feature and describes the different activities you can perform with a feature like, Add, Delete, Modify, Extend etc. The Functionality for each Feature is listed according to user type to help distinguish between content intended for **Developers** (PHP Developers and Front End Developers), **End Users** who work with the Administration Interface (Category Managers, Sales, Marketing and Finance or any other people involved in creating and customizing your main interaction point with your customers), and **E-commerce users** (shop administrators who manage the account in the shop application).
 

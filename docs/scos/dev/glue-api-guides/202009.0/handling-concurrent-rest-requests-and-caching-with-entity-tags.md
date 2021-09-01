@@ -62,7 +62,7 @@ If the client makes a new attempt to update the resource, it needs to send the n
 ## Workflow diagram
 The following diagram shows the workflow of resources that support concurrent requests:
 
-![Workflow diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Handling+Concurrent+REST+Requests+and+Caching+with+Etags/entity-tag-process-flow.png){height="" width=""}
+![Workflow diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Handling+Concurrent+REST+Requests+and+Caching+with+Etags/entity-tag-process-flow.png)
 
 ## Resources supporting concurrent requests with ETags
 The following resource support concurrent requests with ETag headers by default:

@@ -20,7 +20,7 @@ A customer can cancel orders on the *Order History* and *Order Details* pages.
     <summary>Order cancellation representation - Order History Page</summary>
 
 
-![order-history-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/order-history-page.png){height="" width=""}
+![order-history-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/order-history-page.png)
 
 
 </details>
@@ -28,7 +28,7 @@ A customer can cancel orders on the *Order History* and *Order Details* pages.
 <details open>
     <summary>Order cancellation representation - Order Details Page</summary>
 
-![order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/order-details-page.png){height="" width=""}
+![order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/order-details-page.png)
 
 
 </details>
@@ -59,7 +59,7 @@ See [Managing Orders](/docs/scos/user/user-guides/{{page.version}}/back-office-u
 ## Order cancellation on the Storefront
 This is how the Order Cancellation feature works on the Spryker Demo Shop Storefront:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/shop-guide-cancelling-orders.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/shop-guide-cancelling-orders.gif)
 
 ## Related Business User articles
 

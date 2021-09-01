@@ -221,7 +221,7 @@ The product splitting logic does not support [packaging units](/docs/scos/dev/fe
 ## Configurable Bundle on the Storefront
 
 The Configurable Bundle feature looks as follows on the Storefront:
-![Configuring a bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configuring-a-bundle.gif){height="" width=""}
+![Configuring a bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configuring-a-bundle.gif)
 
 ### Current constraints
 

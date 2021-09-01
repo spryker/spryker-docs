@@ -32,14 +32,14 @@ redirect_from:
 
 ## What is the Spryker Commerce OS?
 The Spryker Commerce OS (SCOS) is a completely modular B2B and B2C e-commerce technology. With the modular application and API-based integration with all possible customer touchpoints (front-ends), SCOS provides significantly shorter time-to-market and reduced total cost of ownership, while increasing your ROI due to the digital best practices.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/Spryker-OS-Overview-RGB-JULY19_Spryker-OS-Overview.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/Spryker-OS-Overview-RGB-JULY19_Spryker-OS-Overview.png)
 
 We establish a unique advantage for our customers by creating a commerce operating system that revolves around two cornerstones for success: modular and layered architectures.
 
 ### Modular architecture
 Modular architecture, or modularity of the Spryker Commerce OS, means that the system is composed of small parts called modules. The Spryker Commerce OS consists of over 750 modules. Some of them are mandatory and required by the OS to run, but many are optional and designed to provide certain functionality or connectivity to either internal or external systems.
 The modules combine to create [features](/docs/scos/dev/features/{{page.version}}/overview-of-the-feature-guides.html) and have limited dependencies. The limited dependencies imply less development effort, increasing your return on investment and lowering the total cost of ownership.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/modularity_transparent.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/modularity_transparent.png)
 
 #### Benefits of the Spryker modular architecture:
 
@@ -66,9 +66,9 @@ SCOS is split into four different layers:
 * The **communication layer** connects the presentation layer to the business layer and transfers information between the business layer and the different presentation layers you may have.
 * The **persistence layer** covers all the data storage and processing, such as database queries and advanced calculations.
 
-<!---![Spryker layers](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/spryker_layers.png){height="" width=""}-->
+<!---![Spryker layers](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/spryker_layers.png)-->
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/spryker_layers_s.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/spryker_layers_s.png)
 
 
 #### Benefits of the layered architecture:

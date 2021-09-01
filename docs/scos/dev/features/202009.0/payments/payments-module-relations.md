@@ -10,5 +10,5 @@ redirect_from:
 
 The following scheme shows relations between the *Payment*, *PaymentGui*, and *PaymentDataImport* modules:
 
-![Scheme of modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-modules-scheme.png){height="" width=""}
+![Scheme of modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-modules-scheme.png)
 

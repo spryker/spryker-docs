@@ -18,7 +18,7 @@ Spryker saves orders with line items. There are three general approaches:
 1. There is one Sales Order Item for every sold product to the Sales Order. Even when the same product was sold several times. This way we can have a clear state per item.
 2. All data that is necessary to process the order is copied over from other tables. So we clearly separate dynamic data (like the current name of a product) from static data (like the name of the product at the moment when it was sold).
 3. Prices are saved in an explicit way so that all numbers are fixed and there is no reason for a later re-calculation.
-![Sales order item](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/sales-order-item.png){height="" width=""}
+![Sales order item](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/sales-order-item.png)
 
 * **Structure**:
 
@@ -48,7 +48,7 @@ It is currently not possible to realize splits with Sales Order Items that have 
 ### Customer Data
 
 The Sales Order contains a copy of the Customer data so that it is not affected if the Customer makes changes.
-![Customer data](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/customer-data.png){height="" width=""}
+![Customer data](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/customer-data.png)
 
 **Structure**:
 
@@ -58,7 +58,7 @@ The Sales Order contains a copy of the Customer data so that it is not affected 
 ### Sales Bundles and Options
 
 See description of the [Product Bundle](/docs/scos/dev/database-schema-guide/201903.0/catalog-schema.html#product-bundles) and [Product Option](/docs/scos/dev/database-schema-guide/201903.0/catalog-schema.html#product-options) schemas for more details.
-![Sales and bundles options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/sales-bundles-options.png){height="" width=""}
+![Sales and bundles options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/sales-bundles-options.png)
 
 **Structure**:
 
@@ -80,7 +80,7 @@ Sales Orders and Sales Order Items can have additional costs. Typically this is 
 {% info_block warningBox %}
 Currently, Spryker only supports expenses for the whole order and not per item.
 {% endinfo_block %}
-![Expenses](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/expenses.png){height="" width=""}
+![Expenses](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/expenses.png)
 
 **Structure**:
 
@@ -90,7 +90,7 @@ Currently, Spryker only supports expenses for the whole order and not per item.
 ### Discounts
 
 See Discount Schema for a full description:
-![Discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/discount.png){height="" width=""}
+![Discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/discount.png)
 
 **Structure**:
 
@@ -108,7 +108,7 @@ Orders can be paid with none, one or multiple payments. Each payment is identifi
 | The customer pays the order with a credit card | Credit card |
 | The customer pays the order with two credit cards | Credit card A Credit card B |
 | The customer pays the order with a credit card and a gift card | Credit card Gift card |
-![Payments](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/payments.png){height="" width=""}
+![Payments](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/payments.png)
 
 **Structure**:
 
@@ -120,7 +120,7 @@ Orders can be paid with none, one or multiple payments. Each payment is identifi
 ### Sales Order Item States and Process
 
 Spryker uses State Machine to process orders. Every Sales Order Item has a distinct State and belongs to a Process. The State Machine itself is modeled via XML files and therefore not visible in the schema.
-![Sales order item states and process](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/sales-order-item-states-process.png){height="" width=""}
+![Sales order item states and process](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/sales-order-item-states-process.png)
 
 **Structure**:
 
@@ -138,7 +138,7 @@ When something goes wrong in the fulfillment of an order then it's a good idea t
 {% info_block warningBox %}
 This feature is not 100% reliable at the moment and may result in performance problems. The log can be retrieved in Zed UI via a hidden URL: `/oms/log?id-order=1`
 {% endinfo_block %}
-![Transition log](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/transition-log.png){height="" width=""}
+![Transition log](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/transition-log.png)
 
 **Structure**:
 
@@ -149,7 +149,7 @@ This feature is not 100% reliable at the moment and may result in performance pr
 {% info_block infoBox %}
 The State Machine cannot be executed in parallel for the same Sales Order. For this reason, there is a lock with a configurable TTL.
 {% endinfo_block %}
-![State machine lock](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/state-machine-lock.png){height="" width=""}
+![State machine lock](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/state-machine-lock.png)
 
 ## Quote
 
@@ -160,7 +160,7 @@ The quote object contains the Cart and all user input from the Checkout (like Ad
 ### Persisted Quote (Multi-Cart per Customer)
 
 Customers can have more than one cart and they have the option to keep the cart after checkout.
-![Persisted quote](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/persisted-quote.png){height="" width=""}
+![Persisted quote](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/persisted-quote.png)
 
 **Structure**:
 
@@ -173,7 +173,7 @@ Customers can have more than one cart and they have the option to keep the cart 
 {% info_block infoBox %}
 Carts can be shared among Company Users.
 {% endinfo_block %}
-![Shared quotes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/shared-quotes.png){height="" width=""}
+![Shared quotes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/shared-quotes.png)
 
 ## Sales Order Prices
 
@@ -186,7 +186,7 @@ It's important to obey the Sales Order's `price_mode` that defines if the calcul
 {% info_block infoBox %}
 You can have a look inside the calculation when you add some products to the cart and then open this URL in the shop: `/calculation/debug`
 {% endinfo_block %}
-![Sales order prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/sales-order-prices.png){height="" width=""}
+![Sales order prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/sales-order-prices.png)
 
 In general, there are several types of fields:
 
@@ -219,7 +219,7 @@ All prices in the are the line prices (so multiplied by the related quantity).
 ### Order Totals
 
 Totals are sums of already aggregated values. They are shown in the checkout and in the invoices.
-![Order totals](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/order-totals.png){height="" width=""}
+![Order totals](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Sales+Schema/order-totals.png)
 
 | Field | Description | Calculation |
 | --- | --- | --- |

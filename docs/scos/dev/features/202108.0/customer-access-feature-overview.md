@@ -51,7 +51,7 @@ Even if the **Add to Cart** button is available, an unauthenticated customer is 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage customer access](/docs/scos/dev/features/{{page.version}}/customer-access-feature-overview.html) |
+| [Manage customer access](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customer-access.html) |
 
 {% info_block warningBox "Developer guides" %}
 

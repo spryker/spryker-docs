@@ -20,5 +20,5 @@ The `ProductSet` module provides a `spy_product_set` table that stores some non-
 
 The products in product sets and their sorting positions are stored in the `spy_product_abstract_set` table.
 
-![Product Set Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Sets/product_set_db_schema.png){height="" width=""}
+![Product Set Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Sets/product_set_db_schema.png)
 

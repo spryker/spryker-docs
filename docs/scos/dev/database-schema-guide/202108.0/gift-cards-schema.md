@@ -21,7 +21,7 @@ Enable your customers to buy gift cards with flexible amounts of money and to gi
 {% info_block errorBox %}
 Gift cards are not Discounts!
 {% endinfo_block %}
-![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Gift+Cards+Schema/gift-card.png){height="" width=""}
+![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Gift+Cards+Schema/gift-card.png)
 
 **Structure**:
 
@@ -36,7 +36,7 @@ Gift cards are not Discounts!
 {% info_block infoBox %}
 A Gift Card Product is a regular product in the shop which represents a Gift Card that Customer can buy.
 {% endinfo_block %}
-![Gift card product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Gift+Cards+Schema/gift-card-product.png){height="" width=""}
+![Gift card product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Gift+Cards+Schema/gift-card-product.png)
 
 **Structure**:
 
@@ -56,7 +56,7 @@ A Gift Card Product is a regular product in the shop which represents a Gift Car
 {% info_block infoBox %}
 Gift Cards are used to pay orders. If the Grand Total is higher than the Gift Card Amount then there is some left over. This is saved as a balance.
 {% endinfo_block %}
-![Gift card balance and payment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Gift+Cards+Schema/gift-card-purchase-payment.png){height="" width=""}
+![Gift card balance and payment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Gift+Cards+Schema/gift-card-purchase-payment.png)
 
 **Structure**:
 

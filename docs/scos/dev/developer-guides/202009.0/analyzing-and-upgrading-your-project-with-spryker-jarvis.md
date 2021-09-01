@@ -66,14 +66,14 @@ This view is especially useful when:
 Use this view if you want to stay up-to-date with Spryker and get new features every Spryker product release.
 
 To see this view, run `node jarvis.js <path to your spryker project folder>` in the terminal. This shows you the main Spryker Jarvis page with information about the product release you can upgrade your project to.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04a+at+13.58.50.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04a+at+13.58.50.png)
 
 It can be that a dependency has been upgraded, but no migration is needed. In this case, we will highlight it:
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-04+at+14.00.13.png){height="428" width="312"}
 
 In this view, under the list of features to upgrade and the dependencies, you can also check the features you don’t use but might be interested in. The recently released features are marked as *New feature*:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/unused-features.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/unused-features.png)
 
  You can go to the repository of each feature by clicking the feature names. 
 
@@ -95,7 +95,7 @@ If you use Spryker features and want to be up-to-date with them, we recommend us
 
 To see this view, run `node jarvis.js <path to your spryker project folder> --no-features` in the terminal. This shows you what modules are behind their minor and major versions, and how far they are behind:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-06+at+09.57.56.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-06+at+09.57.56.png)
 
 To see details on a module, such as, what changes have been made in the later versions compared to your module version, click the module:
 
@@ -120,7 +120,7 @@ To see this view, run `node jarvis.js <path to your spryker project folder> --mi
 
 In most cases, you need to add missing dependencies to your project to be able to use the Spryker features. But sometimes, you can swap your modules with the Spryker features because your project already has all the dependencies, as in this example:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-06+at+11.02.11.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screenshot+2020-08-06+at+11.02.11.png)
 
 ## Current constraints
 

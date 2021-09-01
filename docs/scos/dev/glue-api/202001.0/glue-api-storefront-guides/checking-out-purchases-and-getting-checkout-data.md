@@ -46,7 +46,7 @@ For usage information, see sections *Redirecting the User for Payment Confirmati
 {% endinfo_block %}
 
 A typical API Client workflow is as follows:
-![Workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Checking+Out+Purchases+and+Getting+Checkout+Data/checkout-payment-process.png){height="" width=""}
+![Workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Checking+Out+Purchases+and+Getting+Checkout+Data/checkout-payment-process.png)
 
 ## Submitting Checkout Data
 To submit checkout data without order confirmation, you need to use the `/checkout-data` endpoint:
@@ -1002,7 +1002,7 @@ The formats of the payloads used in the request and response to the third party 
 
 **Interaction Diagram**
 
-![Interaction diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Checking+Out+Purchases+and+Getting+Checkout+Data/multi-step-checkout-glue-storefront.png){height="" width=""}
+![Interaction diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Checking+Out+Purchases+and+Getting+Checkout+Data/multi-step-checkout-glue-storefront.png)
 
 ## Updating Payment Data
 If the user is redirected to a third-party page for payment verification, you need to update the payment with the payload received from the payment provider. To do so, post the payload to the following endpoint:

@@ -84,7 +84,7 @@ To configure a mount mode, see [Configuring a mount mode](/docs/scos/dev/develop
 
 Synchronization mount modes, such as mutagen or docker-sync, use algorithms to synchronize your code between host machine and a docker volume. This allows you to run applications at full speed avoiding file system mount latency.
 
-![mutagen-diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+SDK/Choosing+a+mount+mode/mutagen-diagram.png){height="" width=""}
+![mutagen-diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+SDK/Choosing+a+mount+mode/mutagen-diagram.png)
 
 - Mutagen daemon listens to the host file system changes.
 - Mutagen sidecar container listens to the VM file system changes.

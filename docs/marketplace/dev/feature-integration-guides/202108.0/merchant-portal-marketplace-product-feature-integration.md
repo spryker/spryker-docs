@@ -77,6 +77,8 @@ class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantP
 
 {% info_block warningBox "Verification" %}
 
+Make sure the stock available stock column is displayed in the ProductConcreteTable.
+
 {% endinfo_block %}
 
 ### 3) Set up transfer objects

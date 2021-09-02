@@ -7,6 +7,16 @@ template: concept-topic-template
 
 With the *Marketplace Wishlist* feature, the customers can track and save merchant offers and products they wish to purchase through the wishlist. The customers can create multiple wishlists and customize their names.
 
+## Modules diagram
+
+![Entity diagram](https://confluence-connect.gliffy.net/embed/image/37b81a64-3990-4bb8-963e-9a629ebd3c4b.png?utm_medium=live&utm_source=confluence)
+
+## Entity diagram
+
+The following schema illustrates relations in the Marketplace Wishlist entity:
+
+![Entity diagram](https://confluence-connect.gliffy.net/embed/image/2b4daf55-cdb1-417f-81d3-8cad01180385.png?utm_medium=live&utm_source=confluence)
+
 ## Related Developer articles
 
 | INTEGRATION GUIDES | GLUE API GUIDES  |

@@ -197,9 +197,9 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 | ----------- | ----- | ------- | -------------------- |
-| MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCard  |
-| MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButton |
-| GuiTableEditableConfiguration.disableRowKey | property | created | src/Generated/Shared/Transfer/GuiTableEditableConfiguration |
+| MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer  |
+| MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
+| GuiTableEditableConfiguration.disableRowKey | property | created | src/Generated/Shared/Transfer/GuiTableEditableConfigurationTransfer |
 
 {% endinfo_block %}
 

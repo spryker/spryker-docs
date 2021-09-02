@@ -10,6 +10,16 @@ redirect_from:
   - /docs/en/guidelines-for-new-gdpr-rules
   - /v6/docs/guidelines-for-new-gdpr-rules
   - /v6/docs/en/guidelines-for-new-gdpr-rules
+  - /v5/docs/guidelines-for-new-gdpr-rules
+  - /v5/docs/en/guidelines-for-new-gdpr-rules
+  - /v4/docs/guidelines-for-new-gdpr-rules
+  - /v4/docs/en/guidelines-for-new-gdpr-rules
+  - /v3/docs/guidelines-for-new-gdpr-rules
+  - /v3/docs/en/guidelines-for-new-gdpr-rules
+  - /v2/docs/guidelines-for-new-gdpr-rules
+  - /v2/docs/en/guidelines-for-new-gdpr-rules
+  - /v1/docs/guidelines-for-new-gdpr-rules
+  - /v1/docs/en/guidelines-for-new-gdpr-rules
 ---
 
 {% info_block errorBox %}
@@ -20,7 +30,7 @@ This article conforms the [DSGVO](https://de.wikipedia.org/wiki/Datenschutz-Grun
 
 As of May the 25th, 2018, the new General Data Protection Regulations (GDPR) take effect. This document describes how the Spryker Commerce OS is compliant with the GDPR.
 
-GDPR is a set of rules related to the protection and control of personal data. 
+GDPR is a set of rules related to the protection and control of personal data.
 For more information about GDPR, see:
 
 * [GDPR official site](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32016R0679)

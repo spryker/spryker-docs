@@ -14,7 +14,7 @@ This endpoint allows to retrieve detailed information about tax sets of abstract
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html).
+* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html).
 
 
 ## Retrieve tax sets

@@ -14,8 +14,8 @@ This endpoint allows managing shopping list items
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see: 
-* [Glue API: Shopping Lists feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-shopping-lists-feature-integration.html)
-* [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)
+* [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
+* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html)
 
 ## Add items to a shopping list
 To add items to a shopping list, send the request:
@@ -59,7 +59,7 @@ To add items to a shopping list, send the request:
 | Attribute | Type | Required | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Ingeger | ✓ | Quantity of the product to add. |
-| sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html) are allowed. |
+| sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html) are allowed. |
 
 
 
@@ -210,7 +210,7 @@ To change item quantity in a shopping list, send the request:
 
 | Attribute | Type | Required | DESCRIPTION|
 | --- | --- | --- |--- |
-| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html) are allowed. |
+| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html) are allowed. |
 | quantity | Integer | ✓ | New quantity of the product. |
 
 ### Response

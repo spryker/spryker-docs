@@ -25,7 +25,7 @@ The formats of the payloads used in the request and response to the third-party 
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html).
 
 ## Update payment data
 To update payment with a payload from a third-party payment provider, send the request:

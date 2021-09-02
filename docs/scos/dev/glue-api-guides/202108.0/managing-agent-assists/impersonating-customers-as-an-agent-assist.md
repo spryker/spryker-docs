@@ -10,18 +10,18 @@ redirect_from:
   - /docs/en/impersonating-customers-as-an-agent-assist
 ---
 
-Impersonating a customer allows an [agent assist](/docs/scos/dev/features/{{page.version}}/agent-assist-feature-overview.html) to perform actions on their behalf. To impersonate a customer, they receive their Glue API authentication token. Using the token, agent assists perform any action available to the customer.
+Impersonating a customer allows an [agent assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) to perform actions on their behalf. To impersonate a customer, they receive their Glue API authentication token. Using the token, agent assists perform any action available to the customer.
 
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-*   [Glue API: Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-agent-assist-feature-integration.html)
+*   [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html)
     
-*   [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html)
+*   [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
     
-*   [Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-account-management-feature-integration.html)
+*   [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
 
 ## Impersonate a customer
 

@@ -9,18 +9,18 @@ redirect_from:
   - /docs/en/retrieving-promotional-items
 ---
 
-The [Promotions](/docs/scos/dev/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts-feature-overview.html#promotional-product) functionality enables sellers to provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase needs to fulfill certain discount conditions, for example, the purchase amount should exceed a certain threshold.
+The [Promotions](/docs/scos/user/features/{{page.version}}/promotions-and-discounts/promotions-and-discounts-feature-overview.html#promotional-product) functionality enables sellers to provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase needs to fulfill certain discount conditions, for example, the purchase amount should exceed a certain threshold.
 
 {% info_block infoBox "Info" %}
 
-For more details on how to create the discount conditions, see [Creating a Cart Rule](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/merchandising/discount/creating-a-cart-rule.html).
+For more details on how to create the discount conditions, see [Creating a Cart Rule](/docs/scos/user/back-office-user-guide/{{page.version}}merchandising/discount/creating-a-cart-rule.html).
 
 {% endinfo_block %}
 
 In your development, the Promotions API will help you to enable customers to redeem the benefits provided by promotions and check the correct order amount, discount included.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
 
 ## Managing Promotional Items
 You can do the following actions on the promotional items via API:

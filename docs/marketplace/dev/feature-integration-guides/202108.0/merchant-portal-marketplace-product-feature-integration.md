@@ -39,73 +39,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up behavior
-
-Enable the following behaviors by registering the plugins:
-
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-|-|-|-|-|
-| MerchantProductProductAbstractPostCreatePlugin | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
-| PriceProductAbstractPostCreatePlugin | Creates new product price entities by abstract product id and price type if they don't exist. | None | Spryker\Zed\PriceProduct\Communication\Plugin\Product |
-| PriceProductProductAbstractExpanderPlugin | Expands product abstract transfer with prices. | None | Spryker\Zed\PriceProduct\Communication\Plugin\Product |
-| ImageSetProductAbstractPostCreatePlugin | Persists all provided image sets to database for the given abstract product. | None | Spryker\Zed\ProductImage\Communication\Plugin\Product |
-| ProductImageProductAbstractExpanderPlugin | Expands product abstract transfer with product images. | None | Spryker\Zed\ProductImage\Communication\Plugin\Product |
-| TaxSetProductAbstractExpanderPlugin | Finds tax set in database by `ProductAbstractTransfer.idProductAbstract` and sets ProductAbstractTransfer.idTaxSet transfer property. | None | Spryker\Zed\TaxProductConnector\Communication\Plugin\Product |
-| TaxSetProductAbstractPostCreatePlugin | Saves tax set id to product abstract table. | None | Spryker\Zed\TaxProductConnector\Communication\Plugin\Product |
-
-**src/Pyz/Zed/Product/ProductDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Product;
-
-use Spryker\Zed\MerchantProduct\Communication\Plugin\Product\MerchantProductProductAbstractPostCreatePlugin;
-use Spryker\Zed\PriceProduct\Communication\Plugin\Product\PriceProductAbstractPostCreatePlugin;
-use Spryker\Zed\PriceProduct\Communication\Plugin\Product\PriceProductProductAbstractExpanderPlugin;
-use Spryker\Zed\ProductImage\Communication\Plugin\Product\ImageSetProductAbstractPostCreatePlugin;
-use Spryker\Zed\ProductImage\Communication\Plugin\Product\ProductImageProductAbstractExpanderPlugin;
-use Spryker\Zed\TaxProductConnector\Communication\Plugin\Product\TaxSetProductAbstractExpanderPlugin;
-use Spryker\Zed\TaxProductConnector\Communication\Plugin\Product\TaxSetProductAbstractPostCreatePlugin;
-use Spryker\Zed\Product\ProductDependencyProvider as SprykerProductDependencyProvider;
-
-class ProductDependencyProvider extends SprykerProductDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractPostCreatePluginInterface[]
-     */
-    protected function getProductAbstractPostCreatePlugins(): array
-    {
-        return [
-            new ImageSetProductAbstractPostCreatePlugin(),
-            new TaxSetProductAbstractPostCreatePlugin(),
-            new PriceProductAbstractPostCreatePlugin(),
-            new MerchantProductProductAbstractPostCreatePlugin(),
-        ];
-    }
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractExpanderPluginInterface[]
-     */
-    protected function getProductAbstractExpanderPlugins(Container $container): array
-    {
-        return [
-            new ProductImageProductAbstractExpanderPlugin(),
-            new TaxSetProductAbstractExpanderPlugin(),
-            new PriceProductProductAbstractExpanderPlugin(),
-        ];
-    }
-}
-```
-{% info_block warningBox "Verification" %}
-
-Make sure that you can create a new product in the merchant portal and see it after creation in the product data table.
-
-{% endinfo_block %}
-
-### 3) Set up transfer objects
+### 2) Set up transfer objects
 
 Generate transfer changes:
 
@@ -120,7 +54,6 @@ Make sure that the following changes have been applied in transfer objects:
 | TRANSFER  | TYPE  | EVENT | PATH  |
 |-|-|-|-|
 | MerchantProductTableCriteria | class | Created | src/Generated/Shared/Transfer/MerchantProductTableCriteriaTransfer |
-| ProductAbstract.idMerchant | attribute | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer |
 | ProductAbstractCollection | class | Created | src/Generated/Shared/Transfer/ProductAbstractCollectionTransfer |
 | PriceProductTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableCriteriaTransfer |
 | PriceProductTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductAbstractTableViewCollectionTransfer |

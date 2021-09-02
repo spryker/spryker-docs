@@ -418,6 +418,9 @@ entries:
                 - title: "Select"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
 
+                - title: "Text"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html
+
             - title: "Table Feature extension"
               url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
 

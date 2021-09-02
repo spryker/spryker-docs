@@ -49,7 +49,7 @@ Example usage the Table Column Select in the `@spryker/table` config:
 
 ## Interfaces
 
-The Table Column Select interface:
+The Table Column Select interfaces:
 
 ```ts
 type SelectValue = string | number;

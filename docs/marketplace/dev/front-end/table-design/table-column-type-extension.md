@@ -155,4 +155,4 @@ UI library comes with a number of standard column types that can be used on any 
 - [image](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html)—renders an image.
 - [input](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html)—renders `@spryker/input`component.
 - [select](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html)—renders `@spryker/select`component.
-- text—renders a static text.
+- [text](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html)—renders a static text.

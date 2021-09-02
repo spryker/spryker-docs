@@ -51,7 +51,7 @@ Example usage the Table Column Dynamic in the `@spryker/table` config:
 
 ## Interfaces
 
-The Table Column Dynamic interface:
+The Table Column Dynamic interfaces:
 
 ```ts
 interface DataTransformerConfig {

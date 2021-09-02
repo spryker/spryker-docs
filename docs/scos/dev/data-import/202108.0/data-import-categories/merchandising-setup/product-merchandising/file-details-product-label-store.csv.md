@@ -25,7 +25,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*    [product_label.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html)
+*    [product_label.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_label_store.csv*  file can be downloaded here:

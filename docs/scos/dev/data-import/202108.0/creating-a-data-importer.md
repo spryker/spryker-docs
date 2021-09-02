@@ -37,12 +37,12 @@ All `fk_*` fields are foreign keys to other database tables. We can not know the
 
 {% endinfo_block %}
 
-For the database field `fk_locale` we will use the name of the locale for which we need the id (e.g. de_DE). This value will then be used later to fetch the id for the given locale name. 
+For the database field `fk_locale` we will use the name of the locale for which we need the id (e.g. de_DE). This value will then be used later to fetch the id for the given locale name.
 We will use the same technique for the `fk_product` and `fk_product_abstract` fields.
 
 {% info_block infoBox "Info" %}
 
-To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/about-data-import-categories.html). 
+To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/data-import/{{page.version}}data-import-categories/about-data-import-categories.html).
 
 {% endinfo_block %}
 
@@ -76,8 +76,8 @@ Every import type needs its own `DataImporterConfiguration`. To add it, open the
 The constant is used to identify an import type. More information about it will follow later in this article. In our case we will use const `IMPORT_TYPE_PRODUCT_IMAGE = 'product-image';`.
 {% endinfo_block %}
 
-You also need to define the new data importer in the [configuration .yml file](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
-    
+You also need to define the new data importer in the [configuration .yml file](/docs/scos/dev/data-import/{{page.version}}importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
+
 ```
 actions:
   ...
@@ -97,7 +97,7 @@ where:
 First, we will create a new class called `ProductImageWriterStep` in `"*/Zed/DataImport/Business/Model/ProductImage/"` with this content:
 
 **ProductImageWriterStep**
-    
+
 ```php
 <?php
 
@@ -139,7 +139,7 @@ public function createProductImageImporter(DataImportConfigurationActionTransfer
     $dataImporter = $this->getCsvDataImporterWriterAwareFromConfig(
         $this->getConfig()->buildImporterConfigurationByDataImportConfigAction($dataImportConfigurationActionTransfer)
     );
-    
+
 	$dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker(ProductImageWriterStep::BULK_SIZE);
 	$dataSetStepBroker
 		->addStep(new ProductImageWriterStep());
@@ -291,7 +291,7 @@ public function __construct(LocaleRepositoryInterface $localeRepository)
 }
 ```
 
-Now, we need to inject this new Repository into our `ProductImageWriterStep` inside of the business factory. 
+Now, we need to inject this new Repository into our `ProductImageWriterStep` inside of the business factory.
 {% info_block infoBox "Info" %}
 
 When this is done we can use it like this: `$idLocale = $this->localeRepository->getIdLocaleByLocale($dataSet[static::KEY_LOCALE]);`

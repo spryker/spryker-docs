@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/configuring-access-to-private-repositories
   - /docs/configuring-access-to-private-repositories
   - /docs/en/configuring-access-to-private-repositories
+  - /v6/docs/configuring-access-to-private-repositories
+  - /v6/docs/en/configuring-access-to-private-repositories
 ---
 
 This document describes how to configure an environment to allow the Docker SDK access private repositories.
@@ -73,7 +75,7 @@ eval $(ssh-agent)
 ssh-add -K ~/.ssh/id_rsa
 ```
 
-3. MacOS and Windows: For Docker Desktop to fetch the changes, restart the OS. 
+3. MacOS and Windows: For Docker Desktop to fetch the changes, restart the OS.
 
 
 4. Re-build the application:
@@ -138,4 +140,3 @@ docker/sdk up --build
 ```
 
 You've configured authentication to your private repositories.
-

@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-product-abstractcsv
 ---
 
-This article contains content of the **product_abstract.csv** file to configure [Abstract Product](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html) information on your Spryker Demo Shop.
+This article contains content of the **product_abstract.csv** file to configure [Abstract Product](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html) information on your Spryker Demo Shop.
 
 To import the file, run
 
@@ -42,16 +42,16 @@ The file should have the following parameters:
 | icecat_license |  | String | | Icecat product catalogue licence code. |
 | new_from |  | Date | | To be considered a new product from this presented date. |
 | new_to |  | String | | To be considered a new product until this presented date. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/dev/features/{{page.version}}/tax/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 ## Dependencies
 
 This file has the following dependencies:
 
-* [ category.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html)
-* [glossary.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html)
-* [tax.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-tax.csv.html)
+* [ category.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/categories/file-details-category.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [tax.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-tax.csv.html)
 
 ## Recommendations and other information
 For each attribute, where N is a number starting in 1, it is mandatory to have both fields:

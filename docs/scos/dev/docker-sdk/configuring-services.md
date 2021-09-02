@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/configuring-services
   - /docs/configuring-services
   - /docs/en/configuring-services
+  - /v6/docs/configuring-services
+  - /v6/docs/en/configuring-services
 ---
 
 
@@ -35,7 +37,7 @@ This document describes configuration options of the services shipped with Spryk
 ```bash
 git clone https://github.com/spryker/docker-sdk.git ./docker
 ```
- 
+
 * After enabling a service, make sure to apply the new configuration:
     1. Bootstrap docker setup:
     ```bash
@@ -52,7 +54,7 @@ git clone https://github.com/spryker/docker-sdk.git ./docker
 
 {% endinfo_block %}
 
-## Database 
+## Database
 [MariaDB](https://mariadb.org/) is provided as a service by default, but you can switch to MySQL or PostgreSQL as described below.
 
 ### MariaDB
@@ -143,7 +145,7 @@ docker/sdk up --build --data
 
 ## ElasticSearch
 
-[Elasticsearch](https://www.elastic.co/elasticsearch/) is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. 
+[Elasticsearch](https://www.elastic.co/elasticsearch/) is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
 
 See:
 * [Configuring Elasticsearch](/docs/scos/dev/back-end-development/zed/data-manipulation/data-interaction/search/configuring-elasticsearch.html) to learn more about Elastcisearch configuration in Spryker.
@@ -160,10 +162,10 @@ services:
             localhost:9200
                 protocol: tcp
 ```
- 
+
 ## Kibana UI
 
-[Kibana](https://www.elastic.co/kibana) is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch indices. You can easily perform advanced data analysis and visualize your data in a variety of charts, tables, and maps. 
+[Kibana](https://www.elastic.co/kibana) is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch indices. You can easily perform advanced data analysis and visualize your data in a variety of charts, tables, and maps.
 
 See [Kibana documentation](https://www.elastic.co/guide/en/kibana/current/index.html) to learn more.
 
@@ -197,7 +199,7 @@ services:
     broker:
     ...
         endpoints:
-    ... 
+    ...
             localhost:5672:
                 protocol: tcp
             api.queue.spryker.local:
@@ -217,7 +219,7 @@ Spryker provides the basic functionality to generate [OpenApi schema specificati
 ### Configuration
 Follow the steps to configure an endpoint for Swagger UI:
 1. Adjust `deploy.*.yml` in the `services:` section:
-```yaml	
+```yaml
 services:
     ...
     swagger:
@@ -233,7 +235,7 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 ## Redis
 
-[Redis](https://redis.io) is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams. 
+[Redis](https://redis.io) is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams.
 
 See [Redis documentation](https://redis.io/documentation) for more details.
 
@@ -254,7 +256,7 @@ services:
 [Redis Commander](http://joeferner.github.io/redis-commander/) is a web management tool that provides a graphical user interface to access Redis databases and perform basic operations like view keys as a tree, view CRUD keys or import/export databases.
 
 ### Configuration
-Follow the steps to configure an endpoint for Redis Commander: 
+Follow the steps to configure an endpoint for Redis Commander:
 
 1. Adjust `deploy.*.yml` in the `services:` section:
 
@@ -301,7 +303,7 @@ services:
                 endpoints:
                           {custom_endpoint}:
 ```
-  
+
 ## Blackfire
 [Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked via Blackfire web interface.
 
@@ -377,7 +379,7 @@ You can pass the server details only with the `docker/sdk up` command.
 
 {% endinfo_block %}
 
-It is not obligatory to pass all the details as environment variables or define all the details in the deploy file. You can pass the details in any combination. 
+It is not obligatory to pass all the details as environment variables or define all the details in the deploy file. You can pass the details in any combination.
 
 ## New Relic
 [New Relic](https://newrelic.com/) is a tool used to track the performance of services, environment to quickly find and fix issues.
@@ -450,7 +452,7 @@ ChromeDriver is provided as a webdriver service by default, but you can switch t
 
 [ChromeDriver](https://chromedriver.chromium.org/) is a thin wrapper on WebDriver and [Chromium](https://chromedriver.chromium.org/) headless browser. It is used for automating web page interaction, JavaScript execution, and other testing-related activities. It provides full-control API to make end-to-end testing flexible and comfortable.  
 
- 
+
 {% info_block warningBox "Default service" %}
 
 Chromedriver is provided as a service by default. You may only need to use this configuration if you are running an older version of the Docker SDK or if you've previously switched to another WebDriver.
@@ -471,7 +473,7 @@ services:
 
 [PhantomJS](https://phantomjs.org/) is a headless browser for automating web page interaction. It ships with a WebDriver based on [Selenium](https://www.selenium.dev/).
 
-#### Configuration 
+#### Configuration
 
 To enable PhantomJS, adjust `deploy.*.yml` as follows:
 
@@ -484,7 +486,7 @@ services:
 
 ## Dashboard
 
-Dashboard is a tool that helps to monitor logs in real time. You can monitor logs in all or a particular container. 
+Dashboard is a tool that helps to monitor logs in real time. You can monitor logs in all or a particular container.
 
 
 ### Configuration
@@ -512,4 +514,3 @@ tideways:
     environment-name: {tideways_environment_name}
     cli-enabled: {true|false}
 ```
-

@@ -8,6 +8,12 @@ redirect_from:
   - /2021080/docs/en/deploy-file-reference-10
   - /docs/deploy-file-reference-10
   - /docs/en/deploy-file-reference-10
+  - /v6/docs/deploy-file-reference-10
+  - /v6/docs/en/deploy-file-reference-10
+  - /v5/docs/deploy-file-reference-10
+  - /v5/docs/en/deploy-file-reference-10
+  - /v4/docs/deploy-file-reference-10
+  - /v4/docs/en/deploy-file-reference-10
 ---
 
 This reference page describes version 1 of the Deploy file format. This is the newest version.
@@ -455,9 +461,9 @@ The format of the key  is `domain[:port]`. The key must be project-wide unique.
 {% info_block infoBox "Allowing all domains" %}
 
   For security reasons, we recommend allowing all domains only as a temporary workaround. As a permanent solution:
-  * Define the desired domains as separate endpoints with separate CORS headers. 
+  * Define the desired domains as separate endpoints with separate CORS headers.
   * Define the desired domains on the application level
-  
+
 {% endinfo_block %}
 
 ### services: endpoints:

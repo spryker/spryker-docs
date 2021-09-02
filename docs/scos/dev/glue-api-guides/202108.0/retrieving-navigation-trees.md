@@ -15,7 +15,7 @@ The Navigation <!-- add link to feature overview later --> feature enables back-
 A navigation element with its child nodes forms a navigation tree. You can only retrieve the entire navigation tree but not a navigation element.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-navigation-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html).
 
 ## Retrieving a navigation tree
 To retrieve a navigation tree, send the request:

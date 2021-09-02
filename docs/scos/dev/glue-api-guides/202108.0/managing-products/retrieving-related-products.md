@@ -10,9 +10,9 @@ redirect_from:
   - /docs/en/retrieving-related-products
 ---
 
-Using the [Product Relations](/docs/scos/dev/features/{{page.version}}/product-relations/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
+Using the [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
-Only [abstract](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/dev/features/{{page.version}}/product-relations/product-relations-feature-overview.html).)
+Only [abstract](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations/product-relations-feature-overview.html).)
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 
@@ -27,7 +27,7 @@ In your development, the endpoints can help you to:
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html).
 
 ## Retrieve related items of an abstract product
 To get related items of an abstract product, send the request:

@@ -8,9 +8,11 @@ redirect_from:
   - /2021080/docs/en/docker-sdk-configuration-reference
   - /docs/docker-sdk-configuration-reference
   - /docs/en/docker-sdk-configuration-reference
+  - /v6/docs/docker-sdk-configuration-reference
+  - /v6/docs/en/docker-sdk-configuration-reference
 ---
 
-This document is a quick reference for the most common configuration options of the Docker SDK. 
+This document is a quick reference for the most common configuration options of the Docker SDK.
 
 The configuration parameters in this document are examplary. You may need to adjust them per your project requirements.
 
@@ -86,13 +88,3 @@ image:
             memory_limit: {memroy_limit_value}
             ...
 ```
-
-
-
-
-
-
-
-
-
-

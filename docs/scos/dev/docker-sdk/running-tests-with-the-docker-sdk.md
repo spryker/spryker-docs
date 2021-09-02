@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/running-tests-with-the-docker-sdk
   - /docs/running-tests-with-the-docker-sdk
   - /docs/en/running-tests-with-the-docker-sdk
+  - /v6/docs/running-tests-with-the-docker-sdk
+  - /v6/docs/en/running-tests-with-the-docker-sdk
 ---
 
 This document describes how to run tests in different ways.

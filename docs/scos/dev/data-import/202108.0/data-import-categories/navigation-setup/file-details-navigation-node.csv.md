@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-navigation-nodecsv
 ---
 
-This article contains content of the **navigation_node.csv** file to configure [Navigation Node](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/navigation/managing-navigation-elements.html#navigation-node-types) information on your Spryker Demo Shop.
+This article contains content of the **navigation_node.csv** file to configure [Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}content/navigation/managing-navigation-elements.html#navigation-node-types) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:
@@ -32,8 +32,8 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-* [navigation.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html)
-* [glossary.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [navigation.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/navigation-setup/file-details-navigation.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-glossary.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *navigation_node.csv*  file can be downloaded here:

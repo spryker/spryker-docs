@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-glossarycsv
 ---
 
-This article contains content of the **glossary.csv** file to configure [Customer](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/glossary/managing-glossary.html) information on your Spryker Demo Shop.
+This article contains content of the **glossary.csv** file to configure [Customer](/docs/scos/user/back-office-user-guides/{{page.version}}administration/glossary/managing-glossary.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:
@@ -19,12 +19,12 @@ These are the header fields to be included in the .csv file:
 | key | Yes | String | N/A* | Glossary key, which is used in the templates contained in the shop application. |
 | translation | Yes | String | N/A | Translation value of the key for the specific locale. |
 | locale | Yes | String | N/A | Locale of the translation. |
-*N/A: Not applicable. 
+*N/A: Not applicable.
 
 ## Dependencies
 This file has no dependencies.
 
-## Template File & Content Example 
+## Template File & Content Example
 
 A template and an example of the *glossary.csv*  file can be downloaded here:
 

@@ -13,7 +13,7 @@ redirect_from:
 This endpoint allows authenticating as a customer and refreshing customer authentication tokens via OAuth 2.0.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Authenticate as a customer
 To authenticate as a customer, send the request:

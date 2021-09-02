@@ -15,6 +15,6 @@ The table below provides details on Miscellaneous data importers, their purpose,
 
 | Data Importer | Purpose | Console Command| File(s) | Dependencies |
 | --- | --- | --- | --- |--- |
-| **Comment**   | Imports information relative to customer comments. | |[comment.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/miscellaneous/file-details-comment.csv.html)|[customer.csv ](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-customer.csv.html)|
-| **Mime Type**   | Imports information relative to existing MIME types allowed in the platform.|`data:import mime-type` | [mime_type.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/miscellaneous/file-details-mime-type.csv.html)| None|
+| **Comment**   | Imports information relative to customer comments. | |[comment.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/miscellaneous/file-details-comment.csv.html)|[customer.csv ](/docs/scos/dev/data-import/{{page.version}}data-import-categories/commerce-setup/file-details-customer.csv.html)|
+| **Mime Type**   | Imports information relative to existing MIME types allowed in the platform.|`data:import mime-type` | [mime_type.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/miscellaneous/file-details-mime-type.csv.html)| None|
 

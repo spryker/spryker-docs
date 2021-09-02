@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/docker-sdk-quick-start-guide
   - /docs/docker-sdk-quick-start-guide
   - /docs/en/docker-sdk-quick-start-guide
+  - /v6/docs/docker-sdk-quick-start-guide
+  - /v6/docs/en/docker-sdk-quick-start-guide
 ---
 
 This document describes how you can quickly set up a local environment with the Docker SDK.
@@ -100,4 +102,3 @@ For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/sc
 * [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html)
 * [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/docker-sdk-configuration-reference.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/configuring-services.html)
-

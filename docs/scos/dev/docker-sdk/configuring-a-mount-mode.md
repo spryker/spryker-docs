@@ -8,6 +8,8 @@ redirect_from:
   - /2021080/docs/en/configuring-a-mount-mode
   - /docs/configuring-a-mount-mode
   - /docs/en/configuring-a-mount-mode
+  - /v6/docs/configuring-a-mount-mode
+  - /v6/docs/en/configuring-a-mount-mode
 ---
 
 This document describes how to configure a mount mode.
@@ -164,7 +166,7 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
     {% info_block infoBox "Docker Compose version" %}
 
     Replace `{docker-compose-release}` in the command parameter with the version you have selected in the previous step.
-    
+
 {% endinfo_block %}
     ```bash
     sudo curl -L "https://github.com/docker/compose/releases/download/{docker-compose-release}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -319,7 +321,7 @@ To configure native mount mode for Windows with Windows Subsystem for Linux 2 (W
     {% info_block infoBox "Docker Compose version" %}
 
     Replace `{docker-compose-release}` in the command parameter with the version you have selected in the previous step.
-    
+
 {% endinfo_block %}
     ```bash
     sudo curl -L "https://github.com/docker/compose/releases/download/{docker-compose-release}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -338,17 +340,3 @@ docker/sdk boot
 ```bash
 docker/sdk up --build --data --assets
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-

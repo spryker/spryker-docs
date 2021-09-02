@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-product-imagecsv
 ---
 
-This article contains content of the *product_image.csv* file to configure [Product Image](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
+This article contains content of the *product_image.csv* file to configure [Product Image](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & mandatory fields 
 These are the header fields to be included in the .csv file:
@@ -31,8 +31,8 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-* [product_abstract.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
-* [product_concrete.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Template file & content example
 A template and an example of the *product_image.csv*  file can be downloaded here:

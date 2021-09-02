@@ -15,7 +15,7 @@ redirect_from:
 This endpoint allows managing availability notifications of registered and guest customers.
 
 ## Installation 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue: Availability Notification feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-availability-notification-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue: Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-availability-notification-feature-integration.html).
 
 ## Subscribe to availability notifications
 To subscribe to availability notifications for an out-of-stock product, send the request:

@@ -7,6 +7,12 @@ redirect_from:
   - /2021080/docs/en/docker-environment-infrastructure
   - /docs/docker-environment-infrastructure
   - /docs/en/docker-environment-infrastructure
+  - /v6/docs/docker-environment-infrastructure
+  - /v6/docs/en/docker-environment-infrastructure
+  - /v5/docs/docker-environment-infrastructure
+  - /v5/docs/en/docker-environment-infrastructure
+  - /v4/docs/docker-environment-infrastructure
+  - /v4/docs/en/docker-environment-infrastructure
 ---
 
 This document describes the infrastructure of Spryker in Docker environment.
@@ -22,5 +28,3 @@ Spryker containers  follow the rules:
 Below, you can find the diagram of Spryker in Docker environment:
 
  ![Local docker environment diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/docker-local-environment-diagram.png){height="" width=""}
-
-

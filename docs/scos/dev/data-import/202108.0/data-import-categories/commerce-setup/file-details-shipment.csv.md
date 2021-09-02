@@ -26,7 +26,7 @@ The file should have the following parameters:
 | name|  &check; | String | | Name of the shipment method. |
 | carrier |  &check; | String |  | Name of the shipment carrier. |
 | taxSetName |  &check; | String | | 	Name of the tax set. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/dev/features/{{page.version}}/tax/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 ## Dependencies
 This file has no dependencies.

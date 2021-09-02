@@ -68,9 +68,9 @@ Each route plugin implements `ResourceRoutePluginInterface`, which provides a se
 | `getResourceType` | 	Gets the resource type. | string | _carts_ |
 | `configure` | Configures a mapping of the HTTP verbs supported by the resource to the corresponding controller methods responsible for handling them. Also, it defines which of the verbs require authentication to use. | `ResourceRouteCollectionInterface` |  |
 | `getController` | Gets the name of the resource controller responsible for handling requests to the resource. The name must be provided in _kebab-case_, hyphen-separated | string | If the controller name is _CartsResourceController.php_, this function should return _carts-resource_. |
-| `getResourceAttributesClassName` | Gets the FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. | string | See details in [5. Describe Fields for Post and Patch Calls](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#5--describe-fields-for-post-and-patch-calls). |
+| `getResourceAttributesClassName` | Gets the FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. | string | See details in [5. Describe Fields for Post and Patch Calls](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#5--describe-fields-for-post-and-patch-calls). |
 
-For more details on how to implement a route plugin, see [6. Route Requests to Your Controller](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#6--route-requests-to-your-controller).
+For more details on how to implement a route plugin, see [6. Route Requests to Your Controller](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#6--route-requests-to-your-controller).
 
 All route plugins need to be added to `GlueApplicationDependencyProvider` implemented in the `GlueApplication` Module on the Project Level:
 
@@ -197,7 +197,7 @@ If you are implementing a resource that has a parent, you need to create a plugi
 The interface provides only 1 method: `getParentResourceType`. The method must return the type of the immediate parent resource within the context of which the child resource is implemented.
 
 ### Resource Relationships
-Often, to query certain data, one needs to use endpoints from different APIs to get the necessary information. For example, to present products in a customer's wishlist, one would need to use endpoints of the [Wishlists API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html) to get a list of items in the wishlist, and then query endpoints of the [Products API](https://documentation.spryker.com/2021080/docs/retrieving-product-information) in order to get descriptions, images and other information on each product. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
+Often, to query certain data, one needs to use endpoints from different APIs to get the necessary information. For example, to present products in a customer's wishlist, one would need to use endpoints of the [Wishlists API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-wishlists/managing-wishlists.html) to get a list of items in the wishlist, and then query endpoints of the [Products API](https://documentation.spryker.com/2021080/docs/retrieving-product-information) in order to get descriptions, images and other information on each product. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
 
 Let us consider the following REST Response example. It contains information on a wishlist item without any resource relationships.
 

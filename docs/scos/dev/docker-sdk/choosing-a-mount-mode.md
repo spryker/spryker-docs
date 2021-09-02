@@ -8,9 +8,11 @@ redirect_from:
   - /2021080/docs/en/choosing-a-mount-mode
   - /docs/choosing-a-mount-mode
   - /docs/en/choosing-a-mount-mode
+  - /v6/docs/choosing-a-mount-mode
+  - /v6/docs/en/choosing-a-mount-mode
 ---
 
-This document describes mount modes and how you can choose one. 
+This document describes mount modes and how you can choose one.
 
 ## Selecting a mount mode for development
 

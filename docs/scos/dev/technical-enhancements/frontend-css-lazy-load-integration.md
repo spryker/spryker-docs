@@ -12,7 +12,7 @@ redirect_from:
   - /v6/docs/en/frontend-css-lazy-load
 ---
 
-To be able to use the [FE CSS Lazy Load](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/frontend-assets-building-and-loading.html#page-critical-path-layout) feature, do the following:
+To be able to use the [FE CSS Lazy Load](/docs/scos/dev/front-end-development/yves/frontend-assets-building-and-loading.html#page-critical-path-layout) feature, do the following:
 1. Update the `ShopUi` module to 1.44.0 version, and also update the spryker-shop/shop dependencies for the `CatalogPage`, `HomePage` and `ProductDetailPage` modules by running:
 ```bash
 COMPOSER_MEMORY_LIMIT=-1 composer update spryker-shop/shop-application spryker-shop/shop-ui spryker-shop/catalog-page spryker-shop/home-page spryker-shop/product-detail-page --with-dependencies

@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/file-details-taxcsv
 ---
 
-This article contains content of the **tax.csv** file to configure [tax](/docs/scos/dev/features/{{page.version}}/tax/tax.html) information on your Spryker Demo Shop.
+This article contains content of the **tax.csv** file to configure [tax](/docs/scos/user/features/{{page.version}}/tax/tax.html) information on your Spryker Demo Shop.
 
 To import the data, run
 

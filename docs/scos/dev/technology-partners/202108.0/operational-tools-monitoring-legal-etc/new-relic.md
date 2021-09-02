@@ -172,13 +172,14 @@ Monitoring is a Spryker module that provides a hook to add any monitoring provid
 
 You can add custom New Relic events in your application with the API wrapper for New Relic in `\SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin`. To read detailed information about the available API methods, please read the following documentation: [New Relic API](https://docs.newrelic.com/docs/agents/php-agent/php-agent-api).
 
-## New Relic Transaction name plugin
+## Optional: Making New Relic transactions names unique
 
-By default, New Relic has an unreadable transaction name. For example, all transactions look like `index.php`. For readable we added new application plugin, which set up transaction name by pattern: `{{AplicationName}}:{{RequestMethod}}{{RequestUri}}`.
+By default, New Relic transactions are created with the same name: `index.php`. To make transaction names readable, we implemented an application plugin, which sets transaction names by the pattern: `{{AplicationName}}:{{RequestMethod}}{{RequestUri}}`.
 
-To be able to use the transaction plugin, add the plugin into the application dependency provider:
+To use the transaction plugin, add it to the application dependency providers:
 
-#### Yves(`src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php`):
+**Yves**: 
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 ```php
 <?php
 
@@ -205,7 +206,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
-#### Glue(`src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php`):
+
+**Glue**:
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 ```php
 <?php
 
@@ -232,7 +235,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-#### Backoffice(`src/Pyz/Zed/Application/ApplicationDependencyProvider.php`):
+
+**Backoffice**:
+**src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 ```php
 <?php
 
@@ -259,7 +264,9 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
     }
 }
 ```
-#### BackendGateway(`src/Pyz/Zed/Application/ApplicationDependencyProvider.php`):
+
+**BackendGateway**:
+**src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 ```php
 <?php
 
@@ -286,7 +293,9 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
     }
 }
 ```
-#### BackendApi(`src/Pyz/Zed/Application/ApplicationDependencyProvider.php`):
+
+**BackendApi**:
+**src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 ```php
 <?php
 

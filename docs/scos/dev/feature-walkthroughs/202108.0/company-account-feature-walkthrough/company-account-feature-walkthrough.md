@@ -1,6 +1,6 @@
 ---
 title: Company Account feature walkthrough
-last_updated: Aug 13, 2021
+last_updated: Sep 2, 2021
 description: The Company Account feature allows controlling user access to the system within an organization by configuring different permissions and roles for the company's entities (units) and users.
 template: concept-topic-template
 ---
@@ -41,12 +41,12 @@ The following schema represents module relations of the Customer Login by Token 
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
-|---------|---------|---------|---------|
-| Company Account feature integration| CompanyUser migration guide  | Retrieving companies | HowTo - Generate a token for login  |
-| Glue API: Company Account feature integration | BusinessOnBehalfDataImport migration guide  | Retrieving business units  |   |
-|   |   | Retrieving business unit addresses |   |
-|   |   | Retrieving company users  |   |
-|   |   | Retrieving company roles  |   |
-|   |   | Authenticating as a company user  |   |
-|   |   | Managing company user authentication tokens  |   |
+| INTEGRATION GUIDES | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
+|---------|---------|---------|---------|---------|
+| [Company Account feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/company-account-feature-integration.html)| CompanyUser migration guide  | [Retrieving companies](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html/) |[ HowTo - Generate a token for login](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-generate-a-token-for-login.html)  | [Customer Login by Token reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/customer-login-by-token-reference-information.html) |
+| [Glue API: Company Account feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html) | BusinessOnBehalfDataImport migration guide  | [Retrieving business units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)  |   |   |
+|   |   | [Retrieving business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html) |   |   |
+|   |   | [Retrieving company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html)  |   |   |
+|   |   | [Retrieving company roles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)  |   |   |
+|   |   | [Authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)  |   |   |
+|   |   | [Managing company user authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/managing-company-user-authentication-tokens.html)  |   |   |

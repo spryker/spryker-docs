@@ -26,7 +26,7 @@ Follow the steps below to install the feature core.
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-ore-feature-integration.html) | 
+| Spryker Core | master | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-core-feature-integration.html) | 
 |Cart | master | [Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cart-feature-integration.html) |
 |Product  | master | [Product feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-feature-integration.html) | 
 |Tax  | master | |

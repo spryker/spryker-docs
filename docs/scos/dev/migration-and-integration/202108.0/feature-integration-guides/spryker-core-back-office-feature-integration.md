@@ -33,7 +33,7 @@ Ensure that the related features are installed:
 
 | Name | Version |
 | --- | --- | --- |
-| Spryker Core | {% raw %}{{{% endraw %}variable.dev-master{% raw %}}}{% endraw %} | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-ore-feature-integration.html) |
+| Spryker Core | {% raw %}{{{% endraw %}variable.dev-master{% raw %}}}{% endraw %} | [Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-core-feature-integration.html) |
  
 
 ## 1) Install the required modules using Composer

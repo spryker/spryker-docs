@@ -20,7 +20,7 @@ To start integrating Docker into your project:
     * [Installing Docker prerequisites on MacOS](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
     * [Installing Docker prerequisites on Linux](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
     * [Installing Docker prerequisites on Windows](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows.html)
-2. Integrate the [Spryker Core](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-ore-feature-integration.html) feature into your project. 
+2. Integrate the [Spryker Core](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-core-feature-integration.html) feature into your project. 
 
 ## Set up .dockerignore
 

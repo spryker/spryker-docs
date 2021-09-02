@@ -1,5 +1,5 @@
 ---
-title: File details- cms_page.csv
+title: "File details: cms_page.csv"
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-pagecsv
 originalArticleId: 65418d11-4c73-4b42-94fb-8397c29eed33
 redirect_from:
@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **cms_page.csv** file to configure [CMS Page](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |

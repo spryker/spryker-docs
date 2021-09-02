@@ -19,7 +19,7 @@ To start feature integration, overview and install the following features and Gl
 
 | NAME                   | VERSION  | INTEGRATION GUIDE                                            |
 | :--------------------- | :------- | :----------------------------------------------------------- |
-| Glue API: Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Glue API: Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Order Management       | 202009.0 | [Order Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/order-management-feature-integration.html) |
 
 ## 1) Install the required modules using Composer

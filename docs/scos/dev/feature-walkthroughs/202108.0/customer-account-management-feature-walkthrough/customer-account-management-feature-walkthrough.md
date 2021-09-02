@@ -16,10 +16,10 @@ To learn more about the feature and to find out how end users use it, see [Custo
 
 | INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|---|
-| Agent Assist feature integration | CompanyUser migration guide | Authenticating as a customer | File details: customer.csv | Reference information: Customer module overview|
-| Company Account feature integration |  | Confirming customer registration |  |  |
-| Customer Account Management feature integration |  | Managing customer addresses |  |  |
-| Glue API: Customer Account Management feature integration |  | Managing customer authentication tokens |  |  |
-| Spryker Сore feature integration |  | Managing customer authentication tokens via OAuth 2.0 |  |  |
-| Glue API: Spryker Сore feature integration |  | Managing customer passwords |  |  |
-|  |  | Managing customers |  |  |
+| [Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/agent-assist-feature-integration.html) | CompanyUser migration guide | [Authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html) | [File details: customer.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-customer.csv.html) | [Reference information: Customer module overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html)|
+| [Company Account feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/company-account-feature-integration.html) |  | [Confirming customer registration](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/confirming-customer-registration.html) |  |  |
+| [Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-account-management-feature-integration.html) |  | [Managing customer addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html) |  |  |
+| [Glue API: Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html) |  | [Managing customer authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html) |  |  |
+| [Spryker Сore feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/spryker-core-feature-integration.html) |  | [Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html) |  |  |
+| [Glue API: Spryker Сore feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |  | [Managing customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html) |  |  |
+|  |  | [Managing customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html) |  |  |

@@ -1,5 +1,5 @@
 ---
-title: Glue API- Cart feature integration
+title: Glue API - Cart feature integration
 description: Install the Cart API feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cart-feature-integration
 originalArticleId: a46d4b97-ad7c-45bd-aef7-23dbfac109c1
@@ -18,7 +18,7 @@ To start feature integration, overview and install the following features and Gl
 
 | NAME                   | VERSION | INTEGRATION GUIDE                                            |
 | :--------------------- | :------ | :----------------------------------------------------------- |
-| Glue API: Spryker Core | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Glue API: Spryker Core | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Glue API: Product      | master  | [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) |
 | Cart                   | master  | [Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cart-feature-integration.html) |
 
@@ -57,9 +57,9 @@ Ensure that the following modules have been installed:
 Apply database changes and generate entity and transfer changes:
 
 ```shell
-console transfer:generate 
-console propel:install 
-console transfer:generate 
+console transfer:generate
+console propel:install
+console transfer:generate
 ```
 
 
@@ -136,7 +136,7 @@ Ensure that, in the `spy_quote` table, the `uuid` field is populated for all the
 ```sql
 SELECT COUNT(*) FROM spy_quote WHERE uuid IS NULL;
 ```
-The result should be `0 records`. 
+The result should be `0 records`.
 
 
 {% endinfo_block %}
@@ -149,7 +149,7 @@ Activate the following plugin:
 | :--------------------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------- |
 | AnonymousCustomerUniqueIdValidatorPlugin | Validates a REST resource request before processing it. Checks if `X-Anonymous-Customer-Unique-Id` header is set and can be used for requested resource.  |               | Spryker\Glue\CrtsRestApi\Plugin\Vlidator |
 
- 
+
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -250,7 +250,7 @@ Activate the following plugins:
 
 {% info_block infoBox %}
 
-There are two cart behavior strategies: single cart and multicart. Unlike the single-cart behavior, the multicart one allows creating more than one cart for a customer. Depending on the selected strategy, from the plugin pairs in the table below, wire only one plugin into the respective provider. 
+There are two cart behavior strategies: single cart and multicart. Unlike the single-cart behavior, the multicart one allows creating more than one cart for a customer. Depending on the selected strategy, from the plugin pairs in the table below, wire only one plugin into the respective provider.
 
 {% endinfo_block %}
 
@@ -397,7 +397,7 @@ Ensure that the `guest-cart-items` resource relationship is registered as a rela
 
 {% endinfo_block %}
 
- 
+
 
 {% info_block warningBox "Verification" %}
 
@@ -407,7 +407,7 @@ Make sure that the `https://glue.mysprykershop.com/customers/{% raw %}{{{% endra
 
 {% endinfo_block %}
 
- 
+
 **src/Pz/Glue/CstomersRestApi/CustomersRestApiDependencyProvider.php**
 
 ```
@@ -487,7 +487,7 @@ Ensure that `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` is installed correct
 
 {% endinfo_block %}
 
- 
+
 
 **src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
 
@@ -535,4 +535,3 @@ To verify that `Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\Quote
 
 
 {% endinfo_block %}
-

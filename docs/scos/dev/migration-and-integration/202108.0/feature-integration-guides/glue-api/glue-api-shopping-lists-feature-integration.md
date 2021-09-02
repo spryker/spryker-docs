@@ -24,7 +24,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature|
 | --- | --- |--- |
-| Spryker Core	 | 202009.0 |[Glue API: Spryker Core Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Spryker Core	 | 202009.0 |[Glue API: Spryker Core Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Shopping Lists	 | 202009.0 |[Shopping Lists Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shopping-lists-feature-integration.html) |
 
 ## 1) Install the Required Modules Using Composer

@@ -26,9 +26,9 @@ The following schema illustrates relations between alternative products:
 
 |INTEGRATION GUIDES  | GLUE API GUIDES  | DATA IMPORT |
 |---------|---------|---------|
-| Alternative products feature integration  | Retrieving alternative products  | File details: product_alternative.csv  |
-| Alternative Products + Discontinued Products feature integration |   |
-| Alternative Products + Product Label feature integration |   |
-| Alternative products + Inventory Management feature integration   |   |
-| Alternative products + Wishlist feature integration |   |
-| Glue API: Alternative products feature integration |   |
+| [Alternative products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/alternative-products-feature-integration.html)  | [Retrieving alternative products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-alternative-products.html)  | [File details: product_alternative.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html)  |
+| [Alternative Products + Discontinued Products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/alternative-products-discontinued-products-feature-integration.html) |   |
+| [Alternative Products + Product Label feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/alternative-products-product-label-feature-integration.html) |   |
+| [Alternative products + Inventory Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/alternative-products-inventory-management-feature-integration.html)   |   |
+| [Alternative products + Wishlist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/alternative-products-wishlist-feature-integration.html) |   |
+| [Glue API: Alternative products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-alternative-products-feature-integration.html) |   |

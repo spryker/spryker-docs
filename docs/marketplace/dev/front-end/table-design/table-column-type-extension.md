@@ -154,5 +154,5 @@ UI library comes with a number of standard column types that can be used on any 
 - [dynamic](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html)—is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.
 - [image](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html)—renders an image.
 - [input](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html)—renders `@spryker/input`component.
-- select—renders `@spryker/select`component.
+- [select](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html)—renders `@spryker/select`component.
 - text—renders a static text.

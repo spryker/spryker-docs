@@ -415,6 +415,9 @@ entries:
                 - title: "Input"
                   url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html
 
+                - title: "Select"
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
+
             - title: "Table Feature extension"
               url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
 

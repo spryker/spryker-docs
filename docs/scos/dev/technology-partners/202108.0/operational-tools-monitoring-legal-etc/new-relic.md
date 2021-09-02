@@ -172,6 +172,148 @@ Monitoring is a Spryker module that provides a hook to add any monitoring provid
 
 You can add custom New Relic events in your application with the API wrapper for New Relic in `\SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin`. To read detailed information about the available API methods, please read the following documentation: [New Relic API](https://docs.newrelic.com/docs/agents/php-agent/php-agent-api).
 
+## New Relic Transaction name plugin
+
+By default, New Relic has an unreadable transaction name. For example, all transactions look like `index.php`. For readable we added new application plugin, which set up transaction name by pattern: `{{AplicationName}}:{{RequestMethod}}{{RequestUri}}`.
+
+To be able to use the transaction plugin, add the plugin into the application dependency provider:
+
+#### Yves(`src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php`):
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+...
+use SprykerEco\Service\NewRelic\Plugin\NewRelicTransactionNameHandlerPlugin;
+...
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    ...
+    /**
+     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     */
+    protected function getApplicationPlugins(): array
+    {
+        $plugins = [
+            ...
+            new NewRelicTransactionNameHandlerPlugin(),
+        ];
+        ...
+
+        return $plugins;
+    }
+}
+```
+#### Glue(`src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php`):
+```php
+<?php
+
+namespace Pyz\Glue\GlueApplication;
+...
+use SprykerEco\Service\NewRelic\Plugin\NewRelicTransactionNameHandlerPlugin;
+...
+
+class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+    ...
+    /**
+     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     */
+    protected function getApplicationPlugins(): array
+    {
+        $plugins = [
+            ...
+            new NewRelicTransactionNameHandlerPlugin(),
+        ];
+        ...
+
+        return $plugins;
+    }
+}
+```
+#### Backoffice(`src/Pyz/Zed/Application/ApplicationDependencyProvider.php`):
+```php
+<?php
+
+namespace Pyz\Zed\Application;
+...
+use SprykerEco\Service\NewRelic\Plugin\NewRelicTransactionNameHandlerPlugin;
+...
+
+class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
+{
+    ...
+    /**
+     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     */
+    protected function getBackofficeApplicationPlugins(): array
+    {
+        $plugins = [
+            ...
+            new NewRelicTransactionNameHandlerPlugin(),
+        ];
+        ...
+
+        return $plugins;
+    }
+}
+```
+#### BackendGateway(`src/Pyz/Zed/Application/ApplicationDependencyProvider.php`):
+```php
+<?php
+
+namespace Pyz\Zed\Application;
+...
+use SprykerEco\Service\NewRelic\Plugin\NewRelicTransactionNameHandlerPlugin;
+...
+
+class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
+{
+    ...
+    /**
+     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     */
+    protected function getBackendGatewayApplicationPlugins(): array
+    {
+        $plugins = [
+            ...
+            new NewRelicTransactionNameHandlerPlugin(),
+        ];
+        ...
+
+        return $plugins;
+    }
+}
+```
+#### BackendApi(`src/Pyz/Zed/Application/ApplicationDependencyProvider.php`):
+```php
+<?php
+
+namespace Pyz\Zed\Application;
+...
+use SprykerEco\Service\NewRelic\Plugin\NewRelicTransactionNameHandlerPlugin;
+...
+
+class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
+{
+    ...
+    /**
+     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     */
+    protected function getBackendApiApplicationPlugins(): array
+    {
+        $plugins = [
+            ...
+            new NewRelicTransactionNameHandlerPlugin(),
+        ];
+        ...
+
+        return $plugins;
+    }
+}
+```
+
 ---
 
 ## Copyright and Disclaimer

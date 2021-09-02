@@ -8,8 +8,6 @@ redirect_from:
   - /2021080/docs/en/choosing-a-mount-mode
   - /docs/choosing-a-mount-mode
   - /docs/en/choosing-a-mount-mode
-  - /v6/docs/choosing-a-mount-mode
-  - /v6/docs/en/choosing-a-mount-mode
 ---
 
 This document describes mount modes and how you can choose one.
@@ -82,7 +80,7 @@ If the same OS is defined for multiple mount modes, the first mount mode matchin
 
 ## Configuring a mount mode
 
-To configure a mount mode, see [Configuring a mount mode](/docs/scos/dev/the-docker-sdk/configuring-a-mount-mode.html).
+To configure a mount mode, see [Configuring a mount mode](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-a-mount-mode.html).
 
 ## Synchronization mount modes
 

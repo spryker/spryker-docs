@@ -8,8 +8,6 @@ redirect_from:
   - /2021080/docs/en/configuring-services
   - /docs/configuring-services
   - /docs/en/configuring-services
-  - /v6/docs/configuring-services
-  - /v6/docs/en/configuring-services
 ---
 
 

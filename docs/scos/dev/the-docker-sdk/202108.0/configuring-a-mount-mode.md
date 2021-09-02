@@ -8,8 +8,6 @@ redirect_from:
   - /2021080/docs/en/configuring-a-mount-mode
   - /docs/configuring-a-mount-mode
   - /docs/en/configuring-a-mount-mode
-  - /v6/docs/configuring-a-mount-mode
-  - /v6/docs/en/configuring-a-mount-mode
 ---
 
 This document describes how to configure a mount mode.

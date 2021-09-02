@@ -8,8 +8,6 @@ redirect_from:
   - /2021080/docs/en/choosing-a-docker-sdk-version
   - /docs/choosing-a-docker-sdk-version
   - /docs/en/choosing-a-docker-sdk-version
-  - /v6/docs/choosing-a-docker-sdk-version
-  - /v6/docs/en/choosing-a-docker-sdk-version
 ---
 
 This document describes why and how to select a particular version of the Docker SDK and use it in your project.

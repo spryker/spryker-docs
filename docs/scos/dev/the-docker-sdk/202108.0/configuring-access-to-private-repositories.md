@@ -8,8 +8,6 @@ redirect_from:
   - /2021080/docs/en/configuring-access-to-private-repositories
   - /docs/configuring-access-to-private-repositories
   - /docs/en/configuring-access-to-private-repositories
-  - /v6/docs/configuring-access-to-private-repositories
-  - /v6/docs/en/configuring-access-to-private-repositories
 ---
 
 This document describes how to configure an environment to allow the Docker SDK access private repositories.

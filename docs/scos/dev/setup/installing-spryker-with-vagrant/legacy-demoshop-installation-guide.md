@@ -12,7 +12,7 @@ To install the Legacy Demoshop, use the following instructions:
 
 {% info_block infoBox %}
 All customers using the Legacy Demoshop can make their project compatible with the new Spryker Commerce OS architecture available starting from the [November release](/docs/scos/user/intro-to-spryker/{{site.version}}/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
-{% endinfo_block %}. For details, see [Updating the Legacy Demoshop with SCOS](/docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html).)
+{% endinfo_block %}. For details, see [Updating the Legacy Demoshop with SCOS](/docs/scos/dev/technical-enhancements/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html).)
 
 
 ## Mac OS or Linux, with Development Virtual Machine
@@ -415,7 +415,7 @@ $config[ApplicationConstants::ELASTICA_PARAMETER__INDEX_NAME] = 'de_development_
 
 #### RabbitMQ
 
-Configure RabbitMQ permissions and virtual hosts according to the instructions [Tutorial - Set Up a "Hello World" Queue - Legacy Demoshop](/docs/scos/dev/tutorials/201811.0/introduction/tutorial-set-up-a-hello-world-queue-legacy-demoshop.html#rabbitmq-management-ui).
+Configure RabbitMQ permissions and virtual hosts according to the instructions [Tutorial - Set Up a "Hello World" Queue - Legacy Demoshop](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-set-up-a-hello-world-queue-legacy-demoshop.html#rabbitmq-management-ui).
 
 #### Hostname
 

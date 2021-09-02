@@ -8,8 +8,6 @@ redirect_from:
   - /2021080/docs/en/docker-sdk-quick-start-guide
   - /docs/docker-sdk-quick-start-guide
   - /docs/en/docker-sdk-quick-start-guide
-  - /v6/docs/docker-sdk-quick-start-guide
-  - /v6/docs/en/docker-sdk-quick-start-guide
 ---
 
 This document describes how you can quickly set up a local environment with the Docker SDK.
@@ -94,11 +92,11 @@ Depending on your requirements, you can select any combination of the following 
 
 ## Troubleshooting
 
-For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html).
+For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html).
 
 
 ## What documents should I use to start developing and configuring my project?
 
-* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html)
-* [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/docker-sdk-configuration-reference.html)
-* [Configuring services](/docs/scos/dev/the-docker-sdk/configuring-services.html)
+* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file-reference-1.0.html)
+* [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
+* [Configuring services](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html)

@@ -8,8 +8,6 @@ redirect_from:
   - /2021080/docs/en/running-tests-with-the-docker-sdk
   - /docs/running-tests-with-the-docker-sdk
   - /docs/en/running-tests-with-the-docker-sdk
-  - /v6/docs/running-tests-with-the-docker-sdk
-  - /v6/docs/en/running-tests-with-the-docker-sdk
 ---
 
 This document describes how to run tests in different ways.
@@ -107,7 +105,7 @@ services:
         engine: chromedriver
 ```        
 
-See [webdriver:](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html#webdriver) to learn more about webdriver configuration in the deploy file.
+See [webdriver:](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file-reference-1.0.html#webdriver) to learn more about webdriver configuration in the deploy file.
 
 ## Configure Codeception
 

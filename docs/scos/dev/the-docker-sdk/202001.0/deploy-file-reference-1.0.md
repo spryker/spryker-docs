@@ -45,7 +45,7 @@ This reference page describes version 1 of the Deploy file format. This is the n
 The topics below are organized alphabetically for top-level keys and sub-level keys to describe the hierarchy.
 
 You can use the extended YAML syntax according to [YAML™ Version 1.2](https://yaml.org/spec/1.2/spec.html).
-Find B2B/B2C deploy file examples for [development](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/installation-guides/modes-overview.html#development-mode) and [demo](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/installation-guides/modes-overview.html#demo-mode) environments in the table:
+Find B2B/B2C deploy file examples for [development](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) and [demo](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) environments in the table:
 
 | Development mode | Demo mode |
 | --- | --- |
@@ -155,7 +155,7 @@ Defines the Docker image to run Spryker applications in. It can be set according
 
 3. `spryker/php:7.2-alpine` - applies Alpine as a base image. The Alpine images are smaller, but you may have issues with:
     * iconv
-    * NFS 
+    * NFS
     * Non-lating languages
     * Tideways
 
@@ -200,7 +200,7 @@ regions:
 			STORE-2:
 				services:
 					# Store-specific services settings
-			
+
  ```
 
 ***
@@ -251,7 +251,7 @@ groups:
 						store: STORE-1
 					glue.store2.spryker.local:
 						store: STORE-2
-		
+
  ```
 
 Applications can be defined as **Store**-agnostic, as in the example above. Also, applications can be defined as **Store**-specific by leaving a single endpoint pointing to each application. You can see it in the example below. You can use both approaches to scale applications separately by **Store**.
@@ -272,7 +272,7 @@ groups:
 				endpoints:
 					zed.store2.spryker.local:
 						store: STORE-2
-		
+
  ```
 
 ***
@@ -393,16 +393,16 @@ docker:
 
 	mount:
 		baked:
-		
+
  ```
 
 ***
-    
+
 **docker: docker-machine:**
 Defines the virtualization engine to be used for the overall development environment. Possible values are:
 1. `docker:`.
 2. `parallels:`
-[Parallels](https://www.parallels.com/) requires a paid license to be used. 
+[Parallels](https://www.parallels.com/) requires a paid license to be used.
 
 When no engine is defined in `deploy.yml`, the Docker Engine is used.
 ***
@@ -417,7 +417,7 @@ version: 1.0
 docker:
 	ssl:
 		enabled: true
-		
+
  ```
 {% info_block infoBox "Optional variable" %}
 
@@ -444,7 +444,7 @@ version: 1.0
 docker:
 	debug:
 		enabled: true
-		
+
  ```
 
 ***
@@ -510,10 +510,10 @@ docker:
 			platforms:
 				- macos
 				- windows
-		
+
  ```
- *** 
- 
+ ***
+
 **composer:**
 
 Defines the composer settings to be used during deployment.
@@ -523,7 +523,7 @@ Defines the composer settings to be used during deployment.
 2. `autoload:` - defines composer autoload options. Possible values are `--optimize` and `--classmap-authoritative`.
 
 
- 
+
 {% info_block infoBox "Optional variable" %}
 
 If not specified, the default values apply:
@@ -641,7 +641,7 @@ The swagger-ui **Service** used to run Swagger UI to develop API endpoints.
 * Project-wide
     * `swagger: engine:`- possible value is `swagger-ui`.
     * `swagger-ui: endpoints:` - defines the service's port or/and web interface that can be accessed via given endpoints.
-        
+
 ***
 
 **mail_catcher:**

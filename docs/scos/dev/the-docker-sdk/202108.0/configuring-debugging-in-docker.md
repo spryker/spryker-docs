@@ -8,8 +8,6 @@ redirect_from:
   - /2021080/docs/en/configuring-debugging-in-docker
   - /docs/configuring-debugging-in-docker
   - /docs/en/configuring-debugging-in-docker
-  - /v6/docs/configuring-debugging-in-docker
-  - /v6/docs/en/configuring-debugging-in-docker
 ---
 
 This document describes how to configure debugging of Spryker in Docker.

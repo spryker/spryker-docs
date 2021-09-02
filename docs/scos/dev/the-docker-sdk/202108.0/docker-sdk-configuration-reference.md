@@ -8,8 +8,6 @@ redirect_from:
   - /2021080/docs/en/docker-sdk-configuration-reference
   - /docs/docker-sdk-configuration-reference
   - /docs/en/docker-sdk-configuration-reference
-  - /v6/docs/docker-sdk-configuration-reference
-  - /v6/docs/en/docker-sdk-configuration-reference
 ---
 
 This document is a quick reference for the most common configuration options of the Docker SDK.

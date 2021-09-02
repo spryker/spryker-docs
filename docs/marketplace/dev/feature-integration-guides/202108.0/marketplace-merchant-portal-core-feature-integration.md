@@ -199,6 +199,7 @@ Make sure that the following changes have been applied in transfer objects:
 | ----------- | ----- | ------- | -------------------- |
 | MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCard  |
 | MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButton |
+| GuiTableEditableConfiguration.disableRowKey | property | created | src/Generated/Shared/Transfer/GuiTableEditableConfiguration |
 
 {% endinfo_block %}
 

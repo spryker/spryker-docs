@@ -63,6 +63,7 @@ Make sure that the following changes have been applied in transfer objects:
 | ProductManagementAttribute | class | Created | src/Generated/Shared/Transfer/ProductManagementAttributeTransfer |
 | ProductManagementAttributeFilter | class | Created | src/Generated/Shared/Transfer/ProductManagementAttributeFilterTransfer |
 | Merchant | class | Created | src/Generated/Shared/Transfer/MerchantTransfer |
+| MerchantStockCriteria | class | Created | src/Generated/Shared/Transfer/MerchantStockCriteria |
 | StockProduct | class | Created | src/Generated/Shared/Transfer/StockProductTransfer |
 | ReservationRequest | class | Created | src/Generated/Shared/Transfer/ReservationRequestTransfer |
 | ReservationResponse | class | Created | src/Generated/Shared/Transfer/ReservationResponseTransfer |

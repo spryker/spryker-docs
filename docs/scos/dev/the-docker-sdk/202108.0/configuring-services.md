@@ -393,7 +393,7 @@ Follow the steps to enable New Relic:
 ```yaml
 docker:
     newrelic:
-        license: {new_relic_license)
+        license: {new_relic_license}
 ```
 
 2. Adjust `deploy.*.yml` in the `image:` section:

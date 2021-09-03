@@ -1,3 +1,17 @@
+---
+title: Authorization Enabler integration
+description: Learn how to enable the Authorization Enabler
+originalLink: https://documentation.spryker.com/2021080/docs/authorization-enabler-integration
+originalArticleId: 809afa43-2beb-47d6-acaa-ae58efa62470
+redirect_from:
+  - /2021080/docs/authorization-enabler-integration
+  - /2021080/docs/en/authorization-enabler-integration
+  - /docs/authorization-enabler-integration
+  - /docs/en/authorization-enabler-integration
+---
+
+
+
 This document describes how to integrate the Authorization Enabler into a Spryker project.
 
 ## Prerequisites
@@ -39,7 +53,7 @@ Ensure that the following modules have been installed in `vendor/spryker`:
 | GlueApplicationExtension                       | vendor/spryker/glue-application-extension                    |
 | GlueApplicationAuthorizationConnectorExtension | vendor/spryker/glue-application-authorization-connector-extension |
 
-:::
+
 
 {% endinfo_block %}
 
@@ -51,7 +65,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-:::(Warning) (Verification)
+{% info_block warningBox "Verificaiton" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -66,7 +80,7 @@ Make sure that the following changes have been applied in transfer objects:
 | RouteAuthorizationConfigTransfer | class | created | src/Generated/Shared/Transfer/RouteAuthorizationConfigTransfer.php |
 | RestErrorMessageTransfer         | class | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer.php   |
 
- :::
+ {% endinfo_block %}
 
 ## 3) Set up behavior
 
@@ -82,8 +96,8 @@ Activate the following plugins:
 | AuthorizationRestUserValidatorPlugin                         | Validates a request if the route implements the authorization interface. | Spryker\Glue\GlueApplicationAuthorizationConnector\Plugin\GlueApplication |
 | AuthorizationRouterParameterExpanderPlugin                   | Expands a route with additional parameters.                  | Spryker\Glue\GlueApplicationAuthorizationConnector\Plugin\GlueApplication |
 
- <details open>
-    <summary>src/Pyz/Client/Authorization/AuthorizationDependencyProvider.php</summary>
+<details>
+<summary markdown='span'>src/Pyz/Client/Authorization/AuthorizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -109,8 +123,8 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
 
 </details>
 
-<details open>
-    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary markdown='span'>rc/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -148,8 +162,8 @@ class GlueApplicationDependencyProvider extends SprykerAuthorizationDependencyPr
 
  </details>
 
-:::(Warning) (Verification)
+{% info_block warningBox "Verificaiton" %}
 
 To make sure that the plugins are activated, send a request with incorrect authentication details to a protected resource and check that it returns an authorization error.
 
-:::
+{% endinfo_block %}

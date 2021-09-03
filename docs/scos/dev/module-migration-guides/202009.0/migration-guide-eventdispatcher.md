@@ -10,7 +10,7 @@ redirect_from:
 
 ## Upgrading to Version 1.1.2
 
-Version 1.1.2 boosts the overall Zed and Glue performance by introducing a [cache of unresolved entities for Zed](/docs/scos/dev/developer-guides/202009.0/development-guide/guidelines/performance-guidelines.html#activate-class-resolver-cache).
+Version 1.1.2 boosts the overall Zed and Glue performance by introducing a [cache of unresolved entities for Zed](/docs/scos/dev/guidelines/performance-guidelines.html#activate-class-resolver-cache).
 
 **To upgrade to the new version of the module, enable the following plugins:**
 
@@ -18,15 +18,15 @@ For Glue:
 
 ```PHP
 <?php
- 
+
 namespace Pyz\Glue\EventDispatcher;
- 
+
 use Spryker\Glue\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
 use Spryker\Glue\GlueApplication\Plugin\EventDispatcher\GlueRestControllerListenerEventDispatcherPlugin;
 use Spryker\Glue\Kernel\Plugin\EventDispatcher\AutoloaderCacheEventDispatcherPlugin;
 use Spryker\Glue\Router\Plugin\EventDispatcher\RouterListenerEventDispatcherPlugin;
 use Spryker\Glue\Storage\Plugin\EventDispatcher\StorageKeyCacheEventDispatcherPlugin;
- 
+
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
     /**
@@ -68,12 +68,12 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-That's it! You've upgraded the EventDispatcher module to 1.1.2 version. 
+That's it! You've upgraded the EventDispatcher module to 1.1.2 version.
 
 ---
 
-:::(Error) 
-The following migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-and-integration/202009.0/migration-concepts/silex-replacement/silex-replacement.html).
+:::(Error)
+The following migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
 :::
 To upgrade the module, do the following:
 
@@ -89,16 +89,16 @@ composer update spryker/event-dispatcher
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Application;
- 
+
 use Spryker\Zed\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
 use Spryker\Zed\EventDispatcher\Communication\Plugin\Application\EventDispatcherApplicationPlugin;
- 
+
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
     ...
- 
+
     /**
      * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
      */
@@ -118,16 +118,16 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use Spryker\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 use Spryker\Yves\EventDispatcher\Plugin\Application\EventDispatcherApplicationPlugin;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     ...
- 
+
     /**
      * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
      */
@@ -139,7 +139,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             ...
         ];
     }
- 
+
     ...
 }
 ```
@@ -148,16 +148,16 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\EventDispatcher\Plugin\Application\EventDispatcherApplicationPlugin;
- 
+
 class ShopApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     ...
- 
+
     /**
      * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
      */
@@ -168,7 +168,7 @@ class ShopApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new EventDispatcherApplicationPlugin(),
             ...
         ];
-    } 
+    }
     ...
 }
 ```
@@ -179,9 +179,9 @@ class ShopApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\EventDispatcher;
- 
+
 use Spryker\Zed\Acl\Communication\Plugin\EventDispatcher\AccessControlEventDispatcherPlugin;
 use Spryker\Zed\Api\Communication\Plugin\EventDispatcher\ApiControllerEventDispatcherPlugin;
 use Spryker\Zed\Application\Communication\Plugin\EventDispatcher\HeadersSecurityEventDispatcherPlugin;
@@ -203,7 +203,7 @@ use Spryker\Zed\Session\Communication\Plugin\EventDispatcher\SaveSessionEventDis
 use Spryker\Zed\Session\Communication\Plugin\EventDispatcher\SessionEventDispatcherPlugin;
 use Spryker\Zed\Twig\Communication\Plugin\EventDispatcher\TwigEventDispatcherPlugin;
 use Spryker\Zed\ZedRequest\Communication\Plugin\EventDispatcher\GatewayControllerEventDispatcherPlugin;
- 
+
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
     /**
@@ -241,9 +241,9 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\EventDispatcher;
- 
+
 use Spryker\Yves\Application\Communication\Plugin\EventDispatcher\HeadersSecurityEventDispatcherPlugin;
 use Spryker\Yves\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
 use Spryker\Yves\Http\Plugin\EventDispatcher\CookieEventDispatcherPlugin;
@@ -262,7 +262,7 @@ use SprykerShop\Yves\ErrorPage\Plugin\EventDispatcher\ErrorPageEventDispatcherPl
 use SprykerShop\Yves\ShopApplication\Plugin\EventDispatcher\ShopApplicationEventDispatcherPlugin;
 use SprykerShop\Yves\ShopApplication\Plugin\EventDispatcher\ShopApplicationExceptionEventDispatcherPlugin;
 use SprykerShop\Yves\ShopApplication\Plugin\EventDispatcher\ShopApplicationFilterControllerEventDispatcherPlugin;
- 
+
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
     /**
@@ -300,15 +300,15 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\EventDispatcher;
- 
+
 use Spryker\Glue\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
 use Spryker\Glue\GlueApplication\Plugin\EventDispatcher\GlueRestControllerListenerEventDispatcherPlugin;
 use Spryker\Glue\Kernel\Plugin\EventDispatcher\AutoloaderCacheEventDispatcherPlugin;
 use Spryker\Glue\Router\Plugin\EventDispatcher\RouterListenerEventDispatcherPlugin;
 use Spryker\Glue\Storage\Plugin\EventDispatcher\StorageKeyCacheEventDispatcherPlugin;
- 
+
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
     /**

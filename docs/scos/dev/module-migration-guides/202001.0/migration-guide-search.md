@@ -10,8 +10,8 @@ redirect_from:
 
 ## Upgrading from Version 7.* to Version 8.*
 With this version of the Search module we have migrated to Elasticsearch 5.6. Please read the [Elasticsearch Breaking Changes in 5.0](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/breaking-changes-5.0.html) official documentation to adjust your custom implementation accordingly.
-                
-Your development environment needs to be updated with Elasticsearch 5.6.x. In case you are using the Spryker DevVM, you can download the latest release that provides the necessary services. Follow our [Installation Guide](/docs/scos/dev/developer-guides/202001.0/developer-getting-started-guide.html) for detailed instructions about installing the Spryker DevVM.
+
+Your development environment needs to be updated with Elasticsearch 5.6.x. In case you are using the Spryker DevVM, you can download the latest release that provides the necessary services. Follow our [Installation Guide](/docs/scos/dev/developer-getting-started-guide.html) for detailed instructions about installing the Spryker DevVM.
 
 **Elasticsearch 5 Related BC Breaking Change Highlights**
 
@@ -84,7 +84,7 @@ class UrlGenerator implements UrlGeneratorInterface
         return $params;
     }
 ```
-    
+
 You have to change the way filters are configured in twig templates. Previously there was an incorrect setting on using a name, instead of a request parameter. The filters are under `Pyz/Yves/Catalog/Theme/default/catalog/partials/filters` directory.
 
 **Twig templates also require changes:**
@@ -133,5 +133,4 @@ With the version 4 of the Search module, the logic and configuration of how the 
 
 The new version now works with one parameter only (e.g. `/?sort=price_asc`). To migrate to the new version, you’ll need to change your configurations in your classes that implement `\Spryker\Client\Search\Dependency\Plugin\SearchConfigBuilderInterface`. Instead of providing one `SortConfigTransfer` per sorted attribute, now you need to provide two if you wish to sort by both ascending and descending order. To do this, use the `SortConfigTransfer::setIsDescending()` method, and make sure that the values in `SortConfigTransfer::setParameterName()` are unique.
 
-<!-- See the Search documentation for a detailed [example](/docs/scos/dev/features/202001.0/search-and-filter/search-widget-for-concrete-products/configure-search-features.html).-->
-
+<!-- See the Search documentation for a detailed [example](/docs/scos/user/features/{{page.version}}/search-and-filter/search-widget-for-concrete-products/configure-search-features.html).-->

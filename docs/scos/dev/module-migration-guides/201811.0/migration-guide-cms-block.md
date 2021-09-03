@@ -12,13 +12,13 @@ redirect_from:
 This version allows saving CMS Block-Store relation.
 
 1. Update the `spryker/cms-block` module to at least Version 2.0.0.
-2. Update your `spryker/cms-block-collector` module to at least Version 2.0.0. See [Migration Guide - CMS Collector](https://documentation.spryker.com/module_migration_guides/mg-cms-collector.htm) for more details.
+2. Update your `spryker/cms-block-collector` module to at least Version 2.0.0. See [Migration Guide - CMS Collector](docs/scos/dev/module-migration-guides/{{page.version}}/mg-cms-collector.htm) for more details.
 
 <details open>
 <summary>Custom CMS Block Collector</summary>
 
 If you have a custom CMS Block Collector, make sure that it collects CMS Blocks only when the related CMS Block has an entity in the `spy_cms_block_store` table for the desired store.
-    
+
 </br>
 </details>
 
@@ -28,7 +28,7 @@ If you have a custom CMS Block Collector, make sure that it collects CMS Blocks 
 <summary>Transfer object changes</summary>
 
 `CmsBlock` transfer object has now a `StoreRelation` property which allows you to retrieve/define the stores assigned to the current CMS Block.
-    
+
 </br>
 </details>
 
@@ -43,7 +43,7 @@ If you have a custom CMS Block Collector, make sure that it collects CMS Blocks 
 
 <details open>
 <summary>Example data</summary>
-    
+
 **Assumptions**
 You have the following CMS Blocks: Block_1, Block_2, and stores: AT, DE, US.
 
@@ -57,19 +57,19 @@ The `spy_cms_block_store` can have a configuration like this:
 | Block_2 | AT |
 
 This example defines "Block_1" to be enabled in all of your stores, but restricts "Block_2" to AT store only.
-    
+
 {% info_block warningBox "IMPORTANT" %}
 Even if you have 1 store, the associations between CMS Blocks and stores have to be defined.
 {% endinfo_block %}
-    
+
 </br>
 </details>
 
 <details open>
 <summary>Example migration query</summary>    
-    
+
 To populate the new `spy_cms_block_store` table to have all CMS Blocks in all stores as an initial configuration, run the following query:
-    
+
 ```
 PostgreSQL:
 INSERT INTO spy_cms_block_store (id_cms_block_store, fk_cms_block, fk_store)

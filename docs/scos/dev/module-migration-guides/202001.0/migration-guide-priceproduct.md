@@ -20,14 +20,14 @@ There are new functionalities and changes that were added in this new module rel
 In the previous version of the `PriceProduct` module, a product had only one price per store (and multi-currency) with gross and net amounts.
 By adding this concept to the new release, you can set specific prices for each customer separately. Having logged in, user with these specific prices will see another prices in Catalog and will be able to buy products for own price.
 
-To save BC, we have implemented Default Price Dimension inside the new `PriceProduct` module, so all prices imported by new `PriceProductDataImport` will be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/dev/features/202001.0/price/prices-per-merchant-relation/prices-per-merchant-relation-feature-overview.html) to learn more about the price dimension.
+To save BC, we have implemented Default Price Dimension inside the new `PriceProduct` module, so all prices imported by new `PriceProductDataImport` will be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/user/features/{{page.version}}/price/prices-per-merchant-relation/prices-per-merchant-relation-feature-overview.html) to learn more about the price dimension.
 Prices from price dimensions could be stored not only in DB, but also in Storage, therefore the update of the `PriceProductStorage` module was necessary. The new version 2.0.0 of the `PriceProduct` module already supports price dimensions and has Default Price Dimension implemented.
 
 To migrate the changes to the module, do the following:
 
 1. Upgrade your Database structure
 
-- Run 
+- Run
 
 ```bash
 console propel:install
@@ -74,7 +74,7 @@ protected function savePriceProductDefault(string $idPriceProductStore): void
 composer require spryker/price-product-storage:"^2.0.0"
 ```
 
-Now that the module supports plugins for reading prices from different price dimensions, you can put your own plugins here: 
+Now that the module supports plugins for reading prices from different price dimensions, you can put your own plugins here:
 - `\Pyz\Client\PriceProductStorage\PriceProductStorageDependencyProvider::getPriceDimensionStorageReaderPlugins()`
 
 ### PriceProductService
@@ -86,11 +86,11 @@ The prices list can come from Yves (Storage) and Zed (DB).
 
 If you need to add additional fields to one of these objects, add it to another one (if you added QTY to filter, criteria must be updated etc). So that `PriceProductFilterTransfer` could always be converted to `PriceProductCriteriaTransfer`.
 
-`PriceProductService` has plugins with `\Spryker\Service\PriceProductExtension\Dependency\Plugin\PriceProductFilterPluginInterface` which allows to filter price for price dimension. 
+`PriceProductService` has plugins with `\Spryker\Service\PriceProductExtension\Dependency\Plugin\PriceProductFilterPluginInterface` which allows to filter price for price dimension.
 
 This filter can be really simple and filter price only by price dimension name, but it can also bear some logic, for example finding minimum price from this price dimension.
 
-After that the list of prices passed to service will be decreased to the list of filtered prices which fits the Filter object only and filters plugins logic. 
+After that the list of prices passed to service will be decreased to the list of filtered prices which fits the Filter object only and filters plugins logic.
 
 Then `\Spryker\Service\PriceProduct\FilterStrategy\SinglePriceProductFilterStrategyInterface` is applied for filtered prices to find only ONE price (at the moment, there is only one built-in strategy `SinglePriceProductFilterMinStrategy` which finds MIN price).
 
@@ -105,7 +105,7 @@ In new `PriceProduct` module we have added a set of plugins necessary fo work wi
 
 - `PriceDimensionAbstractSaverPluginInterface` - saves price for abstract product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
 - `PriceDimensionConcreteSaverPluginInterface` - saves price for concrete product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
-- `PriceDimensionQueryCriteriaPluginInterface` is used for expanding `PriceProductStoreQuery` using new transfer object `QueryCriteriaTransfer`. 
+- `PriceDimensionQueryCriteriaPluginInterface` is used for expanding `PriceProductStoreQuery` using new transfer object `QueryCriteriaTransfer`.
 
 Basing on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins - all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
 ![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png){height="" width=""}
@@ -115,14 +115,14 @@ Basing on `PriceProductCriteria`, you can build your own `QueryCriteria` to get 
 
 - `PriceProductDimensionExpanderStrategyPluginInterface` - expands `PriceProductDimension` transfer basing on some properties of this transfer (like `idPriceProductDefault`).
 
-As mentioned above, reading prices from Storage is implemented in `PriceProductStorage` module, plugins for reading prices reside in `PriceProductStorageExtension` module (`\Spryker\Client\PriceProductStorageExtension\Dependency\Plugin\PriceProductStoragePriceDimensionPluginInterface`) which has two methods for reading prices from Storage: 
+As mentioned above, reading prices from Storage is implemented in `PriceProductStorage` module, plugins for reading prices reside in `PriceProductStorageExtension` module (`\Spryker\Client\PriceProductStorageExtension\Dependency\Plugin\PriceProductStoragePriceDimensionPluginInterface`) which has two methods for reading prices from Storage:
 - `findProductConcretePrices($id)`, and;
-- `findProductAbstractPrices($id)`. 
+- `findProductAbstractPrices($id)`.
 
 Prices for price dimension inside Storage are supposed to be stored as a separate key-value for each product abstract and concrete. (as example you can check `kv:price_product_abstract:X` (X = ID of product)
 
 All plugins can be added on project level in :
-- `PriceProductDependencyProvider` for Zed and Service layers; 
+- `PriceProductDependencyProvider` for Zed and Service layers;
 - `PriceProductStorageDependencyProvider` for Client layer.
 
 ### Changes Inside the Modules
@@ -155,4 +155,3 @@ All plugins can be added on project level in :
 
 * Added dependency to `PriceProductStorageExtension`
 * `PriceAbstractStorageReader` constructor requires `PriceProductMapper` (new), `PriceProductStoragePriceDimensionPlugin[]`
-

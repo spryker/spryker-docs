@@ -8,8 +8,8 @@ redirect_from:
 ---
 
 ## Upgrading from Version 6.* to Version 7.*
-    
-Version 7.0.0 of the CMS module introduces the [multi-store functionality](https://documentation.spryker.com/v1/docs/cms-pages-overview). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+
+Version 7.0.0 of the CMS module introduces the [multi-store functionality](docs/scos/user/features/{{page.version}}/cms/cms-page/cms-page.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 ### BC breaks and solutions:
 
@@ -20,7 +20,7 @@ Version 7.0.0 of the CMS module introduces the [multi-store functionality](https
 
 **To upgrade to the new version of the module, do the following:**
 
-1. Update the `Cms` module with Composer: 
+1. Update the `Cms` module with Composer:
 
 ```bash
 "spryker/cms": "^7.0.0"
@@ -54,7 +54,7 @@ The event behavior needs to be applied to all `SpyCmsPageStore columns`.
 
 <details open>
 <summary>src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml</summary>
-    
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Cms\Persistence" package="src.Orm.Zed.Cms.Persistence">
@@ -96,7 +96,7 @@ This script will only migrate pages to stores where persistence is shared.
 
 <details>
 <summary>Pyz\Zed\Cms\Communication\Console\CmsStoreToPageDataMigration.php</summary>
-  
+
 ```php
 <?php
 
@@ -222,7 +222,7 @@ To install the module, `"spryker/cms-block": "^1.0.0"` with Composer is required
 *  `vendor/bin/console propel:migrate`
 *  `vendor/bin/console propel:model:build`
 
-After running the last command, you’ll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. 
+After running the last command, you’ll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace.
 
 It’s important to make sure that they are extending the base classes from the core, i.e.
 * `Orm\Zed\Cms\Persistence\SpyCmsBlock` extends `Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlock`
@@ -486,7 +486,7 @@ In this version, we have moved all CMS templates to the Shared layer instead of 
 `src/Pyz/Yves/Cms/Theme/default/template/*` => `src/Pyz/Shared/Cms/Theme/default/template/*`
 
 ### CMS Twig Functions
-The `TwigCms` function has been improved to provide better speed and performance, it will only send a query to Redis when the translations are not available. 
+The `TwigCms` function has been improved to provide better speed and performance, it will only send a query to Redis when the translations are not available.
 You can still work with the current version although upgrading is highly recommended.
 You can find it here: `src/Pyz/Yves/Cms/Plugin/TwigCms.php`.
 
@@ -526,7 +526,7 @@ To push new CMS version data to the frontend storage and search, add it to the `
     ...
     ?>
 ```
-    
+
 </br>
 </details>
 
@@ -537,7 +537,7 @@ Add them here: `src/Pyz/Zed/Cms/CmsDependencyProvider.php`
 
 <details>
 <summary>Code sample:</summary>
-    
+
 ```php
 <?php
 namespace Pyz\Zed\Cms;
@@ -566,7 +566,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 }
 ?>
 ```
-    
+
 </br>
 </details>
 
@@ -575,7 +575,7 @@ To publish pages after importing, add this to your CMS Importer class:
 
 <details>
 <summary>Code sample:</summary>
-    
+
 ```php
 <?php
 

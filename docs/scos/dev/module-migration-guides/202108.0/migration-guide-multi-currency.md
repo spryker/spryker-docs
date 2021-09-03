@@ -47,8 +47,8 @@ First run `composer update spryker/*` to update your all modules to the latest m
 **ProductBundle >= 4.*** - [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
 **ProductLabelGui >= 2.*** - see [Migration Guide - ProductLabelGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productlabelgui.html).
 **ProductManagement >= 0.9.*** - see [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productmanagement.html). New forms and views have been added.
-**ProductRelation >= 2.*** - see [Migration Guide - ProductRelation](https://documentation.spryker.com/2021080/docs/mg-product-relation).
-**ProductRelationCollector >= 2.*** - see [Migration Guide - ProductRelationCollector](https://documentation.spryker.com/2021080/docs/mg-product-relation-collector).
+**ProductRelation >= 2.*** - see [Migration Guide - ProductRelation](/docs/scos/user/features/{{page.version}}/mg-product-relation).
+**ProductRelationCollector >= 2.*** - see [Migration Guide - ProductRelationCollector](/docs/scos/dev/module-migration-guides/{{page.version}}/mg-product-relation-collector.html).
 **ProductSetGui >= 2.*** - see [Migration Guide - ProductSetGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productsetgui.html).
 **Wishlist >= 2.*** - see [Migration Guide - Wishlist](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-wishlist.html).
 **Search >= 7.0** - see [Migration Guide - Search](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html).
@@ -58,4 +58,3 @@ First run `composer update spryker/*` to update your all modules to the latest m
 **ProductOption >= 6.*** - see [Migration Guide - Product Option](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productoption.html).
 
 Some new configuration options have been made for the whole multi-currency feature: earlier the default price type was defined in environment configuration like `$config[PriceProductConstants::DEFAULT_PRICE_TYPE] = 'DEFAULT'`, now it's moved to: `\Spryker\Shared\PriceProduct\PriceProductConfig::getPriceTypeDefaultName`. Please note that you might get an exception that constant is not found - you can safely remove it, unless you used it in your code. In this case replace `\Spryker\Zed\PriceProduct\Business\PriceProductFacade::getDefaultPriceTypeName` or `\Spryker\Client\PriceProduct\PriceProductClient::getPriceTypeDefaultName` accordingly. Default price mode is defined in `\Spryker\Shared\Price\PriceConfig::getDefaultPriceMode`. Default currency is defined based on `config/Shared/stores.php`, array key `currencyIsoCodes` will be the first item in the list.
-

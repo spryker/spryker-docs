@@ -9,7 +9,7 @@ redirect_from:
 
 ## Upgrading from Version 2.* to Version 3.0.0
 
-Version 3 of the **CheckoutRestApi** module adds the **Payment Method per Store** functionality. 
+Version 3 of the **CheckoutRestApi** module adds the **Payment Method per Store** functionality.
 
 **To upgrade to the new version of the module, do the following:**
 
@@ -38,7 +38,7 @@ console transfer:generate
 In this new version of the **CheckoutRestApi** module, we have added support of split delivery. You can find more details about the changes on the [CheckoutRestApi module](https://github.com/spryker/checkout-rest-api/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/split-delivery-migration-concept.html
+This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**

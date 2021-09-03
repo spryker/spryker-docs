@@ -13,7 +13,7 @@ redirect_from:
 In this new version of the **ProductManagement** module, we have added support of decimal stock. You can find more details about the changes on the [ProductManagement module](https://github.com/spryker/product-management/releases) release page.
 
 {% info_block errorBox %}
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-and-integration/202001.0/migration-concepts/decimal-stock-migration-concept.html
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
 {% endinfo_block %}.)
 
 **To upgrade to the new version of the module, do the following:**
@@ -58,7 +58,7 @@ The new version provides support to manage the `abstract product-store` relation
 {% endinfo_block %}
 
 **Example of injection:**
-    
+
 ```php
 <?php
 namespace Pyz\Zed\ProductManagement;
@@ -78,7 +78,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
-You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/multi-store-products-feature-integration.html). 
+You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-products-feature-integration.html). 
 
 ## Upgrading from Version 0.8.* to Version 0.9.*
 
@@ -127,14 +127,14 @@ Project's importer was also updated to take advantage of the new `ProductAttribu
 
 * `src/Pyz/Zed/Importer/Business/Factory/AbstractFactory.php`
 Removed `getProductManagementFacade()` and replaced it with the `getProductAttributeFacade()` method.
-    
+
 * `src/Pyz/Zed/Importer/Business/Factory/ImporterFactory.php`
 Removed `getProductManagementFacade()` and replaced it with the `getProductAttributeFacade()` method.
-    
+
 * `src/Pyz/Zed/Importer/Business/Importer/ProductManagement/ProductManagementAttributeImporter.php`
 Removed `$productManagementFacade` and replaced it with the `$productAttributeFacade` property.
-    
-* `src/Pyz/Zed/Importer/ImporterDependencyProvider.php` 
+
+* `src/Pyz/Zed/Importer/ImporterDependencyProvider.php`
 Removed `FACADE_PRODUCT_MANAGEMENT` and replaced it with the `FACADE_PRODUCT_ATTRIBUTE` constant.
         Removed `addProductManagementFacade()` and replaced it with the `addProductAttributeFacade()` method.
 

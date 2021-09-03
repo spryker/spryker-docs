@@ -1,5 +1,5 @@
 ---
-title: Shipment + approval process feature integration
+title: Shipment + Approval process feature integration
 description: This integration guide provides step-by-step instructions on integrating Shipment and Approval Process connector in Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-approval-process-feature-integration
 originalArticleId: ac858362-21ea-4a7a-8369-b82cee1cc226
@@ -45,12 +45,12 @@ Add the following configuration to your project:
 
 ```php
 <?php
- 
+
 namespace Pyz\Shared\QuoteApproval;
- 
+
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Shared\QuoteApproval\QuoteApprovalConfig as SprykerQuoteApprovalConfig;
- 
+
 class QuoteApprovalConfig extends SprykerQuoteApprovalConfig
 {
     /**
@@ -84,12 +84,12 @@ Register the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\QuoteApproval;
- 
+
 use Spryker\Client\QuoteApproval\QuoteApprovalDependencyProvider as SprykerQuoteApprovalDependencyProvider;
 use Spryker\Client\QuoteApprovalShipmentConnector\Plugin\QuoteApproval\ShipmentApplicableForQuoteApprovalCheckPlugin;
- 
+
 class QuoteApprovalDependencyProvider extends SprykerQuoteApprovalDependencyProvider
 {
     /**
@@ -108,12 +108,12 @@ class QuoteApprovalDependencyProvider extends SprykerQuoteApprovalDependencyProv
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Quote;
- 
+
 use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 use Spryker\Zed\QuoteApprovalShipmentConnector\Communication\Plugin\Quote\QuoteApprovalShipmentQuoteFieldsAllowedForSavingProviderPlugin;
- 
+
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
     /**
@@ -160,12 +160,12 @@ Register the following plugins:
 
 ```php
 <?php
-  
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
 use SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage\QuoteApprovalCheckerCheckoutShipmentStepEnterPreCheckPlugin;
- 
+
 /**
  * @method \Pyz\Yves\CheckoutPage\CheckoutPageConfig getConfig()
  */

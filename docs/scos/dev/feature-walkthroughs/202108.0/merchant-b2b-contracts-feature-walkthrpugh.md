@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Merchant B2B Contracts_ feature allows setting up contracts between a merchant and B2B customer.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Merchant B2B Contracts feature overview](https://documentation.spryker.com/docs/merchant-b2b-contracts-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Merchant B2B Contracts feature overview](/docs/scos/dev/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) for business users.
+
 
 ## Entity diagram
 
@@ -26,5 +26,5 @@ The following schema shows relations within the merchant domain:
 
 |INTEGRATION GUIDES  |
 |---------|
-| Merchant B2B Contracts feature integration   |
-| Merchant feature integration  |
+| [Merchant B2B Contracts feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/merchant-b2b-contracts-feature-integration.html)   |
+| [Merchant feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/merchant-feature-integration.html)  |

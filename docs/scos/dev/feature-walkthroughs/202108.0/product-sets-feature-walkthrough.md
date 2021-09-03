@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Product Sets_ feature allows creating and selling collections of products.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Product Sets feature overview](https://documentation.spryker.com/docs/product-sets-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Product Sets feature overview](/docs/scos/dev/features/{{page.version}}/product-sets/product-sets-feature-overview.html) for business users.
+
 
 ## Entity diagram
 
@@ -36,4 +36,4 @@ The products in product sets and their sorting positions are stored in the `spy_
 
 |INTEGRATION GUIDES | DATA IMPORT |
 |---------|---------|
-| Product Sets feature integration  | File details: product_set.csv |
+| [Product Sets feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-sets-feature-integration.html)  | [File details: product_set.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html) |

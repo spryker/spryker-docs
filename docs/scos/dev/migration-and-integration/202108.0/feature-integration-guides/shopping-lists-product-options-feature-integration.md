@@ -1,5 +1,5 @@
 ---
-title: Shopping lists + product options feature integration
+title: Shopping Lists + Product Options feature integration
 description: In this guide, we provide step-by-step instruction on how to install Shopping Lists + Product Options Feature  into Spryker-based project.
 originalLink: https://documentation.spryker.com/2021080/docs/shopping-lists-product-options-feature-integration
 originalArticleId: 617431ef-6b41-41f7-8e31-e31c077a450c
@@ -67,17 +67,17 @@ Enable the following behaviors by registering the plugins:
 
 <details open>
 <summary>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
- 
+
 ```php    
 <?php
- 
+
 namespace Pyz\Client\ShoppingList;
- 
+
 use Spryker\Client\ShoppingList\ShoppingListDependencyProvider as SprykerShoppingListDependencyProvider;
 use Spryker\Client\ShoppingListProductOptionConnector\ShoppingList\ProductOptionQuoteItemToItemMapperPlugin;
 use Spryker\Client\ShoppingListProductOptionConnector\ShoppingList\ShoppingListItemProductOptionRequestMapperPlugin;
 use Spryker\Client\ShoppingListProductOptionConnector\ShoppingList\ShoppingListItemProductOptionToItemProductOptionMapperPlugin;
- 
+
 class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvider
 {
 	/**
@@ -89,7 +89,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 			new ShoppingListItemProductOptionRequestMapperPlugin(),
 		];
 	}
- 
+
 	/**
 	 * @return \Spryker\Client\ShoppingListExtension\Dependency\Plugin\ShoppingListItemToItemMapperPluginInterface[]
 	 */
@@ -99,7 +99,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 			new ShoppingListItemProductOptionToItemProductOptionMapperPlugin(),
 		];
 	}
- 
+
 	/**
 	 * @return \Spryker\Client\ShoppingListExtension\Dependency\Plugin\QuoteItemToItemMapperPluginInterface[]
 	 */
@@ -161,21 +161,21 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\ShoppingListPage;
- 
+
 use SprykerShop\Yves\ProductOptionWidget\Plugin\ShoppingListPage\ShoppingListItemProductOptionFormDataProviderMapperPlugin;
 use SprykerShop\Yves\ProductOptionWidget\Plugin\ShoppingListPage\ShoppingListItemProductOptionFormExpanderPlugin;
 use SprykerShop\Yves\ShoppingListPage\ShoppingListPageDependencyProvider as SprykerShoppingListPageDependencyProvider;
- 
+
 class ShoppingListPageDependencyProvider extends SprykerShoppingListPageDependencyProvider
 {
- 
+
 	/**
 	 * @return \SprykerShop\Yves\ShoppingListPageExtension\Dependency\Plugin\ShoppingListItemFormExpanderPluginInterface[]
 	 */
@@ -185,7 +185,7 @@ class ShoppingListPageDependencyProvider extends SprykerShoppingListPageDependen
 			new ShoppingListItemProductOptionFormExpanderPlugin(),
 		];
 	}
- 
+
 	/**
 	 * @return \SprykerShop\Yves\ShoppingListPageExtension\Dependency\Plugin\ShoppingListFormDataProviderMapperPluginInterface[]
 	 */

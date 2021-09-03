@@ -258,8 +258,8 @@ Tax amount for single product option (order only) |
 |calculatedDiscounts (CalculatedDiscountTransfer[]|List of applied discounts for this item|
 |quantity (int)|Number of items|
 |IDSalesExpense (int)|ID of expense as stored in the sales_expense|
-|unitGrossPriceWithDiscounts (int)|Single item price after discounts. Set by `SumGrossCalculatedDiscountAmountCalculator` and `OrderAmountAggregator\ItemDiscounts`.|
-|sumGrossPriceWithDiscounts (int)|Sum off all item prices after discounts. Set by `SumGrossCalculatedDiscountAmountCalculator` and `OrderAmountAggregator\ItemDiscounts`.|
+|unitGrossPriceWithDiscounts (int)|Single item price after discounts. Set by `SumGrossCalculatedDiscountAmountCalculator` and `OrderAmountAggregator/ItemDiscounts`.|
+|sumGrossPriceWithDiscounts (int)|Sum off all item prices after discounts. Set by `SumGrossCalculatedDiscountAmountCalculator` and `OrderAmountAggregator/ItemDiscounts`.|
 |unitTaxAmountWithDiscounts (int)|Tax amount for single item after discounts(order only) |
 |sumTaxAmountWithDiscounts (int)|Tax amount for sum of items after discounts(order only) |
 |refundableAmount (int)|Total refundable amount for this item (order only) |

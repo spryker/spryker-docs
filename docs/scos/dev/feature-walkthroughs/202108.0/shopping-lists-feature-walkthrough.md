@@ -7,13 +7,14 @@ template: concept-topic-template
 
 The _Shopping Lists_ feature allows customers to create and share multiple lists of products between company business units or single users. Shopping lists can be shared between users with different sets of permissions.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Shopping Lists](https://documentation.spryker.com/docs/shopping-lists) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Shopping Lists](/docs/scos/dev/features/{{page.version}}/shopping-lists/shopping-lists.html) for business users.
+
 
 ## Related Developer articles
 
 |INTEGRATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-| Shopping lists feature integration  | Managing shopping lists  |
-| Prices feature integration  | Managing shopping list items  |
+| [Shopping Lists feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shopping-lists-feature-integration.html)  | [Managing shopping lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html)  |
+| [Glue API: Shopping Lists feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-shopping-lists-feature-integration.html)  | [Managing shopping list items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html)   |
+| [Prices feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/prices-feature-integration.html)  |  |

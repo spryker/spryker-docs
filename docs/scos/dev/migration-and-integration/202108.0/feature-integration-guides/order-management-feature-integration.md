@@ -1,5 +1,5 @@
 ---
-title: Order management feature integration
+title: Order Management feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/order-management-feature-integration
 originalArticleId: 848449f8-ca6e-4e63-ba21-1c66f248afba
 redirect_from:
@@ -16,7 +16,7 @@ The following feature integration guide expects the basic feature to be in place
 The current Feature Integration guide only adds the following functionalities:
 
 *     Order cancellation behavior
-*     Show `display names` for order item states 
+*     Show `display names` for order item states
 *     Invoice generation
 
 
@@ -77,7 +77,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up Configuration 
+### 3) Set up Configuration
 
 Set up the following configuration.
 
@@ -137,7 +137,7 @@ Using the `DummyPayment01.xml` process as an example, adjust your OMS state-mach
 
 <details open>
     <summary>config/Zed/oms/DummyPayment01.xml</summary>
-    
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -303,7 +303,7 @@ Ensure that you’ve configured the OMS:
 
 {% endinfo_block %}
 
-### 2.2) Configure Fallback Display Name Prefix 
+### 2.2) Configure Fallback Display Name Prefix
 
 Adjust configuration according to your project’s needs:
 
@@ -330,7 +330,7 @@ class OmsConfig extends SprykerOmsConfig
     }
 }
 ```
-	
+
 {% info_block warningBox "Verification" %}
 
 Once you've finished [setting up behavior](#set-up-behavior), ensure that, on the following Storefront pages, the item states are displayed correctly even if the `display` property is not set in the process definition:
@@ -371,7 +371,7 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 Add oder invoice twig template. For example:
 <details open>
     <summary>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
-    
+
 ```html
 {# @var order \Generated\Shared\Transfer\OrderTransfer #}
 {# @var invoice \Generated\Shared\Transfer\OrderInvoiceTransfer #}
@@ -707,7 +707,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new ItemStateOrderItemExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\SearchOrderExpanderPluginInterface[]
      */
@@ -781,7 +781,7 @@ Ensure that, on the following pages, each order contains the `isCancellable` fl
 
 * The Storefront:
     * *Order History*
-    * *Overview* 
+    * *Overview*
 * The Back Office:
     * *Overview of Orders*
 
@@ -894,7 +894,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         $commands = [
             new OrderInvoiceSendConsole(),
         ];
-        
+
         return $commands;
     }
 }
@@ -982,13 +982,13 @@ Ensure that, in the database, the configured data has been added to the `spy_glo
 
 Register the following route provider(s) on the Storefront:
 
- 
+
 
 | Provider | Namespace |
 | --- | --- |
 | `OrderCancelWidgetRouteProviderPlugin` | `SprykerShop\Yves\OrderCancelWidget\Plugin\Router`|
 
-	
+
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
 ```php
@@ -1025,13 +1025,13 @@ Ensure that the `yves.mysprykershop.com/order/cancel` route is available for POS
 Set up the following behaviors.
 
 #### 4.1) Set up Order Cancellation Behavior
- 
+
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | `OrderCancelButtonWidget` | Shows a **Cancel** button on the Storefront. | None | `SprykerShop\Yves\OrderCancelWidget\Widget` |
 
-	
+
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
@@ -1079,4 +1079,3 @@ Ensure that:
 
 
 {% endinfo_block %}
-

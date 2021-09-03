@@ -7,12 +7,12 @@ template: concept-topic-template
 
 The _Refunds_ feature allows issuing refunds on orders.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Refunds feature overview](https://documentation.spryker.com/docs/refunds-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Refunds feature overview](/docs/scos/dev/features/{{page.version}}/refunds-feature-overview.html) for business users.
+
 
 ## Related Developer articles
 
 | MIGRATION GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|
-| Refund migration guide | Refund process management |
+| Refund migration guide | [Refund process management](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/refund-process-management.html) |

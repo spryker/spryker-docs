@@ -1,5 +1,5 @@
 ---
-title: Glue API- Checkout feature integration
+title: "Glue API: Checkout feature integration"
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-checkout-feature-integration
 originalArticleId: f44bd963-7af3-4ce8-8b7a-3c1477880728
 redirect_from:
@@ -150,7 +150,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
 
 
 
-If `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` is true, make sure that the payment methods and providers of your shop are configured in `CheckoutRestApiConfig::getPaymentProviderMethodToStateMachineMapping()`. 
+If `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` is true, make sure that the payment methods and providers of your shop are configured in `CheckoutRestApiConfig::getPaymentProviderMethodToStateMachineMapping()`.
 
 Setting `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` to false ignores the Glue API level configuration. Subsequently, the `checkout-data` endpoint returns all the payment methods.
 
@@ -247,7 +247,7 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAt
 
 <details open>
     <summary>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -288,10 +288,10 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAt
             ...
 }
  ```
- 
+
  </details>
 
- 
+
 {% endinfo_block %}
 
 ## 3) Set up transfer objects
@@ -595,5 +595,3 @@ Integrate the following related features.
 | :----------- | :------------------------------- | :----------------------------------------------------------- |
 | Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html)  |
 | Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html) |
-
-

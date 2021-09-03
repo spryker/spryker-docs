@@ -1,5 +1,5 @@
 ---
-title: Persistent cart sharing feature integration
+title: Persistent Cart Sharing feature integration
 description: The guide describes the process of installing the Persistent Cart feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/persistent-cart-sharing-feature-integration
 originalArticleId: c6f09590-e6e7-45e4-a25b-8612a8c3c5e4
@@ -82,7 +82,7 @@ clipboard.copy.error,Das Kopieren in die Zwischenablage wird von Ihrem Browser n
 persistent_cart_share_page.preview,Preview: %title%,en_US
 persistent_cart_share_page.preview,Vorschau: %title%,de_DE
 ```
-    
+
 Run the following console command to import data:
 ```bash
 console data:import glossary
@@ -103,12 +103,12 @@ src/Pyz/Yves/ResourceSharePage/ResourceSharePageDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ResourceSharePage;
- 
+
 use SprykerShop\Yves\PersistentCartSharePage\Plugin\CartPreviewRouterStrategyPlugin;
 use SprykerShop\Yves\ResourceSharePage\ResourceSharePageDependencyProvider as SprykerResourceSharePageDependencyProvider;
- 
+
 class ResourceSharePageDependencyProvider extends SprykerResourceSharePageDependencyProvider
 {
     /**
@@ -127,12 +127,12 @@ src/Pyz/Client/PersistentCartShare/PersistentCartShareDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\PersistentCartShare;
- 
+
 use Spryker\Client\PersistentCartShare\PersistentCartShareDependencyProvider as SprykerPersistentCartShareDependencyProvider;
 use Spryker\Client\PersistentCartShare\Plugin\PersistentCartShare\PreviewCartShareOptionPlugin;
- 
+
 class PersistentCartShareDependencyProvider extends SprykerPersistentCartShareDependencyProvider
 {
     /**
@@ -161,7 +161,7 @@ Make sure, that you are able to share a cart with "Preview" access to external u
 Register the following route provider plugins:
 
 | Provider | Namespace |
-| --- | --- | 
+| --- | --- |
 | `PersistentCartSharePageRouteProviderPlugin` | `SprykerShop\Yves\PersistentCartSharePage\Plugin\Router` |
 | `PersistentCartShareWidgetRouteProviderPlugin` | `SprykerShop\Yves\PersistentCartShareWidget\Plugin\Router` |
 
@@ -210,12 +210,12 @@ src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\PersistentCartShareWidget\Widget\ShareCartByLinkWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**

@@ -10,9 +10,9 @@ The CMS module provides an extension point for post activation and deactivation 
 ```php
 <?php
 
-namespace Spryker\Zed\Cms\Communication\Plugin;
+namespace Spryker/Zed/Cms/Communication/Plugin;
 
-use Generated\Shared\Transfer\CmsPageTransfer;
+use Generated/Shared/Transfer/CmsPageTransfer;
 
 interface PostCmsPageActivatorPluginInterface
 {
@@ -22,7 +22,7 @@ interface PostCmsPageActivatorPluginInterface
      *
      * @api
      *
-     * @param \Generated\Shared\Transfer\CmsPageTransfer $cmsPageTransfer
+     * @param /Generated/Shared/Transfer/CmsPageTransfer $cmsPageTransfer
      *
      * @return void
      */
@@ -37,20 +37,20 @@ It implements the interface as follows:
 ```php
 <?php
 
-namespace Spryker\Zed\CmsNavigationConnector\Communication\Plugin;
+namespace Spryker/Zed/CmsNavigationConnector/Communication/Plugin;
 
-use Generated\Shared\Transfer\CmsPageTransfer;
-use Spryker\Zed\Cms\Communication\Plugin\PostCmsPageActivatorPluginInterface;
-use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Generated/Shared/Transfer/CmsPageTransfer;
+use Spryker/Zed/Cms/Communication/Plugin/PostCmsPageActivatorPluginInterface;
+use Spryker/Zed/Kernel/Communication/AbstractPlugin;
 
 /**
- * @method \Spryker\Zed\CmsNavigationConnector\Business\CmsNavigationConnectorFacadeInterface getFacade()
- * @method \Spryker\Zed\CmsNavigationConnector\Communication\CmsNavigationConnectorCommunicationFactory getFactory()
+ * @method /Spryker/Zed/CmsNavigationConnector/Business/CmsNavigationConnectorFacadeInterface getFacade()
+ * @method /Spryker/Zed/CmsNavigationConnector/Communication/CmsNavigationConnectorCommunicationFactory getFactory()
  */
 class PostCmsPageActivatorNavigationPlugin extends AbstractPlugin implements PostCmsPageActivatorPluginInterface
 {
     /**
-     * @param \Generated\Shared\Transfer\CmsPageTransfer $cmsPageTransfer
+     * @param /Generated/Shared/Transfer/CmsPageTransfer $cmsPageTransfer
      *
      * @return void
      */

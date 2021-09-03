@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Configurable Bundle_ feature allows creating a configurable list of items.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Configurable Bundle feature overview](https://documentation.spryker.com/docs/configurable-bundle-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Configurable Bundle feature overview](/docs/scos/dev/features/{{page.version}}/configurable-bundle-feature-overview.html) for business users.
+
 
 ## Entity diagram
 
@@ -35,13 +35,13 @@ The following schemas illustrates module relations in the Configurable Bundle fe
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
-| Configurable Bundle feature integration | ConfigurableBundle migration guide | Retrieving configurable bundle templates | HowTo - Render configurable bundle templates in the Storefront  |
-| Merchant Product Restrictions feature integration | ConfigurableBundleStorage migration guide |   |   |
-| Product Lists + Catalog feature integration  | ProductListGui migration guide |   |   |
-| Prices feature integration  | MerchantRelationshipProductListGui migration guide  |   |   |
-| Product feature integration |   |   |   |
-| Product Images + Configurable Bundle feature integration  |   |   |   |
-|Glue API: Configurable Bundle integration |   |   |   |
-|Glue API: Configurable Bundle integration |   |   |   |
-|Glue API: Configurable Bundle + Cart integration |   |   |   |
-|Glue API: Configurable Bundle + Product integration |   |   |   |
+| [Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/configurable-bundle-feature-integration.html) | ConfigurableBundle migration guide | [Retrieving configurable bundle templates](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-configurable-bundle-templates.html) | [HowTo - Render configurable bundle templates in the Storefront](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)  |
+| [Merchant Product Restrictions feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/merchant-product-restrictions-feature-integration.html) | ConfigurableBundleStorage migration guide |   |   |
+| [Product Lists + Catalog feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-lists-catalog-feature-integration.html)  | ProductListGui migration guide |   |   |
+| [Prices feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/prices-feature-integration.html)  | MerchantRelationshipProductListGui migration guide  |   |   |
+| [Product feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-feature-integration.html) |   |   |   |
+| [Product Images + Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-images-configurable-bundle-feature-integration.html)  |   |   |   |
+| [Glue API: Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html) |   |   |   |
+| [Glue API: Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html) |   |   |   |
+| [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-cart-feature-integration.html) |   |   |   |
+| [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html) |   |   |   |

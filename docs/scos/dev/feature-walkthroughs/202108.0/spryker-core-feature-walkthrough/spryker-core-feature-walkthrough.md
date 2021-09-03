@@ -7,9 +7,8 @@ template: concept-topic-template
 
 The _Spryker Core_ feature is a set of basic modules representing the Spryker Commerce OS.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Spryker Core](https://documentation.spryker.com/docs/spryker-core) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Spryker Core](/docs/scos/dev/features/{{page.version}}/spryker-core.html) for business users.
 
 
 ## Related Developer articles

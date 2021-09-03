@@ -8,9 +8,9 @@ template: concept-topic-template
 The _Product_ feature allows creating products, manage their characteristics and settings.
 
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Product](https://documentation.spryker.com/docs/product) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Product](/docs/scos/dev/features/{{page.version}}/product/product.html) for business users.
+
 
 ## Entity diagram
 
@@ -43,10 +43,10 @@ The following schema  represents module relations of the _Quick Order_ page:
 
 | INTEGRATION GUIDES | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| Product feature integration | ProductValidity migration guide | Retrieving abstract products | File details: product_abstract.csv |
-| Quick Add to Cart + Discontinued Products feature integration |  | Retrieving concrete products | File details: product_abstract_store.csv |
-| Alternative Products + Discontinued Products feature integration |  | Retrieving product attributes | File details: product_concrete.csv |
-| Glue API: Products feature integration |  | Retrieving image sets of abstract products | File details: product_attribute_key.csv |
-| Glue API: Product Image Sets feature integration |  | Retrieving image sets of concrete products | File details: product_management_attribute.csv |
-| Category Image feature integration |  |  | File details: product_discontinued.csv |
-| Product + Cart feature integration |  |  |  |
+| [Product feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-feature-integration.html) | ProductValidity migration guide | [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html) | [File details: product_abstract.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) |
+| [Quick Add to Cart + Discontinued Products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/quick-add-to-cart-discontinued-products-feature-integration.html) |  | [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html) | [File details: product_abstract_store.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html) |
+| [Alternative Products + Discontinued Products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/alternative-products-discontinued-products-feature-integration.html) |  | [Retrieving product attributes](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-attributes.html) | [File details: product_concrete.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html) |
+| [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) |  | [Retrieving image sets of abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html) | [File details: product_attribute_key.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html) |
+| [Glue API: Product Image Sets feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-image-sets-feature-integration.html) |  | [Retrieving image sets of concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html) | [File details: product_management_attribute.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) |
+| [Category Image feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/category-image-feature-integration.html) |  |  | [File details: product_discontinued.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html) |
+| [Product + Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-cart-feature-integration.html) |  |  |  |

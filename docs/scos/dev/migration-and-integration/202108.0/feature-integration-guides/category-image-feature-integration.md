@@ -1,5 +1,5 @@
 ---
-title: Category image feature integration
+title: Category Image feature integration
 description: The guide walks you through the process of installing the Category Image feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/category-image-feature-integration
 originalArticleId: 0f3e0644-f1b6-4407-ae2c-e42fe2ee0396
@@ -40,23 +40,23 @@ Adjust the schema definition so entity changes will trigger events.
 | `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`</br>`Entity.spy_category_image_set_to_category_image.update`</br>`Entity.spy_category_image_set_to_category_image.delete` |
 
 **src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml**
-    
+
 ```html
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\CategoryImage\Persistence" package="src.Orm.Zed.CategoryImage.Persistence">
- 
+
 	<table name="spy_category_image_set">
 		<behavior name="event">
 			<parameter name="spy_category_image_set_all" column="*"/>
         </behavior>
     </table>
- 
+
 	<table name="spy_category_image">
 		<behavior name="event">
 			<parameter name="spy_category_image_all" column="*"/>
         </behavior>
     </table>
- 
+
 	<table name="spy_category_image_set_to_category_image">
 		<behavior name="event">
 			<parameter name="spy_category_image_set_to_category_image_all" column="*"/>
@@ -68,7 +68,7 @@ Adjust the schema definition so entity changes will trigger events.
 Set up synchronization queue pools so non-multistore entities (not store specific entities) are synchronized among stores:
 
 **src/Pyz/Zed/CategoryImageStorage/Persistence/Propel/Schema/spy_category_image_storage.schema.xml**
-    
+
 ```html
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -76,7 +76,7 @@ Set up synchronization queue pools so non-multistore entities (not store specifi
 	xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
 	namespace="Orm\Zed\CategoryImageStorage\Persistence"
 	package="src.Orm.Zed.CategoryImageStorage.Persistence">
- 
+
 	<table name="spy_category_image_storage">
 		<behavior name="synchronization">
 			<parameter name="queue_pool" value="synchronizationPool" />
@@ -118,22 +118,22 @@ In this step, you will enable publishing of table changes (create, edit, delete
 | `CategoryImageStorageEventSubscriber` | Registers listeners that are responsible for publishing category image information to storage when a related entity changes. | None | `Spryker\Zed\CategoryImageStorage\Communication\Plugin\Event\Subscriber` |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Event;
- 
+
 use Spryker\Zed\CategoryImageStorage\Communication\Plugin\Event\Subscriber\CategoryImageStorageEventSubscriber;
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
- 
+
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
 	public function getEventSubscriberCollection()
 	{
 		$eventSubscriberCollection = parent::getEventSubscriberCollection();
 		$eventSubscriberCollection->add(new CategoryImageStorageEventSubscriber());
- 
+
 		return $eventSubscriberCollection;
 	}
 }
@@ -143,12 +143,12 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\CategoryImageStorage;
-  
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\CategoryImageStorage\CategoryImageStorageConfig as SprykerCategoryImageSTorageConfig;
-  
+
 class CategoryImageStorageConfig extends SprykerCategoryImageSTorageConfig
 {
 	/**
@@ -172,12 +172,12 @@ Add the following plugins to your project:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Synchronization;
- 
+
 use Spryker\Zed\CategoryImageStorage\Communication\Plugin\Synchronization\CategoryImageSynchronizationDataPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
- 
+
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
 	/**
@@ -267,9 +267,9 @@ Add the following plugins to your project:
 
 ```php
 <?php
-   
+
 namespace Pyz\Zed\Category;
-   
+
 use Spryker\Zed\Category\CategoryDependencyProvider as SprykerDependencyProvider;
 use Spryker\Zed\CategoryImage\Communication\Plugin\CategoryImageSetCreatorPlugin;
 use Spryker\Zed\CategoryImage\Communication\Plugin\CategoryImageSetExpanderPlugin;
@@ -277,7 +277,7 @@ use Spryker\Zed\CategoryImage\Communication\Plugin\CategoryImageSetUpdaterPlugin
 use Spryker\Zed\CategoryImage\Communication\Plugin\RemoveCategoryImageSetRelationPlugin;
 use Spryker\Zed\CategoryImageGui\Communication\Plugin\CategoryImageFormPlugin;
 use Spryker\Zed\CategoryImageGui\Communication\Plugin\CategoryImageFormTabExpanderPlugin;
-   
+
 class CategoryDependencyProvider extends SprykerDependencyProvider
 {
     /**
@@ -291,10 +291,10 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
             ],
             parent::getRelationDeletePluginStack()
         );
-   
+
         return $deletePlugins;
     }
-   
+
     /**
      * @return \Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryTransferExpanderPluginInterface[]
      */
@@ -304,7 +304,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
             new CategoryImageSetExpanderPlugin(),
         ];
     }
-   
+
     /**
      * @return array
      */
@@ -314,7 +314,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
             new CategoryImageFormPlugin(),
         ]);
     }
-   
+
     /**
      * @return \Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryUpdateAfterPluginInterface[]
      */
@@ -324,7 +324,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
             new CategoryImageSetUpdaterPlugin(),
         ];
     }
-   
+
     /**
      * @return \Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryCreateAfterPluginInterface[]
      */
@@ -334,7 +334,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
             new CategoryImageSetCreatorPlugin(),
         ];
     }
-   
+
     /**
      * @return \Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryFormTabExpanderPluginInterface[]
      */
@@ -383,12 +383,12 @@ Register the following global widgets:
 
 ```php
 <?php  
- 
+
 namespace Pyz\Yves\ShopApplication;  
- 
+
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 use SprykerShop\Yves\CategoryImageStorageWidget\Widget\CategoryImageStorageWidget;  
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {    
     /**     
@@ -406,4 +406,3 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 {% info_block warningBox "Verification" %}
 Make sure that the following widgets have been registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`CategoryImageStorageWidget`</td><td>Make sure you have category image data in your storage. Then, render the widget for all the categories that have images assigned.</td></tr></tbody></table>
 {% endinfo_block %}
-

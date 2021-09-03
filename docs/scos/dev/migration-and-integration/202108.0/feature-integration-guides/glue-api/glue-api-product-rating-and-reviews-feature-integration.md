@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product rating & reviews feature integration
+title: "Glue API: Product Rating & Reviews feature integration"
 description: This guide contains step-by-step instructions on integrating Product Rating & Reviews API feature into a Spryker-based project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-rating-reviews-feature-integration
 originalArticleId: 6634ada1-2f5a-454b-a5b3-9319b7e90cbf
@@ -86,12 +86,12 @@ src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use \Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication\AbstractProductsProductReviewsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -209,15 +209,15 @@ src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication\ProductReviewsRelationshipByProductAbstractSkuPlugin;
 use Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication\ProductReviewsRelationshipByProductConcreteSkuPlugin;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
    /**
@@ -236,7 +236,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             ProductsRestApiConfig::RESOURCE_CONCRETE_PRODUCTS,
             new ProductReviewsRelationshipByProductConcreteSkuPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }
@@ -246,13 +246,13 @@ src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\ProductsRestApi;
- 
+
 use Spryker\Glue\ProductReviewsRestApi\Plugin\ProductsRestApi\ProductReviewsAbstractProductsResourceExpanderPlugin;
 use Spryker\Glue\ProductReviewsRestApi\Plugin\ProductsRestApi\ProductReviewsConcreteProductsResourceExpanderPlugin;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiDependencyProvider as SprykerProductsRestApiDependencyProvider;
- 
+
 class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependencyProvider
 {
     /**
@@ -264,7 +264,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
             new ProductReviewsConcreteProductsResourceExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Glue\ProductsRestApiExtension\Dependency\Plugin\AbstractProductsResourceExpanderPluginInterface[]
      */
@@ -587,6 +587,3 @@ Make sure that the response contains product-reviews as a relationship and produ
 </details>
 
 {% endinfo_block %}
-
-
-

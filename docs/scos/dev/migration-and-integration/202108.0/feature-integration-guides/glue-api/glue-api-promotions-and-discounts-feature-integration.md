@@ -1,5 +1,5 @@
 ---
-title: Glue API- Promotions & discounts feature integration
+title: "Glue API: Promotions & Discounts feature integration"
 description: Use the guide to install the Promotions and Discounts feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-promotions-discounts-feature-integration
 originalArticleId: e39ff236-644f-41fe-9aee-796304a59df2
@@ -34,11 +34,11 @@ composer require spryker/discount-promotions-rest-api:"^1.1.0" --update-with-dep
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory | 
-| --- | --- | 
+| Module | Expected Directory |
+| --- | --- |
 | ProductLabelsRestApi | vendor/spryker/product-labels-rest-api |
 | CartCodesRestApi | vendor/spryker/cart-codes-rest-api |
-| DiscountPromotionsRestApi | vendor/spryker/discount-promotions-rest-api | 
+| DiscountPromotionsRestApi | vendor/spryker/discount-promotions-rest-api |
 
 {% endinfo_block %}
 
@@ -129,15 +129,15 @@ To do so, modify the following file:
 
 <details open>
 <summary>src/Pyz/Zed/Quote/QuoteConfig.php</summary>
-   
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Quote;
- 
+
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Zed\Quote\QuoteConfig as SprykerQuoteConfig;
- 
+
 class QuoteConfig extends SprykerQuoteConfig
 {
     /**
@@ -176,13 +176,13 @@ Activate the following plugin:
 
 <details open>
    <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 
     <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication\CartRuleByQuoteResourceRelationshipPlugin;
 use Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication\CartVouchersResourceRoutePlugin;
 use Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication\GuestCartVouchersResourceRoutePlugin;
@@ -197,7 +197,7 @@ use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsRelati
 use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsResourceRoutePlugin;
 use Spryker\Glue\ProductsRestApi\Plugin\GlueApplication\ProductAbstractBySkuResourceRelationshipPlugin;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -211,7 +211,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new GuestCartVouchersResourceRoutePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
      *
@@ -256,7 +256,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             DiscountPromotionsRestApiConfig::RESOURCE_PROMOTIONAL_ITEMS,
             new ProductAbstractBySkuResourceRelationshipPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }
@@ -267,16 +267,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 <details open>
 <summary>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
-   
+
 ```php
 
 <?php
- 
+
 namespace Pyz\Glue\CartsRestApi;
- 
+
 use Spryker\Glue\CartsRestApi\CartsRestApiDependencyProvider as SprykerCartsRestApiDependencyProvider;
 use Spryker\Glue\DiscountPromotionsRestApi\Plugin\CartsRestApi\DiscountPromotionCartItemExpanderPlugin;
- 
+
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
@@ -295,16 +295,16 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 <details open>
 <summary>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
-   
+
 ```php
 
 <?php
- 
+
 namespace Pyz\Zed\CartsRestApi;
- 
+
 use Spryker\Zed\CartsRestApi\CartsRestApiDependencyProvider as SprykerCartsRestApiDependencyProvider;
 use Spryker\Zed\DiscountPromotionsRestApi\Communication\Plugin\CartsRestApi\DiscountPromotionCartItemMapperPlugin;
- 
+
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
@@ -354,7 +354,7 @@ To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure t
 
 <details open>
 <summary>Example response</summary>
-   
+
 ```json
 {
     "data": {
@@ -384,7 +384,7 @@ To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send
 
 <details open>
 <summary>Example response</summary>
-   
+
 ```json
 {
     "data": {
@@ -436,7 +436,7 @@ To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin ins
 
 <details open>
 <summary>Example response</summary>
-   
+
 ```json
 {
     "data": {
@@ -500,7 +500,7 @@ To verify installation of CartRuleByQuoteResourceRelationshipPlugin and VoucherB
 
 <details open>
 <summary>Example response</summary>
-   
+
 ```json
 {
     "data": {
@@ -606,7 +606,7 @@ Make sure that the cart-rules and vouchers relationships are also available for 
 
 <details open>
 <summary>Example response</summary>
-   
+
 ```json
 {
     "data": {
@@ -719,7 +719,7 @@ Add items to the cart to satisfy the conditions of the discount rule:
 
 <details open>
 <summary>Example of Request</summary>
-   
+
 ```json
 {
     "data": {
@@ -740,7 +740,7 @@ Make sure that the following relations are available:
 
 <details open>
 <summary>Example of Response</summary>
-   
+
 ```json
 {
     "data": {
@@ -895,7 +895,7 @@ Add the selected promotional product to the cart and check the cart in the respo
 
 <details open>
 <summary>Example of Request to Add Selected Promotional Product Into The Cart</summary>
-   
+
 ```json
 {
     "data": {
@@ -913,7 +913,7 @@ Add the selected promotional product to the cart and check the cart in the respo
 
 <details open>
 <summary>Example of Response</summary>
-   
+
 ```json
 {
     "data": {

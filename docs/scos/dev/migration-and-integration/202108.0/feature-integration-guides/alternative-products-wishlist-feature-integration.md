@@ -1,5 +1,5 @@
 ---
-title: Alternative products + wishlist feature integration
+title: Alternative Products + Wishlist feature integration
 description: The guide walks you through the process of installing the Alternative products and Wishlist features into the project.
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-wishlist-feature-integration
 originalArticleId: 753cb57b-3b63-4fa1-b40c-a1950802ca9c
@@ -47,12 +47,12 @@ Register the following plugins to enable widgets:
 
 ```php    
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ProductAlternativeWidget\Widget\WishlistProductAlternativeWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
 	/**

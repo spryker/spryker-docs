@@ -1,5 +1,5 @@
 ---
-title: Glue API- Products feature integration
+title: "Glue API: Products feature integration"
 description: This guide will navigate you through the process of installing and configuring the Product API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-products-feature-integration
 originalArticleId: 34d40361-4b84-4665-a0ef-dfe757cbff47
@@ -42,7 +42,7 @@ Make sure that the following modules have been installed:
 | ProductPricesRestApi | vendor/spryker/product-prices-rest-api |
 | ProductTaxSetsRestApi | vendor/spryker/product-tax-sets-rest-api |
 | ProductsCategoriesResourceRelationship | vendor/spryker/products-categories-resource-relationship |
-| ProductAttributesRestApi |vendor/spryker/product-attributes-rest-api| 
+| ProductAttributesRestApi |vendor/spryker/product-attributes-rest-api|
 
 
 {% endinfo_block %}
@@ -71,7 +71,7 @@ class ProductsRestApiConfig extends SprykerProductsRestApiConfig
 }
 ```
 
-  
+
 {% info_block errorBox %}
 
 We recommend setting `ALLOW_PRODUCT_CONCRETE_EAGER_RELATIONSHIP` to `false`.  
@@ -92,8 +92,8 @@ Run the following commands to update the database and generate entity and trans
 console transfer:generate
 console propel:install
 console transfer:generate
-``` 
-  
+```
+
 {% info_block warningBox "Verification" %}
 
 
@@ -102,17 +102,17 @@ Ensure that the following changes have occurred in transfer objects:
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
 | AbstractProductsRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer |
-| ConcreteProductsRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer| 
-| RestProductImageSetsAttributesTransfer|  class|  created | src/Generated/Shared/Transfer/RestProductImageSetsAttributesTransfer| 
-| RestProductImageSetTransfer|  class|  created  | src/Generated/Shared/Transfer/RestProductImageSetTransfer| 
-| RestImagesAttributesTransfer |  class |  created | src/Generated/Shared/Transfer/RestImagesAttributesTransfer| 
-| RestProductPriceAttributesTransfer|  class|  created | src/Generated/Shared/Transfer/RestProductPriceAttributesTransfer| 
-| RestProductPricesAttributesTransfer | class|  created | src/Generated/Shared/Transfer/RestProductPricesAttributesTransfer| 
-| RestCurrencyTransfer|  class | created | src/Generated/Shared/Transfer/RestCurrencyTransfer| 
-| RestProductManagementAttributeAttributes|  class|  created|  src/Generated/Shared/Transfer/RestProductManagementAttributeAttributesTransfer| 
-| RestLocalizedProductManagementAttributeKeyAttributes | class|  created | src/Generated/Shared/Transfer/RestLocalizedProductManagementAttributeKeyAttributesTransfer| 
-| RestProductManagementAttributeValueAttributes | class |  created | src/Generated/Shared/Transfer/RestProductManagementAttributeValueAttributesTransfer| 
-| RestProductManagementAttributeValueTranslationAttributes |  class |  created | src/Generated/Shared/Transfer/RestProductManagementAttributeValueTranslationAttributesTransfer| 
+| ConcreteProductsRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer|
+| RestProductImageSetsAttributesTransfer|  class|  created | src/Generated/Shared/Transfer/RestProductImageSetsAttributesTransfer|
+| RestProductImageSetTransfer|  class|  created  | src/Generated/Shared/Transfer/RestProductImageSetTransfer|
+| RestImagesAttributesTransfer |  class |  created | src/Generated/Shared/Transfer/RestImagesAttributesTransfer|
+| RestProductPriceAttributesTransfer|  class|  created | src/Generated/Shared/Transfer/RestProductPriceAttributesTransfer|
+| RestProductPricesAttributesTransfer | class|  created | src/Generated/Shared/Transfer/RestProductPricesAttributesTransfer|
+| RestCurrencyTransfer|  class | created | src/Generated/Shared/Transfer/RestCurrencyTransfer|
+| RestProductManagementAttributeAttributes|  class|  created|  src/Generated/Shared/Transfer/RestProductManagementAttributeAttributesTransfer|
+| RestLocalizedProductManagementAttributeKeyAttributes | class|  created | src/Generated/Shared/Transfer/RestLocalizedProductManagementAttributeKeyAttributesTransfer|
+| RestProductManagementAttributeValueAttributes | class |  created | src/Generated/Shared/Transfer/RestProductManagementAttributeValueAttributesTransfer|
+| RestProductManagementAttributeValueTranslationAttributes |  class |  created | src/Generated/Shared/Transfer/RestProductManagementAttributeValueTranslationAttributesTransfer|
 
 
 {% endinfo_block %}
@@ -122,7 +122,7 @@ Ensure that the following changes have occurred in transfer objects:
 
 Ensure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are extended with the synchronization behavior of the following methods:
 
-  
+
 
 | Entity | Type | Event | Path | Methods |
 | --- | --- | --- | --- | --- |
@@ -130,7 +130,7 @@ Ensure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are exte
 |SpyProductConcreteStorage |class |extended |src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage |`syncPublishedMessageForMappings()`, `syncUnpublishedMessageForMappings()`|
 
 {% endinfo_block %}
-  
+
 
 ## 4) Set up behavior
 
@@ -144,16 +144,16 @@ Run the following commands to reload the abstract and concrete product data into
 ```bash
 console publish:trigger-events -r product_abstract
 console publish:trigger-events -r product_concrete
-``` 
-  
+```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following Redis keys exist, and there is data in them:
 
 *   `kv:product_abstract:{% raw %}{{{% endraw %}store_name{% raw %}}}{% endraw %}:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_abstract{% raw %}}}{% endraw %}`
-    
+
 *   `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
-    
+
 
 {% endinfo_block %}
 
@@ -161,14 +161,14 @@ Ensure that the following Redis keys exist, and there is data in them:
 
 Activate the following plugins:
 
-  
+
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | AbstractProductsResourceRoutePlugin | Registers the abstract-products resource. | None | Spryker\Glue\ProductsRestApi\Plugin |
 | ConcreteProductsResourceRoutePlugin| Registers the concrete-products resource. |None |Spryker\Glue\ProductsRestApi\Plugin
 
-  
+
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 ```php
 <?php
@@ -192,7 +192,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         ];
     }
 }
-``` 
+```
 
 {% info_block warningBox "Verification" %}
 
@@ -200,9 +200,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Ensure that the following endpoints are available:
 
 *   `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
-    
+
 *   `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`
-    
+
 
 {% endinfo_block %}
 
@@ -210,7 +210,7 @@ Ensure that the following endpoints are available:
 
 Activate the following plugins:
 
-  
+
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
@@ -251,7 +251,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         return $resourceRelationshipCollection;
     }
 }
-``` 
+```
 
 {% info_block warningBox "Verification" %}
 
@@ -259,13 +259,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Ensure that:
 
 *   The following endpoints are available:
-    
-    *   http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %} 
-        
+
+    *   http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}
+
     *   `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`  
-        
+
 *   When the `concrete-products` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-products`.
-    
+
 *   When the `abstract-products` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=abstract-products`.
 
 {% endinfo_block %}
@@ -274,7 +274,7 @@ Ensure that:
 
 Activate the following plugins:
 
-  
+
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
@@ -334,26 +334,26 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         return $resourceRelationshipCollection;
     }
 }
-``` 
+```
 
 </details>
 
-  
+
 {% info_block warningBox "Verification" %}
 
 
 Ensure the following:
 
 *   The endpoints are available:
-    
-    *   `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets` 
-        
+
+    *   `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets`
+
     *   `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets`  
-        
+
 *   When the `abstract-product-image-sets` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets`
-    
+
 *   When the `concrete-product-image-sets` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-product-image-sets`
-    
+
 
 {% endinfo_block %}
 
@@ -361,7 +361,7 @@ Ensure the following:
 
 Activate the following plugins:
 
-  
+
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
@@ -373,7 +373,7 @@ Activate the following plugins:
 
 
 
-  
+
 
 <details open>
     <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
@@ -434,27 +434,27 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Ensure the following:
 
 *   The endpoints are available:
-    
+
     *   `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
-        
+
     *   `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
-        
+
 *   When the `abstract-product-prices` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices`
-    
+
 *   When the `concrete-product-prices` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-product-prices`
-    
+
 
 {% endinfo_block %}
 ### Enable resources and relationships of category
 
 Activate the following plugin:
 
-  
+
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | AbstractProductsCategoriesResourceRelationshipPlugin | Adds the `categories` resource as a relationship to the `abstract-products` resource. | None | Spryker\Glue\ProductsCategoriesResourceRelationship\Plugin |
-  
+
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
@@ -485,11 +485,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         return $resourceRelationshipCollection;
     }
 }
-``` 
+```
 
-  
 
-  
+
+
 {% info_block warningBox "Verification" %}
 
 
@@ -497,9 +497,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Ensure that the relationship has been registered correctly:
 
 1.  Send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes`.
-    
+
 2.  The response should contain the `category-nodes` resource as a relationship.
-    
+
 <details open>
     <summary>Response sample</summary>
 
@@ -552,7 +552,7 @@ Ensure that the relationship has been registered correctly:
       }
    ]
 }
-``` 
+```
 
 </details>
 
@@ -592,11 +592,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following endpoint is available: `http://glue.mysprykershop.com/product-management-attributes/{% raw %}{{{% endraw %}attribute_key{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
-
-  

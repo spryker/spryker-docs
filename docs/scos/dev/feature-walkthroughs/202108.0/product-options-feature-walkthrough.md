@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Product Options_ feature allows a Back Office user to create and assign product options to abstract products.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Product Options feature overview](https://documentation.spryker.com/docs/product-options-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Product Options feature overview](/docs/scos/dev/features/{{page.version}}/product-options/product-options-feature-overview.html) for business users.
+
 
 
 
@@ -17,6 +17,6 @@ To learn more about the feature and to find out how end users use it, see [Produ
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES  | DATA IMPORT |
 |---------|---------|---------|
-| Shopping Lists + Product Options feature integration  | ProductOption migration guide  |File details: product_option.csv |
-| Product options + Order Management feature integration  | | File details: product_option_price.csv |
-| Glue API: Product Options feature integration  | | |
+| [Shopping Lists + Product Options feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shopping-lists-product-options-feature-integration.html)  | ProductOption migration guide  |[File details: product_option.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) |
+| [Product options + Order Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-options-order-management-feature-integration.html)  | | [File details: product_option_price.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html) |
+| [Glue API: Product Options feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)  | | |

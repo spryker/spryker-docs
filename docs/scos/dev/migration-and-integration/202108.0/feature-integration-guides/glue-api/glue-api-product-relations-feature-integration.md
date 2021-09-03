@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product relations feature integration
+title: "Glue API: Product Relations feature integration"
 description: This guide will navigate you through the process of installing and configuring the Product Relations feature in Spryker OS.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-relations-feature-integration
 originalArticleId: 90f7f8ad-55be-4090-8a98-b8530a1d8eb9
@@ -31,7 +31,7 @@ composer require spryker/related-products-rest-api:"^1.0.0" spryker/up-selling-p
 ```
 <section contenteditable="false" class="warningBox"><div class="content">
     Make sure that the following modules have been installed:
-    
+
 |Module|Expected Directory|
 |---|---|
 |`RelatedProductsRestApi`|`vendor/spryker/related-products-rest-api`|
@@ -55,14 +55,14 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\RelatedProductsRestApi\Plugin\GlueApplication\RelatedProductsResourceRoutePlugin;
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\GlueApplication\CartUpSellingProductsResourceRoutePlugin;
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\GlueApplication\GuestCartUpSellingProductsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -87,4 +87,3 @@ http://glue.mysprykershop.com/carts/`{% raw %}{{{% endraw %}cart_uuid{% raw %}}}
 http://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}`/up-selling-products
 
 {% endinfo_block %}
-

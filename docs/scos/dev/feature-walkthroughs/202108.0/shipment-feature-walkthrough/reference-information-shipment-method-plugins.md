@@ -24,11 +24,11 @@ The class must implement `ShipmentMethodAvailabilityPluginInterface` and must ex
 
 ```php
 <?php
-namespace Pyz\Zed\Shipment\Communication\Plugin\Availability;
-use Generated\Shared\Transfer\QuoteTransfer;
-use Generated\Shared\Transfer\ShipmentGroupTransfer;
-use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodAvailabilityPluginInterface;
+namespace Pyz/Zed/Shipment/Communication/Plugin/Availability;
+use Generated/Shared/Transfer/QuoteTransfer;
+use Generated/Shared/Transfer/ShipmentGroupTransfer;
+use Spryker/Zed/Kernel/Communication/AbstractPlugin;
+use Spryker/Zed/ShipmentExtension/Dependency/Plugin/ShipmentMethodAvailabilityPluginInterface;
 class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodAvailabilityPluginInterface
 {
     /**
@@ -37,8 +37,8 @@ class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodAvailabil
      *
      * @api
      *
-     * @param \Generated\Shared\Transfer\ShipmentGroupTransfer $shipmentGroupTransfer
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     * @param /Generated/Shared/Transfer/ShipmentGroupTransfer $shipmentGroupTransfer
+     * @param /Generated/Shared/Transfer/QuoteTransfer $quoteTransfer
      *
      * @return bool
      */
@@ -55,11 +55,11 @@ For each price calculation plugin linked to a shipment method, a class with the 
 
 ```php
 <?php
-namespace Pyz\Zed\Shipment\Communication\Plugin\PriceCalculation;
-use Generated\Shared\Transfer\QuoteTransfer;
-use Generated\Shared\Transfer\ShipmentGroupTransfer;
-use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodPricePluginInterface;
+namespace Pyz/Zed/Shipment/Communication/Plugin/PriceCalculation;
+use Generated/Shared/Transfer/QuoteTransfer;
+use Generated/Shared/Transfer/ShipmentGroupTransfer;
+use Spryker/Zed/Kernel/Communication/AbstractPlugin;
+use Spryker/Zed/ShipmentExtension/Dependency/Plugin/ShipmentMethodPricePluginInterface;
 class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodPricePluginInterface
 {
     /**
@@ -68,8 +68,8 @@ class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodPricePlug
      *
      * @api
      *
-     * @param \Generated\Shared\Transfer\ShipmentGroupTransfer $shipmentGroupTransfer
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     * @param /Generated/Shared/Transfer/ShipmentGroupTransfer $shipmentGroupTransfer
+     * @param /Generated/Shared/Transfer/QuoteTransfer $quoteTransfer
      *
      * @return int
      */
@@ -86,19 +86,19 @@ For each availability plugin linked to a shipment method, a class with the same 
 
 ```php
 <?php
-namespace Pyz\Zed\Shipment\Communication\Plugin\DeliveryTime;
-use Generated\Shared\Transfer\QuoteTransfer;
-use Generated\Shared\Transfer\ShipmentGroupTransfer;
-use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodDeliveryTimePluginInterface;
+namespace Pyz/Zed/Shipment/Communication/Plugin/DeliveryTime;
+use Generated/Shared/Transfer/QuoteTransfer;
+use Generated/Shared/Transfer/ShipmentGroupTransfer;
+use Spryker/Zed/Kernel/Communication/AbstractPlugin;
+use Spryker/Zed/ShipmentExtension/Dependency/Plugin/ShipmentMethodDeliveryTimePluginInterface;
 class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodDeliveryTimePluginInterface
 {
     /**
      * Specification:
      *  - Returns delivery time for shipment group.
      *
-     * @param \Generated\Shared\Transfer\ShipmentGroupTransfer $shipmentGroupTransfer
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     * @param /Generated/Shared/Transfer/ShipmentGroupTransfer $shipmentGroupTransfer
+     * @param /Generated/Shared/Transfer/QuoteTransfer $quoteTransfer
      *
      * @return int
      * @api

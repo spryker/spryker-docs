@@ -64,9 +64,9 @@ In Zed, inside the `Tax/Communication/Plugin/` folder, create the `FlatTaxRateCa
 ```php
 <?php
 ...
-use Generated\Shared\Transfer\QuoteTransfer;
-use Spryker\Zed\Calculation\Dependency\Plugin\CalculatorPluginInterface;
-use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Generated/Shared/Transfer/QuoteTransfer;
+use Spryker/Zed/Calculation/Dependency/Plugin/CalculatorPluginInterface;
+use Spryker/Zed/Kernel/Communication/AbstractPlugin;
 ...
 class NewTaxRateCalculatorPlugin extends AbstractPlugin implements CalculatorPluginInterface
 {
@@ -84,8 +84,8 @@ Next, implement the business logic; create `FlatTaxRateCalculator` inside the `M
 <?php
 ...
 
-use Spryker\Zed\Tax\Persistence\TaxQueryContainer;
-use Spryker\Zed\Tax\Persistence\TaxQueryContainerInterface;
+use Spryker/Zed/Tax/Persistence/TaxQueryContainer;
+use Spryker/Zed/Tax/Persistence/TaxQueryContainerInterface;
 
 class FlatTaxRateCalculator implements CalculatorInterface
 {

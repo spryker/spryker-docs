@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Approval Process_ feature enables managers to control purchases requested by their employees.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Approval Process feature overview](https://documentation.spryker.com/docs/approval-process-feature-overvieww) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Approval Process feature overview](/docs/scos/dev/features/{{page.version}}/approval-process-feature-overview.html) for business users.
+
 
 ## Entity diagram
 
@@ -26,5 +26,5 @@ The following schema illustrates module relations in the Approval Process featur
 
 |INTEGRATION GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|
-| [Approval Process feature integration](/docs/scos\dev\migration-and-integration/{{page.version}}/feature-integration-guides\glue-api\glue-api-alternative-products-feature-integration.html) | [HowTo - Implement customer approval process based on a generic state machine](/docs/scos\dev\tutorials-and-howtos/{{page.version}}/howtos\feature-howtos\howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
-| [Shipment + Approval Process feature integration](/docs/scos\dev\migration-and-integration/{{page.version}}/feature-integration-guides\shipment-approval-process-feature-integration.html)  |   |
+| [Approval Process feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-alternative-products-feature-integration.html) | [HowTo - Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
+| [Shipment + Approval Process feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shipment-approval-process-feature-integration.html)  |   |

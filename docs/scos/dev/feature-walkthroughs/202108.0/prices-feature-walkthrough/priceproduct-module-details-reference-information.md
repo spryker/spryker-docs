@@ -22,13 +22,13 @@ The prices list can come from Yves (Storage) and Zed (DB).
 
 If you need to add additional fields to one of these objects, add it to another one (if you added QTY to filter, criteria must be updated, etc.). So that `PriceProductFilterTransfer` could always be converted to `PriceProductCriteriaTransfer`.
 
-`PriceProductService` has plugins with `\Spryker\Service\PriceProductExtension\Dependency\Plugin\PriceProductFilterPluginInterface` which allows filtering price for price dimension.
+`PriceProductService` has plugins with `/Spryker/Service/PriceProductExtension/Dependency/Plugin/PriceProductFilterPluginInterface` which allows filtering price for price dimension.
 
 This filter can be really simple and filter price only by price dimension name, but it can also bear some logic, for example finding the minimum price from this price dimension.
 
 After that, the list of prices passed to service will be decreased to the list of filtered prices, which fits the Filter object only and filters plugins logic.
 
-Then `\Spryker\Service\PriceProduct\FilterStrategy\SinglePriceProductFilterStrategyInterface` is applied for filtered prices to find only ONE price (at the moment, there is only one built-in strategy `SinglePriceProductFilterMinStrategy` which finds MIN price).
+Then `/Spryker/Service/PriceProduct/FilterStrategy/SinglePriceProductFilterStrategyInterface` is applied for filtered prices to find only ONE price (at the moment, there is only one built-in strategy `SinglePriceProductFilterMinStrategy` which finds MIN price).
 
 There is Quote in a `filter/criteria` without items since this is additional information about the environment from where prices are requested.
 
@@ -52,9 +52,9 @@ Basing on `PriceProductCriteria`, you can build your own `QueryCriteria` to get 
 According to the DB scheme, `spy_price_product_store` table is the common storage for prices from different dimensions. If some price is the same for several dimensions, it will be stored as ONE record. So when a price is changed in one dimension, and there is no identical price in `spy_price_product_store`, the price will be stored as a new record in this table. This is done to avoid overriding prices in other dimensions. After some time, this table will have the so-called "orphaned records" (any price dimension does not have a reference to these prices). To automatically remove them, you can use `src/Pyz/Zed/PriceProduct/PriceProductConfig.php`:
 
 ```php
-namespace Pyz\Zed\PriceProduct;
+namespace Pyz/Zed/PriceProduct;
 
-use Spryker\Zed\PriceProduct\PriceProductConfig as SprykerPriceProductConfig;
+use Spryker/Zed/PriceProduct/PriceProductConfig as SprykerPriceProductConfig;
 class PriceProductConfig extends SprykerPriceProductConfig
 {
     /**
@@ -72,7 +72,7 @@ or run `console price-product-store:optimize` from time to time when needed.
 
 - `PriceProductDimensionExpanderStrategyPluginInterface`—expands `PriceProductDimension` transfer basing on some properties of this transfer (like `idPriceProductDefault`).
 
-Reading prices from Storage is implemented in `PriceProductStorage` module, plugins for reading prices reside in `PriceProductStorageExtension` module (`\Spryker\Client\PriceProductStorageExtension\Dependency\Plugin\PriceProductStoragePriceDimensionPluginInterface`) which has two methods for reading prices from Storage:
+Reading prices from Storage is implemented in `PriceProductStorage` module, plugins for reading prices reside in `PriceProductStorageExtension` module (`/Spryker/Client/PriceProductStorageExtension/Dependency/Plugin/PriceProductStoragePriceDimensionPluginInterface`) which has two methods for reading prices from Storage:
 - `findProductConcretePrices($id)`, and
 - `findProductAbstractPrices($id)`.
 

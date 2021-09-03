@@ -1,5 +1,5 @@
 ---
-title: Merchant custom prices feature integration
+title: Merchant Custom Prices feature integration
 description: The Merchant Custom Price Feature allows setting specific prices for merchants. The guide describes the process of integrating the feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-custom-prices-feature-integration
 originalArticleId: 7b16873a-0326-4f7c-ae97-62bd7e0c3b81
@@ -33,7 +33,7 @@ composer require spryker-feature/merchant-custom-prices:"^master" spryker/price-
 {% info_block warningBox "Verification" %}
 Make sure that the following modules have been installed:<table><col  /><col  /><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`PriceProductMerchantRelationship`</td><td>`vendor/spryker/price-product-merchant-relationship`</td></tr><tr><td>`PriceProductMerchantRelationshipDataImport`</td><td>`vendor/spryker/price-product-merchant-relationship-data-import`</td></tr><tr><td>`PriceProductMerchantRelationshipGui`</td><td>`vendor/spryker/price-product-merchant-relationship-gui`</td></tr><tr><td>`PriceProductMerchantRelationshipStorage`</td><td>`vendor/spryker/price-product-merchant-relationship-storage`</td></tr></tbody></table>
 {% endinfo_block %}
- 
+
 ### 2) Set up Database Schema
 Adjust the schema definition so that entity changes can trigger events:
 
@@ -42,7 +42,7 @@ Adjust the schema definition so that entity changes can trigger events:
 | `spy_price_product_merchant_relationship` | `Entity.spy_price_product_merchant_relationship.create`</br>`Entity.spy_price_product_merchant_relationship.update`</br>`Entity.spy_price_product_merchant_relationship.delete` |
 
 **src/Pyz/Zed/PriceProductMerchantRelationship/Persistence/Propel/Schema/spy_price_product_merchant_relationship.schema.xml**
-    
+
 ```html
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -92,7 +92,7 @@ With this step, you will be able to publish prices on change (create, edit, dele
 | `PriceProductMerchantRelationshipStorageEventSubscriber` | Registers listeners that are responsible for publishing merchant prices to storage when a related entity changes. | None | `Spryker\Zed\ProductListStorage\Communication\Plugin\Event\Subscriber` |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
-    
+
 ```php
 <?php
 
@@ -215,7 +215,7 @@ Verify if `console sync:data --help` has `price_product_abstract_merchant_relati
 ### 4) Import Data
 #### Import Price Product Merchant Relationships
 Prepare your prices data according to your requirements using our demo data:
-		
+
 **vendor/spryker/price-product-merchant-relationship-data-import/data/import/price_product_merchant_relationship.csv**
 
 ```yaml

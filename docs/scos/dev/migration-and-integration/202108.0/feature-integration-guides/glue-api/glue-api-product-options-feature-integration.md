@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product options feature integration
+title: "Glue API: Product Options feature integration"
 description: This guide provides step-by-step instruction on integrating Product Options API Feature into the Spryker based project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-options-feature-integration
 originalArticleId: 6cf952d4-7195-40ec-8366-3f1d3153b34e
@@ -42,7 +42,7 @@ console transfer:generate
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects: 
+Make sure that the following changes have been applied in transfer objects:
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
@@ -241,4 +241,3 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 Make a GET request to `http://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_uuid{% raw %}}}{% endraw %}`. Returned order items should have `productOptions` property with product options chosen for an item.
 
 {% endinfo_block %}
-

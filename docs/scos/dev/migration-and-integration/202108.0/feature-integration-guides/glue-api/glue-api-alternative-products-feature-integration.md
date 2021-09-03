@@ -1,5 +1,5 @@
 ---
-title: Glue API- Alternative products feature integration
+title: "Glue API: Alternative Products feature integration"
 description: This guide will navigate you through the process of installing and configuring the Alternative Products API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-alternative-products-feature-integration
 originalArticleId: 0cac6f60-0429-4b7e-8ff4-9236b8cc51d0
@@ -51,11 +51,11 @@ src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
 <?php
 
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication\AbstractAlternativeProductsResourceRoutePlugin;
 use Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication\ConcreteAlternativeProductsResourceRoutePlugin
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**

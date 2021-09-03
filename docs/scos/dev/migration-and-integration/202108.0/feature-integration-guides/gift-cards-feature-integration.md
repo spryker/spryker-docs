@@ -1,5 +1,5 @@
 ---
-title: Gift cards feature integration
+title: Gift Cards feature integration
 description: The guide walks you through the process of installing the Gift Cards feature in the project.
 originalLink: https://documentation.spryker.com/2021080/docs/gift-cards-feature-integration
 originalArticleId: 88dbe1af-1473-45f0-9f49-864c9d153f52
@@ -41,15 +41,15 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 Extend your project with the following configuration.
 
 **src/Pyz/Zed/GiftCard/GiftCardConfig.php**
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\GiftCard;
- 
+
 use Spryker\Shared\Shipment\ShipmentConfig;
 use Spryker\Zed\GiftCard\GiftCardConfig as SprykerGiftCardConfig;
- 
+
 class GiftCardConfig extends SprykerGiftCardConfig
 {
     /**
@@ -77,14 +77,14 @@ Extend your project with the following configuration.
 
 ```php
 <?php
- 
+
 use Spryker\Shared\Kernel\KernelConstants;
 use Spryker\Shared\Nopayment\NopaymentConfig;
 use Spryker\Shared\Nopayment\NopaymentConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Sales\SalesConstants;
 use Spryker\Zed\GiftCard\GiftCardConfig;
- 
+
 // ---------- Dependency injector
 $config[KernelConstants::DEPENDENCY_INJECTOR_ZED] = [
     'Payment' => [
@@ -95,14 +95,14 @@ $config[KernelConstants::DEPENDENCY_INJECTOR_ZED] = [
         GiftCardConfig::PROVIDER_NAME,
     ],
 ];
- 
+
 $config[NopaymentConstants::NO_PAYMENT_METHODS] = [
     NopaymentConfig::PAYMENT_PROVIDER_NAME,
 ];
 $config[NopaymentConstants::WHITELIST_PAYMENT_METHODS] = [
     GiftCardConfig::PROVIDER_NAME,
 ];
- 
+
 // ---------- State machine (OMS)
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     'Nopayment01',
@@ -117,12 +117,12 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\GiftCard;
- 
+
 use Spryker\Shared\DummyPayment\DummyPaymentConfig;
 use Spryker\Zed\GiftCard\GiftCardConfig as SprykerGiftCardConfig;
- 
+
 class GiftCardConfig extends SprykerGiftCardConfig
 {
     /**
@@ -143,11 +143,11 @@ class GiftCardConfig extends SprykerGiftCardConfig
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\Sales\SalesConfig as SprykerSalesConfig;
- 
+
 class SalesConfig extends SprykerSalesConfig
 {
     /**
@@ -158,9 +158,9 @@ class SalesConfig extends SprykerSalesConfig
         $projectExternalBlocks = [
             'giftCards' => '/gift-card/sales/list', // lists used gift cards for the order
         ];
- 
+
         $externalBlocks = parent::getSalesDetailExternalBlocksUrls();
- 
+
         return array_merge($externalBlocks, $projectExternalBlocks);
     }
 }
@@ -283,13 +283,13 @@ DummyPayment Order State Machine Example:
         xmlns="spryker:oms-01"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd">
- 
+
     <process name="DummyPayment01" main="true">
         <subprocesses>
             <process>DummyRefund</process>
             <process>CreateGiftCard</process>
         </subprocesses>
- 
+
         <states>
             <state name="new" reserved="true"/>
             <state name="payment pending" reserved="true"/>
@@ -306,82 +306,82 @@ DummyPayment Order State Machine Example:
             <state name="delivered"/>
             <state name="closed"/>
         </states>
- 
+
         <transitions>
             <transition happy="true" condition="DummyPayment/IsAuthorized">
                 <source>new</source>
                 <target>payment pending</target>
                 <event>authorize</event>
             </transition>
- 
+
             <transition>
                 <source>new</source>
                 <target>invalid</target>
                 <event>authorize</event>
             </transition>
- 
+
             <transition happy="true" condition="DummyPayment/IsPayed">
                 <source>payment pending</source>
                 <target>paid</target>
                 <event>pay</event>
             </transition>
- 
+
             <transition>
                 <source>payment pending</source>
                 <target>cancelled</target>
                 <event>pay</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>paid</source>
                 <target>confirmed</target>
                 <event>confirm</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>confirmed</source>
                 <target>exported</target>
                 <event>check giftcard purchase</event>
             </transition>
- 
+
             <transition happy="true" condition="GiftCard/IsGiftCard">
                 <source>confirmed</source>
                 <target>gift card purchased</target>
                 <event>check giftcard purchase</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>gift card shipped</source>
                 <target>delivered</target>
                 <event>complete gift card creation</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>exported</source>
                 <target>shipped</target>
                 <event>ship</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>shipped</source>
                 <target>delivered</target>
                 <event>stock-update</event>
             </transition>
- 
+
             <transition>
                 <source>delivered</source>
                 <target>ready for return</target>
                 <event>return</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>delivered</source>
                 <target>closed</target>
                 <event>close</event>
             </transition>
- 
+
         </transitions>
- 
+
         <events>
             <event name="authorize" onEnter="true"/>
             <event name="pay" manual="true" timeout="1 hour" command="DummyPayment/Pay"/>
@@ -393,10 +393,10 @@ DummyPayment Order State Machine Example:
             <event name="return" manual="true" />
         </events>
     </process>
- 
+
     <process name="DummyRefund" file="DummySubprocess/DummyRefund01.xml"/>
     <process name="CreateGiftCard" file="GiftCardSubprocess/CreateGiftCard01.xml"/>
- 
+
 </statemachine>
 ```
 
@@ -410,29 +410,29 @@ DummyPayment Order State Machine Example:
         xmlns="spryker:oms-01"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd">
- 
+
     <process name="CreateGiftCard">
         <states>
             <state name="gift card purchased"/>
             <state name="gift card created"/>
             <state name="gift card shipped"/>
         </states>
- 
+
         <transitions>
             <transition happy="true">
                 <source>gift card purchased</source>
                 <target>gift card created</target>
                 <event>create giftcard</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>gift card created</source>
                 <target>gift card shipped</target>
                 <event>ship giftcard</event>
             </transition>
- 
+
         </transitions>
- 
+
         <events>
             <event name="check giftcard purchase" onEnter="true"/>
             <event name="create giftcard" onEnter="true" command="GiftCard/CreateGiftCard" />
@@ -451,35 +451,35 @@ DummyPayment Order State Machine Example:
         xmlns="spryker:oms-01"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd">
- 
+
     <process name="DummyRefund">
- 
+
         <states>
             <state name="ready for return" />
             <state name="returned"/>
             <state name="refunded"/>
         </states>
- 
+
         <transitions>
             <transition>
                 <source>ready for return</source>
                 <target>returned</target>
                 <event>execute-return</event>
             </transition>
- 
+
             <transition>
                 <source>returned</source>
                 <target>refunded</target>
                 <event>refund</event>
             </transition>
         </transitions>
- 
+
         <events>
             <event name="execute-return" onEnter="true"/>
             <event name="refund" manual="true" command="DummyPayment/Refund"/>
         </events>
     </process>
- 
+
 </statemachine>
 ```
 
@@ -493,19 +493,19 @@ In this step, you should customize your Order State Machine to place orders with
 NoPayment Order State Machine Example:
 
 **config/Zed/oms/Nopayment01.xml**
-    
+
 ```html
 <?xml version="1.0"?>
 <statemachine
         xmlns="spryker:oms-01"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd">
- 
+
     <process name="Nopayment01" main="true">
         <subprocesses>
             <process>DummyRefund</process>
         </subprocesses>
- 
+
         <states>
             <state name="new" reserved="true"/>
             <state name="paid" reserved="true"/>
@@ -514,46 +514,46 @@ NoPayment Order State Machine Example:
             <state name="delivered"/>
             <state name="closed"/>
         </states>
- 
+
         <transitions>
             <transition happy="true">
                 <source>new</source>
                 <target>paid</target>
                 <event>authorize</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>paid</source>
                 <target>exported</target>
                 <event>export</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>exported</source>
                 <target>shipped</target>
                 <event>ship</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>shipped</source>
                 <target>delivered</target>
                 <event>stock-update</event>
             </transition>
- 
+
             <transition>
                 <source>delivered</source>
                 <target>ready for return</target>
                 <event>return</event>
             </transition>
- 
+
             <transition happy="true">
                 <source>delivered</source>
                 <target>closed</target>
                 <event>close</event>
             </transition>
- 
+
         </transitions>
- 
+
         <events>
             <event name="authorize" onEnter="true"/>
             <event name="export" onEnter="true" manual="true" command="Oms/SendOrderConfirmation"/>
@@ -563,9 +563,9 @@ NoPayment Order State Machine Example:
             <event name="return" manual="true" />
         </events>
     </process>
- 
+
     <process name="DummyRefund" file="DummySubprocess/DummyRefund01.xml"/>
- 
+
 </statemachine>
 ```
 
@@ -594,13 +594,13 @@ Add the following plugins to your project:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Calculation;
- 
+
 use Spryker\Zed\Calculation\CalculationDependencyProvider as SprykerCalculationDependencyProvider;
 use Spryker\Zed\GiftCard\Communication\Plugin\GiftCardCalculatorPlugin;
 use Spryker\Zed\Kernel\Container;
- 
+
 class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 {
     /**
@@ -621,13 +621,13 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Cart;
- 
+
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\GiftCard\Communication\Plugin\GiftCardMetadataExpanderPlugin;
 use Spryker\Zed\Kernel\Container;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
@@ -648,13 +648,13 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Checkout;
- 
+
 use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
 use Spryker\Zed\GiftCard\Communication\Plugin\GiftCardOrderItemSaverPlugin;
 use Spryker\Zed\Kernel\Container;
- 
+
 class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
     /**
@@ -675,12 +675,12 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Discount;
- 
+
 use Spryker\Zed\Discount\DiscountDependencyProvider as SprykerDiscountDependencyProvider;
 use Spryker\Zed\GiftCard\Communication\Plugin\GiftCardDiscountableItemFilterPlugin;
- 
+
 class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 {
     /**
@@ -699,14 +699,14 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Mail;
- 
+
 use Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Mail\GiftCardDeliveryMailTypePlugin;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Mail\Business\Model\Mail\MailTypeCollectionAddInterface;
 use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
- 
+
 class MailDependencyProvider extends SprykerMailDependencyProvider
 {
     /**
@@ -717,13 +717,13 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     public function provideBusinessLayerDependencies(Container $container)
     {
         $container = parent::provideBusinessLayerDependencies($container);
- 
+
         $container->extend(static::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
             $mailCollection->add(new GiftCardDeliveryMailTypePlugin());
- 
+
             return $mailCollection;
         });
- 
+
         return $container;
     }
 }
@@ -733,9 +733,9 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Oms;
- 
+
 use Spryker\Zed\GiftCard\Communication\Plugin\Oms\Command\CreateGiftCardCommandPlugin;
 use Spryker\Zed\GiftCard\Communication\Plugin\Oms\Condition\IsGiftCardConditionPlugin;
 use Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Oms\Command\ShipGiftCardByEmailCommandPlugin;
@@ -743,7 +743,7 @@ use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandCollectionInterface;
 use Spryker\Zed\Oms\Dependency\Plugin\Condition\ConditionCollectionInterface;
 use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
- 
+
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
     /**
@@ -756,10 +756,10 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
         $container = parent::provideBusinessLayerDependencies($container);
         $container = $this->extendCommandPlugins($container);
         $container = $this->extendConditionPlugins($container);
- 
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -770,13 +770,13 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
         $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
             $commandCollection->add(new ShipGiftCardByEmailCommandPlugin(), 'GiftCardMailConnector/ShipGiftCard');
             $commandCollection->add(new CreateGiftCardCommandPlugin(), 'GiftCard/CreateGiftCard');
- 
+
             return $commandCollection;
         });
- 
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -787,10 +787,10 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
         $container->extend(OmsDependencyProvider::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
             $conditionCollection
                 ->add(new IsGiftCardConditionPlugin(), 'GiftCard/IsGiftCard');
- 
+
             return $conditionCollection;
         });
- 
+
         return $container;
     }
 }
@@ -800,13 +800,13 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Shipment;
- 
+
 use Spryker\Zed\GiftCard\Communication\Plugin\OnlyGiftCardShipmentMethodFilterPlugin;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Shipment\ShipmentDependencyProvider as SprykerShipmentDependencyProvider;
- 
+
 class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 {
     /**
@@ -846,19 +846,19 @@ Add the following plugins to your project:
 |`PriceToPayPaymentMethodFilterPlugin`  | Filters available payment methods based on the price-to-pay value of the quote. | - |`Spryker\Zed\Nopayment\Communication\Plugin\Payment`  |
 | `GiftCardPaymentMethodFilterPlugin` | Filters blacklisted payment methods in case the quote contains a gift card to be purchased. |-  | `Spryker\Zed\GiftCard\Communication\Plugin` |
 | `GiftCardPreCheckPlugin` | Checks if a gift card payment method value is not bigger than the rest of the gift card value to be used to pay. | - | `Spryker\Zed\GiftCard\Communication\Plugin`|
-| `GiftCardOrderSaverPlugin`| Saves a gift card payment to the database when an order is placed. | - | `Spryker\Zed\GiftCard\Communication\Plugin`| 
+| `GiftCardOrderSaverPlugin`| Saves a gift card payment to the database when an order is placed. | - | `Spryker\Zed\GiftCard\Communication\Plugin`|
 |`NopaymentPreCheckPlugin`| Checks if a "Nopayment" payment method is allowed to be used. | - | `Spryker\Zed\Nopayment\Communication\Plugin\Checkout`|
 
 **src/Pyz/Client/CartCode/CartCodeDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\CartCode;
- 
+
 use Spryker\Client\CartCode\CartCodeDependencyProvider as SprykerCartCodeDependencyProvider;
 use Spryker\Client\GiftCard\Plugin\CartCode\GiftCardCartCodePlugin;
- 
+
 class CartCodeDependencyProvider extends SprykerCartCodeDependencyProvider
 {
     /**
@@ -877,13 +877,13 @@ class CartCodeDependencyProvider extends SprykerCartCodeDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Checkout;
- 
+
 use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
 use Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Checkout\SendEmailToGiftCardUser;
 use Spryker\Zed\Kernel\Container;
- 
+
 class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
     /**
@@ -904,14 +904,14 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\GiftCard;
- 
+
 use Spryker\Zed\GiftCard\GiftCardDependencyProvider as SprykerGiftCardDependencyProvider;
 use Spryker\Zed\GiftCardBalance\Communication\Plugin\BalanceCheckerApplicabilityPlugin;
 use Spryker\Zed\GiftCardBalance\Communication\Plugin\BalanceTransactionLogPaymentSaverPlugin;
 use Spryker\Zed\GiftCardBalance\Communication\Plugin\GiftCardBalanceValueProviderPlugin;
- 
+
 class GiftCardDependencyProvider extends SprykerGiftCardDependencyProvider
 {
     /**
@@ -921,7 +921,7 @@ class GiftCardDependencyProvider extends SprykerGiftCardDependencyProvider
     {
         return new GiftCardBalanceValueProviderPlugin();
     }
- 
+
     /**
      * @return \Spryker\Zed\GiftCard\Dependency\Plugin\GiftCardPaymentSaverPluginInterface[]
      */
@@ -931,7 +931,7 @@ class GiftCardDependencyProvider extends SprykerGiftCardDependencyProvider
             new BalanceTransactionLogPaymentSaverPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\GiftCard\Dependency\Plugin\GiftCardDecisionRulePluginInterface[]
      */
@@ -948,13 +948,13 @@ class GiftCardDependencyProvider extends SprykerGiftCardDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Mail;
 se Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Mail\GiftCardUsageMailTypePlugin;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Mail\Business\Model\Mail\MailTypeCollectionAddInterface;
 use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
- 
+
 class MailDependencyProvider extends SprykerMailDependencyProvider
 {
     /**
@@ -965,13 +965,13 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     public function provideBusinessLayerDependencies(Container $container)
     {
         $container = parent::provideBusinessLayerDependencies($container);
- 
+
         $container->extend(static::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
             $mailCollection->add(new GiftCardUsageMailTypePlugin());
- 
+
             return $mailCollection;
         });
- 
+
         return $container;
     }
 }
@@ -981,9 +981,9 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Payment;
- 
+
 use Spryker\Shared\Nopayment\NopaymentConfig as SprykerNopaymentConfig;
 use Spryker\Zed\GiftCard\Communication\Plugin\GiftCardOrderSaverPlugin;
 use Spryker\Zed\GiftCard\Communication\Plugin\GiftCardPaymentMethodFilterPlugin;
@@ -994,7 +994,7 @@ use Spryker\Zed\Nopayment\Communication\Plugin\Checkout\NopaymentPreCheckPlugin;
 use Spryker\Zed\Nopayment\Communication\Plugin\Payment\PriceToPayPaymentMethodFilterPlugin;
 use Spryker\Zed\Payment\Dependency\Plugin\Checkout\CheckoutPluginCollectionInterface;
 use Spryker\Zed\Payment\PaymentDependencyProvider as SprykerPaymentDependencyProvider;
- 
+
 class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 {
     /**
@@ -1006,10 +1006,10 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
     {
         $container = parent::provideBusinessLayerDependencies($container);
         $container = $this->extendPaymentPlugins($container);
- 
+
         return $container;
     }
- 
+
     /**
      * @return \Spryker\Zed\Payment\Dependency\Plugin\Payment\PaymentMethodFilterPluginInterface[]
      */
@@ -1020,7 +1020,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
             new GiftCardPaymentMethodFilterPlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -1036,23 +1036,23 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
                     SprykerGiftCardConfig::PROVIDER_NAME,
                     PaymentDependencyProvider::CHECKOUT_PRE_CHECK_PLUGINS
                 );
- 
+
                 $pluginCollection->add(
                     new GiftCardOrderSaverPlugin(),
                     SprykerGiftCardConfig::PROVIDER_NAME,
                     PaymentDependencyProvider::CHECKOUT_ORDER_SAVER_PLUGINS
                 );
- 
+
                 $pluginCollection->add(
                     new NopaymentPreCheckPlugin(),
                     SprykerNopaymentConfig::PAYMENT_PROVIDER_NAME,
                     PaymentDependencyProvider::CHECKOUT_ORDER_SAVER_PLUGINS
                 );
- 
+
                 return $pluginCollection;
             }
         );
- 
+
         return $container;
     }
 }
@@ -1091,10 +1091,10 @@ Extend your project with the following configuration.
 
 ```php
 <?php
- 
+
 use Spryker\Shared\Kernel\KernelConstants;
 use Spryker\Shared\Nopayment\NopaymentConfig;
- 
+
 // ---------- Dependency injector
 $config[KernelConstants::DEPENDENCY_INJECTOR_YVES] = [
     'CheckoutPage' => [
@@ -1162,12 +1162,12 @@ Register the following global widget(s):
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\CartCodeWidget\Widget\CartCodeFormWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -1183,7 +1183,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the widget is displayed on the Cart page and the Summary page of the Checkout process. 
+Make sure that the widget is displayed on the Cart page and the Summary page of the Checkout process.
 {% endinfo_block %}
 
 ### 4) Enable Controllers
@@ -1192,7 +1192,7 @@ Make sure that the widget is displayed on the Cart page and the Summary page of 
 Register the following route provider plugins:
 
 | Provider | Namespace |
-| --- | --- | 
+| --- | --- |
 | `CartCodeWidgetRouteProviderPlugin` | `SprykerShop\Yves\CartCodeWidget\Plugin\Router` |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**

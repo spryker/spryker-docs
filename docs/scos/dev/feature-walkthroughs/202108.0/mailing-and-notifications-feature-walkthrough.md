@@ -7,14 +7,14 @@ template: concept-topic-template
 
 The _Mailing & Notifications_ feature allows you to manage newsletters and notifications.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Mailing & Notifications feature overview](https://documentation.spryker.com/docs/mailing-notifications-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Mailing & Notifications feature overview](/docs/scos/dev/features/{{page.version}}/mailing-and-notifications-feature-overview.html) for business users.
+
 
 ## Related Developer articles
 
  | TUTORIALS AND TUTORIALS AND HOWTOS |
 |---------|
-| HowTo - Create and Register a MailTypePlugin | 
-| HowTo - Create and Register a Mail Provider  |
-| Tutorial - Sending an email  |
+| [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-create-and-register-a-mailtypeplugin.html) |
+| [HowTo - Create and Register a Mail Provider](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-create-and-register-a-mail-provider.html)  |
+| [Tutorial - Sending an email](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/introduction-tutorials/tutorial-sending-an-email.html)  |

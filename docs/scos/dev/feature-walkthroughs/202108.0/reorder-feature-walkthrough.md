@@ -7,13 +7,12 @@ template: concept-topic-template
 
 The _Reorder_ feature allows customers to repeat their previous orders in one click.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Reorder feature overview](https://documentation.spryker.com/docs/reorder-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Reorder feature overview](/docs/scos/dev/features/{{page.version}}/reorder-feature-overview.html) for business users.
 
 
 ## Related Developer articles
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES |
 |---------|---------|
-|Multiple carts + Reorder feature integration | CustomerReorderWidget migration guide  |
+| [Multiple Carts + Reorder feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/multiple-carts-reorder-feature-integration.html) | CustomerReorderWidget migration guide  |

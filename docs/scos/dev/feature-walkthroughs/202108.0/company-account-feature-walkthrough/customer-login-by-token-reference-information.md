@@ -39,7 +39,7 @@ Example payload:
       "iat": 1557926620,
       "nbf": 1557926620,
       "exp": 1557955420,
-      "sub": "    {\"customer_reference\":null,\"id_customer\":6,\"id_company_user\":\"1\",\"permissions\":null}",
+      "sub": "    {/"customer_reference/":null,/"id_customer/":6,/"id_company_user/":/"1/",/"permissions/":null}",
   "scopes": []
 }
 ```

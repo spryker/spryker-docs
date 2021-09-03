@@ -1,5 +1,5 @@
 ---
-title: Glue API- Content items API feature integration
+title: "Glue API: Content Items feature integration"
 description: The guide walks you through the process of installing and configuring the Content Items feature in the project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-content-items-api-feature-integration
 originalArticleId: 87cf9b21-06f9-4766-8645-bc62c4d64296
@@ -70,16 +70,16 @@ Activate the following plugins:
 | `ContentProductAbstractListRoutePlugin` | Registers a `/content-product-abstract-lists/{CONTENT-KEY}/content-product-abstract` resource route. | None | `Spryker\Glue\ContentProductAbstractListsRestApi\Plugin` |
 
 src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\ContentBannersRestApi\Plugin\ContentBannerResourceRoutePlugin;
 use Spryker\Glue\ContentProductAbstractListsRestApi\Plugin\ContentProductAbstractListRoutePlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**

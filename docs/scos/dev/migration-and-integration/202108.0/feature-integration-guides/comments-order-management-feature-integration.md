@@ -1,5 +1,5 @@
 ---
-title: Comments + order management feature integration
+title: Comments + Order Management feature integration
 description: The guide walks you through the process of installing the Comments + Order Management feature into the project.
 originalLink: https://documentation.spryker.com/2021080/docs/comments-order-management-feature-integration
 originalArticleId: 2bf29780-07d5-4518-8510-77b7ba549836
@@ -37,14 +37,14 @@ Add the following configuration to your project:
 | `SalesConfig::getSalesDetailExternalBlocksUrls()` | Used to display a block with comments related to the order. | `Pyz\Zed\Sales` |
 
 **Pyz\Zed\Sales\SalesConfig.php**
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\Sales\SalesConfig as SprykerSalesConfig;
- 
+
 class SalesConfig extends SprykerSalesConfig
 {
 	public function getSalesDetailExternalBlocksUrls()
@@ -52,9 +52,9 @@ class SalesConfig extends SprykerSalesConfig
 		$projectExternalBlocks = [
 			'comment' => '/comment-sales-connector/sales/list',
 		];
- 
+
 		$externalBlocks = parent::getSalesDetailExternalBlocksUrls();
- 
+
 		return array_merge($externalBlocks, $projectExternalBlocks);
 	}
 }
@@ -87,12 +87,12 @@ Register the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales\CommentThreadOrderExpanderPlugin;
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
- 
+
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
 	/**
@@ -115,12 +115,12 @@ Make sure that `OrderTransfer::commentThread` contains information about comment
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\CommentSalesConnector\Communication\Plugin\Sales\CommentThreadAttachedCommentOrderPostSavePlugin;
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
- 
+
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
 	/**

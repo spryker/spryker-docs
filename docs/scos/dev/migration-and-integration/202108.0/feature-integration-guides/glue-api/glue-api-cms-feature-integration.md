@@ -1,5 +1,5 @@
 ---
-title: Glue API- CMS feature integration guide
+title: "Glue API: CMS feature integration guide"
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cms-feature-integration-guide
 originalArticleId: e3dfeabf-efbe-407f-b1d7-5bcf31a423f8
 redirect_from:
@@ -48,8 +48,8 @@ Make sure that the following modules have been installed:
 
 ```bash
 console transfer:generate
-console prolel:install 
-console transfer:generate 
+console prolel:install
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -93,7 +93,7 @@ console uuid:generate Cms spy_cms_page
 {% info_block warningBox "Verification" %}
 
 
-Make sure that all the records in the `spy_cms_page` have the `uuid` field populated with auto-generated values. 
+Make sure that all the records in the `spy_cms_page` have the `uuid` field populated with auto-generated values.
 
 
 {% endinfo_block %}
@@ -196,7 +196,7 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 
 ```
 
- 
+
 
 {% info_block warningBox "Verification" %}
 
@@ -224,5 +224,3 @@ Integrate the following related features:
 | :------------ | :------------------------------- | :----------------------------------------------------------- |
 | Content items |                                  | [[Approved\] Content Items feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/941034461) |
 | CMS           | ✓                                | [[PUBLISHED\] CMS Feature Integration - ongoing](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/960201069) |
-
-

@@ -1,5 +1,5 @@
 ---
-title: Glue API- Customer Account Management feature integration
+title: "Glue API: Customer Account Management feature integration"
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-customer-account-management-feature-integration
 originalArticleId: fa53308d-8078-477d-9297-7597d51afbcf
 redirect_from:
@@ -60,7 +60,7 @@ Ensure that the following modules have been installed:
 
 ## 2) Set up configuration
 
-Set the required OAuth config: 
+Set the required OAuth config:
 
 **config/Shared/config_default.php**
 
@@ -294,7 +294,7 @@ Set up the following configuration:
 $stores = require(APPLICATION_ROOT_DIR . '/config/Shared/stores.php');
 $allStores = array_keys($stores);
 
-... 
+...
 
 
 /* Oauth */
@@ -775,7 +775,7 @@ Ensure that the addresses resource relationship is registered correctly:
 
 Ensure that you’ve set up `AccessTokenRestRequestValidatorPlugin`:
 
-1. Send the `POST http://glue.mysprykershop.com/refresh-tokens` request without the `Authorization` header or with an outdated or incorrect authentication token. 
+1. Send the `POST http://glue.mysprykershop.com/refresh-tokens` request without the `Authorization` header or with an outdated or incorrect authentication token.
 
 2. Check that one of the following errors is returned:
 
@@ -791,7 +791,7 @@ Ensure that you’ve set up `AccessTokenRestRequestValidatorPlugin`:
    }
    ```
 
-   
+
 
    ```json
    {
@@ -856,7 +856,7 @@ Ensure that you’ve set up `OauthRefreshTokenSaverPlugin`:
 Ensure that you’ve set up `OauthRefreshTokenReaderPlugin` and `OauthRefreshTokenRevokerPlugin`:
 
 1. Send the request: `DELETE http://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token}`[.](#)
-2. Check that the refresh token has been revoked: run the following SQL query and check that the `spy_oauth_refresh_token::revoked_at` database field is not empty. 
+2. Check that the refresh token has been revoked: run the following SQL query and check that the `spy_oauth_refresh_token::revoked_at` database field is not empty.
 
 {% endinfo_block %}
 

@@ -1,5 +1,5 @@
 ---
-title: Persistent cart sharing + shared carts feature integration
+title: Persistent Cart Sharing + Shared Carts feature integration
 description: The guide walks you through the process of installing the Shared Carts and Persistent Cart Sharing features in the project.
 originalLink: https://documentation.spryker.com/2021080/docs/persisitent-cart-sharing-shared-carts-integration
 originalArticleId: 47b52cfb-cbee-4e76-bb2b-37fcc9cdee20
@@ -32,12 +32,12 @@ src/Pyz/Zed/ResourceShare/ResourceShareDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ResourceShare;
- 
+
 use Spryker\Zed\ResourceShare\ResourceShareDependencyProvider as SprykerResourceShareDependencyProvider;
 use Spryker\Zed\SharedCart\Communication\Plugin\ResourceShare\ShareCartByResourceShareZedActivatorStrategyPlugin;
- 
+
 class ResourceShareDependencyProvider extends SprykerResourceShareDependencyProvider
 {
     /**
@@ -56,13 +56,13 @@ src/Pyz/Client/ResourceShare/ResourceShareDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\ResourceShare;
- 
+
 use Spryker\Client\ResourceShare\ResourceShareDependencyProvider as SprykerResourceShareDependencyProvider;
 use Spryker\Client\SharedCart\Plugin\ResourceShare\CartShareLoginRequiredResourceShareClientActivatorStrategyPlugin;
 use Spryker\Client\SharedCart\Plugin\ResourceShare\SwitchDefaultCartResourceShareClientActivatorStrategyPlugin;
- 
+
 class ResourceShareDependencyProvider extends SprykerResourceShareDependencyProvider
 {
     /**
@@ -74,7 +74,7 @@ class ResourceShareDependencyProvider extends SprykerResourceShareDependencyProv
             new CartShareLoginRequiredResourceShareClientActivatorStrategyPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Client\ResourceShareExtension\Dependency\Plugin\ResourceShareClientActivatorStrategyPluginInterface[]
      */
@@ -149,13 +149,13 @@ src/Pyz/Client/PersistentCartShare/PersistentCartShareDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\PersistentCartShare;
- 
+
 use Spryker\Client\PersistentCartShare\PersistentCartShareDependencyProvider as SprykerPersistentCartShareDependencyProvider;
 use Spryker\Client\SharedCart\Plugin\PersistentCartShare\FullAccessCartShareOptionPlugin;
 use Spryker\Client\SharedCart\Plugin\PersistentCartShare\ReadOnlyCartShareOptionPlugin;
- 
+
 class PersistentCartShareDependencyProvider extends SprykerPersistentCartShareDependencyProvider
 {
     /**
@@ -175,12 +175,12 @@ src/Pyz/Yves/ResourceSharePage/ResourceSharePageDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ResourceSharePage;
- 
+
 use SprykerShop\Yves\ResourceSharePage\ResourceSharePageDependencyProvider as SprykerResourceSharePageDependencyProvider;
 use SprykerShop\Yves\SharedCartPage\Plugin\ResourceShare\SharedCartRouterStrategyPlugin;
- 
+
 class ResourceSharePageDependencyProvider extends SprykerResourceSharePageDependencyProvider
 {
     /**
@@ -216,4 +216,3 @@ Make sure, that when you proceed with the cart share link with Read-only or Full
 {% info_block warningBox "Verification" %}
 Login to Yves as Company User, add some product to the cart and go to the cart page.<br>Make sure, that you can see the "Share Cart via Link" widget on a cart page.<br>Make sure you can see an "Internal Users" radio button. Click on it.<br>Make sure, that you can see two generated links - one for Read-only access and another - for Full Access access.<br>Login as another Company User from the same business unit.<br>Proceed with the link for Read-only access. Make sure, that the cart was shared to you with Read-only access.<br>Proceed with the link for Full Access access. Make sure, that the "Access level was updated." message appeared, and now a cart is shared with you with the Full Access access.
 {% endinfo_block %}
-

@@ -1,5 +1,5 @@
 ---
-title: Alternative products feature integration
+title: Alternative Products feature integration
 description: This guide walks you through the process of installing the Alternative Products feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-feature-integration
 originalArticleId: 580bc0b9-af9d-43ab-8752-0c4dddbc8c9b
@@ -25,7 +25,7 @@ To start feature integration, overview and install the necessary features:
 
 Run the following command(s) to install the required modules:
 ```bash
-composer require spryker-feature/alternative-products: "^202009.0" --update-with-dependencies 
+composer require spryker-feature/alternative-products: "^202009.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -41,7 +41,7 @@ Adjust the schema definition so that entity changes trigger the events.
 |  `spy_product_alternative` |  `Entity.spy_product_alternative.create` `Entity.spy_product_alternative.update` `Entity.spy_product_alternative.delete` |
 
 **src/Pyz/Zed/ProductAlternative/Persistence/Propel/Schema/spy_product_alternative.schema.xml**
-    
+
 ```html
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -57,7 +57,7 @@ Adjust the schema definition so that entity changes trigger the events.
  </table>
  </database>
  ```
-    
+
 Set up synchronization queue pools so that non-multistore entities (not store specific entities) get synchronized among stores:
 
 **src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml**
@@ -82,7 +82,7 @@ Set up synchronization queue pools so that non-multistore entities (not store sp
  </behavior>
  </table>
 
-</database> 
+</database>
 ```
 
 Run the following commands to apply the database changes and generate entity and transfer changes:
@@ -106,7 +106,7 @@ Make sure that the changes have been implemented successfully. For this purpose,
 {% endinfo_block %}`<br />`addSaveEventToMemory()`<br />`addDeleteEventToMemory()`</td></tr></tbody></table>)
 
 ### 3) Configure Export to Redis
-    
+
 {% info_block infoBox "Info" %}
 This step will publish tables on change (create, edit, delete
 {% endinfo_block %} to the `spy_product_alternative_storage`, `spy_product_replacement_for_storage`  and synchronize the data to Storage.)
@@ -118,7 +118,7 @@ This step will publish tables on change (create, edit, delete
 |  `ProductAlternativeStorageEventSubscriber` | Registers listeners that are responsible to publish alternative products storage entity changes when a related entity change event occurs. | None |  `Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Event\Subscriber` |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
- 
+
  ```php
  <?php
 
@@ -173,7 +173,7 @@ class ProductAlternativeStorageConfig extends SprykerProductAlternativeStorageCo
  {
  return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
  }
-} 
+}
 ```
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
@@ -257,7 +257,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
  new ProductAlternativeDataImportPlugin(),
  ];
  }
-} 
+}
 ```
 
 Run the following console command to import data:
@@ -307,7 +307,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
  new ProductAlternativeGuiProductConcretePluginUpdate(), #ProductAlternativeFeature
  ];
  }
-} 
+}
 ```
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
@@ -387,7 +387,7 @@ Please overview and install the necessary features before beginning the integrat
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/alternative-products: "^202009.0" --update-with-dependencies 
+composer require spryker-feature/alternative-products: "^202009.0" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 Make sure that the following modules have been installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`ProductAlternativeWidget`</td><td>`vendor/spryker-shop/product-alternative-widget`</td></tr><tr><td>`ProductReplacementForWidget`</td><td>`vendor/spryker-shop/product-replacement-for-widget`</td></tr></tbody></table>
@@ -408,7 +408,7 @@ product_alternative_widget.add_to_shopping_list,Add to shopping list,en_USproduc
 product_alternative_widget.alternative_for,Alternative for name,en_US
 product_alternative_widget.alternative_for,Alternative für name,de_DE
 product_alternative_widget.show_all,Show all,en_US
-product_alternative_widget.show_all,Zeige alles,de_DE 
+product_alternative_widget.show_all,Zeige alles,de_DE
 ```
 
 Run the following console command to import data:
@@ -464,7 +464,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Run the following command to enable Javascript and CSS changes:
 ```bash
-console frontend:yves:build 
+console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
@@ -474,7 +474,7 @@ Make sure that the following widgets were registered:<table><thead><tr><td>Modul
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Label feature](https://documentation.spryker.com/2021080/docs/product-label) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront. 
+If the [Product Label feature](https://documentation.spryker.com/2021080/docs/product-label) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 
 {% endinfo_block %}

@@ -88,7 +88,7 @@ For example, add FormBuilder in your form type:
 
 ```php
 /**
- * @param \Symfony\Component\Form\FormBuilderInterface $builder
+ * @param /Symfony/Component/Form/FormBuilderInterface $builder
  *
  * @return $this
  */

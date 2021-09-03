@@ -1,5 +1,5 @@
 ---
-title: Quick order + non-splittable products feature integration
+title: Quick Add to Cart + Non-splittable Products feature integration
 description: Install the Quick Add to Cart and Non-splittable Products features in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/quick-order-non-splittable-products-feature-integration
 originalArticleId: a8357121-3fb0-4b48-92ba-b6a735d9b583
@@ -34,12 +34,12 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\QuickOrder;
- 
+
 use Spryker\Client\ProductQuantityStorage\Plugin\QuickOrder\ProductQuantityItemValidatorPlugin;
 use Spryker\Client\QuickOrder\QuickOrderDependencyProvider as SprykerQuickOrderDependencyProvider;
- 
+
 class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 {
 	/**

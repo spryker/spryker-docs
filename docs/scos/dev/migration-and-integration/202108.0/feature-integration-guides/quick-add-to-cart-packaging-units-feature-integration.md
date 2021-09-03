@@ -1,5 +1,5 @@
 ---
-title: Quick order + packaging units feature integration
+title: Quick Add to Cart + Packaging Units feature integration
 description: Quick Add to Cart + Packaging Units allow buying products in different packaging units. This guide describes how to integrate this feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/quick-order-packaging-units-feature-integration
 originalArticleId: 8667c827-6af6-4db7-af01-f10f763b4d83
@@ -31,12 +31,12 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\QuickOrderPage;
- 
+
 use SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder\QuickOrderItemDefaultPackagingUnitExpanderPlugin;
 use SprykerShop\Yves\QuickOrderPage\QuickOrderPageDependencyProvider as SprykerQuickOrderPageDependencyProvider;
- 
+
 class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyProvider
 {
 	/**

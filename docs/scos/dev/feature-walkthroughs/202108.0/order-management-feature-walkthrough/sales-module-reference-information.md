@@ -20,7 +20,7 @@ This is an improvement from the Sales 5.0 version where you had to use `SalesAgg
 
 ## Persisting order calculated values
 
-All calculated values are persisted now, when order are first placed. The values are stored by orderSaver plugins from checkout bundle. Check `\Pyz\Zed\Checkout\CheckoutDependencyProvider::getCheckoutOrderSavers` for currently available plugins.
+All calculated values are persisted now, when order are first placed. The values are stored by orderSaver plugins from checkout bundle. Check `/Pyz/Zed/Checkout/CheckoutDependencyProvider::getCheckoutOrderSavers` for currently available plugins.
 
 Some values can change during time when order refunded or partially refunded. Then `canceled_amount` and `refundable_amount` are recalculated and new values is persisted. At the same moment totals also change, but it does not overwrite old entry, but creates new row in `spy_sales_order_total` with this you have a history of order totals from the time order was placed.
 

@@ -1,5 +1,5 @@
 ---
-title: Product measurement unit feature integration
+title: Product Measurement Unit feature integration
 description: The Measurement Units feature allows defining specific units of measure for products. The guide describes how to integrate the feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-measurement-unit-feature-integration
 originalArticleId: a8fd28fc-83ac-4eda-ac81-81ec492970c1
@@ -60,25 +60,25 @@ Adjust the schema definition so entity changes will trigger events.
           xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
           namespace="OrmZedProductMeasurementUnitPersistence"
           package="src.Orm.Zed.ProductMeasurementUnit.Persistence">
-     
+
     <table name="spy_product_measurement_unit">
         <behavior name="event">
             <parameter name="spy_product_measurement_unit_all" column="*"/>
         </behavior>
     </table>
-     
+
     <table name="spy_product_measurement_base_unit">
         <behavior name="event">
             <parameter name="spy_product_measurement_base_unit_all" column="*"/>
         </behavior>
     </table>
-  
+
     <table name="spy_product_measurement_sales_unit">
         <behavior name="event">
             <parameter name="spy_product_measurement_sales_unit_all" column="*"/>
         </behavior>
     </table>
- 
+
     <table name="spy_product_measurement_sales_unit_store">
         <behavior name="event">
             <parameter name="spy_product_measurement_sales_unit_store_all" column="*"/>
@@ -154,24 +154,24 @@ This step will publish tables on change (create, edit, delete) to the `spy_produ
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | `ProductMeasurementUnitStorageEventSubscriber` | Registers listeners that are responsible to publish product measurement unit storage entity changes when a related entity change event occurs. | None | `Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event\Subscriber` |
- 
+
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
 ```php
  <?php
- 
+
 namespace Pyz\Zed\Event;
- 
+
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
 use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event\Subscriber\ProductMeasurementUnitStorageEventSubscriber;
- 
+
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
     public function getEventSubscriberCollection()
     {
         $eventSubscriberCollection = parent::getEventSubscriberCollection();
         $eventSubscriberCollection->add(new ProductMeasurementUnitStorageEventSubscriber());
- 
+
         return $eventSubscriberCollection;
     }
 }
@@ -190,13 +190,13 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\EventBehavior;
- 
+
 use Spryker\Zed\EventBehavior\EventBehaviorDependencyProvider as SprykerEventBehaviorDependencyProvider;
 use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event\ProductConcreteMeasurementUnitEventResourceRepositoryPlugin;
 use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event\ProductMeasurementUnitEventResourceRepositoryPlugin;
- 
+
 class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProvider
 {
     /**
@@ -216,13 +216,13 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Synchronization;
- 
+
 use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization\ProductConcreteMeasurementUnitSynchronizationDataPlugin;
 use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization\ProductMeasurementUnitSynchronizationDataPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
- 
+
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
@@ -250,12 +250,12 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Installer;
- 
+
 use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
 use Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\Installer\ProductMeasurementUnitInstallerPlugin;
- 
+
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
@@ -356,12 +356,12 @@ Register the following plugin to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ProductMeasurementUnitDataImport\Communication\Plugin\ProductMeasurementUnitDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -412,12 +412,12 @@ Register the following plugin to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ProductMeasurementUnitDataImport\Communication\Plugin\ProductMeasurementBaseUnitDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -486,12 +486,12 @@ Register the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ProductMeasurementUnitDataImport\Communication\Plugin\ProductMeasurementSalesUnitDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -594,12 +594,12 @@ Register the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ProductMeasurementUnitDataImport\Communication\Plugin\ProductMeasurementSalesUnitStoreDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -640,12 +640,12 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\Cart;
- 
+
 use Spryker\Client\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Client\ProductMeasurementUnit\Plugin\Cart\SingleItemQuantitySalesUnitCartChangeRequestExpanderPlugin;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
@@ -664,16 +664,16 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Cart;
- 
+
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\Cart\ProductMeasurementSalesUnitCartPreCheckPlugin;
 use Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\Cart\QuantitySalesUnitGroupKeyItemExpanderPlugin;
 use Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\Cart\QuantitySalesUnitItemExpanderPlugin;
 use Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\Cart\QuantitySalesUnitValuePostSavePlugin;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
@@ -688,7 +688,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new QuantitySalesUnitGroupKeyItemExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -700,7 +700,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new QuantitySalesUnitValuePostSavePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -719,14 +719,14 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
 use Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\SalesExtension\QuantitySalesUnitOrderItemExpanderPreSavePlugin;
 use Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\Sales\QuantitySalesUnitHydrateOrderPlugin;
 use Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\Sales\QuantitySalesUnitOrderItemExpanderPlugin;
- 
+
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
@@ -738,7 +738,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new QuantitySalesUnitOrderItemExpanderPreSavePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\Sales\Dependency\Plugin\HydrateOrderPluginInterface[]
      */
@@ -748,7 +748,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new QuantitySalesUnitHydrateOrderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface[]
      */
@@ -764,12 +764,12 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 **ProductPageSearchDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductPageSearch;
- 
+
 use Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\ProductPageSearch\ProductMeasurementUnitProductAbstractAddToCartPlugin;
 use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
- 
+
 class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
 {
     /**
@@ -875,12 +875,12 @@ Register the following plugins to enable widgets:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ProductDetailPage;
- 
+
 use SprykerShop\Yves\ProductDetailPage\ProductDetailPageDependencyProvider as SprykerShopProductDetailPageDependencyProvider;
 use SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\ProductDetailPage\ProductMeasurementUnitWidgetPlugin;
- 
+
 class ProductDetailPageDependencyProvider extends SprykerShopProductDetailPageDependencyProvider
 {
     /**
@@ -899,12 +899,12 @@ class ProductDetailPageDependencyProvider extends SprykerShopProductDetailPageDe
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CartPage;
- 
+
 use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
 use SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\CartPage\QuantitySalesUnitWidgetPlugin;
- 
+
 class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 {
     /**

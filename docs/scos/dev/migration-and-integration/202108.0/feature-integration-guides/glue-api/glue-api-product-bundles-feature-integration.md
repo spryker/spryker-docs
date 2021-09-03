@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product Bundles feature integration
+title: "Glue API: Product Bundles feature integration"
 description: Learn how to integrate the Glue API- Product Bundles feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-bundles-feature-integration
 originalArticleId: 7512d512-55f0-4d75-a206-993fe4b3617b
@@ -36,8 +36,8 @@ composer require spryker/product-bundles-rest-api:"^1.0.0" --update-with-depend
 | Module |  Expected Directory  |
 | --- | --- |
 | ProductBundlesRestApi | vendor/spryker/product-bundles-rest-api |
- 
- 
+
+
 
 {% endinfo_block %}  
 
@@ -45,7 +45,7 @@ composer require spryker/product-bundles-rest-api:"^1.0.0" --update-with-depend
 Set up transfer objects:
 ```bash
 console transfer:generate
-``` 
+```
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in the transfer objects:
@@ -168,27 +168,24 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 Ensure that you have activated the plugins:
 
 1.  Place an order with product bundles.
-    
+
 2.  Send the request: `GET https://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}orderReference{% raw %}}}{% endraw %}`.
-    
+
 3.  Check that, in the response:
-    
+
     *   There is a `data.attributes.bundleItems` section.
-        
+
     *   The `data.attributes.items.relatedBundleItemIdentifier` attribute value of a bundled item is the same as the `data.attributes.bundleItems.bundleItemIdentifier` attribute value of the product bundle item it belongs to.
 
 
 {% endinfo_block %}
-        
+
 
 ## Related features
 
-  
+
 Integrate the following related features:
 
 | Feature | Required for the current feature | Integration guide |
 | --- | --- | --- |
 | Products  | ✓ | [Glue API: Products feature integration - ongoing](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) |
-
-
-

@@ -1,5 +1,5 @@
 ---
-title: File details- product_price_schedule.csv
+title: File details - product_price_schedule.csv
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-price-schedulecsv
 originalArticleId: 0662559b-6487-4d88-855e-3b605fc326c1
 redirect_from:
@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **product_price_schedule.csv** file to configure[ Product Price Schedule](https://documentation.spryker.com/2021080/docs/scheduled-prices) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |

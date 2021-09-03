@@ -1,5 +1,5 @@
 ---
-title: Glue API - Cart feature integration
+title: "Glue API: Cart feature integration"
 description: Install the Cart API feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cart-feature-integration
 originalArticleId: a46d4b97-ad7c-45bd-aef7-23dbfac109c1

@@ -1,5 +1,5 @@
 ---
-title: Discontinued products + product labels feature integration
+title: Discontinued Products + Product Labels feature integration
 description: This guide provides step-by-step instruction on integrating Discontinued Products + Product Labels feature into a Spryker-based project.
 originalLink: https://documentation.spryker.com/2021080/docs/discontinued-products-product-labels-feature-integration
 originalArticleId: 3b88f34f-9e0c-4250-bffb-a672072fb9c7
@@ -42,10 +42,10 @@ Discontinued,1,1,0,discontinued,,,Discontinued,Abgesetzt,,3
 ```
 
 2. Run the command to import data:
-3. 
+3.
 ```bash
 console data:import product-label
-``` 
+```
 
 {% info_block warningBox "Verification" %}
 

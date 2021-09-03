@@ -1,5 +1,5 @@
 ---
-title: Comments + persistent cart feature integration
+title: Comments + Persistent Cart feature integration
 description: The guide walks you through the process of integrating the Comments + Persistent Cart feature into the project.
 originalLink: https://documentation.spryker.com/2021080/docs/comments-persistent-cart-feature-integration
 originalArticleId: 74b61354-cc45-4748-b62a-8738a0e6e1bf
@@ -32,10 +32,10 @@ Register the following plugins:
 <?php
 
 namespace Pyz\Zed\Quote;
- 
+
 use Spryker\Zed\Comment\Communication\Plugin\Quote\CommentThreadQuoteExpanderPlugin;
 use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
- 
+
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
 	/**
@@ -74,12 +74,12 @@ Register the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CommentWidget;
- 
+
 use SprykerShop\Yves\CartPage\Plugin\CommentWidget\CartCommentThreadAfterOperationStrategyPlugin;
 use SprykerShop\Yves\CommentWidget\CommentWidgetDependencyProvider as SprykerShopCommentDependencyProvider;
- 
+
 class CommentWidgetDependencyProvider extends SprykerShopCommentDependencyProvider
 {
 	/**

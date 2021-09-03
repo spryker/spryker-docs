@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Measurement Units_ feature allows selling products by any unit of measure defined by in the Back Office.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Measurement Units feature overview](https://documentation.spryker.com/docs/measurement-units-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Measurement Units feature overview](/docs/scos/dev/features/{{page.version}}/measurement-units-feature-overview.html) for business users.
+
 
 ## Entity diagram
 
@@ -31,6 +31,6 @@ The following schema illustrates relations between alternative products:
 
 |INTEGRATION GUIDES | GLUE API GUIDES |
 |---------|---------|
-| Product measurement unit feature integration  | Retrieving measurement units  |
-| Quick order + measurement units feature integration | Retrieving sales units  |
-| Glue API: Measurement units feature integration  |   |
+| [Product measurement unit feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-measurement-unit-feature-integration.html)  | [Retrieving measurement units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)  |
+| [Quick order + measurement units feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/quick-order-measurement-units-feature-integration.html) | [Retrieving sales units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html)  |
+| [Glue API: Measurement units feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)  |   |

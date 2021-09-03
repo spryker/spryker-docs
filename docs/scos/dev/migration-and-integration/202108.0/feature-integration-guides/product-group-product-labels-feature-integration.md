@@ -1,5 +1,5 @@
 ---
-title: Product group + product labels feature integration
+title: Product Group + Product Labels feature integration
 description: Instructions to integrate Product group + Product labels feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-group-product-labels-feature-integration
 originalArticleId: d4867491-433c-4986-98a8-679d70abb507
@@ -39,7 +39,7 @@ Register the following plugin:
 | ProductLabelProductViewExpanderPlugin | Expands `ProductViewTransfer` with labels. | None | SprykerShop\Yves\ProductLabelWidget\Plugin\ProductGroupWidget |
 
 
-```php	
+```php
 <?php
 
 namespace Pyz\Yves\ProductGroupWidget;
@@ -63,8 +63,6 @@ class ProductGroupWidgetDependencyProvider extends SprykerShopProductGroupWidget
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the product label on a product abstract card changes correctly after hovering over a color selector. 
+Make sure that the product label on a product abstract card changes correctly after hovering over a color selector.
 
 {% endinfo_block %}
-
-

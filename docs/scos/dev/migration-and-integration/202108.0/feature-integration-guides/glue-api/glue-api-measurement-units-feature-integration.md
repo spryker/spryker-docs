@@ -1,5 +1,5 @@
 ---
-title: Glue API- Measurement units feature integration
+title: "Glue API: Measurement units feature integration"
 description: The procedure of integrating Measurement Units Feature API into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-measurement-units-feature-integration
 originalArticleId: 565ef2a7-0f29-47fb-8438-8e6c6a96bf31
@@ -37,7 +37,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-    
+
 
 
 
@@ -134,9 +134,9 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CartsRestApi\CartsRestApiConfig;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
@@ -148,7 +148,7 @@ use Spryker\Glue\ProductMeasurementUnitsRestApi\Plugin\GlueApplication\SalesUnit
 use Spryker\Glue\ProductMeasurementUnitsRestApi\Plugin\GlueApplication\SalesUnitsResourceRoutePlugin;
 use Spryker\Glue\ProductMeasurementUnitsRestApi\ProductMeasurementUnitsRestApiConfig;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -161,7 +161,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new SalesUnitsResourceRoutePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
      *
@@ -190,12 +190,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CartsRestApiConfig::RESOURCE_GUEST_CARTS_ITEMS,
             new SalesUnitsByCartItemResourceRelationshipPlugin()
         );
-         
+
         return $resourceRelationshipCollection;
     }
 }
 ```
- 
+
 </details>
 
 
@@ -697,6 +697,3 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 Send the request `GET http://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_uuid{% raw %}}}{% endraw %}` and make sure that the order items have `salesUnits` and `salesUnits.amount` properties in the response.
 
 {% endinfo_block %}
-
-
-

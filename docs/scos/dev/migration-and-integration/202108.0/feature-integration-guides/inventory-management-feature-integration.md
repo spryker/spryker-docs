@@ -1,5 +1,5 @@
 ---
-title: Inventory management feature integration
+title: Inventory Management feature integration
 description: The guide guides you through the process of installing the Warehouse Management functionality into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/inventory-management-feature-integration
 originalArticleId: cb79eb0c-0a3a-49c5-a911-ef6f992f1118
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/inventory-management-feature-integration
 ---
 
-This document describes how to ingrate the [Inventory Management](https://documentation.spryker.com/2021080/docs/inventory-management) feature into a Spryker project. 
+This document describes how to ingrate the [Inventory Management](https://documentation.spryker.com/2021080/docs/inventory-management) feature into a Spryker project.
 
 {% info_block errorBox %}
 
@@ -66,7 +66,7 @@ Make sure that the following modules have been installed:
 Set up database schema and transfer objects:
 
 1.  Adjust the schema definition so `EventTransfer` has the additional columns for the Availability entity:
-    
+
 
 **src/Pyz/Zed/Availability/Persistence/Propel/Schema/spy\_availability.schema.xml**
 ```xml
@@ -133,9 +133,9 @@ Make sure that the following changes have been applied in transfer objects:
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
 | StockTransfer| class| added| src/Generated/Shared/Transfer/StockTransfer.php
-| StockCriteriaFilterTransfer| class| added| src/Generated/Shared/Transfer/StockCriteriaFilterTransfer.php| 
-| StockResponseTransfer| class| added| src/Generated/Shared/Transfer/StockResponseTransfer.php| 
-|StockAddressTransfer| class| added| src/Generated/Shared/Transfer/StockAddressTransfer.php| 
+| StockCriteriaFilterTransfer| class| added| src/Generated/Shared/Transfer/StockCriteriaFilterTransfer.php|
+| StockResponseTransfer| class| added| src/Generated/Shared/Transfer/StockResponseTransfer.php|
+|StockAddressTransfer| class| added| src/Generated/Shared/Transfer/StockAddressTransfer.php|
 
 {% endinfo_block %}
 
@@ -145,7 +145,7 @@ Make sure that the following changes have been applied in transfer objects:
 Make sure that the following changes have been applied in the database:
 | Database entity| Type| Event|
 | --- | --- | --- |
-|spy_stock_store| table| added| 
+|spy_stock_store| table| added|
 |spy_stock.is_active| column| added|
 |spy_stock_address| table| created
 
@@ -220,7 +220,7 @@ Make sure that only abstract products with a single concrete product have the `a
 Import warehouses and warehouse address data:
 
 1.  Prepare your data according to your requirements using our demo data:
-    
+
 **vendor/spryker/spryker/Bundles/StockDataImport/data/import/warehouse.csv**
 ```csv
 name,is_active
@@ -276,15 +276,15 @@ Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48
 
 | Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
-| warehouse_name | mandatory | string | Warehouse1 | Warehouse name. | 
-| address1 | mandatory | string | Hallesches Ufer 71 | The first line of the warehouse address. | 
-| address2 | optional | string | | The second line of the warehouse address. | 
-| address3 | optional | string | |The third line of the warehouse address. | 
+| warehouse_name | mandatory | string | Warehouse1 | Warehouse name. |
+| address1 | mandatory | string | Hallesches Ufer 71 | The first line of the warehouse address. |
+| address2 | optional | string | | The second line of the warehouse address. |
+| address3 | optional | string | |The third line of the warehouse address. |
 | zip_code | mandatory | string | 73271 | Zipcode. |
-| city | mandatory | string | Holzmaden | City. | 
+| city | mandatory | string | Holzmaden | City. |
 | region_name | optional | string | | Region name from the `spy_region` table. |
-| country_iso2_code | mandatory | string | DE | The ISO code of the country. | 
-| phone | optional | string | +49 7023 87 33 18 | Landline or any other contact phone. | 
+| country_iso2_code | mandatory | string | DE | The ISO code of the country. |
+| phone | optional | string | +49 7023 87 33 18 | Landline or any other contact phone. |
 |comment | optional | string | | Any related comment. |
 
 
@@ -293,9 +293,9 @@ Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48
 Make sure that:
 
 1.  The .csv files have an empty line in the end.
-    
+
 2.  For each `warehouse_name` entry in `warehouse_address.csv`, there is a respective `name` entry in the `warehouse.csv`.
-    
+
 
 {% endinfo_block %}
 
@@ -323,8 +323,8 @@ Add these plugins to the end of the plugins list but before the `ProductOfferSto
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
-| StockDataImportPlugin | Imports warehouse data into the database. | None | \Spryker\Zed\StockDataImport\Communication\Plugin | 
-| StockStoreDataImportPlugin | Imports data about the relationship between warehouses and stores into the database. | None | \Spryker\Zed\StockDataImport\Communication\Plugin | 
+| StockDataImportPlugin | Imports warehouse data into the database. | None | \Spryker\Zed\StockDataImport\Communication\Plugin |
+| StockStoreDataImportPlugin | Imports data about the relationship between warehouses and stores into the database. | None | \Spryker\Zed\StockDataImport\Communication\Plugin |
 | StockAddressDataImportPlugin | Imports warehouse addresses. | None | Spryker\Zed\StockAddressDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
@@ -380,7 +380,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 
         return $dataImporterCollection;
     }
-    
+
 }
 ```
 
@@ -436,7 +436,7 @@ Make sure that warehouse and warehouse address data have been added to the `spy_
 Set up behavior:
 
 1.  Build a navigation cache:
-    
+
 ```bash
 vendor/bin/console navigation:build-cache
 ```
@@ -484,11 +484,11 @@ Register the following plugins for warehouse address management:
 | --- | --- | --- | --- |
 | StockAddressStockPostCreatePlugin | Creates a warehouse address if it's attached to a warehouse create request. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 | StockAddressStockPostUpdatePlugin | Creates a warehouse address if it's attached to a warehouse update request. </br> Removes an existing warehouse address if it's not attached to a warehouse update request. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
-| StockAddressStockCollectionExpanderPlugin | Expands a warehouse collection with related addresses. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock | 
+| StockAddressStockCollectionExpanderPlugin | Expands a warehouse collection with related addresses. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 
 <details open>
     <summary>Zed/Stock/StockDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -540,19 +540,17 @@ class StockDependencyProvider extends SprykerStockDependencyProvider
 Make sure that the warehouse address management works:
 
 *   In the Back Office, create a warehouse.
-    
+
 *   Import a warehouse address using a data import functionality.
-    
+
 *   Check if the imported warehouse address exists in the `spy_stock_address` database table.
-    
+
 
 {% endinfo_block %}
 
 ## Related features
 
-|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
-|--- | --- | --- | 
+|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+|--- | --- | --- |
 | Inventory Management API | | [Glue API: Inventory Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html) |
 | Alternative Products | | [Alternative Products + Inventory Management Feature Integration - ongoing](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/alternative-products-inventory-management-feature-integration.html)|
-
-

@@ -1,5 +1,5 @@
 ---
-title: Customer access feature integration
+title: Customer Access feature integration
 description: The guide walks you through the process of installing the Customer Access feature in the project.
 originalLink: https://documentation.spryker.com/2021080/docs/customer-access-feature-integration
 originalArticleId: d0b476f0-c6dd-4126-812e-bb37f259cd03
@@ -25,7 +25,7 @@ To start feature integration, overview and install the necessary features:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/customer-access:"^master" --update-with-dependencies 
+composer require spryker-feature/customer-access:"^master" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -141,20 +141,20 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
  return $eventSubscriberCollection;
  }
-} 
+}
 ```
 
 {% info_block warningBox "Verification" %}
 Make sure that when a product list is created, updated or deleted, they are exported (or removed
 {% endinfo_block %} to Redis and Elasticsearch accordingly.)
 
-| Target Entity | Example Expected Data Identifier | 
+| Target Entity | Example Expected Data Identifier |
 |---|---|
 |  `spy_unauthenticated_customer_access` |  `kv:unauthenticated_customer_access` |
 
 **Example Expected Data Fragment**
 
-```xml 
+```xml
 {
 								"content_type_access": [
 								{
@@ -252,7 +252,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 Run the following console command to execute registered installer plugins and install infrastructural data:
 
 ```bash
-console setup:init-db 
+console setup:init-db
 ```
 
 {% info_block warningBox "Verification" %}
@@ -311,7 +311,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
  new SeeShoppingListPermissionPlugin(),
  ];
  }
-} 
+}
 ```
 
 {% info_block warningBox "Verification" %}
@@ -341,7 +341,7 @@ customer.access.cannot_see_price,Bitte melden Sie sich an um den Preis zu sehen,
 Run the following console command to import data:
 
 ```bash
-console data:import glossary 
+console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}

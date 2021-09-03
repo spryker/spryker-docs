@@ -18,7 +18,7 @@ interface CalculationPluginInterface
 /**
 * @api
 *
-* @param \Generated\Shared\Transfer\CalculableObjectTransfer $calculableObjectTransfer
+* @param /Generated/Shared/Transfer/CalculableObjectTransfer $calculableObjectTransfer
 *
 * @return void
 */

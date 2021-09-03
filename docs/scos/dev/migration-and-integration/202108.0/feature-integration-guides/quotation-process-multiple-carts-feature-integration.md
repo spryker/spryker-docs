@@ -1,5 +1,5 @@
 ---
-title: Quotation process + multiple carts feature integration
+title: Quotation Process + Multiple Carts feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-multiple-carts-feature-integration
 originalArticleId: 21c3cf23-8dae-4a61-b89f-b2e668fa4c50
 redirect_from:
@@ -29,13 +29,13 @@ Register the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\PersistentCart;
- 
+
 use Spryker\Client\PersistentCart\PersistentCartDependencyProvider as SprykerPersistentCartDependencyProvider;
 use Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuotePersistPluginInterface;
 use Spryker\Client\MultiCart\Plugin\PersistentCart\MultiCartQuotePersistPlugin;
- 
+
 class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
 {
     /**
@@ -51,4 +51,3 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 {% info_block warningBox "Verification" %}
 Make sure that when you converting quote request with status "Ready" to cart, new cart created instead of replacing the existing one.
 {% endinfo_block %}
-

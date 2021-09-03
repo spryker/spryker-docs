@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Prices_ feature enables Back Office users to effectively manage the prices of all types of products. They can set different types of prices, like default, original, and volume prices.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Prices feature overview](https://documentation.spryker.com/docs/prices-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Prices overview](/docs/scos/dev/features/{{page.version}}/prices/prices-feature-overview/prices-overview.html) for business users.
+
 
 ## Related Developer articles
 

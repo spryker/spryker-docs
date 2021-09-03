@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _CMS_ feature adds a content management system that allows creating and managing the content of custom pages that are not part of the product catalog.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [CMS](https://documentation.spryker.com/docs/cms) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [CMS](/docs/scos/dev/features/{{page.version}}/cms/cms.html) for business users.
+
 
 ## Related Developer articles
 

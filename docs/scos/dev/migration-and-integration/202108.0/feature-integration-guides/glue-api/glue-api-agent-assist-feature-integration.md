@@ -1,5 +1,5 @@
 ---
-title: Glue API- Agent Assist feature integration
+title: "Glue API: Agent Assist feature integration"
 description: Integrate the Glue API- Agent Assist feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-agent-assist-feature-integration
 originalArticleId: 3edbb45b-83fc-4123-ac09-3c80a98ab670
@@ -129,8 +129,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new AgentCustomerSearchResourceRoutePlugin(),
         ];
     }
-    
-    
+
+
 
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RestRequestValidatorPluginInterface[]
@@ -151,7 +151,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new AgentRestUserValidatorPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RestUserFinderPluginInterface[]
      */
@@ -171,19 +171,19 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Ensure that:
 
 *   Invalid agent access tokens passed in the `X-Agent-Authorization` header are rejected with the 401 error code.
-    
-*   The `X-Agent-Authorization` header is required for `/agent-customer-impersonation-access-tokens` and `/agent-customer-search` resources. Requests without the header return the 401 error code.
-    
-*   When a valid agent access token is provided via the `X-Agent-Authorization`, the `RestRequest` object in Glue controllers populates `restUser.idAgent` with the current agent identifier.
-    
-*   The following resources are available:
-    
 
-| Resource | Request to check | 
-| --- | --- | 
-| /agent-access-tokens | POST https://glue.mysprykershop.com/agent-access-tokens | 
-| /agent-customer-impersonation-access-tokens | POST https://glue.mysprykershop.com/agent-customer-impersonation-access-tokens | 
-| /agent-customer-search | GET https://glue.mysprykershop.com/agent-customer-search | 
+*   The `X-Agent-Authorization` header is required for `/agent-customer-impersonation-access-tokens` and `/agent-customer-search` resources. Requests without the header return the 401 error code.
+
+*   When a valid agent access token is provided via the `X-Agent-Authorization`, the `RestRequest` object in Glue controllers populates `restUser.idAgent` with the current agent identifier.
+
+*   The following resources are available:
+
+
+| Resource | Request to check |
+| --- | --- |
+| /agent-access-tokens | POST https://glue.mysprykershop.com/agent-access-tokens |
+| /agent-customer-impersonation-access-tokens | POST https://glue.mysprykershop.com/agent-customer-impersonation-access-tokens |
+| /agent-customer-search | GET https://glue.mysprykershop.com/agent-customer-search |
 
 
 {% endinfo_block %}
@@ -234,4 +234,3 @@ Integrate the following related features:
 | --- | --- |
 | Customer account management | [Customer account management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-account-management-feature-integration.html) |
 | Customer account management + Agent assist | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html) |
-

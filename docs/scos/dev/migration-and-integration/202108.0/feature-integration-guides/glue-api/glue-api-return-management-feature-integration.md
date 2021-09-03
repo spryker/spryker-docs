@@ -1,5 +1,5 @@
 ---
-title: Glue API- Return management feature integration
+title: "Glue API: Return Management feature integration"
 description: This integration guide provides step-by-step instructions on integrating Glue API- Return Management feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-return-management-feature-integration
 originalArticleId: c498bb08-b626-4ce0-ba1a-2115f4aa11fc
@@ -67,9 +67,9 @@ Enable resources and relationships:
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\SalesReturnsRestApi\Plugin\ReturnItemByReturnResourceRelationshipPlugin;
@@ -89,7 +89,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new ReturnsResourceRoutePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
      *
@@ -106,7 +106,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             SalesReturnsRestApiConfig::RESOURCE_RETURN_ITEMS,
             new OrderItemByResourceIdResourceRelationshipPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }

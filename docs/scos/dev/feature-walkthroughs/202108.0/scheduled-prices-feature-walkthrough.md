@@ -7,13 +7,13 @@ template: concept-topic-template
 
 The _Scheduled Prices_ feature enables Back Office users to schedule price changes, which are to happen in the future for multiple products simultaneously.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Scheduled Prices feature overview](https://documentation.spryker.com/docs/scheduled-prices-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Scheduled Prices feature overview](/docs/scos/dev/features/{{page.version}}/scheduled-prices-feature-overview.html) for business users.
+
 
 ## Related Developer articles
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
-|Scheduled prices feature integration | PriceProductSchedule migration guide  | File details: product_price_schedule.csv | HowTo - Schedule cron job for Scheduled Prices  |
-|   |PriceProductScheduleGui migration guide  |   |   |
+| [Scheduled prices feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/scheduled-prices-feature-integration.html) | PriceProductSchedule migration guide  | [File details: product_price_schedule.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html) | [HowTo - Schedule cron job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)  |
+|   | PriceProductScheduleGui migration guide  |   |   |

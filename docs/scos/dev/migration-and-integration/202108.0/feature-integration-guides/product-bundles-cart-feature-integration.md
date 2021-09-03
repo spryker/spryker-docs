@@ -1,5 +1,5 @@
 ---
-title: Product bundles + cart feature integration
+title: Product Bundles + Cart feature integration
 description: This guide provides step-by-step instructions on integrating Product Bundles + Cart feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-cart-feature-integration
 originalArticleId: f069a875-5736-4134-a2c9-34a54b2dfdd0
@@ -51,4 +51,3 @@ Add several regular products and product bundles to cart.
 Make sure that item counter at cart widget shows correct number (bundled items should not be counted as separate items).
 
 {% endinfo_block %}
-

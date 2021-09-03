@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Checkout_ feature allows customizing the checkout workflow.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Checkout feature overview](https://documentation.spryker.com/docs/checkout) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Checkout](/docs/scos/dev/features/{{page.version}}/checkout/checkout.html) for business users.
+
 
 ## Entity diagram
 
@@ -26,5 +26,5 @@ The following diagram shows the relations of the entities in the order threshold
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | DATA IMPORT |
 |---------|---------|---------|
-| Checkout feature integration | Checkout migration guide  | File details: sales_order_threshold.csv  |
-| Merchant feature integration | CheckoutPage migration guide |   |
+| [Checkout feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/checkout-feature-integration.html) | Checkout migration guide  | [File details: sales_order_threshold.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)  |
+| [Merchant feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/merchant-feature-integration.html) | CheckoutPage migration guide |   |

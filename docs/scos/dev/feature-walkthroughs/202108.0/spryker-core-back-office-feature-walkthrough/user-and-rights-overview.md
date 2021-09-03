@@ -36,7 +36,7 @@ See [Managing users](https://documentation.spryker.com/docs/managing-users) to l
 
 {% info_block infoBox "Adding users in the ACL module" %}
 
-You can add Zed users not only via the Back Office, but also in the ACL module. To do so, add the user in `\Spryker\Zed\Acl\AclConfig::getInstallerUsers()`(see [AclConfig.php](https://github.com/spryker/acl/blob/d3193c9259ed2f2b6815f3b2c9f52f4e4e250bbe/src/Spryker/Zed/Acl/AclConfig.php) for example) and run `console setup:init-db`.
+You can add Zed users not only via the Back Office, but also in the ACL module. To do so, add the user in `/Spryker/Zed/Acl/AclConfig::getInstallerUsers()`(see [AclConfig.php](https://github.com/spryker/acl/blob/d3193c9259ed2f2b6815f3b2c9f52f4e4e250bbe/src/Spryker/Zed/Acl/AclConfig.php) for example) and run `console setup:init-db`.
 
 {% endinfo_block %}
 
@@ -44,7 +44,7 @@ You can add Zed users not only via the Back Office, but also in the ACL module. 
 
 Apart from being able to configure user access to Zed resources via Zed UI, you can grant access to additional resources by specifying them in `config_*.php`. The following options are used to do that:
 
-* `AclConstants::ACL_DEFAULT_RULES`—is used to provide/restrict access to Zed resources, defined in the `Spryker\Zed\Auth\AuthConfig::$ingorable` property. For example:
+* `AclConstants::ACL_DEFAULT_RULES`—is used to provide/restrict access to Zed resources, defined in the `Spryker/Zed/Auth/AuthConfig::$ingorable` property. For example:
 
 ```php
 $config[AclConstants::ACL_DEFAULT_RULES] = [

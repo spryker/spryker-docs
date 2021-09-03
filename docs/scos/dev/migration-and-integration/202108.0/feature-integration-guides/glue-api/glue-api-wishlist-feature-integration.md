@@ -1,5 +1,5 @@
 ---
-title: Glue API- Wishlist feature integration
+title: "Glue API: Wishlist feature integration"
 description: This guide will navigate you through the process of installing and configuring the Wishlist API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-wishlist-feature-integration
 originalArticleId: 7bd16038-1571-479b-b746-ee61f76b8c48
@@ -28,13 +28,13 @@ composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
 ```
 <section contenteditable="false" class="warningBox"><div class="content">
     Make sure that the following module has been installed:
-    
+
 |Module|Expected directory|
 |---|---|
 |`WishlistsRestApi`|`vendor/spryker/wishlists-rest-apiWishlistItems`|
 
 </div></section>
-    
+
 ### 2) Set Up Database Schema and Transfer Objects
 Run the following commands to apply database changes, and generate entity and transfer changes:
 
@@ -95,16 +95,16 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CustomersRestApi\CustomersRestApiConfig;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\WishlistsRestApi\Plugin\WishlistItemsResourceRoutePlugin;
 use Spryker\Glue\WishlistsRestApi\Plugin\WishlistRelationshipByResourceIdPlugin;
 use Spryker\Glue\WishlistsRestApi\Plugin\WishlistsResourceRoutePlugin
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -117,7 +117,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new WishlistItemsResourceRoutePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
      *
@@ -130,7 +130,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CustomersRestApiConfig::RESOURCE_CUSTOMERS,
             new WishlistRelationshipByResourceIdPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }

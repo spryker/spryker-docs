@@ -47,7 +47,7 @@ Currently we ship with a couple of plugins:
 
 ## Cart pre-checks
 
-The Zed Cart module has a list of Pre-Checks. These are validators which run when adding a new item to the cart. We have a list of default Pre-Checks and of course you might want to add your own. To do so just add a new plugin to `Pyz\Zed\Cart\CartDependencyProvider::getCartPreCheckPlugins()`.
+The Zed Cart module has a list of Pre-Checks. These are validators which run when adding a new item to the cart. We have a list of default Pre-Checks and of course you might want to add your own. To do so just add a new plugin to `Pyz/Zed/Cart/CartDependencyProvider::getCartPreCheckPlugins()`.
 
 Currently we ship a couple of default pre-checks:
 

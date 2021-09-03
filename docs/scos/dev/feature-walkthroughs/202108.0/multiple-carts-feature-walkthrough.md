@@ -7,14 +7,14 @@ template: concept-topic-template
 
 The _Multiple Carts_ feature allows you to create and manage one or multiple shopping carts in one customer account.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Multiple Carts feature overview](https://documentation.spryker.com/docs/multiple-carts-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Multiple Carts feature overview](/docs/scos/dev/features/{{page.version}}/multiple-carts-feature-overview.html) for business users.
+
 
 ## Related Developer articles
 
 |INTEGRATION GUIDES  |
 |---------|
-| Multiple Carts feature integration  |
-| Multiple carts + Quick Order feature integration  |
-| Multiple carts + Reorder feature integration   |
+| [Multiple Carts feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/multiple-carts-feature-integration.html)  |
+| [Multiple carts + Quick Order feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/multiple-carts-quick-order-feature-integration.html)  |
+| [Multiple carts + Reorder feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/multiple-carts-reorder-feature-integration.html)   |

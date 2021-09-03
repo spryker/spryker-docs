@@ -1,5 +1,5 @@
 ---
-title: Configurable bundle + order management feature integration
+title: Configurable Bundle + Order Management feature integration
 description: This integration guide provides step-by-step instructions on installing Configurable Bundle + Order Management feature.
 originalLink: https://documentation.spryker.com/2021080/docs/configurable-bundle-order-management-feature-integration
 originalArticleId: aedcdbc2-c678-4fa2-ba0d-8ddfc6264415
@@ -54,5 +54,3 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 Make sure that every order item from `SalesFacade::getOrderItems()` results, contains sales order configured bundles data if the order contains configurable bundle.
 
 {% endinfo_block %}
-
-

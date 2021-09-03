@@ -1,5 +1,5 @@
 ---
-title: Product lists + catalog feature integration
+title: Product Lists + Catalog feature integration
 description: The guide walks you through the process of installing the Product Lists as a catalog  feature in the project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-lists-catalog-feature-integration
 originalArticleId: 14356b81-71a8-46ba-93b0-ef5d376fc290
@@ -27,7 +27,7 @@ composer require spryker/customer-catalog:"^1.0.0" --update-with-dependencies
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
-    
+
 | Module | Expected Directory |
 | --- | --- |
 | `CustomerCatalog` | `vendor/spryker/customer-catalog` |
@@ -53,13 +53,13 @@ The order of the query expander plugins matters for the search result. Make sure
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\Catalog;
- 
+
 use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
 use Spryker\Client\CustomerCatalog\Plugin\Search\ProductListQueryExpanderPlugin as CustomerCatalogProductListQueryExpanderPlugin;
 use Spryker\Client\ProductListSearch\Plugin\Search\ProductListQueryExpanderPlugin as ProductListSearchProductListQueryExpanderPlugin;
- 
+
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
     /**
@@ -71,7 +71,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new CustomerCatalogProductListQueryExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface[]
      */
@@ -81,7 +81,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new CustomerCatalogProductListQueryExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface[]
      */
@@ -100,7 +100,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 Make sure you haven't missed the expansion of any product search queries in your project where you need to consider Product Lists.
 
 {% endinfo_block %}
-    
+
 {% info_block warningBox "Verification" %}
 Once you are done with this step, you should only be able to see those Products in your search results, which are on the Product Lists of your Customer's session.<br>You should also be able to filter product concrete search results by product list ID.
 {% endinfo_block %}

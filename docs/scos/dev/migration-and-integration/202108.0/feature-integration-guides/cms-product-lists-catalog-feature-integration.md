@@ -1,5 +1,5 @@
 ---
-title: CMS + product lists + catalog feature integration
+title: CMS + Product Lists + Catalog feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/cms-page-search-product-lists-catalog-feature-integration
 originalArticleId: c395ad85-27ce-44f2-a18f-69fce0d46ba6
 redirect_from:
@@ -49,7 +49,7 @@ Add the following plugins to your project:
 |  `ProductListQueryExpanderPlugin` | Extends a search query by filtering down results to match the current customer's product restrictions. | None |  `\Spryker\Client\CustomerCatalog\Plugin\Search\ProductListQueryExpanderPlugin` |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
-    
+
  ```php
  <?php
 

@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Quotation Process_ feature adds functionality that allows customers to request special product prices and lets agents manage those quote requests.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Quotation Process feature overview](https://documentation.spryker.com/docs/quotation-process-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Quotation Process feature overview](/docs/scos/dev/features/{{page.version}}/quotation-process/quotation-process-feature-overview.html) for business users.
+
 
 ## Entity diagram
 
@@ -26,10 +26,10 @@ The following schema illustrates the module relations of the Quotation Process f
 
 | INTEGRATION GUIDES | MIGRATION GUIDES |
 |---|---|
-| Quotation Process feature integration | QuoteRequestAgent migration guide |
-| Approval Process feature integration | QuoteRequestPage migration guide |
-| Checkout + Quotation process feature integration |  |
-| Quotation Process + Approval Process feature integration |  |
-| Quotation Process + Multiple Carts feature integration |  |
-| Shipment + Cart feature integration |  |
-| Shipment feature integration |  |
+| [Quotation Process feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/checkout-quotation-process-feature-integration.html) | QuoteRequestAgent migration guide |
+| [Approval Process feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/approval-process-feature-integration.html) | QuoteRequestPage migration guide |
+| [Checkout + Quotation process feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/checkout-quotation-process-feature-integration.html) |  |
+| [Quotation Process + Approval Process feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/quotation-process-approval-process-feature-integration.html) |  |
+| [Quotation Process + Multiple Carts feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/quotation-process-multiple-carts-feature-integration.html) |  |
+| [Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-cart-feature-integration.html) |  |
+| [Shipment feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shipment-feature-integration.html) |  |

@@ -33,11 +33,11 @@ Customers are assigned a default billing and a default shipping address. Custome
 
 Similar to the customer registration flow, password restore makes use of a token that acts as a temporary password for the customer. An email is sent to the user to reset the password. The mail contains a link where the password recovery token is embedded. This token is generated specifically for this request. After the customer accesses the URL and enters necessary confirmation data, the customer password is updated.
 
-Out of the box, Spryker provides the plugin `CustomerRestorePasswordMailTypePlugin` (Customer module) to handle a restore password email template. To enable it, register this plugin in your `MailDependencyProvider` (e.g., `Pyz\Zed\Mail\MailDependencyProvider`).
+Out of the box, Spryker provides the plugin `CustomerRestorePasswordMailTypePlugin` (Customer module) to handle a restore password email template. To enable it, register this plugin in your `MailDependencyProvider` (e.g., `Pyz/Zed/Mail/MailDependencyProvider`).
 
 {% info_block infoBox "Token link generation" %}
 
-By default, the **Customer** module will lead to `'‹YVES HOST›/password/restore?token='`. If it's different in your project, you should configure the generation of restore links in `Spryker\Zed\Customer\CustomerConfig::getCustomerPasswordRestoreTokenUrl()`
+By default, the **Customer** module will lead to `'‹YVES HOST›/password/restore?token='`. If it's different in your project, you should configure the generation of restore links in `Spryker/Zed/Customer/CustomerConfig::getCustomerPasswordRestoreTokenUrl()`
 
 {% endinfo_block %}
 
@@ -57,7 +57,7 @@ After the deletion, customers can use an old email for registration, as the new 
 
 To prevent missing any customer-related information, do the following:
 
-1. Process removal for related customer objects. Here you could take care of information stored in dependent bundles or custom relations. To do so, implement the `CustomerAnonymizerPluginInterface`. As an example, take a look at the Newsletter module plugin for unsubscribing a customer from newsletters before removal `Spryker\Zed\Newsletter\Business\Anonymizer\SubscriptionAnonymizer`.
+1. Process removal for related customer objects. Here you could take care of information stored in dependent bundles or custom relations. To do so, implement the `CustomerAnonymizerPluginInterface`. As an example, take a look at the Newsletter module plugin for unsubscribing a customer from newsletters before removal `Spryker/Zed/Newsletter/Business/Anonymizer/SubscriptionAnonymizer`.
 2. Anonymize customer address information.
 3. Anonymize private customer information. Information directly related to customer fields (first name, last name, date of birth, etc.).
 

@@ -6,11 +6,8 @@ template: concept-topic-template
 ---
 
 The _Inventory Management_ feature adds stock and availability management as well as multiple warehouse stock management for products.
-<!--
-To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](https://documentation.spryker.com/docs/inventory-management-feature-overview) for business users.
--->
 
-
+To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](/docs/scos/dev/features/{{page.version}}/inventory-management-feature-overview.html) for business users.
 
 ## Related Developer articles
 

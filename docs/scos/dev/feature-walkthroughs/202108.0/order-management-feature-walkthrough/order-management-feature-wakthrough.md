@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Order Management_ feature adds a collection of functionalities that allow you to see the quantity of the order items, their status, and how long they exist. Also, you can view details per status and order page.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Order Management](https://documentation.spryker.com/docs/order-management) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Order Management](/docs/scos/dev/features/{{page.version}}/order-management/order-management.html) for business users.
+
 
 ## Entity diagram
 

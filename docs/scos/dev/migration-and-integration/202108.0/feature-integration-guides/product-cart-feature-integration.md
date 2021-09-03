@@ -1,5 +1,5 @@
 ---
-title: Product + cart feature integration
+title: Product + Cart feature integration
 description: The guide walks you through the process of installing the Product and Cart features in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-cart-feature-integration
 originalArticleId: 5314b756-dcd4-467b-9777-114744b9d44f
@@ -29,11 +29,11 @@ composer require spryker/product-image-cart-connector:"^1.1.0" --update-with-dep
 ```
 
 <section contenteditable="false" class="warningBox"><div class="content">
-    
+
 **Verification**
-    
+
 Make sure that the following modules have been installed:
-    
+
 | Module | Expected Directory |
 | --- | --- |
 | `ProductImageCartConnector` | `vendor/spryker/product-image-cart-connector` |
@@ -55,16 +55,16 @@ Register the following plugins:
 
 <details open>
 <summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Cart;
- 
+
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\ProductImageCartConnector\Communication\Plugin\ProductImageCartPlugin;
 use Spryker\Zed\Kernel\Container;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
 	/**

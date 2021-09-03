@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Product Relations_ feature enables product catalog managers to create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Product Relations feature overview](https://documentation.spryker.com/docs/product-relations-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Product Relations feature overview](/docs/scos/dev/features/{{page.version}}/product-relations/product-relations-feature-overview.html) for business users.
+
 
 ## Entity diagram
 
@@ -25,5 +25,5 @@ The following schema illustrates relations within the Product Relations feature:
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES |
 |---------|---------|
-|Product relations feature integration | ProductRelation migration guide |
-| Glue API: Product relations feature integration | ProductRelationStorage migration guide |
+|[Product relations feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html) | ProductRelation migration guide |
+| [Glue API: Product relations feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html) | ProductRelationStorage migration guide |

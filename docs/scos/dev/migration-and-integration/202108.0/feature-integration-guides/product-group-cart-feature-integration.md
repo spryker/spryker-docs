@@ -1,5 +1,5 @@
 ---
-title: Product group + cart feature integration
+title: Product Group + Cart feature integration
 description: Instructions to integrate the Product group + Cart feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-group-cart-feature-integration
 originalArticleId: 0377da7c-316a-41bf-a8f3-c00736e18b9b
@@ -64,9 +64,8 @@ Make sure that the correct path to add product to cart is displayed for products
 1. Open a product details page with a product set.
 2. Hover over the **Add to Cart** button.
 3. Make sure that the correct URL to add the product to cart is displayed.
-4. Hover over a color selector to switch to a different abstract product. 
+4. Hover over a color selector to switch to a different abstract product.
 5. Hover over the **Add to Cart** button.
 6. Make sure that the URL to add the product to cart corresponds to the new product.
 
 {% endinfo_block %}
-

@@ -1,5 +1,5 @@
 ---
-title: Approval process feature integration
+title: Approval Process feature integration
 description: This guide describes all steps needed to be performed in order to integrate the Approval Process feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/approval-process-feature-integration
 originalArticleId: 1ba2c034-6c2d-4036-87b8-d2c6bbf5243d
@@ -46,12 +46,12 @@ Add the following configuration to your project:
 
 ```php
 <?php
- 
+
 namespace Pyz\Shared\QuoteApproval;
- 
+
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Shared\QuoteApproval\QuoteApprovalConfig as SprykerQuoteApprovalConfig;
- 
+
 class QuoteApprovalConfig extends SprykerQuoteApprovalConfig
 {
     /**
@@ -154,7 +154,7 @@ quote_approval.request.declined_by,Abgelehnt um,de_DE
 To import the glossary data, run the following console command:
 
 ```bash
-console data:import glossary 
+console data:import glossary
 ```
 
 {% info_block warningBox %}
@@ -177,17 +177,17 @@ Register the following plugins:
 | `SanitizeQuoteApprovalQuoteLockPreResetPlugin` | Allows complete removal of all the approval process-related data from the quote on cart lock reset. | None | `Spryker\Zed\QuoteApproval\Communication\Plugin\Cart`|
 
 **src/Pyz/Client/Permission/PermissionDependencyProvider.php**
- 
+
  ```php
 <?php
- 
+
 namespace Pyz\Client\Permission;
- 
+
 use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
 use Spryker\Client\QuoteApproval\Plugin\Permission\ApproveQuotePermissionPlugin;
 use Spryker\Client\QuoteApproval\Plugin\Permission\PlaceOrderPermissionPlugin;
 use Spryker\Client\QuoteApproval\Plugin\Permission\RequestQuoteApprovalPermissionPlugin;
- 
+
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
     /**
@@ -208,13 +208,13 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
  ```php
 <?php
- 
+
 namespace Pyz\Zed\Permission;
- 
+
 use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
 use Spryker\Zed\QuoteApproval\Communication\Plugin\Permission\ApproveQuotePermissionPlugin;
 use Spryker\Zed\QuoteApproval\Communication\Plugin\Permission\PlaceOrderPermissionPlugin;
- 
+
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
     /**
@@ -234,12 +234,12 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Cart;
- 
+
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\QuoteApproval\Communication\Plugin\Cart\SanitizeQuoteApprovalQuoteLockPreResetPlugin;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
@@ -279,14 +279,14 @@ Register the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Quote;
- 
+
 use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 use Spryker\Zed\QuoteApproval\Communication\Plugin\Quote\QuoteApprovalExpanderPlugin;
 use Spryker\Zed\QuoteApproval\Communication\Plugin\Quote\QuoteApprovalQuoteFieldsAllowedForSavingProviderPlugin;
 use Spryker\Zed\QuoteApproval\Communication\Plugin\Quote\RemoveQuoteApprovalsBeforeQuoteDeletePlugin;
- 
+
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
     /**
@@ -298,7 +298,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
             new RemoveQuoteApprovalsBeforeQuoteDeletePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpanderPluginInterface[]
      */
@@ -308,7 +308,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
             new QuoteApprovalExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteFieldsAllowedForSavingProviderPluginInterface[]
      */
@@ -343,12 +343,12 @@ Register the following plugins:
 
  ```php
 <?php
- 
+
 namespace Pyz\Zed\Checkout;
- 
+
 use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
 use Spryker\Zed\QuoteApproval\Communication\Plugin\Checkout\QuoteApprovalCheckoutPreConditionPlugin;
- 
+
 class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
     /**
@@ -470,13 +470,13 @@ Register the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
 use SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage\QuoteApprovalCheckerCheckoutAddressStepEnterPreCheckPlugin;
 use SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage\QuoteApprovalCheckerCheckoutPaymentStepEnterPreCheckPlugin;
- 
+
 /**
  * @method \Pyz\Yves\CheckoutPage\CheckoutPageConfig getConfig()
  */
@@ -491,7 +491,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
             new QuoteApprovalCheckerCheckoutAddressStepEnterPreCheckPlugin(),
         ];
     }
- 
+
     /**
      * @return \SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutPaymentStepEnterPreCheckPluginInterface[]
      */
@@ -526,14 +526,14 @@ Register the following global widgets:
 
  ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\QuoteApprovalWidget\Widget\QuoteApprovalStatusWidget;
 use SprykerShop\Yves\QuoteApprovalWidget\Widget\QuoteApprovalWidget;
 use SprykerShop\Yves\QuoteApprovalWidget\Widget\QuoteApproveRequestWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -560,7 +560,7 @@ console frontend:yves:build
 
 Make sure that the following plugin was registered:
 
-1. Open Yves and log in to the customer account. 
+1. Open Yves and log in to the customer account.
 2. Open `https://mysprykershop.com/company/company-role/` and assign `RequestQuoteApprovalPermission`, `PlaceOrderPermission`, `ApproveQuotePermission` permissions to any role related to the current customer.
 3. Add the record to the `spy_quote_approval` for the current customer quote id and current customer company user as an approver.
 
@@ -584,12 +584,12 @@ Register the following plugin:
 
  ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\QuoteApprovalWidget\Plugin\Provider\QuoteApprovalControllerProvider;
 use SprykerShop\Yves\ShopApplication\YvesBootstrap as SprykerYvesBootstrap;
- 
+
 class YvesBootstrap extends SprykerYvesBootstrap
 {
     /**
@@ -617,4 +617,3 @@ Make sure that the following plugin was registered:
 Create a new quote with items. Open ` https://mysprykershop.com/cart/`  - Click "Request for Approval" button. Quote approval status should become waiting and approver functionality must be shown.
 
 {% endinfo_block %}
-

@@ -7,18 +7,14 @@ template: concept-topic-template
 
 The _Category Management_ feature allows managing your product catalog with customized categories, category pages, and filters. All products can be categorized into logical clusters so that customers can filter them on the Storefront.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Category Management feature overview](https://documentation.spryker.com/docs/category-management-feature-overview) for business users.
--->
-
-
+To learn more about the feature and to find out how end users use it, see [Category Management feature overview](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html) for business users.
 
 ## Related Developer articles
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES  | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|---------|
-| Category Management feature integration | CategoryGui migration| Retrieving category trees  | File details: category.csv  | HowTo - Manage a big number of categories  |
-| Product + Category Management feature integration  | Category migration | Retrieving category nodes | File details: category_template.csv  |   |
-| CMS + Category Management feature integration  |CategoryPageSearch migration|  | File details: category_store.csv |   |
-| Catalog + Category Management feature integration | CategoryStorage migration |   |   |   |
-| Glue API: Category Management feature integration | ProductCategoryStorag migration |   |   |   |
+| [Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/category-management-feature-integration.html) | CategoryGui migration| [Retrieving category trees](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html)  | [File details: category.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html)  | [HowTo - Manage a big number of categories](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html)  |
+| [Product + Category feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-category-feature-integration.html)  | Category migration | [Retrieving category nodes](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html) | [File details: category_template.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html)  |   |
+| [CMS + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cms-category-management-feature-integration.html)  |CategoryPageSearch migration|  | [File details: category_store.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html) |   |
+| [Catalog + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/catalog-category-management-feature-integration.html) | CategoryStorage migration |   |   |   |
+| [Glue API: Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-category-management-feature-integration.html) | ProductCategoryStorag migration |   |   |   |

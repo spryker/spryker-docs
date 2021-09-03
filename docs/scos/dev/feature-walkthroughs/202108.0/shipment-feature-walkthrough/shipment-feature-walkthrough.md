@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Shipment_ feature allows you to create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. With the feature in place, you can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Shipment feature overview](https://documentation.spryker.com/docs/shipment-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Shipment feature overview](/docs/scos/dev/features/{{page.version}}/shipment/shipment-feature-overview.html) for business users.
+
 
 ## Entity diagram
 

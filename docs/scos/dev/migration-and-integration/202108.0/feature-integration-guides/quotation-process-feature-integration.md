@@ -1,5 +1,5 @@
 ---
-title: Quotation process feature integration
+title: Quotation Process feature integration
 description: Install the Quotation Process feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-feature-integration
 originalArticleId: 27d7dd23-8926-4ad2-b45d-fb3753e6d1a3
@@ -50,12 +50,12 @@ Add the following configuration to your project:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Quote;
- 
+
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Zed\Quote\QuoteConfig as SprykerQuoteConfig;
- 
+
 class QuoteConfig extends SprykerQuoteConfig
 {
     /**
@@ -77,12 +77,12 @@ class QuoteConfig extends SprykerQuoteConfig
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\QuoteRequest;
- 
+
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Zed\QuoteRequest\QuoteRequestConfig as SprykerQuoteRequestConfig;
- 
+
 class QuoteRequestConfig extends SprykerQuoteRequestConfig
 {
     /**
@@ -118,9 +118,9 @@ Make sure that,  when you created quote request, JSON data in the database colum
 
 ```php
 <?php
- 
+
 $stores = require(APPLICATION_ROOT_DIR . '/config/Shared/stores.php');
- 
+
 $allStores = array_keys($stores);
 /* QuoteRequest */
 $jobs[] = [
@@ -141,7 +141,7 @@ Make sure that quote request with outdated **Valid Until** changes its status to
 
 ```php
 <?php
- 
+
 $config[CustomerConstants::CUSTOMER_SECURED_PATTERN] = '(^/login_check$|^(/en|/de)?/customer($|/)|^(/en|/de)?/wishlist($|/)|^(/en|/de)?/shopping-list($|/)|^(/en|/de)?/quote-request($|/)|^(/en|/de)?/company(?!/register)($|/)|^(/en|/de)?/multi-cart($|/)|^(/en|/de)?/shared-cart($|/)|^(/en|/de)?/cart(?!/add)($|/)|^(/en|/de)?/checkout($|/))';
 ```
 
@@ -241,12 +241,12 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\Quote;
- 
+
 use Spryker\Client\Quote\QuoteDependencyProvider as BaseQuoteDependencyProvider;
 use Spryker\Client\QuoteRequest\Plugin\Quote\QuoteRequestDatabaseStrategyPreCheckPlugin;
- 
+
 class QuoteDependencyProvider extends BaseQuoteDependencyProvider
 {
     /**
@@ -269,13 +269,13 @@ Make sure editing quote request items does not trigger new quote creation in per
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\PersistentCart;
- 
+
 use Spryker\Client\PersistentCart\PersistentCartDependencyProvider as SprykerPersistentCartDependencyProvider;
 use Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuotePersistPluginInterface;
 use Spryker\Client\PersistentCart\Plugin\PersistentCartQuotePersistPlugin;
- 
+
 class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
 {
     /**
@@ -295,14 +295,14 @@ Make sure that you can edit quote request items.
 **Pyz\Zed\Console\ConsoleDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\QuoteRequest\Communication\Console\CloseOutdatedQuoteRequestConsole;
- 
- 
+
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -315,8 +315,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         $commands = [
             new CloseOutdatedQuoteRequestConsole(),
         ];
- 
- 
+
+
         return $commands;
     }
 }
@@ -329,14 +329,14 @@ Make sure that status of quote request with outdated Valid Until changes to clos
 **Pyz/Client/Cart/CartDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Cart;
- 
+
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\PriceCartConnector\Communication\Plugin\Cart\SanitizeSourcePricesQuotePreUnlockPlugin;
 use Spryker\Zed\QuoteApproval\Communication\Plugin\Cart\SanitizeQuoteApprovalPreQuoteUnlockPlugin;
 use Spryker\Zed\QuoteRequest\Communication\Plugin\Cart\SanitizeQuoteRequestPreQuoteUnlockPlugin;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
@@ -601,14 +601,14 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\QuoteRequestPage;
- 
+
 use SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage\DeliveryDateMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage\NoteMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestPage\Plugin\QuoteRequestPage\PurchaseOrderNumberMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestPage\QuoteRequestPageDependencyProvider as SprykerQuoteRequestPageDependencyProvider;
- 
+
 class QuoteRequestPageDependencyProvider extends SprykerQuoteRequestPageDependencyProvider
 {
     /**
@@ -633,14 +633,14 @@ Verify that, as a customer, on quote request edit page, you can edit following f
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\QuoteRequestAgentPage;
- 
+
 use SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage\DeliveryDateMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage\NoteMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestAgentPage\Plugin\QuoteRequestAgentPage\PurchaseOrderNumberMetadataFieldPlugin;
 use SprykerShop\Yves\QuoteRequestAgentPage\QuoteRequestAgentPageDependencyProvider as SprykerQuoteRequestAgentPageDependencyProvider;
- 
+
 class QuoteRequestAgentPageDependencyProvider extends SprykerQuoteRequestAgentPageDependencyProvider
 {
     /**
@@ -667,7 +667,7 @@ Verify that, as an agent, on quote request edit page, you can edit following fie
 Register the following route provider plugins:
 
 | Provider | Namespace |
-| --- | --- | 
+| --- | --- |
 | `QuoteRequestPageRouteProviderPlugin` | `SprykerShop\Yves\QuoteRequestPage\Plugin\Router` |
 | `QuoteRequestAgentPageRouteProviderPlugin` | `SprykerShop\Yves\QuoteRequestAgentPage\Plugin\Router` |
 | `QuoteRequestAgentWidgetRouteProviderPlugin` | `SprykerShop\Yves\QuoteRequestAgentWidget\Plugin\Router` |
@@ -736,9 +736,9 @@ Register the following plugins to enable widgets:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\QuoteRequestWidget\Widget\QuoteRequestMenuItemWidget;
 use SprykerShop\Yves\QuoteRequestWidget\Widget\QuoteRequestCreateWidget;
 use SprykerShop\Yves\QuoteRequestWidget\Widget\QuoteRequestCartWidget;
@@ -746,7 +746,7 @@ use SprykerShop\Yves\QuoteRequestWidget\Widget\QuoteRequestCancelWidget;
 use SprykerShop\Yves\QuoteRequestAgentWidget\Widget\QuoteRequestAgentOverviewWidget;
 use SprykerShop\Yves\QuoteRequestAgentPage\Widget\QuoteRequestAgentCancelWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**

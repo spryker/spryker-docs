@@ -7,9 +7,9 @@ template: concept-topic-template
 
 The _Comments_ feature allows adding multiple comments to any entity. The feature can be integrated into any page or entity of the online shop.
 
-<!--
-To learn more about the feature and to find out how end users use it, see [Comments feature overview](https://documentation.spryker.com/docs/comments-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Comments feature overview](/docs/scos/dev/features/{{page.version}}/comments-feature-overview.html) for business users.
+
 
 ## Entity diagram
 
@@ -26,6 +26,6 @@ The following schema illustrates module relations in the Comments feature:
 
 |INTEGRATION GUIDES  | DATA IMPORT |
 |---------|---------|
-| Comments feature integration  | File details: comment.csv  |
-| Comments + persistent cart feature integration |
-| Comments + order management feature integration |
+| [Comments feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/comments-feature-integration.html)  | [File details: comment.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/miscellaneous/file-details-comment.csv.html)  |
+| [Comments + persistent cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/comments-persistent-cart-feature-integration.html) |
+| [Comments + order management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/comments-order-management-feature-integration.html) |

@@ -6,9 +6,8 @@ template: concept-topic-template
 ---
 
 The _Content Items_ feature creates an abstraction layer for content management in the Back Office. It allows content managers to create and preserve small content pieces, which can be inserted into CMS blocks and then into Storefront pages.
-<!--
-To learn more about the feature and to find out how end users use it, see [Content Items feature overview](https://documentation.spryker.com/docs/content-items-feature-overview) for business users.
--->
+
+To learn more about the feature and to find out how end users use it, see [Content Items feature overview](/docs/scos/dev/features/{{page.version}}/content-items/content-items-feature-overview.html) for business users.
 
 ## Related Developer articles
 

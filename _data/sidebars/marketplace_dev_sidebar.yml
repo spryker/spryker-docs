@@ -398,7 +398,11 @@ entries:
           nested:
 
             - title: "Datasources"
-              url: /docs/marketplace/dev/front-end/ui-components-library/datasources.html
+              url: /docs/marketplace/dev/front-end/ui-components-library/datasources/
+              nested:
+
+                - title: "Datasource Inline"
+                  url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
 
             - title: "Data Transformers"
               url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/

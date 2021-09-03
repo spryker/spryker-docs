@@ -806,6 +806,7 @@ Enable the following behaviors by registering the plugins:
 | PriceProductOfferStorageFilterExpanderPlugin | Expands `PriceProductFilterTransfer` with ProductOfferReference when a `ProductViewTransfer` has a ProductOfferReference |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
 | PriceProductOfferPriceProductFilterPlugin | Filters out inapplicable product offer prices and product concrete prices when a product offer is selected |   | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct |
 | PriceProductOfferVolumeExtractorPlugin | Maps out JSON entries from price_data of `PriceProductTransfer` to new `PriceProductTransfers` with volume prices |   | Spryker\Client\PriceProductOfferVolume\Plugin\PriceProductOfferStorage |
+| PriceProductOfferVolumeExtractorPlugin | Extracts volume prices from the price product offer collection. |  | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 | PriceProductOfferVolumeExpanderPlugin | Expands `PriceProductTransfer` with `volumeQuantity` |   | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 | PriceProductOfferVolumeValidatorPlugin | Validates volume prices. |   | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 | PriceProductOfferVolumeFilterPlugin | Applies correct volume pricing when applicable and quantity is selected |   | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer |
@@ -1009,10 +1010,21 @@ namespace Pyz\Zed\PriceProductOffer;
 
 use Spryker\Zed\PriceProductOffer\PriceProductOfferDependencyProvider as SprykerPriceProductOfferDependencyProvider;
 use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeExpanderPlugin;
+use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeExtractorPlugin;
 use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\PriceProductOfferVolumeValidatorPlugin;
 
 class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDependencyProvider
 {
+    /**
+     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExtractorPluginInterface[]
+     */
+    protected function getPriceProductOfferExtractorPlugins(): array
+    {
+        return [
+            new PriceProductOfferVolumeExtractorPlugin(),
+        ];
+    }
+
     /**
      * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExpanderPluginInterface[]
      */

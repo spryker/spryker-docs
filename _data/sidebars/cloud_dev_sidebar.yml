@@ -35,8 +35,6 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html
       - title: Deploying in a production environment
         url: /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html
-      - title: Troubleshooting
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
       - title: Security
         nested:
           - title: Checking ECR image scan results
@@ -60,5 +58,7 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html      
       - title: Managing parameters in the Parameter Store
         url: /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
+      - title: Troubleshooting
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
       - title: Release notes
         url: /docs/cloud/dev/spryker-cloud-commerce-os/release-notes.html

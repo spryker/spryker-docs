@@ -28,7 +28,7 @@ We use *spryker-staging* environment as an example. Follow the procedure in the 
 ![task definition](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Access/Locating+service+credentials/task-definiton.png)
 
 
-5. In the Container Definitions section, select Open ![arrow](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Access/Locating+service+credentials/arrow.png) next to the *zed* container.
+5. In the Container Definitions section, select **Open** (arrow sign) next to the *zed* container.
 
 ![arrow on the screen](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Access/Locating+service+credentials/arrow+on+the+scren.png)
 

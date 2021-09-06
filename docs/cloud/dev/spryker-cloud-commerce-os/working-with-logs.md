@@ -15,7 +15,8 @@ This document describes how to work with logs(events). Logs provide information 
 ## Log groups
 
 To make log browsing easier, logs from the same source form a log stream. Log streams with the same retention, monitoring, and access control settings form a log group. You can check logs from the following log groups.
-| header | header |
+
+| HEADER | HEADER |
 | --- | --- |
 | AWS code build pipelines | DESTRUCTIVE pipeline jobs: /aws/codebuild/danger/{environment_name} </br> NORMAL pipeline jobs: /aws/codebuild/{environment_name} |
 | AWS Elasticsearch | /aws/elasticsearch/{environment_name} |

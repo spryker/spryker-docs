@@ -60,7 +60,7 @@ The dialogue box closes with the new widget displayed in the dashboard.
 
 To customize an existing widget:
 
-1.  At the top-right corner of the widget, select _Widget actions_ ![widget actions](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Customizing+AWS+CloudWatch+dashboards/widget-actions.png) > **Edit**.  
+1.  At the top-right corner of the widget, select _Widget actions_ > **Edit**.  
     
 ![widget actions in context](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Customizing+AWS+CloudWatch+dashboards/widget-actions-in-context.png)
 

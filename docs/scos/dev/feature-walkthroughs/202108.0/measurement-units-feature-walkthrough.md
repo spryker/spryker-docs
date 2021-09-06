@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Measurement Units_ feature allows selling products by any unit of measure defined by in the Back Office.
 
 
-To learn more about the feature and to find out how end users use it, see [Measurement Units feature overview](/docs/scos/dev/features/{{page.version}}/measurement-units-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Measurement Units feature overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) for business users.
 
 
 ## Entity diagram

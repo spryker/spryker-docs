@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Wishlist_ feature allows customers to track and save the products they wish to purchase through the wish list. Customers can create multiple wish lists and customize their names.
 
 
-To learn more about the feature and to find out how end users use it, see [Wishlist feature overview](/docs/scos/dev/features/{{page.version}}/wishlist-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Wishlist feature overview](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) for business users.
 
 
 ## Related Developer articles

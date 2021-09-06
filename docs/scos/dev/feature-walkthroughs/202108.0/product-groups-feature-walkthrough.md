@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Product Groups_ feature allows product catalog managers to group products by attributes, like color or size.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Groups feature overview](/docs/scos/dev/features/{{page.version}}/product-groups-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Groups feature overview](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html) for business users.
 
 
 ## Related Developer articles

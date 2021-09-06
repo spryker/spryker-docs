@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Packaging Unit_ feature defines if a packaging unit holds a fixed amount of products or if customers can buy any amount of products in this packaging unit. Also, it allows applying amount restrictions to products.
 
 
-To learn more about the feature and to find out how end users use it, see [Packaging Units feature overview](/docs/scos/dev/features/{{page.version}}/packaging-units-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Packaging Units feature overview](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html) for business users.
 
 
 ## Related Developer articles

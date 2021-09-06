@@ -7,7 +7,7 @@ template: concept-topic-template
 
 The _Category Management_ feature allows managing your product catalog with customized categories, category pages, and filters. All products can be categorized into logical clusters so that customers can filter them on the Storefront.
 
-To learn more about the feature and to find out how end users use it, see [Category Management feature overview](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Category Management feature overview](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) for business users.
 
 ## Related Developer articles
 

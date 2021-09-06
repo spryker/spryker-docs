@@ -14,7 +14,7 @@ redirect_from:
 
 The following Feature Integration guide expects the basic feature to be in place.
 
-The current Feature Integration guide only adds the [Add product to cart from the Catalog page](/docs/scos/dev/features/{{page.version}}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) functionality.
+The current Feature Integration guide only adds the [Add product to cart from the Catalog page](/docs/scos/user/features/{{page.version}}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) functionality.
 
 {% endinfo_block %}
 

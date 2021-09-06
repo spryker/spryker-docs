@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Product Options_ feature allows a Back Office user to create and assign product options to abstract products.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Options feature overview](/docs/scos/dev/features/{{page.version}}/product-options/product-options-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Options feature overview](/docs/scos/user/features/{{page.version}}/product-options/product-options-feature-overview.html) for business users.
 
 
 

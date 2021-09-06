@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Company Account_ feature allows controlling user access to the system within an organization by configuring different permissions and roles for the company's entities (units) and users.
 
 
-To learn more about the feature and to find out how end users use it, see [Company Account](/docs/scos/dev/features/{{page.version}}/company-account/company-account.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Company Account](/docs/scos/user/features/{{page.version}}/company-account/company-account.html) for business users.
 
 
 ## Entity diagram

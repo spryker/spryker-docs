@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Agent Assist_ feature allows adding an agent, a person who assists customers: advises the best fit for customers and performs various activities on behalf of a customer on the Storefront.
 
 
-To learn more about the feature and to find out how end users use it, see [Agent Assist feature overview](/docs/scos/dev/features/{{page.version}}/agent-assist-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Agent Assist feature overview](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) for business users.
 
 
 ## Related Developer articles

@@ -19,8 +19,8 @@ The following Feature Integration guide expects the basic feature to be in place
 The current feature integration guide adds the following functionality:
 
 * [Warehouse Management](https://documentation.spryker.com/2021080/docs/multiple-warehouse-stock)
-* [Add to cart from catalog page](/docs/scos/dev/features/{{page.version}}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
-* [Warehouse address](/docs/scos/dev/features/{{page.version}}/inventory-management/inventory-management-feature-overview.html#defining-a-warehouse-address)
+* [Add to cart from catalog page](/docs/scos/user/features/{{page.version}}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
+* [Warehouse address](/docs/scos/user/features/{{page.version}}/inventory-management/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
 

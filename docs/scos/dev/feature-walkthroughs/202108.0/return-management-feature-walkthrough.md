@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Return Management_ feature allows you to create and manage returns for a sales order.
 
 
-To learn more about the feature and to find out how end users use it, see [Return Management feature overview](/docs/scos/dev/features/{{page.version}}/return-management/return-management-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Return Management feature overview](/docs/scos/user/features/{{page.version}}/return-management/return-management-feature-overview.html) for business users.
 
 
 ## Related Developer articles

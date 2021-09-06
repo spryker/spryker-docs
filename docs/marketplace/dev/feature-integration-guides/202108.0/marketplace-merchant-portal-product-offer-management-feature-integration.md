@@ -13,15 +13,15 @@ To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|
-| Marketplace Product Offer        | dev-master  | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
-| Marketplace Merchant Portal Core | dev-master  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
+| Marketplace Product Offer        | {{page.version}}  | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
+| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
 
-## 1) Install the required modules using Composer
+### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/product-offer-merchant-portal-gui:"dev-master" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant-portal-product-offer-management:"dev-master" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -30,11 +30,11 @@ Make sure that the following modules have been installed:
 
 | MODULE  | EXPECTED DIRECTORY  |
 | ------------- | --------------- |
-| ProductOfferMerchantPortalGui | spryker/product-offer-merchant-portal-gui |
+| ProductOfferMerchantPortalGui | vendor/spryker/product-offer-merchant-portal-gui |
 
 {% endinfo_block %}
 
-## 2) Set up transfer objects
+### 2) Set up transfer objects
 
 Generate transfer changes:
 
@@ -48,16 +48,33 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE  | EVENT   | PATH |
 | ------------- | ---- | ------ |---------------- |
-| MerchantDashboardCard      | class | Created | src/Generated/Shared/Transfer/MerchantDashboardCard      |
-| MerchantProductOfferCounts | class | Created | src/Generated/Shared/Transfer/MerchantProductOfferCounts |
+| MerchantProductOfferCounts | class | Created | src/Generated/Shared/Transfer/MerchantProductOfferCountsTransfer |
+| ProductTableCriteria.filterHasOffers | property | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
+| ProductTableCriteria.merchantReference | property | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
+| ProductOfferTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductOfferTableCriteriaTransfer |
+| ProductOfferCollection.pagination | property | Created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer |
+| ProductConcrete.numberOfOffers | property | Created | src/Generated/Shared/Transfer/ProductConcreteTransfer |
+| ProductConcrete.productOfferStock | property | Created | src/Generated/Shared/Transfer/ProductConcreteTransfer |
+| MerchantStockCriteria.merchantReference | property | Created | src/Generated/Shared/Transfer/MerchantStockCriteriaTransfer |
+| PriceProductOfferTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableCriteriaTransfer |
+| PriceProductOfferTableViewCollection | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableViewCollectionTransfer |
+| PriceProductOfferTableView | class | Created | src/Generated/Shared/Transfer/PriceProductOfferTableViewTransfer |
 
 {% endinfo_block %}
 
-## 3) Set up behavior
+### 3) Add Zed translations
+
+Generate a new translation cache for Zed:
+
+```bash
+console translator:generate-cache
+```
+
+### 4) Set up behavior
 
 To set up behavior, take the following steps.
 
-### Extend OrderItemsTable in SalesMerchantPortalGui
+#### Extend OrderItemsTable in SalesMerchantPortalGui
 
 Activate the following plugins:
 
@@ -95,7 +112,7 @@ Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up 
 
 {% endinfo_block %}
 
-### Add the Offer widget to MerchantDashobard
+#### Add the Offer widget to MerchantDashobard
 
 Activate the following plugins:
 

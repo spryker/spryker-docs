@@ -36,9 +36,6 @@ Make sure that the following modules have been installed:
 |-|-|
 | ProductMerchantPortalGui | spryker/product-merchant-portal-gui |
 | ProductMerchantPortalGuiExtension | spryker/product-merchant-portal-gui-extension |
-| AvailabilityMerchantPortalGui | spryker/availability-merchant-portal-gui |
-| ProductOfferMerchantPortalGui | spryker/product-offer-merchant-portal-gui |
-| MerchantStockDataImport | spryker/merchant-stock-data-import |
 
 {% endinfo_block %}
 

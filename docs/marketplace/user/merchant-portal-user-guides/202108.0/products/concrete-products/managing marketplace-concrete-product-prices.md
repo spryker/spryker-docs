@@ -26,7 +26,7 @@ To add a new price for a marketplace concrete product:
 7. (Optional) For *GROSS DEFAULT* cell, enter a price. Use `.` or `,` separators.
 8. (Optional) For *NET ORIGINAL* cell, enter a price. Use `.` or `,` separators.
 9. (Optional) For *GROSS ORIGINAL* cell, enter a price. Use `.` or `,` separators.
-10. For *Quantity* cell, enter quantity of items for which the price is defined.
+10. For *QUANTITY* cell, enter the number of items. By default, the quantity is 1. See [Adding volume prices](#adding-volume-prices) for an example.
 
 **Tips & Tricks**
 
@@ -63,6 +63,14 @@ To remove the price of the marketplace concrete product:
 | Net original   | A price of the item before tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |
 | Gross original | A price of the item after tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |
 | Quantity       | A number of items for which the price is defined. This field id used to define the volume prices for the concrete product.  |
+
+ ### Adding volume prices
+
+Let's say you have a product that you want to sell with a special price if a user wants to buy a specific number of the same product. For example, a laptop costs €354.35, but you have defined that if a user buys three items, the cost will be €340 instead of €354.35.
+
+![Volume prices - marketplace product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Products/volume-prices-merchant-products.gif)
+
+## 
 
 ## Next steps
 

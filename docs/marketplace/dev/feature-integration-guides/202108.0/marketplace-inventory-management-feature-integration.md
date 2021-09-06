@@ -43,7 +43,6 @@ Make sure that the following modules have been installed:
 | ProductOfferStockGuiExtension | vendor/spryker/product-offer-stock-gui-extension |
 | ProductOfferAvailability | vendor/spryker/product-offer-availability |
 | ProductOfferAvailabilityStorage | vendor/spryker/product-offer-availability-storage |
-| AvailabilityMerchantPortalGui | spryker/availability-merchant-portal-gui |
 
 {% endinfo_block %}
 
@@ -143,7 +142,6 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferStockProductOfferPostUpdatePlugin | Persists product offer stock on product offer updated. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
 | ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. |  | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
 | ProductOfferStockProductOfferViewSectionPlugin | Shows stock section at product offer view page in Zed. |  | Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer |
-| TotalProductAvailabilityProductConcreteTableExpanderPlugin | Expands ProductConcreteTable with Available stock column data. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
 
 
 **src/Pyz/Zed/marketplace-merchant/marketplace-merchantDependencyProvider.php**
@@ -338,36 +336,6 @@ Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySku
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/ProductMerchantPortalGui/ProductMerchantPortalGuiDependencyProvider.php**
-
-```php
-
-<?php
-
-namespace Pyz\Zed\ProductMerchantPortalGui;
-
-use Spryker\Zed\AvailabilityMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\TotalProductAvailabilityProductConcreteTableExpanderPlugin;
-use Spryker\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvider as SprykerProductMerchantPortalGuiDependencyProvider;
-
-class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantPortalGuiDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\ProductConcreteTableExpanderPluginInterface[]
-     */
-    protected function getProductConcreteTableExpanderPlugins(): array
-    {
-        return [
-            new TotalProductAvailabilityProductConcreteTableExpanderPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure the available stock column is displayed in the ProductConcreteTable.
-
-{% endinfo_block %}
 ### 6) Configure export to Redis
 
 This step publishes tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronize the data to the storage.

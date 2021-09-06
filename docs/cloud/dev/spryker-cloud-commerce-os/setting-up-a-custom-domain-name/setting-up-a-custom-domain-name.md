@@ -41,7 +41,7 @@ We created load balancers for the staging and production environment during the 
     * *{project_name}-staging*
     * *{project_name}-prod*
 
-3. In the *Load balancer:{load balancer name}* section, select Copy ![copy icon](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Setting+up+a+custom+domain+name/Setting+up+a+custom+domain+name/copy-icon.png) next to the DNS name field.
+3. In the *Load balancer:{load balancer name}* section, select **Copy** ![copy icon](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Setting+up+a+custom+domain+name/Setting+up+a+custom+domain+name/copy-icon.png) next to the DNS name field.
  
 4. On the side of the DNS zone provider, set up a CNAME record using the copied *DNS name* as the record value. Refer to the DNS zone provider’s documentation for details.
 

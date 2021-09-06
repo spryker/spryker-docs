@@ -73,9 +73,9 @@ See [Deploy File Reference - 1.0](https://documentation.spryker.com/docs/deploy-
 
 4. Depending on the environment you are setting up the domain for: 
 
-    * [Deploy the application in the production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
+* [Deploy the application in the production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
-    * [Deploy the application in the staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html).
+* [Deploy the application in the staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html).
 
 
 5.  Let us know about the desired change via [support](https://spryker.force.com/support/s/). 

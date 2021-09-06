@@ -129,12 +129,6 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
 | MerchantProductProductAbstractPostCreatePlugin | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
-| PriceProductAbstractPostCreatePlugin | Creates new product price entities by abstract product id and price type if they don't exist. | None | Spryker\Zed\PriceProduct\Communication\Plugin\Product |
-| PriceProductProductAbstractExpanderPlugin | Expands product abstract transfer with prices. | None | Spryker\Zed\PriceProduct\Communication\Plugin\Product |
-| ImageSetProductAbstractPostCreatePlugin | Persists all provided image sets to database for the given abstract product. | None | Spryker\Zed\ProductImage\Communication\Plugin\Product |
-| ProductImageProductAbstractExpanderPlugin | Expands product abstract transfer with product images. | None | Spryker\Zed\ProductImage\Communication\Plugin\Product |
-| TaxSetProductAbstractExpanderPlugin | Finds tax set in database by `ProductAbstractTransfer.idProductAbstract` and sets ProductAbstractTransfer.idTaxSet transfer property. | None | Spryker\Zed\TaxProductConnector\Communication\Plugin\Product |
-| TaxSetProductAbstractPostCreatePlugin | Saves tax set id to product abstract table. | None | Spryker\Zed\TaxProductConnector\Communication\Plugin\Product |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
 
@@ -144,13 +138,6 @@ Enable the following behaviors by registering the plugins:
 namespace Pyz\Zed\Product;
 
 use Spryker\Zed\MerchantProduct\Communication\Plugin\Product\MerchantProductProductAbstractPostCreatePlugin;
-use Spryker\Zed\PriceProduct\Communication\Plugin\Product\PriceProductAbstractPostCreatePlugin;
-use Spryker\Zed\PriceProduct\Communication\Plugin\Product\PriceProductProductAbstractExpanderPlugin;
-use Spryker\Zed\ProductImage\Communication\Plugin\Product\ImageSetProductAbstractPostCreatePlugin;
-use Spryker\Zed\ProductImage\Communication\Plugin\Product\ProductImageProductAbstractExpanderPlugin;
-use Spryker\Zed\TaxProductConnector\Communication\Plugin\Product\TaxSetProductAbstractExpanderPlugin;
-use Spryker\Zed\TaxProductConnector\Communication\Plugin\Product\TaxSetProductAbstractPostCreatePlugin;
-use Spryker\Zed\Product\ProductDependencyProvider as SprykerProductDependencyProvider;
 
 class ProductDependencyProvider extends SprykerProductDependencyProvider
 {
@@ -160,24 +147,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
     protected function getProductAbstractPostCreatePlugins(): array
     {
         return [
-            new ImageSetProductAbstractPostCreatePlugin(),
-            new TaxSetProductAbstractPostCreatePlugin(),
-            new PriceProductAbstractPostCreatePlugin(),
             new MerchantProductProductAbstractPostCreatePlugin(),
-        ];
-    }
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractExpanderPluginInterface[]
-     */
-    protected function getProductAbstractExpanderPlugins(Container $container): array
-    {
-        return [
-            new ProductImageProductAbstractExpanderPlugin(),
-            new TaxSetProductAbstractExpanderPlugin(),
-            new PriceProductProductAbstractExpanderPlugin(),
         ];
     }
 }

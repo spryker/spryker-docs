@@ -20,11 +20,11 @@ Every agent user is a Back Office user. When creating or editing a Back Office u
 
 A Back Office user can create an agent user in **Users** > **Users**.
 
-To learn more about managing agent users in Back Office, see [/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html) 
+To learn more about managing agent users in Back Office, see [/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html)
 
 ![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/zed-agent-assist.png)
 
-## Agent Assit feature on the Storefront
+## Agent Assist feature on the Storefront
 
 To act on a customer's behalf, the agent signs in at `https://mysprykershop.com/agent/login` with the agent account details and searches for the desired customer by typing their name or email in the customer search field.
 
@@ -45,34 +45,14 @@ This is how the Agent Assist feature works on the Spryker Demo Shop Storefront:
 Check out this video tutorial on setting up an Agent user in a B2B company account:
 <iframe src="https://spryker.wistia.com/medias/5zraqrascy" title="Agent Assist" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
-## If you are:
+## Related Business User articles
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/authenticating-as-an-agent-assist" class="mr-link">Authenticate as an agent assist via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/searching-by-customers-as-an-agent-assist" class="mr-link">Search by customers as an agent assist via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/impersonating-customers-as-an-agent-assist" class="mr-link">Impersonate customers as an agent assist via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-agent-assist-authentication-tokens" class="mr-link">Manage agent assist authentication tokens via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/agent-assist-feature-integration" class="mr-link">Integrate the Agent Assist feature</a></li>
-                <li>Integrate the Agent Assist API:</li>
-                <li><a href="https://documentation.spryker.com/docs/glue-api-agent-assist-feature-integration" class="mr-link">Integrate the Agent Assist Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customer-account-management-agent-assist-feature-integration" class="mr-link">Integrate the Customer Account Management + Agent Assist feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-integration" class="mr-link">Integrate the Customer Account Management feature</a></li>
-            </ul>
-        </div>
-         <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#creating-users" class="mr-link">Create an agent user</a></li>
-               </ul>
-        </div>
-        </div>
-</div>
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create an agent user](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/users/roles-groups-and-users/managing-users.html#creating-users) |
 
+{% info_block warningBox "Developer guides" %}
 
+Are you a developer? See [Agent Assist feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/agent-assist-feature-walkthrough.html) for developers.
 
+{% endinfo_block %}

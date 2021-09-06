@@ -1,5 +1,5 @@
 ---
-title: Glue API- Glue application feature integration
+title: "Glue API: Glue Application feature integration"
 description: This guide will navigate you through the process of installing and configuring the Glue Application feature in Spryker OS.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-glue-application-feature-integration
 originalArticleId: 5c59fb6b-34a5-4a63-8979-80b2711652a3
@@ -40,13 +40,13 @@ Add the necessary parameters to `config/Shared/config_default.php`:
 
 <details open>
 <summary>config/Shared/config_default.php</summary>
-    
+
 ```bash
 $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'http://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 ```
-    
+
 </br>
 </details>
 
@@ -60,11 +60,11 @@ Adjust `config/Shared/config_default.php`:
 
 <details open>
 <summary>config/Shared/config_default.ph</summary>
-    
+
 ```bash
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
 ```
-    
+
 </br>
 </details>
 
@@ -77,7 +77,7 @@ Adjust `config/Shared/config_default.php`:
 ```bash
 $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
 ```
-    
+
 </br>
 </details>
 
@@ -129,12 +129,12 @@ Activate the following plugins:
 
 <details open>
 <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\EventDispatcher\Plugin\Application\EventDispatcherApplicationPlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplication\Plugin\Application\GlueApplicationApplicationPlugin;
@@ -170,21 +170,21 @@ Create a new entry point for Glue Application:
 
 ```php
 <?php
- 
+
 use Pyz\Glue\GlueApplication\Bootstrap\GlueBootstrap;
 use Spryker\Shared\Config\Application\Environment;
 use Spryker\Shared\ErrorHandler\ErrorHandlerEnvironment;
- 
+
 define('APPLICATION', 'GLUE');
 defined('APPLICATION_ROOT_DIR') || define('APPLICATION_ROOT_DIR', realpath(__DIR__ . '/../..'));
- 
+
 require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
- 
+
 Environment::initialize();
- 
+
 $errorHandlerEnvironment = new ErrorHandlerEnvironment();
 $errorHandlerEnvironment->initialize();
- 
+
 $bootstrap = new GlueBootstrap();
 $bootstrap
 	->boot()
@@ -204,18 +204,18 @@ Create Nginx VHOST configuration:
 server {
 	# Listener for production/staging - requires external LoadBalancer directing traffic to this port
 	listen 10001;
- 
+
 	# Listener for testing/development - one host only, doesn't require external LoadBalancer
 	listen 80;
- 
+
 	server_name ~^glue\\..+\\.com$;
- 
+
 	keepalive_timeout 0;
 	access_log  /data/logs/development/glue-access.log extended;
- 
+
 	# entry point for Glue Application
 	root /data/shop/development/current/public/Glue;
- 
+
 	set $application_env development;
 	# Binding store
 	set $application_store DE;
@@ -264,13 +264,13 @@ If everything is set up correctly, you should be able to access http://glue.mysp
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplication\Plugin\Rest\SetStoreCurrentLocaleBeforeActionPlugin;
 use Spryker\Glue\StoresRestApi\Plugin\StoresResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -282,7 +282,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new StoresResourceRoutePlugin(),
 		];
 	}
- 
+
 	/**
 	* @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ControllerBeforeActionPluginInterface[]
 	*/
@@ -292,7 +292,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new SetStoreCurrentLocaleBeforeActionPlugin(),
 		];
 	}
-     
+
 	/**
 	* @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\FormatResponseHeadersPluginInterface[]
 	*/
@@ -302,7 +302,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new EntityTagFormatResponseHeadersPlugin(),
 		];
 	}
- 
+
 	/**
 	* @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RestRequestValidatorPluginInterface[]
 	*/
@@ -327,12 +327,12 @@ Use constant of resource name instead of plain string.
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\EntityTagsRestApi;
- 
+
 use Spryker\Glue\CartsRestApi\CartsRestApiConfig;
 use Spryker\Glue\EntityTagsRestApi\EntityTagsRestApiConfig as SprykerEntityTagsRestApiConfig;
- 
+
 class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 {
 	/**
@@ -392,8 +392,7 @@ Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESO
 Send a request with the specified header and body.
 
 Make sure that the response contains the ETag validation error.
-		
+
 {% info_block warningBox %}
 Make sure that the following endpoint is available:</br>http://mysprykershop.com/stores
 {% endinfo_block %}
-

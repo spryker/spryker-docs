@@ -1,5 +1,5 @@
 ---
-title: Return management feature integration
+title: Return Management feature integration
 description: This guide provides step-by-step instructions on integrating the Return Management feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/return-management-feature-integration
 originalArticleId: c914ddfc-69f6-4eb5-8098-c7a14908d9ca
@@ -67,7 +67,7 @@ class SalesConfig extends SprykerSalesConfig
 
         return array_merge($externalBlocks, $projectExternalBlocks);
     }
-    
+
      /**
      * @return bool
      */
@@ -165,13 +165,13 @@ Include `DummyReturn01` as a subprocess into `DummyPayment01`.
     xmlns="spryker:oms-01"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd">
-    
+
     <process name="DummyPayment01" main="true">
         <subprocesses>
             <process>DummyReturn</process>
         </subprocesses>
     </process>
-    
+
     <process name="DummyReturn" file="DummySubprocess/DummyReturn01.xml"/>
 
 </statemachine>
@@ -320,7 +320,7 @@ To set up a new source for Return Reasons, execute the following command:
 ```bash
 console search:setup:sources
 ```
- 
+
 
 Adjust `RabbitMq` module configuration in `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
 
@@ -373,7 +373,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
         ];
     }
 }
-``` 
+```
 
 Configure synchronization pool
 
@@ -478,7 +478,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         ];
     }
 }
-``` 
+```
 
 #### Register Query Expander and Result Formatter Plugins
 | Plugin | Specification | Prerequisites | Namespace |
@@ -525,7 +525,7 @@ class SalesReturnSearchDependencyProvider extends SprykerSalesReturnSearchDepend
 
 {% info_block warningBox "Verification" %}
 
-1. Fill the `spy_sales_return_reason` table with some data and run `console publish:trigger-events -r return_reason` command. 
+1. Fill the `spy_sales_return_reason` table with some data and run `console publish:trigger-events -r return_reason` command.
 Make sure that the `spy_sales_return_search` table is filled with respective data per locale. Check Elasticsearch documents, make sure you are able to see data in the following format:
 ```yaml
 {
@@ -1007,4 +1007,3 @@ Ensure that:
 
 
 {% endinfo_block %}
-

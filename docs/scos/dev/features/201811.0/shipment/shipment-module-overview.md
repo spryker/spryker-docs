@@ -14,7 +14,7 @@ The main concepts regarding shipping that are modeled in the database are :
 * shipment method
 
 The schema below shows how the sales order and shipment method entities are modeled in the database:
-![Shipment Module schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shipment/Shipment+Module+Overview/shipment_method_database_schema_2.png){height="" width=""}
+![Shipment Module schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shipment/Shipment+Module+Overview/shipment_method_database_schema_2.png)
 
 A sales order has an associated sales shipment entity which has an associated sales expense. The values of these entities are calculated and stored during the creation of the sales order, using the current state of shipment method, shipment method plugins, shipment method price, shipment carrier, and tax set data.
 

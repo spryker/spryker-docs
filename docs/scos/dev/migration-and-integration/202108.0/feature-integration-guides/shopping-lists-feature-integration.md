@@ -1,5 +1,5 @@
 ---
-title: Shopping lists feature integration
+title: Shopping Lists feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/shopping-lists-feature-integration
 originalArticleId: 58263f9f-e8b2-48f1-9564-caad27602169
 redirect_from:
@@ -34,7 +34,7 @@ composer require spryker-feature/shopping-lists:"^master" --update-with-dependen
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
-    
+
 | Module | Expected Directory |
 | --- | --- |
 | `ShoppingList`| `vendor/spryker/shopping-list`|
@@ -54,7 +54,7 @@ Adjust the schema definition so that entity changes can trigger events.
 | `spy_shopping_list_company_business_unit` | `Entity.spy_shopping_list_company_business_unit.create`</br>`Entity.spy_shopping_list_company_business_unit.update`</br>`Entity.spy_shopping_list_company_business_unit.delete` |
 
 **src/Pyz/Zed/ShoppingList/Persistence/Propel/Schema/spy_shopping_list.schema.xml**
-    
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -62,25 +62,25 @@ Adjust the schema definition so that entity changes can trigger events.
 		xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
 		namespace="Orm\Zed\ShoppingList\Persistence"
 		package="src.Orm.Zed.ShoppingList.Persistence">
- 
+
 	<table name="spy_shopping_list">
 		<behavior name="event">
 			<parameter name="spy_shopping_list_all" column="*"/>
 		</behavior>
     </table>
- 
+
 	<table name="spy_shopping_list_item">
 		<behavior name="event">
 			<parameter name="spy_shopping_list_item_all" column="*"/>
 		</behavior>
     </table>
- 
+
 	<table name="spy_shopping_list_company_user">
 		<behavior name="event">
 			<parameter name="spy_shopping_list_company_user_all" column="*"/>
 		</behavior>
     </table>
- 
+
 	<table name="spy_shopping_list_company_business_unit">
 		<behavior name="event">
 			<parameter name="spy_shopping_list_company_business_unit_all" column="*"/>
@@ -90,13 +90,13 @@ Adjust the schema definition so that entity changes can trigger events.
 ```
 
 **src/Pyz/Zed/ShoppingListStorage/Persistence/Propel/Schema/spy_shopping_list_customer_storage.schema.xml**
-    
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
 	   namespace="Orm\Zed\ShoppingListStorage\Persistence"
 	   package="src.Orm.Zed.ShoppingListStorage.Persistence">
- 
+
 	<table name="spy_shopping_list_customer_storage">
 		<behavior name="synchronization">
 			<parameter name="queue_pool" value="synchronizationPool"/>
@@ -116,8 +116,8 @@ console transfer:generate
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied when checking your database:
-    
-| Database Entity | Type | Event | 
+
+| Database Entity | Type | Event |
 | --- | --- | --- |
 | `spy_shopping_list` | table | created |
 | `spy_shopping_list_item` | table | created |
@@ -134,9 +134,9 @@ Make sure that the following changes have been applied when checking your databa
 {% info_block warningBox "Verification" %}
 
  Make sure that the following changes have been applied in transfer objects:
-    
+
 | Transfer | Type | Event | Path |
-| --- | --- | --- | ---| 
+| --- | --- | --- | ---|
 | `ShoppingList` | class | created | `src/Generated/Shared/Transfer/ShoppingListTransfer` |
 | `ShoppingListCollection` | class | created | `src/Generated/Shared/Transfer/ShoppingListCollectionTransfer` |
 | `ShoppingListOverviewRequest` | class | created | `src/Generated/Shared/Transfer/ShoppingListOverviewRequestTransfer` |
@@ -171,14 +171,14 @@ Make sure that the following changes have been applied when checking your databa
 | `SpyShoppingListPermissionGroupToPermissionEntity` | class | created | `src/Generated/Shared/Transfer/SpyShoppingListPermissionGroupToPermissionEntityTransfer` |
 | `SpyShoppingListItemEntity` | class | created | `src/Generated/Shared/Transfer/SpyShoppingListItemEntityTransfer` |
 | `SpyShoppingListItemNoteEntity` | class | created | `src/Generated/Shared/Transfer/SpyShoppingListItemEntityTransfer` |
- 
 
-{% endinfo_block %} 
-    
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
-    
+
 | Path | Method name |
 | --- | --- |
 | `src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php` | `prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()` |
@@ -187,13 +187,13 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 | `src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php` | `prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()` |
 
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 ### 3) Add Translations
 Append a glossary for the feature:
 
 **src/data/import/glossary.csv**
-    
+
 ```yaml
 customer.account.shopping_list.item.add.success,Item %sku% was added to the List.,en_US
 customer.account.shopping_list.item.add.success,Artikel %sku% wurde zu der Liste hinzugefügt.,de_DE
@@ -233,42 +233,42 @@ This step will publish tables on change (create, edit, delete) to the `spy_shopp
 | `ShoppingListStorageEventSubscriber` | Registers listeners that are responsible for publishing shopping list data based on changes to shopping lists or related entities. | None | `Spryker\Zed\ShoppingListStorage\Communication\Plugin\Event\Subscriber` |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Event;
- 
+
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
 use Spryker\Zed\ShoppingListStorage\Communication\Plugin\Event\Subscriber\ShoppingListStorageEventSubscriber;
- 
+
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
 	public function getEventSubscriberCollection()
 	{
 		$eventSubscriberCollection = parent::getEventSubscriberCollection();
 		$eventSubscriberCollection->add(new ShoppingListStorageEventSubscriber());
- 
+
 		return $eventSubscriberCollection;
 	}
 }
 ```
 
-Register synchronization queue and synchronization error queue: 
+Register synchronization queue and synchronization error queue:
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\RabbitMq;
- 
+
 use ArrayObject;
 use Generated\Shared\Transfer\RabbitMqOptionTransfer;
 use Spryker\Client\RabbitMq\Model\Connection\Connection;
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\ShoppingListStorage\ShoppingListStorageConfig;
- 
+
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
 	/**
@@ -278,10 +278,10 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 	{
 		$queueOptionCollection = new ArrayObject();
 		$queueOptionCollection->append($this->createQueueOption(ShoppingListStorageConfig::SHOPPING_LIST_SYNC_STORAGE_QUEUE, ShoppingListStorageConfig::SHOPPING_LIST_SYNC_STORAGE_ERROR_QUEUE));
- 
+
 		return $queueOptionCollection;
 	}
- 
+
 	/**
 	 * @param string $queueName
 	 * @param string $errorQueueName
@@ -299,10 +299,10 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 			->setDeclarationType(Connection::RABBIT_MQ_EXCHANGE)
 			->addBindingQueueItem($this->createQueueBinding($queueName))
 			->addBindingQueueItem($this->createErrorQueueBinding($errorQueueName, $routingKey));
- 
+
 		return $queueOptionTransfer;
 	}
- 
+
 	/**
 	 * @param string $queueName
 	 *
@@ -316,10 +316,10 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 			->setDurable(true)
 			->setNoWait(false)
 			->addRoutingKey('');
- 
+
 		return $queueOptionTransfer;
 	}
- 
+
 	/**
 	 * @param string $errorQueueName
 	 * @param string $routingKey
@@ -334,7 +334,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 			->setDurable(true)
 			->setNoWait(false)
 			->addRoutingKey($routingKey);
- 
+
 			return $queueOptionTransfer;
 	}
 }
@@ -350,14 +350,14 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Queue;
- 
+
 use Spryker\Shared\ShoppingListStorage\ShoppingListStorageConfig;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
 use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationStorageQueueMessageProcessorPlugin;
- 
+
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
 	/**
@@ -384,12 +384,12 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Synchronization;
- 
+
 use Spryker\Zed\ShoppingListStorage\Communication\Plugin\Synchronization\ShoppingListSynchronizationDataPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
- 
+
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
 	/**
@@ -413,8 +413,8 @@ Verify if `console sync:data --help` has `shopping_list_customer` as an availabl
 Make sure when shopping lists are exported or created, updated, deleted manually in the Back Office, they are exported (or removed) to Redis accordingly.
 
 | Storage Type | Target Entity | Example Expected Data Identifier |   
-| --- | --- |  --- | 
-| Redis | Shopping List |`shopping_list_customer:de--1` | 
+| --- | --- |  --- |
+| Redis | Shopping List |`shopping_list_customer:de--1` |
 
 {% endinfo_block %}
 
@@ -438,12 +438,12 @@ Add Infrastructural Data:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Installer;
- 
+
 use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
 use Spryker\Zed\ShoppingList\Communication\Plugin\ShoppingListPermissionsInstallerPlugin;
- 
+
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
 	/**
@@ -501,12 +501,12 @@ Register the following plugin to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport\ShoppingListDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
 	protected function getDataImporterPlugins(): array
@@ -590,12 +590,12 @@ Register the following plugin to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport\ShoppingListItemDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
 	protected function getDataImporterPlugins(): array
@@ -655,12 +655,12 @@ Register the following plugin to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport\ShoppingListCompanyUserDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
 	protected function getDataImporterPlugins(): array
@@ -716,12 +716,12 @@ Register the following plugin to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport\ShoppingListCompanyBusinessUnitDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
 	protected function getDataImporterPlugins(): array
@@ -766,13 +766,13 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\Permission;
- 
+
 use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
 use Spryker\Client\ShoppingList\Plugin\ReadShoppingListPermissionPlugin;
 use Spryker\Client\ShoppingList\Plugin\WriteShoppingListPermissionPlugin;
- 
+
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
 	/**
@@ -792,7 +792,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Permission;
 
 use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
@@ -829,7 +829,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ShoppingList;
 
 use Spryker\Zed\ShoppingList\Communication\Plugin\ShoppingListItemProductConcreteActiveAddItemPreCheckPlugin;
@@ -853,12 +853,12 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\ShoppingList;
- 
+
 use Spryker\Client\ShoppingList\ShoppingListDependencyProvider as SprykerShoppingListDependencyProvider;
 use Spryker\Client\ShoppingListNote\Plugin\ShoppingListItemNoteToItemCartNoteMapperPlugin;
- 
+
 class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvider
 {
 	/**
@@ -877,15 +877,15 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\ShoppingList;
- 
+
 use Spryker\Client\ShoppingList\ShoppingListDependencyProvider as SprykerShoppingListDependencyProvider;
 use Spryker\Client\ShoppingListNote\Plugin\ShoppingListItemNoteToItemCartNoteMapperPlugin;
 use Spryker\Zed\ShoppingListNote\Communication\Plugin\ShoppingListItemNoteBeforeDeletePlugin;
 use Spryker\Zed\ShoppingListNote\Communication\Plugin\ShoppingListItemNoteExpanderPlugin;
 use Spryker\Zed\ShoppingListNote\Communication\Plugin\ShoppingListItemNotePostSavePlugin;
- 
+
 class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvider
 {
 	/**
@@ -897,7 +897,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 			new ShoppingListItemNotePostSavePlugin(),
 		];
 	}
- 
+
 	/**
 	 * @return \Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ShoppingListItemBeforeDeletePluginInterface[]
 	 */
@@ -907,7 +907,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 			new ShoppingListItemNoteBeforeDeletePlugin(),
 		];
 	}
- 
+
 	/**
 	 * @return \Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ItemExpanderPluginInterface[]
 	 */
@@ -917,7 +917,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 			new ShoppingListItemNoteExpanderPlugin(),
 		];
 	}
- 
+
 	/**
 	 * @return \Spryker\Client\ShoppingListExtension\Dependency\Plugin\ShoppingListItemToItemMapperPluginInterface[]
 	 */
@@ -934,12 +934,12 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\ShoppingListSession;
- 
+
 use Spryker\Client\ShoppingListSession\ShoppingListSessionDependencyProvider as SprykerShoppingListSessionDependencyProvider;
 use Spryker\Client\ShoppingListStorage\Dependency\Plugin\ShoppingListSession\ShoppingListCollectionOutdatedPlugin;
- 
+
 class ShoppingListSessionDependencyProvider extends SprykerShoppingListSessionDependencyProvider
 {
 	/**
@@ -1239,9 +1239,9 @@ Enable global widgets:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 use SprykerShop\Yves\ShoppingListNoteWidget\Widget\ShoppingListItemNoteWidget;
 use SprykerShop\Yves\ShoppingListPage\Widget\ShoppingListDismissWidget;
@@ -1250,7 +1250,7 @@ use SprykerShop\Yves\ShoppingListWidget\Widget\ShoppingListMenuItemWidget;
 use SprykerShop\Yves\ShoppingListWidget\Widget\ShoppingListNavigationMenuWidget;
 use SprykerShop\Yves\ShoppingListWidget\Widget\ShoppingListSubtotalWidget;
 
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
 	/**

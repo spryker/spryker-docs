@@ -10,44 +10,30 @@ redirect_from:
   - /docs/en/media-management
 ---
 
-The *FIle Manager* feature enables you to upload and manager your assets efectively.
+The *FIle Manager* feature enables you to upload and manager your assets effectively.
 
 A Back Office user can upload files and add them to CMS pages and blocks to display on the Storefront.
 
 Apart from images, you can add a great variety of different types of assets to your project, including but not limited by the following:
 
-*     presentations
+*     Presentations
 *     pdf documents
-*     graphics
-*     banners
+*     Graphics
+*     Banners
 
 This enables content managers to create rich, compelling and attractive content for your customers, as well as gives the chance to offer your customers additional information they might be interested in, like user manuals or instructions.
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Get a general idea of asset measurement](/docs/scos/dev/features/{{page.version}}/file-manager/file-manager-feature-overview/asset-management.html)  |
+| [Get a general idea of the file uploader](/docs/scos/dev/features/{{page.version}}/file-manager/file-manager-feature-overview/file-uploader.html)  |
+| [Manage file tree](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/file-manager/managing-file-tree.html)   |
+| [Manage file list](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/file-manager/managing-file-list.html) |
 
+{% info_block warningBox "Developer guides" %}
 
-## If you are:
+Are you a developer? See [File Manager feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-manager-feature-walkthrough.html) for developers.
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/asset-management" class="mr-link">Get a general idea of asset measurement</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-uploader" class="mr-link">Get a general idea of the file uploader</a></li>
-                <li><a href="https://documentation.spryker.com/docs/custom-location-for-static-assets" class="mr-link">Learn how to configure a custom location for static assets</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-            <li><a href="https://documentation.spryker.com/docs/asset-management" class="mr-link">Get a general idea of asset measurement</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-uploader" class="mr-link">Get a general idea of the file uploader</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-file-tree" class="mr-link">Manage file tree</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-file-list" class="mr-link">Manage file list</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% endinfo_block %}

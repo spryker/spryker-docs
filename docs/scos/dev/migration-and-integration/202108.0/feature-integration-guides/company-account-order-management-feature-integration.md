@@ -1,5 +1,5 @@
 ---
-title: Company account + order management feature integration
+title: Company Account + Order Management feature integration
 description: This guide provides step-by-step instruction on integrating Company Account Management + Order Management feature into the Spryker-based project.
 originalLink: https://documentation.spryker.com/2021080/docs/company-account-order-management-feature-integration
 originalArticleId: 459ba566-efc9-4a44-a990-65d13d137032
@@ -203,7 +203,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Re-login (or log in) as a Company Admin and navigate to `http://www.mysprykershop.com/en/company/company-role`. 
+Re-login (or log in) as a Company Admin and navigate to `http://www.mysprykershop.com/en/company/company-role`.
 Press **Edit** button for some role and make sure that you are able to assign following permissions:
 
 * View Company orders
@@ -374,4 +374,3 @@ Make sure that you are able to choose a certain business unit or company option 
 Make sure that you are able to search and filter through the own / business unit/company orders.
 
 {% endinfo_block %}
-

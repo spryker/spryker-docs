@@ -16,4 +16,4 @@ All your customers need to do is do agree for the newsletter subscription by sel
 
 Once your customer submits the agreement form, an email is triggered to confirm that the request is received and the sign-up is successful.
 
-![Newsletter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+%26+Communication/Newsletter+Subscription/Newsletter.png){height="" width=""}
+![Newsletter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+%26+Communication/Newsletter+Subscription/Newsletter.png)

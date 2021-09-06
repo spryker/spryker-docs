@@ -1,5 +1,5 @@
 ---
-title: Product labels feature integration
+title: Product Labels feature integration
 description: This guide provides step-by-step instruction on integrating
 originalLink: https://documentation.spryker.com/2021080/docs/product-labels-feature-integration
 originalArticleId: ccfbad69-0d8f-4f79-b10d-5e1c930fc9be
@@ -42,7 +42,7 @@ Ensure that the following modules have been installed:
 
 Set up database schema and transfer objects as follows:
 
-1. For entity changes to trigger events, adjust the schema definition: 
+1. For entity changes to trigger events, adjust the schema definition:
 
 **src/Pyz/Zed/ProductLabel/Persistence/Propel/Schema/spy_product_label.schema.xml**
 ```xml
@@ -228,7 +228,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getProductLabelStoragePlugins(),
         );
     }
-    
+
     /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
      */
@@ -323,7 +323,7 @@ class ProductLabelStorageConfig extends SprykerProductLabelStorageConfig
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
-    
+
     /**
      * @return string|null
      */
@@ -331,7 +331,7 @@ class ProductLabelStorageConfig extends SprykerProductLabelStorageConfig
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
-    
+
     /**
      * @return string|null
      */
@@ -403,7 +403,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 Ensure that the product label trigger plugin works correctly:
 
 1. Fill `spy_product_label` table with some data.
-2. Run `console publish:trigger-events -r product_label_dictionary` command. 
+2. Run `console publish:trigger-events -r product_label_dictionary` command.
 3. Ensure that the `spy_product_label_dictionary_storage` table is filled with respective data.
 4. Ensure that the storage entries appear in your system with the `kv:product_label_dictionary:store:locale` mask.
 
@@ -412,8 +412,8 @@ Ensure that the product label trigger plugin works correctly:
 ::(Warning) (Verification)
 your content goes hereEnsure that the product label synchronization plugin works correctly:
 
-1. Fill `spy_product_label_product_abstract` table with some data. 
-2. Run the `console publish:trigger-events -r product_abstract_label` command. 
+1. Fill `spy_product_label_product_abstract` table with some data.
+2. Run the `console publish:trigger-events -r product_abstract_label` command.
 3. Ensure that the `spy_product_abstract_label_storage` table is filled with respective data.
 4. Ensure that storage entries appear in your system with the `kv:product_abstract_label:id_product_abstract` mask.
 :::
@@ -628,6 +628,3 @@ console frontend:yves:build
 Ensure that product labels are displayed on the product details page and catalog page.
 
 {% endinfo_block %}
-
-
-

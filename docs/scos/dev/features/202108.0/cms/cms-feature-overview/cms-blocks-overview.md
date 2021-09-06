@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/cms-blocks-overview
 ---
 
-A *CMS block* is a piece of reusable content which you can add to multipe CMS pages and templates. For example, with the help of a block, you can add banners to the top of a page or add SEO text to the bottom of a page. 
+A *CMS block* is a piece of reusable content which you can add to multipe CMS pages and templates. For example, with the help of a block, you can add banners to the top of a page or add SEO text to the bottom of a page.
 
 ## CMS block template
 
@@ -35,7 +35,7 @@ Each placeholder in a block has locale-specific content (for as many locales as 
 ## Reusing CMS blocks
 
 If you add a CMS block to multiple pages and edit it, the content is updated on all the pages you've added it to.
-This applies to the content and the configuration of blocks. For example, if you update a picture in a block, the new picture will be displayed on all the pages the block is added to. Or, if you update the store relation, the block will stop being displayed on the pages of the store the block is not configured to be displayed on. 
+This applies to the content and the configuration of blocks. For example, if you update a picture in a block, the new picture will be displayed on all the pages the block is added to. Or, if you update the store relation, the block will stop being displayed on the pages of the store the block is not configured to be displayed on.
 
 
 <!---
@@ -46,8 +46,8 @@ You can create connections to other objects like Customer Groups (show a block o
 
 ### Category Blocks
 Category blocks are blocks that can be embedded into the category template, for which we can specify on which specific categories we want them to be rendered.
-		
-For example, we have a Christmas sale that affects the categories  related to toys and sweets. We want to apply the following discount rule for these categories: "When you buy 3 products from this category, the product with a lower price is  free". 
+
+For example, we have a Christmas sale that affects the categories  related to toys and sweets. We want to apply the following discount rule for these categories: "When you buy 3 products from this category, the product with a lower price is  free".
 
 We would like to promote this sale by placing a block that displays the discount rule on the affected categories only.
 
@@ -57,39 +57,19 @@ Product blocks are blocks that can be embedded in the product template, for whic
 
 --->
 
-## If you are:
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                    <li><a href="https://documentation.spryker.com/docs/file-details-cms-blockcsv" class="mr-link">Import CMS blocks</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/file-details-cms-block-storecsv" class="mr-link">Import store relations for CMS blocks</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/enabling-the-category-cms-block" class="mr-link">Enable the category CMS block</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/enabling-the-product-cms-block" class="mr-link">Enable the product CMS block</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/enabling-cms-block-widget" class="mr-link">Enable the CMS block widget</a></li>
-                    <li>Enable CMS blocks:</li>
-                    <li><a href="https://documentation.spryker.com/docs/cms-feature-integration-guide" class="mr-link">Integrate the CMS feature</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/mg-cms-collector#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsCollector module from version 1.* to version 2.*</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/mg-cms-block#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsBlock module from version 1.* to version 2.*</a></li>
-                    <li><a href="https://documentation.spryker.com/docs/mg-cms-block-category-connector#migration-guide---cms-block-category-connector" class="mr-link">Migrate the CmsBlockCategoryConnector module from version 1.* to version 2.*</a></li>
-                       <li><a href="https://documentation.spryker.com/docs/mg-cms-block-category-connector-console" class="mr-link">Migrate the CmsBlockCategoryConnectorConsole module from version 1.* to version 2.*</a></li>
-                       <li><a href="https://documentation.spryker.com/docs/mg-cms-block-collector#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsBlockCollector  module from version 1.* to version 2.*</a></li>
-                       <li><a href="https://documentation.spryker.com/docs/mg-cms-block-gui#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CmsBlockGuI  module from version 1.* to version 2.*</a></li>
-  </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-cms-block" class="mr-link">Create a CMS block</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-cms-blocks" class="mr-link">Manage CMS blocks</a></li>
-            </ul>
-        </div>  
-</div>
-</div>
-                
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/creating-cms-blocks.html)  |
+| [Manage CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html)  |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}
+
 ## See next
 
 * [Templates and slots](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/templates-and-slots-overview.html)

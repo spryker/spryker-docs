@@ -34,6 +34,6 @@ Every navigation entity contains some nodes stored in the `spy_navigation_node` 
 
 The `valid_from`, `valid_to`, and `is_active` fields allow to toggle the node's and its descendants visibility.
 
-![Navigation database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation+Module/navigation_db_schema_2_0.png){height="" width=""}
+![Navigation database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation+Module/navigation_db_schema_2_0.png)
 
 <!-- Last review date: Sep 21, 2017- by Karoly Gerner -->

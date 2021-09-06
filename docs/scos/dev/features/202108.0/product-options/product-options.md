@@ -19,7 +19,7 @@ Each product option is defined by:
 * option value
 * translation
 
-*Product option group* holds all available options, or *option values* that buyers select. For example, you can have the "Warranty" product option group and create "1-year warranty" and "2-year warranty" values for it. 
+*Product option group* holds all available options, or *option values* that buyers select. For example, you can have the "Warranty" product option group and create "1-year warranty" and "2-year warranty" values for it.
 
 With the feature in the Back Office, you can create, update, activate or deactivate, and view all product options available in the system, define a price for product options and select products to which they will be added.
 
@@ -37,11 +37,11 @@ In the Back Office, you can perform the following actions on product options:
 
 See [Creating a Product Option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/creating-a-product-option.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/managing-product-options.html#managing-product-options) to learn more about how to work with product options in the Back Office.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png)
 
 {% info_block infoBox %}
 
-Each product option group may contain as many product options as you need. For example, you can offer insurance services (**product option group**) for the product with several **product options**: 
+Each product option group may contain as many product options as you need. For example, you can offer insurance services (**product option group**) for the product with several **product options**:
 * One-year coverage insurance $100
 * Two-yer coverage insurance $150
 * Three-year coverage insurance $200 etc.
@@ -49,11 +49,11 @@ Each product option group may contain as many product options as you need. For e
 {% endinfo_block %}
 
 ## Product Options in the Storefront
-On the product detail page, the new product option group (1) will be displayed as a drop-down list with the option values (2). 
+On the product detail page, the new product option group (1) will be displayed as a drop-down list with the option values (2).
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-yves.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-yves.png)
 
-For more information about what other actions customers can perform on the product detail page, see [Shop Guide - Managing Products](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-managing-products.html). 
+For more information about what other actions customers can perform on the product detail page, see [Shop Guide - Managing Products](/docs/scos/user/user-guides/{{page.version}}/shop-user-guide/shop-guide-managing-products.html).
 
 ## Current Constraints
 {% info_block infoBox %}
@@ -67,29 +67,15 @@ Currently, the feature has the following functional constraints which are going 
 * if you create a product option, the price will be the same for all merchants
 * unlike other prices in Spryker, product option price is not bound to any of the available price types (DEFAULT or ORIGINAL)
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create a product option](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/creating-a-product-option.html)  |
+| [Manage product options](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-options/managing-product-options.html)  |
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-product-optioncsv" class="mr-link">Import product options</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-product-option-pricecsv" class="mr-link">Import product option prices</a></li>
-                <li><a href="https://documentation.spryker.com/docs/glue-api-product-options-feature-integration" class="mr-link">Integrate the Product Options Glue API</a></li> 
-                <li><a href="https://documentation.spryker.com/docs/mg-product-option" class="mr-link">Migrate to a newer version of Product Option module</a></li> 
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-product-option" class="mr-link">Create a product option</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-options" class="mr-link">Manage Product Options</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+Are you a developer? See [Product Options feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-options-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

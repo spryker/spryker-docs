@@ -1,5 +1,5 @@
 ---
-title: Configurable bundle feature integration
+title: Configurable Bundle feature integration
 description: This guide provides step-by-step instruction on installing the basic functionality for the Configurable Bundle feature in Spryker.
 originalLink: https://documentation.spryker.com/2021080/docs/configurable-bundle-feature-integration
 originalArticleId: 4bac6982-459a-4d2f-b34e-e47e4929a158
@@ -56,19 +56,19 @@ Adjust the schema definition so that entity changes will trigger the events:
           xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ConfigurableBundle\Persistence"
           package="src.Orm.Zed.ConfigurableBundle.Persistence">
- 
+
     <table name="spy_configurable_bundle_template">
         <behavior name="event">
             <parameter name="spy_configurable_bundle_template_all" column="*"/>
         </behavior>
     </table>
- 
+
     <table name="spy_configurable_bundle_template_slot">
         <behavior name="event">
             <parameter name="spy_configurable_bundle_template_slot_all" column="*"/>
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -81,13 +81,13 @@ Adjust the schema definition so that entity changes will trigger the events:
           xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ConfigurableBundleStorage\Persistence"
           package="src.Orm.Zed.ConfigurableBundleStorage.Persistence">
- 
+
     <table name="spy_configurable_bundle_template_storage">
         <behavior name="synchronization">
             <parameter name="queue_pool" value="synchronizationPool" />
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -98,13 +98,13 @@ Adjust the schema definition so that entity changes will trigger the events:
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\ConfigurableBundlePageSearch\Persistence"
           package="src.Orm.Zed.ConfigurableBundlePageSearch.Persistence">
- 
+
     <table name="spy_configurable_bundle_template_page_search">
         <behavior name="synchronization">
             <parameter name="queue_pool" value="synchronizationPool"/>
         </behavior>
     </table>
- 
+
 </database>
 ```
 
@@ -179,7 +179,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% info_block infoBox %}
 
-Each configurable bundle template name needs to have Yves translations. Names are translated directly from `spy_configurable_bundle_template.name` field, e.g.: `configurable_bundle.templates.my-bundle.name`. 
+Each configurable bundle template name needs to have Yves translations. Names are translated directly from `spy_configurable_bundle_template.name` field, e.g.: `configurable_bundle.templates.my-bundle.name`.
 
 Same rule is applied for configurable bundle template slots: `spy_configurable_bundle_template_slot.name` → `spy_configurable_bundle.template_slots.my-slot.name`
 
@@ -327,12 +327,12 @@ Add the page map plugin for the *configurable bundle template* entity.
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Search;
- 
+
 use Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Search\ConfigurableBundleTemplatePageMapPlugin;
 use Spryker\Zed\Search\SearchDependencyProvider as SprykerSearchDependencyProvider;
- 
+
 class SearchDependencyProvider extends SprykerSearchDependencyProvider
 {
     /**
@@ -358,13 +358,13 @@ Add query expander and result-formatter plugins for the *configurable bundle tem
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\ConfigurableBundlePageSearch;
- 
+
 use Spryker\Client\ConfigurableBundlePageSearch\ConfigurableBundlePageSearchDependencyProvider as SprykerConfigurableBundlePageSearchDependencyProvider;
 use Spryker\Client\ConfigurableBundlePageSearch\Plugin\Elasticsearch\ResultFormatter\ConfigurableBundleTemplatePageSearchResultFormatterPlugin;
 use Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\LocalizedQueryExpanderPlugin;
- 
+
 class ConfigurableBundlePageSearchDependencyProvider extends SprykerConfigurableBundlePageSearchDependencyProvider
 {
     /**
@@ -376,7 +376,7 @@ class ConfigurableBundlePageSearchDependencyProvider extends SprykerConfigurable
             new ConfigurableBundleTemplatePageSearchResultFormatterPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface[]
      */
@@ -403,9 +403,9 @@ This step will publish tables on change (create, edit) to the spy_configurable_b
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Event;
- 
+
 use Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\Subscriber\ConfigurableBundleTemplatePageSearchEventSubscriber;
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
 use Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event\Subscriber\ConfigurableBundleStorageEventSubscriber;
@@ -423,7 +423,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
         $eventSubscriberCollection = parent::getEventSubscriberCollection();
         $eventSubscriberCollection->add(new ConfigurableBundleStorageEventSubscriber());
         $eventSubscriberCollection->add(new ConfigurableBundleTemplatePageSearchEventSubscriber());
- 
+
         return $eventSubscriberCollection;
     }
 }
@@ -434,14 +434,14 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\RabbitMq;
- 
+
 use ArrayObject;
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\ConfigurableBundlePageSearch\ConfigurableBundlePageSearchConfig;
 use Spryker\Shared\ConfigurableBundleStorage\ConfigurableBundleStorageConfig;
- 
+
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
     /**
@@ -452,7 +452,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
         $queueOptionCollection = new ArrayObject();
         $queueOptionCollection->append($this->createQueueOption(ConfigurableBundleStorageConfig::CONFIGURABLE_BUNDLE_SYNC_STORAGE_QUEUE, ConfigurableBundleStorageConfig::CONFIGURABLE_BUNDLE_SYNC_STORAGE_ERROR_QUEUE));
         $queueOptionCollection->append($this->createQueueOption(ConfigurableBundlePageSearchConfig::CONFIGURABLE_BUNDLE_SEARCH_QUEUE, ConfigurableBundlePageSearchConfig::CONFIGURABLE_BUNDLE_SEARCH_ERROR_QUEUE));
- 
+
         return $queueOptionCollection;
     }
 }
@@ -464,16 +464,16 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Queue;
- 
+
 use Spryker\Shared\ConfigurableBundlePageSearch\ConfigurableBundlePageSearchConfig;
 use Spryker\Shared\ConfigurableBundleStorage\ConfigurableBundleStorageConfig;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
 use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationSearchQueueMessageProcessorPlugin;
 use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationStorageQueueMessageProcessorPlugin;
- 
+
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
     /**
@@ -504,13 +504,13 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\EventBehavior;
- 
+
 use Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Event\ConfigurableBundleTemplatePageSearchEventResourceBulkRepositoryPlugin;
 use Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event\ConfigurableBundleTemplateEventResourceBulkRepositoryPlugin;
 use Spryker\Zed\EventBehavior\EventBehaviorDependencyProvider as SprykerEventBehaviorDependencyProvider;
- 
+
 class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProvider
 {
     /**
@@ -530,13 +530,13 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Synchronization;
- 
+
 use Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Synchronization\ConfigurableBundleTemplateSynchronizationDataBulkPlugin;
 use Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Synchronization\ConfigurableBundleTemplatePageSynchronizationDataBulkPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
- 
+
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
@@ -552,18 +552,18 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-#### Configure Synchronization Pool Name 
+#### Configure Synchronization Pool Name
 
 **src/Pyz/Zed/ConfigurableBundleStorage/ConfigurableBundleStorageConfig.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ConfigurableBundleStorage;
- 
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\ConfigurableBundleStorage\ConfigurableBundleStorageConfig as SprykerConfigurableBundleStorageConfig;
- 
+
 class ConfigurableBundleStorageConfig extends SprykerConfigurableBundleStorageConfig
 {
     /**
@@ -580,9 +580,9 @@ class ConfigurableBundleStorageConfig extends SprykerConfigurableBundleStorageCo
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ConfigurableBundlePageSearch;
- 
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\ConfigurableBundlePageSearch\ConfigurableBundlePageSearchConfig as SprykerConfigurableBundlePageSearch;
 class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSearch
@@ -599,7 +599,7 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that when you added some data to tables `spy_configurable_bundle_template` or `spy_configurable_bundle_template_slot` and run `console trigger:event -r configurable_bundle_template` command, the changes reflect in `spy_configurable_bundle_template_storage`  and  `spy_configurable_bundle_template_page_search` tables. 
+1. Make sure that when you added some data to tables `spy_configurable_bundle_template` or `spy_configurable_bundle_template_slot` and run `console trigger:event -r configurable_bundle_template` command, the changes reflect in `spy_configurable_bundle_template_storage`  and  `spy_configurable_bundle_template_page_search` tables.
 
 2. Make sure that after step #1 or after command `console sync:data configurable_bundle_template` execution data is exported:
 
@@ -616,7 +616,7 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 **Example expected data fragment for Redis**
 
 ```xml
-{ 
+{
      "id_configurable_bundle_template": 2,
      "uuid": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de",
      "name": "configurable_bundle_templates.my-bundle.name",
@@ -633,17 +633,17 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
             "name": "configurable_bundle.template_slots.slot-7.name",
             "id_product_list": 14
         ]
-    ] 
+    ]
 }
 ```
 
 **Example expected data fragment for Elasticsearch**
 
 ```xml
-{ 
+{
    "locale":"en_US",
    "type":"configurable_bundle_template",
-   "search-result-data":{ 
+   "search-result-data":{
       "idConfigurableBundleTemplate":1,
       "uuid":"8d8510d8-59fe-5289-8a65-19f0c35a0089",
       "name":"configurable_bundle.templates.configurable-bundle-all-in.nam"
@@ -704,13 +704,13 @@ Register the following plugins to enable data import:
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\DataImport;
-  
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin\ConfigurableBundleTemplateDataImportPlugin;
 use Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin\ConfigurableBundleTemplateSlotDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -776,13 +776,13 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Sales;
- 
+
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales\ConfiguredBundleOrderExpanderPlugin;
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales\ConfiguredBundlesOrderPostSavePlugin;
- 
+
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
@@ -794,7 +794,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new ConfiguredBundleOrderExpanderPlugin(),
         ];
     }
-     
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderPostSavePluginInterface[]
      */
@@ -832,9 +832,9 @@ Make sure that when you place an order with a configured bundle:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Cart;
- 
+
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\ConfigurableBundle\Communication\Plugin\Cart\CartConfigurableBundlePreReloadPlugin;
 use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundleGroupKeyItemExpanderPlugin;
@@ -843,9 +843,9 @@ use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundl
 use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundleQuantityCartTerminationPlugin;
 use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin;
 use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundleQuantityPostSavePlugin;
- 
+
 use Spryker\Zed\Kernel\Container;
- 
+
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
@@ -860,7 +860,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -874,7 +874,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new ConfiguredBundleGroupKeyItemExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -886,7 +886,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new ConfiguredBundleTemplateSlotCombinationPreCheckPlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -898,7 +898,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new ConfiguredBundleQuantityPostSavePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -953,12 +953,12 @@ Make sure after updating the configured bundle quantity on cart page:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductList;
- 
+
 use Spryker\Zed\ConfigurableBundle\Communication\Plugin\ProductList\ConfigurableBundleTemplateSlotProductListDeletePreCheckPlugin;
 use Spryker\Zed\ProductList\ProductListDependencyProvider as SprykerProductListDependencyProvider;
- 
+
 class ProductListDependencyProvider extends SprykerProductListDependencyProvider
 {
     /**
@@ -997,9 +997,9 @@ Make sure an error occurs while deleting a product list that was assigned to a s
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ConfigurableBundleGui;
- 
+
 use Spryker\Zed\ConfigurableBundleGui\ConfigurableBundleGuiDependencyProvider as SprykerConfigurableBundleGuiDependencyProvider;
 use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin;
 use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin;
@@ -1007,7 +1007,7 @@ use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\Produc
 use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin;
 use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin;
 use Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui\ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin;
- 
+
 class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleGuiDependencyProvider
 {
     /**
@@ -1019,7 +1019,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
             new ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ConfigurableBundleGuiExtension\Dependency\Plugin\ConfigurableBundleTemplateSlotEditFormExpanderPluginInterface[]
      */
@@ -1029,7 +1029,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
             new ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ConfigurableBundleGuiExtension\Dependency\Plugin\ConfigurableBundleTemplateSlotEditFormDataProviderExpanderPluginInterface[]
      */
@@ -1039,7 +1039,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
             new ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ConfigurableBundleGuiExtension\Dependency\Plugin\ConfigurableBundleTemplateSlotEditFormFileUploadHandlerPluginInterface[]
      */
@@ -1049,7 +1049,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
             new ProductConcreteRelationCsvConfigurableBundleTemplateSlotEditFormFileUploadHandlerPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ConfigurableBundleGuiExtension\Dependency\Plugin\ConfigurableBundleTemplateSlotEditSubTabsProviderPluginInterface[]
      */
@@ -1059,7 +1059,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
             new ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ConfigurableBundleGuiExtension\Dependency\Plugin\ConfigurableBundleTemplateSlotEditTablesProviderPluginInterface[]
      */
@@ -1094,13 +1094,13 @@ Make sure that on configurable bundle template slot edit page (`http://zed.myspr
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductListGui;
- 
+
 use Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui\ConfigurableBundleTemplateListProductListTopButtonsExpanderPlugin;
 use Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui\ConfigurableBundleTemplateProductListUsedByTableExpanderPlugin;
 use Spryker\Zed\ProductListGui\ProductListGuiDependencyProvider as SprykerProductListGuiDependencyProvider;
- 
+
 class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyProvider
 {
     /**
@@ -1112,7 +1112,7 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
             new ConfigurableBundleTemplateListProductListTopButtonsExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductListGuiExtension\Dependency\Plugin\ProductListUsedByTableExpanderPluginInterface[]
      */
@@ -1182,13 +1182,13 @@ Register router plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\Router;
- 
+
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
 use SprykerShop\Yves\ConfigurableBundlePage\Plugin\Router\ConfigurableBundlePageRouteProviderPlugin;
 use SprykerShop\Yves\ConfigurableBundleWidget\Plugin\Router\ConfigurableBundleWidgetRouteProviderPlugin;
- 
+
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
@@ -1223,13 +1223,13 @@ Register the following plugins to enable widgets:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ConfigurableBundleWidget\Widget\QuoteConfiguredBundleWidget;
 use SprykerShop\Yves\SalesConfigurableBundleWidget\Widget\OrderConfiguredBundleWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -1273,11 +1273,11 @@ Add the following configuration to your project:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ConfigurableBundleWidget;
- 
+
 use SprykerShop\Yves\ConfigurableBundleWidget\ConfigurableBundleWidgetConfig as SprykerShopConfigurableBundleWidgetConfig;
- 
+
 class ConfigurableBundleWidgetConfig extends SprykerShopConfigurableBundleWidgetConfig
 {
     /**

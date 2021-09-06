@@ -10,9 +10,9 @@ redirect_from:
   - /docs/en/gift-cards-feature-overview
 ---
 
-The Gift Card feature allows you to create a virtual product with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout. 
+The _Gift Card_ feature allows you to create a virtual product with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
 
-A Gift Card is a prepaid certificate entitling its owner to purchase products for the gift card’s value. 
+A Gift Card is a prepaid certificate entitling its owner to purchase products for the gift card’s value.
 
 When paying for orders with a gift card, the gift cards are considered as an additional payment method. You can use the full balance  or part of the total gift card's value. In the latter case, the remaining value is stored as leftover balance on the original code. You can also use additional gift cards to pay for products. However, gift cards can only be applied for products in the same currency they have been bought.
 
@@ -27,7 +27,7 @@ Gift cards have variants just like abstract products. For example, a New Year Gi
 When a customer puts a gift card to cart, they can change a variant, quantity and remove it from cart, just like any abstract product. It should be noted, however, that no discounts are applied to gift card products since the price paid for the gift card must equal the value of the gift card. Even though technically it is possible to have different amounts for gift card’s price and value (say, the gift card price is 100 Euro, however, the gift card value is 150 Euro), you need to consult your local legislation to make sure it would be legal in your country.
 ![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card.png)
 
-It is not possible to pay a gift card by using another gift card, even if the order contains other products with the gift card. Also, the range of payment methods that can be used to pay for gift cards can be limited. That is, you can filter out the payment methods for gift cards. Payment methods available for gift cards can be specified in the configuration file. By default, invoice payment method is not available for gift cards to avoid fraud. 
+It is not possible to pay a gift card by using another gift card, even if the order contains other products with the gift card. Also, the range of payment methods that can be used to pay for gift cards can be limited. That is, you can filter out the payment methods for gift cards. Payment methods available for gift cards can be specified in the configuration file. By default, invoice payment method is not available for gift cards to avoid fraud.
 
 After a customer buys a gift card, they get a code sent to the specified e-mail address.
 
@@ -73,24 +73,8 @@ With this strategy, a Back Office user will see gift card balance information: a
 
 Even though the Balance strategy is a bit more complicated than Replacement, it provides the shop owner with detailed information about the gift card as well as the purchase history. From the customer’s perspective, this strategy might be a better option if a gift card is used by one person and it does not make sense to send emails with new codes every time a gift card was used.
 
+{% info_block warningBox "Developer guides" %}
 
+Are you a developer? See [Gift Cards feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) for developers.
 
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-gift-card-abstract-configurationcsv" class="mr-link">Import the configuration for abstract gift cards</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-gift-card-concrete-configurationcsv" class="mr-link">Import the configuration for concrete gift cards</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-gift-cards-of-registered-users" class="mr-link">Manage the gift cards of registered users via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-gift-cards-of-guest-users" class="mr-link">Manage the gift cards of guest users via Glue API</a></li>
-                <!--- Add a link to the Glue API: Gift Cards integration guide after it's published --->
-                <li>Integrate the Gift Cards feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/gift-cards-feature-integration" class="mr-link">Integrate the Gift Cards feature</a></li>
-<li><a href="https://documentation.spryker.com/docs/migration-guide-checkoutpage#upgrading-from-version-1---to-version-2--" class="mr-link">Migrate the CheckoutPage module from v. 1.* to v. 2.*</a></li>
-  </ul>
-        </div>
-    </div>    
+{% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: Product group + product rating & reviews feature integration
+title: Product Group + Product Rating & Reviews feature integration
 description: Instructions to integrate the Product group + Product rating & reviews feature into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-group-product-rating-reviews-feature-integration
 originalArticleId: e7a2ed29-792b-4d39-b394-b4d213a3a152
@@ -64,4 +64,3 @@ class ProductGroupWidgetDependencyProvider extends SprykerShopProductGroupWidget
 Make sure that the product rating on a product abstract card changes correctly after hovering over a color selector.
 
 {% endinfo_block %}
-

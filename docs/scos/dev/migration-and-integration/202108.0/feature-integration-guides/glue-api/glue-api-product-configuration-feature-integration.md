@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product Configuration feature integration
+title: "Glue API: Product Configuration feature integration"
 description: Learn how to integrate the Product Configurator feature API into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-configuration-feature-integration
 originalArticleId: da3a4a9b-66a2-43c2-a757-116a60a65e18
@@ -26,7 +26,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Product |master |[Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html)|
 | Cart| master| [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)|
 | Order Management| master |[Glue API: Order Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html)|
@@ -291,7 +291,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
         ];
     }
 }
-``` 
+```
 
 **src/Pyz/Glue/OrdersRestApi/OrdersRestApiDependencyProvider.php**
 ```php
@@ -635,7 +635,7 @@ Make sure that the `items` resource is expanded with the product configuration p
 
 <details open>
     <summary>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -758,4 +758,3 @@ Make sure that the `items` resource is expanded with the product configuration p
 </details>
 
 {% endinfo_block %}
-

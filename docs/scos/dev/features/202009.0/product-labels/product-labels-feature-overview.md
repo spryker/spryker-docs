@@ -19,7 +19,7 @@ The product labels are applied to products to be displayed on their product card
 <summary>Product label on a product card - Storefront</summary>
     
 
-![product label on product card](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-card.png){height="" width=""}
+![product label on product card](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-card.png)
  
 
 </details>
@@ -28,7 +28,7 @@ The product labels are applied to products to be displayed on their product card
 <summary>Product label on a product details page - Storefront</summary>
     
 
-![product label on product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-details-page.png){height="" width=""}
+![product label on product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/product-label-on-product-details-page.png)
      
      
      
@@ -71,7 +71,7 @@ A Back Office user can select the design and the position of the product label o
  <details open>
 <summary>alternative</summary>
      
-![alternative product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/alternatives-available-product-label-design.png){height="" width=""} 
+![alternative product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/alternatives-available-product-label-design.png) 
      
 </details>
 
@@ -79,7 +79,7 @@ A Back Office user can select the design and the position of the product label o
  <details open>
 <summary>discontinued</summary>
      
-![discontinued product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/discontinued-product-label-design.png){height="" width=""}
+![discontinued product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/discontinued-product-label-design.png)
      
 </details>
 
@@ -87,7 +87,7 @@ A Back Office user can select the design and the position of the product label o
  <details open>
 <summary>top</summary>
      
-![top product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/top-product-label-design.png){height="" width=""}
+![top product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/top-product-label-design.png)
      
 </details>
 
@@ -96,14 +96,14 @@ A Back Office user can select the design and the position of the product label o
  <details open>
 <summary>new</summary>
      
-![new product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/new-product-label-design.png){height="" width=""}
+![new product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/new-product-label-design.png)
      
 </details>
 
  <details open>
 <summary>sale</summary>
      
-![sale product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/sale-product-label-design.png){height="" width=""}
+![sale product label design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/sale-product-label-design.png)
      
 </details>
 
@@ -116,7 +116,7 @@ If the product label designs shipped by default are not sufficient for your proj
 ## Product Label Priority
 When several product labels are applied to a product, all of them are displayed on its product card and product details page. 
 
-![product label priority ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/alternatives-available-product-label-design.png){height="" width=""}
+![product label priority ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/alternatives-available-product-label-design.png)
 
 
 A Back Office user can define the order in which product labels are displayed on product card and product details page by entering a **Priority** value when creating a product label. 
@@ -161,5 +161,5 @@ See [Creating a Product Label](/docs/scos/user/user-guides/202009.0/back-office-
 ## Product Label Filtering on the Storefront
 Shop users can view product cards with labels on any Storefront page. Also, they can filter products by labels on category and search results pages.
 
-![Filter product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/filter-labels-yves.png){height="" width=""}
+![Filter product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/filter-labels-yves.png)
 

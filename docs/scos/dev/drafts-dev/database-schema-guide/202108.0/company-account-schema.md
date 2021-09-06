@@ -15,7 +15,7 @@ redirect_from:
 ### Company and Business Units
 
 Companies can contain many business units, which are made up of one or more company users. By providing this structure customer (buyers) on a Spryker system may accurately model their purchasing processes according to their real company structure.
-![Company business units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Company+Account+Schema/company-business-units.png){height="" width=""}
+![Company business units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Company+Account+Schema/company-business-units.png)
 
 **Structure**:
 
@@ -36,7 +36,7 @@ Companies can contain many business units, which are made up of one or more comp
 {% info_block infoBox %}
 Companies and Business Units have multiple Addresses which can be used during the Checkout.
 {% endinfo_block %}
-![Company and Business unit addresses](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Company+Account+Schema/company-business-unit-address.png){height="" width=""}
+![Company and Business unit addresses](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Company+Account+Schema/company-business-unit-address.png)
 
 **Structure**:
 
@@ -47,7 +47,7 @@ Companies and Business Units have multiple Addresses which can be used during th
 ### Company Users
 
 A Company has multiple Users which belong to the Company's Business Units.
-![Company users](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Company+Account+Schema/company-user.png){height="" width=""}
+![Company users](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Company+Account+Schema/company-user.png)
 
 **Structure**:
 
@@ -57,7 +57,7 @@ A Company has multiple Users which belong to the Company's Business Units.
 ### Company User Roles & Permissions
 
 A Company User can have one or multiple Roles which define what the User is allowed or disallowed to do.
-![Company user roles and permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Company+Account+Schema/company-user-roles-permissions.png){height="" width=""}
+![Company user roles and permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Company+Account+Schema/company-user-roles-permissions.png)
 
 **Structure**:
 
@@ -82,7 +82,7 @@ E.g. A Buyer is allowed to add products up to 500.- to the Cart. The "500" is a 
 ### Permission Groups (for Quotes and Shopping Lists)
 
 Shopping Lists and Quotes can be shared with Company Users. This sharing can be regulated with the help of Permissions.
-![Permission groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Company+Account+Schema/permission-groups.png){height="" width=""}
+![Permission groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Company+Account+Schema/permission-groups.png)
 
 **Structure**:
 

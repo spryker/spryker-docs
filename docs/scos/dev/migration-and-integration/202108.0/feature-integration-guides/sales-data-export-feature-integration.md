@@ -1,5 +1,5 @@
 ---
-title: Sales data export feature integration
+title: Sales Data Export feature integration
 description: Integrate the Sales Data Export feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/sales-data-export-feature-integration
 originalArticleId: a32fcb26-bdba-4f01-a494-6c7939236e9b
@@ -144,7 +144,7 @@ actions:
           store_name: [AT]
  ```
  3. Activate the following plugins:
- 
+
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | OrderDataEntityExporterPlugin | Adds the `order` data exporter. | None | Spryker\Zed\SalesDataExport\Communication\Plugin\DataExport |

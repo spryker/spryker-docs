@@ -27,53 +27,40 @@ When you have access to multiple business units, you can:
 
 The following table describes some workflows where assigning a company user to multiple business units is helpful:
 
-| Workflow | Description | Example |
+| WORKFLOW | DESCRIPTION | EXAMPLE |
 | --- | --- | --- |
 | Implementation of specific processes within a company. | In a B2B company, most often, you have multiple business units, and you might have company user who is entitled and responsible for making orders for (all) the business units. | Let's say you have a company that owns several restaurants. Each restaurant is represented as a business unit within your company. There is a manager who is responsible for certain product purchases for every restaurant within your company. Such a user needs access to all the business units to be able to make orders on behalf of every restaurant. Or you might have a person responsible for approving orders within all or specific business units. In this case, you would like to have an approver, who would go through the business units and approve their orders.|
 |Managing business units. | As a B2B company owner, you need to maintain all business units within your company. | You may set up business units for multiple office locations and assign an HR user to all of the business units so that they can handle the administrative functions within all the departments, like:<ul><li>Create company accounts for new users</li><li>Assign roles</li><li>Add permissions</li><li>Delete users</li></ul> |
 
 Database relations without the Business on Behalf feature are as follows:
 
-![scheme1.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/scheme1.png){height="" width=""}
+![scheme1.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/scheme1.png)
 
 That is, the customer data used is connected to the company user in a one-to-one relationship.
 
 The aim of the Business on Behalf feature is having one-to-many relationships:
 
-![scheme2.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/scheme2.png){height="" width=""}
+![scheme2.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/scheme2.png)
 
 ## Business on Behalf on the Storefront
 
 Company users can assign and unassign a company business unit to their accounts on the storefront:
-![business-on-behalf-select-company-business-unit.gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/business-on-behalf-select-company-business-unit.gif){height="" width=""}
+![business-on-behalf-select-company-business-unit.gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/business-on-behalf-select-company-business-unit.gif)
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Attach a company user to a business unit](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/company-account/managing-company-users.html#attaching-a-company-user-to-a-business-unit)  |
+| [Attach a customer to a company](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html)  |
 
 
+{% info_block warningBox "Developer guides" %}
 
-#### If you are:
+Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li>Enable Business on Behalf in your project:</li>
-                 <li><a href="https://documentation.spryker.com/docs/company-account-integration" class="mr-link">Integrate the Company Account feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-business-on-behalf-data-import#upgrading-from-version-1-1-0-to-version-2-0-0" class="mr-link">Migrate the BusinessOnBehalfDataImport module from version 1.* to version 2.*</a></li>
-            </ul>
-        </div>
-         <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-company-users#attaching-a-company-user-to-a-business-unit" class="mr-link">Attach a company user to a business unit</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customers-reference-information#b2b--attach-customer-to-company-page" class="mr-link">Attach a customer to a company</a></li>
-               </ul>
-        </div>
-        </div>
-</div>
+{% endinfo_block %}
 
 
 ## See next
 [Customer Login by Token overview](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/customer-login-by-token-overview.html)
-

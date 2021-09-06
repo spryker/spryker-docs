@@ -27,36 +27,20 @@ Due to the specificity of the state machine for every project, out of the box, t
 The reclamations can have two states - open and closed. The closed state of a reclamation means that there is nothing to do on it anymore, therefore it can not be reopened.
 
 ## Current Constraints
-A Back Office user can create a Reclamation in the Back Office as an action item for a company. The rest needs to be configured according to the project needs. 
+A Back Office user can create a Reclamation in the Back Office as an action item for a company. The rest needs to be configured according to the project needs.
 
 In the Back Office in the order list, a Back Office user doesn't have the functionality to filter the orders by a business unit. All the orders within the shop system (for example, from multiple company accounts) are displayed here.
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create an order linked to a reclamation](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/reclamations/managing-reclamations.html)  |
+| [Create a new order-related reclamation](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#claiming-orders.html)  |
+| [Manage reclamations](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/reclamations/managing-reclamations.html)  |
 
+{% info_block warningBox "Developer guides" %}
 
+Are you a developer? See [Reclamations feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reclamations-feature-walkthrough.html) for developers.
 
-
-
-
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/reclamations-feature-integration" class="mr-link">Integrate the Reclamations feature</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/reclamations/managing-reclamations.html" class="mr-link">Create an order linked to a reclamation</a></li>
-                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/reclamations/managing-reclamations.html" class="mr-link">Manage reclamations</a></li>
-                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/sales/orders/managing-orders.html#claiming-orders" class="mr-link">Create a new order-related reclamation</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% endinfo_block %}

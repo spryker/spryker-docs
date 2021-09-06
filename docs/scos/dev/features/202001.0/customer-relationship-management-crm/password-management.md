@@ -12,9 +12,9 @@ All accounts are password protected. Therefore all customers are asked to provid
 
 If the customer account is created in the Back Office, a store administrator selects the **Send password token through email** check-box and the new customer receives an email with a link to the page where the password can be changed.
 
-![Password protection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Password+Management/password_protection.gif){height="" width=""}
+![Password protection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Password+Management/password_protection.gif)
 
 Also, passwords can easily be restored with a restore-password link.
 
-![Restore a password](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Password+Management/password_restore.gif){height="" width=""}
+![Restore a password](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Password+Management/password_restore.gif)
 

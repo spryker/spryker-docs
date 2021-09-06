@@ -1,5 +1,5 @@
 ---
-title: Glue API- Catalog feature integration
+title: "Glue API: Catalog feature integration"
 description: Use the guide to install the Glue Catalog feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-api-feature-integration
 originalArticleId: 8e4c8246-966e-4f6f-b8e8-6e76cc2af23f
@@ -78,12 +78,12 @@ Activate the following plugins:
 | `CatalogSearchSuggestionsResourceRoutePlugin` | Registers the `search-suggestions` resource. | None | `Spryker\Glue\CatalogSearchRestApi\Plugin` |
 
 src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CatalogSearchProductsResourceRelationship\Plugin\CatalogSearchAbstractProductsResourceRelationshipPlugin;
 use Spryker\Glue\CatalogSearchProductsResourceRelationship\Plugin\CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin;
 use Spryker\Glue\CatalogSearchRestApi\CatalogSearchRestApiConfig;
@@ -91,7 +91,7 @@ use Spryker\Glue\CatalogSearchRestApi\Plugin\CatalogSearchResourceRoutePlugin;
 use Spryker\Glue\CatalogSearchRestApi\Plugin\CatalogSearchSuggestionsResourceRoutePlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -104,7 +104,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new CatalogSearchSuggestionsResourceRoutePlugin(),
 		];
 	}
- 
+
 	/**
 	* @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
 	*
@@ -121,7 +121,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			CatalogSearchRestApiConfig::RESOURCE_CATALOG_SEARCH_SUGGESTIONS,
 			new CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin()
 		);
-         
+
 		return $resourceRelationshipCollection;
 	}
 }
@@ -134,5 +134,3 @@ If `CatalogSearchResourceRoutePlugin` and `CatalogSearchSuggestionsResourceRoute
 {% info_block warningBox %}
 To make sure that `CatalogSearchAbstractProductsResourceRelationshipPlugin` and `CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin` are functioning correctly, do the following:<ul><li>Send a request to `http://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products` and verify that the response includes relationships to `abstract-products` resources.</li><li>Send a request to `http://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products` and verify that the response includes relationships to `abstract-products` resources.</li></ul>
 {% endinfo_block %}
-
-

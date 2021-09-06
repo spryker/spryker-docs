@@ -1,5 +1,5 @@
 ---
-title: Quotation process + approval process feature integration
+title: Quotation Process + Approval Process feature integration
 description: Install the Quotation Process and Approval Process features in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-approval-process-feature-integration
 originalArticleId: 127edbbd-6c59-4aed-826f-66b7b41022c5
@@ -31,12 +31,12 @@ Register the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\QuoteRequest;
- 
+
 use Spryker\Client\QuoteApproval\Plugin\QuoteRequest\QuoteApprovalQuoteRequestQuoteCheckPlugin;
 use Spryker\Client\QuoteRequest\QuoteRequestDependencyProvider as SprykerQuoteRequestDependencyProvider;
- 
+
 class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvider
 {
     /**
@@ -55,12 +55,12 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\QuoteApproval;
- 
+
 use Spryker\Zed\QuoteApproval\QuoteApprovalDependencyProvider as SprykerQuoteApprovalDependencyProvider;
 use Spryker\Zed\QuoteRequest\Communication\Plugin\QuoteApproval\QuoteRequestQuoteApprovalUnlockPreCheckPlugin;
- 
+
 class QuoteApprovalDependencyProvider extends SprykerQuoteApprovalDependencyProvider
 {
     /**

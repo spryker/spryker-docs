@@ -1,5 +1,5 @@
 ---
-title: Customer account management + order management feature integration
+title: Customer Account Management + Order Management feature integration
 description: This guide provides step-by-step instruction on integrating Customer Account Management + Order Management feature into the Spryker-based project.
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management-order-management-feature-integration
 originalArticleId: 749599c0-c1ab-4553-88ad-ee055c344ab8

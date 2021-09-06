@@ -14,18 +14,20 @@ Help your customers track and save items for later purchase through multiple wis
 
 <!--- Customers can create one or multiple wishlists with different names, add products to them and transfer wishlists to carts (either the entire list, or a specific item from the list) --->
 
-Customers can manage their wishlists in the *Wishlist* section of the customer account. In there, they can see the list of wishlists that they have, the number of items inside each one, the date of creation, **Edit** and **Delete** options. 
+Customers can manage their wishlists in the *Wishlist* section of the customer account. In there, they can see the list of wishlists that they have, the number of items inside each one, the date of creation, **Edit** and **Delete** options.
 
 <!---Your users can add items from different lists to the cart.--->
-:::(Warning)
+
+{% info_block warningBox "Warning" %}
+
 Note the following:
 * Only logged-in customers can use the Wishlist functionality.
 * If the same item is added to the cart from multiple wishlists, then in the cart, this item will have the quantity value updated based on the number of times this specific item was added.
 * Each wishlist is an independent entity.
-:::
 
+{% endinfo_block %}
 
-## Naming a wishlist 
+## Naming a wishlist
 
 Users can easily keep track of their wishlists by naming each one individually.
 
@@ -42,63 +44,46 @@ Specifically, the customer can:
 * Add all the products from the wishlist to the cart by selecting the Add all available products to cart
 * Add selected items from the wishlist to the cart by using the **Add to Cart** option for a specific item.
 
-<!--- ![Multiple wishlists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/multiple_wishlists.gif){height="" width=""}-->
+<!--- ![Multiple wishlists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/multiple_wishlists.gif)-->
 
 ## The Wishlist feature on the Storefront
+
 Buyers can do the following actions using the Wishlists feature:
 <details>
 <summary>Create, rename, and edit a wishlist </summary>
 
-![create-rename-delete-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/create-rename-delete-wishlist.gif){height="" width=""}
+![create-rename-delete-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/create-rename-delete-wishlist.gif)
 
 </details>
 
 <details>
-<summary>Add a product from the product deatils page to a wishlist</summary>
+<summary>Add a product from the product details page to a wishlist</summary>
 
-![add-product-from-product-details-page-to-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-product-from-product-details-page-to-wishlist.gif){height="" width=""}
+![add-product-from-product-details-page-to-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-product-from-product-details-page-to-wishlist.gif)
 
 </details>
 
 <details>
 <summary>View a wishlist's details, remove products from the wishlist, and add all products from the wishlist to cart</summary>
 
-![view-details-remove-products-and-add-all-products-from-wishlist-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/view-details-remove-products-and-add-all-products-from-wishlist-to-cart.gif){height="" width=""}
+![view-details-remove-products-and-add-all-products-from-wishlist-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/view-details-remove-products-and-add-all-products-from-wishlist-to-cart.gif)
 
 </details>
 
 <details>
 <summary>Add selected products from the wishlist to cart</summary>
 
-![add-selected-products-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-selected-items-to-cart.gif){height="" width=""}
+![add-selected-products-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-selected-items-to-cart.gif)
 
 </details>
 
-
-
 ## Video tutorial
-
 
 For more details on wishlists, check the video:
 <iframe src="https://spryker.wistia.com/medias/g7hzsa9xw7" title="Wishlists" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <!---<li><a href="https://documentation.spryker.com/docs/ht-adding-new-tag-for-comment" class="mr-link">Add a new tag for a comment</a></li>-->
-                <li><a href="https://documentation.spryker.com/docs/managing-wishlists" class="mr-link">Manage wishlists via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-wishlist-items" class="mr-link">Manage wishlist items via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/glue-api-wishlist-feature-integration" class="mr-link">Integrate the Wishlist Glue API</a></li>
-                <li>Integrate the Wishlist feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/alternative-products-wishlist-feature-integration" class="mr-link">Integrate the Alternative Products + Wishlist feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-wishlist" class="mr-link">Migrate the Wishlist module to the latest version</a></li>
-                </ul>
-        </div>
- <!-- col3 -->
-      </div>
-</div>
+Are you a developer? See [Wishlist feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/wishlist-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

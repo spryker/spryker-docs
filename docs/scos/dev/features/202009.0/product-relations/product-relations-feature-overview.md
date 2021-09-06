@@ -29,12 +29,12 @@ A product relation type defines how a product relation is displayed on Storefron
 
 With Related products, [related products](#product-types-in-product-relations) are displayed on the product details page of the [product owing the relation](#product-types-in-product-relations).
 
-![Related products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/related-products.gif){height="" width=""}
+![Related products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/related-products.gif)
 
 
 With Upselling, when the product owing the relation is added to cart, related products are displayed on the *Cart* page.
 
-![Upselling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/Upselling.gif){height="" width=""}
+![Upselling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/Upselling.gif)
 
 
 
@@ -73,11 +73,11 @@ You can combine the rules using *AND* and *OR* combination operators. When sever
 
 In the following example, for a product to be added to related products, it should belong to both the *Sony* brand and the *Cameras* category.
 
-![And combination operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/and-combination-operator.png){height="" width=""}
+![And combination operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/and-combination-operator.png)
 
 In the following example, for a product to be added to related products, it should belong to at least the *Sony* brand or the *Cameras* category. 
 
-![Or combination operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/or-combination-operator.png){height="" width=""}
+![Or combination operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/or-combination-operator.png)
 
 
 {% info_block infoBox "Info" %}
@@ -91,18 +91,18 @@ When rules are combined by the OR operator, they do not exclude each other. If a
 
 When you have a big product catalog, you might want to use rule groups to make the selection of related products more precise. A rule group is a separate set of rules with its own combination operator. 
 
-![Rule group]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/rule-group.png){height="" width=""}
+![Rule group]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/rule-group.png)
 
 With the rule groups, you can build multiple levels of rule hierarchy. When a product is evaluated against the rules, it is evaluated on all the levels of the hierarchy you build. On each level, there can be both rules and rule groups.
 
-![Rule group hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/rule-group-hierarchy.png){height="" width=""}
+![Rule group hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/rule-group-hierarchy.png)
 
 When a product is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The diagram below shows how a product is evaluated against the rules on the previous screenshot.
 
 <details>
     <summary>Product evaluation diagram</summary>
 
-![product-relation-rule-hierarchy](https://confluence-connect.gliffy.net/embed/image/04eed8c7-8608-472f-8c74-9510d2449487.png?utm_medium=live&utm_source=custom){height="" width=""}
+![product-relation-rule-hierarchy](https://confluence-connect.gliffy.net/embed/image/04eed8c7-8608-472f-8c74-9510d2449487.png?utm_medium=live&utm_source=custom)
     
 </details>
 

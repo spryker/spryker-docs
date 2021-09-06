@@ -1,5 +1,5 @@
 ---
-title: Product images + configurable bundle feature integration
+title: Product Images + Configurable Bundle feature integration
 description: This guide provides step-by-step instruction on integrating the Product Images + Configurable Bundle feature into the Spryker Commerce OS.
 originalLink: https://documentation.spryker.com/2021080/docs/product-images-configurable-bundle-feature-integration
 originalArticleId: 9a304208-8d29-4a63-9b72-3b6ced637048
@@ -161,8 +161,8 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 {% info_block warningBox "Verification" %}
 
 
-1. Make sure that when you added some data to tables `spy_product_image_set`, `spy_product_image_set_to_product_image`, `spy_product_image` with `fk_resource_configurable_bundle_template` and run `console trigger:event -r configurable_bundle_template_image` command, the changes are reflected in the `spy_configurable_bundle_template_image_storage` table. 
-2. Make sure that after step #4  or after `console sync:data configurable_bundle_template_image` command execution, the data s added to the `spy_configurable_bundle_template_image_storage` table and Redis. 
+1. Make sure that when you added some data to tables `spy_product_image_set`, `spy_product_image_set_to_product_image`, `spy_product_image` with `fk_resource_configurable_bundle_template` and run `console trigger:event -r configurable_bundle_template_image` command, the changes are reflected in the `spy_configurable_bundle_template_image_storage` table.
+2. Make sure that after step #4  or after `console sync:data configurable_bundle_template_image` command execution, the data s added to the `spy_configurable_bundle_template_image_storage` table and Redis.
 3. Make sure that when a product image set with the `fk_resource_configurable_bundle_template` is created or edited through ORM, it is exported to Redis accordingly.
 4. Ensure that Elasticsearch document has been expanded by images property.
 
@@ -176,15 +176,15 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 **Example expected data fragment for Elasticsearch**
 
 ```xml
-{ 
+{
    "locale":"en_US",
    "type":"configurable_bundle_template",
-   "search-result-data":{ 
+   "search-result-data":{
       "idConfigurableBundleTemplate":1,
       "uuid":"8d8510d8-59fe-5289-8a65-19f0c35a0089",
       "name":"configurable_bundle.templates.configurable-bundle-all-in.nam",
-      "images":[ 
-         { 
+      "images":[
+         {
             "idmage":1084,
             "idProductImageSetToProductImage":1084,
             "sortOrder":0,
@@ -199,7 +199,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 **Example expected data fragment for Redis**
 
 ```xml
-{ 
+{
      "id_configurable_bundle_template": 1,
       "image_sets": [
         {
@@ -255,7 +255,7 @@ Expand ProductImageSetTransfer transfer:
 </transfers>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer 
+Run the following commands to apply database changes and generate entity and transfer
 changes:
 
 ```bash
@@ -309,9 +309,9 @@ Register the following plugins to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ConfigurableBundleDataImport\Communication\Plugin\ConfigurableBundleTemplateImageDataImportPlugin;
 
@@ -338,6 +338,6 @@ Make sure that `the spy_product_image`, `spy_product_image_set`, `spy_product_im
 
 Make sure that data is synced to the `spy_configurable_bundle_template_image_storage` table.
 
-Make sure that the latest data is present at Elasticsearch and Redis documents for configurable bundle templates. 
+Make sure that the latest data is present at Elasticsearch and Redis documents for configurable bundle templates.
 
 {% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product labels feature integration
+title: "Glue API: Product Labels feature integration"
 description: This guide will navigate you through the process of installing and configuring the Product Labels API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-labels-feature-integration
 originalArticleId: 6977feed-8ecf-4536-ac31-bab1f565d5b4
@@ -71,14 +71,14 @@ Activate the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsRelationshipByResourceIdPlugin;
 use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsResourceRoutePlugin;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -90,7 +90,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new ProductLabelsResourceRoutePlugin(),
         ];
     }
- 
+
     /**
     * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
     *
@@ -103,7 +103,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             ProductsRestApiConfig::RESOURCE_ABSTRACT_PRODUCTS,
             new ProductLabelsRelationshipByResourceIdPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }

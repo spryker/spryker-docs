@@ -14,7 +14,7 @@ redirect_from:
 {% info_block infoBox %}
 There can be multiple admin users with roles and permissions.
 {% endinfo_block %}
-![Zed users and ACL](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Zed+Administration+Schema/zed-users-acl.png){height="" width=""}
+![Zed users and ACL](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Zed+Administration+Schema/zed-users-acl.png)
 
 **Structure**:
 

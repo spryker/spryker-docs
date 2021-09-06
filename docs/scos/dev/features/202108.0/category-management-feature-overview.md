@@ -14,11 +14,11 @@ A category is a set of products that share a common attribute and, therefore, ca
 
 ## Root, parent, and child categories
 
-The product catalog is structured in a category tree, which consists of root, parent, and child categories. 
+The product catalog is structured in a category tree, which consists of root, parent, and child categories.
 
 A *root category* is a base category that stands on top of the category hierarchy. Product and child categories are assigned to root categories, but root categories can not be assigned to anything. Also, a store can only be linked to one root category tree, while a root category tree can be linked to multiple stores. Root categories are added through [data import](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html) and cannot be created in the Back Office, unlike other categories, which can be added in both ways.
 
-A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones via the Back Office or by importing the categories. For information on how to create child categories for the parent categories, see [Creating categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) and [Managing categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html). For information on how to import the child categories, see [File details: category.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html). 
+A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones via the Back Office or by importing the categories. For information on how to create child categories for the parent categories, see [Creating categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) and [Managing categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html). For information on how to import the child categories, see [File details: category.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html).
 
 On the Storefront, in comparison to parent category names, child category names are indented so that they can be identified.
 
@@ -65,45 +65,16 @@ Currently, the Category Management feature has the following functional constrai
 * Category URLs are available in all the stores that share the same locales.
 * Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2b-suite.html). However, in the [B2C demo shop](/docs/scos/user/intro-to-spryker/{{site.version}}/b2c-suite.html), you can still filter the products using the price range filter.
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Create a category](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html) |
+| [Assign products to categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html) |
+| [Manage categories](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/managing-categories.html) |
 
+{% info_block warningBox "Developer guides" %}
 
-## If you are:
+Are you a developer? See [Category management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/category-management-feature-walkthrough.html) for developers.
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/ht-manage-a-big-number-of-categories" class="mr-link">Manage a big number of categories</a></li>
-                <li><a href="/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html" class="mr-link">Import categories</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-category-templatecsv" class="mr-link">Import category templates</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-category-storecsv" class="mr-link">Import store relations for categories</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-category-trees" class="mr-link">Retrieve category trees via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-category-nodes" class="mr-link">Retrieve category nodes via Glue API</a></li>          
-                <li><a href="https://documentation.spryker.com/docs/glue-api-category-management-feature-integration" class="mr-link">Integrate  Category Management Glue API</a></li>
-                 <li>Integrate the Category Management feature:</li>
-                <li><a href="https://documentation.spryker.com/docs/category-management-feature-integration" class="mr-link">Integrate the Category Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/product-category-feature-integration" class="mr-link">Integrate the Product + Category Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/cms-category-management-feature-integration" class="mr-link">Integrate the CMS + Category Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/cms-category-management-feature-integration" class="mr-link">Integrate the Catalog + Category Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-categorygui" class="mr-link">Migrate the CategoryGui module from version 1* to version 2*</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/migration-guide-category#upgrading-from-version-3---to-version-4--" class="mr-link">Migrate the Category module from version 3* to version 4*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-category#upgrading-from-version-4---to-5--" class="mr-link">Migrate the Category module from version 4* to version 5*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-categorypagesearch" class="mr-link">Migrate the CategoryPageSearch module from version 1* to version 2*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-categorystorage" class="mr-link">Migrate the CategoryStorage module from version 1* to version 2*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/migration-guide-productcategorystorage" class="mr-link">Migrate the ProductCategoryStorage module from version 1* to version 2*</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/creating-categories.html" class="mr-link">Create a category</a></li>
-                 <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/category/assigning-products-to-categories.html" class="mr-link">Assign products to categories</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-categories" class="mr-link">Manage categories</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% endinfo_block %}

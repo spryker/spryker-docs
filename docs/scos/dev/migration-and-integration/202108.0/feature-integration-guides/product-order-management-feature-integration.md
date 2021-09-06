@@ -1,5 +1,5 @@
 ---
-title: Product + order management feature integration
+title: Product + Order Management feature integration
 description: This guide provides step-by-step instructions on integrating Product + Order Management feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-order-management-feature-integration
 originalArticleId: 56176d63-974e-44fb-89c5-f201b9994112
@@ -81,7 +81,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new ItemMetadataSearchOrderExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface[]
      */
@@ -106,4 +106,3 @@ Make sure that every order item from `SalesFacade::getOrderItems()` results cont
 Make sure that every order item from `SalesFacade::getOrderItems()` results contain metadata information.
 
 {% endinfo_block %}
-

@@ -1,5 +1,5 @@
 ---
-title: Glue API- Customer access feature integration
+title: "Glue API: Customer Access feature integration"
 description: Use the guide to install the Customer Access API feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-customer-access-feature-integration
 originalArticleId: ec9bfc81-8019-4d55-b885-d63c9cc6a961
@@ -23,7 +23,7 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core | 202001.0 | [Feature API](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html) | 
+| Spryker Core | 202001.0 | [Feature API](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html) |
 | Customer Access | 202001.0 | [Feature](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-access-feature-integration.html) |
 
 ### 1) Install the Required Modules Using Composer
@@ -51,19 +51,19 @@ Add the following configuration:
 | `CustomerAccessRestApiConfig::CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING` | Array that provides a mapping between customer access content types and the corresponding REST resource names. | None |`\Spryker\Glue\CustomerAccessRestApi` |
 
 src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\CustomerAccessRestApi;
- 
+
 use Spryker\Glue\CheckoutRestApi\CheckoutRestApiConfig;
 use Spryker\Glue\CartsRestApi\CartsRestApiConfig;
 use Spryker\Glue\CustomerAccessRestApi\CustomerAccessRestApiConfig as SprykerCustomerAccessRestApiConfig;
 use Spryker\Glue\ProductPricesRestApi\ProductPricesRestApiConfig;
 use Spryker\Glue\WishlistsRestApi\WishlistsRestApiConfig;
 use Spryker\Shared\CustomerAccess\CustomerAccessConfig;
- 
+
 class CustomerAccessRestApiConfig extends SprykerCustomerAccessRestApiConfig
 {
     protected const CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING = [
@@ -117,13 +117,13 @@ src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CustomerAccessRestApi\Plugin\GlueApplication\CustomerAccessFormatRequestPlugin;
 use Spryker\Glue\CustomerAccessRestApi\Plugin\GlueApplication\CustomerAccessResourceRoutePlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -135,7 +135,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new CustomerAccessResourceRoutePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\FormatRequestPluginInterface[]
      */
@@ -206,4 +206,3 @@ Make that `CustomerAccessFormatRequestPlugin` is set up correctly:
 
 
 {% endinfo_block %}
-

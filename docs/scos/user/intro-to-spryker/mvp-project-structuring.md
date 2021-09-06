@@ -74,7 +74,7 @@ Early design and specifications always take longer than expected plus there are 
 * Build a workable version as soon as possible to validate the design and specifications on a working prototype.
 * Be prepared to have several sprints.
 * Launch early = learn longer + reduce waste.
-![MVP car](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/MVP+Project+Structuring/mvp_car.jpg){height="" width=""}
+![MVP car](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/MVP+Project+Structuring/mvp_car.jpg)
 
 * Maximize your time at market.
 * Design features with milestones for early testing throughout the development process as opposed to developing a feature and testing it when its complete.
@@ -96,13 +96,13 @@ To create a lean MVP, the first step is to evaluate the importance of features b
 
 {% info_block infoBox %}
 The image below is an example of how to map functionality to asses the value added and effort.![MVP feature mapping](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/MVP+Project+Structuring/mvp_feature_mapping.png
-{% endinfo_block %}{height="" width=""})
+{% endinfo_block %})
 
 Once functionality has been mapped, it is easier to asses the scope, importance and cost of each feature. 
 
 The next step is to map features to specific releases. With this method, you can formulate a fair assessment of the progression of your release scope and plan your work and resources accordingly.
 
-![MVP feature release](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/MVP+Project+Structuring/mvp_feature_mapping_release.png){height="" width=""}
+![MVP feature release](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/MVP+Project+Structuring/mvp_feature_mapping_release.png)
 
 ## Controlling Your Backlog
 Giving people a voice is positive, controlling the voice is necessary. If everyone gets to have an equal input, things can get out of hand very fast. A high level of involvement in the beginning of a project will lead to an excessive and unmaintainable backlog. Subsequently, the ability to keep accurate estimates will be compromised and the sheer volume will not only be time consuming but lead to shift from planning based on micro factors that are not part of the bigger picture.

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/managing-customers
 ---
 
-This article describes how to manage customers. 
+This article describes how to manage customers.
 
 ## Prerequisites
 
@@ -23,11 +23,11 @@ Each section contains reference information. Make sure to review it before you s
 To create a new customer:
 1. In the top-right corner of the *Customers* page, click **Add Customer**.
 2. On the *Add a customer* page, enter the customer information. The customer information must include first name, last name, and the email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.
-3. Send password token by email by selecting the **Send password token through email** checkbox. After saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. 
+3. Send the password token by email by selecting the **Send password token through email** checkbox. After saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. 
 {% info_block infoBox "Info" %}
 If you don’t select this option, the customer is still able to set a password for their account by clicking the reset password link from the online store.
 {% endinfo_block %}
-4. To complete the customer creation, click **Save**. 
+4. To complete the customer creation, click **Save**.
 This creates the new customer with the *Unverified* status in the *Customers* table. At the same time, the customer receives an email with the verification link that they must click to get verified and start using the online store as registered users do. Once they verified their account via the link in the email, the status in the *Customers* table changes to *Verified*.
 
 ### Reference information: Creating customers
@@ -87,7 +87,7 @@ The following table describes the attributes you enter and select when editing a
 
 The *View customer details* page is designed to serve more purposes than just seeing the details.
 
-On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the *Notes* section. 
+On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the *Notes* section.
 
 To know how the customer addresses are managed, see  [Managing customer addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html).
 
@@ -97,7 +97,7 @@ To view customer details, take one of the following steps:
 * Click **View** in the list of customers.
 * Click **View** in the top right corner of the *Edit Customer* page.
 
-If the customer has addresses, they can be edited in the *Addresses* section of the *View Customer* page. 
+If the customer has addresses, they can be edited in the *Addresses* section of the *View Customer* page.
 
 ### Leaving a note
 
@@ -158,4 +158,3 @@ The *Orders* section:
 | Grant Total | Grand total of the order. |
 | Number of Items | Quantity of the items in the order. |
 | Actions | Actions you can do on this order. |
-

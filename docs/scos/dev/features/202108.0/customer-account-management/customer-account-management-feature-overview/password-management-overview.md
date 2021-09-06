@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/password-management-overview
 ---
 
-*Password Management* enables Spryker admins to manage customer account passwords. It also allows B2B and B2C Shoppers to manage their own account passwords. 
+*Password Management* enables Spryker admins to manage customer account passwords. It also allows B2B and B2C Shoppers to manage their own account passwords.
 
 When you create a customer account in the Back Office, you do not enter the password. Instead, you can select to send a password reset email to the customer account’s email address. This way, the customer knows that the account has been created and they need to reset the password to access it. See [Creating a Customer](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer) to learn how Spryker admin sends password reset emails when creating customer accounts.
 
@@ -20,23 +20,18 @@ With the help of [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue
 
 On the Storefront, it is mandatory to enter a password when creating a customer account. After the account is created, you can update the password in the customer account or request a password reset via email. See [Changing Account Password](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-accounts-overview.html#changing-customer-account-password) to learn how B2B and B2C Shoppers can change account passwords.
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Get a general idea of Customer Account](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-accounts-overview.html)  |
+| [Get a general idea of Customer Registration](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)   |
+| [Get a general idea of Customer Login](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)  |
+| [Get a general idea of Customer Groups](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-groups-overview.html)   |
+| [Get a general idea of Password Management](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/password-management-overview.html)  |
 
+{% info_block warningBox "Developer guides" %}
 
+Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
 
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                  <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-integration" class="mr-link">Enable Password Management by integrating the Customer Account Management feature</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration" class="mr-link">Enable Glue API password management by integrating the Customer Account Management Glue API</a></li>
-                <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html#change-a-customer-s-password" class="mr-link">Change a customer’s password via Glue API</a></li>
-                                <li><a href="https://documentation.spryker.com/docs/customer-password#reset-a-customer-s-password" class="mr-link">Reset a customer’s password via Glue API</a></li>
-            </ul>
-        </div>
-           </div>  
-     </div>
+{% endinfo_block %}

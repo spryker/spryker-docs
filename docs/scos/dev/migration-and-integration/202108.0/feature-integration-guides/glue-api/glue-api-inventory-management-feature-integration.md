@@ -1,5 +1,5 @@
 ---
-title: Glue API- Inventory Management feature integration
+title: "Glue API: Inventory Management feature integration"
 description: Learn how to integrate the Inventory Management feature API into a Spryker project.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-inventory-management-feature-integration
 originalArticleId: e7896d23-ba99-4d95-a3cc-654fbfaae463
@@ -18,11 +18,11 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required sub-feature |
 | --- | --- | --- |
-| Spryker Core| 201907.0| [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html)| 
-| Product | 201907.0 | [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) | 
+| Spryker Core| 201907.0| [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html)|
+| Product | 201907.0 | [Glue API: Products feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) |
 |Inventory Management| 201907.0| |
 
-  
+
 
 ## 1) Install the required modules using Composer
 
@@ -30,7 +30,7 @@ Install the required modules:
 ```bash
 composer require spryker/product-availabilities-rest-api:"^2.0.0" --update-with-dependencies
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -38,7 +38,7 @@ Make sure that the following modules have been installed:
 
 | Module | Expected Directory |
 | --- | --- |
-| ProductAvailabilitiesRestApi| vendor/spryker/product-availabilities-rest-api| 
+| ProductAvailabilitiesRestApi| vendor/spryker/product-availabilities-rest-api|
 | ProductsRestApi| vendor/spryker/products-rest-api |
 
 {% endinfo_block %}
@@ -48,14 +48,14 @@ Run the following command to generate transfer changes:
 ```bash
 console transfer:generate
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
 | Transfer| Type| Event| Path|
 | --- | --- | --- | --- |
-| RestAbstractProductAvailabilityAttributesTransfer| class| created| src/Generated/Shared/Transfer/RestAbstractProductAvailabilityAttributesTransfer| 
+| RestAbstractProductAvailabilityAttributesTransfer| class| created| src/Generated/Shared/Transfer/RestAbstractProductAvailabilityAttributesTransfer|
 | RestConcreteProductAvailabilityAttributesTransfer| class| created| src/Generated/Shared/Transfer/RestConcreteProductAvailabilityAttributesTransfer|
 
 
@@ -67,14 +67,14 @@ Activate the following plugins:
 
 
 
-| Plugin | Specification | Prerequisites | Namespace | 
-| --- | --- | --- | --- | 
+| Plugin | Specification | Prerequisites | Namespace |
+| --- | --- | --- | --- |
 |AbstractProductAvailabilitiesRoutePlugin | Registers the abstract product availabilities resource. | None | Spryker\Glue\ProductAvailabilitiesRestApi\Plugin |
-| ConcreteProductAvailabilitiesRoutePlugin | Registers the concrete product availabilities resource. | None | Spryker\Glue\ProductAvailabilitiesRestApi\Plugin | 
+| ConcreteProductAvailabilitiesRoutePlugin | Registers the concrete product availabilities resource. | None | Spryker\Glue\ProductAvailabilitiesRestApi\Plugin |
 | AbstractProductAvailabilitiesByResourceIdResourceRelationshipPlugin | Adds the abstract product availability resource as a relationship to the abstract product resource. | None | Spryker\Glue\ProductAvailabilitiesRestApi\Plugin\GlueApplication |
 | ConcreteProductAvailabilitiesByResourceIdResourceRelationshipPlugin | Adds the concrete product availability resource as a relationship to the concrete product resource. | None |Spryker\Glue\ProductAvailabilitiesRestApi\Plugin\GlueApplication |
 
-  
+
 <details open>
     <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
@@ -133,9 +133,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure that the following endpoints are available:
 
 *   `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-availabilities`
-    
+
 *   `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-availabilities`
-    
+
 
 Send the `GET http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-availabilities` and make sure that the response includes relationships to the `abstract-product-availabilities` resource.
 
@@ -143,4 +143,3 @@ Send the `GET http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}
 
 
 {% endinfo_block %}  
-

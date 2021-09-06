@@ -1,5 +1,5 @@
 ---
-title: Glue API- Navigation feature integration
+title: "Glue API: Navigation feature integration"
 description: This guide will walk you through the process of installing and configuring the Navigation API feature in Spryker OS.
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-navigation-feature-integration
 originalArticleId: 5b6af295-1650-445f-a3ce-d40389bfc922
@@ -63,14 +63,14 @@ Specify mapping for the source field from which the resourceId field should be f
 
 <details open>
 <summary>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\NavigationsRestApi;
- 
+
 use Spryker\Glue\NavigationsRestApi\NavigationsRestApiConfig as SprykerNavigationsRestApiConfig;
- 
+
 class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 {
 	/**
@@ -107,12 +107,12 @@ Activate the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\NavigationsRestApi\Plugin\ResourceRoute\NavigationsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -124,7 +124,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new NavigationsResourceRoutePlugin(),
 		];
 	}
- 
+
 	/**
 	* @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
 	*
@@ -137,7 +137,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			NavigationsRestApiConfig::RESOURCE_NAVIGATIONS,
 			new CategoryNodeByResourceIdResourceRelationshipPlugin()
 		);
-  
+
 		return $resourceRelationshipCollection;
 	}
 }
@@ -441,4 +441,3 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 
 </br>
 </details>
-

@@ -11,7 +11,7 @@ Some resources (see the List of the private resources below) in Spryker REST API
 
 To get access to a protected resource, first, you need to obtain an **Access Token**. We use JWT tokens required for Spryker Glue to identify a user during API calls. Then you need to pass the token in the request header to get access to the resources that require authentication.
 
-![auth-scheme.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/auth-scheme%281%29.png){height="" width=""}
+![auth-scheme.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/auth-scheme%281%29.png)
 
 For increased security, access tokens have a limited lifetime. When receiving an access token, the response body contains not only the access token itself, but also its lifetime, in seconds, and a **Refresh Token**. When the lifetime expires, the Refresh Token can be exchanged for a new Access Token. The new token will also have a limited lifetime and have a corresponding Refresh Token for future authentication. The default lifetime of the tokens is 8 hours (28800 seconds) for an access token and 1 month (2628000 seconds) for a refresh token, although the settings can be changed in the module configuration.
 

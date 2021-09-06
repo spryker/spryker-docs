@@ -23,7 +23,9 @@ New items are added to shopping lists by clicking **Add to Shopping List** on th
 Company users can create not just one but multiple shopping lists to be used for different needs or to purchase products at different periods.
 
 {% info_block infoBox "Example" %}
+
 For instance, these could be separate shopping lists for daily, weekly, and monthly purchases.
+
 {% endinfo_block %}
 
 The detailed information on managing shopping lists is covered in the [Shop User Guide](https://documentation.spryker.com/2021080/docs/multiple-shared-shopping-lists-overview#multiple-and-shared-shopping-lists-on-the-storefront).
@@ -38,10 +40,12 @@ Three types of shopping list access rights can be granted:
 * Read only
 * Full access
 
-### No Access
+### No access
+
 **No access** means that a shopping list is not shared and therefore can not be seen by a business unit/user.
 
 ### Read only
+
 **_Read only_** permissions allows:
 
 1. **Reading Shopping list**: On the *Shopping List View* page, the user sees a shopping list name, owner, access level (*Read only*), number of users the shopping list is shared with, as well as the table of items with the following information:
@@ -58,7 +62,9 @@ Three types of shopping list access rights can be granted:
 * Actions: The **Add to Cart** button
 
 {% info_block infoBox %}
+
 Alternative products are not shown for discontinued products since they can not be basically added to the cart, and a user with *Read only* rights can not amend the shopping list by adding these products to it.
+
 {% endinfo_block %}
 
 
@@ -69,6 +75,7 @@ Alternative products are not shown for discontinued products since they can not 
 4. **Adding shopping list items to cart**: A user can select the necessary which are available and add them to cart.
 
 ## Full access
+
 **_Full access_** permissions allow:
 
 1. Reading a shopping list: On the _Shopping List View_ page, the user sees the name of owner, access level (Full access), the number of users the shopping list is shared with, as well as the table of items with the following information:
@@ -76,7 +83,7 @@ Alternative products are not shown for discontinued products since they can not 
    * Product name
    * SKU
    * Product attribute
-   * Product options 
+   * Product options
    * Product notes (see [Shopping List Notes](https://documentation.spryker.com/2021080/docs/shopping-list-notes) for more details)
    * Quantity
    * Item price
@@ -84,7 +91,9 @@ Alternative products are not shown for discontinued products since they can not 
    * Actions: **Add to cart** icon, **Remove** button
 
 {% info_block infoBox %}
+
 Besides other products, a user with *Full access* rights is allowed to see alternatives for discontinued items, which can be added to the shopping list.
+
 {% endinfo_block %}
 
 2. **Changing the number of items for adding to cart**: On the *Shopping List View* page, the user can change the item quantity to be added to the cart.
@@ -100,29 +109,32 @@ Besides other products, a user with *Full access* rights is allowed to see alter
 7. **Deleting a shopping list**
 
 8. **Deleting items in a shopping list**: The shopping list items can be deleted on the **Edit Shopping list** page.
-![Shared full access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shared-full-access.png){height="" width=""}
+![Shared full access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shared-full-access.png)
 
 It is possible to grant different access rights on a shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* to the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.
 
 ## Search widget for shopping lists
+
 Starting from v. 2019.03.0, it is possible to integrate the [Search Widget for Concrete Products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 :::(Warning)
 Without the Search widget, you will not be able to search for products. Therefore, make sure that the Search Widget for Concrete Products feature is integrated into your project.
 :::
-![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png){height="" width=""}
+![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png)
 
 ## Subtotal for a shopping list
+
 Starting from v.201907.0, every shopping list has Subtotal for all the items added to the shopping list according to the selected Price Mode and Currency.
-![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png){height="" width=""}
+![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png)
 
 
-## Multiple and Shared Shopping Lists on the Storefront 
+## Multiple and Shared Shopping Lists on the Storefront
+
 <a name="multiple-and-shared-shopping-lists-on-the-storefront"></a> Company users can perform the following actions using the Multiple and Shared Shopping Lists feature on the Storefront:
 
 <details>
 <summary>Create, delete, and add a shopping list to cart</summary>
 
-![create-delete-and-add-shopping-lists-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/create-delete-add-to-cart-shopping-lists.gif){height="" width=""}
+![create-delete-and-add-shopping-lists-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/create-delete-add-to-cart-shopping-lists.gif)
 
 </details>
 
@@ -130,7 +142,7 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 <summary>Edit shopping lists</summary>
 
-![edit-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/manage-shopping-lists.gif){height="" width=""}
+![edit-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/manage-shopping-lists.gif)
 
 </details>
 
@@ -138,7 +150,7 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 <summary>Add products from the product details page to a shopping list</summary>
 
-![add-products-from-the-product-detail-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/add-products-from-the-product-detail-page.gif){height="" width=""}
+![add-products-from-the-product-detail-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/add-products-from-the-product-detail-page.gif)
 
 </details>
 
@@ -147,27 +159,16 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 <summary>Dissmiss a shared shopping list, share and print a shopping list</summary>
 
-![dismiss-share-and-print-a-shopping-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/dismiss-share-and-print-a-shopping-list.gif){height="" width=""}
+![dismiss-share-and-print-a-shopping-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/dismiss-share-and-print-a-shopping-list.gif)
 
 </details>
 
 ## Current constraints
+
 We do not support product options in Subtotal of the Shopping Lists. For example, a shopping list includes 3 office chairs, each of them cost €15. The subtotal will show €45 for 3 items. But if we add a product option, e.g., gift wrapping for €5 each to these three office chairs, the subtotal should display €60 (€15/chair + €5/gift wrapping * 3). However, the shopping list will display just the product price - €45.
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                 <li>Enable Multiple and Shared Shopping Lists in your project:</li>
-                  <li><a href="https://documentation.spryker.com/docs/shopping-lists-feature-integration" class="mr-link">Integrate the Shopping Lists feature</li>
-                 <li><a href="https://documentation.spryker.com/docs/prices-feature-integration" class="mr-link">Integrate the Prices feature into your project</a></li>
-            </ul>
-        </div>
-         <!-- col3 -->
-    </div>
-</div>
+Are you a developer? See [Shopping Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) for developers.
 
+{% endinfo_block %}

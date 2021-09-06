@@ -162,7 +162,7 @@ You can filter out the documents by specific product versions. For this, select 
 <a name="inapp"></a> 
 <!--* **In-App Assistant**: Widget on the main page of the Spryker documentation website that allows you to find top search articles quickly. To open the In-App Assistant, click on a blue book icon in the bottom left corner:  
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker+Documentation/InApp+Assistant.png){height="" width=""}-->
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker+Documentation/InApp+Assistant.png)-->
 
 ## Feedback
 
@@ -196,7 +196,7 @@ You need to fork the repository only the first time you edit the Spryker documen
 
 {% endinfo_block %}
 3.	Click **Edit this file** in the top right menu and make the changes.  
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker+Documentation/edit+button.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker+Documentation/edit+button.png)
 {% info_block infoBox %}
 Spryker documentation is written using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/
 {% endinfo_block %}. )

@@ -1,5 +1,5 @@
 ---
-title: Scheduled prices feature integration
+title: Scheduled Prices feature integration
 description: Use the guide to install the Scheduled Prices feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/scheduled-prices-feature-integration
 originalArticleId: 9b64041e-a249-4675-8e39-82b016675f3c
@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 
-## Install Feature Core
+## Install feature core
 
 ### Prerequisites
 
@@ -23,7 +23,7 @@ To start feature integration, review and install the necessary features:
 | Product | master |
 | Price | master |
 
-### 1) Install the Required Modules Using Composer
+### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
@@ -35,7 +35,7 @@ composer require spryker-feature/scheduled-prices:"^master" --update-with-depend
 Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`PriceProductSchedule`</td><td>`vendor/spryker/price-product-schedule`</td></tr><tr><td>`PriceProductScheduleDataImport`</td><td>`vendor/spryker/price-product-schedule-data-import`</td></tr><tr><td>`PriceProductScheduleGui`</td><td>`vendor/spryker/price-product-schedule-gui`</td></tr></tbody></table>
 {% endinfo_block %}
 
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up database schema and transfer objects
 
 Run the following commands to:
 
@@ -56,9 +56,7 @@ Make sure that the following changes have been applied by checking your database
 Make sure that the following changes in transfer objects have been applied:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`PriceProductScheduleTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleTransfer`</td></tr><tr><td>`PriceProductScheduleCsvValidationResultTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleCsvValidationResultTransfer`</td></tr><tr><td>`PriceProductScheduleImportTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleImportTransfer`</td></tr><tr><td>`PriceProductScheduleImportMetaDataTransfer`</td><td></td><td></td><td></td></tr><tr><td>`PriceProductScheduleImportTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleImportMetaDataTransfer`</td></tr><tr><td>`PriceProductScheduleListTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleListTransfer`</td></tr><tr><td>`PriceProductScheduleListResponseTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleListResponseTransfer`</td></tr><tr><td>`PriceProductScheduleListImportRequestTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleListImportRequestTransfer`</td></tr><tr><td>`PriceProductScheduleListImportErrorTransfer`</td><td></td><td></td><td></td></tr><tr><td>`PriceProductScheduleImportTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleListImportErrorTransfer`</td></tr><tr><td>`PriceProductScheduleListImportResponseTransfer`</td><td></td><td></td><td></td></tr><tr><td>`PriceProductScheduleImportTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleListImportResponseTransfer`</td></tr><tr><td>`PriceProductScheduleListMetaDataTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleListMetaDataTransfer`</td></tr><tr><td>`PriceProductScheduleCriteriaFilterTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleCriteriaFilterTransfer`</td></tr><tr><td>`PriceProductScheduleResponseTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleResponseTransfer`</td></tr><tr><td>`PriceProductScheduleErrorTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleErrorTransfer`</td></tr><tr><td>`PriceProductScheduleRedirectTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductScheduleRedirectTransfer`</td></tr><tr><td>`SpyPriceProductScheduleEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyPriceProductScheduleEntityTransfer`</td></tr><tr><td>`SpyPriceProductScheduleListEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyPriceProductScheduleListEntityTransfer`</td></tr></tbody></table>
 {% endinfo_block %}
 
-### 3) Import Data
-
-#### Import Price Product Schedules
+### 3) Import price product schedules
 
 {% info_block infoBox "Info" %}
 The following imported entities will be used as product price schedules in Spryker OS.
@@ -85,7 +83,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,from_i
 ,060_26175504,DEFAULT,AT,EUR,22592,25103,2019-05-01T00:00:00-00:00,2019-06-30T23:59:59-00:00
 ,060_26175504,DEFAULT,AT,EUR,11296,12552,2019-06-23T00:00:00-00:00,2019-07-19T23:59:59-00:00
 ```
-    
+
 | Column | Is Obligatory? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 |  `abstract_sku` | optional | string | 001 | Existing abstract product SKU of the scheduled price. |
@@ -108,12 +106,12 @@ Register the following plugin to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\PriceProductScheduleDataImport\Communication\Plugin\PriceProductScheduleDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     /**
@@ -138,7 +136,7 @@ console data:import:product-price-schedule
 Make sure that the configured data has been added to the `spy_price_product_schedule` table in the database.
 {% endinfo_block %}
 
-### 4) Set up Behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the console commands, view and tab plugins:
 
@@ -155,15 +153,15 @@ Enable the following behaviors by registering the console commands, view and tab
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
 use Spryker\Zed\PriceProductScheduleDataImport\PriceProductScheduleDataImportConfig;
 use Spryker\Zed\PriceProductSchedule\Communication\Console\PriceProductScheduleApplyConsole;
 use Spryker\Zed\PriceProductSchedule\Communication\Console\PriceProductScheduleCleanupConsole;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -178,7 +176,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new PriceProductScheduleApplyConsole(),
             new PriceProductScheduleCleanupConsole()
         ];
- 
+
         return $commands;
     }
 }
@@ -188,11 +186,11 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\PriceProductScheduleDataImport;
- 
+
 use Spryker\Zed\PriceProductScheduleDataImport\PriceProductScheduleDataImportConfig as SprykerPriceProductScheduleDataImportConfig;
- 
+
 class PriceProductScheduleDataImportConfig extends SprykerPriceProductScheduleDataImportConfig
 {
     /**
@@ -201,7 +199,7 @@ class PriceProductScheduleDataImportConfig extends SprykerPriceProductScheduleDa
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(APPLICATION_ROOT_DIR);
- 
+
         return $moduleRoot . DIRECTORY_SEPARATOR;
     }
 }
@@ -211,19 +209,19 @@ class PriceProductScheduleDataImportConfig extends SprykerPriceProductScheduleDa
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductManagement;
- 
+
 use Spryker\Zed\ProductManagement\ProductManagementDependencyProvider as SprykerProductManagementDependencyProvider;
 use Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement\ScheduledPriceProductAbstractEditViewExpanderPlugin;
 use Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement\ScheduledPriceProductAbstractFormEditTabsExpanderPlugin;
 use Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement\ScheduledPriceProductConcreteEditViewExpanderPlugin;
 use Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement\ScheduledPriceProductConcreteFormEditTabsExpanderPlugin;
- 
- 
+
+
 class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
 {
-   
+
     /**
      * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormEditTabsExpanderPluginInterface[]
      */
@@ -233,7 +231,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new ScheduledPriceProductConcreteFormEditTabsExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormEditTabsExpanderPluginInterface[]
      */
@@ -243,7 +241,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new ScheduledPriceProductAbstractFormEditTabsExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractEditViewExpanderPluginInterface[]
      */
@@ -253,7 +251,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new ScheduledPriceProductAbstractEditViewExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteEditViewExpanderPluginInterface[]
      */
@@ -294,18 +292,18 @@ config/Zed/cronjobs/jobs.php
 
 ```php
 <?php
- 
+
 /**
  * Notes:
  *
  * - jobs[]['name'] must not contains spaces or any other characters, that have to be urlencode()'d
  * - jobs[]['role'] default value is 'admin'
  */
- 
+
 $stores = require(APPLICATION_ROOT_DIR . '/config/Shared/stores.php');
- 
+
 $allStores = array_keys($stores);
- 
+
 /* PriceProductSchedule */
 $jobs[] = [
     'name' => 'apply-price-product-schedule',
@@ -318,5 +316,5 @@ $jobs[] = [
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that scheduled prices have been correctly applied in the **Back Office > Products > Products** section. 
+Make sure that scheduled prices have been correctly applied in the **Back Office > Products > Products** section.
 {% endinfo_block %}

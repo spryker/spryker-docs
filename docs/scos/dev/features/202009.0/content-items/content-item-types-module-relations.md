@@ -13,19 +13,19 @@ This document describes each content item type and the modules relations used fo
 ## Banner
 Banner content item is a content piece that consists of text, a background image and a link. A content manager specifies the values when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--banner) in the Back Office > **Content Management** > **Content Items**. 
 The scheme shows the module relations of the Banner content item:
-![Banner CI module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-module-relations.png){height="" width=""}
+![Banner CI module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-module-relations.png)
 
 ### Banner API
 A developer can fetch the content item data via API. Also, they can view the content item details for a specific locale. 
 
 The scheme below shows the Banner API module relations:
-![Banner API module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-api-module-relations.png){height="" width=""}
+![Banner API module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-api-module-relations.png)
 
 ### Banner Data Importer
 A developer can create and edit the content items by importing them.
 
 The scheme below shows the module relations of the content item data importers:
-![Banner Content Item Data Importers module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-data-importers-module-relations.png){height="" width=""}
+![Banner Content Item Data Importers module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-data-importers-module-relations.png)
 
 
 See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-importers-overview-and-implementation.html) for more details.
@@ -36,7 +36,7 @@ The scheme below shows the module relations of the Abstract product list content
 * data importer
 * API
 
-![Abstract Product List module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/abstract-product-list-module-relations.png){height="" width=""}
+![Abstract Product List module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/abstract-product-list-module-relations.png)
 
 ### Abstract Product List Data Importer
 A developer can create and update the content items by importing them.
@@ -50,7 +50,7 @@ A developer can fetch the information on each abstract product included into a c
 ## Product Set 
 Product set content item is a content piece that consists of text and a [product set](/docs/scos/dev/features/202009.0/product-sets/product-sets.html). A content manager selects an existing product set when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--product-set) in the Back Office > **Content Management** > **Content Items**. 
 The scheme below shows the module relations of the Product set content item and its importer:
-![Product Set content item module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/product-set-module-relations.png){height="" width=""}
+![Product Set content item module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/product-set-module-relations.png)
 
 ### Product Set Data Importer
 Developers can create and update the content items by importing them.
@@ -62,7 +62,7 @@ See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides
 File list content item is a content piece that consists of text and a clickable link or icon to download a file. A content manager selects existing files when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--file-list) in the Back Office > **Content Management** > **Content Items**. 
 
 The scheme below shows the module relations of the File list content item:
-![File List module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/file-list-module-relations.png){height="" width=""}
+![File List module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/file-list-module-relations.png)
 
 ## Navigation 
 
@@ -71,7 +71,7 @@ Navigation content item is a content piece that consists of a [navigation elemen
 
 The scheme shows the module relations of the Navigation content item:
 
-![navigation-content-item-module-relations](https://confluence-connect.gliffy.net/embed/image/73472dc0-68f4-4bcd-a3ef-79c5ea1dcdbe.png?utm_medium=live&utm_source=custom){height="" width=""}
+![navigation-content-item-module-relations](https://confluence-connect.gliffy.net/embed/image/73472dc0-68f4-4bcd-a3ef-79c5ea1dcdbe.png?utm_medium=live&utm_source=custom)
 
 ### Navigation Data Importer
 

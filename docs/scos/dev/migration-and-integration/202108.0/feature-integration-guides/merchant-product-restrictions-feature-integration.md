@@ -1,5 +1,5 @@
 ---
-title: Merchant product restrictions feature integration
+title: Merchant Product Restrictions feature integration
 description: Merchant Product Restrictions allows setting access to particular products. This guide describes the process of integrating the feature into a project.
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-product-restrictions-feature-integration
 originalArticleId: e9b57fe0-4e95-4757-b9bd-5a7850138616
@@ -29,7 +29,7 @@ composer require spryker-feature/merchant-product-restrictions:"^master" --updat
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed: 
+Make sure that the following modules were installed:
 
 | Module | Expected Directory |
 | --- | --- |
@@ -88,7 +88,7 @@ mr-011,pl-008
 | --- | --- | --- | --- | --- |
 |`merchant_relation_key`  | mandatory | string | mr-008 | Identifier of merchant relations. The merchant relations must exist already. |
 | `product_list_key` |mandatory  | string | pl-001 | Identifier of product lists. The product lists must exist already. |
-		
+
 Register the following plugin to enable data import:
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -96,15 +96,15 @@ Register the following plugin to enable data import:
 | `MerchantRelationshipProductListDataImportPlugin` | Imports basic product list data into the database. | <ul><li>Merchant relations must be imported first.</li><li>Product lists must be imported first.</li></ul> | `Spryker\Zed\MerchantRelationshipProductListDataImport\Communication\Plugin` |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
-    
+
 ```php
 <?php
-   
+
 namespace Pyz\Zed\DataImport;
-   
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\MerchantRelationshipProductListDataImport\Communication\Plugin\MerchantRelationshipProductListDataImportPlugin;
-   
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     /**
@@ -116,7 +116,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
             new MerchantRelationshipProductListDataImportPlugin(),
         ];
     }
-} 
+}
 ```
 
 Run the following console command to import data:
@@ -139,12 +139,12 @@ Make sure that the configured data are added to the `spy_product_list` table in 
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Customer;
- 
+
 use Spryker\Zed\Customer\CustomerDependencyProvider as SprykerCustomerDependencyProvider;
 use Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\Customer\ProductListCustomerTransferExpanderPlugin;
- 
+
 class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 {
     /**
@@ -177,14 +177,14 @@ Make sure, that when a customer (with an assigned merchant relationship that has
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\MerchantRelationship;
- 
+
 use Spryker\Zed\MerchantRelationship\MerchantRelationshipDependencyProvider as SprykerMerchantRelationshipDependencyProvider;
 use Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship\ProductListMerchantRelationshipPostCreatePlugin;
 use Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship\ProductListMerchantRelationshipPostUpdatePlugin;
 use Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\MerchantRelationship\ProductListRelationshipMerchantRelationshipPreDeletePlugin;
- 
+
 class MerchantRelationshipDependencyProvider extends SprykerMerchantRelationshipDependencyProvider
 {
     /**
@@ -205,7 +205,7 @@ class MerchantRelationshipDependencyProvider extends SprykerMerchantRelationship
             new ProductListMerchantRelationshipPostCreatePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\MerchantRelationshipExtension\Dependency\Plugin\MerchantRelationshipPostUpdatePluginInterface[]
      */
@@ -236,12 +236,12 @@ Make sure that `fk_merchant_relationship` field of the `spy_product_list` will b
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductList;
- 
+
 use Spryker\Zed\MerchantRelationshipProductList\Communication\Plugin\ProductList\MerchantRelationshipProductListDeletePreCheckPlugin;
 use Spryker\Zed\ProductList\ProductListDependencyProvider as SprykerProductListDependencyProvider;
- 
+
 class ProductListDependencyProvider extends SprykerProductListDependencyProvider
 {
     /**
@@ -285,13 +285,13 @@ Make sure that additional field **Assigned Product Lists** is present at **Merch
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductListGui;
- 
+
 use Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\ProductListGui\MerchantRelationListProductListTopButtonsExpanderPlugin;
 use Spryker\Zed\MerchantRelationshipProductListGui\Communication\Plugin\ProductListGui\MerchantRelationshipProductListUsedByTableExpanderPlugin;
 use Spryker\Zed\ProductListGui\ProductListGuiDependencyProvider as SprykerProductListGuiDependencyProvider;
- 
+
 class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyProvider
 {
     /**
@@ -303,7 +303,7 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
             new MerchantRelationListProductListTopButtonsExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductListGuiExtension\Dependency\Plugin\ProductListUsedByTableExpanderPluginInterface[]
      */

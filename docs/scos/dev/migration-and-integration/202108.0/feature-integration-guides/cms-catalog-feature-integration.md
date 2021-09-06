@@ -1,5 +1,5 @@
 ---
-title: CMS + catalog feature integration
+title: CMS + Catalog feature integration
 description: The CMS Page Search Catalog feature allows viewing search results for subcategory pages. The guide describes how to enable the feature in the project.
 originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-in-search-results-integration
 originalArticleId: 517fc527-ef1f-4d52-91b8-23976ed8d283
@@ -207,7 +207,7 @@ To start feature integration, overview and install the necessary features:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/catalog:"^201903.0" spryker-feature/cms:"^201903.0" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies 
+composer require spryker-feature/catalog:"^201903.0" spryker-feature/cms:"^201903.0" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -234,10 +234,10 @@ cms.page.itemsFound,Artikel gefunden,de_DE
 cms.page.itemsFound,Items found,en_US
 ```
 
-Run the following console command to import it 
+Run the following console command to import it
 
 ```bash
-shelldata:console data:import glossary 
+shelldata:console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
 Make sure that in the database the configured data is added to the `spy_glossary` table.
@@ -249,7 +249,7 @@ Make sure that in the database the configured data is added to the `spy_glossary
 Register the following route provider plugins:
 
 | Provider | Namespace |
-| --- | --- | 
+| --- | --- |
 | `CmsSearchPageRouteProviderPlugin` | `SprykerShop\Yves\CmsSearchPage\Plugin\Router` |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**

@@ -12,7 +12,7 @@ Tailor the customer registration to your needs.
 
 A customer can simply register with an email address and a password or you can choose to ask for more details.
 
-![Login registration](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Login+%26+Registration+Forms/login_registration.gif){height="" width=""}
+![Login registration](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Login+%26+Registration+Forms/login_registration.gif)
 
 Once a customer enters the required information, a customer account is created.
 

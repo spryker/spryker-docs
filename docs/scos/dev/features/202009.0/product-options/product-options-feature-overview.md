@@ -33,7 +33,7 @@ In the Back Office, you can perform the following actions on product options:
 
 See [Creating a Product Option](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/product-options/creating-a-product-option.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/product-options/managing-product-options.html#managing-product-options) to learn more about how to work with product options in the Back Office.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png)
 
 {% info_block infoBox %}
 
@@ -47,7 +47,7 @@ Each product option group may contain as many product options as you need. For e
 ## Product Options in the Storefront
 On the product detail page, the new product option group (1) will be displayed as a drop-down list with the option values (2). 
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-yves.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-yves.png)
 
 For more information about what other actions customers can perform on the product detail page, see [Shop Guide - Managing Products](/docs/scos/user/user-guides/202009.0/shop-user-guide/shop-guide-managing-products.html). 
 

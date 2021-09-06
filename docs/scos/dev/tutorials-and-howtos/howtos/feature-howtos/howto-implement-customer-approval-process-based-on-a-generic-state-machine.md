@@ -1,6 +1,6 @@
 ---
-title: HowTo - Implement Customer Approval Process Based on a Generic State Machine
-description: The guide describes the implementation flow of a customer approval process based on State Machine.
+title: HowTo - Implement customer approval process based on a generic state machine
+description: The guide describes the implementation flow of a customer approval process based on a state machine.
 originalLink: https://documentation.spryker.com/2021080/docs/t-implement-customer-approval-process-on-state-machine
 originalArticleId: 8c73b907-4006-4e26-8583-d4cb21fd5de3
 redirect_from:
@@ -23,16 +23,18 @@ redirect_from:
 ---
 
 ## Introduction
-There are only few things need to do to implement any business processes based on `StateMachine` module:
+
+There are only few things need to do to implement any business processes based on the `StateMachine` module:
 
 1. First of all you need to add table in DB to connect Entity and StateMachine. In our case it's Customer Entity.
 2. We need to create CRUD operations for our new table.
-3. Implement `StateMachineHandlerInterface` plugin and add into StateMachine module dependencies.
+3. Implement the `StateMachineHandlerInterface` plugin and add into StateMachine module dependencies.
 4. Implement some Command and Condition plugins (if need it).
 5. Create state machine xml file with customer approve flow.
 6. Provide Zed UI presentation.
 
-## Schema Creation
+## Schema creation
+
 Customer Approve Process Database Schema
 
 ```php
@@ -60,7 +62,7 @@ Customer Approve Process Database Schema
 
 We have added several foreign keys including foreign key to the `spy_customer` table.
 
-## CRUD Implementation
+## CRUD implementation
 We will need few operations for managing customer approve process:
 
 CustomerApproveProcessFacadeInterface

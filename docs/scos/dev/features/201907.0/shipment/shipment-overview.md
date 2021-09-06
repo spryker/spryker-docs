@@ -14,7 +14,7 @@ The main concepts regarding shipping that are modeled in the database are :
 * shipment method
 
 The shipment method is linked to the sales order. The schema below shows how these entities are modeled in the database:
-![Shipment method database](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shipment/Shipment+Overview/shipment_method_database.png){height="" width=""}
+![Shipment method database](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shipment/Shipment+Overview/shipment_method_database.png)
 
 A sales order has associated a shipment method. Each shipment method is linked to a shipment carrier and a shipment carrier can have zero to many shipment methods. Shipping carriers and methods can be configured from Zed’s back office interface.
 

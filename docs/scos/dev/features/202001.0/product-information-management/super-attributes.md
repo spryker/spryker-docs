@@ -12,4 +12,4 @@ Super Attributes in the Spryker Commerce OS are used to distinguish between the 
 
 Consider the example of a T-shirt, the Abstract Product, that is available in the sizes small, medium, and large, three different Product Variants. The Abstract Product "T-shirt" appears as a search result. On the product detail page the customer can select between the product variants small, medium, large and put it into the cart.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/product-abstraction.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/product-abstraction.png)

@@ -1,5 +1,5 @@
 ---
-title: Product relations feature integration
+title: Product Relations feature integration
 description: Integrate the Product Relations feature into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/product-relations-feature-integration
 originalArticleId: d8e059d5-4ccd-4c03-beb6-d186fae349f3
@@ -42,7 +42,7 @@ Make sure that the following modules have been installed:
 | `ProductRelationWidget` | `vendor/spryker/product-relation-widget` |
 
 {% endinfo_block %}
-	
+
 ### 2) Set up Database Schema and Transfer Objects
 
 1. Run the following commands to apply database changes and generate entity and transfer changes:
@@ -66,11 +66,11 @@ Make sure that the following changes have been applied by checking your database
 
 
 {% endinfo_block %}
-	
+
 2. Adjust the schema definition so entity changes trigger events.
 
 **src/Pyz/Zed/ProductRelation/Persistence/Propel/Schema/spy_product_relation.schema.xml**
-    
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductRelation\Persistence" package="src.Orm.Zed.ProductRelation.Persistence">
@@ -95,7 +95,7 @@ Make sure that the following changes have been applied by checking your database
 
 </database>
 ```
-    
+
 
 | Affected Entity | Triggered events |
 | --- | --- |
@@ -105,41 +105,41 @@ Make sure that the following changes have been applied by checking your database
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects: 
-	
-| Transfer	| Type	| Event| 	Path| 
-| ---| ---| ---| ---| 
-| `ProductRelation`| 	class| 	created	| `src/Generated/Shared/Transfer/ProductRelationTransfer`| 
-`ProductRelationCriteria`	| class| 	created| 	`src/Generated/Shared/Transfer/ProductRelationCriteriaTransfer`| 
-| `StoreRelation`| 	class| 	created| 	`src/Generated/Shared/Transfer/StoreRelationTransfer`| 
-| Store| 	class| 	created| 	`src/Generated/Shared/Transfer/StoreTransfer`| 
-| ProductRelationType	| class| 	created| 	`src/Generated/Shared/Transfer/ProductRelationTypeTransfer`| 
-| `ProductRelationRelatedProduct`	| class	| created| 	`src/Generated/Shared/Transfer/ProductRelationRelatedProductTransfer`| 
-| `RuleQueryDataProvider`	| class	| created	| `src/Generated/Shared/Transfer/RuleQueryDataProviderTransfer`| 
-| `PropelQueryBuilderRuleSet`| 	class	| created| 	`src/Generated/Shared/Transfer/PropelQueryBuilderRuleSetTransfer`| 
-| `PropelQueryBuilderCriteria`	| class	| created	| `src/Generated/Shared/Transfer/PropelQueryBuilderCriteriaTransfer`| 
-| `PropelQueryBuilderCriteriaMapping`| 	class| 	created| 	`src/Generated/Shared/Transfer/PropelQueryBuilderCriteriaMappingTransfer`| 
-| `StorageProductRelations`	| class	| created	| `src/Generated/Shared/Transfer/StorageProductRelationsTransfer`| 
-| `StorageProductAbstractRelation`	| class| 	created| 	`src/Generated/Shared/Transfer/StorageProductAbstractRelationTransfer`| 
-| `Quote`	| class	| created	| `src/Generated/Shared/Transfer/QuoteTransfer`| 
-| `Item`	| class| 	created	| `src/Generated/Shared/Transfer/ItemTransfer`| 
-| `CurrentProductPrice`	| class| 	created| 	`src/Generated/Shared/Transfer/CurrentProductPriceTransfer`| 
-| `Locale`	| class| 	created	| `src/Generated/Shared/Transfer/LocaleTransfer`| 
-| `ProductUrl`| 	class| 	created| 	`src/Generated/Shared/Transfer/ProductUrlTransfer`| 
-| `TabItem`	| class	| created	| `src/Generated/Shared/Transfer/TabItemTransfer`| 
-| `TabsView`	| class| 	created| 	`src/Generated/Shared/Transfer/TabsViewTransfer`| 
-| `LocalizedUrl`	| class	| created| 	`src/Generated/Shared/Transfer/LocalizedUrlTransfer`| 
-| `ProductAbstract`| 	class	| created| 	`src/Generated/Shared/Transfer/ProductAbstractTransfer`| 
-| `ProductRelationCriteriaFilter`	| class| 	created| 	`src/Generated/Shared/Transfer/ProductRelationCriteriaFilterTransfer`| 
-| `ProductRelationResponse`	| class	| created	| `src/Generated/Shared/Transfer/ProductRelationResponseTransfer`| 
-| `Filter`	| class	| created| 	`src/Generated/Shared/Transfer/FilterTransfer`| 
+Make sure that the following changes have been applied in transfer objects:
+
+| Transfer	| Type	| Event| 	Path|
+| ---| ---| ---| ---|
+| `ProductRelation`| 	class| 	created	| `src/Generated/Shared/Transfer/ProductRelationTransfer`|
+`ProductRelationCriteria`	| class| 	created| 	`src/Generated/Shared/Transfer/ProductRelationCriteriaTransfer`|
+| `StoreRelation`| 	class| 	created| 	`src/Generated/Shared/Transfer/StoreRelationTransfer`|
+| Store| 	class| 	created| 	`src/Generated/Shared/Transfer/StoreTransfer`|
+| ProductRelationType	| class| 	created| 	`src/Generated/Shared/Transfer/ProductRelationTypeTransfer`|
+| `ProductRelationRelatedProduct`	| class	| created| 	`src/Generated/Shared/Transfer/ProductRelationRelatedProductTransfer`|
+| `RuleQueryDataProvider`	| class	| created	| `src/Generated/Shared/Transfer/RuleQueryDataProviderTransfer`|
+| `PropelQueryBuilderRuleSet`| 	class	| created| 	`src/Generated/Shared/Transfer/PropelQueryBuilderRuleSetTransfer`|
+| `PropelQueryBuilderCriteria`	| class	| created	| `src/Generated/Shared/Transfer/PropelQueryBuilderCriteriaTransfer`|
+| `PropelQueryBuilderCriteriaMapping`| 	class| 	created| 	`src/Generated/Shared/Transfer/PropelQueryBuilderCriteriaMappingTransfer`|
+| `StorageProductRelations`	| class	| created	| `src/Generated/Shared/Transfer/StorageProductRelationsTransfer`|
+| `StorageProductAbstractRelation`	| class| 	created| 	`src/Generated/Shared/Transfer/StorageProductAbstractRelationTransfer`|
+| `Quote`	| class	| created	| `src/Generated/Shared/Transfer/QuoteTransfer`|
+| `Item`	| class| 	created	| `src/Generated/Shared/Transfer/ItemTransfer`|
+| `CurrentProductPrice`	| class| 	created| 	`src/Generated/Shared/Transfer/CurrentProductPriceTransfer`|
+| `Locale`	| class| 	created	| `src/Generated/Shared/Transfer/LocaleTransfer`|
+| `ProductUrl`| 	class| 	created| 	`src/Generated/Shared/Transfer/ProductUrlTransfer`|
+| `TabItem`	| class	| created	| `src/Generated/Shared/Transfer/TabItemTransfer`|
+| `TabsView`	| class| 	created| 	`src/Generated/Shared/Transfer/TabsViewTransfer`|
+| `LocalizedUrl`	| class	| created| 	`src/Generated/Shared/Transfer/LocalizedUrlTransfer`|
+| `ProductAbstract`| 	class	| created| 	`src/Generated/Shared/Transfer/ProductAbstractTransfer`|
+| `ProductRelationCriteriaFilter`	| class| 	created| 	`src/Generated/Shared/Transfer/ProductRelationCriteriaFilterTransfer`|
+| `ProductRelationResponse`	| class	| created	| `src/Generated/Shared/Transfer/ProductRelationResponseTransfer`|
+| `Filter`	| class	| created| 	`src/Generated/Shared/Transfer/FilterTransfer`|
 
 {% endinfo_block %}
 
 ### 3) Configure Export to Redis
-  
+
 Follow the procedure below to to publish tables on change (create, edit, delete) to the `spy_product_abstract_group_storage` table and synchronize the data to Storage.
-	
+
 #### Set up Publishers
 | Plugin |	Specification |	Prerequisites |	Namespace |
 |--- |--- |--- |--- |
@@ -149,7 +149,7 @@ Follow the procedure below to to publish tables on change (create, edit, delete)
 |`ProductRelationStoreWritePublisherPlugin` |	Publishes product relation data by create and delete events from the `spy_product_relation_store` table. |	none |	`Spryker\Zed\ProductRelationStorage\Communication\Plugin\Publisher\ProductRelationStore\ProductRelationStoreWritePublisherPlugin` |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
-    
+
 ```php
 <?php
 
@@ -215,7 +215,7 @@ Set up Re-generate and Re-sync features as follows:
 | `ProductRelationSynchronizationDataRepositoryPlugin` | Allows the whole storage table content to be synchronizedinto Storage. | none | `Spryker\Zed\ProductRelationStorage\Communication\Plugin\Synchronization\ProductRelationSynchronizationDataRepositoryPlugin` |
 
 **src/Pyz/Zed/ProductRelationStorage/ProductRelationStorageConfig.php**
-			
+
 ```php
 <?php
 
@@ -268,7 +268,7 @@ Follow the steps to import product relations data:
 The following imported entities will be used as product relations in Spryker OS.
 
 {% endinfo_block %}
-	
+
 1. Prepare data according to your requirements using our demo data:
 
 **data/import/product_relation.csv**
@@ -463,4 +463,3 @@ Make sure that:
 |--- |--- |--- |--- |
 |`SimilarProductsWidget` |	Widget for relations with the cross-selling relation type. |	None |	`SprykerShop\Yves\ProductRelationWidget\Widget` |
 |`UpSellingProductsWidget` |	Widget for relations with the up-selling relation type. |	None  | `SprykerShop\Yves\ProductRelationWidget\Widget;` |
-

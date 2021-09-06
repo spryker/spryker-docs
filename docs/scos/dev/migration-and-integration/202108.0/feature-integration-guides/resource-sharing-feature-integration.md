@@ -1,5 +1,5 @@
 ---
-title: Resource sharing feature integration
+title: Resource Sharing feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/resource-sharing-feature-integration
 originalArticleId: 59623dc6-5c8d-432d-8746-aa4d9ef3ede3
 redirect_from:
@@ -26,10 +26,10 @@ composer require spryker-feature/resource-sharing: "^master" --update-with-depen
 ```
 
 <section contenteditable="false" class="warningBox"><div class="content">
-    
+
 **Verification**
 Make sure that the following modules were installed:
-    
+
 | Module | Expected Directory |
 | --- | --- |
 | `ResourceShare` | `vendor/spryker/resource-share` |
@@ -48,21 +48,21 @@ console transfer:generate
 ```
 
 <section contenteditable="false" class="warningBox"><div class="content">
-    
+
 **Verification**
 Make sure that the following changes applied by checking your database:
-    
+
 | Database Entity | Type | Event |
 | --- | --- | --- |
 | `spy_resource_share` | table | created |
 
  </div></section>
- 
+
 <section contenteditable="false" class="warningBox"><div class="content">
-    
+
 **Verification**
 Make sure that the following changes in transfer objects have been applied:
-    
+
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
 | `SpyResourceShareEntityTransfer` | class | created | `src/Generated/Shared/Transfer/SpyResourceShareEntityTransfer` |
@@ -72,7 +72,7 @@ Make sure that the following changes in transfer objects have been applied:
 | `ResourceShareResponse` | class | created | `src/Generated/Shared/Transfer/ResourceShareResponseTransfer` |
 
 </div></section>
- 
+
 ## Install Feature Frontend
 ### Prerequisites
 
@@ -91,10 +91,10 @@ composer require spryker-feature/resource-sharing: "^master" --update-with-depen
 ```
 
 <section contenteditable="false" class="warningBox"><div class="content">
-    
+
 **Verification**
 Make sure that the following modules were installed:
-    
+
 | Module | Expected Directory |
 | --- | --- |
 | `ResourceSharePage` | `vendor/spryker-shop/resource-share-page` |
@@ -138,7 +138,7 @@ Make sure that in the database the configured data are added to the `spy_glossar
 Register the following route provider plugins:
 
 | Provider | Namespace |
-| --- | --- | 
+| --- | --- |
 | `ResourceSharePageRouteProviderPlugin` | `SprykerShop\Yves\ResourceSharePage\Plugin\Router` |
 
 

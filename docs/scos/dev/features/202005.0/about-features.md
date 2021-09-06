@@ -10,7 +10,7 @@ redirect_from:
 This section contains descriptions of the Spryker features grouped by capabilities.
 
 **Capability** is a high-level description of what a certain part of a Spryker product can do. Each capability is mapped to a list of features. A **feature** is a specific aspect of a capability. For example, the *Inventory Management* capability includes the *Stock and Availability Management* and *Multiple Warehouse Stock Management* features. All the features together help to define the exact scope of a capability.
-![Features on the Capability page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/features-list-on-capability-page.png){height="" width=""}
+![Features on the Capability page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/features-list-on-capability-page.png)
 
 ## Section Structure
 

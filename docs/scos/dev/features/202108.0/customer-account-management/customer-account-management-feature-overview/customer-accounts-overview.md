@@ -18,7 +18,7 @@ A *customer account* contains the following customer information on the Storefro
 
 There are slight differences in customer accounts' information for the B2B and B2C shops. The following table describes such differences and similarities:
 
-| Customer Account sections | B2B Shop | B2C Shop |
+| CUSTOMER ACCOUNT SECTION | B2B SHOP | B2C SHOP |
 | --- | --- | --- |
 | Overview | ✓ | ✓|
 | Profile | ✓ | ✓ |
@@ -57,61 +57,43 @@ See [Managing customers](/docs/scos/user/user-guides/{{page.version}}/back-offic
 
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:
-<details open>
+<details>
 <summary>View the account activity</summary>
 
 ![view-account-activity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/view-account-activity.gif)
 
 </details>
 
-<details open>
+<details>
 <summary>Create, edit, and delete a customer address</summary>
 
 ![create-edit-delete-a-customer-address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/create-edit-delete-a-customer-address.gif)
 
 </details>
 
-<details open>
+<details>
 <summary>Filter order history</summary>
 
 ![filter-order-history](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/filter-order-history.gif)
 
 </details>
 
-<details open>
+<details>
 <summary>Reorder selected items</summary>
 
 ![reorder-selected-items](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/reorder-selected-items.gif)
 
 </details>
 
+## Related Business User articles
 
+|BACK OFFICE USER GUIDES|
+|---|
+| [Manage customer accounts](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html)  |
+| [Manage customer addresses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customer-addresses.html)  |
 
-## If you are:
+{% info_block warningBox "Developer guides" %}
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                 <li class="mr-title">Developer</li>
-                 <li><a href="https://documentation.spryker.com/docs/reference-information-customer-module-overview" class="mr-link">Referene information: Customer module overview 7.0</a></li>
-                 <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html-via-glue-api" class="mr-link">Manage customer accounts via Glue API</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/managing-customer-addresses-via-glue-api" class="mr-link">Manage customer account addresses via Glue API</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/glue-api-customer-account-management-feature-integration" class="mr-link">Integrate the Customer Account Management Glue API</a></li>
-                 <li>Enable Customer Accounts:</li>
-                 <li><a href="https://documentation.spryker.com/docs/customer-account-management-feature-integration" class="mr-link">Integrate the Customer Account Management feature</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/mg-customer#upgrading-from-version-6---to-version-7-0" class="mr-link">Migrate the Customer module from version 6.* to version 7.0</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customers.html" class="mr-link">Manage customer accounts</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-customer-addresses" class="mr-link">Manage customer addresses</a></li>
-            </ul>
-        </div>
-        </div>
-</div>
+Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
 
+{% endinfo_block %}

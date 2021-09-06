@@ -1,5 +1,5 @@
 ---
-title: Search widget for concrete products feature integration
+title: Search Widget for Concrete Products feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/search-widget-for-concrete-products-integration
 originalArticleId: 61590531-ea10-4226-829a-ced36cee47c0
 redirect_from:
@@ -80,7 +80,7 @@ product-quantity.notification.quantity.max.failed,Die bestellte Anzahl erfüllt 
 product-quantity.notification.quantity.interval.failed,The ordered quantity was adjusted to the next possible quantity for the article because quantity step is %step%.,en_US
 product-quantity.notification.quantity.interval.failed,Die bestellte Anzahl erfüllt nicht die Anforderungen für dieses Produkt. Intervallgröße ist %step%.,de_DE
 ```
-    
+
 Run the following console command to import data:
 
 ```bash
@@ -123,7 +123,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 <section contenteditable="false" class="..."><div class="content">
-    
+
 **Verification**
 Make sure that the following widgets were registered:
 

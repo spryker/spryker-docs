@@ -1,5 +1,5 @@
 ---
-title: Glue API- Product price feature integration
+title: "Glue API: Product Price feature integration"
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-prices-api-feature-integration
 originalArticleId: 50d3f39f-3a3c-4fc2-a717-179a0205dee7
 redirect_from:
@@ -18,7 +18,7 @@ To start feature integration, overview, and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | dev-master | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Spryker Core | dev-master | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Product | dev-master | [Glue API: Products feature integration - ongoing](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-products-feature-integration.html) |
 | Price | dev-master | [Prices feature integration - ongoing](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/prices-feature-integration.html)|
 
@@ -28,7 +28,7 @@ Install the required modules:
 ```bash
 composer require spryker/product-prices-rest-api:"^1.1.0" spryker/products-product-prices-resource-relationship:"^1.0.0" spryker/price-product-volumes-rest-api:"^1.0.0" --update-with-dependencies
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 
@@ -76,10 +76,10 @@ Activate the following plugins:
 |AbstractProductsProductPricesResourceRelationshipPlugin| Adds the `abstract-product-prices` resource as a relationship to the `abstract-products` resource.| None |Spryker\Glue\ProductsProductPricesResourceRelationship\Plugin|
 |ConcreteProductsProductPricesResourceRelationshipPlugin |Adds the `concrete-product-prices` resource as a relationship to the `concrete-products` resource. |None |Spryker\Glue\ProductsProductPricesResourceRelationship\Plugin|
 |PriceProductVolumeRestProductPricesAttributesMapperPlugin |Adds volume price data to `abstract-product-prices`  and `concrete-product-prices` resources. |None| Spryker\Glue\PriceProductVolumesRestApi\Plugin\ProductPriceRestApi|
-  
+
 <details open>
     <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -129,24 +129,24 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 </details>
-  
+
 {% info_block warningBox "Verification" %}
 
 
 
 *   Make sure that the following endpoints are available:
-    
+
     *   `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
-        
+
     *   `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
-        
+
 *   Send the `GET http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices` request. Make sure that the response contains relationships to the `abstract-product-prices` resources.
-    
+
 *   Send the `GET http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-prices` request. Make sure that the response contains relationships to the `concrete-product-prices` resources.
-    
+
 
 {% endinfo_block %}
-  
+
 
 **src/Pyz/Glue/ProductPricesRestApi/ProductPricesRestApiDependencyProvider.php**
 ```php
@@ -170,7 +170,7 @@ class ProductPricesRestApiDependencyProvider extends SprykerProductPricesRestApi
     }
 }
 ```
-  
+
 {% info_block warningBox "Verification" %}
 
 
@@ -178,9 +178,8 @@ class ProductPricesRestApiDependencyProvider extends SprykerProductPricesRestApi
 To verify that you’ve activated `PriceProductVolumeRestProductPricesAttributesMapperPlugin`:
 
 1.  Create an abstract product with a volume price.
-    
+
 2.  Send the request `GET http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices` request and make sure that the response contains volume prices data.
-    
+
 
 {% endinfo_block %}
- 

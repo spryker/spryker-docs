@@ -34,7 +34,7 @@ Now technically you could have 3 different standalone products with three produc
 
 - From a customer perspective this is unnecessary overhead, especially considering that a product catalog should not display three times a product that will most likely look identical.
 - From a product management perspective, the same product would have to be created three times with the only difference being the size.
-![Product variants](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/product_variants.png){height="" width=""}
+![Product variants](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/product_variants.png)
 
 ## Differentiate Between Abstract and Concrete Products
 In Spryker Commerce OS, both abstract and concrete products have:
@@ -47,7 +47,7 @@ In Spryker Commerce OS, both abstract and concrete products have:
 * media assets
 
 This information, besides the SKU, is inherited from the abstract to the concrete products when they are created. However, only the concrete product has stock and may have one or more additional attributes that we call super attributes (In the example above the super attribute is the size). This structure allows to create multiple variants of a product, which eventually are the products that your customers buy.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/producterd.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/producterd.png)
 
 ## Product Hierarchy in the Spryker Commerce OS Demoshop 
 In the catalog of the shop frontend, the abstract products are listed (e.g. shoe model X blue). Once the customer has selected one of these abstract products and proceeded to the product detail page, the abstract products information is displayed first. Only after having selected the distinctive characteristic of a variant (e.g. size 41 for the shoe in the example above) the concrete product information is displayed (e.g. shoe model X color = blue size = 41). Note that the structure of the products is a business decisions and that both, abstract and concrete products, share the same URL in the Spryker Commerce OS demoshop.

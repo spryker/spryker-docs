@@ -142,7 +142,7 @@ The Spryker Commerce OS product data model allows for the creation of multiple v
 ## Super attributes in the Spryker Commerce OS Demoshop
 In this example on the product detail page there will be the possibility to select either the attribute color or the attribute size. For a variant to be selectable, it should have a unique combination of values for its super attributes compared to the other variants from the same abstract product.
 
-![Product attribute management](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Attributes/product_attribute_management.png){height="" width=""}
+![Product attribute management](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Attributes/product_attribute_management.png)
 
 ## Current Constraints
 {% info_block infoBox %}

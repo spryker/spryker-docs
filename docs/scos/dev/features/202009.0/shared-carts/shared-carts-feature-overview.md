@@ -21,7 +21,7 @@ To share a shopping cart, a user needs to click **Share cart** in the *Actions* 
 ## Permissions management for shared shopping carts
 A shopping cart can be shared with the users of the current business unit. The Share cart `<SHOPPING CART NAME>` page consists of the users within the business unit to share the shopping cart with.
 
-![Shared cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-cart-page.png){height="" width=""}
+![Shared cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-cart-page.png)
 
 There are 3 types of access rights that can be granted on shopping carts:
 
@@ -97,7 +97,7 @@ The _**Full access**_ permission allows:
 
 9. **Proceeding to the checkout**.
 
-![Full access cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/full-access-cart.png){height="" width=""}
+![Full access cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/full-access-cart.png)
 
 10. **Editing shopping a cart name**: The shopping cart name can be updated on the *Shopping car*t page.
 
@@ -107,7 +107,7 @@ The _**Full access**_ permission allows:
 
 13. **Deleting a shopping cart**: The shopping cart can be deleted on the *Shopping cart* page. Deleting a shared shopping cart also deletes it for users it has been shared with.
 
-![Shopping Cart Actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/shopping-cart-actions.png){height="" width=""}
+![Shopping Cart Actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/shopping-cart-actions.png)
 
 By default, the user who has created the cart has Owner access permission. Owner access permission allows everything that allows Full access permission and an ability to share the cart with other users.
 

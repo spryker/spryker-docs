@@ -12,7 +12,7 @@ redirect_from:
 
 This endpoints allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
 
-For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see: 
+For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see:
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
 * [Retrieve a category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree)
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#retrieve-a-category-node)
@@ -57,7 +57,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 <details open>
 <summary>Response sample of a product URL</summary>
-    
+
 ```json
 {
     "data": [
@@ -82,7 +82,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 <details open>
 <summary>Response sample of a category node URL</summary>
-    
+
 ```json
 {
     "data": [
@@ -148,6 +148,3 @@ Using the information from the response and the Glue server name, you can constr
 | 422 | The `url` parameter is missing. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-
-
-

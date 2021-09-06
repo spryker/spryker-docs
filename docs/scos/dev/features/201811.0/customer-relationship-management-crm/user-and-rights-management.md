@@ -29,7 +29,7 @@ The Auth, ACL and User bundles are configured and managed through the Zed user i
 
 Also, you can find bundle names as well as controllers and actions in the file `communication/navigation.xml`. For example:
 
-![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png){height="" width=""}
+![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png)
 
 Learn to create and manage Users, Groups and Roles in Users Control Manual.
 

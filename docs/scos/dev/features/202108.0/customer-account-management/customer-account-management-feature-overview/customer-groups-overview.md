@@ -12,23 +12,14 @@ redirect_from:
 
 *Customer Groups* allow you to organize customers into groups to help you target users for discounts and promotions.
 
- ## If you are:
+## Related Business User articles
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/company-account-feature-integration" class="mr-link">Enable Customer Groups by integrating the Company account feature into your project</a></li>
-                 </ul>
-        </div>
-         <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-customer-groups" class="mr-link">Manage customer groups</a></li>
-               </ul>
-        </div>
-         </div>
-</div>
+|BACK OFFICE USER GUIDES|
+|---|
+| [Manage customer groups](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/customer/customer-customer-access-customer-groups/managing-customer-groups.html)   |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: Shipment + cart feature integration
+title: Shipment + Cart feature integration
 description: This guide provides step-by-step instruction on integrating Shipment + Cart feature into the Spryker-based project.
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-cart-feature-integration
 originalArticleId: a5618db0-4ee1-462e-8165-aedc13881e07
@@ -117,4 +117,3 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 Make sure that if you change items in the cart (add, remove or change quantity) then all the shipping methods are sanitized.
 
 {% endinfo_block %}
-

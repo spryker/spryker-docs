@@ -13,6 +13,7 @@ redirect_from:
 Follow the steps to install Packaging Units feature core.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name |Version  |
@@ -23,7 +24,8 @@ To start feature integration, overview and install the necessary features:
 | Product | 202009.0 |
 | Measurement Units | 202009.0 |
 
-### 1) Install the Required Modules Using Composer
+### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash

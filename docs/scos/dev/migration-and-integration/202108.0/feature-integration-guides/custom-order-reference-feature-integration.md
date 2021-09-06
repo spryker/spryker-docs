@@ -1,5 +1,5 @@
 ---
-title: Custom order reference feature integration
+title: Custom Order Reference feature integration
 description: Use the guide to install the Custom Order Reference feature in your project.
 originalLink: https://documentation.spryker.com/2021080/docs/custom-order-reference-feature-integration
 originalArticleId: 705625ff-2007-49ad-b7d7-6bb7cfdf49fb
@@ -41,7 +41,7 @@ Make sure that the following modules were installed:
 {% endinfo_block %}
 
 ### 2) Set up Database Schema and Transfer Objects
-Run the following commands to apply database changes and to generate entity and transfer changes: 
+Run the following commands to apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate

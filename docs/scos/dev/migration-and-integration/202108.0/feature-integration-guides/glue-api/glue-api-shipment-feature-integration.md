@@ -1,5 +1,5 @@
 ---
-title: Glue API- Shipment feature integration
+title: "Glue API: Shipment feature integration"
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shipment-feature-integration
 originalArticleId: a324452c-5bf0-49f9-a6d8-fd59abf3b414
 redirect_from:
@@ -17,7 +17,7 @@ To start feature integration, overview and install the necessary features:
 
 | FEATURE                    | VERSION | INTEGRATION GUIDE                                            |
 | :------------------------- | :------ | :----------------------------------------------------------- |
-| Glue API: Spryker Core     | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Glue API: Spryker Core     | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Shipment                  | master  | [Shipment feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shipment-feature-integration.html) |
 | Glue API: Checkout         | master  | [Glue API: Checkout feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |
 | Glue API: Glue Application      | master  | [Glue API: Glue Application feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html) |
@@ -64,7 +64,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
- 
+
 
 | TRANSFER                                   | TYPE     | EVENT   | PATH                                                         |
 | :----------------------------------------- | :------- | :------ | :----------------------------------------------------------- |
@@ -393,7 +393,7 @@ To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is ac
 
 ```json
 {
-	"data": 
+	"data":
 	{
         "type": "checkout-data",
         "id": null,
@@ -543,4 +543,3 @@ Integrate the following related features.
 | FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
 | :----------- | :------------------------------- | :----------------------------------------------------------- |
 | Glue API: Checkout | ✓                                | [Glue API: Checkout feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |
-

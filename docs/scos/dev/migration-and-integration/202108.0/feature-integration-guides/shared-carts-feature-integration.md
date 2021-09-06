@@ -1,5 +1,5 @@
 ---
-title: Shared carts feature integration
+title: Shared Carts feature integration
 originalLink: https://documentation.spryker.com/2021080/docs/shared-carts-feature-integration
 originalArticleId: 1f7146bf-124f-435a-85aa-632c2c2738ca
 redirect_from:
@@ -9,7 +9,8 @@ redirect_from:
   - /docs/en/shared-carts-feature-integration
 ---
 
-## Install Feature Core
+## Install feature core
+
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
@@ -21,7 +22,8 @@ To start feature integration, overview and install the necessary features:
 |Company Account|master|
 |Spryker Core|master|
 
-### 1) Install the Required Modules Using Composer
+### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 ```bash
 composer require spryker-feature/shared-carts: "^master" --update-with-dependencies
@@ -30,7 +32,7 @@ composer require spryker-feature/shared-carts: "^master" --update-with-dependenc
 Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`SharedCart`</td><td>`vendor/spryker/shared-cart`</td></tr><tr><td>`SharedCartDataImport`</td><td>`vendor/spryker/shared-cart-data-import`</td></tr></tbody></table>
 {% endinfo_block %}
 
-### 2) Set up the Database Schema
+### 2) Set up the database schema
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
@@ -67,9 +69,9 @@ console data:import glossary
 Make sure that the configured data has been added to the `spy_glossary` table in the database.
 {% endinfo_block %}
 
-### 4) Import Data
+### 4) Import data
 
-#### Add Infrastructural Data
+#### Add infrastructural data
 Register the following plugins:
 
 |Plugin|Specification|Prerequisites|Namespace|
@@ -81,7 +83,7 @@ Register the following plugins:
 |`WriteSharedCartPermissionPlugin`|Quote permission to check writing shared cart permissions in the zed layer. |None|`Spryker\Zed\SharedCart\Communication\Plugin`|
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
-    
+
 ```php
 <?php
 
@@ -431,7 +433,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 A customer cannot add an item to the read-only shared quote.
 {% endinfo_block %}
 
-#### Set up Customer Integration
+#### Set up customer integration
 
 Register the following plugin:
 
@@ -503,7 +505,7 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 Before removing company user, all records from DB table `spy_quote_company_user` related to company user must be removed.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -659,7 +661,7 @@ console frontend:yves:build
 Make sure that the following plugin has been registered:<br>Open Yves and log in with customer.<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`SharedCartPermissionGroupWidget`</td><td>Hover over the multicart list in the header: it should contain the access column.</td></tr><tr><td>`CartListPermissionGroupWidget`</td><td>Open `https://mysprykershop.com/multi-cart/` - the page should contain the access column and share cart link</td></tr><tr><td>`CartDeleteCompanyUsersListWidget`</td><td>Open `https://mysprykershop.com/multi-cart/`. Click on the share cart link. <br />Share the cart and click on the delete link.<br />The list of customers whom this cart is shared with should appear on the delete confirmation page.</td></tr></tbody></table>
 {% endinfo_block %}
 
-### 4) Enable Controllers
+### 4) Enable controllers
 
 Register the following plugin:
 

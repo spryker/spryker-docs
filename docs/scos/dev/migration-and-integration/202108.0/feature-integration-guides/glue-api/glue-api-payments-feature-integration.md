@@ -1,5 +1,5 @@
 ---
-title: Glue API- Payments feature integration
+title: "Glue API: Payments feature integration"
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-payments-feature-integration
 originalArticleId: 37aaeca3-9205-4ca3-8332-6a1ab7b31c80
 redirect_from:
@@ -35,7 +35,7 @@ composer require spryker/payments-rest-api:"1.1.0" --update-with-dependencies
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
+
 Make sure that the following modules are installed:
 
 | Module | Expected Directory |
@@ -48,22 +48,22 @@ Put all the payment methods available in the shop to  `CheckoutRestApiConfig`, f
 
 <details open>
 <summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\PaymentsRestApi;
- 
+
 use Spryker\Glue\PaymentsRestApi\PaymentsRestApiConfig as SprykerPaymentsRestApiConfig;
 use Spryker\Shared\DummyPayment\DummyPaymentConfig;
- 
+
 class PaymentsRestApiConfig extends SprykerPaymentsRestApiConfig
 {
     protected const PAYMENT_METHOD_PRIORITY = [
         DummyPaymentConfig::PAYMENT_METHOD_INVOICE => 1,
         DummyPaymentConfig::PAYMENT_METHOD_CREDIT_CARD => 2,
     ];
- 
+
     protected const PAYMENT_METHOD_REQUIRED_FIELDS = [
         DummyPaymentConfig::PROVIDER_NAME => [
             DummyPaymentConfig::PAYMENT_METHOD_INVOICE => [
@@ -98,16 +98,16 @@ To have payment methods available for the checkout,  extend `RestPaymentTransfer
 <transfers xmlns="spryker:transfer-01"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
- 
+
     <transfer name="RestPayment">
         <property name="DummyPayment" type="DummyPayment"/>
         <property name="DummyPaymentInvoice" type="DummyPayment"/>
         <property name="DummyPaymentCreditCard" type="DummyPayment"/>
     </transfer>
- 
+
 </transfers>
 ```
-    
+
 </br>
 </details>
 
@@ -154,17 +154,17 @@ Activate the following plugin:
 
 <details open>
 <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CheckoutRestApi\CheckoutRestApiConfig;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication\PaymentMethodsByCheckoutDataResourceRelationshipPlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -179,7 +179,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
             new PaymentMethodsByCheckoutDataResourceRelationshipPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }
@@ -203,15 +203,15 @@ Mappers should be configured on a project level to map the data from the request
 
 <details open>
 <summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CheckoutRestApi;
- 
+
 use Spryker\Zed\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
 use Spryker\Zed\PaymentsRestApi\Communication\Plugin\CheckoutRestApi\PaymentsQuoteMapperPlugin;
- 
+
 class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
 {
     /**
@@ -242,15 +242,15 @@ To verify that `PaymentsQuoteMapperPlugin` is activated, send a POST request to 
 
 <details open>
 <summary>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
 namespace Pyz\Glue\CheckoutRestApi;
- 
+
 use Spryker\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
 use Spryker\Glue\PaymentsRestApi\Plugin\CheckoutRestApi\SelectedPaymentMethodCheckoutDataResponseMapperPlugin;
- 
+
 class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
 {
     /**
@@ -262,7 +262,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
             new SelectedPaymentMethodCheckoutDataResponseMapperPlugin(),
         ];
     }
-} 
+}
 
 ```
 

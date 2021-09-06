@@ -24,7 +24,7 @@ Spryker Commerce OS allows to define several storage locations in which the prod
 
 ### Product Stock
 A product is associated to at least one stock product. Stocks cannot be attached to abstract products (only to concrete products). You can use a specific flag for stock which will indicate that the product associated to the stock (for example, a product with no physical stock) never goes out of stock.
-![Product Stock](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Multiple+Warehouse+Stock+Management/product_stock.png){height="" width=""}
+![Product Stock](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Multiple+Warehouse+Stock+Management/product_stock.png)
 
 ### Calculating Current Stock For Products
 A product quantity from a stock is being reserved when an order containing it, is being processed. The state machine is doing this job of reserving stocks by setting the `reserved` flag. In order to calculate the available stock, not only the maintained stock (the sum of stocks from each storage location) is taken into account, but also the currently processed orders.

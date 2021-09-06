@@ -40,34 +40,34 @@ Specifically, the customer can:
 * Add all the products from the wishlist to the cart by selecting the Add all available products to cart
 * Add selected items from the wishlist to the cart by using the **Add to Cart** option for a specific item.
 
-<!--- ![Multiple wishlists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/multiple_wishlists.gif){height="" width=""}-->
+<!--- ![Multiple wishlists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/multiple_wishlists.gif)-->
 
 ## The Wishlist feature on the Storefront
 Buyers can do the following actions using the Wishlists feature:
 <details>
 <summary>Create, rename, and edit a wishlist </summary>
 
-![create-rename-delete-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/create-rename-delete-wishlist.gif){height="" width=""}
+![create-rename-delete-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/create-rename-delete-wishlist.gif)
 
 </details>
 
 <details>
 <summary>Add a product from the product deatils page to a wishlist</summary>
 
-![add-product-from-product-details-page-to-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-product-from-product-details-page-to-wishlist.gif){height="" width=""}
+![add-product-from-product-details-page-to-wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-product-from-product-details-page-to-wishlist.gif)
 
 </details>
 
 <details>
 <summary>View a wishlist's details, remove products from the wishlist, and add all products from the wishlist to cart</summary>
 
-![view-details-remove-products-and-add-all-products-from-wishlist-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/view-details-remove-products-and-add-all-products-from-wishlist-to-cart.gif){height="" width=""}
+![view-details-remove-products-and-add-all-products-from-wishlist-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/view-details-remove-products-and-add-all-products-from-wishlist-to-cart.gif)
 
 </details>
 
 <details>
 <summary>Add selected products from the wishlist to cart</summary>
 
-![add-selected-products-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-selected-items-to-cart.gif){height="" width=""}
+![add-selected-products-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/add-selected-items-to-cart.gif)
 
 </details>

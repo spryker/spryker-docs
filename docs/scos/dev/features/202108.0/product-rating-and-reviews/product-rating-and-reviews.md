@@ -25,33 +25,20 @@ Currently, the feature has the following functional constraints which are going 
 
 * Product reviews are linked to locales, but not stores.
 * A review is available in all the stores that share the locale of the store in which it has been originally created.
- 
+
 ## Video tutorial
 
 For more details on managing ratings and reviews, check the video:
 <iframe src="https://spryker.wistia.com/medias/efvyq9vfb8" title="Ratings and Reviews" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
-## If you are:
+## Related Business User articles
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-rating-reviews-feature-integration" class="mr-link">Integrate the Product Rating & Reviews feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/glue-api-product-rating-reviews-feature-integration" class="mr-link">Integrate the Product Rating & Reviews Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/file-details-product-reviewcsv" class="mr-link">Import product reviews</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-ratings-and-reviews" class="mr-link">Manage the product ratings and reviews via Glue API</a></li>
-            </ul>
-        </div>
-      <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-reviews">Manage product reviews</a></li>
-            </ul>
-        </div>  
-</div>
-</div>
+|BACK OFFICE USER GUIDES|
+|---|
+| [Manage product reviews](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/catalog/product-reviews/managing-product-reviews.html) |
 
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Product Rating & Reviews feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-rating-reviews-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

@@ -29,20 +29,8 @@ To keep your catalog dynamic, you can include auto-generated pages based on cate
 
 The main benefits of working with the catalog are to pave the way for a smooth shopping journey with well-organized categories that organize and extend your catalog to match your business needs.
 
+{% info_block warningBox "Developer guides" %}
 
-## If you are:
+Are you a developer? See [Catalog feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) for developers.
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/searching-the-product-catalog" class="mr-link">Search the product catalog via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-autocomplete-and-search-suggestions" class="mr-link">Retrieve autocomplete and search suggestions via Glue API</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/catalog-api-feature-integration" class="mr-link">Integrate the Catalog Glue API</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+{% endinfo_block %}

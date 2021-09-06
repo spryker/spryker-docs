@@ -1,5 +1,5 @@
 ---
-title: Alternative products + discontinued products feature integration
+title: Alternative Products + Discontinued Products feature integration
 description: This guide describes all the steps needed to be performed in order to integrate the Alternative Products + Discontinued Products features into your project.
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-discontinued-products-feature-integration
 originalArticleId: eb447174-6a43-4adb-8914-747a9771c4a9
@@ -31,12 +31,12 @@ Register the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\ProductAlternativeStorage;
- 
+
 use Spryker\Client\ProductAlternativeStorage\ProductAlternativeStorageDependencyProvider as SprykerProductAlternativeStorageDependencyProvider;
 use Spryker\Client\ProductDiscontinuedStorage\Plugin\ProductAlternativeStorage\DiscontinuedCheckAlternativeProductApplicablePlugin;
- 
+
 class ProductAlternativeStorageDependencyProvider extends SprykerProductAlternativeStorageDependencyProvider
 {
     /**
@@ -55,12 +55,12 @@ class ProductAlternativeStorageDependencyProvider extends SprykerProductAlternat
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductAlternative;
- 
+
 use Spryker\Zed\ProductAlternative\ProductAlternativeDependencyProvider as SprykerProductAlternativeDependencyProvider;
 use Spryker\Zed\ProductDiscontinued\Communication\Plugin\ProductAlternative\DiscontinuedCheckAlternativeProductApplicablePlugin;
- 
+
 class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDependencyProvider
 {
     /**
@@ -82,7 +82,7 @@ Make sure that you can see alternatives for products that are marked as **discon
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Label feature](https://documentation.spryker.com/2021080/docs/product-label) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront. 
+If the [Product Label feature](https://documentation.spryker.com/2021080/docs/product-label) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 
 {% endinfo_block %}

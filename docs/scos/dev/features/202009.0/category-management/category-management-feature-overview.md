@@ -11,7 +11,7 @@ redirect_from:
 The Category Management feature serves a double purpose. On the one hand, it allows shop administrators to structure their products into a logical system where each product belongs to a category or a set of interrelated categories. On the other hand, this enables customers to easily navigate the front end and locate desired products quickly.
 
 A category is a set of products which share a common attribute and, therefore, can be united logically. Categories are managed in the **Back Office > Category** section. 
-![gui-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/gui-category.png){height="" width=""}
+![gui-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/gui-category.png)
 
 ## Parent and Child Categories
 When there is a big number of products in a shop, it's essential to build a category tree to structure product catalog and enable customers to easily locate exactly what they want. This can be done with the help of **parent** and **child** categories.
@@ -30,21 +30,21 @@ The screenshot below shows that the parent category "Cameras & camholders" has t
 
 In the screenshot below, the "Tablets" child category is assigned to "Computers" parent category. The "Tablets" category does not have any child categories assigned to it.
 
-![child-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/child-category.png){height="" width=""}
+![child-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/child-category.png)
 
 You can assign new child categories to a parent one in the **Back Office > Category** section using the **Add category to this node** action. For more details, see [Creating Categories](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/category/creating-categories.html).
 
-![add-new-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/add-new-category.png){height="" width=""}
+![add-new-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/add-new-category.png)
 
 Existing child categories are assigned to a parent one in a different way from the **Back Office > Category section > Edit Category** page.
 
-![add-existing-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/add-existing-category.png){height="" width=""}
+![add-existing-category.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/add-existing-category.png)
 
 You can assign a category to several parent ones using the **Additional Parents** form.
 
 For example, the "Smart watches" category is assigned to the "Product Bundles" and "Smart Wearables" categories (see the screenshot below).
 
-![multiple-parents.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/multiple-parents.png){height="" width=""}
+![multiple-parents.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/multiple-parents.png)
 
 The order of child categories shown in the category tree in the front end can be manually resorted in the **Back Office > Category** section using the **Re-sort child categories** action. For more information, see [Managing Categories](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/category/managing-categories.html).
 
@@ -58,28 +58,28 @@ If not specified otherwise, upon category creation, the catalog Category templat
 
 For example, the "Fujitsu ESPRIMO E420", "Lenovo ThinkStation P900", and "Fujitsu CELSIUS M740" products are assigned to the "PCs & Workstations" category with the Catalog template (see the screenshot below).
 
-![catalog.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/catalog.png){height="" width=""}
+![catalog.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/catalog.png)
 
 ### Catalog + CMS Block
 This category template allows you to show the products that are assigned to this category and one or more CMS blocks.
 
 The screenshot below illustrates how the same category displays assigned products and a CMS block with the Catalog + CMS block template.
 
-![catalog-cms-block.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/catalog-cms-block.png){height="" width=""}
+![catalog-cms-block.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/catalog-cms-block.png)
 
 ### CMS Block
 There might be situations when you wouldn't need to show any products, but one or more CMS blocks instead. This template does just that.
 
 The screenshot below illustrates how the same category displays a CMS block.
 
-![cms-block.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/catalog-cms-block.png){height="" width=""}
+![cms-block.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/catalog-cms-block.png)
 
 ### Sub Categories Grid
 This category template shows the child categories assigned to this category apart from showing them in the category tree. It makes it easier to navigate product catalog when there are more than two hierarchy levels.
 
 For example, the "Computers" category displays the "Notebooks", "PCs & Workstations", and "Tablets" child categories assigned to it using the Sub Categories grid template (see the screenshot below).
 
-![sub-categories-grid.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/sub-categories-grid.png){height="" width=""}
+![sub-categories-grid.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Category+Management/Category+Management+Feature+Overview/sub-categories-grid.png)
 
 The images, which are shown in the front end when the sub categories grid category template is chosen, are added in the **Back Office > Category section> Edit Category page > Image** tab. For more details, see [Creating Categories](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/category/creating-categories.html).
 
@@ -92,18 +92,18 @@ The default filter functionality allows you to use *standard filters* and *dynam
 Standard filters help buyers find the products they look for in the catalog.
 
 With the standard filters, they can filter the products according to the specified price range, product ratings, product labels, color, material, brand, etc.
-![Filter Attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/filter-attributes-b2c.png){height="" width=""}
+![Filter Attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/filter-attributes-b2c.png)
 
 There as the following standard filter types:
 
 * *Single-select*: allows a user to select only one filter option.
-![Single Select](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/single-select-b2c.gif){height="" width=""}
+![Single Select](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/single-select-b2c.gif)
 
 * *Multi-select*: allows a user to select several variants simultaneously.
-![Multi Select](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/multi-select-b2c.gif){height="" width=""}
+![Multi Select](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/multi-select-b2c.gif)
 
 * *Range*: filters data in the dimension from the maximum and minimum value. In the Spryker Demo Shop, the range filter is applied to the abstract product prices.
-![Range Filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/range-b2c.gif){height="" width=""}
+![Range Filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/range-b2c.gif)
 
 Products appropriate for the active filters are displayed in the results.
 

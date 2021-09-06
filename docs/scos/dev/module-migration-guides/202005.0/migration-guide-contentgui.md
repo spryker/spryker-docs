@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
-Version 2.0.0 of the `ContentGui` module introduces the [Content Items](https://documentation.spryker.com/v5/docs/en/content-items-overview-201907) functionality that allows creating and managing content and later selecting where it should be inserted.
+Version 2.0.0 of the `ContentGui` module introduces the [Content Items](/docs/scos/user/features/{{page.version}}/cms/content-items/content-items-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.
 
 The `ContentGui` module version 2.0.0 introduced the following changes:
 

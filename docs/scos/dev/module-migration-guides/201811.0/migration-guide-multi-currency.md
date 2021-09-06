@@ -26,7 +26,7 @@ First run `composer update spryker/*` to update your all modules to the latest m
 **Discount >= 5.*** - see .
 **Calculation >= 4.2.*** - we have changed the way the discount amount is aggregated.
 **Cart >= 4.2.*** - we have added a new facade method to rebuild cart items when currency is changed. Extension point to watch for cart item rebuild.
-**CartCurrencyConnector** - new module provides plugin for cart rebuilding. See [Currency configuration](https://documentation.spryker.com/v1/docs/currency) for more details.
+**CartCurrencyConnector** - new module provides plugin for cart rebuilding. <!-- See [Currency configuration](https://documentation.spryker.com/v1/docs/currency) for more details. -->
 **ProductDiscountConnector >= 3.2.*** - we have changed the way the net price is assigned.
 **ProductLabelDiscountConnector >= 1.2.*** - we have changed the way the net price is assigned.
 **ShipmentDiscountConnector >= 1.1.*** - we have changed the way the net price is assigned.

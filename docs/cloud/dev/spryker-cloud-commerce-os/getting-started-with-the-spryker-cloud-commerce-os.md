@@ -1,5 +1,5 @@
 ---
-title: Getting started with Spryker Cloud Commerce OS
+title: Getting started with the Spryker Cloud Commerce OS
 description: After the initial setup, access Spryker Cloud and start developing.
 originalLink: https://cloud.spryker.com/docs/getting-started-with-spryker-cloud-commerce-os
 originalArticleId: 04c7a319-4c90-4fd7-a112-982569e48c70
@@ -8,7 +8,7 @@ redirect_from:
   - /docs/en/getting-started-with-spryker-cloud-commerce-os
 ---
 
-This document is a starting point of development with Spryker Cloud Commerce OS(SCCOS).
+This document is a starting point of development with the Spryker Cloud Commerce OS(SCCOS).
 
 SCCOS is a fully-managed solution. Before you start developing, we set up environments, tools, and services based on your Onboarding Questionnaire. If you didn't request something in the questionnaire, you can always do it via [support](https://spryker.force.com/support/s/).
 

@@ -9,29 +9,34 @@ redirect_from:
   - /docs/en/release-notes-2021080
 ---
 
-The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements we are announcing in September 2020.
-For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
+The Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements.
+For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
 
 
-## Spryker Commerce OS
+## Spryker Cloud Commerce OS
+
+This section describes the new features released for Spryker Commerce OS.
+
 ### Password and security
-With this release, you can tailor the **customer registration** process to your needs. A customer can simply register with an email address and a password, or you can choose to ask for more details. Once a customer enters the required information, the customer account is created. A double-opt-in option ensures that the registration process follows all the GDPR requirements. 
-Also, we’ve improved the Storefront security check. Now, the shop owners can **set password requirements** for customers and Agent users, such as minimum length and special characters.
-Configuration of the password comes with **brute force attack protection**: after a certain number of failed login attempts, the user account can be locked for a set amount of time. The shop owner can configure the threshold for the number of login attempts and the account lockout duration.
+
+With this release, you can tailor the customer registration process to your needs. A customer can register with an email address and a password, or you can choose to ask for more details. Once a customer enters the required information, the customer account is created. A double-opt-in option ensures that the registration process follows all the GDPR requirements.
+Also, we’ve improved the Storefront security check. Now, the shop owners can set password requirements for customers and agent users, such as minimum length and special characters.
+Password configuration comes with a brute force attack protection: after a certain number of failed login attempts, the user account can be locked for a set amount of time. You can configure the threshold for the number of login attempts and the account lockout duration.
 
 #### Documentation
+
 * [Customer Registration overview](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html#customer-registration-overview)
 * [Customer Login overview](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-login-overview.html)
 
 
 ### Identity Access Manager: Back Office Login
-Due to the **support of the OpenID Connect protocol**, you can now use Identity Access Managers to log in to the Spryker Back Office. To illustrate this capability, we offer integration of the Microsoft Azure Active Directory service that allows your users to log in to the Back Office with their Microsoft Azure Active Directory credentials.
+With the support of the OpenID Connect protocol, you can now use Identity Access Managers to log in to the Spryker Back Office. To illustrate this capability, we offer the integration of the Microsoft Azure Active Directory service that allows your users to log in to the Back Office with their Microsoft Azure Active Directory credentials.
 
 #### Documentation
 [Back Office Login overview](/docs/scos/dev/features/{{page.version}}/spryker-core-back-office/spryker-core-back-office-feature-overview/back-office-login-overview.html)
 
 ### Category per store
-Spryker now supports **store relations at the category level**. You can hide and show categories in stores depending on your business requirements. The store relation applies from a parent category to its child categories.
+Spryker now supports store relations at the category level. You can hide and show categories per store depending on your business requirements. Child categories inherit the store relations of the parent category.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/category-per-store.png){height="" width=""}
 
@@ -39,65 +44,67 @@ Spryker now supports **store relations at the category level**. You can hide and
 [Category management](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html)
 
 ### Avalara integration
-Calculating **sales tax** for an order is never a trivial matter. Different products and services can have different tax rates or fixed tax amounts. In Europe, tax rates are the same for the whole country, but in the USA, you get different tax rates per state, per city, and per zip code. Moreover, depending on your warehouses’ locations and your customers' locations, the taxes they pay for the same product are different. Last but not least, each jurisdiction can always change the tax rate at its discretion. Now imagine the amount of work if you would need to manage your tax calculations manually!
-Since tax calculation is not an area where mistakes are allowed, Spryker decided to partner with [Avalara](https://www.avalara.com/us/en/index.html), a company that “lives and breathes tax compliance, so you don’t have to.”
-The **Avalara integration** enables you to validate your customers’ and your warehouses’ addresses to improve the rate accuracy when calculating sales tax in the checkout process.
+Calculating sales tax for an order is never a trivial matter. Different products and services can have different tax rates or fixed tax amounts. In Europe, tax rates are the same for the whole country, but in the USA, tax rates are different per state, per city, and per zip code. Moreover, depending on your warehouses’ locations and your customers' locations, the taxes they pay for the same product are different. Each jurisdiction can always change the tax rate at its discretion.
+Since tax calculation is not an area where mistakes are allowed, we decided to partner with [Avalara](https://www.avalara.com/us/en/index.html), a company that “lives and breathes tax compliance, so you don’t have to.”
+The Avalara integration enables you to validate your customers’ and your warehouses’ addresses to improve the rate accuracy when calculating sales tax in the checkout process.
 
 #### Documentation
 [Tax](/docs/scos/dev/features/{{page.version}}/tax/tax.html)
 
-## Data Exchange
-While expanding Spryker's out-of-the-box data exchange capabilities, we’ve implemented some **additional data importers** and made some small improvements (exception handling, dependencies, upgrading to PHP 7.3+, and minor bug fixes) that allow you to keep your software up-to-date.
+### Data exchange
+While expanding the Spryker's out-of-the-box data exchange capabilities, we’ve implemented additional data importers and made small improvements, such as exception handling, dependencies, upgrading to PHP 7.3+, and minor bug fixes, that allow you to keep your software up to date.
 
-### Data import
-These are the new data importers available in our default data import framework: 
+#### Data import
+These are the new data importers available in our default data import framework:
 
-* Categories per store: [Import data associating categories with stores](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html). 
-* Warehouse address: [Import the warehouse address data](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html). 
+* Categories per store: [Import data associating categories with stores](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html).
+* Warehouse address: [Import the warehouse address data](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html).
 
-### Data export
-Within Spryker’s default data export framework, we have made some small improvements (exception handling, dependencies, upgrades, and minor fixes), helping you to keep your software up-to-date.
+#### Data export
+Within the Spryker’s default data export framework, we have made small improvements: exception handling, dependencies, upgrades, and minor fixes.
 
-### Middleware 
-We have completed some maintenance activities and done minor fixes helping you to keep your project up-to-date.
+### Middleware
+We have completed maintenance activities and done minor fixes helping you to keep your project up to date.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/middleware.png){height="" width=""}
 
-## SCCOS & Docker-SDK
+## The Docker SDK
+
+This section describes the new functionalities released for the Docker SDK.
 
 ### Email configuration
 The Docker SDK supports two new mailing-related parameters: `name` and `email address`. When sending emails like customer registration, the values of the parameters are used in the `From` field. You can define them in the `regions:services:mail:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#regions-)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html#regions-)
 
 ### Sync solution: Mutagen
 
 The Docker SDK supports [Mutagen](https://mutagen.io/) as the new default sync solution. You can configure it in the `docker:mount:` section of the desired Deploy file.
 
 #### Documentation
-[Configuring mutagen mount mode on MacOS](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-a-mount-mode.html#configuring-mutagen-mount-mode-on-macos)
+[Configuring mutagen mount mode on MacOS](/docs/scos/dev/the-docker-sdk/configuring-a-mount-mode.html#configuring-mutagen-mount-mode-on-macos)
 
 ### Smaller production images
 
 The Docker SDK supports defining if Xdebug is to be built in Docker images. By default, it is enabled for the development environment and disabled for the production environment. You can define it in the `docker:debug:enabled:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#docker--debug-)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html#docker--debug-)
 
 ### Configurable cors-allow-origin
 
 The Docker SDK supports defining [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for the Glue API application. You can define it in the `groups: applications: endpoints: cors-allow-origin:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#groups--applications--endpoints-)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html#groups--applications--endpoints-)
 
 ### Accessing private repositories via SSH agent
 
-The Docker SDK supports accessing private repositories via SSH agent. Private repository credentials are provided by SSH agent. They are used only when building images. You can use SSH agent for development environments and CI/CD pipelines. 
+The Docker SDK supports accessing private repositories via SSH agent. Private repository credentials are provided by SSH agent. They are used only when building images. You can use SSH agent for development environments and CI/CD pipelines.
 
 #### Documentation
-[Configuring access to private repositories](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-access-to-private-repositories.html#configuring-access-to-private-repositories)
+[Configuring access to private repositories](/docs/scos/dev/the-docker-sdk/configuring-access-to-private-repositories.html#configuring-access-to-private-repositories)
 
 ### Graceful handling of SIGTERM and SIGSTOP
 
@@ -107,17 +114,17 @@ Worker processes support `SIGTERM` and `SIGSTOP` signal handling and gracefully 
 [Queue worker signal handling](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/queue-worker-signal-handling.html#queue-worker-signal-handling)
 
 ### ECR image scanning
-[Amazon ECR image scanning](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) is enabled in all environments and for all customers. ECR Image scanning scans each Docker image prepared during a CD pipeline execution and provides security findings you can analyze to improve security. 
+[Amazon ECR image scanning](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) is enabled in all environments and for all customers. ECR Image scanning scans each Docker image prepared during a CD pipeline execution and provides security findings you can analyze to improve security.
 Images are scanned in the background when they are pushed to AWS ECR, so it does not affect the deployment duration. Reports are available as soon as an image was scanned.
 
 ### Configurable max-request-body-size
 The Docker SDK supports configuring `max-request-body-size` per application. It is limited in the code for security reasons, but you can increase or remove the maximum value for selected applications. You can configure `max-request-body-size` in the `groups: applications: application: http: max-request-body-size:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html#groups--applications-)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html#groups--applications-)
 
 ### CloudTrail retention time changes
-Cloud Trail logs are now saved for at least 12 months for governance, compliance, operational auditing, and risk auditing of accounts. You can adjust the interval per your requirements. 
+Cloud Trail logs are now saved for at least 12 months for governance, compliance, operational auditing, and risk auditing of accounts. You can adjust the interval per your requirements.
 
 ### Elasticsearch: defining prefixes for indexes via a Deploy file
 The Docker SDK configures prefixes for Elasticsearch index names based on the `namespace` attribute from a Deploy file. Now you can have several environment or application-related indexes inside the same Elasticsearch service. It works only in a local development environment.
@@ -126,14 +133,14 @@ The Docker SDK configures prefixes for Elasticsearch index names based on the `n
 We released the documentation covering the following Docker SDK topics: installing on Windows with WSL2, introduction and quick start guides, development: debugging, testing, configuring synchronization modes.
 
 #### Documentation
-[Docker SDK](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/docker-sdk.html#docker-sdk)
+[Docker SDK](/docs/scos/dev/the-docker-sdk/docker-sdk.html#docker-sdk)
 
 ## Spryker Glue API
 We continue to add support for new storefront APIs.
 
 ### CMS pages API (basic information)
 With the **CMS APIs**, you can retrieve basic information on CMS pages individually and in collections. The retrievable basic information includes name, URL, status, validity, SEO meta-title, meta-description, and meta-keywords. Information contained in content blocks is not retrievable yet.
-          If you use content banners and content product abstracts for your CMS page representation, you can retrieve their information together with the CMS page’s basic details in one request by including those resources in the request.
+If you use content banners and content product abstracts for your CMS page representation, you can retrieve their information together with the CMS page’s basic details in one request by including those resources in the request.
 
 #### Documentation
 [Retrieving CMS pages](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)
@@ -149,7 +156,7 @@ With the **Agent Assist APIs**, you can create representations that enable a use
 * [Managing agent assist authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#managing-agent-assist-authentication-tokens)
 
 ### Product Bundles APIs
-With the **Product Bundles APIs**, you can create representations that cover the use of product bundles throughout the user journey, both for B2C and B2B. With this release, products, carts, and sales order endpoints support product bundles: you can retrieve product bundles, add them to the cart, manage them in the cart, and remove product bundles from the cart. All these endpoints consider the nature of the product bundles as a set of products that are always sold together. 
+With the **Product Bundles APIs**, you can create representations that cover the use of product bundles throughout the user journey, both for B2C and B2B. With this release, products, carts, and sales order endpoints support product bundles: you can retrieve product bundles, add them to the cart, manage them in the cart, and remove product bundles from the cart. All these endpoints consider the nature of the product bundles as a set of products that are always sold together.
 
 #### Documentation
 
@@ -169,8 +176,8 @@ The **Configurable Bundle** endpoints allow you to create representations that e
 * [Adding a configurable bundle to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
 * [Changing quantity of configurable bundles in a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
 * [Removing a configurable bundle from a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
-* [Adding a configurable bundle to a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-user-s-cart) 
-* [Changing quantity of configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-user’s-cart) 
+* [Adding a configurable bundle to a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-user-s-cart)
+* [Changing quantity of configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-user’s-cart)
 * [Removing a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-user’s-cart)
 * [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
 * [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html)
@@ -223,7 +230,7 @@ In the customer authorization context, there is now a new endpoint that is fully
 ### Cart performance
 We have revamped the shopping list and cart experience addressing the main performance drags on the most usual actions like adding new products, converting a shopping list, duplicating a cart, etc. We have achieved this due to the following techniques:
 
-* Parallelizing the product availability check with MGET instead of single calls. Thus, we have also reduced the number of the single calls. 
+* Parallelizing the product availability check with MGET instead of single calls. Thus, we have also reduced the number of the single calls.
 * Deferring non-essential cart items to AJAX calls.
 * Adding the possibility of using eventual consistency patterns.
 
@@ -262,7 +269,7 @@ We have also extended the testing framework so that you can include your tests.
 We have introduced the **strict mode** and type hints for transfer objects in function arguments and return types. This allows for safer and cleaner code, raises the code legibility and the checking capacity of our validation tools. We maintain the flexibility to define assStrict, specific transfers or even fields within these transfers.
 
 #### Documentation
-[Transfer strict types](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html#transfer-strict-types)
+[Transfer strict types](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html#transfer-strict-types)
 
 
 ### Front-end (Profiling + Microdata)
@@ -272,5 +279,3 @@ Yves has also got its fresh features: the structured information is now generate
 
 * [Web Profiler Widget for Yves](/docs/scos/dev/migration-and-integration/{{page.version}}/development-tools/web-profiler-widget-for-yves.html#web-profiler-widget-for-yves)
 * [Basic SEO techniques to use in your project](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/best-practices/basic-seo-techniques-to-use-in-your-project.html#basic-seo-techniques-to-use-in-your-project)
-
-

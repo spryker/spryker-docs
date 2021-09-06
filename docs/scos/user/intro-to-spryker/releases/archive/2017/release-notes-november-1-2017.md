@@ -75,7 +75,7 @@ composer require spryker/rabbit-mq:"^1.0.0" spryker/event:"^2.0.0" spryker/event
 
 ## Improvements
 ### State Machine Sub-process Reuse
-A sub-processes in Spryker state machine allows you to simplify workflows. Each sub-process can represent a part of your business logic. Sometimes within the business logic you might need to have same or similar sub-processes multiple times (e.g. transactional email, refund). With this release, we allow you to copy state machine sub-processes as many times as you need in a project workflow. This will allow you to reuse existing parts of a state machine schema. For more details, see [Modelling - State Machine](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html).
+A sub-processes in Spryker state machine allows you to simplify workflows. Each sub-process can represent a part of your business logic. Sometimes within the business logic you might need to have same or similar sub-processes multiple times (e.g. transactional email, refund). With this release, we allow you to copy state machine sub-processes as many times as you need in a project workflow. This will allow you to reuse existing parts of a state machine schema. For more details, see [Modelling - State Machine](/docs/scos/dev/back-end-development/zed/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html).
 
 **Affected Modules**
 

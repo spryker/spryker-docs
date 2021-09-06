@@ -10,12 +10,12 @@ redirect_from:
   - /docs/en/retrieving-company-roles
 ---
 
-In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html) to distribute scopes and permissions among [Company Users](/docs/scos/dev/features/{{page.version}}/company-account/company-account-feature-overview/company-accounts-overview.html). This endpoint allows retrieving information about the company roles.
+In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/company-user-roles-and-permissions-overview.html) to distribute scopes and permissions among [Company Users](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/company-accounts-overview.html). This endpoint allows retrieving information about the company roles.
 
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve a company role
 

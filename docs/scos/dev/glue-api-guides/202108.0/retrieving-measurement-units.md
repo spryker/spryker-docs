@@ -10,11 +10,11 @@ redirect_from:
   - /docs/en/retrieving-measurement-units
 ---
 
-The Measurement Units API together with the [Measurement Units](/docs/scos/dev/features/{{page.version}}/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop. 
+The Measurement Units API together with the [Measurement Units](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop. 
 
 ## Installation 
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Measurement Units Feature Integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html).
 
 ## Retrieve a measurement unit
 

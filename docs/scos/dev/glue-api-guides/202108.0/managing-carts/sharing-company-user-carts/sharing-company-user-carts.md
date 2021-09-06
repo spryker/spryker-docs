@@ -15,7 +15,7 @@ Company users can share their carts with other company users, so multiple repres
 This endpoint allows sharing carts with company users.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shared-carts-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shared-carts-feature-integration.html).
 
 
 ## Share a cart

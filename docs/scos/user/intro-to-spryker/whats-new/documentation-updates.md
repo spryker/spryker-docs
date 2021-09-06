@@ -297,7 +297,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 
 ### Spryker in Docker
-* [Queue Worker](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#7--queue)
+* [Queue Worker](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#7--queue)
 * [Deploy File Reference](https://documentation.spryker.com/2021080/docs/deploy-file-reference-version-1-201907#deploy-file-reference---1-0)
 * [Health checks](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/health-checks.html)
 * [Asset Management](/docs/scos/dev/features/{{page.version}}/file-manager/file-manager-feature-overview/asset-management.html)

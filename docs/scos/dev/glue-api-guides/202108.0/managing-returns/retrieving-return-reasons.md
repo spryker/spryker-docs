@@ -13,7 +13,7 @@ redirect_from:
 This endpoint allows retrieving returns reasons.
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-return-management-feature-integration.html)
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-return-management-feature-integration.html)
 
 ## Retrieve return reasons
 

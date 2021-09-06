@@ -50,6 +50,12 @@
             }
         }
 
+        .toc-active & {
+            @include media("<tablet") {
+                transform: translateY(0);
+            }
+        }
+
         .page-scrolled & {
             @include media(">=desktop") {
                 padding: 10px 0;

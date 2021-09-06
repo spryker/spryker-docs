@@ -187,9 +187,9 @@ For production setups, now you can generate optimized docker images.
 
 #### Documentation
 
-* [Getting Started with Docker](/docs/scos/dev/developer-guides/{{page.version}}/installation/installing-spryker-with-docker/installing-spryker-with-docker.html#running-production)
-* [Deploy File Reference](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/deploy-file-reference-1.0.html)
-* [Spryker in Docker Services](/docs/scos/dev/developer-guides/{{page.version}}/docker-sdk/configuring-services.html)
+* [Getting Started with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#running-production)
+* [Deploy File Reference](/docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html)
+* [Spryker in Docker Services](/docs/scos/dev/the-docker-sdk/configuring-services.html)
 
 
 ***
@@ -231,7 +231,7 @@ The Heartbeat functionality is replaced with health checks. There is a new set o
 The **Queue manager** functionality is extended with the command that makes queue worker exit right after processing a queue. If the queue is empty, the queue worker exits instead of waiting for the configured execution time to pass.
 
 #### Documentation:
-[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#7--queue)
+[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#7--queue)
 
 
 ### Search Initialization Improvement

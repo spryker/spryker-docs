@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  link_validation:
+    name: Links validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.6
+      - run: bundle install
+      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
+
+      - run: bundle exec htmlproofer ./_site --allow-hash-href --url-ignore="/glue.mysprykershop.com\/[\.\w\-\/\?]+/,/github.com\/[\.\w\-\/]+\.md/"
+
+  page_validation:
+    name: Page validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.6
+      - run: bundle install
+      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
+      - run: bundle exec jekyll validate
+
+  algolia_search:
+    name: Push pages to Algolia
+    runs-on: ubuntu-latest
+
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.6
+      - run: bundle install
+      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
+        env: # Or as an environment variable
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_user.yml
+        env: # Or as an environment variable
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}

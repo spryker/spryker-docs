@@ -8,7 +8,7 @@ Marketplace extension provided by Spryker Cloud Commerce OS covers a wide range 
 
 A *Marketplace* is a type of e-commerce website where products or services are delivered and fulfilled by multiple sellers or *merchants* to the buyers, whereas transactions are processed by the Marketplace operator.
 
-*Marketplace operator* is the company that owns the Marketplace. It can also sell on the marketplace as the [main merchant](/docs/marketplace/user/features/{{ site.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html).
+*Marketplace operator* is the company that owns the Marketplace. It can also sell on the marketplace as the [main merchant](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html).
 
 ## Marketplace administrator
 

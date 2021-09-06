@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/checking-out-purchases
 ---
 
-This endpoint allows finalizing the checkout process by placing an order. 
+This endpoint allows finalizing the checkout process by placing an order.
 
 After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Thus, use the endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html).  
 
@@ -18,11 +18,11 @@ The endpoint also provides information on whether it is necessary to redirect th
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Checkout feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html)
-* [Glue API: Shipment feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html)
-* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html)
-* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
-* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
+* [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
+* [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)
+* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
+* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
+* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 
 
@@ -62,7 +62,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 <details open>
     <summary>Request sample with one shipment</summary>
 `POST https://glue.mysprykershop.com/checkout`
-    
+
 ```json
 {
     "data": {
@@ -207,7 +207,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
-    
+
 </details>
 
 
@@ -392,7 +392,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 
 <details>
     <summary>Response sample with one shipment</summary>
-    
+
 ```json
 {
     "data": {
@@ -409,12 +409,12 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
     }
 }
 ```
-    
+
 </details>
 
 <details>
     <summary>Response sample with a split shipment</summary>
-    
+
 ```json
 {
     "data": {
@@ -431,12 +431,12 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
     }
 }
 ```
-    
+
 </details>
 
 <details open>
     <summary>Response sample with a split shipment, order information, and shipment information</summary>
-    
+
 ```json
 {
     "data": {
@@ -1299,4 +1299,3 @@ For the attributes of other included resources, see [Retrieve an order](/docs/sc
 ## Next steps
 
 * [Updating payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html)
-

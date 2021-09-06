@@ -5,7 +5,7 @@ description: This article describes the AvailabilityStorage module, which publis
 template: concept-topic-template
 ---
 
-The [AvailabilityStorage](https://github.com/spryker/availability-storage) module publishes all the availability information for abstract and concrete products. Items are grouped by abstract product, and the process is handled by [Publish and Synchronize](https://documentation.spryker.com/docs/publish-and-synchronization).
+The [AvailabilityStorage](https://github.com/spryker/availability-storage) module publishes all the availability information for abstract and concrete products. Items are grouped by abstract product, and the process is handled by [Publish and Synchronize](/docs/scos/dev/back-end-development/zed/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 Published data example:
 

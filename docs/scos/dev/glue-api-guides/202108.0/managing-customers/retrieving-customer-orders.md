@@ -14,7 +14,7 @@ This endpoint allows retrieving a customer’s orders.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Order Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html).
 
 ## Retrieve a customer’s orders
 

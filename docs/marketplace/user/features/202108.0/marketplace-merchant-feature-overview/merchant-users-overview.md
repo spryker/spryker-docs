@@ -41,7 +41,7 @@ To be able to log in to the Merchant Portal, both merchant and merchant user nee
 
 {% info_block infoBox "Info" %}
 
-If a merchant got [denied](https://documentation.spryker.com/marketplace/docs/merchants-feature-overview#denied), all their merchant users get deactivated automatically. If the merchant is re-approved again, their merchant users need to be re-activated one-by-one manually.
+If a merchant got [denied](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses), all their merchant users get deactivated automatically. If the merchant is re-approved again, their merchant users need to be re-activated one-by-one manually.
 
 {% endinfo_block %}
 

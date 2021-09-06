@@ -292,7 +292,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-Configure synchronization pool name:
+Configure synchronization storage:
 
 **src/Pyz/Zed/MerchantProductOfferStorage/MerchantProductOfferStorageConfig.php**
 
@@ -316,15 +316,55 @@ class MerchantProductOfferStorageConfig extends SprykerMerchantProductOfferStora
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
+
+    /**
+     * @return string|null
+     */
+    public function getEventQueueName(): ?string
+    {
+        return PublisherConfig::PUBLISH_QUEUE;
+    }
+}
+```
+
+Configure synchronization search
+
+**src/Pyz/Zed/MerchantProductOfferSearch/MerchantProductOfferSearchConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantProductOfferSearch;
+
+use Spryker\Shared\Publisher\PublisherConfig;
+use Spryker\Zed\MerchantProductOfferSearch\MerchantProductOfferSearchConfig as SprykerMerchantProductOfferSearchConfig;
+
+class MerchantProductOfferSearchConfig extends SprykerMerchantProductOfferSearchConfig
+{
+    /**
+     * @return string|null
+     */
+    public function getMerchantEventQueueName(): ?string
+    {
+        return PublisherConfig::PUBLISH_QUEUE;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getMerchantProductOfferEventQueueName(): ?string
+    {
+        return PublisherConfig::PUBLISH_QUEUE;
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
- Make sure that after setting up the event listeners, the following commands do the following:
+Make sure that after setting up the event listeners, the following commands do the following:
 
-   1. `console sync:data product_concrete_product_offers` exports data from `spy_product_concrete_product_offers_storage` table to Redis.
-   2. `console sync:data product_offer` exports data from `spy_product_offer_storage` table to Redis.
+1. `console sync:data product_concrete_product_offers` exports data from `spy_product_concrete_product_offers_storage` table to Redis.
+2. `console sync:data product_offer` exports data from `spy_product_offer_storage` table to Redis.
 
 Make sure that when the following entities get updated via the ORM, the corresponding Redis keys have the correct values.
 
@@ -919,8 +959,7 @@ offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------ | ----------- | ------ | ----------- | ---------------- |
 | product_offer_reference | &check; | string    | offer1       | Unique product offer identifier.             |
-| valid_from              |  | String  | 2020-01-01   | Date since which the product offer is valid. |
-| valid_to                |  | String | 2020-01-01   | Date till which the product offer is valid.  |
+| store_name | &check; | string    | DE       | Related store to product offer identifier.             |
 
 Register the following plugins to enable data import:
 
@@ -1033,8 +1072,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 }
 ```
 
-<details>
-<summary markdown='span'>src/Pyz/Client/Search/SearchDependencyProvider.php</summary>
+**src/Pyz/Client/Search/SearchDependencyProvider.php**
 
 ```php
 <?php
@@ -1090,10 +1128,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>
+**src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php**
 
 ```php
 <?php
@@ -1140,10 +1175,8 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
     }
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
 ```php
 <?php
@@ -1220,8 +1253,6 @@ class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProdu
 }
 ```
 
-</details>
-
 **src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
@@ -1246,8 +1277,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
+**src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
 
 ```php
 <?php
@@ -1292,8 +1322,6 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
-
-</details>
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -1366,6 +1394,7 @@ Add product offers section to marketplace section of `navigation.xml`:
 ```
 
 Execute the following command:
+
 ```bash
 console navigation:build-cache
 ```
@@ -1414,8 +1443,6 @@ merchant_product_offer.view_seller,View Seller,en_US
 merchant_product_offer.view_seller,Händler ansehen,de_DE
 merchant_product_offer.sold_by,Sold by,en_US
 merchant_product_offer.sold_by,Verkauft durch,de_DE
-merchant.sold_by,Sold by,en_US
-merchant.sold_by,Verkauft durch,de_DE
 ```
 
 Import data:
@@ -1437,7 +1464,6 @@ Register the following plugins to enable widgets:
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | -------------- | --------------- | ------ | ---------------- |
 | MerchantProductOfferWidget       | Shows the list of the offers with their prices for a concrete product. |           | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
-| ProductOfferSoldByMerchantWidget | Shows merchant data for an offer given a cart item.          |           | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1447,7 +1473,6 @@ Register the following plugins to enable widgets:
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\MerchantProductOfferWidget\Widget\MerchantProductOfferWidget;
-use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -1459,7 +1484,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             MerchantProductOfferWidget::class,
-            SoldByMerchantWidget::class,
         ];
     }
 }
@@ -1478,7 +1502,6 @@ Make sure that the following widgets were registered:
 | MODULE | TEST |
 | ----------------- | ----------------- |
 | MerchantProductOfferWidget       | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
-| SoldByMerchantWidget | Go through the checkout process with an offer, and you will see the sold by text and merchant data throughout the checkout process. |
 
 {% endinfo_block %}
 
@@ -1486,5 +1509,8 @@ Make sure that the following widgets were registered:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
+| Marketplace Merchant Portal Product Offer Management | | [Marketplace Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) |
 | Marketplace Product Offer API | | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html) |
+| Marketplace Product Offer + Price | | [Marketplace Product Offer + Price feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) |
 | Marketplace Product Offer + Cart | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html) |
+| Marketplace Product Offer + Checkout | | [Marketplace Product Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html) |

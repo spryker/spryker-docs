@@ -139,11 +139,11 @@ To check the deployed application version in the ECS cluster, do following:
 ## Roll back an application
 To roll back an application:
 
-1. Find out the application version you want to roll back to. See [1. Check the version to deploy](#1--check-the-version-to-deploy) for more details.
+1. Find out the application version you want to roll back to. See [1. Check the version to deploy](#check-the-version-to-deploy) for more details.
 
-2. In [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/), set the application version as the value of the */spryker-staging/desired_version* parameter. See [2. Define the version to deploy](#2-define-the-version-to-deploy) for more details. 
+2. In [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/), set the application version as the value of the */spryker-staging/desired_version* parameter. See [2. Define the version to deploy](#define-the-version-to-deploy) for more details. 
 
-3. Run a deployment pipeline as described in [3. Run a deployment pipeline](#3--run-a-deployment-pipeline).
+3. Run a deployment pipeline as described in [3. Run a deployment pipeline](#run-a-deployment-pipeline).
 
 
 ## Next step

@@ -810,6 +810,7 @@ Enable the following behaviors by registering the plugins:
 | PriceProductOfferVolumeExpanderPlugin | Expands `PriceProductTransfer` with `volumeQuantity` |   | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 | PriceProductOfferVolumeValidatorPlugin | Validates volume prices. |   | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
 | PriceProductOfferVolumeFilterPlugin | Applies correct volume pricing when applicable and quantity is selected |   | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer |
+| PriceProductOfferProductOfferViewSectionPlugin | Returns template for render price product offer information |   | Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductOfferGui |
 
 **src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
 
@@ -1066,6 +1067,30 @@ class PriceProductOfferStorageDependencyProvider extends SprykerPriceProductOffe
     {
         return [
             new PriceProductOfferVolumeExtractorPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOfferGui;
+
+use Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductOfferGui\PriceProductOfferProductOfferViewSectionPlugin;
+use Spryker\Zed\ProductOfferGui\ProductOfferGuiDependencyProvider as SprykerProductOfferGuiDependencyProvider;
+
+class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface[]
+     */
+    public function getProductOfferViewSectionPlugins(): array
+    {
+        return [
+            new PriceProductOfferProductOfferViewSectionPlugin(),
         ];
     }
 }

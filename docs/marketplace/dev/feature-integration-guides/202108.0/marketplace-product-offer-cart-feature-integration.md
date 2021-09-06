@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME      | VERSION  | INTEGRATION GUIDE |
 | --------- | -------- | ------------------|
-| Marketplace Product Offer | dev-master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
+| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
 | Cart | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart)
 
 ### Set up behavior
@@ -103,7 +103,7 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME        | VERSION    | INTEGRATION GUIDE |
 | ----------- | ---------- | ------------------|
-| Marketplace Product Offer | dev-master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
+| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
 | Cart                      | 202001.0   | [Cart feature integration](https://github.com/spryker-feature/cart) |
 
 ### Set up behavior

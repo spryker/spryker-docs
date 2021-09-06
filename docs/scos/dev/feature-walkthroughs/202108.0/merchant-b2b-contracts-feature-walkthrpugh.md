@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Merchant B2B Contracts_ feature allows setting up contracts between a merchant and B2B customer.
 
 
-To learn more about the feature and to find out how end users use it, see [Merchant B2B Contracts feature overview](/docs/scos/dev/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Merchant B2B Contracts feature overview](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) for business users.
 
 
 ## Entity diagram

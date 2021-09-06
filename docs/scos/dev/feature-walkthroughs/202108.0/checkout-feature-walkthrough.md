@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Checkout_ feature allows customizing the checkout workflow.
 
 
-To learn more about the feature and to find out how end users use it, see [Checkout](/docs/scos/dev/features/{{page.version}}/checkout/checkout.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Checkout](/docs/scos/user/features/{{page.version}}/checkout/checkout.html) for business users.
 
 
 ## Entity diagram

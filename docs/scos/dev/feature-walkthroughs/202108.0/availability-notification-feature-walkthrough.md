@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Availability Notification_ feature allows customers to subscribe to product availability notifications to receive emails when an out-of-stock product is back in stock.
 
 
-To learn more about the feature and to find out how end users use it, see [Availability Notification feature overview](/docs/scos/dev/features/{{page.version}}/availability-notification-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Availability Notification feature overview](/docs/scos/user/features/{{page.version}}/availability-notification-feature-overview.html) for business users.
 
 
 ## Entity diagram

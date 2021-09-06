@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Alternative Products_ feature allows defining alternative products for products that are discontinued or out of stock.
 
 
-To learn more about the feature and to find out how end users use it, see [Alternative Products feature overview](/docs/scos/dev/features/{{page.version}}/alternative-products-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Alternative Products feature overview](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) for business users.
 
 
 ## Entity diagram

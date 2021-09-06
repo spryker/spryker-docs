@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Search_ feature enables you to control search and filtering preferences and customize them to improve your customers' user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
 
 
-To learn more about the feature and to find out how end users use it, see [Search](/docs/scos/dev/features/{{page.version}}/search/search.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Search](/docs/scos/user/features/{{page.version}}/search/search.html) for business users.
 
 
 | GLUE API GUIDES |

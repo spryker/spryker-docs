@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Merchant Product Restrictions_ feature allows merchants to define what products are available to each of their B2B customers.
 
 
-To learn more about the feature and to find out how end users use it, see [Merchant Product Restrictions feature overview](/docs/scos/dev/features/{{page.version}}/merchant-product-restrictions-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Merchant Product Restrictions feature overview](/docs/scos/user/features/{{page.version}}/merchant-product-restrictions-feature-overview.html) for business users.
 
 
 ## Entity diagram

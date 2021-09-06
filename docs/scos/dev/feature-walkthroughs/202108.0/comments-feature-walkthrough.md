@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Comments_ feature allows adding multiple comments to any entity. The feature can be integrated into any page or entity of the online shop.
 
 
-To learn more about the feature and to find out how end users use it, see [Comments feature overview](/docs/scos/dev/features/{{page.version}}/comments-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Comments feature overview](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html) for business users.
 
 
 ## Entity diagram

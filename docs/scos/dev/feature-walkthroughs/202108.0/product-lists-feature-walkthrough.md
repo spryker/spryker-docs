@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Product Lists_ feature allows configuring product availability for specific companies by blacklisting or whitelisting products for them.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Lists feature overview](/docs/scos/dev/features/{{page.version}}/product-lists-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Lists feature overview](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) for business users.
 
 
 

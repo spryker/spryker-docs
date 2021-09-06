@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Cart_ feature provides functionality of the shopping cart and cart total calculations.
 
 
-To learn more about the feature and to find out how end users use it, see [Cart](/docs/scos/dev/features/{{page.version}}/cart/cart.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Cart](/docs/scos/user/features/{{page.version}}/cart/cart.html) for business users.
 
 
 ## Related Developer articles

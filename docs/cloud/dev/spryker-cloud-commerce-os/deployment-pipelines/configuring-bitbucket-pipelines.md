@@ -1,6 +1,7 @@
 ---
 title: Configuring Bitbucket Pipelines
 description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/configuring-bitbucket-pipelines
 originalArticleId: f100164f-976a-4ce5-b713-7c58335f9965
 redirect_from:
@@ -140,7 +141,7 @@ To set up a job that runs a specific group of tests:
 |PLACEHOLDER | DESCRIPTION | EXAMPLE IN THE PROPERTY VALUE | 
 |---|---|---|
 |{image_tag} | Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian). | 7.4 |
-|{tests_configuration_file} | Codeception configuration files that defines the tests to run. Example: [codeception.ci.functional.yml](codeception.ci.functional.yml )  | codeception.functional.yml|
+|{tests_configuration_file} | Codeception configuration files that defines the tests to run. Example: codeception.ci.functional.yml  | codeception.functional.yml|
 
 
 

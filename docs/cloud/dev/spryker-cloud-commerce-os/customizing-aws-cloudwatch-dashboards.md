@@ -1,6 +1,7 @@
 ---
 title: Customizing AWS CloudWatch dashboards
 description: Adjust AWS CloudWatch dashboards to your needs.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/customizing-aws-cloudwatch-dashboards
 originalArticleId: 20c2a91e-d6c8-446b-ace9-4723e2fd078a
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Release notes
 description: New features and enhancements for Spryker Cloud Commerce OS.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/release-notes
 originalArticleId: eee5e8bc-dd95-4b51-91f4-203962a2e8af
 redirect_from:
@@ -33,7 +34,7 @@ This document describes new features and enhancements we released for Spryker Cl
 
 * **Documentation about Docker SDK installation on Windows**: updated Docker prerequisites for Windows with instructions for WSL2. See [Installing Docker prerequisites on Windows](https://documentation.spryker.com/docs/installing-docker-prerequisites-on-windows).
 
-* **Documentation about Onboarding deliverables**: updated the Spryker Cloud Commerce OS getting started page with the deliverables provided after the onboarding. See [Getting started with Spryker Cloud Commerce OS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-spryker-cloud-commerce-os.html).
+* **Documentation about Onboarding deliverables**: updated the Spryker Cloud Commerce OS getting started page with the deliverables provided after the onboarding. See [Getting started with the Spryker Cloud Commerce OS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html).
 
 * **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/cloud/dev/spryker-cloud-commerce-os/connecting-code-repository.html#connect-a-gitlab-code-repository).
 

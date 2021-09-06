@@ -1,6 +1,7 @@
 ---
 title: Locating service credentials
 description: To connect to Spryker Cloud services, locate the credentials in the AWS Management Console.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/locating-service-credentials
 originalArticleId: 8db85787-ad90-4c6f-94e9-ab82bf94703c
 redirect_from:
@@ -36,5 +37,5 @@ The credentials are located in the *Environment Variables* section.
 ![environment variables](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Access/Locating+service+credentials/environment+variables.png)
 
 ## Next step
-* [Connecting to services via SSH](/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html)
+* [Connecting to services via SSH](/docs/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html)
 

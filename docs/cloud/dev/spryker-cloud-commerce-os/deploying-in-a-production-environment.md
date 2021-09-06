@@ -1,6 +1,7 @@
 ---
 title: Deploying in a production environment
 description: Deploy an application in a production environment in the AWS Management Console.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/deploying-in-a-production-environment
 originalArticleId: 71dae250-39b8-4adc-a57d-ba9376587f7c
 redirect_from:
@@ -67,7 +68,6 @@ To run a pipeline:
 
 {% endinfo_block %}
 
-
 3. Optional: check the deployed application version and the application version to be deployed:
 
     1. In the *Prepare_versions_information_for_Approval_stage* stage, select **Details**.
@@ -126,12 +126,12 @@ To check the deployed application version in the [ECS cluster](https://docs.aws.
 ## Roll back an application
 To roll back an application:
 
-1. Find out the application version you want to roll back to. See [1. Check the version to deploy](#1--check-the-version-to-deploy) for more details.
+1. Find out the application version you want to roll back to. See [1. Check the version to deploy](#check-the-version-to-deploy) for more details.
 
-2. In [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/), set the application version as the value of the */spryker-staging/desired_version* parameter. See [2. Define the version to deploy](#2-define-the-version-to-deploy) for more details. 
+2. In [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/), set the application version as the value of the */spryker-staging/desired_version* parameter. See [2. Define the version to deploy](#define-the-version-to-deploy) for more details. 
 
 
-3. Run a deployment pipeline as described in [3. Run a deployment pipeline](#3--run-a-deployment-pipeline).
+3. Run a deployment pipeline as described in [3. Run a deployment pipeline](#run-a-deployment-pipeline).
 
 
 

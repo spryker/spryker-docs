@@ -1,6 +1,7 @@
 ---
 title: Configuring Azure Pipelines
 description: Learn how to configure Azure Pipelines and connect them to your project.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/configuring-azure-pipelines
 originalArticleId: df3448d4-34a8-43a8-bc58-f37ea8b6cd8d
 redirect_from:

@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting
 description: Solutions to common issues related to Spryker Cloud Commerce OS.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/troubleshooting
 originalArticleId: de8342de-9e4a-451f-8294-7a59a893b099
 redirect_from:

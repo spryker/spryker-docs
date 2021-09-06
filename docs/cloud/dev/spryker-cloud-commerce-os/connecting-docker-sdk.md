@@ -1,6 +1,7 @@
 ---
 title: Connecting Docker SDK
 description: Connect Docker SDK to your Spryker Cloud project.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/connecting-docker-sdk
 originalArticleId: a4fe702d-b469-4224-a329-aba9f6c2c027
 redirect_from:

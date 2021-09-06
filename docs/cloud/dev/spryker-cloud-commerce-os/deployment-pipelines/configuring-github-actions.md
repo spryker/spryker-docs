@@ -1,6 +1,7 @@
 ---
 title: Configuring GitHub Actions
 description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/configuring-github-actions
 originalArticleId: ad8a174f-1372-4cae-b530-fa77a9cd5479
 redirect_from:
@@ -258,7 +259,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](https:/
 
 4. Repeat steps 1 to 3 until you add all the desired jobs.
 
-For different configuration examples, see Configuring groups of tests via the [Configuring groups of tests via the Docker SDK: Configuration examples](/docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-github-actions.html#configuring-groups-of-tests-via-the-docker-sdk--configuration-examples).
+For different configuration examples, see Configuring groups of tests via the [Configuring groups of tests via the Docker SDK: Configuration examples](/docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-github-actions.html#configuring-groups-of-tests-via-the-docker-sdk).
 
 ### Configuring groups of tests via the Docker SDK: Configuration examples
 
@@ -445,12 +446,12 @@ image:
 
 *   To learn about workflow configuration, see [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions).
     
-*   To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates).
+*   To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
     
-*   To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets).
+*   To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
     
-*   To learn about the Deploy file, see [Deploy file reference - 1.0](https://documentation.spryker.com/docs/deploy-file-reference-10#deploy-file-reference---1-0).
+*   To learn about the Deploy file, see [Deploy file reference - 1.0](https://documentation.spryker.com/docs/deploy-file-reference-10#deploy-file-reference---1-0)
     
-*   To learn about configuring services with the Docker SDK, see [Configuring services](https://documentation.spryker.com/docs/configuring-services#configuring-services).
+*   To learn about configuring services with the Docker SDK, see [Configuring services](https://documentation.spryker.com/docs/configuring-services#configuring-services)
     
 

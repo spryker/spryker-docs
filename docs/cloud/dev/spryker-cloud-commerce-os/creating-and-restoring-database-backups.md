@@ -1,6 +1,7 @@
 ---
 title: Creating and restoring database backups
 description: Learn how to manage database backups in Spryker Cloud Commerce OS.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/creating-and-restoring-database-backups
 originalArticleId: e2174fdf-a9f6-4fd9-80ee-4d9e46f6d72d
 redirect_from:
@@ -87,7 +88,7 @@ This takes you to the _Modify DB instance: {DB name}_ page.
 
 * To apply the changes immediately, select **Immediately**. This can cause an outage in some cases. For more information, see  [Modifying an Amazon RDS DB Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html).
 
-* To apply the changes during the next scheduled maintenance window of the DB, select **During the next scheduled maintenance window**. In this case, you have to wait for the database to be renamed before you can [restore it from a snapshot](#2--restore-a-db-from-a-snapshot).
+* To apply the changes during the next scheduled maintenance window of the DB, select **During the next scheduled maintenance window**. In this case, you have to wait for the database to be renamed before you can [restore it from a snapshot](#restoring-a-database).
 
 8. Review your changes and select **Modify DB Instance**_._  
 This takes you to the _Databases_ page with the success message displayed.  

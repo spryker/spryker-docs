@@ -1,5 +1,6 @@
 ---
 title: Setting up a custom domain name
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-domain-name
 originalArticleId: fbf9cb02-2a68-45bd-a404-258011585225
 redirect_from:
@@ -11,8 +12,8 @@ With Spryker Cloud Commerce OS, you get domain names (domains) which are managed
 If you provided custom domains for the initial setup, follow [Set up a DNS zone](#set-up-a-dns-zone).
 If you want to set up a custom domain after the initial setup, depending on the desired DNS zone provider, see:
 
-* [Setting up a custom domain name with Route 53](setting-up-a-custom-domain-name-with-route-53)
-* [Setting up a custom domain name with a third-party DNS zone provider](setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider)
+* [Setting up a custom domain name with Route 53](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-route-53.html)
+* [Setting up a custom domain name with a third-party DNS zone provider](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html)
 
 ## Set up a DNS zone
 You can host the DNS zone of a domain with [Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html) or with a third-party provider. 

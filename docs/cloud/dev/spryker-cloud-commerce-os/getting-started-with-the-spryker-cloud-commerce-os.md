@@ -1,6 +1,7 @@
 ---
 title: Getting started with the Spryker Cloud Commerce OS
 description: After the initial setup, access Spryker Cloud and start developing.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/getting-started-with-spryker-cloud-commerce-os
 originalArticleId: 04c7a319-4c90-4fd7-a112-982569e48c70
 redirect_from:
@@ -25,7 +26,7 @@ After the initial setup, the following is configured and available:
 You can access SCCOS via:
 
 * IAM account - provides access to AWS Management Console. See [Accessing AWS Management Console](/docs/cloud/dev/spryker-cloud-commerce-os/access/accessing-aws-management-console.html) for more details. 
-* SSH - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). See [Connecting to services via SSH](/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html) for more details.
+* SSH - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). See [Connecting to services via SSH](/docs/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html) for more details.
 * VPN - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). We provide the access details during the onboarding.
 * SFTP - provides access to the SFTP folder mounted inside the Jenkins container.
 
@@ -48,6 +49,7 @@ You can find the credentials for services in the environment variables for the Z
 ## CD Pipelines
 The following CD pipelines are configured in [CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html):
 
+<div class="width-100">
 
 | Pipeline | Details |
 | --- | --- |
@@ -56,6 +58,7 @@ The following CD pipelines are configured in [CodePipeline](https://docs.aws.ama
 | Build | Compiles images and pushes them into the [Amazon Elastic Container Registry](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html). Starts automatically when a new commit is detected.  |
 | Rollout Scheduler | Deploys the scheduler. |
 
+</div>
 
 See [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html) and [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html) to learn about running pipelines.
 

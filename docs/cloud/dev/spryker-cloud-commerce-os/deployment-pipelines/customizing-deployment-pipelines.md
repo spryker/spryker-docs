@@ -1,6 +1,7 @@
 ---
 title: Customizing deployment pipelines
 description: Learn how to customize deployment pipelines.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/customizing-deployment-pipelines
 originalArticleId: 84961c76-f48a-42db-95e4-789434c891e0
 redirect_from:
@@ -93,9 +94,9 @@ To add one or more commands to the `install` stage of a deployment pipeline:
 
 1.  Depending on the desired environment, add the desired commands to one of the following files:
     
-    * Normal: `config/install/production`
+* Normal: `config/install/production`
         
-    * Destructive: `config/install/destructive`
+* Destructive: `config/install/destructive`
         
 2.  Push the changes to the repository.
     

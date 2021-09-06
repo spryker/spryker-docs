@@ -8,12 +8,12 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/connecting-docker-sdk.html
       - title: Access
         nested:
-          - title: Connecting to services via SSH
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html
           - title: Accessing AWS Management Console
             url: /docs/cloud/dev/spryker-cloud-commerce-os/access/accessing-aws-management-console.html
           - title: Locating service credentials
             url: /docs/cloud/dev/spryker-cloud-commerce-os/access/locating-service-credentials.html
+          - title: Connecting to services via SSH
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html
       - title: Connecting code repository
         url: /docs/cloud/dev/spryker-cloud-commerce-os/connecting-code-repository.html
       - title: Deploying in a staging environment
@@ -25,13 +25,12 @@ entries:
       - title: Preparation for going live
         url: /docs/cloud/dev/spryker-cloud-commerce-os/preparation-for-going-live.html
       - title: Setting up a custom domain name
-        nested:
-          - title: Setting up a custom domain name with a third-party DNS zone provider
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html
-          - title: Setting up a custom domain name
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name.html
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name.html
+        nested:      
           - title: Setting up a custom domain name with Route 53
             url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-route-53.html      
+          - title: Setting up a custom domain name with a third-party DNS zone provider
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html
       - title: Setting up a custom SSL certificate
         url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html
       - title: Deploying in a production environment
@@ -45,19 +44,18 @@ entries:
           - title: Generating access keys
             url: /docs/cloud/dev/spryker-cloud-commerce-os/security/generating-access-keys.html
       - title: Deployment pipelines
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/deployment-pipelines.html
         nested:
-          - title: Configuring Bitbucket Pipelines
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-bitbucket-pipelines.html
+          - title: Customizing deployment pipelines
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/customizing-deployment-pipelines.html
           - title: Configuring Azure Pipelines
             url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-azure-pipelines.html
           - title: Configuring GitHub Actions
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-github-actions.html=
-          - title: Deployment pipelines
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/deployment-pipelines.html
-          - title: Customizing deployment pipelines
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/customizing-deployment-pipelines.html
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-github-actions.html
           - title: Configuring GitLab pipelines
             url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-gitlab-pipelines.html
+          - title: Configuring Bitbucket Pipelines
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/configuring-bitbucket-pipelines.html
       - title: Customizing AWS CloudWatch dashboards
         url: /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html      
       - title: Managing parameters in the Parameter Store

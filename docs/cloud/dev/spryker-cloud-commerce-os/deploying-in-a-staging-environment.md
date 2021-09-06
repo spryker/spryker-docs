@@ -1,6 +1,7 @@
 ---
 title: Deploying in a staging environment
 description: Deploy an application in a staging environment.
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/deploying-in-a-staging-environment
 originalArticleId: 9a152894-26bd-488f-8dfa-a8e645063c51
 redirect_from:

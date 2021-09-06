@@ -1,5 +1,6 @@
 ---
 title: Setting up a custom domain name with Route 53
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-domain-name-with-route-53
 originalArticleId: 6a422776-6e65-48ae-8133-759954b13537
 redirect_from:
@@ -72,9 +73,9 @@ See [Deploy File Reference - 1.0](https://documentation.spryker.com/docs/deploy-
 
 4. Depending on the environment you are setting up the domain for: 
 
-    * [Deploy the application in the production environment](deploying-in-a-production-environment).
+    * [Deploy the application in the production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
-    * [Deploy the application in the staging environment](deploying-in-a-staging-environment).
+    * [Deploy the application in the staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html).
 
 
 5.  Let us know about the desired change via [support](https://spryker.force.com/support/s/). 

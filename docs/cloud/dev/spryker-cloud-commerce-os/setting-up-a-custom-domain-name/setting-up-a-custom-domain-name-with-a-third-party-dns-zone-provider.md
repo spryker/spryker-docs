@@ -1,5 +1,6 @@
 ---
 title: Setting up a custom domain name with a third-party DNS zone provider
+template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider
 originalArticleId: a0bdd6d7-2603-4bb6-8ab9-0899a6b2041f
 redirect_from:
@@ -19,7 +20,7 @@ To point a domain to your application, point it to the respective load balancer 
     * *{project_name}-staging*
     * *{project_name}-prod*
 
-3. In the *Load balancer:{load balancer name}* section, select Copy ![copy icon](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Setting+up+a+custom+domain+name/Setting+up+a+custom+domain+name+with+a+third-party+DNS+zone+provider/copy-icon.png) next to the DNS name field.
+3. In the *Load balancer:{load balancer name}* section, select **Copy** ![copy icon](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Setting+up+a+custom+domain+name/Setting+up+a+custom+domain+name+with+a+third-party+DNS+zone+provider/copy-icon.png) next to the DNS name field.
  
 4. On the side of the DNS zone provider, set up a CNAME record using the copied *DNS name* as the record value. Refer to the DNS zone provider’s documentation for details.
 
@@ -71,9 +72,9 @@ See [Deploy File Reference - 1.0](https://documentation.spryker.com/docs/deploy-
 
 4. Depending on the environment you are setting up the domain for: 
 
-    * [Deploy the application in the production environment](deploying-in-a-production-environment).
+* [Deploy the application in the production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
-    * [Deploy the application in the staging environment](deploying-in-a-staging-environment).
+* [Deploy the application in the staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html).
 
 ## Next step
 

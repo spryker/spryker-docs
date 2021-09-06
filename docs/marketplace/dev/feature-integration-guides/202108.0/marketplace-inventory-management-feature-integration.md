@@ -143,7 +143,6 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. |  | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
 | ProductOfferStockProductOfferViewSectionPlugin | Shows stock section at product offer view page in Zed. |  | Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer |
 
-
 **src/Pyz/Zed/marketplace-merchant/marketplace-merchantDependencyProvider.php**
 
 ```php

@@ -76,3 +76,22 @@ class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantP
 Make sure the available stock column is displayed in the ProductConcreteTable.
 
 {% endinfo_block %}
+
+
+### 3) Set up transfer objects
+
+Generate transfer changes:
+
+```bash
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes have been applied in transfer objects:
+
+| TRANSFER  | TYPE  | EVENT | PATH  |
+|-|-|-|-|
+| ProductConcreteAvailabilityCollection | class | Created | src/Generated/Shared/Transfer/ProductConcreteAvailabilityCollectionTransfer |
+
+{% endinfo_block %}

@@ -59,7 +59,7 @@ layout: default
         <div class="post-header">
             <h1 class="post-header__title">{{ page.title }}</h1>
 
-            <div class="post-meta">Last updated: <time datetime="">{% if page.last_updated %} {{ page.last_updated | date: "%d.%m.%Y" }} {% else %} {{ page.last_modified_at | date: "%d.%m.%Y" }} {% endif %}</time></div>
+            <div class="post-meta">Last updated: <time datetime="">{% if page.last_updated %} {{ page.last_updated | date: "%B %-d, %Y" }} {% else %} {{ page.last_modified_at | date: "%B %-d, %Y" }} {% endif %}</time></div>
 
             {% if site.github_editme_path %}
                 <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="button post-header__button button--small" role="button"><i class="icon-github"></i> Edit on GitHub</a>

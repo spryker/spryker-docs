@@ -1,8 +1,8 @@
 algolia:
-  index_name: 'marketplace_user'
+  index_name: 'cloud_dev'
   files_to_exclude:
     - index.md
     - 404.md
     - search.md
+    - docs/marketplace/user/**/*.md
     - docs/marketplace/dev/**/*.md
-    - docs/cloud/dev/**/*.md

@@ -17,16 +17,16 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | -------|
-| Spryker Core         | 202001.0   | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Marketplace Merchant | dev-master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product              | 202001.0   | [Product feature integration](https://github.com/spryker-feature/product) |
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Product              | {{page.version}} | [Product feature integration](https://documentation.spryker.com/docs/product-feature-integration) |
 
 ###  1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-product-offer --update-with-dependencies
+composer require spryker-feature/marketplace-product-offer:"dev-master" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -35,6 +35,7 @@ Make sure that the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | ------------------ | ---------------------- |
+| MerchantProductOfferWidget     | spryker-shop/merchant-product-offer-widget |
 | MerchantProductOffer           | spryker/merchant-product-offer             |
 | MerchantProductOfferDataImport | spryker/merchant-product-offer-data-import |
 | MerchantProductOfferGui        | spryker/merchant-product-offer-gui         |
@@ -42,10 +43,9 @@ Make sure that the following modules were installed:
 | MerchantProductOfferStorage    | spryker/merchant-product-offer-storage     |
 | ProductOffer                   | spryker/product-offer                      |
 | ProductOfferGui                | spryker/product-offer-gui                  |
-| ProductOfferSales              | spryker/product-offer-sales                |
 | ProductOfferValidity           | spryker/product-offer-validity             |
-| ProductOfferValidityGui        | spryker/product-offer-validity-gui         |
 | ProductOfferValidityDataImport | spryker/product-offer-validity-data-import |
+| ProductOfferValidityGui        | spryker/product-offer-validity-gui         |
 
 {% endinfo_block %}
 
@@ -70,6 +70,7 @@ Adjust the schema definition so that entity changes will trigger events:
             <parameter name="spy_product_offer_product_offer_reference" column="product_offer_reference" keep-additional="true"/>
             <parameter name="spy_product_offer_concrete_sku" column="concrete_sku" keep-additional="true"/>
         </behavior>
+        <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
     </table>
 
     <table name="spy_product_offer_store" phpName="SpyProductOfferStore">
@@ -98,7 +99,6 @@ Verify that the following changes have been implemented by checking your databas
 | spy_product_offer_store                      | table  | created |
 | spy_product_concrete_product_offers_storage  | table  | created |
 | spy_product_offer_storage                    | table  | created |
-| spy_sales_order_item.product_offer_reference | column | created |
 | spy_product_offer_validity                   | table  | created |
 
 
@@ -106,20 +106,53 @@ Make sure that the following changes were applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 | --------------- | -------- | ------ | ---------------- |
-| MerchantProductOfferCriteriaFilter | class     | created | src/Generated/Shared/Transfer/MerchantProductOfferCriteriaFilterTransfer |
-| DataImporterConfiguration          | class     | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer |
+| Item.productOfferReference         | property | created | src/Generated/Shared/Transfer/ItemTransfer                   |
+| MerchantProductOfferCriteria       | class     | created | src/Generated/Shared/Transfer/MerchantProductOfferCriteriaTransfer |
 | ProductOffer                       | class     | created | src/Generated/Shared/Transfer/ProductOfferTransfer           |
-| StringFacetMap                     | class     | created | src/Generated/Shared/Transfer/StringFacetMapTransfer         |
-| ProductOffer.idProductConcrete     | attribute | created | src/Generated/Shared/Transfer/ProductOfferTransfer           |
-| ProductOfferResponse.isSuccessful  | attribute | created | src/Generated/Shared/Transfer/ProductOfferResponseTransfer   |
-| ProductOfferCriteriaFilter         | class     | created | src/Generated/Shared/Transfer/ProductOfferCriteriaFilterTransfer |
-| Item.productOfferReference         | attribute | created | src/Generated/Shared/Transfer/ItemTransfer                   |
+| ProductOfferStore                  | class     | created | src/Generated/Shared/Transfer/ProductOfferStoreTransfer           |
+| ProductOfferResponse               | class     | created | src/Generated/Shared/Transfer/ProductOfferResponseTransfer           |
+| ProductOfferError                  | class     | created | src/Generated/Shared/Transfer/ProductOfferErrorTransfer           |
+| ProductOfferCollection             | class     | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer           |
+| ProductOfferCriteria               | class     | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer           |
 | ProductOfferValidity               | class     | created | src/Generated/Shared/Transfer/ProductOfferValidityTransfer   |
-| ProductOffer.productOfferValidity  | attribute | created | src/Generated/Shared/Transfer/ProductOfferTransfer           |
+| ProductOfferValidityCollection     | class     | created | src/Generated/Shared/Transfer/ProductOfferValidityCollectionTransfer   |
+| ProductPageSearch.merchantReferences | property  | created | src/Generated/Shared/Transfer/ProductPageSearchTransfer   |
+| ProductPayload.merchantReferences    | property  | created | src/Generated/Shared/Transfer/ProductPayloadTransfer   |
+| PageMap.merchantReferences           | property  | created | src/Generated/Shared/Transfer/PageMapTransfer   |
+| ProductAbstractMerchant.merchantReferences | property  | created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer   |
+| ProductView.productOfferReference | property  | created | src/Generated/Shared/Transfer/ProductViewTransfer   |
+| ProductOfferStorage               | class  | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer   |
+| ProductOfferStorageCollection     | class  | created | src/Generated/Shared/Transfer/ProductOfferStorageCollectionTransfer   |
+| ProductOfferStorageCriteria     | class  | created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer   |
+| ProductStorageCriteria.merchantReference     | property  | created | src/Generated/Shared/Transfer/ProductStorageCriteriaTransfer   |
+
 
 {% endinfo_block %}
 
 ### 3) Add Zed translations
+
+Append glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```csv
+product-offer.info.reference.invalid,"Product offer reference not found for product with SKU '%sku%'.",en_US
+product-offer.info.reference.invalid,"Produktangebotsreferenz für Produkt mit SKU '%sku%' nicht gefunden.",de_DE
+product-offer.message.not-active-or-approved,"Product offer not active for product with SKU '%sku%'.",en_US
+product-offer.message.not-active-or-approved,"Produktangebot ist inaktiv für Produkt mit SKU '%sku%'.",de_DE
+```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data is added to the `spy_glossary` table in the database.
+
+{% endinfo_block %}
 
 Generate a new translation cache for Zed:
 
@@ -1310,6 +1343,7 @@ It means the following:
 {% endinfo_block %}
 
 ### 7) Configure navigation
+
 Add product offers section to marketplace section of `navigation.xml`:
 
 **config/Zed/navigation.xml**

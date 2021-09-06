@@ -1,0 +1,7 @@
+algolia:
+  index_name: 'marketplace_dev'
+  files_to_exclude:
+    - index.md
+    - 404.md
+    - search.md
+    - docs/cloud/dev/**/*.md

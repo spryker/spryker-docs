@@ -7,7 +7,7 @@
                     <div class="main-header__left-inner">
                         <div class="main-header__meta">
                             <strong class="main-header__meta-title">{{ page.title }}</strong>
-                            <div class="main-header__meta-subtitle">Last updated: <time datetime="">20.05.2021</time></div>
+                            <div class="main-header__meta-subtitle">Last updated: <time datetime="">{% if page.last_updated %} {{ page.last_updated | date: "%B %-d, %Y" }} {% else %} {{ page.last_modified_at | date: "%B %-d, %Y" }} {% endif %}</time></div>
                         </div>
 
                         <strong class="main-header__logo">
@@ -33,6 +33,8 @@
                                                 Marketplace developer guide
                                                 {% elsif page.product-type == 'marketplace/user' %}
                                                 Marketplace users guide
+                                                {% elsif page.product-type == 'cloud/dev' %}
+                                                Spryker Cloud Commerce OS
                                                 {% else %}
                                                 Select Product
                                                 {% endif %}
@@ -72,7 +74,7 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="https://cloud.spryker.com/" class="main-nav__drop-link">
+                                                <a href="/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-spryker-cloud-commerce-os.html" class="main-nav__drop-link">
                                                 Spryker Cloud Commerce OS
                                                 </a>
                                             </li>

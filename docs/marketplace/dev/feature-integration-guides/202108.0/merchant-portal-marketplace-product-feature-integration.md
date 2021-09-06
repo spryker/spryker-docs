@@ -69,3 +69,11 @@ Make sure that the following changes have been applied in transfer objects:
 | ReservationResponse | class | Created | src/Generated/Shared/Transfer/ReservationResponseTransfer |
 
 {% endinfo_block %}
+
+### 3) Zed translations
+
+Generate a new translation cache for Zed:
+
+```bash
+console translator:generate-cache
+```

@@ -26,10 +26,10 @@ Configurable Bundles feature is useful when you want to:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/configurable-bundle-feature-overview" class="mr-link">Get a general idea of the Configurable Bundle feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/configurable-bundle-module-relations" class="mr-link">Familiarize yourself with the module schema for the Configurable Bundle feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/howto-rendering-configurable-bundles-in-the-storefront" class="mr-link">Render Configurable Bundle Templates in the Storefront</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/migration-guide-configurablebundle" class="mr-link">Migrate ConfigurableBundle module from version 1.* to  version 2.*</a></li>
+                <li><a href="docs\scos\user\features\202009.0\configurable-bundle\configurable-bundle-feature-overview.md" class="mr-link">Get a general idea of the Configurable Bundle feature</a></li>
+                <li><a href="docs\scos\user\features\202009.0\configurable-bundle\configurable-bundle-module-relations.md" class="mr-link">Familiarize yourself with the module schema for the Configurable Bundle feature</a></li>
+                <li><a href="docs\scos\dev\tutorials-and-howtos\howtos\feature-howtos\howto-render-configurable-bundle-templates-in-the-storefront.md" class="mr-link">Render Configurable Bundle Templates in the Storefront</a></li>
+                 <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-configurablebundle.md" class="mr-link">Migrate ConfigurableBundle module from version 1.* to  version 2.*</a></li>
                   <li><a href="https://documentation.spryker.com/docs/migration-guide-configurablebundlestorage" class="mr-link">Migrate ConfigurableBundleStorage module from version 1.* to  version 2.*</a></li>
                 <li><a href="https://documentation.spryker.com/docs/migration-guide-product-list-gui" class="mr-link">Migrate ProductListGui module from version 1.* to  version 2.*</a></li>
                  <li><a href="https://documentation.spryker.com/docs/migration-guide-merchantrelationshipproductlistgui" class="mr-link">Migrate MerchantRelationshipProductListGui module from version 1.* to  version 2.*</a></li>

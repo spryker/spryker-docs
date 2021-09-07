@@ -629,6 +629,7 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
     </table>
 </body>
 </html>
+
 ```
 
 </details>
@@ -642,13 +643,18 @@ You will be able to verify the invoice template configuration in a later step.
 
 
 {% info_block errorBox %}
+
 An `oms.state.` prefixed translation key is a combination of the `OmsConfig::getFallbackDisplayNamePrefix()` and a normalized state machine name. If you have different OMS state-machine states or a fallback display name prefix, adjust the corresponding translations.
+
 {% endinfo_block %}
+
 {% info_block infoBox "Normalized state machine names" %}
+
 By default, in state machine names, the following applies:
 
 - Spaces are replaced with dashes.
 - All the words are decapitalized.
+
 {% endinfo_block %}
 
 1. Append glossary according to your configuration:
@@ -710,6 +716,7 @@ console data:import:glossary
 
 
 {% info_block warningBox "Verification" %}
+
 Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}

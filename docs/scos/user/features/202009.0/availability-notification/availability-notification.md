@@ -20,9 +20,9 @@ This feature is shipped in the form of a newsletter to which customers can subsc
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/availability-notification-feature-overview" class="mr-link">Get a general idea of the Availability Notification feature</a></li> 
-                <li><a href="https://documentation.spryker.com/docs/availability-notification-feature-integration" class="mr-link">Integrate the Availability Notification feature into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\availability-notification\availability-notification-feature-overview.md" class="mr-link">Get a general idea of the Availability Notification feature</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\availability-notification-feature-integration.md" class="mr-link">Integrate the Availability Notification feature into your project</a></li>
             </ul>
         </div>
         </div>
-</div> 
+</div>

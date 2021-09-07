@@ -1,5 +1,5 @@
 ---
-title: Agent Assist + Shopping List feature integration
+title: Agent Assist + Shopping List feature integration guide
 originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-shopping-list-feature-integration
 originalArticleId: ab65e035-ba74-4693-83e0-4f3459ebbb97
 redirect_from:
@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/agent-assist-shopping-list-feature-integration
 ---
 
-This document describes how to integrate the Agent Assist + Shopping List feature into a Spryker project. 
+This document describes how to integrate the Agent Assist + Shopping List feature into a Spryker project.
 
 ## Prerequisites
 
@@ -68,5 +68,4 @@ Integrate the following related features:
 | FEATURE                     | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
 | --------------------------- | -------------------------------- | ------------------------------------------------------------ |
 | Agent Assist | ✓                                | [Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/agent-assist-feature-integration.html) |
-| Agent Assist + Cart |                                  | [Agent Assist + Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/agent-assist-cart-feature-integration.html) |
-
+| Agent Assist + Cart |                                  | [Agent Assist + Cart feature integration guide](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/agent-assist-cart-feature-integration-guide.html) |

@@ -1,5 +1,5 @@
 ---
-title: How Translations are Managed
+title: How Translations are managed
 description: The key concept for rendering web pages with translated content very fast and with limited resource usage is using a key-value storage.
 originalLink: https://documentation.spryker.com/v4/docs/glossary-how-translations-managed
 originalArticleId: 730065d8-a6b4-4941-9a46-2ea8b07e892e

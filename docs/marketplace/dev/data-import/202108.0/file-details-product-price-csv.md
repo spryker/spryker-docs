@@ -1,3 +1,10 @@
+---
+title: "File details: product_price.csv"
+last_updated: Sep 7, 2021
+description: This document describes the product_price.csv file to configure  product prices in your Spryker shop.
+template: import-file-template
+---
+
 This article contains content of the **product_price.csv** file to configure [prices](https://documentation.spryker.com/docs/price) of the products/services in your Spryker Demo Shop.
 
 To import the file, run:

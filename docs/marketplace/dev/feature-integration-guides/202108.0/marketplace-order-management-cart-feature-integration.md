@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | ----------- | ------- | ------------------|
-| Order Threshold | dev-master  | [Order Threshold feature integration](https://documentation.spryker.com/docs/order-threshold-feature-integration) |
+| Order Threshold | {{page.version}}  | [Order Threshold feature integration](https://documentation.spryker.com/docs/order-threshold-feature-integration) |
 | Cart            | 202001.0    | [Cart feature integration](https://github.com/spryker-feature/cart) |
 
 ### 1) Install the required modules using Composer
@@ -98,9 +98,9 @@ To start feature integration, integrate the required features:
 
 | NAME            | VERSION |
 | -------------------- | ----------- |
-| Order Threshold      | dev-master  |
+| Order Threshold      | {{page.version}}  |
 | Cart                 | 202001.0    |
-| Merchant Portal Core | dev-master  |
+| Merchant Portal Core | {{page.version}}  |
 
 ### 1) Install the required modules using Composer
 

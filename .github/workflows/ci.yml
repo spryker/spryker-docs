@@ -54,7 +54,7 @@ jobs:
         uses: actions/cache@v2.1.6
         with:
           path: '~/.bundler-cache/'
-          key:  gemfile-${{ hashFiles('**/Gemfile.lock') }}
+          key:  gemfile-valid-1-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: gemfile-
 
       - run: bundle install

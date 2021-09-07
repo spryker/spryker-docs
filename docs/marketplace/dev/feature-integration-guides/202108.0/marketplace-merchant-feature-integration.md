@@ -1,6 +1,6 @@
 ---
 title: Marketplace Merchant feature integration
-last_updated: Mar 23, 2021
+last_updated: Sep 7, 2021
 description: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -69,7 +69,7 @@ Set up database schema:
 
 ```
 
-2. Apply database changes and to generate entity and transfer changes:
+2. Apply database changes, generate entity and transfer changes:
 
 ```bash
 console transfer:generate

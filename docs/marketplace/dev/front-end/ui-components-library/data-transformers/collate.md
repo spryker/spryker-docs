@@ -12,7 +12,7 @@ This document provides details about the Data Transformer Collate service in the
 Data Transformer Collate is an Angular Service that implements sorting, filtering, and pagination of data based on configuration.
 In general, the meaning of the word `collate` is to collect, arrange and assemble in a specific order of sequence.
 
-```ts
+```html
 <spy-table
   [config]="{
     datasource: {

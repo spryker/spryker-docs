@@ -19,6 +19,12 @@ entries:
           - title: Marketplace Storefront
             url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-storefront.html
 
+          - title: Release notes
+            nested:
+
+            - title: Release notes 202108.0
+              url: /docs/marketplace/user/intro-to-the-spryker-marketplace/release-notes/release-notes-2021080.html
+
       - title: Features
         url: /docs/marketplace/user/features/
         nested:
@@ -38,6 +44,9 @@ entries:
 
         - title: Merchant Opening Hours feature overview
           url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
+
+        - title: Marketplace Product feature overview
+          url: /docs/marketplace/user/features/marketplace-product-feature-overview.html          
 
         - title: Marketplace Product Offer feature overview
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html

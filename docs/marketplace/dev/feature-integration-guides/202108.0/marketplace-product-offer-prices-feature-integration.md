@@ -91,6 +91,13 @@ Make sure that the following changes were applied in transfer objects:
 | PriceProductOffer | class | created | src/Generated/Shared/Transfer/PriceProductOfferTransfer |
 | PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
 | PriceProductStoreCriteria | class | created | src/Generated/Shared/Transfer/PriceProductStoreCriteriaTransfer |
+| PriceProductCriteria.productOfferReference | property | created | src/Generated/Shared/Transfer/PriceProductCriteriaTransfer |
+| PriceProduct.concreteSku | property | created | src/Generated/Shared/Transfer/PriceProductTransfer |
+| PriceProductDimension.productOfferReference | property | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
+| PriceProductDimension.idProductOffer | property | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
+| PriceProductDimension.idPriceProductOffer | property | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
+| ProductOffer.prices | property | created | src/Generated/Shared/Transfer/ProductOfferTransfer |
+| PriceProductFilterIdentifier.productOfferReference | property | created | src/Generated/Shared/Transfer/PriceProductFilterIdentifierTransfer |
 | ProductOfferStorage.price | property | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer |
 
 {% endinfo_block %}

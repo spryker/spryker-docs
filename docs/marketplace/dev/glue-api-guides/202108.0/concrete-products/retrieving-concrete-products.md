@@ -1134,7 +1134,7 @@ For attributes of the other included resources, see the following:
 * [Retrieve product ratings and reviews](https://documentation.spryker.com/docs/retrieving-product-ratings-and-reviews#product-ratings-and-reviews-response-attributes)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
-* [Retrieving abstract products](https://documentation.spryker.com/marketplace/docs/retrieving-abstract-products#abstract-products-response-attributes)
+* [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html#response)
 * [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}//merchants/retrieving-merchants.html#merchants-response-attributes)
 
 

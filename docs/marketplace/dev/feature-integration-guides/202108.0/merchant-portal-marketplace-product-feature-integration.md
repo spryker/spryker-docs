@@ -26,7 +26,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/product-merchant-portal-gui:"dev-master" --update-with-dependencies
+composer require spryker/product-merchant-portal-gui:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

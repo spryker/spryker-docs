@@ -10,7 +10,7 @@ This document explains the Table Column Type Text in the Components library.
 
 Table Column Text is an Angular Component that provides a static text.
 
-Example usage the Table Column Text in the `@spryker/table` config:
+Example usage of the Table Column Text in the `@spryker/table` config:
 
 ```html
 <spy-table [config]="{
@@ -45,7 +45,7 @@ Example usage the Table Column Text in the `@spryker/table` config:
 
 ## Interfaces
 
-The Table Column Text interface:
+Below you can find interface for the Table Column Text type:
 
 ```ts
 interface TableColumnTextConfig {

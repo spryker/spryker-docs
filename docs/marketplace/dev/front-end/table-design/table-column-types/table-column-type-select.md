@@ -10,7 +10,7 @@ This document explains the Table Column Type Select in the Components library.
 
 Table Column Select is an Angular Component that provides a drop-down list by rendering the `@spryker/select` component.
 
-Example usage the Table Column Select in the `@spryker/table` config:
+Example usage of the Table Column Select in the `@spryker/table` config:
 
 ```html
 <spy-table [config]="{
@@ -49,7 +49,7 @@ Example usage the Table Column Select in the `@spryker/table` config:
 
 ## Interfaces
 
-The Table Column Select interfaces:
+Below you can find interfaces for the Table Column Select type:
 
 ```ts
 type SelectValue = string | number;

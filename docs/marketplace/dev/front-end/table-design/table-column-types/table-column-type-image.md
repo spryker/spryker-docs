@@ -10,7 +10,7 @@ This document explains the Table Column Type Image in the Components library.
 
 Table Column Image is an Angular Component that provides an image.
 
-Example usage the Table Column Image in the `@spryker/table` config:
+Example usage of the Table Column Image in the `@spryker/table` config:
 
 ```html
 <spy-table [config]="{
@@ -34,7 +34,7 @@ Example usage the Table Column Image in the `@spryker/table` config:
 
 ## Interfaces
 
-The Table Column Image interface:
+Below you can find interface for the Table Column Image type:
 
 ```ts
 interface TableColumnImageConfig {

@@ -17,15 +17,15 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product | dev-master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html) |
-| Tax | dev-master | [Tax feature integration](https://github.com/spryker-feature/tax)
+| Marketplace Product | {{page.version}} | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html) |
+| Tax | {{page.version}} | [Tax feature integration](https://github.com/spryker-feature/tax)
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/tax-merchant-portal-gui:"dev-master" --update-with-dependencies
+composer require spryker/tax-merchant-portal-gui:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

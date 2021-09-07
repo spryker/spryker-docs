@@ -16,12 +16,12 @@ The agent user can be created in the Administration Interface under _Users Contr
 In fact, any Administration Interface user can be agent, all you need to do for that is select the _This user is an agent check-box_ on the _User create/edit page_, and the user gets the Agent mark. See Adding New Users to learn more how to create a new agent user in the Admin UI.
 {% endinfo_block %}
 
-![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/zed-agent-assist.png){height="" width=""}
+![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/zed-agent-assist.png) 
 
 ## How does it work?
 To act on customer's behalf, the agent signs in to web-shop via `http://mysprykershop.com/agent/login` link with the agent account details and selects the right customer by typing their name or email in the customer search field.
 
-![customer-assitent.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/customer-assitent.png){height="" width=""}
+![customer-assitent.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/customer-assitent.png) 
 
 Once necessary customer is found in the customer search field, the agent clicks **Confirm**.
 
@@ -31,6 +31,6 @@ This virtually logs the agent in to the web-shop under the selected customer, so
 
 Having performed the necessary actions requested by the customer, the agent ends the customer assistance session by clicking **End Customer Assistance**.
 
-<!-- ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/customer-session.png){height="" width=""} -->
+<!-- ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/customer-session.png)  -->
 
 <!-- Last review date: Sep 26, 2018-- by Andrii Sokirko -->

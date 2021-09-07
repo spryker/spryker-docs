@@ -19,11 +19,11 @@ You can view how it looks like on the store website:
 
 * **B2C**
     Template used: Big Banner w/Middle Title and Subtitle
-![Banner content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/banner-yves-b2c.gif){height="" width=""}
+![Banner content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/banner-yves-b2c.gif) 
 
 * **B2B**
     Template used: Big Banner Left Title, Subtitle and Button
-![Banner content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/banner-template-b2b.png){height="" width=""}
+![Banner content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/banner-template-b2b.png) 
 
 ***
 ## Abstract Product List Content Item Widget
@@ -35,11 +35,11 @@ You can view how it looks like on the store website:
 
 * **B2C**
 Template used: Slider with product category info
-![Abstract product list content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/abstract-product-list-yves-b2c.png){height="" width=""}
+![Abstract product list content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/abstract-product-list-yves-b2c.png) 
 
 * **B2B**
 Template used: Product Slider for store/landing pages
-![Abstract product list content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/apl-template-b2b.png){height="" width=""}
+![Abstract product list content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/apl-template-b2b.png) 
 
 ***
 ## Product Set Content Item Widget
@@ -51,11 +51,11 @@ You can view how it looks like on the store website:
 
 * **B2C**
 Template used: Images left side, products right side and only add all button)
-![Product set content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/product-set-yves-b2c.png){height="" width=""}
+![Product set content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/product-set-yves-b2c.png) 
 
 * **B2B**
 Template used: Product Set for landing pages
-![Product set content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/product-set-template-b2b.png){height="" width=""}
+![Product set content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/product-set-template-b2b.png) 
 
 ***
 ## File List Content Item Widget
@@ -71,8 +71,8 @@ You can view how it looks like on the store website:
 
 * **B2C**
     Template used: File icon and size
-![File list content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/file-list-yves-b2c.gif){height="" width=""}
+![File list content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/file-list-yves-b2c.gif) 
 
 * **B2B**
     Template used: Text Link
-![File list content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/file-list-yves-b2b.gif){height="" width=""}
+![File list content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/file-list-yves-b2b.gif) 

@@ -30,7 +30,7 @@ where **3** is the ID of the label you want to retrieve.
 Label IDs can be found in the **Products / Product Labels** section of the Back Office.
 {% endinfo_block %}
 
-![Product Labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Products/Accessing+Product+Labels/product_labels_2.png){height="" width=""}
+![Product Labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Products/Accessing+Product+Labels/product_labels_2.png) 
 
 ### Response
 The endpoint responds with information on the requested product label, including the CSS class that can be used to display the label on a storefront.

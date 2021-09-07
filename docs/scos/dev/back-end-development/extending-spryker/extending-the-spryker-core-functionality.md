@@ -26,7 +26,7 @@ To extend the Spryker-Core functionality and to use the Spryker Engine to develo
 The project consists of two parts : **Spryker Core** and **Project** implementation. They both follow the same structure and the project implementation goes on top of the Spryker Core functionalities.
 
 The picture below shows how a request is being handled:
-![Request handling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+Extending+Spryker/request_handling.png){height="" width=""}
+![Request handling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+Extending+Spryker/request_handling.png) 
 
 ## Project Structure Overview
 The code is divided into three parts:

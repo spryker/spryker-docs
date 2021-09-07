@@ -14,7 +14,7 @@ This page contains the information on the UI elements and pages that refer to th
 Quote Requests is the page where you can access all your RFQs. Don't have an RFQ? Start creating it.
 
 On the **Quote Requests** page, you see the following:
-![Quote requests](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Request+for+Quote:+Reference+Information/quote-requests.png){height="" width=""}
+![Quote requests](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Request+for+Quote:+Reference+Information/quote-requests.png) 
 
 | # | Element | Description |
 |---|---|---|
@@ -31,7 +31,7 @@ By default, the last created RFQ goes on top of the table.
 ## Quote Request
 
 Every **Quote Request** page consists of the following parts:
-![Quote request page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Request+for+Quote:+Reference+Information/quote-request-page.png){height="" width=""}
+![Quote request page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Request+for+Quote:+Reference+Information/quote-request-page.png) 
 
 | # | Element | Description |
 |---|---|---|

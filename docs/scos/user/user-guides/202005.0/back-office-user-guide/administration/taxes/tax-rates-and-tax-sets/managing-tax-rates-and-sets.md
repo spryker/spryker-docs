@@ -21,7 +21,7 @@ To define a rate under which the product, shipment, or a threshold are going to 
 2. On the **Create Tax Rate** page, enter and select the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
 3. Click **Save**.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/create-tax-rate.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/create-tax-rate.png) 
 
 ### Editing a Tax Rate
 In the ever-changing business world, there is a chance that the taxation policies can change too. 
@@ -31,7 +31,7 @@ In the ever-changing business world, there is a chance that the taxation policie
 2. On the **Edit Tax Rate** page, change the attributes. See [Taxes: Reference information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
 3. Click **Save**.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/editing-tax-rate.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/editing-tax-rate.png) 
 ***
 **Tips & Tricks**
 You can start editing a tax rate while viewing it:
@@ -84,7 +84,7 @@ Remember how you created the tax rate? To be able to use this taxation rule for 
 1. On the **Overview of Tax Sets** page, click **Create Tax Set** in the top right corner of the page.
 2. On the **Create Tax Set** page, enter the tax set name and select one or several tax rates to assign. See [Taxes: Reference information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/taxes/tax-rates-and-tax-sets/references/taxes-reference-information.html) for more details.
 3. Click **Save**.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/create-tax-set.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/create-tax-set.png) 
 
 
 ### Editing a Tax Set

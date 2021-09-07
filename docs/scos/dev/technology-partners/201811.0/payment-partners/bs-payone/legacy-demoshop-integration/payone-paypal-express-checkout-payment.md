@@ -85,6 +85,6 @@ $config[PayoneConstants::PAYONE][PayoneConstants::PAYONE_REDIRECT_EXPRESS_CHECKO
 ```
 
 ## Flow Diagram
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/BS+Payone/paypal-express-checkout-spryker-flow.png){height="" width=""}
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/BS+Payone/paypal-express-checkout-spryker-flow.png) 
 
 

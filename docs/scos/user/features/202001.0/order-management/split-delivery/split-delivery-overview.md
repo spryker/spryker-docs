@@ -21,7 +21,7 @@ In the Storefront, the Split Delivery feature allows you, as a customer, to set 
 In the Back Office, the Split Delivery feature allows you, as a Back Office user, to view, update and/or create multiple shipments for an order that had originally one delivery address.
 The following scheme illustrates relations between **Shipment**, **ShipmentGui**, and **Sales** modules:
 
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Split+Delivery/split-delivery-module-relations.png){height="" width=""}
+![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Split+Delivery/split-delivery-module-relations.png) 
 
 ## Split Delivery in the Storefront
 
@@ -33,14 +33,14 @@ In the *Address* checkout step, the **Define to multiple addresses** drop-down o
 
 Then, in the *Shipment* checkout step, you can see the products grouped by the same delivery address. The number of shipments equals the number of the same delivery addresses. For each shipment, you can select a delivery date (optional) and a shipment method.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png) 
 
 See [Shop Guide - Address](/docs/scos/user/user-guides/202001.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html) for more details on how to add multiple delivery addresses to order items in the Storefront.
 
 ## Split Delivery in the Back Office
 In the Back Office, the shipments are displayed in the *Order Items* section on the **View Order: [Order ID]** page.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Split+Delivery/Split+Delivery+Feature+Overview/shipments-zed.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Split+Delivery/Split+Delivery+Feature+Overview/shipments-zed.png) 
 
 Here you can perform the following actions on shipments:
 

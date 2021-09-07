@@ -22,12 +22,12 @@ If you do not need to add a condition, you can leave the query builder empty.
 {% endinfo_block %}
 
 Example: Discount is applied if five or more items are in the cart and it is Tuesday or Wednesday.
-![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png){height="" width=""}
+![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png) 
 
 The minimum order amount value specifies the threshold which should be reached for the products in a cart with a certain attribute to be discounted. When added to cart, products with the attribute specified by a query are measured against the threshold. By default, the minimum order amount value is 1. It means that any discount is applied if the number of items (that meet the rules) inside the cart is superior or equal to 1.
 
 Example: Discount is applied if 4 or more items with the Intel Core processor are in the cart.
-![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/threshold.png){height="" width=""}
+![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/threshold.png) 
 
 **More Advanced Example**
 
@@ -45,7 +45,7 @@ The discount is going to be applied if one of the following is fulfilled:
     * the subtotal amount is greater or equal: 80 € (Euro) **OR** 95 CHF (Swiss Franc)
 
 The setup will look like the following:
-![B2B scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2b-scenario.png){height="" width=""}
+![B2B scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2b-scenario.png) 
 
 **B2C Scenario**
 The discount is going to be applied if one of the following is fulfilled:
@@ -58,4 +58,4 @@ The discount is going to be applied if one of the following is fulfilled:
     * the item color is white, this item does not have the label **New**, and the customer adds at least two items (or more) to a cart
 
 The setup will look like the following:
-![B2C scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2c-scenario.png){height="" width=""}
+![B2C scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2c-scenario.png) 

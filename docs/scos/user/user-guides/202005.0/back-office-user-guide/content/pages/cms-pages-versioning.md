@@ -29,7 +29,7 @@ On the **Version History: [Page Name]** page, you can return to the list of CMS 
 ### Rolling back to a CMS Page Version
 To roll back to the specific version:
 1. On the **Version History: [Page Name]** page from the drop-down list, select the version that you want to return to.
-![Rolling back to the selected version](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/CMS+Pages+Versioning/page-versioning.png){height="" width=""}
+![Rolling back to the selected version](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/CMS+Pages+Versioning/page-versioning.png) 
 
 2. Click **Rollback to Selected Version** in the top right corner of the page. This will copy all data from the older version and publish the previous version in the online store.
 

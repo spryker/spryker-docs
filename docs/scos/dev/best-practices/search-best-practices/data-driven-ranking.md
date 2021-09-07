@@ -116,15 +116,15 @@ Very different kinds of scoring functions are conceivable and the advantages of 
 To be able to combine scores in such expressions, we normalize them between 0 and 1 and try to make sure that they are more or less equally distributed across all documents. If, for example, the ranking formula is `0.3 * score_1 + 0.7 * score_2` and the scores are in the same range, then you could say that `score_1` has a 30% influence on the outcome of the sorting and `score_2` an influence of 70%. The equal distribution is important because if, for example, most documents have a very high `score_2`, then having a high `score_2` becomes much more important for appearing at the top of the ranking than having a high `score_1` (an effect which can be consciously used).
 
 So for finding good normalization functions, it is important to look at the distribution of some measures across all products. This is the distribution of the number of sold items per product at Contorion (numbers are only up to the end of 2014 due to data sensitivity):
-![Computation of score top_seller](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-top-seller-computation.png){height="" width=""}
+![Computation of score top_seller](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-top-seller-computation.png) 
 
 Out of the products sold at all, most were sold only once or twice, while only very few products were sold more than 10 times. For the top_seller score to be meaningful, it is less important whether the product sold 500 or 50 times but rather whether it sold 10 times or once. The `atan(x - avg(X)) / (π / 2)` score formula reflects this: it returns 0.5 for the average number of sold items across all products and has most of its dynamics around that average. A second example is the distribution of the expected margin across products (again with data up to the end of 2014):
-![Computation of score expected_margin](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-expected-margin-computation.png){height="" width=""}
+![Computation of score expected_margin](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-expected-margin-computation.png) 
 
 For such “Gaussian-looking” distributions, we also use functions that put the average at 0.5 and that have most of their dynamics within the standard deviation of the distribution: `0.5 + atan((x - avg(X)) / stdev(X)) / π`.
 
 The last example is the expected delivery time in hours:
-![Computation of score deliery_speed](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-delivery-speed-computation.png){height="" width=""}
+![Computation of score deliery_speed](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-delivery-speed-computation.png) 
 
 Here our stakeholders made a conscious decision to define 48 hours as the neutral case (a score of 0.5) and everything after 60 hours as “bad”: `0.5 - atan((x - 48) / 12) / π`.
 

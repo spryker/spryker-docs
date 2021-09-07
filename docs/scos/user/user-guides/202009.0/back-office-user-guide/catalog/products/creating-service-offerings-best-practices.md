@@ -61,7 +61,7 @@ To create the product option, do the following:
 5. Activate the option by clicking **Activate** in the *Actions* column of the **Product option list**.
 
 That’s it. The option appears for the product on the Storefront:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/service-as-option-storefront.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/service-as-option-storefront.png) 
 {% info_block infoBox "Note" %}
 
 Keep in mind that depending on the use case you want to implement for your shop, additional development effort may be required on your project's side. For example, if you don’t want to allow buyers to add the Service option more than once if they have a set of specific products in carts.
@@ -95,7 +95,7 @@ If you don’t want to display the Service products in the Storefront so buyers 
  3. Activate the Configurable Bundle Template by clicking **Activate** in the *Actions* column of the **Configurable Bundle Templates** page.
  The configurable bundle now appears on the **Configurable Bundle List** page on the Storefront. Buyers can select the products and add the service if they want:
  
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/configurable-bundle-list.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/configurable-bundle-list.png) 
 
 {% info_block infoBox "Note" %}
 

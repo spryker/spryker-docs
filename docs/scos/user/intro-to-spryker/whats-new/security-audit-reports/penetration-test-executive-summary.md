@@ -18,7 +18,7 @@ B2B” of Spryker Systems GmbH were tested for security vulnerabilities and risk
 The penetration test was conducted voluntarily and is based on the recognized industry standard of the "OWASP Testing Guide v4.1 (2020)" as well as on the "Implementation Concept for Penetration Tests" of the German Federal Office for Information Security.
 Overall, the security of *Spryker Commerce B2C* and *Spryker Commerce B2B* gave a positive impression. The penetration test revealed some information leakages, including subdomain names, software in use, version numbers, and TCP timestamps (all available without login). However, regarding the transport layer security (TLS), a very high security standard (see Appendix) is in place. The security of the central authentication mechanisms and session management is working well.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/What's+new/Security+audit/penetration-test-executive-summary.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/What's+new/Security+audit/penetration-test-executive-summary.png) 
 
 During the penetration test a few medium and high rated vulnerabilities such as weak password policies, persistent Cross-Site-Scripting (XSS) and Cross-Site-Request-Forgery (CSRF) were discovered. Due to the general security concept it was not possible to harm the security in such a manner that the server or complete was taken over. There are several mitigation mechanisms like security header in place and it is made use of best practice like using secure and httpOnly flag on each cookie.
 In summary, the security of the shop systems is ensured by effective protection measures and can be enhanced at some points.

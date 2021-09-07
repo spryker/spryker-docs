@@ -28,7 +28,7 @@ To create a new RFQ:
 
 * See [Buyer Workflow](https://documentation.spryker.com/v5/docs/en/quotation-process-feature-overview#buyer-workflow) for more information on the request statuses and the workflow.
 * See [Reference Information](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/references/request-for-quote-reference-information.html) for details on UI elements in the **Quote Requests** page in the Customer Account.
-![Create Quote Request](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Creating+a+Request+for+Quote/create-quote-request.png){height="" width=""}
+![Create Quote Request](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Creating+a+Request+for+Quote/create-quote-request.png) 
 
 ***
 **What's next?**

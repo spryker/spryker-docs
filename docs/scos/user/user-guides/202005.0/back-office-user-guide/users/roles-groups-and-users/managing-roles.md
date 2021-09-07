@@ -128,7 +128,7 @@ From the `zed.de.b2b-demo-shop.local/product-attribute-gui/attribute/create` lin
 - _create_ is action.<br>
 You can verify the bundle, controller and action values in the [navigation.xml file ](https://github.com/spryker/product-attribute-gui/blob/master/src/Spryker/Zed/ProductAttributeGui/Communication/navigation.xml
 {% endinfo_block %} of the product-attribute-gui module under the *Create a Product Attribute* label:<br>
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/Roles%2C+Groups+and+Users/Managing+Roles/Create+attribute.png){height="" width=""})
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/Roles%2C+Groups+and+Users/Managing+Roles/Create+attribute.png) )
 
 3. Go back to the **Edit Role** page and fill in the required fields:
 **Bundle**: _product-attribute-gui_

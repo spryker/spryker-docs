@@ -11,7 +11,7 @@ redirect_from:
 The **Search and Filters** section in the Back Office is designed to build a successful user journey in finding the right product to buy.
 The **Search and Filter** section is mostly used by Product Catalog Managers.
 **Standardized flow of actions for a Product Catalog Manager**
-![Search and Filter - Product Catalog Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/search-and-filter-section.png){height="" width=""}
+![Search and Filter - Product Catalog Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/search-and-filter-section.png) 
 
 {% info_block infoBox %}
 This is how a Product Catalog Manager interacts with the other teams to create the search and filter preferences.

@@ -51,7 +51,7 @@ To change the title and content of the page:
 1. Select **Edit** > **Placeholders**.
 2.  On the **Edit Placeholders: [Page Name]** editor that opens, insert your cursor into the placeholder where you would like to update the content.
 3.  Using options on the editor menu, edit the content of your page.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png) 
 
 {% info_block infoBox %}
 In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-pages

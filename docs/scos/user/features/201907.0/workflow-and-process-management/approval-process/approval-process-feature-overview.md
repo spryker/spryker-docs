@@ -24,11 +24,11 @@ In the B2B industry, approvals are referred to carts and items in the carts that
 In the approval process you specify:
 
 * *Buy up to grand total* permission that restricts the cart checkout when the cart grand total amount reaches the limit specified in this permission.
-![Buy up to grand total permission](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/buy-up-to-grand-total-permission.png){height="" width=""}
+![Buy up to grand total permission](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/buy-up-to-grand-total-permission.png) 
 
 * *Send cart for approval* permission that allows a Buyer to send a cart for approval to their manager. Without this permission, the buyer cannot see the Request for Approval widget.
 * *Approve up to grand total* permission that allows an Approver to approve the carts that do not hit the cart grand total limit specified there.
-![Approve up to grand total permission](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approve-up-to-grand-total.png){height="" width=""}
+![Approve up to grand total permission](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approve-up-to-grand-total.png) 
 
 Every approval request, in turn, can have three statuses:
 
@@ -37,7 +37,7 @@ Every approval request, in turn, can have three statuses:
 * **Declined** - The cart has been rejected.
 
 Module relations in the Approval Process feature can be represented in the following schema:
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-module-relations.png){height="" width=""}
+![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-module-relations.png) 
 
 ## Approval Process Workflow
 The Approval Process as such introduces steps that company employees should follow to order, request for approval, and pay for products.
@@ -55,7 +55,7 @@ There may be several Approvers with different Approver limit permissions created
 2. **Approval or Rejection**
 
    After the request for approval has been sent, the Approver can check it in their Shopping Cart Widget:
-![Approval request](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-request.png){height="" width=""}
+![Approval request](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-request.png) 
 
    At this point, the Approver cannot alter the cart in any way (like editing it, or adding vouchers). Based on the contents of the cart, the Approver may reject or approve the Buyer's cart. If approved, the cart is submitted back to the Buyer for processing and checkout. Cart status changes to **Approved**. A Buyer cannot do any updates/changes with the cart after it has been approved, except for Checkout. If the Approver rejects the cart, the approval workflow is terminated. The cart gets the status **Declined** and cart editing is restored again. The Buyer may perform some changes with the cart (remove items, decrease the number of products) and start the approval process again or send the cart to another Approver.
    
@@ -115,7 +115,7 @@ The company has the following company users:
 The cart D can't be processed as the cart total is higher than any Approver permissions set for that company. In such a case the only workaround is to edit the cart (decrease the quantity of the items or remove some items from the cart), split the cart into several carts or create a new Approver role with a bigger Approve up to permission.
 
 You can also check the lifecycle of the above four scenarios in the following schema:
-![Approval process workflow schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-workflow-schema.png){height="" width=""}
+![Approval process workflow schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-workflow-schema.png) 
 
 ## Cart Lock Functionality
 After the cart is submitted for approval, it gets locked for both the Buyer and the Approver. This functionality prevents any changes to cart's content while it's in pending approval state.

@@ -12,7 +12,7 @@ redirect_from:
 
  In order to reproduce some edge cases like declined payment or pending capture Amazon provides two solutions. First is special methods marked with red star on payment widget.
 
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/00000005.png){height="" width=""}
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/00000005.png) 
 
 It allows reproducing different cases of decline payment workflow. But there are more edge cases like expired authorisation or pending capture there is only one way to reproduce - pass simulation string as 'SellerNote' parameter of API request. <!-- More information is available here-->
 

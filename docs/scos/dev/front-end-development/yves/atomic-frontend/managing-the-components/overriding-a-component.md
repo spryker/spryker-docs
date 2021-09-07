@@ -23,7 +23,7 @@ redirect_from:
 
 If the implementation of any of the components shipped with Spryker frontend does not suite your needs, you can override it with a component of your own. The following article shows how to override a molecule called **simple-carousel**. By default, the component is used, for example, to display product suggestions at the bottom of the page.
 
-![Old simple carousel](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/old-simple-carousel.png){height="" width=""}
+![Old simple carousel](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/old-simple-carousel.png) 
 
 Let us replace the default implementation of this molecule with our own version. It will look basically the same as the default one, but we'll use a different color for the left and right arrows; the current view number will be displayed in the browser console. Also, when reaching the last image in the set, the component will no longer be reset to the first view automatically by pressing the right button.
 
@@ -199,10 +199,10 @@ Now, let us build the frontend. Run the following command in the console: `npm r
 
 As soon as **npm** finishes, you can see the changes in the simple carousel component. The arrow color is changed and you cannot switch to the **1st** element after reaching the last one:
 
-![New simple carousel](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-simple-carousel.png){height="" width=""}
+![New simple carousel](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-simple-carousel.png) 
 
 If you open the browser console, you can see the current view number each time you press the left or the right arrow.
 
-![Carousel console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-carousel-console.png){height="" width=""}
+![Carousel console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-carousel-console.png) 
 
 <!-- Last review date: Nov 19, 2018 by Volodymyr Volkov-->

@@ -12,7 +12,7 @@ Hide Content from Logged out Users allows Store Administrators to decide whether
 
 After enabling the feature in your project, Store Administrator can see a new submenu **Customer Access** under **Customer** menu. Using Customer Access submenu, Store Administrator can hide the following content types:
 
-![content-types.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users+Overview/content-types.png){height="" width=""}
+![content-types.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users+Overview/content-types.png) 
 
 * **price** 
 A visitor will not see the price if they are not logged in:
@@ -21,7 +21,7 @@ A visitor will not see the price if they are not logged in:
 **Settings in Admin UI (on the left)**
 **Shop application (on the right)**
 
-![price_not_shown_for_non_logged_in_user.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users+Overview/price_not_shown_for_non_logged_in_user.png){height="" width=""}
+![price_not_shown_for_non_logged_in_user.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users+Overview/price_not_shown_for_non_logged_in_user.png) 
 
 * **order-place-submit**
 Having clicked on the Checkout button, the visitor is taken to the login page.

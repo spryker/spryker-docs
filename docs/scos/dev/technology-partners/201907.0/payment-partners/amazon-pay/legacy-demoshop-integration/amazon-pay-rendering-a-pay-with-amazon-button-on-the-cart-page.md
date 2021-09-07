@@ -13,7 +13,7 @@ Usually the checkout page includes information for the buyer to review, items in
 From this page, the buyer can proceed to checkout by clicking a related GUI element (for example hyperlink or button).
 
 Amazon Pay provides its own GUI element, a button which renders by Amazon Javascript code snippet and looks as follows:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/amazonpay_button.png){height="" width=""}  
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/amazonpay_button.png)   
 
 If the buyer is a registered Amazon customer, clicking the button prompts to enter their Amazon login and password.
 
@@ -33,4 +33,4 @@ Configuration is used from your current settings profile.
 If everything was done properly, the clickable button will be displayed and by clicking it, the user will see a popup window with Amazon prompt to login.
 
 The Popup looks as follows:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/amazon_popup.png){height="" width=""}
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/amazon_popup.png) 

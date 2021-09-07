@@ -18,6 +18,6 @@ The business relationships between merchants and buyers are usually based on con
 
 The diagram below shows relations within the merchant domain:
 
-![merchants-diagram.png](https://confluence-connect.gliffy.net/embed/image/9c3eb6cd-8492-4550-a280-e218bd3b974a.png?utm_medium=live&utm_source=custom){height="" width=""}
+![merchants-diagram.png](https://confluence-connect.gliffy.net/embed/image/9c3eb6cd-8492-4550-a280-e218bd3b974a.png?utm_medium=live&utm_source=custom) 
 
 Merchants and merchant relations can be [managed in the Back Office](https://documentation.spryker.com/v5/docs/merchants). You can also import merchants and merchant relations in bulk from a .csv file. See [HowTo - Import Merchants and Merchant Relations](https://documentation.spryker.com/v5/docs/en/howto-import-merchants-and-merchant-relations) for details.

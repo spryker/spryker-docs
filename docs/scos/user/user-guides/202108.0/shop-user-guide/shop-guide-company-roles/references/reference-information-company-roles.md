@@ -15,7 +15,7 @@ redirect_from:
 
 To open the **Company Roles** page, go to the header of the shop application > Name of your company > Roles.
 
-![Roles header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-header.png){height="" width=""}
+![Roles header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-header.png) 
 
 On the **Company Roles** page you see the following:
 
@@ -30,7 +30,7 @@ On the **Company Roles** page you see the following:
 
 ## Edit Company Role Page
 This page opens when you try to edit the existing company role.
-![Edit a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/edit-role.png){height="" width=""}
+![Edit a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/edit-role.png) 
 
 The following table describes the permissions you can assign to a role.
 

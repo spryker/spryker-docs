@@ -40,4 +40,4 @@ Propel	Fast and simple ORM Framework MySQL or PostgreSQL.	Both databases are sup
 | Persistence factory | Factory is used to instantiate query objects. |
 
 The following diagram shows how the elements interact:
-![Diagram showing interaction of elements](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Zed/Persistence+Layer/persistence-layer.png){height="" width=""}
+![Diagram showing interaction of elements](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Zed/Persistence+Layer/persistence-layer.png) 

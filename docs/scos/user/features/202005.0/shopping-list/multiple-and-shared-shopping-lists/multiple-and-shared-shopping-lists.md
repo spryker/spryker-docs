@@ -49,7 +49,7 @@ Shopping lists offer the following advantages:
     </div>
 </div>
 
-![Shopping List Feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/shopping-lists-multiple.png){height="" width=""}
+![Shopping List Feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/shopping-lists-multiple.png) 
 
 Check out this video tutorial on how to use Shopping Lists.
 <iframe src="https://fast.wistia.net/embed/iframe/zk32pr3lgt" title="How to use Shopping Lists in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>

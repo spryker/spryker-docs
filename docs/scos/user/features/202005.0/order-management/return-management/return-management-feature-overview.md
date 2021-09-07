@@ -49,11 +49,11 @@ The above states are the default ones in the OMS. You can display them as they a
 {% endinfo_block %}
 -->
 The relation of sales order items statuses and the return states is as follows:
-![Sales Order Items and Statuses](https://confluence-connect.gliffy.net/embed/image/cebbb529-19b7-4623-bd6d-ef2b30fe97a9.png?utm_medium=live&utm_source=custom){height="" width=""}
+![Sales Order Items and Statuses](https://confluence-connect.gliffy.net/embed/image/cebbb529-19b7-4623-bd6d-ef2b30fe97a9.png?utm_medium=live&utm_source=custom) 
 
 ## Return Slip
 Buyers and Back Office users can have a paper version of the return by printing the automatically generated *return slip*. The return slip contains return and sales order references, details on the returnable sales order items, and a barcode generated based on the return reference. 
-![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-slip.png){height="" width=""}
+![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-slip.png) 
 
 ## Return Management on the Storefront
 Buyers can return entire orders or individual sales order items as soon as they have been delivered to them. When returning, the Buyers can select select or enter a return reason. See [Shop Guide - Creating a Return](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html)  for details on how the Buyers create the returns.
@@ -66,7 +66,7 @@ The [Product Bundles](/docs/scos/dev/features/202005.0/product-information-manag
 {% endinfo_block %}
 
 Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office User [processes the return](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/managing-orders.html#creating-a-return). See [Return Items States](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/references/return-item-states-reference-information.html) for details on the return states.
-![Create return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-return.png){height="" width=""}
+![Create return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-return.png) 
 
 {% info_block infoBox "Info" %}
 
@@ -75,7 +75,7 @@ Next to each sales order item, there is the date till which the item can be retu
 {% endinfo_block %}
 
 All the returns created by the Buyer or by the Back Office User for the Buyer, are listed on the *Returns* page in the Customer Account. From here, the Buyer can [view the return details](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/references/return-details-reference-information.html) and [print the return slip](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html).
-![Returns details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-details.png){height="" width=""}
+![Returns details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/return-details.png) 
 
 ## Return Management in the Back Office
 A Back Office User can create returns for the [returnable items](#returnable-items-and-a-return-policy) in the *Ordres* section of the Back Office. See [Back Office User Guide - Managing Orders](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/orders/managing-orders.html) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office User Guide - Return Management](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/managing-returns.html)  for instructions on how to manage the returns in the Back Office.

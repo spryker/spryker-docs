@@ -72,7 +72,7 @@ That `filter/criteria` is a flat object, so we filter only by its properties, ho
 ### Using the Price Dimensions
 In new `PriceProduct` module we have added a set of plugins necessary fo work with price dimensions. All new plugin interfaces are now in the new module `PriceProductExtension`. They are as follows:
 `Zed:PriceDimensionAbstractSaverPluginInterface` - saves price for abstract product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())PriceDimensionConcreteSaverPluginInterface` - saves price for concrete product in the DB for the selected price dimension (based on `PriceProductTransfer→getPriceDimension())PriceDimensionQueryCriteriaPluginInterface` is used for expanding `PriceProductStoreQuery` using new transfer object `QueryCriteriaTransfer`. Basing on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins - all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
-![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png){height="" width=""}
+![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png) 
 
 * Service:
 `PriceProductFilterPluginInterface` - filters array of prices based on `PriceProductFilterTransfer`

@@ -14,4 +14,4 @@ The newsletter subscription locates in the **Newsletter** section of the user pr
 
 All your customers need to do is to agree for the newsletter subscription. Once they submit the agreement form, an email is triggered to confirm that the request is received and the sign-up is successful.
 
-![Newsletter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+%26+Communication/Newsletter+Subscription/subscribe-to-the-newsletter.gif){height="" width=""}
+![Newsletter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+%26+Communication/Newsletter+Subscription/subscribe-to-the-newsletter.gif) 

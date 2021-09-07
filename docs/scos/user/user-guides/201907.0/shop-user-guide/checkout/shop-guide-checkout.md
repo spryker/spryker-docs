@@ -21,7 +21,7 @@ A typical checkout process includes the following steps:
 * [Payment](/docs/scos/user/user-guides/201907.0/shop-user-guide/checkout/shop-guide-payment-step.html): Select the payment method.
 * [Summary](/docs/scos/user/user-guides/201907.0/shop-user-guide/checkout/shop-guide-summary-step.html): View the details, update the information, if needed, and place the order.
 
-![Checkout process](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/split-delivery-checkout.gif){height="" width=""}
+![Checkout process](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/split-delivery-checkout.gif) 
 ***
 **What's next?**
 

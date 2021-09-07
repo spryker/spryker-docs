@@ -25,7 +25,7 @@ The lifetime of the token is 8 hours by default, but this value can be changed o
 ## Token Structure
 Every token consists of the three sections separated by periods.
 
-![Token struc](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Customer+Login+by+Token/Customer+Login+by+Token+Feature+Overview/token-structure.png){height="" width=""}
+![Token struc](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Customer+Login+by+Token/Customer+Login+by+Token+Feature+Overview/token-structure.png) 
 
 * **Header** contains the information about the token type (JWT) and the encryption algorithm (RS256). For example:
 

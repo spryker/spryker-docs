@@ -14,7 +14,7 @@ redirect_from:
 Introducing CMS Page Preview for previewing a working version of your content before publishing it live. This feature gives you the chance to judge the final look of CMS placeholder content as it will appear in the final layout. 
 
 The CMS Page Preview has an option to view draft CMS pages before publishing. To be able to preview a CMS page, your Zed user needs to be linked to an Yves customer account. To do so, go to User Control / User / Assign Customers. Here you can assign multiple Yves customers to your Zed user. Once you have the necessary customer linked to the Zed user, make sure that you are logged-in in Zed with your Zed account as well as logged-in in Yves with the assigned customer account. Now, you can preview drafts of your CMS pages by navigating to Content Management / Pages / View / Preview.
-![CMS page preview](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+October+-+1+2017/RN_cms_page_preview.gif){height="" width=""}
+![CMS page preview](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+October+-+1+2017/RN_cms_page_preview.gif) 
 
 **Affected Modules**
 
@@ -47,7 +47,7 @@ composer require spryker/cms-collector:"^2.0.0" spryker/customer-user-connector:
 In certain cases, a validity date needs to be applied to specific navigation nodes. This is mostly done for promotional reasons. For example, it might be necessary to promote a Christmas category only during a two week period. This category is linked to the navigation but should only appear in the navigation for two weeks.
 
 With this release, we introduced date boundaries for navigation nodes. You can now control node visibility over time by using the optional values "from/to". These dates are applied to the node and all its descendants.
-![Validity dates for navigation nodes](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+October+-+1+2017/RN_validity_dates_for_navigation_nodes.png){height="" width=""}
+![Validity dates for navigation nodes](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+October+-+1+2017/RN_validity_dates_for_navigation_nodes.png) 
 
 **Affected Modules**
 

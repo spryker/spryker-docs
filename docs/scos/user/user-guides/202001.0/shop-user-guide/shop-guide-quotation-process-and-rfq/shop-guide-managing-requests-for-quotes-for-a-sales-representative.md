@@ -24,7 +24,7 @@ A Sales Representative can manage the RFQs by:
 ## Viewing the RFQs
 
 To view the RFQs created both by yourself as a Sales Representative or by customers, hover over the **Quote Request Widget** in the header. In the **Quote Request Widget**, 5 last RFQs are shown. To view all the RFQs, click **View all requests** in the **Quote Request Widget**.
-![Quote request widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/quote-request-widget.png){height="" width=""}
+![Quote request widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/quote-request-widget.png) 
 ***
 ## Editing Items in an RFQ
 
@@ -34,11 +34,11 @@ To edit items in an RFQ:
 
 1. On the **Quote Request** page, click **Edit**.
 2. On the **Edit RFQ** page, click **Edit Items**.
-![Edit items agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/edit-items-agent1.png){height="" width=""}
+![Edit items agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/edit-items-agent1.png) 
 
  You can change the item quantity, measurement units, remove the existing products from the RFQ or add the products from the catalog.
 3. Click **Save and Back to Edit** in **Quote Request Widget** after you have finished. The changes will be saved to an RFQ.
-![Edit items agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/edit-items-agent.png){height="" width=""}
+![Edit items agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/edit-items-agent.png) 
 ***
 ## Revising the RFQs and Sending to Customers
 
@@ -58,14 +58,14 @@ a. *(Optional)* Update the RFQ details by:
 * Selecting a due date in **Do not ship later than** field.
 * Adding the **Notes**.
 * Adding a date until which the RFQ is right in **Valid Till** field.
-![Create RFQ agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/create-rfq-agent.png){height="" width=""}
+![Create RFQ agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/create-rfq-agent.png) 
 
 {% info_block warningBox %}
 If you check the **Show latest version to customer** checkbox, the customer will see the updates you did after the RFQ is sent back.
 {% endinfo_block %}
 
 b. *(Optional)* Change the prices for products in the RFQ and offer your customers a special price. To do that, untick **Use Default Prices** check box next to the product the price of which you want to update.
-![Change a price for RFQ agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/change-price-rfq-agent.png){height="" width=""}
+![Change a price for RFQ agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/change-price-rfq-agent.png) 
 
 2. After the Quote Request has been revised, you can either **Save** it or **Send to Customer**.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/rfq-revise-agent.png)
@@ -84,7 +84,7 @@ To create an RFQ for a customer:
 1. Hover over the **Quote Request Widget** in the header.
 2. Click **Create new Quote Request**.
 3. On the **Create Quote Request** page, start entering the customer's name for whom the Quote Request is being created.
-![Create Quote Request](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/create-RFQ-for-customer-select.png){height="" width=""}
+![Create Quote Request](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/create-RFQ-for-customer-select.png) 
 
 4. From the drop-down list of suggestions, select the necessary customer.
 5. Click **Save**.
@@ -94,7 +94,7 @@ To create an RFQ for a customer:
   - Select a due date in **Do not ship later than** field.
   - Add the **Notes**.
   - Add a date until which the RFQ is right in **Valid Till** field
-![Create RFQ agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/create-rfq-agent.png){height="" width=""}
+![Create RFQ agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/create-rfq-agent.png) 
 
 If the **Show the latest version** to customer checkbox is not selected, the company user will not be able to access the RFQ in their account.
   - Add products to the RFQ by clicking **Edit Items** on the **Edit** page.

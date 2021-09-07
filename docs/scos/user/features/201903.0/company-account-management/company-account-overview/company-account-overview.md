@@ -47,7 +47,7 @@ The Company Account feature allows you to control user access to the system with
     </div>
 </div>
 
-![Company account overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account+Overview/company-account-overview.png){height="" width=""}
+![Company account overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account+Overview/company-account-overview.png) 
 
 Check out this video tutorial on how to set up Company structure.
 <iframe src="https://fast.wistia.net/embed/iframe/qkdgkeannb" title="How to set up Company Structure in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>

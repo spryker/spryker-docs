@@ -32,7 +32,7 @@ Pages are the main concept of modular front-end (Yves) which splits a code into 
 As an example, we consider Product Detail Page as one Page module which is responsible for displaying products and their basic information.
 {% endinfo_block %}
 
-![PDP page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/pdp-page.png){height="" width=""}
+![PDP page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/pdp-page.png) 
 
 {% info_block infoBox %}
 Another *Page* module example would be any customer related pages, like Login, Register, Profile, Addresses. These are several different pages. Each page is responsible for something specific from the customer domain, so it's natural to group them under the same module.
@@ -47,7 +47,7 @@ Meanwhile, Page modules implement only feature basics, while Widgets provide opt
 **Product Detail Page** shows basic product information, like the name, description and attributes of the product. But there are lots of optional features that can appear on the same page. The most commonly used examples are product image, price, availability, options, groups, rating, relations, an much more.
 {% endinfo_block %}
 
-![PDP ratings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/pdp-ratings.png){height="" width=""}
+![PDP ratings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/pdp-ratings.png) 
 
 The *Pages* and *Widgets* concept offers a solution to tailor projects to their custom needs.
 When you get the general understanding of the Pages/Widgets concept, its time to investigate how the *Pages* module looks like, why and how the module can be extended.
@@ -63,7 +63,7 @@ As more features you need to have on in your *Page* module, as much you need to 
 
 To extend a Page with an additional functionality you use **Widgets**. When you extend the front-end by rendering a template fragment in a template of a controller action, you need to specify the exact place of each extension point on a template level.
 
-![PDP schema template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/product-details-page-schema-temlate.png){height="" width=""}
+![PDP schema template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/product-details-page-schema-temlate.png) 
 
 {% info_block warningBox %}
 Before you start using the widget system, make sure to register the following plugins:
@@ -172,7 +172,7 @@ The Page and Widget concepts were introduced in `spryker/kernel: 3.16.0` module 
 
 Widgets are implemented on demand of an extension of a template. 
 
-![MyPage module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/MyPage_module.png){height="" width=""}
+![MyPage module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/MyPage_module.png) 
 
 Before you start using the widget plugin system, make sure to register the `\SprykerShop\Yves\ShopApplication\Plugin\Provider\WidgetServiceProvider` in your YvesBoostrap.
 

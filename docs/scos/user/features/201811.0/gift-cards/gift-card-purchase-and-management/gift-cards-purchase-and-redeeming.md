@@ -20,7 +20,7 @@ In the Spryker shop, the gift cards follow the same rules and bought as products
 Gift cards have variants just like abstract products, i.e. for example, a New Year Gift Card can have all the different values - 50 Euro, 100 Euro, etc. - in this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro, 100 Euro etc. gift cards would be its variants.
 
 When customer puts a gift card to cart, it is possible to change variant, quantity and remove it from cart, just like any abstract product. It should be noted however, that no discounts are applied on gift card products, since the price paid for the gift card must equal the value of the gift card. Even though technically it is possible to have different amounts for gift card’s price and value (say, the gift card price is 100 Euro however the gift card value is 150 Euro), but you need to consult your local legislation to make sure it would be legal in your country.
-![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card.png){height="" width=""}
+![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card.png) 
 
 It is not possible to pay a gift card by using another gift card, even if order contains other products besides the gift card. Also, the range of payment methods that can be used to pay for gift cards can be limited. That is, it is possible to filter out the payment methods for gift cards. By default, invoice payment method is not available for gift cards to avoid fraud. Payment methods available for gift cards can be specified in the configuration file.
 
@@ -29,7 +29,7 @@ After customer buys a gift card, he/she gets a code sent to the provided e-mail 
 Once the gift card code has been generated, it becomes a voucher that can be used as a payment method.
 
 The gift card product-voucher transition workflow can be schematically represented as follows:
-![Git card product-voucher transition workflow schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/GC+product-voucher+transition.png){height="" width=""}
+![Git card product-voucher transition workflow schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/GC+product-voucher+transition.png) 
 
 When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is “noshipment” constant in the app configuration, which can be selected to configure shipment for specific type of products, in our case, to gift cards.
 
@@ -45,10 +45,10 @@ With a gift card code in place, users get an alternative payment method to pay f
 6. Payment method selection and payment.
 
 Schematically, the order placement process with gift card looks as follows:
-![Order placement process](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gc_payment_process.png){height="" width=""}
+![Order placement process](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gc_payment_process.png) 
 
 In the Back Office, the Back Office user can see if an order was paid with a gift card and/or a regular payment method. The amount paid with the gift card as well as the amount paid with a regular payment method (if applicable) are shown as well.
-![Gift card payment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card_payment_method.png){height="" width=""}
+![Gift card payment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card_payment_method.png) 
 
 ## Gift Card Value Checking Strategies
 

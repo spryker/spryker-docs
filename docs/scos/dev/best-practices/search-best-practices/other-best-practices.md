@@ -54,7 +54,7 @@ We do this because we think that different page types (for example brand pages, 
 ```
 
 Furthermore, our generic page-based schema allows for other search operations such as rendering a “staple page” (an overview of different variants of a product; often with their own facet navigation such as the aforementioned [Senkkopf-Holzbauschraube](https://www.contorion.de/befestigungstechnik/spax-universal-senkkopf-holzbauschraube-vg-SP84167377)):
-![Staple page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Other+Best+Practices/staple.png){height="" width=""}
+![Staple page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Other+Best+Practices/staple.png) 
 
 The query looks very similar to a normal faceted navigation, except that it searches only within a specific staple.
 

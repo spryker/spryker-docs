@@ -34,14 +34,14 @@ Open **Preferences** → **Languages & Frameworks** → **PHP** → **Debug** in
   b. If not selected, select the **Can accept external connections** checkbox.
   c. If selected, clear the **Force break at first line when no path mapping specified** and **Force break at first line when a script is outside the project** checkboxes.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/binary.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/binary.png) 
 
 2. In the **External connections** block:
 
   a. Increase **Max. simultaneous connection** from 4 to 5.
   b. If selected, unselect the **Ignore external connections through unregistered server configurations** and **Break at first line in PHP scripts** checkboxes.
 
-![image 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/binary2.png){height="" width=""}
+![image 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/binary2.png) 
 
 </details>
 
@@ -56,7 +56,7 @@ Add a server:
 2. In the **Host** section, enter *spryker*.
 3. Select the **Use path mappings** checkbox.
 4. Set the absolute path to the `/data` folder on the server for the folder with your Spryker project files.
-![Servers config](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/servers-confg.png){height="" width=""}
+![Servers config](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/servers-confg.png) 
 
 </details>
 
@@ -71,7 +71,7 @@ Add a server:
   b. Image name: "spryker_app:latest"
   c. PHP interpreter path: **php** 
 
-![Remote php interpreter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/remote-php-interpreter.png){height="" width=""}
+![Remote php interpreter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/remote-php-interpreter.png) 
 
 </details>
 
@@ -79,10 +79,10 @@ Add a server:
     <summary>Remote Debug configuration</summary>
 
 1. Open **Run** → **Edit Configurations...**.
-![Edit configurations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/edit-configs.png){height="" width=""}
+![Edit configurations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/edit-configs.png) 
 
 2. Add new **PHP Remote Debug** configuration.
-![PHP remote debug](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/php-remote-debug.png){height="" width=""}
+![PHP remote debug](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/php-remote-debug.png) 
 
 3. Set the name to "spryker".
 4. Select the **spryker** server.

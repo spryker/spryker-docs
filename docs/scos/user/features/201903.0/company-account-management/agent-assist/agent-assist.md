@@ -32,7 +32,7 @@ Even though popularity of online shopping continues to grow, many buyers still l
         </div>
 </div>
 
-![Agent Assist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist/Customer-Assitent.png){height="" width=""}
+![Agent Assist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist/Customer-Assitent.png) 
 
 Check out this video tutorial on setting up Agent Assist user in the company account.
 <iframe src="https://fast.wistia.net/embed/iframe/86ixsrlfi5" title="How to set up Agent Assist in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>

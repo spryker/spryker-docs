@@ -25,7 +25,7 @@ By default, the last created RFQ goes on top of the table.
 ## Quote Request
 
 Every **Quote Request** page consists of the following parts:
-![Quote request page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Request+for+Quote:+Reference+Information/create-rfq.png){height="" width=""}
+![Quote request page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Request+for+Quote:+Reference+Information/create-rfq.png) 
 
 | # | Element |
 |---|---|

@@ -30,7 +30,7 @@ By default, the invoice can be generated only for the whole order (not for indiv
 The invoice template is not provided out of the box and needs to be added in the SalesInvoiceConfig.php file. Otherwise, the exception is thrown, and the invoice is not generated.
 
 Check out the example of the Spryker invoice template:
-![Generated Invoice](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Invoice+Generation/generated-invoice.png){height="" width=""}
+![Generated Invoice](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Invoice+Generation/generated-invoice.png) 
 
 In the generated invoice template, the following data is **not hardcoded**:
 

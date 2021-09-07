@@ -16,7 +16,7 @@ In Spryker, front-end elements have dedicated SCSS styles. To show you how to cu
 
 You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/en/acer-aspire-s7-134) in our B2C Demo Shop.
 
-![B2C-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-1.png){height="" width=""}
+![B2C-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-1.png) 
 
 
 
@@ -35,7 +35,7 @@ You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/
 | 11 | project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/button/button.scss |
 
 
-![B2C-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-2.png){height="" width=""}
+![B2C-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-2.png) 
 
 
 | # | Path to SCSS |
@@ -44,7 +44,7 @@ You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/
 | 13 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/toggler-item/toggler-item.scss |
 | 14 | project/src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-detail-option/product-detail-option.scss |
 
-![B2C-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-3.png){height="" width=""}
+![B2C-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-3.png) 
 
 
 | # | Path to SCSS |

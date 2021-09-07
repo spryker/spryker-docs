@@ -12,11 +12,11 @@ Roles page allows your shop owner to manage the roles for your company.
 
 To open the Company Roles page, go to the header of the shop application → Name of your company → Roles.
 
-![Roles header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-header.png){height="" width=""}
+![Roles header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-header.png) 
 
 ## Graphic User Interface
 
-![Roles GUI](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-gui.png){height="" width=""}
+![Roles GUI](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-gui.png) 
 
 The *Company Roles* page consists of the following elements:
 
@@ -34,7 +34,7 @@ The *Company Roles* page consists of the following elements:
 
 1. On the **Company Roles** page, click **+Create New Role**.
 2. Enter the name of the role.
-![Create a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/create-role.png){height="" width=""}
+![Create a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/create-role.png) 
 
 {% info_block infoBox %}
 Selecting the **Is Default** check-box means that the new users will be created with this role assigned by default.
@@ -49,7 +49,7 @@ You can edit the existing role settings by completing the steps below:
 1. On the **Company Roles** page, click![Edit icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/edit-icon.png) next to the company user you would like to edit.
 2. Update the necessary settings.
 
-![Edit a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/edit-role.png){height="" width=""}
+![Edit a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/edit-role.png) 
 
 A role includes a set of permissions that can be enabled/disabled according to your needs by switching the toggle in Enable column.
   - **Add company users** - allows adding company users. With this permission enabled, a user will have Create User button on the Company Users page.
@@ -70,7 +70,7 @@ A role includes a set of permissions that can be enabled/disabled according to y
 
 You can delete a company user by clicking ![Delete icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/delete-icon.png) icon next to the company user you are going to delete. Confirm the removal by clicking **Delete**.
 
-![Delete a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/delete-role.png){height="" width=""}
+![Delete a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/delete-role.png) 
 
 Don't forget to check out the video tutorial on setting up the [Company Roles](/docs/scos/dev/features/202001.0/company-account-management/company-user-roles-and-permissions/company-user-roles-and-permissions-feature-overview.html) in Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/202001.0/about-spryker.html#spryker-b2b-b2c-demo-shops):
 <iframe src="https://fast.wistia.net/embed/iframe/72qy3slwjo" title="How to set up Company Users and Roles in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="589" height="315"></iframe>

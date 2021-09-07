@@ -15,14 +15,14 @@ This topic contains the reference information for working in the following Back 
 ***
 
 <!--
-![Hard Threshold)](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/Hard+Threshold.gif){height="" width=""}
+![Hard Threshold)](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/Hard+Threshold.gif) 
 
 
-![Soft Threshold with a message](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-message.gif){height="" width=""}
+![Soft Threshold with a message](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-message.gif) 
 
-![Soft Threshold with a fixed fee](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-fixed-fee.gif){height="" width=""}
+![Soft Threshold with a fixed fee](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-fixed-fee.gif) 
 
-![Soft Threshold with a flexible fee](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-flexible-fee.gif){height="" width=""} 
+![Soft Threshold with a flexible fee](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-flexible-fee.gif)  
 
 -->
 

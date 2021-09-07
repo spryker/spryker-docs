@@ -42,7 +42,7 @@ composer require spryker/cms-content-widget-product-search-connector:"^1.0.0"
 
 ### Multi-Store Product Abstract
 With this release, we are introducing a new feature which allows managing product abstracts across stores. Now, a shop administrator can configure the abstract product appearance per store in the Administration Interface through a store toggle element available for each product abstract. The store toggle element controls the availability of the corresponding product abstract and related product concretes in specific store(s). Customers would be able to see only those abstract products (and their concrete products) which are associated with the store(s) defined by the shop administrator.
-![Multi-store product abstract](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+1+2018/store_relation_abstract.png){height="" width=""}
+![Multi-store product abstract](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+1+2018/store_relation_abstract.png) 
 
 **Affected Modules**
 

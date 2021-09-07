@@ -27,12 +27,12 @@ Say a shop administrator wants to customize a list of products on a CMS page. To
 
 With **cms_block** widgets, you can add some content or insert banners to promote your advertising campaigns or activities.
 
-![widgets-menu.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/CMS+Widget/CMS+Widget+Overview/widgets-menu.png){height="" width=""}
+![widgets-menu.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/CMS+Widget/CMS+Widget+Overview/widgets-menu.png) 
 
 In the Admin UI, a shop administrator can simply add a content widget responsible for a particular content by selecting a respective widget. This will insert a widget template such as `{% raw %}{{{% endraw %} function name (['identifier']) {% raw %}}}{% endraw %}` where you need to replace a function name with a respective content widget and enter a parameter instead of the identifier. Parameters differ depending on the widget you use. See the CMS Widget to learn more how to add a widget to a CMS page in the Administration Interface.
 
 After the widget is added and changes are kept and published, they appear in the shop application. For example, this is how the `product_set` widget is displayed.
 
-![product-set-widget-zed.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/CMS+Widget/CMS+Widget+Overview/product-set-widget-zed.png){height="" width=""}
+![product-set-widget-zed.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/CMS+Widget/CMS+Widget+Overview/product-set-widget-zed.png) 
 
 <!-- Last review date: Mar 4, 2019 -- by Yuliia Boiko -->

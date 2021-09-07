@@ -14,7 +14,7 @@ In terms of [Merchant concept](/docs/scos/dev/features/201907.0/company-account-
 
 The diagram below shows product restrictions relations within the Merchant concept:
 
-![product-restrictions-model.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Product+Restrictions+from+Merchant+to+Buyer/Product+Restrictions+from+Merchant+to+Buyer+Overview/product-restrictions-model.png){height="" width=""}
+![product-restrictions-model.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Product+Restrictions+from+Merchant+to+Buyer/Product+Restrictions+from+Merchant+to+Buyer+Overview/product-restrictions-model.png) 
 
 Product Restrictions from Merchant to Buyer give merchants [another layer](/docs/scos/dev/features/201907.0/company-account-management/hide-content-from-logged-out-users/hide-content-from-logged-out-users.html) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
 

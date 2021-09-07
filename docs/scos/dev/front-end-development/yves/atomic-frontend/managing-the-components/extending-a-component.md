@@ -25,7 +25,7 @@ With the idea of [atomic design](/docs/scos/dev/front-end-development/yves/atomi
 
 Let us review the process of extending a component on the example of **side-drawer**. This component appears in Spryker Shop only on mobile screens. You can access it by clicking the menu button.
 
-![Open side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/open-side-drawer.png){height="" width=""}
+![Open side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/open-side-drawer.png) 
 
 The following tutorial shows how to create a new component based on the default side drawer. The new side drawer will show an alert whenever it is present on a page. Also, the component outlook will be different.
 
@@ -160,8 +160,8 @@ As soon as the frontend has been compiled, replace the original side drawer with
 
 Now, whenever you access a page with a side drawer in Spryker Shop, you will get an alert from the new side drawer.
 
-![Side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/side-drawer-notification.png){height="" width=""}
+![Side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/side-drawer-notification.png) 
 
 Also, the drawer itself has a new outlook.
 
-![New side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-side-drawer.png){height="" width=""}
+![New side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-side-drawer.png) 

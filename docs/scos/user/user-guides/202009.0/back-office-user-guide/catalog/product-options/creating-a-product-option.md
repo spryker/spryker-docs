@@ -59,7 +59,7 @@ On the **Product option list** page, click **Activate** for a specific product o
 While creating a product option, if you want to remove some product from the selected, clear checkboxes next to the products you selected or click **Deselect all on the page** (this will remove all products from the to-be-assigned list you selected on this page).
 
 You can switch between **All products** and **Products to be assigned** view by selecting the respective options on the top of the products table.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Creating+a+product+option/product-to-be-assigned-tab.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Creating+a+product+option/product-to-be-assigned-tab.png) 
 
 If you know the name or the SKU of the product to which an option should be assigned, you can search for it in the **Search** field.
 

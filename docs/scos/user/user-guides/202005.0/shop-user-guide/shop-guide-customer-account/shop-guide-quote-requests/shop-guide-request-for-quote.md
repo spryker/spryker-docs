@@ -19,6 +19,6 @@ The articles included in this section:
 [Managing RFQs for a Sales Representative](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html) describes the procedures a Sales Representative can do.
 
 [RFQ: Reference Information](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/references/request-for-quote-reference-information.html) contains details on the UI elements for the RFQ pages in the shop application.
-![Request for Quote](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/rfq-gif.gif){height="" width=""}
+![Request for Quote](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/rfq-gif.gif) 
 
 

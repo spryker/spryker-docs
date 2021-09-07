@@ -87,7 +87,7 @@ class GlossaryFacade extends AbstractFacade
 ## Encapsulation
 
 The idea of the business layer is to present a facade to all clients and to hide the internal details. This is the main requirement for future updates and it keeps the bundles decoupled. So when you look at a module from another module you will only see the facade.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/How+to+Implement+a+Facade/facade-as-internal-api.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/How+to+Implement+a+Facade/facade-as-internal-api.png) 
 
 ## Related Spryks
 

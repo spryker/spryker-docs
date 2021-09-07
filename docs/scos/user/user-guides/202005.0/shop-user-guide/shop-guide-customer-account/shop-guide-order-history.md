@@ -12,14 +12,14 @@ Order History is the page where you can check all the orders you have created in
 <details open>
 <summary>B2B Shop</summary>
 
-![b2b-order-history](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Order+History/b2b-order-history.png){height="" width=""}
+![b2b-order-history](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Order+History/b2b-order-history.png) 
 </details>
 
 
 <details open>
 <summary>B2C Shop</summary>
 
-![b2c-order-history](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Order+History/b2c-order-history.png){height="" width=""}
+![b2c-order-history](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Order+History/b2c-order-history.png) 
 </details>
 
 The article describes how you can manage orders in your Customer Account, and provides step-by-step instructions on how to:
@@ -51,7 +51,7 @@ On the **Order Details** page, you can view the order details, add a comment, an
 ***
 ## Reordering the Orders
 You can reorder the whole order or the selected items from the order.
-![reorder-buttons-b2b](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Order+History/reorder-buttons-b2b.png){height="" width=""}
+![reorder-buttons-b2b](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Order+History/reorder-buttons-b2b.png) 
 
 **To reorder the whole order or the selected items:**
 

@@ -37,7 +37,7 @@ To reflect the availability of a leading product for a packaging unit and to def
 
 The shop owner can define various sales units for the packaging units. For example, for a chocolate bar, the base unit could be set to item, and the sales units could be box, packet or gift box with variable or fixed amount of chocolate bars in them.
 
-![Packaging Unit](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/sales-units-dropdown.png){height="" width=""}
+![Packaging Unit](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/sales-units-dropdown.png) 
 
 Read on to learn about the product packaging unit amount options.
 
@@ -57,7 +57,7 @@ The packaging unit amount can be:
 
 The schema below shows relations between products, packaging units, their types, and amounts:
 
-![Database relations scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/database-relation-scheme.png){height="" width=""}
+![Database relations scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/database-relation-scheme.png) 
 
 All packaging units having leading products, have a base unit of measure and can also have various sales units reflecting the amount of items in the packaging units.
 
@@ -102,14 +102,14 @@ In this example, we sell Atlantic salmon as a package containing **37.44** kg of
 
 Thus, when the customer wants to buy 3 packages of fish, it means that they buy 3 packages with 37,44 kg per package.
 
-![case 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+&+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/case1.png){height="" width=""}
+![case 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+&+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/case1.png) 
 
 To calculate stock, Quantity is multiplied by Amount (the default value). The resulting value will be subtracted from the current stock. 
 
 **Case 2. Products are sold in measurement units, the amount of stock is variable.**
 
 In this example, we sell potatoes as kilograms and, thus, set a price per kilogram. Potatoes are sold as a package containing 1 kg (the default value for the **Amount** field). However, a customer can select how much potatoes they want to buy per package because **Amount** has been defined as a variable. In our example, the customer decided to buy 2 packages with 2.5 kg per each. 
-![Case2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+&+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/case2.png){height="" width=""}
+![Case2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+&+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/case2.png) 
 
 **Case 3. Products are sold with shared stock enabled.**
 
@@ -117,7 +117,7 @@ In this example, we can sell VGA cables as items (ring) and meters (as long as y
 
 If a customer selects **Ring**, they can set only quantity (in our example, 3) because **Amount** has not been specified as a variable. 
 
-![Case3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+&+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/case3.png){height="" width=""}
+![Case3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+&+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/case3.png) 
 
 After the customer places the order, in the Back Office, we see the following:
 
@@ -125,7 +125,7 @@ After the customer places the order, in the Back Office, we see the following:
 * Availablity for the non-leading product (**VGA cables**) decreased by 3 (quantity of reserved products).
 Then, the customer decided to select the **As long as you want** packaging unit type. In this case, they can set quantity and specify how many meters or centimeters of cables there will be in the packaging unit amount. This is possible because **Amount** is a variable for this packaging unit type. 
 
-![Case3-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+&+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/case3-1.png){height="" width=""}
+![Case3-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+&+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/case3-1.png) 
 
 In our example, the customer set the **meter** for a sales unit, selected **3.5** - for the **Amount** field and **2** - for the **Quantity** field. The default value for **"As long as you want"** is set to **0.5**.
 
@@ -135,7 +135,7 @@ Once the order has been placed, we can navigate to the Back Office and see the f
 * Availablity for the non-leading product (**VGA cables**) didn't change from the previous time.
 The figure below shows how these items and packaging units appear in the cart.
 
-![Cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/cart-with-items.png){height="" width=""}
+![Cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/cart-with-items.png) 
 
 In our example, the following conditions are met:
 

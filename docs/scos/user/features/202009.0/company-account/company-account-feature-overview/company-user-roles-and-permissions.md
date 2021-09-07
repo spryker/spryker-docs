@@ -15,7 +15,7 @@ Usually employees within a company have different roles (e.g. purchasing, admini
 
 Upon initial creation of the first Company User, the default role is Admin. After the Admin user has been created, he/she creates the structure of the company and can define the default role to be used further on.
 
-![roles.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles.png){height="" width=""}
+![roles.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles.png) 
 
 ## Permissions
 Each Company role contains a set of permissions in the form of **Permission** keys attributed to them.
@@ -39,11 +39,11 @@ One and the same user can have several Company Roles assigned to them. It means 
 For example, suppose Junior Sales Managers are allowed to place an order for up to 1000 Euro, whereas Team Leaders can place orders for up to 2000 Euro. If a user has both roles assigned to him, he/she will be allowed to place orders for up to 2000 Euro, and not 1000 Euro.<br>Or, for example, if Junior Sales Managers are not allowed to view specific products, but Team Leaders can, the users having both Junior Sales Manager and Team Leader roles will be allowed to view those products.
 {% endinfo_block %}
 
-![roles-permissions.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles-permissions.png){height="" width=""}
+![roles-permissions.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles-permissions.png) 
 
 Company roles and permissions and their relation to the organizational structure can be schematically represented as follows:
 
-![roles_structure.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles_structure.png){height="" width=""}
+![roles_structure.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles_structure.png) 
 
 ## Permission types
 Permissions can be simple and complex.
@@ -58,7 +58,7 @@ Permissions can be simple and complex.
             <p>A Company User is allowed (or not allowed) to access product details page.</p>
           
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png) 
 
 
 </td>
@@ -102,7 +102,7 @@ Obviously, the permissions can not be checked at the step when user just clicks 
 
 The termination hooks (plugin stack) do not allow the permissions sneak into the business logic foundation so it will remain clean from the permissions and not overwhelmed with “can” “if not; then…” etc.
 
-![termination_hooks.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/termination_hooks.png){height="" width=""}
+![termination_hooks.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/termination_hooks.png) 
 
 The termination hooks are performed one by one, and process termination can happen for any reason, and one of them would be the permissions.
 

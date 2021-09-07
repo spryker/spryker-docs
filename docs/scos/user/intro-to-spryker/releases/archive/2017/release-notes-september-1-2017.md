@@ -14,7 +14,7 @@ redirect_from:
 To  manage a high number of product attributes, we moved them to a separate module supported with a UI. 
 
 Now stores with more than 100k of product attributes, have a convenient and easy "process content management" interface.
-![Attribute management](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+1+2017/RN_attribute_management_for_high_number_of_attributes.png){height="" width=""}
+![Attribute management](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+September+-+1+2017/RN_attribute_management_for_high_number_of_attributes.png) 
 
 **Affected Modules**
 

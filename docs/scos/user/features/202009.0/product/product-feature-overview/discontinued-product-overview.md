@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 If a concrete product runs out of stock, it is tagged as out of stock and cannot be added to cart:
-![Discontinued PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-pdp-page.png){height="" width=""}
+![Discontinued PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-pdp-page.png) 
 
 Once the stock is updated with a positive number, the concrete product becomes available for purchase.
 
@@ -22,7 +22,7 @@ Only [concrete products](https://documentation.spryker.com/v6/docs/products-over
 {% endinfo_block %} can become discontinued.)
 
 The schema below illustrates the relations between discontinued products, abstract and concrete products:
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-schema.png){height="" width=""}
+![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-schema.png) 
 
 
 ## If you are:

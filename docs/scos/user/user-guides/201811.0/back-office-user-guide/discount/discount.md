@@ -12,7 +12,7 @@ The **Discount** section in the Back Office is mostly used by the Marketing Cont
 This section allows creating discounts for products.
 
 **Standardized flow of actions for a Marketing Content Manager**
-![Discounts - Marketing Content Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/discounts-section.png){height="" width=""}
+![Discounts - Marketing Content Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/discounts-section.png) 
 
 {% info_block infoBox %}
 This is how the Marketing Content Manager interacts with the other departments and team members to introduce the planned discounts and use the Back Office to create those.

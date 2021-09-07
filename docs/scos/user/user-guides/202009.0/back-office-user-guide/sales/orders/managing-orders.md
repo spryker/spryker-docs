@@ -94,7 +94,7 @@ To view details on a return, click **View** in the Actions column of the *Return
 
 1. In the **List of orders**, click **View** next to the order you want to update the custom order reference of.
 2. In the **Custom Order Reference** section of the *View Order: [Order ID]* page, click **Edit Reference**.
-![edit-custom-order-reference](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-custom-order-reference.png){height="" width=""}
+![edit-custom-order-reference](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-custom-order-reference.png) 
 3. Update the custom order reference.
 4. Click **Save**.
 
@@ -134,7 +134,7 @@ To edit a billing address:
 1. Click **View** next to the order you want to edit the billing address of.
 2. On the *View Order* page, scroll down to the **Customer** section.
 3. Under the **Billing address**, click **Edit**. The *Edit Address for Order* page opens.  
-![Edit billing address button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-billing-information.png){height="" width=""}
+![Edit billing address button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-billing-information.png) 
 
 3. Make the updates and click **Save**.
 

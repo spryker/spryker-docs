@@ -24,7 +24,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/acl: "dev-master" --update-with-dependencies
+composer require spryker-feature/acl: "{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -53,7 +53,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes by checking your database
+Verify the following changes have been applied by checking your database:
 
 | DATABASE ENTITY               | TYPE  | EVENT   |
 | ----------------------------- | ----- | ------- |
@@ -102,7 +102,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 4) Setup behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -117,6 +117,7 @@ Enable the following behaviors by registering the plugins:
 | AclEntityApplicationPlugin | Enables ACL for the whole Application. |  | Spryker\Zed\AclEntity\Communication\Plugin\Application |
 
 **src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
+
 ```php
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
@@ -129,9 +130,10 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
             new AccessControlEventDispatcherPlugin(),
         ];
     }
-````
+```
 
 **src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php**
+
 ```php
 class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProvider
 {
@@ -145,9 +147,10 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
         ];
     }
 }
-````
+```
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
+
 ```php
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
@@ -161,9 +164,10 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
         ];
     }
 }
-````
+```
 
 **src/Pyz/Zed/User/UserDependencyProvider.php**
+
 ```php
 class InstallerDependencyProvider extends SprykerUserDependencyProvider
 {
@@ -181,9 +185,10 @@ class InstallerDependencyProvider extends SprykerUserDependencyProvider
         return $container;
     }
 }
-````
+```
 
 **src/Pyz/Zed/Acl/AclDependencyProvider.php**
+
 ```php
 class AclDependencyProvider extends SprykerAclDependencyProvider
 {
@@ -196,7 +201,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
             new AclRulesAclRolesExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclRolePostSavePluginInterface[]
      */
@@ -207,10 +212,12 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
         ];
     }
 }
-````
+```
 
-Use the following example if you want to enable ACL Entity for the whole Application, e.g for Merchant portal
+Use the following example if you want to enable ACL Entity for the whole Application, e.g. for the Merchant portal:
+
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
+
 ```php
 class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalApplicationDependencyProvider
 {
@@ -224,10 +231,9 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
         ];
     }
 }
-````
+```
 
-
-****Install DB data for ACL****
+### 5) Install the database data for ACL
 
 ```bash
 console setup:init-db
@@ -235,18 +241,18 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Make sure that request doesn't success for users without permission.
+Make sure that the request doesn't succeed for users without permission.
 
-Make sure that user can see only allowed menu links.
+Make sure that the user can see only the allowed menu links.
 
 Make sure that `spy_acl_role` `spy_acl_group` `spy_acl_user_has_group` tables contain default data.
 
 Make sure that current User transfer contains appropriate Acl groups inside.
 
-Make sure that AclEntityRule is created in `spy_acl_entity_rule` when RoleTransfer is saved and contains AclEntityRules inside
+Make sure that `AclEntityRule` is created in `spy_acl_entity_rule` when the `RoleTransfer` is saved and contains `AclEntityRules`.
 
-Make sure that RolesTransfer contains needed AclEntityRules inside.
+Make sure that `RolesTransfer` contains needed `AclEntityRules`.
 
-Make sure that user who doesn't suppose to have access to an entity or endpoint, don't have it
+Ensure the user who is not supposed to have access to an entity or endpoint does not have it.
 
 {% endinfo_block %}

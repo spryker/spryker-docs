@@ -13,9 +13,6 @@ jobs:
   link_validation:
     name: Links validation
     runs-on: ubuntu-latest
-    env:
-      BUNDLE_CACHE_PATH: '~/.bundler-cache/'
-      BUNDLE_CACHE_ALL: true
 
     steps:
       - uses: actions/checkout@v2
@@ -33,6 +30,10 @@ jobs:
           restore-keys: gemfile-
 
       - run: bundle install
+        env:
+          BUNDLE_CACHE_PATH: '~/.bundler-cache/'
+          BUNDLE_CACHE_ALL: true
+
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
 
       - run: bundle exec htmlproofer ./_site --allow-hash-href --url-ignore="/glue.mysprykershop.com\/[\.\w\-\/\?]+/,/github.com\/[\.\w\-\/]+\.md/"
@@ -57,6 +58,10 @@ jobs:
           restore-keys: gemfile-
 
       - run: bundle install
+        env:
+          BUNDLE_CACHE_PATH: '~/.bundler-cache/'
+          BUNDLE_CACHE_ALL: true
+
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
       - run: bundle exec jekyll validate
 
@@ -81,6 +86,10 @@ jobs:
           restore-keys: gemfile-
 
       - run: bundle install
+        env:
+          BUNDLE_CACHE_PATH: '~/.bundler-cache/'
+          BUNDLE_CACHE_ALL: true
+
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
         env: # Or as an environment variable

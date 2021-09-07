@@ -28,10 +28,13 @@ At Spryker people from around the world work together to provide outstanding pro
 If you discover a problem with Spryker Software, please let us know immediately. Please avoid ignoring a problem that you find, or work around it without reporting it to us. Not only would this prevent us from making our software better, but your workaround might not be maintainable and could cause you problems with upgradability or reduce your flexibility sometime in the future.
 
 ### Bring the right information
-Please ensure that every case you open with us includes the information we need to work on it. Take a look [here](/docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html) to learn what info matters most.
+Please ensure that every case you open with us includes the information we need to work on it. Take a look [here](https://documentation.spryker.com/v6/docs/how-to-get-the-most-out-of-spryker-support) to learn what info matters most.
+
+### Assess Business Impact realistically
+To make sure that we resolve the right cases first, we need to triage and prioritize. You can help us to this better if you assess and specify the business impact of your problem appropriately. For a more detailed explanation on what Business Impact is and how priorities work have a look into this [article](/2021080/docs/case-priorities).
 
 ## What you can expect from us
-In our SLAs, we guarantee certain [First Response Times](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html#first-response-time)
+In our SLAs, we guarantee certain [First Response Times](https://documentation.spryker.com/docs/how-spryker-support-works-1#first-response-time)
 you can expect us to react to your cases within the time that is specified in your SLA. While we work to resolve high priority issues as fast as possible, we do not and cannot guarantee resolution times for the issues you open with us because of the breadth of cases we offer to work on. Guaranteeing resolution times would make it necessary for us to make the definition of the cases we accept stricter which ultimately will make it harder and more bureaucratic for you to work with us. 
 
 ### Infrastructure Support
@@ -52,4 +55,3 @@ This is a general recommendation that will not only teach you and your team on h
 
 ### Learn more about how we work
 We are working on being more transparent on how we work internally, because we believe it makes working with us easier. Take a look at the other articles in the Support Section of our documentation to lean about our processes.
-

@@ -410,6 +410,7 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
     <summary markdown='span'>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
 
 ```twig
+{%- raw -%}
 {# @var order \Generated\Shared\Transfer\OrderTransfer #}
 {# @var invoice \Generated\Shared\Transfer\OrderInvoiceTransfer #}
 
@@ -629,6 +630,7 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
     </table>
 </body>
 </html>
+{% endraw %}
 ```
 
 </details>

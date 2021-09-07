@@ -11,7 +11,7 @@ This document provides details about the Data Transformer Object-map service in 
 Data Transformer Object-map is an Angular Service that executes another Data Transformer from the config for specific properties in an object.
 In the example below, the `datasource` will return an array with the transformed `date` in every child object.
 
-```ts
+```html
 <spy-select
   [datasource]="{
     type: 'inline',

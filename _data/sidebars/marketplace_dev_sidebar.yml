@@ -366,7 +366,7 @@ entries:
           url: /docs/marketplace/dev/data-import/file-details-merchant-product-csv.html
 
         - title: "File details: product-price.csv"
-          url: /docs/marketplace/dev/data-import/202108.0/file-details-product-price-csv.html
+          url: /docs/marketplace/dev/data-import/file-details-product-price-csv.html
 
 
       - title: Front-end

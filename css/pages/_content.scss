@@ -34,7 +34,7 @@
         @include media("<tablet") {
             font-size: 20px;
             line-height: 1.4;
-            margin: 0 0 8px;
+            margin-bottom: 8px;
         }
     }
 
@@ -43,7 +43,7 @@
 
         @include media("<tablet") {
             font-size: 16px;
-            margin: 0 0 8px;
+            margin-bottom: 8px;
         }
     }
 
@@ -52,7 +52,7 @@
 
         @include media("<tablet") {
             font-size: 15px;
-            margin: 0 0 8px;
+            margin-bottom: 8px;
         }
     }
 
@@ -88,6 +88,14 @@
             td,
             th {
                 word-break: break-word;
+
+                &:first-child {
+                    width: 35%;
+
+                    @include media("<tablet") {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -229,6 +237,7 @@
         border: 2px solid $grey-lighten;
         background: $grey-lightest;
         border-radius: 4px;
+        position: relative;
 
         & + details {
             margin-top: -22px;
@@ -277,13 +286,22 @@
     }
 
     .info-block {
+        position: relative;
+
         td, th {
             word-break: break-word;
+        }
+
+        .width-50 {
+            table {
+                width: 100%;
+                max-width: 100%;
+            }
         }
     }
 
     ol {
-        padding: 0;
+        padding: 0 0 0 40px;
         list-style-position: inside;
 
         & > li {
@@ -291,19 +309,14 @@
                 display: inline;
             }
         }
+
+        ol ol li {
+            list-style-type: decimal;
+        }
     }
 
-    .table-wrapper {
-        margin: 0 0 20px;
-        overflow: auto;
-
-        @include media("<tablet") {
-            overflow: visible;
-        }
-
-        table {
-            margin: 0 auto 5px;
-        }
+    & > ol {
+        padding: 0;
     }
 
     p {
@@ -318,6 +331,8 @@
         display: block;
         margin: 0 auto 1em;
         max-width: 50%;
+        cursor: zoom-in;
+        position: relative;
 
         @include media("<desktop") {
             max-width: 100%;
@@ -336,6 +351,24 @@
         @include media("<laptop") {
             display: block;
             margin: 25px 0 15px;
+        }
+    }
+
+    [data-lightbox] {
+        pointer-events: none;
+
+        img {
+            pointer-events: auto;
+        }
+
+        &:after {
+            content: none;
+        }
+    }
+
+    .anchorjs-link {
+        @include media("<desktop") {
+            opacity: 1;
         }
     }
 }
@@ -412,4 +445,123 @@
     color: $grey-6;
     width: 100%;
     margin: 0 0 16px;
+}
+
+.post-anchor {
+    position: absolute;
+    z-index: 3;
+    flex: none;
+    grid-area: none;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+
+    @include media("<widescreen") {
+        right: 24px;
+    }
+
+    @include media("<tablet") {
+        right: 16px;
+    }
+
+    &__button {
+        position: sticky;
+        z-index: 10;
+        bottom: 30px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        background: $grey-lighten;
+        color: $grey;
+        font-size: 10px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: opacity .2s linear, background .2s linear;
+        opacity: 0;
+
+        &:hover,
+        &:active {
+            text-decoration: none;
+            background: $silver;
+        }
+
+        .page-scrolled & {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
+
+.table {
+    margin: 0 0 20px;
+    overflow: auto;
+    position: relative;
+
+    table {
+        margin: 0 0 5px;
+
+        @include media("<tablet") {
+            margin: 0;
+        }
+    }
+
+    &.has-collapse {
+        @include media("<tablet") {
+            max-height: calc(100vh - 150px);
+            overflow: hidden;
+            padding: 0 0 50px;
+        }
+
+        &.expanded {
+            @include media("<tablet") {
+                overflow: visible;
+                max-height: max-content;
+            }
+        }
+
+        .table__toggle {
+            @include media("<tablet") {
+                display: block;
+            }
+        }
+    }
+
+    &__toggle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid $grey-3;
+        color: $red;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 1.25;
+        border-radius: 0 0 4px 4px;
+        background: rgba($white, .95);
+        display: none;
+
+        &-active-text {
+            display: none;
+
+            .expanded & {
+                display: block;
+            }
+        }
+
+        &-default-text {
+            display: block;
+
+            .expanded & {
+                display: none;
+            }
+        }
+    }
 }

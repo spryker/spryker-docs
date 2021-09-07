@@ -19,4 +19,4 @@ topnav_dropdowns:
         - title: Developer Documentation
           url: /docs/marketplace/dev/setup/system-requirements.html
         - title: User Documentation
-          url: /docs/marketplace/user/intro-to-spryker/marketplace-concept
+          url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept

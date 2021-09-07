@@ -21,8 +21,8 @@ To {task}, send the request:
 
 ---
 
-`{method}` **{endpoint}{% raw %}*{{path_parameter}}*{% endraw %}**
-<!--i.e., `GET` **/carts/{% raw %}*{{cart_uuid}}*{% endraw %}**-->
+`{method}` {% raw %}**{endpoint}*{{path_parameter}}***{% endraw %}
+<!--i.e., `GET` {% raw %}**/carts/*{{cart_uuid}}***{% endraw %}-->
 ---
 
 | PATH PARAMETER | DESCRIPTION |
@@ -43,7 +43,7 @@ To {task}, send the request:
 <!--
 {% info_block infoBox "Included resources" %}
 
-If a particular combination of resources should be included into request to achieve a particular result, explain in it in this note.
+If a particular combination of resources should be included in the request to achieve a particular result, explain in it in this note. For example, "To include `bundled-products`, include `concrete-products` and `bundled-products` in the request.`"
 
 {% endinfo_block %}
 
@@ -58,8 +58,8 @@ Request sample: '{method} {endpoint}{parameter example}' <!--usage description (
 
 | REQUEST SAMPLE | USAGE |
 |---|---|
-| `{method} {endpoint}{parameter example}` | <!-- usage description (in imperative mood, i.e. Retrieve all products) --> |
-| `{method} {endpoint}{parameter example}?include={included resource}` |  |
+| {method} {endpoint}{parameter example} | <!-- usage description (in imperative mood, i.e. Retrieve all products) --> |
+| {method} {endpoint}{parameter example}?include={included resource} | <!-- If including a resource into a request requires other resources to be included, describe only the target resource. For example, including `bundled-products` requires `concrete-products` and `bundled-products`. In this case, describe the request as " Retrieve ... with bundled products" omitting the other two resources. |
 
 <details><summary>{request description}</summary>
 '{method} {endpoint}{parameter example}' <!--usage description (in imperative mood, i.e. Retrieve all products). -->
@@ -79,6 +79,16 @@ Request sample: '{method} {endpoint}{parameter example}' <!--usage description (
 <!-- Response sample should correspond to the request sample in the previous section. -->
 
 <details><summary>{response sample description}</summary>
+
+```{language}
+{response sample body}
+```
+
+</details>
+
+<!-- For included resources: -->
+<!-- If an included resource is in the request to include some other resource, omit it in the description -->
+<details><summary>Response sample with {included entity name}</summary>
 
 ```{language}
 {response sample body}

@@ -9,6 +9,24 @@ A Marketplace Product feature adds merchant information to the product that a me
 
 To learn more about the feature and to find out how end users use it, see [Marketplace Product feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) feature overview for business users.
 
+![Entity diagram](https://confluence-connect.gliffy.net/embed/image/15402fef-7a49-4ff6-bdc7-9e82f2f92011.png?utm_medium=live&utm_source=confluence)
+
+**Modules**
+
+**MerchantProduct** - created `MerchantProductEvents` with publish.
+
+**MerchantProductDataImport** - adjusted `MerchantProductAbstractWriterStep` so that it triggers merchant product publish event.
+
+**MerchantProductOfferSearch** - adjusted `MerchantProductPageDataLoaderPlugin` to merge merchant names that we set to  PayloadTransfer with those that it already contains, updated plugins to make it compatible with `MerchantProductSearch` module.
+
+**MerchantProductSearch** - created new plugins and subscribes on `MerchantEvents` - publish and entity update.
+
+## Entity diagram
+
+The following schema illustrates relations in the Marketplace Wishlist entity:
+
+![Entity diagram](https://confluence-connect.gliffy.net/embed/image/80809f75-1f94-4f19-9cfd-e39235026e89.png?utm_medium=live&utm_source=confluence)
+
 ## Related Developer articles
 
 | INTEGRATION GUIDES| GLUE API GUIDES  | DATA IMPORT   |

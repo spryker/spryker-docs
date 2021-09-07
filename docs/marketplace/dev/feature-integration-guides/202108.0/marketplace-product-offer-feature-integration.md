@@ -1382,6 +1382,8 @@ merchant_product_offer.sold_by,Sold by,en_US
 merchant_product_offer.sold_by,Verkauft durch,de_DE
 merchant.sold_by,Sold by,en_US
 merchant.sold_by,Verkauft durch,de_DE
+product-offer.info.reference.invalid,Product offer reference not found for product with SKU '%sku%'.,en_US
+product-offer.info.reference.invalid,Produktangebotsreferenz für Produkt mit SKU '% sku%' nicht gefunden.,de_DE
 ```
 
 Import data:

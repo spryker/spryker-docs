@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUNDLE_CACHE_PATH: '~/.bundler-cache/'
+      BUNDLE_CACHE_ALL: true
 
     steps:
       - uses: actions/checkout@v2

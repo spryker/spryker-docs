@@ -21,17 +21,10 @@ jobs:
         uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
         with:
           ruby-version: 2.6
-          
-      - name: Cache
-        uses: actions/cache@v2.1.6
-        with:
-          path: '~/.bundler-cache/'
-          key:  gemfile-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: gemfile-
+          bundler-cache: true
 
       - run: bundle install
         env:
-          BUNDLE_CACHE_PATH: '~/.bundler-cache/'
           BUNDLE_CACHE_ALL: true
 
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
@@ -49,17 +42,10 @@ jobs:
         uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
         with:
           ruby-version: 2.6
-          
-      - name: Cache
-        uses: actions/cache@v2.1.6
-        with:
-          path: '~/.bundler-cache/'
-          key:  gemfile-valid-1-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: gemfile-
+          bundler-cache: true
 
       - run: bundle install
         env:
-          BUNDLE_CACHE_PATH: '~/.bundler-cache/'
           BUNDLE_CACHE_ALL: true
 
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml
@@ -77,17 +63,10 @@ jobs:
         uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
         with:
           ruby-version: 2.6
-          
-      - name: Cache
-        uses: actions/cache@v2.1.6
-        with:
-          path: '~/.bundler-cache/'
-          key:  gemfile-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: gemfile-
+          bundler-cache: true
 
       - run: bundle install
         env:
-          BUNDLE_CACHE_PATH: '~/.bundler-cache/'
           BUNDLE_CACHE_ALL: true
 
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml

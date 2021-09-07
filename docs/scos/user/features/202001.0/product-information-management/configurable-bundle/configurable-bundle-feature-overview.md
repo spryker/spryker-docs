@@ -38,7 +38,7 @@ A Shop User can set up the Configurable Bundle on the **Configurator page**. Con
 
 | Storefront | Back Office |
 | --- | --- |
-| ![Configurable Bundle Template in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+back+office.png){height="" width=""} | ![Configurable Bundle Template in the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+storefront.png){height="" width=""} |
+| ![Configurable Bundle Template in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+back+office.png)  | ![Configurable Bundle Template in the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+storefront.png)  |
 A bundle template can contain an infinite number of the slots.
 
 The example below illustrates how the Configurable Bundle data is saved to the database:
@@ -85,7 +85,7 @@ A Back Office User can [create an unlimited number of slots](/docs/scos/user/use
 * Base cabinet
 * Drawer base cabinet
 
-![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png){height="" width=""}
+![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png) 
 
 {% endinfo_block %}
 A slot contains a list of products or even categories to choose from. In Spryker Commerce OS, this functionality is represented via **product lists**. Spryker Back Office User adds the necessary products to the product list to allow buyers to choose among several options in the slot. 
@@ -109,7 +109,7 @@ Slot `Base Cabinet` may contain a list with five assigned products:
 * Base cabinet with two shelves SKU 12236
 * Base cabinet with pull-out SKU 12237
 * Base cabinet with wire basket SKU 12238
-![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png){height="" width=""}
+![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png) 
 
 {% endinfo_block %}
 An **assigned product** is a concrete product that is assigned to the slot. When you select the product for a slot, **the product is picked**.
@@ -119,11 +119,11 @@ You have picked `Base cabinet with 2 shelves SKU 12236` product to fill the slot
 
 {% endinfo_block %}
 When represented schematically, a configurable bundle looks like this:
-![Config Bundle Schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/slots+scheme.png){height="" width=""}
+![Config Bundle Schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/slots+scheme.png) 
 
 ## Configurable Bundle & Cart and Cart Notes
 When the customer has successfully filled all the slots in the template, they add the configurable bundle to the cart. On the cart page, the items are grouped by the configured bundle.
-![Configured Bundle on the Cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configured-bundle-on-cart-page.png){height="" width=""}
+![Configured Bundle on the Cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configured-bundle-on-cart-page.png) 
 
 You can add a note to the whole Configurable bundle on the cart page. The note will further be displayed on the Checkout Summary and Order Details page under the respective Configurable Bundle template.
 
@@ -230,11 +230,11 @@ Configurator is a page where a shopper assembles a Configurable Bundle. It allow
 
 ### Configurable Bundle List
 This page contains a list of all Configurable Bundle Templates that are active. All the templates are taken from the **Back Office > Configurable Bundle Templates** section. To configure the template, use our [Configurable Bundle Template Back Office guide](/docs/scos/user/user-guides/202001.0/back-office-user-guide/products/configurable-bundle-templates/configurable-bundle-templates.html).
-![Configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+storefront.png){height="" width=""}
+![Configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+storefront.png) 
 
 ### Configurator Page
 Configurator is the exemplary page where you can set up your configurable bundle from the template.
-![Configurator Slots](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurator-slots.png){height="" width=""}
+![Configurator Slots](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurator-slots.png) 
 
 All slots are optional, so you can fill, for example, only two slots from the example image above. However, you can customize this configuration according to project needs.
 

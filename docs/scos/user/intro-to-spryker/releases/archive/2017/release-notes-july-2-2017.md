@@ -12,7 +12,7 @@ redirect_from:
 ## Features
 ### Filter by Product Labels
 We've changed product label touch logic in order to be able to export label IDs for products when their label relations change. This will allow you to further search and filter by labels.
-![Filter by product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_filter_by_product_labels.gif){height="" width=""}
+![Filter by product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_filter_by_product_labels.gif) 
 
 **Affected Modules**
 
@@ -99,9 +99,9 @@ With this release, we are introducing templating and CMS page block positioning 
 With our out of the box solution, you can manage categories as catalog pages, as a mix of catalog with blocks included or as pure content pages. You can modify the provided templates, as well as you can extend our solution to include your custom templates.
 
 CMS block positioning can be used for placing a block in certain places in your template (like for example include banners in the top position, some SEO text in the bottom position, etc.). Out of the box, category pages have only 1 default position. For a more advanced template take a look at our demoshop. Here we showcase top, middle and bottom positions. You can extend our solution in a way that will help you better manage your content by changing its configuration.
-![Category template Yves](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_category_template_and_cms_block_position_1.gif){height="" width=""}
+![Category template Yves](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_category_template_and_cms_block_position_1.gif) 
 
-![Category template Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_category_template_and_cms_block_position_2.gif){height="" width=""}
+![Category template Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+2+2017/RN_category_template_and_cms_block_position_2.gif) 
 
 **Affected Modules**
 

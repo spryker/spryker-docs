@@ -143,7 +143,7 @@ to run this command periodically. In demoshop we've set this to run every minute
 ## Under the Hood
 
 ### Database Schema
-![product_label_db](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product_label_db.png){height="" width=""}
+![product_label_db](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product_label_db.png) 
 
 The `Product Label` module adds three new tables:
 

@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 Example State Machine:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-paydirekt-flow-example.png){height="" width=""}
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-paydirekt-flow-example.png) 
 
 ## Front-end Integration
 To adjust the frontend appearance, provide the following templates in your theme directory:

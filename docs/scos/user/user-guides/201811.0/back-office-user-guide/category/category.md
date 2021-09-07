@@ -13,7 +13,7 @@ This section is designed to build a logical structure of products by assigning t
 The primary uses of categories are to develop dynamic category pages and enhance store's search and filter capabilities.
 
 **Standardized flow of actions for a Product Catalog Manager**
-![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/category-section.png){height="" width=""}
+![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/category-section.png) 
 
 {% info_block infoBox %}
 This is how a Product Catalog Manager can create a structure to display products by, for example, Electronics. Under this category, you can group all of your products that meet this criterion. Furthermore, you can create nested categories that split the products into smaller groups such as TVs, Mobile Phones, DVDs, etc.

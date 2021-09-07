@@ -30,7 +30,7 @@ To enable guest checkout:
 2. Remove customer permissions:
     1. In the Back Office, go to **Customers** > **Customer Access**.
     2. Clear all the permissions.
-    ![customer-permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+enable+guest+checkout+in+B2B+Demo+Shop/customer-permissions.png){height="" width=""}
+    ![customer-permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+enable+guest+checkout+in+B2B+Demo+Shop/customer-permissions.png) 
     3. Select **Save**
     This refreshes the page with the success message displayed.
 

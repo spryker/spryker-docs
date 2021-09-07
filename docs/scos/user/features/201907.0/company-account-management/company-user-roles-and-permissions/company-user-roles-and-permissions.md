@@ -37,7 +37,7 @@ A Company User may have one or multiple "Roles". These roles consist of permissi
         </div>
 </div>
 
-![Company User  Roles](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+User+Roles+and+Permissions/Company+User+Roles.png){height="" width=""}
+![Company User  Roles](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+User+Roles+and+Permissions/Company+User+Roles.png) 
 
 Check out this video tutorial on setting up Company Users and Roles.
 <iframe src="https://fast.wistia.net/embed/iframe/72qy3slwjo" title="How to set up Company Users and Roles in Spryker" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>

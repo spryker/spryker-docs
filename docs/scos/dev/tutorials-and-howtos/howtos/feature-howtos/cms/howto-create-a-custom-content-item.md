@@ -166,7 +166,7 @@ class ContentFooTermForm extends AbstractType
 
 After enabling the plugin, make sure there is the new content item in Back Office > **Content Management** > **Content Items** > **Add Content Item** drop-down menu.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/add-content-item-menu.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/add-content-item-menu.png) 
 
 {% endinfo_block %}
 
@@ -206,7 +206,7 @@ Now you can use your plugin as a function in Twig files. If you’ve named your 
 
 *CMS Block Glossary Edit* and *Placeholder Edit* pages contains WYSIWYG editor to put content into CMS block or page.  The **Content Item** drop-down menu in the WYSIWYG toolbar contains all the content items which you can add. See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{site.version}}content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages-and-blocks) for more details.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/content-item-menu.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/content-item-menu.png) 
 
 ***
 To add the new content item to that list, in `src/Zed/ContentFooGui`, implement a new plugin using `\Spryker\Zed\ContentGuiExtension\Dependency\Plugin\ContentGuiEditorPluginInterface`, e. g.  `ContentFooContentGuiEditorPlugin`.

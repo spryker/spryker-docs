@@ -22,7 +22,7 @@ Prior to proceeding with content items widgets, make sure that they have been en
 
 You can work with widgets on the **Edit Placeholders** page of the **Pages** or **Blocks** menu. See [Adding Content Items Widgets to Pages and Blocks](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html) for more details.
 
-![Content items widgets](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items+Widgets+Overview/content-item-menu-page.png){height="" width=""}
+![Content items widgets](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items+Widgets+Overview/content-item-menu-page.png) 
 
 Additionally, you can make some changes to the widget, such as:
 

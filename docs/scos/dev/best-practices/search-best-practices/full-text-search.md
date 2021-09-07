@@ -23,7 +23,7 @@ redirect_from:
 ---
 
 Full-text search is a feature where a user enters arbitrary text into a search field and then gets documents that are relevant for that query. It is normally combined with faceted navigation. In the example below, a user searched for “hammer” and then further filtered for hammer weights of 2000 gram and prices between 10€ and 50€:
-![Full-text search](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/fulltext-search.png){height="" width=""}
+![Full-text search](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/fulltext-search.png) 
 
 Although some tweaking is necessary, Elasticsearch does a great job in running full-text queries fast (it’s one of the most important features of the underlying Lucene engine). On the other hand, more work is required to get text relevance right and to make sure that the first returned query results are the ones that are most relevant for the user.
 
@@ -34,7 +34,7 @@ The defaults of Elasticsearch work fine for basic full-text search use cases, bu
 Analyzers are composed of a single tokenizer and zero or more token filters. A tokenizer splits source text into a stream of tokens (e.g. splitting by whitespace characters) which are then passed to token filters. Filters are applied one by one, each modifying its input stream by deleting/splitting/changing tokens and passing the stream to the next filter. The resulting list of tokens is saved to [Elasticsearch inverted index](https://www.elastic.co/guide/en/elasticsearch/guide/current/inverted-index.html) and made searchable in a very performant way.
 
 The picture below shows a text analysis process that works good for tool-related text in German:
-![Text analysis](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/text-analysis.png){height="" width=""}
+![Text analysis](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/text-analysis.png) 
 
 The exact steps and their order will differ for different business models and applications (there is no “free lunch” here) so this will require some experimentation before getting it right.
 

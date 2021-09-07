@@ -13,7 +13,7 @@ redirect_from:
 ### Selecting Product Variant in the Cart
 With this release we are bringing the variant selection functionality to the cart. Your shop user can now modify the selected variant right in the cart which will then, if available, replace the current item in the cart with the newly selected one (e.g. changing the size of a t-shirt or storage capacity of a smartphone).
 
-![Selecting Product Variant in the cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_selecting_product_variant_in_the_cart.gif){height="" width=""}
+![Selecting Product Variant in the cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_selecting_product_variant_in_the_cart.gif) 
 
 **Affected Modules**
 
@@ -53,7 +53,7 @@ In addition, we are introducing a set of new features for CMS blocks:
 
 * **Category and product blocks**: In Admin UI, you can now also assign categories and product to a given block, which will imply that the block shows up for these categories and products in the shop frontend. Yet you can still also continue using blocks as static ones by simply placing them in your page  template.
 
-![Category and Product blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_improvement_and_new_features_for_cms_blocks.gif){height="" width=""}
+![Category and Product blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_improvement_and_new_features_for_cms_blocks.gif) 
 
 **Affected Modules**
 
@@ -111,7 +111,7 @@ composer require spryker/file-system:"^1.0.0" spryker/flysystem:"^1.0.0" spryker
 ### On Sale Products
 We've enhanced the management of products with multiple price types. You can now import and manage from PIM multiple prices of a product. Those prices are also exported to Elasticsearch. For inspiration, you can check our demoshop use case implementation for products on sale: if a product has both original and default price, then the original price is strikethrough and the default price is the current sales price for the product. In Yves we have also introduced a filtered catalog for `/outlet` where a user can browse through all products that are currently on sale. 
 
-![On sale products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_on_sale_products.gif){height="" width=""}
+![On sale products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_on_sale_products.gif) 
 
 **Affected Modules**
 
@@ -122,7 +122,7 @@ We've enhanced the management of products with multiple price types. You can now
 ### Discount Rules Based On Product Labels
 With this release, we are now introducing a new connector module to handle discount rules based on product labels. This feature will allow you to define discount calculation and condition rules based on existing product labels.
 
-![Discount rules](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_discount_rules_based_on_product_labels.gif){height="" width=""}
+![Discount rules](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+July+-+1+2017/RN_discount_rules_based_on_product_labels.gif) 
 
 **Affected Module**
 

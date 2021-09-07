@@ -24,7 +24,7 @@ For the convenience of shop visitors, they can easily change the way the search 
 * **Sort by name ascending**: The pages in search results will be arranged in the order from the shortest name in the title to the longest one.
 * **Sort by name descending**: The pages in search results will be arranged in the reversed order: from the longest title name to the shortest one.
 
-![Sorting by name](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Searching+within+CMS+Pages/sort-by-name.png){height="" width=""}
+![Sorting by name](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Searching+within+CMS+Pages/sort-by-name.png) 
 
 After the sorting has been applied, the page will be reloaded and the search results will be listed in the corresponding order.
 
@@ -42,7 +42,7 @@ It is possible to specify how many CMS pages will be returned to the page. For n
 
 Thus, if you need to load more results, select the respective number from the drop-down.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Searching+within+CMS+Pages/pages-number.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Searching+within+CMS+Pages/pages-number.png) 
 
 ## Pagination
 

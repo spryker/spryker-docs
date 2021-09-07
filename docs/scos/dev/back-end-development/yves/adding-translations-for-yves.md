@@ -45,7 +45,7 @@ An entry in the glossary has a key and translations per locale, like this:
 ```
 
 Before it can be used in Yves, this data must be exported to the KV-storage. You can use the [Redis Desktop Manager](http://redisdesktop.com/) to have a look inside and see the values.
-![Glossary KV and DB](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Frontend+Translations/glossary-kv-and-db.png){height="" width=""}
+![Glossary KV and DB](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Frontend+Translations/glossary-kv-and-db.png) 
 
 ## Usage in Twig templates
 

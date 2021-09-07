@@ -41,4 +41,4 @@ The link allows displaying the prices in accordance with the currency selected. 
 In case a shopper accesses the link for the cart, that is not available anymore, they cannot access it and get _This cart is unavailable_ message.
 
 You can check the module relations in the schema below:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Unique+URL+per+Cart+for+Easy+Sharing/unique-url-module-diagram.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Unique+URL+per+Cart+for+Easy+Sharing/unique-url-module-diagram.png) 

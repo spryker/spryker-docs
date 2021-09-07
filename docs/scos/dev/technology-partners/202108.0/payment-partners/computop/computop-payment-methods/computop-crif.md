@@ -15,7 +15,7 @@ redirect_from:
 Popular with customers, risky for the merchant: Payment methods such as direct debit or purchase on account involve a high level of default risk. Computop Paycontrol, an automated credit rating with all standard credit agencies, combines flexibility and payment security for online business. With Paycontrol you can, amongst other things, automatically obtain information from CRIF without having to connect your shop system to individual information interfaces.
 
 CRIF (formerly Deltavista) provides information on about 80 million individuals, 6 million companies, and 10 million payment, register, and address records from Germany, Austria and Switzerland.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/CRIF-process-flow.png){height="" width=""}
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/CRIF-process-flow.png) 
 
 ## Calling the Interface
 

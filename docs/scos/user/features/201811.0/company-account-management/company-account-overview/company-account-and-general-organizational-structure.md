@@ -13,11 +13,11 @@ In the context of permissions management, the top level of a B2B business model 
 Upon initial registration of a Company, it appears in the B2B shop with the Pending status in the Administrator Interface. After the Company has been checked, it gets the “Approved” status.
 
 
-![companies_overview.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account+Overview/Company+Account+and+General+Organizational+Structure/companies_overview.png){height="" width=""}
+![companies_overview.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account+Overview/Company+Account+and+General+Organizational+Structure/companies_overview.png) 
 
 Each company consists of several **Business Units**, that can be viewed as physical divisions of a Company. The Business Units in their turn can have a hierarchical structure as well, which means that they can have own departments, teams etc. Business units also have metadata (e.g. tax-number).
 
-![company-account-overview.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account+Overview/Company+Account+and+General+Organizational+Structure/company-account-overview.png){height="" width=""}
+![company-account-overview.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account+Overview/Company+Account+and+General+Organizational+Structure/company-account-overview.png) 
 
 The level below the Business Unit is the **Company Address**.
 
@@ -38,6 +38,6 @@ The Company User contains all the information about the Customer and has a one-t
 
 The scheme below illustrates relations between Company, Business Unit, Company (Unit) Address and Company User (Customer).
 
-![schema_1.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account+Overview/Company+Account+and+General+Organizational+Structure/schema_1.png){height="" width=""}
+![schema_1.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account+Overview/Company+Account+and+General+Organizational+Structure/schema_1.png) 
 
 <!-- _Last review date: Aug 15, 2018_ by Denis Turkov -->

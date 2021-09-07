@@ -38,7 +38,7 @@ Follow the steps to create a Banner:
     * **Alt-text**
 
 
-![Banner content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/banner-content-item-page.png){height="" width=""}
+![Banner content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/banner-content-item-page.png) 
 
 See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html#create-and-edit-banner-content-item-page) to learn about the attributes on this page. 
 
@@ -107,7 +107,7 @@ Make sure the Product Abstract List has been created:
 
 {% endinfo_block %}
 
-![Abstract product list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/apl-create-page.png){height="" width=""}
+![Abstract product list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/apl-create-page.png) 
 
 
 ***
@@ -194,7 +194,7 @@ The following logic applies in a multi-language setup:
 
 {% endinfo_block %}
   
-![File list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/file-list-create.png){height="" width=""}
+![File list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/file-list-create.png) 
 
 4. Click **Save**. This takes you to the *Overview of Content Items* page.
 {% info_block warningBox "Verification" %}

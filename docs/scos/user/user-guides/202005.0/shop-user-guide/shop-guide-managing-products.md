@@ -20,7 +20,7 @@ You can navigate to a product detail page from:
 * Search results page by clicking a product card
 * Search bar > Products section
 
-![Ways to navigate to a product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/pdp-video-gif.gif){height="" width=""}
+![Ways to navigate to a product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/pdp-video-gif.gif) 
 
 On the product detail page, you can view some general product information that includes:
 
@@ -37,7 +37,7 @@ On the product detail page, you can view some general product information that i
 <details open>
 <summary>For the descriptions of the elements you see on the page, expand this section:</summary>
     
-![Basic elements available on the product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/basic-elements.png){height="" width=""}
+![Basic elements available on the product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/basic-elements.png) 
     
 | # | Element | Description |
 | --- | --- | --- |
@@ -61,7 +61,7 @@ If a shop owner offers some additional items (product options), you can add them
 
 Under **Ratings & Reviews**, a set of **similar products** can be displayed. In this set, shop owners usually recommend products that are similar in properties to the product you are viewing and might match the requirements you are looking for in the product. If you want to view or add the product to the cart, click the product card. This will redirect you to the product detail page of this specific product where you can view product information and/or add it to the cart. 
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/reviews-and-slots.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/reviews-and-slots.png) 
 ***
 To sum up, on the product detail page, you can do the following:
 
@@ -83,7 +83,7 @@ You have the following options to select the shopping cart:
 * select the cart from all available carts by clicking **All Carts** in the widget
 * create a new cart by clicking **Create New Cart**. Then, enter the name of the cart in the **Cart Name** field, and click **Submit**. For more information on how to create carts, see [Shop Guide - Creating a Shopping Cart](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html).
 
-![Shopping cart widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/shopping-cart-widget.png){height="" width=""}
+![Shopping cart widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/shopping-cart-widget.png) 
 
 {% endinfo_block %}
 
@@ -94,7 +94,7 @@ You have the following options to select the shopping cart:
 3. (Optional) Clear the **Add as separate item** checkbox if you do not want to add this product as a separate item to the order. By default, this checkbox is selected.
 4. To complete the operation, click **Add to Cart**. The items will be added to the selected (active) shopping cart. See [Shop Guide - Checkout](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-checkout.html) to learn more about how to proceed with the order.
 
-![Add to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-cart-howto.png){height="" width=""}
+![Add to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-cart-howto.png) 
 ***
 ## Adding a Product to Shopping List
 
@@ -111,7 +111,7 @@ You can order frequently bought products faster by adding the products to a [sho
 1. From the drop-down list, select the shopping list to which you want to add the product.
 2. Specify the quantity of the product and click **Add to Shopping list**. The item will be added to the shopping list you’ve selected. For more information on managing shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-lists.html).
 
-![Add to shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-shopping-list-howto.png){height="" width=""}
+![Add to shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-shopping-list-howto.png) 
 
 **Tips & Tricks**
 
@@ -137,7 +137,7 @@ If you have not been logged in, the **Sign Up / Sign In** page opens.
 * summary
 * description
 
-![Add a product review](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-review-howto.png){height="" width=""}
+![Add a product review](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-review-howto.png) 
 
 3. To keep the changes, click **Submit**. The review will be saved and sent to the shop administrator for further processing.
 
@@ -159,7 +159,7 @@ To add a product to the wishlist, click **Add to Wishlist**. This will add the p
 
 If you have several wishlists in your account, then first, select the wishlist to which you want to add the product, and then click **Add to Wishlist**. The product will be saved to the selected wishlist.
 
-![Add products to a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/adding-to-wishlist.png){height="" width=""}
+![Add products to a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/adding-to-wishlist.png) 
 ***
 
 **What’s next?**

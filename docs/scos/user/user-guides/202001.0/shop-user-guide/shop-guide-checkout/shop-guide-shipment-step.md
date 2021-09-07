@@ -25,7 +25,7 @@ To select a shipment method:
 
 1. Choose an available shipment method.
 2. Specify a date you want the shipment to be delivered. This is an optional step.
-![Shipment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Shipment+Step/shipment-step-new.png){height="" width=""}
+![Shipment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Shipment+Step/shipment-step-new.png) 
 
 3. To proceed to the *Payment* step, click **Go to Payment**.
 ***

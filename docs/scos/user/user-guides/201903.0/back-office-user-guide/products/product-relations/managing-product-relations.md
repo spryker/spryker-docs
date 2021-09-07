@@ -43,7 +43,7 @@ There are 2 places where you can view the product relation:
 1. On the **Product Relations** page, click **View in Shop** in the _Actions_ column for a specific product relation. 
     You are redirected to the abstract product PDP. 
 2. On the PDP of an abstract product, scroll down to the Similar products section to see what products are assigned to it as "similars."
-![Product relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Relations/Managing+Product+Relations/product-relations.png){height="" width=""}
+![Product relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Relations/Managing+Product+Relations/product-relations.png) 
 
 ***
 **Tips & Tricks**

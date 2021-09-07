@@ -25,7 +25,7 @@ To edit a content item widget:
 1. On the *Overview of CMS Pages* page, in the *Actions* column, select **Edit** > **Placeholders** next to the block you want to add a content item widget to.
 2. On the *Edit Placeholders: [CMS Page Name]* page, in the *Placeholder* tab editor, click a widget element.
 
-![Content item widget edit menu](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Editing+Content+Item+Widgets/content-item-widget-menu.png){height="" width=""}
+![Content item widget edit menu](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Editing+Content+Item+Widgets/content-item-widget-menu.png) 
 
 2. In the pop-up menu, you can click:
     * **Edit Widget**. This will re-open the *Insert a Content Item* pop-up window where you can select another content item of the **same** type and/or another template.

@@ -35,10 +35,10 @@ The central place of the Spryker’s search sub-system is the *Search* module. T
 *     storing the data for search (indexing documents in Elasticsearch)
 
 Old versions of the Search module were highly coupled to Elasticsearch 5 as the search provider.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Current+Search+state+Copy.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Current+Search+state+Copy.png) 
 
 From now on, all the search provider-specific tasks are performed by the dedicated modules, which implement various plugin interfaces from the new *SearchExtension* module and are hooked to the Search module. The Search module itself is all about receiving requests through its API and routing them to the corresponding search provider-specific module(s) through the delegation mechanism. All Elasticsearch specific code has been deprecated in the Search module and moved to the new *SearchElasticsearch* module.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Desired+state+Copy.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Desired+state+Copy.png) 
 
 To achieve this in the backward-compatible way, a new concept called **search context** was introduced, which is represented by the `SearchContextTransfer` object. The search context is needed to determine the search provider, which should respond to a particular search request, as well as to store information/configuration needed to handle this request. The main and mandatory part of this search context is the source identifier. The source identifier is used in two scenarios:
 

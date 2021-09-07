@@ -31,7 +31,7 @@ The **Return Management** feature provides multiple ways to return items of an o
 You can define the **return policy** per each store. By default, the return policy is based on the 30 days **return period**, but you can change the default return period for your project.
 
 When creating a return, a Customer can see all the relevant return information such as the return period, if the item is returnable or not, as well as set a return reason and check the item's states and the total remuneration.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image9.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image9.png) 
 
 #### Documentation
 [Return Management](https://documentation.spryker.com/2021080/docs/en/return-management)
@@ -39,7 +39,7 @@ When creating a return, a Customer can see all the relevant return information s
 ### Custom Order Reference 
 **Custom Order Reference** is a small but powerful feature that allows Customers and Back Office Users to add an external reference to the orders. It can be a reference to a system that manages internal purchases or a ticket system. This reference can be saved and viewed both on the Storefront and in the Back Office.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image5.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image5.png) 
 
 #### Documentation
 [Custom Order Reference](https://documentation.spryker.com/2021080/docs/custom-order-reference)
@@ -47,14 +47,14 @@ When creating a return, a Customer can see all the relevant return information s
 ### Filter and Search in Order Archive 
 
 **Filter and Search in Order Archive** allows B2C users to search and filter orders in their order archive, and for B2B users, it opens even more possibilities. **Filter and Search** adds two new permissions that allow B2B users to view their orders, orders of their Business Units, and orders of their Company. Now, the order management provides multiple tools to find an order by order reference, product name, or product SKU and to see products of the orders on the order archive page.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image14.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image14.png) 
 
 #### Documentation
 [Filter and Search in Order Archive](https://documentation.spryker.com/2021080/docs/customer-account-feature-overview#customer-account-on-the-storefront)
 
 ### Adding shipment cost to RFQ 
 **Adding shipment cost for RFQ** is a new step in the Quotation Process at Spryker. Previously, it was not possible to create a quote with a shipment cost. Now, the quote contains the full cost of the purchase, including shipping. 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image6.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image6.png) 
 
 #### Documentation
 [Quotation Process & RFQ](/docs/scos/dev/features/{{page.version}}/quotation-process/quotation-process.html)
@@ -62,21 +62,21 @@ When creating a return, a Customer can see all the relevant return information s
 ### Product Relations per Store
 We have enhanced our multi-store feature with a new product management functionality.
 Starting from this release, **Product Relations can be assigned to stores**. You can now define different Product Relations of the same type (related product or up-sell) and assign them to specific stores.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image12.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image12.gif) 
 
 #### Documentation
 [Product Relations](/docs/scos/dev/features/{{page.version}}/product-relations/product-relations.html)
 
 ### Product Labels per Store
 We have enhanced the Product Labels feature so that now you can define the stores a product label is displayed in.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image8.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image8.png) 
 
 #### Documentation
 [Product Labels](https://documentation.spryker.com/2021080/docs/en/product-label) 
 
 ### Ability to Change Image and Name in a Product Group
 We have improved our Front-end component **Product Abstract Card** to fully support the Product Group feature. Whenever you hover over the color selector on the card, the picture, title, and price of the product are updated to match your selection.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image16.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image16.gif) 
 
 #### Documentation
 [Product Group](https://documentation.spryker.com/2021080/docs/product-groups)
@@ -84,7 +84,7 @@ We have improved our Front-end component **Product Abstract Card** to fully supp
 ### Navigation as Content Item
 Our **Navigation** feature joins the Content Management capability. You can now define navigation as a content item and use it anywhere inside your Storefront. Simply add the navigation content item to a CMS Block or Page.
 This also allows creating a different navigation for each store and locale.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image11.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image11.gif) 
 
 #### Documentation
 [Navigation](https://documentation.spryker.com/2021080/docs/navigation) 
@@ -92,19 +92,19 @@ This also allows creating a different navigation for each store and locale.
 ### Emails as CMS Blocks
 You can now manage emails you send to customers, using the Spryker CMS. Starting from this release, you can **define emails' content and layout** by editing CMS Blocks and applying email templates.
 For each email template, there are HTML and text versions available by default. Choose a template to meet your requirements, manage translations via glossary keys, and build complex logic via our Twig template engine.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image1.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image1.png) 
 
 #### Documentation
 [Email as CMS Block](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/email-as-a-cms-block-overview.html)
 
 ### New Navigation for the Back Office
 We have reorganized our Back Office navigation to make it more clear and easier to use.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image3.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image3.png) 
 
 ### Add to Cart from the Category Page
 Adding a product with one variant to cart has become easier with this release. Now you can **add a simple product from the catalog to cart** in one click. Product groups that contain multiple simple products also support this behavior, as you can switch between variants on the catalog page. 
 Products that have more than one variant do not have the Add to cart button on the Category page. 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image4.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image4.png) 
 
 #### Documentation
 [Quick Order from the Catalog Page](/docs/scos/dev/features/{{page.version}}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
@@ -112,7 +112,7 @@ Products that have more than one variant do not have the Add to cart button on t
 ### Double opt-in for Customer Registration
 Spryker now supports a **double opt-in for Customer sign-ups**, that can happen either from the sign-up page or during the checkout process.
 When a Customer signs up, an email with a confirmation link is sent to the provided email address. The Customer must click the link to verify the email address and thereby perform the double opt-in, which will then allow the Customer to log in.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image10.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image10.png) 
 
 #### Documentation
 [Customer Registration](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-registration-overview.html)
@@ -161,7 +161,7 @@ You will have access to detailed information about CSV files format, dependencie
 We have improved the data importers’ usability. 
 Using a **YAML configuration file** as a parameter of data:import **console command**, you will now be able to **import several CSV data files in a batch**, having the flexibility of defining it without changing your project’s source code.
 You may now change names and locations of the CSV files to be imported, define a YAML configuration file with a data subset to import as a bulk, making it easier to manage your data import operation.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image2.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image2.png) 
 
 #### Documentation
 [Importing Data with a Configuration File](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-data-with-a-configuration-file.html)
@@ -175,7 +175,7 @@ Provide more autonomy to business users managing product data updates.
 
 The new **combined product data import with a single file** feature allows to import at once the following product data sets: Product Abstract Store, Product Abstract, Product Concrete, Product Stock, Product Group, Product Prices, Product Images, to one or to multiple stores.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image7.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image7.png) 
 
 To execute it, a single .csv file with the combined product data-sets to import needs to be created and its sequence specified in the configuration YAML file. 
 The combined product data-sets follow an identical format as the individual .csv files used by the modular data importers. The existing modular data importers managing individual product .csv files are not impacted (that is, *productabstract.csv, productconcrete.csv, product_price.csv*, etc. will continue to work as before).
@@ -185,7 +185,7 @@ The combined product data-sets follow an identical format as the individual .csv
 
 ### Data Export (Orders)
 The new **Data Export Sales Orders** feature allows you to export orders, order items, and order expenses data for one or multiple stores, giving the flexibility to define filter criteria to export only what is necessary. 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image15.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Nots+202009.0/image15.png) 
 
 Using an export **YAML configuration file**, you have the flexibility to define a filter to export data from specific stores and date/time period of orders, for both ranges of order creation and update, without needing to change any project source code.
 

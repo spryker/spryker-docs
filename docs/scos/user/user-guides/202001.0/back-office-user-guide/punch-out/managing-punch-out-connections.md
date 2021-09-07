@@ -29,7 +29,7 @@ To edit the connection:
 ## Viewing the Entry Points
 Entry points are the Gateway URLs that are available for connection, where ERP can punch out.
 To view the entry points, in the **List of Punch Out Connections > Actions** column, click **Entry Points**.
-![Entry points](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/entry-points.png){height="" width=""}
+![Entry points](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/entry-points.png) 
 
 ## (De)Activating the Punch Out Connection
 When you do not need the connection anymore, you can deactivate it. To do this, in the **List of Punch Out Connections > Actions** column, click **Deactivate**. The connection is deactivated immediately.

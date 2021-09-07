@@ -32,5 +32,5 @@ To protect the application and user data, the Back Office Application (Zed) must
 {% endinfo_block %}
 
 
-![Back Office security](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Running+Production/spryker-applications-in-hosting-env.png){height="" width=""}
+![Back Office security](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Running+Production/spryker-applications-in-hosting-env.png)
 

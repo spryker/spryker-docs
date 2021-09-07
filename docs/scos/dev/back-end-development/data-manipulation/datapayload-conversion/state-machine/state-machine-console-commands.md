@@ -31,7 +31,7 @@ State machine event trigger sequence diagram
 
 A low level sequence diagram of what happens when trigger method is being invoked.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data-Payload+Conversion/Stata+Machine/state_machine_event_trigger_sequence.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data-Payload+Conversion/Stata+Machine/state_machine_event_trigger_sequence.png) 
 
 ## State Machine Handler Interface
 

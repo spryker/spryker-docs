@@ -32,7 +32,7 @@ Use the placeholder **[code]** to indicate the position you want random characte
 | **1** | The voucher can be redeemed once. |  
 | **n > 1** | The voucher can be redeemed _n_ times. |  
 
-![Voucher code](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Voucher+Codes:+Reference+Information/voucher-code.png){height="" width=""}
+![Voucher code](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Voucher+Codes:+Reference+Information/voucher-code.png) 
 
 
 **Voucher Code Pool**

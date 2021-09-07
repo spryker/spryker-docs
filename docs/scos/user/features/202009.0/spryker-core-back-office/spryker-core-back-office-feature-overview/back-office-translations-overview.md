@@ -47,7 +47,7 @@ Newly created and all the existing modules are shipped with German translation b
 
 The scheme below illustrates relations between Translator, UserExtension, User, UserLocale and UserLocaleGui modules:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Back+Office/Back+Office+Translations/Back+Office+Translations+Feature+Overview/module-diagram.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Back+Office/Back+Office+Translations/Back+Office+Translations+Feature+Overview/module-diagram.png) 
 
 
 ## If you are:

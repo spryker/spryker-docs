@@ -14,17 +14,17 @@ It is used by:
 **Products > Availability** section in the Back Office
 
     **Standardized flow of actions for a Product Catalog Manager**
-![Flow of actions for a Product Catalog Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/products-section.png){height="" width=""}
+![Flow of actions for a Product Catalog Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/products-section.png) 
 
 * Customer Service
 **Products > Reviews** section in the Back Office
     **Standardized flow of actions for a Customer Service Representative**
-![Customer Service Slice of life](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Customer+Service+Slice+of+life.png){height="" width=""}
+![Customer Service Slice of life](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Customer+Service+Slice+of+life.png) 
 
 * Product Catalog Managers
 **Products > Products, Attributes, Product Options, Product Labels, Product Sets, Product Relations** sections in Back Office
     **Standardized flow of actions for a Product Catalog Manager**
-![Flow of actions for a Product Catalog Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/products-section-2.png){height="" width=""}
+![Flow of actions for a Product Catalog Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/products-section-2.png) 
 
 {% info_block infoBox %}
 This is how different teams and team members work with different product management menus and interact with others to have the products managed correctly.

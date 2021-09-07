@@ -25,7 +25,7 @@ $config[HeidelpayConstants::CONFIG_HEIDELPAY_TRANSACTION_CHANNEL_IDEAL] = '31HA0
 ## Registration Concept
 
 Payment flow with credit card is divided into two workflows - based on the existing "Registration" and without/with the new "Registration". **"Registration"** means that customer's **anonymized** credit card data will be persisted in the database in order to use it again next time, if customer **uses the same shipping address**. The idea is visually represented in the image below:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Heidelpay/Heidelpay+-+Credit+Card+Secure/9241664.png){height="" width=""}
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Heidelpay/Heidelpay+-+Credit+Card+Secure/9241664.png) 
 
 ## Checkout Payment Step Display
 

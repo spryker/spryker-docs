@@ -24,7 +24,7 @@ To create a tax rate:
 2. On the *Create Tax Rate* page, enter and select the attributes. See [ Reference information: Creating and editing tax rates](#reference-information--creating-and-editing-tax-rates) for details on the attributes.
 3. Click **Save**.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/create-tax-rate.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/create-tax-rate.png) 
 
 ## Editing a tax rate
 To update a tax rate:
@@ -33,7 +33,7 @@ To update a tax rate:
 2. On the *Edit Tax Rate* page, change the attributes.
 3. Click **Save**.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/editing-tax-rate.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/editing-tax-rate.png) 
 
 ### Tips & tricks
 You can start editing a tax rate while viewing it:

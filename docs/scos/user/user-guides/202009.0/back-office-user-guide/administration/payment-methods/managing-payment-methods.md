@@ -37,7 +37,7 @@ To edit a payment method:
 * Select the checkbox to make the payment method available in the *Payment* step during the checkout process
 * Clear the checkbox to make the payment method unavailable in the *Payment* step during the checkout process.
 
-![Edit the payment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Payment+Management/Payment+Methods/Managing+Payment+Methods/edit-payment-method.png){height="" width=""}
+![Edit the payment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Payment+Management/Payment+Methods/Managing+Payment+Methods/edit-payment-method.png) 
 
 3. In the **Store relation** tab, select stores you want the payment method to be displayed in.
 

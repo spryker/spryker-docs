@@ -72,7 +72,7 @@ Define servers in PhpStorm:
     3. For **Host**, enter *zed.mysprykershop.com*.
     4. Select **Use path mappings**.
     5. Set **Absolute path on server** to `/data/shop/development/current`.
-![Define servers in PHPStorm](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Debugging+Setup+for+VM+Prior+Version+91/define-Servers-Php-Storm.png){height="" width=""}
+![Define servers in PHPStorm](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Debugging+Setup+for+VM+Prior+Version+91/define-Servers-Php-Storm.png) 
 
 3. For Yves, add another server. Copy the settings from the previous step, but, for **Name** and **Host**, enter.
 

@@ -73,7 +73,7 @@ Keep in mind that measurement units cannot be updated. You can only add a new pr
 
 2. To add products to the quote request, use one of the following options:
     * On the **Cart** page in the **Quick add to Cart** widget, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**.
-![quick-add-to-cart-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/quick-add-to-cart-widget.png){height="" width=""}
+![quick-add-to-cart-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/quick-add-to-cart-widget.png) 
     * From the catalog, select the product, choose the options and quantity, and click **Add to Cart**.
     * On the **Quick Order** page, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Quick Order](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-quick-order.html).
     * On the **Shopping list** page, click the shopping list, select the checkboxes for the items you want to add from the shopping list, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Shopping Lists](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/shop-guide-shopping-lists.html).
@@ -83,7 +83,7 @@ Keep in mind that measurement units cannot be updated. You can only add a new pr
 **Tips & Tricks**
 If you want to update the item quantity, enter the value in the Quantity field and click the **Refresh** icon.
 
-![change-quantity-in-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/change-quantity-in-cart.png){height="" width=""}
+![change-quantity-in-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/change-quantity-in-cart.png) 
 ___
 
 ### Updating Delivery Information
@@ -96,7 +96,7 @@ To edit a delivery address and a shipment method:
 If the delivery address hasn’t been defined yet, the Address step will open first. Thus, you’ll need to add the delivery address and then proceed with updating the shipment method.
 
 {% endinfo_block %}
-![update-delivery-information](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/update-delivery-information.png){height="" width=""}
+![update-delivery-information](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/update-delivery-information.png) 
 
 2. On the **Address** page, select the new delivery and billing addresses. See [Shop Guide - Delivery Address](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-checkout/shop-guide-address-step.html) for more information on the options you have in the **Select a delivery address** field.
 

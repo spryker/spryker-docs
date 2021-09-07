@@ -32,7 +32,7 @@ Managing content with the help of templates with slots involves four separate en
 
 The following Storefront page breakdown shows the arrangement of the entities.
 
-![image](https://confluence-connect.gliffy.net/embed/image/a7cad21d-e586-4c8f-92d5-9095071e3e8d.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/a7cad21d-e586-4c8f-92d5-9095071e3e8d.png?utm_medium=live&utm_source=custom) 
 
 ## Template
 Template is a [Twig](https://twig.symfony.com/) file that, when applied to a page, defines its design and layout. Template with slots is a template that defines the layout of slots across a page and has at least one slot assigned.
@@ -40,7 +40,7 @@ Template is a [Twig](https://twig.symfony.com/) file that, when applied to a pag
 <details open>
     <summary>Template representation - Storefront</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-+template.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-+template.png) 
 
 </details>
     
@@ -57,7 +57,7 @@ A content manager can [manage templates with slots](/docs/scos/user/user-guides/
 <details open>
     <summary>Template representation - the Back Office</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-template.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-template.png) 
 
 
 </details>
@@ -72,7 +72,7 @@ Slot is a configurable space for content in a template. Unlike template that is 
 <details open>
     <summary>Slot representation - Storefront</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-slot.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-slot.png) 
 
 
 </details>
@@ -90,7 +90,7 @@ A content manager can [manage slots](/docs/scos/user/user-guides/202009.0/back-o
 <details open>
     <summary>Slot representation - the Back Office</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-slot.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-slot.png) 
 
 
 </details>
@@ -102,7 +102,7 @@ A content manager can [manage slots](/docs/scos/user/user-guides/202009.0/back-o
 <details open>
     <summary> CMS block representation - Storefront</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-cms-block.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-cms-block.png) 
 
 
 </details>
@@ -114,7 +114,7 @@ A content manager can [manage CMS blocks](/docs/scos/user/user-guides/202009.0/b
 <details open>
     <summary> CMS block representation - the Back Office</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-cms-block.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-cms-block.png) 
 
 
 </details>
@@ -130,7 +130,7 @@ CMS Block is a separate entity with a dedicated section in the Back Office. See 
 <details open>
     <summary> Content item representation - Storefront</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-content-item.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-content-item.png) 
 
 
 </details>
@@ -199,7 +199,7 @@ With templates and slots, the following applies:
 
 The schema below shows how content is managed with the help of templates with slots:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png) 
 
 ## Visibility Conditions
 When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied.  To narrow down the number of pages to a desired selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
@@ -350,7 +350,7 @@ Unlike category, product details and CMS pages, the home page does not require a
 ## Database Schema - Templates with Slots and CMS Blocks Content Provider
 You can find the database schema for templates, slots and the SprykerCMS content provider below:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/template-slot-cms-blocks-content-provider.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/template-slot-cms-blocks-content-provider.png) 
 
 **Structure:**
 

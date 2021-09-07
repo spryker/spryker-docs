@@ -25,7 +25,7 @@ You can only add existing, active, and not expired block. If the block has not b
     * Categories: top
     * Categories: middle
     * Categories: bottom
-![Position blocks on a category page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/categories-position.png){height="" width=""}
+![Position blocks on a category page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/categories-position.png) 
 
 {% info_block infoBox %}
 See  [CMS Block: Reference Information](/docs/scos/user/user-guides/201811.0/back-office-user-guide/content-management/blocks/references/cms-block-reference-information.html
@@ -46,7 +46,7 @@ You can only add existing, active, and not expired block. If the block has not b
 See  [CMS Block: Reference Information](/docs/scos/user/user-guides/201811.0/back-office-user-guide/content-management/blocks/references/cms-block-reference-information.html
 {% endinfo_block %}  to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.)
 
-![Assign blocks to a product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/product-page-block.png){height="" width=""}
+![Assign blocks to a product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/product-page-block.png) 
 
 3. From the drop-down list, select any of the suggested abstract products.  
 4. To keep the changes, click **Save**.

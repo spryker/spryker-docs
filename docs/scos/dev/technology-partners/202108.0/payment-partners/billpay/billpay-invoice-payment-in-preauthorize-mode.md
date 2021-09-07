@@ -371,4 +371,4 @@ In your checkout process you can now see the Billapay as a payment method in the
 If the link does not work, just click **Maintenance->OMS** to list all registered OMS state machines.
 
 Basic state machine will look somewhat like this and you can use it as sample in your project.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Billpay/basic_OMS_state_machine.png){height="" width=""}
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Billpay/basic_OMS_state_machine.png) 

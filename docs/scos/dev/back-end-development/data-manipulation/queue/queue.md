@@ -164,7 +164,7 @@ The command syntax is as follows:
 ## Queue Workers
 Queue `Worker` is another useful command that sends the `Task`  to a background process and provides parallel processing. By adjusting the `Worker` config, we can run tasks within a different time slot and with a different amount of processes.
 
-![rabbitmq_worker.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/Queue/Queue/rabbitmq_worker.png){height="" width=""}
+![rabbitmq_worker.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/Queue/Queue/rabbitmq_worker.png) 
 
 **Command syntax:**
 

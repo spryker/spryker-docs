@@ -25,15 +25,15 @@ redirect_from:
 ## Installing the PHP agent
 When accessing your New Relic APM dashboard, you will be asked to download and set up the New Relic agent:
 
-![New Relic - Step 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step1.png){height="" width=""}
+![New Relic - Step 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step1.png) 
 
 It is important to generate a LICENSE KEY (which is different from the API KEY):
 
-![New Relic - Step 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step2.png){height="" width=""}
+![New Relic - Step 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step2.png) 
 
 Then, you'll be able to install the New Relic agent:
 
-![New Relic - Step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step3.png){height="" width=""}
+![New Relic - Step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step3.png) 
 
 Here is the instruction for a default Linux installation:
 
@@ -45,7 +45,7 @@ $ sudo ./newrelic-install install
 ```
 Enter the license key  and follow the instructions:
 
-![New Relic - Step 4](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step4.png){height="" width=""}
+![New Relic - Step 4](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step4.png) 
 
 Once the installation is finished,  check/modify the following files: a mapping default fpm (web) transaction to the default Yves, and the console commands (non-web) to the default Zed.
 

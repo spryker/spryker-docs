@@ -20,6 +20,6 @@ Both [invoice](/docs/scos/dev/technology-partners/{{page.version}}/payment-partn
 * Capture: to capture the payment and receive money from the buyer.
 * Refund: to refund the buyer when returning products.
 
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-workflow.png){height="" width=""} 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-workflow.png)  
 
 See Payolution - [Performing Requests](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html) for detailed information on the requests.

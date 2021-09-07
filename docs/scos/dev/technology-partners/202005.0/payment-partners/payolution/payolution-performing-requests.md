@@ -89,4 +89,4 @@ To perform the needed requests, you can easily use the implemented state machine
 ## Core Module Structure Diagram
 
 The Payolution core module uses the following class and flow and structure:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-core-bundle-structure.png){height="" width=""}
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-core-bundle-structure.png) 

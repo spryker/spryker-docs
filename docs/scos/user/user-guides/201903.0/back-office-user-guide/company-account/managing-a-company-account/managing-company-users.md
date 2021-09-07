@@ -48,7 +48,7 @@ All values are available for modifications except for the email. The **Email** f
 If the company User is currently deactivated, there will be the **Enable** option in the _Actions_ column. Click it to activate the user.
 
 And vice versa, if the user is enabled, they can be disabled here. Click **Disable** to deactivate the user.
-![Enabling a company user](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Company+Users/enabling-company-user.png){height="" width=""}
+![Enabling a company user](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Company+Users/enabling-company-user.png) 
 
 ## Deleting a Company User
 

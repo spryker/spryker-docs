@@ -25,13 +25,13 @@ The following templates are used to set up your category look:
 * **Catalog (default)**
     Select this template if you want to display all product pages linked to the selected category. The product pages include the general product description, a price, an image, and a clickable **View** button that will redirect you to the product details page.
   See how the **Catalog** template looks on Yves.
-![Catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/Catalog.gif){height="" width=""}
+![Catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/Catalog.gif) 
 
 * **Catalog+CMS Block**
     Select this template if you want to show all product pages assigned to the selected category and a CMS Block. Depending on your design requirements, you need to set a specific CMS block and to specify where it should be displayed: top, middle, or bottom. See Content Management topics for more information.
     
     See how the **Catalog+CMS Block** template looks on Yves.
-![Catalog + CMS block](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/Catalog%2BCms+Block.gif){height="" width=""}
+![Catalog + CMS block](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/Catalog%2BCms+Block.gif) 
 
     The category is in the catalog, and two CMS blocks are now displayed on the page: _Tackle Your To-Do's_ and _Build a Space That Spurs Creativity_ in the example).
     
@@ -39,7 +39,7 @@ The following templates are used to set up your category look:
     Select this template if you want to display only a specific CMS block on the category page. In this case, choose a position of the CMS block on the page. 
     See how the **CMS Block** template looks on Yves.
    
-![CMS block](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/CMS+Block.gif){height="" width=""}
+![CMS block](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/CMS+Block.gif) 
 
 Instead of navigating you to the catalog view, once such a category is selected you see the CMS block.
     
@@ -47,7 +47,7 @@ Instead of navigating you to the catalog view, once such a category is selected 
     Select if you want to create a multilevel category structure. Here you can assign an image to each subcategory. 
     See how the **Sub Category grid** template looks on Yves.
   
-![Sub category grid](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/sub+category.gif){height="" width=""}
+![Sub category grid](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/sub+category.gif) 
 
 **A template with slots**
 

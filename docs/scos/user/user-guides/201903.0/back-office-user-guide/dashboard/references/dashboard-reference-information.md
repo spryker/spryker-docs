@@ -17,7 +17,7 @@ The very first chart you see on the **Dashboard** page is **Count Orders**. This
 {% info_block infoBox %}
 The x-axis shows days, and the y-axis shows the number of orders.
 {% endinfo_block %}
-![Count orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/count-orders.png){height="" width=""}
+![Count orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/count-orders.png) 
 
 ## Orders by Status
 The Orders by status chart shows you the statuses of all the orders that currently exist in the system. 
@@ -25,11 +25,11 @@ The Orders by status chart shows you the statuses of all the orders that current
 You can hover your mouse over the chart to see the details. 
 {% endinfo_block %}
 Once the status of an order is updated in the **Sales > Orders** section, the change is reflected on this chart.
-![Order status](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/orders-status.png){height="" width=""}
+![Order status](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/orders-status.png) 
 
 ## Top Orders
 The Top Products chart visualizes 10 most sold products. 
 {% info_block infoBox %}
 The x-axis shows placed orders, and the y-axis shows product names. You can hover your mouse over each line and see the number of ordered items.
 {% endinfo_block %}
-![Top orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/top-orders.png){height="" width=""}
+![Top orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/top-orders.png) 

@@ -35,7 +35,7 @@ Alternatively, press **Ctrl+M** to open the **Add or Remove Snap-ins** window.
 {% endinfo_block %}
 5. In the **Available snap-ins** list, select **Certificates**.
 6. Select **Add >**.
-![Add certs](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/add-certs.png){height="" width=""}
+![Add certs](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/add-certs.png) 
 
 7. Click **Certificates (local computer)** > **Trusted Root Authorities**.
 8. Right-click the **Certificates** folder and select **All Tasks** > **Import**.
@@ -44,7 +44,7 @@ Alternatively, press **Ctrl+M** to open the **Add or Remove Snap-ins** window.
 {% info_block warningBox "Verification" %}
 
 Ensure that you can open Yves, Zed, and Glue without warnings via HTTPS.
-![HTTPS verification](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/https-verification.png){height="" width=""}
+![HTTPS verification](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/https-verification.png) 
 
 {% endinfo_block %}
 
@@ -66,7 +66,7 @@ To add `spryker_ca.crt` to trusted authorities in Google Chrome on Linux:
 {% info_block warningBox "Verification" %}
 
 Ensure that you can open Yves, Zed, and Glue without warnings via HTTPS.
-![HTTPS verification](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/https-verification.png){height="" width=""}
+![HTTPS verification](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/https-verification.png) 
 
 {% endinfo_block %}
 
@@ -81,12 +81,12 @@ To add `spryker_ca.crt` to trusted authorities in Firefox on Linux:
 6. In the **Authorities** tab, click **Import**.
 7. Select `spryker_ca.crt`.
 8. Select **Trust this CA to identify websites.**
-![Select file in Firefox](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/select-file.png){height="" width=""}
+![Select file in Firefox](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/select-file.png) 
 9. Click **OK** to save the changes.
 {% info_block warningBox "Verification" %}
 
 Ensure that you can open Yves, Zed, and Glue without warnings via HTTPS.
-![HTTPS verification](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/https-verification.png){height="" width=""}
+![HTTPS verification](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/https-verification.png) 
 
 {% endinfo_block %}
 
@@ -97,17 +97,17 @@ To add `spryker_ca.crt` to trusted authorities in MacOS:
 3. Select `spryker_ca.crt` and click **Open**.
 4. Go to the *Certificates* category.
 5. Right-click the *Spryker* certificate and select **Get Info**.
-![Get info in Safari and Chrome](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/get-info.png){height="" width=""}
+![Get info in Safari and Chrome](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/get-info.png) 
 
 6. Open the **Trust** drop-down menu.
 7. In the **When using this certificate** drop-down menu, select **Always Trust**.
-![Make the certificate trusted](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/always-trust.png){height="" width=""}
+![Make the certificate trusted](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/always-trust.png) 
 
 
 
 {% info_block warningBox "Verification" %}
 
 Ensure that you can open Yves, Zed, and Glue without warnings via HTTPS.
-![HTTPS verification](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/https-verification.png){height="" width=""}
+![HTTPS verification](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/https-verification.png) 
 
 {% endinfo_block %}

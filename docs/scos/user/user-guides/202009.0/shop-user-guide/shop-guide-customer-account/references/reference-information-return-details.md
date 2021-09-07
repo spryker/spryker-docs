@@ -33,4 +33,4 @@ The following table describes attributes of the Return Details page when you vie
 |  | Remuneration total | Total remuneration. |
     
 
-![Return  details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/References/Return+Details+page.png){height="" width=""}
+![Return  details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/References/Return+Details+page.png) 

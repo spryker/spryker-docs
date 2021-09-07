@@ -39,7 +39,7 @@ When **Gift Cards** are bought, they are treated just like regular products. How
 
 When **Gift Cards** are applied, they are treated as a separate payment method. Your customers can pay a part of or the whole order with a Gift Card. You can see the remaining balance for all active Gift Cards that your customers bought.
 
-![Gift Cards reintegration](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image5.png){height="" width=""}
+![Gift Cards reintegration](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image5.png) 
 
 **Documentation:**
 Feature documentation: [Gift Cards](https://documentation.spryker.com/2021080/docs/gift-card)
@@ -50,11 +50,11 @@ In the Back Office, you can import CSV files to define **Scheduled Prices** for 
 
 Import your Scheduled Prices via a CSV file:
 
-![Scheduled Prices import](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image12.png){height="" width=""}
+![Scheduled Prices import](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image12.png) 
 
 View the Scheduled Prices defined for a specific product:
 
-![Scheduled Prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image11.png){height="" width=""}
+![Scheduled Prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image11.png) 
 
 #### Compatibility Issues
 
@@ -67,7 +67,7 @@ View the Scheduled Prices defined for a specific product:
 
 In the Back Office, you can now define the order in which your images appear. For products, product sets and categories, you can define which image is to be shown first, second, third, etc.
 
-![Reorder images](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image10.png){height="" width=""}
+![Reorder images](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image10.png) 
 
 **Documentation**: [Product Image Management](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/product-images-overview.html)
 ***
@@ -83,11 +83,11 @@ The Spryker out-of-the-box **Content Items** are Banners, Abstract Product Lists
 
 The Content Manager manages the **Content Items** in the Back Office while the app developer accesses content items via the Glue API and uses the content across many touchpoints with a single source of truth.
 
-![Overview of content items page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image7.png){height="" width=""}
+![Overview of content items page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image7.png) 
 
-![Create content item page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image9.png){height="" width=""}
+![Create content item page](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image9.png) 
 
-![Content item widget UI](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image8.png){height="" width=""}
+![Content item widget UI](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image8.png) 
 
 **Documentation**: 
 
@@ -194,7 +194,7 @@ In the main use case, a buyer adds products to the cart, converts it to an **RFQ
 
 The feature also supports an alternative flow when a customer and salesperson had an off-line communication and the sales rep prepares a special offer on the buyer's behalf using the agent assist functionality.
 
-![Request for Quote](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image6.png){height="" width=""}
+![Request for Quote](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image6.png) 
 
 #### Compatibility Issues:
 Request for Quote v. 2.0.0  does not support bundles
@@ -206,10 +206,10 @@ This new functionality allows the B2B buyers to access Spryker’s online shop f
 
 The buyer can seamlessly log in to the chosen webshop within their browser, select items, and return the shopping cart to the procurement system. The final order will be placed within the ERP-system and can follow established procurement workflows.
 
-![Punchout](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image1.png){height="" width=""}
+![Punchout](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image1.png) 
 
 The feature is implemented as an ECO module in partnership with 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image3.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image3.png) 
 
 https://www.punchoutcatalogs.com/
 
@@ -220,7 +220,7 @@ The feature has been released as a global widget and can be integrated into any 
 
 Even better - conversation about the order can continue after the order had been placed, without losing any useful information.
 
-![Multiple comments](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image2.png){height="" width=""}
+![Multiple comments](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image2.png) 
 
 **Documentation**: [Comments](https://documentation.spryker.com/2021080/docs/comments)
 
@@ -233,7 +233,7 @@ In the first case, you provide users with the necessary level of access rights t
 
 Cart in the Preview mode can also be shared with users in your company because it's not limited in usage to external users only.
 
-![Unique URL for Easy Cart Sharing](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image4.png){height="" width=""}
+![Unique URL for Easy Cart Sharing](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image4.png) 
 
 **Documentation**: [Unique URL per Cart for Easy Sharing](/docs/scos/dev/features/{{page.version}}/resource-sharing-feature-overview.html)
 

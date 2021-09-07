@@ -11,7 +11,7 @@ redirect_from:
 The Company Account section is designed to manage the company structure and is mostly used by Sales people in cooperation with Spryker Admins that provides the details of the signed contracts.
 
 **Standardized flow of actions for a Sales Representative**
-![Company Account - Sales Representative](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/company-account-section.png){height="" width=""}
+![Company Account - Sales Representative](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/company-account-section.png) 
 
 {% info_block infoBox %}
 This is how the Sales people interact with Spryker Admins to set up the company account.
@@ -21,7 +21,7 @@ The company accounts can be set up either in the Storefront by the company repre
 
 | Online Store | Back Office |
 | --- | --- |
-| ![Online store](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/online-store-company-account.png){height="" width=""} | ![Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/back-office-company-account.png){height="" width=""} |
+| ![Online store](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/online-store-company-account.png)  | ![Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/back-office-company-account.png)  |
 
 The Company Account section consists of the sections that are logically connected to each other. So the setup flow looks the following:
 * **Companies** - create a company record

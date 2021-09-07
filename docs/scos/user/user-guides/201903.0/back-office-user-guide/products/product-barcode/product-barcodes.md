@@ -25,4 +25,4 @@ You can see the barcodes in the **Products > Product Barcode** section. The sect
 
 You can see Product ID, product name, SKU, and the barcode itself.
 
-![Product barcodes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Barcodes/product-barcode.png){height="" width=""}
+![Product barcodes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Barcodes/product-barcode.png) 

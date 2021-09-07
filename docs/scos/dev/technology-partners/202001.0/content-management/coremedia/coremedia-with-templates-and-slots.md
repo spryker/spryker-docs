@@ -26,7 +26,7 @@ When CoreMedia is set as the slot content provider:
 
 The schema below shows how content is managed with the help of templates with slots when CoreMedia is the content provider:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Content+Management/CoreMedia/Coremedia+with+Templates+%26+Slots/coremedia-flow.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Content+Management/CoreMedia/Coremedia+with+Templates+%26+Slots/coremedia-flow.png) 
 
 ## Slot Widget
 Slot widget is used to fetch the content created in the CoreMedia CMS editor and render it in specified Storefront pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. Slot widget is used by inserting it into a template which is applied to a page subsequently.

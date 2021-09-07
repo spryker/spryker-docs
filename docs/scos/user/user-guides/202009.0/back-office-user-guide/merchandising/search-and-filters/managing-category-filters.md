@@ -31,7 +31,7 @@ To find a specific category, start entering its name in the *Search* field, and 
 ![Adding a filter to a category](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-filter-to-category.png)
     
     Categories in the category tree view that have manually defined filter settings are marked with a pencil icon next to their name. 
-![Category tree view](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/category-tree-view.png){height="" width=""}
+![Category tree view](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/category-tree-view.png) 
     
 4. Start typing the name of the existing filter in the *Add filter* field. As you type, the autocompleted drop-down appears, so you can select a filter there.
 5. After selecting the filter, click **Add**. The filter appears in the *Active filters* list.

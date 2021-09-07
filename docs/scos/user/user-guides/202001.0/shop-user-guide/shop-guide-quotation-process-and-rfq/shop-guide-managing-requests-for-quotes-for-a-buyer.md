@@ -72,7 +72,7 @@ You can edit the items (products) when you are editing an RFQ. To edit the items
 
 1. Start editing the existing RFQ.
 2. On the **Edit RFQ** page, click **Edit Items**.
-![Edit items](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/edit-items.png){height="" width=""}
+![Edit items](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/edit-items.png) 
 
 You can change the item quantity, measurement units, remove the existing products from the RFQ or add the products from the catalog.
 3. Click **Save and Back to Edit** after you have finished. The changes will be saved to an RFQ.

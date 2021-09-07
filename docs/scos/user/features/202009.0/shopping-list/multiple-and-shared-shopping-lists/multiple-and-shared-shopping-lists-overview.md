@@ -98,7 +98,7 @@ Besides other products, a user with *Full access* rights is allowed to see alter
 7. **Deleting a shopping list**
 
 8. **Deleting items in a shopping list**: The shopping list items can be deleted on the **Edit Shopping list** page.
-![Shared full access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shared-full-access.png){height="" width=""}
+![Shared full access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shared-full-access.png) 
 
 It is possible to grant different access rights on a shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* to the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.
 
@@ -107,11 +107,11 @@ Starting from v. 2019.03.0, it is possible to integrate the [Search Widget for C
 :::(Warning)
 Without the Search widget, you will not be able to search for products. Therefore, make sure that the Search Widget for Concrete Products feature is integrated into your project.
 :::
-![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png){height="" width=""}
+![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png) 
 
 ## Subtotal for a shopping list
 Starting from v.201907.0, every shopping list has Subtotal for all the items added to the shopping list according to the selected Price Mode and Currency.
-![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png){height="" width=""}
+![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png) 
 
 
 ## Multiple and Shared Shopping Lists on the Storefront 
@@ -120,7 +120,7 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 <details>
 <summary>Create, delete, and add a shopping list to cart</summary>
 
-![create-delete-and-add-shopping-lists-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/create-delete-add-to-cart-shopping-lists.gif){height="" width=""}
+![create-delete-and-add-shopping-lists-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/create-delete-add-to-cart-shopping-lists.gif) 
 
 </details>
 
@@ -128,7 +128,7 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 <summary>Edit shopping lists</summary>
 
-![edit-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/manage-shopping-lists.gif){height="" width=""}
+![edit-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/manage-shopping-lists.gif) 
 
 </details>
 
@@ -136,7 +136,7 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 <summary>Add products from the product details page to a shopping list</summary>
 
-![add-products-from-the-product-detail-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/add-products-from-the-product-detail-page.gif){height="" width=""}
+![add-products-from-the-product-detail-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/add-products-from-the-product-detail-page.gif) 
 
 </details>
 
@@ -145,7 +145,7 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 <summary>Dissmiss a shared shopping list, share and print a shopping list</summary>
 
-![dismiss-share-and-print-a-shopping-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/dismiss-share-and-print-a-shopping-list.gif){height="" width=""}
+![dismiss-share-and-print-a-shopping-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/dismiss-share-and-print-a-shopping-list.gif) 
 
 </details>
 

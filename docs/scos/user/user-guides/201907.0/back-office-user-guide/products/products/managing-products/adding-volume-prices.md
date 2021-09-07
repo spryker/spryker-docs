@@ -19,7 +19,7 @@ The volume prices only work with the default prices set up.
 **To set up a volume price:**
 1. Navigate to the **Price & Tax** tab of either an **abstract** or **concrete** product.
 2. For each currency set up in your store, you see the **Add Product Volume Price** option in the currency abbreviation column (_if the price is defined for the currency_):
-    ![Add product volume prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Volume+Prices/add-product-volume-price.png){height="" width=""}
+    ![Add product volume prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Volume+Prices/add-product-volume-price.png) 
 3. Click **Add Product Volume Price**.
 4. On the **Add volume prices** page, define the quantity of products for which a special price will be applied (_gross and net for B2B cases_)  and click either **Save and add more rows** if you have entered all the rows on the screen and need to enter more conditions, or **Save and exit** if you have set up everything you need.
 {% info_block warningBox "Note" %}

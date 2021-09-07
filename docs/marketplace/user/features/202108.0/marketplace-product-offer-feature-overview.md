@@ -8,7 +8,7 @@ The *Product Offer* entity is created when multiple merchants need to sell the s
 
 Product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *product offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference is mandatory and can only be defined once.
 
-Merchants can create product offers in the Merchant Portal <!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-csv.html).
+Merchants can [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal or [import the product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-csv.html).
 
  Marketplace administrators can view and approve or deny merchants' product offers in the Back Office. See [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html) for details.
 
@@ -70,7 +70,7 @@ The product offer prices support:
 
 Product offer price follows the [concrete product price inheritance model](https://documentation.spryker.com/docs/price-functionality#price-inheritance). So if the Merchant doesn't set a price in the offer, it is taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it is indicated. If at least one price is defined for the offer (e.g., original), it is valid for this offer even if the concrete product has a default price (sales price), but the offer does not. See [Price types](https://documentation.spryker.com/docs/scheduled-prices-feature-overview#price-types) for details on the price types.
 
-Merchants can define product offer prices in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer price](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer-csv.html).
+Merchants can define product offer prices in the Merchant Portal when they [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer) or [import product offer prices](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer-csv.html).
 
 ## Product offer stores
 Merchant product offer is defined per store. Merchants set their own prices per store for the product offer.
@@ -84,39 +84,6 @@ The table below illustrates the logic according to which the product offer is d
 | Is product offer visible?                 | no   | yes  | no   |
 
 Merchants can define product offer stores in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer store](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-store-csv.html).
-
-## Product offer stock
-A product offer has its own stock in one or many warehouses. A warehouse can hold stock for multiple offers.
-
-The stock per offer in the warehouse is defined by merchant the same way it is defined for concrete product. It means that offer reservation is assigned to every product offer separately. 
-
-In cases when an offer doesn't have any physical stock and can always be purchased, there is the `is_never_out_of_stock` attribute that is added to the offer entity.
-
-When `is_never_out_of_stock` is set to `true`, then this offer is always available in terms of stock.
-When the offer is out of stock, it is displayed as an out-of-stock product.
-
-Merchants can define product offer stocks in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer stock](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock-csv.html).
-
-### Product offer availability
-Product offer availability calculation differs from the calculation of concrete products availability:
-
-| Concrete product availability   | Product offer availability   |
-| --------------------- | ------------------------ |
-| Formula: Concrete product availability = Concrete product quantity – Concrete product reservations | Formula: Offer availability = Offer quantity – Offer reservations |
-
-Thus, the algorithm of calculating offer availability is updated, but the algorithm of calculating reservations is preserved.
-Offer availability is considered on the Storefront: 
-
-* On the product details page while adding the offer to cart.
-* On the cart page: Product stays in the cart if the attached offer is not available anymore and a hint is shown.
-* During the checkout: When pressing **Buy now** the availability is checked one more time.
-
-{% info_block infoBox "Example" %}
-
-Let's assume that a merchant has defined quantity 10 for product offer 1. The customer adds 8 items of the product offer 1 to a shopping cart, and later updates the quantity to 12. In such a situation, the availability of the product offer 1 is checked and the customer is notified to update the quantity of the product offer to the available number to proceed with the purchase. 
-
-{% endinfo_block %}
-
 
 ## Product offers on the Storefront
 
@@ -165,12 +132,12 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 
 ## Related Business User articles
 
-|MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
+| MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|
-| [Managing merchant product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html)|
+| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html)|
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}//marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html) and [Marketplace Product Offer Prices feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-prices-feature-walkthrough.html for developers.
+Are you a developer? See [Marketplace Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}//marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html) and [Marketplace Product Offer Prices feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-prices-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

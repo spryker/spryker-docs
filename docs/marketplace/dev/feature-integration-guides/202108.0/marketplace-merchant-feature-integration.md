@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-merchant:"dev-master" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1033,13 +1033,13 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 ```bash
-composer require spryker-feature/marketplace-merchant: "dev-master" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant: "{{page.version}}" --update-with-dependencies
 ```
 
 | MODULE | EXPECTED DIRECTORY |

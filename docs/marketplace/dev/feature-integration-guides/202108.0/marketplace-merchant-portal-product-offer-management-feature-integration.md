@@ -1,31 +1,27 @@
 ---
-title: Merchant Portal - Marketplace Product Offer feature integration
+title: Marketplace Merchant Portal Product Offer Management feature integration
 last_updated: Jan 05, 2021
-description: This integration guide provides steps on how to integrate the Merchant Portal - Marketplace Product Offer feature into a Spryker project.
+description: This integration guide provides steps on how to integrate the Marketplace Merchant Portal Product Offer Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Merchant Portal - Marketplace Product Offer feature into a Spryker project.
+This document describes how to integrate the Marketplace Merchant Portal Product Offer Management feature into a Spryker project.
 
-## Install feature core
-
-Follow the steps below to install the Merchant Portal - Marketplace Product Offer feature core.
-
-### Prerequisites
+## Prerequisites
 
 To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|
-| Marketplace Product Offer        | dev-master  | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
-| Marketplace Merchant Portal Core | dev-master  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
+| Marketplace Product Offer        | {{page.version}}  | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
+| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/product-offer-merchant-portal-gui:"dev-master" --update-with-dependencies
+composer require spryker/product-offer-merchant-portal-gui:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -38,7 +34,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up transfer objects
+## 2) Set up transfer objects
 
 Generate transfer changes:
 
@@ -57,11 +53,11 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+## 3) Set up behavior
 
 To set up behavior, take the following steps.
 
-#### Extend OrderItemsTable in SalesMerchantPortalGui
+### Extend OrderItemsTable in SalesMerchantPortalGui
 
 Activate the following plugins:
 
@@ -99,7 +95,7 @@ Make sure that the `ProductOfferMerchantOrderItemTableExpanderPlugin` is set up 
 
 {% endinfo_block %}
 
-#### Add the Offer widget to MerchantDashobard
+### Add the Offer widget to MerchantDashobard
 
 Activate the following plugins:
 

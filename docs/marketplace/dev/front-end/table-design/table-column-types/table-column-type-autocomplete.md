@@ -10,7 +10,7 @@ This document explains the Table Column Type Autocomplete in the Components libr
 
 Table Column Autocomplete is an Angular Component that provides an autocomplete field by rendering the `@spryker/input` and `@spryker/autocomplete` components.
 
-Example usage the Table Column Autocomplete in the `@spryker/table` config:
+Example usage of the Table Column Autocomplete in the `@spryker/table` config:
 
 ```html
 <spy-table [config]="{
@@ -45,7 +45,7 @@ Example usage the Table Column Autocomplete in the `@spryker/table` config:
 
 ## Interfaces
 
-The Table Column Autocomplete interfaces:
+Below you can find interfaces for the Table Column Autocomplete type:
 
 ```ts
 interface AutocompleteValue {

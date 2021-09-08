@@ -30,7 +30,7 @@ B2B customers usually purchase large volumes of products selecting specific meas
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                 <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\order-management-feature-integration.md" class="mr-link">Get a general idea of Invoice Generation</a></li>
-                <li><a href="https://documentation.spryker.com/docs/invoice-generation-overview" class="mr-link">Get a general idea of Invoice Generation</a></li>
+                <li><a href="docs\scos\user\features\202009.0\order-management\order-management-feature-overview\invoice-generation-overview.md" class="mr-link">Get a general idea of Invoice Generation</a></li>
                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\order-management-feature-integration.md" class="mr-link">Integrate the Order Management feature into your project</a></li>
                 <li><a href="docs\scos\dev\glue-api-guides\202009.0\retrieving-orders.md" class="mr-link">Manage orders via Glue API</a></li>
             </ul>

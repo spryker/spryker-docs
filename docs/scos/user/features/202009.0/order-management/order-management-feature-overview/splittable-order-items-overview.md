@@ -58,7 +58,7 @@ Both non-splittable and splittable order items can be refunded in the Back Offic
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/splittable-order-items-feature-overview" class="mr-link">Get a general idea of the Splittable Order Items feature</a></li>
+                <li><a href="docs\scos\user\features\202009.0\order-management\order-management-feature-overview\splittable-order-items-overview.md" class="mr-link">Get a general idea of the Splittable Order Items feature</a></li>
                 <!--<li><a href="#" class="mr-link">View splittable and non-splittable orders in the Back Office</a></li>-->
             </ul>
         </div>

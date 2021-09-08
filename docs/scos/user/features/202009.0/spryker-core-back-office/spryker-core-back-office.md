@@ -42,7 +42,7 @@ You can define access permissions and roles for all Back Office users where need
                 <li><a href="https://documentation.spryker.com/docs/managing-punchout-connections" class="mr-link">Punch Out</a></li>
                 <li><a href="https://documentation.spryker.com/docs/order-matrix-reference-information" class="mr-link">Sales</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-customers" class="mr-link">Customers</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-an-abstract-product" class="mr-link">Catalog</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\abstract-products\creating-abstract-products-and-product-bundles.md" class="mr-link">Catalog</a></li>
                 <li><a href="https://documentation.spryker.com/docs/creating-content-items" class="mr-link">Content</a></li>
                 <li><a href="https://documentation.spryker.com/docs/creating-a-voucher" class="mr-link">Merchandising</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-roles" class="mr-link">Users</a></li>

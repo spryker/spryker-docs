@@ -37,7 +37,7 @@ You can find the example of the JSON below:
 		"DEFAULT" => 8999,
 		"ORIGINAL" => 11308,
 	],
- 
+
 		"price_data" => ["QTY" => 10, "GROSS(DEFAULT)" => 100, "NET(DEFAULT)" => 90], ["QTY" => 20, "GROSS(DEFAULT)" => 90, "NET(DEFAULT)" => 80]
 	],
 		"CHF" => [
@@ -125,14 +125,14 @@ Currently, the feature has the following functional constraints which are going 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/prices-feature-integration" class="mr-link">Enable volume prices by integrating the Prices feature into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\prices\prices-feature-overview\price.mds-feature-integration" class="mr-link">Enable volume prices by integrating the Prices feature into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/adding-volume-prices-to-abstract-products" class="mr-link">Set volume prices for products</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\products\abstract-products\adding-volume-prices-to-abstract-products.md" class="mr-link">Set volume prices for products</a></li>
             </ul>
         </div>
     </div>

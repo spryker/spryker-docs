@@ -18,7 +18,7 @@ For the **Add to cart** icon to be active for the product on the Catalog page, t
 * The product should not have [attributes](docs\scos\user\features\202009.0\product\product-feature-overview\product-attribute-overview.md).
 * The product should not have [measurement](/docs/scos/dev/features/202009.0/measurement-units/measurement-units.html) or [packaging units](/docs/scos/dev/features/202009.0/packaging-units/packaging-units.html).
 
-Product belonging to a [product group](https://documentation.spryker.com/v6/docs/products-overview) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available.
+Product belonging to a [product group](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available.
 
 If a product has [options](/docs/scos/dev/features/202009.0/product-options/product-options.html), it can be added to cart from the Category page, but it will be added without any options.
 

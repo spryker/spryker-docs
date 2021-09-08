@@ -10,10 +10,10 @@ redirect_from:
 
 The *Product Information Management* functionality allows you to build a product catalog with the help of the following features:
 
-* [Product Abstraction](https://documentation.spryker.com/v6/docs/products-overview) to distinguish between different product versions, to keep track of their stock, and to provide a better shopping experience to customers.
+* [Product Abstraction](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md) to distinguish between different product versions, to keep track of their stock, and to provide a better shopping experience to customers.
 * [Product Groups](/docs/scos/dev/features/202009.0/product-groups/product-groups.html) to group products by attributes.
 * [Product Relations](/docs/scos/dev/features/202009.0/product-relations/product-relations.html) to recommend related products to customers.
-* [Product Attributes](https://documentation.spryker.com/v6/docs/products-overview) to manage products, improve search and filtering on the Storefront.
+* [Product Attributes](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md) to manage products, improve search and filtering on the Storefront.
 * [Product Lists](/docs/scos/dev/features/202009.0/product-lists/product-lists.html) to blacklist or whitelist products for specific companies.
 * [Product Options](/docs/scos/dev/features/202009.0/product-options/product-options.html) to diversify products.
 * [Alternative Products](/docs/scos/dev/features/202009.0/alternative-products/alternative-products.html) to suggest to customer a product that can replace the unavailable one.

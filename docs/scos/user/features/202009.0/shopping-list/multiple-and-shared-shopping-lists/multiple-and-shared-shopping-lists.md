@@ -31,7 +31,7 @@ Check out this video tutorial on how to use Shopping Lists.
                 <li class="mr-title">Developer</li>
                  <li><a href="https://documentation.spryker.com/docs/shopping-lists-feature-integration" class="mr-link">Enable multiple and shared shopping lists:
                  <ul>by integrating the Shopping Lists feature into your project</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/prices-feature-integration" class="mr-link">Integrate the Prices feature into your project</a></li>
+                 <li><a href="docs\scos\user\features\202009.0\prices\prices-feature-overview\price.mds-feature-integration" class="mr-link">Integrate the Prices feature into your project</a></li>
             </ul>
         </div>
          <!-- col3 -->

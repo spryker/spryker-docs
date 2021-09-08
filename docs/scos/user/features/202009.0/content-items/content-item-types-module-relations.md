@@ -11,12 +11,12 @@ redirect_from:
 This document describes each content item type and the modules relations used for them.
 
 ## Banner
-Banner content item is a content piece that consists of text, a background image and a link. A content manager specifies the values when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--banner) in the Back Office > **Content Management** > **Content Items**. 
+Banner content item is a content piece that consists of text, a background image and a link. A content manager specifies the values when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--banner) in the Back Office > **Content Management** > **Content Items**.
 The scheme shows the module relations of the Banner content item:
 ![Banner CI module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-module-relations.png)
 
 ### Banner API
-A developer can fetch the content item data via API. Also, they can view the content item details for a specific locale. 
+A developer can fetch the content item data via API. Also, they can view the content item details for a specific locale.
 
 The scheme below shows the Banner API module relations:
 ![Banner API module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-api-module-relations.png)
@@ -30,8 +30,8 @@ The scheme below shows the module relations of the content item data importers:
 
 See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-importers-overview-and-implementation.html) for more details.
 ***
-## Abstract Product List 
-Abstract product list content item is a content piece that consists of text and [abstract products](https://documentation.spryker.com/v6/docs/products-overview). A content manager selects existing abstract products when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--abstract-product-list) in the Back Office > **Content Management** > **Content Items**. 
+## Abstract Product List
+Abstract product list content item is a content piece that consists of text and [abstract products](docs\scos\user\features\202009.0\product\product-feature-overview\product-overview.md). A content manager selects existing abstract products when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--abstract-product-list) in the Back Office > **Content Management** > **Content Items**. 
 The scheme below shows the module relations of the Abstract product list content item and its components:
 * data importer
 * API
@@ -44,11 +44,11 @@ A developer can create and update the content items by importing them.
 See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-importers-overview-and-implementation.html) for more details.
 
 ### Abstract Product List API
-A developer can fetch the information on each abstract product included into a contnet item via API based on the content item key. Also, they can view details of content items for all or a specific locale. 
+A developer can fetch the information on each abstract product included into a contnet item via API based on the content item key. Also, they can view details of content items for all or a specific locale.
 
 ***
-## Product Set 
-Product set content item is a content piece that consists of text and a [product set](/docs/scos/dev/features/202009.0/product-sets/product-sets.html). A content manager selects an existing product set when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--product-set) in the Back Office > **Content Management** > **Content Items**. 
+## Product Set
+Product set content item is a content piece that consists of text and a [product set](/docs/scos/dev/features/202009.0/product-sets/product-sets.html). A content manager selects an existing product set when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--product-set) in the Back Office > **Content Management** > **Content Items**.
 The scheme below shows the module relations of the Product set content item and its importer:
 ![Product Set content item module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/product-set-module-relations.png)
 
@@ -58,15 +58,15 @@ Developers can create and update the content items by importing them.
 See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-importers-overview-and-implementation.html) for more details.
 
 ***
-## File List 
-File list content item is a content piece that consists of text and a clickable link or icon to download a file. A content manager selects existing files when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--file-list) in the Back Office > **Content Management** > **Content Items**. 
+## File List
+File list content item is a content piece that consists of text and a clickable link or icon to download a file. A content manager selects existing files when [creating the content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#content-item--file-list) in the Back Office > **Content Management** > **Content Items**.
 
 The scheme below shows the module relations of the File list content item:
 ![File List module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/file-list-module-relations.png)
 
-## Navigation 
+## Navigation
 
-Navigation content item is a content piece that consists of a [navigation element](/docs/scos/dev/features/202009.0/content-items/content-item-types-module-relations.html). A content manager selects a navigation element when [creating the Navigation content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#create-a-navigation-content-item) in the Back Office. 
+Navigation content item is a content piece that consists of a [navigation element](/docs/scos/dev/features/202009.0/content-items/content-item-types-module-relations.html). A content manager selects a navigation element when [creating the Navigation content item](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html#create-a-navigation-content-item) in the Back Office.
 
 
 The scheme shows the module relations of the Navigation content item:
@@ -78,9 +78,3 @@ The scheme shows the module relations of the Navigation content item:
 A developer can create and edit navigation content items by [importing](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/importing-data-with-a-configuration-file.html#console-commands-to-run-import) them.
 
 See [File details: content_navigation.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/content-management/file-details-content-navigation.csv.html) for more details.
-
-
-
-
-
-

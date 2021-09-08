@@ -18,22 +18,20 @@ It's typical that in the B2B business model a company would like to sell persona
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-product-restrictions-feature-overview" class="mr-link">Get a general idea of the Merchant Product Restrictions feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/restricted-products-behavior" class="mr-link">Check out the use-cases of the restricted products behavior</a></li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-product-restrictions-feature-integration" class="mr-link">Integrate the Merchant Product Restrictions into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-product-restrictions\merchant-product-restrictions-feature-overview.md" class="mr-link">Get a general idea of the Merchant Product Restrictions feature</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-product-restrictions\restricted-products-behavior.md" class="mr-link">Check out the use-cases of the restricted products behavior</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\merchant-product-restrictions-feature-integration.md" class="mr-link">Integrate the Merchant Product Restrictions into your project</a></li>
             </ul>
         </div>
          <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-product-restrictions-feature-overview" class="mr-link">Get a general idea of the Merchant Product Restrictions feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-a-product-list" class="mr-link">Create a new product list to set product restrictions</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-lists#editing-a-product-list" class="mr-link">Edit the existing product list</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-lists#exporting-a-product-list" class="mr-link">Export a product list</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-lists#removing-a-product-list" class="mr-link">Remove a product list from the system</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-product-lists#removing-products-form-a-product-list" class="mr-link">Remove products from the product list</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-product-restrictions\merchant-product-restrictions-feature-overview.md" class="mr-link">Get a general idea of the Merchant Product Restrictions feature</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\product-lists\creating-a-product-list.md" class="mr-link">Create a new product list to set product restrictions</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\product-lists\managing-product-lists.md#editing-a-product-list" class="mr-link">Edit the existing product list</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\product-lists\managing-product-lists.md#exporting-a-product-list" class="mr-link">Export a product list</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\product-lists\managing-product-lists.md#removing-a-product-list" class="mr-link">Remove a product list from the system</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\product-lists\managing-product-lists.md#deassigning-products-from-a-product-list" class="mr-link">Remove products from the product list</a></li>
             </ul>
         </div>
-        
-

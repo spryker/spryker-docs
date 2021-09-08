@@ -21,22 +21,20 @@ Check out this video tutorial on how to set up merchants and merchant relations:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/merchants-and-merchant-relations-overview" class="mr-link">Get a general idea of the Merchant B2B Contracts feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/merchant-b2b-contracts-feature-integration" class="mr-link">Integrate the Merchant B2B Contracts into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-b2b-contracts\merchant-b2b-contracts-feature-overview.md" class="mr-link">Get a general idea of the Merchant B2B Contracts feature</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\merchant-b2b-contracts-feature-integration.md" class="mr-link">Integrate the Merchant B2B Contracts into your project</a></li>
             </ul>
         </div>
          <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                 <li><a href="https://documentation.spryker.com/docs/merchants-and-merchant-relations-overview" class="mr-link">Get a general idea of the Merchant B2B Contracts feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-merchants" class="mr-link">Add, edit, delete a merchant</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-merchant-relations" class="mr-link">Add, edit, delete a merchant relation</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-company-unit-addresses" class="mr-link">Create and manage Company Unit Addresses</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-company-users" class="mr-link">Create and manage Company Users</a></li>
+                <li><a href="docs\scos\user\features\202009.0\merchant-b2b-contracts\merchant-b2b-contracts-feature-overview.md" class="mr-link">Get a general idea of the Merchant B2B Contracts feature</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\marketplace\merchants-and-merchant-relations\managing-merchants.md" class="mr-link">Add, edit, delete a merchant</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\marketplace\merchants-and-merchant-relations\managing-merchant-relations.md" class="mr-link">Add, edit, delete a merchant relation</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\customer\company-account\managing-company-unit-addresses.md" class="mr-link">Create and manage Company Unit Addresses</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\customer\company-account\managing-company-users.md" class="mr-link">Create and manage Company Users</a></li>
             </ul>
         </div>
         </div>
 </div>
-
-

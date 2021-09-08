@@ -29,7 +29,7 @@ Product concrete with `is_quantity_splittable = true` has a separate line for ea
 Product concrete with `is_quantity_splittable = false` is counted as one sales item in the web shop:
 ![is_quantity_splittable = false](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Splittable+Order+Items/Splittable+Order+Items+Feature+Overview/SOI-false.png){height="" width=""}
 
-It is possible to import splittable information for product concretes in the `product_concrete.csv` file by setting the value of the `is_splittable` field to either 1 or 0. 
+It is possible to import splittable information for product concretes in the `product_concrete.csv` file by setting the value of the `is_splittable` field to either 1 or 0.
 
 To import concrete products, run the following command:
 
@@ -51,7 +51,7 @@ Both non-splittable and splittable order items can be refunded in the Back Offic
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                 <!--<li><a href="#" class="mr-link">Enable Splittable Order Items in your project</a></li>-->
-                <li><a href="https://documentation.spryker.com/docs/quick-order-non-splittable-products-feature-integration" class="mr-link">Integrate the Quick Add to Cart + Non-splittable Products feature into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\quick-order-non-splittable-products-feature-integration.md" class="mr-link">Integrate the Quick Add to Cart + Non-splittable Products feature into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
@@ -64,4 +64,3 @@ Both non-splittable and splittable order items can be refunded in the Back Offic
         </div>
     </div>
 </div>
-

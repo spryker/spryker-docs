@@ -20,7 +20,7 @@ B2B customers usually purchase large volumes of products selecting specific meas
                 <li class="mr-title">Developer</li>
                 <li><a href="https://documentation.spryker.com/docs/splittable-order-items-feature-overview" class="mr-link">Get a general idea of the Splittable Order Items feature</a></li>
                 <!--<li><a href="#" class="mr-link">Enable Splittable Order Items in your project</a></li>-->
-                <li><a href="https://documentation.spryker.com/docs/quick-order-non-splittable-products-feature-integration-201903" class="mr-link">Integrate the Quick Add to Cart + Non-splittable Products feature v. 201903.0 into your project</a></li>
+                <li><a href="https://documentation.spryker.com/docs/quick-order-non-splittable-products-feature-integration" class="mr-link">Integrate the Quick Add to Cart + Non-splittable Products feature v. 201903.0 into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->

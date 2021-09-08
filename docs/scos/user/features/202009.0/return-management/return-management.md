@@ -59,7 +59,7 @@ Check out this video to get more details on how Return Management works:
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
                <li><a href="https://documentation.spryker.com/docs/return-management-feature-overview" class="mr-link">Get a general idea of the Return Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-orders#creating-a-return" class="mr-link">Create returns in the Back Office</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-orders.md#creating-a-return" class="mr-link">Create returns in the Back Office</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-returns" class="mr-link">View return details, set return statuses and print return slips in the Back Office</a></li>
                 <li><a href="https://documentation.spryker.com/docs/building-a-return-management-process-best-practices" class="mr-link">Choose a suitable return management process for your project</a></li>
             </ul>

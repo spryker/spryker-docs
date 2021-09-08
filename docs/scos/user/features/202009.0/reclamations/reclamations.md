@@ -31,7 +31,7 @@ The Reclamations feature is a simple, yet effective way for administrators to ha
                 <li><a href="https://documentation.spryker.com/docs/reclamations-feature-overview-201903" class="mr-link">Get a general idea of the Reclamations feature</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-reclamations" class="mr-link">Create a new order linked to a reclamation</a></li>
                 <li><a href="https://documentation.spryker.com/docs/managing-reclamations" class="mr-link">View, edit and close reclamations</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-orders#claiming-orders" class="mr-link">Create a new order-related reclamation</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-orders.md#claiming-orders" class="mr-link">Create a new order-related reclamation</a></li>
             </ul>
         </div>
     </div>

@@ -53,7 +53,7 @@ A Store Administrator cannot upload an empty text file.
 * Add translations for the File Name for every locale, if necessary.
 ![Add translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file+menu.png){height="" width=""}
 
-4. After the file is uploaded it is available in the Files list section in the directory: 
+4. After the file is uploaded it is available in the Files list section in the directory:
 ![Files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/files-list.png){height="" width=""}
 
 ## File List
@@ -94,7 +94,7 @@ To add a file to the Shop App, follow the steps below:
 
 3. You will get the string `{% raw %}{{{% endraw %} cms_file('identifier'){% raw %}}}{% endraw %}` where you need to insert the _file ID_ instead of _identifier_:
 
-4. Save the changes and publish the page: 
+4. Save the changes and publish the page:
 5. Check the published page in the Shop Application:
 The file is available as a download link to the visitor shop visitor.
 {% info_block errorBox %}
@@ -136,7 +136,7 @@ To check the full list of MIME types, refer to the article.
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-file-tree#uploading-files" class="mr-link">Upload files to the Back Office</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\file-manager\managing-file-tree.md#uploading-files" class="mr-link">Upload files to the Back Office</a></li>
                 <!---<li><a href="https://documentation.spryker.com/docs/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-pages" class="mr-link">Add a File to the Shop Application</a></li>-->
             </ul>
         </div>

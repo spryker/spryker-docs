@@ -20,8 +20,8 @@ The P*roduct Quantity Restrictions* feature enables you to easily handle all suc
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-quantity-restrictions-overview" class="mr-link">Get a general idea of the Product Quantity Restrictions feature</a></li>
-            <li><a href="https://documentation.spryker.com/docs/file-details-product-quantitycsv" class="mr-link">Import product quantity restrictions into your project</a></li>     
+                <li><a href="docs\scos\user\features\202009.0\non-splittable-products\non-splittable-products-feature-overview.md" class="mr-link">Get a general idea of the Product Quantity Restrictions feature</a></li>
+            <li><a href="docs\scos\dev\data-import\202009.0\data-import-categories\merchandising-setup\product-merchandising\file-details-product-quantity.csv.md" class="mr-link">Import product quantity restrictions into your project</a></li>     
                            </ul>
      </div>
 </div>

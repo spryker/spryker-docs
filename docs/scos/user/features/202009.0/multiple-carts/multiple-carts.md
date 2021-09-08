@@ -25,12 +25,12 @@ In this video we explain how to use Shopping Carts in the Spryker [B2B Demo Shop
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/multiple-carts-overview" class="mr-link">Get a general idea of the Multiple Carts feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/managing-guest-carts" class="mr-link">Manage guest carts via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/managing-carts-of-registered-users" class="mr-link">Manage carts of registered users via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/multiple-carts-feature-integration" class="mr-link">Integrate the Multiple Carts feature into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/multiple-carts-quick-order-integration" class="mr-link">Integrate the Multiple Carts + Quick Order feature into your project</a></li>
-                <li><a href="https://documentation.spryker.com/docs/multiple-carts-reorder-feature-integration" class="mr-link">Integrate the Multiple Carts + Reorder feature into your project</a></li> 
+                <li><a href="docs\scos\user\features\202009.0\multiple-carts\multiple-carts-feature-overview.md" class="mr-link">Get a general idea of the Multiple Carts feature</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-carts\guest-carts\managing-guest-carts.md" class="mr-link">Manage guest carts via Glue API</a></li>
+                <li><a href="docs\scos\dev\glue-api-guides\202009.0\managing-carts\carts-of-registered-users\managing-carts-of-registered-users.md" class="mr-link">Manage carts of registered users via Glue API</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\multiple-carts-feature-integration.md" class="mr-link">Integrate the Multiple Carts feature into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\multiple-carts-quick-order-feature-integration.md" class="mr-link">Integrate the Multiple Carts + Quick Order feature into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\multiple-carts-reorder-feature-integration.md" class="mr-link">Integrate the Multiple Carts + Reorder feature into your project</a></li>
             </ul>
         </div>
         <!-- col3 -->

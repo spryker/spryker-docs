@@ -251,7 +251,7 @@ Sometimes inheritance is exactly what you need, and none of the above strategies
 ### 3. Lock your module version after inheritance
 If you inherit a class from Spryker, there is one more way to "protect" yourself during the update by locking your module version to the current minor. You can do this by, for example, replacing the *carret* module version (“^1.3.2”) with the *tilde* version (“~1.3.2”) in your *composer.json*. Next time when the class you've updated gets minor changes on the Spryker side, composer will warn you about the locked version, and you will have to investigate why this module was locked. Make sure to leave a meaningful comment in your VCS when locking the module for the person who will investigate that.
 
-In Spryker we have the [Composer Constrainer](/docs/scos/dev/developer-guides/architecture-guide/module-api/using-composer-constraint-for-customized-modules.html) tool that will try to lock modules for you automatically by searching for inherited classes in your project namsepace.
+In Spryker we have the [Composer Constrainer](/docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html) tool that will try to lock modules for you automatically by searching for inherited classes in your project namsepace.
 
 ## Updating and installing features
 At some point, you will need to add new or update the existing features for your project. This section will help you do that.
@@ -284,7 +284,7 @@ A new feature might require a higher major version for a specific module. In thi
 {% endinfo_block %}
 
 ## Troubleshooting
-This section contains common issues with the updates and provides solutions on how to fix them. If your issue is not on the list, and you need help, please [contact us](/docs/scos/dev/developer-guides/updating-a-spryker-based-project.html#let-us-know).
+This section contains common issues with the updates and provides solutions on how to fix them. If your issue is not on the list, and you need help, please [contact us](/docs/scos/dev/updating-a-spryker-based-project.html#let-us-know).
 
 ### I see Spryker Code Sniffer updates
 In case you see Code Sniffer updates from Spryker, first check if the new code sniffer rules have been added. Investigate what they are doing and decide with the team if you need them.

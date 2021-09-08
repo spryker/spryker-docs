@@ -14,7 +14,7 @@ redirect_from:
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements we are announcing in May of 2020 as part of the [code release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#atomic--code--releases).
-For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
 
 
 ## Spryker Commerce OS
@@ -50,14 +50,14 @@ You may now change names and location of the CSV files to be imported, define a 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image4.png) 
 
 #### Documentation
-[Importing Data with a Configuration File](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-data-with-a-configuration-file.html)
+[Importing Data with a Configuration File](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html)
 
 ### Data Import Documentation
 We have improved data importers’ documentation, making it easier to understand how Spryker Demo Shop data import works for most common import operations: Products, Prices, Stock, Content, Merchandising, etc. 
 You will have access to detailed information about CSV files content, dependencies, and mandatory information needed to run your usual data import operation.
 
 #### Documentation
-[Demo Shop Data Import](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/demo-shop-data-import/importing-demo-shop-data.html)
+[Demo Shop Data Import](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/importing-demo-shop-data.html)
 
 ### Product Relation per Store
 We have enhanced our multi-store feature with a new product management functionality.

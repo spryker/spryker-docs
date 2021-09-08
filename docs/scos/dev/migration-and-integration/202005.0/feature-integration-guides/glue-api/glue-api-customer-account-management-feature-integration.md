@@ -212,7 +212,7 @@ $jobs[] = [
 
 {% info_block infoBox "Note" %}
 
-For information on how to protect resources, refer to [Security and Authentication](/docs/scos/dev/developer-guides/202005.0/installation/system-requirements.html).
+For information on how to protect resources, refer to [Security and Authentication](/docs/scos/dev/installation/system-requirements.html).
 
 {% endinfo_block %}
 

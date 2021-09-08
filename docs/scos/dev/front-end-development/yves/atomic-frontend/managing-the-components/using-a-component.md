@@ -85,8 +85,8 @@ The following block demonstrates how to include component `new-component-counter
 ```
 
 {% info_block infoBox %}
-See component implementation in [How To Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html
-{% endinfo_block %}.)
+See component implementation in [How To Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+{% endinfo_block %}
 
 Now, let us have a look at the embedded element on the page:
 
@@ -129,8 +129,8 @@ The resulting Twig will look as follows:
 ```
 
 {% info_block infoBox %}
-You can find the original Twig of the component in the _Create Component Template_ section of [HowTo - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html
-{% endinfo_block %}.)
+You can find the original Twig of the component in the _Create Component Template_ section of [HowTo - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+{% endinfo_block %}
 
 Now, let us check how it looks like on the page.
 

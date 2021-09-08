@@ -38,8 +38,8 @@ You can tailor the State Machine to your needs to trigger certain processes auto
 The `StateMachine` module provides a generic implementation for state machines (SM). This module provides functionality for drawing the SM graph, triggering events, initializing a new state machine, or for getting the state history for a processed item.
 
 {% info_block warningBox %}
-If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/dev/features/{{site.version}}/order-management/oms-order-management-system-matrix.html
-{% endinfo_block %}.)
+If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/dev/features/{{site.version}}/order-management/oms-order-management-system-matrix.html).
+{% endinfo_block %}
 
 {% info_block infoBox %}
 There is already an example state machine implemented in Legacy Demoshop. Look for the `stateMachineExample` module. You can use it as a base for implementing your custom SM.

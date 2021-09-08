@@ -28,7 +28,7 @@ The scheme below shows the module relations of the content item data importers:
 ![Banner Content Item Data Importers module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-data-importers-module-relations.png) 
 
 
-See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html) for more details.
+See [Data Importers Overview and Implementation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html) for more details.
 ***
 ## Abstract Product List 
 Abstract product list content item is a content piece that consists of text and [abstract products](/docs/scos/dev/features/202001.0/product-information-management/product-abstraction.html). A content manager selects existing abstract products when [creating the content item](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/creating-content-items.html#content-item--abstract-product-list) in the Back Office > **Content Management** > **Content Items**. 
@@ -41,7 +41,7 @@ The scheme below shows the module relations of the Abstract product list content
 ### Abstract Product List Data Importer
 A developer can create and update the content items by importing them.
 
-See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html) for more details.
+See [Data Importers Overview and Implementation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html) for more details.
 
 ### Abstract Product List API
 A developer can fetch the information on each abstract product included into a contnet item via API based on the content item key. Also, they can view details of content items for all or a specific locale. 
@@ -55,7 +55,7 @@ The scheme below shows the module relations of the Product set content item and 
 ### Product Set Data Importer
 Developers can create and update the content items by importing them.
 
-See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html) for more details.
+See [Data Importers Overview and Implementation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html) for more details.
 
 ***
 ## File List 

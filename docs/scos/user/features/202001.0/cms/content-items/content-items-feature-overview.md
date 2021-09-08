@@ -22,7 +22,7 @@ You can use each content item for different purposes. For example, the Banner co
 
 A content manager can [create content items](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section. 
 A developer can do the following:
-* [Import content items](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html)
+* [Import content items](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html)
 * [Get content items data via API](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/retrieving-content-item-data/retrieving-content-item-data.html)
 
 See [Content Items Types: Module Relations](https://documentation.spryker.com/v4/docs/content-items-types-module-relations-201907) for more information on each content item type and module relations.

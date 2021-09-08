@@ -13,8 +13,8 @@ The [Company Account](/docs/scos/dev/features/202001.0/company-account-managemen
 The **Company Accounts API** provides REST access to retrieving Company User information.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/b2b-account-management/logging-in-as-company-user.html
-{% endinfo_block %}.)
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/b2b-account-management/logging-in-as-company-user.html).
+{% endinfo_block %}
 
 In your development, the API can help you to provide information on *Company User Accounts* within the company that the authenticated user belongs to.
 
@@ -29,8 +29,8 @@ To retrieve a list of all the Company Users that belong to the company of the lo
 Sample request: *GET http://glue.mysprykershop.com/company-users*
 
 {% info_block warningBox "Authentication Required" %}
-To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Response
 The endpoint responds with a **RestCompanyUserCollectionResponse** that contains the Company Users in the company of the logged in user.
@@ -112,8 +112,8 @@ To retrieve a list of the Company Users that the currently logged in user can im
 Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
 
 {% info_block warningBox "Authentication Required" %}
-To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Response
 The endpoint responds with a **RestCompanyUserCollectionResponse** that contains the Company Users available to the currently logged in user.
@@ -133,8 +133,8 @@ If the currently logged in user does not have access to any Company User account
 *The attributes mentioned are all attributes in the response. Type is not mentioned.
 
 {% info_block warningBox "Note" %}
-The company user identifier contained in the id member can be used to access the Company User in the future as well as impersonate as that account. For details, see [Logging In as Company User](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/b2b-account-management/logging-in-as-company-user.html
-{% endinfo_block %}.)
+The company user identifier contained in the id member can be used to access the Company User in the future as well as impersonate as that account. For details, see [Logging In as Company User](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/b2b-account-management/logging-in-as-company-user.html).
+{% endinfo_block %}
 
 <details open>
 <summary>Sample Response</summary>
@@ -193,8 +193,8 @@ To retrieve information on a specific Company User, send a GET request to the fo
 Sample request: *GET http://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5*
 
 {% info_block warningBox "Authentication Required" %}
-To get information on a Company User, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To get information on a Company User, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Response
 The endpoint responds with a **RestCompanyUserResponse** that contains information on the requested Company User.

@@ -11,8 +11,8 @@ redirect_from:
 In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/dev/features/202001.0/company-account-management/company-user-roles-and-permissions/company-user-roles-and-permissions-feature-overview.html) in order to distribute scopes and permissions among [Company Users](/docs/scos/dev/features/202001.0/company-account-management/company-account-overview/company-account-overview.html). To identify which roles company users are assigned to, you can use the endpoints provided by the **Company Role API**.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as **Company Accounts** and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/b2b-account-management/logging-in-as-company-user.html
-{% endinfo_block %}.)
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as **Company Accounts** and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/b2b-account-management/logging-in-as-company-user.html).
+{% endinfo_block %}
 
 In your development, the endpoint can help you to identify the roles existing in the company of the currently logged in user.
 

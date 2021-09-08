@@ -268,7 +268,7 @@ The following content has been added to the Academy:
 
 * [Payment Integration - Heidelpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
 * [Risk Solution Services Integration - Arvato 2.0](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html-2-0)
-* [Performance Guidelines](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/performance-guidelines.html)
+* [Performance Guidelines](/docs/scos/dev/guidelines/performance-guidelines.html)
 * [Performing Core Updates Smoothly](/docs/scos/dev/setup/composer.html#core-updates)
 * [CMS Blocks](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-blocks-overview.html)
 * [CMS Pages](/docs/scos/dev/features/{{page.version}}/cms/cms-feature-overview/cms-pages-overview.html)

@@ -178,7 +178,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 * [Spryk Code Generator](/docs/scos/dev/sdk/{{page.version}}/development-tools/spryk-code-generator.html)
 * [Importer](/docs/scos/dev/sdk/{{page.version}}/data-import.html)
 * [Development Virtual Machine, Docker Containers & Console](/docs/scos/dev/sdk/{{page.version}}/development-virtual-machine-docker-containers-and-console.html)
-* [CSS Class Customization](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/atomic-frontend/atomic-front-end-general-overview.html)
+* [CSS Class Customization](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html)
 * [Cronjob Scheduling](/docs/scos/dev/sdk/{{page.version}}/cronjob-scheduling.html)
 
 [**Technology Partner Integrations**](https://documentation.spryker.com/2021080/docs/integrating-technology-partners):

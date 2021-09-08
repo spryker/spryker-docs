@@ -13,8 +13,8 @@ In the B2B context, buyers typically represent a company and act on its behalf. 
 To impersonate a customer as a Company User, API clients can use the **Business on Behalf API**. It provides REST access to retrieve a list of the Company Users available to the currently logged in user and impersonate as any user available to them.
 
 {% info_block warningBox "Authentication" %}
-Before impersonating as Company Users, customers need to authenticate first. For details on how to do so, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+Before impersonating as Company Users, customers need to authenticate first. For details on how to do so, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 During the impersonation process, customers receive an Access Token. The token can be used to access any B2B REST API resources, such as Companies, Business Units, Carts etc. Also, authenticated company users will benefit from the [merchant-specific prices](/docs/scos/dev/features/202001.0/price/prices-per-merchant-relation/prices-per-merchant-relation-feature-overview.html) available to them (applied to certain business units as a rule) instead of the default ones. Also, you can customize the behavior of your API client to match the user's company, job role, business unit, and scope.
 
@@ -25,8 +25,8 @@ If the [Prices per Merchant Relation \(Customer specific prices\
 The same as with B2C resource access tokens, the tokens provided by the API have limited timeframe. When receiving an access token, the response body contains not only the access token itself, but also its lifetime, in seconds, and a **Refresh Token**. When the lifetime expires, the Refresh Token can be exchanged for a new Access Token. The new token will also have a limited lifetime and have a corresponding Refresh Token for future authentication. The default lifetime of the tokens is 8 hours (28800 seconds) for an access token and 1 month (2628000 seconds) for a refresh token. The settings can be changed in the module configuration.
 
 {% info_block infoBox "Info" %}
-For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 In your development, the endpoint can help you to:
 
@@ -46,8 +46,8 @@ To retrieve a list of all the Company Users available to the currently logged in
 Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
 
 {% info_block infoBox "Authentication Required" %}
-To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Response
 The endpoint responds with a `RestCompanyUserCollectionResponse` that contains the Company Users available to the currently logged in user.
@@ -321,8 +321,8 @@ To impersonate a user as a Company Account and receive a B2B access token, send 
 Sample request: *POST http://glue.mysprykershop.com/company-user-access-tokens*
 
 {% info_block warningBox "Authentication Required" %}
-To access the endpoint, you need to authenticate customers as regular users first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To access the endpoint, you need to authenticate customers as regular users first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 **Attributes**
 

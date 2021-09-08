@@ -32,7 +32,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*     [cms_template.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/content-management/file-details-cms-template.csv.html)
+*     [cms_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-template.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *cms_page.csv*  file can be downloaded here:

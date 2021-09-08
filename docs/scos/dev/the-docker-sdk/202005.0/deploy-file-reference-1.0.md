@@ -41,7 +41,7 @@ This reference page describes version 1 of the Deploy file format. This is the n
 The topics below are organized alphabetically for top-level keys and sub-level keys to describe the hierarchy.
 
 You can use the extended YAML syntax according to [YAML™ Version 1.2](https://yaml.org/spec/1.2/spec.html).
-Find B2B/B2C deploy file examples for [development](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/modes-overview.html#development-mode) and [demo](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/installation-guides/modes-overview.html#demo-mode) environments in the table:
+Find B2B/B2C deploy file examples for [development](/docs/scos/dev/installation/spryker-in-docker/installation-guides/modes-overview.html#development-mode) and [demo](/docs/scos/dev/installation/spryker-in-docker/installation-guides/modes-overview.html#demo-mode) environments in the table:
 
 | Development mode | Demo mode |
 | --- | --- |
@@ -321,7 +321,7 @@ Find common settings for all services below:
 
 * `engine:` - defines a third-party application supported by Spryker that does the job specific for the **Service**. For example, you can currently set `database:engine:` to `postgres` or `mysql`.
 * `endpoints:` - defines the list of **Endpoints** that point to the **Service** web interface or port.
-* `version:` - defines the version of the service to be installed. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See [Database](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/configuration/services.html#database) for detailed configuration instructions.
+* `version:` - defines the version of the service to be installed. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See [Database](/docs/scos/dev/installation/spryker-in-docker/configuration/services.html#database) for detailed configuration instructions.
 {% info_block infoBox "Optional variable" %}
 If not specified, the [default version](https://github.com/spryker/docker-sdk#supported-services
 {% endinfo_block %} applies.)
@@ -430,7 +430,7 @@ When no engine is defined in `deploy.yml`, the Docker Engine is used.
 
 **docker: newrelic:**
 
-Defines the [New Relic](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/configuration/services.html#new-relic) configuration.
+Defines the [New Relic](/docs/scos/dev/installation/spryker-in-docker/configuration/services.html#new-relic) configuration.
 
 * `docker: newrelic: license:` - defines the New Relic license which should be acquired from [New Relic](https://www.newrelic.com/).
 
@@ -630,7 +630,7 @@ An SQL database management system **Service**.
 * Project-wide
 
   - `database: engine:` - possible values are `postgres`and `mysql`.
-  - `database: version:` - defines the version of the database engine. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See [Database](/docs/scos/dev/developer-guides/202005.0/installation/spryker-in-docker/configuration/services.html#database) for detailed configuration instructions.
+  - `database: version:` - defines the version of the database engine. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See [Database](/docs/scos/dev/installation/spryker-in-docker/configuration/services.html#database) for detailed configuration instructions.
   - `database: root: username:`, `database: root: password:` - defines the user with root privileges.
   - `database: endpoints:` - defines the service's port that can be accessed via given endpoints.
 

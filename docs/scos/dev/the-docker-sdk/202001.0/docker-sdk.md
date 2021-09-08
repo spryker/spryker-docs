@@ -10,7 +10,7 @@ redirect_from:
 
 Spryker Docker SDK is a tool designed to help you set up docker environment for your Spryker project.
 
-The tool builds a production-like Docker infrastructure for Spryker based on the provided [Deploy file](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html).
+The tool builds a production-like Docker infrastructure for Spryker based on the provided [Deploy file](/docs/scos/dev/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html).
 
 Spryker Docker SDK is used for the following purposes:
 
@@ -20,8 +20,8 @@ Spryker Docker SDK is used for the following purposes:
 
 **What's next?**
 Before you start installing your Spryker in Docker, follow the installation prerequisites for your operating system:
-* [Linux](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-linux.html)
-* [MacOS](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-macos.html)
-* [Windows](/docs/scos/dev/developer-guides/202001.0/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-windows.html)
+* [Linux](/docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-linux.html)
+* [MacOS](/docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-macos.html)
+* [Windows](/docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-windows.html)
 
 <!-- Last review date: Aug 06, 2019by Mike Kalinin, Andrii Tserkovnyi -->

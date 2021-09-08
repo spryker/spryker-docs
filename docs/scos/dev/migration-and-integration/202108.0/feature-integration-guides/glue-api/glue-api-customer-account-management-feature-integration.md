@@ -310,7 +310,7 @@ $jobs[] = [
 ### Enable resources and relationships
 {% info_block infoBox %}
 
-For information on how to protect resources, see [Security and authentication](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/glue-api/security-and-authentication.html).
+For information on how to protect resources, see [Security and authentication](/docs/scos/dev/glue-api-guides/security-and-authentication.html).
 
 {% endinfo_block %}
 

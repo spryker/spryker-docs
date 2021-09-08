@@ -15,13 +15,13 @@ The file should have the following parameters:
 
 | Parameter | Required | Type | Default value | Requirements or comments | Description |
 | --- | --- | --- | --- | --- | --- |
-| warehouse_name | ✓ | String | | Must be a valid warehouse name imported from [warehouse.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html). | Name of the warehouse. |
+| warehouse_name | ✓ | String | | Must be a valid warehouse name imported from [warehouse.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html). | Name of the warehouse. |
 | store_name | ✓ | String | | Must be a valid store name imported from the existing `stores.php` configuration file of demo shop PHP project. | Name of the store. |
 
 ## Dependencies
 This file has the following dependencies: 
 
-*     [warehouse.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
+*     [warehouse.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
 *     `stores.php` configuration file of demo shop PHP project, where stores are defined initially
 
 ## Additional details

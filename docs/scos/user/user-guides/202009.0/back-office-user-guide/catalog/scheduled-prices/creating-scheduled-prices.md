@@ -29,8 +29,8 @@ Instead of changing prices manually on the starting day of the promotion, you ca
 5. Once redirected to the _Import dry run_ page, check whether there are incorrect entries in your file in the **Errors found inside your file** section.
 
      {% info_block infoBox %}
-If needed, you can [edit the imported scheduled prices](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html
-{% endinfo_block %}.)
+If needed, you can [edit the imported scheduled prices](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/scheduled-prices/managing-scheduled-prices.html).
+{% endinfo_block %}
     
 6. Check if the successfully imported price schedules are correct in the **Row processed with success** section.
 

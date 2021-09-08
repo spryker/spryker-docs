@@ -30,8 +30,8 @@ These are the header fields to be included in the .csv file:
 
 This file has the following dependencies:
 
-* [navigation.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html)
-* [glossary.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *navigation_node.csv*  file can be downloaded here:

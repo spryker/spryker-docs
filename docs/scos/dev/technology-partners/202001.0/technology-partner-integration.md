@@ -113,7 +113,7 @@ In this section you will find information about our Technology Partner Integrati
 * [Heidelpay](/docs/scos/dev/technology-partners/202001.0/payment-partners/heidelpay/heidelpay.html)
 <!--* [Informa Solutions](/docs/scos/dev/technology-partners/202001.0/payment-partners/informa-solutions.html)-->
 * [Klarna](/docs/scos/dev/technology-partners/202001.0/payment-partners/klarna/klarna.html)
-* [Payolution](/docs/scos/dev/technology-partners/202001.0/payment-partners/payolution/payolution.html)
+* [Payone](/docs/scos/dev/technology-partners/202001.0/payment-partners/payolution/payolution.html)
 * [Powerpay](/docs/scos/dev/technology-partners/202001.0/payment-partners/powerpay.html)
 * [Ratenkauf by Easycredit](/docs/scos/dev/technology-partners/202001.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
 * [RatePAY](/docs/scos/dev/technology-partners/202001.0/payment-partners/ratepay/ratepay.html)

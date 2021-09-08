@@ -25,7 +25,7 @@ redirect_from:
  The Spryker Commerce OS is an end-to-end solution for e-commerce. This document contains a business level description of major new features and enhancements released in November of 2018.
 
 {% info_block infoBox %}
-For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html
+For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html
 {% endinfo_block %}.
 
 ## Demo Shops

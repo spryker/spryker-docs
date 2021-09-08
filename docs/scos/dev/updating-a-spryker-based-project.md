@@ -190,7 +190,7 @@ For the **minor** module updates, where you have lots of customizations, it woul
 ```Bash
 php -d memory_limit=-1 composer.phar require "spryker/sales:^8.0.0"
 ```
-If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](/docs/scos/dev/developer-guides/{{page.version}}/updating-a-spryker-based-project.html#troubleshooting) section at the end of the article, *In case when update is not possible* part.
+If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](/docs/scos/dev/updating-a-spryker-based-project.html#troubleshooting) section at the end of the article, *In case when update is not possible* part.
 
 2. [Check the migration guide](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/migration-and-integration/{{page.version}}/module-migration-guides/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
@@ -209,7 +209,7 @@ Automoted tests are must-have for every project in general and are very helpful 
 *     Functional tests - cover your Facade methods in Zed
 *     Unit tests - cover classes with complex business logic and tricky algorithms
 
-See the [Testing](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
+See the [Testing](/docs/scos/dev/guidelines/testing/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
 
 {% info_block infoBox "Note" %}
 

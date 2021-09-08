@@ -40,7 +40,7 @@ We will use the same technique for the `fk_product` and `fk_product_abstract` fi
 
 {% info_block infoBox "Info" %}
 
-To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/about-data-import-categories.html). 
+To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html). 
 
 {% endinfo_block %}
 
@@ -74,7 +74,7 @@ Every import type needs its own `DataImporterConfiguration`. To add it, open the
 The constant is used to identify an import type. More information about it will follow later in this article. In our case we will use const `IMPORT_TYPE_PRODUCT_IMAGE = 'product-image';`.
 {% endinfo_block %}
 
-You also need to define the new data importer in the [configuration .yml file](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
+You also need to define the new data importer in the [configuration .yml file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
     
 ```
 actions:

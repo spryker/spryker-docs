@@ -19,9 +19,9 @@ These are the header fields to be included in the .csv file:
 | 1 | key | v (unique)| *string* | N/A | Unique identifier of the content item. |
 | 2 | name | v | *string* | Human-readable name. | Name of the content. |
 | 3 | description |   | *string* | N/A  | Description of the content. |
-| 4 | navigation_key.default | v | *string* | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html).  |
-| 5 | navigation_key.en_US |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `en_US` [locale](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html). |
-| 6 | title.de_DE |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/scos/dev/developer-guides/202005.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html). |
+| 4 | navigation_key.default | v | *string* | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html).  |
+| 5 | navigation_key.en_US |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `en_US` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
+| 6 | title.de_DE |  | *string* | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
 
 
 N/A: Not applicable.
@@ -29,7 +29,7 @@ N/A: Not applicable.
 ## Dependencies
 This file has the following dependencies:
 
-* [navigation.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html) 
+* [navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) 
 
 ## Template File & Content Example
 A template and an example **content_navigation.csv** file can be downloaded here:

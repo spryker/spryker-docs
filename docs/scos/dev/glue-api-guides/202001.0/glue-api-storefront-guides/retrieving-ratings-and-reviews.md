@@ -316,8 +316,8 @@ Sample request: `POST http://glue.mysprykershop.com/abstract-products/139/produc
 where **139** is the SKU of the **abstract** product a customer wants to rate and/or review.
 
 {% info_block warningBox "Authentication" %}
-Ratings and reviews cannot be posted anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+Ratings and reviews cannot be posted anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 **Request Attributes:**
 

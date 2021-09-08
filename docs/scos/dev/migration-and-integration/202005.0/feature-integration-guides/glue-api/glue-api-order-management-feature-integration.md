@@ -76,7 +76,7 @@ Activate the following plugins:
 
 {% info_block infoBox "Info" %}
 
-`OrdersResourceRoutePlugin` *GET* verb is a protected resource, please reference the configure section of [Resource routing](/docs/scos/dev/developer-guides/202005.0/development-guide/glue-api/glue-infrastructure.html#resource-routing).
+`OrdersResourceRoutePlugin` *GET* verb is a protected resource, please reference the configure section of [Resource routing](/docs/scos/dev/glue-api-guides/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

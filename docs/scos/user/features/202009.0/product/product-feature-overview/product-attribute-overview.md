@@ -14,7 +14,7 @@ You can create characteristic attributes for products, like brand or special fea
 
 A Back Office user can [create product attributes](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/attributes/creating-product-attributes.html).
 
-A developer can import [product attributes](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) and [super attributes](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html). 
+A developer can import [product attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) and [super attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html). 
 
 
 ## Product attribute inheritance 
@@ -23,7 +23,7 @@ A Back Office user can add product attributes to abstract and concrete products.
 
 
 ## Declared attributes
-A declared attribute is an attribute that was [created](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/attributes/creating-product-attributes.html) or [imported](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
+A declared attribute is an attribute that was [created](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/attributes/creating-product-attributes.html) or [imported](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
 
 After declaring an attribute, Back Office users can add it to products, and developers can import products with it. 
 

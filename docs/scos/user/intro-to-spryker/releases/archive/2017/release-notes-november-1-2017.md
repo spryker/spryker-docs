@@ -10,8 +10,8 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
-This month we released some important [security updates](/docs/scos/user/intro-to-spryker/whats-new/security-updates.html
-{% endinfo_block %}.)
+This month we released some important [security updates](/docs/scos/user/intro-to-spryker/whats-new/security-updates.html).
+{% endinfo_block %}
 
 ## Features
 ### Multi-currency for Shipments

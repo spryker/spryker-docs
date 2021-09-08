@@ -14,6 +14,34 @@ To import stock of merchant products, see [File details: product_stock.csv](http
 
 To learn more about the feature and to find out how end users use it, see [Marketplace Inventory Management feature overview ](/docs/marketplace/user/features/{{ page.version }}/marketplace-inventory-management-feature-overview.html) for business users.
 
+
+![Entity diagram](https://confluence-connect.gliffy.net/embed/image/72767452-8b31-46fd-9c23-8d5416fd02e6.png?utm_medium=live&utm_source=confluence)
+
+**ProductOfferStockDataImport** - Introduced module, created steps to validate product offer reference existence and warehouse name existence.
+
+**ProductOfferStock** - Introduced module to provide correct offer availability. Added event listener and subscribed to update, create, delete events for `spy_product_offer_stock`, republish  to republish `product_concrete_product_offers_storage` and add/remove `product_offer` in Redis based on product availability.
+
+**ProductOfferAvailability** - Introduced `ProductOfferAvailabilityStrategyPlugin` that is able to overwrite product concrete availability with selected product offer availability.
+
+**Availability** - Introduced `ProductAvailabilityCriteria` transfer and `AvailabilityFacade::isProductSellableForStore()`.
+
+**AvailabilityExtension** - Introduced `AvailabilityProviderStrategyPluginInterface` with `isApplicable()` and `findProductConcreteAvailabilityForStore()` methods.
+
+**ProductOfferAvailabilityStorage** - Introduced new storage structure `{availability: 2}`.
+
+**MerchantProductOfferStorage** - Introduced dependency to `ProductOfferStock` module. Used `ProductOfferStock` query to join when publishing to check if quantity > 0.
+
+**MerchantProductOfferStorageClient** - Introduced `MerchantProductOfferStorageClient::findProductOfferStorageByReference()`.
+
+**MerchantProductOfferWidget** - Added `MerchantProductOfferPreAddToCartPlugin` that implements `PreAddToCartPluginInterface` to add product offer reference and merchant reference to `ItemTransfer`.
+
+## Entity diagram
+
+The following schema illustrates relations in the Marketplace Wishlist entity:
+
+![Entity diagram](https://confluence-connect.gliffy.net/embed/image/7be7c0cf-b4d5-41c5-bfc3-e30b76efce31.png?utm_medium=live&utm_source=confluence)
+
+
 ## Related Developer articles
 
 | INTEGRATION GUIDES | DATA IMPORT  |

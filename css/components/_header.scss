@@ -1,25 +1,75 @@
 .main-header {
-    background: $header-bg-color;
-    padding: 15px 0;
     z-index: 100;
-    position: relative;
-    box-shadow: 0px 6px 10px 0px rgba($black, 0.05),
-    0px 1px 0px 0px $grey-light,
-    0px 1px 2px 0px rgba($black, 0.05);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 94px;
 
     @include media("<laptop") {
-        padding: 7px 0;
+        min-height: 78px;
     }
 
     @include media("<desktop") {
-        position: sticky;
-        top: 0;
-        left: 0;
-        width: 100%;
+        min-height: 0;
     }
 
-    @include media("<tablet") {
-        padding: 5px 0;
+    .scroll-down & {
+        @include media("<desktop") {
+            pointer-events: none;
+        }
+    }
+
+    .home-layout &,
+    .search-layout & {
+        pointer-events: auto;
+    }
+
+    &__bg {
+        background: $header-bg-color;
+        box-shadow: 0px 6px 10px 0px rgba($black, 0.05),
+        0px 1px 0px 0px $grey-light,
+        0px 1px 2px 0px rgba($black, 0.05);
+        transition: transform .3s linear, padding .2s linear;
+        padding: 15px 0;
+
+        @include media("<laptop") {
+            padding: 7px 0;
+        }
+
+        @include media("<tablet") {
+            padding: 5px 0;
+        }
+
+        .scroll-down & {
+            @include media("<desktop") {
+                transform: translateY(-128px);
+            }
+            @include media("<tablet") {
+                transform: translateY(-114px);
+            }
+        }
+
+        .toc-active & {
+            @include media("<tablet") {
+                transform: translateY(0);
+            }
+        }
+
+        .page-scrolled & {
+            @include media(">=desktop") {
+                padding: 10px 0;
+            }
+        }
+
+        .home-layout &,
+        .search-layout & {
+            transform: none;
+
+            @include media(">=desktop") {
+                padding: 15px 0;
+            }
+        }
     }
 
     &__inner {
@@ -31,6 +81,13 @@
         display: flex;
         align-items: center;
         flex: 1 1 auto;
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            flex: 0 1 auto;
+            position: relative;
+        }
     }
 
     &__right {
@@ -52,7 +109,6 @@
 
     &__logo {
         display: block;
-        width: 156px;
         margin: 0 24px 0 0;
         flex: 0 0 auto;
 
@@ -61,19 +117,91 @@
             margin: 0 20px 0 0;
         }
 
+        @include media(">=desktop") {
+            min-width: 155px;
+        }
+
         img {
             display: block;
-            width: 100%;
-            height: auto;
-
-            @include media("<laptop") {
-                width: auto;
-                height: 64px;
-            }
+            width: auto;
+            height: 64px;
+            transition: height .1s linear, opacity .2s linear;
 
             @include media("<tablet") {
                 height: 54px;
             }
+
+            .page-scrolled & {
+                @include media(">=desktop") {
+                    height: 40px;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+
+            .home-layout &,
+            .search-layout & {
+                @include media(">=desktop") {
+                    height: 64px;
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+        }
+    }
+
+    &__meta {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        flex: none;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s linear, transform 0.3s linear;
+        transform: scale(0);
+        transform-origin: 0 50%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include media("<desktop") {
+            display: none;
+        }
+
+        .page-scrolled & {
+            @include media(">=desktop") {
+                pointer-events: auto;
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .home-layout &,
+        .search-layout & {
+            @include media(">=desktop") {
+                display: none;
+            }
+        }
+
+        &-title {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 16px;
+            line-height: 1.25;
+            font-weight: 800;
+            color: $grey-dark;
+            margin: 0 0 4px;
+        }
+
+        &-subtitle {
+            display: block;
+            font-size: 12px;
+            line-height: 1.25;
+            color: $grey-6;
         }
     }
 
@@ -117,7 +245,7 @@
             letter-spacing: .02em;
             transition: color .3s linear, background .3s linear, border-color .3s linear;
 
-            @include media("<tablet") {
+            @include media("<desktop") {
                 height: 56px;
                 padding: 17px 40px;
                 color: $grey-lighten;
@@ -170,6 +298,37 @@
                 visibility: visible;
                 opacity: 1;
             }
+        }
+    }
+}
+
+.header-switcher {
+    position: relative;
+
+    &__sticky {
+        pointer-events: none;
+        opacity: 0;
+        transition: color .3s linear, background .3s linear, border-color .3s linear, box-shadow .3s linear, .3s linear opacity;
+
+        .page-scrolled & {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        &:after {
+            content: none !important;
+        }
+    }
+
+    &__default {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: color .3s linear, background .3s linear, border-color .3s linear, box-shadow .3s linear, .3s linear opacity;
+
+        .page-scrolled & {
+            pointer-events: none;
+            opacity: 0;
         }
     }
 }

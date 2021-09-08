@@ -19,7 +19,7 @@ Every textual information can be provided in multiple languages. Languages are i
 {% info_block warningBox %}
 The Glossary is used for the translation of all customer-facing texts that appear on the website, in emails, invoices,... It is not used for Administration Interface translation.
 {% endinfo_block %}
-![Glossary](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/CMS+Schema/glossary.png){height="" width=""}
+![Glossary](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/CMS+Schema/glossary.png) 
 
 **Structure**:
 
@@ -32,7 +32,7 @@ Create localized CMS pages based on predefined templates.
 {% endinfo_block %}
 
 There is a clear separation of the layout and the content of a CMS Page. The layout is hardcoded in a Twig Template and cannot be changed without deployment. The Template contains Markup with Placeholders (e.g. &lt;h3&gt;{% raw %}{{{% endraw %} spyCms('title') | raw {% raw %}}}{% endraw %}&lt;/h3&gt;) which needs to be linked to Glossary Keys.
-![CMS pages](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/CMS+Schema/cms-pages.png){height="" width=""}
+![CMS pages](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/CMS+Schema/cms-pages.png) 
 
 **Structure**:
 
@@ -53,7 +53,7 @@ Create localized CMS content blocks that can be included on dynamic pages like t
 {% endinfo_block %}
 
 CMS Blocks are very similar to CMS Pages with the main difference that they are referenced by the name and there is no URL.
-![CMS blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/CMS+Schema/cms-blocks.png){height="" width=""}
+![CMS blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/CMS+Schema/cms-blocks.png) 
 
 **Structure**:
 
@@ -72,7 +72,7 @@ CMS Blocks are very similar to CMS Pages with the main difference that they are 
 {% info_block infoBox %}
 CMS Blocks can be integrated into other pages with a Twig function. But there are also other ways to integrate CMS Blocks on Category and Product Pages
 {% endinfo_block %}
-![CMS block connection with products and categories](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/CMS+Schema/cms-block-connection-products-categories.png){height="" width=""}
+![CMS block connection with products and categories](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/CMS+Schema/cms-block-connection-products-categories.png) 
 
 **Structure**:
 

@@ -18,7 +18,7 @@ On the Punch Out Connections page, you see the following:
 * Company and business unit the connection is set up for
 * The date when the connection was created
 * The actions you can perform
-![Punch out connections](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/punch-out-connections.png){height="" width=""}
+![Punch out connections](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/punch-out-connections.png) 
 
 ### Creating and Editing Transferred Cart Connection Page Attributes
 The following table describes the attributes that are used when creating or updating a connection:
@@ -54,6 +54,6 @@ On the **Transactions Log** page, you see the following:
 * Transaction Status
 * Session ID
 * The date when the transaction was created
-![Transaction log](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/transactions-log.png){height="" width=""}
+![Transaction log](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/transactions-log.png) 
 
 <!-- Last review date: Sep 2, 2019 by Oksana Karasyova  -->

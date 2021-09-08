@@ -40,7 +40,7 @@ There are two ways to allow a MIME type:
 **Tips & Tricks**
 If you create a MIME type but do not allow it, no constraints are going to be applied. 
 If you create the MIME types as follows:
-![Tips](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/tips-one.png){height="" width=""}
+![Tips](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/tips-one.png) 
 
 Then you will be able to download only the following file types:
 * text/csv 

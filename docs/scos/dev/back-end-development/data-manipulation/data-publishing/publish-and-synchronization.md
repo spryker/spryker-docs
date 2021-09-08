@@ -84,7 +84,7 @@ Implementing Event Behaviors is recommended to keep the shop app data up to date
 
 
 Publish and Synchronize Process schema:
-![How Publish and Synchronize works](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Publish+and+Synchronization/how-it-works.png){height="" width=""}
+![How Publish and Synchronize works](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Publish+and+Synchronization/how-it-works.png) 
 
 ### Publish
 

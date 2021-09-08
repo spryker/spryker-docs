@@ -138,7 +138,7 @@ Get to know the parts of the Spryker Development Virtual Machine with which we s
 Select one of the topics below depending on what you want to do next:
 
 * [About Spryker](/docs/scos/user/intro-to-spryker/about-spryker.html): general information about Spryker, news, and release notes.
-* [Features](/docs/scos/dev/features/{{page.version}}/overview-of-the-feature-guides.html): general information about the Spryker features.
+* [Features](/docs/scos/user/features/{{page.version}}/overview-of-the-feature-guides.html): general information about the Spryker features.
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and guides.
 * [User guides](/docs/scos/user/user-guides/{{page.version}}/about-user-guides.html): step-by-step Backoffice and Storefront user guides.
 * [Developer guides](/docs/scos/dev/developer-guides/{{page.version}}/overview-of-the-developer-guides.html): technical information and guides for developers.

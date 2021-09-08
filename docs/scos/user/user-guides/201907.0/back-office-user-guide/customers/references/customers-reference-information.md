@@ -35,7 +35,7 @@ The following table describes the attributes you enter and select when creating 
 |**Send password token through email**|If the checkbox is selected, after saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer is still able to set a password for their account, by clicking the reset password link from the shop interface. |
 |Edit page only: **Billing Address**|A drop-down list with the addresses set up for the customer. The selected address defines the billing address for your customer.|
 |Edit page only: **Shipping Address**|A drop-down list with the addresses set up for the customer. The selected address defines the shipping address for your customer.|
-![Add or edit customers page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/customers-reference-information.png){height="" width=""}
+![Add or edit customers page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/customers-reference-information.png) 
 
 ***
 ## Add New Address page
@@ -48,7 +48,7 @@ The following table describes the attributes you enter and select when adding a 
 |**Phone**|Customer's phone number.|
 |**Company**|Customer's company.|
 |**Comment**|Any specific comment regarding the customer or customer address (e.g. _"This address is going to be used only if the order costs less than 900 euros."_).|
-![Add new address page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/Add+new+address+page.png){height="" width=""}
+![Add new address page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/Add+new+address+page.png) 
 
 ***
 ## B2B: Attach Customer to Company page

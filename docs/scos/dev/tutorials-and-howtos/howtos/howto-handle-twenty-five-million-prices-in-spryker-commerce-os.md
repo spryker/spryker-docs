@@ -23,7 +23,7 @@ In Spryker, each price is imported as a [price dimension](/docs/scos/user/featur
 
 
 Price import flow:
-![price import flow ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+handle+25+million+prices+in+Spryker+Commerce+OS/price-import-flow.jpg){height="" width=""}
+![price import flow ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+handle+25+million+prices+in+Spryker+Commerce+OS/price-import-flow.jpg) 
 
 
 ## Challenges

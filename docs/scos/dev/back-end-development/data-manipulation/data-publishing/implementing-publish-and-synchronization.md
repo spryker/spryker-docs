@@ -368,7 +368,7 @@ foreach ($productAbstracts as $productAbstract) {
 ## Additional Tasks
 ### View Event Mapping
 To see all listeners mapped for a certain event, Ctrl+Click it in PhpStorm. The following example shows that the *SPY_URL_CREATE* event has **6** listeners mapped to it, which means that there will be **6** messages for this event in the **event** queue.
-![Lookup listener](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Resources+and+Developer+Tools/Publish+and+Synchronization+Reference/lookup-listener.png){height="" width=""}
+![Lookup listener](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Resources+and+Developer+Tools/Publish+and+Synchronization+Reference/lookup-listener.png) 
 
 ### Debug Publish and Synchronize
 To debug Publish and Synchronize:

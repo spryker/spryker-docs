@@ -10,7 +10,7 @@ redirect_from:
 
 ## Order History Page
 This is the page that opens when you navigate to the **Customer Account > Order History**.
-![order-history-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/References/order-history-page.png){height="" width=""}
+![order-history-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/References/order-history-page.png) 
 
 On the **Order History** page, you see the following:
 
@@ -25,7 +25,7 @@ On the **Order History** page, you see the following:
 
 ## Order Details Page
 This page is opened when you are viewing or are reordering the completed order.
-![order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/References/order-details-page.png){height="" width=""}
+![order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/References/order-details-page.png) 
 
 On the **Order Details** page, you see the following information:
 

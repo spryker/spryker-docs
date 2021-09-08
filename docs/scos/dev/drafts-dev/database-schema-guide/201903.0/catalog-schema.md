@@ -14,7 +14,7 @@ redirect_from:
 {% info_block infoBox %}
 Spryker's product catalog is divided into Abstract Products that contain all common Attributes and Variants (~ Concrete Products
 {% endinfo_block %}. The Attributes which make the difference among the Variants are called Super-Attributes (e.g. Size of T-Shirts).)
-![Database product abstract](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-abstract.png){height="" width=""}
+![Database product abstract](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-abstract.png) 
 
 | | | |
 | --- |---| --- |
@@ -26,7 +26,7 @@ Spryker's product catalog is divided into Abstract Products that contain all com
 {% info_block infoBox %}
 Attribute keys and values are saved in JSON array to the products and their variants. This means you don't need to predefine a static schema and you don't require clean product data. Any information can be imported and then later enriched by meta data (like pre-defined values
 {% endinfo_block %}, used for facet filters and full-text search. Localizable Attribute values can be translated while keys are saved without translation.)
-![Product attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-attributes.png){height="" width=""}
+![Product attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-attributes.png) 
 
 **Structure:**
 
@@ -46,7 +46,7 @@ Attribute keys and values are saved in JSON array to the products and their vari
 {% info_block infoBox %}
 Any product can have any Attributes. The data is stored as pairs of keys / values in a JSON field. The idea is that inventory managers can add any kind of information and then use the Administration Interface to define what Spryker should do with the data. This way they can optimize the shop without deployments.
 {% endinfo_block %}
-![Attribute configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/attribute-configuration.png){height="" width=""}
+![Attribute configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/attribute-configuration.png) 
 
 **Structure:**
 
@@ -81,14 +81,14 @@ Synchronisation: Modifying the search and filter preferences are executing an ex
 {% info_block infoBox %}
 Abstract Products can be activated per Store. The approach is if a product is not related to any store then it will not appear anywhere. So to make all products appear in all stores, all relations must be explicitly defined.
 {% endinfo_block %}
-![Multi-store products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/multi-store-products.png){height="" width=""}
+![Multi-store products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/multi-store-products.png) 
 
 ### Related Data (via Foreign Key)
 
 {% info_block infoBox %}
 Abstract and Concrete Products are related to other entities.
 {% endinfo_block %}
-![Related data via foreign key](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/related-data-foreign-key.png){height="" width=""}
+![Related data via foreign key](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/related-data-foreign-key.png) 
 
 * Every Abstract Product is represented by a Product-Detail-Page in the shop which has a unique URL per locale
 * Abstract Products can be categorized
@@ -102,7 +102,7 @@ The schema below is not complete as there are a few more entities like product r
 {% info_block infoBox %}
 Products are also related to objects from different functional areas (e.g. sales-orders
 {% endinfo_block %}. Here we are using implicit relations via the natural identifier (SKU) to avoid hard coupling among different bounded contexts which makes it easier to operate Spryker in a service approach with separated databases (product-, order-, availability-service).)
-![Related data via SKU](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/related-data-sku.png){height="" width=""}
+![Related data via SKU](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/related-data-sku.png) 
 
 * Soft relationships:
 
@@ -117,7 +117,7 @@ Products are also related to objects from different functional areas (e.g. sales
 {% info_block infoBox %}
 Product options are additional items with a price but without their own stock. Customers can only buy them together with a product. (e.g. an insurance for a phone
 {% endinfo_block %}.)
-![Product options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-options.png){height="" width=""}
+![Product options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-options.png) 
 
 **Structure:**
 
@@ -132,7 +132,7 @@ Product options are additional items with a price but without their own stock. C
 {% info_block infoBox %}
 Two or more product variants can be bundled together and mapped to a  Product Bundle. The Product Bundle is a regular product with its own information, price, and stock. When a customer buys a Product Bundle then each Sales-Order-Item in the Sales-Order represents one of the bundled products.
 {% endinfo_block %}
-![Product bundles](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-bundles.png){height="" width=""}
+![Product bundles](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-bundles.png) 
 
 * The "Product Bundle" itself is represented by a Concrete Product while the bundled products are relations to other Concrete Products:
 
@@ -148,7 +148,7 @@ Two or more product variants can be bundled together and mapped to a  Product Bu
 {% info_block infoBox %}
 Product groups are used to link products together which are equal from the customer point of view (e.g. different colors of a T-Shirt
 {% endinfo_block %}.)
-![Product groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-groups.png){height="" width=""}
+![Product groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-groups.png) 
 
 * Typical use case:
 
@@ -163,7 +163,7 @@ Product groups are used to link products together which are equal from the custo
 {% info_block infoBox %}
 Multiple products can be offered as a set so that the customer can add them to cart with a single click. Each set has its own URL and all sets can be shown on a separate section in the catalog. The typical use case is called "Shop-by-Look" and it's a common feature for fashion shops.
 {% endinfo_block %}
-![Product set](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-set.png){height="" width=""}
+![Product set](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-set.png) 
 
 * The Product Set has a localizable name and can contain multiple products
 * Product Sets are represented by dedicated pages in the shop and therefore have an URL
@@ -176,7 +176,7 @@ Multiple products can be offered as a set so that the customer can add them to c
 {% info_block infoBox %}
 An Abstract Product can be related to other Abstract Products for cross- and up-selling purposes. For instance, to show "similar products" on a product detail page.
 {% endinfo_block %}
-![Product relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-relations.png){height="" width=""}
+![Product relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-relations.png) 
 
 Structure:
 
@@ -192,7 +192,7 @@ Structure:
 {% info_block infoBox %}
 Products can be sold in different **Measurement Units**. For instance, apples can be sold in "Item" and "Kilogram" amounts. Each product variant can be sold in one or multiple different units but only one unit is the base one that we use for all internal calculations.
 {% endinfo_block %}
-![Measurement units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/measurement-units.png){height="" width=""}
+![Measurement units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/measurement-units.png) 
 
 | Use case | Product Variant | (Internal) Base Unit | Sales Unit(s) |
 | --- | --- | --- | --- |
@@ -227,7 +227,7 @@ Products can be sold in different **Measurement Units**. For instance, apples ca
 {% info_block infoBox %}
 When products are added to the cart there can be restrictions like min/max quantity or an interval. This is especially useful in combination with Measurement Units (e.g. to disallow that a client buys 3g or 3 tons of apple
 {% endinfo_block %}.)
-![Product quantity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-quantity.png){height="" width=""}
+![Product quantity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-quantity.png) 
 
 ### Splittable Products
 
@@ -236,7 +236,7 @@ When a Quote is transferred into a Sales-Order, all Cart-Items are saved as indi
 {% endinfo_block %}
 
 But this does not work for all kinds of products. For instance, when a customer buys five-meter cable then she cannot cancel or return a single meter. For this reason, we introduced a new parameter for products which determines if a product is splittable or not.
-![Splittable products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/splittable-products.png){height="" width=""}
+![Splittable products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/splittable-products.png) 
 
 **Structure:**
 
@@ -252,7 +252,7 @@ Even when the product is marked as splittable, Spryker may still save them into 
 {% info_block infoBox %}
 A shop can sell the same product in different Packaging Units, for example, to sell apples, options could be to sell apples as "Item", a "Bag" of apples or a "Pallet" of apples. Each Packaging Unit is represented by one product variant:
 {% endinfo_block %}
-![Packaging units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/packaging-units.png){height="" width=""}
+![Packaging units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/packaging-units.png) 
 
 | Abstract Product | Concrete Product / Variant | Packaging Unit |
 | --- | --- | --- |
@@ -303,7 +303,7 @@ A Product List can be applied to different use cases. Eg. to allow Customer Grou
 {% info_block errorBox %}
 This feature is in progress. The schema is not final.
 {% endinfo_block %}
-![Product lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-lists.png){height="" width=""}
+![Product lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-lists.png) 
 
 **Structure**:
 
@@ -319,7 +319,7 @@ This feature is in progress. The schema is not final.
 {% info_block warningBox %}
 Products can be categorized so that customers can filter them in the shop.
 {% endinfo_block %}
-![Categories and nodes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/categories-and-nodes.png){height="" width=""}
+![Categories and nodes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/categories-and-nodes.png) 
 
 **Structure**:
 
@@ -339,7 +339,7 @@ Products can be categorized so that customers can filter them in the shop.
 {% info_block infoBox %}
 Products can be categorized.
 {% endinfo_block %}
-![Category to product mapping](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/category-product-mapping.png){height="" width=""}
+![Category to product mapping](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/category-product-mapping.png) 
 
 **Structure**:
 
@@ -350,7 +350,7 @@ Products can be categorized.
 {% info_block infoBox %}
 Normally for categories, the system will automatically show the filters that fit the related products. But you can also manually add or remove filters and reorder them.
 {% endinfo_block %}
-![Category filters](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/category-filters.png){height="" width=""}
+![Category filters](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/category-filters.png) 
 
 **Structure**:
 
@@ -380,7 +380,7 @@ The Promotional price feature is currently under development.
 {% info_block infoBox %}
 Prices are related to Abstract and Concrete Products. The idea is that the Abstract Product holds the general price which can be inherited or overwritten by the Concrete Product.
 {% endinfo_block %}
-![Product prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-prices.png){height="" width=""}
+![Product prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/product-prices.png) 
 
 **Structure**:
 
@@ -399,7 +399,7 @@ Prices are related to Abstract and Concrete Products. The idea is that the Abstr
 ### Price Dimensions
 
 Product prices have two main characteristics: **Price Types** and **Price Dimension**
-![Price dimensions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/price-dimensions.png){height="" width=""}
+![Price dimensions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/price-dimensions.png) 
 
 | | |
 | ---| ---|
@@ -434,7 +434,7 @@ The Stock of a product represents the physical amount of products in the warehou
 {% info_block warningBox %}
 Stocks are not directly related to Stores but there is a Store-to-Warehouse Mapping that be configured in code (see `StockConfig`
 {% endinfo_block %}. Stocks can be dedicated or shared among Stores.)
-![Stock](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/stock.png){height="" width=""}
+![Stock](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/stock.png) 
 
 **Structure**:
 
@@ -451,7 +451,7 @@ The Availability of a Product is a calculated information: Available Quantity = 
 {% info_block warningBox %}
 "Reserved Item" means that there is a Sales Order Item with a State that is marked as "Reserved" in the State Machine.
 {% endinfo_block %}
-![Availability](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/availability.png){height="" width=""}
+![Availability](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/availability.png) 
 
 **Structure**:
 
@@ -470,7 +470,7 @@ The Availability of a Product is a calculated information: Available Quantity = 
 {% info_block infoBox %}
 Spryker's OMS allows reserving Products which are sold but not yet shipped.
 {% endinfo_block %}
-![Reservations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/reservations.png){height="" width=""}
+![Reservations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Catalog+Schema/reservations.png) 
 
 Structure:
 

@@ -22,7 +22,7 @@ If you don’t select this option, the customer is still able to set a password 
 {% endinfo_block %}
 4. To complete the customer creation, click **Save**. 
 This creates the new customer with the *Unverified* status in the *Customers* table. At the same time, the customer receives an email with the verification link that they must click to get verified and start using the online store as registered users do. Once they verified their account via the link in the email, the status in *Customers* table changes to *Verified*.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customer%2C+Customer+Access%2C+Customer+Groups/Managing+Customers/BO-unverfied-customer.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customer%2C+Customer+Access%2C+Customer+Groups/Managing+Customers/BO-unverfied-customer.png) 
 
 
 To know more about the attributes you see, select, and enter while creating a customer, see [Customers: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/customer/customer-customer-access-customer-groups/references/reference-information-customers.html). 

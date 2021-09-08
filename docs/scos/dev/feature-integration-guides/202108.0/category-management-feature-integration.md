@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/category-management-feature-integration
 ---
 
-This document describes how to integrate the [Category Management](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Category Management](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

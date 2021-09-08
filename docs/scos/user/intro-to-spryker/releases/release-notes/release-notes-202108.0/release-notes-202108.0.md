@@ -38,7 +38,7 @@ With the support of the OpenID Connect protocol, you can now use Identity Access
 ### Category per store
 Spryker now supports store relations at the category level. You can hide and show categories per store depending on your business requirements. Child categories inherit the store relations of the parent category.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/category-per-store.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/category-per-store.png) 
 
 #### Documentation
 [Category management](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html)
@@ -66,7 +66,7 @@ Within the Spryker’s default data export framework, we have made small improve
 ### Middleware
 We have completed maintenance activities and done minor fixes helping you to keep your project up to date.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/middleware.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/middleware.png) 
 
 ## The Docker SDK
 

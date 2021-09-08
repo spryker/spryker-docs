@@ -64,7 +64,7 @@ console spryk:run AddSharedRestAttributesTransfer --mode=project --module=Resour
 {% endinfo_block %}
 
 The resulting folder structure in the example of the Wishlists REST API module:
-![Wishlists REST API module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Glue+API/wishlists-rest-api-module.png){height="" width=""}
+![Wishlists REST API module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Glue+API/wishlists-rest-api-module.png) 
 
 ## 2. Create a Configuration Class
 

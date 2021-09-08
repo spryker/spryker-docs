@@ -11,7 +11,7 @@ redirect_from:
 The Glossary section in the Back Office is mostly used by administrators when a new locale for a store needs to be set up. In case no new locale needs to be set up, the Marketing Content Manager or Spryker Admin can use this section in order to improve the existing content (translations).
 
 **Standardized flow of actions for a DevOps**
-![Flow of actions for a DevOps](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Glossary/glossary-section.png){height="" width=""}
+![Flow of actions for a DevOps](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Glossary/glossary-section.png) 
 
 {% info_block infoBox %}
 This is how the DevOps interacts with the Development Team and uses the Back Office to set up a new locale for a store.

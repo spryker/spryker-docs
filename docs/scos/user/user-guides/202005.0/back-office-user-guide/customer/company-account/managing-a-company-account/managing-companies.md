@@ -28,7 +28,7 @@ Specifically, company roles can be **Edited**, **De(Activated)**, **Approved**, 
 ## Managing a Company
 
 Right after the Company has been created whether in the shop application or in the Back Office, it appears with **Pending** status in the **List of Companies** table. To become active and available to be used, it needs to be approved and then activated.
-![Managing a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Companies/managing-company.png){height="" width=""}
+![Managing a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Companies/managing-company.png) 
 
 ### Approving and Activating a Company
 To approve a company and activate a company:
@@ -36,12 +36,12 @@ To approve a company and activate a company:
     As a result, the status of the company is changed to **Approved**.
 2. Click **Activate** in the _Actions_ column. As a result, the activity state of the company will change from **Inactive** to **Active**.
 
-![Approving a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Companies/activating-company.png){height="" width=""}
+![Approving a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Companies/activating-company.png) 
 
 ### Denying a Company
 In case you cannot approve the registration, you can deny it.
 To disapprove a company, click **Deny**.
-![Denying a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Companies/denying-company.png){height="" width=""}
+![Denying a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Companies/denying-company.png) 
 
 You can approve and activate the record in a later event. The record itself will continue existing in the system.
 

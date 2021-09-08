@@ -61,6 +61,6 @@ CREATE UNIQUE INDEX "spy_wishlist_item-unique-fk_wishlist-fk_product" ON spy_wis
 ```
 
 Schema diagram:
-![wishlist_schema.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+Wishlist/wishlist_schema.png){height="" width=""}
+![wishlist_schema.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+Wishlist/wishlist_schema.png) 
 
 <!-- Last review date: Nov 23, 2017 by Aurimas Ličkus -->

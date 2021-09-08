@@ -14,7 +14,7 @@ To start working with product labels, navigate to the **Products > Product Label
 ***
 You can update the order in which labels appear for the products.
 For example, you can set the labels NEW to be always displayed first for products.
-![Prioritize product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Labels/Prioritizing+Labels/Prioritizing-Labels.gif){height="" width=""}
+![Prioritize product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Labels/Prioritizing+Labels/Prioritizing-Labels.gif) 
 
 ***
 **To prioritize product labels:**

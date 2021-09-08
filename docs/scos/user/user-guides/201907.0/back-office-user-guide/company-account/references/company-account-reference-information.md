@@ -66,16 +66,16 @@ The following table describes the attributes you see, select, or enter while cre
 **Company User Profile**
 | Back Office: Company User Record | Online Store: Company User Profile |
 | --- | --- |
-| ![Back Office: Company User Profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-user-profile-backoffice.png){height="" width=""} | ![Online Store: Company User Profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-user-profile-online-store.png){height="" width=""} |
+| ![Back Office: Company User Profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-user-profile-backoffice.png)  | ![Online Store: Company User Profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-user-profile-online-store.png)  |
 
 **Company Roles**
 
 | Back Office: Company Roles | Online Store: Company Roles |
 | --- | --- |
-| ![Back Office: Company Role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-role-backoffice.png){height="" width=""} | ![Online Store: Company Role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-role-online-store.png){height="" width=""} |
+| ![Back Office: Company Role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-role-backoffice.png)  | ![Online Store: Company Role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-role-online-store.png)  |
 
 **Company Users**
 
 | Back Office: Company Users |Online Store: Company Users |
 | --- | --- |
-| ![Back Office: Company User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-user-backoffice.png){height="" width=""} | ![Online Store: Company User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-user-online-store.png){height="" width=""} |
+| ![Back Office: Company User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-user-backoffice.png)  | ![Online Store: Company User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Company+Account:+Reference+Information/company-user-online-store.png)  |

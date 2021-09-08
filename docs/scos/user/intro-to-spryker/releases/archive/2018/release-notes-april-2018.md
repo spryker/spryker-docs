@@ -12,9 +12,9 @@ redirect_from:
 ## Features
 ### Reorder
 One of the biggest factors that influences customer loyalty and persuades them to repeatedly buy from your shop, is shopping convenience. In this release, we are introducing another feature that will make your customers' (and your) life easier: **reorder**. This feature allows customers to reorder their previous orders in one click. All your customers would need to do is go to  _Order History_ in their **Customer Account** and reorder either the entire order or individual items from it.
-![Reorder](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+April+-+2018/reorder_view_orders.png){height="" width=""}
+![Reorder](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+April+-+2018/reorder_view_orders.png) 
  
-![Reorder - View details](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+April+-+2018/reorder_order_details.png){height="" width=""}
+![Reorder - View details](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+April+-+2018/reorder_order_details.png) 
 
 **Affected Modules**
 

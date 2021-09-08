@@ -31,7 +31,7 @@ If you are not logged in to shop when completing the checkout, the first page yo
 
 {% endinfo_block %}
 
-![Checkout process](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/split-delivery-checkout.gif){height="" width=""}
+![Checkout process](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/split-delivery-checkout.gif) 
 
 
 ***

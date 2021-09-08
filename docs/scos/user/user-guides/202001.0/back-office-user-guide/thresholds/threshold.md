@@ -12,7 +12,7 @@ The **Threshold** section in the Back Office is mostly used by Spryker Admins.
 When doing business online, there comes a time when you need to set a minimum order amount to ensure that the cost of shipping the order is worthwhile for the business. This minimum order amount is configured in the **Back Office > Threshold** section.
 
 **Standardized flow of actions for a Spryker Admin**
-![E-Commerce Slice-of-Life (Thresholds))](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/threshold-section.png){height="" width=""}
+![E-Commerce Slice-of-Life (Thresholds))](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/threshold-section.png) 
 
 {% info_block infoBox %}
 The minimum order value can be used for both B2B and B2C businesses. The difference is that the thresholds in the B2B environment can be set up for a specific merchant relation, while in the B2C world this option is not used.

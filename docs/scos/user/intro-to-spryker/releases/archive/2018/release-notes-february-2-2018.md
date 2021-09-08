@@ -12,7 +12,7 @@ redirect_from:
 ## Features
 ### CMS Blocks Per Store
 We continue progressing towards full enablement of the multi-store concept. With this release, we are introducing a new multi-store CMS Blocks feature. It enables you to manage CMS blocks display per stores through a store toggle element on CMS Block management pages in the Administration Interface. To define which store(s) a CMS block should be visible in, just select the respective store(s) under "Store relation".
-![CMS blocks per store](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/cms_block_store_relation.png){height="" width=""}
+![CMS blocks per store](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/cms_block_store_relation.png) 
 
 **Affected Modules**
 
@@ -42,7 +42,7 @@ composer require spryker/cms-block:"^2.0.0" spryker/cms-block-collector:"^2.0.0"
 
 ### Discounts Per Store
 As a part of the multi-store concept, the Discount per Store feature has been implemented in this release. It allows managing discounts per stores, which enables a shop owner to deliver an even better shopping experience for customers by creating targeted offers with discounts for specific countries.
-![Discounts per store](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/discount_multistore.png){height="" width=""}
+![Discounts per store](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/discount_multistore.png) 
 
 **Affected Modules**
 
@@ -70,7 +70,7 @@ composer require spryker/discount:"^6.0.0"
 
 ### Time To Live For Products
 With this release, we are introducing a new feature that enables the shop administrator to set validity dates for products. With the Time To Live (TTL) For Products feature, you can easily define from and till when your product(s) will be visible and available for purchase by your customers without having to manage the inventory manually. This feature is extremely useful if you sell products with an expiry date, seasonal products or products that are valid for a certain period of time (e.g. tickets), or if for promotional reasons, you temporally sell some products within a limited time frame, or if you want to start selling some products (e.g. a collection) from a specific date and/or time. The product validity time can be set to up-to-the minute accuracy.
-![Time to live for products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/ttl.png){height="" width=""}
+![Time to live for products](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+February+-+2+2018/ttl.png) 
 
 **Affected Modules**
 

@@ -28,7 +28,7 @@ For this reason, three shipment discount types have been implemented:
 * Price – a discount to a delivery price
 
 You can now create discount calculation rules like the one in the example below. The example below will ensure that if the selected shipment carrier is the Spryker Dummy Shipment, selected shipment method is the Express and the price of this Express shipment method is greater than or equal to 5, then the discount is applied. If, for example, you remove the middle rule ("shipment-method equal Express (Spryker Dummy Shipment)", then the discount will be applied for all shipment methods from Spryker Dummy Shipment shipment carrier if the price of the shipment method is greater than or equal to 5. 
-![Shipment discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Archive/RN_shipment_discount.png){height="" width=""}
+![Shipment discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Archive/RN_shipment_discount.png) 
 
 **Affected Modules**
 

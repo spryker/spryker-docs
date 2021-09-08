@@ -86,12 +86,12 @@ Register the following widgets:
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\CartPage\Widget\ProductAbstractAddToCartButtonWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -114,4 +114,3 @@ console frontend:yves:build
 Navigate to catalog and find an abstract product with single concrete. You should see a button for adding this concrete product to the cart right from the catalog page.
 
 {% endinfo_block %}
-

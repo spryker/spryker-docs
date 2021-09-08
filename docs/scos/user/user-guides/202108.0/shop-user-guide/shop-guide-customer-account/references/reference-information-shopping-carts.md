@@ -17,14 +17,14 @@ Shopping Carts page is the page where you can access your shopping carts. Don't 
 There are two ways to open the Shopping Carts page:
 
 1. Via a **Shopping Cart Widget**. Go to the header of the shop application → My Cart → All Carts.
-![Shopping cart widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-carts-widget.png){height="" width=""}
+![Shopping cart widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-carts-widget.png) 
 
 2. Via a **Customer Account**. Navigate to your user icon → Overview → Shopping Carts submenu. 
-![Customer account overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/customer-account-overview.png){height="" width=""}
+![Customer account overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/customer-account-overview.png) 
 
 On the Shopping Carts page, you see the following:
 
-![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-carts-page.png){height="" width=""}
+![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-carts-page.png) 
 
 | # | Element | Description |
 |---|---|---|
@@ -43,7 +43,7 @@ On the Shopping Carts page, you see the following:
 You can access a Shopping Cart page by clicking on a respective shopping cart name on the Shopping Carts page:
 ![Shopping cart page overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-cart-page-overview.png)
 Every Shopping Cart page consists of:
-![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-cart-page.png){height="" width=""}
+![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-cart-page.png) 
 
 | # | Element | Description |
 |---|---|---|

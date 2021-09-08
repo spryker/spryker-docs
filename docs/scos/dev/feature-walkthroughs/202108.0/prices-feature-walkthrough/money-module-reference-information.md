@@ -109,7 +109,7 @@ protected function addMoneyValueCollectionType(FormBuilderInterface $builder)
 Also, modify the twig template to include the form money value collection table.
 
 ```
-{{ form_money_collection(mainForm.moneyValueCollection) }}
+{% raw %} {{ form_money_collection(mainForm.moneyValueCollection) }} {% endraw %}
 ```
 
 This renders the table with all currencies enabled in the store. You have to handle persistence yourself, which means that you have to save and read data to the `MoneyValueTransfer` collection.

@@ -35,11 +35,11 @@ To be able to process API requests correctly, Resource Modules need to implement
 
 ## Request Handling
 Upon receiving an API request, the `GlueApplication` Module verifies whether the request is correct, checks whether all required parameters are present, and also identifies the HTTP verb and additional filters, if any. Then, deserializes request data and builds an **API Request Object** which is passed to the corresponding `Resource` Module. The object supports `Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface`.
-![Glue Application Module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/glue-application-module.png){height="" width=""}
+![Glue Application Module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/glue-application-module.png) 
 
 Upon receiving a request object, the `Resource` module needs to provide it with a valid response. Responses are provided as **API Response Objects**. To build them, `Resource` modules use the `RestApi\Spryker\Glue\Kernel\AbstractFactory::getResourceBuilder()` method which returns the `RestResourceBuilderInterface` objects. The `GlueApplication` Module serializes such objects into the response format and then passes them to the requestor.
 
-![Glue Application Module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/communication.png){height="" width=""}
+![Glue Application Module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/communication.png) 
 
 A `Resource` Module can communicate with the Storage, Search and Spryker Commerce OS (Zed) using a Client only.
 
@@ -122,7 +122,7 @@ Also, a module should contain the transfer definition in `src/Pyz/Shared/Resourc
 
 The resulting folder structure on the example of the WishlistsRestApi Module looks as follows:
 
-![Wishlists REST API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/wishlists-rest-api.png){height="" width=""}
+![Wishlists REST API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/wishlists-rest-api.png) 
 
 #### Resource Controller
 This controller provides actions for all HTTP verbs that a resource implements. It is responsible for:
@@ -320,11 +320,11 @@ To add relationships between two resources, you can either implement the Resourc
 
 *Option 1: With a separate module*
 
-![implementation-wiht-separate-module.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/implementation-wiht-separate-module.png){height="" width=""}
+![implementation-wiht-separate-module.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/implementation-wiht-separate-module.png) 
 
 _Option 2: Without module_
 
-![implementation-without-module.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/implementation-without-module.png){height="" width=""}
+![implementation-without-module.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/implementation-without-module.png) 
 
 Implementation without a separate module can be used when the resource being queried contains a unique identifier to directly map the related resource. In the example of wishlist items and products, each item contains the SKU of the product it relates to. Thus, relationships between these resources can be implemented without a relationship module, using product SKU as a unique identifier.
 

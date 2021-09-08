@@ -22,7 +22,7 @@ With a **hard threshold** applied, a buyer cannot proceed with checkout and plac
 This means that a buyer will need to add more products to the cart to meet the required minimum value.
 **Example:**
 If you set the hard threshold to be 400€, the buyer's cart grand total should not be less than that value. Otherwise:
-    ![Hard Threshold)](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/Hard+Threshold.gif){height="" width=""}
+    ![Hard Threshold)](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/Hard+Threshold.gif) 
 
 A soft threshold allows a customer to proceed to checkout but displays a flash warning message and, if selected, adds an additional fee to the order sum as a penalty that the customer will need to pay.
 
@@ -32,11 +32,11 @@ A **soft threshold** can be of the following types:
 * Soft Threshold with flexible fee
 
 * **Soft Threshold with message**. No additional fees are applied. This just informs the user that a minimum order value exists.
-    ![Soft Threshold with a message](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-message.gif){height="" width=""}
+    ![Soft Threshold with a message](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-message.gif) 
 * **Soft Threshold with fixed fee**. You can define an additional fixed fee in money equivalent (e.g. 30€) to be paid by a buyer in case the minimum order value is not met.
-    ![Soft Threshold with a fixed fee](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-fixed-fee.gif){height="" width=""}
+    ![Soft Threshold with a fixed fee](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-fixed-fee.gif) 
 * **Soft Threshold with flexible fee**. You can define an additional flexible fee in percentages (e.g. 10%) to be paid by a buyer in case the minimum order value is not met. That 10 % is recalculated based on the cart subtotal.  
-    ![Soft Threshold with a flexible fee](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-flexible-fee.gif){height="" width=""} 
+    ![Soft Threshold with a flexible fee](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Threshold/Threshold:+Reference+Information/soft-threshold-with-flexible-fee.gif)  
 
 ## Merchant Relationships Thresholds Unique Feature (B2B)
 The merchant thresholds are applied only to the products with special (merchant) prices.

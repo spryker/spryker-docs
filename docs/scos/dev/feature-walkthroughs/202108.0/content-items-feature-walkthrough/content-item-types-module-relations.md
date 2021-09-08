@@ -33,7 +33,7 @@ The scheme below shows the module relations of the content item data importers:
 See [Data Importers Overview and Implementation](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importers-overview-and-implementation.html) for more details.
 ***
 ## Abstract Product List
-Abstract product list content item is a content piece that consists of text and [abstract products](/docs/scos/dev/features/{{page.version}}/product/product-feature-overview/products-overview.html). A content manager selects existing abstract products when [creating the content item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html#content-item--abstract-product-list) in the Back Office > **Content Management** > **Content Items**.
+Abstract product list content item is a content piece that consists of text and [abstract products](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html). A content manager selects existing abstract products when [creating the content item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html#content-item--abstract-product-list) in the Back Office > **Content Management** > **Content Items**.
 The scheme below shows the module relations of the Abstract product list content item and its components:
 * data importer
 * API
@@ -50,7 +50,7 @@ A developer can fetch the information on each abstract product included into a c
 
 ***
 ## Product Set
-Product set content item is a content piece that consists of text and a [product set](/docs/scos/dev/features/{{page.version}}/product-sets/product-sets.html). A content manager selects an existing product set when [creating the content item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html#content-item--product-set) in the Back Office > **Content Management** > **Content Items**.
+Product set content item is a content piece that consists of text and a [product set](/docs/scos/user/features/{{page.version}}/product-sets/product-sets.html). A content manager selects an existing product set when [creating the content item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html#content-item--product-set) in the Back Office > **Content Management** > **Content Items**.
 The scheme below shows the module relations of the Product set content item and its importer:
 ![Product Set content item module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/product-set-module-relations.png)
 
@@ -68,7 +68,7 @@ The scheme below shows the module relations of the File list content item:
 
 ## Navigation
 
-Navigation content item is a content piece that consists of a [navigation element](/docs/scos/dev/features/{{page.version}}/content-items/content-item-types-module-relations.html). A content manager selects a navigation element when [creating the Navigation content item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html#create-a-navigation-content-item) in the Back Office.
+Navigation content item is a content piece that consists of a [navigation element](/docs/scos/user/features/{{page.version}}/content-items/content-item-types-module-relations.html). A content manager selects a navigation element when [creating the Navigation content item](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/creating-content-items.html#create-a-navigation-content-item) in the Back Office.
 
 
 The scheme shows the module relations of the Navigation content item:

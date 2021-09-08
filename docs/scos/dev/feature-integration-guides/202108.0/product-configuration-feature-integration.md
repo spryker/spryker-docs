@@ -16,7 +16,7 @@ This is the Beta version of the feature and is therefore subject to changes.
 
 {% endinfo_block %}
 
-This document describes how to integrate the [Product Configuration](/docs/scos/dev/features/{{page.version}}/configurable-product/configurable-product-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Product Configuration](/docs/scos/user/features/{{page.version}}/configurable-product/configurable-product-feature-overview.html) feature into a Spryker project.
 
 
 ## Install feature core

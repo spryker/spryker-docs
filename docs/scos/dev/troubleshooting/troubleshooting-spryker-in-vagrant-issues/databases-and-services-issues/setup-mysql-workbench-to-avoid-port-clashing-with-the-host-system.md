@@ -15,7 +15,7 @@ redirect_from:
 We recommend setting up TCP/IP over SSH for MySQL to avoid port clashing with the host system. For current connection values have a look at `config/Shared/config_default-development_DE.php`. Use `$HOME/.vagrant.d/insecure_private_key` as SSH Key File.
 
 MySQL:
-![Workbench vagrant setup](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Troubleshooting/msql-workbench-vagrant-setup.png){height="" width=""}
+![Workbench vagrant setup](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Troubleshooting/msql-workbench-vagrant-setup.png) 
 
 In case the connection fails, run the following command :
 

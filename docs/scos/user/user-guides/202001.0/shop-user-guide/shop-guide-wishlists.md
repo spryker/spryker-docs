@@ -32,7 +32,7 @@ The feature is available only for **logged-in** users.
 
 **To create a wishlist**, on the **Wishlist** page, enter a name of the wishlist you want to create and click **Add new wishlist** to keep the changes.
 
-![Creating a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Wishlists/create-wishlist.png){height="" width=""}
+![Creating a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Wishlists/create-wishlist.png) 
 
 **Tips & Tricks**
 
@@ -44,11 +44,11 @@ You can also create a wishlist from the product detail page when adding a produc
 1. Click **Edit** for the wishlist and change the name.
 2. To keep the changes, click **Save**.
 
-![Editing a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Wishlists/edit-wishlist-name.png){height="" width=""}
+![Editing a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Wishlists/edit-wishlist-name.png) 
 
 **To remove the wishlist**, click **Delete**. Once done, the message confirming that the wishlist has been removed from your **Customer Account** will pop-up.
 
-![Removing a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Wishlists/wishlists-page.png){height="" width=""}
+![Removing a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Wishlists/wishlists-page.png) 
 
 **To view the wishlist details**, select the wishlist you want to view. This will open the **[Wishlist name]** page where you can do the following:
 
@@ -60,7 +60,7 @@ You can also create a wishlist from the product detail page when adding a produc
 
 * Navigate to the product detail page. For more information on how to manage the products on the page, see *Shop Guide - Managing Products*. <!-- add a link once published https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1165492794/Under+PO+Review+Shop+Guide+-+Managing+Products#Adding-a-Product-to-Wishlist -->
 
-![Viewing a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Wishlists/view-wishlists.png){height="" width=""}
+![Viewing a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Wishlists/view-wishlists.png) 
 ***
 **What’s next?**
 

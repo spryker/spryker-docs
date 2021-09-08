@@ -17,13 +17,13 @@ The article describes how you can get information about your customer activity a
 <details open>
 <summary>B2B Shop</summary>
 
-![b2b-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Overview/b2b-overview.png){height="" width=""}
+![b2b-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Overview/b2b-overview.png) 
 </details>
 
 <details open>
 <summary>B2C Shop</summary>
 
-![b2c-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Overview/b2c-overview.png){height="" width=""}
+![b2c-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Customer+Account/Overview/b2c-overview.png) 
 </details>
 
 ***

@@ -398,7 +398,7 @@ DummyPayment Order State Machine Example:
 </statemachine>
 ```
 
-![Dummy payment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/dummy-payment.svg){height="" width=""}
+![Dummy payment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/dummy-payment.svg) 
 
 **config/Zed/oms/GiftCardSubprocess/CreateGiftCard01.xml**
 
@@ -481,7 +481,7 @@ DummyPayment Order State Machine Example:
 </statemachine>
 ```
 
-![Nopayment ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/nopayment.svg){height="" width=""}
+![Nopayment ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/nopayment.svg) 
 
 #### Prepare Order State Machines - Gift Card Usage Process
 
@@ -567,7 +567,7 @@ NoPayment Order State Machine Example:
 </statemachine>
 ```
 
-![Nopayment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/nopayment.svg){height="" width=""}
+![Nopayment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/nopayment.svg) 
 
 #### Gift Card Purchase Process
 {% info_block infoBox "Info" %}

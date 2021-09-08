@@ -14,12 +14,12 @@ Company Account Overview page allows your shop owner to manage the company in th
 
 To open the Company Account page, go to the header of the shop application → Name of your company → Overview.
 
-![Company account header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/company-account-header.png){height="" width=""}
+![Company account header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/company-account-header.png) 
 
 
 ## Graphic User Interface
 
-![Company Account GUI](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/company-account-gui.png){height="" width=""}
+![Company Account GUI](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/company-account-gui.png) 
 
 The *Company Overview* page consists of the following elements:
 
@@ -33,7 +33,7 @@ The *Company Overview* page consists of the following elements:
 
 To create a Company in the web-shop, go to `/company/register` and register a company.
 
-![Register a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/register-company.png){height="" width=""}
+![Register a company](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Account/register-company.png) 
 
 Fill in the required (*) fields to complete the registration.
 

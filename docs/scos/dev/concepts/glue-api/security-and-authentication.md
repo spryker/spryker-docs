@@ -28,7 +28,7 @@ Access tokens issued by the API have a limited lifetime. When a token is issued,
 If an invalid or expired token is passed when accessing a protected resource, or no token is passed at all, the API will respond with a 401 Unauthorized response code. This response code will also be issued if a user is not authorized to access that particular resource. The response body will contain a detailed error message. It is, therefore, the client's responsibility to handle the 401 response code and error messages correctly.
 
 Authentication workflow:
-![authentication-workflow.PNG](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Security+and+Authentication/authentication-workflow.png){height="" width=""}
+![authentication-workflow.PNG](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Security+and+Authentication/authentication-workflow.png) 
 
 ## Modules
 Authentication and authorization are provided by the following modules:

@@ -16,7 +16,7 @@ To create a new RFQ:
 
 1. Open the **Shopping Cart** page.
 2. Click **Request a Quote**.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Creating+a+Request+for+Quote/create-rfq.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Creating+a+Request+for+Quote/create-rfq.png) 
 
 3. Optional: On the **Create Quote Request** page populate the fields:
 - Enter a PURCHASE ORDER NUMBER

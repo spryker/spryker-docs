@@ -107,7 +107,7 @@ To trigger the return states:
 1. On the *Returns* page, click **View** in the *Actions* column. This takes you to the *Return Overview [Return Reference]* page.
 
 2. In the *Trigger all matching state* section, click the necessary state. The return state changes, and the new states that you can trigger appear.
-![Trigger states](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Returns/trigger-status.png){height="" width=""}
+![Trigger states](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Returns/trigger-status.png) 
  
 {% info_block infoBox "Info" %}
 

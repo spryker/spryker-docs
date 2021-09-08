@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Merchant Custom Prices_ feature allows a merchant to define custom prices for B2B customers.
 
 
-To learn more about the feature and to find out how end users use it, see [Merchant Custom Prices feature overview](/docs/scos/dev/features/{{page.version}}/merchant-custom-prices-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Merchant Custom Prices feature overview](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) for business users.
 
 
 ## Related Developer articles

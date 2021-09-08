@@ -25,7 +25,7 @@ You can manage order shipments by:
 To create a new shipment for the order:
 1. Scroll down to the *Order Items* section and click **Create Shipment**.
 
-![Create shipment button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Order+Shipments/create-shipment-btn.png){height="" width=""}
+![Create shipment button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Order+Shipments/create-shipment-btn.png) 
 
 2. On the **New Shipment for Order** page, populate the required fields marked with *.
 3. In the *Order items inside this shipment* section, select the order items you want to be delivered in this shipment. 

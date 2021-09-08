@@ -29,4 +29,4 @@ The simply only delegates the calls to internal business models. Similar to a re
 Spryker’s facades are an implementation of the [Facade pattern](https://en.wikipedia.org/wiki/Facade_pattern).
 
 In Spryker, the facades are the entry point into Zed’s business layer. All the other models are behind the facade and must not be accessed directly.
-![Facade](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/Facade/facade-as-internal-api.png){height="" width=""}
+![Facade](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/Facade/facade-as-internal-api.png) 

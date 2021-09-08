@@ -14,7 +14,7 @@ The company accounts can be set up either in the Storefront by the company repre
 
 | Online Store | Back Office |
 | --- | --- |
-| ![Online store](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/online-store-company-account.png){height="" width=""} | ![Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/back-office-company-account.png){height="" width=""} |
+| ![Online store](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/online-store-company-account.png)  | ![Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/back-office-company-account.png)  |
 
 The Company Account section consists of the sections that are logically connected to each other. So the setup flow looks the following:
 * **Companies** - create a company record

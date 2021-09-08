@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Configurable Bundle_ feature allows creating a configurable list of items.
 
 
-To learn more about the feature and to find out how end users use it, see [Configurable Bundle feature overview](/docs/scos/dev/features/{{page.version}}/configurable-bundle-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Configurable Bundle feature overview](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) for business users.
 
 
 ## Entity diagram

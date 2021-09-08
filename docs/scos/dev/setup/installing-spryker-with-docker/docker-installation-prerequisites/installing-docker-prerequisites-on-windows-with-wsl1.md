@@ -65,10 +65,10 @@ To enable WSL1:
 
 1. Open **Windows Control Panel** > **Programs** > **Programs and Features**.
 2. Select the **Turn Windows features on or off**  hyperlink.
-![step 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/w-features-on-off.png){height="" width=""}
+![step 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/w-features-on-off.png) 
 
 3. Select **Windows Subsystem for Linux** and select **OK**.
-![step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/windows-subsystem.png){height="" width=""}
+![step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/windows-subsystem.png) 
 
 ### Install and update Ubuntu
 
@@ -77,7 +77,7 @@ Install Ubuntu:
 1. Open Microsoft Store.
 2. In the Search filed, enter *Ubuntu* and press *Enter*.
 3. From the search results page, select **Ubuntu 18.04 LTS** and install it.
-![Ubuntu step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/ubuntu-in-store.png){height="" width=""}
+![Ubuntu step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/ubuntu-in-store.png) 
 
 Update Ubuntu:
 

@@ -18,7 +18,7 @@ On the page, you can see all the payment methods available in the shop applicati
 * Payment method status
 * Stores in which the payment method is available
 
-![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Payment+Management/Payment+Methods/References/Payments%3A+Reference+Information/payment-methods-page.png){height="" width=""}
+![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Payment+Management/Payment+Methods/References/Payments%3A+Reference+Information/payment-methods-page.png) 
 
 On the page, you can do the following:
 

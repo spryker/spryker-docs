@@ -107,7 +107,6 @@ class AclConfig extends SprykerAclConfig
     protected function addMerchantPortalInstallerRules(array $installerRules): array
     {
         $bundleNames = [
-             // ...
             'user-merchant-portal-gui',
         ];
 
@@ -144,7 +143,6 @@ class MerchantUserConfig extends SprykerMerchantUserConfig
     protected function getAllowedBundlesAclRules(): array
     {
         $bundleNames = [
-            // ...
             'user-merchant-portal-gui',
         ];
 

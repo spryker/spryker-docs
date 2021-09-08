@@ -478,8 +478,8 @@ Grant only default CRUD (INSERT, DELETE, UPDATE, SELECT) operations. DO NOT gran
 The following code snippet example is for MySQL:
 
 ```mysql
-CREATE USER 'merchnatportal'@'localhost' IDENTIFIED BY '{your_merchnatportal_password}'; // YOU MUST CHANGE THE PASSWORD.
-GRANT SELECT, INSERT, UPDATE, DELETE ON your_app_schema.* TO 'merchnatportal'@'localhost';
+CREATE USER 'merchantportal'@'localhost' IDENTIFIED BY '{your_merchantportal_password}'; // YOU MUST CHANGE THE PASSWORD.
+GRANT SELECT, INSERT, UPDATE, DELETE ON your_app_schema.* TO 'merchantportal'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
@@ -487,7 +487,7 @@ FLUSH PRIVILEGES;
 
 Example of an Nginx configuration:
 
-**/etc/nginx/merchnat-portal.conf**
+**/etc/nginx/merchant-portal.conf**
 
 ```nginx
 server {
@@ -514,8 +514,8 @@ server {
         fastcgi_param SCRIPT_FILENAME  $document_root/index.php;
 
         # Credentials of the newly created DB user.
-        fastcgi_param SPRYKER_DB_USERNAME merchnatportal;
-        fastcgi_param SPRYKER_DB_PASSWORD '{your_merchnatportal_password}';
+        fastcgi_param SPRYKER_DB_USERNAME merchantportal;
+        fastcgi_param SPRYKER_DB_PASSWORD '{your_merchantportal_password}';
 
 
         more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';

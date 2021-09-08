@@ -10,46 +10,71 @@ entries:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
 
-          - title: Installation
-            url: /docs/marketplace/dev/setup/installation.html
-
-          - title: Post-installation steps
-            url: /docs/marketplace/dev/setup/post-installation-steps.html
-
       - title: Feature walkthroughs
         nested:
           - title: Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/merchant.html
 
-          - title: Marketplace Merchant
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant.html
+          - title: Marketplace Merchant feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
 
-          - title: Merchant Category
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category.html
+          - title: Merchant Category feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-category-feature-walkthrough.html
 
-          - title: Merchant Opening Hours
-            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours.html
+          - title: Merchant Opening Hours feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
 
-          - title: Marketplace Product Offer
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/marketplace-product-offer.html
+          - title: Marketplace Product feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
+
+          - title: Marketplace Product Offer feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
             nested:
-              - title: Rendering merchant product offers on the Storefront
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/rendering-merchant-product-offers-on-the-storefront.html
 
               - title: Product Offer in the Back Office
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-in-the-back-office.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-in-the-back-office.html
+
+              - title: Rendering merchant product offers on the Storefront
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/rendering-merchant-product-offers-on-the-storefront.html
 
               - title: Product Offer storage
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-storage.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-storage.html
 
               - title: Product Offer store relation
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-store-relation.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-store-relation.html
 
               - title: Product Offer validity dates
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer/product-offer-validity-dates.html
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html
 
-          - title: Marketplace Order Management
-            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management.html
+          - title: Marketplace Merchant Portal Product Offer Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
+
+          - title: Marketplace Product Offer Prices feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
+
+          - title: Marketplace Inventory Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
+          
+          - title: Marketplace Order Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough.html
+
+          - title: Marketplace Return Management feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
+
+          - title: Marketplace Shipment feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shipment-feature-walkthrough.html
+
+          - title: Marketplace Promotions and Discounts feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html
+
+          - title: Marketplace Product Options feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
+
+          - title: Marketplace Cart Notes feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-cart-notes-feature-walkthrough.html
+
+          - title: Marketplace Wishlist feature walkthrough
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
 
       - title: Feature integration guides
         nested:
@@ -140,8 +165,8 @@ entries:
           - title: Merchant Portal - Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
 
-          - title: Merchant Portal - Marketplace Product Offer feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-offer-feature-integration.html
+          - title: Marketplace Merchant Portal Product Offer Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html
 
           - title: Merchant Portal - Marketplace Product + Tax feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html
@@ -178,8 +203,8 @@ entries:
               - title: "Glue API: Merchant Opening Hours feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
 
-              - title: "Glue API: Offer Volume Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/offer-volume-prices.html
+              - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/glue-api-marketplace-product-offer-volume-prices.html
 
               - title: "Glue API: Marketplace Product Offer + Cart feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
@@ -193,17 +218,14 @@ entries:
             - title:  Retrieving abstract products
               url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html
 
-            - title:  Retrieving abstract product lists
-              url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-product-lists.html
-
           - title: Concrete products
             nested:
 
             - title:  Retrieving concrete products
               url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
 
-            - title:  Retrieving product offers for a concrete product
-              url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-for-a-concrete-product.html
+            - title:  Retrieving product offers of concrete products
+              url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-of-concrete-products.html
 
           - title: Сarts of registered users
             nested:
@@ -214,6 +236,12 @@ entries:
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 
+          - title: Content items
+            nested:
+
+            - title:  Retrieving abstract products in abstract product lists
+              url: /docs/marketplace/dev/glue-api-guides/content-items/retrieving-abstract-products-in-abstract-product-lists.html
+
           - title: Guest carts
             nested:
 
@@ -222,18 +250,42 @@ entries:
 
             - title:  Managing items in carts of registered users
               url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
-          
+
+          - title: Merchants
+            nested:
+
+            - title:  Retrieving merchants
+              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html
+
+            - title:  Retrieving merchant addresses
+              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html
+
+            - title:  Retrieving merchant opening hours
+              url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-opening-hours.html
+
+          - title: Product offers
+            nested:
+
+            - title: Retrieving product offers
+              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html
+
+            - title: Retrieving product offer availability
+              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-availability.html
+
+            - title: Retrieving product offer prices
+              url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-prices.html
+
           - title: Wishlists
-            nested: 
+            nested:
 
             - title: Managing wishlists
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
-            
+
             - title: Managing wishlist items
               url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 
-          - title: Catalog search
-            url: /docs/marketplace/dev/glue-api-guides/catalog-search.html
+          - title: Searching the product catalog
+            url: /docs/marketplace/dev/glue-api-guides/searching-the-product-catalog.html
 
           - title: Managing the returns
             url: /docs/marketplace/dev/glue-api-guides/managing-the-returns.html
@@ -244,20 +296,8 @@ entries:
           - title: Retrieving Marketplace orders
             url: /docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html
 
-          - title: Retrieving merchant information
-            url: /docs/marketplace/dev/glue-api-guides/retrieving-merchant-information.html
-
-          - title: Retrieving product offers
-            url: /docs/marketplace/dev/glue-api-guides/retrieving-product-offers.html
-
-          - title: Retrieving suggestions for auto-completion and search
-            url: /docs/marketplace/dev/glue-api-guides/retrieving-suggestions-for-auto-completion-and-search.html
-
-
-      - title: HowTos
-        nested:
-          - title: HowTos sample page
-            url: /docs/marketplace/dev/howtos/howtos-sample-page.html
+          - title: Retrieving autocomplete and search suggestions
+            url: /docs/marketplace/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
 
       - title: Data export
         nested:
@@ -326,8 +366,8 @@ entries:
       - title: Front-end
         nested:
 
-        - title: "Setting up the project"
-          url: /docs/marketplace/dev/front-end/setting-up-the-project.html
+        - title: "Setting up the Merchant portal"
+          url: /docs/marketplace/dev/front-end/setting-up-the-merchant-portal.html
 
         - title: "Building the project"
           url: /docs/marketplace/dev/front-end/building-the-project.html
@@ -347,9 +387,6 @@ entries:
 
             - title: "Table Column Type extension"
               url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension.html
-
-            - title: "Table Actions extension"
-              url: /docs/marketplace/dev/front-end/table-design/table-actions-extension.html
 
             - title: "Table Feature extension"
               url: /docs/marketplace/dev/front-end/table-design/table-feature-extension.html
@@ -397,17 +434,14 @@ entries:
             - title: "Persistence"
               url: /docs/marketplace/dev/front-end/ui-components-library/persistence.html
 
-        - title: "How-To: Create a new module with application"
-          url: /docs/marketplace/dev/front-end/how-to-create-a-new-module-with-application.html
-
         - title: "Angular Services"
           url: /docs/marketplace/dev/front-end/angular-services.html
 
         - title: "Angular Components"
           url: /docs/marketplace/dev/front-end/angular-components.html
 
-      - title: Back-end
+      - title: HowTos
         nested:
 
-          - title: "Marketplace infrastructure setup"
-            url: /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
+          - title: "How-To: Create a new module with application"
+            url: /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html

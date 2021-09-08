@@ -42,6 +42,7 @@ Make sure that the following modules have been installed:
 | MerchantUser | vendor/spryker/merchant-user |
 | MerchantUserGui |	vendor/spryker/merchant-user-gui |
 | MerchantStorage | vendor/spryker/merchant-storage |
+| MerchantWidget | vendor/spryker-shop/merchant-widget |
 
 {% endinfo_block %}
 
@@ -1081,13 +1082,17 @@ composer require spryker-feature/marketplace-merchant: "{{page.version}}" --upda
 | MerchantProfileWidget | vendor/spryker-shop/merchant-profile-widget |
 | MerchantPage | vendor/spryker-shop/merchant-page |
 
-### 2) Add Yves translations
+### 2) Add translations
+
 Add Yves translations:
 
 1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
+
 ```
+merchant.sold_by,Sold by,en_US
+merchant.sold_by,Verkauft durch,de_DE
 merchant_profile.email,Email Address,en_US
 merchant_profile.email,Email,de_DE
 merchant_profile.address,Address,en_US

@@ -39,37 +39,11 @@ Make sure the following modules have been installed:
 |-|-|
 | MerchantProductOfferWishlist | vendor/spryker/merchant-product-offer-wishlist |
 | MerchantProductWishlist | vendor/spryker/merchant-product-offer-wishlist |
-| MerchantWidget | vendor/spryker-shop/merchant-widget |
-| WishlistPageExtension | vendor/spryker-shop/wishlist-page-extension |
 
 {% endinfo_block %}
 
-### 2) Add Yves translations
-Add Yves translations:
 
-1. Append glossary according to your configuration:
-
-**data/import/common/common/glossary.csv**
-```
-merchant.sold_by,Sold by,en_US
-merchant.sold_by,Verkauft durch,de_DE
-merchant_switcher.message.product_is_not_available,"Product %product_name% (SKU %sku%) is not available from the selected merchant. Please remove it in order to proceed or switch the merchant.",en_US
-merchant_switcher.message.product_is_not_available,"Produkt %product_name% (SKU %sku%) ist beim ausgewählten Händler nicht erhältlich. Bitte diesen Artikel entfernen, um fortzufahren oder den Händler zu wechseln.",de_DE
-```
-
-2. Import data:
-
-```bash
-console data:import glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
-
-{% endinfo_block %}
-
-### 3) Set up database schema and transfer objects
+### 2) Set up database schema and transfer objects
 
 Generate transfer changes:
 
@@ -116,7 +90,7 @@ Make sure  the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
 
-### 4) Set up behavior
+### 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -279,7 +253,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
-            // ...
             SoldByMerchantWidget::class,
         ];
     }

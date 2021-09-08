@@ -1,6 +1,6 @@
 ---
 title: Marketplace Order Management feature integration
-last_updated: Jun 25, 2021
+last_updated: Sep 07, 2021
 description: This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -17,10 +17,10 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|
-| Spryker Core | 202001.0 | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Order Management | 202001.0 | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
-| Shipment | 202001.0 | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
-| State Machine | 202001.0 | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Order Management | {{page.version}} | [Order Management feature integration](https://documentation.spryker.com/docs/order-management-feature-integration) |
+| Shipment | {{page.version}} | [Shipment feature integration](https://documentation.spryker.com/docs/shipment-feature-integration) |
+| State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install required modules using Сomposer
@@ -28,7 +28,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-order-management --update-with-dependencies
+composer require spryker-feature/marketplace-order-management:"dev-master" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -37,19 +37,19 @@ Make sure that the following modules have been installed:
 
 | MODULE  | EXPECTED DIRECTORY |
 | -------- | ------------------- |
-| MerchantOms | spryker/merchant-oms |
-| MerchantOmsDataImport | spryker/merchant-oms-data-import |
-| MerchantOmsGui | spryker/merchant-oms-gui |
-| MerchantSalesOrder | spryker/merchant-sales-order |
-| MerchantSalesOrderMerchantUserGui | spryker/merchant-sales-order-merchant-user-gui |
-| MerchantSalesOrderDataExport | spryker/merchant-sales-order-data-export |
-| ProductOfferSales | spryker/product-offer-sales |
+| MerchantOms | vendor/spryker/merchant-oms |
+| MerchantOmsDataImport | vendor/spryker/merchant-oms-data-import |
+| MerchantOmsGui | vendor/spryker/merchant-oms-gui |
+| MerchantSalesOrder | vendor/spryker/merchant-sales-order |
+| MerchantSalesOrderMerchantUserGui | vendor/spryker/merchant-sales-order-merchant-user-gui |
+| MerchantSalesOrderDataExport | vendor/spryker/merchant-sales-order-data-export |
+| ProductOfferSales | vendor/spryker/product-offer-sales |
+| OmsProductOfferReservation | vendor/spryker/oms-product-offer-reservation |
+| ProductOfferReservationGui | vendor/spryker/product-offer-reservation-gui |
 
 {% endinfo_block %}
 
 ### 2) Set up configuration
-
-<!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
 
 Add the following configuration:
 
@@ -339,8 +339,8 @@ Add the following configuration:
 
 </details>
 
-
 ### 3) Set up database schema and transfer objects
+
 Apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -362,6 +362,7 @@ Check your database to make sure that the following changes have been applied:
 |spy_merchant_sales_order_totals | table |created |
 |spy_sales_expense.merchant_reference | column |created |
 |spy_sales_order_item.merchant_reference | column |created  |
+|spy_oms_product_offer_reservation | table |created  |
 
 {% endinfo_block %}
 
@@ -371,12 +372,14 @@ Make sure that the following changes have been triggered in transfer objects:
 
 | TRANSFER | TYPE | EVENT  | PATH  |
 | --------- | ------- | ----- | ------------- |
-| MerchantOrderCriteria.idMerchant | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.idMerchant | property | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
 | DataImporterConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer |
-| StateMachineItem.stateName | attribute | created | src/Generated/Shared/Transfer/StateMachineItemTransfer |
-| Merchant.merchantReference | attribute | created | src/Generated/Shared/Transfer/MerchantTransfer |
-| MerchantOrderItem.idMerchantOrderItem | attribute | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
-| Item.productOfferReference | attribute | created| src/Generated/Shared/Transfer/ItemTransfer |
+| StateMachineItem.stateName | property | created | src/Generated/Shared/Transfer/StateMachineItemTransfer |
+| Merchant.merchantReference | property | created | src/Generated/Shared/Transfer/MerchantTransfer |
+| MerchantOrderItem.idMerchantOrderItem | property | created | src/Generated/Shared/Transfer/MerchantOrderItemTransfer |
+| Item.productOfferReference | property | created| src/Generated/Shared/Transfer/ItemTransfer |
+| OmsProductOfferReservationCriteria | class | created| src/Generated/Shared/Transfer/OmsProductOfferReservationCriteriaTransfer |
+| OmsProductOfferReservation | class | created| src/Generated/Shared/Transfer/OmsProductOfferReservationTransfer |
 
 {% endinfo_block %}
 
@@ -861,3 +864,4 @@ Integrate the following related features:
 | --- | --- | --- |
 | Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
 | Marketplace Order Management + Cart |  | [Marketplace Order Management + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-cart-feature-integration.html)|
+| Marketplace Inventory Management + Marketplace Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-marketplace-order-management-feature-integration.html)  |

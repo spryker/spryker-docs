@@ -81,8 +81,8 @@ entries:
           - title: Marketplace Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
 
-          - title: Marketplace Inventory Management + Order Management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-order-management-feature-integration.html
+          - title: Marketplace Inventory Management + Marketplace Order Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-marketplace-order-management-feature-integration.html
 
           - title: Marketplace Inventory Management + Packaging Units feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-packaging-units-feature-integration.html

@@ -14,7 +14,7 @@ To start feature integration, overview and install all these necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application feature integration](https://documentation.spryker.com/v6/docs/glue-application-feature-integration-201907) |
+| Spryker Core | 201907.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html) |
 
 
 ## 1) Install the required modules using Composer
@@ -33,7 +33,7 @@ composer require spryker/orders-rest-api:"^4.3.0" --update-with-dependencies
 | `OrdersRestApi` | `vendor/spryker/orders-rest-api` |
 
 {% endinfo_block %}
-   
+
 
 ## 2) Set Up Transfer Objects
 Run the following command to generate the transfer changes:
@@ -82,10 +82,10 @@ Activate the following plugins:
 
 <details open>
 <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
 
 use Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig;
@@ -118,7 +118,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CheckoutRestApiConfig::RESOURCE_CHECKOUT,
             new OrderRelationshipByOrderReferencePlugin()
         );
-		
+
 		return $resourceRelationshipCollection;
 	}
 }
@@ -130,7 +130,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that the following endpoints are available: 
+To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that the following endpoints are available:
 
 * http://glue.mysprykershop.com/orders
 * http://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_reference{% raw %}}}{% endraw %}

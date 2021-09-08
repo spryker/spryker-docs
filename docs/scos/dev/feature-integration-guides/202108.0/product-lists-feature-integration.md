@@ -797,5 +797,5 @@ Make sure that no restricted products can be added to a cart and if they were al
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}
-After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user who browses the catalog gets product lists assigned, and this can be fulfilled by providing owners for product lists.</br>Check out our [Merchant Relationship Product Restrictions integration guide](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/merchant-product-restrictions-feature-integration.html
+After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user who browses the catalog gets product lists assigned, and this can be fulfilled by providing owners for product lists.</br>Check out our [Merchant Relationship Product Restrictions integration guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html
 {% endinfo_block %} that adds this functionality for merchant relationships.)

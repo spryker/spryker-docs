@@ -36,19 +36,19 @@ composer require spryker-feature/category-management:"^dev-master" --update-with
 
 Make sure that the following modules have been installed:
 
-|MODULE | EXPECTED DIRECTORY | 
-|--- | --- | 
-| Category | vendor/spryker/category | 
-| CategoryDataFeed | vendor/spryker/category-data-feed | 
-| CategoryDataImport | vendor/spryker/category-data-import | 
+|MODULE | EXPECTED DIRECTORY |
+|--- | --- |
+| Category | vendor/spryker/category |
+| CategoryDataFeed | vendor/spryker/category-data-feed |
+| CategoryDataImport | vendor/spryker/category-data-import |
 | CategoryExporter | vendor/spryker/category-exporter |
-| CategoryGui | vendor/spryker/category-gui | 
-| CategoryPageSearch | vendor/spryker/category-page-search | 
-| CategoryStorage | vendor/spryker/category-storage | 
-| CategoryGuiExtension | vendor/spryker/category-gui-extension | 
-| CategoryImage | vendor/spryker/category-image | 
-| CategoryImageGui | vendor/spryker/category-image-gui | 
-| CategoryImageStorage | vendor/spryker/category-image-storage | 
+| CategoryGui | vendor/spryker/category-gui |
+| CategoryPageSearch | vendor/spryker/category-page-search |
+| CategoryStorage | vendor/spryker/category-storage |
+| CategoryGuiExtension | vendor/spryker/category-gui-extension |
+| CategoryImage | vendor/spryker/category-image |
+| CategoryImageGui | vendor/spryker/category-image-gui |
+| CategoryImageStorage | vendor/spryker/category-image-storage |
 | CategoryExtension | vendor/spryker/category-extension|
 
 {% endinfo_block %}
@@ -58,7 +58,7 @@ Set up the following configuration:
 
 <details open>
     <summary>src/Pyz/Zed/CategoryImageStorage/CategoryImageStorageConfig.php</summary>
-    
+
 ```php
 <?php
 
@@ -92,7 +92,7 @@ class CategoryImageStorageConfig extends SprykerCategoryImageStorageConfig
 
 <details open>
     <summary>src/Pyz/Zed/CategoryPageSearch/CategoryPageSearchConfig.php</summary>
-    
+
 ```php
 <?php
 
@@ -125,7 +125,7 @@ class CategoryPageSearchConfig extends SprykerCategoryPageSearchConfig
 
 <details open>
     <summary>src/Pyz/Zed/CategoryStorage/CategoryStorageConfig.php</summary>
-    
+
 ```php
 <?php
 
@@ -204,7 +204,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 <details open>
     <summary>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -239,10 +239,10 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 ### 3) Set up database schema and transfer objects 
 
 1.  Adjust the schema definition so that entity changes trigger the events:
-    
+
 <details open>
     <summary>src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category.schema.xml</summary>
-    
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Category\Persistence" package="src.Orm.Zed.Category.Persistence">
@@ -284,7 +284,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 <details open>
     <summary>src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml</summary>
-    
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\CategoryImage\Persistence" package="src.Orm.Zed.CategoryImage.Persistence">
@@ -341,20 +341,20 @@ console transfer:generate
 
 Make sure that the following changes have been applied in the database.
 
-|DATABASE ENTITY | TYPE | EVENT | 
-|--- | --- | --- | 
-|spy_category | table | created | 
-|spy_category_attribute | table | created | 
+|DATABASE ENTITY | TYPE | EVENT |
+|--- | --- | --- |
+|spy_category | table | created |
+|spy_category_attribute | table | created |
 |spy_category_closure_table | table | created |
-|spy_category_node | table | created | 
-|spy_category_store | table | created | 
-|spy_category_template | table | created | 
-|spy_category_node_storage | table | created | 
-|spy_category_node_page_search | table | created | 
-|spy_category_tree_storage | table | created | 
-|spy_category_image_set | table | created | 
-|spy_category_image | table | created | 
-|spy_category_image_set_to_category_image | table | created | 
+|spy_category_node | table | created |
+|spy_category_store | table | created |
+|spy_category_template | table | created |
+|spy_category_node_storage | table | created |
+|spy_category_node_page_search | table | created |
+|spy_category_tree_storage | table | created |
+|spy_category_image_set | table | created |
+|spy_category_image | table | created |
+|spy_category_image_set_to_category_image | table | created |
 |spy_category_image_storage | table | created|
 
 {% endinfo_block %}
@@ -366,24 +366,24 @@ Make sure that propel entities have been generated successfully by checking thei
 {% endinfo_block %}
 4. Change the generated entity classes to extend from the core classes.
 
-|CLASS PATH | EXTENDS | 
-|--- | --- | 
-| src/Orm/Zed/Category/Persistence/Base/SpyCategory.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategory | 
+|CLASS PATH | EXTENDS |
+|--- | --- |
+| src/Orm/Zed/Category/Persistence/Base/SpyCategory.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategory |
 | src/Orm/Zed/Category/Persistence/Base/SpyCategoryAttribute.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategoryAttribute |
-| src/Orm/Zed/Category/Persistence/Base/SpyCategoryClosureTable.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategoryClosureTable | 
-| src/Orm/Zed/Category/Persistence/Base/SpyCategoryNode.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategoryNode | 
-| src/Orm/Zed/Category/Persistence/Base/SpyCategoryStore.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategoryStore | 
-| src/Orm/Zed/Category/Persistence/Base/SpyCategoryTemplate.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategoryTemplate | 
-| src/Orm/Zed/CategoryPageSearch/Persistence/Base/SpyCategoryNodePageSearch.php | Spryker\Zed\CategoryPageSearch\Persistence\Propel\AbstractSpyCategoryNodePageSearch | 
+| src/Orm/Zed/Category/Persistence/Base/SpyCategoryClosureTable.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategoryClosureTable |
+| src/Orm/Zed/Category/Persistence/Base/SpyCategoryNode.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategoryNode |
+| src/Orm/Zed/Category/Persistence/Base/SpyCategoryStore.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategoryStore |
+| src/Orm/Zed/Category/Persistence/Base/SpyCategoryTemplate.php | Spryker\Zed\Category\Persistence\Propel\AbstractSpyCategoryTemplate |
+| src/Orm/Zed/CategoryPageSearch/Persistence/Base/SpyCategoryNodePageSearch.php | Spryker\Zed\CategoryPageSearch\Persistence\Propel\AbstractSpyCategoryNodePageSearch |
 | src/Orm/Zed/CategoryStorage/Persistence/Base/SpyCategoryNodeStorage.php | Spryker\Zed\CategoryStorage\Persistence\Propel\AbstractSpyCategoryNodeStorage |
-| src/Orm/Zed/CategoryStorage/Persistence/Base/SpyCategoryTreeStorage.php | Spryker\Zed\CategoryStorage\Persistence\Propel\AbstractSpyCategoryTreeStorage | 
-| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImage.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImage | 
-| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageQuery.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageQuery | 
-| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSet.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSet | 
+| src/Orm/Zed/CategoryStorage/Persistence/Base/SpyCategoryTreeStorage.php | Spryker\Zed\CategoryStorage\Persistence\Propel\AbstractSpyCategoryTreeStorage |
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImage.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImage |
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageQuery.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageQuery |
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSet.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSet |
 | src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetQuery.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetQuery |
-| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImage.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImage | 
-| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImageQuery.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImageQuery | 
-| src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorage.php | Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorage | 
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImage.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImage |
+| src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImageQuery.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImageQuery |
+| src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorage.php | Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorage |
 | src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorageQuery.php | Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorageQuery|
 
 
@@ -391,32 +391,32 @@ Make sure that propel entities have been generated successfully by checking thei
 
 Make sure that the following changes have been implemented in transfer objects:
 
-|TRANSFER| TYPE| EVENT| PATH| 
-|---| ---| ---| ---| 
-| CategoryCollectionTransfer| class| created| src/Generated/Shared/Transfer/CategoryCollectionTransfer.php| 
-| CategoryCriteriaTransfer| class| created| src/Generated/Shared/Transfer/CategoryCriteriaTransfer.php| 
-| CategoryDataFeedTransfer| class| created| src/Generated/Shared/Transfer/CategoryDataFeedTransfer.php| 
-| CategoryImageSetCollectionStorageTransfer| class| created| src/Generated/Shared/Transfer/CategoryImageSetCollectionStorageTransfer.php| 
-| CategoryImageSetStorageTransfer| class| created| src/Generated/Shared/Transfer/CategoryImageSetStorageTransfer.php| 
-| CategoryImageSetTransfer| class| created| src/Generated/Shared/Transfer/CategoryImageSetTransfer.php| 
-| CategoryImageStorageTransfer| class| created| src/Generated/Shared/Transfer/CategoryImageStorageTransfer.php| 
+|TRANSFER| TYPE| EVENT| PATH|
+|---| ---| ---| ---|
+| CategoryCollectionTransfer| class| created| src/Generated/Shared/Transfer/CategoryCollectionTransfer.php|
+| CategoryCriteriaTransfer| class| created| src/Generated/Shared/Transfer/CategoryCriteriaTransfer.php|
+| CategoryDataFeedTransfer| class| created| src/Generated/Shared/Transfer/CategoryDataFeedTransfer.php|
+| CategoryImageSetCollectionStorageTransfer| class| created| src/Generated/Shared/Transfer/CategoryImageSetCollectionStorageTransfer.php|
+| CategoryImageSetStorageTransfer| class| created| src/Generated/Shared/Transfer/CategoryImageSetStorageTransfer.php|
+| CategoryImageSetTransfer| class| created| src/Generated/Shared/Transfer/CategoryImageSetTransfer.php|
+| CategoryImageStorageTransfer| class| created| src/Generated/Shared/Transfer/CategoryImageStorageTransfer.php|
 | CategoryImageTransfer| class| created| src/Generated/Shared/Transfer/CategoryImageTransfer.php|
-| CategoryLocalizedAttributesTransfer| class| created| src/Generated/Shared/Transfer/CategoryLocalizedAttributesTransfer.php| 
-| CategoryMapTransfer| class| created| src/Generated/Shared/Transfer/CategoryMapTransfer.php| 
+| CategoryLocalizedAttributesTransfer| class| created| src/Generated/Shared/Transfer/CategoryLocalizedAttributesTransfer.php|
+| CategoryMapTransfer| class| created| src/Generated/Shared/Transfer/CategoryMapTransfer.php|
 | CategoryNodeAggregationTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeAggregationTransfer.php|
 | CategoryNodeCriteriaTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeCriteriaTransfer.php|
-| CategoryNodeFilterTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeFilterTransfer.php| 
-| CategoryNodePageSearchTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodePageSearchTransfer.php| 
-| CategoryNodeSearchResultTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeSearchResultTransfer.php| 
-| CategoryNodeStorageTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeStorageTransfer.php| 
-| CategoryNodeUrlCriteriaTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeUrlCriteriaTransfer.php| 
-| CategoryNodeUrlPathCriteriaTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeUrlPathCriteriaTransfer.php| 
-| CategoryResponseTransfer| class| created| src/Generated/Shared/Transfer/CategoryResponseTransfer.php| 
-| CategoryTemplateTransfer| class| created| src/Generated/Shared/Transfer/CategoryTemplateTransfer.php| 
-| CategoryTransfer| class| created| src/Generated/Shared/Transfer/CategoryTransfer.php| 
-| CategoryTreeStorageTransfer| class| created| src/Generated/Shared/Transfer/CategoryTreeStorageTransfer.php| 
-| NodeCollectionTransfer| class| created| src/Generated/Shared/Transfer/NodeCollectionTransfer.php| 
-| NodeTransfer| class| created| src/Generated/Shared/Transfer/NodeTransfer.php| 
+| CategoryNodeFilterTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeFilterTransfer.php|
+| CategoryNodePageSearchTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodePageSearchTransfer.php|
+| CategoryNodeSearchResultTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeSearchResultTransfer.php|
+| CategoryNodeStorageTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeStorageTransfer.php|
+| CategoryNodeUrlCriteriaTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeUrlCriteriaTransfer.php|
+| CategoryNodeUrlPathCriteriaTransfer| class| created| src/Generated/Shared/Transfer/CategoryNodeUrlPathCriteriaTransfer.php|
+| CategoryResponseTransfer| class| created| src/Generated/Shared/Transfer/CategoryResponseTransfer.php|
+| CategoryTemplateTransfer| class| created| src/Generated/Shared/Transfer/CategoryTemplateTransfer.php|
+| CategoryTransfer| class| created| src/Generated/Shared/Transfer/CategoryTransfer.php|
+| CategoryTreeStorageTransfer| class| created| src/Generated/Shared/Transfer/CategoryTreeStorageTransfer.php|
+| NodeCollectionTransfer| class| created| src/Generated/Shared/Transfer/NodeCollectionTransfer.php|
+| NodeTransfer| class| created| src/Generated/Shared/Transfer/NodeTransfer.php|
 | UpdateCategoryStoreRelationRequest| class| created| src/Generated/Shared/Transfer/UpdateCategoryStoreRelationRequest.php|
 
 {% endinfo_block %}
@@ -444,12 +444,12 @@ Add the page map plugin for the *category node* entity.
 **src/Pyz/Zed/Search/SearchDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Search;
- 
+
 use Spryker\Zed\CategoryPageSearch\Communication\Plugin\Search\CategoryNodeDataPageMapBuilder;
 use Spryker\Zed\Search\SearchDependencyProvider as SprykerSearchDependencyProvider;
- 
+
 class SearchDependencyProvider extends SprykerSearchDependencyProvider
 {
     /**
@@ -468,7 +468,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 Configure tables to be published to the `spy_category_image_storage`, `spy_category_node_storage`, `spy_category_tree_storage`, and`spy_category_node_page_search` and synchronized to the Storage on create, edit, and delete changes:
 
 1.  Set up publisher plugins:
-    
+
 
 |PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE|
 |--- | --- | --- | ---|
@@ -499,7 +499,7 @@ Configure tables to be published to the `spy_category_image_storage`, `spy_cate
 
 <details open>
     <summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -543,7 +543,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getCategoryPageSearchPlugins(),
         );
     }
-    
+
     /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
      */
@@ -565,7 +565,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ParentWritePublisherPlugin(),
         ];
     }
-    
+
     /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
      */
@@ -599,19 +599,19 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Event;
- 
+
 use Spryker\Zed\CategoryImageStorage\Communication\Plugin\Event\Subscriber\CategoryImageStorageEventSubscriber;
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
- 
+
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
     public function getEventSubscriberCollection()
     {
         $eventSubscriberCollection = parent::getEventSubscriberCollection();
         $eventSubscriberCollection->add(new CategoryImageStorageEventSubscriber());
- 
+
         return $eventSubscriberCollection;
     }
 }
@@ -619,15 +619,15 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 3. Set up trigger plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE | 
-| --- | --- | --- | --- | 
-| CategoryNodePublisherTriggerPlugin | Retrieves category nodes based on the provided limit and offset. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher | 
-| CategoryTreePublisherTriggerPlugin | Retrieves category trees based on the provided limit and offset. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher | 
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| CategoryNodePublisherTriggerPlugin | Retrieves category nodes based on the provided limit and offset. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher |
+| CategoryTreePublisherTriggerPlugin | Retrieves category trees based on the provided limit and offset. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher |
 | CategoryPagePublisherTriggerPlugin | Retrieves category nodes based on the provided limit and offset. | | Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher|
 
 <details open>
     <summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -667,11 +667,11 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 4. Set up synchronization plugins:
 
-|PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE | 
-|--- | --- | --- | --- | 
-|CategoryNodeSynchronizationDataBulkRepositoryPlugin | Retrieves a category node storage collection based on the provided offset, limit, and IDs. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Synchronization | 
-| CategoryTreeSynchronizationDataBulkRepositoryPlugin | Retrieves a category tree storage collection based on the provided offset, limit, and `categoryTreeStorageId` values. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Synchronization | 
-| CategoryPageSynchronizationDataBulkRepositoryPlugin | Retrieves a collection of synchronization data based on the provided offset, limit, and IDs. | | Spryker\Zed\CategoryPageSearch\Communication\Plugin\Synchronization | 
+|PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--- | --- | --- | --- |
+|CategoryNodeSynchronizationDataBulkRepositoryPlugin | Retrieves a category node storage collection based on the provided offset, limit, and IDs. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Synchronization |
+| CategoryTreeSynchronizationDataBulkRepositoryPlugin | Retrieves a category tree storage collection based on the provided offset, limit, and `categoryTreeStorageId` values. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Synchronization |
+| CategoryPageSynchronizationDataBulkRepositoryPlugin | Retrieves a collection of synchronization data based on the provided offset, limit, and IDs. | | Spryker\Zed\CategoryPageSearch\Communication\Plugin\Synchronization |
 | CategoryImageSynchronizationDataBulkPlugin | Synchronizes all category image entries from the database to Redis. | | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Synchronization|
 
 
@@ -715,15 +715,15 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 Make sure that the `category-node` and `category-tree` trigger plugins work correctly:
 
 1.  Fill the `spy_category` table with some data.
-    
+
 2.  Run the `console publish:trigger-events -r category_node` command.
-    
+
 3.  Run the `console publish:trigger-events -r category_tree` command.
-    
+
 4.  Make sure that the `spy_category_node_storage` and `spy_category_tree_storage` tables have been filled with respective data.
-    
+
 5.  Make sure that, in your system, storage entries are displayed with `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
-    
+
 
 {% endinfo_block %}
 
@@ -732,11 +732,11 @@ Make sure that the `category-node` and `category-tree` trigger plugins work corr
 Make sure that *category-node*, *category-tree* synchronization plugins works correctly:
 
 1.  Fill the `spy_category_node_storage`, `spy_category_tree_storage` tables with some data.
-    
+
 2.  Run the `console sync:data -r category_node` command.
-    
+
 3.  Run the `console sync:data -r category_tree` command.
-    
+
 4.  Check that, in your system, the storage entries are displayed with the `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
 
 {% endinfo_block %}    
@@ -748,14 +748,14 @@ Make sure that when a category is created or edited through ORM, it is exported 
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | ---  | --- | --- |
-| Elasticsearch | CategoryNode | category_node:at:en_us:2 | 
-| Redis | CategoryNode | category_node:de:de_de:5 | 
-| Redis | CategoryTree | category_tree:de:en_us | 
+| Elasticsearch | CategoryNode | category_node:at:en_us:2 |
+| Redis | CategoryNode | category_node:de:de_de:5 |
+| Redis | CategoryTree | category_tree:de:en_us |
 | Redis | CategoryImage| category_image:de_de:15|
 
 <details open>
     <summary>EXAMPLE EXPECTED DATA FRAGMENT: category_node:at:en_us:2</summary>
-    
+
 ```yaml
 {
    "_index": "spryker_at_page",
@@ -799,7 +799,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 
 <details open>
     <summary>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
-    
+
 ```yaml
 {
     "id_category": 5,
@@ -873,7 +873,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 
 <details open>
     <summary>EXAMPLE EXPECTED DATA FRAGMENT: category_tree:de:en_us</summary>
-    
+
 ```yaml
 {
     "category_nodes_storage": [
@@ -925,7 +925,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 
 <details open>
     <summary>EXAMPLE EXPECTED DATA FRAGMENT: category_image:de_de:15</summary>
-    
+
 ```yaml
 {
     "id_category": 15,
@@ -954,7 +954,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 ### 6) Import data
 
 1.  Prepare your data according to your requirements using our demo data:
-    
+
 
 **data/import/common/common/category.csv**
 ```csv
@@ -963,22 +963,22 @@ cameras-and-camcorder,demoshop,Kameras & Camcorders,Cameras & Camcorders,Kameras
 ```
 |COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
 |--- |---| --- | --- | --- |
-| category_key | ✓ | string | cameras-and-camcorder | Sluggable name of the category. | 
-| parent_category_key | | string | demoshop | Sluggable name of the parent category. | 
-| name.de_DE | ✓ | string | Kameras & Camcorders | Human-readable name of the category (de). | 
-| name.en_US | ✓ | string | Cameras & Camcorders | Human-readable name of the category (en). | 
-| meta_title.de_DE | ✓ | string | Kameras & Camcorders | Human-readable title for category (de). | 
-| meta_title.en_US | ✓ | string | Cameras & Camcorders | A Human-readable title for category (en). | 
-| meta_description.de_DE | ✓ | string | Kameras & Camcorders | A Human-readable description for category (de). | 
-| meta_description.en_US | ✓ | string | Cameras & Camcorders | A Human-readable description for category (en). | 
-| meta_keywords.de_DE | ✓ | string | Kameras & Camcorders | A Human-readable keywords for category (de). | 
-| meta_keywords.en_US | ✓ | string | Cameras & Camcorders | A Human-readable keywords for category (en). | 
-| is_active | | bool | 1 | Defines if the category is active. | 
-| is_in_menu ||  bool | 1 | Defines if the category is displayed in the menu on the Storefront. | 
+| category_key | ✓ | string | cameras-and-camcorder | Sluggable name of the category. |
+| parent_category_key | | string | demoshop | Sluggable name of the parent category. |
+| name.de_DE | ✓ | string | Kameras & Camcorders | Human-readable name of the category (de). |
+| name.en_US | ✓ | string | Cameras & Camcorders | Human-readable name of the category (en). |
+| meta_title.de_DE | ✓ | string | Kameras & Camcorders | Human-readable title for category (de). |
+| meta_title.en_US | ✓ | string | Cameras & Camcorders | A Human-readable title for category (en). |
+| meta_description.de_DE | ✓ | string | Kameras & Camcorders | A Human-readable description for category (de). |
+| meta_description.en_US | ✓ | string | Cameras & Camcorders | A Human-readable description for category (en). |
+| meta_keywords.de_DE | ✓ | string | Kameras & Camcorders | A Human-readable keywords for category (de). |
+| meta_keywords.en_US | ✓ | string | Cameras & Camcorders | A Human-readable keywords for category (en). |
+| is_active | | bool | 1 | Defines if the category is active. |
+| is_in_menu ||  bool | 1 | Defines if the category is displayed in the menu on the Storefront. |
 | is_searchable | | bool | 1 | Defines if the category is displayed in the search. If the value is `0`, the category cannot be found in the catalog search. |
-| is_root ||  bool | 0 | Defines if the category. is a root category: `0` – non-root category, `1` – root category. | 
-| is_main ||  bool | 1 | Defines if the category is main. | 
-| node_order ||  int | 90 | When displayed with other categories, defines their order based on the comparison of this parameter’s values. | 
+| is_root ||  bool | 0 | Defines if the category. is a root category: `0` – non-root category, `1` – root category. |
+| is_main ||  bool | 1 | Defines if the category is main. |
+| node_order ||  int | 90 | When displayed with other categories, defines their order based on the comparison of this parameter’s values. |
 | template_name | | string | Catalog (default) | Human-readable name of the category template. |
 
 
@@ -990,9 +990,9 @@ category_key,included_store_names,excluded_store_names
 demoshop,DE,
 ```
 |COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
-|--- |---| --- | --- | --- | 
-| category_key | ✓ | string | demoshop | Sluggable name of the category. | 
-| included_store_names| |  string | DE | List of the store names to link to the category. | 
+|--- |---| --- | --- | --- |
+| category_key | ✓ | string | demoshop | Sluggable name of the category. |
+| included_store_names| |  string | DE | List of the store names to link to the category. |
 | excluded_store_names |   | string | "US,AT" | List of the store names to unlink from the category. |
 
 **data/import/category_template.csv**
@@ -1008,9 +1008,9 @@ template_name,template_path
 
 2. Register the following data import plugins:
 
-|Plugin | Specification | Prerequisites | Namespace | 
-|--- | --- | --- | --- | 
-| CategoryDataImportPlugin | Imports the category data. | | Spryker\Zed\CategoryDataImport\Communication\Plugin | 
+|Plugin | Specification | Prerequisites | Namespace |
+|--- | --- | --- | --- |
+| CategoryDataImportPlugin | Imports the category data. | | Spryker\Zed\CategoryDataImport\Communication\Plugin |
 CategoryStoreDataImportPlugin | Imports the category store data. | | Spryker\Zed\CategoryDataImport\Communication\Plugin\DataImport|
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
@@ -1039,8 +1039,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 ```
 3. Register the following plugins:
 
-|PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE | 
-|--- | --- | --- | --- | 
+|PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--- | --- | --- | --- |
 | MainChildrenPropagationCategoryStoreAssignerPlugin | Updates the category store relation for a passed category. Updates the category store relation for the children category nodes where `category_node.is_main` is true. | | Spryker\Zed\Category\Communication\Plugin\Category |
 
 **src/Pyz/Zed/Category/CategoryDependencyProvider.php**
@@ -1092,15 +1092,15 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 Add the following plugins to your project:
 
-|PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE | 
-|--- | --- | --- | --- | 
-| CategoryUrlPathPrefixUpdaterPlugin| Adds a language identifier to category URL paths.|  | Spryker\Zed\Category\Communication\Plugin| 
-| CategoryImageSetCreatorPlugin| After a category is created, persists new category image sets into the database.|  | Spryker\Zed\CategoryImage\Communication\Plugin| 
-| CategoryImageSetExpanderPlugin| Expands `CategoryTransfer` with the category's image sets from the database.|  | Spryker\Zed\CategoryImage\Communication\Plugin| 
-| CategoryImageSetUpdaterPlugin| After a category is updated, persists category image set changes into the database. | | Spryker\Zed\CategoryImage\Communication\Plugin| 
-| RemoveCategoryImageSetRelationPlugin| When a category is deleted, deletes the category image sets.|  | Spryker\Zed\CategoryImage\Communication\Plugin| 
-| ImageSetSubformCategoryFormPlugin| Extends the create and edit category forms with the fields related to category image sets.|  | Spryker\Zed\CategoryImageGui\Communication\Plugin\CategoryGui| 
-| ImageSetCategoryFormTabExpanderPlugin| Extends create and edit category tabs with category image set.|  | Spryker\Zed\CategoryImageGui\Communication\Plugin\CategoryGui| 
+|PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--- | --- | --- | --- |
+| CategoryUrlPathPrefixUpdaterPlugin| Adds a language identifier to category URL paths.|  | Spryker\Zed\Category\Communication\Plugin|
+| CategoryImageSetCreatorPlugin| After a category is created, persists new category image sets into the database.|  | Spryker\Zed\CategoryImage\Communication\Plugin|
+| CategoryImageSetExpanderPlugin| Expands `CategoryTransfer` with the category's image sets from the database.|  | Spryker\Zed\CategoryImage\Communication\Plugin|
+| CategoryImageSetUpdaterPlugin| After a category is updated, persists category image set changes into the database. | | Spryker\Zed\CategoryImage\Communication\Plugin|
+| RemoveCategoryImageSetRelationPlugin| When a category is deleted, deletes the category image sets.|  | Spryker\Zed\CategoryImage\Communication\Plugin|
+| ImageSetSubformCategoryFormPlugin| Extends the create and edit category forms with the fields related to category image sets.|  | Spryker\Zed\CategoryImageGui\Communication\Plugin\CategoryGui|
+| ImageSetCategoryFormTabExpanderPlugin| Extends create and edit category tabs with category image set.|  | Spryker\Zed\CategoryImageGui\Communication\Plugin\CategoryGui|
 | UrlStorageCategoryNodeMapperPlugin| If `UrlStorageTransfer.fkResourceCategorynode` is provided, maps the category node storage data to `UrlStorageResourceMapTransfer`. | | Spryker\Client\CategoryStorage\Plugin |
 
 
@@ -1189,7 +1189,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 
 <details open>
     <summary>src/Pyz/Zed/CategoryGui/CategoryGuiDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -1270,10 +1270,10 @@ To install the Category Management feature front end, follow the steps below.
 
 Overview and install the following features.
 
-| NAME | VERSION | 
-| --- | --- | 
-| Category | master | 
-| Spryker Core | master| 
+| NAME | VERSION |
+| --- | --- |
+| Category | master |
+| Spryker Core | master|
 
 ### 1) Install the required modules using Composer
 
@@ -1288,7 +1288,7 @@ Make sure that the following modules have been installed:
 
 |MODULE | EXPECTED DIRECTORY |
 |--- | --- |
-| CategoryWidget | vendor/spryker-shop/category-widget | 
+| CategoryWidget | vendor/spryker-shop/category-widget |
 | CategoryImageStorageWidget | vendor/spryker-shop/category-image-storage-widget|
 
 {% endinfo_block %}
@@ -1298,8 +1298,8 @@ Make sure that the following modules have been installed:
 Register the following global widgets:
 
 | WIDGET | DESCRIPTION | NAMESPACE |
-|--- | --- | --- | 
-| CategoryImageStorageWidget | Finds the given category image set in Storage and displays its first image in a given size format. | SprykerShop\Yves\CategoryImageStorageWidget\Widget| 
+|--- | --- | --- |
+| CategoryImageStorageWidget | Finds the given category image set in Storage and displays its first image in a given size format. | SprykerShop\Yves\CategoryImageStorageWidget\Widget|
 
 
 
@@ -1309,10 +1309,10 @@ Register the following global widgets:
 
 namespace Pyz\Yves\ShopApplication;   
 
-use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider; 
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 use SprykerShop\Yves\CategoryImageStorageWidget\Widget\CategoryImageStorageWidget;   
 
-class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider 
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {     
 	/**      
 	* @return string[]      
@@ -1322,7 +1322,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 		return [             
 			CategoryImageStorageWidget::class,         
 		];     
-	} 
+	}
 }
 ```
 
@@ -1330,8 +1330,8 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Make sure that the following widgets have been registered:
 
-|MODULE | TEST | 
-|--- | --- | 
+|MODULE | TEST |
+|--- | --- |
 CategoryImageStorageWidget | Make sure you have category image data in your storage. Then, render the widget for all the categories that have images assigned.|
 
 {% endinfo_block %}
@@ -1340,8 +1340,8 @@ CategoryImageStorageWidget | Make sure you have category image data in your stor
 
 Add the following plugins to your project:
 
-|PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE | 
-|--- | --- | --- | --- | 
+|PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--- | --- | --- | --- |
 | CategoryTwigPlugin| Defines the `categories` variable for a global usage in twig files.| | SprykerShop\Yves\CategoryWidget\Plugin\Twig |
 
 
@@ -1379,10 +1379,9 @@ Make sure the `categories` variable is available in twig files.
 
 Integrate the following related features:
 
-|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
-|--- | --- | --- | 
-| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-category-management-feature-integration.html) | 
-| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/catalog-category-management-feature-integration.html) |
-| Product + Category Management  | |  [Product + Category Management feature integration](https://documentation.spryker.com/2021080/docs/product-category-management-feature-integration) | 
-| CMS + Category Management | | [CMS + Category Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/cms-category-management-feature-integration.html)|
-
+|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+|--- | --- | --- |
+| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html) |
+| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/catalog-category-management-feature-integration.html) |
+| Product + Category Management  | |  [Product + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-category-management-feature-integration.html) | 
+| CMS + Category Management | | [CMS + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-category-management-feature-integration.html)|

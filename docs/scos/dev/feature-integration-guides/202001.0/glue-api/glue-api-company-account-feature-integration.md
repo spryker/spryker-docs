@@ -17,9 +17,9 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-application-feature-integration.html) |
-| Company account | 201907.0 | [Company Account](https://documentation.spryker.com/v4/docs/company-account-feature-integration) |
-| Customer Account Management | 201907.0 | [Customer API](https://documentation.spryker.com/v4/docs/customer-account-management-feature-integration-glue-201907) |
+| Spryker Core | 201907.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html) |
+| Company account | 201907.0 | [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
+| Customer Account Management | 201907.0 | [Customer API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/customer-account-management-feature-integration-glue.html) |
 | Uuid generation console | 201907.0 | UUID Generation Console |
 
 ### 1) Install the required modules using Composer
@@ -225,16 +225,16 @@ Activate the following plugins:
 | `CompanyUserAccessTokensResourceRoutePlugin` | Registers the `company-user-access-tokens` resource | None | `Spryker\Glue\CompanyUserAuthRestApi\Plugin\GlueApplication` |
 
 src/Pyz/Zed/OauthCustomerConnector/OauthCustomerConnectorDependencyProvider.php
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\OauthCustomerConnector;
- 
+
 use Spryker\Zed\CompanyUsersRestApi\Communication\Plugin\OauthCustomerConnector\CompanyUserOauthCustomerIdentifierExpanderPlugin;
 use Spryker\Zed\OauthCustomerConnector\OauthCustomerConnectorDependencyProvider as SprykerOauthCustomerConnectorDependencyProvider;
 use Spryker\Zed\OauthPermission\Communication\Plugin\OauthCustomerConnector\PermissionOauthCustomerIdentifierExpanderPlugin;
- 
+
 class OauthCustomerConnectorDependencyProvider extends SprykerOauthCustomerConnectorDependencyProvider
 {
     /**
@@ -251,15 +251,15 @@ class OauthCustomerConnectorDependencyProvider extends SprykerOauthCustomerConne
 ```
 
 src/Pyz/Glue/AuthRestApi/AuthRestApiDependencyProvider.php
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\AuthRestApi;
- 
+
 use Spryker\Glue\AuthRestApi\AuthRestApiDependencyProvider as SprykerAuthRestApiDependencyProvider;
 use Spryker\Glue\OauthCompanyUser\Plugin\AuthRestApi\CompanyUserRestUserMapperPlugin;
- 
+
 class AuthRestApiDependencyProvider extends SprykerAuthRestApiDependencyProvider
 {
     /**
@@ -275,15 +275,15 @@ class AuthRestApiDependencyProvider extends SprykerAuthRestApiDependencyProvider
 ```
 
 src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\OauthCompanyUser;
- 
+
 use Spryker\Zed\OauthCompanyUser\OauthCompanyUserDependencyProvider as SprykerOauthCompanyUserDependencyProvider;
 use Spryker\Zed\OauthPermission\Communication\Plugin\OauthCompanyUser\PermissionOauthCompanyUserIdentifierExpanderPlugin;
- 
+
 class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependencyProvider
 {
     /**
@@ -299,15 +299,15 @@ class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependen
 ```
 
 src/Pyz/Zed/Oauth/OauthDependencyProvider.php
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Oauth;
- 
+
 use Spryker\Zed\Oauth\OauthDependencyProvider as SprykerOauthDependencyProvider;
 use Spryker\Zed\OauthPermission\Communication\Plugin\Filter\OauthUserIdentifierFilterPermissionPlugin;
- 
+
 class OauthDependencyProvider extends SprykerOauthDependencyProvider
 {
     /**
@@ -323,15 +323,15 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 ```
 
 src/Pyz/Zed/OauthPermission/OauthPermissionConfig.php
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\OauthPermission;
- 
+
 use Generated\Shared\Transfer\CustomerIdentifierTransfer;
 use Spryker\Zed\OauthPermission\OauthPermissionConfig as SprykerOauthPermissionConfig;
- 
+
 class OauthPermissionConfig extends SprykerOauthPermissionConfig
 {
     /**
@@ -347,16 +347,16 @@ class OauthPermissionConfig extends SprykerOauthPermissionConfig
 ```
 
 src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\CustomersRestApi;
- 
+
 use Spryker\Glue\CompanyBusinessUnitsRestApi\Plugin\CustomersRestApi\CompanyBusinessUnitCustomerExpanderPlugin;
 use Spryker\Glue\CompanyUsersRestApi\Plugin\CustomersRestApi\CompanyUserCustomerExpanderPlugin;
 use Spryker\Glue\CustomersRestApi\CustomersRestApiDependencyProvider as SprykerCustomersRestApiDependencyProvider;
- 
+
 class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependencyProvider
 {
     /**
@@ -374,12 +374,12 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 
 <details open>
 <summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication\CompaniesResourcePlugin;
 use Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication\CompanyByCompanyBusinessUnitResourceRelationshipPlugin;
 use Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication\CompanyByCompanyRoleResourceRelationshipPlugin;
@@ -398,7 +398,7 @@ use Spryker\Glue\CompanyUsersRestApi\Plugin\GlueApplication\CompanyUsersResource
 use Spryker\Glue\CustomersRestApi\Plugin\GlueApplication\CustomerByCompanyUserResourceRelationshipPlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -415,7 +415,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new CompanyUserAccessTokensResourceRoutePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
      *
@@ -452,7 +452,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CompanyUsersRestApiConfig::RESOURCE_COMPANY_USERS,
             new CustomerByCompanyUserResourceRelationshipPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }
@@ -466,7 +466,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 To verify that everything is set up correctly, first, you need to authenticate as a regular customer. Then, to get the ID of the Company Users you can impersonate as, send a `GET` request to `http://glue.mysprykershop.com/company-users/mine`.
 
 http://mysprykershop.com/company-users/mine response
-    
+
 ```json
 {
     "data": [{
@@ -486,7 +486,7 @@ http://mysprykershop.com/company-users/mine response
 To log in as a Company User, send a `POST` request to `http://glue.mysprykershop.com/company-user-access-tokens` passing the ID of the necessary Company User in the request. Make sure that the response contains all the necessary data.
 
 http://mysprykershop.com/company-user-access-tokens request
-    
+
 ```json
 {
     "data": {
@@ -499,7 +499,7 @@ http://mysprykershop.com/company-user-access-tokens request
 ```
 
 http://mysprykershop.com/company-user-access-tokens response
-    
+
 ```json
 {
     "data": {
@@ -571,4 +571,3 @@ Send a `GET` request to `http://glue.mysprykershop.com/company-roles/mine?includ
 Send a `GET` request to `http://glue.mysprykershop.com/company-users/{% raw %}{{{% endraw %}company_user_uuid{% raw %}}}{% endraw %}?include=company-roles,companies,company-business-units,customers`. Make sure that the response contains a single Company User. Make sure that the `company-roles`, `companies`, `company-business-units` and `customers` relationships are present.
 
 {% endinfo_block %}
-

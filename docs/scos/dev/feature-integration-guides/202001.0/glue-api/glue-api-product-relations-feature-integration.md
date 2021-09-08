@@ -16,10 +16,10 @@ To start feature integration, overview and install the necessary features:
 
 |Name|Version|Required Sub-Feature|
 |---|---|---|
-|Spryker Core|202001.0|[Glue Application](https://documentation.spryker.com/v4/docs/glue-application-feature-integration-201907)|
+|Spryker Core|202001.0|[Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html)|
 |Product Relation|202001.0||
-|Cart|202001.0| [Cart API](https://documentation.spryker.com/v4/docs/cart-feature-integration-201907) ||
-Product|202001.0|[Products API](https://documentation.spryker.com/v4/docs/products-feature-integration-201907)|
+|Glue API: Cart feature integration |202001.0| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
+|Glue API: Products |202001.0|[Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:
@@ -29,7 +29,7 @@ composer require spryker/related-products-rest-api:"^1.0.0" spryker/up-selling-p
 ```
 <section contenteditable="false" class="warningBox"><div class="content">
     Make sure that the following modules have been installed:
-    
+
 |Module|Expected Directory|
 |---|---|
 |`RelatedProductsRestApi`|`vendor/spryker/related-products-rest-api`|
@@ -53,14 +53,14 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\RelatedProductsRestApi\Plugin\GlueApplication\RelatedProductsResourceRoutePlugin;
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\GlueApplication\CartUpSellingProductsResourceRoutePlugin;
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\GlueApplication\GuestCartUpSellingProductsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -88,5 +88,5 @@ http://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uui
 
 
 
- 
+
 <!-- Last review date: Aug 02, 2019* by Eugenia Poidenko, Yuliia Boiko-->

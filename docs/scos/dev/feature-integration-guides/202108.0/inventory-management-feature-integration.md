@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/inventory-management-feature-integration
 ---
 
-This document describes how to ingrate the [Inventory Management](https://documentation.spryker.com/2021080/docs/inventory-management) feature into a Spryker project.
+This document describes how to ingrate the [Inventory Management](/docs/scos/dev/features/{{page.version}}/inventory-management/inventory-management-feature-overview.html) feature into a Spryker project.
 
 {% info_block errorBox %}
 
@@ -552,5 +552,5 @@ Make sure that the warehouse address management works:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| Inventory Management API | | [Glue API: Inventory Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html) |
-| Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/alternative-products-inventory-management-feature-integration.html)|
+| Inventory Management API | | [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html) |
+| Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-inventory-management-feature-integration.html)|

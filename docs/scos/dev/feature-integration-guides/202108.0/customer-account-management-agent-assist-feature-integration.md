@@ -22,8 +22,8 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Customer Account Managemen | master | [Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-account-management-feature-integration.html) |
-| Agent Assist | master | [Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/agent-assist-feature-integration.html) |
+| Customer Account Managemen | master | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Agent Assist | master | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
 
 
 
@@ -239,8 +239,8 @@ Install the following related features:
 
 | Feature | Integration Guide |
 | --- | --- |
-| Customer Account Management | [Customer Acount Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/customer-account-management-feature-integration.html) |
-| Agent Assist | [Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/agent-assist-feature-integration.html) |
-| Agent Assist API | [Glue API: Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-agent-assist-feature-integration.html) |
+| Customer Account Management | [Customer Acount Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Agent Assist | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
+| Agent Assist API | [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html) |
 
 

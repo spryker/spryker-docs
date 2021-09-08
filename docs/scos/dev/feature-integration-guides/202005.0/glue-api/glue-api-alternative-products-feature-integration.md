@@ -16,7 +16,7 @@ To start feature integration, overview and install the necessary features:
 | --- | --- | --- |
 | Spryker Core | 201907.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html) |
 | Alternative Products | 201907.0 | |
-| Products | 201907.0 | [Product API feature integration](https://documentation.spryker.com/v5/docs/en/products-feature-integration-201907) |
+| Glue API: Products | 201907.0 | [Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-products-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -49,11 +49,11 @@ src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
 <?php
 
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication\AbstractAlternativeProductsResourceRoutePlugin;
 use Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication\ConcreteAlternativeProductsResourceRoutePlugin
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**

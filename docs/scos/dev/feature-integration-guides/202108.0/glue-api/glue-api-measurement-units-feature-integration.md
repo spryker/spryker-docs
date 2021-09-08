@@ -17,8 +17,8 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version |Link |
 | --- | --- | --- |
-| Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html)  |
-| Product Measurement Units | 202009.0 | [Product Measurement Units feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-measurement-unit-feature-integration.html) |
+| Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-ore-feature-integration.html)  |
+| Product Measurement Units | 202009.0 | [Product Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer
 Run the following command to install the required modules:

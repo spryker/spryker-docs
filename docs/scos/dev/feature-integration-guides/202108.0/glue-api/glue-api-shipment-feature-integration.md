@@ -17,11 +17,11 @@ To start feature integration, overview and install the necessary features:
 
 | FEATURE                    | VERSION | INTEGRATION GUIDE                                            |
 | :------------------------- | :------ | :----------------------------------------------------------- |
-| Glue API: Spryker Core     | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
-| Shipment                  | master  | [Shipment feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/shipment-feature-integration.html) |
-| Glue API: Checkout         | master  | [Glue API: Checkout feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |
-| Glue API: Glue Application      | master  | [Glue API: Glue Application feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html) |
-| Glue API: Order Management | master  | [Glue API: Order Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html) |
+| Glue API: Spryker Core     | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Shipment                  | master  | [Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |
+| Glue API: Checkout         | master  | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Glue Application      | master  | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Glue API: Order Management | master  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -542,5 +542,5 @@ Integrate the following related features.
 
 | FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
 | :----------- | :------------------------------- | :----------------------------------------------------------- |
-| Glue API: Checkout | ✓                                | [Glue API: Checkout feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Checkout | ✓                                | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
 

@@ -371,8 +371,8 @@ Make sure that `ProductGroupColorWidget` has been registered:
 
 | Feature | feature integration guide |
 | --- | --- |
-| Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-group-product-labels-feature-integration.html) |
-| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-group-product-rating-and-reviews-feature-integration.html) |
-| Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/product-group-cart-feature-integration.html)  |
+| Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-labels-feature-integration.html) |
+| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-rating-and-reviews-feature-integration.html) |
+| Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-cart-feature-integration.html)  |
 
 

@@ -13,8 +13,8 @@ redirect_from:
 To start feature integration, overview and install the necessary features:
 |Name|Version|Integration guide|
 |---|---|---|
-Spryker Core|201907.0|[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html)|
-|Product|201907.0|[Product API feature integration](https://documentation.spryker.com/v3/docs/product-api-feature-integration-201907)|
+| Glue API: Glue Application |201907.0|[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html)|
+|Product|201907.0|[Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/product-api-feature-integration.html)|
 |Wishlist| 201907.0 |
 
 ### 1) Install the required modules using Composer
@@ -25,13 +25,13 @@ composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
 ```
 <section contenteditable="false" class="warningBox"><div class="content">
     Make sure that the following module has been installed:
-    
+
 |Module|Expected directory|
 |---|---|
 |`WishlistsRestApi`|`vendor/spryker/wishlists-rest-apiWishlistItems`|
 
 </div></section>
-    
+
 ### 2) Set Up Database Schema and Transfer Objects
 Run the following commands to apply database changes, and generate entity and transfer changes:
 
@@ -89,16 +89,16 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CustomersRestApi\CustomersRestApiConfig;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\WishlistsRestApi\Plugin\WishlistItemsResourceRoutePlugin;
 use Spryker\Glue\WishlistsRestApi\Plugin\WishlistRelationshipByResourceIdPlugin;
 use Spryker\Glue\WishlistsRestApi\Plugin\WishlistsResourceRoutePlugin
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -111,7 +111,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new WishlistItemsResourceRoutePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
      *
@@ -124,7 +124,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CustomersRestApiConfig::RESOURCE_CUSTOMERS,
             new WishlistRelationshipByResourceIdPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }

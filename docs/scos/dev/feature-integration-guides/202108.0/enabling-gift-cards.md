@@ -12,9 +12,9 @@ redirect_from:
 
 The Gift Cards feature is shipped with the following modules:
 
-* **GiftCard**: implements the basic functionality of the Gift Cards feature as  well as the Replacement value-checking strategy<!-- add link (https://documentation.spryker.com/capabilities/gift_cards/gift_card_purchase_and_management/gift-cards-purchase-redeeming.htm)-->.
+* **GiftCard**: implements the basic functionality of the Gift Cards feature as  well as the Replacement value-checking strategy.
 
-* **GiftCardBalance**: implements gift card Balance value-checking strategy<!--(https://documentation.spryker.com/capabilities/gift_cards/gift_card_purchase_and_management/gift-cards-purchase-redeeming.htm)-->.
+* **GiftCardBalance**: implements gift card Balance value-checking strategy<.
 
 * **GiftCardMailConnector**: responsible for sending e-mails on gift cards usage (balance change) as well as gift cards codes delivery.
 
@@ -62,13 +62,3 @@ spryker/product-management:"^0.12.0"
 | `PriceToPayPaymentMethodFilterPlugin` | Filters payment methods based on cart totals. | `PaymentDependencyProvider::getPaymentMethodFilterPlugins` | - |
 | `PaymentFormFilterPlugin` | Each payment method provides its subforms. The plugin filters them out based on an available payment method list. | `CheckoutDependencyProvider::getPaymentFormFilterPlugins` | - |
 | `PaymentCalculatorPlugin` | Distributes total prices to payment methods. Calculates price to pay to quote totals. | `CalculationDependencyProvider::getQuoteCalculatorPluginStack` | - |
-
-<!--**See also:**
-
-* [Get a general idea of what the gift cards are and why you need them](https://documentation.spryker.com/capabilities/gift_cards/gift_card_purchase_and_management/gift-card-purchase-management.htm)
-* [Learn about the Gift Cards Purchase and Redeeming Process and value checking strategies](https://documentation.spryker.com/capabilities/gift_cards/gift_card_purchase_and_management/gift-cards-purchase-redeeming.htm)
--->
- 
-<!-- Last review date: Mar 27, 2018 -->
-
-[//]: # (by Denis Turkov)

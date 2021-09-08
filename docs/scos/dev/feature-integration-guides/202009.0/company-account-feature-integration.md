@@ -42,37 +42,37 @@ Adjust the schema definition so entity changes will trigger events.
 | `spy_company_user` | `Entity.spy_company_user.`</br>`Entity.spy_company_user.update`</br>`Entity.spy_company_user.delete` |
 
 **src/Pyz/Zed/CompanyUser/Persistence/Propel/Schema/spy_company_user.schema.xml**
-    
+
 ```html
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
 	   xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
 	   namespace="Orm\Zed\CompanyUser\Persistence" package="src.Orm.Zed.CompanyUser.Persistence">
-  
+
 	<table name="spy_company_user">
 		<behavior name="event">
 			<parameter name="spy_company_user_all" column="*"/>
 		</behavior>
     </table>
-  
+
     </database>
 ```   
 
 **src/Pyz/Zed/Company/Persistence/Propel/Schema/spy_company.schema.xml**
-    
+
 ```html
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
 	   xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
 	   namespace="Orm\Zed\Company\Persistence" package="src.Orm.Zed.Company.Persistence">
-  
+
 	<table name="spy_company">
 		<behavior name="event">
 			<parameter name="spy_company_is_active" column="is_active"/>
 			<parameter name="spy_company_status" column="status"/>
         </behavior>
 	</table>
-  
+
     </database>
 ```
 
@@ -109,22 +109,22 @@ With this step, you will be able to publish tables on change (create, edit, dele
 | `CompanyUserStorageEventSubscriber` | Registers listeners that are responsible for publishing company user storage entity changes when a related entity change event occurs. | None | `NoneSpryker\Zed\CompanyUserStorage\Communication\Plugin\Event\Subscriber` |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
-    
+
 ```php
 <?php
-  
+
 namespace Pyz\Zed\Event;
-  
+
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
 use Spryker\Zed\CompanyUserStorage\Communication\Plugin\Event\Subscriber\CompanyUserStorageEventSubscriber;
-  
+
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
 	public function getEventSubscriberCollection()
 	{
 		$eventSubscriberCollection = parent::getEventSubscriberCollection();
 		$eventSubscriberCollection->add(new CompanyUserStorageEventSubscriber());
-  
+
 		return $eventSubscriberCollection;
 	}
 }
@@ -136,12 +136,12 @@ Set up synchronization queue pools so that non-multistore entities (not store-sp
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CompanyUserStorage;
- 
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\CompanyUserStorage\CompanyUserStorageConfig as SprykerCompanyUserStorageConfig;
- 
+
 class CompanyUserStorageConfig extends SprykerCompanyUserStorageConfig
 {
 	public function getCompanyUserSynchronizationPoolName(): ?string
@@ -161,12 +161,12 @@ class CompanyUserStorageConfig extends SprykerCompanyUserStorageConfig
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\CompanyUserStorage;
-  
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\CompanyUserStorage\CompanyUserStorageConfig as SprykerCompanyUserStorageConfig;
-  
+
 class CompanyUserStorageConfig extends SprykerCompanyUserStorageConfig
 {
 	/**
@@ -183,12 +183,12 @@ class CompanyUserStorageConfig extends SprykerCompanyUserStorageConfig
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\Synchronization;
-  
+
 use Spryker\Zed\CompanyUserStorage\Communication\Plugin\Synchronization\CompanyUserSynchronizationDataPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
-  
+
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
 	/**
@@ -257,12 +257,12 @@ Register the following plugins to enable data import:
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\DataImport;
-  
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\BusinessOnBehalfDataImport\Communication\Plugin\DataImport\BusinessOnBehalfCompanyUserDataImportPlugin;
-  
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
 	protected function getDataImporterPlugins(): array
@@ -305,13 +305,13 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Customer;
- 
+
 use Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer\DefaultCompanyUserCustomerTransferExpanderPlugin;
 use Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer\IsOnBehalfCustomerTransferExpanderPlugin;
 use Spryker\Zed\Customer\CustomerDependencyProvider as SprykerCustomerDependencyProvider;
- 
+
 class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 {
 	/**
@@ -331,13 +331,13 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\Customer;
- 
+
 use Spryker\Client\Customer\CustomerDependencyProvider as SprykerCustomerDependencyProvider;
 use Spryker\Client\CustomerExtension\Dependency\Plugin\AccessTokenAuthenticationHandlerPluginInterface;
 use Spryker\Client\OauthCompanyUser\Plugin\Customer\CompanyUserAccessTokenAuthenticationHandlerPlugin;
- 
+
 class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 {
 	/**
@@ -354,12 +354,12 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Customer;
- 
+
 use Spryker\Zed\CompanyUser\Communication\Plugin\Customer\CompanyUserReloadCustomerTransferExpanderPlugin;
 use Spryker\Zed\Customer\CustomerDependencyProvider as SprykerCustomerDependencyProvider;
- 
+
 class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 {
 	/**
@@ -378,15 +378,15 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Oauth;
- 
+
 use Spryker\Zed\Oauth\OauthDependencyProvider as SprykerOauthDependencyProvider;
 use Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth\IdCompanyUserOauthGrantTypeConfigurationProviderPlugin;
 use Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth\CompanyUserOauthScopeProviderPlugin;
 use Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth\CompanyUserAccessTokenOauthGrantTypeConfigurationProviderPlugin;
 use Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth\CompanyUserAccessTokenOauthUserProviderPlugin;
- 
+
 class OauthDependencyProvider extends SprykerOauthDependencyProvider
 {
 	/**
@@ -399,7 +399,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 			new CompanyUserOauthUserProviderPlugin(),
 		];
 	}
- 
+
 	/**
 	 * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthScopeProviderPluginInterface[]
 	 */
@@ -409,7 +409,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 			new CompanyUserOauthScopeProviderPlugin(),
 		];
 	}
- 
+
 	/**
 	 * @return \Spryker\Zed\OauthExtension\Dependency\Plugin\OauthGrantTypeConfigurationProviderPluginInterface[]
 	 */
@@ -427,12 +427,12 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CompanyUserStorage;
- 
+
 use Spryker\Zed\CompanyBusinessUnitStorage\Communication\Plugin\CompanyBusinessUnitCompanyUserStorageExpanderPlugin;
 use Spryker\Zed\CompanyUserStorage\CompanyUserStorageDependencyProvider as SprykerCompanyUserStorageDependencyProvider;
- 
+
 class CompanyUserStorageDependencyProvider extends SprykerCompanyUserStorageDependencyProvider
 {
 	/**
@@ -451,11 +451,11 @@ class CompanyUserStorageDependencyProvider extends SprykerCompanyUserStorageDepe
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Installer;
- 
+
 use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
- 
+
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
 	/**
@@ -475,8 +475,8 @@ Log in with a customer who has multiple Company Users and a default one. Check i
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](https://documentation.spryker.com/v6/docs/ht-generating-token-for-login-201907
-{% endinfo_block %}.)
+Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html).
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` was set up correctly, you need to check the data exported to the key-value storage key `kv:company_user:1` for the `id_company_business_unit:id`. `id_company_business_unit` needs to be set up to a correct foreign key of the business unit the company user is assigned to.
@@ -488,9 +488,9 @@ Overview and install the necessary features before beginning the integration ste
 
 | Name | Version |
 | --- | --- |
-| Spryker Core |master | 
-| Customer Account Management | master | 
-| Company Account | master | 
+| Spryker Core |master |
+| Customer Account Management | master |
+| Company Account | master |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
@@ -544,12 +544,12 @@ Register the following plugins to enable widgets:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\BusinessOnBehalfWidget\Widget\BusinessOnBehalfStatusWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
 	/**

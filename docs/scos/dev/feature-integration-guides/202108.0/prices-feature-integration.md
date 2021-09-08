@@ -35,7 +35,7 @@ composer require spryker-feature/prices: "^202001.0" --update-with-dependencies
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
-    
+
  | Module | Expected Directory |
 | --- | --- |
 | `PriceProductVolume` | `vendor/spryker/price-product-volume` |
@@ -53,7 +53,7 @@ console transfer:generate
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes in transfer objects:
-    
+
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
 | `PriceProductVolume` | class |  created | `src/Generated/Shared/Transfer/PriceProductVolumeTransfer` |
@@ -103,12 +103,12 @@ src/Pyz/Zed/DataImport/DataImportDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\PriceProductDataImport\Communication\Plugin\PriceProductDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -144,12 +144,12 @@ src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\PriceProduct;
- 
+
 use Spryker\Zed\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
 use Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProductExtension\PriceProductVolumeExtractorPlugin;
- 
+
 class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
 {
     /**
@@ -168,12 +168,12 @@ src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\PriceProductStorage;
- 
+
 use Spryker\Client\PriceProductStorage\PriceProductStorageDependencyProvider as SprykerPriceProductStorageDependencyProvider;
 use Spryker\Client\PriceProductVolume\Plugin\PriceProductStorageExtension\PriceProductVolumeExtractorPlugin;
- 
+
 class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDependencyProvider
 {
     /**
@@ -192,12 +192,12 @@ src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Service\PriceProduct;
- 
+
 use Spryker\Service\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
 use Spryker\Service\PriceProductVolume\Plugin\PriceProductExtension\PriceProductVolumeFilterPlugin;
- 
+
 class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
 {
     /**
@@ -282,13 +282,13 @@ src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 use SprykerShop\Yves\PriceProductVolumeWidget\Widget\ProductPriceVolumeWidget;
 use SprykerShop\Yves\PriceProductWidget\Widget\PriceProductWidget;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -311,6 +311,6 @@ Make sure that the following widgets were registered:
 | Module | Test |
 | --- | --- |
 | `ProductPriceVolumeWidget` | Go to the product detail page for a product with Volume Prices set, and observe the table in the detail area that contains the Volume Prices data. |
-| `PriceProductWidget` | Could be checked on a slot configurator page of a [Configurable Bundle](https://documentation.spryker.com/2021080/docs/configurable-bundle) feature. |
+| `PriceProductWidget` | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) feature. |
 
 {% endinfo_block %}

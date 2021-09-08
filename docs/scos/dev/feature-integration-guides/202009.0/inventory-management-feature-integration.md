@@ -9,8 +9,9 @@ redirect_from:
 ---
 
 {% info_block errorBox %}
-The following feature integration guide expects the basic feature to be in place.</br>The current feature integration guide only adds the **[Warehouse Management](https://documentation.spryker.com/v6/docs/multiple-warehouse-stock
-{% endinfo_block %}** and **[Add to cart from catalog page](/docs/scos/user/features/{{page.version}}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)** functionalities.)
+The following feature integration guide expects the basic feature to be in place.</br>The current feature integration guide only adds the **[Warehouse Management](/docs/scos/user/features/{{page.version}}/inventory-management/warehouse-management.html)** and **[Add to cart from catalog page](/docs/scos/user/features/{{page.version}}/cart/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)** functionalities.
+
+{% endinfo_block %}
 
 ## Install Feature Core
 ### Prerequisites
@@ -37,13 +38,13 @@ Adjust the schema definition so `EventTransfer` has the additional columns for A
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Availability\Persistence" package="src.Orm.Zed.Availability.Persistence">
- 
+
     <table name="spy_availability_abstract">
         <behavior name="event">
             <parameter name="spy_availability_abstract_quantity" column="quantity" value="0" operator="==="/>
         </behavior>
     </table>
- 
+
     <table name="spy_availability">
         <behavior name="event">
             <parameter name="spy_availability_is_never_out_of_stock" column="is_never_out_of_stock"/>
@@ -89,12 +90,12 @@ Install the following plugins:
 **src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductPageSearch;
- 
+
 use Spryker\Zed\Availability\Communication\Plugin\ProductPageSearch\AvailabilityProductAbstractAddToCartPlugin;
 use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
- 
+
 class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
 {
     /**
@@ -127,14 +128,14 @@ Warehouse1,1
 Warehouse2,1
 Warehouse3,0
 ```
-    
+
 | Column | Is Mandatory? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `name` | yes | string | Warehouse1 | Name of the warehouse. |
 | `is_active` | yes | bool | 1 | Is the warehouse activated? |
 
 **vendor/spryker/spryker/Bundles/StockDataImport/data/import/warehouse_store.csv**
-    
+
 ```yaml
 warehouse_name,store_name
 Warehouse1,DE
@@ -160,16 +161,16 @@ Add these plugins to the end of the plugins list but before the `ProductOfferSto
 {% endinfo_block %}
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\StockDataImport\Communication\Plugin\StockDataImportPlugin;
 use Spryker\Zed\StockDataImport\Communication\Plugin\StockStoreDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     /**
@@ -191,11 +192,11 @@ Move the existing product stock importer after you call the `addDataImporterPlug
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport\Business;
- 
+
 use Spryker\Zed\DataImport\Business\DataImportBusinessFactory as SprykerDataImportBusinessFactory;
- 
+
 /**
  * @method \Pyz\Zed\DataImport\DataImportConfig getConfig()
  */
@@ -209,10 +210,10 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
         $dataImporterCollection = $this->createDataImporterCollection();
         $dataImporterCollection->addDataImporterPlugins($this->getDataImporterPlugins());
         $dataImporterCollection->addDataImporter($this->createProductStockImporter());
- 
+
         return $dataImporterCollection;
     }
-     
+
 }
 ```
 
@@ -222,14 +223,14 @@ Enable the behaviors by registering the console commands:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
 use Spryker\Zed\StockDataImport\StockDataImportConfig;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -243,7 +244,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . StockDataImportConfig::IMPORT_TYPE_STOCK),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . StockDataImportConfig::IMPORT_TYPE_STOCK_STORE),
         ];
- 
+
         return $commands;
     }
 }
@@ -260,7 +261,7 @@ console data:import stock-store
 Make sure that warehouse data has been added to the `spy_stock` and `spy_stock_store`  tables in the database.
 {% endinfo_block %}
 
-### 5) Set up Behavior 
+### 5) Set up Behavior
 Run the following command to build navigation cache:
 
 ```bash
@@ -277,13 +278,13 @@ Configure the stock GUI module with a store form plugin.
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\StockGui;
- 
+
 use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;
 use Spryker\Zed\StockGui\StockGuiDependencyProvider as SprykerStockGuiDependencyProvider;
 use Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin;
- 
+
 class StockGuiDependencyProvider extends SprykerStockGuiDependencyProvider
 {
     /**
@@ -299,4 +300,3 @@ class StockGuiDependencyProvider extends SprykerStockGuiDependencyProvider
 {% info_block warningBox "Verification" %}
 Make sure that the navigation for Stock GUI has been successfully generated by checking that in the Back Office, the Administration menu with the Warehouses submenu is present in the left-side navigation bar.
 {% endinfo_block %}
-

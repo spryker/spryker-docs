@@ -59,12 +59,12 @@ Activate the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\StoresRestApi\Plugin\StoresResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -83,10 +83,3 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block infoBox "Verification" %}
 Make sure that following endpoint is available:<br>`http://example.org/stores`
 {% endinfo_block %}
-
-<!--**See also:**
-[Glue API Storefront Guides](https://documentation.spryker.com/glue_rest_api/glue_api_storefront_guides/glue-api-storefront-guides.htm)
- -->
-_Last review date: Feb 12, 2019_ 
-
-[//]: # (by Tihran Voitov, Dmitry Beirak)

@@ -20,7 +20,7 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application feature integration](https://documentation.spryker.com/v6/docs/glue-application-feature-integration-201907)  |
+| Spryker Core | master | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-application-feature-integration.html)  |
 | Payments | master |  |
 
 ## 1)  Install the required modules using Composer

@@ -30,8 +30,8 @@ composer update "spryker/*"
 ```
 
 ```bash
-composer require spryker/price-product:"^2.0.0" spryker/price-product-data-import:"^0.1.0" spryker/price-product-extension:"^1.0.0" 
-spryker/price-product-merchant-relationship:"^1.0.0" spryker/price-product-merchant-relationship-data-import:"^0.1.0" 
+composer require spryker/price-product:"^2.0.0" spryker/price-product-data-import:"^0.1.0" spryker/price-product-extension:"^1.0.0"
+spryker/price-product-merchant-relationship:"^1.0.0" spryker/price-product-merchant-relationship-data-import:"^0.1.0"
 spryker/price-product-merchant-relationship-storage:"^1.0.0" spryker/price-product-storage:"^2.0.0" spryker/price-product-storage-extension:"^1.0.0" --update-with-dependencies
 ```
 
@@ -46,9 +46,9 @@ spryker/price-product-merchant-relationship-storage:"^1.0.0" spryker/price-produ
 
 ```php
 <?php
-								
+
 namespace Pyz\Client\PriceProductStorage;
-								
+
 use Spryker\Client\PriceProductMerchantRelationshipStorage\Plugin\PriceProductStorageExtension\PriceProductMerchantRelationshipStorageDimensionPlugin;
 use Spryker\Client\PriceProductStorage\PriceProductStorageDependencyProvider as SprykerPriceProductStorageDependencyProvider;
 
@@ -64,7 +64,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
         ];
     }
 }
-								
+
 class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDependencyProvider
 {
     /**
@@ -178,8 +178,8 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 | `DataImport` | `PriceProductMerchantRelationshipDataImportPlugin` | Imports prices for merchant relations. | `getDataImporterPlugins` |
 
 {% info_block warningBox %}
-If you have not installed plugins needed for Merchant and Merchant Relations<!-- add a link (http://documentation.spryker.com/capabilities/company_account/merchants_and_merchant_relations/merchants-and-merchant-relations.htm
-{% endinfo_block %}-->, add them here as well. See _Merchant and Merchant Relations feature integration guide_ <!-- link to IG--> for more details.)
+If you have not installed plugins needed for Merchant and Merchant Relations<!-- add a link-->, add them here as well. See _Merchant and Merchant Relations feature integration guide_ <!-- link to IG--> for more details.)
+{% endinfo_block %}
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -191,7 +191,7 @@ use Spryker\Zed\MerchantRelationshipDataImport\Communication\Plugin\MerchantRela
 use Spryker\Zed\PriceProductDataImport\Communication\Plugin\PriceProductDataImportPlugin;
 use Spryker\Zed\PriceProductMerchantRelationshipDataImport\Communication\Plugin\PriceProductMerchantRelationshipDataImportPlugin;
 ...
-      
+
     protected function getDataImporterPlugins(): array
     {
         return [
@@ -232,10 +232,10 @@ use Spryker\Zed\PriceProductMerchantRelationshipDataImport\Communication\Plugin\
 namespace Pyz\Zed\Console;
 ...
 use Spryker\Zed\PriceProductMerchantRelationship\Communication\Console\PriceProductMerchantRelationshipDeleteConsole;
- 
+
 ...
             // Setup commands
- 
+
             new PriceProductMerchantRelationshipDeleteConsole(),
 ...
 ```
@@ -255,13 +255,13 @@ use Spryker\Zed\PriceProductMerchantRelationship\Communication\Console\PriceProd
           xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\PriceProductMerchantRelationship\Persistence"
           package="src.Orm.Zed.PriceProductMerchantRelationship.Persistence">
-  
+
     <table name="spy_price_product_merchant_relationship">
         <behavior name="event">
             <parameter name="spy_price_product_merchant_relationship_all" column="*"/>
         </behavior>
     </table>
-  
+
 </database>
 ```
 

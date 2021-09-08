@@ -17,11 +17,11 @@ To start feature integration, overview and install the necessary features:
 
 | FEATURE                               | VERSION | INTEGRATION GUIDE                                            |
 | :------------------------------------ | :------ | :----------------------------------------------------------- |
-| Glue API: Spryker Core                | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-spryker-ore-feature-integration.html) |
-| Glue API: Cart                        | master  | [Glue API: Cart feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html) |
-| Glue API: Customer Account Management | master  | [Glue API: Customer Account Management feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html) |
-| Glue API: Payments                    | master  | [Glue API: Payments feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html) |
-| Glue API: Shipment                   | master  | [Glue API: Shipment feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html) |
+| Glue API: Spryker Core                | master  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-ore-feature-integration.html) |
+| Glue API: Cart                        | master  | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
+| Glue API: Customer Account Management | master  | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| Glue API: Payments                    | master  | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
+| Glue API: Shipment                   | master  | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -593,7 +593,7 @@ Integrate the following related features.
 
 | FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
 | :----------- | :------------------------------- | :----------------------------------------------------------- |
-| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html)  |
-| Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html) |
+| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)  |
+| Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
 
 

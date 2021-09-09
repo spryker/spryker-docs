@@ -67,11 +67,5 @@ Integrate the following related features:
 
 | FEATURE                     | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                            |
 | --------------------------- | -------------------------------- | ------------------------------------------------------------ |
-<<<<<<< HEAD:docs/scos/dev/feature-integration-guides/202108.0/agent-assist-shopping-list-feature-integration-guide.md
-| Agent Assist | ✓                                | [Agent Assist feature integration](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/agent-assist-feature-integration.html) |
-| Agent Assist + Cart |                                  | [Agent Assist + Cart feature integration guide](/docs/scos/dev/migration-and-integration/{{page.version}}/feature-integration-guides/agent-assist-cart-feature-integration-guide.html) |
-=======
 | Agent Assist | ✓                                | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
 | Agent Assist + Cart |                                  | [Agent Assist + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-cart-feature-integration.html) |
-
->>>>>>> scos-migration-updated:docs/scos/dev/feature-integration-guides/202108.0/agent-assist-shopping-list-feature-integration.md

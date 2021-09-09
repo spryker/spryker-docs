@@ -1,6 +1,6 @@
 ---
 title: Merchant Portal feature integration
-last_updated: Dec 11, 2020
+last_updated: Sep 9, 2021
 description: This document describes the process how to integrate the Merchant Portal feature into a Spryker project.
 draft: true
 template: feature-integration-guide-template
@@ -17,11 +17,15 @@ See [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev
 
 ## Installing frontend dependencies
 
+Run the following command:
+
 ```bash
 $ yarn install
 ```
 
 ## Building front end
+
+Run the following command:
 
 ```bash
 $ yarn mp:build
@@ -205,6 +209,40 @@ Run the following command to create users with ACL rules :
 console setup:init-db
 ```
 
+#### Extending acl entity metadata configuration.
+
+You can use our `AclEntityDummyProduct` module as an example of extending AclEntityMetadata configuration.
+
+Run the following command to install the module:
+
+```bash
+composer require spryker/acl-entity-dummy-product:"^0.2.0" --update-with-dependencies
+```
+
+Use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetadataConfigExpanderPlugin` as an example of `AclEntityMetadataCollection` configuration.
+
+```php
+<?php
+     namespace Pyz\Zed\AclEntity;
+
+     use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
+     use Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetadataConfigExpanderPlugin;
+
+     class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
+     {
+         /**
+          * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface[]
+          */
+          protected function getAclEntityMetadataCollectionExpanderPlugins(): array
+          {
+              return [
+                  new DummyProductAclEntityMetadataConfigExpanderPlugin(),
+              ];
+          }
+     }
+```
+
+
 ### 4) Merchant Portal Navigation Links in Sidebar
 
 To configure the Merchant Portal Sidebar add installed MP gui modules into `config/Zed/navigation.xml`.
@@ -336,7 +374,8 @@ Update next modules to latest minors.
 
 Apply changes from https://github.com/spryker-shop/suite/pull/681/files.
 
-**Check it**
+
+{% info_block warningBox "Verification" %}
 
 Go to `http://mp.de.spryker.local/security-merchant-portal-gui/login`
 
@@ -347,3 +386,5 @@ The Merchant Portal should look like on the picture:
 After login, you should be redirected to the Dashboard. The Sidebar contents will depend on installed features and configuration.
 
 ![Merchant Portal dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Marketplace/Merchant+Portal+feature+integration/mp-dashboard.png)
+
+{% endinfo_block %}

@@ -1,6 +1,6 @@
 ---
 title: Marketplace Merchant feature integration
-last_updated: Mar 23, 2021
+last_updated: Sep 9, 2021
 description: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-merchant:"dev-master" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -69,7 +69,7 @@ Set up database schema:
 
 ```
 
-2. Apply database changes and to generate entity and transfer changes:
+2. Apply database changes, generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -144,7 +144,6 @@ Enable the following behaviors by registering the plugins:
 | MerchantProfileFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant profile data. |   | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
 | MerchantProfileLegalInformationFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant legal information. |   | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
 | MerchantProfileFormExpanderPlugin | Expands MerchantForm with merchant profile fields. |   | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui |
-| MerchantUserAclInstallerPlugin | Provides merchant user roles to ACL. |    | Spryker\Zed\MerchantUser\Communication\Plugin\Acl |
 | SyncMerchantUsersStatusMerchantPostUpdatePlugin | Updates merchant users status by merchant status on merchant update. |   | Spryker\Zed\MerchantUser\Communication\Plugin\Merchant |
 | MerchantUserTabMerchantFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
@@ -268,40 +267,6 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure that when you edit a merchant in the Merchants section of the Back Office, you can see merchant profile related tabs: Contact Person, Merchant Profile, Legal Information, Merchant User.
-
-{% endinfo_block %}
-
-<details><summary markdown='span'>src/Pyz/Zed/Acl/AclDependencyProvider.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Zed\Acl;
-
-use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
-use Spryker\Zed\MerchantUser\Communication\Plugin\Acl\MerchantUserAclInstallerPlugin;
-
-class AclDependencyProvider extends SprykerAclDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclInstallerPluginInterface[]
-     */
-    public function getAclInstallerPlugins(): array
-    {
-        return [
-            new MerchantUserAclInstallerPlugin(),
-        ];
-    }
-}
-
-```
-</details>
-
-{% info_block warningBox "Verification" %}
-
-Make sure after executing `console setup:init-db`, the Merchant Admin role is present in `spy_acl_role`.
-
-Make sure the `console sync:data url` command exports the merchant URL data from `spy_url`  to Redis.
 
 {% endinfo_block %}
 
@@ -1305,13 +1270,13 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 ```bash
-composer require spryker-feature/marketplace-merchant: "dev-master" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant: "{{page.version}}" --update-with-dependencies
 ```
 
 | MODULE | EXPECTED DIRECTORY |

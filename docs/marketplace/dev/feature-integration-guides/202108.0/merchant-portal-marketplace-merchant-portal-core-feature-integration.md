@@ -18,8 +18,9 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | -------------------- | ---------- | ---------|
 | Spryker Core         | dev-master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Spryker Core BO      | dev-master | [Spryker Core Back Office feature integration](https://github.com/spryker-feature/spryker-core-back-office)
-| Marketplace Merchant | dev-master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
+| Spryker Core BO      | dev-master | [Spryker Core Back Office feature integration](https://github.com/spryker-feature/spryker-core-back-office) | 
+| Marketplace Merchant | dev-master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Acl | dev-master | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html) |
 
 ###  1) Install the required modules using Composer
 
@@ -35,8 +36,13 @@ Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | ------------- | --------------- |
-| DashboardMerchantPortalGui   | vendor/spryker/dashboard-merchant-portal-gui  |
-| DashboardMerchantPortalGuiExtension | vendor/spryker/dashboard-merchant-portal-gui-extension |
+| Acl   | vendor/spryker/acl  |
+| AclEntity   | vendor/spryker/acl-entity  |
+| AclMerchantPortal   | vendor/spryker/acl-merchant-portal  |
+| MerchantPortalApplication   | vendor/spryker/merchant-portal-application  |
+| MerchantUser   | vendor/spryker/merchant-user  |
+| MerchantUserPasswordResetMail   | vendor/spryker/merchant-user-password-reset-mail  |
+| Navigation   | vendor/spryker/navigation  |
 | SecurityMerchantPortalGui  | vendor/spryker/security-merchant-portal-gui |
 | ZedUi  | vendor/spryker/zed-ui |
 | GuiTable | vendor/spryker/gui-table |
@@ -44,7 +50,59 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+### 2) Set up the database schema
+
+Apply database changes and to generate entity and transfer changes:
+
+```bash
+console transfer:generate
+console propel:install
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Verify that the following changes have been implemented by checking your database:
+
+| DATABASE ENTITY               | TYPE  | EVENT   |
+| ----------------------------- | ----- | ------- |
+| spy_acl_group.reference | column |created  |
+| spy_merchant_user.id_merchant_user | column | created |
+| spy_merchant_user.fk_merchant | column | created |
+| spy_merchant_user.fk_user | column | created |
+
+Make sure that the following changes were applied in transfer objects:
+
+| TRANSFER | TYPE | EVENT | PATH |
+|-|-|-|-|
+| PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
+| DataImporterReaderConfiguration | class | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
+| Currency.Code | attribute | created | src/Generated/Shared/Transfer/CurrencyTransfer |
+| PriceProductFilter.Filter | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
+| PriceProductFilter.value | attribute | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer |
+| Rule | class | created | src/Generated/Shared/Transfer/RuleTransfer |
+| AclEntityRule | class | created | src/Generated/Shared/Transfer/AclEntityRuleTransfer |
+| MerchantResponse | class | created | src/Generated/Shared/Transfer/MerchantResponseTransfer |
+| Merchant | class | created | src/Generated/Shared/Transfer/MerchantTransfer |
+| MerchantError | class | created | src/Generated/Shared/Transfer/MerchantErrorTransfer |
+| Roles | class | created | src/Generated/Shared/Transfer/RolesTransfer |
+| Role | class | created | src/Generated/Shared/Transfer/RoleTransfer |
+| AclEntitySegment | class | created | src/Generated/Shared/Transfer/AclEntitySegmentTransfer |
+| AclEntitySegmentRequest | class | created | src/Generated/Shared/Transfer/AclEntitySegmentRequestTransfer |
+| AclEntitySegmentResponse | class | created | src/Generated/Shared/Transfer/AclEntitySegmentResponseTransfer |
+| Group | class | created | src/Generated/Shared/Transfer/GroupTransfer |
+| AclEntityMetadataCollection | class | created | src/Generated/Shared/Transfer/AclEntityMetadataCollectionTransfer |
+| AclEntityMetadata | class | created | src/Generated/Shared/Transfer/AclEntityMetadataTransfer |
+| AclEntityParentMetadata | class | created | src/Generated/Shared/Transfer/AclEntityParentMetadataTransfer |
+| AclEntityParentConnectionMetadata | class | created | src/Generated/Shared/Transfer/AclEntityParentConnectionMetadataTransfer |
+| GroupCriteria | class | created | src/Generated/Shared/Transfer/GroupCriteriaTransfer |
+| AclEntityMetadataConfig | class | created | src/Generated/Shared/Transfer/AclEntityMetadataConfigTransfer |
+| User | class | created | src/Generated/Shared/Transfer/UserTransfer |
+| MerchantUser | class | created | src/Generated/Shared/Transfer/MerchantUserTransfer |
+
+{% endinfo_block %}
+
+### 3) Set up behavior
 
 Set up behavior as follows:
 
@@ -58,6 +116,10 @@ Set up behavior as follows:
 | GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
 | GuiTableConfigurationTwigPlugin | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
 | SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui  |
+| MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
+| MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
+| MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant user |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| ProductViewerForOfferCreationAclInstallerPlugin | Provide ProductViewerForOfferCreation Roles with Rules and Groups to create on install |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -163,6 +225,157 @@ class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalG
 
 ```
 
+**src/Pyz/Zed/AclEntity/AclEntityDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\AclEntity;
+
+use Spryker\Zed\AclEntity\AclEntityDependencyProvider as SprykerAclEntityDependencyProvider;
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalAclEntityMetadataConfigExpanderPlugin;
+
+class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface[]
+     */
+    protected function getAclEntityMetadataCollectionExpanderPlugins(): array
+    {
+        return [
+            new MerchantPortalAclEntityMetadataConfigExpanderPlugin(),
+        ];
+    }
+}
+```
+**src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Merchant;
+
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant\MerchantAclMerchantPostCreatePlugin;
+use Spryker\Zed\Merchant\MerchantDependencyProvider as SprykerMerchantDependencyProvider;
+
+class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface[]
+     */
+    protected function getMerchantPostCreatePlugins(): array
+    {
+        return [
+            new MerchantAclMerchantPostCreatePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/MerchantUser/MerchantUserDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantUser;
+
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser\MerchantAclMerchantUserPostCreatePlugin;
+use Spryker\Zed\MerchantUser\MerchantUserDependencyProvider as SprykerMerchantUserDependencyProvider;
+
+class MerchantUserDependencyProvider extends SprykerMerchantUserDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\MerchantUserExtension\Dependency\Plugin\MerchantUserPostCreatePluginInterface[]
+     */
+    protected function getMerchantUserPostCreatePlugins(): array
+    {
+        return [
+            new MerchantAclMerchantUserPostCreatePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Acl/AclDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Acl;
+
+use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser\ProductViewerForOfferCreationAclInstallerPlugin;
+
+class AclDependencyProvider extends SprykerAclDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclInstallerPluginInterface[]
+     */
+    protected function getAclInstallerPlugins(): array
+    {
+        return [
+            new ProductViewerForOfferCreationAclInstallerPlugin(),
+        ];
+    }
+}
+```
+
+Enable Merchant Portal infrastructural plugins. 
+
+**src/Pyz/Zed/Acl/AclDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantPortalApplication;
+
+use Spryker\Zed\AclEntity\Communication\Plugin\Application\AclEntityApplicationPlugin;
+use Spryker\Zed\ErrorHandler\Communication\Plugin\Application\ErrorHandlerApplicationPlugin;
+use Spryker\Zed\EventDispatcher\Communication\Plugin\Application\EventDispatcherApplicationPlugin;
+use Spryker\Zed\Form\Communication\Plugin\Application\FormApplicationPlugin;
+use Spryker\Zed\GuiTable\Communication\Plugin\Application\GuiTableApplicationPlugin;
+use Spryker\Zed\Http\Communication\Plugin\Application\HttpApplicationPlugin;
+use Spryker\Zed\Locale\Communication\Plugin\Application\LocaleApplicationPlugin;
+use Spryker\Zed\MerchantPortalApplication\MerchantPortalApplicationDependencyProvider as SprykerMerchantPortalApplicationDependencyProvider;
+use Spryker\Zed\Messenger\Communication\Plugin\Application\MessengerApplicationPlugin;
+use Spryker\Zed\Propel\Communication\Plugin\Application\PropelApplicationPlugin;
+use Spryker\Zed\Router\Communication\Plugin\Application\MerchantPortalRouterApplicationPlugin;
+use Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPlugin;
+use Spryker\Zed\Session\Communication\Plugin\Application\SessionApplicationPlugin;
+use Spryker\Zed\Translator\Communication\Plugin\Application\TranslatorApplicationPlugin;
+use Spryker\Zed\Twig\Communication\Plugin\Application\TwigApplicationPlugin;
+use Spryker\Zed\Validator\Communication\Plugin\Application\ValidatorApplicationPlugin;
+use Spryker\Zed\ZedUi\Communication\Plugin\Application\ZedUiApplicationPlugin;
+
+class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalApplicationDependencyProvider
+{
+    /**
+     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     */
+    protected function getMerchantPortalApplicationPlugins(): array
+    {
+        return [
+            new SessionApplicationPlugin(),
+            new TwigApplicationPlugin(),
+            new EventDispatcherApplicationPlugin(),
+            new LocaleApplicationPlugin(),
+            new TranslatorApplicationPlugin(),
+            new MessengerApplicationPlugin(),
+            new PropelApplicationPlugin(),
+            new MerchantPortalRouterApplicationPlugin(),
+            new HttpApplicationPlugin(),
+            new ErrorHandlerApplicationPlugin(),
+            new FormApplicationPlugin(),
+            new ValidatorApplicationPlugin(),
+            new GuiTableApplicationPlugin(),
+            new SecurityApplicationPlugin(),
+            new ZedUiApplicationPlugin(),
+            new AclEntityApplicationPlugin(),
+        ];
+    }
+}
+```
+
 Open access to the *Merchant Portal* login page by default:
 
 **config/Shared/config_default.php**
@@ -223,7 +436,51 @@ To start builder integration, check the Spryker packages versions:
 | Gui (optional)              | >= 3.30.2 |
 | Product Relation (optional) | >= 2.4.3  |
 
-### 1) Set up Marketplace builder configs
+### 1) Install the required modules using Composer
+
+Install the required modules:
+```bash
+composer require spryker/dashboard-merchant-portal-gui:"^1.0.0" --update-with-dependencies
+```
+
+| MODULE | EXPECTED DIRECTORY |
+|-|-|
+| DashboardMerchantPortalGui   | vendor/spryker/dashboard-merchant-portal-gui  |
+| DashboardMerchantPortalGuiExtension | vendor/spryker/dashboard-merchant-portal-gui-extension |
+
+### 2) Set up transfer objects
+
+Generate transfer changes:
+
+```bash
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes have been applied in transfer objects:
+
+| TRANSFER | TYPE | EVENT | PATH |
+|-|-|-|-|
+| MerchantDashboardCard | object | Created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer |
+| MerchantDashboardActionButton | object | Created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
+
+{% endinfo_block %}
+
+### 3) Build navigation cache.
+
+Execute the following command:
+```bash
+console navigation:build-cache
+```
+{% info_block warningBox "Verification" %}
+
+Make sure that Merchant Portal has "Dashboard" menu section.
+
+{% endinfo_block %}
+
+
+### 4) Set up Marketplace builder configs
 
 Add the `angular.json` file.
 
@@ -345,7 +602,7 @@ yarn install
 
 Check if the MarketPlace packages are located in the `node_modules/@spryker` folder (e.g., utils).
 
-### 2) Install Marketplace builder
+### 5) Install Marketplace builder
 
 Add the merchant-portal folder and builder files:
 
@@ -401,7 +658,7 @@ export default async (
 
 {% endinfo_block %}
 
-### 3) Adjust deployment configs
+### 6) Adjust deployment configs
 
 If you want to configure deployment configuration to automatically install and build Merchant Portal, you need to change frontend dependencies and install commands in the deployment Yaml:
 

@@ -53,7 +53,7 @@ Set up database schema:
 **src/Pyz/Zed/MerchantSearch/Persistence/Propel/Schema/spy_merchant_search.schema.xml**
 
 ```xml
-  <?xml version="1.0"?>
+<?xml version="1.0"?>
   <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" name="zed"
             namespace="Orm\Zed\MerchantSearch\Persistence"
@@ -273,7 +273,7 @@ Make sure that when you edit a merchant in the Merchants section of the Back Off
 
 <details><summary markdown='span'>src/Pyz/Zed/Acl/AclDependencyProvider.php</summary>
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\Acl;
@@ -365,7 +365,8 @@ namespace Pyz\Zed\Publisher;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 use Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin;
 use Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin;
-ss PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
    /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
@@ -520,7 +521,7 @@ Configure export to Elastica:
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
-   <?php
+<?php
 
 namespace Pyz\Zed\Publisher;
 
@@ -1051,9 +1052,246 @@ console data:import merchant-profile
 console data:import merchant-profile-address
 ```
 
+
+In order to import merchant user data preform the folowing steps:
+
+1. Prepare merchant user data according to your requirements using the demo data:
+
+<details>
+<summary markdown='span'>/data/import/common/common/marketplace/merchant_user.csv</summary>
+
+```csv
+merchant_reference,username
+MER000006,michele@sony-experts.com
+```
+</details>
+
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+|-|-|-|-|-|
+| merchant_reference | &check; | String | MER000006  | Identifier of the merchant in the system. Have to be unique. |
+| username | &check; | String | `michele@sony-experts.com`  | Username of the merchant user. It is an email address that is used for logging into the Merchant Portal as a merchant user.  |
+
+
+2. Create the Step model for writing merchant user data.
+
+**src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport\Business\Model\MerchantUser;
+
+use Generated\Shared\Transfer\MerchantUserCriteriaTransfer;
+use Generated\Shared\Transfer\MerchantUserTransfer;
+use Generated\Shared\Transfer\UserCriteriaTransfer;
+use Orm\Zed\Merchant\Persistence\SpyMerchantQuery;
+use Orm\Zed\User\Persistence\SpyUserQuery;
+use Pyz\Zed\DataImport\Business\Exception\EntityNotFoundException;
+use Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface;
+use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
+use Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface;
+
+class MerchantUserWriterStep implements DataImportStepInterface
+{
+    /**
+     * @var \Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface
+     */
+    protected $merchantUserFacade;
+
+    /**
+     * @param \Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface $merchantUserFacade
+     */
+    public function __construct(MerchantUserFacadeInterface $merchantUserFacade)
+    {
+        $this->merchantUserFacade = $merchantUserFacade;
+    }
+
+    protected const MERCHANT_REFERENCE = 'merchant_reference';
+    protected const USERNAME = 'username';
+
+    /**
+     * @inheritDoc
+     */
+    public function execute(DataSetInterface $dataSet): void
+    {
+        $idMerchant = $this->getIdMerchantByReference($dataSet[static::MERCHANT_REFERENCE]);
+        $idUser = $this->getIdUserByUsername($dataSet[static::USERNAME]);
+
+        $merchantUserTransfer = $this->merchantUserFacade->findMerchantUser(
+            (new MerchantUserCriteriaTransfer())
+                ->setIdUser($idUser)
+                ->setIdMerchant($idMerchant)
+        );
+
+        if (!$merchantUserTransfer) {
+            $userTransfer = $this->merchantUserFacade->findUser(
+                (new UserCriteriaTransfer())->setIdUser($idUser)
+            );
+
+            $this->merchantUserFacade->createMerchantUser(
+                (new MerchantUserTransfer())
+                    ->setIdMerchant($idMerchant)
+                    ->setUser($userTransfer)
+            );
+        }
+    }
+
+    /**
+     * @param string $merchantReference
+     *
+     * @throws \Pyz\Zed\DataImport\Business\Exception\EntityNotFoundException
+     *
+     * @return int
+     */
+    protected function getIdMerchantByReference(string $merchantReference): int
+    {
+        $merchantEntity = SpyMerchantQuery::create()
+            ->findOneByMerchantReference($merchantReference);
+
+        if (!$merchantEntity) {
+            throw new EntityNotFoundException(sprintf('Merchant with reference "%s" is not found.', $merchantReference));
+        }
+
+        return $merchantEntity->getIdMerchant();
+    }
+
+    /**
+     * @param string $username
+     *
+     * @throws \Pyz\Zed\DataImport\Business\Exception\EntityNotFoundException
+     *
+     * @return int
+     */
+    protected function getIdUserByUsername(string $username): int
+    {
+        $userEntity = SpyUserQuery::create()
+            ->findOneByUsername($username);
+
+        if (!$userEntity) {
+            throw new EntityNotFoundException(sprintf('User with username "%s" is not found.', $username));
+        }
+
+        return $userEntity->getIdUser();
+    }
+}
+```
+3. Add the merchant user import type to full import (if needed).
+
+**src/Pyz/Zed/DataImport/DataImportConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\DataImport\DataImportConfig as SprykerDataImportConfig;
+
+/**
+ * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+ */
+class DataImportConfig extends SprykerDataImportConfig
+{
+    public const IMPORT_TYPE_MERCHANT_USER = 'merchant-user';
+    
+    /**
+     * @return string[]
+     */
+    public function getFullImportTypes(): array
+    {
+        return [
+            static::IMPORT_TYPE_MERCHANT_USER,
+        ];
+    } 
+}
+```
+
+4. Enable merchant user data import command.
+
+**src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport\Business;
+
+use Generated\Shared\Transfer\DataImportConfigurationActionTransfer;
+use Generated\Shared\Transfer\DataImporterConfigurationTransfer;
+use Spryker\Zed\DataImport\Business\DataImportBusinessFactory as SprykerDataImportBusinessFactory;
+use Spryker\Zed\DataImport\Business\Model\DataImporterInterface;
+use Pyz\Zed\DataImport\Business\Model\MerchantUser\MerchantUserWriterStep;
+use Pyz\Zed\DataImport\DataImportConfig;
+
+/**
+ * @method \Pyz\Zed\DataImport\DataImportConfig getConfig()
+ * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+ * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
+ * @SuppressWarnings(PHPMD.ExcessiveClassLength)
+ */
+class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
+{
+    /**
+     * @param \Generated\Shared\Transfer\DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer
+     *
+     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface|null
+     */
+    public function getDataImporterByType(DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer): ?DataImporterInterface
+    {
+        switch ($dataImportConfigurationActionTransfer->getDataEntity()) {
+            case DataImportConfig::IMPORT_TYPE_MERCHANT_USER:
+                return $this->createMerchantUserImporter($dataImportConfigurationActionTransfer);
+            default:
+                return null;
+        }
+    }
+    
+    /**
+     * @param \Generated\Shared\Transfer\DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer
+     *
+     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
+     */
+    public function createMerchantUserImporter(DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer)
+    {
+        $dataImporter = $this->getCsvDataImporterFromConfig(
+            $this->getConfig()->buildImporterConfigurationByDataImportConfigAction($dataImportConfigurationActionTransfer)
+        );
+
+        $dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
+        $dataSetStepBroker->addStep(new MerchantUserWriterStep(
+            $this->getMerchantUserFacade()
+        ));
+
+        $dataImporter->addDataSetStepBroker($dataSetStepBroker);
+
+        return $dataImporter;
+    }
+}
+```
+
+5. Create and prepare your data import configuration files according to your requirements using our demo config template:
+
+<details>
+<summary markdown='span'>data/import/common/marketplace_import_config_EU.yml</summary>
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-user
+    source: data/import/common/common/merchant_user.csv
+ ```
+</details>
+
+6. Import data.
+
+```bash
+console data:import merchant-user
+```
+
 {% info_block warningBox "Verification" %}
 
-Make sure that the imported data has been added to the `spy_merchant_profile` and `spy_merchant_profile_address` tables.
+Make sure that the imported data has been added to the `spy_merchant_profile`, `spy_merchant_profile_address` and `spy_merchant_user` tables.
 
 {% endinfo_block %}
 

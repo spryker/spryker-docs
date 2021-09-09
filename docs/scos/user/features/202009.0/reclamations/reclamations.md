@@ -20,18 +20,18 @@ The Reclamations feature is a simple, yet effective way for administrators to ha
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/reclamations-feature-overview-201903" class="mr-link">Get a general idea of the Reclamations feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/reclamations-feature-integration-201903" class="mr-link">Integrate the Reclamations feature into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\reclamations\reclamations-feature-overview.md" class="mr-link">Get a general idea of the Reclamations feature</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\reclamations-feature-integration.md" class="mr-link">Integrate the Reclamations feature into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/reclamations-feature-overview-201903" class="mr-link">Get a general idea of the Reclamations feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-reclamations" class="mr-link">Create a new order linked to a reclamation</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-reclamations" class="mr-link">View, edit and close reclamations</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-orders#claiming-orders" class="mr-link">Create a new order-related reclamation</a></li>
+                <li><a href="docs\scos\user\features\202009.0\reclamations\reclamations-feature-overview.md" class="mr-link">Get a general idea of the Reclamations feature</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\reclamations\managing-reclamations.md" class="mr-link">Create a new order linked to a reclamation</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\reclamations\managing-reclamations.md" class="mr-link">View, edit and close reclamations</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\sales\orders\managing-orders.md#claiming-orders" class="mr-link">Create a new order-related reclamation</a></li>
             </ul>
         </div>
     </div>

@@ -24,12 +24,12 @@ The table below shows quantities that will be created in the system if a concret
 | example concrete 2 | false | 5 | 1 | 5 |
 
 Product concrete with `is_quantity_splittable = true` has a separate line for each order item in the web shop:
-![Order details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Splittable+Order+Items/Splittable+Order+Items+Feature+Overview/SOI.png) 
+![Order details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Splittable+Order+Items/Splittable+Order+Items+Feature+Overview/SOI.png)
 
 Product concrete with `is_quantity_splittable = false` is counted as one sales item in the web shop:
-![is_quantity_splittable = false](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Splittable+Order+Items/Splittable+Order+Items+Feature+Overview/SOI-false.png) 
+![is_quantity_splittable = false](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Splittable+Order+Items/Splittable+Order+Items+Feature+Overview/SOI-false.png)
 
-It is possible to import splittable information for product concretes in the `product_concrete.csv` file by setting the value of the `is_splittable` field to either 1 or 0. 
+It is possible to import splittable information for product concretes in the `product_concrete.csv` file by setting the value of the `is_splittable` field to either 1 or 0.
 
 To import concrete products, run the following command:
 
@@ -51,17 +51,16 @@ Both non-splittable and splittable order items can be refunded in the Back Offic
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                 <!--<li><a href="#" class="mr-link">Enable Splittable Order Items in your project</a></li>-->
-                <li><a href="https://documentation.spryker.com/docs/quick-order-non-splittable-products-feature-integration" class="mr-link">Integrate the Quick Add to Cart + Non-splittable Products feature into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\quick-order-non-splittable-products-feature-integration.md" class="mr-link">Integrate the Quick Add to Cart + Non-splittable Products feature into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/splittable-order-items-feature-overview" class="mr-link">Get a general idea of the Splittable Order Items feature</a></li>
+                <li><a href="docs\scos\user\features\202009.0\order-management\order-management-feature-overview\splittable-order-items-overview.md" class="mr-link">Get a general idea of the Splittable Order Items feature</a></li>
                 <!--<li><a href="#" class="mr-link">View splittable and non-splittable orders in the Back Office</a></li>-->
             </ul>
         </div>
     </div>
 </div>
-

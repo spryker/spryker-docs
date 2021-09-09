@@ -22,6 +22,4 @@ For each shopping cart, the following details are provided:
 * View all carts which opens Shopping cart menu in the customer account
 * Create new cart which adds a new list in Shopping cart section
 
-![Shopping Cart Widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shopping+Cart+Widget+Overview/shopping-cart-widget.png) 
-
-
+![Shopping Cart Widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shopping+Cart+Widget+Overview/shopping-cart-widget.png)

@@ -82,6 +82,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 You are ready to use the shipment discounts.
 
 ## Checkout Shipment Pre-Check Plugin
+
 You can add shipment pre-check plugin to checkout workflow, which will check if the shipment is active in order placing. If it's not - then error message will be displayed and customer will get redirected to the shipment step to select another shipment method.
 
 First, you have to composer install a new module composer require spryker/shipment-checkout-connector. This module will provide plugin itself.

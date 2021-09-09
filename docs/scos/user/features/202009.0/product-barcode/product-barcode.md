@@ -20,15 +20,15 @@ Barcodes are often overlooked as a way to cut costs and save time. A valuable an
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/product-barcode-feature-overview" class="mr-link">Get a general idea of the Product Barcode  feature</a></li>
+                <li><a href="docs\scos\user\features\202009.0\product-barcode\product-barcode-feature-overview.md" class="mr-link">Get a general idea of the Product Barcode  feature</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/product-barcode-feature-overview" class="mr-link">Get a general idea of the Product Barcode  feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/viewing-product-barcodes" class="mr-link">View product barcode details</a></li>
+                <li><a href="docs\scos\user\features\202009.0\product-barcode\product-barcode-feature-overview.md" class="mr-link">Get a general idea of the Product Barcode  feature</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\product-barcodes\viewing-product-barcodes.md" class="mr-link">View product barcode details</a></li>
             </ul>
         </div>
     </div>

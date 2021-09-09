@@ -23,7 +23,7 @@ All calculated values are persisted now, when order are first placed. The values
 Some values can change during time when order refunded or partially refunded. Then `canceled_amount` and `refundable_amount` are recalculated and new values is persisted. At the same moment totals also change, but it does not overwrite old entry, but creates new row in `spy_sales_order_total` with this you have a history of order totals from the time order was placed.
 
 The following ER diagram shows persisted calculated values:
-![ER diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Sales/sales_persisting_order_values.png) 
+![ER diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Sales/sales_persisting_order_values.png)
 
 ## Extension Points
 HydrateOrderPluginInterface - its an action which happens when `SalesFacade::getOrderByIdSalesOrder()` method is called. This means that you may want to enrich you `OrderTransfer` with additional data. This plugins accepts passes `OrderTransfer` for additional population.
@@ -34,5 +34,3 @@ There are already few plugins provided:
 * `ProductOptionOrderHydratePlugin` - hydrates `OrderTransfer` with product option related data.
 * `ProductBundleOrderHydratePlugin` - hydrates `OrderTransfer` with product bundle related data.
 * `ShipmentOrderHydratePlugin` - hydrates `OrderTransfer` with shipment related data.
-
-

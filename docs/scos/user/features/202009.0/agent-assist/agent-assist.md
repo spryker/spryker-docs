@@ -8,7 +8,7 @@ redirect_from:
   - /v6/docs/en/agent-assist
 ---
 
-Add a human touch to your online shop with the Agent Assist feature. Entitle your customer support representatives with an Agent role to support your customers during the purchasing process. 
+Add a human touch to your online shop with the Agent Assist feature. Entitle your customer support representatives with an Agent role to support your customers during the purchasing process.
 An Agent is a person with a profound knowledge of the company’s product range and the shop system. The Agent can perform various activities on the shop on behalf of your customer. For example, the Agents can complete an order, create and share shopping lists, or even register a company as if they were that customer. This makes the Agents an asset for customers looking for personalized experiences as well as for those who need help to perform certain actions in an online store.
 
 With the Spryker Agent Assist feature, you will be able to:
@@ -28,20 +28,18 @@ Check out this video tutorial on setting up an Agent user in a B2B company accou
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/agent-assist-overview" class="mr-link">Get a general idea of the Agent Assist feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/authenticating-as-an-agent-assist" class="mr-link">Manage Agent users via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/agent-assist-feature-integration-201903" class="mr-link">Integrate the Agent Assist feature into your project</a></li>
+                <li><a href="/docs\scos\user\features\202009.0\agent-assist\agent-assist-feature-overview.html" class="mr-link">Get a general idea of the Agent Assist feature</a></li>
+                <li><a href="/docs\scos\dev\glue-api-guides\202009.0\managing-agent-assists\authenticating-as-an-agent-assist.html" class="mr-link">Manage Agent users via Glue API</a></li>
+                <li><a href="/docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\glue-api\glue-api-agent-assist-feature-integration.md" class="mr-link">Integrate the Agent Assist feature into your project</a></li>
             </ul>
         </div>
          <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                 <li><a href="https://documentation.spryker.com/docs/agent-assist-overview" class="mr-link">Get a general idea of the Agent Assist feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-users#creating-users" class="mr-link">Create an Agent user in the Back Office</a></li>
+                 <li><a href="/docs\scos\user\features\202009.0\agent-assist\agent-assist-feature-overview.html" class="mr-link">Get a general idea of the Agent Assist feature</a></li>
+                <li><a href="/docs\scos\user\user-guides\202009.0\back-office-user-guide\users\roles-groups-and-users\managing-users.md#creating-users" class="mr-link">Create an agent user in the Back Office</a></li>
                </ul>
         </div>
         </div>
 </div>
-
-

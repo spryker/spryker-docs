@@ -47,7 +47,7 @@ Newly created and all the existing modules are shipped with German translation b
 
 The scheme below illustrates relations between Translator, UserExtension, User, UserLocale and UserLocaleGui modules:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Back+Office/Back+Office+Translations/Back+Office+Translations+Feature+Overview/module-diagram.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Back+Office/Back+Office+Translations/Back+Office+Translations+Feature+Overview/module-diagram.png)
 
 
 ## If you are:
@@ -58,16 +58,15 @@ The scheme below illustrates relations between Translator, UserExtension, User, 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/en/spryker-core-back-office-feature-integration" class="mr-link">Enable Back Office translations by integrating the Spryker Core Back Office feature into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\spryker-core-back-office-feature-integration.md" class="mr-link">Enable Back Office translations by integrating the Spryker Core Back Office feature into your project</a></li>
             </ul>
         </div>
       <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title">Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-users#creating-users" class="mr-link">Assign language to a Back Office user</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\users\roles-groups-and-users\managing-users.md#creating-users" class="mr-link">Assign language to a Back Office user</a></li>
             </ul>
         </div>  
 </div>
 </div>
-

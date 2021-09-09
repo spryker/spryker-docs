@@ -23,19 +23,19 @@ Check out this video on managing the categories:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/category-management-feature-overview-201903" class="mr-link">Get a general idea of the Category Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-category#upgrading-from-version-3---to-version-4--" class="mr-link">Migrate the Category module from version 3* to version 4*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/ht-manage-a-big-number-of-categories-201903" class="mr-link">Manage a big number of categories</a></li>
+                <li><a href="docs\scos\user\features\202009.0\category-management\category-management-feature-overview.md" class="mr-link">Get a general idea of the Category Management feature</a></li>
+                <li><a href="docs\scos\dev\module-migration-guides\202009.0\migration-guide-category.md" class="mr-link">Migrate the Category module from version 3* to version 4*</a></li>
+                <li><a href="docs\scos\dev\tutorials-and-howtos\howtos\feature-howtos\howto-manage-a-big-number-of-categories.md" class="mr-link">Manage a big number of categories</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                 <li><a href="https://documentation.spryker.com/docs/category-management-feature-overview-201903" class="mr-link">Get a general idea of the Category Management feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/creating-categories" class="mr-link">Create a Product Category</a></li>
-                 <li><a href="https://documentation.spryker.com/docs/assigning-products-to-categories" class="mr-link">Assign Products to Categories</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-categories" class="mr-link">Manage Categories</a></li>
+                 <li><a href="docs\scos\user\features\202009.0\category-management\category-management-feature-overview.md" class="mr-link">Get a general idea of the Category Management feature</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\category\creating-categories.md" class="mr-link">Create a Product Category</a></li>
+                 <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\category\assigning-products-to-categories.md" class="mr-link">Assign Products to Categories</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\catalog\category\managing-categories.md" class="mr-link">Manage Categories</a></li>
             </ul>
         </div>
     </div>

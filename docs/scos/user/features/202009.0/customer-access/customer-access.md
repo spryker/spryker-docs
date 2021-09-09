@@ -22,16 +22,16 @@ The feature allows you to give your customers the ability to hide content from E
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/hide-content-from-logged-out-users-overview" class="mr-link">Get a general idea of the Customer Access feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customer-access-feature-integration" class="mr-link">Integrate the Customer Access feature into your project</a></li>
+                <li><a href="docs\scos\user\features\202009.0\customer-access\customer-access.md" class="mr-link">Get a general idea of the Customer Access feature</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\customer-access-feature-integration.md" class="mr-link">Integrate the Customer Access feature into your project</a></li>
             </ul>
         </div>
 <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/hide-content-from-logged-out-users-overview" class="mr-link">Get a general idea of the Customer Access feature</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-customer-access" class="mr-link">Manage customer access</a></li>
+                <li><a href="docs\scos\user\features\202009.0\customer-access\customer-access.md" class="mr-link">Get a general idea of the Customer Access feature</a></li>
+                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\customer\customer-customer-access-customer-groups\managing-customer-access.md" class="mr-link">Manage customer access</a></li>
             </ul>
         </div>
         </div>

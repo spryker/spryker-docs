@@ -18,16 +18,16 @@ B2B customers usually purchase large volumes of products selecting specific meas
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/splittable-order-items-feature-overview" class="mr-link">Get a general idea of the Splittable Order Items feature</a></li>
+                <li><a href ="docs\scos\user\features\202009.0\order-management\order-management-feature-overview\splittable-order-items-overview.md" class="mr-link">Get a general idea of the Splittable Order Items feature</a></li>
                 <!--<li><a href="#" class="mr-link">Enable Splittable Order Items in your project</a></li>-->
-                <li><a href="https://documentation.spryker.com/docs/quick-order-non-splittable-products-feature-integration-201903" class="mr-link">Integrate the Quick Add to Cart + Non-splittable Products feature v. 201903.0 into your project</a></li>
+                <li><a href="docs\scos\dev\migration-and-integration\202009.0\feature-integration-guides\quick-order-non-splittable-products-feature-integration.md" class="mr-link">Integrate the Quick Add to Cart + Non-splittable Products feature v. 201903.0 into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/splittable-order-items-feature-overview" class="mr-link">Get a general idea of the Splittable Order Items feature</a></li>
+                <li><a href="docs\scos\user\features\202009.0\order-management\order-management-feature-overview\splittable-order-items-overview.md" class="mr-link">Get a general idea of the Splittable Order Items feature</a></li>
                 <!--<li><a href="#" class="mr-link">View splittable and non-splittable orders in the Back Office</a></li>-->
             </ul>
         </div>

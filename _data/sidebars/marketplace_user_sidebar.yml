@@ -19,6 +19,9 @@ entries:
           - title: Marketplace Storefront
             url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-storefront.html
 
+          - title: Merchant Portal
+            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/merchant-portal.html
+
           - title: Release notes
             nested:
 
@@ -46,7 +49,7 @@ entries:
           url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
 
         - title: Marketplace Product feature overview
-          url: /docs/marketplace/user/features/marketplace-product-feature-overview.html          
+          url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
 
         - title: Marketplace Product Offer feature overview
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html

@@ -343,7 +343,7 @@ Below you will find the list of the new/updated documentation released as part o
 #### Other documentation:
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/{{page.version}}/howtos/howto-set-up-multiple-stores.html)
 * [Inventory](https://documentation.spryker.com/2021080/docs/inventory-management)
-* [Custom Twig Functions for Yves](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/yves/custom-twig-functions-for-yves.html)
-* [Custom Twig Functions for Zed](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/front-end/zed/custom-twig-functions-for-zed.html)
+* [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
+* [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)
 
 

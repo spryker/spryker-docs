@@ -73,7 +73,7 @@ On the **Overview of Orders** page, click the hyperlinked customer email in the 
 </br>**To edit the Billing address**:
 1. On the **View Order** page, scroll down to the **Customer** section.
 2. Click **Edit** under the **Billing** address. The **Edit Address for Order** page opens.  
-![Edit billing address button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-billing-information.png){height="" width=""}
+![Edit billing address button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-billing-information.png) 
 
 3. Make the updates and click **Save**.
 

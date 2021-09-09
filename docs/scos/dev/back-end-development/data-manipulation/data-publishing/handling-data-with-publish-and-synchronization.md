@@ -405,7 +405,7 @@ Ensure that the event has been created:
 2.  You should see an event in the `publish.hello_world` queue:
 
 
-![rabbitmq-event](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/rabbitmq-event.png){height="" width=""}
+![rabbitmq-event](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/rabbitmq-event.png) 
 
 
 {% endinfo_block %}
@@ -504,7 +504,7 @@ Ensure that the event has been processed correctly:
 
 *   The `publish.hello_world` queue is empty:
 
-![empty-rabbitmq-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/empty-rabbitmq-queue.png){height="" width=""}
+![empty-rabbitmq-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/empty-rabbitmq-queue.png) 
 
 
 
@@ -930,7 +930,7 @@ The Publish process is complete.
 
 Ensure that the data has been exported to a secondary queue for the Synchronize process. The `sync.storage.hello` queue should have at least one message:
 
-![separate-sync-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/separate-sync-queue.jpeg){height="" width=""}
+![separate-sync-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/separate-sync-queue.jpeg) 
 
 
 
@@ -966,7 +966,7 @@ Follow the steps to check the data in Redis:
 
 2. Сheck if the data is structured correctly:
 
-![data-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/data-structure.jpeg){height="" width=""}
+![data-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/data-structure.jpeg) 
 
 ## 10. Client
 

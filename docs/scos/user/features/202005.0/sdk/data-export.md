@@ -19,5 +19,5 @@ Export data on orders, generated in Spryker, to external systems like ERP or OMS
 **What's next?**
 
 * To install the Sales Data Export feature, see [Sales Data Export Feature Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/sales-data-export-feature-integration.html).
-* To learn how you can export order informaton, see [Exporting Data](/docs/scos/dev/developer-guides/202005.0/development-guide/data-export/exporting-data.html).
-* For the examles of the exported files and details on their format, see [Data Export Orders .csv Files Format](/docs/scos/dev/developer-guides/202005.0/development-guide/data-export/data-export-orders-.csv-files-format.html).
+* To learn how you can export order informaton, see [Exporting Data](/docs/scos/dev/data-export/exporting-data.html).
+* For the examles of the exported files and details on their format, see [Data Export Orders .csv Files Format](/docs/scos/dev/data-export/data-export-orders-.csv-files-format.html).

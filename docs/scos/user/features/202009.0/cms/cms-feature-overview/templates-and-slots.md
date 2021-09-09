@@ -147,7 +147,7 @@ The template with slots can be applied to any page. Even though a content manage
 A developer can apply templates with slots to all the other page types.
 
 ## Correlation
-The correlation between templates and slots is defined by importing template and slot lists into database. Learn how to [import these lists](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-importers-overview-and-implementation.html).
+The correlation between templates and slots is defined by importing template and slot lists into database. Learn how to [import these lists](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
 
 Using the information from the imported lists, the Slot Widget can understand which slots are assigned to a template, and from where to fetch content for each slot.
 
@@ -216,8 +216,8 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 
 {% info_block infoBox "Product details page" %}
-For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/category/assigning-products-to-categories.html
-{% endinfo_block %}.)
+For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/user-guides/202009.0/back-office-user-guide/catalog/category/assigning-products-to-categories.html).
+{% endinfo_block %}
 
 To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. See [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html) to learn more.
 

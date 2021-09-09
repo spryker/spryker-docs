@@ -13,7 +13,7 @@ Quick Order page allows your customers to quickly find and buy products in just 
 
 To open Quick Order Page, go to the header of the shop application → **Quick Order**.
 
-![Quick order widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/quick-order-widget.png){height="" width=""}
+![Quick order widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/quick-order-widget.png) 
 
 Here you can:
 
@@ -103,7 +103,7 @@ To add a quick order to a shopping list, do the following:
 
 1. On the **Quick Order** page, populate all the required information: enter the product SKU or product name and the required quantity.
 2. Select the required Shopping List in the drop-down list, if necessary.
-![Select the required Shopping List](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/select-list-quick-order.png){height="" width=""}
+![Select the required Shopping List](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/select-list-quick-order.png) 
 3. Click **Add to Shopping List**.
 
 ## Adding a Quick Order to a Shopping Cart

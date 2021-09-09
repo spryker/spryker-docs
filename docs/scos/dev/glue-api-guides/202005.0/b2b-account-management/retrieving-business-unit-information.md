@@ -11,8 +11,8 @@ redirect_from:
 In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/scos/dev/features/202005.0/company-account-management/company-account-overview/company-account-overview.html), are organized in Business Units depending on their job role and the scope of their activity. The endpoints provided by the **Business Unit** and **Business Unit Address** APIs allow retrieving Business Unit information.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/202005.0/b2b-account-management/logging-in-as-company-user.html
-{% endinfo_block %}.)
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/202005.0/b2b-account-management/logging-in-as-company-user.html).
+{% endinfo_block %}
 
 In your development, the endpoint can help you to provide information on the Business Units available in the company of the currently logged in user.
 

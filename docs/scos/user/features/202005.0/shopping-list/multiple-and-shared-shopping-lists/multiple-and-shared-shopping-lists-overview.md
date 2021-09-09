@@ -29,7 +29,7 @@ The detailed information on managing shopping lists is covered in the [Shop User
 ## Permissions Management for Shared Shopping Lists
 
 Users of companies with business units can **share** their shopping lists within the company business units. The shopping lists can either be shared with the entire business unit or its members. Company users can view shopping lists shared with them, on *My Account->Shopping lists* page. The shopping lists can be shared by clicking **Share** at this page as well. The *Share [SHOPPING LIST NAME]* page consists of two sections: Business Units and Users. Here, the shopping list owner can select either the entire business unit or individual users to share the shopping list with.
-![Share shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/share-shopping+list.png){height="" width=""}
+![Share shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/share-shopping+list.png) 
 
 Three types of shopping list access rights can be granted:
 
@@ -100,17 +100,17 @@ Besides other products, user with *Full access* rights is allowed to see alterna
 7. **Deleting shopping list**
 
 8. **Deleting items in shopping list**: The shopping list items can be deleted on *Edit Shopping list* page
-![Shared full access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shared-full-access.png){height="" width=""}
+![Shared full access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shared-full-access.png) 
 
 It is possible to grant different access rights on shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* for the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.
 
 ## Search Widget for Shopping Lists
 Starting from v. 2019.03.0, it is possible to add a [search widget for concrete products](/docs/scos/dev/features/202005.0/search-and-filter/search-widget-for-concrete-products/search-widget-for-concrete-products-overview.html) to a shopping list. The widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
-![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png){height="" width=""}
+![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png) 
 
 ## Subtotal for a Shopping List
 Starting from v.201907.0, every shopping list has Subtotal for all the items added to the shopping list according to the selected Price Mode and Currency.
-![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png){height="" width=""}
+![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png) 
 
 ## Current Constraints
 We do not support product options in Subtotal of the Shopping Lists. For example, a shopping list includes 3 office chairs, each of them cost €15. The subtotal will show €45 for 3 items. But if we add a product option, e.g. gift wrapping for €5 each to these three office chairs, the subtotal should display €60 (€15/chair + €5/gift wrapping * 3). However, the shopping list will display just the product price - €45.

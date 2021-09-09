@@ -23,5 +23,3 @@ For each shopping cart, the following details are provided:
 * Create new cart which adds a new list in Shopping cart section
 
 ![Shopping Cart Widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shopping+Cart+Widget+Overview/shopping-cart-widget.png)
-
-

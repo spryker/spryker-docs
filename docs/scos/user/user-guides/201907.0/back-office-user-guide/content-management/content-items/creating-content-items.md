@@ -45,7 +45,7 @@ To create a Banner content item:
     * Click URL
     * Alt-text
 
-![Banner content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/banner-content-item-page.png){height="" width=""}
+![Banner content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/banner-content-item-page.png) 
 
 4. Click **Save** to keep the changes. This will take you to the list of content items where you can see a new **Banner** content item in the table and the following message: '_Content item has been successfully created_'.
 ***
@@ -72,7 +72,7 @@ To create an Abstract Product List content item:
 Using options in the _Actions_ column of the top table, you can:<ul><li>Change the order of products in the list by clicking **Move Down** or **Move Up**.</li><li>Remove the product(s
 {% endinfo_block %} from the list. To do this, click **Delete** for a respective product.</li></ul>)
 
-![Abstract product list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/apl-create-page.png){height="" width=""}
+![Abstract product list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/apl-create-page.png) 
 
 4. To keep the changes, click **Save**. This will take you to the list of content items where you can see a new **Abstract Product List** content item in the table and the following message: '_Content item has been successfully created_'.
 ***
@@ -96,7 +96,7 @@ To create a Product Set content item:
 2. On the **Create Content Item: Product Set** page that opens, enter **Name** and **Description** of the Product Set content item. Both fields are mandatory to specify. See [Content Items: Reference Information](/docs/scos/user/user-guides/201907.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
 3. In the _Available Product Sets_ bottom table, select only **one** product set by clicking **+Add** in the _Actions_ column per locale. This will add the selected product set to the top table. 
 
-![Product set content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/product-set-create-page.png){height="" width=""}
+![Product set content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/product-set-create-page.png) 
 
 4. To keep the changes, click **Save**. The **Overview of Content Items** page opens containing a new **Product Set** content item in the table.
 ***
@@ -123,7 +123,7 @@ To create a File content item:
 {% info_block infoBox %}
 In the top table, you can re-order files by clicking **Move Up** and **Move Down** or remove the selected ones by clicking **Delete**.
 {% endinfo_block %}
-![File list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/file-list-create.png){height="" width=""}
+![File list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/file-list-create.png) 
 
 4. Click **Save**. This will successfully save the changes and take you to the list of content items where you can see a new **File List** content item in the table and the following message: '_Content item has been successfully created_'.
 

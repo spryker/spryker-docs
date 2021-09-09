@@ -50,9 +50,9 @@ The following tables describe the attributes that you enter and select while cre
 
 ## Product Set Example
 This is how the product set looks like in the online store:
-![Product set example](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Product+Sets%3A+Reference+Information/product-set-example.png){height="" width=""}
+![Product set example](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Product+Sets%3A+Reference+Information/product-set-example.png) 
 
 The Back Office set up for this product set looks the following way:
-![Product set in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Product+Sets%3A+Reference+Information/product-set-in-back-office.png){height="" width=""}
+![Product set in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Product+Sets%3A+Reference+Information/product-set-in-back-office.png) 
 
-![Product set in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Product+Sets%3A+Reference+Information/product-set-example-in-back-office.png){height="" width=""}
+![Product set in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Product+Sets%3A+Reference+Information/product-set-example-in-back-office.png) 

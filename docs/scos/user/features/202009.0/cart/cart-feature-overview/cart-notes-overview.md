@@ -20,5 +20,3 @@ The shop administrator can see the special request in the **Back Office: Sales >
 
 ## Current Constraints
 In a situation, when the same product variants are added to the cart with different notes, the variants get merged with the same note.
-
-

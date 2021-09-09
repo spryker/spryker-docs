@@ -28,7 +28,7 @@ For this reason, three shipment discount types have been implemented:
 * Price – a discount to a delivery price
 
 You can now create discount calculation rules like the one in the example below. The example below will ensure that if the selected shipment carrier is the Spryker Dummy Shipment, selected shipment method is the Express and the price of this Express shipment method is greater than or equal to 5, then the discount is applied. If, for example, you remove the middle rule ("shipment-method equal Express (Spryker Dummy Shipment)", then the discount will be applied for all shipment methods from Spryker Dummy Shipment shipment carrier if the price of the shipment method is greater than or equal to 5. 
-![Shipment discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Archive/RN_shipment_discount.png){height="" width=""}
+![Shipment discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Archive/RN_shipment_discount.png) 
 
 **Affected Modules**
 
@@ -128,7 +128,7 @@ Please note that the sniff commands now are as follows:
 
 **Tip**: You can use `console c:s:s` and `console c:s:a` as shortcuts.
 
-For guidelines and documentation, see [Code Architecture Guide](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/coding-guidelines/code-architecture-guide.html).
+For guidelines and documentation, see [Code Architecture Guide](/docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html).
 
 **Affected Modules**
 

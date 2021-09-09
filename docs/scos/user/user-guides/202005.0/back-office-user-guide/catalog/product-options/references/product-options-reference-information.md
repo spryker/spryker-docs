@@ -38,7 +38,7 @@ The following table describes the attributes you enter and select while creating
 
 ## Product Option Examples
 On the following example, the Warranty and Insurance are the product option groups:
-![Product option example](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Product+Options%3A+Reference+Information/product-option-example.png){height="" width=""}
+![Product option example](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Product+Options%3A+Reference+Information/product-option-example.png) 
 
 And the values available in the drop-down lists are the product options:
-![Select an option](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Product+Options%3A+Reference+Information/select-option-drop-down.png){height="" width=""}
+![Select an option](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Product+Options%3A+Reference+Information/select-option-drop-down.png) 

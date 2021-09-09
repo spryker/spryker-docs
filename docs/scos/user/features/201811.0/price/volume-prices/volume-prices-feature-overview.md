@@ -15,7 +15,7 @@ Volume pricing helps the merchants to gain the commitment of the customers. Prov
 Such incentives allow a business company to purchase additional inventory at a reduced cost and allow sellers or manufacturers to reduce the products by selling more units and increase their revenues per transaction.
 
 The schema below illustrates the connection between `spy_price_product_store` table links `spy_price_product_merchant_relationship` with the `spy_currency` and `spy_store` tables.
-![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Volume+Prices/Volume+Prices+Feature+Overview/volume-prices-dbschema.png){height="" width=""}
+![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Volume+Prices/Volume+Prices+Feature+Overview/volume-prices-dbschema.png) 
 
 `price_data` in` spy_price_product_store` table contains a JSON with prices per mode, currency and type.
 
@@ -64,10 +64,10 @@ The concrete product can also have its own volume prices different from its abst
 A specific volume price for a concrete product has a higher priority over an inherited one from its abstract product.
 
 The volume prices are imported using [data importer](https://github.com/spryker/spryker/blob/master/Bundles/PriceProductDataImport/data/import/product_price.csv). The JSON with volume prices is added to the `price_data.volume_prices` column as shown in the example:
-![CSV file containing volume prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Volume+Prices/Volume+Prices+Feature+Overview/volume-prices-csv.png){height="" width=""}
+![CSV file containing volume prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Volume+Prices/Volume+Prices+Feature+Overview/volume-prices-csv.png) 
 
 After the import is completed the volume prices are shown on the product detail page:
-![Volume prices displayed on the product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Volume+Prices/Volume+Prices+Feature+Overview/volume-prices-pdp.png){height="" width=""}
+![Volume prices displayed on the product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Volume+Prices/Volume+Prices+Feature+Overview/volume-prices-pdp.png) 
 
 Once the product is added to the shopping list or to the cart, the item price corresponding to the volume price is displayed for that quantity. If the user increases or decreases the quantity in cart (but not in shopping list since here we don't really change quantities), the price is updated once the user goes over or under a threshold defined by the volume prices.
 

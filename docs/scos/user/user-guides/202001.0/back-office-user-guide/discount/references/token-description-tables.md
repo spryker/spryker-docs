@@ -12,7 +12,7 @@ This topic contains a set of tables that describe fields, value types, and opera
 ***
 ## Tokens
 
-![Token](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Token+Description+Tables/tokens.png){height="" width=""}
+![Token](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Token+Description+Tables/tokens.png) 
 
 | Value | Description |
 | --- | --- |

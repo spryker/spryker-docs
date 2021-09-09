@@ -33,7 +33,7 @@ The table with shopping lists shows details for each of the lists, including:
 * Creation date
 * Possible actions to manage shopping lists: [edit](#edit), [print](/docs/scos/dev/features/201903.0/shopping-list/printing-a-shopping-list/printing-a-shopping-list.html), [delete](#deleted), [share](#share), [dismiss](#dismiss) (for shared shopping lists)
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/lists-table.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/lists-table.png) 
 
 
 When clicking **Edit**<a name="edit"></a> for a shopping list, the customer is taken to *Edit shopping list* page, where they can:
@@ -45,14 +45,14 @@ When clicking **Edit**<a name="edit"></a> for a shopping list, the customer is t
 * Add comments to items (check [Shopping list notes](/docs/scos/dev/features/201903.0/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
 * [Delete](#deleted) the shopping list
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/edit-shopping-list.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/edit-shopping-list.png) 
 
 
 ## Permissions Management for Shared Shopping Lists
 
 Users of companies with business units can **share** <a name="share"></a>their shopping lists within the company business units. The shopping lists can either be shared with the entire business unit, or its individual members. Customers can view shopping lists shared with them, on *My Account->Shopping lists* page. The shopping lists can be shared  by clicking **Share** at this page as well. The *Share [SHOPPING LIST NAME]* page consists of two sections: Business Units and Users. Here, the shopping list owner can select either entire business units, or individual users to share the shopping list with.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/share-shopping-list.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/share-shopping-list.png) 
 
 
 There are three types of shopping list access rights that can be granted
@@ -92,7 +92,7 @@ Alternative products are not shown for discontinued products, since they can not
 
 4. **Adding shopping list items to cart**: The user can select the necessary which are available and add them to cart
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/shared-read-only.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/shared-read-only.png) 
 
 
 ### Full access
@@ -122,7 +122,7 @@ Besides other products, user with *Full access* rights is allowed to see  altern
 7. **[Deleting shopping list](#deleted)**
 8. **Deleting items in shopping list**: The shopping list items can be deleted on *Edit Shopping list* page
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/shared-full-access.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/shared-full-access.png) 
 
 
 It is possible to grant different access rights on shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* for the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.

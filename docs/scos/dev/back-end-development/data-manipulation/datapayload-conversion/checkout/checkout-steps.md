@@ -29,7 +29,7 @@ The checkout process consists of the following steps:
 * Place order step
 * Success step
 
-![Quote_transfer_lifetime.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Checkout/Multi-Step+Checkout/Checkout+Steps/quote-transfer-lifetime.png){height="" width=""}
+![Quote_transfer_lifetime.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Checkout/Multi-Step+Checkout/Checkout+Steps/quote-transfer-lifetime.png) 
 
 Read on to learn more on each step.
 

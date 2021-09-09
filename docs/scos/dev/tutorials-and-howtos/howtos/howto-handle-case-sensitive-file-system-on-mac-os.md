@@ -42,7 +42,7 @@ We can use Mac OS' Disk Utility application to create a disk image. We will crea
 9. Select the image format: Sparse (be careful: Somethimes changing the image format will reset the setting for image size).
 
 The resulting dialog should look something like this:
-![Case sensitive file system](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Handle+Case+Sensitive+File-System/case+sensitive+system.png){height="" width=""}
+![Case sensitive file system](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Handle+Case+Sensitive+File-System/case+sensitive+system.png) 
 
 After the disk has been created you can see it being mounted in Finder already.
 

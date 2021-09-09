@@ -22,7 +22,7 @@ Keep in mind that the feature is available only for logged-in users.
 
 <summary>Cart Page</summary>
 
-![yves-custom-order-ref-cart-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/yves-custom-order-ref-cart-page.png){height="" width=""}
+![yves-custom-order-ref-cart-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/yves-custom-order-ref-cart-page.png) 
 
 </details>
 
@@ -30,7 +30,7 @@ Keep in mind that the feature is available only for logged-in users.
 
 <summary>Summary Page</summary>
 
-![yves-custom-order-ref-summary-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/yves-custom-order-ref-summary-page.png){height="" width=""}
+![yves-custom-order-ref-summary-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/yves-custom-order-ref-summary-page.png) 
 
 </details>
 
@@ -38,13 +38,13 @@ Keep in mind that the feature is available only for logged-in users.
 
 <summary>Order Details Page </summary>
 
-![yves-custom-order-ref-order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/yves-custom-order-ref-order-details-page.png){height="" width=""}
+![yves-custom-order-ref-order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/yves-custom-order-ref-order-details-page.png) 
 
 </details>
 
 When working with the order in the Back Office, you, as a Back Office user, can view, edit, or remove the custom order reference on the order details page.
 
-![zed-custom-order-ref-new](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/zed-custom-order-ref-new.gif){height="" width=""}
+![zed-custom-order-ref-new](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/zed-custom-order-ref-new.gif) 
 
 ## Interaction of the Custom Order Reference with the RFQ, Approval Process, and Share Cart via Link
 If you submit a [quote request](https://documentation.spryker.com/v5/docs/en/quotation-process-feature-overview) and then convert it to the shopping cart, the cart gets locked. However, adding and updating the customer order reference for the locked cart is still possible. 

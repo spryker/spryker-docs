@@ -16,13 +16,13 @@ redirect_from:
 </div></section>
 
 **Request for Quote (RFQ)** is a request that a B2B buyer sends to their suppliers stating that they would like to get a quoted price on particular products with the details about the packaging and volumes they need. 
-![Request quote](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/request-quote.png){height="" width=""}
+![Request quote](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/request-quote.png) 
 
 Within the Spryker Commerce OS, RFQ is represented by the ability of a Sales Representative to see the list of quotes, check and edit them, thereby change and overwrite the prices for the products in the RFQ for a certain buyer. In turn, a buyer is able to create an RFQ from a shopping cart, add a note to it and bid for cheaper prices. An RFQ can also specify the timeline for delivery, a date by which the proposal should be submitted, and history of the negotiations.
-![Sales Representative and RFQ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/sales-rep-rfq.png){height="" width=""}
+![Sales Representative and RFQ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/sales-rep-rfq.png) 
 
 One of the RFQ features is a tool for creating special offers for buyers with limited validity. For example, a Sales Representative can update the prices for products in the RFQ and set the exact time until which this offer is valid, e.g, 29th of December, 2019, 11:58 PM. If the Buyer tries to proceed with this RFQ to Checkout on 29th of December, 2019 at 11:59 PM, then this RFQ will not be available.
-![RFQ Validity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/valid-till.png){height="" width=""}
+![RFQ Validity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/valid-till.png) 
 
 ## RFQ Statuses
 The RFQ can have the following statuses:
@@ -42,14 +42,14 @@ The process of requesting the quote includes two workflows depending on the role
 
 ### Buyer Workflow
 A Buyer can create a Quote Request the product prices from a Shopping Cart:
-![Buyer workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/buyer-rfq-button.png){height="" width=""}
+![Buyer workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/buyer-rfq-button.png) 
 
 After filling the metadata fields and submitting the request, RFQ gets to the status **Draft** where the buyer can also check the version information, edit the add/remove products, change their quantity, update meta information and once done, send the RFQ to a Sales Representative. After that, the Buyer waits until the RFQ gets processed by a Sales Representative. The status of the RFQ changes to **Waiting**. Request for Quote cannot be edited at this point. It is only possible to cancel it.
 
 After the Sales Representative has processed the request, the Buyer gets it back with the status **Ready**. At this point, if a Buyer is satisfied with such a request, then they can convert the RFQ to Cart, and after that proceed to the Checkout. When the order is placed, the RFQ receives **Closed** status.
 
 If the buyer isn't satisfied and would like to negotiate the price further, they can **Revise** the RFQ and move it back to the **Draft** status. The RFQ obtains a new RFQ version. Schematically, the workflow is shown below:
-![Schema of workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/Buyer+Workflow.png){height="" width=""}
+![Schema of workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/Buyer+Workflow.png) 
 
 ### Sales Representative Workflow
 A Sales Representative can create an RFQ using two working procedures:
@@ -67,7 +67,7 @@ A Sales Representative can create an RFQ on behalf of any company user. This opt
 To create an RFQ on behalf of a user, see the [Creating an RFQ for a Customer](/docs/scos/user/user-guides/201907.0/shop-user-guide/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html#creating-an-rfq-for-a-customer) section in *Shop Guide - Managing Requests for Quote for a Sales Representative*.
 
 The workflow with statuses for a Sales Representative is presented in the schema below:
-![Workflow for Sales Reps](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/sales-rep-workflow.png){height="" width=""}
+![Workflow for Sales Reps](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/sales-rep-workflow.png) 
 
 When a Sales Representative creates an RFQ, it has the **Show the latest version to customer** checkbox empty by default. This means, that the buyer cannot see the latest updated version of the RFQ (for example, with the changed prices). When the **Show the latest version to customer** checkbox is selected, the updates that have been made by a Sales Representative are available to the Buyer right here. The Buyer can see the **In Progress** status for the RFQ.
 
@@ -81,7 +81,7 @@ Agent account has a Quote Request Widget. The Widget displays the latest five re
 * Total
 * Number of Items
 * Status
-![Agent widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/agent-widget-rfq.png){height="" width=""}
+![Agent widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/agent-widget-rfq.png) 
 
 ### RFQ Versioning
 Versioning implies management of multiple variants of the same RFQ, all of which have same general details but include the customized data (for example, prices for the same products in the different versions of the RFQ can vary). Every RFQ receives specific identifiers, such as DE--1-Y-X, where: 
@@ -89,7 +89,7 @@ Versioning implies management of multiple variants of the same RFQ, all of which
 * DE--1 - customer reference
 * Y - number of the request of the customer
 * X - version of the RFQ
-![RFQ versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/rfq-versions.png){height="" width=""}
+![RFQ versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/rfq-versions.png) 
 
 The RFQ version is updated when:
 
@@ -105,7 +105,7 @@ If your project has only Persistent Cart module, which means that only one Shopp
 If your project has Persistent Cart and Multi-cart modules, converting the RFQ into a Shopping Cart creates a new locked shopping cart.
 
 To let users utilize the cart irrespective of the RFQ updates, Cart Unblock functionality has been implemented.
-![Unblocking the cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/cart-unblock.png){height="" width=""}
+![Unblocking the cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/cart-unblock.png) 
 
 A Buyer can unblock a locked cart, however, the modifications that have been applied during the RFQ workflow will be discarded.
 
@@ -117,7 +117,7 @@ Example: In the project, the cart needs approval when the cart total exceeds €
 {% endinfo_block %}
 
 Module relations for the RFQ feature are schematically represented in the schema below:
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/request-for-quote-module-diagram.png){height="" width=""}
+![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/request-for-quote-module-diagram.png) 
 
 ### Current Constraints
 

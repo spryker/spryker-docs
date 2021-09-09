@@ -24,10 +24,10 @@ Company Administrator can create an *Approver* role for the manager who is respo
 To create an Approver / Buyer with Limit roles in the shop application, do the following:
 
 1. Log in to your Company Account and navigate to **Roles** section.
-![Roles widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/roles-on-widget.png){height="" width=""}
+![Roles widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/roles-on-widget.png) 
 
 2. Click **+Add new role**.
-![Add a new role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/add-new-role.png){height="" width=""}
+![Add a new role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/add-new-role.png) 
 
 3. Enter the Role name - Approver or Buyer with Limit.
 4. Click **Submit**.
@@ -38,10 +38,10 @@ To create an Approver / Buyer with Limit roles in the shop application, do the f
 
 1. In the list of Roles on the *Roles* page, click<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/edit-icon.png" class="js-content-icon">**Edit** icon beside the **Approver** role in the *Roles* section.
 2. In the Permissions list, turn on the toggle beside  *Approve up to grand total*.
-![Approve up to grand total](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approve-up-to-grand-total-permission.png){height="" width=""}
+![Approve up to grand total](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approve-up-to-grand-total-permission.png) 
 
 3. To set the grand total limit , click<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/config-icon.png" class="js-content-icon" alt="Config icon">. Provide the amount (in cents) till which the Approver can review the requests.
-![Configure a permission](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/configure-permission.png){height="" width=""}
+![Configure a permission](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/configure-permission.png) 
 
 ## Configuring `Buy up to grand total` Permission
 
@@ -53,10 +53,10 @@ To configure *Buy up to grand total*, do the following:
 {% info_block warningBox %}
 *Send cart for approval (Requires "Buy up to grand total"
 {% endinfo_block %}* should also be enabled.)
-![Buy up to grand total](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/buy-up-to-grand-total.png){height="" width=""}
+![Buy up to grand total](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/buy-up-to-grand-total.png) 
 
 3. To set the grand total limit , click<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/config-icon.png" alt="Config icon" class="js-content-icon">. Provide the amount (in cents) till which the Buyer is able to proceed to Checkout.
-![Configure permission buy](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/configure-permission-buy.png){height="" width=""}
+![Configure permission buy](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/configure-permission-buy.png) 
 
 ## Submitting a Request for Approval
 
@@ -64,7 +64,7 @@ A buyer can submit a quote for approval if both *Buy up to grand total* and *Sen
 
 After completing all the steps of the Checkout, if the quote grand total exceeds the limit specified in the *Buy up to grand total* permission, the user sees the Approval Widget on the Checkout Summary page:
 
-![Approval widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approval-widget-2.png){height="" width=""}
+![Approval widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approval-widget-2.png) 
 
 To submit the approval request, do the following:
 
@@ -75,11 +75,11 @@ To submit the approval request, do the following:
 
 An Approver can check all the Approval requests either on the **Shopping Carts** page or on the **Shopping Cart Widget**:
 
-![Approval request cart vs widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approval-request-cart-vs-widget.png){height="" width=""}
+![Approval request cart vs widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approval-request-cart-vs-widget.png) 
 
 To approve or decline a cart, follow the steps below:
 
 1. Click the cart you would like to review to open the [Shopping Cart page](/docs/scos/user/user-guides/202005.0/shop-user-guide/shop-guide-customer-account/references/shopping-carts-reference-information.html#shopping-cart).
 2. Click **Checkout** to proceed to the Checkout Summary page where the widget is located.
 3. In the **Approval Request Widget** click **Approve** or **Decline**.
-![Approve / Deny Widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approve-deny-widget.png){height="" width=""}
+![Approve / Deny Widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approve-deny-widget.png) 

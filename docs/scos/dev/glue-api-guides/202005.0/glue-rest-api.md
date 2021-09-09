@@ -15,15 +15,15 @@ The Spryker Glue REST API is a fully functional JSON REST API that comes in the 
 The Spryker API infrastructure, which is implemented as a separate layer of the Spryker Commerce OS, is called Glue. Glue is responsible for providing API endpoints, processing requests, as well as for communication with other layers of the OS in order to retrieve the necessary information. As a result, the Glue is responsible for communicating with any clients on the touchpoint side.
 
 {% info_block infoBox %}
-For more details, see [Glue Infrastructure](/docs/scos/dev/developer-guides/202005.0/development-guide/glue-api/glue-infrastructure.html
-{% endinfo_block %}.)
+For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/glue-infrastructure.html).
+{% endinfo_block %}
 
 ## REST API
 The Glue REST API comes with a set of predefined APIs, and the possibility for you to extend and add APIs in your project. There is no restriction when it comes to customization. The predefined APIs support Storefront functionality and may as well be used for integrations with 3rd party systems. Storefront functionality specifically enables you to build a custom experience for your customers in any touchpoint you want and thereby leveraging data and functionality at the core of your Commerce OS. For instance, it allows you to fetch product data to be displayed on a custom product detail page in your mobile app.
 
 {% info_block infoBox %}
-For more details, see [REST API Reference](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html
-{% endinfo_block %}.)
+For more details, see [REST API Reference](/docs/scos/dev/glue-api-guides/202005.0/rest-api-reference.html).
+{% endinfo_block %}
 
 ## B2C API React Example
 In order to help you understand possible use cases, we offer you a sample app available as an example implementation (which is not a starting point for customer projects, though). It can coexist with an existing demo shop as a second touchpoint in the project. From a technology perspective, it is based on our customers' interests. The example app is implemented in the form of a single-page application based on a React JS library.

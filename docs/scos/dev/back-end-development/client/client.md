@@ -41,7 +41,7 @@ For each of these resources, there is a Client. So, it is not only one Client, b
 
 Commerce OS Clients communicate with the Commerce OS using HTTP. They mainly perform RPCs (remote procedure calls) using HTTP POST requests with a serialized JSON payload. They also do all the necessary authorization and authentication between the two applications.
 The ClientClient’s purpose is to encapsulate the logic that runs the shop independent from the overlying application. So in case you want to use a different technology stack, you can reuse the Client.
-![Client Schematic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/client-schematic.png){height="" width=""}
+![Client Schematic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/client-schematic.png)
 
 
 ## How to use a Client in Yves
@@ -49,7 +49,7 @@ The ClientClient’s purpose is to encapsulate the logic that runs the shop inde
 `getClient()` method in Yves
 
 Spryker provides several clients. For instance there is a cart client which contains methods like `addItem()` or `removeItem()`. And there is a catalog client that handles query strings. In each module, you can access the related Client with the `getClient()` method, which is available in controllers and plugins.
-![Yves Get Client](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/yves-getclient.png){height="" width=""}
+![Yves Get Client](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/yves-getclient.png) 
 
 The following example shows how the cart Client is used inside the `CartController.` As you can see, the Client uses [transfer objects](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) as an input parameter.
 

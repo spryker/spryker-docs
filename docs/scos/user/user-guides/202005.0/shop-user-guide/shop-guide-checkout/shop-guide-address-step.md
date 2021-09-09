@@ -16,7 +16,7 @@ You can proceed to the *Address* step as a:<ul><li>**registered user**: In the L
 ***
 To open the *Address* step, click **Checkout** in the corresponding shopping cart.
 
-![Shopping cart checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Address+Step/checkout-btn.png){height="" width=""}
+![Shopping cart checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Address+Step/checkout-btn.png) 
 
 Here you can do the following:
 
@@ -33,7 +33,7 @@ If there are no pre-saved addresses, the **Define new address** option is displa
 {% endinfo_block %}
 
 1. On the **Address** page, select the **Define new address** option from the drop-down menu.
-![Create a new address](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Address+Step/define-new-address.png){height="" width=""}
+![Create a new address](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Address+Step/define-new-address.png) 
 
 2. Fill in all the required information.
 3. To proceed to the *Shipment* step, click **Next**.

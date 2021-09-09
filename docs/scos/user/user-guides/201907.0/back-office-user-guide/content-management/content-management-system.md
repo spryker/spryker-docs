@@ -13,7 +13,7 @@ The **Content Management** section in the Back Office is mostly used by Marketin
 The section is designed to create, manage and display content in the storefront. The content is represented by **CMS Pages**, **CMS Blocks**, **Content Items**, and **Content Item Widgets**. This section also allows you to set up a URL redirect from one site to another. For example, you have several sites for your shop. However, you decide to remove one of them to display all the content on one website. 
 
 **Standardized flow of actions for a Marketing Content Managers**
-![Flow of actions for a Marketing Content Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/content-management-section.png){height="" width=""}
+![Flow of actions for a Marketing Content Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/content-management-section.png) 
 
 {% info_block infoBox %}
 This is how a Marketing Content Manager can work with the content using the Back Office and interact with other departments to launch a marketing campaign.

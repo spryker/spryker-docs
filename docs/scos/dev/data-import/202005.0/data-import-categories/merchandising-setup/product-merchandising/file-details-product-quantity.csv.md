@@ -23,7 +23,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 
 This file has the following dependency:
-*     [product_concrete.csv](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+*     [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Template File & Content Example
 A template and an example of the *product_quantity.csv*  file can be downloaded here:

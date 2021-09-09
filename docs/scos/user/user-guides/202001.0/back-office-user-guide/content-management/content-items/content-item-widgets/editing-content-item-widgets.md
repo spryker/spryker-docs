@@ -15,7 +15,7 @@ To edit a content item widget:
 
 1. On the **Edit Placeholders: [CMS Page name] -> Placeholder** tab editor, click a widget element.
 
-![Content item widget edit menu](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Editing+Content+Item+Widgets/content-item-widget-menu.png){height="" width=""}
+![Content item widget edit menu](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Editing+Content+Item+Widgets/content-item-widget-menu.png) 
 
 2. In the popover menu, you can click:
     * **Edit Widget**. This will re-open the **Insert a Content Item** pop-up window where you can select another content item of the **same** type and/or another template.
@@ -38,7 +38,7 @@ To edit a content item widget:
 
 1. On the **Edit Block Glossary: [Block ID name] -> Placeholder** tab editor, click a widget element.
 
-![Edit content item widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Editing+Content+Item+Widgets/content-item-widget-menu-block.png){height="" width=""}
+![Edit content item widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Editing+Content+Item+Widgets/content-item-widget-menu-block.png) 
 
 2. In the popover menu, you can click:
     * **Edit Widget**. This will re-open the **Insert a Content Item** pop-up window where you can select another content item of the **same** type and/or another template.

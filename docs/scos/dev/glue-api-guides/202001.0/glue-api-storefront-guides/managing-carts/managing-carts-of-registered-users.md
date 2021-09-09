@@ -11,8 +11,8 @@ redirect_from:
 The **Carts API** provides access to management of customers' shopping carts. Carts come in two different forms: carts for registered customers and carts for guests. In your development, the resources provided by the API can support you in the development of shopping cart functionality.
 
 {% info_block infoBox "Info" %}
-The following document covers the APIs for carts for **registered customers** only. If you want to know how to access carts of unregistered users, see [Managing Guest Carts](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html
-{% endinfo_block %}.)
+The following document covers the APIs for carts for **registered customers** only. If you want to know how to access carts of unregistered users, see [Managing Guest Carts](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html).
+{% endinfo_block %}
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Carts API](/docs/scos/dev/migration-and-integration/202001.0/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html){target="_blank"}.
@@ -239,8 +239,8 @@ Sample request: *GET http://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you need.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 {% info_block warningBox "Note" %}
 You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
@@ -468,8 +468,8 @@ Sample request: *POST http://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you need.
 
 {% info_block warningBox "Authentication" %}
-To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 {% info_block warningBox "Note" %}
 You can also use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4

@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 Example State Machine:
-![Click Me](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/computop-credit-card-flow-example.png){height="" width=""}
+![Click Me](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/computop-credit-card-flow-example.png) 
 
 ## Front-end Integration
 

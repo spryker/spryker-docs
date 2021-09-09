@@ -11,7 +11,7 @@ redirect_from:
 The **Maintenance** section is designed mostly for DevOps.
 This section contains a piece of very technical information that is useful for team members who deals with the technical aspects of the project. 
 **Standardized flow of actions for a DevOps**
-![Maintenance - DevOps](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Maintenance/maintenance-section.png){height="" width=""}
+![Maintenance - DevOps](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Maintenance/maintenance-section.png) 
 
 {% info_block infoBox %}
 This is how a DevOps uses the Maintenance section to ensure that the system works as designed.

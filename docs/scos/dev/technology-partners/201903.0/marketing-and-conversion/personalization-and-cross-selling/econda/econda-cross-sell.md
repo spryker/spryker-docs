@@ -25,7 +25,7 @@ An Econda ID can be found in your account details (see image below).
 
 These instructions assume  you are using Antelope for your Yves assets management. If your project uses other frontend automation you can still use the instructions as guidelines.
 
-Before getting started we recommend that you read the following topics: [asset management](/docs/scos/dev/developer-guides/201903.0/development-guide/front-end/legacy-demoshop/frontend-overview.html#asset-management) and [Twig.](/docs/scos/dev/developer-guides/201903.0/development-guide/front-end/legacy-demoshop/twig-templates/overview-twig.html)
+Before getting started we recommend that you read the following topics: [asset management](/docs/scos/dev/legacy-demoshop/frontend-overview.html#asset-management) and [Twig.](/docs/scos/dev/legacy-demoshop/twig-templates/overview-twig.html)
 
 ## Installing assets
 

@@ -41,7 +41,7 @@ The `redirectUrl` and `isExternalRedirect` attributes are auto-mapped out of the
 {% endinfo_block %}
 2. A plugin to process the response of the payment service provider.
 The overall interaction diagram between Glue API, the API Client, and the third party is as follows:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Glue+API/Tutorial+Interacting+with+Third+Party+Payment+Providers+via+Glue+API/multi-step-checkout-glue-infrastructure.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Glue+API/Tutorial+Interacting+with+Third+Party+Payment+Providers+via+Glue+API/multi-step-checkout-glue-infrastructure.png) 
 
 ## 2. Implement Checkout Response Mapper Plugin
 First, we need to implement a plugin that maps the checkout response and fills it with the necessary redirect URL and other attributes that are mapped. To do so, create a plugin file on the **Glue** layer: `src/Pyz/Glue/MyModule/Plugin/CheckoutRestApi/CheckoutResponseMapperPlugin.php`.

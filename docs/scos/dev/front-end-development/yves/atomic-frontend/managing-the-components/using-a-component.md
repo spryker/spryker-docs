@@ -85,12 +85,12 @@ The following block demonstrates how to include component `new-component-counter
 ```
 
 {% info_block infoBox %}
-See component implementation in [How To Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html
-{% endinfo_block %}.)
+See component implementation in [How To Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+{% endinfo_block %}
 
 Now, let us have a look at the embedded element on the page:
 
-![Embedded element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/embedded-element.png){height="" width=""}
+![Embedded element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/embedded-element.png) 
 
 ## Embed
 Embedding gives you more freedom with components. It allows you to modify the template of the component you include and even add additional elements to it. For example, you can add or remove blocks, arrange them differently etc. Unlike including, context is not passed via the embed statement, so you need to define the required contracts explicitly.
@@ -129,9 +129,9 @@ The resulting Twig will look as follows:
 ```
 
 {% info_block infoBox %}
-You can find the original Twig of the component in the _Create Component Template_ section of [HowTo - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html
-{% endinfo_block %}.)
+You can find the original Twig of the component in the _Create Component Template_ section of [HowTo - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+{% endinfo_block %}
 
 Now, let us check how it looks like on the page.
 
-![Updated embedded element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/updated-embedded-element.png){height="" width=""}
+![Updated embedded element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/updated-embedded-element.png) 

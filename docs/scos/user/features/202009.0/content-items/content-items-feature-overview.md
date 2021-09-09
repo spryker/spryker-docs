@@ -28,7 +28,7 @@ For use cases and exmaple of each of the content item, see [Content Item Widgets
 
 A content manager can [create content items](/docs/scos/user/user-guides/202009.0/back-office-user-guide/content/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section.
 A developer can do the following:
-* [Import content items](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-importers-overview-and-implementation.html)
+* [Import content items](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)
 * [Retrieve banner content items](docs\scos\dev\glue-api-guides\202009.0\retrieving-content-items\retrieving-banner-content-items.html)
 * [Retrieve abstract product list content items](docs\scos\dev\glue-api-guides\202009.0\retrieving-content-items\retrieving-abstract-product-list-content-items.md)
 

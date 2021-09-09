@@ -73,7 +73,7 @@ You must also find out which data has changed because you don’t want to comple
 To be able to browse the data that’s stored in Redis, you must set up Redis Desktop Manager(RDS). [Install RDS](http://redisdesktop.com/download) and then configure as shown on the screenshot below.
 
 Find the current Redis Port in `config/Shared/config_default-development.php`.
-![Redis setup](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Using+Redis+as+a+KV+Storage/redis-setup.png){height="" width=""}
+![Redis setup](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Using+Redis+as+a+KV+Storage/redis-setup.png) 
 
 Make sure that your virtual machine is up and running.
 

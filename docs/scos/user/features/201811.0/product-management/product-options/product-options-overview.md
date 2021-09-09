@@ -41,7 +41,7 @@ Prices are **integer** values and stored in their normalized form. For example, 
 Different SKU and glossary key are stored for each product option value.
 
 The scheme below displays how the product options are stored in the database:
-![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options_database_schema1.png){height="" width=""}
+![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options_database_schema1.png) 
 
 ## Product Option Collector
 
@@ -52,7 +52,7 @@ Product options are exported to Yves by a separate collector. Each abstract prod
 Each option is persisted into `sales_order_item_option` table when the order is placed.
 
 In the diagram below you can see how the product options are stored when the order is placed:
-![Product options storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options_storage.png){height="" width=""}
+![Product options storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options_storage.png) 
 
 ## Product Options Management in the Back Office
 Say you want to sell a product that will have several options attached, for example, warranty period for 1, 2, and 3 years.
@@ -64,7 +64,7 @@ See [Creating a New Product Option](/docs/scos/user/user-guides/201811.0/back-of
 {% endinfo_block %} to learn more how to create a product option group and assign products in Admin UI.)
 
 After you save the changes, a new product option group will appear on the product detail page. The option values will be displayed as a drop-down list. The product option price is added to the product price in the cart.
-![Product option warranty](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/yves-product-option-warranty.png){height="" width=""}
+![Product option warranty](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/yves-product-option-warranty.png) 
 
 ##  Product Options Management in the Legacy Demoshop
 
@@ -92,7 +92,7 @@ A product configuration is the set of option value selections for each option ty
 In general an option does not have a stock.
 
 Example:
-![Product options example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options.png){height="" width=""}
+![Product options example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product_options.png) 
 
 ## Current Constraints
 {% info_block infoBox %}

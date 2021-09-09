@@ -10,8 +10,8 @@ redirect_from:
 The **Carts API** provides access to management of customers' shopping carts. The following document covers working with **carts of registered users**.
 
 {% info_block infoBox %}
-If you want to know how to process carts of registered users, see [Managing Guest Carts](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html
-{% endinfo_block %}.)
+If you want to know how to process carts of registered users, see [Managing Guest Carts](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/managing-carts/managing-guest-carts.html).
+{% endinfo_block %}
 
 ## Guest Carts and Carts of Registered Users
 Access to carts of registered users is provided by the /carts resource. Before accessing the resource, you need to authenticate a user first. For more details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html).
@@ -31,8 +31,8 @@ Apart from creating a new cart, you can also convert a cart of a guest customer 
 {% endinfo_block %}
 
 {% info_block errorBox %}
-To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Request
 **Attributes**
@@ -158,8 +158,8 @@ Sample request: `GET http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4af
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need.
 
 {% info_block errorBox %}
-To use the endpoints, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use the endpoints, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Response
 No matter which of the 2 endpoints you use, they will respond with a RestCartsResponse containing the requested cart(s).
@@ -216,8 +216,8 @@ Sample request: `POST http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4a
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need.
 
 {% info_block errorBox %}
-To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ## Request
 **Attributes**
@@ -256,8 +256,8 @@ Sample request: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need and `177_25913296` is the SKU of the concrete product you want to remove.
 
 {% info_block errorBox %}
-To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Response
 If the item was deleted successfully, the endpoint will respond with a **204 No Content** status code.
@@ -276,8 +276,8 @@ Sample request: `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need and `177_25913296` is the SKU of the concrete product for which to change the quantity.
 
 {% info_block errorBox %}
-To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html
-{% endinfo_block %}.)
+To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api/201903.0/glue-api-storefront-guides/authentication-and-authorization.html).
+{% endinfo_block %}
 
 ### Request
 **Attributes**

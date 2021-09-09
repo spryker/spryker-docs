@@ -21,7 +21,7 @@ To start managing translations, navigate to the **Glossary** section.
 5. Once done, click **Save**.
 
 This is the example of how the translations can look like:
-![Example of translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Glossary/Managing+Glossary/managing-glossary.png){height="" width=""}
+![Example of translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Glossary/Managing+Glossary/managing-glossary.png) 
 
 ***
 **To edit an existing translation:**

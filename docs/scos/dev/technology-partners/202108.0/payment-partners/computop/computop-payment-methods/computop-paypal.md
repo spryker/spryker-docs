@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 Example State Machine
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-paypal-flow-example.png){height="" width=""}
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-paypal-flow-example.png) 
 
 ## Front-End Integration
 To adjust frontend appearance, provide following templates in your theme directory:

@@ -18,5 +18,3 @@ The web shop users can print their shopping lists, as well as shopping lists sha
 
 Clicking *Print* opens a printable version of a *Shopping List* page, which contains the shopping lists name, product barcode, SKU, name, default price and note:
 ![Printing page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Print+Shopping+List/Printing+a+Shopping+List+Feature+Overview/print.png)
-
-

@@ -24,7 +24,7 @@ Sample request: `GET http://mysprykershop.com/product-labels/3`
 where `3` is the ID of the label you want to retrieve.
 Label IDs can be found in the `Products / Product Labels` section of the administration interface.
 
-![Product Labels 2.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/Product%20Labels%202.png){height="" width=""}
+![Product Labels 2.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/Product%20Labels%202.png) 
 
 **Sample Response**
 ```json

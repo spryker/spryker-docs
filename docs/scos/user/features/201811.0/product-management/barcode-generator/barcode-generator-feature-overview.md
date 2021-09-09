@@ -13,13 +13,13 @@ The Barcode Generator can be used for any kind of entity, and by default, we pro
 ## What is a barcode?
 
 A barcode is a square or rectangular image consisting of a series of parallel black lines (bars) and white spaces of varying widths that can be read by a scanner and printed. Barcodes are applied to entities as a means of quick identification.
-![Barcode example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Barcode+Generator/Barcode+Generator+Feature+Overview/barcode.png){height="" width=""}
+![Barcode example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Barcode+Generator/Barcode+Generator+Feature+Overview/barcode.png) 
 
 In the default configuration, barcodes are generated based on the SKU of a concrete product using [Code128](https://en.wikipedia.org/wiki/Code_128) format. Though, Spryker provides highly customizable solutions through plugins with the help of which the setup can be changed.
 
 {% info_block infoBox %}
-You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/dev/features/201811.0/product-management/product-abstraction.html
-{% endinfo_block %}.)
+You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/dev/features/201811.0/product-management/product-abstraction.html).
+{% endinfo_block %}
 
 {% info_block errorBox %}
 In your project, you can also implement QR codes functionality by creating similar plugins.

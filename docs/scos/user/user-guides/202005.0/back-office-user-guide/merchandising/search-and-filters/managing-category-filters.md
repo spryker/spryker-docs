@@ -32,10 +32,10 @@ This procedure will show you how to customize filter behavior by adding the filt
 2. Choose a category for which you would like to overwrite the default global settings.
     To find a specific category, start entering its name in the **Search** field and the results will be automatically highlighted in the category tree.
 3. After selecting a category, the **Category Filters for [Category name]** frame opens to show the current configuration.
-![Adding a filter to a category](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-filter-to-category.png){height="" width=""}
+![Adding a filter to a category](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-filter-to-category.png) 
     
     Categories in the category tree view that have manually defined filter settings are marked with a pencil icon next to their name. 
-![Category tree view](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/category-tree-view.png){height="" width=""}
+![Category tree view](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/category-tree-view.png) 
     
 4. Start typing the name of the existing filter in the **Add filter** field. As you type, the autocompleted drop-down will appear so you can select a filter there.
 5. After selecting the filter, click **Add**. The filter will appear in the **Active filters** list.
@@ -43,23 +43,23 @@ This procedure will show you how to customize filter behavior by adding the filt
 
 **Tips & Tricks**
 Clicking **Reset to global settings** in **Category Filters for [Category name]** will remove the customized filter settings.
-![Reset to global settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/reset-to-global-settings.png){height="" width=""}
+![Reset to global settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/reset-to-global-settings.png) 
 
 
 ## Reordering Filters
 
 **To reorder filters**, just drag and drop them to the necessary place.
-![Reordering filters](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/reordering-filters.gif){height="" width=""}
+![Reordering filters](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/reordering-filters.gif) 
 
 
 ## Removing a Filter
 
 It is possible to remove either all filters from the active filters at once or just single filters.
 1. **To remove all filters** > Click **Remove all**.
-   ![Removing a filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/removing-filter.png){height="" width=""}
+   ![Removing a filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/removing-filter.png) 
 2. **To remove single filters** > Click a **basket** icon at the filter you want to remove. Once done, click **Save**.
     The removed filters will be moved to the **Inactive filters** list.
-![Removing a single filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/remove-single-filter.gif){height="" width=""}
+![Removing a single filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/remove-single-filter.gif) 
 
 **Tips & Tricks**
 To add the removed filters again, click on the **green plus sign** at the filters you want to add back from Inactive filters.

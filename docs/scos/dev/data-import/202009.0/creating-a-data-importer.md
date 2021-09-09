@@ -18,7 +18,7 @@ Currently, we only support CSV as a format for file imports out of the box. Howe
 
 ## Prerequisites
 <a name="prerequisites"></a>Before you start creating a data importer, you need to know what data it should include. We recommend you start by checking out the respective database tables you want to fill with data. The image below shows the table relation for product images.
-![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_database_schema.png){height="" width=""}
+![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_database_schema.png) 
 
 From this schema, you can easily identify the data columns you need for your import file. So the relevant fields to fill are:
 
@@ -40,7 +40,7 @@ We will use the same technique for the `fk_product` and `fk_product_abstract` fi
 
 {% info_block infoBox "Info" %}
 
-To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/about-data-import-categories.html). 
+To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html). 
 
 {% endinfo_block %}
 
@@ -61,7 +61,7 @@ Your .csv file for the product images import will contain the following header c
 Now, you can start to fill in some data into the new file. We recommend adding only a couple of entries to check after the first import run if all needed data is imported.
 
 Once you populate all columns, your CSV file should be similar to this one:
-![CSV file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_csv_file_example.png){height="" width=""}
+![CSV file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_csv_file_example.png) 
 
 Save the new file under `data/import/*`.
 
@@ -74,7 +74,7 @@ Every import type needs its own `DataImporterConfiguration`. To add it, open the
 The constant is used to identify an import type. More information about it will follow later in this article. In our case we will use const `IMPORT_TYPE_PRODUCT_IMAGE = 'product-image';`.
 {% endinfo_block %}
 
-You also need to define the new data importer in the [configuration .yml file](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
+You also need to define the new data importer in the [configuration .yml file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
     
 ```
 actions:
@@ -428,4 +428,4 @@ public function execute(DataSetInterface $dataSet)
 ## 7. Run the Importer
 That’s it! Now when you run the console command `vendor/bin/console data:import:product-image`, you will see an output similar to this one:
 
-![Importer command](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_console_output.png){height="" width=""}
+![Importer command](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_console_output.png) 

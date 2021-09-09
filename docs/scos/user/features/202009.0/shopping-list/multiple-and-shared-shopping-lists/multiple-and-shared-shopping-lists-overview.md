@@ -74,7 +74,7 @@ Alternative products are not shown for discontinued products since they can not 
    * Product name
    * SKU
    * Product attribute
-   * Product options 
+   * Product options
    * Product notes (see [Shopping List Notes](/docs/scos/dev/features/202009.0/shopping-list/shopping-list-notes/shopping-list-notes.html) for more details)
    * Quantity
    * Item price
@@ -114,7 +114,7 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 ![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png)
 
 
-## Multiple and Shared Shopping Lists on the Storefront 
+## Multiple and Shared Shopping Lists on the Storefront
 <a name="multiple-and-shared-shopping-lists-on-the-storefront"></a> Company users can perform the following actions using the Multiple and Shared Shopping Lists feature on the Storefront:
 
 <details>
@@ -151,4 +151,3 @@ Starting from v.201907.0, every shopping list has Subtotal for all the items add
 
 ## Current constraints
 We do not support product options in Subtotal of the Shopping Lists. For example, a shopping list includes 3 office chairs, each of them cost €15. The subtotal will show €45 for 3 items. But if we add a product option, e.g., gift wrapping for €5 each to these three office chairs, the subtotal should display €60 (€15/chair + €5/gift wrapping * 3). However, the shopping list will display just the product price - €45.
-

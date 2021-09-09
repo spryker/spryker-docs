@@ -17,7 +17,7 @@ The customer registration can be completed only by the customer by setting up th
 {% endinfo_block %}.)
 
 **Standardized flow of actions for a Spryker Admin**
-![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/customers-section.png){height="" width=""}
+![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/customers-section.png) 
 
 {% info_block infoBox %}
 This is how a Spryker Admin interacts with other departments to build customers' accounts with a specific set of access rules. 

@@ -22,7 +22,7 @@ You can use each content item for different purposes. For example, the Banner co
 
 A content manager can [create content items](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section. 
 A developer can do the following:
-* [Import content items](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html)
+* [Import content items](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html)
 * [Get content items data via API](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/retrieving-content-item-data/retrieving-content-item-data.html)
 
 See [Content Items Types: Module Relations](https://documentation.spryker.com/v4/docs/content-items-types-module-relations-201907) for more information on each content item type and module relations.
@@ -32,14 +32,14 @@ Content Item Widget is a Twig code piece that is used to render a content item o
 
 You can insert a content item widget into a CMS block by selecting a respective content item in the [WYSIWYG editor](/docs/scos/dev/features/202001.0/cms/wysiwyg-editor.html) drop-down menu: 
   
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/insert-content-item-widget.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/insert-content-item-widget.png) 
   
 In the WYSIWYG editor, the inserted content item widget will not be displayed as a code piece. Instead, you will see a block with the content item widget setting. 
 
 <details open>
     <summary>Content item widget representation - the Back Office</summary>
     
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-item-widget-the-back-office.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-item-widget-the-back-office.png) 
 
 </details>
 
@@ -48,14 +48,14 @@ After inserting the CMS block with the cotnent item widget into a published page
 <details open>
     <summary>Content item representation - Storefront</summary>
     
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-item-storefront.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-item-storefront.png) 
     
 </details>
 
 
 The schema shows how the Content items feature affects content management in Spryker:
 
-![image](https://confluence-connect.gliffy.net/embed/image/b2c37d9d-5350-4535-b437-677bffeb18da.png?utm_medium=live&utm_source=custom){height="" width=""}
+![image](https://confluence-connect.gliffy.net/embed/image/b2c37d9d-5350-4535-b437-677bffeb18da.png?utm_medium=live&utm_source=custom) 
 
 See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html) to learn more about working with content item widgets in the WYSIWYG editor.
 
@@ -68,14 +68,14 @@ You can select a template when inserting a content item widget into a CMS block.
 <details open>
     <summary>Content item widget template - the Back Office</summary>
 
-![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-the-back-office.png ){height="" width=""}
+![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-the-back-office.png ) 
 
 </details>
 
 <details open>
     <summary>Content item widget template - Storefront</summary>
 
-![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-storefront.png ){height="" width=""}
+![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-storefront.png ) 
 
 </details>
 
@@ -84,14 +84,14 @@ You can select a template when inserting a content item widget into a CMS block.
 <details open>
     <summary>Content item widget template - the Back Office</summary>
 
-![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/top-title-content-item-widget-template-the-back-office.png ){height="" width=""}
+![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/top-title-content-item-widget-template-the-back-office.png ) 
 
 </details>
 
 <details open>
     <summary>Content item widget template - Storefront</summary>
 
-![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/top-title-content-item-widget-template-storefront.png ){height="" width=""}
+![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/top-title-content-item-widget-template-storefront.png ) 
 
 </details>
 
@@ -102,7 +102,7 @@ A developer can create and customize templates. See [Adding a Template for a Con
 ## Content Database Schema
 CMS content is an item that can contain different content based on its type (banner, products, product set, file). Content items can be added to blocks and pages with a Twig function.
 
-![Content Database Schema]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-database-schema.png ){height="" width=""}
+![Content Database Schema]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-database-schema.png ) 
 
 
 Structure:

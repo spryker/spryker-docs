@@ -38,7 +38,7 @@ Follow the steps to create a Banner:
     * **Alt-text**
 
 
-![Banner content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/banner-content-item-page.png){height="" width=""}
+![Banner content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/banner-content-item-page.png) 
 
 See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/content-management/content-items/references/content-items-reference-information.html#create-and-edit-banner-content-item-page) to learn about the attributes on this page. 
 
@@ -46,7 +46,7 @@ See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific values overwrite the default values when the Banner is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific values overwrite the default values when the Banner is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
 
 
@@ -93,7 +93,7 @@ See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no products are selected for a locale, the default products are displayed on a Storefront page with the locale selected.
 
 
@@ -107,7 +107,7 @@ Make sure the Product Abstract List has been created:
 
 {% endinfo_block %}
 
-![Abstract product list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/apl-create-page.png){height="" width=""}
+![Abstract product list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/apl-create-page.png) 
 
 
 ***
@@ -141,7 +141,7 @@ See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* A locale-specific product set overwrites the default product set when the Product Set content item is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* A locale-specific product set overwrites the default product set when the Product Set content item is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no product set is selected for a locale, the default product set is displayed on a Storefront page with the locale selected.
 
 
@@ -189,12 +189,12 @@ See [Content Items: Reference Information](/docs/scos/user/user-guides/202001.0/
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-* Locale-specific files overwrite the default files when the File List is rendered on a Storefront page with the [locale](/docs/scos/dev/developer-guides/202001.0/development-guide/back-end/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* Locale-specific files overwrite the default files when the File List is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
 * If no files are selected for a locale, the default files are displayed a Storefront page with the locale selected.
 
 {% endinfo_block %}
   
-![File list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/file-list-create.png){height="" width=""}
+![File list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/file-list-create.png) 
 
 4. Click **Save**. This takes you to the *Overview of Content Items* page.
 {% info_block warningBox "Verification" %}

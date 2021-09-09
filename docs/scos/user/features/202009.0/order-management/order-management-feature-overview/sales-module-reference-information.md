@@ -34,5 +34,3 @@ There are already few plugins provided:
 * `ProductOptionOrderHydratePlugin` - hydrates `OrderTransfer` with product option related data.
 * `ProductBundleOrderHydratePlugin` - hydrates `OrderTransfer` with product bundle related data.
 * `ShipmentOrderHydratePlugin` - hydrates `OrderTransfer` with shipment related data.
-
-

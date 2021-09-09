@@ -16,7 +16,7 @@ Anyone may save any data using the Persistence Service. Anyone may use Persisten
 
 Persistence is used in other components like Cache, Table State Sync Feature etc.
 
-```ts
+```html
 <spy-select
   [datasource]="{
     type: 'http',

@@ -17,7 +17,7 @@ In case, the Comments feature is integrated into your project, you can leave a c
 **To add a comment to the cart, do the following:**
 1. Open the **Shopping Cart** page.
 2. In the **Comments to Cart** widget, type a message in the text field:
-![Comments to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/add-comment-to-cart.png){height="" width=""}
+![Comments to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/add-comment-to-cart.png) 
 
 3. Click **Send**.
 
@@ -29,7 +29,7 @@ You can edit your comment after you have sent it. To edit a comment:
 1. Open the **Shopping Cart** page.
 2. In the **Comments to Cart** widget, find your comment you would like to edit.
 3. Click **Edit**.
-![Edit a comment](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/edit-comment-to-cart.png){height="" width=""}
+![Edit a comment](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/edit-comment-to-cart.png) 
 
 ## (Un)Tagging a Comment in the Cart
 
@@ -39,7 +39,7 @@ You can add a tag to a comment. This is helpful when you need to quickly filter 
 1. Open the **Shopping Cart** page.
 2. In the **Comments to Cart** widget, find the comment you would like to tag.
 3. From the drop-down list of the available tags, select the needed.
-![Tag a comment](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/tag-comment.png){height="" width=""}
+![Tag a comment](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/tag-comment.png) 
 
 {% info_block infoBox %}
 You can add multiple tags to a comment.
@@ -49,7 +49,7 @@ You can add multiple tags to a comment.
 {% info_block errorBox %}
 To remove the tag, click X next to the tag you don't need:
 {% endinfo_block %}
-![Remove a tag](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/untag-comment.png){height="" width=""}
+![Remove a tag](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/untag-comment.png) 
 
 ## (Un)Filtering a Comment in the Cart
 
@@ -59,7 +59,7 @@ You can filter the comments by tags that are added to them.
 
 1. Open the **Shopping Cart** page.
 2. In the **Comments to Cart** widget, in the drop-down list, select the tag that is added to the comments to filter them:
-![Filter comments](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/filter-comments.png){height="" width=""}
+![Filter comments](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/filter-comments.png) 
 
 {% info_block errorBox %}
 Select **All** to unfilter the comments by tag.
@@ -72,7 +72,7 @@ Select **All** to unfilter the comments by tag.
 1. Open the **Shopping Cart** page.
 2. In the **Comments to Cart** widget, find the comment you would like to remove.
 3. Click **Remove**.
-![Remove a comment](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/remove-comment.png){height="" width=""}
+![Remove a comment](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/remove-comment.png) 
 
 {% info_block errorBox %}
 You can remove only your own comments.

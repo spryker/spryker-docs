@@ -42,7 +42,7 @@ Every approval request, in turn, can have three statuses:
 
 Module relations in the Approval Process feature can be represented in the following schema:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-schema.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-schema.png) 
 
 ## Approval Process Workflow
 The Approval Process as such introduces steps that company employees should follow to order, request for approval, and pay for products. 
@@ -63,7 +63,7 @@ At this point, the Approver cannot alter the quote in any way (like editing it, 
 
 Schematically, the Approval Process workflow can be defined in the following way:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-workflow.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Approval+Process/Approval+Process+Feature+Overview/approval-process-workflow.png) 
 
 ### Approval Process Scenarios
 Approval process workflow can be most clearly described in several common scenarios:

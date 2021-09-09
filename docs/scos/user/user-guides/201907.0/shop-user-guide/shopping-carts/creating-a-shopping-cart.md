@@ -18,10 +18,10 @@ To create a shopping cart:
 {% info_block infoBox %}
 See [Shopping Carts: Reference Information](/docs/scos/user/user-guides/201907.0/shop-user-guide/shopping-carts/shopping-carts-reference-information.html
 {% endinfo_block %} for information on the Shopping Carts page contents.)
-![Create shopping cart button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Creating+a+Shopping+Cart/create-shopping-cart-button.png){height="" width=""}
+![Create shopping cart button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Creating+a+Shopping+Cart/create-shopping-cart-button.png) 
 
 2. Enter the cart name in the **Cart Name** field. 
-![Create a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Creating+a+Shopping+Cart/create-cart.png){height="" width=""}
+![Create a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Creating+a+Shopping+Cart/create-cart.png) 
 4. Click **Submit**.
 
 You can also create a shopping cart via a **Shopping Cart Widget**.

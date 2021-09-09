@@ -20,7 +20,7 @@ Thus, the **Comments** feature enables your B2B customers to effectively communi
 
 ## Comments Widget
 Within the Comments feature, we have created the Comments Widget. The widget can be placed on any entity page, in our case - it is a **Shopping Cart** page. 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/comments-shopping-cart.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/comments-shopping-cart.png) 
 
 Company users can perform the following actions using the Comment Widget:
 
@@ -38,10 +38,10 @@ The comment contains the following information:
 * Comment Tag
 
 Company users can add comments to a shared cart in both Read-only and Full Access permissions. A user can also add a comment before submitting the order, on the Checkout Summary page:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/checkout-summary-page-comment.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/checkout-summary-page-comment.png) 
 
 as well as post factum, after the order has been placed, on the Order History page:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/order-history-comments.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/order-history-comments.png) 
 
 {% info_block warningBox "Note" %}
 When reordering the existing order, the comments attached to the order are not duplicated.
@@ -51,7 +51,7 @@ When the order with the attached comments is placed, the Back Office user can vi
 ### Comment Tags
 Every comment may be tagged.
 **Tags** are keywords associated with the comments. The tags are added to group the comments sharing a similar idea or topic. For example, you may have several comments where colleagues have covered the details on how the order should be delivered, so you may tag these comments with "Delivery" tag for convenience. Also, in the drop-down menu, you can filter the comments according to tags added.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filter-tags.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filter-tags.png) 
 
 {% info_block warningBox "Note" %}
 To create a new tag, see [HowTo - Add a New Tag for Comment](https://documentation.spryker.com/v4/docs/ht-adding-new-tag-for-comment
@@ -59,4 +59,4 @@ To create a new tag, see [HowTo - Add a New Tag for Comment](https://documentati
 
 ### Module Relations in the Comments Feature
 Module Relations in the Comments feature are represented in the following schema:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/techspec-comments-module-diagram.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/techspec-comments-module-diagram.png) 

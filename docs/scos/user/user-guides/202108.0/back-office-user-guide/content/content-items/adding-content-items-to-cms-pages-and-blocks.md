@@ -28,18 +28,18 @@ To add a content item widget to a page:
 3. On the *Edit Placeholders: CMS Page [Name]* page, go to the *Placeholder* tab and place your cursor where you want to insert the content items.
 4. In the editor pane, select the widget you want to add from the **Content Item** drop-down list.
 
-![Content item menu page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/content-item-menu-page.png){height="" width=""}
+![Content item menu page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/content-item-menu-page.png) 
 
 The *Insert a Content Item* pop-up window opens.
 
-![Insert content item window](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/insert-content-item-window.png){height="" width=""}
+![Insert content item window](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/insert-content-item-window.png) 
 
 5. Select a content item and its template, and click **Insert**. 
 {% info_block infoBox %}
 Keep in mind that you can select only *one* item and *one* template at a time.
 {% endinfo_block %}
 This will insert a content item widget with the following details: 
-![Widget UI element](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/widget-ui-element.png){height="" width=""}
+![Widget UI element](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/widget-ui-element.png) 
 
 * Content Item Type
 * Content Item Key
@@ -62,7 +62,7 @@ To add a content item widget to a block:
 1. On the *Overview of CMS Blocks* page, in the _Actions_ column, select **Edit Placeholder** next to the block you want to add a content item widget to.
 3. On the *Edit Block Glossary: Block ID* page, go to the *Placeholder* tab and place your cursor where you want to insert the content items.
 4. In the editor pane, select the widget you want to add from the **Content Item** drop-down list. The *Insert a Content Item* pop-up window opens.
-![Insert content item for blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/insert-content-item-widget-block.png){height="" width=""}
+![Insert content item for blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/insert-content-item-widget-block.png) 
 
 5. Select a content item and its template, and click **Insert**. This will insert the content item widget containing the following details:
 
@@ -79,8 +79,8 @@ Keep in mind that you can select only *one* item and *one* template at a time.
 6. Click **Save**. The new content item widget will be added to the block. 
 
 {% info_block infoBox %}
-You can preview how the content item widget will be displayed on the website by following the steps described in  [Managing CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html
-{% endinfo_block %}.)
+You can preview how the content item widget will be displayed on the website by following the steps described in  [Managing CMS blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/blocks/managing-cms-blocks.html).
+{% endinfo_block %}
 
 **What's next?**
 To know more about how to edit a content item widget, see  [Editing content items in CMS pages and blocks](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/content/content-items/editing-content-items-in-cms-pages-and-blocks.html).

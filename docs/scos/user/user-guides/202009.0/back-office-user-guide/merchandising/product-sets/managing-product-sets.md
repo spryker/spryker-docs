@@ -18,11 +18,11 @@ To edit a product set:
 2. On the **Edit Product Set** page, update the needed attributes. The procedure is very similar to the procedure of creating a product set (see _Creating a Product Set_ article for more details). The only difference is that in the **Products** tab, in addition to the **Select Products to assign** table, you will see the **Products in this Set** table at the bottom of the page. In this table you can:
     1. Clear the checkbox in the _Selected_ column to remove a specific product from the set.
     2. Define the position of the products in the set by putting the appropriate numbers to the _Position_ column. The product that has 0 in the _Position_ column goes first.
-![Editing a product set](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/editing-product-set.png){height="" width=""}
+![Editing a product set](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/editing-product-set.png) 
 
     {% info_block infoBox "Info" %}
-The attributes you see are described in [Product Sets: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-sets/references/reference-information-product-sets.html
-{% endinfo_block %}.)
+The attributes you see are described in [Product Sets: Reference Information](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-sets/references/reference-information-product-sets.html).
+{% endinfo_block %}
 3. Once done, click **Submit**.
 
 **Tips & Tricks**
@@ -35,7 +35,7 @@ If you want to reorder the product sets, you:
 1. Click **Reorder Product Sets** in the top right corner of the **Product Sets** page.
 2. On the **Reorder Product Sets** page, define the order by putting the appropriate numbers in the _Weight_ column. Product Sets with higher numbers listed first. 
    
-![Reordering product sets](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/reorder-product-sets.png){height="" width=""}
+![Reordering product sets](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/reorder-product-sets.png) 
 
 3. Once done, click **Submit**.
 

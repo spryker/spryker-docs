@@ -136,7 +136,7 @@ A Back Office user can define the stores each product label is displayed in. For
 
 See [Creating a Product Label](/docs/scos/user/user-guides/202009.0/back-office-user-guide/merchandising/product-labels/creating-product-labels.html) to learn how a Back Office user can define store relation for a product label.
 
-A developer can also [import store relations for product labels](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html).
+A developer can also [import store relations for product labels](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html).
 
 
 ## Product Label Statuses

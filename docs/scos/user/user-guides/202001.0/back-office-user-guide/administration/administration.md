@@ -13,7 +13,7 @@ The **Administration** section in the Back Office is mostly used by Spryker Admi
 This section is designed to reflect data about stores and warehouses configuration. It is a source of information for management that helps to either approve the configuration or identify the need for updates.
 
 **Standardized flow of actions for a Spryker Admin**
-![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/administration-section.png){height="" width=""}
+![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/administration-section.png) 
 
 {% info_block infoBox %}
 This is how the data about stores and warehouses is communicated between different teams inside and outside of Spryker Back Office.

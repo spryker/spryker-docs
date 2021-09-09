@@ -9,5 +9,5 @@ redirect_from:
 ---
 
 Comments allow you to discuss the cart contents and order details with your colleagues.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/comments-gif.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/comments-gif.gif) 
 

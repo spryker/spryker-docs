@@ -25,8 +25,8 @@ In your development, the endpoints can help you to:
 * Provide additional products items in a customer's cart to offer upscale variations, accessories and other additional items for products in the cart. This will help you in boosting the cart value.
 
 {% info_block infoBox %}
-To be able to use **Product Relations API**, first, you need to have the Product Relations feature integrated with your project. For details, see [Product Relation Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
-{% endinfo_block %}.)
+To be able to use **Product Relations API**, first, you need to have the Product Relations feature integrated with your project. For details, see [Product Relation Integration](/docs/scos/dev/migration-and-integration/202005.0/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html).
+{% endinfo_block %}
 
 {% info_block infoBox %}
 Different types of relations, as well as their logic, are defined on the project level and can vary depending on the project-specific implementation. The API does not define any new relations. Its task is only to present related products via REST requests.

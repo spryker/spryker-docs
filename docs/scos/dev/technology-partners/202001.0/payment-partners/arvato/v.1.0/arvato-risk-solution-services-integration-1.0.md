@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 The purpose of developing the risk solution services is to provide a complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation. Besides the use of pre-configured service modules for risk management, risk solution services comprise process support up to the outsourcing of the entire operative risk management. All risk management processes are supported by a business intelligence component.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-overview.png){height="" width=""}
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-overview.png) 
 
 ## Prerequisites
 For every service call of risk solution services an authorization is required.
@@ -40,7 +40,7 @@ API URLs:
 Services:
 * [Risk Check](/docs/scos/dev/technology-partners/202001.0/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html)
 
-To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/developer-guides/202001.0/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) for more details.
+To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) for more details.
 
 ## Installation
 

@@ -11,7 +11,7 @@ When setting up a Spryker’s Demo Shop, data content sample is imported while e
 
 {% info_block infoBox "Info" %}
 
-The order of data importers is defined in the [.yml configuration file](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/importing-data-with-a-configuration-file.html).
+The order of data importers is defined in the [.yml configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
 
 {% endinfo_block %}
 
@@ -19,7 +19,7 @@ This operation has some dependencies, as data importers execution follows certai
 
 The list below illustrates the order followed to run the data importers, and import the: Commerce shop configuration setup data, product catalog data, and other content.
 
-**1. [Commerce Setup](/docs/scos/dev/developer-guides/202005.0/development-guide/data-import/data-import-categories/commerce-setup/commerce-setup.html) data import**
+**1. [Commerce Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/commerce-setup.html) data import**
 
   1. store
   2. currency

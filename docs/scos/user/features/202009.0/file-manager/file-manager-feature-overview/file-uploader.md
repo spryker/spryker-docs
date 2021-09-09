@@ -24,7 +24,7 @@ The files are kept in folders.
 {% endinfo_block %}
 
 The changes will take effect after **Save** is selected.
-![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-tree.png)
+![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-tree.png) 
 
 Every folder within File Directories Tree can be deleted by selecting **Delete Directory**.
 
@@ -37,7 +37,7 @@ To upload a file to a particular directory follow the steps:
 
 1. Select the folder you are going to upload files to in the File Directories Tree.
 2. In the right section, click on **Add File**:
-![Upload files to the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file.png)
+![Upload files to the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file.png) 
 
 3. On the **Add a File page**:
 * In the **File name** field, enter the name of the file that will be displayed in the shop.
@@ -51,14 +51,14 @@ If Use file name option is selected, then File Name field is not required and wi
 A Store Administrator cannot upload an empty text file.
 {% endinfo_block %}
 * Add translations for the File Name for every locale, if necessary.
-![Add translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file+menu.png)
+![Add translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file+menu.png) 
 
-4. After the file is uploaded it is available in the Files list section in the directory:
-![Files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/files-list.png)
+4. After the file is uploaded it is available in the Files list section in the directory: 
+![Files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/files-list.png) 
 
 ## File List
 File List submenu represents a table listing all the files uploaded to the Back Office:
-![File list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-list.png)
+![File list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-list.png) 
 
 A Back Office user can perform the following actions to files:
 
@@ -73,7 +73,7 @@ For example, at first you uploaded _**Instruction1.txt**_ file (**_v.1_**), then
 After that you decided that the image instruction would be more useful in this case and uploaded **_Instruction.png_** (**_v.3_**) to the file.
 
 Thus, you will have 3 versions of a file available: 2 text instructions and one image instruction.
-![File versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-versions.png)
+![File versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-versions.png) 
 
 By default, the latest version of all available will be shown to the buyer in the shop application.
 
@@ -94,7 +94,7 @@ To add a file to the Shop App, follow the steps below:
 
 3. You will get the string `{% raw %}{{{% endraw %} cms_file('identifier'){% raw %}}}{% endraw %}` where you need to insert the _file ID_ instead of _identifier_:
 
-4. Save the changes and publish the page:
+4. Save the changes and publish the page: 
 5. Check the published page in the Shop Application:
 The file is available as a download link to the visitor shop visitor.
 {% info_block errorBox %}
@@ -107,7 +107,7 @@ The shop visitor will download the latest version of the file.
 {% info_block infoBox %}
 [MIME type](https://en.wikipedia.org/wiki/Media_type
 {% endinfo_block %} is a standard that describes the contents of the files. MIME type will help the browser to determine how it will process a document. For example, if the MIME type is set as "text/html", then a client will open the document in Notepad, if the MIME type is set as "image/jpeg", then the client will open it via image viewer program.)
-![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/mime-type-settings.png)
+![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/mime-type-settings.png) 
 
 {% info_block warningBox %}
 Only files with the MIME types ticked in "Is Allowed" column will be allowed for uploading to the Administration Interface.
@@ -136,7 +136,7 @@ To check the full list of MIME types, refer to the article.
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="docs\scos\user\user-guides\202009.0\back-office-user-guide\content\file-manager\managing-file-tree.md#uploading-files" class="mr-link">Upload files to the Back Office</a></li>
+                <li><a href="https://documentation.spryker.com/docs/managing-file-tree#uploading-files" class="mr-link">Upload files to the Back Office</a></li>
                 <!---<li><a href="https://documentation.spryker.com/docs/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-pages" class="mr-link">Add a File to the Shop Application</a></li>-->
             </ul>
         </div>

@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 The Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements.
-For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS, see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
 
 
 ## Spryker Cloud Commerce OS
@@ -38,7 +38,7 @@ With the support of the OpenID Connect protocol, you can now use Identity Access
 ### Category per store
 Spryker now supports store relations at the category level. You can hide and show categories per store depending on your business requirements. Child categories inherit the store relations of the parent category.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/category-per-store.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/category-per-store.png) 
 
 #### Documentation
 [Category management](/docs/scos/dev/features/{{page.version}}/category-management-feature-overview.html)
@@ -57,8 +57,8 @@ While expanding the Spryker's out-of-the-box data exchange capabilities, we’ve
 #### Data import
 These are the new data importers available in our default data import framework:
 
-* Categories per store: [Import data associating categories with stores](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html).
-* Warehouse address: [Import the warehouse address data](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html).
+* Categories per store: [Import data associating categories with stores](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html).
+* Warehouse address: [Import the warehouse address data](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html).
 
 #### Data export
 Within the Spryker’s default data export framework, we have made small improvements: exception handling, dependencies, upgrades, and minor fixes.
@@ -66,7 +66,7 @@ Within the Spryker’s default data export framework, we have made small improve
 ### Middleware
 We have completed maintenance activities and done minor fixes helping you to keep your project up to date.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/middleware.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+notes+202108.0/middleware.png) 
 
 ## The Docker SDK
 
@@ -241,13 +241,13 @@ We have done a complete revamp of the Spryker external libraries where we are de
 * Deprecated our PhantomJS dependencies for Chromedriver (Headless Chromium) with increase in speed and Codeception compatibility.
 * Updated Twig to v1.42 and v3^.
 * Updated Redis to v6.
-* Added PHP 8 compatibility, in Spryker as well as in Propel where we will be propping PHP 7.2 as deprecated.
+* Added PHP 8 compatibility, in Spryker as well as in Propel where we will be dropping PHP 7.2 as deprecated.
 
 #### Documentation
 
 * [Symfony 5 integration](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/symfony-5-integration.html#symfony-5-integration)
 * [Chromium browser for tests](/docs/scos/dev/migration-and-integration/{{page.version}}/technical-enhancements/chromium-browser-for-tests.html#chromium-browser-for-tests)
-* [Test framework](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html)
+* [Test framework](/docs/scos/dev/guidelines/testing/test-framework.html)
 * [Migrating from Twig v1 to Twig v3](/docs/scos/dev/migration-and-integration/{{page.version}}/migration-concepts/migrating-from-twig-v1-to-twig-v3.html#migrating-from-twig-v1-to-twig-v3)
 * [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html#supported-versions-of-php)
 
@@ -263,7 +263,7 @@ We are making available a **testing infrastructure** specifically for the Publis
 We have also extended the testing framework so that you can include your tests.
 
 #### Documentation
-[Test framework](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing/test-framework.html)
+[Test framework](/docs/scos/dev/guidelines/testing/test-framework.html)
 
 ### Transfer strict mode
 We have introduced the **strict mode** and type hints for transfer objects in function arguments and return types. This allows for safer and cleaner code, raises the code legibility and the checking capacity of our validation tools. We maintain the flexibility to define assStrict, specific transfers or even fields within these transfers.
@@ -278,4 +278,4 @@ Yves has also got its fresh features: the structured information is now generate
 #### Documentation
 
 * [Web Profiler Widget for Yves](/docs/scos/dev/migration-and-integration/{{page.version}}/development-tools/web-profiler-widget-for-yves.html#web-profiler-widget-for-yves)
-* [Basic SEO techniques to use in your project](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/best-practices/basic-seo-techniques-to-use-in-your-project.html#basic-seo-techniques-to-use-in-your-project)
+* [Basic SEO techniques to use in your project](/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html#basic-seo-techniques-to-use-in-your-project)

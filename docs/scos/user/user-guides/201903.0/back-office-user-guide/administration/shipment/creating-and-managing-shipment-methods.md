@@ -22,8 +22,8 @@ A delivery method is described by :
 * availability (when is the shipment method available?)
 
 {% info_block errorBox "Important" %}
-Each shipment method has its own specificity, so these three aspects must be configured (this is done through [plugins](/docs/scos/dev/features/201903.0/shipment/shipment-method-plugins.html
-{% endinfo_block %}.))
+Each shipment method has its own specificity, so these three aspects must be configured (this is done through [plugins](/docs/scos/dev/features/201903.0/shipment/shipment-method-plugins.html).
+{% endinfo_block %})
 
 **To create a new shipment method:**
 1. In the top-right corner of the **Delivery Methods** page, click **Create new delivery method**.
@@ -50,7 +50,7 @@ In case you need to update any values that you have entered during the shipment 
 <!-- **Tips & Tricks**
 This is how the Back Office setup looks in the online store:
 **Back Office**
-![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png){height="" width=""}
+![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png) 
 
 **Online Store**
 ![Online store](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Shipment/Creating+and+Managing+Shipment+Methods/online-store.png){height="400" width="300"}-->

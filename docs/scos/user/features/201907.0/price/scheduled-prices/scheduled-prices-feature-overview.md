@@ -21,7 +21,7 @@ Currently, the feature only works with the following price types:
 A default price is the one that is shown as a real price of product.
 
 An original price is the one that, in the front end, is shown as a strikethrough to identify that the price has been used before the default price was applied as if there is a promotion.
-![Default original price](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Scheduled+Prices/Scheduled+Prices+Feature+Overview/default-original-price.png){height="" width=""}
+![Default original price](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Scheduled+Prices/Scheduled+Prices+Feature+Overview/default-original-price.png) 
 
 ## Time Zones
 
@@ -55,7 +55,7 @@ In this case:
 * Scheduled price #2 remains active till the scheduled price #3 gets applied on <b>01.03</b>.
 * When active period of scheduled price #3 ends on <b>01.04</b>, price reverts back to scheduled price #2.
 * When active period of scheduled price #2 ends on <b>08.06</b>, price reverts back to the scheduled price #1.
-![Price application diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Scheduled+Prices/Scheduled+Prices+Feature+Overview/price-application-diagram.png){height="" width=""}
+![Price application diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Scheduled+Prices/Scheduled+Prices+Feature+Overview/price-application-diagram.png) 
 
 * When there are no scheduled prices left to apply, the ORIGINAL price specified outside of scheduled price logic, gets applied.
 * When there are no scheduled prices left to apply and there has been no ORIGINAL price specified outside of scheduled price logic, it will become impossible to add the product to cart and its price won't be displayed.

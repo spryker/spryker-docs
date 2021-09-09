@@ -18,4 +18,4 @@ Both invoice and installment utilize the same request flow. It basically consist
 * Capture: to capture the payment and receive money from the buyer.
 * Refund: to refund the buyer when returning products.
 
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-workflow.png){height="" width=""} 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-workflow.png)  

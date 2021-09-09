@@ -18,9 +18,9 @@ Please note, that we do not have [Toran Proxy](https://toranproxy.com/
 With this release, we are introducing a new functionality which enables shop owners to manage prices in the shop per currency and price mode (net/gross) for products, bundle products, product option, and shipment methods. A shop administrator can provide prices for the gross and net price mode per currency through the Administration Interface.
 
 Shop visitors in their turn can select a currency/price mode using a switcher on Yves and all prices in the shop will be at once displayed according to the selection. The customer can than place orders using the selected currency.
-![Multi-currency product options in Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multicurrency_zed.png){height="" width=""}
+![Multi-currency product options in Zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multicurrency_zed.png) 
 
-![Multi-currency product options in Yves](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multicurrency_yves.png){height="" width=""}
+![Multi-currency product options in Yves](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multicurrency_yves.png) 
 
 | Major | Minor | Patch |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ composer require spryker/catalog-price-product-connector:"^1.0.0" spryker/price:
 Finding products quickly and efficiently on Yves is critical to many customers. This is pretty easy if a category is relatively small. However, in case of larger categories, if customers have to scroll through a long list of filters, that might negatively influence their user experience and even their buying behavior.
 
 With this release, we are introducing a new category filters functionality which gives you full control over filters appearing on the catalog page in Yves per category. The filters available in the catalog page in Yves per category are definable in Zed Administration Interface. It is possible either to apply general filter settings or to do specific settings by re-ordering, adding and removing filters manually. 
-![Category filters](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/Category+Filters.gif){height="" width=""}
+![Category filters](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/Category+Filters.gif) 
 
 **Affected Modules**
 
@@ -73,7 +73,7 @@ composer require spryker/product-category-filter:"^1.0.0" spryker/product-catego
 Customers often prefer to add multiple products to the cart at once rather than editing the quantity of products in the cart.
 
 With this release, we have added a possibility to add more than one item to the cart directly from the product details page. Now, a customer simply selects the desired quantity of items on the product details page and moves all these items to cart with just one click. This simplifies the process of shopping for customers and improves their shopping experience.
-![Adding multiple products to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multiple_quantity.png){height="" width=""}
+![Adding multiple products to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+January+-+2018/multiple_quantity.png) 
 
 **Affected Modules**
 
@@ -225,6 +225,6 @@ After Log minor 3.4.0, a project could get unexpected behavior if methods were e
 ## Documentation Updates
 The following content has been added to the Academy:
 
-* [Coding Best Practices](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/best-practices/coding-best-practices.html)
+* [Coding Best Practices](/docs/scos/dev/best-practices/coding-best-practices.html)
 
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

@@ -31,4 +31,3 @@ Spryker holds your product stock in a type called DECIMAL(20,10), which means th
 
 ## Calculating Current Stock for Products
 A product quantity from stock is being reserved when an order containing it is being processed. The state machine is reserving stocks by setting the *reserved* flag. To calculate the available stock per store, not only the maintained stock (the sum of *active* stocks related to the current store from each storage location) is taken into account, but also the currently processed orders.
-

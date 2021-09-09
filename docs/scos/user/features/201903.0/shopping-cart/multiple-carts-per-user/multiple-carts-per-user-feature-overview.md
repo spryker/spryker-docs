@@ -35,7 +35,7 @@ The table with shopping carts shows details for each of the carts, including:
 * Cart Total
 * Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/dev/features/201903.0/shopping-cart/shared-cart/shared-cart-feature-overview.html), delete, switch cart to shopping list (see the *Actions* table for details)
 
-![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-carts-list.png){height="" width=""}
+![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-carts-list.png) 
 
 The table bellow provides detailed information on the possible actions to manage shopping carts.
 
@@ -75,7 +75,7 @@ After the shopping cart is set to active, the user is redirected to a respective
 * Tax
 * Grand Total
 
-![Shopping Cart Page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/shopping-cart-page.png){height="" width=""}
+![Shopping Cart Page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/shopping-cart-page.png) 
 
 
 <!--**See also:**

@@ -108,7 +108,7 @@ In new `PriceProduct` module we have added a set of plugins necessary fo work wi
 - `PriceDimensionQueryCriteriaPluginInterface` is used for expanding `PriceProductStoreQuery` using new transfer object `QueryCriteriaTransfer`.
 
 Basing on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins - all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
-![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png){height="" width=""}
+![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png) 
 
 #### Service
 - `PriceProductFilterPluginInterface` - filters array of prices based on `PriceProductFilterTransfer`

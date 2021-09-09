@@ -25,7 +25,7 @@ The file should have the following parameters:
 |-|-|-|-|-|-|
 | Order_reference |   |   |   | Unique | Identifier of the order in the system. |
 | order_item_reference | &check; | String |   | Unique | Identifier of the  item in the order. |
-| order_item_event_oms | &check; | String |   | OMS events depend on the  [state machine](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html) configured. | Desired order item state. Only this parameter is updated in the database |
+| order_item_event_oms | &check; | String |   | OMS events depend on the  [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html) configured. | Desired order item state. Only this parameter is updated in the database |
 
 ## Import file dependencies
 The file has no dependencies.

@@ -103,12 +103,12 @@ Here are the steps you should follow:
 * By our estimate, testing a module such as the Product Category module with some positive and some negative cases takes 30 - 40 minutes for an experienced tester. An inexperienced person would probably take an hour. Use these estimates to help calculate the time you need for testing in your plans. Planning projects with development time and test time together, helps to create a more realistic timeline. It will also help you to be able to predict your launch date a bit better as a well-tested project is likely to have less surprises towards the end.
 
 The following diagram illustrates what a test process looks like without a QA team.
-![Testing concepts without QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-noqa.png){height="" width=""}
+![Testing concepts without QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-noqa.png) 
 
 ### Testing with a Full-Time QA Engineer or Team:
 
 A QA Engineer or team will probably lead the process and define their own process allowing developers and product owners to do their own job instead of QA. In this case there will be dedicated time for writing test scenarios, testing and retesting things. All in all the process should look more or less like this:
-![Testing concepts with QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-qa.png){height="" width=""}
+![Testing concepts with QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-qa.png) 
 
 You will still need to adhere to the steps listed above and plan time for testing, but the overall time will still be reduced as far as development staff are not involved in time consuming acceptance testing and can continue with implementing the next feature. Also, the test quality will be much better.
 

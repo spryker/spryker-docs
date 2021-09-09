@@ -10,13 +10,13 @@ redirect_from:
 
 Order cancellation makes the shopping experience of B2B and B2C shoppers more flexible by allowing them to cancel their orders within a defined time period. Also, it optimizes the workflow of sales and customer service by allowing them to cancel orders on customers’ behalf in the Back Office.
 
-For example, a customer changes their mind about an item in an order they have placed. Instead of contacting customer service, they can cancel the order and place a new one with the desired items. 
+For example, a customer changes their mind about an item in an order they have placed. Instead of contacting customer service, they can cancel the order and place a new one with the desired items.
 
 A customer can cancel orders on the *Order History* and *Order Details* pages.
 
 <details open>
     <summary>Order cancellation representation - Order History Page</summary>
-    
+
 
 ![order-history-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/order-history-page.png)
 
@@ -25,7 +25,7 @@ A customer can cancel orders on the *Order History* and *Order Details* pages.
 
 <details open>
     <summary>Order cancellation representation - Order Details Page</summary>
-    
+
 ![order-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/order-details-page.png)
 
 
@@ -40,9 +40,9 @@ See [Changing Order Statuses](/docs/scos/user/user-guides/202009.0/back-office-u
 
 A customer can cancel an order only within a defined time period. By default, the time period is 30 minutes. After the time period has passed, the buttons to cancel the order are not available. A Back Office user can skip the cancellation time period.  
 
-Also, they can cancel an order only if all the included items are in the states that are defined as cancellable. By default, the *payment pending* and *confirmed* states are cancellable. If at least one of the items in an order is in a different state, the buttons to cancel the order are not available. 
+Also, they can cancel an order only if all the included items are in the states that are defined as cancellable. By default, the *payment pending* and *confirmed* states are cancellable. If at least one of the items in an order is in a different state, the buttons to cancel the order are not available.
 
-In the [state machine](/docs/scos/dev/developer-guides/202009.0/development-guide/back-end/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#order-process-modelling-via-state-machines), a developer can configure different order states to be cancellable and change the cancellation time period.
+In the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#order-process-modelling-via-state-machines), a developer can configure different order states to be cancellable and change the cancellation time period.
 
 {% info_block warningBox "State machine" %}
 
@@ -81,5 +81,5 @@ This is how the Order Cancellation feature works on the Spryker Demo Shop Storef
             </ul>
                 </div>
                   <!-- col3 -->
-        
+
 </div>

@@ -30,7 +30,7 @@ The merchant is created and can be used to create merchant specific prices (see 
 You can sort the table of merchant relations based on the company for which the merchant relation has been created.
 
 To sort the *List of Merchant relations* table, select a specific company in the *Company* drop-down list that is above the table.
-![Sorting merchant relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/Merchant+and+Merchant+Relations/Managing+Merchant+Relations/sorting-merchant-relations.png){height="" width=""}
+![Sorting merchant relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/Merchant+and+Merchant+Relations/Managing+Merchant+Relations/sorting-merchant-relations.png) 
 
 Once the company is selected, the table is sorted to display only the merchant relations that are created with this specific company assigned.
 

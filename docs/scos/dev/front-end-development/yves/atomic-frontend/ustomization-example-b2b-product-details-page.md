@@ -16,7 +16,7 @@ In Spryker, front-end elements have dedicated SCSS styles. To show you how to cu
 
 You can see the [full version of this page](https://www.de.b2b.demo-spryker.com/en/soennecken-permanentmarker-4mm-rundspitze-M22663) in our B2B Demo Shop.
 
-![B2B-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2B+Product+Details+page/b2b-1.png){height="" width=""}
+![B2B-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2B+Product+Details+page/b2b-1.png) 
 
 | # | Path to SCSS |
 | --- | --- |
@@ -35,7 +35,7 @@ You can see the [full version of this page](https://www.de.b2b.demo-spryker.com/
 | 13 | project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/button/button.scss |
 
 
-![B2B-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2B+Product+Details+page/b2b-2.png){height="" width=""}
+![B2B-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2B+Product+Details+page/b2b-2.png) 
 
 
 | # | Path to SCSS |

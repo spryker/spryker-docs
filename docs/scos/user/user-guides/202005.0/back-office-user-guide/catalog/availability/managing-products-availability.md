@@ -38,8 +38,8 @@ This will take you to the **Product Availability** page. See [Availability: Refe
 6. Click **Save**.
 
 {% info_block warningBox "Note" %}
-Please note that you are updating the product variant availability, not the bundle availability itself. To see examples on how the bundle availability is calculated, see [Availability: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/availability/references/availability-reference-information.html
-{% endinfo_block %}.)
+Please note that you are updating the product variant availability, not the bundle availability itself. To see examples on how the bundle availability is calculated, see [Availability: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/catalog/availability/references/availability-reference-information.html).
+{% endinfo_block %}
 ***
 **Tips & Tricks**
 You can edit stock for variants from the **Edit Concrete Product** page:

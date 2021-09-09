@@ -25,8 +25,8 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 This file has the following dependencies:
 
-*  [currency.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-currency.csv.html)
-*  [glossary.csv](/docs/scos/dev/developer-guides/202009.0/development-guide/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+*  [currency.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-currency.csv.html)
+*  [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 *  s*tores.php* configuration file of the demo shop PHP project
 
 ## Template File & Content Example

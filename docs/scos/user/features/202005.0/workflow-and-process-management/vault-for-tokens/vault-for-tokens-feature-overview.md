@@ -12,7 +12,7 @@ Vault for Tokens provides the functionality to store sensitive data. This featur
 
 _Spryker.UtilEncryption_ provides data encryption / decryption functionality and _Spryker.Vault_ module uses this functionality to store and retrieve data from the database.
 
-![Module relations of Vault for Tokens](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Vault+for+Tokens/Vault+for+Tokens+Feature+Overview/module-relations-vault-for-tokens.png){height="" width=""}
+![Module relations of Vault for Tokens](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Vault+for+Tokens/Vault+for+Tokens+Feature+Overview/module-relations-vault-for-tokens.png) 
 
 The database structure includes the following fields:
 

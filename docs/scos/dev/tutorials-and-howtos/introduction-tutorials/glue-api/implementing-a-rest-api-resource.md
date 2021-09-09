@@ -64,7 +64,7 @@ console spryk:run AddSharedRestAttributesTransfer --mode=project --module=Resour
 {% endinfo_block %}
 
 The resulting folder structure in the example of the Wishlists REST API module:
-![Wishlists REST API module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Glue+API/wishlists-rest-api-module.png){height="" width=""}
+![Wishlists REST API module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Glue+API/wishlists-rest-api-module.png) 
 
 ## 2. Create a Configuration Class
 
@@ -229,8 +229,8 @@ The **POST** and the **PATCH** verbs allow you to pass the body in your request.
 The same as with any other data source, you can use containers called **Transfer Objects** for the convenience of dealing with data retrieved from POST requests. The objects are defined in the XML transfer file located in the Shared layer. The names of the transfer objects need to start with **Rest**.
 
 {% info_block infoBox %}
-For information on how to define the objects and syntax, see [How to create transfer objects](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
-{% endinfo_block %}.)
+For information on how to define the objects and syntax, see [How to create transfer objects](/docs/scos/dev/back-end-development/zed/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
+{% endinfo_block %}
 
 In the example below, the `RestWishlistsAttributesTransfer` Transfer Object will have three string attributes automatically mapped from a POST request:
 

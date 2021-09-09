@@ -31,7 +31,7 @@ To trigger the return states:
 1. On the *Returns* page, click **View** in the *Actions* column. This takes you to the *Return Overview [Return reference]*.
 
 2. *Trigger all matching state* section of the *Return Overview [Return reference]* page, click the necessary state. The return state changes and the new states that you can trigger, appear. See [Return Item States: Reference Information](/docs/scos/user/user-guides/202005.0/back-office-user-guide/sales/returns/references/return-item-states-reference-information.html) for information on the return items states and the flow.
-![Trigger states](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Returns/trigger-status.png){height="" width=""}
+![Trigger states](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Returns/trigger-status.png) 
  
 {% info_block infoBox "Info" %}
 

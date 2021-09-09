@@ -13,7 +13,7 @@ This section is designed to build a logical organizational structure of users th
 The bigger is the online shop, the more clients it has, the more Back Office users it may need. Therefore, the primary uses of the Users Control section are to create those users, build the user group structure and either grant or restrict the access to a defined list of sections. 
  **Standardized flow of actions for a Spryker Admin**
  
-![Users Control - Spryker Admin](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/users-control-section.png){height="" width=""}
+![Users Control - Spryker Admin](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/users-control-section.png) 
 
 {% info_block infoBox %}
 This is how a Spryker Admin interacts with other departments to build a team structure with a specific set of access rules for each specific team member.

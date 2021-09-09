@@ -352,4 +352,4 @@ When done, you can include it into other components, views and templates.
 
 Now, open the front page of Spryker Shop. The new component will appear on the top of the page, below the header.
 
-![New component counter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-component-counter.png){height="" width=""}
+![New component counter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-component-counter.png) 

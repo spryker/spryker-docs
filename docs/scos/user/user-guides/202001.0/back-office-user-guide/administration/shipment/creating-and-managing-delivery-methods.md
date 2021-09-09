@@ -42,7 +42,7 @@ Regardless if you have multi-currency prices with multiple price modes or just o
 The fields marked with * are required.
 {% endinfo_block %}
 
-    ![Create a delivery method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/create-delivery-method.png){height="" width=""}
+    ![Create a delivery method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/create-delivery-method.png) 
 
 3. To activate the delivery method, select the **Is active** checkbox.
 4. In the **Price & Tax** tab, do the following:
@@ -50,7 +50,7 @@ The fields marked with * are required.
     * Select the tax set from the drop-down list. The values are taken from the **Taxes > Tax Sets** section. For more information, see [Managing Tax Rates and Sets](/docs/scos/user/user-guides/202001.0/back-office-user-guide/taxes/tax-rates-and-tax-sets/managing-tax-rates-and-sets.html).
 
 5. In the **Store Relation** tab, select the stores in which the delivery method will be available.
-![Store relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/store-relation-delivery-method.png){height="" width=""}
+![Store relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/store-relation-delivery-method.png) 
 
 6. To keep the changes, click **Save**. This will redirect you to the **Delivery Methods** page where you can see the new delivery method on the list and the following message: '*Shipment method has been successfully saved*'.
 ***
@@ -66,7 +66,7 @@ Keep in mind that **Delivery Method Key** cannot be edited.
 **Tips & Tricks**
 This is how the Back Office setup looks in the online store:
 **Back Office**
-![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png){height="" width=""}
+![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png) 
 ***
 ## Viewing Delivery Methods
 To view the delivery method details, click **View**  in the *Actions* column for the delivery method you want to view. On the **View Delivery Method: [Delivery Method name]** page, you'll see three sections containing delivery method details: **Configuration**, **Store relation**, and **Price & Tax**. See [Delivery Methods: Reference Information](/docs/scos/user/user-guides/202001.0/back-office-user-guide/administration/shipment/references/delivery-methods-reference-information.html) for more details on the attributes you see on the page.

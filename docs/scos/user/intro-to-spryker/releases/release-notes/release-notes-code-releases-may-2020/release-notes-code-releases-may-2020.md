@@ -14,21 +14,21 @@ redirect_from:
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements we are announcing in May of 2020 as part of the [code release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#atomic--code--releases).
-For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-guides/{{page.version}}/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
 
 
 ## Spryker Commerce OS
 ### Custom Order Reference
 **Custom Order Reference** is a small but powerful feature that allows adding an external reference to the orders that were placed by a Customer. It can be a reference to a system that manages internal purchases or a ticket system. Irrespective of the purpose of the external system, which can vary from invoicing to accounting, the reference to it can always be saved on the Storefront and in the Back Office. 
 **Custom Order Reference** is the out-of-the-box solution that increases transparency and allows you to control purchases for the B2B companies more efficiently.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image1.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image1.png) 
 
 #### Documentation
 [Custom Order Reference](https://documentation.spryker.com/2021080/docs/custom-order-reference)
 
 ### Filter and Search in Order Archive 
 **Filter and Search in Order Archive** allows B2C users to search and filter orders in their order archive, and for B2B users, it opens even more possibilities. **Filter and Search** adds two new permissions that allow B2B users to view their orders, orders of their Business Units, and orders of their Company. The order management has now become easier and provides multiple tools to find an order by order reference, product name, or product SKU and to see products of the orders on the order archive page. 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image7.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image7.png) 
 
 #### Documentation
 [Filter and Search in Order Archive](/docs/scos/dev/features/{{page.version}}/customer-account-management/customer-account-management-feature-overview/customer-accounts-overview.html#customer-account-on-the-storefront)
@@ -36,7 +36,7 @@ For information about installing the Spryker Commerce OS see [Getting Started Gu
 ### Adding Shipment Cost to RFQ 
 **Adding shipment cost for RFQ** is a new step in the Quotation Process at Spryker. Previously, it was not possible to create a quote with a shipment cost, which created limitations in digital negotiations about a purchase. Now, the negotiations can go further: the B2B Customers can negotiate with Supplier not only the item price and volume of order but the shipment cost of the purchase as well. 
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image3.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image3.png) 
 
 
 #### Documentation
@@ -47,31 +47,31 @@ We have improved data importers’ usability.
 Using a **YAML configuration file** as a parameter of data:import **console command** you will now be able to **import several CSV data files in a batch**, having the flexibility of defining it without changing your project’s source code.
 You may now change names and location of the CSV files to be imported, define a YAML configuration file with a data subset to import as a bulk, making it easier to manage your data import operation.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image4.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image4.png) 
 
 #### Documentation
-[Importing Data with a Configuration File](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/importing-data-with-a-configuration-file.html)
+[Importing Data with a Configuration File](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html)
 
 ### Data Import Documentation
 We have improved data importers’ documentation, making it easier to understand how Spryker Demo Shop data import works for most common import operations: Products, Prices, Stock, Content, Merchandising, etc. 
 You will have access to detailed information about CSV files content, dependencies, and mandatory information needed to run your usual data import operation.
 
 #### Documentation
-[Demo Shop Data Import](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/demo-shop-data-import/importing-demo-shop-data.html)
+[Demo Shop Data Import](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/importing-demo-shop-data.html)
 
 ### Product Relation per Store
 We have enhanced our multi-store feature with a new product management functionality.
 Starting from this release, **Product Relations** can be assigned to stores. You can now define different **Product Relations** of the same type (related product or up-sell) and assign them to specific stores.
 This way, you can adjust the relations between products depending on your markets.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image6.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image6.gif) 
 
 #### Documentation
 [Product Relations](/docs/scos/dev/features/{{page.version}}/product-relations/product-relations.html)
 
 ### Product Abstract Card on Product List
 We have improved our Front-end component **Product Abstract Card** to fully support the Product Group feature. Whenever you hover the color selector on the card, the picture, title, and price of the product are updated to match your selection.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image8.gif){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes%3A+Code+Releases+May%2C+2020/image8.gif) 
 
 #### Documentation
 [Product Groups](https://documentation.spryker.com/2021080/docs/product-groups)

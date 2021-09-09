@@ -14,7 +14,7 @@ The article describes how you can create a new company role.
 
 1. On the **Company Roles** page, click **+Create New Role**.
 2. Enter the name of the role.
-![Create a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/create-role.png){height="" width=""}
+![Create a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/create-role.png) 
 
     {% info_block infoBox %}
 Selecting the **Is Default** check-box means that the new users will be created with this role assigned by default.

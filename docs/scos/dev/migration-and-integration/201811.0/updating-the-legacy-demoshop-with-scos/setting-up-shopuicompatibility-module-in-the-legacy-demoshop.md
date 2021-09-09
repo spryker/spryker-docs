@@ -7,7 +7,7 @@ redirect_from:
   - /v1/docs/en/setting-up-shopuicompatibility
 ---
 
-The `ShopUiCompatibility` module is the main module necessary for the [Atomic Frontend](/docs/scos/dev/developer-guides/201811.0/development-guide/front-end/yves/atomic-frontend/atomic-frontend-general-overview.html). This module is provided in SCOS by default.
+The `ShopUiCompatibility` module is the main module necessary for the [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-frontend-general-overview.html). This module is provided in SCOS by default.
 The following guide describes how to set up the ShopUICompatibility in the Legacy Demoshop.
 
 To install `ShopUiCompatibility` module in the Legacy Demoshop, follow the instructions below:

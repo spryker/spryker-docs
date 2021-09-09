@@ -15,8 +15,8 @@ Guest carts come with an expiration date, which means that unregistered users ca
 Only one cart can be created for each guest customer.
 
 {% info_block infoBox %}
-If you want to know how to process carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-carts-of-registered-users.html
-{% endinfo_block %}.)
+If you want to know how to process carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api/202001.0/glue-api-storefront-guides/managing-carts/managing-carts-of-registered-users.html).
+{% endinfo_block %}
 
 
 ## Installation
@@ -786,7 +786,7 @@ Upon login, the behavior depends on whether your project is a single cart or [mu
 * in **multiple cart** environments, the guest cart will be converted to a regular user cart and added to the list of the customers' own carts.
 The workflow is presented in the diagram below:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Carts/Managing+Guest+Carts/assigning-guest-cart-to-registered-user.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Carts/Managing+Guest+Carts/assigning-guest-cart-to-registered-user.png) 
 
 For example, in a **multiple carts** environment, the user journey for a registered user can look as follows:
 

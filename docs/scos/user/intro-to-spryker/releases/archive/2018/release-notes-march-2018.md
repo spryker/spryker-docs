@@ -12,7 +12,7 @@ redirect_from:
 ## Features
 ### Gift Cards
 The feature we have all been waiting for has arrived - gift cards! It goes without saying that gift cards' popularity among buyers is so high that there is actually no reason not to offer them in your shop. Gift cards are not only an entry point for new customers, they are a great way to encourage sales from the existing buyers and run promotions. Gift cards are easy to buy, just like usual products, and can be accessed immediately, as they are purely virtual and do not require shipment. Gift cards can be applied as a voucher and redeemed to pay an order.
-![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+March+-+2018/gift_card.png){height="" width=""}
+![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+March+-+2018/gift_card.png) 
 
 **Affected Modules**
 
@@ -39,7 +39,7 @@ composer require spryker/gift-card:"^1.0.0" spryker/gift-card-balance:"^1.0.0" s
 
 ### Setting a New Password For the Administration Interface Users
 Previously, the users of the Administration Interface could create passwords for new users only, i.e. from the "Create new User" page. With this release, the Administration Interface's users have been granted a new ability - from now on they can also change passwords of other Administration Interface's users on the "Edit User" page. 
-![User password change](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+March+-+2018/user_password_change.png){height="" width=""}
+![User password change](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+March+-+2018/user_password_change.png) 
 
 **Affected Modules**
 
@@ -49,9 +49,9 @@ Previously, the users of the Administration Interface could create passwords for
 
 ### Multi-store Products Availability
 We continue to work hard on the multi-store concept and in this release we are happy to announce one more feature that brings us even closer to its full enablement - the multi-store products availability. From now on, the products' availability can be calculated on a per-store basis. That means that if you have several shops located in different countries, you can manage stocks across the countries separately, which makes overall inventory and logistics management more efficient. The shop administrators can now select stores they want to see the availability for.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+March+-+2018/box_selection_overview_page_collapsed.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+March+-+2018/box_selection_overview_page_collapsed.png) 
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+March+-+2018/Store_definision_availability_details.png){height="" width=""}
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Archive/Release+Notes+-+March+-+2018/Store_definision_availability_details.png) 
 
 **Affected Modules**
 
@@ -165,6 +165,6 @@ Previously, there was an issue with the existing tax rates in the Administration
 The following content has been added to the Academy:
 
 <!--* Feature List-->
-* [Testing Concepts](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/guidelines/testing-concepts.html)
+* [Testing Concepts](/docs/scos/dev/guidelines/testing-concepts.html)
 
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

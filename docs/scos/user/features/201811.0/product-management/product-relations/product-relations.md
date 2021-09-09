@@ -21,10 +21,10 @@ Product relations are build on a base of abstract products, not concrete product
 To summarize, you can:
 
 * Type: **Upselling** - Display one to many similar products in the cart.
-![Upselling type](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Similar+products+in+the+cart.gif){height="" width=""}
+![Upselling type](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Similar+products+in+the+cart.gif) 
 
 * Type: **Related products** - Display one to many similar products on the Product Details Page.
-![Related products type](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Similar+Products.gif){height="" width=""}
+![Related products type](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Similar+Products.gif) 
 
 ## If you are:
 

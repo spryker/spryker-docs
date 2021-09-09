@@ -3,7 +3,6 @@ title: ACL feature integration
 last_updated: Sep 7, 2021
 description: This integration guide provides steps on how to integrate the ACL feature into a Spryker project.
 template: feature-integration-guide-template
-published: false
 ---
 
 This integration guide provides steps on how to integrate the ACL feature into a Spryker project.
@@ -18,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | master      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Spryker Core Back Office | master      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration) |
+| Spryker Core         | {{page.version}}      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| Spryker Core Back Office | {{page.version}}      | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration) |
 
 ### 1) Install the required modules using Composer
 
@@ -55,7 +54,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes have been applied by checking your database:
+Verify that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY               | TYPE  | EVENT   |
 | ----------------------------- | ----- | ------- |
@@ -216,7 +215,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-Use the following example if you want to enable ACL Entity for the whole Application, e.g. for the Merchant portal:
+Use the following example if you want to enable ACL Entity for the whole Application, e.g. for the Merchant Portal:
 
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
@@ -236,6 +235,8 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 ```
 
 ### 5) Install the database data for ACL
+
+Run the following command:
 
 ```bash
 console setup:init-db

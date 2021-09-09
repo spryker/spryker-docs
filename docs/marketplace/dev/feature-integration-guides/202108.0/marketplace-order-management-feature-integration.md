@@ -58,7 +58,96 @@ Add the following configuration:
 | MainMerchantStateMachine | Introduce `MainMerchantStateMachine` configuration. | config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml |
 | MerchantDefaultStateMachine | Introduce `MerchantDefaultStateMachine` configuration. | config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml |
 | MarketplacePayment  | Introduce `MarketplacePayment` order management system. | config/Zed/oms/MarketplacePayment01.xml |
-| MarketplacePayment  | Introduce `MarketplacePayment` order management system. | config/Zed/oms/MarketplacePayment01.xml |
+| MerchantOmsConfig  | Introduce OMS processes configuration. | src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php |
+| MerchantSalesOrderMerchantUserGuiDependencyProvider  | Introduce Merchant Order GUI configuration. | src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiDependencyProvider.php |
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantOms;
+
+use Spryker\Zed\MerchantOms\MerchantOmsConfig as SprykerMerchantOmsConfig;
+
+class MerchantOmsConfig extends SprykerMerchantOmsConfig
+{
+    /**
+     * @var string
+     */
+    protected const MAIN_MERCHANT_OMS_PROCESS_NAME = 'MainMerchantStateMachine';
+    /**
+     * @var string
+     */
+    protected const MAIN_MERCHANT_STATE_MACHINE_INITIAL_STATE = 'created';
+
+    /**
+     * @return string[]
+     */
+    public function getMerchantProcessInitialStateMap(): array
+    {
+        return array_merge(
+            parent::getMerchantProcessInitialStateMap(),
+            [
+                static::MAIN_MERCHANT_OMS_PROCESS_NAME => static::MAIN_MERCHANT_STATE_MACHINE_INITIAL_STATE,
+            ]
+        );
+    }
+
+    /**
+     * @api
+     *
+     * @return string[]
+     */
+    public function getMerchantOmsProcesses(): array
+    {
+        return array_merge(
+            parent::getMerchantOmsProcesses(),
+            [
+                static::MAIN_MERCHANT_OMS_PROCESS_NAME,
+            ]
+        );
+    }
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantSalesOrderMerchantUserGui;
+
+use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;
+use Spryker\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUserGuiDependencyProvider as SprykerMerchantSalesOrderMerchantUserGuiDependencyProvider;
+use Spryker\Zed\ShipmentGui\Communication\Plugin\Form\ItemFormTypePlugin;
+use Spryker\Zed\ShipmentGui\Communication\Plugin\Form\ShipmentFormTypePlugin;
+
+class MerchantSalesOrderMerchantUserGuiDependencyProvider extends SprykerMerchantSalesOrderMerchantUserGuiDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
+     */
+    public function getShipmentFormTypePlugin(): FormTypeInterface
+    {
+        return new ShipmentFormTypePlugin();
+    }
+
+    /**
+     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
+     */
+    public function getItemFormTypePlugin(): FormTypeInterface
+    {
+        return new ItemFormTypePlugin();
+    }
+}
+```
+
+</details>
 
 <details>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml</summary>
